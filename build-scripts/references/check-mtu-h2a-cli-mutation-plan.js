@@ -57,6 +57,46 @@ function requireIncludes(values, expected, context) {
   }
 }
 
+function sameArray(actual, expected) {
+  return Array.isArray(actual) &&
+    Array.isArray(expected) &&
+    actual.length === expected.length &&
+    actual.every((value, index) => value === expected[index]);
+}
+
+function requireLiveMatchesSpec(live, spec, context) {
+  for (const key of [
+    'id',
+    'name',
+    'kern',
+    'mastery_target',
+    'prior_learning',
+    'zero_needs_status',
+    'generator',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && live[key] !== spec[key]) {
+      fail(`${context} live ${key} must match reviewed spec`);
+    }
+  }
+  for (const key of [
+    'needs',
+    'exam_codes',
+    'aspects',
+    'terms',
+    'procedure',
+    'pitfalls',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && !sameArray(live[key] || [], spec[key] || [])) {
+      fail(`${context} live ${key} must match reviewed spec`);
+    }
+  }
+  if (spec.zero_needs_review) {
+    const liveReview = JSON.stringify(live.zero_needs_review || {});
+    const specReview = JSON.stringify(spec.zero_needs_review);
+    if (liveReview !== specReview) fail(`${context} live zero_needs_review must match reviewed spec`);
+  }
+}
+
 const plan = readJson(PLAN_JSON_PATH);
 const planMarkdown = readText(PLAN_MD_PATH);
 const reviewPacket = readText(REVIEW_PACKET_PATH);
@@ -127,8 +167,15 @@ requireIncludes(plan.proposed_new_unit_ids || [], expectedNewIds, 'proposed_new_
 requireIncludes(plan.proposed_live_update_targets || [], expectedUpdateTargets, 'proposed_live_update_targets');
 
 const byId = new Map(units.map((unit) => [unit.id, unit]));
+const h2cReducedExecutionIds = ['F19', 'F20', 'A85', 'A86', 'A87', 'A91'];
+const h2cReducedExecutionPresent = h2cReducedExecutionIds.some((id) => byId.has(id));
+if (h2cReducedExecutionPresent && !h2cReducedExecutionIds.every((id) => byId.has(id))) {
+  fail('MTU-H2C reduced execution state is partial; expected all clean IDs or none');
+}
 for (const id of expectedNewIds) {
-  if (byId.has(id)) fail(`proposed new ID ${id} already exists in live MTU registry`);
+  if (byId.has(id) && !h2cReducedExecutionIds.includes(id)) {
+    fail(`proposed new ID ${id} already exists in live MTU registry`);
+  }
 }
 for (const id of expectedUpdateTargets) {
   if (!byId.has(id)) fail(`proposed update target ${id} does not exist in live MTU registry`);
@@ -166,11 +213,18 @@ for (const lane of lanes) {
     if (!spec || spec.id !== lane.proposed_unit_id) {
       fail(`${lane.lane_id} must include proposed_spec matching proposed_unit_id`);
     }
-    const specErrors = validateSpec(spec, knownIds);
-    if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
-    knownIds.add(spec.id);
-    simulatedUnits.push({ ...spec });
-    simulatedById.set(spec.id, spec);
+    if (byId.has(spec.id)) {
+      if (!h2cReducedExecutionIds.includes(spec.id)) {
+        fail(`${lane.lane_id} proposed_spec ID already exists outside MTU-H2C reduced execution`);
+      }
+      requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+    } else {
+      const specErrors = validateSpec(spec, knownIds);
+      if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
+      knownIds.add(spec.id);
+      simulatedUnits.push({ ...spec });
+      simulatedById.set(spec.id, spec);
+    }
   } else if (lane.action_type === 'unit_update') {
     if (!lane.target_live_unit_id || !byId.has(lane.target_live_unit_id)) {
       fail(`${lane.lane_id} unit_update must target an existing live unit`);
@@ -417,8 +471,8 @@ for (const requiredText of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
+if (!/\| (MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2D/MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
 }
 
 console.log('OK MTU-H2A CLI mutation plan: reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json');

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T06:42:44.178Z
+Generated: 2026-05-28T07:10:48.443Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1870
+Files indexed: 1878
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -590,7 +590,7 @@ Count: 112
 
 ## references
 
-Count: 317
+Count: 318
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -698,6 +698,7 @@ Count: 317
 - references/data/sprints/MTU-H2A.result.json
 - references/data/sprints/MTU-H2B.plan.json
 - references/data/sprints/MTU-H2B.result.json
+- references/data/sprints/MTU-H2C.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -912,7 +913,7 @@ Count: 317
 
 ## reports
 
-Count: 885
+Count: 891
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1204,6 +1205,10 @@ Count: 885
 - reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-MTU-H2B-cli-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.json
+- reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.md
+- reports/review-gates/GATE-MTU-H2B-cli-execution/human-interview.json
+- reports/review-gates/GATE-MTU-H2B-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1584,6 +1589,8 @@ Count: 885
 - reports/sprints/MTU-H2B-plan.md
 - reports/sprints/MTU-H2B-planning-review.md
 - reports/sprints/MTU-H2B-result.md
+- reports/sprints/MTU-H2C-baseline.md
+- reports/sprints/MTU-H2C-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1820,7 +1827,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 235
+Count: 236
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1914,6 +1921,7 @@ Count: 235
 - docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

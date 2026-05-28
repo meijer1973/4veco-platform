@@ -58,6 +58,46 @@ function requireIncludes(values, expected, context) {
   }
 }
 
+function sameArray(actual, expected) {
+  return Array.isArray(actual) &&
+    Array.isArray(expected) &&
+    actual.length === expected.length &&
+    actual.every((value, index) => value === expected[index]);
+}
+
+function requireLiveMatchesSpec(live, spec, context) {
+  for (const key of [
+    'id',
+    'name',
+    'kern',
+    'mastery_target',
+    'prior_learning',
+    'zero_needs_status',
+    'generator',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && live[key] !== spec[key]) {
+      fail(`${context} live ${key} must match reviewed spec`);
+    }
+  }
+  for (const key of [
+    'needs',
+    'exam_codes',
+    'aspects',
+    'terms',
+    'procedure',
+    'pitfalls',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && !sameArray(live[key] || [], spec[key] || [])) {
+      fail(`${context} live ${key} must match reviewed spec`);
+    }
+  }
+  if (spec.zero_needs_review) {
+    const liveReview = JSON.stringify(live.zero_needs_review || {});
+    const specReview = JSON.stringify(spec.zero_needs_review);
+    if (liveReview !== specReview) fail(`${context} live zero_needs_review must match reviewed spec`);
+  }
+}
+
 const packet = readJson(PACKET_JSON_PATH);
 const packetMarkdown = readText(PACKET_MD_PATH);
 const h2aPlan = readJson(H2A_PLAN_PATH);
@@ -106,8 +146,15 @@ const expectedUpdateTargets = ['A12', 'A20'];
 requireIncludes(packet.registry_state_proof.proposed_new_ids_checked_absent || [], expectedNewIds, 'registry_state_proof.proposed_new_ids_checked_absent');
 requireIncludes(packet.registry_state_proof.live_update_targets_checked_present || [], expectedUpdateTargets, 'registry_state_proof.live_update_targets_checked_present');
 
+const h2cReducedExecutionIds = ['F19', 'F20', 'A85', 'A86', 'A87', 'A91'];
+const h2cReducedExecutionPresent = h2cReducedExecutionIds.some((id) => byId.has(id));
+if (h2cReducedExecutionPresent && !h2cReducedExecutionIds.every((id) => byId.has(id))) {
+  fail('MTU-H2C reduced execution state is partial; expected all clean IDs or none');
+}
 for (const id of expectedNewIds) {
-  if (byId.has(id)) fail(`proposed new ID ${id} already exists in live MTU registry`);
+  if (byId.has(id) && !h2cReducedExecutionIds.includes(id)) {
+    fail(`proposed new ID ${id} already exists in live MTU registry`);
+  }
 }
 for (const id of expectedUpdateTargets) {
   if (!byId.has(id)) fail(`expected live update target ${id} is missing`);
@@ -190,10 +237,17 @@ for (const lane of executionReady) {
     if (!lane.cli_command_exact.includes('unit-add.js')) fail(`${lane.lane_id} command must use unit-add.js`);
     const spec = sourceLane.proposed_spec;
     if (!spec || spec.id !== lane.unit_id) fail(`${lane.lane_id} source proposed_spec must match unit_id`);
-    const specErrors = validateSpec(spec, knownIds);
-    if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
-    knownIds.add(spec.id);
-    simulatedById.set(spec.id, { ...spec });
+    if (byId.has(spec.id)) {
+      if (!h2cReducedExecutionIds.includes(spec.id)) {
+        fail(`${lane.lane_id} proposed_spec ID already exists outside MTU-H2C reduced execution`);
+      }
+      requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+    } else {
+      const specErrors = validateSpec(spec, knownIds);
+      if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
+      knownIds.add(spec.id);
+      simulatedById.set(spec.id, { ...spec });
+    }
   } else if (lane.action_type === 'unit_update') {
     if (!lane.dry_run_command_exact || !lane.dry_run_command_exact.includes('--dry-run')) {
       fail(`${lane.lane_id} unit_update must include dry_run_command_exact`);
@@ -397,8 +451,8 @@ if (humanInterviewJson || gateClosureJson) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
+if (!/\| (MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2D/MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');

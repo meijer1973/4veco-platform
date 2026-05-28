@@ -1,15 +1,15 @@
 {
   "report_id": "needs-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-28T06:42:37.536Z",
+  "generated_on": "2026-05-28T07:10:40.626Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 229,
-    "empty_needs": 42
+    "live_units": 235,
+    "empty_needs": 43
   },
   "issues": [
     {
@@ -248,6 +248,15 @@
     },
     {
       "issue_id": "needs-coverage-0027",
+      "severity": "info",
+      "affected_entity": "F19",
+      "category": "empty_needs:true_zero",
+      "evidence_path": "references/machine/micro-teaching-units.json",
+      "next_action": "Review whether this is true zero, underbouw assumed, or false zero.",
+      "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
+    },
+    {
+      "issue_id": "needs-coverage-0028",
       "severity": "medium",
       "affected_entity": "G06",
       "category": "empty_needs:unclassified",
@@ -256,7 +265,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0028",
+      "issue_id": "needs-coverage-0029",
       "severity": "medium",
       "affected_entity": "G07",
       "category": "empty_needs:unclassified",
@@ -265,7 +274,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0029",
+      "issue_id": "needs-coverage-0030",
       "severity": "medium",
       "affected_entity": "G08",
       "category": "empty_needs:unclassified",
@@ -274,7 +283,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0030",
+      "issue_id": "needs-coverage-0031",
       "severity": "medium",
       "affected_entity": "G10",
       "category": "empty_needs:unclassified",
@@ -283,7 +292,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0031",
+      "issue_id": "needs-coverage-0032",
       "severity": "medium",
       "affected_entity": "G11",
       "category": "empty_needs:unclassified",
@@ -292,7 +301,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0032",
+      "issue_id": "needs-coverage-0033",
       "severity": "medium",
       "affected_entity": "H05",
       "category": "empty_needs:unclassified",
@@ -301,7 +310,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0033",
+      "issue_id": "needs-coverage-0034",
       "severity": "medium",
       "affected_entity": "H10",
       "category": "empty_needs:unclassified",
@@ -310,7 +319,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0034",
+      "issue_id": "needs-coverage-0035",
       "severity": "medium",
       "affected_entity": "H16",
       "category": "empty_needs:unclassified",
@@ -319,7 +328,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0035",
+      "issue_id": "needs-coverage-0036",
       "severity": "medium",
       "affected_entity": "H21",
       "category": "empty_needs:unclassified",
@@ -328,7 +337,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0036",
+      "issue_id": "needs-coverage-0037",
       "severity": "medium",
       "affected_entity": "H29",
       "category": "empty_needs:unclassified",
@@ -337,7 +346,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0037",
+      "issue_id": "needs-coverage-0038",
       "severity": "medium",
       "affected_entity": "I01",
       "category": "empty_needs:unclassified",
@@ -346,7 +355,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0038",
+      "issue_id": "needs-coverage-0039",
       "severity": "medium",
       "affected_entity": "I06",
       "category": "empty_needs:unclassified",
@@ -355,7 +364,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0039",
+      "issue_id": "needs-coverage-0040",
       "severity": "medium",
       "affected_entity": "I14",
       "category": "empty_needs:unclassified",
@@ -364,7 +373,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0040",
+      "issue_id": "needs-coverage-0041",
       "severity": "medium",
       "affected_entity": "L01",
       "category": "empty_needs:unclassified",
@@ -373,7 +382,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0041",
+      "issue_id": "needs-coverage-0042",
       "severity": "medium",
       "affected_entity": "L03",
       "category": "empty_needs:unclassified",
@@ -382,7 +391,7 @@
       "proof_required_to_close": "Unit has explicit zero-needs status or at least one validated prerequisite."
     },
     {
-      "issue_id": "needs-coverage-0042",
+      "issue_id": "needs-coverage-0043",
       "severity": "medium",
       "affected_entity": "L05",
       "category": "empty_needs:unclassified",

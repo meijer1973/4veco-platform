@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T06:42:44.141Z",
+  "generatedAt": "2026-05-28T07:10:48.404Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,13 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-28 Roadmap ID: references-team-roadmap Roadmap version: v2.91-gate-mtu-h2b-partial-pass Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-28 Roadmap ID: references-team-roadmap Roadmap version: v2.92-mtu-h2c-reduced-scope-cli-execution Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE...",
           "sprints": [
             {
-              "sprint": "MTU-H2C",
-              "name": "Reduced-Scope Solo q1-q3 CLI Execution Preflight",
+              "sprint": "MTU-H2D",
+              "name": "Solo q1-q3 Held And Conditional Lane Resolution",
               "completed": "no",
-              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Proceed only with the reduced-scope execution preflight authorized by GATE-MTU-H2B. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`. `A92` cannot execute until its dependency on conditional `A89` is resolved by including/accepting `A89`, revising `A92`, or holding `A92`. `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes. `A12` is held until an update spec retains `A2.11` or a later gate explicitly justifies removal. `A20` is held because target exercise `4.1.2` uses `A20` in a given-MK context. Any execution must echo extracted JSON specs before commands, prove the reviewed plan file is unchanged or revalidated, run final ID-collision checks, and prove no unintended lesson/candidate/external-source diff. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
+              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a focused resolution packet before any further Solo q1-q3 MTU execution. Resolve `A12` by retaining `A2.11` in any derivative-MO update spec or routing a later gate that explicitly authorizes removal. Resolve `A20` through a split/deprecate/replacement and affected-mapping plan because target exercise `4.1.2` uses current `A20` in a given-MK context. Decide or revise conditional lanes `A88`, `A89`, `A90`, and `A93`; resolve `A92` by accepting/adding `A89`, revising `A92`, or keeping `A92` held. This is planning/review work only unless a later gate names exact CLI commands, specs, rollback, audit log, validation evidence, and execution authority. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
               "exitGate": ""
             },
             {
@@ -261,31 +261,38 @@
               "exitGate": ""
             },
             {
+              "sprint": "MTU-H2C",
+              "name": "Reduced-Scope Solo q1-q3 CLI Execution",
+              "completed": "yes",
+              "currentState": "Completed the reduced clean-lane CLI execution authorized by GATE-MTU-H2B. Through `unit-add.js`, minted exactly `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`, with extracted JSON specs echoed before execution and post-execution validation. `A12`, `A20`, `A88`, `A89`, `A90`, `A92`, and `A93` were not executed. `A12` remains held until its update spec retains `A2.11` or a later gate authorizes removal; `A20` remains held because target exercise `4.1.2` uses current `A20` in a given-MK context; `A92` remains held until the `A89` dependency route is resolved. H2A/H2B checkers now validate the post-H2C lifecycle state while still blocking conditional/held IDs from silently appearing. No candidate storage, candidate writes, `references/external/` mutation, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use was authorized. Top operational next action is `MTU-H2D`.",
+              "exitGate": ""
+            },
+            {
               "sprint": "GATE-MTU-H2B",
               "name": "Solo q1-q3 CLI Execution Authorization Human Review",
               "completed": "yes",
-              "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate requires final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. Top operational next action is `MTU-H2C`.",
+              "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate required final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. MTU-H2C has since executed the clean lanes; top operational next action is `MTU-H2D`.",
               "exitGate": ""
             },
             {
               "sprint": "MTU-H2B",
               "name": "Solo q1-q3 CLI Execution Gate Packet",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B has since closed; top operational next action is `MTU-H2C`.",
+              "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B closed and MTU-H2C executed the reduced clean lanes; top operational next action is `MTU-H2D`.",
               "exitGate": ""
             },
             {
               "sprint": "GATE-MTU-H2A",
               "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
               "completed": "yes",
-              "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B` and `GATE-MTU-H2B` have since closed; top operational next action is now `MTU-H2C`.",
+              "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B`, `GATE-MTU-H2B`, and `MTU-H2C` have since closed; top operational next action is now `MTU-H2D`.",
               "exitGate": ""
             },
             {
               "sprint": "MTU-H2A",
               "name": "Solo q1-q3 CLI-Mutation Planning",
               "completed": "yes",
-              "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, and GATE-MTU-H2B have since closed; top operational next action is now `MTU-H2C`.",
+              "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, GATE-MTU-H2B, and MTU-H2C have since closed; top operational next action is now `MTU-H2D`.",
               "exitGate": ""
             },
             {
@@ -965,10 +972,10 @@
       ],
       "sprints": [
         {
-          "sprint": "MTU-H2C",
-          "name": "Reduced-Scope Solo q1-q3 CLI Execution Preflight",
+          "sprint": "MTU-H2D",
+          "name": "Solo q1-q3 Held And Conditional Lane Resolution",
           "completed": "no",
-          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Proceed only with the reduced-scope execution preflight authorized by GATE-MTU-H2B. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`. `A92` cannot execute until its dependency on conditional `A89` is resolved by including/accepting `A89`, revising `A92`, or holding `A92`. `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes. `A12` is held until an update spec retains `A2.11` or a later gate explicitly justifies removal. `A20` is held because target exercise `4.1.2` uses `A20` in a given-MK context. Any execution must echo extracted JSON specs before commands, prove the reviewed plan file is unchanged or revalidated, run final ID-collision checks, and prove no unintended lesson/candidate/external-source diff. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
+          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Prepare a focused resolution packet before any further Solo q1-q3 MTU execution. Resolve `A12` by retaining `A2.11` in any derivative-MO update spec or routing a later gate that explicitly authorizes removal. Resolve `A20` through a split/deprecate/replacement and affected-mapping plan because target exercise `4.1.2` uses current `A20` in a given-MK context. Decide or revise conditional lanes `A88`, `A89`, `A90`, and `A93`; resolve `A92` by accepting/adding `A89`, revising `A92`, or keeping `A92` held. This is planning/review work only unless a later gate names exact CLI commands, specs, rollback, audit log, validation evidence, and execution authority. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1077,10 +1084,18 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "MTU-H2C",
+          "name": "Reduced-Scope Solo q1-q3 CLI Execution",
+          "completed": "yes",
+          "currentState": "Completed the reduced clean-lane CLI execution authorized by GATE-MTU-H2B. Through `unit-add.js`, minted exactly `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`, with extracted JSON specs echoed before execution and post-execution validation. `A12`, `A20`, `A88`, `A89`, `A90`, `A92`, and `A93` were not executed. `A12` remains held until its update spec retains `A2.11` or a later gate authorizes removal; `A20` remains held because target exercise `4.1.2` uses current `A20` in a given-MK context; `A92` remains held until the `A89` dependency route is resolved. H2A/H2B checkers now validate the post-H2C lifecycle state while still blocking conditional/held IDs from silently appearing. No candidate storage, candidate writes, `references/external/` mutation, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use was authorized. Top operational next action is `MTU-H2D`.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "GATE-MTU-H2B",
           "name": "Solo q1-q3 CLI Execution Authorization Human Review",
           "completed": "yes",
-          "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate requires final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. Top operational next action is `MTU-H2C`.",
+          "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate required final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. MTU-H2C has since executed the clean lanes; top operational next action is `MTU-H2D`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1088,7 +1103,7 @@
           "sprint": "MTU-H2B",
           "name": "Solo q1-q3 CLI Execution Gate Packet",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B has since closed; top operational next action is `MTU-H2C`.",
+          "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B closed and MTU-H2C executed the reduced clean lanes; top operational next action is `MTU-H2D`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1096,7 +1111,7 @@
           "sprint": "GATE-MTU-H2A",
           "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
           "completed": "yes",
-          "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B` and `GATE-MTU-H2B` have since closed; top operational next action is now `MTU-H2C`.",
+          "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B`, `GATE-MTU-H2B`, and `MTU-H2C` have since closed; top operational next action is now `MTU-H2D`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1104,7 +1119,7 @@
           "sprint": "MTU-H2A",
           "name": "Solo q1-q3 CLI-Mutation Planning",
           "completed": "yes",
-          "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, and GATE-MTU-H2B have since closed; top operational next action is now `MTU-H2C`.",
+          "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, GATE-MTU-H2B, and MTU-H2C have since closed; top operational next action is now `MTU-H2D`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1877,7 +1892,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 100,
+      "completedCount": 101,
       "openCount": 14
     },
     {

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "sprint_id": "MTU-H2C",
   "plan": "reports/sprints/MTU-H2C-plan.md",
-  "status": "planned",
+  "status": "completed",
   "created": "2026-05-28",
   "source_gate": "reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.json",
   "human_review_required": false,

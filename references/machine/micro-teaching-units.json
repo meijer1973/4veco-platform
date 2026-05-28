@@ -2617,6 +2617,144 @@
     "generator": "GEN_A84"
   },
   {
+    "id": "A85",
+    "name": "Totale opbrengst puntberekening: TO = P x Q",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken totale opbrengst uit een enkele prijs en hoeveelheid zonder eerst een volledige TO-functie op te stellen.",
+    "needs": [
+      "A04"
+    ],
+    "exam_codes": [
+      "A2.1"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Bepaal de prijs P en hoeveelheid Q die bij dezelfde situatie horen.",
+      "Noteer TO = P x Q.",
+      "Vul P en Q in en bereken de totale opbrengst.",
+      "Controleer of aantallen, geldbedragen en schaalfactoren bij elkaar passen."
+    ],
+    "pitfalls": [
+      "Een volledige TO-functie opstellen terwijl alleen een puntberekening nodig is.",
+      "P en Q uit verschillende situaties combineren."
+    ],
+    "generator": "GEN_A85"
+  },
+  {
+    "id": "A86",
+    "name": "TVK berekenen uit constante variabele kosten",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Bereken totale variabele kosten door constante variabele kosten per stuk met de hoeveelheid te vermenigvuldigen.",
+    "needs": [
+      "A04"
+    ],
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "variabele-kosten"
+    ],
+    "procedure": [
+      "Bepaal de variabele kosten per stuk of constante MK uit de opgave.",
+      "Bepaal de hoeveelheid Q.",
+      "Noteer TVK = variabele kosten per stuk x Q.",
+      "Bereken TVK en controleer schaal en eenheid."
+    ],
+    "pitfalls": [
+      "Variabele kosten per stuk behandelen als totale variabele kosten.",
+      "Constante kosten optellen voordat de vraag daarom vraagt."
+    ],
+    "generator": "GEN_A86"
+  },
+  {
+    "id": "A87",
+    "name": "Onbekende vaste kosten berekenen uit winstvergelijking",
+    "category": "vaardigheden",
+    "layer": 2,
+    "kern": "Los W = TO - (TVK + TCK) op naar de onbekende vaste kosten wanneer winst, opbrengst en variabele kosten bekend zijn.",
+    "needs": [
+      "A02",
+      "A85",
+      "A86"
+    ],
+    "exam_codes": [
+      "A2.1",
+      "A2.11"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "winst"
+    ],
+    "procedure": [
+      "Noteer de winstvergelijking W = TO - (TVK + TCK).",
+      "Vul W, TO en TVK in met dezelfde schaal en periode.",
+      "Herschrijf de vergelijking zodat TCK alleen staat.",
+      "Bereken TCK en geef de uitkomst met geldbedrag en schaalfactor."
+    ],
+    "pitfalls": [
+      "A21 als volledige route behandelen zonder de onbekende TCK te isoleren.",
+      "TVK en TCK verwisselen.",
+      "De schaalfactor pas na de laatste stap vergeten."
+    ],
+    "generator": "GEN_A87"
+  },
+  {
+    "id": "A91",
+    "name": "MO = gegeven MK oplossen",
+    "category": "vaardigheden",
+    "layer": 1,
+    "kern": "Los MO = MK op wanneer de marginale kosten als constante of gegeven waarde in de opgave staan.",
+    "needs": [
+      "A02"
+    ],
+    "exam_codes": [
+      "A2.10",
+      "A2.12"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "rekenen",
+      "verbaal"
+    ],
+    "terms": [
+      "marginale-kosten"
+    ],
+    "procedure": [
+      "Neem de MO-functie uit de voorafgaande stap.",
+      "Neem de gegeven MK-waarde uit de opgave.",
+      "Stel MO = gegeven MK.",
+      "Los de vergelijking op naar Q*.",
+      "Controleer dat je geen MK-functie afleidt als MK al gegeven is."
+    ],
+    "pitfalls": [
+      "Een MK-functie afleiden terwijl MK direct gegeven is.",
+      "De gegeven kostenstijging verwarren met de nieuwe MK.",
+      "MO = MK oplossen zonder daarna de prijs uit GO/P(Q) te halen."
+    ],
+    "generator": "GEN_A91"
+  },
+  {
     "id": "B01",
     "name": "Schaarste als kerneconomisch probleem",
     "category": "schaarste",
@@ -4311,6 +4449,60 @@
     "pitfalls": [
       "De heffing of subsidie niet gelijk aan de externaliteit zetten — over- of ondercorrigeren leidt tot residueel welvaartsverlies.",
       "Pigou-heffing verwarren met een gewone accijns — bij Pigou is het tarief bewust gelijk aan de externe kost, niet vrij gekozen voor opbrengst."
+    ]
+  },
+  {
+    "id": "F19",
+    "name": "Maatschappelijke kosten verbaal herkennen",
+    "category": "samenwerken en onderhandelen",
+    "layer": 0,
+    "kern": "Herken dat een keuze, productie of consumptie kosten veroorzaakt die niet door de directe gebruiker of producent worden gedragen.",
+    "needs": [],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "understand",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "zero_needs_status": "true_zero",
+    "zero_needs_review": {
+      "reviewed_on": "2026-05-27",
+      "reviewer": "GATE-MTU-H2 routing review",
+      "rationale": "This is the first verbal external-cost recognition unit and must not depend on full MPC/MSC machinery.",
+      "recommended_needs": [],
+      "severity": "medium"
+    }
+  },
+  {
+    "id": "F20",
+    "name": "Maatschappelijke kosten uitleggen met voorbeeld",
+    "category": "samenwerken en onderhandelen",
+    "layer": 1,
+    "kern": "Geef een contextspecifiek voorbeeld van maatschappelijke of externe kosten en leg uit waarom die kosten bij anderen of de samenleving terechtkomen.",
+    "needs": [
+      "F19"
+    ],
+    "exam_codes": [
+      "F2.4"
+    ],
+    "mastery_target": "apply",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal"
+    ],
+    "terms": [],
+    "procedure": [
+      "Noem het concrete nadeel of de concrete schade uit de context.",
+      "Benoem wie de schade of kosten draagt.",
+      "Leg uit dat de directe gebruiker of producent deze kosten niet volledig betaalt.",
+      "Sluit af waarom dit maatschappelijke of externe kosten zijn."
+    ],
+    "pitfalls": [
+      "Alleen een voorbeeld noemen zonder uit te leggen waarom het extern is.",
+      "De schade behandelen als gewone private kosten voor de gebruiker."
     ]
   },
   {
