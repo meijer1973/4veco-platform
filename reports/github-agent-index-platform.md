@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-27T14:00:37.546Z
+Generated: 2026-05-28T06:17:08.832Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1851
+Files indexed: 1856
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -908,7 +908,7 @@ Count: 315
 
 ## reports
 
-Count: 871
+Count: 875
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1191,6 +1191,10 @@ Count: 871
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.json
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/review-packet.md
 - reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.json
+- reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.md
+- reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/human-interview.json
+- reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/human-interview.md
 - reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1802,7 +1806,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 233
+Count: 234
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1893,6 +1897,7 @@ Count: 233
 - docs/roadmaps/outdated/reference-team-roadmap-v2.85-mtu-h1-operation-benchmark.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.87-gate-mtu-h2-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json

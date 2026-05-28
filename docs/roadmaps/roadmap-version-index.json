@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-27",
+  "updated_on": "2026-05-28",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.89-gate-mtu-h2a-pass-with-conditions",
+      "version": "v2.90-gate-mtu-h2b-cli-execution-review",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-27",
+      "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.87-gate-mtu-h2-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md",
@@ -110,7 +111,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-MTU-H2A closed as pass_with_conditions for execution-gate planning only. Top operational next action is MTU-H2B CLI execution gate packet preparation; no CLI execution, protected reference mutation, or product-use lane is authorized."
+      "notes": "Current operating roadmap after MTU-H2B prepared the Solo q1-q3 CLI execution gate packet without mutation. Top operational next action is GATE-MTU-H2B human review; no CLI execution, protected reference mutation, or product-use lane is authorized before the gate closes."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.89",
+      "version": "v2.89-gate-mtu-h2a-pass-with-conditions",
+      "title": "References Team Roadmap before GATE-MTU-H2B review",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-27",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before MTU-H2B completed the execution-gate packet and moved the top operational next action to GATE-MTU-H2B human review."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.88",

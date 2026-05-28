@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2B",
+  "gate_id": "GATE-MTU-H2B",
+  "created": "2026-05-28",
+  "status": "execution_gate_packet_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.json",
+  "source_plan": "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "registry_state_proof": {
+    "source_commit_at_packet_start": "5f34a79cb532de62d1f05e732cf532b2566396be",
+    "live_registry": "references/machine/micro-teaching-units.json",
+    "proposed_new_ids_checked_absent": [
+      "F19",
+      "F20",
+      "A85",
+      "A86",
+      "A87",
+      "A88",
+      "A89",
+      "A90",
+      "A91",
+      "A92",
+      "A93"
+    ],
+    "live_update_targets_checked_present": [
+      "A12",
+      "A20"
+    ],
+    "candidate_storage_checked_not_created": [
+      "references/data/exam-ingestion/operation-candidates.json",
+      "references/data/exam-ingestion/answer-skill-candidates.json",
+      "references/data/exam-ingestion/source-annex-extraction-overlays.json"
+    ]
+  },
+  "generator_field_proof": {
+    "status": "passed",
+    "a_domain_lanes_with_generators": {
+      "A85": "GEN_A85",
+      "A86": "GEN_A86",
+      "A87": "GEN_A87",
+      "A88": "GEN_A88",
+      "A89": "GEN_A89",
+      "A90": "GEN_A90",
+      "A91": "GEN_A91",
+      "A92": "GEN_A92",
+      "A93": "GEN_A93"
+    },
+    "live_update_generators": {
+      "A12": "GEN_A12",
+      "A20": "GEN_A20"
+    }
+  },
+  "term_link_validation": {
+    "status": "passed",
+    "validated_terms": [
+      "variabele-kosten",
+      "winst",
+      "marginale-kosten"
+    ],
+    "missing_terms": []
+  },
+  "or_prerequisite_guardrail": {
+    "status": "passed",
+    "unit": "A91",
+    "planned_needs": [
+      "A02"
+    ],
+    "guardrail": "A91 must not depend on both A90 and A12; question-level operation maps may route either A90 -> A91 or A12 -> A91."
+  },
+  "a20_usage_impact_audit": {
+    "status": "blocking_direct_a20_update",
+    "direct_a20_update_execution_ready": false,
+    "summary": "Active target exercise 4.1.2 uses A20 in a given-MK constant-cost context, so narrowing A20 to derived-MK-only would create a stale mapping unless a split/replacement plan updates that use.",
+    "live_a20_current_summary": {
+      "name": "MO = MK oplossen",
+      "needs": [
+        "A12",
+        "A13",
+        "A02"
+      ],
+      "procedure_requires_mk_derivation": true
+    },
+    "active_usage_classifications": [
+      {
+        "source": "references/authored/course-target-exercises.json",
+        "record_id": "3.2.2",
+        "classification": "derived_mk_required",
+        "evidence": "TK = 0.5Q^2 + 10Q + 500; subquestion asks students to write MK by differentiating TK, then set MO = MK."
+      },
+      {
+        "source": "references/authored/course-target-exercises.json",
+        "record_id": "3.3.3",
+        "classification": "derived_mk_required",
+        "evidence": "Monopoly procedure asks students to differentiate TO to MO, differentiate TK to MK, then set MO = MK."
+      },
+      {
+        "source": "references/authored/course-target-exercises.json",
+        "record_id": "4.1.2",
+        "classification": "given_mk_required",
+        "evidence": "Price-discrimination target gives MK = EUR10 constant and asks students to set MO = MK without deriving MK."
+      },
+      {
+        "source": "engines/skilltree/generators.js",
+        "record_id": "GEN_A20",
+        "classification": "generator_impact_review_required",
+        "evidence": "A20 has a live skill-tree generator; any semantic narrowing needs generator copy/procedure review before execution."
+      },
+      {
+        "source": "references/data/procedure-visual/inventory.json",
+        "record_id": "PV inventory A20 entries",
+        "classification": "derived_mk_supporting_context",
+        "evidence": "PV inventory treats A20 as strategically central to derive-MO/MK steps; compatible with derived-MK route but still requires review before changing the live unit."
+      }
+    ],
+    "required_route": "Hold direct A20 update in GATE-MTU-H2B. Route A20 to a later split/deprecate/replacement plan or an execution packet that also handles affected mappings."
+  },
+  "execution_ready_lanes": [
+    {
+      "lane_id": "MTUH2B-F19-VERBAL-EXTERNAL-COST",
+      "source_lane_id": "MTUH2A-Q1-F19-VERBAL-EXTERNAL-COST",
+      "action_type": "unit_add",
+      "unit_id": "F19",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q1-F19-VERBAL-EXTERNAL-COST').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate F19 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-F20-EXTERNAL-COST-EXAMPLE",
+      "source_lane_id": "MTUH2A-Q1-F20-EXTERNAL-COST-EXAMPLE",
+      "action_type": "unit_add",
+      "unit_id": "F20",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q1-F20-EXTERNAL-COST-EXAMPLE').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate F20 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A85-TO-POINT-CALCULATION",
+      "source_lane_id": "MTUH2A-Q2-A85-TO-POINT-CALCULATION",
+      "action_type": "unit_add",
+      "unit_id": "A85",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q2-A85-TO-POINT-CALCULATION').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A85 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A86-TVK-CONSTANT-VARIABLE-COST",
+      "source_lane_id": "MTUH2A-Q2-A86-TVK-CONSTANT-VARIABLE-COST",
+      "action_type": "unit_add",
+      "unit_id": "A86",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q2-A86-TVK-CONSTANT-VARIABLE-COST').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A86 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A87-UNKNOWN-FIXED-COST-FROM-PROFIT",
+      "source_lane_id": "MTUH2A-Q2-A87-UNKNOWN-FIXED-COST-FROM-PROFIT",
+      "action_type": "unit_add",
+      "unit_id": "A87",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q2-A87-UNKNOWN-FIXED-COST-FROM-PROFIT').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A87 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A88-SCALE-FACTOR-HANDLING",
+      "source_lane_id": "MTUH2A-Q2-A88-SCALE-FACTOR-HANDLING",
+      "action_type": "unit_add",
+      "unit_id": "A88",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q2-A88-SCALE-FACTOR-HANDLING').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A88 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A89-GO-AS-PRICE-RELATION",
+      "source_lane_id": "MTUH2A-Q3-A89-GO-AS-PRICE-RELATION",
+      "action_type": "unit_add",
+      "unit_id": "A89",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A89-GO-AS-PRICE-RELATION').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A89 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A90-MO-WITHOUT-DERIVATIVES",
+      "source_lane_id": "MTUH2A-Q3-A90-MO-WITHOUT-DERIVATIVES",
+      "action_type": "unit_add",
+      "unit_id": "A90",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A90-MO-WITHOUT-DERIVATIVES').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A90 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A12-DERIVATIVE-MO-UPDATE",
+      "source_lane_id": "MTUH2A-Q3-A12-DERIVATIVE-MO-UPDATE",
+      "action_type": "unit_update",
+      "unit_id": "A12",
+      "execution_ready": true,
+      "dry_run_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A12-DERIVATIVE-MO-UPDATE').update_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-update.js --id A12 --spec $spec --dry-run",
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A12-DERIVATIVE-MO-UPDATE').update_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-update.js --id A12 --spec $spec",
+      "rollback": "Restore the previous A12 JSON from git history with a reviewed unit-update rollback."
+    },
+    {
+      "lane_id": "MTUH2B-A91-MO-EQUALS-GIVEN-MK",
+      "source_lane_id": "MTUH2A-Q3-A91-MO-EQUALS-GIVEN-MK",
+      "action_type": "unit_add",
+      "unit_id": "A91",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A91-MO-EQUALS-GIVEN-MK').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A91 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A92-NEW-PRICE-AFTER-Q",
+      "source_lane_id": "MTUH2A-Q3-A92-NEW-PRICE-AFTER-Q",
+      "action_type": "unit_add",
+      "unit_id": "A92",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A92-NEW-PRICE-AFTER-Q').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A92 through a later reviewed rollback lane."
+    },
+    {
+      "lane_id": "MTUH2B-A93-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+      "source_lane_id": "MTUH2A-Q3-A93-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE",
+      "action_type": "unit_add",
+      "unit_id": "A93",
+      "execution_ready": true,
+      "cli_command_exact": "$plan = Get-Content -Raw reports\\mtu-hardening\\solo-q1-q3-cli-mutation-plan.json | ConvertFrom-Json; $spec = ($plan.mutation_lanes | Where-Object lane_id -eq 'MTUH2A-Q3-A93-PERCENTAGE-PRICE-CHANGE-AFTER-COST-CHANGE').proposed_spec | ConvertTo-Json -Depth 20 -Compress; node build-scripts\\references\\unit-add.js --spec $spec",
+      "rollback": "Revert the execution commit before dependent units are used, or deprecate A93 through a later reviewed rollback lane."
+    }
+  ],
+  "held_lanes": [
+    {
+      "lane_id": "MTUH2B-A20-DERIVED-MK-UPDATE",
+      "source_lane_id": "MTUH2A-Q3-A20-DERIVED-MK-UPDATE",
+      "unit_id": "A20",
+      "action_type": "unit_update_or_split",
+      "execution_ready": false,
+      "hold_reason": "A20 usage audit found active given-MK usage in target exercise 4.1.2; direct narrowing would make that mapping stale.",
+      "required_next_route": "GATE-MTU-H2B should route A20 to a later split/deprecate/replacement packet or require an execution packet that updates affected mappings."
+    }
+  ],
+  "expected_diff_scope_if_later_authorized": {
+    "direct_cli_write_files": [
+      "references/machine/micro-teaching-units.md",
+      "references/machine/micro-teaching-units.json"
+    ],
+    "post_execution_generated_files_may_refresh": [
+      "reports/json/*.json",
+      "reports/markdown/*.md",
+      "reports/internal-dashboard/*",
+      "reports/github-agent-index-*.json",
+      "reports/github-agent-index-*.md",
+      "references/data/source-document-registry.json",
+      "references/data/source_manifest.json",
+      "references/data/document_inventory.json",
+      "reports/url-index.md"
+    ],
+    "must_not_change": [
+      "references/external/",
+      "references/data/exam-ingestion/*-candidates.json",
+      "lesson output",
+      "target-exercise promotion records",
+      "candidate storage",
+      "student/product-use flags"
+    ]
+  },
+  "post_execution_validation_required_if_later_authorized": [
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js",
+    "node build-scripts/references/check-mtu-h2a-cli-mutation-plan.js",
+    "node build-scripts/reports/generate-all.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/reports/generate-reference-health.js",
+    "node build-scripts/reports/check-reference-health.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "review_recommendation": {
+    "recommended_gate_decision": "pass_with_conditions_for_unblocked_execution_only",
+    "recommended_authorized_next": "bounded CLI execution sprint for execution_ready_lanes only, unless GATE-MTU-H2B requires unit-add dry-run wrapper first",
+    "recommended_hold": "Do not execute A20 update/split from this gate."
+  }
+}

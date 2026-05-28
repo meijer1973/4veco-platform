@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-27
+Updated: 2026-05-28
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.89-gate-mtu-h2a-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2A closed as pass_with_conditions for execution-gate planning only. Top operational next action is MTU-H2B CLI execution gate packet preparation; no CLI execution, protected reference mutation, or product-use lane is authorized. |
+| References Team Roadmap | `v2.90-gate-mtu-h2b-cli-execution-review` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2B prepared the Solo q1-q3 CLI execution gate packet without mutation. Top operational next action is GATE-MTU-H2B human review; no CLI execution, protected reference mutation, or product-use lane is authorized before the gate closes. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H2B review | `v2.89-gate-mtu-h2a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2A closure | `v2.88-mtu-h2a-cli-mutation-planning` | `docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2A CLI mutation planning | `v2.87-gate-mtu-h2-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.87-gate-mtu-h2-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2 closure | `v2.86-mtu-h2-solo-micro-case-review` | `docs/roadmaps/outdated/reference-team-roadmap-v2.86-mtu-h2-solo-micro-case-review.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2B",
+  "title": "Solo q1-q3 CLI Execution Authorization Review",
+  "status": "review_packet_ready_no_mutation",
+  "generated": "2026-05-28",
+  "review_scope": "Review whether the MTU-H2B packet is adequate to authorize a later bounded CLI execution sprint for unblocked Solo q1-q3 MTU lanes only. Do not authorize A20 execution unless the active given-MK usage is resolved by an explicit split/replacement route.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.json",
+    "reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.md",
+    "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json",
+    "reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/gate-closure.json",
+    "references/machine/micro-teaching-units.json",
+    "references/authored/course-target-exercises.json",
+    "engines/skilltree/generators.js",
+    "references/data/procedure-visual/inventory.json",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/unit-update.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_facing_output": false
+  },
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "This gate reviews CLI execution authorization only; MTU-H2B itself did not execute mutation, mint units, update units, change lesson output, or authorize product use.",
+      "required_answer": "yes"
+    },
+    {
+      "id": "CAL-2",
+      "question": "Direct A20 update or split execution is not ready because active target exercise 4.1.2 uses A20 in a given-MK context; A20 must remain held unless a later gate names an explicit split/replacement and affected-mapping route.",
+      "required_answer": "yes"
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2B-Q1",
+      "topic": "ID availability and registry-state proof",
+      "preferred_option": "accept the ID availability proof for F19, F20, and A85-A93, with a final pre-execution collision check required"
+    },
+    {
+      "id": "MTUH2B-Q2",
+      "topic": "unit specs, generator fields, and term links",
+      "preferred_option": "accept the unblocked unit specs, generator-field proof, and term-link validation"
+    },
+    {
+      "id": "MTUH2B-Q3",
+      "topic": "unblocked execution command set",
+      "preferred_option": "authorize a later bounded CLI execution sprint for F19, F20, A85-A93, and the A12 update only"
+    },
+    {
+      "id": "MTUH2B-Q4",
+      "topic": "A12 derivative-MO update",
+      "preferred_option": "accept the A12 update as a clarification of the derivative MO route while preserving A90 as the non-calculus route"
+    },
+    {
+      "id": "MTUH2B-Q5",
+      "topic": "A20 usage impact audit",
+      "preferred_option": "hold direct A20 update/split execution and route A20 to a later split/deprecate/replacement packet"
+    },
+    {
+      "id": "MTUH2B-Q6",
+      "topic": "unit-add dry-run limitation",
+      "preferred_option": "decide whether direct unit-add execution is acceptable after gate authorization or whether a dry-run wrapper must be built first"
+    },
+    {
+      "id": "MTUH2B-Q7",
+      "topic": "expected diff, rollback, audit, and validation proof",
+      "preferred_option": "require command log, pre/post diff, rollback route, audit evidence, unit-index validation, reports, reference health, Jest, and no-unintended-diff proof"
+    },
+    {
+      "id": "MTUH2B-Q8",
+      "topic": "next sprint authority",
+      "preferred_option": "authorize a bounded CLI execution sprint for unblocked lanes only, or hold until unit-add dry-run tooling exists"
+    },
+    {
+      "id": "MTUH2B-Q9",
+      "topic": "mutation and product authority now",
+      "preferred_option": "no mutation or product authority from the review packet itself"
+    }
+  ],
+  "stop_conditions": [
+    "Stop if hand edits to references/machine/ or references/external/ are authorized.",
+    "Stop if direct A20 update/split execution is authorized while active given-MK usage in target exercise 4.1.2 remains unresolved.",
+    "Stop if q1 is treated as requiring full MPC/MSC or welfare-loss machinery.",
+    "Stop if q2 is treated as requiring full TO-function construction.",
+    "Stop if q3 is treated as requiring MK derivation when MK is given or as requiring a calculus-only MO route.",
+    "Stop if q1 or q2 answer-form needs are hidden instead of routed to MTU-H4.",
+    "Stop if D07 broader incidence/pass-through work is mutated from this gate instead of routed to MTU-H3 or a later named lane.",
+    "Stop if unit-add dry-run limitations are hidden from the execution authorization decision.",
+    "Stop if candidate storage, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized."
+  ],
+  "recommended_next_action": "Run the formal GATE-MTU-H2B human review before any CLI execution, unit minting, unit update execution, unit split execution, candidate storage, lesson handoff, or student/product use."
+}
