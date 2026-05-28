@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-28T14:29:29.512Z",
+  "generated_on": "2026-05-28T14:57:16.156Z",
   "status": "pass",
   "summary": {
-    "record_count": 329,
-    "source_manifest_file_count": 334,
+    "record_count": 330,
+    "source_manifest_file_count": 335,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 244,
+      "governance_data": 245,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -28,7 +28,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 201,
+      "sprint_metadata": 202,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -44,7 +44,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 242,
+      "governance_data": 243,
       "planning": 1,
       "schema_contract": 28
     },
@@ -52,7 +52,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 278
+      "not_public_citation_source": 279
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -5333,7 +5333,7 @@
       "title": "MTU H3.Plan",
       "source_type": "sprint_metadata",
       "authority_level": "governance_data",
-      "source_version": "sha256:761a745427802c99cd8788463c96b3765e6b862d405ee501f06ac21432f1f036",
+      "source_version": "sha256:bca642b316ed3e7acb24702a9f665a2f7183d2d8bbfd8af8d3a921663054fc11",
       "status": "governance_data",
       "owner": "references_team",
       "citation_policy": "cite_as_governance_record_only",
@@ -5342,8 +5342,46 @@
       "generated_status": "generated_or_sprint_metadata",
       "edit_policy": "sprint_process",
       "refresh_policy": "sprint_lifecycle",
-      "source_hash": "761a745427802c99cd8788463c96b3765e6b862d405ee501f06ac21432f1f036",
-      "size_bytes": 2453,
+      "source_hash": "bca642b316ed3e7acb24702a9f665a2f7183d2d8bbfd8af8d3a921663054fc11",
+      "size_bytes": 2658,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h3-result",
+      "path": "references/data/sprints/MTU-H3.result.json",
+      "title": "MTU H3.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:551117a8335f9f9f7417347bdc909dd0975d65685b731018e1fcab71bc6ef46d",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "551117a8335f9f9f7417347bdc909dd0975d65685b731018e1fcab71bc6ef46d",
+      "size_bytes": 3116,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

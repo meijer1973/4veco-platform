@@ -17,6 +17,8 @@ const PACKET_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h3-incidence-
 const REVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'review-packet.json');
 const REVIEW_MD = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'review-packet.md');
 const BUNDLE_URLS = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'bundle-urls.md');
+const HUMAN_INTERVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'human-interview.json');
+const GATE_CLOSURE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'gate-closure.json');
 const H2J_RESULT = path.join(ROOT, 'reports', 'sprints', 'MTU-H2J-result.md');
 const UNITS_JSON = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const TARGET_EXERCISES = path.join(ROOT, 'references', 'authored', 'course-target-exercises.json');
@@ -173,6 +175,31 @@ requireIncludes(bundle, 'review-packet.json', 'bundle urls');
 requireIncludes(h2jResult, 'MTU-H3', 'H2J result');
 requireIncludes(roadmap, 'GATE-MTU-H3');
 requireIncludes(roadmap, 'MTU-H3 | Incidence Pass-Through Skill Family Review | yes');
-requireIncludes(roadmap, 'v3.03-mtu-h3-review-packet');
+if (!/v3\.0[34]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions)/.test(roadmap)) {
+  fail('roadmap must be in MTU-H3 review or post-GATE-MTU-H3 closure lifecycle state');
+}
+
+if (fs.existsSync(GATE_CLOSURE_JSON)) {
+  const closure = readJson(GATE_CLOSURE_JSON);
+  const interview = readJson(HUMAN_INTERVIEW_JSON);
+  if (closure.status !== 'pass_with_conditions') fail('H3 closure status must be pass_with_conditions');
+  if (closure.authorized_next.sprint_id !== 'MTU-H3A') fail('H3 closure must authorize MTU-H3A next');
+  if (closure.authorized_next.execution_authorized !== false) fail('H3 closure must not authorize execution');
+  if (closure.reviewed_remote_commit !== '316c299db215898760e3c6da430b70b055b0b5e2') {
+    fail('H3 closure must record reviewed remote commit');
+  }
+  if (interview.verdict !== 'pass_with_conditions_for_routing_only_no_mutation') {
+    fail('H3 human interview verdict mismatch');
+  }
+  for (const lane of ['D07', 'D41', 'D42', 'D43', 'D44', 'D45', 'D46']) {
+    if (!JSON.stringify(closure.accepted_routing).includes(lane)) fail(`H3 closure must mention ${lane}`);
+  }
+  if (closure.authority_boundary.d07_mutation_authorized !== false) fail('H3 closure must not authorize D07 mutation');
+  if (closure.authority_boundary.unit_minting_authorized !== false) fail('H3 closure must not authorize unit minting');
+  if (closure.authority_boundary.target_exercise_mutation_authorized !== false) {
+    fail('H3 closure must not authorize target-exercise mutation');
+  }
+  requireIncludes(roadmap, 'MTU-H3A | Incidence Pass-Through CLI-Mutation Planning Packet | no');
+}
 
 console.log('OK MTU-H3 incidence/pass-through review packet');

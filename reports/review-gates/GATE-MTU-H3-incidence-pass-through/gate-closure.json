@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3-incidence-pass-through",
+  "sprint_id": "MTU-H3",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_cli_mutation_planning_packet_only",
+  "decision": "PASS WITH CONDITIONS for incidence/pass-through family routing only; authorize only a later bounded CLI-mutation planning packet",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "316c299db215898760e3c6da430b70b055b0b5e2",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H3-incidence-pass-through/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H3-incidence-pass-through/review-packet.md",
+  "family_review_packet": "reports/mtu-hardening/mtu-h3-incidence-pass-through-family-review.json",
+  "summary": "GATE-MTU-H3 accepted the incidence/pass-through lane architecture as routing only. D07 should be narrowed to tax afwentelingspercentage / percentage burden, with D41-D46 or equivalents planned for tax wedge labeling, tax burden amounts, subsidy effective prices, subsidy benefit-sharing, relative elasticity explanation, and cost-shock pass-through share. No mutation or product use is authorized.",
+  "accepted_routing": [
+    {
+      "lane": "D07",
+      "decision": "narrow",
+      "scope": "tax afwentelingspercentage / percentage burden calculation"
+    },
+    {
+      "lane": "D41",
+      "decision": "plan_equivalent",
+      "scope": "tax wedge and Pc/Pp graphical labeling"
+    },
+    {
+      "lane": "D42",
+      "decision": "plan_equivalent",
+      "scope": "tax burden amounts in euros"
+    },
+    {
+      "lane": "D43",
+      "decision": "plan_equivalent",
+      "scope": "subsidy equilibrium and effective prices"
+    },
+    {
+      "lane": "D44",
+      "decision": "plan_equivalent",
+      "scope": "subsidy benefit-sharing"
+    },
+    {
+      "lane": "D45",
+      "decision": "plan_equivalent",
+      "scope": "incidence explanation with relative elasticities"
+    },
+    {
+      "lane": "D46",
+      "decision": "plan_equivalent",
+      "scope": "cost-shock pass-through share distinct from A93"
+    },
+    {
+      "lane": "A93",
+      "decision": "keep_bounded",
+      "scope": "percentage price change after cost change only"
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "next_packet_must_include_exact_specs_for_narrowed_d07_and_d41_d46_or_equivalents",
+    "next_packet_must_decide_whether_d07_covers_consumer_and_producer_percentage_shares_or_only_consumer_afwenteling",
+    "next_packet_must_include_exact_mapping_proposal_for_3_1_1_3_1_2_and_3_1_3",
+    "d07_should_not_require_elasticity_explanation",
+    "d45_should_route_to_both_demand_and_supply_elasticity_knowledge",
+    "d41_should_not_import_welfare_area_shading_unless_task_asks_for_areas",
+    "a93_boundary_proof_required",
+    "no_projection_refresh_before_authorized_source_mutation",
+    "no_product_or_lesson_output_authority"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_gate": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_gate": false,
+    "d07_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "D07 mixes percentage, burden, and elasticity.",
+      "severity": "high",
+      "resolution": "Next planning packet must narrow D07 and split amount and elasticity lanes."
+    },
+    {
+      "issue": "3.1.1 over-triggers D07.",
+      "severity": "high",
+      "resolution": "Next planning packet must plan D41/equivalent and mapping update."
+    },
+    {
+      "issue": "3.1.2 needs amount plus percentage.",
+      "severity": "medium-high",
+      "resolution": "Next planning packet must distinguish D42/equivalent from narrowed D07."
+    },
+    {
+      "issue": "Subsidy incidence is missing.",
+      "severity": "medium-high",
+      "resolution": "Next planning packet must plan D43/D44 or equivalent if target operation requires subsidy incidence."
+    },
+    {
+      "issue": "A93/incidence boundary risk.",
+      "severity": "high",
+      "resolution": "A93 remains bounded to price percentage change; D46/equivalent handles true cost-shock pass-through share."
+    },
+    {
+      "issue": "Elasticity explanation under-specified.",
+      "severity": "medium-high",
+      "resolution": "Next planning packet must plan D45/equivalent with demand and supply elasticity route."
+    },
+    {
+      "issue": "Projection/source boundary.",
+      "severity": "medium",
+      "resolution": "Mapping writes remain authored-reference mutations and projections refresh only after authorized source mutation."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H3A",
+    "name": "Incidence Pass-Through CLI-Mutation Planning Packet",
+    "authority": "prepare a later bounded CLI-mutation planning packet for accepted H3 lanes only; no execution",
+    "execution_authorized": false
+  }
+}

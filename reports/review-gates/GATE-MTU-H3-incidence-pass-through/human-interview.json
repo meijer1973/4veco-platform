@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3-incidence-pass-through",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "316c299db215898760e3c6da430b70b055b0b5e2",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_for_routing_only_no_mutation",
+  "calibration_answers": [
+    {
+      "id": "MTUH3-C1",
+      "answer": "yes",
+      "notes": "Gate reviews incidence/pass-through routing only and does not authorize mutation, target-exercise writes, projection refresh, PV promotion, lesson output, or product use."
+    },
+    {
+      "id": "MTUH3-C2",
+      "answer": "yes_with_closure_commit_hash",
+      "notes": "The H3 packet and evidence were fetchable remotely. Closure records reviewed commit 316c299db215898760e3c6da430b70b055b0b5e2 as the satisfied remote proof."
+    },
+    {
+      "id": "MTUH3-C3",
+      "answer": "yes",
+      "notes": "A93 remains a percentage price-change unit, not a general incidence or pass-through-share unit."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH3-Q1",
+      "decision": "narrow_d07_to_tax_afwentelingspercentage_percentage_burden",
+      "rationale": "D07 currently mixes percentage calculation, producer remainder, and elasticity explanation. Keep D07 for the percentage lane and route other operations separately."
+    },
+    {
+      "id": "MTUH3-Q2",
+      "decision": "route_3_1_1_away_from_d07_toward_d41_equivalent",
+      "rationale": "3.1.1 asks for tax-shifted supply, new consumer/producer prices, and a tax wedge graph, not afwentelingspercentage."
+    },
+    {
+      "id": "MTUH3-Q3",
+      "decision": "split_tax_burden_amounts_and_percentage",
+      "rationale": "3.1.2 asks both tax burden amounts and afwentelingspercentage. Amounts should be calculated before percentage conversion."
+    },
+    {
+      "id": "MTUH3-Q4",
+      "decision": "plan_dedicated_subsidy_incidence_lanes",
+      "rationale": "3.1.3 has subsidy effective prices, subsidy cost, and DWL, but no dedicated subsidy incidence or benefit-sharing unit. Welfare-loss units do not replace subsidy incidence."
+    },
+    {
+      "id": "MTUH3-Q5",
+      "decision": "keep_a93_bounded_and_plan_d46_only_for_true_cost_shock_pass_through_share",
+      "rationale": "A93 calculates percentage price change after a cost change; pass-through share uses the cost shock as denominator and is conceptually different."
+    },
+    {
+      "id": "MTUH3-Q6",
+      "decision": "plan_d41_for_tax_wedge_pc_pp_labeling_keep_welfare_areas_separate",
+      "rationale": "Existing welfare-area units cover surplus/DWL areas, but consumer price, producer price, and tax wedge labeling is a distinct representation operation."
+    },
+    {
+      "id": "MTUH3-Q7",
+      "decision": "move_relative_elasticity_explanation_to_d45_equivalent",
+      "rationale": "D07 depends on demand elasticity only but asks students to explain distribution via demand and supply elasticity; that is too broad for a percentage-calculation unit."
+    },
+    {
+      "id": "MTUH3-Q8",
+      "decision": "authorize_only_later_bounded_cli_mutation_planning_packet_no_execution",
+      "rationale": "The next packet should provide exact specs, mapping changes, rollback, validation, and generator/PV boundaries."
+    },
+    {
+      "id": "MTUH3-Q9",
+      "decision": "keep_authored_mapping_writes_and_generated_projection_refresh_behind_later_authorization",
+      "rationale": "Target-exercise mapping changes are authored-reference mutations; generated projections refresh only after authorized source mutation."
+    },
+    {
+      "id": "MTUH3-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "rationale": "No D07 update, D41-D46 minting, target-exercise mutation, projection refresh, PV promotion, lesson output, or product use is authorized now."
+    }
+  ],
+  "accepted_lane_architecture": [
+    {
+      "lane": "D07",
+      "scope": "Heffing afwentelingspercentage berekenen",
+      "core": "Calculate consumer/producer percentage shares from P0, Pc/Pp, and tax amount."
+    },
+    {
+      "lane": "D41",
+      "scope": "Belastingwig en Pc/Pp grafisch labelen",
+      "core": "Identify and label consumer price, producer price, tax wedge, and relevant Q in a graph."
+    },
+    {
+      "lane": "D42",
+      "scope": "Belastingdruk in euro's berekenen",
+      "core": "Calculate euro burden for consumer and producer before percentage conversion."
+    },
+    {
+      "lane": "D43",
+      "scope": "Subsidie-evenwicht en effectieve prijzen bepalen",
+      "core": "Determine Pc/Pp and Q after subsidy."
+    },
+    {
+      "lane": "D44",
+      "scope": "Subsidievoordeel verdelen tussen consument en producent",
+      "core": "Calculate benefit-sharing from subsidy."
+    },
+    {
+      "lane": "D45",
+      "scope": "Incidentie verklaren met relatieve elasticiteiten",
+      "core": "Explain why the relatively less elastic side bears more tax burden or captures subsidy benefit."
+    },
+    {
+      "lane": "D46",
+      "scope": "Kostenstijging doorberekenen als pass-through share",
+      "core": "Calculate pass-through share of a cost shock; keep distinct from A93 price-percentage change."
+    }
+  ],
+  "conditions_for_next_planning_packet": [
+    "Exact proposed specs for narrowed D07 and D41-D46.",
+    "Decision whether D07 keeps both consumer and producer percentage shares or only consumer afwenteling.",
+    "Exact mapping proposal: 3.1.1 remove D07 and add D41/equivalent; 3.1.2 keep narrowed D07 and add D42/equivalent; 3.1.3 add D43/D44 only if target operation requires subsidy incidence.",
+    "Dependency audit: D07 should not require elasticity explanation; D45 should include or route to both demand and supply elasticity knowledge; D41 should not import welfare-area shading unless the task asks for areas.",
+    "A93 boundary proof: A93 remains price percentage change; D46 handles pass-through share only when denominator is cost shock.",
+    "No projection refresh before authorized source mutation."
+  ],
+  "quality_log": [
+    {
+      "issue": "D07 mixes percentage, burden, and elasticity.",
+      "severity": "high",
+      "next_action": "Narrow D07 and split amount and elasticity lanes.",
+      "proof_required": "New D07 spec has one primary operation."
+    },
+    {
+      "issue": "3.1.1 over-triggers D07.",
+      "severity": "high",
+      "next_action": "Plan D41 and mapping update.",
+      "proof_required": "3.1.1 no longer requires afwentelingspercentage."
+    },
+    {
+      "issue": "3.1.2 needs amount plus percentage.",
+      "severity": "medium_high",
+      "next_action": "Add D42 plus narrowed D07.",
+      "proof_required": "Mapping distinguishes amount from percentage."
+    },
+    {
+      "issue": "Subsidy incidence is missing.",
+      "severity": "medium_high",
+      "next_action": "Plan D43/D44.",
+      "proof_required": "3.1.3 route covers effective prices and benefit-sharing if required."
+    },
+    {
+      "issue": "A93/incidence boundary risk.",
+      "severity": "high",
+      "next_action": "Keep A93 bounded and plan D46 separately.",
+      "proof_required": "No pass-through-share task maps to A93 alone."
+    },
+    {
+      "issue": "Elasticity explanation under-specified.",
+      "severity": "medium_high",
+      "next_action": "Plan D45 with demand/supply elasticity route.",
+      "proof_required": "D07 no longer contains hidden elasticity explanation."
+    },
+    {
+      "issue": "Projection/source boundary.",
+      "severity": "medium",
+      "next_action": "Keep mapping writes authored and projections downstream.",
+      "proof_required": "No generated refresh before source mutation."
+    }
+  ]
+}
