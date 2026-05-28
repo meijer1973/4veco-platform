@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T09:49:42.850Z
+Generated: 2026-05-28T10:02:39.563Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1915
+Files indexed: 1924
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 307
+Count: 308
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -329,6 +329,7 @@ Count: 307
 - build-scripts/references/derive-exam-codes.js
 - build-scripts/references/download-exams.js
 - build-scripts/references/exam-question-gap-audit.js
+- build-scripts/references/execute-mtu-h2f-conditional-lanes.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
@@ -595,7 +596,7 @@ Count: 114
 
 ## references
 
-Count: 323
+Count: 324
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -709,6 +710,7 @@ Count: 323
 - references/data/sprints/MTU-H2D.result.json
 - references/data/sprints/MTU-H2E.plan.json
 - references/data/sprints/MTU-H2E.result.json
+- references/data/sprints/MTU-H2F.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -923,7 +925,7 @@ Count: 323
 
 ## reports
 
-Count: 916
+Count: 922
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1232,6 +1234,10 @@ Count: 916
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.json
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.md
 - reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/gate-closure.json
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/gate-closure.md
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/human-interview.json
+- reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1626,6 +1632,8 @@ Count: 916
 - reports/sprints/MTU-H2E-diff-summary.md
 - reports/sprints/MTU-H2E-plan.md
 - reports/sprints/MTU-H2E-result.md
+- reports/sprints/MTU-H2F-baseline.md
+- reports/sprints/MTU-H2F-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1862,7 +1870,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 240
+Count: 241
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1961,6 +1969,7 @@ Count: 240
 - docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.94-gate-mtu-h2d-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

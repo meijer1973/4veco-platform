@@ -147,13 +147,22 @@ requireIncludes(packet.registry_state_proof.proposed_new_ids_checked_absent || [
 requireIncludes(packet.registry_state_proof.live_update_targets_checked_present || [], expectedUpdateTargets, 'registry_state_proof.live_update_targets_checked_present');
 
 const h2cReducedExecutionIds = ['F19', 'F20', 'A85', 'A86', 'A87', 'A91'];
+const h2fConditionalExecutionIds = ['A88', 'A89', 'A90', 'A92', 'A93'];
 const h2cReducedExecutionPresent = h2cReducedExecutionIds.some((id) => byId.has(id));
 if (h2cReducedExecutionPresent && !h2cReducedExecutionIds.every((id) => byId.has(id))) {
   fail('MTU-H2C reduced execution state is partial; expected all clean IDs or none');
 }
+const h2fConditionalExecutionPresent = h2fConditionalExecutionIds.some((id) => byId.has(id));
+if (h2fConditionalExecutionPresent && !h2fConditionalExecutionIds.every((id) => byId.has(id))) {
+  fail('MTU-H2F conditional execution state is partial; expected all conditional IDs or none');
+}
 for (const id of expectedNewIds) {
-  if (byId.has(id) && !h2cReducedExecutionIds.includes(id)) {
-    fail(`proposed new ID ${id} already exists in live MTU registry`);
+  if (
+    byId.has(id) &&
+    !h2cReducedExecutionIds.includes(id) &&
+    !h2fConditionalExecutionIds.includes(id)
+  ) {
+    fail(`proposed new ID ${id} already exists in live MTU registry outside later authorized execution`);
   }
 }
 for (const id of expectedUpdateTargets) {
@@ -238,10 +247,12 @@ for (const lane of executionReady) {
     const spec = sourceLane.proposed_spec;
     if (!spec || spec.id !== lane.unit_id) fail(`${lane.lane_id} source proposed_spec must match unit_id`);
     if (byId.has(spec.id)) {
-      if (!h2cReducedExecutionIds.includes(spec.id)) {
-        fail(`${lane.lane_id} proposed_spec ID already exists outside MTU-H2C reduced execution`);
+      if (!h2cReducedExecutionIds.includes(spec.id) && !h2fConditionalExecutionIds.includes(spec.id)) {
+        fail(`${lane.lane_id} proposed_spec ID already exists outside later authorized execution`);
       }
-      requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+      if (h2cReducedExecutionIds.includes(spec.id)) {
+        requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+      }
     } else {
       const specErrors = validateSpec(spec, knownIds);
       if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
@@ -256,7 +267,11 @@ for (const lane of executionReady) {
     if (!sourceLane.update_spec || lane.unit_id !== sourceLane.target_live_unit_id) {
       fail(`${lane.lane_id} source update_spec must match target_live_unit_id`);
     }
-    Object.assign(simulatedById.get(lane.unit_id), sourceLane.update_spec);
+    if (lane.unit_id === 'A12' && h2fConditionalExecutionPresent) {
+      requireIncludes(simulatedById.get('A12').exam_codes || [], ['A2.11'], 'live A12 exam_codes after H2F');
+    } else {
+      Object.assign(simulatedById.get(lane.unit_id), sourceLane.update_spec);
+    }
   } else {
     fail(`${lane.lane_id} unsupported action_type ${lane.action_type}`);
   }
@@ -451,8 +466,8 @@ if (humanInterviewJson || gateClosureJson) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
+if (!/\| (MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2G/MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');

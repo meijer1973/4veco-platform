@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2F",
+  "status": "completed",
+  "completed_on": "2026-05-28",
+  "plan": "reports/sprints/MTU-H2F-plan.md",
+  "baseline": "reports/sprints/MTU-H2F-baseline.md",
+  "result": "reports/sprints/MTU-H2F-result.md",
+  "diff_summary": "reports/sprints/MTU-H2F-diff-summary.md",
+  "execution_log": "reports/sprints/MTU-H2F-execution-log.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/gate-closure.json",
+  "reviewed_remote_commit": "52ffc484b270182964283e20cd696aca6ce5f9e6",
+  "protected_reference_data_changed": true,
+  "protected_reference_change_method": "reference CLI only",
+  "machine_reference_mutation_executed": true,
+  "external_source_mutated": false,
+  "unit_minting_executed": true,
+  "unit_update_executed": true,
+  "unit_split_executed": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "lesson_output_mutated": false,
+  "target_exercise_promoted": false,
+  "executed_lanes": [
+    "A12",
+    "A88",
+    "A89",
+    "A90",
+    "A92",
+    "A93"
+  ],
+  "held_lanes": [
+    "A20"
+  ],
+  "generator_blocked_or_missing_implementation": [
+    "GEN_A85",
+    "GEN_A86",
+    "GEN_A87",
+    "GEN_A88",
+    "GEN_A89",
+    "GEN_A90",
+    "GEN_A91",
+    "GEN_A92",
+    "GEN_A93"
+  ],
+  "student_facing_skilltree_use_authorized": false,
+  "pv_projection_authorized": false,
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2a-cli-mutation-plan.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2-solo-cases.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2F-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2F --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2G",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "open_follow_ups": [
+    "Prepare MTU-H2G for the held A20 split/replacement and affected-mapping packet.",
+    "Keep A20 out of MTU-H3 unless a separate reviewed A20 route authorizes changes.",
+    "Implement or review generators for GEN_A85 through GEN_A93 before student-facing skill-tree exposure."
+  ]
+}

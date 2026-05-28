@@ -168,13 +168,22 @@ requireIncludes(plan.proposed_live_update_targets || [], expectedUpdateTargets, 
 
 const byId = new Map(units.map((unit) => [unit.id, unit]));
 const h2cReducedExecutionIds = ['F19', 'F20', 'A85', 'A86', 'A87', 'A91'];
+const h2fConditionalExecutionIds = ['A88', 'A89', 'A90', 'A92', 'A93'];
 const h2cReducedExecutionPresent = h2cReducedExecutionIds.some((id) => byId.has(id));
 if (h2cReducedExecutionPresent && !h2cReducedExecutionIds.every((id) => byId.has(id))) {
   fail('MTU-H2C reduced execution state is partial; expected all clean IDs or none');
 }
+const h2fConditionalExecutionPresent = h2fConditionalExecutionIds.some((id) => byId.has(id));
+if (h2fConditionalExecutionPresent && !h2fConditionalExecutionIds.every((id) => byId.has(id))) {
+  fail('MTU-H2F conditional execution state is partial; expected all conditional IDs or none');
+}
 for (const id of expectedNewIds) {
-  if (byId.has(id) && !h2cReducedExecutionIds.includes(id)) {
-    fail(`proposed new ID ${id} already exists in live MTU registry`);
+  if (
+    byId.has(id) &&
+    !h2cReducedExecutionIds.includes(id) &&
+    !h2fConditionalExecutionIds.includes(id)
+  ) {
+    fail(`proposed new ID ${id} already exists in live MTU registry outside later authorized execution`);
   }
 }
 for (const id of expectedUpdateTargets) {
@@ -214,10 +223,12 @@ for (const lane of lanes) {
       fail(`${lane.lane_id} must include proposed_spec matching proposed_unit_id`);
     }
     if (byId.has(spec.id)) {
-      if (!h2cReducedExecutionIds.includes(spec.id)) {
-        fail(`${lane.lane_id} proposed_spec ID already exists outside MTU-H2C reduced execution`);
+      if (!h2cReducedExecutionIds.includes(spec.id) && !h2fConditionalExecutionIds.includes(spec.id)) {
+        fail(`${lane.lane_id} proposed_spec ID already exists outside later authorized execution`);
       }
-      requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+      if (h2cReducedExecutionIds.includes(spec.id)) {
+        requireLiveMatchesSpec(byId.get(spec.id), spec, lane.lane_id);
+      }
     } else {
       const specErrors = validateSpec(spec, knownIds);
       if (specErrors.length) fail(`${lane.lane_id} proposed_spec invalid: ${specErrors.join('; ')}`);
@@ -471,8 +482,8 @@ for (const requiredText of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
+if (!/\| (MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D|MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2G/MTU-H2F/GATE-MTU-H2E/MTU-H2E/GATE-MTU-H2D/MTU-H2D/MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
 }
 
 console.log('OK MTU-H2A CLI mutation plan: reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json');

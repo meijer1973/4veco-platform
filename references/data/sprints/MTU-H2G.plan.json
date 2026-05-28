@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2G",
+  "plan": "reports/sprints/MTU-H2G-plan.md",
+  "baseline": "reports/sprints/MTU-H2G-baseline.md",
+  "status": "planned",
+  "created": "2026-05-28",
+  "source_sprint": "references/data/sprints/MTU-H2F.result.json",
+  "protected_reference_data_changes_allowed": false,
+  "held_unit": "A20",
+  "active_replacement_candidate": "A91",
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2G-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2G",
+    "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+    "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "git diff --check"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  }
+}

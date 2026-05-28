@@ -73,6 +73,44 @@ function validateNewSpec(spec, knownIds, context) {
   if (errors.length) fail(`${context} revised_spec invalid: ${errors.join('; ')}`);
 }
 
+function requireLiveMatchesSpec(live, spec, context) {
+  for (const key of [
+    'id',
+    'name',
+    'kern',
+    'mastery_target',
+    'prior_learning',
+    'zero_needs_status',
+    'generator',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && live[key] !== spec[key]) {
+      fail(`${context} live ${key} must match revised spec after H2F execution`);
+    }
+  }
+  for (const key of [
+    'needs',
+    'exam_codes',
+    'aspects',
+    'terms',
+    'procedure',
+    'pitfalls',
+  ]) {
+    if (
+      Object.prototype.hasOwnProperty.call(spec, key) &&
+      !sameArray(live[key] || [], spec[key] || [])
+    ) {
+      fail(`${context} live ${key} must match revised spec after H2F execution`);
+    }
+  }
+  if (spec.zero_needs_review) {
+    const liveReview = JSON.stringify(live.zero_needs_review || {});
+    const specReview = JSON.stringify(spec.zero_needs_review);
+    if (liveReview !== specReview) {
+      fail(`${context} live zero_needs_review must match revised spec after H2F execution`);
+    }
+  }
+}
+
 const resolution = readJson(RESOLUTION_JSON_PATH);
 const resolutionMd = readText(RESOLUTION_MD_PATH);
 const reviewPacket = readJson(REVIEW_PACKET_JSON_PATH);
@@ -124,14 +162,28 @@ const byId = new Map(units.map((unit) => [unit.id, unit]));
 const knownIds = new Set(byId.keys());
 const h2cIds = ['F19', 'F20', 'A85', 'A86', 'A87', 'A91'];
 const absentIds = ['A88', 'A89', 'A90', 'A92', 'A93'];
+function validateRevisedSpec(spec, context) {
+  if (byId.has(spec.id)) {
+    requireLiveMatchesSpec(byId.get(spec.id), spec, context);
+  } else {
+    validateNewSpec(spec, knownIds, context);
+  }
+}
 requireIncludes(resolution.post_h2c_registry_expectations.must_exist_from_h2c || [], h2cIds, 'post_h2c_registry_expectations.must_exist_from_h2c');
 requireIncludes(resolution.post_h2c_registry_expectations.must_remain_absent || [], absentIds, 'post_h2c_registry_expectations.must_remain_absent');
 requireIncludes(resolution.post_h2c_registry_expectations.must_remain_live_update_targets || [], ['A12', 'A20'], 'post_h2c_registry_expectations.must_remain_live_update_targets');
 for (const id of h2cIds) {
   if (!byId.has(id)) fail(`expected MTU-H2C unit ${id} to exist`);
 }
-for (const id of absentIds) {
-  if (byId.has(id)) fail(`${id} must remain absent after MTU-H2D`);
+const h2fPresentIds = absentIds.filter((id) => byId.has(id));
+const h2fExecuted = h2fPresentIds.length === absentIds.length;
+if (h2fPresentIds.length && !h2fExecuted) {
+  fail(`H2F execution state is partial; expected all or none of ${absentIds.join(', ')} live`);
+}
+if (!h2fExecuted) {
+  for (const id of absentIds) {
+    if (byId.has(id)) fail(`${id} must remain absent after MTU-H2D and before H2F execution`);
+  }
 }
 for (const id of ['A12', 'A20']) {
   if (!byId.has(id)) fail(`${id} must remain live`);
@@ -206,14 +258,14 @@ if (!sameArray(a88.revised_spec.needs, [])) fail('A88 revised needs must be empt
 if (a88.revised_spec.zero_needs_status !== 'true_zero') fail('A88 must carry true_zero review');
 if (a88.revised_spec.generator !== 'GEN_A88') fail('A88 generator must be GEN_A88');
 if ((a88.revised_spec.needs || []).includes('A61')) fail('A88 must not depend on A61');
-validateNewSpec(a88.revised_spec, knownIds, 'A88');
+validateRevisedSpec(a88.revised_spec, 'A88');
 
 const a89 = laneById(lanes, 'A89');
 if (!sameArray(a89.revised_spec.needs, [])) fail('A89 revised needs must be empty');
 if (a89.revised_spec.zero_needs_status !== 'true_zero') fail('A89 must carry true_zero review');
 if (a89.revised_spec.generator !== 'GEN_A89') fail('A89 generator must be GEN_A89');
 if ((a89.revised_spec.needs || []).includes('A04')) fail('A89 must not depend on A04');
-validateNewSpec(a89.revised_spec, knownIds, 'A89');
+validateRevisedSpec(a89.revised_spec, 'A89');
 
 const a90 = laneById(lanes, 'A90');
 if (!sameArray(a90.revised_spec.needs, ['A89'])) fail('A90 revised needs must be A89 only');
@@ -224,10 +276,12 @@ requireIncludes(a90.deferred_variants || [], [
   'MO bepalen uit opbrengsttabel zonder afgeleiden',
   'MO bepalen uit grafische bron zonder afgeleiden',
 ], 'A90 deferred_variants');
+validateRevisedSpec(a90.revised_spec, 'A90');
 
 const a92 = laneById(lanes, 'A92');
 if (!sameArray(a92.revised_spec.needs, ['A04', 'A89'])) fail('A92 revised needs must be A04,A89');
 if (a92.disposition !== 'revise_for_later_execution_gate_after_a89') fail('A92 disposition must depend on A89 acceptance');
+validateRevisedSpec(a92.revised_spec, 'A92');
 
 const a93 = laneById(lanes, 'A93');
 if (!sameArray(a93.revised_spec.needs, ['A38', 'A92'])) fail('A93 revised needs must be A38,A92');
@@ -236,6 +290,7 @@ if (!(a93.revised_spec.pitfalls || []).some((pitfall) => pitfall.includes('niet 
   fail('A93 must keep price-change versus pass-through pitfall');
 }
 if (!a93.deferred_route || a93.deferred_route.route !== 'MTU-H3') fail('A93 must defer broader incidence to MTU-H3');
+validateRevisedSpec(a93.revised_spec, 'A93');
 
 requireArray(resolution, 'quality_log', 'resolution', 6);
 requireArray(resolution, 'deferred_visible_dependencies', 'resolution', 3);
@@ -461,8 +516,8 @@ for (const requiredText of ['A12', 'A20', 'A88', 'A89', 'A90', 'A92', 'A93']) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2F, GATE-MTU-H2E, MTU-H2E, GATE-MTU-H2D, or MTU-H2D for H2D lifecycle');
+if (!/\| (MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2G, MTU-H2F, GATE-MTU-H2E, MTU-H2E, GATE-MTU-H2D, or MTU-H2D for H2D lifecycle');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');

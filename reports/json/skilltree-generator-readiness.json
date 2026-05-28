@@ -4,7 +4,7 @@
   "sprint_id": "RX.6",
   "gate_id": "GATE-RX6-skilltree-generator-integration",
   "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
-  "generated_on": "2026-05-03T09:58:20.524Z",
+  "generated_on": "2026-05-28T09:55:11.146Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -22,13 +22,13 @@
     "references/data/sprints/RX.6-generator-blocked-units.json"
   ],
   "summary": {
-    "active_a_domain_count": 81,
-    "interactive_skill_count": 44,
-    "generator_blocked_count": 37,
-    "explicit_generator_block_count": 37,
+    "active_a_domain_count": 90,
+    "interactive_skill_count": 47,
+    "generator_blocked_count": 43,
+    "explicit_generator_block_count": 43,
     "untracked_missing_generator_count": 0,
-    "deploy_interactive_skill_count": 44,
-    "deploy_generator_blocked_count": 37,
+    "deploy_interactive_skill_count": 47,
+    "deploy_generator_blocked_count": 43,
     "blocked_interactive_leak_count": 0
   },
   "rows": [
@@ -243,7 +243,7 @@
     },
     {
       "unit_id": "A12",
-      "name": "MO bepalen",
+      "name": "MO bepalen met afgeleide",
       "aspects": [
         "grafisch",
         "rekenen"
@@ -1283,22 +1283,17 @@
         "verbaal"
       ],
       "declared_generator": "GEN_A61",
-      "generator_implemented": false,
-      "generator_blocked": true,
+      "generator_implemented": true,
+      "generator_blocked": false,
       "generator_block_sources": [
-        "references/data/sprints/RX.2-generator-blocked-units.json",
-        "references/data/sprints/RX.6-generator-blocked-units.json"
+        "references/data/sprints/RX.2-generator-blocked-units.json"
       ],
-      "interactive_skilltree_use_allowed": false,
-      "student_facing_skilltree_use_allowed": false,
-      "base_elements_export": "generator_blocked",
-      "deploy_bundle_export": "generator_blocked",
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
       "needs_filtered_for_interactive_tree": [],
-      "proof_required_to_unblock": [
-        "GEN_A61 implemented in the skill-tree generator layer",
-        "generator coverage validator passes",
-        "student-facing skill-tree exposure is explicitly approved in a later sprint"
-      ]
+      "proof_required_to_unblock": []
     },
     {
       "unit_id": "A62",
@@ -1307,22 +1302,17 @@
         "grafisch"
       ],
       "declared_generator": "GEN_A62",
-      "generator_implemented": false,
-      "generator_blocked": true,
+      "generator_implemented": true,
+      "generator_blocked": false,
       "generator_block_sources": [
-        "references/data/sprints/RX.2b-generator-blocked-units.json",
-        "references/data/sprints/RX.6-generator-blocked-units.json"
+        "references/data/sprints/RX.2b-generator-blocked-units.json"
       ],
-      "interactive_skilltree_use_allowed": false,
-      "student_facing_skilltree_use_allowed": false,
-      "base_elements_export": "generator_blocked",
-      "deploy_bundle_export": "generator_blocked",
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
       "needs_filtered_for_interactive_tree": [],
-      "proof_required_to_unblock": [
-        "GEN_A62 implemented in the skill-tree generator layer",
-        "generator coverage validator passes",
-        "student-facing skill-tree exposure is explicitly approved in a later sprint"
-      ]
+      "proof_required_to_unblock": []
     },
     {
       "unit_id": "A63",
@@ -1331,22 +1321,17 @@
         "grafisch"
       ],
       "declared_generator": "GEN_A63",
-      "generator_implemented": false,
-      "generator_blocked": true,
+      "generator_implemented": true,
+      "generator_blocked": false,
       "generator_block_sources": [
-        "references/data/sprints/RX.2b-generator-blocked-units.json",
-        "references/data/sprints/RX.6-generator-blocked-units.json"
+        "references/data/sprints/RX.2b-generator-blocked-units.json"
       ],
-      "interactive_skilltree_use_allowed": false,
-      "student_facing_skilltree_use_allowed": false,
-      "base_elements_export": "generator_blocked",
-      "deploy_bundle_export": "generator_blocked",
+      "interactive_skilltree_use_allowed": true,
+      "student_facing_skilltree_use_allowed": true,
+      "base_elements_export": "interactive",
+      "deploy_bundle_export": "interactive",
       "needs_filtered_for_interactive_tree": [],
-      "proof_required_to_unblock": [
-        "GEN_A63 implemented in the skill-tree generator layer",
-        "generator coverage validator passes",
-        "student-facing skill-tree exposure is explicitly approved in a later sprint"
-      ]
+      "proof_required_to_unblock": []
     },
     {
       "unit_id": "A64",
@@ -1797,23 +1782,240 @@
         "generator coverage validator passes",
         "student-facing skill-tree exposure is explicitly approved in a later sprint"
       ]
+    },
+    {
+      "unit_id": "A85",
+      "name": "Totale opbrengst puntberekening: TO = P x Q",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A85",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A85 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A86",
+      "name": "TVK berekenen uit constante variabele kosten",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A86",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A86 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A87",
+      "name": "Onbekende vaste kosten berekenen uit winstvergelijking",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A87",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A87 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A88",
+      "name": "Schaalfactoren in examencijfers toepassen",
+      "aspects": [
+        "rekenen",
+        "verbaal",
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A88",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A88 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A89",
+      "name": "GO herkennen als prijsfunctie van de monopolist",
+      "aspects": [
+        "verbaal",
+        "rekenen"
+      ],
+      "declared_generator": "GEN_A89",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A89 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A90",
+      "name": "MO bepalen uit lineaire GO-regel zonder afgeleiden",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A90",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A90 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A91",
+      "name": "MO = gegeven MK oplossen",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A91",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A91 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A92",
+      "name": "Nieuwe prijs bepalen na winstmaximaliserende Q",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A92",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A92 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A93",
+      "name": "Procentuele prijsverandering na kostenverandering",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A93",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A93 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
     }
   ],
   "checks": [
     {
       "id": "source_base_elements_split_matches_generators",
       "status": "passed",
-      "detail": "44 interactive and 37 blocked rows in source base-elements."
+      "detail": "47 interactive and 43 blocked rows in source base-elements."
     },
     {
       "id": "deploy_bundle_split_matches_source",
       "status": "passed",
-      "detail": "44 interactive and 37 blocked rows in deploy bundle data."
+      "detail": "47 interactive and 43 blocked rows in deploy bundle data."
     },
     {
       "id": "blocked_units_have_explicit_noninteractive_status",
       "status": "passed",
-      "detail": "37/37 missing-generator units have explicit generator-block records."
+      "detail": "43/43 missing-generator units have explicit generator-block records."
     },
     {
       "id": "no_missing_generator_unit_is_interactive",
@@ -1828,7 +2030,7 @@
     {
       "id": "rx6_generator_block_file_written",
       "status": "passed",
-      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 37 blocked unit(s)."
+      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 43 blocked unit(s)."
     }
   ],
   "blocked_scope": [

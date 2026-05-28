@@ -84,6 +84,39 @@ function commandSpec(command) {
   return JSON.parse(match[1]);
 }
 
+function requireLiveMatchesSpec(live, spec, context) {
+  for (const key of [
+    'id',
+    'name',
+    'kern',
+    'mastery_target',
+    'prior_learning',
+    'zero_needs_status',
+    'generator',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key) && live[key] !== spec[key]) {
+      fail(`${context} live ${key} must match reviewed spec`);
+    }
+  }
+  for (const key of [
+    'needs',
+    'exam_codes',
+    'aspects',
+    'terms',
+    'procedure',
+    'pitfalls',
+  ]) {
+    if (Object.prototype.hasOwnProperty.call(spec, key)) {
+      sameArray(live[key] || [], spec[key] || [], `${context} live ${key}`);
+    }
+  }
+  if (spec.zero_needs_review) {
+    const liveReview = JSON.stringify(live.zero_needs_review || {});
+    const specReview = JSON.stringify(spec.zero_needs_review);
+    if (liveReview !== specReview) fail(`${context} live zero_needs_review must match reviewed spec`);
+  }
+}
+
 const packet = readJson(PACKET_JSON);
 const packetMd = readText(PACKET_MD);
 const review = readJson(REVIEW_JSON);
@@ -140,8 +173,15 @@ const unitMap = new Map(units.map((unit) => [unit.id, unit]));
 for (const id of ['A12', 'A20', 'A38', 'A04']) {
   if (!unitMap.has(id)) fail(`live unit ${id} must exist`);
 }
-for (const id of NEW_IDS) {
-  if (unitMap.has(id)) fail(`${id} must remain absent before H2E execution`);
+const h2fPresentIds = NEW_IDS.filter((id) => unitMap.has(id));
+const h2fExecuted = h2fPresentIds.length === NEW_IDS.length;
+if (h2fPresentIds.length && !h2fExecuted) {
+  fail(`H2F execution state is partial; expected all or none of ${NEW_IDS.join(', ')} live`);
+}
+if (!h2fExecuted) {
+  for (const id of NEW_IDS) {
+    if (unitMap.has(id)) fail(`${id} must remain absent before H2F execution`);
+  }
 }
 if (!(unitMap.get('A12').exam_codes || []).includes('A2.11')) fail('live A12 must retain A2.11');
 if (!generators.includes('GEN.A12')) fail('generators.js must contain GEN.A12');
@@ -177,6 +217,9 @@ if (a12Spec.generator !== 'GEN_A12') fail('A12 spec must keep GEN_A12');
 dryRunA12(a12Spec);
 
 const specs = new Map();
+const specKnownIds = new Set(units
+  .map((unit) => unit.id)
+  .filter((id) => !NEW_IDS.includes(id)));
 for (const id of NEW_IDS) {
   const command = commands.get(id);
   if (command.action !== 'unit-add') fail(`${id} action must be unit-add`);
@@ -184,8 +227,9 @@ for (const id of NEW_IDS) {
   if (!String(command.dry_run_limitation || '').includes('no dry-run')) fail(`${id} must expose unit-add dry-run limitation`);
   const spec = commandSpec(command);
   specs.set(id, spec);
-  const errors = validateSpec(spec, new Set(units.map((unit) => unit.id)));
+  const errors = validateSpec(spec, specKnownIds);
   if (errors.length) fail(`${id} validateSpec errors: ${errors.join('; ')}`);
+  specKnownIds.add(id);
 }
 
 sameArray(specs.get('A88').needs, [], 'A88 needs');
@@ -204,9 +248,16 @@ if (!(specs.get('A93').pitfalls || []).some((pitfall) => pitfall.includes('niet 
   fail('A93 must keep price-change versus pass-through pitfall');
 }
 
+if (h2fExecuted) {
+  for (const id of NEW_IDS) requireLiveMatchesSpec(unitMap.get(id), specs.get(id), id);
+  requireIncludes(unitMap.get('A12').exam_codes || [], ['A2.11'], 'live A12 exam_codes');
+}
+
 const simulated = units.map((unit) => ({ ...unit }));
 Object.assign(simulated.find((unit) => unit.id === 'A12'), a12Spec);
-for (const id of NEW_IDS) simulated.push(specs.get(id));
+if (!h2fExecuted) {
+  for (const id of NEW_IDS) simulated.push(specs.get(id));
+}
 const catalogErrors = validate(simulated, {
   terms: loadTerminology(),
   eindtermen: loadEindtermen(),
@@ -300,8 +351,8 @@ for (const required of [
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (MTU-H2F|GATE-MTU-H2E|MTU-H2E) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be MTU-H2F, GATE-MTU-H2E, or MTU-H2E for H2E lifecycle');
+if (!/\| (MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2G, MTU-H2F, GATE-MTU-H2E, or MTU-H2E for H2E lifecycle');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) fail('first row must state ACTIVE OPERATIONAL NEXT ACTION');
 
