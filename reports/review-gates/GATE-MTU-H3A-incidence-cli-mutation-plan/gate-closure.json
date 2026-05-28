@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3A-incidence-cli-mutation-plan",
+  "sprint_id": "MTU-H3A",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_execution_packet_preparation_only",
+  "decision": "PASS WITH CONDITIONS for CLI-mutation planning only; authorize only a later bounded execution packet preparation sprint",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "a5f481a8c4a0b5817d5583ddc5303ccba5240458",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/review-packet.md",
+  "planning_packet": "reports/mtu-hardening/mtu-h3a-incidence-cli-mutation-plan.json",
+  "summary": "GATE-MTU-H3A accepted the H3A CLI-mutation planning direction and authorized only a later bounded execution-packet preparation sprint. The closure accepts narrowed D07, proposed D41-D46 lane structure, exact mapping directions, rollback/validation/projection boundaries, and adds conditions for D42 dependency review and D45 supply-elasticity handling. No mutation or product use is authorized.",
+  "accepted_for_later_execution_packet_preparation": [
+    {
+      "lane": "D07",
+      "decision": "narrow",
+      "scope": "tax afwentelingspercentage / percentage burden calculation",
+      "conditions": [
+        "needs D42 and A38",
+        "no A15 dependency",
+        "no hidden elasticity explanation"
+      ]
+    },
+    {
+      "lane": "D41",
+      "decision": "accept",
+      "scope": "tax wedge and Pc/Pp graphical labeling",
+      "mapping_direction": "3.1.1 later replaces D07 with D41"
+    },
+    {
+      "lane": "D42",
+      "decision": "accept_with_dependency_review",
+      "scope": "tax burden amounts in euros before percentage conversion",
+      "conditions": [
+        "later execution packet must justify D42 needs D41 or revise D42 to depend on a more general Pc/Pp route"
+      ]
+    },
+    {
+      "lane": "D43",
+      "decision": "accept",
+      "scope": "subsidy equilibrium and effective prices",
+      "mapping_direction": "3.1.3 later adds D43"
+    },
+    {
+      "lane": "D44",
+      "decision": "accept_planned_hold_mapping",
+      "scope": "subsidy benefit-sharing",
+      "conditions": [
+        "do not map unless target evidence explicitly requires benefit-sharing"
+      ]
+    },
+    {
+      "lane": "D45",
+      "decision": "accept_with_supply_elasticity_condition",
+      "scope": "incidence explanation with relative elasticities",
+      "conditions": [
+        "keep qualitative and internal",
+        "or add a separate supply-elasticity unit first",
+        "or hold D45"
+      ]
+    },
+    {
+      "lane": "D46",
+      "decision": "accept",
+      "scope": "cost-shock pass-through share distinct from A93",
+      "conditions": [
+        "A93 remains unchanged and bounded to price percentage change"
+      ]
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "next_packet_must_review_d42_dependency_on_d41_to_avoid_graphical_over_triggering",
+    "next_packet_must_resolve_d45_supply_elasticity_status_as_qualitative_internal_separate_unit_or_hold",
+    "d07_execution_spec_must_not_retain_a15_or_hidden_elasticity_explanation",
+    "a93_must_remain_unchanged_and_bounded_to_price_percentage_change",
+    "next_packet_must_print_exact_specs_and_target_mapping_diffs_before_execution",
+    "next_packet_must_require_d07_dry_run_catalog_validation_target_exercise_validation_and_no_unintended_diff_proof",
+    "generated_projection_refresh_only_after_authorized_source_mutations",
+    "no_product_or_lesson_output_authority"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_gate": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_gate": false,
+    "d07_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "D07 still too broad until execution.",
+      "severity": "high",
+      "resolution": "Next execution packet must narrow D07 and remove A15/elasticity explanation."
+    },
+    {
+      "issue": "D42 may over-trigger D41.",
+      "severity": "medium-high",
+      "resolution": "Next execution packet must justify or revise D42 dependency."
+    },
+    {
+      "issue": "D45 supply elasticity gap.",
+      "severity": "medium-high",
+      "resolution": "Next execution packet must keep D45 qualitative, add a separate supply-elasticity unit, or hold D45."
+    },
+    {
+      "issue": "3.1.1 D07 over-trigger.",
+      "severity": "high",
+      "resolution": "Next execution packet may prepare mapping patch replacing D07 with D41."
+    },
+    {
+      "issue": "3.1.2 amount/percentage conflation.",
+      "severity": "medium-high",
+      "resolution": "Next execution packet may prepare D42 plus narrowed D07 route."
+    },
+    {
+      "issue": "Subsidy incidence missing.",
+      "severity": "medium-high",
+      "resolution": "Next execution packet may prepare D43; keep D44 unmapped until target evidence requires it."
+    },
+    {
+      "issue": "A93 boundary risk.",
+      "severity": "high",
+      "resolution": "Keep D46 separate from A93."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H3B",
+    "name": "Incidence Pass-Through CLI Execution Packet",
+    "authority": "prepare a later bounded execution packet for accepted H3A lanes only; no execution",
+    "execution_authorized": false
+  }
+}

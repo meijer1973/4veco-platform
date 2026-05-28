@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3A-incidence-cli-mutation-plan",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "a5f481a8c4a0b5817d5583ddc5303ccba5240458",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_for_cli_mutation_planning_only_no_execution",
+  "calibration_answers": [
+    {
+      "id": "MTUH3A-CAL1",
+      "answer": "yes",
+      "notes": "Gate reviews H3A planning only and does not authorize protected reference mutation, D07 update, unit minting, target-exercise mutation, projection refresh, lesson output, or product use."
+    },
+    {
+      "id": "MTUH3A-CAL2",
+      "answer": "yes_with_closure_commit_hash",
+      "notes": "The H3A packet and evidence were fetchable remotely. Closure records reviewed commit a5f481a8c4a0b5817d5583ddc5303ccba5240458 as the satisfied remote proof."
+    },
+    {
+      "id": "MTUH3A-CAL3",
+      "answer": "yes",
+      "notes": "D41-D46 remain planning proposals only, and D07 remains unchanged until later execution authorization."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH3A-Q1",
+      "decision": "approve_d07_narrowed_scope",
+      "rationale": "The proposed D07 update correctly narrows it to tax afwentelingspercentage / percentage burden calculation. Removing A15 is correct because elasticity explanation moves to D45."
+    },
+    {
+      "id": "MTUH3A-Q2",
+      "decision": "approve_d41_and_3_1_1_mapping_direction",
+      "rationale": "3.1.1 asks for shifted supply, Pc/Pp, and a tax wedge, not afwentelingspercentage. Replacing D07 with D41 and clearing the missing tax-wedge flag is correct."
+    },
+    {
+      "id": "MTUH3A-Q3",
+      "decision": "approve_d42_d07_split_with_dependency_review",
+      "rationale": "3.1.2 needs euro burden amounts first and percentage conversion second. The next packet must justify whether D42 needs D41 or whether D42 needs a more general Pc/Pp identification route."
+    },
+    {
+      "id": "MTUH3A-Q4",
+      "decision": "approve_d43_d44_route",
+      "rationale": "D43 covers subsidy effective prices and belongs on 3.1.3; D44 should remain planned but unmapped unless a target explicitly asks for benefit-sharing."
+    },
+    {
+      "id": "MTUH3A-Q5",
+      "decision": "approve_d45_with_supply_elasticity_condition",
+      "rationale": "D45 makes hidden elasticity explanation explicit and names the supply-elasticity gap. Execution should keep it qualitative, add a separate supply-elasticity unit first, or hold D45."
+    },
+    {
+      "id": "MTUH3A-Q6",
+      "decision": "approve_d46_and_keep_a93_bounded",
+      "rationale": "D46 uses the cost shock as denominator, while A93 remains old-price denominator percentage change."
+    },
+    {
+      "id": "MTUH3A-Q7",
+      "decision": "accept_command_rollback_validation_with_exact_spec_logging",
+      "rationale": "The packet discloses unit-add dry-run limitations, requires D07 dry-run, exact extracted-spec logs, rollback, and validation."
+    },
+    {
+      "id": "MTUH3A-Q8",
+      "decision": "accept_mapping_projection_boundary",
+      "rationale": "Mapping writes are authored-reference mutations and projections refresh only after authorized source mutation."
+    },
+    {
+      "id": "MTUH3A-Q9",
+      "decision": "authorize_only_later_bounded_execution_packet_no_execution",
+      "rationale": "The next packet should include exact CLI commands, exact target-mapping patches, rollback, validation, and no-unintended-diff proof."
+    },
+    {
+      "id": "MTUH3A-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "rationale": "No mutation, minting, mapping write, projection refresh, PV projection, lesson output, or product use is authorized now."
+    }
+  ],
+  "accepted_for_later_execution_packet_preparation": [
+    {
+      "lane": "D07",
+      "decision": "narrow_to_percentage_burden",
+      "conditions": [
+        "needs D42 and A38",
+        "no A15 dependency",
+        "no hidden elasticity explanation"
+      ]
+    },
+    {
+      "lane": "D41",
+      "decision": "tax_wedge_pc_pp_labeling",
+      "mapping_direction": "3.1.1 later replaces D07 with D41"
+    },
+    {
+      "lane": "D42",
+      "decision": "tax_burden_amounts_in_euros",
+      "conditions": [
+        "review whether D42 needs D41 or a more general Pc/Pp route"
+      ]
+    },
+    {
+      "lane": "D43",
+      "decision": "subsidy_effective_prices",
+      "mapping_direction": "3.1.3 later adds D43"
+    },
+    {
+      "lane": "D44",
+      "decision": "subsidy_benefit_sharing_planned_but_unmapped",
+      "conditions": [
+        "map only if target evidence explicitly requires benefit-sharing"
+      ]
+    },
+    {
+      "lane": "D45",
+      "decision": "relative_elasticity_explanation",
+      "conditions": [
+        "keep qualitative and internal",
+        "or add a separate supply-elasticity unit first",
+        "or hold D45"
+      ]
+    },
+    {
+      "lane": "D46",
+      "decision": "cost_shock_pass_through_share",
+      "conditions": [
+        "A93 remains unchanged and bounded to price percentage change"
+      ]
+    }
+  ],
+  "required_conditions_before_execution_packet": [
+    "Review D42's dependency on D41 to avoid unnecessary graphical over-triggering.",
+    "Resolve D45's supply-elasticity status: qualitative internal treatment, separate unit, or hold.",
+    "Keep D07 free of A15 and hidden elasticity explanation.",
+    "Keep A93 unchanged and bounded to price percentage change.",
+    "Print exact specs and target mapping diffs before execution.",
+    "Run D07 dry-run, validate catalog, validate target exercises, and prove no unintended diffs.",
+    "Refresh generated projections only after authorized source mutations."
+  ],
+  "quality_log": [
+    {
+      "issue": "D07 still too broad until execution.",
+      "severity": "high",
+      "next_action": "Narrow D07; remove A15 and elasticity explanation.",
+      "proof_required": "New D07 spec validates with D42 and A38."
+    },
+    {
+      "issue": "D42 may over-trigger D41.",
+      "severity": "medium_high",
+      "next_action": "Review D42 dependency before execution.",
+      "proof_required": "D42 works for non-graph and graph contexts, or dependency is justified."
+    },
+    {
+      "issue": "D45 supply elasticity gap.",
+      "severity": "medium_high",
+      "next_action": "Add separate supply-elasticity unit or bound D45 to qualitative reasoning.",
+      "proof_required": "D45 no longer hides supply-side prerequisite."
+    },
+    {
+      "issue": "3.1.1 D07 over-trigger.",
+      "severity": "high",
+      "next_action": "Replace D07 with D41 in later mapping patch.",
+      "proof_required": "Mapping no longer asks afwentelingspercentage."
+    },
+    {
+      "issue": "3.1.2 amount/percentage conflation.",
+      "severity": "medium_high",
+      "next_action": "Add D42 plus narrowed D07.",
+      "proof_required": "Mapping distinguishes euro burden and percentage share."
+    },
+    {
+      "issue": "Subsidy incidence missing.",
+      "severity": "medium_high",
+      "next_action": "Add D43; keep D44 unmapped until needed.",
+      "proof_required": "3.1.3 covers effective subsidy prices."
+    },
+    {
+      "issue": "A93 boundary risk.",
+      "severity": "high",
+      "next_action": "Keep D46 separate.",
+      "proof_required": "No pass-through-share task maps to A93 alone."
+    }
+  ]
+}
