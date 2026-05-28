@@ -15,6 +15,10 @@ const PACKET_MD_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q1-q3-c
 const H2A_PLAN_PATH = path.join(ROOT, 'reports', 'mtu-hardening', 'solo-q1-q3-cli-mutation-plan.json');
 const REVIEW_PACKET_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'review-packet.md');
 const REVIEW_PACKET_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'review-packet.json');
+const HUMAN_INTERVIEW_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'human-interview.md');
+const HUMAN_INTERVIEW_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'human-interview.json');
+const GATE_CLOSURE_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'gate-closure.md');
+const GATE_CLOSURE_JSON_PATH = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H2B-cli-execution', 'gate-closure.json');
 const UNITS_JSON_PATH = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const ROADMAP_PATH = path.join(ROOT, 'references', 'reference-team-roadmap.md');
 
@@ -59,6 +63,10 @@ const packetMarkdown = readText(PACKET_MD_PATH);
 const h2aPlan = readJson(H2A_PLAN_PATH);
 const reviewPacket = readText(REVIEW_PACKET_PATH);
 const reviewPacketJson = readJson(REVIEW_PACKET_JSON_PATH);
+const humanInterview = fs.existsSync(HUMAN_INTERVIEW_PATH) ? readText(HUMAN_INTERVIEW_PATH) : null;
+const humanInterviewJson = fs.existsSync(HUMAN_INTERVIEW_JSON_PATH) ? readJson(HUMAN_INTERVIEW_JSON_PATH) : null;
+const gateClosure = fs.existsSync(GATE_CLOSURE_PATH) ? readText(GATE_CLOSURE_PATH) : null;
+const gateClosureJson = fs.existsSync(GATE_CLOSURE_JSON_PATH) ? readJson(GATE_CLOSURE_JSON_PATH) : null;
 const units = readJson(UNITS_JSON_PATH);
 const roadmap = readText(ROADMAP_PATH);
 
@@ -288,17 +296,118 @@ for (const requiredText of [
   if (!reviewPacket.includes(requiredText)) fail(`review packet must include "${requiredText}"`);
 }
 
+if (humanInterviewJson || gateClosureJson) {
+  if (!humanInterviewJson || !humanInterview) fail('human interview Markdown/JSON must both exist once gate closure starts');
+  if (!gateClosureJson || !gateClosure) fail('gate closure Markdown/JSON must both exist once gate closure starts');
+  if (humanInterviewJson.gate_id !== 'GATE-MTU-H2B') fail('human interview JSON gate_id must be GATE-MTU-H2B');
+  if (humanInterviewJson.decision !== 'partial_pass_with_conditions') {
+    fail('human interview decision must be partial_pass_with_conditions');
+  }
+  requireArray(humanInterviewJson, 'calibration_answers', 'human interview JSON', 2);
+  requireArray(humanInterviewJson, 'binding_answers', 'human interview JSON', 9);
+  requireArray(humanInterviewJson, 'conditions', 'human interview JSON', 6);
+  requireIncludes(humanInterviewJson.conditions, [
+    'final_pre_execution_collision_check',
+    'a12_retain_a2_11_or_exclude',
+    'a20_held_until_split_or_replacement',
+    'extracted_spec_logging_before_each_command',
+    'a92_a89_dependency_resolved_before_a92_execution',
+  ], 'human_interview.conditions');
+  if (humanInterviewJson.mutation_authorized_by_packet_now !== false) {
+    fail('human interview must not authorize mutation by packet now');
+  }
+  if (humanInterviewJson.student_product_use_authorized_now !== false) {
+    fail('human interview must not authorize student/product use');
+  }
+  if (!humanInterviewJson.pattern_analysis || !humanInterviewJson.pattern_analysis.implementation_note.includes('A92')) {
+    fail('human interview pattern analysis must record the A92/A89 dependency issue');
+  }
+  for (const requiredText of [
+    'PARTIAL PASS WITH CONDITIONS',
+    'A12',
+    'A20',
+    'A92',
+    'A89',
+    'Explicit Human Confirmation',
+  ]) {
+    if (!humanInterview.includes(requiredText)) fail(`human interview Markdown must include "${requiredText}"`);
+  }
+
+  if (gateClosureJson.gate_id !== 'GATE-MTU-H2B') fail('gate closure JSON gate_id must be GATE-MTU-H2B');
+  if (gateClosureJson.status !== 'partial_pass_with_conditions') {
+    fail('gate closure status must be partial_pass_with_conditions');
+  }
+  if (gateClosureJson.status_detail !== 'reduced_scope_execution_only') {
+    fail('gate closure status_detail must be reduced_scope_execution_only');
+  }
+  if (gateClosureJson.closure_confirmed_by_human !== true) fail('gate closure must be confirmed by human');
+  if (gateClosureJson.protected_reference_data_changed !== false) fail('gate closure must not change protected reference data');
+  requireArray(gateClosureJson, 'approved_after_final_preflight', 'gate closure JSON', 6);
+  requireIncludes(gateClosureJson.approved_after_final_preflight, [
+    'F19',
+    'F20',
+    'A85',
+    'A86',
+    'A87',
+    'A91',
+  ], 'gate_closure.approved_after_final_preflight');
+  const dependencyResolution = requireArray(gateClosureJson, 'approved_after_dependency_resolution', 'gate closure JSON', 1);
+  if (!dependencyResolution.some((item) => item.unit_id === 'A92')) {
+    fail('gate closure must route A92 through dependency resolution');
+  }
+  requireIncludes(gateClosureJson.held.map((item) => item.unit_id), ['A12', 'A20'], 'gate_closure.held.unit_id');
+  requireIncludes(gateClosureJson.required_before_any_execution, [
+    'echo extracted JSON spec before each CLI command',
+    'exclude A12 unless its update spec retains A2.11 or a later gate authorizes removal',
+    'resolve A92/A89 dependency before A92 execution',
+  ], 'gate_closure.required_before_any_execution');
+  if (!gateClosureJson.authorized_next || gateClosureJson.authorized_next.sprint_id !== 'MTU-H2C') {
+    fail('gate closure must authorize MTU-H2C as next sprint');
+  }
+  for (const key of [
+    'protected_reference_mutation_authorized',
+    'external_source_mutation_authorized',
+    'machine_reference_mutation_authorized',
+    'candidate_writes_authorized',
+    'lesson_output_mutation_authorized',
+    'student_product_use_authorized',
+    'diagnostics_authorized',
+    'adaptive_routing_authorized',
+    'mastery_authorized',
+    'sequencing_authorized',
+    'student_facing_ai_authorized',
+    'summative_use_authorized',
+    'pv_projection_authorized',
+    'pv_machine_promotion_authorized',
+  ]) {
+    requireFalse(gateClosureJson.authority_boundary, key, 'gate_closure.authority_boundary');
+  }
+  for (const requiredText of [
+    'PARTIAL PASS WITH CONDITIONS',
+    'Approved After Final Preflight',
+    'Approved Only After Dependency Resolution',
+    'Conditional Or Revise First',
+    'Held',
+    'Operational Next Action',
+  ]) {
+    if (!gateClosure.includes(requiredText)) fail(`gate closure Markdown must include "${requiredText}"`);
+  }
+}
+
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
+if (!/\| (MTU-H2C|GATE-MTU-H2B|MTU-H2B) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2C after gate closure, GATE-MTU-H2B while review is active, or MTU-H2B while packet preparation is active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');
 }
 if (!roadmap.includes('| MTU-H2B | Solo q1-q3 CLI Execution Gate Packet | yes |')) {
   fail('roadmap Closed Sprints must include MTU-H2B closure row after packet preparation');
+}
+if (gateClosureJson && !roadmap.includes('| GATE-MTU-H2B | Solo q1-q3 CLI Execution Authorization Human Review | yes |')) {
+  fail('roadmap Closed Sprints must include GATE-MTU-H2B closure row after gate closure');
 }
 
 console.log('OK MTU-H2B CLI execution gate packet: reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.json');

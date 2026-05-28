@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.90-gate-mtu-h2b-cli-execution-review",
+      "version": "v2.91-gate-mtu-h2b-partial-pass",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.87-gate-mtu-h2-pass-with-conditions.md",
@@ -111,7 +112,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2B prepared the Solo q1-q3 CLI execution gate packet without mutation. Top operational next action is GATE-MTU-H2B human review; no CLI execution, protected reference mutation, or product-use lane is authorized before the gate closes."
+      "notes": "Current operating roadmap after GATE-MTU-H2B closed as partial_pass_with_conditions. Top operational next action is MTU-H2C reduced-scope CLI execution preflight; A12 and A20 are held, and A92 requires A89 dependency resolution."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.90",
+      "version": "v2.90-gate-mtu-h2b-cli-execution-review",
+      "title": "References Team Roadmap before GATE-MTU-H2B closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-MTU-H2B closed as partial_pass_with_conditions and moved the top operational next action to MTU-H2C reduced-scope execution preflight."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.89",

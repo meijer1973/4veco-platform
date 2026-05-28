@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2B",
+  "date": "2026-05-28",
+  "status": "completed",
+  "decision": "partial_pass_with_conditions",
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "summary": "This gate reviews CLI execution authorization only; MTU-H2B itself did not execute mutation, mint units, update units, change lesson output, or authorize product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes",
+      "summary": "Direct A20 update or split execution is not ready because active target exercise 4.1.2 uses A20 in a given-MK context; A20 remains held."
+    }
+  ],
+  "binding_answers": [
+    {
+      "id": "MTUH2B-Q1",
+      "decision": "accept_with_final_pre_execution_collision_check",
+      "summary": "Accept the ID availability and registry-state proof, with a required final pre-execution collision check."
+    },
+    {
+      "id": "MTUH2B-Q2",
+      "decision": "partly_accept_specs_with_a12_and_dependency_conditions",
+      "summary": "Generator fields and used term links are validated, but A12 must retain A2.11 before execution; A88/A89/A93 carry possible dependency overreach; F19/F20 empty term arrays require a deliberate waiver or follow-up."
+    },
+    {
+      "id": "MTUH2B-Q3",
+      "decision": "authorize_subset_or_revise_before_execution",
+      "summary": "Do not authorize the command set exactly as written because it includes A12; exclude A20 and either exclude A12 or revise the A12 update spec first."
+    },
+    {
+      "id": "MTUH2B-Q4",
+      "decision": "hold_a12_until_exam_code_regression_fixed",
+      "summary": "A12 wording direction is acceptable, but the update spec must retain A2.11 or explicitly justify removing it before execution."
+    },
+    {
+      "id": "MTUH2B-Q5",
+      "decision": "hold_a20",
+      "summary": "Route A20 to a later split/deprecate/replacement packet or to a packet that also updates affected mappings and generator evidence."
+    },
+    {
+      "id": "MTUH2B-Q6",
+      "decision": "direct_unit_add_acceptable_after_gate_and_preflight",
+      "summary": "Direct unit-add execution is acceptable after human gate approval, exact specs, rollback plan, validators, and final preflight because the CLI validates atomically and fails loudly."
+    },
+    {
+      "id": "MTUH2B-Q7",
+      "decision": "mostly_sufficient_add_extracted_spec_logging",
+      "summary": "Require exact command log, pre/post diff, rollback, build-unit-index, schema validation, reference health, Jest, git diff --check, no-unintended-diff proof, and echoing the extracted JSON spec before each command."
+    },
+    {
+      "id": "MTUH2B-Q8",
+      "decision": "authorize_bounded_execution_only_after_revision_or_reduced_scope",
+      "summary": "A later sprint may execute clean unit-add lanes after final preflight, but A20 remains held and A12 must be fixed or excluded."
+    },
+    {
+      "id": "MTUH2B-Q9",
+      "decision": "no_mutation_or_product_authority_now",
+      "summary": "The review packet itself authorizes nothing; a human closure may only authorize the explicitly bounded next sprint it names."
+    }
+  ],
+  "pattern_analysis": {
+    "summary": "The packet solved the major governance problem and correctly held A20, but it claimed too much as execution-ready.",
+    "approved_after_final_preflight": [
+      "F19",
+      "F20",
+      "A85",
+      "A86",
+      "A87",
+      "A91",
+      "A92"
+    ],
+    "conditionally_approved_or_revise_first": [
+      "A88",
+      "A89",
+      "A90",
+      "A93"
+    ],
+    "held": [
+      "A12",
+      "A20"
+    ],
+    "implementation_note": "A92 currently depends on A89 in the reviewed spec, so a later execution sprint must either explicitly include/accept A89, revise the A92 dependency, or hold A92 as well."
+  },
+  "conditions": [
+    "final_pre_execution_collision_check",
+    "a12_retain_a2_11_or_exclude",
+    "a20_held_until_split_or_replacement",
+    "extracted_spec_logging_before_each_command",
+    "plan_json_unchanged_or_revalidated",
+    "a92_a89_dependency_resolved_before_a92_execution",
+    "no_unintended_diff_proof",
+    "product_boundaries_remain_false"
+  ],
+  "authorized_next": "MTU-H2C reduced-scope CLI execution preflight/sprint only, with A12 and A20 held unless revised by a later reviewed packet",
+  "mutation_authorized_by_packet_now": false,
+  "student_product_use_authorized_now": false
+}

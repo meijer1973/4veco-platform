@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2B",
+  "sprint_id": "MTU-H2B",
+  "gate_directory": "reports/review-gates/GATE-MTU-H2B-cli-execution",
+  "date": "2026-05-28",
+  "closed_on": "2026-05-28",
+  "status": "partial_pass_with_conditions",
+  "status_detail": "reduced_scope_execution_only",
+  "decision": "PARTIAL PASS WITH CONDITIONS for reduced-scope CLI execution planning/execution only",
+  "closure_confirmed_by_human": true,
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H2B-cli-execution/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.md",
+  "audit": "reports/review-gates/GATE-MTU-H2B-cli-execution/bundle-urls.md",
+  "summary": "GATE-MTU-H2B partially accepted the execution-gate packet. It may route a later reduced-scope CLI execution sprint, but the full H2B execution-ready set is not authorized as written.",
+  "approved_after_final_preflight": [
+    "F19",
+    "F20",
+    "A85",
+    "A86",
+    "A87",
+    "A91"
+  ],
+  "approved_after_dependency_resolution": [
+    {
+      "unit_id": "A92",
+      "condition": "A92 currently depends on A89; include and accept A89, revise A92, or hold A92."
+    }
+  ],
+  "conditionally_approved_or_revise_first": [
+    {
+      "unit_id": "A88",
+      "condition": "Dependency risk around A61 must be explicitly accepted or revised."
+    },
+    {
+      "unit_id": "A89",
+      "condition": "Dependency risk around A04 and understand-level generator handling must be explicitly accepted or revised."
+    },
+    {
+      "unit_id": "A90",
+      "condition": "Mixed table/graph/rule route must be explicitly accepted or revised."
+    },
+    {
+      "unit_id": "A93",
+      "condition": "Dependency risk around A66/A61 and price-change/pass-through distinction must be explicitly accepted or revised."
+    }
+  ],
+  "held": [
+    {
+      "unit_id": "A12",
+      "reason": "Held until the update spec retains A2.11 or explicitly justifies removing it."
+    },
+    {
+      "unit_id": "A20",
+      "reason": "Held because active target exercise 4.1.2 uses A20 in a given-MK context."
+    }
+  ],
+  "required_before_any_execution": [
+    "git status --short",
+    "fresh ID collision check for F19, F20, and A85-A93",
+    "fresh confirmation that A12 and A20 exist",
+    "echo extracted JSON spec before each CLI command",
+    "prove the plan JSON is unchanged from the reviewed commit or revalidate it",
+    "confirm A20 is not executed",
+    "exclude A12 unless its update spec retains A2.11 or a later gate authorizes removal",
+    "resolve A92/A89 dependency before A92 execution",
+    "post-execution build-unit-index, schema, report, reference-health, Jest, and git diff checks"
+  ],
+  "blocked_outcomes": [
+    "H2B full execution-ready set as written",
+    "A12 execution from the current update spec",
+    "A20 execution",
+    "protected reference hand edits",
+    "external-source mutation",
+    "candidate writes",
+    "lesson-output mutation",
+    "CP-6 closure",
+    "Year-1 closure",
+    "diagnostics",
+    "adaptive routing",
+    "mastery or sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV projection",
+    "PV machine promotion",
+    "student/product use"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized_by_this_packet": false,
+    "unit_update_execution_authorized_by_this_packet": false,
+    "unit_split_execution_authorized_by_this_packet": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "authorized_next": {
+    "sprint_id": "MTU-H2C",
+    "name": "Reduced-Scope Solo q1-q3 CLI Execution Preflight",
+    "authority": "prepare and, after final preflight, execute only the reduced approved scope; A12 and A20 held unless a later reviewed packet resolves them"
+  }
+}

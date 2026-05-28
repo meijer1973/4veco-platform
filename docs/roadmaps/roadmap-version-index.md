@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v2.90-gate-mtu-h2b-cli-execution-review` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H2B prepared the Solo q1-q3 CLI execution gate packet without mutation. Top operational next action is GATE-MTU-H2B human review; no CLI execution, protected reference mutation, or product-use lane is authorized before the gate closes. |
+| References Team Roadmap | `v2.91-gate-mtu-h2b-partial-pass` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H2B closed as partial_pass_with_conditions. Top operational next action is MTU-H2C reduced-scope CLI execution preflight; A12 and A20 are held, and A92 requires A89 dependency resolution. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H2B closure | `v2.90-gate-mtu-h2b-cli-execution-review` | `docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2B review | `v2.89-gate-mtu-h2a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H2A closure | `v2.88-mtu-h2a-cli-mutation-planning` | `docs/roadmaps/outdated/reference-team-roadmap-v2.88-mtu-h2a-cli-mutation-planning.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H2A CLI mutation planning | `v2.87-gate-mtu-h2-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.87-gate-mtu-h2-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

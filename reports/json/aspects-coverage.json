@@ -1,7 +1,7 @@
 {
   "report_id": "aspects-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-28T06:17:01.118Z",
+  "generated_on": "2026-05-28T06:42:37.537Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-28T06:17:13.027Z",
+  "generated_on": "2026-05-28T06:42:49.073Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 310,
-    "source_manifest_file_count": 315,
+    "record_count": 312,
+    "source_manifest_file_count": 317,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 225,
+      "governance_data": 227,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 182,
+      "sprint_metadata": 184,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 223,
+      "governance_data": 225,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 259
+      "not_public_citation_source": 261
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -4629,6 +4629,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "76d97ddcf13f47a52f6745b7cc540663e65760c1e950c0a7dbccbc60d1f0ded7",
       "size_bytes": 2784,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2b-plan",
+      "path": "references/data/sprints/MTU-H2B.plan.json",
+      "title": "MTU H2B.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:5e20a84d2f302a6ca8528d200d6cdca782bc4440322b5685d350ccdf434d1332",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "5e20a84d2f302a6ca8528d200d6cdca782bc4440322b5685d350ccdf434d1332",
+      "size_bytes": 3830,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mtu-h2b-result",
+      "path": "references/data/sprints/MTU-H2B.result.json",
+      "title": "MTU H2B.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:607e14c571e7523ada5b10afb33866eac983f5c281391f9cb80033e50c68ccfa",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "607e14c571e7523ada5b10afb33866eac983f5c281391f9cb80033e50c68ccfa",
+      "size_bytes": 3029,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -10164,7 +10240,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:bdc3e8e81db07a8b657ea7fe5ac554773142e0d1f9daec7913454a97f4b195cf",
+      "source_version": "sha256:c324213ec06449793008bf868cdcd9ca7a5c57afe7b6dbfe99cc2f5340f4ed92",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -10173,8 +10249,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "bdc3e8e81db07a8b657ea7fe5ac554773142e0d1f9daec7913454a97f4b195cf",
-      "size_bytes": 223106,
+      "source_hash": "c324213ec06449793008bf868cdcd9ca7a5c57afe7b6dbfe99cc2f5340f4ed92",
+      "size_bytes": 224532,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

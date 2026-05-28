@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2C",
+  "plan": "reports/sprints/MTU-H2C-plan.md",
+  "status": "planned",
+  "created": "2026-05-28",
+  "source_gate": "reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.json",
+  "human_review_required": false,
+  "lead_review_required": false,
+  "protected_reference_data_changes_allowed": true,
+  "allowed_protected_changes": [
+    "references/machine/micro-teaching-units.md",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "forbidden_lanes": [
+    "A12",
+    "A20"
+  ],
+  "clean_lanes_after_final_preflight": [
+    "F19",
+    "F20",
+    "A85",
+    "A86",
+    "A87",
+    "A91"
+  ],
+  "requires_dependency_resolution": [
+    "A92"
+  ],
+  "conditional_or_revise_first": [
+    "A88",
+    "A89",
+    "A90",
+    "A93"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2C-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2C",
+    "node build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  }
+}

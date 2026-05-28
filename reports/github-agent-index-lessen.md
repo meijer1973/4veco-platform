@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-28T06:17:08.878Z
+Generated: 2026-05-28T06:42:44.212Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1527
+Files indexed: 1532
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2410,7 +2410,7 @@ Count: 817
 
 ## other
 
-Count: 391
+Count: 396
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2654,11 +2654,16 @@ Count: 391
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-teacher-learning-quality-review.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-technical-qa-report.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-baseline-audit.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-closure-log.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-design-review.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-human-review-packet.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-human-review-record.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-lead-review-summary.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-operation-chain-analysis.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-platform-handoff.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-sprint-plan.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-stop-decision.md
+- archive/sprints/L1.7B-P23/L1.7B-P23-teacher-learning-quality-review.md
 - archive/sprints/L1.7B-P23/L1.7B-P23-technical-qa-report.md
 - archive/sprints/L1.7B-Q2/L1.7B-Q2-sprint-plan.md
 - archive/sprints/L1.7B-R/L1.7B-R-baseline-audit.md

@@ -272,14 +272,14 @@ requireArray(gateClosureJson, 'blocked_outcomes', 'gate closure JSON', 10);
 const sprintLedgerMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!sprintLedgerMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = sprintLedgerMatch[1];
-if (!/\| (GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
+if (!/\| (MTU-H2C|GATE-MTU-H2B|MTU-H2B|MTU-H2A|GATE-MTU-H2A) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be MTU-H2C/GATE-MTU-H2B/MTU-H2B after GATE-MTU-H2A closure, or MTU-H2A/GATE-MTU-H2A while active');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('post-GATE-MTU-H2 first row must state ACTIVE OPERATIONAL NEXT ACTION');
 }
-if (!firstRow.includes('planning') && !firstRow.includes('human review') && !firstRow.includes('gate packet')) {
-  fail('post-GATE-MTU-H2 first row must point to planning, human review, or gate-packet authority');
+if (!firstRow.includes('planning') && !firstRow.includes('human review') && !firstRow.includes('gate packet') && !firstRow.includes('preflight') && !firstRow.includes('execution')) {
+  fail('post-GATE-MTU-H2 first row must point to planning, human review, gate-packet, preflight, or execution authority');
 }
 if (!roadmap.includes('| GATE-MTU-H2 | Solo q1-q3 Micro-Case Human Review | yes | Closed as `pass_with_conditions` for routing only.')) {
   fail('roadmap Closed Sprints must include GATE-MTU-H2 closure row');

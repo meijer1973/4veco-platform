@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T06:17:08.792Z",
+  "generatedAt": "2026-05-28T06:42:44.141Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,20 +160,27 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-28 Roadmap ID: references-team-roadmap Roadmap version: v2.90-gate-mtu-h2b-cli-execution-review Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE ec...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-28 Roadmap ID: references-team-roadmap Roadmap version: v2.91-gate-mtu-h2b-partial-pass Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
           "sprints": [
             {
-              "sprint": "GATE-MTU-H2B",
-              "name": "Solo q1-q3 CLI Execution Authorization Human Review",
+              "sprint": "MTU-H2C",
+              "name": "Reduced-Scope Solo q1-q3 CLI Execution Preflight",
               "completed": "no",
-              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2B execution-gate packet before any CLI execution. The gate should decide whether to authorize a later bounded CLI execution sprint for the unblocked lanes `F19`, `F20`, `A85-A93`, and the `A12` update, or require a `unit-add` dry-run wrapper first. Direct `A20` update/split execution is held because active target exercise `4.1.2` still uses `A20` in a given-MK context; `A20` must route to a later split/deprecate/replacement packet or an execution packet that also updates affected mappings and generator evidence. No hand edits to `references/machine/` or `references/external/`, CLI execution, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized before this gate closes.",
+              "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Proceed only with the reduced-scope execution preflight authorized by GATE-MTU-H2B. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`. `A92` cannot execute until its dependency on conditional `A89` is resolved by including/accepting `A89`, revising `A92`, or holding `A92`. `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes. `A12` is held until an update spec retains `A2.11` or a later gate explicitly justifies removal. `A20` is held because target exercise `4.1.2` uses `A20` in a given-MK context. Any execution must echo extracted JSON specs before commands, prove the reviewed plan file is unchanged or revalidated, run final ID-collision checks, and prove no unintended lesson/candidate/external-source diff. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
               "exitGate": ""
             },
             {
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` is ready for human review with a stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` accepted the stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. Platform task-type expansion is now required before lesson `L1.7B-Q2` can produce target-exercise-readiness evidence for calculation or graph/table paragraphs. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GAME-UX-3",
+              "name": "Exit Ticket Task-Type Expansion",
+              "completed": "no",
+              "currentState": "**LESSON PLATFORM HANDOFF / PLANNED DEPENDENCY.** L1.7B-P23 closed as a correct stop/handoff because choice-only checkpoint output would weaken the exit-ticket specification for `1.1.2` and `1.1.3`. Platform support must add reviewed task families and validation for numeric input, calculation/work capture, percent/index notation, short constructed response, table-value selection, graph reading, and graph construction or axis/point-placement checks before generated readiness checkpoints can be produced for calculation or graph/table paragraphs. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
               "exitGate": ""
             },
             {
@@ -250,28 +257,35 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-MTU-H2B",
+              "name": "Solo q1-q3 CLI Execution Authorization Human Review",
+              "completed": "yes",
+              "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate requires final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. Top operational next action is `MTU-H2C`.",
               "exitGate": ""
             },
             {
               "sprint": "MTU-H2B",
               "name": "Solo q1-q3 CLI Execution Gate Packet",
               "completed": "yes",
-              "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2B`.",
+              "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B has since closed; top operational next action is `MTU-H2C`.",
               "exitGate": ""
             },
             {
               "sprint": "GATE-MTU-H2A",
               "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
               "completed": "yes",
-              "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. Top operational next action is `MTU-H2B`.",
+              "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B` and `GATE-MTU-H2B` have since closed; top operational next action is now `MTU-H2C`.",
               "exitGate": ""
             },
             {
               "sprint": "MTU-H2A",
               "name": "Solo q1-q3 CLI-Mutation Planning",
               "completed": "yes",
-              "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A has since closed and the top operational next action is `MTU-H2B`.",
+              "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, and GATE-MTU-H2B have since closed; top operational next action is now `MTU-H2C`.",
               "exitGate": ""
             },
             {
@@ -951,10 +965,10 @@
       ],
       "sprints": [
         {
-          "sprint": "GATE-MTU-H2B",
-          "name": "Solo q1-q3 CLI Execution Authorization Human Review",
+          "sprint": "MTU-H2C",
+          "name": "Reduced-Scope Solo q1-q3 CLI Execution Preflight",
           "completed": "no",
-          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Run the formal human review for the MTU-H2B execution-gate packet before any CLI execution. The gate should decide whether to authorize a later bounded CLI execution sprint for the unblocked lanes `F19`, `F20`, `A85-A93`, and the `A12` update, or require a `unit-add` dry-run wrapper first. Direct `A20` update/split execution is held because active target exercise `4.1.2` still uses `A20` in a given-MK context; `A20` must route to a later split/deprecate/replacement packet or an execution packet that also updates affected mappings and generator evidence. No hand edits to `references/machine/` or `references/external/`, CLI execution, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized before this gate closes.",
+          "currentState": "**ACTIVE OPERATIONAL NEXT ACTION.** Proceed only with the reduced-scope execution preflight authorized by GATE-MTU-H2B. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`. `A92` cannot execute until its dependency on conditional `A89` is resolved by including/accepting `A89`, revising `A92`, or holding `A92`. `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes. `A12` is held until an update spec retains `A2.11` or a later gate explicitly justifies removal. `A20` is held because target exercise `4.1.2` uses `A20` in a given-MK context. Any execution must echo extracted JSON specs before commands, prove the reviewed plan file is unchanged or revalidated, run final ID-collision checks, and prove no unintended lesson/candidate/external-source diff. No hand edits to `references/machine/` or `references/external/`, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output are authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -962,7 +976,15 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, and `L1.7B-MAP`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` is ready for human review with a stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` accepted the stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. Platform task-type expansion is now required before lesson `L1.7B-Q2` can produce target-exercise-readiness evidence for calculation or graph/table paragraphs. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GAME-UX-3",
+          "name": "Exit Ticket Task-Type Expansion",
+          "completed": "no",
+          "currentState": "**LESSON PLATFORM HANDOFF / PLANNED DEPENDENCY.** L1.7B-P23 closed as a correct stop/handoff because choice-only checkpoint output would weaken the exit-ticket specification for `1.1.2` and `1.1.3`. Platform support must add reviewed task families and validation for numeric input, calculation/work capture, percent/index notation, short constructed response, table-value selection, graph reading, and graph construction or axis/point-placement checks before generated readiness checkpoints can be produced for calculation or graph/table paragraphs. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1050,7 +1072,15 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until lesson `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GATE-MTU-H2B",
+          "name": "Solo q1-q3 CLI Execution Authorization Human Review",
+          "completed": "yes",
+          "currentState": "Closed as `partial_pass_with_conditions` for reduced-scope execution only. The full H2B execution-ready set is not authorized as written. Clean lanes after final preflight are `F19`, `F20`, `A85`, `A86`, `A87`, and `A91`; `A92` requires dependency resolution because it depends on conditional `A89`; `A88`, `A89`, `A90`, and `A93` are conditional or revise-first lanes; `A12` is held until its update spec retains `A2.11` or explicitly justifies removal; and `A20` is held because active target exercise `4.1.2` uses `A20` in a given-MK context. The gate requires final preflight, extracted-spec logging, unchanged/revalidated plan proof, rollback/validation/no-unintended-diff proof, and no product-use authority. Top operational next action is `MTU-H2C`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1058,7 +1088,7 @@
           "sprint": "MTU-H2B",
           "name": "Solo q1-q3 CLI Execution Gate Packet",
           "completed": "yes",
-          "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. Top operational next action is `GATE-MTU-H2B`.",
+          "currentState": "Completed as a non-mutating execution-gate packet sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-execution-gate-packet.*`, `reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js`. The packet proves ID availability for `F19`, `F20`, and `A85-A93`; validates A-unit generator fields and term links; simulates the unblocked post-execution catalog; carries exact command strings for the unblocked lanes; and records expected diff, rollback, audit, validation, and no-unintended-diff requirements. The `A20` usage audit blocks direct `A20` narrowing because target exercise `4.1.2` uses `A20` in a given-MK context. MTU-H2B did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, execute unit splits, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2B has since closed; top operational next action is `MTU-H2C`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1066,7 +1096,7 @@
           "sprint": "GATE-MTU-H2A",
           "name": "Solo q1-q3 CLI-Mutation Plan Human Review",
           "completed": "yes",
-          "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. Top operational next action is `MTU-H2B`.",
+          "currentState": "Closed as `pass_with_conditions_execution_gate_planning_only`. Accepted the proposed `F19`, `F20`, `A85-A93`, `A12` update, and conditional `A20` update/split route for a later bounded execution-gate packet only. Conditions require ID-collision proof, schema-valid specs, A-unit generator-field proof or validator proof, term-link validation, `A20` usage impact audit, OR-prerequisite guardrail for `A90`/`A12`/`A91`, exact command log, rollback, audit, validation, reference-health/Jest proof, and no unintended external/candidate/lesson-output diff. GATE-MTU-H2A authorized no CLI execution, protected/external/machine reference mutation, unit minting, unit update execution, unit split execution, candidate writes, lesson-output mutation, CP-6/Year-1 closure, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use. `MTU-H2B` and `GATE-MTU-H2B` have since closed; top operational next action is now `MTU-H2C`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1074,7 +1104,7 @@
           "sprint": "MTU-H2A",
           "name": "Solo q1-q3 CLI-Mutation Planning",
           "completed": "yes",
-          "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A has since closed and the top operational next action is `MTU-H2B`.",
+          "currentState": "Completed as a planning-only sprint. Added `reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.*`, `reports/review-gates/GATE-MTU-H2A-cli-mutation-plan/review-packet.*`, sprint logs, and `build-scripts/references/check-mtu-h2a-cli-mutation-plan.js`. The packet proposes exact new IDs `F19`, `F20`, and `A85` through `A93`, plus live updates to `A12` and `A20`, with CLI specs, command order, rollback/audit expectations, validation proof, and guardrails. It keeps q1/q2 answer-form needs routed to MTU-H4 and D07 incidence/pass-through routed to MTU-H3. MTU-H2A did not mutate `references/machine/` or `references/external/`, mint units, execute unit updates, create candidate storage, write candidates, mutate lesson output, close CP-6/Year-1, or authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student-facing output. GATE-MTU-H2A, MTU-H2B, and GATE-MTU-H2B have since closed; top operational next action is now `MTU-H2C`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1847,8 +1877,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 99,
-      "openCount": 13
+      "completedCount": 100,
+      "openCount": 14
     },
     {
       "id": "lessen",
@@ -1867,17 +1897,17 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
-              "sprint": "L1.7B-P23",
-              "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
+              "sprint": "GAME-UX-3",
+              "name": "Exit Ticket Task-Type Expansion",
               "completed": "no",
-              "currentState": "**READY FOR HUMAN REVIEW / STOP-HANDOFF DECISION.** Operation-chain analysis shows `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks, so the sprint stopped instead of generating weak generic MC checks. `Check` remains hidden for `1.1.2` and `1.1.3`; no source data or generated exit-ticket output was created. Human review must decide whether the stop/handoff is accepted. If we continue from the current state, the next step is the L1.7B-P23 human review.",
+              "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY BEFORE L1.7B-Q2.** L1.7B-P23 closed as a correct stop/handoff: `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks. Platform support must add reviewed task families and validation before generated `1.1.2` or `1.1.3` checkpoints can be produced. If we continue from the current state, the next step is the platform task-type expansion handoff.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-Q2",
               "name": "Exit Ticket Target-Exercise Readiness Implementation",
               "completed": "no",
-              "currentState": "**REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+              "currentState": "**BLOCKED PENDING PLATFORM TASK-TYPE SUPPORT / REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, task types that support the operation chain, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
               "exitGate": ""
             },
             {
@@ -1898,7 +1928,14 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `L1.7C-MATH` and `L1.7B-MAP` are closed, but Scale Gate 1 may not run until `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until platform task-type support, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "L1.7B-P23",
+              "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: platform task-type expansion is required, L1.7B-Q2 cannot produce readiness evidence for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
               "exitGate": ""
             },
             {
@@ -2256,10 +2293,10 @@
       ],
       "sprints": [
         {
-          "sprint": "L1.7B-P23",
-          "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
+          "sprint": "GAME-UX-3",
+          "name": "Exit Ticket Task-Type Expansion",
           "completed": "no",
-          "currentState": "**READY FOR HUMAN REVIEW / STOP-HANDOFF DECISION.** Operation-chain analysis shows `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks, so the sprint stopped instead of generating weak generic MC checks. `Check` remains hidden for `1.1.2` and `1.1.3`; no source data or generated exit-ticket output was created. Human review must decide whether the stop/handoff is accepted. If we continue from the current state, the next step is the L1.7B-P23 human review.",
+          "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY BEFORE L1.7B-Q2.** L1.7B-P23 closed as a correct stop/handoff: `1.1.2` needs calculation/work fields, final answer entry, percentage/index notation, and short explanation, while `1.1.3` needs table/graph handling, economic axis convention, graph drawing or point placement, interpolation, and short explanation. The current exit-ticket engine/UI supports only choice tasks. Platform support must add reviewed task families and validation before generated `1.1.2` or `1.1.3` checkpoints can be produced. If we continue from the current state, the next step is the platform task-type expansion handoff.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2267,7 +2304,7 @@
           "sprint": "L1.7B-Q2",
           "name": "Exit Ticket Target-Exercise Readiness Implementation",
           "completed": "no",
-          "currentState": "**REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+          "currentState": "**BLOCKED PENDING PLATFORM TASK-TYPE SUPPORT / REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, task types that support the operation chain, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2291,7 +2328,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `L1.7C-MATH` and `L1.7B-MAP` are closed, but Scale Gate 1 may not run until `L1.7B-P23`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until platform task-type support, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat exit-ticket output as scale or target-exercise-readiness evidence unless Q2 closes or the gate explicitly limits exit tickets to non-summative checkpoint status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2388,6 +2425,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "L1.7B-P23",
+          "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: platform task-type expansion is required, L1.7B-Q2 cannot produce readiness evidence for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2696,7 +2741,7 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 38,
+      "completedCount": 39,
       "openCount": 17
     },
     {
