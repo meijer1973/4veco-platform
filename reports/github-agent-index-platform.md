@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T07:10:48.443Z
+Generated: 2026-05-28T07:52:01.113Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1878
+Files indexed: 1887
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -590,7 +590,7 @@ Count: 112
 
 ## references
 
-Count: 318
+Count: 320
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -699,6 +699,8 @@ Count: 318
 - references/data/sprints/MTU-H2B.plan.json
 - references/data/sprints/MTU-H2B.result.json
 - references/data/sprints/MTU-H2C.plan.json
+- references/data/sprints/MTU-H2C.result.json
+- references/data/sprints/MTU-H2D.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -913,7 +915,7 @@ Count: 318
 
 ## reports
 
-Count: 891
+Count: 897
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1590,7 +1592,13 @@ Count: 891
 - reports/sprints/MTU-H2B-planning-review.md
 - reports/sprints/MTU-H2B-result.md
 - reports/sprints/MTU-H2C-baseline.md
+- reports/sprints/MTU-H2C-diff-summary.md
+- reports/sprints/MTU-H2C-execution-log.md
 - reports/sprints/MTU-H2C-plan.md
+- reports/sprints/MTU-H2C-preflight.md
+- reports/sprints/MTU-H2C-result.md
+- reports/sprints/MTU-H2D-baseline.md
+- reports/sprints/MTU-H2D-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1827,7 +1835,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 236
+Count: 237
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1922,6 +1930,7 @@ Count: 236
 - docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.9-rx1-inventory-prepared.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.91-gate-mtu-h2b-partial-pass.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

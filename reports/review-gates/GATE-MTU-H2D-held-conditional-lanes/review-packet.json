@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2D",
+  "sprint_id": "MTU-H2D",
+  "created": "2026-05-28",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "review_scope": "Review MTU-H2D held and conditional Solo q1-q3 lane dispositions only. Do not authorize direct mutation from this packet.",
+  "remote_evidence_prerequisite": "Before the formal review starts, this packet and every cited evidence file must be committed and pushed to the normal remote branch so a remote reviewer can fetch the evidence from main. Do not close this gate against local-only packet evidence.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.json",
+    "reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.md",
+    "reports/sprints/MTU-H2C-result.md",
+    "reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.json",
+    "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/authored/course-target-exercises.json",
+    "engines/skilltree/generators.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_facing_output": false
+  },
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "Confirm that GATE-MTU-H2D reviews held/conditional lane resolution only and does not authorize protected reference mutation, unit minting, unit update execution, unit split execution, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "question": "Confirm that any later execution must be handled by a separate gate or execution packet with exact CLI commands, extracted specs, rollback, audit log, validation evidence, and no-unintended-diff proof."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2D-Q1",
+      "topic": "A12 derivative-MO update",
+      "question": "Should the later A12 update route retain A2.11 and optionally add A2.10/A2.12 for the monopoly derivative-MO context?",
+      "options": [
+        "Yes, accept the revised A12 route with A2.11 retained.",
+        "Keep A12 unchanged and hold all A12 execution.",
+        "Revise A12 differently before any execution packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q2",
+      "topic": "A20 hold route",
+      "question": "Should A20 remain held for a separate split/deprecate/replacement and affected-mapping packet because target exercise 4.1.2 uses current A20 in a given-MK context?",
+      "options": [
+        "Yes, keep A20 held and require a separate split/replacement packet.",
+        "Allow A20 only in a packet that simultaneously updates affected mappings and generator evidence.",
+        "Hold all q3 MO work until A20 is resolved.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q3",
+      "topic": "A88 scale-factor route",
+      "question": "Should A88 be revised to a zero-needs scale-factor reliability unit rather than depending on A61?",
+      "options": [
+        "Yes, accept revised A88 with no A61 dependency.",
+        "Keep A61 dependency and accept the table-selection prerequisite.",
+        "Hold A88 until a broader calculation reliability review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q4",
+      "topic": "A89 GO-as-price route",
+      "question": "Should A89 be revised to a zero-needs recognition unit so A92, not A89, carries substitution?",
+      "options": [
+        "Yes, accept revised A89 as zero-needs recognition.",
+        "Keep A04 dependency and accept substitution as prerequisite.",
+        "Hold A89 until broader monopoly unit review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q5",
+      "topic": "A90 non-calculus MO route",
+      "question": "Should A90 be narrowed to the linear GO-rule route and defer table/graph non-calculus MO variants?",
+      "options": [
+        "Yes, accept revised A90 as the linear GO-rule route.",
+        "Keep the broader table/graph/rule A90 route.",
+        "Hold A90 until separate monopoly/calculus sequencing review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q6",
+      "topic": "A92 new-price route",
+      "question": "Should A92 remain a later execution candidate only after A89 is accepted or executed?",
+      "options": [
+        "Yes, keep A92 dependent on accepted/executed A89.",
+        "Revise A92 so it no longer depends on A89.",
+        "Hold A92 until all monopoly-price routes are reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q7",
+      "topic": "A93 price-change route",
+      "question": "Should A93 drop A66, depend on A38 and A92 only, and keep broader incidence/pass-through routed to MTU-H3?",
+      "options": [
+        "Yes, accept revised A93 with A38 and A92 only.",
+        "Keep A66 dependency and accept the indirect A61 risk.",
+        "Hold A93 until MTU-H3 incidence review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q8",
+      "topic": "Generator condition and next sprint",
+      "question": "If the revised lanes are accepted, should the next sprint prepare a bounded execution packet for A12/A88/A89/A90/A92/A93 while requiring generator implementation or explicit generator-blocked status?",
+      "options": [
+        "Yes, prepare a later execution packet with generator requirements explicit.",
+        "First run a generator implementation planning sprint.",
+        "Hold all downstream work and revise H2D.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2D-Q9",
+      "topic": "Mutation and product authority now",
+      "question": "Does GATE-MTU-H2D authorize protected reference mutation, external-source mutation, machine-reference mutation, unit minting, unit updates, unit splits, candidate writes, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This gate may only record reviewed lane dispositions and route later bounded work.",
+        "Yes, but only if exact commands and rollback are named in the closure.",
+        "Hold; authority cannot be decided until the packet is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "Stop if this review packet or any cited evidence artifact is not fetchable from the remote branch used for human review.",
+    "Stop if any answer authorizes hand edits to references/machine or references/external.",
+    "Stop if any answer authorizes direct A20 execution while active given-MK usage in target exercise 4.1.2 remains unresolved.",
+    "Stop if any answer removes A2.11 from A12 without explicit human authorization.",
+    "Stop if any answer hides generator absence for A88, A89, A90, A92, or A93.",
+    "Stop if any answer treats q3 as requiring MK derivation when MK is given.",
+    "Stop if q1 or q2 answer-form needs are hidden instead of routed to MTU-H4.",
+    "Stop if D07 broader incidence/pass-through work is mutated from this gate instead of routed to MTU-H3.",
+    "Stop if any answer authorizes candidate storage, candidate writes, lesson-output mutation, CP-6 closure, Year-1 closure, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use."
+  ],
+  "recommended_next_action": "Run the formal GATE-MTU-H2D human review before any later execution packet or CLI mutation."
+}

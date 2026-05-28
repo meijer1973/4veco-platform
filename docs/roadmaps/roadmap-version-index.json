@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.92-mtu-h2c-reduced-scope-cli-execution",
+      "version": "v2.93-mtu-h2d-held-conditional-resolution",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.91-gate-mtu-h2b-partial-pass.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.89-gate-mtu-h2a-pass-with-conditions.md",
@@ -113,7 +114,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2C completed the reduced clean-lane CLI execution. Top operational next action is MTU-H2D held/conditional Solo q1-q3 lane resolution; A12 and A20 remain held, and A92 requires A89 dependency resolution."
+      "notes": "Current operating roadmap after MTU-H2D prepared the held/conditional Solo q1-q3 lane resolution packet. Top operational next action is GATE-MTU-H2D human review; no further Solo q1-q3 MTU execution is authorized until that gate closes."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.92",
+      "version": "v2.92-mtu-h2c-reduced-scope-cli-execution",
+      "title": "References Team Roadmap before MTU-H2D held/conditional resolution",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before MTU-H2D prepared the held/conditional lane resolution packet and moved the top operational next action to GATE-MTU-H2D."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.91",

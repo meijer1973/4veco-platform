@@ -64,6 +64,15 @@ Normal closure for non-trivial work now includes:
 - after validation and commit, push to the normal remote branch unless the user explicitly asks to keep work local
 - report both the local commit hash and whether it has been pushed
 
+Human-review packets have an extra remote-publication rule:
+
+- before sending, running, or recording a human-review packet, push the packet
+  and every cited evidence artifact to the normal remote branch, refresh the
+  GitHub-facing maps/indexes, and verify the remote is current enough for an
+  off-site reviewer to fetch the files. Do not ask for or close a review gate
+  against local-only evidence unless the user explicitly orders a local-only
+  dry run.
+
 Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
 All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 
 

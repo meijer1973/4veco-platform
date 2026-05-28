@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2D",
+  "gate_id": "GATE-MTU-H2D",
+  "created": "2026-05-28",
+  "status": "resolution_packet_ready_no_mutation",
+  "source_sprint": "reports/sprints/MTU-H2C-result.md",
+  "source_gate": "reports/review-gates/GATE-MTU-H2B-cli-execution/gate-closure.json",
+  "source_plan": "reports/mtu-hardening/solo-q1-q3-cli-mutation-plan.json",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false
+  },
+  "post_h2c_registry_expectations": {
+    "must_exist_from_h2c": [
+      "F19",
+      "F20",
+      "A85",
+      "A86",
+      "A87",
+      "A91"
+    ],
+    "must_remain_absent": [
+      "A88",
+      "A89",
+      "A90",
+      "A92",
+      "A93"
+    ],
+    "must_remain_live_update_targets": [
+      "A12",
+      "A20"
+    ],
+    "candidate_storage_must_not_exist": [
+      "references/data/exam-ingestion/operation-candidates.json",
+      "references/data/exam-ingestion/answer-skill-candidates.json",
+      "references/data/exam-ingestion/source-annex-extraction-overlays.json"
+    ]
+  },
+  "generator_implementation_status": {
+    "registry_generator_fields_present": [
+      "GEN_A12",
+      "GEN_A20"
+    ],
+    "implemented": [
+      {
+        "registry_generator": "GEN_A12",
+        "skilltree_key": "GEN.A12",
+        "condition": "Existing implementation requires impact review if A12 wording or semantics change."
+      },
+      {
+        "registry_generator": "GEN_A20",
+        "skilltree_key": "GEN.A20",
+        "condition": "Existing implementation requires impact review before any A20 split, deprecation, replacement, or semantic narrowing."
+      }
+    ],
+    "missing_for_revised_lanes": [
+      "GEN_A88",
+      "GEN_A89",
+      "GEN_A90",
+      "GEN_A92",
+      "GEN_A93"
+    ],
+    "execution_condition": "GEN_A12 and GEN_A20 have existing skill-tree generator implementations and need impact review if their registry semantics change. GEN_A88, GEN_A89, GEN_A90, GEN_A92, and GEN_A93 have proposed generator fields but no matching skill-tree generator implementation in the current baseline; later execution must implement them, mark them generator-blocked/not-yet-interactive, or prove they are not exposed to the skill-tree route."
+  },
+  "lane_dispositions": [
+    {
+      "unit_id": "A12",
+      "lane_type": "live_unit_update",
+      "disposition": "revise_for_later_execution_gate",
+      "execution_authorized_now": false,
+      "reason": "The H2B review correctly held the earlier update because it removed live exam-code link A2.11. The revised route keeps A2.11 and only adds A2.10/A2.12 if a later gate accepts the broader monopoly-MO context.",
+      "revised_update_spec": {
+        "name": "MO bepalen met afgeleide",
+        "kern": "Bepaal marginale opbrengst door eerst TO op te stellen en daarvan de afgeleide naar Q te nemen.",
+        "needs": [
+          "A11",
+          "A07"
+        ],
+        "exam_codes": [
+          "A2.11",
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "rekenen"
+        ],
+        "terms": [],
+        "procedure": [
+          "Stel de TO-functie op via TO = P x Q.",
+          "Bepaal MO als afgeleide van TO naar Q.",
+          "Controleer het type: bij volkomen concurrentie is MO = P; bij een lineaire monopolieprijsfunctie P = a - bQ is MO = a - 2bQ.",
+          "Gebruik deze MO-functie later in de passende MO = MK-route."
+        ],
+        "pitfalls": [
+          "Deze afgeleide route gebruiken als een niet-calculus MO-route genoeg is.",
+          "De MO-functie later als prijsfunctie gebruiken."
+        ],
+        "generator": "GEN_A12"
+      },
+      "required_before_execution": [
+        "run unit-update --dry-run for A12",
+        "prove A2.11 remains in the extracted update spec",
+        "prove A90 or another non-calculus route remains visible as an alternative where appropriate",
+        "review GEN_A12 impact if A12 wording or semantics change"
+      ]
+    },
+    {
+      "unit_id": "A20",
+      "lane_type": "live_unit_update_or_split",
+      "disposition": "hold_for_split_deprecate_replacement_packet",
+      "execution_authorized_now": false,
+      "reason": "Active target exercise 4.1.2 uses A20 in a given-MK context. Directly narrowing A20 to derived-MK would stale that mapping and conflict with the new A91 given-MK unit.",
+      "active_given_mk_usage": {
+        "source": "references/authored/course-target-exercises.json",
+        "record_id": "4.1.2",
+        "evidence": "The price-discrimination target gives MK = EUR10 constant and currently cites A20 for MO = MK logic."
+      },
+      "required_next_packet": {
+        "packet_purpose": "A20 split/deprecate/replacement and affected-mapping plan",
+        "must_classify": [
+          "all target-exercise A20 uses",
+          "A35, A36, and D30 dependency impact",
+          "GEN_A20 generator behavior",
+          "whether existing A20 remains broad, becomes derived-MK, or is deprecated in favor of successors"
+        ],
+        "generator_condition": "GEN_A20 has an existing skill-tree generator implementation and must be reviewed before any A20 split, deprecation, replacement, or semantic narrowing.",
+        "must_not_execute_from_h2d": true
+      }
+    },
+    {
+      "unit_id": "A88",
+      "lane_type": "new_unit_add",
+      "disposition": "revise_for_later_execution_gate",
+      "execution_authorized_now": false,
+      "reason": "The original A61 dependency over-triggered table-value selection. Scale-factor handling is a cross-surface calculation-reliability skill and should not require table selection.",
+      "revised_spec": {
+        "id": "A88",
+        "name": "Schaalfactoren in examencijfers toepassen",
+        "kern": "Gebruik schaalvermeldingen zoals x 1.000 correct in formules, tabellen, grafieklabels en eindantwoorden.",
+        "needs": [],
+        "exam_codes": [
+          "A2.1",
+          "A2.4"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [],
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-28",
+          "reviewer": "MTU-H2D resolution packet",
+          "rationale": "Scale labels can appear in formulas, tables, graphs, and final answer units; requiring A61 would over-trigger table-value selection.",
+          "recommended_needs": [],
+          "severity": "medium"
+        },
+        "procedure": [
+          "Zoek of waarden een schaalvermelding hebben, zoals x 1.000 of mln.",
+          "Noteer of je rekent in weergegeven eenheden of werkelijke eenheden.",
+          "Pas de schaalfactor consequent toe in formules en tussenstappen.",
+          "Geef het eindantwoord met de juiste eenheid en eventuele vermenigvuldigingsfactor."
+        ],
+        "pitfalls": [
+          "Een waarde in duizenden als losse eenheden behandelen.",
+          "Tijdens de berekening van schaal wisselen zonder dat te noteren."
+        ],
+        "generator": "GEN_A88"
+      },
+      "required_before_execution": [
+        "generator implementation or generator-blocked status for GEN_A88",
+        "fresh ID availability check",
+        "schema validation of revised spec"
+      ]
+    },
+    {
+      "unit_id": "A89",
+      "lane_type": "new_unit_add",
+      "disposition": "revise_for_later_execution_gate",
+      "execution_authorized_now": false,
+      "reason": "The original A04 dependency over-triggered substitution. A89 is a recognition unit: students must know GO/P(Q) is the price relation; A92 should carry the substitution step.",
+      "revised_spec": {
+        "id": "A89",
+        "name": "GO herkennen als prijsfunctie van de monopolist",
+        "kern": "Herken dat de GO- of vraagfunctie bij een monopolist de prijsfunctie P(Q) geeft die later met Q* moet worden gebruikt.",
+        "needs": [],
+        "exam_codes": [
+          "A2.10"
+        ],
+        "mastery_target": "understand",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal",
+          "rekenen"
+        ],
+        "terms": [],
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-28",
+          "reviewer": "MTU-H2D resolution packet",
+          "rationale": "Recognition that GO is the monopoly price relation should not force substitution; substitution is handled by A92.",
+          "recommended_needs": [],
+          "severity": "medium"
+        },
+        "procedure": [
+          "Zoek in de opgave de GO-, vraag-, of prijsfunctie.",
+          "Benoem dat deze functie de prijs P bij hoeveelheid Q geeft.",
+          "Houd MO apart: MO bepaalt de winstmaximaliserende hoeveelheid, niet de verkoopprijs."
+        ],
+        "pitfalls": [
+          "MO gebruiken als prijsfunctie.",
+          "Een herkenningsstap behandelen alsof al een berekening met Q* nodig is."
+        ],
+        "generator": "GEN_A89"
+      },
+      "required_before_execution": [
+        "generator implementation or generator-blocked status for GEN_A89",
+        "fresh ID availability check",
+        "schema validation of revised spec"
+      ]
+    },
+    {
+      "unit_id": "A90",
+      "lane_type": "new_unit_add",
+      "disposition": "revise_for_later_execution_gate",
+      "execution_authorized_now": false,
+      "reason": "The original lane mixed table, graph, and line-rule routes. For the Solo q3 canonical case, the reviewable non-calculus route should be narrowed to the linear GO rule; table and graph routes can be reviewed later if needed.",
+      "revised_spec": {
+        "id": "A90",
+        "name": "MO bepalen uit lineaire GO-regel zonder afgeleiden",
+        "kern": "Bepaal bij een lineaire monopolistische prijsfunctie de MO-regel zonder de afgeleide route verplicht te maken.",
+        "needs": [
+          "A89"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Herken de lineaire prijsfunctie P = a - bQ.",
+          "Gebruik de lineaire MO-regel: MO = a - 2bQ.",
+          "Controleer dat deze MO-regel alleen de hoeveelheidstap ondersteunt.",
+          "Gebruik later de GO- of prijsfunctie om de verkoopprijs te bepalen."
+        ],
+        "pitfalls": [
+          "De afgeleide route verplicht maken voordat die route nodig is.",
+          "De GO-functie zelf als MO gebruiken.",
+          "De MO-uitkomst als verkoopprijs behandelen."
+        ],
+        "generator": "GEN_A90"
+      },
+      "deferred_variants": [
+        "MO bepalen uit opbrengsttabel zonder afgeleiden",
+        "MO bepalen uit grafische bron zonder afgeleiden"
+      ],
+      "required_before_execution": [
+        "A89 accepted or executed first",
+        "generator implementation or generator-blocked status for GEN_A90",
+        "schema validation of revised spec"
+      ]
+    },
+    {
+      "unit_id": "A92",
+      "lane_type": "new_unit_add",
+      "disposition": "revise_for_later_execution_gate_after_a89",
+      "execution_authorized_now": false,
+      "reason": "A92 is valid only after the A89 route is accepted, because it depends on recognizing GO/P(Q) as the price relation before substituting Q*.",
+      "revised_spec": {
+        "id": "A92",
+        "name": "Nieuwe prijs bepalen na winstmaximaliserende Q",
+        "kern": "Bepaal na Q* de prijs door Q* in de GO- of prijsfunctie P(Q) in te vullen.",
+        "needs": [
+          "A04",
+          "A89"
+        ],
+        "exam_codes": [
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Neem de gevonden winstmaximaliserende hoeveelheid Q*.",
+          "Zoek de GO- of prijsfunctie P(Q), niet de MO-functie.",
+          "Vul Q* in de prijsfunctie in.",
+          "Bereken de prijs en controleer de eenheid."
+        ],
+        "pitfalls": [
+          "Q* in MO invullen en die uitkomst als prijs gebruiken.",
+          "De oude prijs gebruiken nadat de kosten of MK zijn veranderd."
+        ],
+        "generator": "GEN_A92"
+      },
+      "required_before_execution": [
+        "A89 accepted or executed first",
+        "generator implementation or generator-blocked status for GEN_A92",
+        "schema validation of revised spec"
+      ]
+    },
+    {
+      "unit_id": "A93",
+      "lane_type": "new_unit_add",
+      "disposition": "revise_for_later_execution_gate_after_a92",
+      "execution_authorized_now": false,
+      "reason": "The original A66 dependency imported indirect A61/table over-trigger risk. The revised route depends on generic percentage change and the new-price-after-Q* step only. Broader incidence/pass-through remains MTU-H3.",
+      "revised_spec": {
+        "id": "A93",
+        "name": "Procentuele prijsverandering na kostenverandering",
+        "kern": "Bereken de procentuele verandering van de prijs na een kostenverandering met de oude prijs als noemer en onderscheid dit van pass-through.",
+        "needs": [
+          "A38",
+          "A92"
+        ],
+        "exam_codes": [
+          "A2.4",
+          "A2.10",
+          "A2.12"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal de oude prijs en nieuwe prijs.",
+          "Bereken de prijsverandering: nieuwe prijs min oude prijs.",
+          "Deel door de oude prijs en vermenigvuldig met 100 procent.",
+          "Controleer dat je de prijsverandering berekent, niet het doorberekende deel van de kostenstijging."
+        ],
+        "pitfalls": [
+          "De kostenstijging als noemer gebruiken in plaats van de oude prijs.",
+          "Procentuele prijsverandering verwarren met incidence of pass-through share.",
+          "De procentuele prijsstijging is niet hetzelfde als het percentage van de kostenstijging dat wordt doorberekend.",
+          "De nieuwe prijs als basiswaarde gebruiken."
+        ],
+        "generator": "GEN_A93"
+      },
+      "deferred_route": {
+        "route": "MTU-H3",
+        "reason": "Broader tax, subsidy, cost-shock incidence and pass-through family work remains outside H2D."
+      },
+      "required_before_execution": [
+        "A92 accepted or executed first",
+        "generator implementation or generator-blocked status for GEN_A93",
+        "schema validation of revised spec"
+      ]
+    }
+  ],
+  "deferred_visible_dependencies": [
+    {
+      "route": "MTU-H3",
+      "scope": "Broader tax, subsidy, cost-shock incidence and pass-through family work including D07 split/generalization."
+    },
+    {
+      "route": "MTU-H4",
+      "scope": "Answer-form MTUs for bereken, leg uit, leg uit met voorbeeld, analyseer, arceer/grafisch, geef aan, and question-type mapping."
+    },
+    {
+      "route": "later A20 split/deprecate/replacement packet",
+      "scope": "Active A20 mapping migration and generator impact review."
+    }
+  ],
+  "quality_log": [
+    {
+      "issue": "A12 update spec removed A2.11",
+      "category": "exam-code regression",
+      "severity": "high",
+      "resolution": "revise A12 update spec to retain A2.11 before any execution"
+    },
+    {
+      "issue": "A20 active given-MK use",
+      "category": "semantic narrowing risk",
+      "severity": "high",
+      "resolution": "hold A20 for split/deprecate/replacement and affected-mapping packet"
+    },
+    {
+      "issue": "A88 depended on A61",
+      "category": "MTU over-trigger",
+      "severity": "medium",
+      "resolution": "revise A88 to zero-needs scale-factor reliability unit"
+    },
+    {
+      "issue": "A89 depended on A04",
+      "category": "MTU over-trigger",
+      "severity": "medium",
+      "resolution": "revise A89 to zero-needs recognition unit"
+    },
+    {
+      "issue": "A90 mixed table, graph, and line-rule routes",
+      "category": "MTU granularity",
+      "severity": "medium",
+      "resolution": "narrow A90 to the linear GO-rule route and defer table/graph variants"
+    },
+    {
+      "issue": "A93 depended on A66/A61 path",
+      "category": "MTU over-trigger",
+      "severity": "medium",
+      "resolution": "revise A93 to depend on A38 and A92 only"
+    },
+    {
+      "issue": "Generators absent for revised A-domain additions",
+      "category": "student-route readiness",
+      "severity": "medium",
+      "resolution": "require generator implementation or generator-blocked/non-interactive status for A88, A89, A90, A92, and A93 before execution/student exposure; review existing GEN_A12 and GEN_A20 if their source units change"
+    }
+  ],
+  "review_recommendation": {
+    "recommended_gate_decision": "review_required_no_mutation_from_h2d",
+    "recommended_next_gate": "GATE-MTU-H2D",
+    "recommended_authorized_after_gate_if_accepted": "later bounded CLI execution packet for revised A12, A88, A89, A90, A92, and A93 only; A20 remains a separate split/deprecate/replacement packet",
+    "not_authorized": [
+      "direct A20 execution",
+      "protected reference hand edits",
+      "references/external mutation",
+      "candidate writes",
+      "lesson output",
+      "student/product use"
+    ]
+  }
+}
