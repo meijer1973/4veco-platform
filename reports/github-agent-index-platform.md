@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T16:53:07.785Z
+Generated: 2026-05-28T17:07:41.763Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2043
+Files indexed: 2048
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -956,7 +956,7 @@ Count: 339
 
 ## reports
 
-Count: 1006
+Count: 1010
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1319,6 +1319,10 @@ Count: 1006
 - reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/gate-closure.json
+- reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/gate-closure.md
+- reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/human-interview.json
+- reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1985,7 +1989,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 252
+Count: 253
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2096,6 +2100,7 @@ Count: 252
 - docs/roadmaps/outdated/reference-team-roadmap-v3.04-gate-mtu-h3-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.05-mtu-h3a-cli-mutation-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

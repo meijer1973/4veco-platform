@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-05-28T16:53:03.418Z",
+  "generated_at": "2026-05-28T17:07:52.134Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.",
   "summary": {
-    "file_count": 339,
+    "file_count": 340,
     "by_layer": {
       "authored_judgement": 8,
-      "governance_data": 254,
+      "governance_data": 255,
       "external_authority": 32,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
@@ -20,7 +20,7 @@
     "by_edit_policy": {
       "human_reviewed_edit": 16,
       "generated_by_inventory_script": 37,
-      "sprint_process": 216,
+      "sprint_process": 217,
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 5,
@@ -1113,7 +1113,7 @@
       "file_name": "source-document-registry.json",
       "extension": "json",
       "size_bytes": 499326,
-      "sha256": "37ecc6401c3d2d00da54936f3159bde49dfb66f6f3bb76e69c9f8a0fce731a2f",
+      "sha256": "2366bf3803fc8882fcd964f1b2aadc82f91bc8cf26088404ed01577220773ec3",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -2574,6 +2574,26 @@
       "extension": "json",
       "size_bytes": 3393,
       "sha256": "8c06f1aeb6f271566500b32d557e453f06f178170640c4acec3c57118ad4b2b6",
+      "layer": "governance_data",
+      "authority_level": "generated_report",
+      "source_type": "sprint_metadata",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "owner": "references_team",
+      "refresh_policy": "sprint_lifecycle",
+      "downstream_dependencies": [
+        "roadmap",
+        "dashboards",
+        "future-validators"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "references/data/sprints/MTU-H3C.plan.json",
+      "file_name": "MTU-H3C.plan.json",
+      "extension": "json",
+      "size_bytes": 3889,
+      "sha256": "a86969507a61215dbe53ba548885ce14643efd439bed150dfa26cf63d5e70096",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "sprint_metadata",
