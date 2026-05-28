@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.04-gate-mtu-h3-pass-with-conditions",
+      "version": "v3.05-mtu-h3a-cli-mutation-plan",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.04-gate-mtu-h3-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.03-mtu-h3-review-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.02-mtu-h2j-executed-mtu-h3-active.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
@@ -125,7 +126,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-MTU-H3 closed pass with conditions and MTU-H3A became the active incidence/pass-through CLI-mutation planning lane."
+      "notes": "Current operating roadmap after MTU-H3A prepared the incidence/pass-through CLI-mutation planning packet and GATE-MTU-H3A became the active human review."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.04",
+      "version": "v3.04-gate-mtu-h3-pass-with-conditions",
+      "title": "References Team Roadmap before MTU-H3A CLI-mutation planning packet",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.04-gate-mtu-h3-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after MTU-H3A prepared the non-mutating incidence/pass-through CLI-mutation planning packet and moved the top operational next action to GATE-MTU-H3A."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.03",

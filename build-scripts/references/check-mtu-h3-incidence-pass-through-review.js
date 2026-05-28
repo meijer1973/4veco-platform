@@ -175,7 +175,7 @@ requireIncludes(bundle, 'review-packet.json', 'bundle urls');
 requireIncludes(h2jResult, 'MTU-H3', 'H2J result');
 requireIncludes(roadmap, 'GATE-MTU-H3');
 requireIncludes(roadmap, 'MTU-H3 | Incidence Pass-Through Skill Family Review | yes');
-if (!/v3\.0[34]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions)/.test(roadmap)) {
+if (!/v3\.0[345]-(?:mtu-h3-review-packet|gate-mtu-h3-pass-with-conditions|mtu-h3a-cli-mutation-plan)/.test(roadmap)) {
   fail('roadmap must be in MTU-H3 review or post-GATE-MTU-H3 closure lifecycle state');
 }
 
@@ -199,7 +199,8 @@ if (fs.existsSync(GATE_CLOSURE_JSON)) {
   if (closure.authority_boundary.target_exercise_mutation_authorized !== false) {
     fail('H3 closure must not authorize target-exercise mutation');
   }
-  requireIncludes(roadmap, 'MTU-H3A | Incidence Pass-Through CLI-Mutation Planning Packet | no');
+  requireIncludes(roadmap, 'MTU-H3A | Incidence Pass-Through CLI-Mutation Planning Packet | yes');
+  requireIncludes(roadmap, 'GATE-MTU-H3A | Incidence Pass-Through CLI-Mutation Plan Human Review | no');
 }
 
 console.log('OK MTU-H3 incidence/pass-through review packet');

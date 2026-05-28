@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-28T14:57:16.156Z",
+  "generated_on": "2026-05-28T15:11:36.763Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -10924,7 +10924,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:f04a717b70f80cf80c164e2fe2fd832365e149438a91b0453a67a1e4194d8ce9",
+      "source_version": "sha256:28600d402b118c3ec59de30e29f96b088312fa042d4b67a94c0a967001d2bddd",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -10933,8 +10933,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "f04a717b70f80cf80c164e2fe2fd832365e149438a91b0453a67a1e4194d8ce9",
-      "size_bytes": 243836,
+      "source_hash": "28600d402b118c3ec59de30e29f96b088312fa042d4b67a94c0a967001d2bddd",
+      "size_bytes": 245387,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

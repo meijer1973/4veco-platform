@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H3A",
+  "gate_id": "GATE-MTU-H3A-incidence-cli-mutation-plan",
+  "generated_on": "2026-05-28",
+  "status": "cli_mutation_plan_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H3-incidence-pass-through/gate-closure.json",
+  "source_family_review": "reports/mtu-hardening/mtu-h3-incidence-pass-through-family-review.json",
+  "h3_reviewed_remote_commit": "316c299db215898760e3c6da430b70b055b0b5e2",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_be_committed_and_pushed_before_human_review; closure must record the reviewed remote commit/hash",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "d07_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-MTU-H3-incidence-pass-through/gate-closure.json",
+    "reports/mtu-hardening/mtu-h3-incidence-pass-through-family-review.json",
+    "reports/sprints/MTU-H3A-plan.md",
+    "reports/sprints/MTU-H3A-baseline.md",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/authored/course-target-exercises.json as read-only context",
+    "engines/skilltree/generators.js as read-only context",
+    "build-scripts/references/unit-update.js",
+    "build-scripts/references/unit-add.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "baseline_checks": {
+    "d07_live": true,
+    "d07_current_needs": [
+      "D05",
+      "A15"
+    ],
+    "d41_d46_absent": [
+      "D41",
+      "D42",
+      "D43",
+      "D44",
+      "D45",
+      "D46"
+    ],
+    "a93_live_and_bounded": true,
+    "target_exercises_reviewed": [
+      "3.1.1",
+      "3.1.2",
+      "3.1.3"
+    ]
+  },
+  "proposed_unit_updates": [
+    {
+      "unit_id": "D07",
+      "action": "unit-update",
+      "reviewed_patch": {
+        "name": "Heffing afwentelingspercentage berekenen",
+        "kern": "Bereken welk percentage van een heffing bij consumenten en producenten terechtkomt nadat de euro-bedragen van de belastingdruk bekend zijn.",
+        "needs": [
+          "D42",
+          "A38"
+        ],
+        "exam_codes": [
+          "D1.4a"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "heffingen"
+        ],
+        "procedure": [
+          "Gebruik de belastingdruk in euros: consumentenbedrag = Pc - P0 en producentenbedrag = P0 - Pp.",
+          "Deel het consumentenbedrag door de heffing t en vermenigvuldig met 100 procent.",
+          "Deel het producentenbedrag door t en vermenigvuldig met 100 procent, of gebruik 100 procent minus consumentenpercentage.",
+          "Controleer dat beide percentages samen 100 procent zijn.",
+          "Rond af zoals de vraag vraagt en benoem wie welk percentage draagt."
+        ],
+        "pitfalls": [
+          "De prijsverandering delen door de nieuwe prijs in plaats van door de heffing.",
+          "Alleen het consumentenpercentage geven wanneer de vraag beide partijen vraagt.",
+          "Elasticiteit uitleggen terwijl de vraag alleen om percentageberekening vraagt."
+        ]
+      },
+      "planning_rationale": "D07 keeps the percentage-conversion operation and removes hidden elasticity explanation from its dependency route. Elasticity explanation moves to D45. D42 supplies euro burden amounts first; A38 supplies percentage calculation reliability."
+    }
+  ],
+  "proposed_unit_additions": [
+    {
+      "unit_id": "D41",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D41",
+        "name": "Belastingwig en Pc/Pp grafisch labelen",
+        "kern": "Label in een P-Q diagram de consumentenprijs Pc, producentenprijs Pp, belastingwig t = Pc - Pp en de verhandelde hoeveelheid Qt na een heffing.",
+        "needs": [
+          "D05"
+        ],
+        "exam_codes": [
+          "D1.13",
+          "D1.24"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "grafisch",
+          "verbaal"
+        ],
+        "terms": [
+          "heffingen",
+          "evenwichtsprijs"
+        ],
+        "procedure": [
+          "Bepaal of gebruik het nieuwe evenwicht na heffing: consumentenprijs Pc en hoeveelheid Qt.",
+          "Bepaal de producentenprijs Pp als Pc - t.",
+          "Teken of label bij Qt de verticale afstand tussen Pc en Pp als belastingwig t.",
+          "Label Pc, Pp, Qt en de wig zonder welfare-gebieden te arceren.",
+          "Controleer dat Pc - Pp gelijk is aan het heffingsbedrag."
+        ],
+        "pitfalls": [
+          "De wig tekenen tussen vraag en aanbod bij de oude hoeveelheid in plaats van bij Qt.",
+          "Pp verwarren met de consumentenprijs Pc.",
+          "Welfare-gebieden arceren terwijl alleen de wig of prijzen gevraagd worden."
+        ]
+      },
+      "planning_rationale": "D41 covers tax-wedge representation without importing welfare-area shading or percentage afwenteling."
+    },
+    {
+      "unit_id": "D42",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D42",
+        "name": "Belastingdruk in euro's berekenen",
+        "kern": "Bereken in euro per eenheid welk deel van een heffing door consument en producent wordt gedragen.",
+        "needs": [
+          "D41"
+        ],
+        "exam_codes": [
+          "D1.4a"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "heffingen",
+          "evenwichtsprijs"
+        ],
+        "procedure": [
+          "Neem de oude evenwichtsprijs P0, de consumentenprijs Pc en de producentenprijs Pp na heffing.",
+          "Bereken consumentendruk = Pc - P0.",
+          "Bereken producentendruk = P0 - Pp.",
+          "Controleer dat consumentendruk + producentendruk gelijk is aan de heffing t.",
+          "Benoem de bedragen per eenheid en rond af zoals de vraag vraagt."
+        ],
+        "pitfalls": [
+          "Meteen percentages berekenen voordat de euro-bedragen duidelijk zijn.",
+          "Pc en Pp omwisselen.",
+          "Belastingopbrengst t x Q verwarren met belastingdruk per eenheid."
+        ]
+      },
+      "planning_rationale": "D42 separates euro burden amounts from D07 percentage conversion."
+    },
+    {
+      "unit_id": "D43",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D43",
+        "name": "Subsidie-evenwicht en effectieve prijzen bepalen",
+        "kern": "Bepaal na een subsidie de consumentenprijs Pc, de effectieve producentenontvangst Pp en de nieuwe hoeveelheid.",
+        "needs": [
+          "A41"
+        ],
+        "exam_codes": [
+          "A2.15",
+          "D3.5"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "subsidies",
+          "evenwichtsprijs"
+        ],
+        "procedure": [
+          "Leid met A41 de aanbodfunctie na subsidie af of gebruik de gegeven na-subsidie aanbodlijn.",
+          "Los het nieuwe evenwicht op en bepaal consumentenprijs Pc en hoeveelheid Qs.",
+          "Bereken de producentenontvangst Pp als Pc + subsidie s.",
+          "Controleer dat Pp - Pc gelijk is aan het subsidiebedrag.",
+          "Benoem Pc, Pp en Qs expliciet."
+        ],
+        "pitfalls": [
+          "De subsidie optellen bij de consumentenprijs in plaats van bij de producentenontvangst.",
+          "De aanbodlijn in de verkeerde richting verschuiven.",
+          "Subsidiekosten of surplus berekenen terwijl alleen effectieve prijzen gevraagd zijn."
+        ]
+      },
+      "planning_rationale": "D43 gives subsidy incidence its own effective-price route before any benefit-sharing or welfare calculation."
+    },
+    {
+      "unit_id": "D44",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D44",
+        "name": "Subsidievoordeel verdelen tussen consument en producent",
+        "kern": "Bereken welk voordeel van een subsidie terechtkomt bij consumenten en producenten.",
+        "needs": [
+          "D43"
+        ],
+        "exam_codes": [
+          "D3.5"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [
+          "subsidies"
+        ],
+        "procedure": [
+          "Neem de oude evenwichtsprijs P0, consumentenprijs Pc en producentenontvangst Pp na subsidie.",
+          "Bereken consumentenvoordeel = P0 - Pc.",
+          "Bereken producentenvoordeel = Pp - P0.",
+          "Controleer dat consumentenvoordeel + producentenvoordeel gelijk is aan de subsidie s.",
+          "Benoem welk deel bij welke partij terechtkomt."
+        ],
+        "pitfalls": [
+          "Subsidievoordeel verwarren met totale overheidsuitgaven s x Q.",
+          "Alleen naar de consumentenprijs kijken en de producentenontvangst vergeten.",
+          "Welfare-effecten of DWL behandelen terwijl alleen benefit-sharing gevraagd is."
+        ]
+      },
+      "planning_rationale": "D44 is planned but not mapped to 3.1.3 unless the target exercise explicitly requires subsidy benefit-sharing."
+    },
+    {
+      "unit_id": "D45",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D45",
+        "name": "Incidentie verklaren met relatieve elasticiteiten",
+        "kern": "Leg uit dat de relatief minder elastische kant van de markt meer belastingdruk draagt of meer subsidievoordeel ontvangt.",
+        "needs": [
+          "A15"
+        ],
+        "exam_codes": [
+          "D1.4a",
+          "D3.5"
+        ],
+        "mastery_target": "understand",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [
+          "heffingen",
+          "subsidies",
+          "prijselasticiteit-van-de-vraag"
+        ],
+        "procedure": [
+          "Bepaal uit context of grafiek welke kant relatief minder elastisch reageert: vraag of aanbod.",
+          "Gebruik A15 voor vraagelasticiteit en benoem aanbodelasticiteit kwalitatief via helling of context wanneer geen aanbodelasticiteitsunit beschikbaar is.",
+          "Leg bij een heffing uit dat de relatief minder elastische kant meer belastingdruk draagt.",
+          "Leg bij een subsidie uit dat de relatief minder elastische kant relatief meer voordeel ontvangt.",
+          "Koppel de uitleg aan de berekende of getekende Pc/Pp-verdeling."
+        ],
+        "pitfalls": [
+          "Alleen vraagelasticiteit noemen terwijl aanbodelasticiteit ook bepalend is.",
+          "Steile lijn automatisch verwarren met inelastisch zonder op asdefinitie en context te letten.",
+          "Een percentageberekening geven terwijl de vraag om een verklaring vraagt."
+        ]
+      },
+      "planning_rationale": "D45 makes the elasticity explanation explicit and flags the current lack of a separate supply-elasticity unit instead of hiding that scope in D07."
+    },
+    {
+      "unit_id": "D46",
+      "action": "unit-add",
+      "reviewed_spec": {
+        "id": "D46",
+        "name": "Kostenstijging doorberekenen als pass-through share",
+        "kern": "Bereken welk percentage van een kostenstijging in de prijs wordt doorberekend en houd dit gescheiden van de procentuele prijsverandering in A93.",
+        "needs": [
+          "A93"
+        ],
+        "exam_codes": [
+          "A2.4",
+          "A2.10"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal de oude prijs en nieuwe prijs zoals in A93.",
+          "Bereken de prijsstijging in euro: nieuwe prijs - oude prijs.",
+          "Bepaal de kostenstijging per eenheid die als schok wordt gegeven.",
+          "Bereken pass-through share = prijsstijging / kostenstijging x 100 procent.",
+          "Controleer dat de noemer de kostenstijging is, niet de oude prijs."
+        ],
+        "pitfalls": [
+          "De oude prijs als noemer gebruiken; dat is A93 prijspercentage, geen pass-through share.",
+          "De volledige kostenstijging als doorberekend aannemen zonder de prijsverandering te berekenen.",
+          "Pass-through share verwarren met tax incidence zonder belastingwig of Pc/Pp."
+        ]
+      },
+      "planning_rationale": "D46 keeps cost-shock pass-through share separate from A93, where the denominator is the old price."
+    }
+  ],
+  "target_mapping_plan": [
+    {
+      "record_id": "3.1.1",
+      "status": "later_authored_reference_mutation_required",
+      "rationale": "3.1.1 asks for shifted supply, new consumer/producer prices, and a tax wedge drawing, not afwentelingspercentage.",
+      "before": {
+        "required_skills": [
+          "A06",
+          "A23",
+          "A41",
+          "D05",
+          "D07"
+        ],
+        "prior_knowledge_assumed": [
+          "A06"
+        ],
+        "new_skills_introduced": [
+          "A23",
+          "A41",
+          "D05",
+          "D07"
+        ],
+        "missing_units_flagged": [
+          "Distinguish consumer price Pc vs producer price Pp and the tax wedge = Pc \u2212 Pp (concept-level + grafisch)"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A06",
+          "A23",
+          "A41",
+          "D05",
+          "D41"
+        ],
+        "prior_knowledge_assumed": [
+          "A06"
+        ],
+        "new_skills_introduced": [
+          "A23",
+          "A41",
+          "D05",
+          "D41"
+        ],
+        "missing_units_flagged": []
+      }
+    },
+    {
+      "record_id": "3.1.2",
+      "status": "later_authored_reference_mutation_required",
+      "rationale": "3.1.2 asks for euro burden amounts and afwentelingspercentage, so D42 should precede narrowed D07.",
+      "before": {
+        "required_skills": [
+          "A10",
+          "A19",
+          "A23",
+          "A32",
+          "A40",
+          "D03",
+          "D07"
+        ],
+        "prior_knowledge_assumed": [
+          "A10",
+          "A19",
+          "A23",
+          "A40",
+          "D07"
+        ],
+        "new_skills_introduced": [
+          "A32",
+          "D03"
+        ],
+        "missing_units_flagged": [
+          "Compute afwentelingspercentage = (Pc \u2212 P*) / tax \u00d7 100 and interpret it (A-domain candidate; the consumer-burden metric)",
+          "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A10",
+          "A19",
+          "A23",
+          "A32",
+          "A40",
+          "D03",
+          "D41",
+          "D42",
+          "D07"
+        ],
+        "prior_knowledge_assumed": [
+          "A10",
+          "A19",
+          "A23",
+          "A40",
+          "D41"
+        ],
+        "new_skills_introduced": [
+          "A32",
+          "D03",
+          "D42",
+          "D07"
+        ],
+        "missing_units_flagged": [
+          "Apply the surplus-accounting identity: old TS = new CS + new PS + tax revenue + DWL (concept-level, completeness check)"
+        ]
+      }
+    },
+    {
+      "record_id": "3.1.3",
+      "status": "later_authored_reference_mutation_required",
+      "rationale": "3.1.3 requires subsidy effective prices; D44 remains unmapped until a target explicitly asks for benefit-sharing.",
+      "before": {
+        "required_skills": [
+          "A06",
+          "A10",
+          "A19",
+          "A27",
+          "A41",
+          "D19",
+          "D29"
+        ],
+        "prior_knowledge_assumed": [
+          "A06",
+          "A10",
+          "A19",
+          "A41"
+        ],
+        "new_skills_introduced": [
+          "A27",
+          "D19",
+          "D29"
+        ],
+        "missing_units_flagged": [
+          "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",
+          "Compute government subsidy expenditure = subsidy \u00d7 Q_new (reken skill, A-domain candidate)"
+        ]
+      },
+      "after": {
+        "required_skills": [
+          "A06",
+          "A10",
+          "A19",
+          "A27",
+          "A41",
+          "D19",
+          "D29",
+          "D43"
+        ],
+        "prior_knowledge_assumed": [
+          "A06",
+          "A10",
+          "A19",
+          "A41"
+        ],
+        "new_skills_introduced": [
+          "A27",
+          "D19",
+          "D29",
+          "D43"
+        ],
+        "missing_units_flagged": [
+          "Explain that subsidies cause DWL via overproduction beyond the Pareto-efficient quantity (concept-level, counterintuitive to students)",
+          "Compute government subsidy expenditure = subsidy \u00d7 Q_new (reken skill, A-domain candidate)"
+        ]
+      },
+      "held_mapping": {
+        "unit_id": "D44",
+        "reason": "Current target evidence does not explicitly require subsidy benefit-sharing; keep D44 planned but unmapped unless later target evidence requires it."
+      }
+    }
+  ],
+  "dependency_audit": [
+    {
+      "surface": "D07",
+      "decision": "remove A15 from the percentage-calculation route",
+      "risk_control": "Elasticity explanation moves to D45."
+    },
+    {
+      "surface": "D41",
+      "decision": "depend on D05 only",
+      "risk_control": "Do not import A40/A32/D29 welfare-area shading unless a task asks for welfare areas."
+    },
+    {
+      "surface": "D45",
+      "decision": "depend on A15 but name supply elasticity qualitatively",
+      "risk_control": "The review packet asks whether a separate supply-elasticity unit is required before execution."
+    },
+    {
+      "surface": "D46",
+      "decision": "depend on A93 while preserving denominator boundary",
+      "risk_control": "D46 uses cost shock as denominator; A93 remains old-price denominator."
+    }
+  ],
+  "a93_boundary_proof": {
+    "a93_role": "percentage price change after a cost change",
+    "d46_role": "pass-through share of a cost shock",
+    "must_not_change_a93_in_h3a": true,
+    "boundary_test": "A93 denominator is old price; D46 denominator is the cost shock."
+  },
+  "command_plan_for_later_execution_packet": {
+    "execution_authorized_now": false,
+    "commands_to_prepare_later": [
+      "node build-scripts/references/unit-update.js --id D07 --dry-run --spec '<reviewed D07 patch>'",
+      "node build-scripts/references/unit-update.js --id D07 --spec '<reviewed D07 patch>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D41 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D42 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D43 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D44 spec, if still accepted>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D45 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed D46 spec>'",
+      "apply exact authored mapping patch for 3.1.1, 3.1.2, and 3.1.3 only after separate execution authorization"
+    ],
+    "unit_add_dry_run_limitation_disclosed": true,
+    "authored_mapping_cli_absent": true,
+    "later_packet_must_print_each_extracted_spec_before_command": true,
+    "later_packet_must_print_exact_mapping_before_after_arrays": true
+  },
+  "rollback_requirements_for_later_execution_packet": [
+    "restore prior D07 fields exactly",
+    "remove D41-D46 only through an authorized machine-reference rollback route if minted",
+    "restore previous target-exercise arrays for 3.1.1, 3.1.2, and 3.1.3",
+    "restore prior missing-unit flags if mapping patch is rejected",
+    "discard generated projection refreshes that derive from rolled-back source changes",
+    "prove no candidate, lesson-output, PV, or student-facing state changed"
+  ],
+  "validation_stack_for_later_execution_packet": [
+    "git status --short and clean-worktree proof or explicit expected files",
+    "fresh D41-D46 absence check and D07/A38/A41/A93 presence check",
+    "unit-update --dry-run for D07",
+    "simulated catalog validation before mutation",
+    "build-unit-index",
+    "validate-core-schemas",
+    "course-target-exercises validation",
+    "generator-readiness check if any route touches interactive exposure",
+    "report JSON validation",
+    "Jest",
+    "git diff --check",
+    "no-unintended-diff proof"
+  ],
+  "projection_boundary": {
+    "generated_projection_refresh_authorized_now": false,
+    "later_refresh_allowed_only_after_authorized_source_mutation": true,
+    "generated_surfaces_to_refresh_later_if_execution_happens": [
+      "owned-content graph",
+      "RAG chunks",
+      "procedure/PV reports",
+      "generator-readiness reports"
+    ]
+  },
+  "stop_conditions": [
+    "stop if direct D07 mutation is authorized from H3A",
+    "stop if D41-D46 minting is authorized without a later exact execution packet",
+    "stop if D07 keeps A15 or hidden elasticity explanation",
+    "stop if D41 imports welfare-area shading",
+    "stop if D45 hides the supply-elasticity gap",
+    "stop if D46 collapses into A93 or changes A93's boundary",
+    "stop if target-exercise mapping writes are treated as generated projections",
+    "stop if generated projections refresh before authorized source mutation",
+    "stop if PV projection, PV machine promotion, lesson output, or student/product use is authorized"
+  ],
+  "recommended_next_action": "Commit and push this planning packet and review packet, then run GATE-MTU-H3A human review before any D07 update, D41-D46 minting, target-exercise mapping update, projection refresh, lesson handoff, or student-facing exposure."
+}

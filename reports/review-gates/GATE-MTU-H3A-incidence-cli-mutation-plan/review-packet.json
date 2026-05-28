@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H3A-incidence-cli-mutation-plan",
+  "sprint_id": "MTU-H3A",
+  "generated_on": "2026-05-28",
+  "status": "review_packet_ready_no_mutation",
+  "source_packet": "reports/mtu-hardening/mtu-h3a-incidence-cli-mutation-plan.json",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_be_committed_and_pushed_before_human_review; closure must record the reviewed remote commit/hash",
+  "review_scope": "Review the H3A incidence/pass-through CLI-mutation planning packet only. Decide whether a later bounded execution packet may be prepared for D07 and accepted D41-D46 lanes.",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "d07_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/mtu-hardening/mtu-h3a-incidence-cli-mutation-plan.json",
+    "reports/mtu-hardening/mtu-h3a-incidence-cli-mutation-plan.md",
+    "reports/review-gates/GATE-MTU-H3-incidence-pass-through/gate-closure.json",
+    "reports/mtu-hardening/mtu-h3-incidence-pass-through-family-review.json",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/authored/course-target-exercises.json as read-only context",
+    "build-scripts/references/unit-update.js",
+    "build-scripts/references/unit-add.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "calibration_questions": [
+    {
+      "id": "MTUH3A-CAL1",
+      "question": "Confirm this gate reviews the H3A CLI-mutation planning packet only and does not itself authorize protected reference mutation, D07 update, unit minting, target-exercise mutation, projection refresh, lesson output, or student/product use."
+    },
+    {
+      "id": "MTUH3A-CAL2",
+      "question": "Confirm the H3A packet, review packet, and cited evidence have been pushed to the normal remote branch before this review starts."
+    },
+    {
+      "id": "MTUH3A-CAL3",
+      "question": "Confirm D41-D46 remain planning proposals, not live IDs, and D07 remains unchanged until a later execution packet is explicitly authorized."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH3A-Q1",
+      "topic": "D07 narrowed scope",
+      "question": "Is the proposed D07 update acceptable as a tax afwentelingspercentage / percentage burden calculation unit with needs D42 and A38, no A15 dependency, and elasticity explanation moved to D45?",
+      "options": [
+        "Yes, approve this D07 route for later execution-packet planning.",
+        "Revise the D07 name, needs, procedure, or scope; name the change.",
+        "Hold D07 until a broader tax incidence review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q2",
+      "topic": "D41 and 3.1.1",
+      "question": "Is D41 acceptable as the tax wedge and Pc/Pp graphical-labeling lane, and should 3.1.1 later replace D07 with D41 while clearing the current tax-wedge missing-unit flag?",
+      "options": [
+        "Yes, approve D41 and the 3.1.1 mapping direction for later execution-packet planning.",
+        "Revise D41 or the 3.1.1 mapping; name the change.",
+        "Hold 3.1.1 mapping until broader graphical/welfare routing is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q3",
+      "topic": "D42 and 3.1.2",
+      "question": "For 3.1.2, should tax burden amounts be handled by D42 and afwentelingspercentage by narrowed D07, with D42/D07 added to the later mapping route?",
+      "options": [
+        "Yes, approve D42 plus narrowed D07 for later execution-packet planning.",
+        "Keep amount and percentage together in D07; explain why.",
+        "Revise the 3.1.2 mapping or hold until surplus sequencing is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q4",
+      "topic": "D43/D44 subsidy route",
+      "question": "Are D43 and D44 acceptable as subsidy effective-price and subsidy benefit-sharing lanes, with 3.1.3 later adding D43 only and keeping D44 unmapped unless benefit-sharing is explicitly required?",
+      "options": [
+        "Yes, approve D43/D44 and the 3.1.3 D43-only mapping direction.",
+        "Add D44 to 3.1.3 as well; explain the target evidence.",
+        "Hold subsidy incidence lanes until broader subsidy/welfare review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q5",
+      "topic": "D45 elasticity explanation",
+      "question": "Is D45 acceptable as the relative-elasticity explanation lane with A15 plus explicit qualitative supply-elasticity reasoning, or should a separate supply-elasticity unit be required before execution?",
+      "options": [
+        "Yes, approve D45 with the supply-elasticity gap visible.",
+        "Require a separate supply-elasticity unit before D45 execution.",
+        "Hold D45 until demand and supply elasticity units are jointly reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q6",
+      "topic": "D46 and A93 boundary",
+      "question": "Is D46 acceptable as cost-shock pass-through share with A93 as prerequisite, while A93 remains bounded to percentage price change?",
+      "options": [
+        "Yes, approve D46 and keep A93 unchanged.",
+        "Revise D46 or its dependency on A93; name the change.",
+        "Hold cost-shock pass-through until monopoly/cost-shock review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q7",
+      "topic": "Command, rollback, and validation standard",
+      "question": "Are the later command set, D07 dry-run, unit-add dry-run limitation disclosure, exact extracted-spec logs, rollback route, and validation stack sufficient for a later execution packet?",
+      "options": [
+        "Yes, accept the command, rollback, and validation standard.",
+        "Add more proof requirements before execution; name them.",
+        "Hold until unit-add dry-run or an authored-reference CLI exists.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q8",
+      "topic": "Mapping and projection boundary",
+      "question": "Are the authored mapping boundary and projection guardrails sufficient: mapping writes require later authorization, and generated projections refresh only after authorized source mutation?",
+      "options": [
+        "Yes, accept the mapping/projection boundary.",
+        "Add more generated surfaces or source safeguards before execution.",
+        "Hold until projection/PV architecture is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q9",
+      "topic": "Next sprint authority",
+      "question": "If GATE-MTU-H3A closes, what should be authorized next?",
+      "options": [
+        "Authorize only a later bounded execution packet for accepted H3A lanes; no execution yet.",
+        "Authorize direct execution only if exact commands, rollback, mapping diffs, and validation are included in the closure.",
+        "Hold all downstream incidence/pass-through work and revise the H3A packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH3A-Q10",
+      "topic": "Mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, D07 update, unit minting, target-exercise mutation, candidate writes, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This packet authorizes no mutation or product use; a closure may only authorize a named later sprint.",
+        "Yes, but only for explicitly named low-risk CLI lanes after exact proof is accepted.",
+        "Hold; authority cannot be decided until D07 scope is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "Stop if the packet/evidence has not been pushed before review.",
+    "Stop if any answer authorizes hand edits to references/machine or references/external.",
+    "Stop if any answer authorizes D07 mutation, D41-D46 minting, target-exercise writes, projection refresh, or student/product use from this gate.",
+    "Stop if D07 keeps A15 or hidden elasticity explanation.",
+    "Stop if D41 imports welfare-area shading without explicit target evidence.",
+    "Stop if D45 hides the supply-elasticity gap.",
+    "Stop if D46 is treated as the same operation as A93 or if A93 is generalized without a later boundary decision.",
+    "Stop if target-exercise mapping writes are treated as generated projections or promotion.",
+    "Stop if generated projections are refreshed before authorized source mutations.",
+    "Stop if PV projection, PV machine promotion, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, or student/product use is authorized now."
+  ],
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run GATE-MTU-H3A before any D07 update, D41-D46 unit minting, target-exercise mapping update, generated projection refresh, lesson handoff, or student-facing exposure."
+}
