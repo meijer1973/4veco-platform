@@ -73,6 +73,7 @@ every acceptance claim must have command-output proof.
 - `references/machine/micro-teaching-units.md`
 - `references/machine/micro-teaching-units.json`
 - generator-readiness records/reports produced by reference scripts
+- `build-scripts/references/execute-mtu-h2f-conditional-lanes.js`
 - `reports/sprints/MTU-H2F-*`
 - `references/data/sprints/MTU-H2F.*.json`
 - roadmap/index updates after execution
