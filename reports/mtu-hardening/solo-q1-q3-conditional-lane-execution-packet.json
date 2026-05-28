@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2E",
+  "gate_id": "GATE-MTU-H2E-conditional-lane-execution",
+  "created": "2026-05-28",
+  "status": "execution_packet_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/gate-closure.json",
+  "source_resolution": "reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.json",
+  "h2d_remote_evidence_commit": "63c2e53731af3941d49183628f4ba5927f8ac551",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_commit_and_push_this_packet_before_human_review",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "execution_scope": {
+    "reviewable_lanes": [
+      "A12",
+      "A88",
+      "A89",
+      "A90",
+      "A92",
+      "A93"
+    ],
+    "held_out_of_scope": [
+      "A20"
+    ],
+    "a20_condition": "A20 remains held for a separate split/deprecate/replacement and affected-mapping packet because target exercise 4.1.2 uses current A20 in a given-MK context.",
+    "no_direct_execution_from_h2e_packet": true
+  },
+  "pre_execution_checks_required": [
+    "git status --short",
+    "fresh ID absence check for A88, A89, A90, A92, and A93",
+    "fresh confirmation that A12 and A20 exist",
+    "print each extracted JSON spec before running its CLI command",
+    "run A12 unit-update --dry-run and prove A2.11 remains",
+    "confirm A20 command is absent from the execution set",
+    "confirm review packet and cited evidence were pushed before review"
+  ],
+  "lane_summaries": [
+    {
+      "unit_id": "A12",
+      "action": "unit-update",
+      "name": "MO bepalen met afgeleide",
+      "needs": [
+        "A11",
+        "A07"
+      ],
+      "exam_codes": [
+        "A2.11",
+        "A2.10",
+        "A2.12"
+      ],
+      "mastery_target": "apply",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "grafisch",
+        "rekenen"
+      ],
+      "terms": [],
+      "generator": "GEN_A12",
+      "zero_needs_status": null,
+      "generator_handling": "existing GEN.A12 implementation requires impact review; no new generator work in H2E",
+      "route_condition": "The H2B review correctly held the earlier update because it removed live exam-code link A2.11. The revised route keeps A2.11 and only adds A2.10/A2.12 if a later gate accepts the broader monopoly-MO context."
+    },
+    {
+      "unit_id": "A88",
+      "action": "unit-add",
+      "name": "Schaalfactoren in examencijfers toepassen",
+      "needs": [],
+      "exam_codes": [
+        "A2.1",
+        "A2.4"
+      ],
+      "mastery_target": "apply",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "rekenen",
+        "verbaal",
+        "grafisch"
+      ],
+      "terms": [],
+      "generator": "GEN_A88",
+      "zero_needs_status": "true_zero",
+      "generator_handling": "planned generator-blocked/not-yet-interactive until GEN implementation and later exposure approval",
+      "route_condition": "The original A61 dependency over-triggered table-value selection. Scale-factor handling is a cross-surface calculation-reliability skill and should not require table selection."
+    },
+    {
+      "unit_id": "A89",
+      "action": "unit-add",
+      "name": "GO herkennen als prijsfunctie van de monopolist",
+      "needs": [],
+      "exam_codes": [
+        "A2.10"
+      ],
+      "mastery_target": "understand",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "verbaal",
+        "rekenen"
+      ],
+      "terms": [],
+      "generator": "GEN_A89",
+      "zero_needs_status": "true_zero",
+      "generator_handling": "planned generator-blocked/not-yet-interactive until GEN implementation and later exposure approval",
+      "route_condition": "The original A04 dependency over-triggered substitution. A89 is a recognition unit: students must know GO/P(Q) is the price relation; A92 should carry the substitution step."
+    },
+    {
+      "unit_id": "A90",
+      "action": "unit-add",
+      "name": "MO bepalen uit lineaire GO-regel zonder afgeleiden",
+      "needs": [
+        "A89"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12"
+      ],
+      "mastery_target": "apply",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "terms": [],
+      "generator": "GEN_A90",
+      "zero_needs_status": null,
+      "generator_handling": "planned generator-blocked/not-yet-interactive until GEN implementation and later exposure approval",
+      "route_condition": "The original lane mixed table, graph, and line-rule routes. For the Solo q3 canonical case, the reviewable non-calculus route should be narrowed to the linear GO rule; table and graph routes can be reviewed later if needed."
+    },
+    {
+      "unit_id": "A92",
+      "action": "unit-add",
+      "name": "Nieuwe prijs bepalen na winstmaximaliserende Q",
+      "needs": [
+        "A04",
+        "A89"
+      ],
+      "exam_codes": [
+        "A2.10",
+        "A2.12"
+      ],
+      "mastery_target": "apply",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "terms": [],
+      "generator": "GEN_A92",
+      "zero_needs_status": null,
+      "generator_handling": "planned generator-blocked/not-yet-interactive until GEN implementation and later exposure approval",
+      "route_condition": "A92 is valid only after the A89 route is accepted, because it depends on recognizing GO/P(Q) as the price relation before substituting Q*."
+    },
+    {
+      "unit_id": "A93",
+      "action": "unit-add",
+      "name": "Procentuele prijsverandering na kostenverandering",
+      "needs": [
+        "A38",
+        "A92"
+      ],
+      "exam_codes": [
+        "A2.4",
+        "A2.10",
+        "A2.12"
+      ],
+      "mastery_target": "apply",
+      "prior_learning": "new_this_year",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "terms": [],
+      "generator": "GEN_A93",
+      "zero_needs_status": null,
+      "generator_handling": "planned generator-blocked/not-yet-interactive until GEN implementation and later exposure approval",
+      "route_condition": "The original A66 dependency imported indirect A61/table over-trigger risk. The revised route depends on generic percentage change and the new-price-after-Q* step only. Broader incidence/pass-through remains MTU-H3."
+    }
+  ],
+  "exact_command_set": [
+    {
+      "unit_id": "A12",
+      "action": "unit-update",
+      "dry_run_command": "node build-scripts/references/unit-update.js --id A12 --spec '{\"name\":\"MO bepalen met afgeleide\",\"kern\":\"Bepaal marginale opbrengst door eerst TO op te stellen en daarvan de afgeleide naar Q te nemen.\",\"needs\":[\"A11\",\"A07\"],\"exam_codes\":[\"A2.11\",\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Stel de TO-functie op via TO = P x Q.\",\"Bepaal MO als afgeleide van TO naar Q.\",\"Controleer het type: bij volkomen concurrentie is MO = P; bij een lineaire monopolieprijsfunctie P = a - bQ is MO = a - 2bQ.\",\"Gebruik deze MO-functie later in de passende MO = MK-route.\"],\"pitfalls\":[\"Deze afgeleide route gebruiken als een niet-calculus MO-route genoeg is.\",\"De MO-functie later als prijsfunctie gebruiken.\"],\"generator\":\"GEN_A12\"}' --dry-run",
+      "execution_command": "node build-scripts/references/unit-update.js --id A12 --spec '{\"name\":\"MO bepalen met afgeleide\",\"kern\":\"Bepaal marginale opbrengst door eerst TO op te stellen en daarvan de afgeleide naar Q te nemen.\",\"needs\":[\"A11\",\"A07\"],\"exam_codes\":[\"A2.11\",\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"grafisch\",\"rekenen\"],\"terms\":[],\"procedure\":[\"Stel de TO-functie op via TO = P x Q.\",\"Bepaal MO als afgeleide van TO naar Q.\",\"Controleer het type: bij volkomen concurrentie is MO = P; bij een lineaire monopolieprijsfunctie P = a - bQ is MO = a - 2bQ.\",\"Gebruik deze MO-functie later in de passende MO = MK-route.\"],\"pitfalls\":[\"Deze afgeleide route gebruiken als een niet-calculus MO-route genoeg is.\",\"De MO-functie later als prijsfunctie gebruiken.\"],\"generator\":\"GEN_A12\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A88",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A88\",\"name\":\"Schaalfactoren in examencijfers toepassen\",\"kern\":\"Gebruik schaalvermeldingen zoals x 1.000 correct in formules, tabellen, grafieklabels en eindantwoorden.\",\"needs\":[],\"exam_codes\":[\"A2.1\",\"A2.4\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\",\"grafisch\"],\"terms\":[],\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-28\",\"reviewer\":\"MTU-H2D resolution packet\",\"rationale\":\"Scale labels can appear in formulas, tables, graphs, and final answer units; requiring A61 would over-trigger table-value selection.\",\"recommended_needs\":[],\"severity\":\"medium\"},\"procedure\":[\"Zoek of waarden een schaalvermelding hebben, zoals x 1.000 of mln.\",\"Noteer of je rekent in weergegeven eenheden of werkelijke eenheden.\",\"Pas de schaalfactor consequent toe in formules en tussenstappen.\",\"Geef het eindantwoord met de juiste eenheid en eventuele vermenigvuldigingsfactor.\"],\"pitfalls\":[\"Een waarde in duizenden als losse eenheden behandelen.\",\"Tijdens de berekening van schaal wisselen zonder dat te noteren.\"],\"generator\":\"GEN_A88\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A89",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A89\",\"name\":\"GO herkennen als prijsfunctie van de monopolist\",\"kern\":\"Herken dat de GO- of vraagfunctie bij een monopolist de prijsfunctie P(Q) geeft die later met Q* moet worden gebruikt.\",\"needs\":[],\"exam_codes\":[\"A2.10\"],\"mastery_target\":\"understand\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"rekenen\"],\"terms\":[],\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-28\",\"reviewer\":\"MTU-H2D resolution packet\",\"rationale\":\"Recognition that GO is the monopoly price relation should not force substitution; substitution is handled by A92.\",\"recommended_needs\":[],\"severity\":\"medium\"},\"procedure\":[\"Zoek in de opgave de GO-, vraag-, of prijsfunctie.\",\"Benoem dat deze functie de prijs P bij hoeveelheid Q geeft.\",\"Houd MO apart: MO bepaalt de winstmaximaliserende hoeveelheid, niet de verkoopprijs.\"],\"pitfalls\":[\"MO gebruiken als prijsfunctie.\",\"Een herkenningsstap behandelen alsof al een berekening met Q* nodig is.\"],\"generator\":\"GEN_A89\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A90",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A90\",\"name\":\"MO bepalen uit lineaire GO-regel zonder afgeleiden\",\"kern\":\"Bepaal bij een lineaire monopolistische prijsfunctie de MO-regel zonder de afgeleide route verplicht te maken.\",\"needs\":[\"A89\"],\"exam_codes\":[\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Herken de lineaire prijsfunctie P = a - bQ.\",\"Gebruik de lineaire MO-regel: MO = a - 2bQ.\",\"Controleer dat deze MO-regel alleen de hoeveelheidstap ondersteunt.\",\"Gebruik later de GO- of prijsfunctie om de verkoopprijs te bepalen.\"],\"pitfalls\":[\"De afgeleide route verplicht maken voordat die route nodig is.\",\"De GO-functie zelf als MO gebruiken.\",\"De MO-uitkomst als verkoopprijs behandelen.\"],\"generator\":\"GEN_A90\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A92",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A92\",\"name\":\"Nieuwe prijs bepalen na winstmaximaliserende Q\",\"kern\":\"Bepaal na Q* de prijs door Q* in de GO- of prijsfunctie P(Q) in te vullen.\",\"needs\":[\"A04\",\"A89\"],\"exam_codes\":[\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Neem de gevonden winstmaximaliserende hoeveelheid Q*.\",\"Zoek de GO- of prijsfunctie P(Q), niet de MO-functie.\",\"Vul Q* in de prijsfunctie in.\",\"Bereken de prijs en controleer de eenheid.\"],\"pitfalls\":[\"Q* in MO invullen en die uitkomst als prijs gebruiken.\",\"De oude prijs gebruiken nadat de kosten of MK zijn veranderd.\"],\"generator\":\"GEN_A92\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    },
+    {
+      "unit_id": "A93",
+      "action": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A93\",\"name\":\"Procentuele prijsverandering na kostenverandering\",\"kern\":\"Bereken de procentuele verandering van de prijs na een kostenverandering met de oude prijs als noemer en onderscheid dit van pass-through.\",\"needs\":[\"A38\",\"A92\"],\"exam_codes\":[\"A2.4\",\"A2.10\",\"A2.12\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Bepaal de oude prijs en nieuwe prijs.\",\"Bereken de prijsverandering: nieuwe prijs min oude prijs.\",\"Deel door de oude prijs en vermenigvuldig met 100 procent.\",\"Controleer dat je de prijsverandering berekent, niet het doorberekende deel van de kostenstijging.\"],\"pitfalls\":[\"De kostenstijging als noemer gebruiken in plaats van de oude prijs.\",\"Procentuele prijsverandering verwarren met incidence of pass-through share.\",\"De procentuele prijsstijging is niet hetzelfde als het percentage van de kostenstijging dat wordt doorberekend.\",\"De nieuwe prijs als basiswaarde gebruiken.\"],\"generator\":\"GEN_A93\"}'",
+      "extracted_spec_must_be_logged": true,
+      "execution_authorized_by_packet": false
+    }
+  ],
+  "post_execution_commands_required_if_later_gate_authorizes_execution": [
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+    "git diff --check"
+  ],
+  "generator_handling_decision": {
+    "existing_implemented_generators": [
+      {
+        "registry_generator": "GEN_A12",
+        "skilltree_key": "GEN.A12",
+        "condition": "A12 wording/semantic change requires impact review; H2E does not edit generator code."
+      },
+      {
+        "registry_generator": "GEN_A20",
+        "skilltree_key": "GEN.A20",
+        "condition": "A20 remains out of scope; any later A20 split must review generator behavior."
+      }
+    ],
+    "proposed_missing_generators": [
+      {
+        "unit_id": "A88",
+        "registry_generator": "GEN_A88",
+        "skilltree_key": "GEN.A88",
+        "implementation_present_now": false,
+        "h2e_decision": "generator_blocked_not_yet_interactive_if_minted_later",
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A89",
+        "registry_generator": "GEN_A89",
+        "skilltree_key": "GEN.A89",
+        "implementation_present_now": false,
+        "h2e_decision": "generator_blocked_not_yet_interactive_if_minted_later",
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A90",
+        "registry_generator": "GEN_A90",
+        "skilltree_key": "GEN.A90",
+        "implementation_present_now": false,
+        "h2e_decision": "generator_blocked_not_yet_interactive_if_minted_later",
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A92",
+        "registry_generator": "GEN_A92",
+        "skilltree_key": "GEN.A92",
+        "implementation_present_now": false,
+        "h2e_decision": "generator_blocked_not_yet_interactive_if_minted_later",
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      },
+      {
+        "unit_id": "A93",
+        "registry_generator": "GEN_A93",
+        "skilltree_key": "GEN.A93",
+        "implementation_present_now": false,
+        "h2e_decision": "generator_blocked_not_yet_interactive_if_minted_later",
+        "student_facing_skilltree_use_allowed": false,
+        "pv_projection_allowed": false
+      }
+    ],
+    "execution_condition": "If a later gate authorizes unit-add for A88/A89/A90/A92/A93 without implementing generators, the execution sprint must refresh the skill-tree generator readiness block record so the new live units are explicit generator-blocked/non-interactive rows."
+  },
+  "expected_diff_if_later_execution_is_authorized": [
+    "references/machine/micro-teaching-units.md",
+    "references/machine/micro-teaching-units.json",
+    "references/data/sprints/RX.6-generator-blocked-units.json, if generator-blocked status is used for new A-units",
+    "reports/json/skilltree-generator-readiness.json and reports/markdown/skilltree-generator-readiness.md, if generator readiness is rebuilt",
+    "sprint execution logs and validation evidence"
+  ],
+  "rollback_route": [
+    "Before execution, capture git status and exact pre-execution commit.",
+    "If a command fails before commit, restore only the affected CLI-generated diffs from the pre-execution commit.",
+    "If A12 update is rejected, rerun unit-update with the previous A12 JSON patch or revert the execution commit.",
+    "If any new A-unit is rejected after minting, use a later reviewed unit-deprecate/revert lane rather than hand-editing references/machine.",
+    "Never hand-edit references/machine or references/external as rollback."
+  ],
+  "validation_required_before_any_later_execution": [
+    "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+    "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2E --complete",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js after generator-readiness rebuild if new generator-blocked units are minted",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "not_authorized": [
+    "A20 execution",
+    "hand edits to references/machine or references/external",
+    "unit minting from this packet alone",
+    "unit update execution from this packet alone",
+    "candidate storage or writes",
+    "lesson output mutation",
+    "target-exercise promotion",
+    "student/product use"
+  ]
+}

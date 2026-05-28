@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T08:04:04.877Z
+Generated: 2026-05-28T09:13:11.501Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 1896
+Files indexed: 1904
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -592,7 +592,7 @@ Count: 113
 
 ## references
 
-Count: 321
+Count: 322
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -704,6 +704,7 @@ Count: 321
 - references/data/sprints/MTU-H2C.result.json
 - references/data/sprints/MTU-H2D.plan.json
 - references/data/sprints/MTU-H2D.result.json
+- references/data/sprints/MTU-H2E.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -918,7 +919,7 @@ Count: 321
 
 ## reports
 
-Count: 903
+Count: 909
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1218,6 +1219,10 @@ Count: 903
 - reports/review-gates/GATE-MTU-H2B-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H2B-cli-execution/review-packet.md
+- reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/gate-closure.json
+- reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/gate-closure.md
+- reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/human-interview.json
+- reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/human-interview.md
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.json
 - reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1608,6 +1613,8 @@ Count: 903
 - reports/sprints/MTU-H2D-diff-summary.md
 - reports/sprints/MTU-H2D-plan.md
 - reports/sprints/MTU-H2D-result.md
+- reports/sprints/MTU-H2E-baseline.md
+- reports/sprints/MTU-H2E-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1844,7 +1851,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 238
+Count: 239
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -1941,6 +1948,7 @@ Count: 238
 - docs/roadmaps/outdated/reference-team-roadmap-v2.90-gate-mtu-h2b-cli-execution-review.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.91-gate-mtu-h2b-partial-pass.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.92-mtu-h2c-reduced-scope-cli-execution.md
+- docs/roadmaps/outdated/reference-team-roadmap-v2.93-mtu-h2d-held-conditional-resolution.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

@@ -2,7 +2,7 @@
 
 Date: 2026-05-28
 
-Status: planned after GATE-MTU-H2D pass-with-conditions.
+Status: completed; GATE-MTU-H2E review packet ready after remote push.
 
 ## Goal
 
@@ -71,8 +71,15 @@ than hidden in the execution packet.
 - `reports/sprints/MTU-H2E-plan.md`
 - `references/data/sprints/MTU-H2E.plan.json`
 - `reports/sprints/MTU-H2E-baseline.md`
-- future H2E execution-packet artifacts under `reports/mtu-hardening/` and
-  `reports/review-gates/` if prepared and pushed before review.
+- `reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json`
+- `reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.md`
+- `reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json`
+- `reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md`
+- `build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js`
+- `build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js`
+- `reports/sprints/MTU-H2E-result.md`
+- `reports/sprints/MTU-H2E-diff-summary.md`
+- `references/data/sprints/MTU-H2E.result.json`
 
 ## Forbidden paths
 
@@ -97,7 +104,8 @@ than hidden in the execution packet.
 
 ## Outputs
 
-- a later execution-gate packet for accepted non-A20 lanes, if prepared;
+- a later execution-gate packet for accepted non-A20 lanes;
+- a GATE-MTU-H2E review packet;
 - no registry mutation;
 - no generated lesson output.
 
@@ -123,9 +131,19 @@ than hidden in the execution packet.
 ## Acceptance tests
 
 ```bash
+node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2E-plan.md
-node build-scripts/sprints/check-sprint-bundle.js MTU-H2E
+node build-scripts/sprints/check-sprint-bundle.js MTU-H2E --complete
 node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js
+node build-scripts/references/check-mtu-h2-solo-cases.js
+node build-scripts/references/check-mtu-h2a-cli-mutation-plan.js
+node build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js
+node build-scripts/references/check-roadmap-version-index.js
+node build-scripts/references/check-source-document-registry.js
+node build-scripts/references/check-source-manifest.js
+node build-scripts/references/check-document-inventory.js
+node build-scripts/sprints/emit-url-index.js --check
+node build-scripts/reports/validate-report-json.js
 git diff --check
 ```
 

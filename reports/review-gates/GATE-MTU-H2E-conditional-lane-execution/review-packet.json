@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2E-conditional-lane-execution",
+  "sprint_id": "MTU-H2E",
+  "date": "2026-05-28",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "review_scope": "Review the MTU-H2E conditional-lane execution packet only. Decide whether a later bounded CLI execution sprint may be authorized for A12/A88/A89/A90/A92/A93 with A20 held.",
+  "remote_evidence_prerequisite": "This review packet, the execution packet, and all cited evidence must be committed and pushed to the normal remote branch before human review starts.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json",
+    "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.md",
+    "reports/review-gates/GATE-MTU-H2D-held-conditional-lanes/gate-closure.json",
+    "reports/mtu-hardening/solo-q1-q3-held-conditional-resolution.json",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "engines/skilltree/generators.js",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/unit-update.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "Confirm this gate reviews the H2E execution packet only and does not itself authorize protected reference mutation, unit minting, unit update execution, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "question": "Confirm the H2E packet and cited evidence have been pushed to the normal remote branch before this review starts."
+    },
+    {
+      "id": "CAL-3",
+      "question": "Confirm A20 remains out of scope and must stay held unless a separate split/deprecate/replacement packet handles affected mappings and generator behavior."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2E-Q1",
+      "topic": "remote evidence and preflight",
+      "question": "Is the remote-before-review evidence rule and final pre-execution preflight sufficient for any later execution sprint?",
+      "options": [
+        "Yes, accept the remote/preflight requirements.",
+        "Add stronger remote hash or clean-worktree proof before execution.",
+        "Hold until the packet is regenerated from a newer base commit.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q2",
+      "topic": "A12 update route",
+      "question": "Should the later execution lane update A12 to the derivative-MO wording while retaining A2.11 and using existing GEN_A12 with impact review?",
+      "options": [
+        "Yes, approve the A12 update route for later execution.",
+        "Keep A12 unchanged and execute only new-unit lanes.",
+        "Revise A12 wording or exam codes before execution.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q3",
+      "topic": "A88 and A89 zero-needs",
+      "question": "Are A88 scale-factor handling and A89 GO-as-price recognition acceptable as zero-needs units with explicit zero-needs rationale?",
+      "options": [
+        "Yes, approve both zero-needs routes for later execution.",
+        "Approve only one; name which and why.",
+        "Hold zero-needs additions until a broader root-unit review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q4",
+      "topic": "A90 linear GO rule",
+      "question": "Is A90 correctly narrowed to MO from a linear GO rule without derivatives, with table/graph variants deferred?",
+      "options": [
+        "Yes, approve the narrowed A90 route.",
+        "Revise A90 before execution.",
+        "Hold A90 until a broader monopoly sequencing review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q5",
+      "topic": "A92 and A93 dependency route",
+      "question": "Should A92 depend on A89, and should A93 depend on A38 and A92 only while broader incidence remains MTU-H3?",
+      "options": [
+        "Yes, approve A92/A93 as planned.",
+        "Revise one dependency; name which.",
+        "Hold A92/A93 until A89 or MTU-H3 is complete.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q6",
+      "topic": "generator-blocked handling",
+      "question": "Is it acceptable to mint A88/A89/A90/A92/A93 later as generator-blocked/not-yet-interactive units, with generator-readiness refresh and no student-facing exposure?",
+      "options": [
+        "Yes, accept generator-blocked/non-interactive handling for later execution.",
+        "Require generator implementation before unit minting.",
+        "Require proof of non-exposure instead of generator-blocked tracking.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q7",
+      "topic": "command set and rollback",
+      "question": "Are the exact commands, command order, extracted-spec logging, rollback route, and validation requirements sufficient?",
+      "options": [
+        "Yes, accept the command/rollback/validation standard.",
+        "Add more proof requirements before execution.",
+        "Hold until unit-add dry-run exists.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q8",
+      "topic": "A20 held lane",
+      "question": "Should A20 remain held outside this execution packet and require a separate affected-mapping and generator-review packet?",
+      "options": [
+        "Yes, keep A20 held and separate.",
+        "Allow A20 only in a packet that updates affected mappings and generator evidence.",
+        "Hold all q3 MO work until A20 is resolved.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q9",
+      "topic": "next sprint authority",
+      "question": "If GATE-MTU-H2E closes, what should be authorized next?",
+      "options": [
+        "Authorize a bounded CLI execution sprint for A12/A88/A89/A90/A92/A93 only, with A20 held.",
+        "Authorize only generator implementation planning before CLI execution.",
+        "Hold all downstream work and revise the packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2E-Q10",
+      "topic": "mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, unit minting, unit updates, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This packet authorizes no mutation or product use; a closure may only authorize a named later sprint.",
+        "Yes, but only for explicitly named low-risk CLI lanes after exact proof is accepted.",
+        "Hold; authority cannot be decided until generator handling is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "Stop if the packet/evidence has not been pushed before review.",
+    "Stop if any answer authorizes hand edits to references/machine or references/external.",
+    "Stop if any answer authorizes A20 execution from this gate.",
+    "Stop if A12 removes A2.11.",
+    "Stop if A88 or A89 zero-needs rationale is removed.",
+    "Stop if A90 becomes a broad table/graph/rule unit again.",
+    "Stop if A93 reintroduces A66 or hides the MTU-H3 incidence boundary.",
+    "Stop if generator absence for A88/A89/A90/A92/A93 is hidden.",
+    "Stop if unit-add dry-run limitations are hidden.",
+    "Stop if candidate writes, lesson-output mutation, target-exercise promotion, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use are authorized now."
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run the formal GATE-MTU-H2E human review before any CLI execution."
+}

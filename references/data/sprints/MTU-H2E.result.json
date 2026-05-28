@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2E",
+  "status": "completed",
+  "completed_on": "2026-05-28",
+  "plan": "reports/sprints/MTU-H2E-plan.md",
+  "baseline": "reports/sprints/MTU-H2E-baseline.md",
+  "result": "reports/sprints/MTU-H2E-result.md",
+  "diff_summary": "reports/sprints/MTU-H2E-diff-summary.md",
+  "execution_packet": "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json",
+  "review_packet": "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json",
+  "checker": "build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "lesson_output_mutated": false,
+  "target_exercise_promoted": false,
+  "external_source_mutated": false,
+  "reviewable_lanes": [
+    "A12",
+    "A88",
+    "A89",
+    "A90",
+    "A92",
+    "A93"
+  ],
+  "held_lanes": [
+    "A20"
+  ],
+  "generator_blocked_or_missing_implementation": [
+    "GEN_A88",
+    "GEN_A89",
+    "GEN_A90",
+    "GEN_A92",
+    "GEN_A93"
+  ],
+  "implemented_generators_requiring_impact_review": [
+    "GEN_A12",
+    "GEN_A20"
+  ],
+  "authorized_next": {
+    "gate_id": "GATE-MTU-H2E-conditional-lane-execution",
+    "name": "Conditional Lane Execution Human Review",
+    "authority": "human review of execution packet only; no mutation unless a later closure names exact CLI commands and execution authority"
+  },
+  "remote_publication_required_before_review": true,
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/references/check-mtu-h2e-conditional-lane-execution-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2E-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-H2E --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2d-held-conditional-resolution.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2-solo-cases.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2a-cli-mutation-plan.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd test -- --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "open_follow_ups": [
+    "Push H2E review packet and cited evidence before formal human review.",
+    "Run GATE-MTU-H2E human review.",
+    "Keep A20 in a separate split/deprecate/replacement and affected-mapping packet.",
+    "Handle generator implementation or generator-blocked status before any student-facing exposure."
+  ]
+}
