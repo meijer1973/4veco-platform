@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v2.98-mtu-h2g-a20-split-packet",
+      "version": "v2.99-mtu-h2h-a20-cli-mutation-plan",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-28",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.97-mtu-h2f-conditional-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.96-gate-mtu-h2e-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v2.95-mtu-h2e-conditional-execution-packet.md",
@@ -119,7 +120,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H2G prepared the non-mutating A20 split/replacement and affected-mapping packet. Top operational next action is GATE-MTU-H2G human review."
+      "notes": "Current operating roadmap after GATE-MTU-H2G closed planning-only and MTU-H2H prepared the non-mutating A20/A94/A95 CLI-mutation planning packet. Top operational next action is GATE-MTU-H2H human review."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v2.98",
+      "version": "v2.98-mtu-h2g-a20-split-packet",
+      "title": "References Team Roadmap before GATE-MTU-H2G closure and MTU-H2H planning",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v2.98-mtu-h2g-a20-split-packet.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-28",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Snapshot archived before GATE-MTU-H2G closed as pass_with_conditions for A20 split/replacement planning and MTU-H2H prepared the corrected A20/A94/A95 CLI-mutation planning packet."
     },
     {
       "roadmap_id": "references-team-roadmap-v2.97",

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H2H",
+  "plan": "reports/sprints/MTU-H2H-plan.md",
+  "baseline": "reports/sprints/MTU-H2H-baseline.md",
+  "status": "completed",
+  "created": "2026-05-28",
+  "completed_on": "2026-05-28",
+  "result": "reports/sprints/MTU-H2H-result.md",
+  "diff_summary": "reports/sprints/MTU-H2H-diff-summary.md",
+  "result_json": "references/data/sprints/MTU-H2H.result.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H2G-a20-split-replacement/gate-closure.json",
+  "packet": "reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json",
+  "checker": "build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js",
+  "human_review_required": true,
+  "gate_id": "GATE-MTU-H2H-a20-cli-mutation-plan",
+  "review_packet": "reports/review-gates/GATE-MTU-H2H-a20-cli-mutation-plan/review-packet.md",
+  "valid_gate_statuses": [
+    "pass_with_conditions",
+    "partial_pass_with_conditions",
+    "hold"
+  ],
+  "remote_publication_required_before_review": true,
+  "protected_reference_data_changes_allowed": false,
+  "machine_reference_mutation_allowed": false,
+  "target_exercise_mutation_allowed": false,
+  "candidate_units": [
+    "A94",
+    "A95"
+  ],
+  "held_or_update_units": [
+    "A20"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H2H-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H2H",
+    "node build-scripts/references/check-mtu-h2h-a20-cli-mutation-plan.js",
+    "node build-scripts/references/check-mtu-h2g-a20-split-packet.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "git diff --check"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "student_product_use": false
+  }
+}

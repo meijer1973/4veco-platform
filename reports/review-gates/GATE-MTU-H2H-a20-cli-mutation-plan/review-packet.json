@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2H-a20-cli-mutation-plan",
+  "sprint_id": "MTU-H2H",
+  "date": "2026-05-28",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "review_scope": "Review the MTU-H2H A20/A94/A95 CLI-mutation planning packet only. Decide whether a later bounded execution packet may be prepared.",
+  "remote_evidence_prerequisite": "This review packet, the H2H planning packet, and all cited evidence must be committed and pushed to the normal remote branch before human review starts.",
+  "evidence_base": [
+    "reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json",
+    "reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.md",
+    "reports/review-gates/GATE-MTU-H2G-a20-split-replacement/gate-closure.json",
+    "reports/mtu-hardening/solo-q1-q3-a20-split-replacement-packet.json",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/authored/course-target-exercises.json",
+    "engines/skilltree/generators.js",
+    "build-scripts/references/unit-update.js",
+    "build-scripts/references/unit-add.js",
+    "references/reference-team-roadmap.md"
+  ],
+  "planned_focus": [
+    {
+      "surface": "A20",
+      "finding": "corrected derived-MO plus derived-MK spec includes A2.11",
+      "review_issue": "approve or revise A20 update direction"
+    },
+    {
+      "surface": "A94",
+      "finding": "price-taker MO = P plus derived MK",
+      "review_issue": "approve or revise A94 spec and mapping use"
+    },
+    {
+      "surface": "A95",
+      "finding": "given MK-function route and possible GEN.A20 destination",
+      "review_issue": "approve or revise A95/generator route"
+    },
+    {
+      "surface": "target mappings",
+      "finding": "exact before/after arrays for 3.2.2, 3.3.3, and 4.1.2",
+      "review_issue": "approve or revise authored-reference update plan"
+    }
+  ],
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "Confirm this gate reviews the H2H CLI-mutation planning packet only and does not itself authorize protected reference mutation, unit minting, unit update execution, target-exercise mutation, generator changes, lesson output, or student/product use."
+    },
+    {
+      "id": "CAL-2",
+      "question": "Confirm the H2H packet and cited evidence have been pushed to the normal remote branch before this review starts."
+    },
+    {
+      "id": "CAL-3",
+      "question": "Confirm target-exercise mapping changes are authored-reference mutations and require exact before/after diffs, rollback, and validation before execution."
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH2H-Q1",
+      "topic": "A20 corrected spec",
+      "question": "Is the corrected A20 update spec acceptable: name `Winstmaximum oplossen met afgeleide MO en MK`, needs `A12/A13/A02`, exam codes `A2.10/A2.11/A2.12`, and generator `GEN_A20` subject to generator handling?",
+      "options": [
+        "Yes, approve the corrected A20 spec for later execution-packet planning.",
+        "Revise A20 name or fields; name the change.",
+        "Prefer formal split/deprecate instead of updating A20 in place.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q2",
+      "topic": "A94 price-taker route",
+      "question": "Is A94 acceptable as `MO = P en afgeleide MK oplossen`, with explicit price-taker `MO = marktprijs P`, needs `A13/A02`, and no A12 derivative-MO prerequisite?",
+      "options": [
+        "Yes, approve A94 for later execution-packet planning.",
+        "Revise A94 name, needs, or procedure; name the change.",
+        "Hold A94 until broader price-taker sequencing review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q3",
+      "topic": "A95 given MK-function route",
+      "question": "Is A95 acceptable as `MO = gegeven MK-functie oplossen`, distinct from A91's given constant/value MK route?",
+      "options": [
+        "Yes, approve A95 for later execution-packet planning.",
+        "Revise A95 name, needs, or procedure; name the change.",
+        "Hold A95 until generator/unit alignment review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q4",
+      "topic": "target-exercise mapping diffs",
+      "question": "Are the proposed authored mapping diffs acceptable: 3.2.2 replaces A20 with A94 and removes A20 as prior, 3.3.3 keeps A20, and 4.1.2 replaces A20 with A91?",
+      "options": [
+        "Yes, approve these mapping diffs for later execution-packet planning.",
+        "Revise one mapping; name the record and field.",
+        "Hold mapping work until broader target-exercise review.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q5",
+      "topic": "GEN.A20 route",
+      "question": "Is the preferred generator route acceptable: move current GEN.A20 behavior to A95/equivalent and create, rewrite, or block GEN.A20 for the narrowed derived-route A20?",
+      "options": [
+        "Yes, approve the preferred generator route for later planning.",
+        "Rewrite GEN.A20 in place and do not move behavior to A95.",
+        "Hold all execution planning until generator implementation is designed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q6",
+      "topic": "command and rollback standard",
+      "question": "Are the later command, rollback, and validation requirements sufficient, including A20 dry-run, unit-add dry-run limitation disclosure, exact mapping before/after logs, generator-readiness proof, and no-unintended-diff proof?",
+      "options": [
+        "Yes, accept the command/rollback/validation standard.",
+        "Add more proof requirements before execution; name them.",
+        "Hold until unit-add dry-run or authored-reference CLI exists.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q7",
+      "topic": "projection refresh",
+      "question": "Are the projection refresh guardrails sufficient: owned-content graph, RAG chunks, procedure/PV reports, and generator readiness refresh only after authorized unit and mapping mutations?",
+      "options": [
+        "Yes, accept the projection-refresh guardrails.",
+        "Add more generated surfaces before execution.",
+        "Hold until projection/PV architecture is reviewed.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q8",
+      "topic": "next sprint authority",
+      "question": "If GATE-MTU-H2H closes, what should be authorized next?",
+      "options": [
+        "Authorize only a later bounded execution packet; no execution yet.",
+        "Authorize direct execution only if exact commands, mapping diffs, generator route, rollback, and validation are included in the closure.",
+        "Hold all downstream work and revise the H2H packet.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q9",
+      "topic": "MTU-H3 sequencing",
+      "question": "May MTU-H3 incidence/pass-through proceed after H2H planning if the A20 execution packet remains separately tracked?",
+      "options": [
+        "Yes, MTU-H3 may proceed if A20 execution remains explicitly tracked.",
+        "No, complete A20 execution before MTU-H3.",
+        "Hold sequencing until H2H closure is written.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH2H-Q10",
+      "topic": "mutation and product authority now",
+      "question": "Does this review packet itself authorize protected reference mutation, unit minting, unit updates, target-exercise mutation, generator change, lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use now?",
+      "options": [
+        "No. This packet authorizes no mutation or product use; a closure may only authorize a named later sprint.",
+        "Yes, but only for explicitly named low-risk planning artifacts.",
+        "Hold; authority cannot be decided until generator handling is revised.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "Stop if the packet/evidence has not been pushed before review.",
+    "Stop if any answer authorizes hand edits to references/machine or references/external.",
+    "Stop if any answer authorizes A20 mutation from this gate.",
+    "Stop if any answer authorizes A94/A95 minting from this gate.",
+    "Stop if any answer authorizes target-exercise mapping writes from this gate.",
+    "Stop if any answer removes A2.11 from the narrowed A20 route.",
+    "Stop if A94 loses the price-taker MO = P step.",
+    "Stop if GEN.A20 mismatch or missing GEN_A94/GEN_A95 status is hidden.",
+    "Stop if generated projections are refreshed before authorized source mutations.",
+    "Stop if PV projection or PV machine promotion is authorized now.",
+    "Stop if candidate writes, lesson-output mutation, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, or student/product use are authorized now."
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "generator_change_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run GATE-MTU-H2H before any A20 CLI mutation, A94/A95 unit minting, target-exercise mapping update, generator change, generated projection refresh, or student-facing exposure."
+}

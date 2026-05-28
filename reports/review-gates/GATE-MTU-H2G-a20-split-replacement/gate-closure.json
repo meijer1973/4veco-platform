@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2G-a20-split-replacement",
+  "date": "2026-05-28",
+  "status": "pass_with_conditions",
+  "closure_type": "planning_only",
+  "reviewed_remote_commit": "f925da5ed7521c3052c60668599c5a97d99aaf7a",
+  "remote_publication_status": "satisfied_by_reviewed_remote_commit",
+  "source_review_packet": "reports/review-gates/GATE-MTU-H2G-a20-split-replacement/review-packet.md",
+  "human_interview": "reports/review-gates/GATE-MTU-H2G-a20-split-replacement/human-interview.md",
+  "verdict": "PASS WITH CONDITIONS for A20 split/replacement planning only. No mutation or execution authorized.",
+  "accepted": [
+    "Usage audit is sufficient: 3.2.2 is price-taker/given-MO plus derived-MK, 3.3.3 is derived-MO plus derived-MK, 4.1.2 is given constant MK, and GEN.A20 currently practises given MO and given MK-function solving.",
+    "A20 may be narrowed/renamed to the full derived-MO plus derived-MK route in a later packet, but only if affected mappings and GEN.A20 behavior are handled.",
+    "A94 or equivalent should be planned for price-taker/given-MO plus derived-MK cases.",
+    "A95 or equivalent should be planned for given MK-function cases.",
+    "4.1.2 should move from A20 to A91 for its given constant-MK equality-solving step.",
+    "MTU-H3 incidence/pass-through may proceed if A20 remains explicitly tracked separately."
+  ],
+  "conditions": [
+    "Add A2.11 to the proposed A20 exam codes.",
+    "Rename A20 with clearer wording; avoid afgeleide MO ambiguity.",
+    "Add an explicit price-taker MO = P step to A94.",
+    "Decide whether GEN.A20 is rewritten for narrowed A20, moved to A95, or blocked.",
+    "Later mapping changes for 3.2.2, 3.3.3, and 4.1.2 must be handled as authored-reference updates with exact before/after diffs.",
+    "Generated projections may refresh only after authorized unit/mapping mutations.",
+    "No mutation, unit minting, target-exercise write, generator change, PV projection, lesson output, or student/product use is authorized by this gate."
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H2H",
+    "name": "A20/A94/A95 CLI-Mutation Planning Packet",
+    "scope": "Prepare a later bounded CLI-mutation planning packet with corrected A20 spec, A94/A95 specs, exact mapping diffs, GEN.A20 route, rollback, validation, and no-exposure proof.",
+    "execution_authorized": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

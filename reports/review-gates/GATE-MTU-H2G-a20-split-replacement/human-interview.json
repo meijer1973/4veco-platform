@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H2G-a20-split-replacement",
+  "date": "2026-05-28",
+  "reviewed_remote_commit": "f925da5ed7521c3052c60668599c5a97d99aaf7a",
+  "review_mode": "human_review_recorded_from_user_verdict",
+  "verdict": "pass_with_conditions_planning_only",
+  "calibration_answers": [
+    {
+      "id": "CAL-1",
+      "answer": "yes",
+      "notes": "Gate reviews the A20 split/replacement packet only and authorizes no mutation, unit minting, target-exercise mutation, lesson output, or product use."
+    },
+    {
+      "id": "CAL-2",
+      "answer": "yes_with_closure_override",
+      "notes": "The packet and evidence were fetchable remotely. The reviewed packet JSON still said must_commit_and_push_this_packet_before_human_review; closure records reviewed commit f925da5ed7521c3052c60668599c5a97d99aaf7a as the satisfied remote proof."
+    },
+    {
+      "id": "CAL-3",
+      "answer": "yes",
+      "notes": "Any later A20 mutation must handle affected target-exercise mappings and GEN.A20 behavior before student-facing exposure."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH2G-Q1",
+      "decision": "accept_with_wording_refinement",
+      "rationale": "Accept the classifications. Refine 3.2.2 wording to say price-taker MO = P explicitly, not only given MO."
+    },
+    {
+      "id": "MTUH2G-Q2",
+      "decision": "approve_a20_narrowing_for_later_planning_only",
+      "rationale": "A20 may become the full derived-MO plus derived-MK route with needs A12/A13/A02, but only in a later packet that handles mappings and generator behavior. Add A2.11 to the A20 exam codes."
+    },
+    {
+      "id": "MTUH2G-Q3",
+      "decision": "approve_a94_or_equivalent_for_later_planning",
+      "rationale": "3.2.2 should not require A12 derivative-MO because the price-taker rule is MO = P. A94 must name that rule explicitly."
+    },
+    {
+      "id": "MTUH2G-Q4",
+      "decision": "approve_a95_or_equivalent_for_later_planning",
+      "rationale": "A91 covers given constant/value MK. A95 is appropriate for given MK-function cases and for the current GEN.A20 behavior if preserved."
+    },
+    {
+      "id": "MTUH2G-Q5",
+      "decision": "approve_412_a20_to_a91_mapping_direction",
+      "rationale": "This fixes the stale false prerequisite for the given constant-MK equality-solving step without validating the entire price-discrimination route."
+    },
+    {
+      "id": "MTUH2G-Q6",
+      "decision": "prefer_move_current_gen_a20_behavior_to_a95",
+      "rationale": "Current GEN.A20 gives both MO and MK functions directly and does not match a narrowed derive-both A20. Move it to A95/equivalent or block exposure until A20 has a matching generator."
+    },
+    {
+      "id": "MTUH2G-Q7",
+      "decision": "accept_with_owned_source_generated_projection_separation",
+      "rationale": "Refresh owned-content graph, RAG chunks, PV/procedure reports, and generator readiness only after authorized mutation. Prove authored mapping changes are intentional and generated reports only follow those changes."
+    },
+    {
+      "id": "MTUH2G-Q8",
+      "decision": "authorize_later_bounded_cli_mutation_planning_packet_only",
+      "rationale": "Next step must name exact specs, exact mapping changes, generator handling, rollback, validation, and no-exposure proof. No execution from H2G."
+    },
+    {
+      "id": "MTUH2G-Q9",
+      "decision": "mtu_h3_may_proceed_if_a20_remains_tracked",
+      "rationale": "Incidence/pass-through work may proceed if A20 remains explicitly scheduled or held separately."
+    },
+    {
+      "id": "MTUH2G-Q10",
+      "decision": "no_mutation_or_product_authority_now",
+      "rationale": "The packet authorizes no mutation, target-exercise writes, unit minting, generator changes, PV projection, or student/product use."
+    }
+  ],
+  "required_conditions": [
+    "Add A2.11 to the proposed A20 exam codes.",
+    "Rename A20 with clearer wording and avoid the ambiguous phrase afgeleide MO.",
+    "Add an explicit price-taker MO = P step to A94.",
+    "Decide whether GEN.A20 is rewritten for narrowed A20, moved to A95, or blocked.",
+    "Treat mapping changes for 3.2.2, 3.3.3, and 4.1.2 as authored-reference updates with exact before/after diffs.",
+    "Refresh generated projections only after authorized unit or mapping mutations.",
+    "Authorize no mutation, unit minting, target-exercise write, generator change, PV projection, lesson output, or student/product use from this gate."
+  ],
+  "quality_log": [
+    {
+      "issue": "A20 generic label covers multiple routes",
+      "severity": "high",
+      "surface": "MTU registry",
+      "next_action": "Narrow/rename A20 or split/deprecate.",
+      "proof_required": "A20 only represents derived-MO plus derived-MK route."
+    },
+    {
+      "issue": "A20 proposed exam codes omit A2.11",
+      "severity": "high",
+      "surface": "MTU spec",
+      "next_action": "Add A2.11.",
+      "proof_required": "A20 spec validates with derivative code retained."
+    },
+    {
+      "issue": "3.2.2 over-triggers A12 via A20",
+      "severity": "medium_high",
+      "surface": "target-exercise mapping",
+      "next_action": "Plan A94/equivalent and remap.",
+      "proof_required": "3.2.2 no longer requires derivative MO."
+    },
+    {
+      "issue": "4.1.2 stale A20 mapping after A91 exists",
+      "severity": "high",
+      "surface": "target-exercise mapping",
+      "next_action": "Replace A20 with A91 for given constant MK step.",
+      "proof_required": "4.1.2 mapping no longer implies derived MK."
+    },
+    {
+      "issue": "GEN.A20 mismatch if A20 is narrowed",
+      "severity": "high_if_exposed",
+      "surface": "skill-tree generator",
+      "next_action": "Rewrite GEN.A20, move it to A95, or block exposure.",
+      "proof_required": "Generator-readiness report shows no stale A20 interaction."
+    },
+    {
+      "issue": "A94 needs explicit price-taker rule",
+      "severity": "medium",
+      "surface": "new MTU spec",
+      "next_action": "Add MO = P for price-taker step.",
+      "proof_required": "A94 procedure names the rule explicitly."
+    }
+  ]
+}

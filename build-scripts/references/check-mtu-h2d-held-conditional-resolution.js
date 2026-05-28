@@ -516,8 +516,8 @@ for (const requiredText of ['A12', 'A20', 'A88', 'A89', 'A90', 'A92', 'A93']) {
 const firstRowMatch = roadmap.match(/\| Sprint \| Name \| Completed \| Current State \|\s*\n\|[-|]+\|\s*\n(\|[^\n]+\|)/);
 if (!firstRowMatch) fail('could not find first Sprint Ledger row in roadmap');
 const firstRow = firstRowMatch[1];
-if (!/\| (GATE-MTU-H2G|MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D) \|/.test(firstRow)) {
-  fail('first Sprint Ledger row must be GATE-MTU-H2G, MTU-H2G, MTU-H2F, GATE-MTU-H2E, MTU-H2E, GATE-MTU-H2D, or MTU-H2D for H2D lifecycle');
+if (!/\| (GATE-MTU-H2H|MTU-H2H|GATE-MTU-H2G|MTU-H2G|MTU-H2F|GATE-MTU-H2E|MTU-H2E|GATE-MTU-H2D|MTU-H2D) \|/.test(firstRow)) {
+  fail('first Sprint Ledger row must be GATE-MTU-H2H, MTU-H2H, GATE-MTU-H2G, MTU-H2G, MTU-H2F, GATE-MTU-H2E, MTU-H2E, GATE-MTU-H2D, or MTU-H2D for H2D lifecycle');
 }
 if (!firstRow.includes('ACTIVE OPERATIONAL NEXT ACTION')) {
   fail('first Sprint Ledger row must state ACTIVE OPERATIONAL NEXT ACTION');
