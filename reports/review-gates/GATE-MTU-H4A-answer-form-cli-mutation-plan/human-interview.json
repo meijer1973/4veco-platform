@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4A-answer-form-cli-mutation-plan",
+  "sprint_id": "MTU-H4A",
+  "recorded_on": "2026-05-29",
+  "reviewed_remote_commit": "a91e5da2082ef8aacc040e55b3fae905d6f0799a",
+  "review_mode": "human_review_recorded_from_supplied_reviewer_verdict",
+  "full_question_list_shown_before_review": true,
+  "one_response_contained_all_answers": true,
+  "follow_up_ambiguity_remaining": false,
+  "verdict": {
+    "status": "pass_with_conditions",
+    "summary": "PASS WITH CONDITIONS for later bounded execution-packet preparation. No execution or product use now."
+  },
+  "calibration_answers": [
+    {
+      "id": "calibration_1",
+      "answer": "yes",
+      "summary": "This gate reviews H4A planning only and does not authorize mutation or product use."
+    },
+    {
+      "id": "calibration_2",
+      "answer": "yes_based_on_remote_fetchability",
+      "summary": "The H4A packet and evidence have been pushed before review; closure records the reviewed remote commit."
+    },
+    {
+      "id": "calibration_3",
+      "answer": "yes",
+      "summary": "Candidate storage remains absent, A-domain ID pressure is a review issue, and proposed answer-form IDs are not live until later execution."
+    }
+  ],
+  "review_answers": [
+    {
+      "question_id": "MTUH4A-Q1",
+      "decision": "approve_for_this_bounded_packet_with_id_policy_follow_up",
+      "rationale": "A100 is invalid under the two-digit ID pattern. A71 is held. A80, A81, and A96-A99 are acceptable for this packet, but future growth requires an ID-policy sprint or namespace decision."
+    },
+    {
+      "question_id": "MTUH4A-Q2",
+      "decision": "approve_a96",
+      "rationale": "A96 is a clean reusable bereken answer-form unit with formula/relation, values, intermediate steps, unit/notation, and conclusion; it remains content-neutral with needs empty."
+    },
+    {
+      "question_id": "MTUH4A-Q3",
+      "decision": "approve_a97_a98_a99_as_separate_lanes",
+      "rationale": "uitleg_dat, uitleg_of, and leg uit met voorbeeld have distinct procedures and should not collapse into one broad lane."
+    },
+    {
+      "question_id": "MTUH4A-Q4",
+      "decision": "approve_a80_with_split_if_needed_condition",
+      "rationale": "A combined noem/geef-aan unit is acceptable now, with future split required if evidence shows geef aan behaves differently from noem."
+    },
+    {
+      "question_id": "MTUH4A-Q5",
+      "decision": "approve_a81_as_modifier",
+      "rationale": "A81 is not a standalone complete answer form; it must combine with an underlying answer form such as calculation, explanation, classification, or graph response."
+    },
+    {
+      "question_id": "MTUH4A-Q6",
+      "decision": "approve_held_treatment",
+      "rationale": "Graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation remain held with no unit-add commands."
+    },
+    {
+      "question_id": "MTUH4A-Q7",
+      "decision": "approve_no_write_ex_overlay_boundary",
+      "rationale": "q3 threshold conclusion/unit-direction and q15 two-step correction-model explanation remain visible as EX answer-skill overlays with no candidate storage or writes."
+    },
+    {
+      "question_id": "MTUH4A-Q8",
+      "decision": "approve_mapping_projection_boundary",
+      "rationale": "Current question_type mappings remain planning input only; no target-exercise fields are written and projections refresh only after later source mutations."
+    },
+    {
+      "question_id": "MTUH4A-Q9",
+      "decision": "accept_with_generator_exposure_condition",
+      "rationale": "The command plan discloses no dry-run support, requires extracted-spec logging, simulated catalog validation, and generator/exposure checks."
+    },
+    {
+      "question_id": "MTUH4A-Q10",
+      "decision": "authorize_only_later_bounded_execution_packet_no_execution_now",
+      "rationale": "The next packet may prepare exact unit-add execution for accepted lanes, but no mutation, storage creation, target-exercise writes, projection refresh, or product use is authorized."
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "accept_bounded_use_of_a80_a81_a96_a99_and_keep_a71_held",
+    "future_a_domain_growth_requires_id_policy_or_namespace_decision",
+    "require_generator_implementation_or_generator_blocked_non_interactive_status_before_student_facing_exposure",
+    "do_not_write_target_exercise_question_type_or_answer_form_fields_from_this_gate",
+    "do_not_create_or_write_answer_skill_candidate_storage",
+    "later_execution_packet_must_run_simulated_catalog_validation_and_full_validator_stack",
+    "validate_proposed_exam_codes_against_syllabus_registry"
+  ],
+  "quality_log": [
+    {
+      "issue": "A-domain ID pressure",
+      "severity": "high_for_future_work",
+      "next_action": "Accept this bounded allocation; plan ID-policy follow-up.",
+      "proof_required": "Closure states A80/A81/A96-A99 are bounded and future growth needs policy."
+    },
+    {
+      "issue": "A100 invalid",
+      "severity": "high_if_used",
+      "next_action": "Keep rejected.",
+      "proof_required": "No execution packet references A100."
+    },
+    {
+      "issue": "A71 held",
+      "severity": "medium",
+      "next_action": "Do not consume without explicit review.",
+      "proof_required": "A71 absent from command set."
+    },
+    {
+      "issue": "Answer-form units may lack generators",
+      "severity": "high_if_exposed",
+      "next_action": "Implement or generator-block.",
+      "proof_required": "Generator-readiness proves no broken student route."
+    },
+    {
+      "issue": "bron could become standalone",
+      "severity": "medium_high",
+      "next_action": "Keep A81 as modifier.",
+      "proof_required": "Future mapping requires underlying answer form."
+    },
+    {
+      "issue": "EX overlays could be hidden",
+      "severity": "high",
+      "next_action": "Keep q3/q15 overlay route visible.",
+      "proof_required": "No candidate storage or writes."
+    },
+    {
+      "issue": "Target-exercise fields absent",
+      "severity": "medium",
+      "next_action": "Separate authored-reference mutation packet only.",
+      "proof_required": "Exact before/after diffs before any field write."
+    }
+  ],
+  "explicit_non_authority": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

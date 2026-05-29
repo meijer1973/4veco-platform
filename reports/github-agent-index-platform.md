@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-29T20:19:42.150Z
+Generated: 2026-05-29T20:28:25.317Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2103
+Files indexed: 2111
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -619,7 +619,7 @@ Count: 124
 
 ## references
 
-Count: 347
+Count: 349
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -886,6 +886,8 @@ Count: 347
 - references/data/sprints/S9.result.json
 - references/data/sprints/S9a.plan.json
 - references/data/sprints/S9a.result.json
+- references/data/sprints/SPEC-ET-1.plan.json
+- references/data/sprints/SPEC-ET-1.result.json
 - references/data/sprints/SYNC-2.plan.json
 - references/data/sprints/SYNC-2.result.json
 - references/data/sprints/SYNC-4.plan.json
@@ -971,7 +973,7 @@ Count: 347
 
 ## reports
 
-Count: 1048
+Count: 1053
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1998,6 +2000,11 @@ Count: 1048
 - reports/sprints/S9a-baseline.md
 - reports/sprints/S9a-diff-summary.md
 - reports/sprints/S9a-result.md
+- reports/sprints/SPEC-ET-1-baseline.md
+- reports/sprints/SPEC-ET-1-diff-summary.md
+- reports/sprints/SPEC-ET-1-plan.md
+- reports/sprints/SPEC-ET-1-planning-review.md
+- reports/sprints/SPEC-ET-1-result.md
 - reports/sprints/SYNC-2-baseline.md
 - reports/sprints/SYNC-2-diff-summary.md
 - reports/sprints/SYNC-2-lead-review-assignment.md
@@ -2042,7 +2049,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 258
+Count: 259
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2159,6 +2166,7 @@ Count: 258
 - docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

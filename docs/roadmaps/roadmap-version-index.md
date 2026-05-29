@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.14-exit-ticket-target-equivalent-spec` | `references/reference-team-roadmap.md` | Current operating roadmap after SPEC-ET-1 corrected exit-ticket semantics to target-equivalent proof, added EX-LESSON-1, and kept GATE-MTU-H4A as the top operational next action; no mutation or product use is authorized. |
+| References Team Roadmap | `v3.15-gate-mtu-h4a-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H4A closed pass_with_conditions and moved the top operational next action to MTU-H4B bounded execution-packet preparation; no mutation or product use is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H4A closure | `v3.14-exit-ticket-target-equivalent-spec` | `docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before SPEC-ET-1 target-equivalent correction | `v3.13-mtu-h4a-answer-form-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4A planning packet | `v3.12-gate-mtu-h4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4 closure | `v3.11-engine-operationalization-track` | `docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md` | `references/reference-team-roadmap.md` |

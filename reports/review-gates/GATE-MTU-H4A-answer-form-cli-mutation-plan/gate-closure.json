@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4A-answer-form-cli-mutation-plan",
+  "sprint_id": "MTU-H4A",
+  "date": "2026-05-29",
+  "closed_on": "2026-05-29",
+  "status": "pass_with_conditions",
+  "status_detail": "planning_only_authorize_later_bounded_execution_packet_no_execution",
+  "decision": "PASS WITH CONDITIONS for later bounded execution-packet preparation; no execution or product use now",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "a91e5da2082ef8aacc040e55b3fae905d6f0799a",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.md",
+  "planning_packet": "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+  "summary": "GATE-MTU-H4A accepted the answer-form CLI-mutation planning packet and authorized only a later bounded execution-packet preparation sprint. The closure approves A80, A81, and A96-A99 for later execution-packet planning, rejects A100, keeps A71 held, keeps graph, Type 4, and analysis/evaluation lanes held, preserves q3/q15 EX overlay no-write boundaries, blocks candidate storage and target-exercise field writes, and requires generator/exposure handling plus exam-code validation before any later execution packet.",
+  "accepted_for_later_execution_packet_preparation": [
+    {
+      "unit_id": "A96",
+      "lane": "ANS_BEREKEN",
+      "decision": "accept_for_later_bounded_execution_packet_preparation",
+      "maps_question_types": [
+        "berekenen"
+      ]
+    },
+    {
+      "unit_id": "A97",
+      "lane": "ANS_LEG_UIT_DAT",
+      "decision": "accept_for_later_bounded_execution_packet_preparation",
+      "maps_question_types": [
+        "uitleg_dat"
+      ]
+    },
+    {
+      "unit_id": "A98",
+      "lane": "ANS_LEG_UIT_OF",
+      "decision": "accept_for_later_bounded_execution_packet_preparation",
+      "maps_question_types": [
+        "uitleg_of"
+      ]
+    },
+    {
+      "unit_id": "A99",
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "decision": "accept_for_later_bounded_execution_packet_preparation",
+      "maps_question_types": []
+    },
+    {
+      "unit_id": "A80",
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "decision": "accept_for_later_bounded_execution_packet_preparation_with_split_if_evidence_requires",
+      "maps_question_types": [
+        "noem"
+      ],
+      "split_if_future_evidence_requires": true
+    },
+    {
+      "unit_id": "A81",
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "decision": "accept_as_source_use_modifier_plus_underlying_answer_form",
+      "maps_question_types": [
+        "bron"
+      ],
+      "standalone_complete_answer_form": false,
+      "requires_underlying_answer_form": true
+    }
+  ],
+  "id_allocation_decision": {
+    "a100_invalid": true,
+    "a71_held": true,
+    "a80_a81_a96_a99_accepted_for_this_bounded_packet_only": true,
+    "proposed_ids_consume_remaining_non_held_a_domain_slots": true,
+    "future_a_domain_growth_requires_id_policy_or_namespace_decision": true
+  },
+  "held_lanes": [
+    {
+      "lane": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "decision": "held_until_stronger_mapping_and_graph_object_evidence",
+      "unit_minting_authorized": false
+    },
+    {
+      "lane": "ANS_MOTIVEER_CLASSIFICATIE",
+      "decision": "held_type_4_planning_lane",
+      "core": [
+        "state_definition",
+        "map_definition_criteria_to_context",
+        "conclude_yes_no_or_classification"
+      ],
+      "unit_minting_authorized": false
+    },
+    {
+      "lane": "ANS_ANALYSEER_BEOORDEEL",
+      "decision": "held_for_later_evidence",
+      "unit_minting_authorized": false
+    }
+  ],
+  "ex_overlay_decisions": [
+    {
+      "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "source_requirement_id": "q3-answer-1",
+      "decision": "keep_overlay_route_no_write"
+    },
+    {
+      "answer_skill_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+      "source_requirement_id": "q15-answer-1",
+      "decision": "keep_overlay_route_no_write"
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "accept_bounded_use_of_a80_a81_a96_a99_and_keep_a71_held",
+    "future_a_domain_growth_requires_id_policy_or_namespace_decision",
+    "require_generator_implementation_or_generator_blocked_non_interactive_status_before_student_facing_exposure",
+    "do_not_write_target_exercise_question_type_or_answer_form_fields_from_this_gate",
+    "do_not_create_or_write_answer_skill_candidate_storage",
+    "later_execution_packet_must_run_simulated_catalog_validation_and_full_validator_stack",
+    "validate_proposed_exam_codes_against_syllabus_registry"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_gate": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_gate": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized_by_this_gate": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized_by_this_gate": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "A-domain ID pressure",
+      "severity": "high_for_future_work",
+      "resolution": "This bounded allocation is accepted; future answer-form or A-domain growth requires ID-policy or namespace review."
+    },
+    {
+      "issue": "A100 invalid",
+      "severity": "high_if_used",
+      "resolution": "A100 remains rejected and must not appear in an execution packet."
+    },
+    {
+      "issue": "A71 held",
+      "severity": "medium",
+      "resolution": "A71 remains held and absent from the command set."
+    },
+    {
+      "issue": "Answer-form units may lack generators",
+      "severity": "high_if_exposed",
+      "resolution": "Later execution packet must prove generator implementation or generator-blocked/non-interactive status and no student-facing exposure."
+    },
+    {
+      "issue": "bron could become standalone",
+      "severity": "medium_high",
+      "resolution": "A81 remains source-use modifier plus underlying answer form, not a complete standalone answer form."
+    },
+    {
+      "issue": "EX overlays could be hidden",
+      "severity": "high",
+      "resolution": "q3/q15 overlay needs remain visible and candidate storage/writes remain blocked."
+    },
+    {
+      "issue": "Target-exercise fields absent",
+      "severity": "medium",
+      "resolution": "Use only a later authored-reference mutation packet with exact before/after diffs for question_type or answer_form fields."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H4B",
+    "name": "Answer-Form Bounded CLI Execution Packet",
+    "authority": "prepare a later bounded execution packet for accepted H4A lanes only; no execution or product use",
+    "execution_authorized": false,
+    "student_product_use_authorized": false,
+    "scope": [
+      "prepare exact unit-add execution commands for A80 A81 and A96-A99",
+      "print and log every extracted spec before any later command",
+      "prove simulated catalog validation before mutation",
+      "verify generator implementation or generator-blocked non-interactive status",
+      "prove no student-facing route exposes generator-blocked answer-form units",
+      "preserve A100 rejection and A71 hold",
+      "keep graph Type 4 and analysis/evaluation lanes held",
+      "keep q3/q15 EX answer-skill overlay needs visible with no candidate writes",
+      "keep target-exercise field writes projection refresh lesson output and product use out of scope"
+    ]
+  }
+}

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-29T20:19:42.209Z
+Generated: 2026-05-29T20:28:25.368Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1533
+Files indexed: 1535
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2410,7 +2410,7 @@ Count: 817
 
 ## other
 
-Count: 397
+Count: 399
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2786,6 +2786,8 @@ Count: 397
 - archive/sprints/SCOPE-LANG-1/SCOPE-LANG-1-sprint-plan.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-closure-log.md
 - archive/sprints/SPEC-END-STATE/SPEC-END-STATE-sprint-plan.md
+- archive/sprints/SPEC-ET-1/SPEC-ET-1-closure-log.md
+- archive/sprints/SPEC-ET-1/SPEC-ET-1-sprint-plan.md
 - archive/sprints/SYNC-1/SYNC-1-roadmap-reconciliation-log.md
 - archive/sprints/SYNC-2/SYNC-2-companion-pre-scale-roadmap-update.md
 - archive/sprints/SYNC-3/SYNC-3-shared-skill-map-roadmap-update.md
