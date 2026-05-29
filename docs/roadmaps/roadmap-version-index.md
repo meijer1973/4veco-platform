@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-28
+Updated: 2026-05-29
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.10-mtu-h4-answer-form-routing-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4 prepared the non-mutating answer-form/question-type routing packet and GATE-MTU-H4 became the active human-review sprint. |
+| References Team Roadmap | `v3.11-engine-operationalization-track` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-4 added the engine operationalization track while keeping GATE-MTU-H4 as the active human-review sprint. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before engine operationalization track | `v3.10-mtu-h4-answer-form-routing-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4 answer-form routing packet | `v3.09-mtu-h3c-incidence-executed` | `docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H3C incidence execution | `v3.08-gate-mtu-h3b-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H3B closure | `v3.07-mtu-h3b-incidence-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md` | `references/reference-team-roadmap.md` |

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SYNC-4",
+  "name": "Engine Operationalization Roadmap Sync",
+  "status": "completed",
+  "completed_on": "2026-05-29",
+  "plan": "reports/sprints/SYNC-4-plan.md",
+  "baseline": "reports/sprints/SYNC-4-baseline.md",
+  "planning_review": "reports/sprints/SYNC-4-planning-review.md",
+  "result": "reports/sprints/SYNC-4-result.md",
+  "diff_summary": "reports/sprints/SYNC-4-diff-summary.md",
+  "generated_output_statement": "SYNC-4 created specification, roadmap, planning, and repository-map records only. It generated no student-facing lesson output.",
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "candidate_storage_creation_authorized": false,
+  "answer_skill_candidate_writes_authorized": false,
+  "target_exercise_mutation_authorized": false,
+  "generated_projection_refresh_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/SYNC-4-lead-review-assignment.md",
+    "round1": "reports/sprints/SYNC-4-lead-review-round1.md",
+    "corrections": "reports/sprints/SYNC-4-lead-review-corrections.md",
+    "round2": "reports/sprints/SYNC-4-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "primary_outputs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "../4veco-lessen/lessen-team-roadmap.md",
+    "../4veco-lessen/archive/sprints/SYNC-4/SYNC-4-engine-operationalization-roadmap-update.md",
+    "references/reference-team-roadmap.md",
+    "docs/roadmaps/roadmap-version-index.json",
+    "docs/roadmaps/roadmap-version-index.md",
+    "docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md",
+    "reports/sprints/SYNC-4-plan.md",
+    "reports/sprints/SYNC-4-baseline.md",
+    "reports/sprints/SYNC-4-planning-review.md",
+    "reports/sprints/SYNC-4-result.md",
+    "reports/sprints/SYNC-4-diff-summary.md",
+    "reports/sprints/SYNC-4-lead-review-assignment.md",
+    "reports/sprints/SYNC-4-lead-review-round1.md",
+    "reports/sprints/SYNC-4-lead-review-corrections.md",
+    "reports/sprints/SYNC-4-lead-review-round2.md",
+    "references/data/sprints/SYNC-4.plan.json",
+    "references/data/sprints/SYNC-4.result.json",
+    "reports/url-index.md",
+    "reports/github-agent-index-platform.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-lessen.json",
+    "reports/internal-dashboard/index.html",
+    "reports/internal-dashboard/dashboard-data.json"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-4-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SYNC-4",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SYNC-4 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"GAME-UX-3A|ENGINE-OP-1|SKILLMAP-OP-1|GRAPH-UX-2|MATH-UX-2|REASON-UX-2|GAME-ARCH-1|GATE-ENGINE-1|Scale Gate 1\" ..\\4veco-lessen\\lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"shared task|task-type|task shell|skill-map|target-exercise readiness\" ..\\4veco-lessen\\specifications\\product-end-state.md ..\\4veco-lessen\\specifications\\companion-core-specifications.md",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ..\\4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-MTU-H4 Answer-Form And Question-Type Routing Human Review. If it closes with planning authority, proceed to GAME-UX-3A Shared Task-Type UX Foundation."
+}

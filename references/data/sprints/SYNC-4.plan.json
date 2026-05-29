@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SYNC-4",
+  "name": "Engine Operationalization Roadmap Sync",
+  "status": "planned_active",
+  "plan": "reports/sprints/SYNC-4-plan.md",
+  "baseline": "reports/sprints/SYNC-4-baseline.md",
+  "planning_review": "reports/sprints/SYNC-4-planning-review.md",
+  "generated_output_statement": "SYNC-4 creates specification, roadmap, planning, and repository-map records only. It generates no student-facing lesson output.",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_changed": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-4-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-4",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-4 --complete",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "rg -n \"GAME-UX-3A|ENGINE-OP-1|SKILLMAP-OP-1|GRAPH-UX-2|MATH-UX-2|REASON-UX-2|GAME-ARCH-1|GATE-ENGINE-1|Scale Gate 1\" ..\\4veco-lessen\\lessen-team-roadmap.md",
+    "rg -n \"shared task|task-type|task shell|skill-map|target-exercise readiness\" ..\\4veco-lessen\\specifications\\product-end-state.md ..\\4veco-lessen\\specifications\\companion-core-specifications.md",
+    "git -C ..\\4veco-lessen diff --check"
+  ]
+}

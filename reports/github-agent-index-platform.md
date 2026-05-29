@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-28T17:35:16.116Z
+Generated: 2026-05-29T14:44:43.990Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2059
+Files indexed: 2084
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 319
+Count: 320
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -290,6 +290,7 @@ Count: 319
 - build-scripts/references/check-mtu-h3a-incidence-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
 - build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
+- build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -488,7 +489,7 @@ Count: 42
 
 ## validators
 
-Count: 122
+Count: 123
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -522,6 +523,7 @@ Count: 122
 - build-scripts/references/check-mtu-h3a-incidence-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
 - build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
+- build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -615,7 +617,7 @@ Count: 122
 
 ## references
 
-Count: 341
+Count: 345
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -747,6 +749,8 @@ Count: 341
 - references/data/sprints/MTU-H3B.result.json
 - references/data/sprints/MTU-H3C.plan.json
 - references/data/sprints/MTU-H3C.result.json
+- references/data/sprints/MTU-H4.plan.json
+- references/data/sprints/MTU-H4.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -880,6 +884,8 @@ Count: 341
 - references/data/sprints/S9a.result.json
 - references/data/sprints/SYNC-2.plan.json
 - references/data/sprints/SYNC-2.result.json
+- references/data/sprints/SYNC-4.plan.json
+- references/data/sprints/SYNC-4.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
@@ -961,7 +967,7 @@ Count: 341
 
 ## reports
 
-Count: 1016
+Count: 1034
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1067,6 +1073,8 @@ Count: 1016
 - reports/mtu-hardening/mtu-h3a-incidence-cli-mutation-plan.md
 - reports/mtu-hardening/mtu-h3b-incidence-cli-execution-packet.json
 - reports/mtu-hardening/mtu-h3b-incidence-cli-execution-packet.md
+- reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json
+- reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -1330,6 +1338,9 @@ Count: 1016
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.md
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/bundle-urls.md
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.json
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1764,6 +1775,10 @@ Count: 1016
 - reports/sprints/MTU-H3C-execution-log.md
 - reports/sprints/MTU-H3C-plan.md
 - reports/sprints/MTU-H3C-result.md
+- reports/sprints/MTU-H4-baseline.md
+- reports/sprints/MTU-H4-diff-summary.md
+- reports/sprints/MTU-H4-plan.md
+- reports/sprints/MTU-H4-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -1974,6 +1989,15 @@ Count: 1016
 - reports/sprints/SYNC-2-plan.md
 - reports/sprints/SYNC-2-planning-review.md
 - reports/sprints/SYNC-2-result.md
+- reports/sprints/SYNC-4-baseline.md
+- reports/sprints/SYNC-4-diff-summary.md
+- reports/sprints/SYNC-4-lead-review-assignment.md
+- reports/sprints/SYNC-4-lead-review-corrections.md
+- reports/sprints/SYNC-4-lead-review-round1.md
+- reports/sprints/SYNC-4-lead-review-round2.md
+- reports/sprints/SYNC-4-plan.md
+- reports/sprints/SYNC-4-planning-review.md
+- reports/sprints/SYNC-4-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -2000,7 +2024,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 254
+Count: 256
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2113,6 +2137,8 @@ Count: 254
 - docs/roadmaps/outdated/reference-team-roadmap-v3.06-gate-mtu-h3a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.07-mtu-h3b-incidence-execution-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-05-29
+Last strategic update: 2026-05-28
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.11-engine-operationalization-track`
+Roadmap version: `v3.10-mtu-h4-answer-form-routing-packet`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -45,15 +45,8 @@ legacy bundles only.
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
 | GATE-MTU-H4 | Answer-Form And Question-Type Routing Human Review | no | **ACTIVE OPERATIONAL NEXT ACTION.** Run the formal GATE-MTU-H4 human review after the H4 routing packet and cited evidence are pushed to the normal remote branch. Review the hybrid boundary between reusable answer-form MTU lanes and EX answer-skill overlays, the current `question_type` mapping candidates, held graph/analysis lanes, and the future source-mutation boundary. The gate must show the full question list, ask calibration questions, ask one question at a time, record answers, run pattern analysis, ask targeted follow-ups, draft a closure proposal, and require explicit human confirmation before writing a closure. No protected reference mutation, unit minting, candidate storage creation, candidate writes, target-exercise mutation, generated projection refresh, lesson output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use is authorized. |
-| LESSON-SCALE-1 | Lesson Companion Pre-Scale Gates Tracking | no | **TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains. SYNC-4 now makes the shared task-type UI part of the product end-state and adds the operational engine proof track. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GATE-MTU-H4`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion. |
-| GAME-UX-3A | Shared Task-Type UX Foundation | no | **PLANNED DEPENDENCY AFTER GATE-MTU-H4.** Expand the checkpoint/task engine into a reusable task shell for exit tickets, graph/table practice, and math/calculation practice. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, protected reference mutation, candidate writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling. |
-| ENGINE-OP-1 | Four-Engine Operational Proof Audit | no | **REQUIRED BEFORE SCALE GATE 1 OR CONTROLLED ENGINE SCALING.** Audit the student-visible state of the shared skill-map route, math game, graph game, reasoning game, and checkpoint route for `1.1.1`, `1.1.2`, and `1.1.3`. Record what the student sees on the landing page, which route opens, what skill-map state is visible, what game/task is played, what feedback appears, and whether the route helps the student move toward the paragraph target exercise. Produce screenshots and a student-path trace. Architecture-only proof is insufficient. |
-| SKILLMAP-OP-1 | Student-Visible Skill-Map Route | no | **MAKE THE SHARED SKILL-MAP OPERATIONAL.** Convert the shared skill-map runtime contract into a visible student route. For each practice mode, show only the relevant skill subset: reasoning, calculation, graph/table, or checkpoint. Show recommended next skill, current paragraph target, route progress, and practice link without exposing internal MTU codes. Validate desktop/mobile, light/dark, keyboard/focus order, and student-experience clarity. |
-| GRAPH-UX-2 | Graph Game + Checkpoint UI Integration | no | **USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Use MTU/operation-chain evidence where available. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use coherent UI language. |
-| MATH-UX-2 | Math Game + Checkpoint UI Integration | no | **USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math game by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relationship between skill-map route, math practice, and exit-ticket readiness. |
-| REASON-UX-2 | Reasoning Game Variant And Feedback Upgrade | no | **MAKE REDENEREN A REAL PRACTICE ENGINE.** Improve the reasoning game with richer causal/procedural variants, better replay value, short explanation or structured reasoning tasks, and feedback that explains reasoning errors. Align with answer-form MTUs and target-exercise operation chains where available. |
-| GAME-ARCH-1 | Practice Engine Build-vs-Rebuild Decision | no | **DECISION SPRINT AFTER ENGINE-OP-1.** Compare continuing refactor versus rebuilding the practice engines around one shared task shell and one shared skill-map route. Evaluate graph, math, reasoning, and checkpoint engines for duplicated UI, state drift, inaccessible skill-map behavior, internal-code leakage, weak feedback, and inability to support target-exercise operation chains. If refactor cost exceeds rebuild cost, authorize a fresh integrated practice-engine architecture through a later explicit plan. |
-| GATE-ENGINE-1 | Four-Engine Operational Integration Review | no | **HUMAN REVIEW GATE BEFORE ENGINE SCALE.** Review whether the shared skill-map, graph game, math game, reasoning game, and exit-ticket checkpoint now operate as one coherent student-facing route. The gate must inspect live generated output and student-path traces, not only contracts. It must decide whether to continue refactoring, rebuild one or more engines through a later plan, allow controlled production, or pause for roadmap correction. |
+| LESSON-SCALE-1 | Lesson Companion Pre-Scale Gates Tracking | no | **TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied the source-controlled `1.1.1` checkpoint engine/output support. `L1.7C-MATH` restored the scoped skill-tree math game as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata scope to `B01/B02`, removed `A04`, recorded target-exercise skills as `A43/B01/B02`, and kept `targetReadinessEvidence: false`. Lesson `L1.7B-P23` accepted the stop/handoff decision: current exit-ticket task types are choice-only and cannot honestly check `1.1.2` calculation/index or `1.1.3` graph/table operation chains. Platform task-type expansion is now required before lesson `L1.7B-Q2` can produce target-exercise-readiness evidence for calculation or graph/table paragraphs. EX-7 is resolved as a validator/dry-run CLI implementation only. Reference/product planning must not treat the lesson companion pipeline as scale-approved until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion. |
+| GAME-UX-3 | Exit Ticket Task-Type Expansion | no | **LESSON PLATFORM HANDOFF / PLANNED DEPENDENCY.** L1.7B-P23 closed as a correct stop/handoff because choice-only checkpoint output would weaken the exit-ticket specification for `1.1.2` and `1.1.3`. Platform support must add reviewed task families and validation for numeric input, calculation/work capture, percent/index notation, short constructed response, table-value selection, graph reading, and graph construction or axis/point-placement checks before generated readiness checkpoints can be produced for calculation or graph/table paragraphs. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling. |
 | MTU-H5 | MTU Mapping Regression Validator | no | Planned after MTU-H1/H2/H3/H4 produce enough reviewed mapping rules. Build a regression check for missing correction-model operations, over-triggered prerequisites, calculus/function-construction false positives, incidence questions without incidence MTUs, question words without answer-form MTUs, scale-factor gaps, and missing misconception tags. No candidate writes or protected mutation are authorized. |
 | MTU-H6 | Hardened MTUs Into Student Routes | no | Planned only after the relevant MTU/answer-form/incidence decisions are reviewed and implemented through governed paths. Feed hardened operation chains into instapquiz routing, uitleg vaardigheden, skill-tree/procedure games, practice, exit-ticket coverage, answer-model generation, and review gates while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion. |
 | REF-CT3 | Year-2 Skeleton | no | Planned after the CP.6a-CP.6f remediation lanes and the bounded EX-0/EX-1/EX-2 exam-ingestion implementation track produce enough evidence for a responsible CP-6 closure proposal, explicit hold, or Year-2 anchoring handoff. Prepare Year-2 skeleton with CvTE-vwo anchor status and `concept_orphan` flags for CP-7; do not treat the rough three-year blueprint as authoritative. |
@@ -62,13 +55,12 @@ legacy bundles only.
 | Sprint 12 | Exam And Target Exercise Decomposition Backfill | no | Planned after schema/overlay work. Backfill exercise metadata for the 349 exam questions and 49 target exercises through protected-source-safe overlays. |
 | Sprint 13 | Composition Pattern Registry | no | Planned. Define reusable exercise-composition patterns for internal authoring support, not automatic student-facing publication. |
 | Sprint 14 | C-to-B Promotion Workflow | no | Planned only after schema audit, owned-source registry, exercise overlays, D04/unit-design status, R7.6, R14.1, and precision lint path are ready. |
-| Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until `GATE-MTU-H4`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row operational quality. |
+| Product Gate | Re-Evaluate R10-R13 Product Surfaces | no | Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; and EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes. Broad lesson-companion scaling remains blocked until platform task-type support, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row scaling quality. |
 
 ## Closed Sprints
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| SYNC-4 | Engine Operationalization Roadmap Sync | yes | Completed as a roadmap/specification synchronization sprint. Updated `../4veco-lessen/specifications/product-end-state.md` and `../4veco-lessen/specifications/companion-core-specifications.md` so the shared task-type UI is part of the end-state product, not exit-ticket-only implementation detail. Updated the lesson roadmap and this platform roadmap with `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, and `GATE-ENGINE-1`. Archived roadmap v3.10 and updated version indexes. No engine code, generated lesson output, protected reference mutation, external-source mutation, machine-reference mutation, unit minting, candidate storage, candidate writes, target-exercise mutation, generated projection refresh, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use was authorized. Top operational next action remains `GATE-MTU-H4`. |
 | MTU-H4 | Answer-Form MTUs And Question-Type Mapping | yes | Completed as a non-mutating routing-packet sprint after MTU-H3C. Added `reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.*`, `reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.*`, `reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/bundle-urls.md`, `build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js`, and sprint logs. The packet records that target exercises currently have no `question_type` or `answer_form` fields, extracted exam evidence has `uitleg_dat`, `uitleg_of`, `bron`, `berekenen`, and `noem` values, H2 deferred q1/q2 answer forms remain visible, and EX answer-skill candidate storage remains absent/dry-run-only. It proposes a hybrid boundary: reusable answer-form MTU planning lanes for broad procedures and EX answer-skill overlays for correction-model-specific answer construction. No protected reference mutation, external-source mutation, machine-reference mutation, unit minting, candidate storage creation, candidate writes, target-exercise mutation, generated projection refresh, lesson-output mutation, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use was authorized. Top operational next action is `GATE-MTU-H4`. |
 | MTU-H3C | Incidence Pass-Through Bounded CLI Execution | yes | Completed the GATE-MTU-H3B authorized bounded execution sprint. Added `D41`, `D42`, `D43`, `D45`, and `D46` through `unit-add.js`; updated `D07` through `unit-update.js` after dry-run; applied exact authored target-exercise mapping patches for `3.1.1`, `3.1.2`, and `3.1.3`; kept `D44` held and unmapped; refreshed owned-content graph, RAG chunks, procedure/PV reports, roadmap indexes, and source registries only after source mutations. `D42` executed as `true_zero` with no `D41` dependency; `D45` keeps supply elasticity qualitative; `A93` remains unchanged and bounded to price percentage change. No `references/external/` mutation, target-exercise promotion, candidate storage, candidate writes, lesson-output mutation, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use was authorized. Top operational next action is `MTU-H4`. |
 | GATE-MTU-H3B | Incidence Pass-Through CLI Execution Human Review | yes | Closed as `pass_with_conditions` after the H3B packet and cited evidence were pushed to remote commit `ad7d69c3836176a10111384aeb640d49e93b705d`. Authorized a later bounded execution sprint for `D41`, `D42`, `D43`, `D45`, `D46`, narrowed `D07`, exact authored mapping patches for `3.1.1`, `3.1.2`, and `3.1.3`, and generated projection refresh only after authorized source mutations. `D44` remains held and unmapped. Conditions require final preflight, extracted-spec logging, `D07` dry-run proving `A15` and hidden elasticity are removed, `D42` no `D41` dependency plus zero-needs status fix or justification, `D45` qualitative supply-elasticity treatment, unchanged `A93`, no target-exercise status/source/promotion metadata changes, full validation, and no product-use authority. Top operational next action is `MTU-H4`. |
@@ -484,21 +476,8 @@ accepted the stop/handoff decision as the correct product decision: generating
 choice-only exit tickets for `1.1.2` and `1.1.3` would undercut the
 target-exercise-readiness specification. `Check` remains hidden for both
 paragraphs and no generated exit-ticket output was created. The next
-lesson-companion dependency, if work continues, is shared task-type shell
-support before `L1.7B-Q2`.
-
-Update 2026-05-29: SYNC-4 completed the engine operationalization roadmap and
-specification sync. The shared task-type UI is now part of the product
-end-state specification, and the platform/lesson roadmaps add the operational
-track: `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`,
-`MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, and `GATE-ENGINE-1`. These rows
-require student-visible route proof, screenshots, task feedback evidence, and a
-live-output human integration review before engine scale or Scale Gate 1
-reliance. SYNC-4 authorizes no engine code, generated lesson output, protected
-mutation, target-exercise writes, generated projection refresh, diagnostics,
-adaptive routing, mastery/sequencing, student-facing AI, summative use, PV
-projection, PV machine promotion, Scale Gate 1, or student/product use. Top
-operational next action remains `GATE-MTU-H4`.
+lesson-companion dependency, if work continues, is platform exit-ticket
+task-type expansion before `L1.7B-Q2`.
 
 Compatibility decisions:
 
@@ -2129,18 +2108,17 @@ Sprints:
 - `EX-7` completed: validators and dry-run-only CLIs implemented with no
   candidate storage, candidate writes, q19 extraction execution, protected
   mutation, lesson-output mutation, or student/product use.
-- `GAME-UX-2` completed the source-controlled non-summative checkpoint engine
-  for `1.1.1` only; it is not target-exercise-readiness evidence.
+- `GAME-UX-2` is the next platform start decision or waiver: implement a
+  source-controlled non-summative checkpoint engine only if explicitly started.
 - `LESSON-SCALE-1` tracks the lesson-side pre-scale dependency: L1.7A rejected
   broad scaling; `L1.7B-C` closed the exit-ticket contract-only lane; L1.7C-0
   closed the shared skill-map contract; platform `GAME-UX-1` implemented the
   shared skill-map runtime support; lesson L1.7C/L1.7D closed PASS WITH FLAGS;
-  lesson L2.0 closed PASS WITH FLAGS with the house-style baseline; and
-  L1.7C-MATH, L1.7B-MAP, and L1.7B-P23 have closed with carried flags. Broad
-  companion/product scaling must still wait for GATE-MTU-H4, GAME-UX-3A,
-  ENGINE-OP-1, SKILLMAP-OP-1, GRAPH-UX-2, MATH-UX-2, REASON-UX-2,
-  GAME-ARCH-1, GATE-ENGINE-1, L1.7B-Q2, GATE-L1.7B-Q2, REV-STD-1, minimal
-  curriculum-versioning readiness, and Scale Gate 1.
+  and lesson L2.0 closed PASS WITH FLAGS with the house-style baseline,
+  game-row flag disposition, exit-ticket readiness, and consolidation landing
+  rule recorded. Broad companion/product scaling must still wait for L1.7B-R,
+  GATE-L1.7B, minimal curriculum-versioning readiness, GAME-UX-2 status or an
+  explicit waiver, and Scale Gate 1.
 - `Content Track 3` planned: Year-2 skeleton and `GATE-CP7-year-2-anchoring`,
   after CP-6 remediation and the bounded exam-ingestion pilot track make the
   Year-1 hold explicit enough to guide skeleton work.
@@ -2194,7 +2172,6 @@ Sprints:
 | GATE-MTU-H3-incidence-pass-through | before incidence/pass-through family lanes advance to CLI-mutation planning | yes | yes | routing only for `D07` and planning-only `D41`-`D46`/equivalent lane decisions; no mutation or execution |
 | GATE-MTU-H3A-incidence-cli-mutation-plan | before incidence/pass-through lanes advance to an execution-packet sprint | yes | yes | closed pass with conditions for execution-packet preparation only; requires D42 dependency review, D45 supply-elasticity resolution, A93 boundary, exact specs/mapping diffs, rollback, validation, and no mutation or execution from the gate |
 | GATE-MTU-H3B-incidence-cli-execution | before incidence/pass-through CLI execution is authorized | yes | yes | closed `pass_with_conditions`; authorized `MTU-H3C` bounded execution for `D07`, `D41`, `D42`, `D43`, `D45`, `D46`, exact mappings, and downstream projection refresh after source mutation, with `D44` held and no product-use authority |
-| GATE-ENGINE-1 | after `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, graph/math/reasoning integration, and `GAME-ARCH-1` | yes | yes | live-output review before engine scale, Scale Gate 1 reliance, or target-exercise-readiness checkpoint reliance on the shared route/task-shell system |
 | GATE-CP7-year-2-anchoring | before Year-2 Tier C authoring is treated as coherent | yes | yes | Year-2 skeleton progression |
 | GATE-CP8-rag-eval-content-coverage | during R7.6 | yes | yes | broader teacher-facing retrieval confidence |
 
@@ -2280,10 +2257,10 @@ GATE-EX5 Operation and answer-skill contract human review closed as pass_with_co
 EX-6 Validator and CLI implementation planning completed without candidate writes or q19 extraction execution
 GATE-EX6 Validator and CLI planning human review closed as pass_with_conditions for validator/dry-run CLI implementation only
 EX-7 Validator and dry-run CLI implementation completed, with no candidate storage, candidate writes, or q19 extraction execution
-LESSON-SCALE-1 lesson companion pre-scale gates tracked: L1.7A closed with broad scaling rejected; L1.7B-C recorded the exit-ticket companion contract and paused implementation; L1.7B-R closed the boundary-safe checkpoint resume; GATE-L1.7B closed the product-boundary review; L1.7C-0 closed the shared skill-map contract; GAME-UX-1 implemented platform shared skill-map runtime support; L1.7C closed PASS WITH FLAGS after focused recheck; L1.7D closed PASS WITH FLAGS; L2.0 closed PASS WITH FLAGS with game-row flag disposition, exit-ticket readiness, house-style policy, and consolidation landing proof recorded; GAME-UX-2 closed checkpoint-engine support; L1.7C-MATH restored the scoped primary math route; L1.7B-MAP fixed checkpoint metadata; L1.7B-P23 closed as a stop/handoff; shared task-type shell support, operational engine proof, visible skill-map route work, graph/math/reasoning integration, build-vs-rebuild decision, GATE-ENGINE-1, L1.7B-Q2, GATE-L1.7B-Q2, REV-STD-1, and Scale Gate 1 remain before broad companion/product scaling
+LESSON-SCALE-1 lesson companion pre-scale gates tracked: L1.7A closed with broad scaling rejected; L1.7B-C recorded the exit-ticket companion contract and paused implementation; L1.7B-R closed the boundary-safe checkpoint resume; GATE-L1.7B closed the product-boundary review; L1.7C-0 closed the shared skill-map contract; GAME-UX-1 implemented platform shared skill-map runtime support; L1.7C closed PASS WITH FLAGS after focused recheck; L1.7D closed PASS WITH FLAGS; L2.0 closed PASS WITH FLAGS with game-row flag disposition, exit-ticket readiness, house-style policy, and consolidation landing proof recorded; GAME-UX-2 closed checkpoint-engine support; L1.7C-MATH restored the scoped primary math route; L1.7B-MAP fixed checkpoint metadata; L1.7B-P23 closed as a stop/handoff; platform task-type support, L1.7B-Q2, GATE-L1.7B-Q2, REV-STD-1, and Scale Gate 1 remain before broad companion/product scaling
 GAME-UX-1 shared skill-map engine architecture completed for the closed lesson L1.7C-0 contract
 GAME-UX-2 exit-ticket checkpoint engine completed as bounded platform support for L1.7B-R
-SYNC-4 engine operationalization roadmap/specification sync completed
+GAME-UX-3 exit-ticket task-type expansion planned from the L1.7B-P23 stop/handoff before L1.7B-Q2 readiness implementation
 MTU-H1 operation benchmark from Solo q1-q3 completed without mutation
 GATE-MTU-H2 Solo q1-q3 routing review closed as pass_with_conditions
 MTU-H2A Solo q1-q3 CLI-mutation planning completed without mutation
@@ -2296,30 +2273,6 @@ GATE-MTU-H2D Solo q1-q3 held/conditional lane human review closed as pass_with_c
 MTU-H2E Solo q1-q3 conditional lane execution packet completed without mutation
 GATE-MTU-H2E Conditional lane execution human review closed as pass_with_conditions
 MTU-H2F Conditional Solo q1-q3 CLI execution
-MTU-H2G A20 split/replacement packet
-GATE-MTU-H2G A20 split/replacement human review
-MTU-H2H A20/A94/A95 CLI-mutation planning
-GATE-MTU-H2H A20/A94/A95 CLI-mutation plan human review
-MTU-H2I A20/A94/A95 CLI execution packet
-GATE-MTU-H2I A20/A94/A95 CLI execution human review
-MTU-H2J A20/A94/A95 bounded CLI execution
-MTU-H3 incidence/pass-through family review
-GATE-MTU-H3 incidence/pass-through human review
-MTU-H3A incidence/pass-through CLI-mutation planning
-GATE-MTU-H3A incidence/pass-through CLI-mutation plan human review
-MTU-H3B incidence/pass-through CLI execution packet
-GATE-MTU-H3B incidence/pass-through CLI execution human review
-MTU-H3C incidence/pass-through bounded CLI execution
-MTU-H4 answer-form MTUs and question-type mapping
-GATE-MTU-H4 answer-form/question-type routing human review
-GAME-UX-3A shared task-type UX foundation
-ENGINE-OP-1 four-engine operational proof audit
-SKILLMAP-OP-1 student-visible skill-map route
-GRAPH-UX-2 graph game + checkpoint UI integration
-MATH-UX-2 math game + checkpoint UI integration
-REASON-UX-2 reasoning game variant and feedback upgrade
-GAME-ARCH-1 practice engine build-vs-rebuild decision
-GATE-ENGINE-1 four-engine operational integration review
 REF-CT3 Year-2 skeleton (CP-7)
 R7.6 RAG quality hardening
 R14.1 Minimal curriculum versioning
@@ -2333,19 +2286,7 @@ Do not invert this order.
 
 ## Immediate Next Sprint
 
-Next action: run `GATE-MTU-H4` after the H4 routing packet, review packet,
-bundle URLs, sprint result, and cited evidence are committed and pushed to the
-normal remote branch. The gate must decide answer-form/question-type routing
-only: reusable answer-form MTU lanes, EX answer-skill overlay boundaries, held
-graph/analysis lanes, and later planning authority. No hand edits to
-`references/machine/` or `references/external/`, unit minting, candidate
-storage creation, candidate writes, target-exercise mutation, generated
-projection refresh, lesson-output mutation, diagnostics, adaptive routing,
-mastery/sequencing, student-facing AI, summative use, PV projection, PV machine
-promotion, Scale Gate 1, or student/product use are authorized before a human
-closure explicitly names the next bounded authority. After GATE-MTU-H4, the
-roadmap points to `GAME-UX-3A` shared task-type UX foundation, then
-`ENGINE-OP-1` operational proof.
+Next action: run `GATE-MTU-H2H-a20-cli-mutation-plan` after the H2H packet, review packet, bundle URLs, sprint result, and cited evidence are committed and pushed to the normal remote branch. GATE-MTU-H2G closed as planning-only pass-with-conditions, and MTU-H2H has prepared the corrected non-mutating planning packet for `A20`, `A94`, `A95`, affected authored mappings, and `GEN.A20` behavior. The gate must decide whether a later bounded execution packet may be prepared. No hand edits to `references/machine/` or `references/external/`, direct `A20` mutation, `A94`/`A95` minting, target-exercise mapping write, generator implementation change, generated projection refresh, candidate write, lesson-output mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use are authorized before a human closure explicitly names the next bounded authority. GAME-UX-2 has already supplied the bounded checkpoint engine support; lesson-side broad companion scaling remains blocked by the lesson review/Scale Gate path, while the reference-side active lane is now `GATE-MTU-H2H`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 
