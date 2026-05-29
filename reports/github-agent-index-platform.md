@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-29T14:44:43.990Z
+Generated: 2026-05-29T15:01:23.123Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2084
+Files indexed: 2089
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -967,7 +967,7 @@ Count: 345
 
 ## reports
 
-Count: 1034
+Count: 1038
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1339,6 +1339,10 @@ Count: 1034
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H3B-incidence-cli-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/bundle-urls.md
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.md
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/human-interview.json
+- reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/human-interview.md
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.json
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -2024,7 +2028,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 256
+Count: 257
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2139,6 +2143,7 @@ Count: 256
 - docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

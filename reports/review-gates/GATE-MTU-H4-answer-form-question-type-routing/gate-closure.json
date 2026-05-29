@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4-answer-form-question-type-routing",
+  "sprint_id": "MTU-H4",
+  "date": "2026-05-29",
+  "closed_on": "2026-05-29",
+  "status": "pass_with_conditions",
+  "status_detail": "routing_only_authorize_later_bounded_cli_mutation_planning_packet_no_execution",
+  "decision": "PASS WITH CONDITIONS for answer-form/question-type routing only; authorize only a later bounded CLI-mutation planning packet",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "38a032346db9a6a1dcb247d52afce745c48863f7",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/human-interview.md",
+  "review_packet": "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.md",
+  "routing_packet": "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+  "summary": "GATE-MTU-H4 accepted the answer-form/question-type routing packet and authorized only a later bounded CLI-mutation planning packet. The closure approves a hybrid boundary between reusable answer-form MTUs, EX answer-skill overlays, and later authored-reference question_type/answer_form fields. It adds conditions for a held Type 4 motiveer/classificatie lane, bron as source-use modifier, graph planning-only evidence, strict EX overlay visibility, no candidate storage, and no target-exercise field writes.",
+  "accepted_planning_lanes": [
+    {
+      "lane": "ANS_BEREKEN",
+      "decision": "accept_for_later_planning",
+      "maps_question_types": [
+        "berekenen"
+      ]
+    },
+    {
+      "lane": "ANS_LEG_UIT_DAT",
+      "decision": "accept_for_later_planning",
+      "maps_question_types": [
+        "uitleg_dat"
+      ]
+    },
+    {
+      "lane": "ANS_LEG_UIT_OF",
+      "decision": "accept_for_later_planning",
+      "maps_question_types": [
+        "uitleg_of"
+      ]
+    },
+    {
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "decision": "accept_for_later_planning",
+      "maps_question_types": []
+    },
+    {
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "decision": "accept_for_later_planning_with_split_if_evidence_requires",
+      "maps_question_types": [
+        "noem"
+      ]
+    },
+    {
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "decision": "accept_as_source_use_modifier_plus_underlying_answer_form",
+      "maps_question_types": [
+        "bron"
+      ],
+      "standalone_complete_answer_form": false
+    },
+    {
+      "lane": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "decision": "accept_as_planning_candidate_needing_more_mapping_evidence",
+      "maps_question_types": []
+    }
+  ],
+  "held_lanes": [
+    {
+      "lane": "ANS_ANALYSEER_BEOORDEEL",
+      "decision": "held_for_later_evidence",
+      "unit_minting_authorized": false
+    },
+    {
+      "lane": "ANS_MOTIVEER_CLASSIFICATIE",
+      "decision": "add_as_held_type_4_planning_lane",
+      "core": [
+        "state_definition",
+        "map_definition_criteria_to_context",
+        "conclude_yes_no_or_classification"
+      ],
+      "unit_minting_authorized": false
+    }
+  ],
+  "ex_overlay_decisions": [
+    {
+      "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "decision": "keep_overlay_route_no_write"
+    },
+    {
+      "answer_skill_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+      "decision": "keep_overlay_route_no_write"
+    }
+  ],
+  "conditions": [
+    "add_held_type_4_motiveer_classificatie_lane",
+    "treat_bron_as_source_use_modifier_not_standalone_answer_form",
+    "do_not_mint_graph_or_analysis_evaluation_answer_form_units_until_stronger_mapping_evidence",
+    "keep_ex_overlay_boundary_strict",
+    "do_not_create_or_write_answer_skill_candidates_json",
+    "do_not_write_target_exercise_question_type_or_answer_form_fields_from_this_gate",
+    "record_reviewed_remote_commit_hash"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized_by_this_gate": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_gate": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized_by_this_gate": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized_by_this_gate": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "Type 4 / motiveer/classificatie lane absent",
+      "severity": "medium-high",
+      "resolution": "Next packet must add held planning lane and list Type 4 explicitly."
+    },
+    {
+      "issue": "bron can be mistaken for a full answer form",
+      "severity": "medium",
+      "resolution": "Next packet must mark bron as source-use modifier combined with an underlying answer form."
+    },
+    {
+      "issue": "Graph lane lacks current extracted mapping evidence",
+      "severity": "medium",
+      "resolution": "Keep graph lane planning-only until exact target/example evidence supports minting."
+    },
+    {
+      "issue": "EX answer skills could be hidden inside broad MTUs",
+      "severity": "high",
+      "resolution": "Keep q3/q15 overlays visible and authorize no candidate writes."
+    },
+    {
+      "issue": "Candidate storage absent",
+      "severity": "high",
+      "resolution": "Do not create answer-skill-candidates.json without a later exact gate."
+    },
+    {
+      "issue": "Target exercise fields absent",
+      "severity": "medium",
+      "resolution": "Use only a later authored-reference packet with exact before/after diffs for fields."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H4A",
+    "name": "Answer-Form CLI-Mutation Planning Packet",
+    "authority": "prepare a later bounded CLI-mutation planning packet for accepted answer-form lanes and held-lane decisions only; no execution",
+    "execution_authorized": false,
+    "scope": [
+      "propose exact answer-form unit IDs and specs",
+      "carry held Type 4 motiveer/classificatie lane",
+      "mark bron as source-use modifier plus underlying answer form",
+      "keep graph/draw/shade planning-only until stronger mapping evidence exists",
+      "keep analysis/evaluation held",
+      "keep q3/q15 EX answer-skill overlay needs visible",
+      "define exact source-mutation, candidate-storage, target-exercise field, and projection boundaries for later review"
+    ]
+  }
+}

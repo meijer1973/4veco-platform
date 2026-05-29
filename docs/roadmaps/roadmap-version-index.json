@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.11-engine-operationalization-track",
+      "version": "v3.12-gate-mtu-h4-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.08-gate-mtu-h3b-pass-with-conditions.md",
@@ -132,7 +133,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after SYNC-4 added the engine operationalization track while keeping GATE-MTU-H4 as the active human-review sprint."
+      "notes": "Current operating roadmap after GATE-MTU-H4 closed PASS WITH CONDITIONS for routing only and authorized only MTU-H4A bounded answer-form CLI-mutation planning; no mutation or product use is authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.11",
+      "version": "v3.11-engine-operationalization-track",
+      "title": "References Team Roadmap before GATE-MTU-H4 closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after GATE-MTU-H4 closed PASS WITH CONDITIONS and moved the top operational next action to MTU-H4A bounded answer-form planning."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.10",
