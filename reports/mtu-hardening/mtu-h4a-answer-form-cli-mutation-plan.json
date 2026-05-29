@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H4A",
+  "gate_id": "GATE-MTU-H4A-answer-form-cli-mutation-plan",
+  "generated_on": "2026-05-29",
+  "status": "cli_mutation_plan_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+  "source_routing_packet": "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+  "h4_reviewed_remote_commit": "38a032346db9a6a1dcb247d52afce745c48863f7",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_be_committed_and_pushed_before_human_review; closure must record the reviewed remote commit/hash",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+    "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+    "reports/sprints/MTU-H4A-plan.md",
+    "reports/sprints/MTU-H4A-baseline.md",
+    "reports/json/exam-question-extraction-gaps.json",
+    "references/authored/vraagtypen-en-opgaveontwerp.md",
+    "references/authored/course-target-exercises.json as read-only context",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/schemas/answer-skill-candidates.schema.json",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/answer-skill-candidate-add.js",
+    "build-scripts/references/check-operation-answer-skill-candidates.js"
+  ],
+  "baseline_checks": {
+    "target_exercise_records": 54,
+    "target_exercise_question_type_fields_present": 0,
+    "target_exercise_answer_form_fields_present": 0,
+    "answer_skill_candidate_storage_absent": true,
+    "live_mtu_count": 250,
+    "a_domain_id_regex": "^[A-L]\\\\d\\\\d$",
+    "invalid_ids": [
+      "A100"
+    ],
+    "open_a_domain_slots": [
+      "A71",
+      "A80",
+      "A81",
+      "A96",
+      "A97",
+      "A98",
+      "A99"
+    ],
+    "a71_status": "held_high_risk_from_prior_graphical_foundation_work_not_used_by_h4a",
+    "proposed_non_held_a_slots": [
+      "A80",
+      "A81",
+      "A96",
+      "A97",
+      "A98",
+      "A99"
+    ]
+  },
+  "question_type_baseline": {
+    "uitleg_dat": 32,
+    "uitleg_of": 10,
+    "bron": 8,
+    "berekenen": 2,
+    "noem": 2
+  },
+  "proposed_unit_additions": [
+    {
+      "lane": "ANS_BEREKEN",
+      "unit_id": "A96",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "reviewed_spec": {
+        "id": "A96",
+        "name": "Bereken-vraag beantwoorden",
+        "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+        "needs": [],
+        "exam_codes": [
+          "A2.1",
+          "A1.7"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+          "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+          "Vul de gegevens zichtbaar in met labels.",
+          "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+          "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+        ],
+        "pitfalls": [
+          "Alleen een los getal opschrijven zonder controleerbare berekening.",
+          "Eenheid, procentteken, indexnotatie of schaalfactor vergeten.",
+          "Tussentijds afronden waardoor het eindantwoord afwijkt."
+        ],
+        "generator": "GEN_A96",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 accepted ANS_BEREKEN from the berekenen question_type and the H2 q2 deferred answer-form need. The unit teaches answer construction only; the underlying calculation unit remains mapped separately.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A96 spec>'"
+    },
+    {
+      "lane": "ANS_LEG_UIT_DAT",
+      "unit_id": "A97",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "reviewed_spec": {
+        "id": "A97",
+        "name": "Leg-uit-dat antwoord opbouwen",
+        "kern": "Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Neem de conclusie uit de vraag over als eindpunt van je antwoord.",
+          "Bepaal welke economische oorzaak of gegeven in de context het startpunt is.",
+          "Schrijf de eerste causale schakel met het juiste begrip of mechanisme.",
+          "Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.",
+          "Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering."
+        ],
+        "pitfalls": [
+          "Een mening geven in plaats van de gevraagde conclusie onderbouwen.",
+          "Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.",
+          "De conclusie veranderen terwijl die in de vraag al gegeven is."
+        ],
+        "generator": "GEN_A97",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 accepted a separate uitleg_dat lane because the conclusion is already given and the student must build toward it.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A97 spec>'"
+    },
+    {
+      "lane": "ANS_LEG_UIT_OF",
+      "unit_id": "A98",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "reviewed_spec": {
+        "id": "A98",
+        "name": "Leg-uit-of antwoord opbouwen",
+        "kern": "Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.",
+          "Zet die richting expliciet in de eerste zin.",
+          "Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.",
+          "Werk de causale schakels uit die laten zien waarom deze richting volgt.",
+          "Controleer dat je antwoord niet beide kanten open laat."
+        ],
+        "pitfalls": [
+          "Beginnen met uitleg zonder de richting te kiezen.",
+          "Alleen stijgt/daalt noemen zonder economische oorzaak.",
+          "De richting laten afhangen van een niet-genoemde aanname."
+        ],
+        "generator": "GEN_A98",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 accepted a separate uitleg_of lane because the student must first determine direction before explaining.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A98 spec>'"
+    },
+    {
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "unit_id": "A99",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "reviewed_spec": {
+        "id": "A99",
+        "name": "Leg uit met voorbeeld beantwoorden",
+        "kern": "Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.",
+        "needs": [],
+        "exam_codes": [
+          "A1.3",
+          "A1.9"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.",
+          "Kies een concreet voorbeeld dat binnen de context past.",
+          "Benoem welk kenmerk van het voorbeeld relevant is.",
+          "Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.",
+          "Koppel het voorbeeld terug aan de vraag of context."
+        ],
+        "pitfalls": [
+          "Een voorbeeld noemen zonder uitleg waarom het past.",
+          "Een voorbeeld kiezen dat buiten de economische context valt.",
+          "Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt."
+        ],
+        "generator": "GEN_A99",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 kept leg uit met voorbeeld separate because the example-fit requirement is not the same as a broad causal explanation lane.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A99 spec>'"
+    },
+    {
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "unit_id": "A80",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "reviewed_spec": {
+        "id": "A80",
+        "name": "Noem of geef-aan antwoord geven",
+        "kern": "Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Onderstreep wat precies genoemd of aangewezen moet worden.",
+          "Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.",
+          "Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.",
+          "Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.",
+          "Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt."
+        ],
+        "pitfalls": [
+          "Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.",
+          "Een uitleg schrijven terwijl alleen identificatie gevraagd is.",
+          "Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken."
+        ],
+        "generator": "GEN_A80",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 approved a combined noem/geef-aan lane, with a condition that future evidence may split geef aan from noem.",
+      "split_condition": "If future evidence shows geef aan requires a distinct procedure from noem, do not overload A80; route a later split/replacement packet.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A80 spec>'"
+    },
+    {
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "unit_id": "A81",
+      "action": "unit-add",
+      "execution_authorized_now": false,
+      "standalone_complete_answer_form": false,
+      "compatible_underlying_answer_forms": [
+        "ANS_BEREKEN",
+        "ANS_LEG_UIT_DAT",
+        "ANS_LEG_UIT_OF",
+        "ANS_LEG_UIT_MET_VOORBEELD",
+        "ANS_NOEM_GEEF_AAN",
+        "ANS_MOTIVEER_CLASSIFICATIE",
+        "ANS_GRAFISCH_ARCEER_TEKEN"
+      ],
+      "reviewed_spec": {
+        "id": "A81",
+        "name": "Bron gebruiken in een antwoord",
+        "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1",
+          "A1.5"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+          "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+          "Zeg wat die observatie economisch betekent.",
+          "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+          "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+        ],
+        "pitfalls": [
+          "Een bron noemen zonder te gebruiken in de redenering.",
+          "Een getal of figuur aflezen zonder eenheid, periode of label.",
+          "Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt."
+        ],
+        "generator": "GEN_A81",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "planning_rationale": "H4 accepted bron only as a modifier. A81 teaches explicit source use, but any later target mapping must combine it with the underlying answer form and content units.",
+      "later_command_template": "node build-scripts/references/unit-add.js --spec '<reviewed A81 spec>'"
+    }
+  ],
+  "held_lanes": [
+    {
+      "lane": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "status": "held_planning_candidate_needing_stronger_mapping_evidence",
+      "unit_id": null,
+      "unit_minting_authorized": false,
+      "reason": "H4 accepted graph/draw/shade as a planning candidate but required stronger mapping evidence before minting.",
+      "future_evidence_required": [
+        "exact target-exercise or exam-question examples",
+        "source/graph object evidence when a source annex is required",
+        "decision whether this belongs in a broad answer-form MTU, graph practice engine task type, or both"
+      ]
+    },
+    {
+      "lane": "ANS_MOTIVEER_CLASSIFICATIE",
+      "status": "held_type_4_lane",
+      "unit_id": null,
+      "unit_minting_authorized": false,
+      "core": [
+        "state definition",
+        "map definition criteria to context",
+        "conclude yes/no or classification"
+      ],
+      "reason": "H4 condition added Type 4 so the seven-type taxonomy is not silently incomplete. Current extraction evidence does not yet support minting."
+    },
+    {
+      "lane": "ANS_ANALYSEER_BEOORDEEL",
+      "status": "held_for_later_evidence",
+      "unit_id": null,
+      "unit_minting_authorized": false,
+      "reason": "H4 held analysis/evaluation until stronger exam-question evidence distinguishes argument, evaluation, and judgement boundaries."
+    }
+  ],
+  "id_policy_notes": {
+    "a100_invalid": true,
+    "a71_not_used": true,
+    "proposed_ids_consume_remaining_non_held_a_slots": true,
+    "future_answer_form_growth_requires_review": true,
+    "recommended_review_question": "Approve A80/A81/A96-A99 for this packet, or require an ID-policy sprint before execution."
+  },
+  "target_question_type_mapping_plan": {
+    "writes_authorized_now": false,
+    "target_exercise_fields_authorized_now": false,
+    "mapping_candidates_for_later_packet": [
+      {
+        "question_type": "berekenen",
+        "answer_form_lane": "ANS_BEREKEN",
+        "proposed_unit_id": "A96",
+        "modifier": false
+      },
+      {
+        "question_type": "uitleg_dat",
+        "answer_form_lane": "ANS_LEG_UIT_DAT",
+        "proposed_unit_id": "A97",
+        "modifier": false
+      },
+      {
+        "question_type": "uitleg_of",
+        "answer_form_lane": "ANS_LEG_UIT_OF",
+        "proposed_unit_id": "A98",
+        "modifier": false
+      },
+      {
+        "question_type": "noem",
+        "answer_form_lane": "ANS_NOEM_GEEF_AAN",
+        "proposed_unit_id": "A80",
+        "modifier": false,
+        "split_if_future_evidence_requires": true
+      },
+      {
+        "question_type": "bron",
+        "answer_form_lane": "ANS_BRON_GEBRUIKEN",
+        "proposed_unit_id": "A81",
+        "modifier": true,
+        "requires_underlying_answer_form": true
+      }
+    ]
+  },
+  "ex_answer_skill_overlay_boundary": {
+    "storage_path": "references/data/exam-ingestion/answer-skill-candidates.json",
+    "storage_created_now": false,
+    "candidate_writes_authorized_now": false,
+    "visible_overlay_needs": [
+      {
+        "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+        "source_requirement_id": "q3-answer-1",
+        "decision": "keep_overlay_route_no_write"
+      },
+      {
+        "answer_skill_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+        "source_requirement_id": "q15-answer-1",
+        "decision": "keep_overlay_route_no_write"
+      }
+    ],
+    "future_write_requirements": [
+      "closed exact lane gate",
+      "candidate storage creation authorization",
+      "schema validation",
+      "correction-model step references",
+      "point-rule references",
+      "rewarded wording",
+      "accepted alternatives",
+      "mutation and product-use flags false unless a later gate changes them"
+    ]
+  },
+  "command_plan_for_later_execution_packet": {
+    "execution_authorized_now": false,
+    "unit_add_has_no_dry_run_support": true,
+    "commands_to_prepare_later": [
+      "node build-scripts/references/unit-add.js --spec '<reviewed A96 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed A97 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed A98 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed A99 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed A80 spec>'",
+      "node build-scripts/references/unit-add.js --spec '<reviewed A81 spec>'"
+    ],
+    "later_packet_must_print_each_extracted_spec_before_command": true,
+    "later_packet_must_run_simulated_catalog_validation_before_mutation": true,
+    "later_packet_must_verify_generators_or_exposure_blocks": true
+  },
+  "rollback_requirements_for_later_execution_packet": [
+    "record pre-execution catalog state and exact commands",
+    "remove any newly minted answer-form units only through an authorized machine-reference rollback route",
+    "do not hand-edit references/machine or references/external",
+    "do not refresh generated projections until source mutations are authorized and complete",
+    "do not expose generator-blocked answer-form units in student-facing routes",
+    "keep target-exercise mapping rollback separate from machine-reference rollback"
+  ],
+  "validation_stack_for_later_execution_packet": [
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "simulated catalog validation",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/references/check-operation-answer-skill-candidates.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "recommended_next_gate": "GATE-MTU-H4A-answer-form-cli-mutation-plan",
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run GATE-MTU-H4A before any answer-form MTU minting, target-exercise mapping update, candidate storage creation, candidate writes, generated projection refresh, lesson output, or student-facing exposure."
+}

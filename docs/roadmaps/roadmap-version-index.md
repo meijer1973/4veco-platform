@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.12-gate-mtu-h4-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H4 closed PASS WITH CONDITIONS for routing only and authorized only MTU-H4A bounded answer-form CLI-mutation planning; no mutation or product use is authorized. |
+| References Team Roadmap | `v3.13-mtu-h4a-answer-form-cli-mutation-plan` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4A prepared the answer-form CLI-mutation planning packet and moved the top operational next action to GATE-MTU-H4A; no mutation or product use is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H4A planning packet | `v3.12-gate-mtu-h4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4 closure | `v3.11-engine-operationalization-track` | `docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before engine operationalization track | `v3.10-mtu-h4-answer-form-routing-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4 answer-form routing packet | `v3.09-mtu-h3c-incidence-executed` | `docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md` | `references/reference-team-roadmap.md` |

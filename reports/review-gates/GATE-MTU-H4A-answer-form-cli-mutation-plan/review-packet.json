@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4A-answer-form-cli-mutation-plan",
+  "sprint_id": "MTU-H4A",
+  "generated_on": "2026-05-29",
+  "status": "review_packet_ready_no_mutation_authorized",
+  "source_packet": "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "must_be_committed_and_pushed_before_human_review; closure must record the reviewed remote commit/hash",
+  "review_scope": "Review the MTU-H4A answer-form CLI-mutation planning packet only. Decide whether a later bounded execution packet may be prepared for accepted answer-form lanes.",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_execution_authorized": false,
+    "unit_split_execution_authorized": false,
+    "unit_deprecation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json",
+    "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.md",
+    "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+    "reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json",
+    "reports/sprints/MTU-H4A-plan.md",
+    "reports/sprints/MTU-H4A-baseline.md",
+    "references/authored/vraagtypen-en-opgaveontwerp.md",
+    "references/authored/course-target-exercises.json as read-only context",
+    "references/machine/micro-teaching-units.json as read-only context",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "references/schemas/answer-skill-candidates.schema.json",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js"
+  ],
+  "calibration_questions": [
+    {
+      "id": "CAL-1",
+      "question": "Confirm this gate reviews the H4A planning packet only and does not itself authorize protected reference mutation, unit minting, candidate storage, candidate writes, target-exercise mutation, projection refresh, lesson output, or student/product use.",
+      "required_answer": "yes"
+    },
+    {
+      "id": "CAL-2",
+      "question": "Confirm the H4A packet, review packet, and cited evidence have been pushed to the normal remote branch before this review starts.",
+      "required_answer": "yes"
+    },
+    {
+      "id": "CAL-3",
+      "question": "Confirm candidate storage remains absent, A-domain ID pressure is a review issue, and no proposed answer-form ID is live until a later exact execution gate authorizes it.",
+      "required_answer": "yes"
+    }
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH4A-Q1",
+      "topic": "ID allocation and planning scope",
+      "question": "Are the proposed A-domain IDs A80, A81, and A96-A99 acceptable for later execution-packet planning, with A100 rejected as invalid and A71 left unused?",
+      "options": [
+        "Yes, approve this ID allocation for later execution-packet planning.",
+        "Require an ID-policy sprint before any answer-form execution packet.",
+        "Revise one or more IDs; name the replacement route.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q2",
+      "topic": "A96 bereken",
+      "question": "Is A96 acceptable as the later planned unit for ANS_BEREKEN, with formula, substitution, intermediate steps, unit/notation, and conclusion?",
+      "options": [
+        "Yes, approve A96 for later execution-packet planning.",
+        "Revise the A96 name, procedure, zero-needs status, or exam codes.",
+        "Hold bereken answer-form planning until more correction-model examples are read.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q3",
+      "topic": "leg uit lanes",
+      "question": "Are A97, A98, and A99 acceptable as separate later planned units for uitleg_dat, uitleg_of, and leg uit met voorbeeld?",
+      "options": [
+        "Yes, approve all three separate lanes for later execution-packet planning.",
+        "Merge or revise one of the lanes; name the change.",
+        "Hold explanation answer-form units until broader answer-model evidence is read.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q4",
+      "topic": "noem/geef aan",
+      "question": "Is A80 acceptable as the combined noem/geef-aan answer-form unit, with a future split required if evidence shows geef aan behaves differently?",
+      "options": [
+        "Yes, approve A80 with the split-if-needed condition.",
+        "Split noem and geef aan now before execution-packet planning.",
+        "Hold concise-identification answer forms until more examples are audited.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q5",
+      "topic": "bron modifier",
+      "question": "Is A81 acceptable as ANS_BRON_GEBRUIKEN only as a source-use modifier plus underlying answer form, not as a standalone complete answer form?",
+      "options": [
+        "Yes, approve A81 as modifier plus underlying answer form.",
+        "Revise A81 so source-use stays entirely in task UI rather than an MTU.",
+        "Hold bron until source-annex extraction is reviewed more broadly.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q6",
+      "topic": "held lanes",
+      "question": "Is the held-lane treatment sufficient for graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation, with no unit-add commands now?",
+      "options": [
+        "Yes, keep all three held as written.",
+        "Move one held lane into later execution-packet planning; name it and the evidence.",
+        "Require stronger evidence before any H4A downstream work.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q7",
+      "topic": "EX overlays",
+      "question": "Should q3 threshold conclusion/unit-direction and q15 two-step correction-model explanation remain EX answer-skill overlays with no candidate storage or writes?",
+      "options": [
+        "Yes, keep both overlays visible and authorize no writes.",
+        "Move one overlay into reusable answer-form MTU planning; name it and why.",
+        "Hold until answer-skill candidate storage is authorized.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q8",
+      "topic": "mapping and projection boundary",
+      "question": "Are the mapping and projection boundaries sufficient: current question_type mappings remain planning input only, no target-exercise fields are written, and projections refresh only after later source mutations?",
+      "options": [
+        "Yes, accept the mapping/projection boundary.",
+        "Add more mapping proof before execution-packet planning.",
+        "Hold until an authored-reference field-mutation CLI exists.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q9",
+      "topic": "command and validation standard",
+      "question": "Are the later command templates, unit-add no-dry-run disclosure, extracted-spec logging, simulated catalog validation, generator/exposure block, rollback, and validation stack sufficient?",
+      "options": [
+        "Yes, accept the command, rollback, and validation standard.",
+        "Add more proof requirements before execution-packet planning.",
+        "Hold until unit-add has a dry-run mode or generator readiness is resolved.",
+        "Open answer / other, with rationale."
+      ]
+    },
+    {
+      "id": "MTUH4A-Q10",
+      "topic": "next sprint and authority",
+      "question": "If GATE-MTU-H4A closes, what is authorized next, and does this packet authorize any mutation or product use now?",
+      "options": [
+        "Authorize only a later bounded execution packet for accepted H4A lanes; no execution or product use now.",
+        "Authorize direct execution only if exact commands and final preflight are included in the closure.",
+        "Hold all downstream answer-form work and revise the H4A packet.",
+        "Open answer / other, with rationale."
+      ]
+    }
+  ],
+  "stop_conditions": [
+    "stop if the packet/evidence has not been pushed before review",
+    "stop if any answer authorizes hand edits to references/machine or references/external",
+    "stop if any answer authorizes unit minting or target-exercise writes from this gate",
+    "stop if any answer creates or writes references/data/exam-ingestion/answer-skill-candidates.json",
+    "stop if A100 or any invalid A-domain ID is treated as usable",
+    "stop if A71 is consumed without explicit reviewer decision",
+    "stop if bron is treated as a standalone complete answer form",
+    "stop if graph, Type 4, or analysis/evaluation are minted without stronger evidence",
+    "stop if generated projections are refreshed before authorized source mutations",
+    "stop if lesson output, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use is authorized now"
+  ],
+  "recommended_next_action": "Commit and push this packet and cited evidence, then run GATE-MTU-H4A before any answer-form MTU minting, target-exercise field update, candidate storage creation, candidate write, generated projection refresh, lesson output, or student-facing exposure."
+}
