@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SPEC-ET-1",
+  "status": "completed",
+  "completed": "2026-05-29",
+  "plan": "reports/sprints/SPEC-ET-1-plan.md",
+  "baseline": "reports/sprints/SPEC-ET-1-baseline.md",
+  "result": "reports/sprints/SPEC-ET-1-result.md",
+  "diff_summary": "reports/sprints/SPEC-ET-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "external_source_mutation": false,
+  "machine_reference_mutation": false,
+  "generated_lesson_output_changed": false,
+  "engine_code_changed": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "target_exercise_mutation": false,
+  "generated_projection_refresh": false,
+  "student_product_use_authorized": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SPEC-ET-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SPEC-ET-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SPEC-ET-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"target-equivalent|SPEC-ET-1|EX-LESSON-1|GAME-UX-3A|L1\\\\.7B-Q2|GATE-L1\\\\.7B-Q2|Scale Gate 1\" ..\\\\4veco-lessen\\\\specifications ..\\\\4veco-lessen\\\\lessen-team-roadmap.md references\\\\reference-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "powershell -NoProfile -Command \"if (rg -n 'ready to try|klaar om de eindopgave te proberen|target-exercise-readiness complete' ..\\\\4veco-lessen\\\\specifications\\\\product-end-state.md ..\\\\4veco-lessen\\\\specifications\\\\companion-core-specifications.md) { exit 1 } else { exit 0 }\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ..\\\\4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "next_action": "Run GATE-MTU-H4A before any answer-form execution planning; use SPEC-ET-1 as the target-equivalent proof standard for EX-LESSON-1, GAME-UX-3A, L1.7B-Q2, and GATE-L1.7B-Q2.",
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

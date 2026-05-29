@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T19:34:15.868Z",
+  "generatedAt": "2026-05-29T20:19:42.092Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-29 Roadmap ID: references-team-roadmap Roadmap version: v3.13-mtu-h4a-answer-form-cli-mutation-plan Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvT...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-29 Roadmap ID: references-team-roadmap Roadmap version: v3.14-exit-ticket-target-equivalent-spec Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE e...",
           "sprints": [
             {
               "sprint": "GATE-MTU-H4A",
@@ -173,14 +173,21 @@
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains. SYNC-4 now makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4A has prepared answer-form execution-planning evidence but authorizes no mutation or product use. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GATE-MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, and `SPEC-ET-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4A prepared answer-form execution-planning evidence but authorizes no mutation or product use. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-LESSON-1",
+              "name": "Exam-Ingestion End-State Integration",
+              "completed": "no",
+              "currentState": "**LESSON PRODUCT INTEGRATION DEPENDENCY BEFORE EXAM-TARGET SCALE RELIANCE.** Update lesson-roadmap gates, paragraph-plan requirements, and later lesson-build handoffs so official CvTE and CvTE-derived target exercises trace prompt, source annexes, graphs/tables/figures, correction model, point allocation, answer-construction requirements, concepts, calculations, graph/table/source operations, reasoning operations, and answer-writing requirements into the explanation, skill-map route, shared task shell, target-equivalent exit ticket, and answer model. This row authorizes no protected reference mutation, generated lesson output, target-exercise mutation, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use.",
               "exitGate": ""
             },
             {
               "sprint": "GAME-UX-3A",
               "name": "Shared Task-Type UX Foundation",
               "completed": "no",
-              "currentState": "**PLANNED DEPENDENCY AFTER GATE-MTU-H4A REVIEW OR WITH H4A CONDITIONS VISIBLE.** Expand the checkpoint/task engine into a reusable task shell for exit tickets, graph/table practice, and math/calculation practice. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. GAME-UX-3A may use the H4/H4A routing decisions as design input, but it must not claim live answer-form MTUs or target-exercise readiness until later governed source mutations and evidence close. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, protected reference mutation, candidate writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
+              "currentState": "**PLANNED DEPENDENCY AFTER GATE-MTU-H4A REVIEW OR WITH H4A CONDITIONS AND SPEC-ET-1 TARGET-EQUIVALENT REQUIREMENTS VISIBLE.** Expand the checkpoint/task engine into a reusable task shell for target-equivalent exit tickets, checkpoint-only local checks, graph/table practice, math/calculation practice, and exam-style answer-form requirements. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. GAME-UX-3A may use the H4/H4A routing decisions as design input, but it must not claim live answer-form MTUs or target-equivalent exit-ticket proof until later governed source mutations, implementation evidence, and GATE-L1.7B-Q2 close. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, protected reference mutation, candidate writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
               "exitGate": ""
             },
             {
@@ -208,7 +215,7 @@
               "sprint": "MATH-UX-2",
               "name": "Math Game + Checkpoint UI Integration",
               "completed": "no",
-              "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math game by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relationship between skill-map route, math practice, and exit-ticket readiness.",
+              "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math game by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relationship between skill-map route, math practice, and target-equivalent exit-ticket proof.",
               "exitGate": ""
             },
             {
@@ -292,7 +299,14 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; and MTU-H4A prepared a planning packet only, authorizing no mutation or product use. Broad lesson-companion scaling remains blocked until `GATE-MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row operational quality.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; and `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; and MTU-H4A prepared a planning packet only, authorizing no mutation or product use. Broad lesson-companion scaling remains blocked until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SPEC-ET-1",
+              "name": "Exit Ticket Target-Equivalent Specification Correction",
+              "completed": "yes",
+              "currentState": "Completed as a cross-repo specification and roadmap correction sprint. Updated `../4veco-lessen/specifications/product-end-state.md` and `../4veco-lessen/specifications/companion-core-specifications.md` so the exit ticket is target-equivalent proof, not merely readiness-to-try. Added local non-summative completion-language hierarchy, strengthened exam-ingestion end-product integration, updated lesson and platform roadmap rows for `EX-LESSON-1`, `GAME-UX-3A`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and Scale Gate 1, and preserved all blocks on generated lesson output, engine code, protected reference mutation, candidate storage, candidate writes, target-exercise mutation, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, and student/product use. Top operational next action remains `GATE-MTU-H4A`; later task-shell and exit-ticket implementation must use the target-equivalent proof standard.",
               "exitGate": ""
             },
             {
@@ -1179,7 +1193,15 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains. SYNC-4 now makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4A has prepared answer-form execution-planning evidence but authorizes no mutation or product use. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GATE-MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, and `SPEC-ET-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4A prepared answer-form execution-planning evidence but authorizes no mutation or product use. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "EX-LESSON-1",
+          "name": "Exam-Ingestion End-State Integration",
+          "completed": "no",
+          "currentState": "**LESSON PRODUCT INTEGRATION DEPENDENCY BEFORE EXAM-TARGET SCALE RELIANCE.** Update lesson-roadmap gates, paragraph-plan requirements, and later lesson-build handoffs so official CvTE and CvTE-derived target exercises trace prompt, source annexes, graphs/tables/figures, correction model, point allocation, answer-construction requirements, concepts, calculations, graph/table/source operations, reasoning operations, and answer-writing requirements into the explanation, skill-map route, shared task shell, target-equivalent exit ticket, and answer model. This row authorizes no protected reference mutation, generated lesson output, target-exercise mutation, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1187,7 +1209,7 @@
           "sprint": "GAME-UX-3A",
           "name": "Shared Task-Type UX Foundation",
           "completed": "no",
-          "currentState": "**PLANNED DEPENDENCY AFTER GATE-MTU-H4A REVIEW OR WITH H4A CONDITIONS VISIBLE.** Expand the checkpoint/task engine into a reusable task shell for exit tickets, graph/table practice, and math/calculation practice. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. GAME-UX-3A may use the H4/H4A routing decisions as design input, but it must not claim live answer-form MTUs or target-exercise readiness until later governed source mutations and evidence close. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, protected reference mutation, candidate writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
+          "currentState": "**PLANNED DEPENDENCY AFTER GATE-MTU-H4A REVIEW OR WITH H4A CONDITIONS AND SPEC-ET-1 TARGET-EQUIVALENT REQUIREMENTS VISIBLE.** Expand the checkpoint/task engine into a reusable task shell for target-equivalent exit tickets, checkpoint-only local checks, graph/table practice, math/calculation practice, and exam-style answer-form requirements. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. GAME-UX-3A may use the H4/H4A routing decisions as design input, but it must not claim live answer-form MTUs or target-equivalent exit-ticket proof until later governed source mutations, implementation evidence, and GATE-L1.7B-Q2 close. This row authorizes no source-data mutation, generated lesson output, `Check` activation, target-exercise promotion, protected reference mutation, candidate writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or broad companion scaling.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1219,7 +1241,7 @@
           "sprint": "MATH-UX-2",
           "name": "Math Game + Checkpoint UI Integration",
           "completed": "no",
-          "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math game by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relationship between skill-map route, math practice, and exit-ticket readiness.",
+          "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math game by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relationship between skill-map route, math practice, and target-equivalent exit-ticket proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1315,7 +1337,15 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; and `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; and MTU-H4A prepared a planning packet only, authorizing no mutation or product use. Broad lesson-companion scaling remains blocked until `GATE-MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining readiness, review-standard, curriculum-versioning, and game-row operational quality.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; and `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; and MTU-H4A prepared a planning packet only, authorizing no mutation or product use. Broad lesson-companion scaling remains blocked until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "SPEC-ET-1",
+          "name": "Exit Ticket Target-Equivalent Specification Correction",
+          "completed": "yes",
+          "currentState": "Completed as a cross-repo specification and roadmap correction sprint. Updated `../4veco-lessen/specifications/product-end-state.md` and `../4veco-lessen/specifications/companion-core-specifications.md` so the exit ticket is target-equivalent proof, not merely readiness-to-try. Added local non-summative completion-language hierarchy, strengthened exam-ingestion end-product integration, updated lesson and platform roadmap rows for `EX-LESSON-1`, `GAME-UX-3A`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and Scale Gate 1, and preserved all blocks on generated lesson output, engine code, protected reference mutation, candidate storage, candidate writes, target-exercise mutation, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, and student/product use. Top operational next action remains `GATE-MTU-H4A`; later task-shell and exit-ticket implementation must use the target-equivalent proof standard.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2312,8 +2342,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 124,
-      "openCount": 19
+      "completedCount": 125,
+      "openCount": 20
     },
     {
       "id": "lessen",
@@ -2332,17 +2362,24 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
-              "sprint": "MTU-H4A",
-              "name": "Answer-Form CLI-Mutation Planning Packet",
+              "sprint": "GATE-MTU-H4A",
+              "name": "Answer-Form CLI-Mutation Plan Human Review",
               "completed": "no",
-              "currentState": "**PLATFORM SOURCE-PLANNING DEPENDENCY AFTER GATE-MTU-H4.** Prepare only a bounded answer-form planning packet: exact lane specs, held Type 4 / motiveer / classificatie lane, `bron` as source-use modifier plus underlying answer form, graph/draw/shade planning-only evidence condition, held analysis/evaluation, visible q3/q15 EX overlays, and future source/projection boundaries. This authorizes no mutation, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use.",
+              "currentState": "**ACTIVE PLATFORM REVIEW GATE BEFORE ANSWER-FORM EXECUTION PLANNING.** Review the non-mutating H4A answer-form planning packet before any answer-form execution packet is prepared. No protected reference mutation, unit minting, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use is authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "EX-LESSON-1",
+              "name": "Exam-Ingestion End-State Integration",
+              "completed": "no",
+              "currentState": "**REQUIRED BEFORE EXAM-TARGET EXIT TICKET OR SCALE RELIANCE.** Update lesson-roadmap gates, paragraph-plan requirements, and later lesson-build handoffs so official CvTE and CvTE-derived target exercises trace prompt, source annexes, graphs/tables/figures, correction model, point allocation, answer-construction requirements, concepts, calculations, graph/table/source operations, reasoning operations, and answer-writing requirements into the explanation, skill-map route, shared task shell, exit ticket, and answer model. This row authorizes no generated output, protected reference mutation, target-exercise mutation, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use.",
               "exitGate": ""
             },
             {
               "sprint": "GAME-UX-3A",
               "name": "Shared Task-Type UX Foundation",
               "completed": "no",
-              "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY AFTER GATE-MTU-H4 AND BEFORE ENGINE OPERATIONAL PROOF, WITH MTU-H4A CONDITIONS VISIBLE.** Expand the current checkpoint/task engine into the reusable task shell required by `specifications/product-end-state.md` and `specifications/companion-core-specifications.md`. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. This is not exit-ticket-only; graph/table practice, math/calculation practice, and readiness checkpoints must share the task language where the student action overlaps. It may use H4 routing as design input, but must not claim live answer-form MTUs or target-exercise readiness until later governed source mutations and evidence close.",
+              "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY AFTER GATE-MTU-H4A AND BEFORE ENGINE OPERATIONAL PROOF, WITH MTU-H4A CONDITIONS AND SPEC-ET-1 TARGET-EQUIVALENT REQUIREMENTS VISIBLE.** Expand the current checkpoint/task engine into the reusable task shell required by `specifications/product-end-state.md` and `specifications/companion-core-specifications.md`. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. This is not exit-ticket-only; target-equivalent exit tickets, graph/table practice, math/calculation practice, and exam-style answer-form requirements must share the task language where the student action overlaps. It may use H4/H4A routing as design input, but must not claim live answer-form MTUs or target-equivalent exit-ticket proof until later governed source mutations, implementation evidence, and GATE-L1.7B-Q2 close.",
               "exitGate": ""
             },
             {
@@ -2370,7 +2407,7 @@
               "sprint": "MATH-UX-2",
               "name": "Math Game + Checkpoint UI Integration",
               "completed": "no",
-              "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math route by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relation between skill-map route, math practice, and exit-ticket readiness.",
+              "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math route by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relation between skill-map route, math practice, and target-equivalent exit-ticket proof.",
               "exitGate": ""
             },
             {
@@ -2396,16 +2433,16 @@
             },
             {
               "sprint": "L1.7B-Q2",
-              "name": "Exit Ticket Target-Exercise Readiness Implementation",
+              "name": "Exit Ticket Target-Equivalent Implementation",
               "completed": "no",
-              "currentState": "**BLOCKED PENDING SHARED TASK SHELL AND ENGINE OPERATIONAL PROOF / REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+              "currentState": "**BLOCKED PENDING SHARED TASK SHELL AND ENGINE OPERATIONAL PROOF / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md`. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
               "exitGate": ""
             },
             {
               "sprint": "GATE-L1.7B-Q2",
-              "name": "Exit Ticket Completion Language And Readiness Review",
+              "name": "Exit Ticket Target-Equivalent Proof Review",
               "completed": "no",
-              "currentState": "**REQUIRED BEFORE STRONGER COMPLETION COPY.** Decide what the checkpoint may say when all answers are correct. `Je bent klaar om de eindopgave te proberen` is allowed only if Q2 proves target-exercise-readiness coverage. Mastery, grade, automatic progression, sequencing, diagnostics, summative claims, PV, and AI language remain prohibited.",
+              "currentState": "**REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION COPY.** Decide whether successful completion justifies local paragraph-completion language such as `Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt`, `Je kunt nu door naar de eindopgave`, or `Je hebt deze paragraaf-check succesvol afgerond`. Mastery, grade, automatic progression, sequencing, diagnostics, summative claims, PV, and AI language remain prohibited.",
               "exitGate": ""
             },
             {
@@ -2419,28 +2456,42 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, or exit-ticket output as scale or target-exercise-readiness evidence unless live student-route proof and Q2 readiness evidence close or the gate explicitly limits those surfaces to non-summative checkpoint/practice status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `SPEC-ET-1`, `MTU-H4A`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SPEC-ET-1",
+              "name": "Exit Ticket Target-Equivalent Specification Correction",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / SPECIFICATION CORRECTION.** Updated `specifications/product-end-state.md` and `specifications/companion-core-specifications.md` so the exit ticket is defined as a target-equivalent proof task rather than merely readiness-to-try. Added local non-summative completion-language hierarchy, strengthened exam-ingestion end-product integration, revised `L1.7B-Q2`, `GATE-L1.7B-Q2`, `GAME-UX-3A`, and Scale Gate 1 wording, and preserved all blocks on grades, diagnostics, mastery, sequencing, summative use, AI, PV, Scale Gate 1, and student/product use. Records: `archive/sprints/SPEC-ET-1/`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "MTU-H4A",
+              "name": "Answer-Form CLI-Mutation Planning Packet",
+              "completed": "yes",
+              "currentState": "**CLOSED PLATFORM SOURCE-PLANNING DEPENDENCY AFTER GATE-MTU-H4.** Prepared only a bounded answer-form planning packet: exact lane specs, held Type 4 / motiveer / classificatie lane, `bron` as source-use modifier plus underlying answer form, graph/draw/shade planning-only evidence condition, held analysis/evaluation, visible q3/q15 EX overlays, and future source/projection boundaries. This authorizes no mutation, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use. Top operational next action is `GATE-MTU-H4A`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-P23",
               "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: shared task-type shell support is required, L1.7B-Q2 cannot produce readiness evidence for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: shared task-type shell support is required, L1.7B-Q2 cannot produce target-equivalent proof for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-MAP",
               "name": "Exit Ticket Skill-Metadata Alignment",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / READINESS FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-exercise-readiness evidence because it does not cover the full `A43` operation chain. Carried flags: readiness belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as readiness evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS / EVIDENCE-FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-equivalent proof because it does not cover the full `A43` operation chain. Carried flags: target-equivalent proof belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as proof evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7C-MATH",
               "name": "Restore Skill-Tree Math Game + Four-Game Architecture Integrity",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / SCALE GATE FLAG CARRIER.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck closed PASS WITH FLAGS. Primary `Rekenen` now points to scoped `wiskundevaardigheden.html` for `1.1.2` and `1.1.3`; `stappenplan.html` remains `Rekenstappen` support; unscoped `1.1.1` stays collapsed as `Brede vaardigheidskaart`. Carried flags: skill-tree progress language needs Scale Gate 1 review, restored math is not target-exercise-readiness evidence, keyboard/focus proof should strengthen before scale, and scoped skilltree comments need cleanup. Records: `archive/sprints/L1.7C-MATH/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS / SCALE GATE FLAG CARRIER.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck closed PASS WITH FLAGS. Primary `Rekenen` now points to scoped `wiskundevaardigheden.html` for `1.1.2` and `1.1.3`; `stappenplan.html` remains `Rekenstappen` support; unscoped `1.1.1` stays collapsed as `Brede vaardigheidskaart`. Carried flags: skill-tree progress language needs Scale Gate 1 review, restored math is not target-equivalent proof evidence, keyboard/focus proof should strengthen before scale, and scoped skilltree comments need cleanup. Records: `archive/sprints/L1.7C-MATH/`.",
               "exitGate": ""
             },
             {
@@ -2468,14 +2519,14 @@
               "sprint": "GATE-L1.7B",
               "name": "Exit Ticket Product-Boundary Review",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-exercise-readiness evidence because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-equivalent proof because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-R",
               "name": "Boundary-Safe Exit Ticket Checkpoint Resume",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-exercise-readiness, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-equivalent proof, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
               "exitGate": ""
             },
             {
@@ -2496,7 +2547,7 @@
               "sprint": "L1.7C",
               "name": "Three-Aspect Game Quality Upgrade",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS; RETROSPECTIVE ROUTE GAP CORRECTED BY L1.7C-MATH.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, game screenshot QA should mature, and the restored math route remains practice rather than target-exercise-readiness evidence. L1.7C-MATH later restored the old skill-tree math game as primary `Rekenen` where scoped. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
+              "currentState": "**CLOSED PASS WITH FLAGS; RETROSPECTIVE ROUTE GAP CORRECTED BY L1.7C-MATH.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, game screenshot QA should mature, and the restored math route remains practice rather than target-equivalent proof evidence. L1.7C-MATH later restored the old skill-tree math game as primary `Rekenen` where scoped. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
               "exitGate": ""
             },
             {
@@ -2524,7 +2575,7 @@
               "sprint": "L-EX1",
               "name": "Exam-Target Paragraph Controlled Implementation",
               "completed": "no",
-              "currentState": "**FUTURE CONTROLLED IMPLEMENTATION.** Build one paragraph around a real official exam question using platform exam-ingestion data, source annexes, answer-model decomposition, MTU mapping, and companion visual/answer-model gates. Must preserve the end-state distinction between paragraph publication, target-exercise-readiness proof, and scale readiness. No broad companion scaling or generated-output hand patching.",
+              "currentState": "**FUTURE CONTROLLED IMPLEMENTATION.** Build one paragraph around a real official exam question using platform exam-ingestion data, source annexes, answer-model decomposition, MTU mapping, and companion visual/answer-model gates. Must preserve the end-state distinction between paragraph publication, target-equivalent proof, and scale readiness. No broad companion scaling or generated-output hand patching.",
               "exitGate": ""
             },
             {
@@ -2784,10 +2835,18 @@
       ],
       "sprints": [
         {
-          "sprint": "MTU-H4A",
-          "name": "Answer-Form CLI-Mutation Planning Packet",
+          "sprint": "GATE-MTU-H4A",
+          "name": "Answer-Form CLI-Mutation Plan Human Review",
           "completed": "no",
-          "currentState": "**PLATFORM SOURCE-PLANNING DEPENDENCY AFTER GATE-MTU-H4.** Prepare only a bounded answer-form planning packet: exact lane specs, held Type 4 / motiveer / classificatie lane, `bron` as source-use modifier plus underlying answer form, graph/draw/shade planning-only evidence condition, held analysis/evaluation, visible q3/q15 EX overlays, and future source/projection boundaries. This authorizes no mutation, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use.",
+          "currentState": "**ACTIVE PLATFORM REVIEW GATE BEFORE ANSWER-FORM EXECUTION PLANNING.** Review the non-mutating H4A answer-form planning packet before any answer-form execution packet is prepared. No protected reference mutation, unit minting, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "EX-LESSON-1",
+          "name": "Exam-Ingestion End-State Integration",
+          "completed": "no",
+          "currentState": "**REQUIRED BEFORE EXAM-TARGET EXIT TICKET OR SCALE RELIANCE.** Update lesson-roadmap gates, paragraph-plan requirements, and later lesson-build handoffs so official CvTE and CvTE-derived target exercises trace prompt, source annexes, graphs/tables/figures, correction model, point allocation, answer-construction requirements, concepts, calculations, graph/table/source operations, reasoning operations, and answer-writing requirements into the explanation, skill-map route, shared task shell, exit ticket, and answer model. This row authorizes no generated output, protected reference mutation, target-exercise mutation, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2795,7 +2854,7 @@
           "sprint": "GAME-UX-3A",
           "name": "Shared Task-Type UX Foundation",
           "completed": "no",
-          "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY AFTER GATE-MTU-H4 AND BEFORE ENGINE OPERATIONAL PROOF, WITH MTU-H4A CONDITIONS VISIBLE.** Expand the current checkpoint/task engine into the reusable task shell required by `specifications/product-end-state.md` and `specifications/companion-core-specifications.md`. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. This is not exit-ticket-only; graph/table practice, math/calculation practice, and readiness checkpoints must share the task language where the student action overlaps. It may use H4 routing as design input, but must not claim live answer-form MTUs or target-exercise readiness until later governed source mutations and evidence close.",
+          "currentState": "**PLATFORM HANDOFF / ACTIVE NEXT DEPENDENCY AFTER GATE-MTU-H4A AND BEFORE ENGINE OPERATIONAL PROOF, WITH MTU-H4A CONDITIONS AND SPEC-ET-1 TARGET-EQUIVALENT REQUIREMENTS VISIBLE.** Expand the current checkpoint/task engine into the reusable task shell required by `specifications/product-end-state.md` and `specifications/companion-core-specifications.md`. Required task families: numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, and graph-construction substitute. The shell must support neutral feedback, retry/self-check, screenshot QA, keyboard/focus QA, and no mastery/diagnostic/sequencing/summative/product-use claims. This is not exit-ticket-only; target-equivalent exit tickets, graph/table practice, math/calculation practice, and exam-style answer-form requirements must share the task language where the student action overlaps. It may use H4/H4A routing as design input, but must not claim live answer-form MTUs or target-equivalent exit-ticket proof until later governed source mutations, implementation evidence, and GATE-L1.7B-Q2 close.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2827,7 +2886,7 @@
           "sprint": "MATH-UX-2",
           "name": "Math Game + Checkpoint UI Integration",
           "completed": "no",
-          "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math route by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relation between skill-map route, math practice, and exit-ticket readiness.",
+          "currentState": "**USE THE SHARED TASK SHELL FOR CALCULATION OPERATIONS.** Upgrade the scoped math route by integrating numeric input, calculation/work capture, final answer, percentage/index notation, units where relevant, and feedback on common calculation errors. Produce one working route for `1.1.2` showing the relation between skill-map route, math practice, and target-equivalent exit-ticket proof.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2857,17 +2916,17 @@
         },
         {
           "sprint": "L1.7B-Q2",
-          "name": "Exit Ticket Target-Exercise Readiness Implementation",
+          "name": "Exit Ticket Target-Equivalent Implementation",
           "completed": "no",
-          "currentState": "**BLOCKED PENDING SHARED TASK SHELL AND ENGINE OPERATIONAL PROOF / REQUIRED BEFORE STRONGER CHECK CLAIMS.** Upgrade one checkpoint into target-exercise-readiness evidence under `specifications/product-end-state.md`. It must decompose the paragraph target exercise into operations and test the complete operation chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Is this student ready to try the target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+          "currentState": "**BLOCKED PENDING SHARED TASK SHELL AND ENGINE OPERATIONAL PROOF / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md`. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
         {
           "sprint": "GATE-L1.7B-Q2",
-          "name": "Exit Ticket Completion Language And Readiness Review",
+          "name": "Exit Ticket Target-Equivalent Proof Review",
           "completed": "no",
-          "currentState": "**REQUIRED BEFORE STRONGER COMPLETION COPY.** Decide what the checkpoint may say when all answers are correct. `Je bent klaar om de eindopgave te proberen` is allowed only if Q2 proves target-exercise-readiness coverage. Mastery, grade, automatic progression, sequencing, diagnostics, summative claims, PV, and AI language remain prohibited.",
+          "currentState": "**REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION COPY.** Decide whether successful completion justifies local paragraph-completion language such as `Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt`, `Je kunt nu door naar de eindopgave`, or `Je hebt deze paragraaf-check succesvol afgerond`. Mastery, grade, automatic progression, sequencing, diagnostics, summative claims, PV, and AI language remain prohibited.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2883,7 +2942,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `MTU-H4A`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, or exit-ticket output as scale or target-exercise-readiness evidence unless live student-route proof and Q2 readiness evidence close or the gate explicitly limits those surfaces to non-summative checkpoint/practice status during controlled production. It may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `SPEC-ET-1`, `MTU-H4A`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `GATE-MTU-H4A`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2899,7 +2958,7 @@
           "sprint": "L-EX1",
           "name": "Exam-Target Paragraph Controlled Implementation",
           "completed": "no",
-          "currentState": "**FUTURE CONTROLLED IMPLEMENTATION.** Build one paragraph around a real official exam question using platform exam-ingestion data, source annexes, answer-model decomposition, MTU mapping, and companion visual/answer-model gates. Must preserve the end-state distinction between paragraph publication, target-exercise-readiness proof, and scale readiness. No broad companion scaling or generated-output hand patching.",
+          "currentState": "**FUTURE CONTROLLED IMPLEMENTATION.** Build one paragraph around a real official exam question using platform exam-ingestion data, source annexes, answer-model decomposition, MTU mapping, and companion visual/answer-model gates. Must preserve the end-state distinction between paragraph publication, target-equivalent proof, and scale readiness. No broad companion scaling or generated-output hand patching.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2984,10 +3043,26 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "SPEC-ET-1",
+          "name": "Exit Ticket Target-Equivalent Specification Correction",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / SPECIFICATION CORRECTION.** Updated `specifications/product-end-state.md` and `specifications/companion-core-specifications.md` so the exit ticket is defined as a target-equivalent proof task rather than merely readiness-to-try. Added local non-summative completion-language hierarchy, strengthened exam-ingestion end-product integration, revised `L1.7B-Q2`, `GATE-L1.7B-Q2`, `GAME-UX-3A`, and Scale Gate 1 wording, and preserved all blocks on grades, diagnostics, mastery, sequencing, summative use, AI, PV, Scale Gate 1, and student/product use. Records: `archive/sprints/SPEC-ET-1/`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "MTU-H4A",
+          "name": "Answer-Form CLI-Mutation Planning Packet",
+          "completed": "yes",
+          "currentState": "**CLOSED PLATFORM SOURCE-PLANNING DEPENDENCY AFTER GATE-MTU-H4.** Prepared only a bounded answer-form planning packet: exact lane specs, held Type 4 / motiveer / classificatie lane, `bron` as source-use modifier plus underlying answer form, graph/draw/shade planning-only evidence condition, held analysis/evaluation, visible q3/q15 EX overlays, and future source/projection boundaries. This authorizes no mutation, candidate storage, candidate writes, target-exercise fields, projection refresh, lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use. Top operational next action is `GATE-MTU-H4A`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "L1.7B-P23",
           "name": "Exit Ticket Target-Skill Checkpoint Designs For 1.1.2 And 1.1.3",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: shared task-type shell support is required, L1.7B-Q2 cannot produce readiness evidence for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM HANDOFF.** Human review accepted the stop/handoff decision. Operation-chain analysis showed that `1.1.2` requires calculation/work input, final numeric answer, percentage/index notation, and short explanation; `1.1.3` requires table/graph handling, axis convention, graph drawing or point-placement substitute, interpolation, and short explanation. No `1.1.2` or `1.1.3` exit-ticket output was generated because the current engine/UI is choice-only. `Check` remains hidden until reviewed generated checkpoint output exists. Carried flags: shared task-type shell support is required, L1.7B-Q2 cannot produce target-equivalent proof for calculation/graph paragraphs until task-type support exists, and target-exercise/MTU review flags remain live. Records: `archive/sprints/L1.7B-P23/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2995,7 +3070,7 @@
           "sprint": "L1.7B-MAP",
           "name": "Exit Ticket Skill-Metadata Alignment",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / READINESS FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-exercise-readiness evidence because it does not cover the full `A43` operation chain. Carried flags: readiness belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as readiness evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS / EVIDENCE-FLAG CARRIER.** Human review accepted the metadata alignment: `1.1.1` checkpoint-assessed metadata now uses `B01/B02`, `A04` is removed from checkpoint target/scope metadata, `metadataAlignment.targetExerciseSkillIds` records `A43/B01/B02`, and `targetReadinessEvidence` remains `false`. The metadata mismatch is fixed for the checkpoint's current role, but the current checkpoint is not target-equivalent proof because it does not cover the full `A43` operation chain. Carried flags: target-equivalent proof belongs to `L1.7B-Q2`, future checkpoint designs must use task forms appropriate to the target exercise, Scale Gate 1 may not rely on the current checkpoint as proof evidence, and the `1.1.1` target-exercise registry record still needs its separate final review path. Records: `archive/sprints/L1.7B-MAP/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3003,7 +3078,7 @@
           "sprint": "L1.7C-MATH",
           "name": "Restore Skill-Tree Math Game + Four-Game Architecture Integrity",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / SCALE GATE FLAG CARRIER.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck closed PASS WITH FLAGS. Primary `Rekenen` now points to scoped `wiskundevaardigheden.html` for `1.1.2` and `1.1.3`; `stappenplan.html` remains `Rekenstappen` support; unscoped `1.1.1` stays collapsed as `Brede vaardigheidskaart`. Carried flags: skill-tree progress language needs Scale Gate 1 review, restored math is not target-exercise-readiness evidence, keyboard/focus proof should strengthen before scale, and scoped skilltree comments need cleanup. Records: `archive/sprints/L1.7C-MATH/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS / SCALE GATE FLAG CARRIER.** First human review accepted the route restoration but returned REVISE because the restored math-game result state could show `Volgende: A39`. Targeted revision now renders the next action with student-facing skill names, replaces visible dependency-node IDs with `Vaardigheid`, adds focused source tests, and adds post-exercise screenshot QA showing `Volgende: Prijsindex (CPI) berekenen` with no internal `A##`/`B##` code. Focused human recheck closed PASS WITH FLAGS. Primary `Rekenen` now points to scoped `wiskundevaardigheden.html` for `1.1.2` and `1.1.3`; `stappenplan.html` remains `Rekenstappen` support; unscoped `1.1.1` stays collapsed as `Brede vaardigheidskaart`. Carried flags: skill-tree progress language needs Scale Gate 1 review, restored math is not target-equivalent proof evidence, keyboard/focus proof should strengthen before scale, and scoped skilltree comments need cleanup. Records: `archive/sprints/L1.7C-MATH/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3035,7 +3110,7 @@
           "sprint": "GATE-L1.7B",
           "name": "Exit Ticket Product-Boundary Review",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-exercise-readiness evidence because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS.** The `1.1.1` checkpoint product boundary is accepted as a non-summative, practice-oriented controlled paragraph-limited `Check` surface. GATE-L1.7B does not authorize Scale Gate 1, broad scaling, CP-6/Year-1 closure, target-exercise promotion, diagnostics, mastery, sequencing, summative use, student-facing AI, PV projection, or PV machine promotion. Carried flag `GATE-L1.7B-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; Scale Gate 1 still may not treat the current checkpoint as target-equivalent proof because `A43` is not covered by the task chain. Records: `archive/sprints/GATE-L1.7B/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3043,7 +3118,7 @@
           "sprint": "L1.7B-R",
           "name": "Boundary-Safe Exit Ticket Checkpoint Resume",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-exercise-readiness, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Platform `GAME-UX-2` completed the source-controlled exit-ticket checkpoint engine and generated lesson output through platform scripts only. Lesson output commit `5c47961269096c21a7d50bbc97c71de7984ff6e1` contains the `1.1.1` checkpoint and landing `Check` activation; historical tag `checkpoint/GAME-UX-2-exit-ticket-mvp-lesson`. Human review accepted the checkpoint as a boundary-safe, non-summative controlled paragraph-limited checkpoint surface. Green checks: platform focused checkpoint/landing/skill-map tests, full platform Jest 554 passed / 8 skipped, deploy, `1.1.1` validation, Book 1 checks, procedure contracts, target exercises, sprint bundle, and checkpoint/landing desktop/mobile light/dark screenshot QA; local focused recheck 26/26 and `1.1.1` complete student-web validation passed. Carried flag `L1.7B-R-CF1` was later resolved for checkpoint metadata scope by `L1.7B-MAP`; the checkpoint still may not be used for target-equivalent proof, diagnostics, mastery, sequencing, target-exercise promotion, CP-6/Year-1, PV, Scale Gate 1, or broad-scaling evidence. Records: `archive/sprints/L1.7B-R/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3067,7 +3142,7 @@
           "sprint": "L1.7C",
           "name": "Three-Aspect Game Quality Upgrade",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS; RETROSPECTIVE ROUTE GAP CORRECTED BY L1.7C-MATH.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, game screenshot QA should mature, and the restored math route remains practice rather than target-exercise-readiness evidence. L1.7C-MATH later restored the old skill-tree math game as primary `Rekenen` where scoped. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
+          "currentState": "**CLOSED PASS WITH FLAGS; RETROSPECTIVE ROUTE GAP CORRECTED BY L1.7C-MATH.** L1.7C consumed platform `GAME-UX-1` shared skill-map runtime and regenerated Book 1 through the platform workflow so `Redeneren`, `Rekenen/Stappenplan`, and `Grafieken` consume one shared compact route panel. First human review returned REVISE because the route panel could expose internal skill IDs such as `A61`; focused revision fixed the label, added an `A61` regression test, corrected `1.1.1` landing copy, and added route-panel screenshots. Focused human recheck closed PASS WITH FLAGS. Carried flags: `Grafieken` has only one less-labelled variant, `Redeneren` needs richer variants/replay value, game screenshot QA should mature, and the restored math route remains practice rather than target-equivalent proof evidence. L1.7C-MATH later restored the old skill-tree math game as primary `Rekenen` where scoped. No adaptive diagnostics, mastery, sequencing, AI, summative use, PV projection, or PV machine promotion. Records: `archive/sprints/L1.7C/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3296,8 +3371,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 39,
-      "openCount": 25
+      "completedCount": 41,
+      "openCount": 26
     },
     {
       "id": "innovation",

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-29T19:34:07.418Z
+Generated: 2026-05-29T20:19:42.150Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2089
+Files indexed: 2103
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 320
+Count: 321
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -291,6 +291,7 @@ Count: 320
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
 - build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
+- build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -489,7 +490,7 @@ Count: 42
 
 ## validators
 
-Count: 123
+Count: 124
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -524,6 +525,7 @@ Count: 123
 - build-scripts/references/check-mtu-h3b-incidence-cli-execution-packet.js
 - build-scripts/references/check-mtu-h3c-incidence-cli-execution.js
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
+- build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -617,7 +619,7 @@ Count: 123
 
 ## references
 
-Count: 345
+Count: 347
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -751,6 +753,8 @@ Count: 345
 - references/data/sprints/MTU-H3C.result.json
 - references/data/sprints/MTU-H4.plan.json
 - references/data/sprints/MTU-H4.result.json
+- references/data/sprints/MTU-H4A.plan.json
+- references/data/sprints/MTU-H4A.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -967,7 +971,7 @@ Count: 345
 
 ## reports
 
-Count: 1038
+Count: 1048
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1075,6 +1079,8 @@ Count: 1038
 - reports/mtu-hardening/mtu-h3b-incidence-cli-execution-packet.md
 - reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.json
 - reports/mtu-hardening/mtu-h4-answer-form-question-type-routing.md
+- reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json
+- reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -1345,6 +1351,9 @@ Count: 1038
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/human-interview.md
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.json
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.md
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/bundle-urls.md
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.json
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -1783,6 +1792,11 @@ Count: 1038
 - reports/sprints/MTU-H4-diff-summary.md
 - reports/sprints/MTU-H4-plan.md
 - reports/sprints/MTU-H4-result.md
+- reports/sprints/MTU-H4A-baseline.md
+- reports/sprints/MTU-H4A-diff-summary.md
+- reports/sprints/MTU-H4A-plan.md
+- reports/sprints/MTU-H4A-planning-review.md
+- reports/sprints/MTU-H4A-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -2028,7 +2042,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 257
+Count: 258
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2144,6 +2158,7 @@ Count: 257
 - docs/roadmaps/outdated/reference-team-roadmap-v3.09-mtu-h3c-incidence-executed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

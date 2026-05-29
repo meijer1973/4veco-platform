@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.13-mtu-h4a-answer-form-cli-mutation-plan",
+      "version": "v3.14-exit-ticket-target-equivalent-spec",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-29",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.10-mtu-h4-answer-form-routing-packet.md",
@@ -134,7 +135,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H4A prepared the answer-form CLI-mutation planning packet and moved the top operational next action to GATE-MTU-H4A; no mutation or product use is authorized."
+      "notes": "Current operating roadmap after SPEC-ET-1 corrected exit-ticket semantics to target-equivalent proof, added EX-LESSON-1, and kept GATE-MTU-H4A as the top operational next action; no mutation or product use is authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.13",
+      "version": "v3.13-mtu-h4a-answer-form-cli-mutation-plan",
+      "title": "References Team Roadmap before SPEC-ET-1 target-equivalent correction",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-29",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after SPEC-ET-1 corrected exit-ticket semantics from readiness-to-try to target-equivalent proof and added EX-LESSON-1 as the exam-ingestion end-product integration dependency."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.12",
