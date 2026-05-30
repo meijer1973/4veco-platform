@@ -267,9 +267,9 @@ ${JSON.stringify(log.postflight, null, 2)}
 
 ## Boundary Proof
 
-- `A71` remains held/absent.
-- `A100` remains invalid/absent.
-- No target-exercise `question_type` or `answer_form` fields were written.
+- A71 remains held/absent.
+- A100 remains invalid/absent.
+- No target-exercise question_type or answer_form fields were written.
 - No answer-skill candidate storage was created.
 - No lesson output, diagnostics, adaptive routing, mastery/sequencing,
   student-facing AI, summative use, PV projection, PV machine promotion,
