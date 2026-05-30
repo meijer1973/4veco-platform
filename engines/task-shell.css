@@ -1,0 +1,227 @@
+:root {
+  --ts-bg: #f7f9fb;
+  --ts-panel: #ffffff;
+  --ts-soft: #edf7f4;
+  --ts-text: #152033;
+  --ts-muted: #5f6f83;
+  --ts-line: #d8e1ea;
+  --ts-primary: #176c67;
+  --ts-accent: #b76524;
+  --ts-focus: #2d73c8;
+  --ts-radius: 8px;
+  --ts-shadow: 0 14px 36px rgba(18, 35, 58, 0.1);
+}
+
+[data-theme="dark"] {
+  --ts-bg: #101820;
+  --ts-panel: #182333;
+  --ts-soft: #17322f;
+  --ts-text: #edf4fb;
+  --ts-muted: #b3c1cf;
+  --ts-line: #31445a;
+  --ts-primary: #65c7bb;
+  --ts-accent: #efa15d;
+  --ts-focus: #8ab8ff;
+  --ts-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+.ts-shell {
+  display: grid;
+  gap: 18px;
+  color: var(--ts-text);
+}
+
+.ts-shell-head,
+.ts-task {
+  background: var(--ts-panel);
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  box-shadow: var(--ts-shadow);
+}
+
+.ts-shell-head {
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.ts-eyebrow {
+  margin: 0 0 8px;
+  color: var(--ts-primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.ts-shell h1,
+.ts-task h2 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.ts-shell h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.ts-shell-head p:not(.ts-eyebrow),
+.ts-purpose {
+  color: var(--ts-muted);
+  line-height: 1.55;
+}
+
+.ts-task-list {
+  display: grid;
+  gap: 16px;
+}
+
+.ts-task {
+  padding: clamp(16px, 3vw, 26px);
+}
+
+.ts-task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--ts-muted);
+  font-weight: 700;
+}
+
+.ts-task h2 {
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+  line-height: 1.35;
+}
+
+.ts-options,
+.ts-calculation,
+.ts-point-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.ts-point-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ts-choice {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: transparent;
+  color: var(--ts-text);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ts-choice:hover,
+.ts-choice:focus-visible,
+.ts-input:focus-visible,
+.ts-textarea:focus-visible {
+  border-color: var(--ts-focus);
+  outline: 2px solid color-mix(in srgb, var(--ts-focus) 36%, transparent);
+  outline-offset: 2px;
+}
+
+.ts-choice-mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 2px solid var(--ts-primary);
+  border-radius: 999px;
+}
+
+.ts-choice-body {
+  display: grid;
+  gap: 4px;
+}
+
+.ts-choice-body span {
+  color: var(--ts-muted);
+  line-height: 1.4;
+}
+
+.ts-field {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.ts-input,
+.ts-textarea {
+  width: 100%;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+}
+
+.ts-input {
+  min-height: 46px;
+  padding: 10px 12px;
+}
+
+.ts-textarea {
+  min-height: 112px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.ts-criteria,
+.ts-feedback-card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: var(--ts-muted);
+  line-height: 1.55;
+}
+
+.ts-feedback {
+  margin-top: 12px;
+}
+
+.ts-feedback-card {
+  padding: 14px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-soft);
+}
+
+.ts-feedback-card.is-retry {
+  background: color-mix(in srgb, var(--ts-accent) 14%, var(--ts-panel));
+}
+
+.ts-feedback-card.is-matched,
+.ts-feedback-card.is-self_check {
+  background: color-mix(in srgb, var(--ts-primary) 14%, var(--ts-panel));
+}
+
+.ts-feedback-card p {
+  margin: 6px 0 10px;
+  color: var(--ts-muted);
+  line-height: 1.55;
+}
+
+.ts-feedback-card a {
+  color: var(--ts-primary);
+  font-weight: 800;
+}
+
+.ts-error {
+  color: var(--ts-accent);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .ts-point-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-task {
+    padding: 16px;
+  }
+}

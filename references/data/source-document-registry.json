@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-30T21:53:09.982Z",
+  "generated_on": "2026-05-30T22:21:00.166Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 350,
-    "source_manifest_file_count": 355,
+    "record_count": 352,
+    "source_manifest_file_count": 357,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 265,
+      "governance_data": 267,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 222,
+      "sprint_metadata": 224,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 263,
+      "governance_data": 265,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 299
+      "not_public_citation_source": 301
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -4401,6 +4401,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "c6cbeea9da0851de1b90df4c96369a1476cf5c87d20d74e5b54da1424c0e644f",
       "size_bytes": 5405,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-game-ux-3a-plan",
+      "path": "references/data/sprints/GAME-UX-3A.plan.json",
+      "title": "GAME UX 3A.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:4046e53bf2164f9555db3d7160baaa35e33e7245f930b0ec83d3da756d3b0a25",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "4046e53bf2164f9555db3d7160baaa35e33e7245f930b0ec83d3da756d3b0a25",
+      "size_bytes": 2678,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-game-ux-3a-result",
+      "path": "references/data/sprints/GAME-UX-3A.result.json",
+      "title": "GAME UX 3A.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:695f6264afa62079f435b0f5acb014a6957f6c0774e2199b77e98bcd423dcc02",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "695f6264afa62079f435b0f5acb014a6957f6c0774e2199b77e98bcd423dcc02",
+      "size_bytes": 3935,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -11684,7 +11760,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:cb159f626252c7b23b2d4c5f1eb4c896615b65427473c8d5f9f1804272cbad6f",
+      "source_version": "sha256:d58f1b0ddf4bfe02210c2ed6ae4749b3d864ee0e6ed6931c114c16ec17946eaf",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -11693,8 +11769,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "cb159f626252c7b23b2d4c5f1eb4c896615b65427473c8d5f9f1804272cbad6f",
-      "size_bytes": 277998,
+      "source_hash": "d58f1b0ddf4bfe02210c2ed6ae4749b3d864ee0e6ed6931c114c16ec17946eaf",
+      "size_bytes": 279067,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

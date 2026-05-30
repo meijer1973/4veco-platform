@@ -59,6 +59,7 @@ function generateShell(parNr, parName) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="${sharedPath}/skill-map-route.css">
+    <link rel="stylesheet" href="${sharedPath}/task-shell.css">
     <link rel="stylesheet" href="${sharedPath}/exit-ticket.css">
     <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 </head>
@@ -74,6 +75,8 @@ function generateShell(parNr, parName) {
     <script src="${sharedPath}/skilltree/base-elements.js"></script>
     <script src="${sharedPath}/skilltree/${parNr}.js"></script>
     <script src="${sharedPath}/skill-map-route-ui.js"></script>
+    <script src="${sharedPath}/task-shell-engine.js"></script>
+    <script src="${sharedPath}/task-shell-ui.js"></script>
     <script src="${sharedPath}/exit-ticket/${parNr}.js"></script>
     <script src="${sharedPath}/exit-ticket-engine.js"></script>
     <script src="${sharedPath}/exit-ticket-ui.js"></script>

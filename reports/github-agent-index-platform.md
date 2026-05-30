@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-30T21:53:00.784Z
+Generated: 2026-05-30T22:20:49.973Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2145
+Files indexed: 2154
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -623,7 +623,7 @@ Count: 125
 
 ## references
 
-Count: 353
+Count: 355
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -715,6 +715,8 @@ Count: 353
 - references/data/sprints/EX-6.result.json
 - references/data/sprints/EX-7.plan.json
 - references/data/sprints/EX-7.result.json
+- references/data/sprints/EX-LESSON-1.plan.json
+- references/data/sprints/EX-LESSON-1.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GAME-UX-1.plan.json
@@ -981,7 +983,7 @@ Count: 353
 
 ## reports
 
-Count: 1076
+Count: 1082
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1700,6 +1702,12 @@ Count: 1076
 - reports/sprints/EX-7-plan.md
 - reports/sprints/EX-7-planning-review.md
 - reports/sprints/EX-7-result.md
+- reports/sprints/EX-LESSON-1-baseline.md
+- reports/sprints/EX-LESSON-1-diff-summary.md
+- reports/sprints/EX-LESSON-1-exam-target-route-checklist.md
+- reports/sprints/EX-LESSON-1-plan.md
+- reports/sprints/EX-LESSON-1-planning-review.md
+- reports/sprints/EX-LESSON-1-result.md
 - reports/sprints/EX-NS0-baseline.md
 - reports/sprints/EX-NS0-diff-summary.md
 - reports/sprints/EX-NS0-lead-review-assignment.md
@@ -2080,7 +2088,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 263
+Count: 264
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2202,6 +2210,7 @@ Count: 263
 - docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

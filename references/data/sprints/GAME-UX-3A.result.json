@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GAME-UX-3A",
+  "status": "completed",
+  "completed_on": "2026-05-30",
+  "plan": "reports/sprints/GAME-UX-3A-plan.md",
+  "baseline": "reports/sprints/GAME-UX-3A-baseline.md",
+  "result": "reports/sprints/GAME-UX-3A-result.md",
+  "diff_summary": "reports/sprints/GAME-UX-3A-diff-summary.md",
+  "task_family_fixture_summary": "reports/sprints/GAME-UX-3A-task-family-fixtures.md",
+  "lesson_archive_plan": "../4veco-lessen/archive/sprints/GAME-UX-3A/GAME-UX-3A-sprint-plan.md",
+  "lesson_archive_closure": "../4veco-lessen/archive/sprints/GAME-UX-3A/GAME-UX-3A-closure-log.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "lesson_output_mutated": false,
+  "engine_source_changed": true,
+  "generated_projection_refresh_executed": false,
+  "student_product_use_allowed": false,
+  "active_next_sprint": "ENGINE-OP-1",
+  "accepted_task_families": [
+    "numeric_input",
+    "calculation_work_capture",
+    "final_answer_entry",
+    "unit_notation_field",
+    "short_constructed_response",
+    "table_value_selection",
+    "graph_reading",
+    "point_placement",
+    "graph_construction_substitute",
+    "structured_reasoning"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GAME-UX-3A-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-3A",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-3A --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"numeric input|calculation/work capture|final-answer entry|unit/notation|short constructed response|table-value selection|graph reading|point placement|graph-construction substitute|structured reasoning\" engines reports/sprints references/reference-team-roadmap.md ../4veco-lessen/lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --name-only -- \"Boek*\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

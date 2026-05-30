@@ -35,6 +35,9 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('shared/skilltree/base-elements.js');
         expect(shell).toContain('shared/skilltree/1.1.1.js');
         expect(shell).toContain('shared/skill-map-route-ui.js');
+        expect(shell).toContain('shared/task-shell.css');
+        expect(shell).toContain('shared/task-shell-engine.js');
+        expect(shell).toContain('shared/task-shell-ui.js');
         expect(shell).toContain('shared/exit-ticket/1.1.1.js');
         expect(shell).toContain('shared/exit-ticket-engine.js');
         expect(shell).toContain('shared/exit-ticket-ui.js');
@@ -43,6 +46,9 @@ describe('ExitTicketUI', () => {
 
     test('deploy copies checkpoint runtime and runs the shell generator before landing pages', () => {
         const deploy = fs.readFileSync(path.join(PLATFORM_ROOT, 'scripts', 'deploy.js'), 'utf8');
+        expect(deploy).toContain("'task-shell-engine.js'");
+        expect(deploy).toContain("'task-shell-ui.js'");
+        expect(deploy).toContain("'task-shell.css'");
         expect(deploy).toContain("'exit-ticket-engine.js'");
         expect(deploy).toContain("'exit-ticket-ui.js'");
         expect(deploy).toContain("'exit-ticket.css'");

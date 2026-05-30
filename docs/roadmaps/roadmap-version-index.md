@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.19-ex-lesson1-route-trace-handoff` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-LESSON-1 converted the exam-ingestion end state into paragraph-plan, authoring-guide, review-prompt, roadmap, and checklist requirements; top operational next action is GAME-UX-3A, with no generated lesson output, target-exercise field writes, candidate storage, projection refresh, product use, or Scale Gate 1 authority authorized. |
+| References Team Roadmap | `v3.20-game-ux3a-task-shell-foundation` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-UX-3A added the shared task-shell runtime foundation for target-equivalent exit tickets, checkpoint-only local checks, graph/table practice, math/calculation practice, and exam-style answer-form requirements; top operational next action is ENGINE-OP-1, with no generated lesson output, target-exercise field writes, candidate storage, projection refresh, product use, or Scale Gate 1 authority authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GAME-UX-3A task-shell foundation | `v3.19-ex-lesson1-route-trace-handoff` | `docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-LESSON-1 route-trace handoff | `v3.18-mtu-h4c-answer-form-executed` | `docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4C execution | `v3.17-gate-mtu-h4b-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4B closure | `v3.16-mtu-h4b-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md` | `references/reference-team-roadmap.md` |

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-30T21:53:00.810Z
+Generated: 2026-05-30T22:20:50.004Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1535
+Files indexed: 1537
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2410,7 +2410,7 @@ Count: 817
 
 ## other
 
-Count: 399
+Count: 401
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2458,6 +2458,8 @@ Count: 399
 - "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.pdf"
 - archive/planning/plan-1.1.1-part-b-clarity-audit.md
 - archive/README.md
+- archive/sprints/EX-LESSON-1/EX-LESSON-1-closure-log.md
+- archive/sprints/EX-LESSON-1/EX-LESSON-1-sprint-plan.md
 - archive/sprints/GATE-L1.7B-Q2/GATE-L1.7B-Q2-sprint-plan.md
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-closure-log.md
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-human-review-packet.md
