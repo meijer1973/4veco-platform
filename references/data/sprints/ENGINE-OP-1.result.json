@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "sprint_id": "ENGINE-OP-1",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/ENGINE-OP-1-plan.md",
+  "baseline": "reports/sprints/ENGINE-OP-1-baseline.md",
+  "result": "reports/sprints/ENGINE-OP-1-result.md",
+  "diff_summary": "reports/sprints/ENGINE-OP-1-diff-summary.md",
+  "planning_review": "reports/sprints/ENGINE-OP-1-planning-review.md",
+  "student_path_trace": "reports/sprints/ENGINE-OP-1-student-path-trace.md",
+  "screenshot_manifest": "reports/sprints/ENGINE-OP-1-screenshot-manifest.md",
+  "operational_audit": "reports/sprints/ENGINE-OP-1-operational-audit.md",
+  "lesson_archive_plan": "../4veco-lessen/archive/sprints/ENGINE-OP-1/ENGINE-OP-1-sprint-plan.md",
+  "lesson_archive_closure": "../4veco-lessen/archive/sprints/ENGINE-OP-1/ENGINE-OP-1-closure-log.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "lesson_output_mutated": false,
+  "engine_source_changed": false,
+  "generated_projection_refresh_executed": false,
+  "student_product_use_allowed": false,
+  "active_next_sprint": "SKILLMAP-OP-1",
+  "audit_verdict": "pass_with_flags_for_audit_completion_only",
+  "screenshot_count": 17,
+  "key_findings": [
+    "1.1.3 graph practice is the strongest current operational route and gives neutral source/value/calculation feedback.",
+    "1.1.2 math practice is restored and scoped.",
+    "Generated output does not yet use the GAME-UX-3A shared task shell.",
+    "1.1.2 and 1.1.3 have no target-equivalent checkpoint route.",
+    "Shared skill-map route panels are empty or mis-scoped in several places."
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/ENGINE-OP-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js ENGINE-OP-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js ENGINE-OP-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"ENGINE-OP-1|student-path trace|screenshot manifest|shared task shell|target-equivalent proof|SKILLMAP-OP-1\" reports/sprints references/reference-team-roadmap.md ../4veco-lessen/lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "Get-ChildItem reports/sprints/ENGINE-OP-1-screenshots -File | Measure-Object",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --name-only -- \"Boek*\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

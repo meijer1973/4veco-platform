@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-05-30T22:21:00.166Z",
+  "generated_on": "2026-05-30T22:47:39.410Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -16,15 +16,15 @@
     "references/SOURCE_OF_TRUTH.md"
   ],
   "summary": {
-    "record_count": 352,
-    "source_manifest_file_count": 357,
+    "record_count": 354,
+    "source_manifest_file_count": 359,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 5,
       "authored_judgement": 9,
       "generated_report": 2,
-      "governance_data": 267,
+      "governance_data": 269,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 28
@@ -41,7 +41,7 @@
       "inventory": 34,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 224,
+      "sprint_metadata": 226,
       "machine_projection": 3,
       "owned_source_readme": 1,
       "qc_prompt": 5,
@@ -57,7 +57,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 265,
+      "governance_data": 267,
       "planning": 1,
       "schema_contract": 28
     },
@@ -65,7 +65,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 19,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 301
+      "not_public_citation_source": 303
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -3489,6 +3489,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "1f58ba80141a8763a550d52db22437edc2cc475cb10c28ae73db6e69e4a9ef2c",
       "size_bytes": 6013,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-engine-op-1-plan",
+      "path": "references/data/sprints/ENGINE-OP-1.plan.json",
+      "title": "ENGINE OP 1.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:1108ef614b371c3e83f5ba423b43d3cc7c9c6c29dc0d4b0587c9be67ca3616c3",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "1108ef614b371c3e83f5ba423b43d3cc7c9c6c29dc0d4b0587c9be67ca3616c3",
+      "size_bytes": 2509,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-engine-op-1-result",
+      "path": "references/data/sprints/ENGINE-OP-1.result.json",
+      "title": "ENGINE OP 1.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:44fc5653f5c0ebb34832dae4a791d7d896022a3121925541d1af0d433a635ade",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "44fc5653f5c0ebb34832dae4a791d7d896022a3121925541d1af0d433a635ade",
+      "size_bytes": 4233,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -11760,7 +11836,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:d58f1b0ddf4bfe02210c2ed6ae4749b3d864ee0e6ed6931c114c16ec17946eaf",
+      "source_version": "sha256:11be7489ae01bf4cec65fdcacd5bd63a2b97dd8dd566f9b92eb8533f3a9c79cd",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -11769,8 +11845,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "d58f1b0ddf4bfe02210c2ed6ae4749b3d864ee0e6ed6931c114c16ec17946eaf",
-      "size_bytes": 279067,
+      "source_hash": "11be7489ae01bf4cec65fdcacd5bd63a2b97dd8dd566f9b92eb8533f3a9c79cd",
+      "size_bytes": 281126,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

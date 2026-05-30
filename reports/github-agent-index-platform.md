@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-30T22:20:49.973Z
+Generated: 2026-05-30T22:47:39.766Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2154
+Files indexed: 2168
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 71
+Count: 76
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -74,6 +74,9 @@ Count: 71
 - engines/skilltree/base-elements.js
 - engines/skilltree/explanations.js
 - engines/skilltree/generators.js
+- engines/task-shell-engine.js
+- engines/task-shell-ui.js
+- engines/task-shell.css
 - engines/tests/_wiskundevaardigheden-template.html
 - engines/tests/adaptive-seam.test.js
 - engines/tests/companion-alt-text-meaningful.test.js
@@ -110,6 +113,8 @@ Count: 71
 - engines/tests/skilltree-data.test.js
 - engines/tests/skilltree-engine.test.js
 - engines/tests/skilltree-visible-copy.test.js
+- engines/tests/task-shell-engine.test.js
+- engines/tests/task-shell-ui.test.js
 - engines/tests/visual-surfaces-no-prod-label.test.js
 - engines/theme.js
 - engines/voorkennis.css
@@ -623,7 +628,7 @@ Count: 125
 
 ## references
 
-Count: 355
+Count: 357
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -723,6 +728,8 @@ Count: 355
 - references/data/sprints/GAME-UX-1.result.json
 - references/data/sprints/GAME-UX-2.plan.json
 - references/data/sprints/GAME-UX-2.result.json
+- references/data/sprints/GAME-UX-3A.plan.json
+- references/data/sprints/GAME-UX-3A.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/MTU-H1.plan.json
@@ -983,7 +990,7 @@ Count: 355
 
 ## reports
 
-Count: 1082
+Count: 1088
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1732,6 +1739,12 @@ Count: 1082
 - reports/sprints/GAME-UX-2-planning-review.md
 - reports/sprints/GAME-UX-2-qa.md
 - reports/sprints/GAME-UX-2-result.md
+- reports/sprints/GAME-UX-3A-baseline.md
+- reports/sprints/GAME-UX-3A-diff-summary.md
+- reports/sprints/GAME-UX-3A-plan.md
+- reports/sprints/GAME-UX-3A-planning-review.md
+- reports/sprints/GAME-UX-3A-result.md
+- reports/sprints/GAME-UX-3A-task-family-fixtures.md
 - reports/sprints/GATE-CP6-baseline.md
 - reports/sprints/GATE-CP6-diff-summary.md
 - reports/sprints/GATE-CP6-lead-review-assignment.md
@@ -2088,7 +2101,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 264
+Count: 265
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2211,6 +2224,7 @@ Count: 264
 - docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
