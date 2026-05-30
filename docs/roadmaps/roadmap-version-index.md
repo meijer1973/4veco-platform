@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.17-gate-mtu-h4b-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H4B closed PASS WITH CONDITIONS and moved the top operational next action to MTU-H4C bounded answer-form CLI execution; no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.18-mtu-h4c-answer-form-executed` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4C executed the bounded answer-form CLI lane for A80, A81, and A96-A99 through unit-add.js only; top operational next action is EX-LESSON-1, with no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H4C execution | `v3.17-gate-mtu-h4b-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4B closure | `v3.16-mtu-h4b-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4B execution packet | `v3.15-gate-mtu-h4a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4A closure | `v3.14-exit-ticket-target-equivalent-spec` | `docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md` | `references/reference-team-roadmap.md` |
@@ -130,19 +131,3 @@ docs/roadmaps/roadmap-version-index.json
 | References Team Roadmap before S4 CP-3 dry run | `v2.5-representation-sensitive-phase` | `docs/roadmaps/outdated/reference-team-roadmap-v2.5-representation-sensitive-phase.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before representation-sensitive phase | `v2.4-r9.2-plus-cp1-cautions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.4-r9.2-plus-cp1-cautions.md` | `references/reference-team-roadmap.md` |
 | 4veco-platform Reference/Data System Final Codex Handoff Roadmap | `legacy-2026-04-27` | `docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md` | `references/reference-team-roadmap.md` |
-
-## Historical Inputs
-
-| Roadmap/Input | Version | Path | Role |
-|---|---|---|---|
-| Pointer from old final handoff path to archived snapshot | `pointer-2026-04-29` | `docs/roadmaps/final-codex-handoff-roadmap-original.md` | Compatibility pointer for historical reports that mention the old path. |
-| Reference Team Roadmap Live Version 28 April | `snapshot-2026-04-28` | `knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md` | Snapshot used during HCS/engineering comparison. |
-| HCS Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-HCS.md` | HCS proposal incorporated into the live roadmap through CP-1 decisions. |
-| Head of Engineering Final Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-final-head-of-engineering.md` | Engineering proposal incorporated into the live roadmap after repository-checked edits. |
-| Repository-Checked Updated Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md` | Repository-checked proposal used to update the live roadmap. |
-| Platform Team Roadmap | `legacy-2026-04-27` | `knowledge/old/platform-team-roadmap.md` | Legacy platform-team planning document retained in knowledge/old. |
-| Three-Month Roadmap | `legacy-2026-04-24` | `knowledge/old/three-month-roadmap.md` | Legacy cross-team roadmap retained in knowledge/old. |
-
-## Rule For Agents
-
-Do not treat proposal or archived roadmap files as current operating instructions. Check `status` in the JSON index first, then use the active roadmap path.

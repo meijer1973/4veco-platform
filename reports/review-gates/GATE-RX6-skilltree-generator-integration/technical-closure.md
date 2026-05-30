@@ -13,11 +13,11 @@ RX.6 completed skill-tree generator integration by separating generator-backed i
 
 ## Summary
 
-- Active A-domain units: 92
+- Active A-domain units: 98
 - Interactive skilltree units: 47
-- Generator-blocked units: 45
+- Generator-blocked units: 51
 - Untracked missing generators: 0
-- Deployed blocked rows: 45
+- Deployed blocked rows: 51
 
 ## Conditions
 

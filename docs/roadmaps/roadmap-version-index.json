@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.17-gate-mtu-h4b-pass-with-conditions",
+      "version": "v3.18-mtu-h4c-answer-form-executed",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-30",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md",
@@ -138,7 +139,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after GATE-MTU-H4B closed PASS WITH CONDITIONS and moved the top operational next action to MTU-H4C bounded answer-form CLI execution; no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority is authorized."
+      "notes": "Current operating roadmap after MTU-H4C executed the bounded answer-form CLI lane for A80, A81, and A96-A99 through unit-add.js only; top operational next action is EX-LESSON-1, with no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.17",
+      "version": "v3.17-gate-mtu-h4b-pass-with-conditions",
+      "title": "References Team Roadmap before MTU-H4C execution",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-30",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after MTU-H4C executed the bounded answer-form CLI lane and moved the top operational next action to EX-LESSON-1."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.16",

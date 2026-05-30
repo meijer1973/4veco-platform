@@ -2,12 +2,12 @@
   "schema_version": 1,
   "sprint_id": "RX.6",
   "status": "active_block",
-  "generated_on": "2026-05-28T13:53:54.630Z",
+  "generated_on": "2026-05-30T21:32:39.280Z",
   "source_gate": "reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json",
   "blocked_reason": "active A-domain catalog units without generator implementations must be non-interactive until a later generator sprint implements and validates them",
   "student_facing_skilltree_use_allowed": false,
   "pv_projection_allowed": false,
-  "unit_count": 45,
+  "unit_count": 51,
   "generator_blocked_units": [
     "A20",
     "A45",
@@ -41,6 +41,8 @@
     "A77",
     "A78",
     "A79",
+    "A80",
+    "A81",
     "A82",
     "A83",
     "A84",
@@ -53,7 +55,11 @@
     "A91",
     "A92",
     "A93",
-    "A94"
+    "A94",
+    "A96",
+    "A97",
+    "A98",
+    "A99"
   ],
   "units": [
     {
@@ -569,6 +575,38 @@
       ]
     },
     {
+      "unit_id": "A80",
+      "name": "Noem of geef-aan antwoord geven",
+      "generator": "GEN_A80",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A80 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A81",
+      "name": "Bron gebruiken in een antwoord",
+      "generator": "GEN_A81",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A81 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
       "unit_id": "A82",
       "name": "Elasticiteit berekenen uit tabelwaarden",
       "generator": "GEN_A82",
@@ -771,6 +809,70 @@
       "non_interactive_until_generator_validates": true,
       "proof_required_to_unblock": [
         "GEN_A94 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A96",
+      "name": "Bereken-vraag beantwoorden",
+      "generator": "GEN_A96",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A96 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A97",
+      "name": "Leg-uit-dat antwoord opbouwen",
+      "generator": "GEN_A97",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A97 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A98",
+      "name": "Leg-uit-of antwoord opbouwen",
+      "generator": "GEN_A98",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A98 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "deployed browser bundle exports the unit as interactive",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A99",
+      "name": "Leg uit met voorbeeld beantwoorden",
+      "generator": "GEN_A99",
+      "generator_implemented": false,
+      "generator_status": "missing_generator_implementation",
+      "student_facing_skilltree_use_allowed": false,
+      "pv_projection_allowed": false,
+      "non_interactive_until_generator_validates": true,
+      "proof_required_to_unblock": [
+        "GEN_A99 implemented in the skill-tree generator layer",
         "generator coverage validator passes",
         "deployed browser bundle exports the unit as interactive",
         "student-facing skill-tree exposure is explicitly approved in a later sprint"

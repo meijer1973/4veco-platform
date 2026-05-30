@@ -4,7 +4,7 @@
   "sprint_id": "RX.6",
   "gate_id": "GATE-RX6-skilltree-generator-integration",
   "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
-  "generated_on": "2026-05-28T13:53:54.989Z",
+  "generated_on": "2026-05-30T21:32:39.292Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
@@ -22,13 +22,13 @@
     "references/data/sprints/RX.6-generator-blocked-units.json"
   ],
   "summary": {
-    "active_a_domain_count": 92,
+    "active_a_domain_count": 98,
     "interactive_skill_count": 47,
-    "generator_blocked_count": 45,
-    "explicit_generator_block_count": 45,
+    "generator_blocked_count": 51,
+    "explicit_generator_block_count": 51,
     "untracked_missing_generator_count": 0,
     "deploy_interactive_skill_count": 47,
-    "deploy_generator_blocked_count": 45,
+    "deploy_generator_blocked_count": 51,
     "blocked_interactive_leak_count": 0
   },
   "rows": [
@@ -1709,6 +1709,53 @@
       ]
     },
     {
+      "unit_id": "A80",
+      "name": "Noem of geef-aan antwoord geven",
+      "aspects": [
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A80",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A80 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A81",
+      "name": "Bron gebruiken in een antwoord",
+      "aspects": [
+        "verbaal",
+        "grafisch"
+      ],
+      "declared_generator": "GEN_A81",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A81 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
       "unit_id": "A82",
       "name": "Elasticiteit berekenen uit tabelwaarden",
       "aspects": [
@@ -2043,23 +2090,116 @@
         "A02"
       ],
       "proof_required_to_unblock": []
+    },
+    {
+      "unit_id": "A96",
+      "name": "Bereken-vraag beantwoorden",
+      "aspects": [
+        "rekenen",
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A96",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A96 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A97",
+      "name": "Leg-uit-dat antwoord opbouwen",
+      "aspects": [
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A97",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A97 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A98",
+      "name": "Leg-uit-of antwoord opbouwen",
+      "aspects": [
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A98",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A98 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
+    },
+    {
+      "unit_id": "A99",
+      "name": "Leg uit met voorbeeld beantwoorden",
+      "aspects": [
+        "verbaal"
+      ],
+      "declared_generator": "GEN_A99",
+      "generator_implemented": false,
+      "generator_blocked": true,
+      "generator_block_sources": [
+        "references/data/sprints/RX.6-generator-blocked-units.json"
+      ],
+      "interactive_skilltree_use_allowed": false,
+      "student_facing_skilltree_use_allowed": false,
+      "base_elements_export": "generator_blocked",
+      "deploy_bundle_export": "generator_blocked",
+      "needs_filtered_for_interactive_tree": [],
+      "proof_required_to_unblock": [
+        "GEN_A99 implemented in the skill-tree generator layer",
+        "generator coverage validator passes",
+        "student-facing skill-tree exposure is explicitly approved in a later sprint"
+      ]
     }
   ],
   "checks": [
     {
       "id": "source_base_elements_split_matches_generators",
       "status": "passed",
-      "detail": "47 interactive and 45 blocked rows in source base-elements."
+      "detail": "47 interactive and 51 blocked rows in source base-elements."
     },
     {
       "id": "deploy_bundle_split_matches_source",
       "status": "passed",
-      "detail": "47 interactive and 45 blocked rows in deploy bundle data."
+      "detail": "47 interactive and 51 blocked rows in deploy bundle data."
     },
     {
       "id": "blocked_units_have_explicit_noninteractive_status",
       "status": "passed",
-      "detail": "45/45 missing-generator units have explicit generator-block records."
+      "detail": "51/51 missing-generator units have explicit generator-block records."
     },
     {
       "id": "no_missing_generator_unit_is_interactive",
@@ -2074,7 +2214,7 @@
     {
       "id": "rx6_generator_block_file_written",
       "status": "passed",
-      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 45 blocked unit(s)."
+      "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 51 blocked unit(s)."
     }
   ],
   "blocked_scope": [

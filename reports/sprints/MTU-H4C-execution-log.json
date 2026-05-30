@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H4C",
+  "generated_on": "2026-05-30T21:24:35.105Z",
+  "status": "passed",
+  "source_gate": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/gate-closure.json",
+  "source_packet": "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json",
+  "reviewed_remote_commit": "f59c83a7067678aa3ff2c4bab4455ab9d90d72af",
+  "accepted_unit_ids": [
+    "A96",
+    "A97",
+    "A98",
+    "A99",
+    "A80",
+    "A81"
+  ],
+  "pre_execution_git": {
+    "head": "ad806273e64f41c95c00bd6dc9f28f0ed5f53c25",
+    "status_short": "?? knowledge/exit-ticket-game-1.1.1.zip"
+  },
+  "reviewed_specs": [
+    {
+      "unit_id": "A96",
+      "lane": "ANS_BEREKEN",
+      "command_spec_sha256": "e149f9882272f2fb4dee1261559a85d11b03cfc528b15265abd77ad777a610c2",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A96\",\"name\":\"Bereken-vraag beantwoorden\",\"kern\":\"Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.\",\"needs\":[],\"exam_codes\":[\"A2.1\",\"A1.7\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welke grootheid, periode en eenheid de vraag vraagt.\",\"Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.\",\"Vul de gegevens zichtbaar in met labels.\",\"Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.\",\"Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context.\"],\"pitfalls\":[\"Alleen een los getal opschrijven zonder controleerbare berekening.\",\"Eenheid, procentteken, indexnotatie of schaalfactor vergeten.\",\"Tussentijds afronden waardoor het eindantwoord afwijkt.\"],\"generator\":\"GEN_A96\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A96",
+        "name": "Bereken-vraag beantwoorden",
+        "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+        "needs": [],
+        "exam_codes": [
+          "A2.1",
+          "A1.7"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+          "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+          "Vul de gegevens zichtbaar in met labels.",
+          "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+          "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+        ],
+        "pitfalls": [
+          "Alleen een los getal opschrijven zonder controleerbare berekening.",
+          "Eenheid, procentteken, indexnotatie of schaalfactor vergeten.",
+          "Tussentijds afronden waardoor het eindantwoord afwijkt."
+        ],
+        "generator": "GEN_A96",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    },
+    {
+      "unit_id": "A97",
+      "lane": "ANS_LEG_UIT_DAT",
+      "command_spec_sha256": "c73d4928dc4c0c28dca47c73ca8114a49e43d4a0334d2065d3b608e14ff2bde4",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A97\",\"name\":\"Leg-uit-dat antwoord opbouwen\",\"kern\":\"Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Neem de conclusie uit de vraag over als eindpunt van je antwoord.\",\"Bepaal welke economische oorzaak of gegeven in de context het startpunt is.\",\"Schrijf de eerste causale schakel met het juiste begrip of mechanisme.\",\"Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.\",\"Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering.\"],\"pitfalls\":[\"Een mening geven in plaats van de gevraagde conclusie onderbouwen.\",\"Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.\",\"De conclusie veranderen terwijl die in de vraag al gegeven is.\"],\"generator\":\"GEN_A97\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A97",
+        "name": "Leg-uit-dat antwoord opbouwen",
+        "kern": "Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Neem de conclusie uit de vraag over als eindpunt van je antwoord.",
+          "Bepaal welke economische oorzaak of gegeven in de context het startpunt is.",
+          "Schrijf de eerste causale schakel met het juiste begrip of mechanisme.",
+          "Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.",
+          "Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering."
+        ],
+        "pitfalls": [
+          "Een mening geven in plaats van de gevraagde conclusie onderbouwen.",
+          "Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.",
+          "De conclusie veranderen terwijl die in de vraag al gegeven is."
+        ],
+        "generator": "GEN_A97",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    },
+    {
+      "unit_id": "A98",
+      "lane": "ANS_LEG_UIT_OF",
+      "command_spec_sha256": "93b42b1c25392bfdedeb8bc8acc1b6e4ae4e525f779a8417362e96acde01c5ba",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A98\",\"name\":\"Leg-uit-of antwoord opbouwen\",\"kern\":\"Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.\",\"Zet die richting expliciet in de eerste zin.\",\"Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.\",\"Werk de causale schakels uit die laten zien waarom deze richting volgt.\",\"Controleer dat je antwoord niet beide kanten open laat.\"],\"pitfalls\":[\"Beginnen met uitleg zonder de richting te kiezen.\",\"Alleen stijgt/daalt noemen zonder economische oorzaak.\",\"De richting laten afhangen van een niet-genoemde aanname.\"],\"generator\":\"GEN_A98\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A98",
+        "name": "Leg-uit-of antwoord opbouwen",
+        "kern": "Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.",
+          "Zet die richting expliciet in de eerste zin.",
+          "Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.",
+          "Werk de causale schakels uit die laten zien waarom deze richting volgt.",
+          "Controleer dat je antwoord niet beide kanten open laat."
+        ],
+        "pitfalls": [
+          "Beginnen met uitleg zonder de richting te kiezen.",
+          "Alleen stijgt/daalt noemen zonder economische oorzaak.",
+          "De richting laten afhangen van een niet-genoemde aanname."
+        ],
+        "generator": "GEN_A98",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    },
+    {
+      "unit_id": "A99",
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "command_spec_sha256": "ef13d39e66877d363ccf4cff12b5d734cf2618324ae9c308adadc930d0f2151a",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A99\",\"name\":\"Leg uit met voorbeeld beantwoorden\",\"kern\":\"Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.\",\"needs\":[],\"exam_codes\":[\"A1.3\",\"A1.9\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.\",\"Kies een concreet voorbeeld dat binnen de context past.\",\"Benoem welk kenmerk van het voorbeeld relevant is.\",\"Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.\",\"Koppel het voorbeeld terug aan de vraag of context.\"],\"pitfalls\":[\"Een voorbeeld noemen zonder uitleg waarom het past.\",\"Een voorbeeld kiezen dat buiten de economische context valt.\",\"Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt.\"],\"generator\":\"GEN_A99\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A99",
+        "name": "Leg uit met voorbeeld beantwoorden",
+        "kern": "Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.",
+        "needs": [],
+        "exam_codes": [
+          "A1.3",
+          "A1.9"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.",
+          "Kies een concreet voorbeeld dat binnen de context past.",
+          "Benoem welk kenmerk van het voorbeeld relevant is.",
+          "Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.",
+          "Koppel het voorbeeld terug aan de vraag of context."
+        ],
+        "pitfalls": [
+          "Een voorbeeld noemen zonder uitleg waarom het past.",
+          "Een voorbeeld kiezen dat buiten de economische context valt.",
+          "Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt."
+        ],
+        "generator": "GEN_A99",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    },
+    {
+      "unit_id": "A80",
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "command_spec_sha256": "37a29ed4feef84ce2cf27d17aa05de054a113727390f17001d84a3e9a43bc2fa",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A80\",\"name\":\"Noem of geef-aan antwoord geven\",\"kern\":\"Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.\",\"needs\":[],\"exam_codes\":[\"A1.1\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Onderstreep wat precies genoemd of aangewezen moet worden.\",\"Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.\",\"Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.\",\"Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.\",\"Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt.\"],\"pitfalls\":[\"Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.\",\"Een uitleg schrijven terwijl alleen identificatie gevraagd is.\",\"Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken.\"],\"generator\":\"GEN_A80\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A80",
+        "name": "Noem of geef-aan antwoord geven",
+        "kern": "Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Onderstreep wat precies genoemd of aangewezen moet worden.",
+          "Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.",
+          "Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.",
+          "Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.",
+          "Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt."
+        ],
+        "pitfalls": [
+          "Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.",
+          "Een uitleg schrijven terwijl alleen identificatie gevraagd is.",
+          "Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken."
+        ],
+        "generator": "GEN_A80",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    },
+    {
+      "unit_id": "A81",
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "command_spec_sha256": "b9527ffb0a470994f6bd003b84af32ad6d2bf8bea12e85a027f7ed748d8424fa",
+      "reviewed_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A81\",\"name\":\"Bron gebruiken in een antwoord\",\"kern\":\"Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.\",\"needs\":[],\"exam_codes\":[\"A1.1\",\"A1.5\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.\",\"Noteer de relevante bronobservatie met label, periode, eenheid of richting.\",\"Zeg wat die observatie economisch betekent.\",\"Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.\",\"Controleer dat het antwoord niet stopt bij alleen citeren of aflezen.\"],\"pitfalls\":[\"Een bron noemen zonder te gebruiken in de redenering.\",\"Een getal of figuur aflezen zonder eenheid, periode of label.\",\"Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt.\"],\"generator\":\"GEN_A81\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "spec": {
+        "id": "A81",
+        "name": "Bron gebruiken in een antwoord",
+        "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1",
+          "A1.5"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+          "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+          "Zeg wat die observatie economisch betekent.",
+          "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+          "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+        ],
+        "pitfalls": [
+          "Een bron noemen zonder te gebruiken in de redenering.",
+          "Een getal of figuur aflezen zonder eenheid, periode of label.",
+          "Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt."
+        ],
+        "generator": "GEN_A81",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      }
+    }
+  ],
+  "commands": [
+    {
+      "unit_id": "A96",
+      "lane": "ANS_BEREKEN",
+      "command_spec_sha256": "e149f9882272f2fb4dee1261559a85d11b03cfc528b15265abd77ad777a610c2",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A96\",\"name\":\"Bereken-vraag beantwoorden\",\"kern\":\"Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.\",\"needs\":[],\"exam_codes\":[\"A2.1\",\"A1.7\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welke grootheid, periode en eenheid de vraag vraagt.\",\"Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.\",\"Vul de gegevens zichtbaar in met labels.\",\"Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.\",\"Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context.\"],\"pitfalls\":[\"Alleen een los getal opschrijven zonder controleerbare berekening.\",\"Eenheid, procentteken, indexnotatie of schaalfactor vergeten.\",\"Tussentijds afronden waardoor het eindantwoord afwijkt.\"],\"generator\":\"GEN_A96\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A96 \"Bereken-vraag beantwoorden\" (catalog now 251 units)\n",
+      "stderr": "(node:18856) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "unit_id": "A97",
+      "lane": "ANS_LEG_UIT_DAT",
+      "command_spec_sha256": "c73d4928dc4c0c28dca47c73ca8114a49e43d4a0334d2065d3b608e14ff2bde4",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A97\",\"name\":\"Leg-uit-dat antwoord opbouwen\",\"kern\":\"Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Neem de conclusie uit de vraag over als eindpunt van je antwoord.\",\"Bepaal welke economische oorzaak of gegeven in de context het startpunt is.\",\"Schrijf de eerste causale schakel met het juiste begrip of mechanisme.\",\"Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.\",\"Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering.\"],\"pitfalls\":[\"Een mening geven in plaats van de gevraagde conclusie onderbouwen.\",\"Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.\",\"De conclusie veranderen terwijl die in de vraag al gegeven is.\"],\"generator\":\"GEN_A97\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A97 \"Leg-uit-dat antwoord opbouwen\" (catalog now 252 units)\n",
+      "stderr": "(node:14388) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "unit_id": "A98",
+      "lane": "ANS_LEG_UIT_OF",
+      "command_spec_sha256": "93b42b1c25392bfdedeb8bc8acc1b6e4ae4e525f779a8417362e96acde01c5ba",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A98\",\"name\":\"Leg-uit-of antwoord opbouwen\",\"kern\":\"Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.\",\"Zet die richting expliciet in de eerste zin.\",\"Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.\",\"Werk de causale schakels uit die laten zien waarom deze richting volgt.\",\"Controleer dat je antwoord niet beide kanten open laat.\"],\"pitfalls\":[\"Beginnen met uitleg zonder de richting te kiezen.\",\"Alleen stijgt/daalt noemen zonder economische oorzaak.\",\"De richting laten afhangen van een niet-genoemde aanname.\"],\"generator\":\"GEN_A98\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A98 \"Leg-uit-of antwoord opbouwen\" (catalog now 253 units)\n",
+      "stderr": "(node:6872) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "unit_id": "A99",
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "command_spec_sha256": "ef13d39e66877d363ccf4cff12b5d734cf2618324ae9c308adadc930d0f2151a",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A99\",\"name\":\"Leg uit met voorbeeld beantwoorden\",\"kern\":\"Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.\",\"needs\":[],\"exam_codes\":[\"A1.3\",\"A1.9\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.\",\"Kies een concreet voorbeeld dat binnen de context past.\",\"Benoem welk kenmerk van het voorbeeld relevant is.\",\"Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.\",\"Koppel het voorbeeld terug aan de vraag of context.\"],\"pitfalls\":[\"Een voorbeeld noemen zonder uitleg waarom het past.\",\"Een voorbeeld kiezen dat buiten de economische context valt.\",\"Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt.\"],\"generator\":\"GEN_A99\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A99 \"Leg uit met voorbeeld beantwoorden\" (catalog now 254 units)\n",
+      "stderr": "(node:12984) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "unit_id": "A80",
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "command_spec_sha256": "37a29ed4feef84ce2cf27d17aa05de054a113727390f17001d84a3e9a43bc2fa",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A80\",\"name\":\"Noem of geef-aan antwoord geven\",\"kern\":\"Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.\",\"needs\":[],\"exam_codes\":[\"A1.1\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Onderstreep wat precies genoemd of aangewezen moet worden.\",\"Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.\",\"Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.\",\"Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.\",\"Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt.\"],\"pitfalls\":[\"Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.\",\"Een uitleg schrijven terwijl alleen identificatie gevraagd is.\",\"Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken.\"],\"generator\":\"GEN_A80\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A80 \"Noem of geef-aan antwoord geven\" (catalog now 255 units)\n",
+      "stderr": "(node:728) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "unit_id": "A81",
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "command_spec_sha256": "b9527ffb0a470994f6bd003b84af32ad6d2bf8bea12e85a027f7ed748d8424fa",
+      "command": "C:\\Program Files\\nodejs\\node.exe build-scripts\\references\\unit-add.js --spec {\"id\":\"A81\",\"name\":\"Bron gebruiken in een antwoord\",\"kern\":\"Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.\",\"needs\":[],\"exam_codes\":[\"A1.1\",\"A1.5\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.\",\"Noteer de relevante bronobservatie met label, periode, eenheid of richting.\",\"Zeg wat die observatie economisch betekent.\",\"Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.\",\"Controleer dat het antwoord niet stopt bij alleen citeren of aflezen.\"],\"pitfalls\":[\"Een bron noemen zonder te gebruiken in de redenering.\",\"Een getal of figuur aflezen zonder eenheid, periode of label.\",\"Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt.\"],\"generator\":\"GEN_A81\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.\",\"recommended_needs\":[],\"severity\":\"low\"}}",
+      "status": 0,
+      "stdout": "OK  minted A81 \"Bron gebruiken in een antwoord\" (catalog now 256 units)\n",
+      "stderr": "(node:17076) Warning: Accessing non-existent property 'formatEntry' of module exports inside circular dependency\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    }
+  ],
+  "preflight": {
+    "unit_count": 250,
+    "accepted_presence": {
+      "A96": false,
+      "A97": false,
+      "A98": false,
+      "A99": false,
+      "A80": false,
+      "A81": false
+    },
+    "held_id_present": false,
+    "invalid_id_present": false,
+    "invalid_id_valid_by_regex": false,
+    "candidate_storage_exists": false,
+    "target_exercise_records": 54,
+    "target_question_type_field_count": 0,
+    "target_answer_form_field_count": 0
+  },
+  "postflight": {
+    "unit_count": 256,
+    "accepted_presence": {
+      "A96": true,
+      "A97": true,
+      "A98": true,
+      "A99": true,
+      "A80": true,
+      "A81": true
+    },
+    "held_id_present": false,
+    "invalid_id_present": false,
+    "candidate_storage_exists": false,
+    "target_exercise_records": 54,
+    "target_question_type_field_count": 0,
+    "target_answer_form_field_count": 0
+  },
+  "boundaries": {
+    "target_exercise_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "lesson_output_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "completed_on": "2026-05-30T21:24:35.515Z"
+}

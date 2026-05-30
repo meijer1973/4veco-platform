@@ -120,6 +120,25 @@ function asExercises(data) {
   return Array.isArray(data) ? data : data.exercises;
 }
 
+function selectedSpecShape(spec) {
+  return {
+    id: spec.id,
+    name: spec.name,
+    kern: spec.kern,
+    needs: spec.needs,
+    exam_codes: spec.exam_codes,
+    mastery_target: spec.mastery_target,
+    prior_learning: spec.prior_learning,
+    aspects: spec.aspects,
+    terms: spec.terms,
+    procedure: spec.procedure,
+    pitfalls: spec.pitfalls,
+    generator: spec.generator,
+    zero_needs_status: spec.zero_needs_status,
+    zero_needs_review: spec.zero_needs_review,
+  };
+}
+
 const packet = readJson(PACKET_JSON);
 const packetMd = readText(PACKET_MD);
 const review = readJson(REVIEW_JSON);
@@ -168,8 +187,15 @@ if (packet.h4_reviewed_remote_commit !== h4Closure.reviewed_remote_commit) fail(
 if (h4Packet.sprint_id !== 'MTU-H4') fail('source H4 packet mismatch');
 
 const unitMap = new Map(units.map((unit) => [unit.id, unit]));
-for (const id of ['A71', 'A80', 'A81', 'A96', 'A97', 'A98', 'A99', 'A100']) {
-  if (unitMap.has(id)) fail(`${id} must be absent in the pre-H4A planning baseline`);
+const plannedIds = Array.from(EXPECTED_LANES.values());
+const plannedPresence = plannedIds.map((id) => unitMap.has(id));
+const preExecution = plannedPresence.every((present) => present === false);
+const postExecution = plannedPresence.every((present) => present === true);
+if (!preExecution && !postExecution) {
+  fail('H4A planned IDs must be either all absent before execution or all live after H4C');
+}
+for (const id of ['A71', 'A100']) {
+  if (unitMap.has(id)) fail(`${id} must remain absent/held or invalid`);
 }
 if (packet.baseline_checks.a100_invalid !== undefined) fail('packet should use invalid_ids instead of baseline_checks.a100_invalid');
 if (!Array.isArray(packet.baseline_checks.invalid_ids) || !packet.baseline_checks.invalid_ids.includes('A100')) {
@@ -192,7 +218,8 @@ if (!Array.isArray(packet.proposed_unit_additions) || packet.proposed_unit_addit
   fail('packet must include exactly six proposed unit additions');
 }
 
-const existingIds = new Set(units.map((unit) => unit.id));
+const baseUnits = units.filter((unit) => !plannedIds.includes(unit.id));
+const existingIds = new Set(baseUnits.map((unit) => unit.id));
 const additionSpecs = [];
 for (const [lane, unitId] of EXPECTED_LANES.entries()) {
   const laneRecord = byId(packet.proposed_unit_additions, lane, 'proposed lane');
@@ -211,6 +238,12 @@ for (const [lane, unitId] of EXPECTED_LANES.entries()) {
   }
   const specErrors = validateSpec(spec, existingIds);
   if (specErrors.length) fail(`${unitId} validateSpec errors: ${specErrors.join('; ')}`);
+  if (postExecution) {
+    const liveUnit = unitMap.get(unitId);
+    if (JSON.stringify(selectedSpecShape(liveUnit)) !== JSON.stringify(selectedSpecShape(spec))) {
+      fail(`${unitId} live unit must match the H4A reviewed spec shape after H4C execution`);
+    }
+  }
   additionSpecs.push(spec);
 }
 
@@ -233,7 +266,7 @@ if (packet.id_policy_notes.future_answer_form_growth_requires_review !== true) {
   fail('id policy must require future review');
 }
 
-const simulated = units.concat(additionSpecs);
+const simulated = baseUnits.concat(additionSpecs);
 const validation = validate(simulated, {
   terms: loadTerminology(),
   eindtermen: loadEindtermen(),

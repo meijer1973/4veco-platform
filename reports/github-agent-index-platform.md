@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-30T21:15:45.978Z
+Generated: 2026-05-30T21:32:11.293Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2130
+Files indexed: 2139
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -117,7 +117,7 @@ Count: 71
 
 ## build scripts
 
-Count: 323
+Count: 324
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -345,6 +345,7 @@ Count: 323
 - build-scripts/references/execute-mtu-h2f-conditional-lanes.js
 - build-scripts/references/execute-mtu-h2j-a20-a94-a95.js
 - build-scripts/references/execute-mtu-h3c-incidence-cli.js
+- build-scripts/references/execute-mtu-h4c-answer-form-cli.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
@@ -622,7 +623,7 @@ Count: 125
 
 ## references
 
-Count: 351
+Count: 352
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -760,6 +761,7 @@ Count: 351
 - references/data/sprints/MTU-H4A.result.json
 - references/data/sprints/MTU-H4B.plan.json
 - references/data/sprints/MTU-H4B.result.json
+- references/data/sprints/MTU-H4C.plan.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -978,7 +980,7 @@ Count: 351
 
 ## reports
 
-Count: 1066
+Count: 1072
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1368,6 +1370,10 @@ Count: 1066
 - reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/gate-closure.json
+- reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/gate-closure.md
+- reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.json
+- reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -1817,6 +1823,8 @@ Count: 1066
 - reports/sprints/MTU-H4B-diff-summary.md
 - reports/sprints/MTU-H4B-plan.md
 - reports/sprints/MTU-H4B-result.md
+- reports/sprints/MTU-H4C-baseline.md
+- reports/sprints/MTU-H4C-plan.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -2067,7 +2075,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 261
+Count: 262
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2187,6 +2195,7 @@ Count: 261
 - docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
