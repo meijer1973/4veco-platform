@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H4C",
+  "name": "Answer-Form Bounded CLI Execution",
+  "status": "planned",
+  "planned_on": "2026-05-30",
+  "plan": "reports/sprints/MTU-H4C-plan.md",
+  "baseline": "reports/sprints/MTU-H4C-baseline.md",
+  "source_gate": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/gate-closure.json",
+  "source_packet": "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json",
+  "reviewed_remote_commit": "f59c83a7067678aa3ff2c4bab4455ab9d90d72af",
+  "human_review_required": false,
+  "protected_reference_data_changes_allowed": true,
+  "protected_reference_data_change_method": "build-scripts/references/unit-add.js only",
+  "allowed_protected_reference_paths": [
+    "references/machine/micro-teaching-units.md",
+    "references/machine/micro-teaching-units.json"
+  ],
+  "accepted_unit_ids": [
+    "A96",
+    "A97",
+    "A98",
+    "A99",
+    "A80",
+    "A81"
+  ],
+  "held_unit_ids": [
+    "A71"
+  ],
+  "invalid_ids": [
+    "A100"
+  ],
+  "held_lanes": [
+    "ANS_GRAFISCH_ARCEER_TEKEN",
+    "ANS_MOTIVEER_CLASSIFICATIE",
+    "ANS_ANALYSEER_BEOORDEEL"
+  ],
+  "candidate_storage_creation_allowed": false,
+  "candidate_writes_allowed": false,
+  "target_exercise_question_type_writes_allowed": false,
+  "target_exercise_answer_form_writes_allowed": false,
+  "generated_projection_refresh_as_source_side_effect_allowed": false,
+  "lesson_output_allowed": false,
+  "student_product_use_allowed": false,
+  "scale_gate_1_allowed": false,
+  "acceptance_tests": [
+    "node build-scripts/references/execute-mtu-h4c-answer-form-cli.js --check-log",
+    "node build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+    "node build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js",
+    "node build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H4C-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H4C --complete",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-document-registry.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ]
+}
