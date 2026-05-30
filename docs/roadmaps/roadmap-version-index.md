@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.18-mtu-h4c-answer-form-executed` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4C executed the bounded answer-form CLI lane for A80, A81, and A96-A99 through unit-add.js only; top operational next action is EX-LESSON-1, with no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority authorized. |
+| References Team Roadmap | `v3.19-ex-lesson1-route-trace-handoff` | `references/reference-team-roadmap.md` | Current operating roadmap after EX-LESSON-1 converted the exam-ingestion end state into paragraph-plan, authoring-guide, review-prompt, roadmap, and checklist requirements; top operational next action is GAME-UX-3A, with no generated lesson output, target-exercise field writes, candidate storage, projection refresh, product use, or Scale Gate 1 authority authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before EX-LESSON-1 route-trace handoff | `v3.18-mtu-h4c-answer-form-executed` | `docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4C execution | `v3.17-gate-mtu-h4b-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4B closure | `v3.16-mtu-h4b-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4B execution packet | `v3.15-gate-mtu-h4a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

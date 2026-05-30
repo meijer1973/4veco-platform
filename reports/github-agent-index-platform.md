@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-30T21:32:11.293Z
+Generated: 2026-05-30T21:53:00.784Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2139
+Files indexed: 2145
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -623,7 +623,7 @@ Count: 125
 
 ## references
 
-Count: 352
+Count: 353
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -762,6 +762,7 @@ Count: 352
 - references/data/sprints/MTU-H4B.plan.json
 - references/data/sprints/MTU-H4B.result.json
 - references/data/sprints/MTU-H4C.plan.json
+- references/data/sprints/MTU-H4C.result.json
 - references/data/sprints/PV-G4.plan.json
 - references/data/sprints/PV.1.plan.json
 - references/data/sprints/PV.1.result.json
@@ -980,7 +981,7 @@ Count: 352
 
 ## reports
 
-Count: 1072
+Count: 1076
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1824,7 +1825,11 @@ Count: 1072
 - reports/sprints/MTU-H4B-plan.md
 - reports/sprints/MTU-H4B-result.md
 - reports/sprints/MTU-H4C-baseline.md
+- reports/sprints/MTU-H4C-diff-summary.md
+- reports/sprints/MTU-H4C-execution-log.json
+- reports/sprints/MTU-H4C-execution-log.md
 - reports/sprints/MTU-H4C-plan.md
+- reports/sprints/MTU-H4C-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
@@ -2075,7 +2080,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 262
+Count: 263
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2196,6 +2201,7 @@ Count: 262
 - docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

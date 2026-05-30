@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EX-LESSON-1",
+  "status": "completed",
+  "completed_on": "2026-05-30",
+  "plan": "reports/sprints/EX-LESSON-1-plan.md",
+  "baseline": "reports/sprints/EX-LESSON-1-baseline.md",
+  "result": "reports/sprints/EX-LESSON-1-result.md",
+  "diff_summary": "reports/sprints/EX-LESSON-1-diff-summary.md",
+  "route_checklist": "reports/sprints/EX-LESSON-1-exam-target-route-checklist.md",
+  "lesson_archive_plan": "../4veco-lessen/archive/sprints/EX-LESSON-1/EX-LESSON-1-sprint-plan.md",
+  "lesson_archive_closure": "../4veco-lessen/archive/sprints/EX-LESSON-1/EX-LESSON-1-closure-log.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "lesson_output_mutated": false,
+  "engine_source_changed": false,
+  "generated_projection_refresh_executed": false,
+  "student_product_use_allowed": false,
+  "active_next_sprint": "GAME-UX-3A",
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EX-LESSON-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-LESSON-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-LESSON-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"Exam-target route trace|official correction model|source annexes|shared task shell|target-equivalent exit ticket\" BUILD-PARAGRAPH.md build-scripts/templates/template-paragraph-plan.md skills/econ-companion-artifacts.md skills/econ-textbook-paragraph.md agents/teacher-learning-quality-review-agent.md agents/student-experience-review-agent.md",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"EX-LESSON-1|GAME-UX-3A|MTU-H4C|Exam-target\" references/reference-team-roadmap.md ../4veco-lessen/lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

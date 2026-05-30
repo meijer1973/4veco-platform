@@ -75,6 +75,10 @@ Inspect as many of these as apply:
 - Student-facing instructions, examples, exercises, feedback, score/routing logic, and completion states.
 - Graphs, flow charts, diagrams, tables, visual models, icons, and SVG economics graphs.
 - Paragraph plan, prior-knowledge expectations, terminology table, procedure-stappen-plan, and target exercise.
+- For official CvTE or CvTE-derived targets: the paragraph plan's
+  `Exam-target route trace`, source annex/figure/table/graph requirements,
+  official correction-model operations, and the planned target-equivalent exit
+  ticket or named blocker.
 - Surrounding lesson path, index page, next-step route, and prerequisite artifacts.
 - Source/generator files when rendered output suggests a source-output or template problem.
 - Existing review reports, quality-ref YAML, validator/test reports, and screenshots.
@@ -118,10 +122,16 @@ Questions:
 - Does the student know what to do first?
 - Does the student know what happens after acting?
 - Does the student know when they are finished?
+- For an exam-target route, can the student see why the current task helps
+  with the official-exam-style target exercise without seeing internal MTU or
+  operation codes?
 
 Hard fail:
 
 - The student cannot identify the next action or completion condition.
+- An exam-target route hides a required source, graph/table, calculation,
+  reasoning, or answer-writing action so the student cannot connect practice to
+  the target exercise.
 
 ### Pass 2 - Affordance
 

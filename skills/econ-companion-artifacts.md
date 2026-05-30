@@ -68,6 +68,20 @@ Before writing or generating the artifact, inspect the relevant sources:
 7. **Paragraph index and companion route structure** — `index.html` routing for this paragraph.
 8. **Relevant platform generator/template** — the builder script (`b1-XYZ-<companion>.js`), converter (`convert_<companion>.py`), shared engine (`engines/`, `build-scripts/lib/`).
 
+For an official CvTE or CvTE-derived target exercise, also inspect the
+`Exam-target route trace` section in `_paragraph-plan.md` before creating any
+graph/table, math/calculation, reasoning, checkpoint, or guided-practice
+surface. The companion artifact must preserve the trace from official prompt,
+source annexes, figures/tables/graphs, official correction model, point
+allocation, and answer-construction requirements to the student-facing route.
+If the trace names a shared task shell need, use the same student-action
+language in the artifact plan: numeric input, calculation/work capture,
+final-answer entry, unit/notation field, short constructed response,
+table-value selection, graph reading, point placement, or graph-construction
+substitute. If the required task shell or target-equivalent exit ticket is not
+implemented yet, mark the companion handoff as blocked by the named sprint or
+gate instead of weakening the exam requirement into a choice-only task.
+
 **Do not infer artifact existence or correctness from a plan alone. Verify the actual generated artifact** in the lessen tree (HTML in browser, DOCX rendered to PDF, image variants opened directly).
 
 ---

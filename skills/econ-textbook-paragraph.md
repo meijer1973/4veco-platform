@@ -31,6 +31,14 @@ Builds one complete textbook paragraph: theory + worked example + exercises + gr
 2. **Exercise set** — `exercises.md` and `answers.md` from `econ-exercise-builder`
 3. **Preceding paragraphs** — to know what has been taught (for recall boxes, cross-references)
 
+For an official CvTE or CvTE-derived target exercise, also require the
+paragraph plan's `Exam-target route trace`. The textbook paragraph and answer
+model must cover every official correction model step or mark it as prior
+knowledge/out of scope with evidence. Source annexes, figures, tables, graphs,
+point allocation, answer-construction requirements, and answer-form needs must
+remain visible in the paragraph plan so Part B can map them to the skill-map
+route, shared task shell, target-equivalent exit ticket, and review gates.
+
 ### 1.2 Output files
 
 Per paragraph, saved to `<output-folder>/X.Y.Z [Name]/` (e.g., `1.2.2 Vraagfactoren/`):

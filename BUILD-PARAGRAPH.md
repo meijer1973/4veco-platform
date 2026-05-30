@@ -130,8 +130,8 @@ profile.
 ## Exam-target paragraph input contract
 
 When the target exercise is an official exam question, the paragraph plan must
-include an exam-target decomposition table. Every official answer-model step
-must be traceable to one of:
+include an exam-target decomposition table and an exam-target route trace.
+Every official answer-model step must be traceable to one of:
 
 - taught explicitly in Part A;
 - practised in textbook opgaven;
@@ -143,6 +143,13 @@ must be traceable to one of:
 A paragraph cannot receive an exam-target PASS if students are asked to perform
 an answer-model operation that is not taught, practised, scaffolded, or
 justified as prior knowledge.
+
+The trace must follow the student-facing route, not only the source files. For
+each official prompt/source/correction-model requirement, name where the
+student encounters the required concept or operation in the explanation,
+practice route, skill-map route, shared task shell, target-equivalent exit
+ticket, and answer model. If a later surface does not exist yet, mark it
+`blocked: [named sprint/gate]`; do not silently treat absence as coverage.
 
 Required `_paragraph-plan.md` section for exam-target paragraphs:
 
@@ -162,9 +169,25 @@ Target answer requirements:
 |---|---:|---|---|---|---|
 
 Paragraph build implications:
-| Required exam operation | Where taught in Part A | Where practised in opgaven | Where scaffolded in begeleide inoefening | Where repeated in game/companion |
-|---|---|---|---|---|
+| Required exam operation | Where taught in Part A | Where practised in opgaven | Where scaffolded in begeleide inoefening | Where repeated in game/companion | Status |
+|---|---|---|---|---|---|
+
+Exam-target route trace:
+| Official requirement | Explanation | Practice route | Skill-map route | Shared task shell need | Target-equivalent exit ticket | Answer model | Review/gate evidence |
+|---|---|---|---|---|---|---|---|
+
+Answer-form chain:
+| Question / substep | Underlying operation | Answer form or modifier | Required task type | MTU / answer-form evidence | Held or blocked condition |
+|---|---|---|---|---|---|
 ```
+
+The `Shared task shell need` column must use student-action language such as
+numeric input, calculation/work capture, final-answer entry, unit/notation
+field, short constructed response, table-value selection, graph reading, point
+placement, or graph-construction substitute. It must not expose internal MTU or
+operation codes to students. The `Answer-form chain` may cite internal MTU IDs
+as builder evidence, but generated student-facing labels must remain plain
+Dutch.
 
 ## A2: Build content
 

@@ -106,6 +106,61 @@ How exercises are distributed across the three difficulty levels.
 
 ---
 
+## Exam-target route trace
+
+> Required when the paragraph target exercise is an official CvTE question or a
+> CvTE-derived exam-style task. Leave this section as `not exam-target` only
+> when the target exercise is not exam-based. This trace is the bridge from
+> official exam evidence to the student-facing route; it is not a place to make
+> mastery, diagnostic, sequencing, summative, AI, PV, or product-use claims.
+
+Exam-target status: [not exam-target / official CvTE / CvTE-derived]
+
+Source:
+- official exam:
+- year / tijdvak:
+- opgave:
+- question(s):
+- official prompt:
+- official correction model:
+- source annexes / figures / tables / graphs:
+- point allocation:
+
+Target answer requirements:
+| Answer-model step | Points | Required concept | Required calculation | Required visual/source operation | Required reasoning operation | Required answer wording |
+|---|---:|---|---|---|---|---|
+| | | | | | | |
+
+Paragraph build implications:
+| Required exam operation | Where taught in Part A | Where practised in opgaven | Where scaffolded in begeleide inoefening | Where repeated in game/companion | Status / blocker |
+|---|---|---|---|---|---|
+| | | | | | |
+
+Student route trace:
+| Official requirement | Explanation | Practice route | Skill-map route | Shared task shell need | Target-equivalent exit ticket | Answer model | Review/gate evidence |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+Answer-form chain:
+| Question / substep | Underlying operation | Answer form or modifier | Required task type | MTU / answer-form evidence | Held or blocked condition |
+|---|---|---|---|---|---|
+| | | | | | |
+
+Review boundary:
+- [ ] Every official correction-model step is taught, practised, scaffolded,
+      marked as prior knowledge with MTU evidence, or explicitly out of scope
+      with a reason.
+- [ ] Source annexes, figures, tables, and graphs used in the official question
+      have a student-visible source/visual operation route.
+- [ ] Shared task shell needs are written as student actions, not internal
+      codes.
+- [ ] Target-equivalent exit-ticket status is blocked until the complete
+      operation and answer-form chain is reviewed by the relevant gate.
+- [ ] No completion, mastery, diagnostic, sequencing, summative, AI, PV, or
+      product-use claim is made from this plan alone.
+
+---
+
 ## Skills & prior knowledge
 
 Quick reference for the "uitleg" builders. **Cite unit IDs from `references/machine/micro-teaching-units.md`** — not free text — so the registry integrity reports can catch drift.

@@ -42,6 +42,9 @@ Inspect as many of these as apply:
 - `AGENTS.md`, `BUILD-PARAGRAPH.md`, `BUILD-CHAPTER.md`, and any relevant sprint/gate plan.
 - Paragraph plan, learning goals, procedure-stappen-plan, terminology table, and visual assignment table.
 - Course blueprint and target exercise.
+- For official CvTE or CvTE-derived targets: the paragraph plan's
+  `Exam-target route trace`, official prompt/source annexes/figures/tables,
+  official correction model, point allocation, and answer-form requirements.
 - Micro-teaching units and canonical procedure entries.
 - Student-facing artifacts: markdown, PDF, HTML, DOCX, PPTX, games, exercise sets, handouts, and summaries.
 - Rendered output when the learning design depends on layout, graph reading, visual sequence, or interaction flow.
@@ -84,10 +87,19 @@ Questions:
 - Are the tasks aligned with those goals?
 - Are students practicing the knowledge and skills they are expected to master?
 - Is there a clear endpoint?
+- For exam-target paragraphs, does each official correction-model operation
+  appear as taught, practised, scaffolded, justified prior knowledge, or
+  deliberately out of scope with a reason?
+- Does the route trace connect official source/correction-model evidence to
+  explanation, practice, skill-map route, shared task shell needs,
+  target-equivalent exit ticket, and answer model?
 
 Hard fail:
 
 - Learning goals are unclear or the tasks do not match the stated learning goals.
+- An official exam-target answer-model operation is required of students but is
+  absent from teaching, practice, scaffolding, prior-knowledge evidence, and
+  the review-gate trace.
 
 ### Pass 2 - Prior knowledge
 
