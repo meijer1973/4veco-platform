@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4B-answer-form-cli-execution",
+  "sprint_id": "MTU-H4B",
+  "date": "2026-05-30",
+  "closed_on": "2026-05-30",
+  "status": "pass_with_conditions",
+  "status_detail": "authorize_later_bounded_execution_sprint_no_execution_from_gate",
+  "decision": "PASS WITH CONDITIONS for authorizing a later bounded H4B execution sprint",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "f59c83a7067678aa3ff2c4bab4455ab9d90d72af",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet was fetchable remotely; closure records reviewed commit hash",
+  "protected_reference_data_changed": false,
+  "human_interview": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.md",
+  "human_interview_json": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.json",
+  "review_packet": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md",
+  "execution_packet": "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json",
+  "source_gate": "reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/gate-closure.json",
+  "summary": "GATE-MTU-H4B accepted the answer-form CLI execution packet and authorized only a later bounded execution sprint. The closure approves later execution of the reviewed unit-add commands for A96, A97, A98, A99, A80, and A81; preserves generator-blocked/non-interactive exposure guardrails; keeps graph, Type 4, and analysis/evaluation lanes held; keeps q3/q15 EX overlays visible with no candidate storage or writes; blocks target-exercise field writes, projection refresh beyond execution validation outputs, lesson output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV promotion, Scale Gate 1, and student/product use.",
+  "accepted_for_later_bounded_execution": [
+    {
+      "unit_id": "A96",
+      "lane": "ANS_BEREKEN",
+      "decision": "accept_for_later_bounded_execution",
+      "command_spec_sha256": "e149f9882272f2fb4dee1261559a85d11b03cfc528b15265abd77ad777a610c2"
+    },
+    {
+      "unit_id": "A97",
+      "lane": "ANS_LEG_UIT_DAT",
+      "decision": "accept_for_later_bounded_execution",
+      "command_spec_sha256": "c73d4928dc4c0c28dca47c73ca8114a49e43d4a0334d2065d3b608e14ff2bde4"
+    },
+    {
+      "unit_id": "A98",
+      "lane": "ANS_LEG_UIT_OF",
+      "decision": "accept_for_later_bounded_execution",
+      "command_spec_sha256": "93b42b1c25392bfdedeb8bc8acc1b6e4ae4e525f779a8417362e96acde01c5ba"
+    },
+    {
+      "unit_id": "A99",
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "decision": "accept_for_later_bounded_execution",
+      "command_spec_sha256": "ef13d39e66877d363ccf4cff12b5d734cf2618324ae9c308adadc930d0f2151a"
+    },
+    {
+      "unit_id": "A80",
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "decision": "accept_for_later_bounded_execution_with_split_if_evidence_requires",
+      "command_spec_sha256": "37a29ed4feef84ce2cf27d17aa05de054a113727390f17001d84a3e9a43bc2fa",
+      "split_if_future_evidence_requires": true
+    },
+    {
+      "unit_id": "A81",
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "decision": "accept_for_later_bounded_execution_as_source_use_modifier_plus_underlying_answer_form",
+      "command_spec_sha256": "b9527ffb0a470994f6bd003b84af32ad6d2bf8bea12e85a027f7ed748d8424fa",
+      "standalone_complete_answer_form": false,
+      "requires_underlying_answer_form": true
+    }
+  ],
+  "id_allocation_decision": {
+    "a100_invalid": true,
+    "a71_held": true,
+    "a80_a81_a96_a99_accepted_for_this_bounded_execution_only": true,
+    "proposed_ids_consume_remaining_non_held_a_domain_slots": true,
+    "future_a_domain_growth_requires_id_policy_or_namespace_decision": true
+  },
+  "held_lanes": [
+    {
+      "lane": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "decision": "held_until_stronger_mapping_and_graph_object_evidence",
+      "unit_minting_authorized_by_this_gate": false
+    },
+    {
+      "lane": "ANS_MOTIVEER_CLASSIFICATIE",
+      "decision": "held_type_4_lane",
+      "unit_minting_authorized_by_this_gate": false
+    },
+    {
+      "lane": "ANS_ANALYSEER_BEOORDEEL",
+      "decision": "held_for_later_evidence",
+      "unit_minting_authorized_by_this_gate": false
+    }
+  ],
+  "ex_overlay_decisions": [
+    {
+      "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "source_requirement_id": "q3-answer-1",
+      "decision": "keep_overlay_route_visible_no_candidate_storage_no_write"
+    },
+    {
+      "answer_skill_id": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION",
+      "source_requirement_id": "q15-answer-1",
+      "decision": "keep_overlay_route_visible_no_candidate_storage_no_write"
+    }
+  ],
+  "conditions": [
+    "record_reviewed_remote_commit_hash",
+    "run_final_preflight_for_absent_a80_a81_a96_a99_a71_held_a100_invalid_candidate_storage_absent_and_no_target_fields",
+    "print_and_log_each_extracted_spec_before_command_execution",
+    "verify_each_spec_matches_reviewed_command_hash_before_execution",
+    "accept_unit_add_no_dry_run_limitation_only_with_simulated_catalog_validation_and_exact_command_review",
+    "rebuild_and_check_generator_readiness_after_execution",
+    "block_or_implement_gen_a80_gen_a81_gen_a96_gen_a99_before_student_facing_exposure",
+    "keep_a81_as_source_use_modifier_not_standalone_answer_form",
+    "keep_graph_type4_and_analysis_evaluation_lanes_held",
+    "keep_q3_q15_ex_overlays_visible_no_candidate_storage_no_writes",
+    "do_not_write_target_exercise_question_type_or_answer_form_fields",
+    "do_not_refresh_generated_projections_as_source_mutation_side_effect",
+    "allow_only_validation_report_outputs_required_by_the_execution_sprint",
+    "do_not_authorize_lesson_output_diagnostics_adaptive_routing_mastery_sequencing_student_facing_ai_summative_use_pv_projection_pv_machine_promotion_scale_gate_1_or_student_product_use"
+  ],
+  "authority_boundary": {
+    "direct_execution_from_review_packet_authorized": false,
+    "protected_reference_mutation_authorized_by_this_gate": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized_by_this_gate": false,
+    "unit_minting_authorized_by_this_gate": false,
+    "target_exercise_mutation_authorized_by_this_gate": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "generated_projection_refresh_authorized_by_this_gate": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "quality_log": [
+    {
+      "issue": "A-domain ID exhaustion after H4B",
+      "severity": "high_for_future_work",
+      "resolution": "Execute only this bounded allocation; future answer-form or A-domain growth requires ID-policy or namespace review."
+    },
+    {
+      "issue": "unit-add no dry-run",
+      "severity": "medium",
+      "resolution": "Use simulated validation and exact command/spec-hash logging in the execution sprint."
+    },
+    {
+      "issue": "missing generators",
+      "severity": "high_if_exposed",
+      "resolution": "After execution, implement or mark generator-blocked/not-yet-interactive and prove no exposed missing generators."
+    },
+    {
+      "issue": "A81 modifier could be misused",
+      "severity": "medium_high",
+      "resolution": "Keep A81 as source-use modifier plus underlying answer form; no mapping may treat it as standalone."
+    },
+    {
+      "issue": "EX overlays could be hidden",
+      "severity": "high",
+      "resolution": "q3/q15 overlay needs remain visible and candidate storage/writes remain blocked."
+    },
+    {
+      "issue": "target-exercise field writes out of scope",
+      "severity": "medium",
+      "resolution": "Use only a later authored-reference mutation packet with exact before/after diffs for question_type or answer_form fields."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H4C",
+    "name": "Answer-Form Bounded CLI Execution",
+    "authority": "execute the reviewed H4B unit-add commands for A80, A81, and A96-A99 under the stated preflight, logging, generator, validation, and no-exposure conditions",
+    "execution_authorized": true,
+    "direct_execution_from_this_gate_packet": false,
+    "student_product_use_authorized": false,
+    "scope": [
+      "run final ID and baseline preflight",
+      "print and log exact reviewed specs and command hashes",
+      "execute unit-add for A96",
+      "execute unit-add for A97",
+      "execute unit-add for A98",
+      "execute unit-add for A99",
+      "execute unit-add for A80",
+      "execute unit-add for A81",
+      "rebuild and check generator readiness after execution",
+      "record generator-blocked/not-yet-interactive or implemented status",
+      "run the validation stack and keep student-facing exposure blocked"
+    ],
+    "out_of_scope": [
+      "candidate storage creation",
+      "candidate writes",
+      "target-exercise question_type writes",
+      "target-exercise answer_form writes",
+      "generated projection refresh as source mutation side effect",
+      "lesson output",
+      "diagnostics",
+      "adaptive routing",
+      "mastery or sequencing",
+      "student-facing AI",
+      "summative use",
+      "PV projection",
+      "PV machine promotion",
+      "Scale Gate 1",
+      "student/product use"
+    ]
+  }
+}

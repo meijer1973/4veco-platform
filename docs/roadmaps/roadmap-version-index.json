@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.16-mtu-h4b-execution-packet",
+      "version": "v3.17-gate-mtu-h4b-pass-with-conditions",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-30",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md",
@@ -137,7 +138,18 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after MTU-H4B prepared the non-mutating answer-form CLI execution packet and moved the top operational next action to GATE-MTU-H4B; no mutation or product use is authorized."
+      "notes": "Current operating roadmap after GATE-MTU-H4B closed PASS WITH CONDITIONS and moved the top operational next action to MTU-H4C bounded answer-form CLI execution; no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority is authorized."
+    },
+    {
+      "roadmap_id": "references-team-roadmap-v3.16",
+      "version": "v3.16-mtu-h4b-execution-packet",
+      "title": "References Team Roadmap before GATE-MTU-H4B closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-30",
+      "superseded_by": "references/reference-team-roadmap.md",
+      "notes": "Superseded after GATE-MTU-H4B closed pass_with_conditions and moved the top operational next action to MTU-H4C bounded answer-form CLI execution."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.15",

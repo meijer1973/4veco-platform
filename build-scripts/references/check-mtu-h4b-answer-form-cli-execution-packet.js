@@ -20,6 +20,10 @@ const PACKET_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h4b-answer-fo
 const REVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'review-packet.json');
 const REVIEW_MD = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'review-packet.md');
 const BUNDLE_URLS = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'bundle-urls.md');
+const HUMAN_INTERVIEW_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'human-interview.json');
+const HUMAN_INTERVIEW_MD = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'human-interview.md');
+const GATE_CLOSURE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'gate-closure.json');
+const GATE_CLOSURE_MD = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4B-answer-form-cli-execution', 'gate-closure.md');
 const H4A_CLOSURE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H4A-answer-form-cli-mutation-plan', 'gate-closure.json');
 const H4A_PACKET = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h4a-answer-form-cli-mutation-plan.json');
 const UNITS_JSON = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
@@ -28,6 +32,7 @@ const CANDIDATE_STORAGE = path.join(ROOT, 'references', 'data', 'exam-ingestion'
 const ROADMAP = path.join(ROOT, 'references', 'reference-team-roadmap.md');
 
 const ACCEPTED_IDS = ['A96', 'A97', 'A98', 'A99', 'A80', 'A81'];
+const REVIEWED_REMOTE_COMMIT = 'f59c83a7067678aa3ff2c4bab4455ab9d90d72af';
 const HELD_LANES = [
   'ANS_GRAFISCH_ARCEER_TEKEN',
   'ANS_MOTIVEER_CLASSIFICATIE',
@@ -350,8 +355,118 @@ if (fs.existsSync(BUNDLE_URLS)) {
   const bundle = readText(BUNDLE_URLS);
   requireIncludes(bundle, 'review-packet.md', 'bundle urls');
   requireIncludes(bundle, 'review-packet.json', 'bundle urls');
+  if (fs.existsSync(GATE_CLOSURE_JSON)) requireIncludes(bundle, 'gate-closure.json', 'bundle urls');
+  if (fs.existsSync(HUMAN_INTERVIEW_JSON)) requireIncludes(bundle, 'human-interview.json', 'bundle urls');
 }
 
+if (fs.existsSync(GATE_CLOSURE_JSON) || fs.existsSync(HUMAN_INTERVIEW_JSON)) {
+  const closure = readJson(GATE_CLOSURE_JSON);
+  const closureMd = readText(GATE_CLOSURE_MD);
+  const human = readJson(HUMAN_INTERVIEW_JSON);
+  const humanMd = readText(HUMAN_INTERVIEW_MD);
+
+  if (closure.schema_version !== 1) fail('H4B closure schema_version must be 1');
+  if (closure.gate_id !== packet.gate_id) fail('H4B closure gate_id mismatch');
+  if (closure.sprint_id !== 'MTU-H4B') fail('H4B closure sprint_id must be MTU-H4B');
+  if (closure.status !== 'pass_with_conditions') fail('H4B closure must be pass_with_conditions');
+  if (closure.status_detail !== 'authorize_later_bounded_execution_sprint_no_execution_from_gate') {
+    fail('H4B closure status_detail mismatch');
+  }
+  if (closure.reviewed_remote_commit !== REVIEWED_REMOTE_COMMIT) {
+    fail('H4B closure must record the reviewed remote commit');
+  }
+  if (closure.remote_evidence_pushed_before_review !== true) {
+    fail('H4B closure must record remote evidence pushed before review');
+  }
+  if (closure.protected_reference_data_changed !== false) {
+    fail('H4B closure must not record protected reference data changes');
+  }
+  arrayEqual(
+    closure.accepted_for_later_bounded_execution.map((item) => item.unit_id),
+    ACCEPTED_IDS,
+    'H4B closure accepted IDs',
+  );
+  arrayEqual(closure.held_lanes.map((lane) => lane.lane), HELD_LANES, 'H4B closure held lanes');
+  if (closure.id_allocation_decision.a100_invalid !== true) fail('H4B closure must keep A100 invalid');
+  if (closure.id_allocation_decision.a71_held !== true) fail('H4B closure must keep A71 held');
+  if (closure.id_allocation_decision.future_a_domain_growth_requires_id_policy_or_namespace_decision !== true) {
+    fail('H4B closure must require future A-domain ID-policy/namespace review');
+  }
+  if (closure.authority_boundary.direct_execution_from_review_packet_authorized !== false) {
+    fail('H4B closure must not authorize direct execution from the review packet');
+  }
+  for (const key of [
+    'protected_reference_mutation_authorized_by_this_gate',
+    'machine_reference_mutation_authorized_by_this_gate',
+    'unit_minting_authorized_by_this_gate',
+    'target_exercise_mutation_authorized_by_this_gate',
+    'question_type_field_writes_authorized',
+    'answer_form_field_writes_authorized',
+    'candidate_storage_creation_authorized',
+    'candidate_writes_authorized',
+    'generated_projection_refresh_authorized_by_this_gate',
+    'lesson_output_mutation_authorized',
+    'diagnostics_authorized',
+    'adaptive_routing_authorized',
+    'mastery_authorized',
+    'sequencing_authorized',
+    'student_facing_ai_authorized',
+    'summative_use_authorized',
+    'pv_projection_authorized',
+    'pv_machine_promotion_authorized',
+    'scale_gate_1_authorized',
+    'student_product_use_authorized',
+  ]) {
+    requireFalse(closure.authority_boundary, key, 'closure.authority_boundary');
+  }
+  if (closure.authorized_next.sprint_id !== 'MTU-H4C') {
+    fail('H4B closure must authorize MTU-H4C as the next sprint');
+  }
+  if (closure.authorized_next.execution_authorized !== true) {
+    fail('H4B closure must authorize only the later bounded execution sprint');
+  }
+  if (closure.authorized_next.student_product_use_authorized !== false) {
+    fail('H4B closure must keep student/product use unauthorized');
+  }
+  for (const required of [
+    'print_and_log_each_extracted_spec_before_command_execution',
+    'rebuild_and_check_generator_readiness_after_execution',
+    'do_not_write_target_exercise_question_type_or_answer_form_fields',
+    'do_not_authorize_lesson_output_diagnostics_adaptive_routing_mastery_sequencing_student_facing_ai_summative_use_pv_projection_pv_machine_promotion_scale_gate_1_or_student_product_use',
+  ]) {
+    if (!closure.conditions.includes(required)) fail(`H4B closure missing condition ${required}`);
+  }
+  requireIncludes(closureMd, 'PASS WITH CONDITIONS', 'closure markdown');
+  requireIncludes(closureMd, REVIEWED_REMOTE_COMMIT, 'closure markdown');
+
+  if (human.schema_version !== 1) fail('H4B human interview schema_version must be 1');
+  if (human.gate_id !== packet.gate_id) fail('H4B human interview gate_id mismatch');
+  if (human.reviewed_remote_commit !== REVIEWED_REMOTE_COMMIT) {
+    fail('H4B human interview must record reviewed remote commit');
+  }
+  if (human.verdict !== 'pass_with_conditions_for_later_bounded_h4b_execution_sprint') {
+    fail('H4B human interview verdict mismatch');
+  }
+  if (!Array.isArray(human.calibration_answers) || human.calibration_answers.length !== 3) {
+    fail('H4B human interview must record three calibration answers');
+  }
+  if (!Array.isArray(human.answers) || human.answers.length !== 10) {
+    fail('H4B human interview must record ten question answers');
+  }
+  if (human.authorized_next.sprint_id !== 'MTU-H4C') fail('H4B human interview must authorize MTU-H4C next');
+  if (human.authorized_next.execution_authorized_for_next_sprint !== true) {
+    fail('H4B human interview must authorize execution only for the next sprint');
+  }
+  if (human.authorized_next.direct_execution_from_this_review_packet !== false) {
+    fail('H4B human interview must reject direct execution from this packet');
+  }
+  requireIncludes(humanMd, 'PASS WITH CONDITIONS', 'human interview markdown');
+  requireIncludes(humanMd, REVIEWED_REMOTE_COMMIT, 'human interview markdown');
+}
+
+if (!roadmap.includes('MTU-H4C | Answer-Form Bounded CLI Execution')) {
+  fail('roadmap must include MTU-H4C active row after H4B closure');
+}
 if (!roadmap.includes('MTU-H4B | Answer-Form Bounded CLI Execution Packet')) {
   fail('roadmap must include MTU-H4B row');
 }

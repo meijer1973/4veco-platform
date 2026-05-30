@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.16-mtu-h4b-execution-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4B prepared the non-mutating answer-form CLI execution packet and moved the top operational next action to GATE-MTU-H4B; no mutation or product use is authorized. |
+| References Team Roadmap | `v3.17-gate-mtu-h4b-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H4B closed PASS WITH CONDITIONS and moved the top operational next action to MTU-H4C bounded answer-form CLI execution; no lesson output, target-exercise field writes, candidate storage, projection refresh side effects, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-MTU-H4B closure | `v3.16-mtu-h4b-execution-packet` | `docs/roadmaps/outdated/reference-team-roadmap-v3.16-mtu-h4b-execution-packet.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4B execution packet | `v3.15-gate-mtu-h4a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4A closure | `v3.14-exit-ticket-target-equivalent-spec` | `docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before SPEC-ET-1 target-equivalent correction | `v3.13-mtu-h4a-answer-form-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
@@ -71,7 +72,6 @@ docs/roadmaps/roadmap-version-index.json
 | References Team Roadmap before shared skill-map engine tracking | `v2.65-lesson-companion-pre-scale-gates` | `docs/roadmaps/outdated/reference-team-roadmap-v2.65-lesson-companion-pre-scale-gates.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before lesson companion pre-scale gate tracking | `v2.64-gate-ex2-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.64-gate-ex2-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX2 closure | `v2.63-ex1-exam-ingestion-pilot` | `docs/roadmaps/outdated/reference-team-roadmap-v2.63-ex1-exam-ingestion-pilot.md` | `references/reference-team-roadmap.md` |
-| References Team Roadmap before EX-1 exam-ingestion pilot completion | `v2.62-gate-ex0-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v2.62-gate-ex0-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-EX0 closure | `v2.61-ex0-exam-ingestion-contract` | `docs/roadmaps/outdated/reference-team-roadmap-v2.61-ex0-exam-ingestion-contract.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-0 exam-ingestion contract design | `v2.60-cp6f-113-part-a-cleared` | `docs/roadmaps/outdated/reference-team-roadmap-v2.60-cp6f-113-part-a-cleared.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CP.6f focused 1.1.3 Part A remediation recheck | `v2.59-cp6e-113-part-a-failed-clearance` | `docs/roadmaps/outdated/reference-team-roadmap-v2.59-cp6e-113-part-a-failed-clearance.md` | `references/reference-team-roadmap.md` |
@@ -135,12 +135,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap/Input | Version | Path | Role |
 |---|---|---|---|
+| Pointer from old final handoff path to archived snapshot | `pointer-2026-04-29` | `docs/roadmaps/final-codex-handoff-roadmap-original.md` | Compatibility pointer for historical reports that mention the old path. |
 | Reference Team Roadmap Live Version 28 April | `snapshot-2026-04-28` | `knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md` | Snapshot used during HCS/engineering comparison. |
-| HCS Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-HCS.md` | Proposal incorporated through CP-1 decisions. |
-| Head of Engineering Final Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-final-head-of-engineering.md` | Proposal incorporated after repository-checked edits. |
+| HCS Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-HCS.md` | HCS proposal incorporated into the live roadmap through CP-1 decisions. |
+| Head of Engineering Final Exercise Schema Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-final-head-of-engineering.md` | Engineering proposal incorporated into the live roadmap after repository-checked edits. |
 | Repository-Checked Updated Roadmap | `proposal-2026-04-28` | `knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md` | Repository-checked proposal used to update the live roadmap. |
-| Platform Team Roadmap | `legacy-2026-04-27` | `knowledge/old/platform-team-roadmap.md` | Legacy platform planning context. |
-| Three-Month Roadmap | `legacy-2026-04-24` | `knowledge/old/three-month-roadmap.md` | Legacy cross-team planning context. |
+| Platform Team Roadmap | `legacy-2026-04-27` | `knowledge/old/platform-team-roadmap.md` | Legacy platform-team planning document retained in knowledge/old. |
+| Three-Month Roadmap | `legacy-2026-04-24` | `knowledge/old/three-month-roadmap.md` | Legacy cross-team roadmap retained in knowledge/old. |
 
 ## Rule For Agents
 

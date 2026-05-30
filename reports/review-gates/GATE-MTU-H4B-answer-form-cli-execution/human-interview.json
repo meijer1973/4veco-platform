@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H4B-answer-form-cli-execution",
+  "sprint_id": "MTU-H4B",
+  "recorded_on": "2026-05-30",
+  "review_mode": "human_review_recorded_from_supplied_reviewer_verdict",
+  "reviewed_remote_commit": "f59c83a7067678aa3ff2c4bab4455ab9d90d72af",
+  "verdict": "pass_with_conditions_for_later_bounded_h4b_execution_sprint",
+  "verdict_summary": "PASS WITH CONDITIONS for authorizing a later bounded H4B execution sprint. The H4B packet is ready to move from execution-packet review to a narrowly scoped execution sprint for A80, A81, and A96-A99, provided the sprint preserves generator-blocked/non-interactive status and does not write target-exercise fields, candidate storage, projections, lesson output, or product-facing routes.",
+  "remote_evidence_status": {
+    "packet_and_evidence_pushed_before_review": true,
+    "basis": "remote fetchability",
+    "closure_must_record_reviewed_commit_hash": true
+  },
+  "calibration_answers": [
+    {
+      "id": "MTUH4B-CAL1",
+      "answer": "yes",
+      "rationale": "This gate reviews H4B execution only and does not itself authorize mutation or product use."
+    },
+    {
+      "id": "MTUH4B-CAL2",
+      "answer": "yes",
+      "rationale": "The H4B packet, review packet, sprint logs, checker, and cited evidence were remotely fetchable before review. Closure should record the reviewed remote commit/hash."
+    },
+    {
+      "id": "MTUH4B-CAL3",
+      "answer": "yes",
+      "rationale": "A100 remains invalid, A71 remains held, candidate storage remains absent, and proposed answer-form IDs are not live until later execution authorization."
+    }
+  ],
+  "answers": [
+    {
+      "id": "MTUH4B-Q1",
+      "decision": "accept_baseline",
+      "rationale": "H4A closed with accepted IDs and carried-forward conditions; H4B confirms the accepted lanes, held lanes, and baseline state."
+    },
+    {
+      "id": "MTUH4B-Q2",
+      "decision": "approve_bounded_id_allocation",
+      "rationale": "A80, A81, and A96-A99 are acceptable for this sprint. A100 remains invalid, A71 remains held, and future A-domain growth requires ID-policy or namespace review."
+    },
+    {
+      "id": "MTUH4B-Q3",
+      "decision": "approve_a96",
+      "rationale": "A96 cleanly encodes the calculation answer form: read requested quantity/unit, show formula, substitute values, show intermediate steps, answer with unit/notation, and conclude in context."
+    },
+    {
+      "id": "MTUH4B-Q4",
+      "decision": "approve_a97_a98_a99_separately",
+      "rationale": "uitleg_dat, uitleg_of, and leg uit met voorbeeld require different answer structures and should not be collapsed into one generic explanation unit."
+    },
+    {
+      "id": "MTUH4B-Q5",
+      "decision": "approve_a80_with_split_if_needed_condition",
+      "rationale": "A80 is acceptable as concise identification. A future split remains required if reviewed evidence shows geef aan requires a different answer procedure from noem."
+    },
+    {
+      "id": "MTUH4B-Q6",
+      "decision": "approve_a81_as_modifier",
+      "rationale": "A81 is a source-use modifier, not a complete answer form. It must combine with an underlying answer form such as calculation, explanation, classification, or graph response."
+    },
+    {
+      "id": "MTUH4B-Q7",
+      "decision": "approve_generator_exposure_guardrails_with_non_exposure_proof",
+      "rationale": "The planned units declare generators but do not yet have implementations. H4B requires generator implementation or generator-blocked/non-interactive status before student-facing exposure; current blocked interactive leak count is zero."
+    },
+    {
+      "id": "MTUH4B-Q8",
+      "decision": "approve_held_lanes_and_ex_overlay_boundary",
+      "rationale": "Graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation remain held. q3/q15 EX overlays remain visible; candidate storage is absent and writes are unauthorized."
+    },
+    {
+      "id": "MTUH4B-Q9",
+      "decision": "accept_validation_and_rollback_standard",
+      "rationale": "Simulated catalog validation passed for all six units, exam-code validation passed, and the later execution stack includes H4B checker, build index, schema validation, course-target validation, generator-readiness rebuild/check, report JSON validation, Jest, and git diff --check."
+    },
+    {
+      "id": "MTUH4B-Q10",
+      "decision": "authorize_bounded_execution_sprint_only",
+      "rationale": "The next sprint may execute the six reviewed unit-add commands. It must not create candidate storage, write target-exercise fields, refresh generated projections beyond required validation outputs, mutate lesson output, or expose student-facing routes."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "MTU-H4C",
+    "name": "Answer-Form Bounded CLI Execution",
+    "authority": "bounded execution sprint for the reviewed H4B unit-add commands only",
+    "execution_authorized_for_next_sprint": true,
+    "direct_execution_from_this_review_packet": false,
+    "student_product_use_authorized": false,
+    "unit_ids": [
+      "A96",
+      "A97",
+      "A98",
+      "A99",
+      "A80",
+      "A81"
+    ]
+  },
+  "conditions_for_execution_sprint": [
+    "record_reviewed_remote_commit_hash",
+    "run_final_preflight_for_absent_a80_a81_a96_a99_a71_held_a100_invalid_candidate_storage_absent_and_no_target_fields",
+    "print_each_exact_unit_spec_before_execution_and_verify_it_matches_the_reviewed_command_hash",
+    "accept_unit_add_no_dry_run_limitation_only_with_simulated_catalog_validation_and_exact_command_review",
+    "after_minting_rebuild_generator_readiness_and_mark_gen_a80_gen_a81_gen_a96_gen_a99_as_implemented_or_generator_blocked_not_yet_interactive",
+    "do_not_write_target_exercise_question_type_or_answer_form_fields",
+    "do_not_create_or_write_ex_candidate_storage",
+    "do_not_refresh_generated_projections_as_a_source_mutation_side_effect",
+    "allow_only_validation_report_outputs_required_by_the_execution_sprint",
+    "do_not_authorize_lesson_output_or_student_product_use"
+  ],
+  "held_lanes": [
+    "ANS_GRAFISCH_ARCEER_TEKEN",
+    "ANS_MOTIVEER_CLASSIFICATIE",
+    "ANS_ANALYSEER_BEOORDEEL"
+  ],
+  "ex_overlays": [
+    "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+    "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION"
+  ],
+  "quality_log": [
+    {
+      "issue": "A-domain ID exhaustion after H4B",
+      "severity": "high_for_future_work",
+      "next_action": "Execute only this bounded allocation; require later ID-policy or namespace review.",
+      "proof_required": "Closure states future A-domain growth needs policy."
+    },
+    {
+      "issue": "unit-add no dry-run",
+      "severity": "medium",
+      "next_action": "Use simulated validation and exact command logging.",
+      "proof_required": "Execution log includes specs and command hashes."
+    },
+    {
+      "issue": "missing generators",
+      "severity": "high_if_exposed",
+      "next_action": "Mark generator-blocked or implement.",
+      "proof_required": "Generator-readiness report shows no exposed missing generators."
+    },
+    {
+      "issue": "A81 modifier could be misused",
+      "severity": "medium_high",
+      "next_action": "Keep explicit modifier boundary.",
+      "proof_required": "No mapping treats A81 as standalone answer form."
+    },
+    {
+      "issue": "EX overlays could be hidden",
+      "severity": "high",
+      "next_action": "Keep q3/q15 visible; no candidate writes.",
+      "proof_required": "No answer-skill-candidates.json created."
+    },
+    {
+      "issue": "target-exercise field writes out of scope",
+      "severity": "medium",
+      "next_action": "Separate authored-reference packet only.",
+      "proof_required": "No question_type or answer_form diffs."
+    }
+  ]
+}
