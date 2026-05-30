@@ -1,0 +1,62 @@
+{
+  "sprint_id": "MTU-H4B",
+  "name": "Answer-Form Bounded CLI Execution Packet",
+  "status": "planned",
+  "date": "2026-05-30",
+  "plan": "reports/sprints/MTU-H4B-plan.md",
+  "baseline": "reports/sprints/MTU-H4B-baseline.md",
+  "gate_id": "GATE-MTU-H4B-answer-form-cli-execution",
+  "review_packet": "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md",
+  "human_review_required": true,
+  "valid_gate_statuses": [
+    "pass_with_conditions",
+    "revise_packet",
+    "hold"
+  ],
+  "protected_reference_data_changes_allowed": false,
+  "student_facing_output_allowed": false,
+  "accepted_lane_ids": [
+    "A96",
+    "A97",
+    "A98",
+    "A99",
+    "A80",
+    "A81"
+  ],
+  "held_lane_ids": [
+    "ANS_GRAFISCH_ARCEER_TEKEN",
+    "ANS_MOTIVEER_CLASSIFICATIE",
+    "ANS_ANALYSEER_BEOORDEEL"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-H4B-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-H4B --complete",
+    "node build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+    "node build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js",
+    "node build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/references/check-source-document-registry.js",
+    "node build-scripts/references/check-source-manifest.js",
+    "node build-scripts/references/check-document-inventory.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "forbidden_authority": {
+    "unit_minting_now": false,
+    "target_exercise_field_writes_now": false,
+    "candidate_storage_creation_now": false,
+    "candidate_writes_now": false,
+    "projection_refresh_now": false,
+    "lesson_output_now": false,
+    "product_use_now": false,
+    "student_facing_ai_now": false,
+    "summative_use_now": false,
+    "pv_projection_now": false,
+    "scale_gate_1_now": false
+  }
+}

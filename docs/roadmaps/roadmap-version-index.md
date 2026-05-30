@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-05-29
+Updated: 2026-05-30
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.15-gate-mtu-h4a-pass-with-conditions` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-MTU-H4A closed pass_with_conditions and moved the top operational next action to MTU-H4B bounded execution-packet preparation; no mutation or product use is authorized. |
+| References Team Roadmap | `v3.16-mtu-h4b-execution-packet` | `references/reference-team-roadmap.md` | Current operating roadmap after MTU-H4B prepared the non-mutating answer-form CLI execution packet and moved the top operational next action to GATE-MTU-H4B; no mutation or product use is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before MTU-H4B execution packet | `v3.15-gate-mtu-h4a-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.15-gate-mtu-h4a-pass-with-conditions.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-MTU-H4A closure | `v3.14-exit-ticket-target-equivalent-spec` | `docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before SPEC-ET-1 target-equivalent correction | `v3.13-mtu-h4a-answer-form-cli-mutation-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MTU-H4A planning packet | `v3.12-gate-mtu-h4-pass-with-conditions` | `docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md` | `references/reference-team-roadmap.md` |

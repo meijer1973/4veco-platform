@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-29T20:28:25.317Z
+Generated: 2026-05-30T10:00:28.067Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2111
+Files indexed: 2116
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -973,7 +973,7 @@ Count: 349
 
 ## reports
 
-Count: 1053
+Count: 1057
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1354,6 +1354,10 @@ Count: 1053
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.json
 - reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/review-packet.md
 - reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/bundle-urls.md
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/gate-closure.json
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/gate-closure.md
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/human-interview.json
+- reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/human-interview.md
 - reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.json
 - reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/review-packet.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
@@ -2049,7 +2053,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 259
+Count: 260
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2167,6 +2171,7 @@ Count: 259
 - docs/roadmaps/outdated/reference-team-roadmap-v3.11-engine-operationalization-track.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.12-gate-mtu-h4-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.13-mtu-h4a-answer-form-cli-mutation-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.14-exit-ticket-target-equivalent-spec.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

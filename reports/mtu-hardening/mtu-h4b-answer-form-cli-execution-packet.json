@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H4B",
+  "gate_id": "GATE-MTU-H4B-answer-form-cli-execution",
+  "generated_on": "2026-05-30",
+  "status": "execution_packet_ready_no_mutation",
+  "source_gate": "reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/gate-closure.json",
+  "source_planning_packet": "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json",
+  "source_routing_gate": "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+  "reviewed_h4a_remote_commit": "a91e5da2082ef8aacc040e55b3fae905d6f0799a",
+  "reviewed_h4_remote_commit": "38a032346db9a6a1dcb247d52afce745c48863f7",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "H4B packet, review packet, sprint plan, baseline, checker, and cited evidence must be committed and pushed to the normal remote branch before GATE-MTU-H4B starts.",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "answer_form_execution_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-MTU-H4A-answer-form-cli-mutation-plan/gate-closure.json",
+    "reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.json",
+    "reports/review-gates/GATE-MTU-H4-answer-form-question-type-routing/gate-closure.json",
+    "reports/sprints/MTU-H4B-plan.md",
+    "reports/sprints/MTU-H4B-baseline.md",
+    "references/machine/micro-teaching-units.json",
+    "references/authored/course-target-exercises.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "build-scripts/references/unit-add.js",
+    "build-scripts/references/build-unit-index.js",
+    "reports/json/skilltree-generator-readiness.json"
+  ],
+  "h4a_closure_summary": {
+    "status": "pass_with_conditions",
+    "authorized_next": {
+      "sprint_id": "MTU-H4B",
+      "name": "Answer-Form Bounded CLI Execution Packet",
+      "authority": "prepare a later bounded execution packet for accepted H4A lanes only; no execution or product use",
+      "execution_authorized": false,
+      "student_product_use_authorized": false,
+      "scope": [
+        "prepare exact unit-add execution commands for A80 A81 and A96-A99",
+        "print and log every extracted spec before any later command",
+        "prove simulated catalog validation before mutation",
+        "verify generator implementation or generator-blocked non-interactive status",
+        "prove no student-facing route exposes generator-blocked answer-form units",
+        "preserve A100 rejection and A71 hold",
+        "keep graph Type 4 and analysis/evaluation lanes held",
+        "keep q3/q15 EX answer-skill overlay needs visible with no candidate writes",
+        "keep target-exercise field writes projection refresh lesson output and product use out of scope"
+      ]
+    },
+    "accepted_ids": [
+      "A96",
+      "A97",
+      "A98",
+      "A99",
+      "A80",
+      "A81"
+    ],
+    "held_lanes": [
+      "ANS_GRAFISCH_ARCEER_TEKEN",
+      "ANS_MOTIVEER_CLASSIFICATIE",
+      "ANS_ANALYSEER_BEOORDEEL"
+    ],
+    "conditions_carried_forward": [
+      "record reviewed remote commit/hash before review",
+      "accept bounded A80/A81/A96-A99 allocation and keep A71 held",
+      "future A-domain growth requires ID-policy or namespace decision",
+      "generator implementation or generator-blocked/non-interactive status before student-facing exposure",
+      "no target-exercise question_type or answer_form writes",
+      "no answer-skill candidate storage creation or writes",
+      "run simulated catalog validation and full validator stack",
+      "validate exam codes against syllabus registry"
+    ]
+  },
+  "baseline_checks": {
+    "live_unit_count": 250,
+    "id_presence": {
+      "A96": false,
+      "A97": false,
+      "A98": false,
+      "A99": false,
+      "A80": false,
+      "A81": false,
+      "A71": false,
+      "A100": false
+    },
+    "invalid_id_policy": {
+      "regex": "^[A-L][0-9][0-9]$",
+      "invalid_ids_rejected": [
+        "A100"
+      ],
+      "a100_valid": false
+    },
+    "target_exercise_records": 54,
+    "target_question_type_field_count": 0,
+    "target_answer_form_field_count": 0,
+    "candidate_storage_exists": false,
+    "candidate_storage_path": "references/data/exam-ingestion/answer-skill-candidates.json"
+  },
+  "id_allocation": {
+    "accepted_for_this_bounded_execution_packet": [
+      "A96",
+      "A97",
+      "A98",
+      "A99",
+      "A80",
+      "A81"
+    ],
+    "held_id_not_consumed": "A71",
+    "invalid_ids_rejected": [
+      "A100"
+    ],
+    "remaining_non_held_a_domain_slots_after_later_execution": [],
+    "future_a_domain_growth_requires": "ID-policy or namespace decision before any further A-domain answer-form planning.",
+    "execution_authorized_now": false
+  },
+  "exact_unit_lanes": [
+    {
+      "lane": "ANS_BEREKEN",
+      "unit_id": "A96",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A96",
+        "name": "Bereken-vraag beantwoorden",
+        "kern": "Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.",
+        "needs": [],
+        "exam_codes": [
+          "A2.1",
+          "A1.7"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "rekenen",
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke grootheid, periode en eenheid de vraag vraagt.",
+          "Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.",
+          "Vul de gegevens zichtbaar in met labels.",
+          "Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.",
+          "Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context."
+        ],
+        "pitfalls": [
+          "Alleen een los getal opschrijven zonder controleerbare berekening.",
+          "Eenheid, procentteken, indexnotatie of schaalfactor vergeten.",
+          "Tussentijds afronden waardoor het eindantwoord afwijkt."
+        ],
+        "generator": "GEN_A96",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 accepted ANS_BEREKEN from the berekenen question_type and the H2 q2 deferred answer-form need. The unit teaches answer construction only; the underlying calculation unit remains mapped separately.",
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A96\",\"name\":\"Bereken-vraag beantwoorden\",\"kern\":\"Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.\",\"needs\":[],\"exam_codes\":[\"A2.1\",\"A1.7\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welke grootheid, periode en eenheid de vraag vraagt.\",\"Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.\",\"Vul de gegevens zichtbaar in met labels.\",\"Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.\",\"Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context.\"],\"pitfalls\":[\"Alleen een los getal opschrijven zonder controleerbare berekening.\",\"Eenheid, procentteken, indexnotatie of schaalfactor vergeten.\",\"Tussentijds afronden waardoor het eindantwoord afwijkt.\"],\"generator\":\"GEN_A96\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "e149f9882272f2fb4dee1261559a85d11b03cfc528b15265abd77ad777a610c2"
+    },
+    {
+      "lane": "ANS_LEG_UIT_DAT",
+      "unit_id": "A97",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A97",
+        "name": "Leg-uit-dat antwoord opbouwen",
+        "kern": "Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Neem de conclusie uit de vraag over als eindpunt van je antwoord.",
+          "Bepaal welke economische oorzaak of gegeven in de context het startpunt is.",
+          "Schrijf de eerste causale schakel met het juiste begrip of mechanisme.",
+          "Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.",
+          "Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering."
+        ],
+        "pitfalls": [
+          "Een mening geven in plaats van de gevraagde conclusie onderbouwen.",
+          "Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.",
+          "De conclusie veranderen terwijl die in de vraag al gegeven is."
+        ],
+        "generator": "GEN_A97",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 accepted a separate uitleg_dat lane because the conclusion is already given and the student must build toward it.",
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A97\",\"name\":\"Leg-uit-dat antwoord opbouwen\",\"kern\":\"Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Neem de conclusie uit de vraag over als eindpunt van je antwoord.\",\"Bepaal welke economische oorzaak of gegeven in de context het startpunt is.\",\"Schrijf de eerste causale schakel met het juiste begrip of mechanisme.\",\"Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.\",\"Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering.\"],\"pitfalls\":[\"Een mening geven in plaats van de gevraagde conclusie onderbouwen.\",\"Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.\",\"De conclusie veranderen terwijl die in de vraag al gegeven is.\"],\"generator\":\"GEN_A97\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "c73d4928dc4c0c28dca47c73ca8114a49e43d4a0334d2065d3b608e14ff2bde4"
+    },
+    {
+      "lane": "ANS_LEG_UIT_OF",
+      "unit_id": "A98",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A98",
+        "name": "Leg-uit-of antwoord opbouwen",
+        "kern": "Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.",
+        "needs": [],
+        "exam_codes": [
+          "A1.7",
+          "A4.2"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.",
+          "Zet die richting expliciet in de eerste zin.",
+          "Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.",
+          "Werk de causale schakels uit die laten zien waarom deze richting volgt.",
+          "Controleer dat je antwoord niet beide kanten open laat."
+        ],
+        "pitfalls": [
+          "Beginnen met uitleg zonder de richting te kiezen.",
+          "Alleen stijgt/daalt noemen zonder economische oorzaak.",
+          "De richting laten afhangen van een niet-genoemde aanname."
+        ],
+        "generator": "GEN_A98",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 accepted a separate uitleg_of lane because the student must first determine direction before explaining.",
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A98\",\"name\":\"Leg-uit-of antwoord opbouwen\",\"kern\":\"Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.\",\"Zet die richting expliciet in de eerste zin.\",\"Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.\",\"Werk de causale schakels uit die laten zien waarom deze richting volgt.\",\"Controleer dat je antwoord niet beide kanten open laat.\"],\"pitfalls\":[\"Beginnen met uitleg zonder de richting te kiezen.\",\"Alleen stijgt/daalt noemen zonder economische oorzaak.\",\"De richting laten afhangen van een niet-genoemde aanname.\"],\"generator\":\"GEN_A98\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "93b42b1c25392bfdedeb8bc8acc1b6e4ae4e525f779a8417362e96acde01c5ba"
+    },
+    {
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "unit_id": "A99",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A99",
+        "name": "Leg uit met voorbeeld beantwoorden",
+        "kern": "Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.",
+        "needs": [],
+        "exam_codes": [
+          "A1.3",
+          "A1.9"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.",
+          "Kies een concreet voorbeeld dat binnen de context past.",
+          "Benoem welk kenmerk van het voorbeeld relevant is.",
+          "Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.",
+          "Koppel het voorbeeld terug aan de vraag of context."
+        ],
+        "pitfalls": [
+          "Een voorbeeld noemen zonder uitleg waarom het past.",
+          "Een voorbeeld kiezen dat buiten de economische context valt.",
+          "Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt."
+        ],
+        "generator": "GEN_A99",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 kept leg uit met voorbeeld separate because the example-fit requirement is not the same as a broad causal explanation lane.",
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A99\",\"name\":\"Leg uit met voorbeeld beantwoorden\",\"kern\":\"Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.\",\"needs\":[],\"exam_codes\":[\"A1.3\",\"A1.9\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.\",\"Kies een concreet voorbeeld dat binnen de context past.\",\"Benoem welk kenmerk van het voorbeeld relevant is.\",\"Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.\",\"Koppel het voorbeeld terug aan de vraag of context.\"],\"pitfalls\":[\"Een voorbeeld noemen zonder uitleg waarom het past.\",\"Een voorbeeld kiezen dat buiten de economische context valt.\",\"Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt.\"],\"generator\":\"GEN_A99\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "ef13d39e66877d363ccf4cff12b5d734cf2618324ae9c308adadc930d0f2151a"
+    },
+    {
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "unit_id": "A80",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A80",
+        "name": "Noem of geef-aan antwoord geven",
+        "kern": "Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal"
+        ],
+        "terms": [],
+        "procedure": [
+          "Onderstreep wat precies genoemd of aangewezen moet worden.",
+          "Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.",
+          "Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.",
+          "Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.",
+          "Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt."
+        ],
+        "pitfalls": [
+          "Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.",
+          "Een uitleg schrijven terwijl alleen identificatie gevraagd is.",
+          "Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken."
+        ],
+        "generator": "GEN_A80",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 approved a combined noem/geef-aan lane, with a condition that future evidence may split geef aan from noem.",
+      "split_if_needed_condition": "Split noem and geef-aan into separate lanes if reviewed evidence shows different answer-construction behavior.",
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A80\",\"name\":\"Noem of geef-aan antwoord geven\",\"kern\":\"Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.\",\"needs\":[],\"exam_codes\":[\"A1.1\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Onderstreep wat precies genoemd of aangewezen moet worden.\",\"Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.\",\"Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.\",\"Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.\",\"Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt.\"],\"pitfalls\":[\"Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.\",\"Een uitleg schrijven terwijl alleen identificatie gevraagd is.\",\"Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken.\"],\"generator\":\"GEN_A80\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "37a29ed4feef84ce2cf27d17aa05de054a113727390f17001d84a3e9a43bc2fa"
+    },
+    {
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "unit_id": "A81",
+      "action": "unit-add",
+      "execution_authorized_by_packet": false,
+      "reviewed_spec": {
+        "id": "A81",
+        "name": "Bron gebruiken in een antwoord",
+        "kern": "Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.",
+        "needs": [],
+        "exam_codes": [
+          "A1.1",
+          "A1.5"
+        ],
+        "mastery_target": "apply",
+        "prior_learning": "new_this_year",
+        "aspects": [
+          "verbaal",
+          "grafisch"
+        ],
+        "terms": [],
+        "procedure": [
+          "Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.",
+          "Noteer de relevante bronobservatie met label, periode, eenheid of richting.",
+          "Zeg wat die observatie economisch betekent.",
+          "Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.",
+          "Controleer dat het antwoord niet stopt bij alleen citeren of aflezen."
+        ],
+        "pitfalls": [
+          "Een bron noemen zonder te gebruiken in de redenering.",
+          "Een getal of figuur aflezen zonder eenheid, periode of label.",
+          "Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt."
+        ],
+        "generator": "GEN_A81",
+        "zero_needs_status": "true_zero",
+        "zero_needs_review": {
+          "reviewed_on": "2026-05-29",
+          "reviewer": "GATE-MTU-H4A planning review",
+          "rationale": "Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.",
+          "recommended_needs": [],
+          "severity": "low"
+        }
+      },
+      "h4a_planning_rationale": "H4 accepted bron only as a modifier. A81 teaches explicit source use, but any later target mapping must combine it with the underlying answer form and content units.",
+      "source_use_modifier_only": true,
+      "standalone_complete_answer_form": false,
+      "compatible_underlying_answer_forms": [
+        "ANS_BEREKEN",
+        "ANS_LEG_UIT_DAT",
+        "ANS_LEG_UIT_OF",
+        "ANS_LEG_UIT_MET_VOORBEELD",
+        "ANS_NOEM_GEEF_AAN",
+        "ANS_MOTIVEER_CLASSIFICATIE",
+        "ANS_GRAFISCH_ARCEER_TEKEN"
+      ],
+      "exact_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A81\",\"name\":\"Bron gebruiken in een antwoord\",\"kern\":\"Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.\",\"needs\":[],\"exam_codes\":[\"A1.1\",\"A1.5\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.\",\"Noteer de relevante bronobservatie met label, periode, eenheid of richting.\",\"Zeg wat die observatie economisch betekent.\",\"Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.\",\"Controleer dat het antwoord niet stopt bij alleen citeren of aflezen.\"],\"pitfalls\":[\"Een bron noemen zonder te gebruiken in de redenering.\",\"Een getal of figuur aflezen zonder eenheid, periode of label.\",\"Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt.\"],\"generator\":\"GEN_A81\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "command_spec_sha256": "b9527ffb0a470994f6bd003b84af32ad6d2bf8bea12e85a027f7ed748d8424fa"
+    }
+  ],
+  "exact_command_set": [
+    {
+      "execution_order": 1,
+      "unit_id": "A96",
+      "lane": "ANS_BEREKEN",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "e149f9882272f2fb4dee1261559a85d11b03cfc528b15265abd77ad777a610c2",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A96\",\"name\":\"Bereken-vraag beantwoorden\",\"kern\":\"Beantwoord een bereken-vraag controleerbaar door formule, invulling, tussenstappen, eindantwoord, eenheid of notatie en korte conclusie te tonen.\",\"needs\":[],\"exam_codes\":[\"A2.1\",\"A1.7\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"rekenen\",\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welke grootheid, periode en eenheid de vraag vraagt.\",\"Noteer de formule of rekenregel die past bij de onderliggende vaardigheid.\",\"Vul de gegevens zichtbaar in met labels.\",\"Werk de tussenstappen uit en rond pas af aan het einde of zoals de vraag vraagt.\",\"Geef het eindantwoord met eenheid of notatie en sluit af met een korte conclusie in de context.\"],\"pitfalls\":[\"Alleen een los getal opschrijven zonder controleerbare berekening.\",\"Eenheid, procentteken, indexnotatie of schaalfactor vergeten.\",\"Tussentijds afronden waardoor het eindantwoord afwijkt.\"],\"generator\":\"GEN_A96\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper combines with underlying calculation/content units in target mappings; no stable content prerequisite is encoded as needs.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    },
+    {
+      "execution_order": 2,
+      "unit_id": "A97",
+      "lane": "ANS_LEG_UIT_DAT",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "c73d4928dc4c0c28dca47c73ca8114a49e43d4a0334d2065d3b608e14ff2bde4",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A97\",\"name\":\"Leg-uit-dat antwoord opbouwen\",\"kern\":\"Bouw bij een gegeven conclusie een causaleketen op met voldoende schakels en keer expliciet terug naar de gevraagde conclusie.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Neem de conclusie uit de vraag over als eindpunt van je antwoord.\",\"Bepaal welke economische oorzaak of gegeven in de context het startpunt is.\",\"Schrijf de eerste causale schakel met het juiste begrip of mechanisme.\",\"Schrijf de tweede schakel of het verdere effect dat naar de gegeven conclusie leidt.\",\"Sluit af door de gegeven conclusie expliciet te koppelen aan je redenering.\"],\"pitfalls\":[\"Een mening geven in plaats van de gevraagde conclusie onderbouwen.\",\"Een tussenstap overslaan waardoor de causale keten niet controleerbaar is.\",\"De conclusie veranderen terwijl die in de vraag al gegeven is.\"],\"generator\":\"GEN_A97\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; content prerequisites remain in the underlying target mapping rather than in the answer-form needs list.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    },
+    {
+      "execution_order": 3,
+      "unit_id": "A98",
+      "lane": "ANS_LEG_UIT_OF",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "93b42b1c25392bfdedeb8bc8acc1b6e4ae4e525f779a8417362e96acde01c5ba",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A98\",\"name\":\"Leg-uit-of antwoord opbouwen\",\"kern\":\"Beantwoord een leg-uit-of vraag door eerst de richting of keuze te bepalen en daarna de redenering te geven die die richting verklaart.\",\"needs\":[],\"exam_codes\":[\"A1.7\",\"A4.2\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Bepaal eerst de richting, keuze of ja/nee-uitkomst die de vraag open laat.\",\"Zet die richting expliciet in de eerste zin.\",\"Gebruik het relevante economische mechanisme uit de onderliggende vaardigheid.\",\"Werk de causale schakels uit die laten zien waarom deze richting volgt.\",\"Controleer dat je antwoord niet beide kanten open laat.\"],\"pitfalls\":[\"Beginnen met uitleg zonder de richting te kiezen.\",\"Alleen stijgt/daalt noemen zonder economische oorzaak.\",\"De richting laten afhangen van een niet-genoemde aanname.\"],\"generator\":\"GEN_A98\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper; underlying content or graph units carry the substantive prerequisite route.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    },
+    {
+      "execution_order": 4,
+      "unit_id": "A99",
+      "lane": "ANS_LEG_UIT_MET_VOORBEELD",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "ef13d39e66877d363ccf4cff12b5d734cf2618324ae9c308adadc930d0f2151a",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A99\",\"name\":\"Leg uit met voorbeeld beantwoorden\",\"kern\":\"Geef een passend voorbeeld, leg uit waarom het voorbeeld bij het gevraagde begrip of mechanisme hoort, en verbind het voorbeeld met de context.\",\"needs\":[],\"exam_codes\":[\"A1.3\",\"A1.9\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Lees welk begrip, mechanisme of effect met een voorbeeld moet worden toegelicht.\",\"Kies een concreet voorbeeld dat binnen de context past.\",\"Benoem welk kenmerk van het voorbeeld relevant is.\",\"Leg uit waarom dat kenmerk bij het begrip of mechanisme hoort.\",\"Koppel het voorbeeld terug aan de vraag of context.\"],\"pitfalls\":[\"Een voorbeeld noemen zonder uitleg waarom het past.\",\"Een voorbeeld kiezen dat buiten de economische context valt.\",\"Alleen de definitie geven terwijl de vraag om een voorbeeld vraagt.\"],\"generator\":\"GEN_A99\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for example-answer structure; domain concepts remain separate prerequisites in target mappings.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    },
+    {
+      "execution_order": 5,
+      "unit_id": "A80",
+      "lane": "ANS_NOEM_GEEF_AAN",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "37a29ed4feef84ce2cf27d17aa05de054a113727390f17001d84a3e9a43bc2fa",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A80\",\"name\":\"Noem of geef-aan antwoord geven\",\"kern\":\"Geef bij noem/geef-aan vragen precies de gevraagde identificatie of lijst, zonder onnodige berekening of redenering.\",\"needs\":[],\"exam_codes\":[\"A1.1\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\"],\"terms\":[],\"procedure\":[\"Onderstreep wat precies genoemd of aangewezen moet worden.\",\"Bepaal hoeveel items of welk soort kenmerk de vraag vraagt.\",\"Geef alleen de gevraagde items, termen, actoren, brongegevens of richtingen.\",\"Gebruik dezelfde taal of labels als de vraag of bron wanneer dat controleerbaar is.\",\"Voeg geen extra redenering toe tenzij de vraag daar apart om vraagt.\"],\"pitfalls\":[\"Meer antwoorden geven dan gevraagd, waardoor een fout antwoord mee kan tellen.\",\"Een uitleg schrijven terwijl alleen identificatie gevraagd is.\",\"Een bronlabel of eenheid weglaten wanneer die nodig is om het item herkenbaar te maken.\"],\"generator\":\"GEN_A80\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form wrapper for concise identification; it combines with whichever content/source unit supplies the item.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    },
+    {
+      "execution_order": 6,
+      "unit_id": "A81",
+      "lane": "ANS_BRON_GEBRUIKEN",
+      "command_kind": "unit-add",
+      "dry_run_command": null,
+      "dry_run_limitation": "unit-add has no dry-run mode in the current CLI; H4B therefore uses simulated catalog validation and exact command review instead.",
+      "print_or_log_extracted_spec_before_execution": true,
+      "command_spec_sha256": "b9527ffb0a470994f6bd003b84af32ad6d2bf8bea12e85a027f7ed748d8424fa",
+      "execution_command": "node build-scripts/references/unit-add.js --spec '{\"id\":\"A81\",\"name\":\"Bron gebruiken in een antwoord\",\"kern\":\"Gebruik een brongegeven expliciet als bewijs of startpunt en maak daarna de onderliggende uitleg-, bereken-, classificatie- of grafische antwoordvorm af.\",\"needs\":[],\"exam_codes\":[\"A1.1\",\"A1.5\"],\"mastery_target\":\"apply\",\"prior_learning\":\"new_this_year\",\"aspects\":[\"verbaal\",\"grafisch\"],\"terms\":[],\"procedure\":[\"Lees welke bron, tabel, figuur of tekstregel de vraag aanwijst.\",\"Noteer de relevante bronobservatie met label, periode, eenheid of richting.\",\"Zeg wat die observatie economisch betekent.\",\"Verbind de bronobservatie met de onderliggende antwoordvorm, zoals uitleg, berekening, classificatie of grafiek.\",\"Controleer dat het antwoord niet stopt bij alleen citeren of aflezen.\"],\"pitfalls\":[\"Een bron noemen zonder te gebruiken in de redenering.\",\"Een getal of figuur aflezen zonder eenheid, periode of label.\",\"Brongebruik behandelen als volledig antwoord terwijl de vraag ook uitleg, berekening of conclusie vraagt.\"],\"generator\":\"GEN_A81\",\"zero_needs_status\":\"true_zero\",\"zero_needs_review\":{\"reviewed_on\":\"2026-05-29\",\"reviewer\":\"GATE-MTU-H4A planning review\",\"rationale\":\"Answer-form modifier for source use, not a standalone complete answer form; underlying answer-form and content units remain mapped separately.\",\"recommended_needs\":[],\"severity\":\"low\"}}'",
+      "execution_authorized_by_packet": false
+    }
+  ],
+  "held_lanes": [
+    {
+      "lane": "ANS_GRAFISCH_ARCEER_TEKEN",
+      "execution_command_present": false,
+      "status": "held_pending_stronger_evidence_or_separate_gate"
+    },
+    {
+      "lane": "ANS_MOTIVEER_CLASSIFICATIE",
+      "execution_command_present": false,
+      "status": "held_pending_stronger_evidence_or_separate_gate"
+    },
+    {
+      "lane": "ANS_ANALYSEER_BEOORDEEL",
+      "execution_command_present": false,
+      "status": "held_pending_stronger_evidence_or_separate_gate"
+    }
+  ],
+  "ex_answer_skill_overlay_boundary": {
+    "overlays_visible": [
+      "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION"
+    ],
+    "source_contract": "references/data/exam-ingestion/operation-answer-skill-contract.json",
+    "contract_status": "design_contract_pending_gate_review",
+    "candidate_storage_path": "references/data/exam-ingestion/answer-skill-candidates.json",
+    "candidate_storage_exists": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "q3_q15_hidden_inside_answer_form_mtu": false
+  },
+  "target_mapping_boundary": {
+    "current_question_type_mappings_are_planning_input_only": true,
+    "target_exercise_question_type_writes_authorized": false,
+    "target_exercise_answer_form_writes_authorized": false,
+    "future_packet_required_for_authored_reference_field_mutation": true
+  },
+  "bron_modifier_boundary": {
+    "unit_id": "A81",
+    "standalone_complete_answer_form": false,
+    "must_combine_with_underlying_answer_form": true,
+    "compatible_underlying_answer_forms": [
+      "ANS_BEREKEN",
+      "ANS_LEG_UIT_DAT",
+      "ANS_LEG_UIT_OF",
+      "ANS_LEG_UIT_MET_VOORBEELD",
+      "ANS_NOEM_GEEF_AAN",
+      "ANS_MOTIVEER_CLASSIFICATIE",
+      "ANS_GRAFISCH_ARCEER_TEKEN"
+    ],
+    "stored_boundary_fields": [
+      "kern",
+      "procedure",
+      "pitfalls",
+      "zero_needs_review"
+    ]
+  },
+  "generator_exposure_handling": {
+    "current_skilltree_generator_readiness": {
+      "source": "reports/json/skilltree-generator-readiness.json",
+      "status": "passed",
+      "student_facing_skilltree_use_authorized": false,
+      "generator_exposure_for_blocked_units_authorized": false,
+      "blocked_interactive_leak_count": 0
+    },
+    "planned_units": [
+      {
+        "unit_id": "A96",
+        "declared_generator": "GEN_A96",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      },
+      {
+        "unit_id": "A97",
+        "declared_generator": "GEN_A97",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      },
+      {
+        "unit_id": "A98",
+        "declared_generator": "GEN_A98",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      },
+      {
+        "unit_id": "A99",
+        "declared_generator": "GEN_A99",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      },
+      {
+        "unit_id": "A80",
+        "declared_generator": "GEN_A80",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      },
+      {
+        "unit_id": "A81",
+        "declared_generator": "GEN_A81",
+        "unit_live_now": false,
+        "generator_implemented_now": false,
+        "current_readiness_row_exists": false,
+        "exposure_status_now": "not_live_no_student_route",
+        "condition_before_student_facing_exposure": "After any later minting, either implement the declared generator or record generator-blocked/non-interactive status and prove no student-facing route exposes the unit."
+      }
+    ],
+    "later_execution_condition": "After the units are minted, rerun generator readiness and either implement GEN_A80/GEN_A81/GEN_A96-GEN_A99 or record them as generator-blocked/non-interactive before any student-facing route can expose them.",
+    "student_facing_exposure_authorized_now": false
+  },
+  "simulated_catalog_validation": {
+    "status": "passed",
+    "method": [
+      "validateSpec for each reviewed unit spec against the current live catalog",
+      "build-unit-index validate() on the simulated catalog with all six units appended",
+      "loadEindtermen exam-code check against references/external/syllabus-eindtermen.json"
+    ],
+    "spec_validation": [
+      {
+        "unit_id": "A96",
+        "validate_spec_errors": []
+      },
+      {
+        "unit_id": "A97",
+        "validate_spec_errors": []
+      },
+      {
+        "unit_id": "A98",
+        "validate_spec_errors": []
+      },
+      {
+        "unit_id": "A99",
+        "validate_spec_errors": []
+      },
+      {
+        "unit_id": "A80",
+        "validate_spec_errors": []
+      },
+      {
+        "unit_id": "A81",
+        "validate_spec_errors": []
+      }
+    ],
+    "catalog_validation_errors": [],
+    "exam_code_validation": {
+      "A1.1": true,
+      "A1.3": true,
+      "A1.5": true,
+      "A1.7": true,
+      "A1.9": true,
+      "A2.1": true,
+      "A4.2": true
+    },
+    "simulated_unit_count_after_additions": 256,
+    "protected_reference_data_written": false
+  },
+  "expected_later_execution_diff": {
+    "protected_reference_files_that_would_change_only_after_later_authorization": [
+      "references/machine/micro-teaching-units.md",
+      "references/machine/micro-teaching-units.json"
+    ],
+    "generated_reports_allowed_only_after_authorized_source_mutation": true,
+    "target_exercise_fields_not_part_of_later_h4b_execution": [
+      "question_type",
+      "answer_form"
+    ],
+    "candidate_storage_not_part_of_later_h4b_execution": "references/data/exam-ingestion/answer-skill-candidates.json"
+  },
+  "rollback_requirements_for_later_execution": [
+    "Capture git status and current commit before execution.",
+    "Run exact commands only after a later gate authorizes execution.",
+    "If any command fails before commit, revert the execution sprint changes as a whole; do not hand-edit references/machine.",
+    "If execution is committed and later rejected, route a reviewed revert or deprecation sprint; do not use silent hand edits.",
+    "Never create answer-skill candidate storage, target-exercise fields, generated projections, or lesson output as rollback side effects."
+  ],
+  "validation_stack_for_later_execution": [
+    "node build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+    "node build-scripts/references/build-unit-index.js",
+    "node build-scripts/references/validate-core-schemas.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd test -- --runInBand",
+    "git diff --check"
+  ],
+  "recommended_next_gate": "GATE-MTU-H4B-answer-form-cli-execution",
+  "recommended_next_action": "Commit and push this H4B packet and cited evidence, then run GATE-MTU-H4B before any answer-form unit minting or downstream exposure."
+}
