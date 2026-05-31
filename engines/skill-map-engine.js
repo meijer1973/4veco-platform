@@ -196,7 +196,7 @@
         };
     }
 
-    function buildPrimaryAction(surface, recommendedId, visibleSkills) {
+    function buildPrimaryAction(surface, recommendedId, visibleSkills, request) {
         var skillId = recommendedId || (visibleSkills[0] && visibleSkills[0].id) || null;
         var state = null;
         for (var i = 0; i < visibleSkills.length; i++) {
@@ -206,7 +206,10 @@
             }
         }
         return {
-            label: state === 'in_progress' ? 'Ga verder' : 'Start oefenen',
+            label: request && request.practiceLabel
+                ? request.practiceLabel
+                : (state === 'in_progress' ? 'Ga verder' : 'Start oefenen'),
+            href: request && request.practiceHref ? request.practiceHref : null,
             surface: surface || 'skill-map',
             skillId: skillId
         };
@@ -262,7 +265,7 @@
             var row = sorted[s];
             var routeRole = targetSet[row.id] ? 'target' : (candidateSet[row.id] ? 'prerequisite' : 'candidate');
             var vm = toVisibleSkill(row, stars, recommendedId, routeRole);
-            if (mode === 'compact' && vm.state === 'not_yet_useful') {
+            if (mode === 'compact' && vm.state === 'not_yet_useful' && routeRole === 'candidate') {
                 collapsed.notYetUseful++;
                 continue;
             }
@@ -295,7 +298,10 @@
             mode: mode,
             aspectFilter: aspectFilter,
             surface: request.surface || 'skill-map',
-            primaryAction: buildPrimaryAction(request.surface, recommendedId, visible),
+            title: request.title || null,
+            paragraphTarget: request.paragraphTarget || null,
+            routePurpose: request.routePurpose || null,
+            primaryAction: buildPrimaryAction(request.surface, recommendedId, visible, request),
             recommendedSkillId: recommendedId,
             visibleSkills: visible,
             collapsedCounts: collapsed,
@@ -322,6 +328,11 @@
             targetSkills: Array.isArray(options.targetSkills) ? options.targetSkills.slice() : [],
             maxVisibleAvailable: options.maxVisibleAvailable || 4,
             allowFullView: options.allowFullView === true,
+            title: options.title || null,
+            paragraphTarget: options.paragraphTarget || null,
+            routePurpose: options.routePurpose || null,
+            practiceHref: options.practiceHref || null,
+            practiceLabel: options.practiceLabel || null,
             boundaryFlags: copyFlags()
         };
     }

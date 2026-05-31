@@ -74,9 +74,10 @@
 
   function renderSkillMapRoute() {
     if (!window.SkillMapRouteUI || typeof engine.getSkillMapRequest !== "function") return "";
+    var routeOptions = window.SkillMapRouteUI.getRouteOptions("graphical", { mode: "compact", maxVisibleAvailable: 3 });
     return window.SkillMapRouteUI.renderRequest(
-      engine.getSkillMapRequest({ mode: "compact", maxVisibleAvailable: 3 }),
-      { title: "Oefenroute Grafieken" }
+      engine.getSkillMapRequest(routeOptions),
+      routeOptions
     );
   }
 

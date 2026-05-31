@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-30T22:47:39.766Z
+Generated: 2026-05-31T08:12:09.202Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2168
+Files indexed: 2196
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -498,7 +498,7 @@ Count: 42
 
 ## validators
 
-Count: 125
+Count: 127
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -611,6 +611,8 @@ Count: 125
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
+- reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-mobile.png
 - reports/sprints/EX-0-validation-log.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
@@ -628,7 +630,7 @@ Count: 125
 
 ## references
 
-Count: 357
+Count: 359
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -704,6 +706,8 @@ Count: 357
 - references/data/sprints/CP.6f-113-part-a-recheck.json
 - references/data/sprints/CP.6f.plan.json
 - references/data/sprints/CP.6f.result.json
+- references/data/sprints/ENGINE-OP-1.plan.json
+- references/data/sprints/ENGINE-OP-1.result.json
 - references/data/sprints/EX-0.plan.json
 - references/data/sprints/EX-0.result.json
 - references/data/sprints/EX-1.plan.json
@@ -990,7 +994,7 @@ Count: 357
 
 ## reports
 
-Count: 1088
+Count: 1113
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1635,6 +1639,31 @@ Count: 1088
 - reports/sprints/CP.6f-planning-review.md
 - reports/sprints/CP.6f-result.md
 - reports/sprints/CP.6f-validation-log.md
+- reports/sprints/ENGINE-OP-1-baseline.md
+- reports/sprints/ENGINE-OP-1-diff-summary.md
+- reports/sprints/ENGINE-OP-1-operational-audit.md
+- reports/sprints/ENGINE-OP-1-plan.md
+- reports/sprints/ENGINE-OP-1-planning-review.md
+- reports/sprints/ENGINE-OP-1-result.md
+- reports/sprints/ENGINE-OP-1-screenshot-manifest.md
+- reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/graph-1-1-2-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/graph-1-1-3-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/graph-1-1-3-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-1-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-1-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-2-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-2-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-3-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/landing-1-1-3-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/math-1-1-2-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/math-1-1-2-mobile.png
+- reports/sprints/ENGINE-OP-1-screenshots/math-1-1-3-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/reasoning-1-1-1-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/reasoning-1-1-2-desktop.png
+- reports/sprints/ENGINE-OP-1-screenshots/reasoning-1-1-3-desktop.png
+- reports/sprints/ENGINE-OP-1-student-path-trace.md
 - reports/sprints/EX-0-baseline.md
 - reports/sprints/EX-0-diff-summary.md
 - reports/sprints/EX-0-lead-review-assignment.md
@@ -2101,7 +2130,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 265
+Count: 266
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2225,6 +2254,7 @@ Count: 265
 - docs/roadmaps/outdated/reference-team-roadmap-v3.17-gate-mtu-h4b-pass-with-conditions.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

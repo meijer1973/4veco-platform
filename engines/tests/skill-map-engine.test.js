@@ -16,6 +16,14 @@ function makeSkillMap(stars, data) {
     });
 }
 
+function makeRouteSkillMap(stars, data) {
+    return new SkillMapEngine({
+        elements: { ...elements, SKILLS: elements.ROUTE_SKILLS },
+        data: data || { parNr: '1.1.1', activeSkills: null },
+        stars: stars || {}
+    });
+}
+
 function graphicalFixture() {
     return {
         schema_version: 1,
@@ -50,6 +58,23 @@ function graphicalFixture() {
 }
 
 describe('SkillMapEngine aspect routes', () => {
+    test('route display catalog can show non-interactive paragraph concept units', () => {
+        const view = makeRouteSkillMap().buildView({
+            surface: 'reasoning-game',
+            mode: 'compact',
+            aspectFilter: 'reasoning',
+            skillScope: ['B01', 'B02'],
+            targetSkills: ['B02'],
+            paragraphTarget: 'Schaarste en alternatieve kosten herkennen'
+        });
+
+        expect(elements.SKILLS.map(skill => skill.id)).not.toContain('B01');
+        expect(elements.ROUTE_SKILLS.map(skill => skill.id)).toEqual(expect.arrayContaining(['B01', 'B02']));
+        expect(skillIds(view)).toEqual(expect.arrayContaining(['B01', 'B02']));
+        expect(view.paragraphTarget).toBe('Schaarste en alternatieve kosten herkennen');
+        expect(view.visibleSkills.find(skill => skill.id === 'B02').routeRole).toBe('target');
+    });
+
     test('filters calculation route by MTU rekenen aspect and keeps mixed support visible', () => {
         const view = makeSkillMap().buildView({
             surface: 'calculation-game',

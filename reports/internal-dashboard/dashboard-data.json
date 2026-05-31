@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T22:47:39.699Z",
+  "generatedAt": "2026-05-31T08:12:15.844Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,27 +160,20 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.21-engine-op1-operational-proof-audit Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE e...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.22-skillmap-op1-student-route Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
           "sprints": [
             {
-              "sprint": "SKILLMAP-OP-1",
-              "name": "Student-Visible Skill-Map Route",
+              "sprint": "GRAPH-UX-2",
+              "name": "Graph Game + Checkpoint UI Integration",
               "completed": "no",
-              "currentState": "**ACTIVE NEXT SPRINT AFTER ENGINE-OP-1 / REQUIRED BEFORE ENGINE SCALE OR TARGET-EQUIVALENT CHECKPOINT RELIANCE.** ENGINE-OP-1 proved that the route layer is now the integration bottleneck: some route panels are useful, but `1.1.2` reasoning/graph routes are empty, `1.1.1` reasoning is mis-scoped toward unrelated calculation/graph skills, and math pages are not visibly unified with the shared route panel. Convert the shared skill-map runtime contract into a visible student route. For each practice mode, show only the relevant skill subset: reasoning, calculation, graph/table, or checkpoint. Show recommended next skill, current paragraph target, route progress, and practice link without exposing internal MTU codes. Validate desktop/mobile, light/dark, keyboard/focus order, and student-experience clarity.",
+              "currentState": "**ACTIVE NEXT OPERATIONAL SPRINT AFTER SKILLMAP-OP-1 / USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Use MTU/operation-chain evidence where available. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use coherent UI language. Preserve blocks on target-equivalent completion claims, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, and student/product use.",
               "exitGate": ""
             },
             {
               "sprint": "LESSON-SCALE-1",
               "name": "Lesson Companion Pre-Scale Gates Tracking",
               "completed": "no",
-              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, `SPEC-ET-1`, `EX-LESSON-1`, and platform `ENGINE-OP-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support; platform `GAME-UX-3A` supplied the shared task-shell runtime foundation; platform `ENGINE-OP-1` audited live student routes and found route panels empty/mis-scoped, task-shell use absent from generated output, and no target-equivalent checkpoints for `1.1.2`/`1.1.3`. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks; `EX-LESSON-1` made exam ingestion operational as a paragraph-plan, shared-task-shell, route, exit-ticket, and answer-model trace. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4C executed the bounded answer-form unit additions and kept generator-blocked/non-interactive exposure guardrails. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "GRAPH-UX-2",
-              "name": "Graph Game + Checkpoint UI Integration",
-              "completed": "no",
-              "currentState": "**USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Use MTU/operation-chain evidence where available. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use coherent UI language.",
+              "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, `SPEC-ET-1`, `EX-LESSON-1`, and platform `ENGINE-OP-1` and `SKILLMAP-OP-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support; platform `GAME-UX-3A` supplied the shared task-shell runtime foundation; platform `ENGINE-OP-1` audited live student routes and found route panels empty/mis-scoped, task-shell use absent from generated output, and no target-equivalent checkpoints for `1.1.2`/`1.1.3`; platform `SKILLMAP-OP-1` made the route layer visible and scoped in live Book 1 output without target-equivalent, diagnostic, mastery, sequencing, summative, PV, or product-use authority. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks; `EX-LESSON-1` made exam ingestion operational as a paragraph-plan, shared-task-shell, route, exit-ticket, and answer-model trace. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4C executed the bounded answer-form unit additions and kept generator-blocked/non-interactive exposure guardrails. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -271,21 +264,28 @@
               "sprint": "Product Gate",
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
-              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output and showed the route layer and task-shell integrations are not yet coherent product proof. Broad lesson-companion scaling remains blocked until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+              "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; and SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority. Broad lesson-companion scaling remains blocked until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SKILLMAP-OP-1",
+              "name": "Student-Visible Skill-Map Route",
+              "completed": "yes",
+              "currentState": "Completed as a live route-visibility sprint. Added a route-display catalog so conceptual MTUs can appear in student routes without becoming runnable skill-tree exercises; added per-surface `skillMapRoutes` for Book 1 `1.1.1`, `1.1.2`, and `1.1.3`; rendered shared route panels in reasoning, graph/table, procedure support, and math/calculation surfaces; regenerated controlled Book 1 automated output through platform deploy only; and captured desktop/mobile screenshot proof. The route panels now show paragraph target, recommended focus, local progress, and practice action without visible MTU codes. No target-exercise fields, candidate storage, protected references, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use was authorized. Top operational next action is `GRAPH-UX-2`.",
               "exitGate": ""
             },
             {
               "sprint": "ENGINE-OP-1",
               "name": "Four-Engine Operational Proof Audit",
               "completed": "yes",
-              "currentState": "Completed as a screenshot-backed operational audit of the live generated routes for `1.1.1`, `1.1.2`, and `1.1.3`. Produced student-path traces, screenshots, screenshot manifest, and operational findings without generated lesson output, protected reference mutation, target-exercise field writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Audit findings: `1.1.3` graph practice is the strongest current operational route and gives neutral source/value/calculation feedback; `1.1.2` math practice is restored and scoped; `1.1.1` check remains a local short check only; generated output does not yet use the GAME-UX-3A shared task shell; `1.1.2` and `1.1.3` have no target-equivalent checkpoint route; and shared skill-map route panels are empty or mis-scoped in several places. Top operational next action is `SKILLMAP-OP-1`.",
+              "currentState": "Completed as a screenshot-backed operational audit of the live generated routes for `1.1.1`, `1.1.2`, and `1.1.3`. Produced student-path traces, screenshots, screenshot manifest, and operational findings without generated lesson output, protected reference mutation, target-exercise field writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Audit findings: `1.1.3` graph practice is the strongest current operational route and gives neutral source/value/calculation feedback; `1.1.2` math practice is restored and scoped; `1.1.1` check remains a local short check only; generated output does not yet use the GAME-UX-3A shared task shell; `1.1.2` and `1.1.3` have no target-equivalent checkpoint route; and shared skill-map route panels were empty or mis-scoped before SKILLMAP-OP-1. SKILLMAP-OP-1 has since closed route-visibility proof; top operational next action is `GRAPH-UX-2`.",
               "exitGate": ""
             },
             {
               "sprint": "GAME-UX-3A",
               "name": "Shared Task-Type UX Foundation",
               "completed": "yes",
-              "currentState": "Completed as a runtime-foundation sprint with no generated lesson output, protected reference mutation, target-exercise writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Added `task-shell-engine`, `task-shell-ui`, and `task-shell.css`; wired exit-ticket shells and deploy copy support; added focused tests for the shared task families and exit-ticket shell inclusion. Supported task families now include numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, graph-construction substitute, and structured reasoning. The shell carries neutral feedback and retry/self-check states while preserving no mastery, diagnostic, sequencing, summative, AI, PV, or product-use claims. ENGINE-OP-1 has since proved that generated output does not yet use the shell; top operational next action is `SKILLMAP-OP-1`.",
+              "currentState": "Completed as a runtime-foundation sprint with no generated lesson output, protected reference mutation, target-exercise writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Added `task-shell-engine`, `task-shell-ui`, and `task-shell.css`; wired exit-ticket shells and deploy copy support; added focused tests for the shared task families and exit-ticket shell inclusion. Supported task families now include numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, graph-construction substitute, and structured reasoning. The shell carries neutral feedback and retry/self-check states while preserving no mastery, diagnostic, sequencing, summative, AI, PV, or product-use claims. ENGINE-OP-1 proved generated output did not yet use the shell; SKILLMAP-OP-1 has since closed route visibility; top operational next action is `GRAPH-UX-2`.",
               "exitGate": ""
             },
             {
@@ -299,7 +299,7 @@
               "sprint": "MTU-H4C",
               "name": "Answer-Form Bounded CLI Execution",
               "completed": "yes",
-              "currentState": "Completed as the bounded execution sprint authorized by GATE-MTU-H4B. Added `A96`, `A97`, `A98`, `A99`, `A80`, and `A81` through `unit-add.js` only; rebuilt generator readiness; kept missing generators generator-blocked/non-interactive; left `A71` held and `A100` invalid; kept graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation held; kept q3/q15 EX overlays visible with no candidate storage or writes; wrote no target-exercise `question_type` or `answer_form` fields; produced no lesson output and authorized no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use. EX-LESSON-1, GAME-UX-3A, and ENGINE-OP-1 have since closed; top operational next action is `SKILLMAP-OP-1`.",
+              "currentState": "Completed as the bounded execution sprint authorized by GATE-MTU-H4B. Added `A96`, `A97`, `A98`, `A99`, `A80`, and `A81` through `unit-add.js` only; rebuilt generator readiness; kept missing generators generator-blocked/non-interactive; left `A71` held and `A100` invalid; kept graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation held; kept q3/q15 EX overlays visible with no candidate storage or writes; wrote no target-exercise `question_type` or `answer_form` fields; produced no lesson output and authorized no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use. EX-LESSON-1, GAME-UX-3A, ENGINE-OP-1, and SKILLMAP-OP-1 have since closed; top operational next action is `GRAPH-UX-2`.",
               "exitGate": ""
             },
             {
@@ -1203,10 +1203,10 @@
       ],
       "sprints": [
         {
-          "sprint": "SKILLMAP-OP-1",
-          "name": "Student-Visible Skill-Map Route",
+          "sprint": "GRAPH-UX-2",
+          "name": "Graph Game + Checkpoint UI Integration",
           "completed": "no",
-          "currentState": "**ACTIVE NEXT SPRINT AFTER ENGINE-OP-1 / REQUIRED BEFORE ENGINE SCALE OR TARGET-EQUIVALENT CHECKPOINT RELIANCE.** ENGINE-OP-1 proved that the route layer is now the integration bottleneck: some route panels are useful, but `1.1.2` reasoning/graph routes are empty, `1.1.1` reasoning is mis-scoped toward unrelated calculation/graph skills, and math pages are not visibly unified with the shared route panel. Convert the shared skill-map runtime contract into a visible student route. For each practice mode, show only the relevant skill subset: reasoning, calculation, graph/table, or checkpoint. Show recommended next skill, current paragraph target, route progress, and practice link without exposing internal MTU codes. Validate desktop/mobile, light/dark, keyboard/focus order, and student-experience clarity.",
+          "currentState": "**ACTIVE NEXT OPERATIONAL SPRINT AFTER SKILLMAP-OP-1 / USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Use MTU/operation-chain evidence where available. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use coherent UI language. Preserve blocks on target-equivalent completion claims, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, and student/product use.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1214,15 +1214,7 @@
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
-          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, `SPEC-ET-1`, `EX-LESSON-1`, and platform `ENGINE-OP-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support; platform `GAME-UX-3A` supplied the shared task-shell runtime foundation; platform `ENGINE-OP-1` audited live student routes and found route panels empty/mis-scoped, task-shell use absent from generated output, and no target-equivalent checkpoints for `1.1.2`/`1.1.3`. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks; `EX-LESSON-1` made exam ingestion operational as a paragraph-plan, shared-task-shell, route, exit-ticket, and answer-model trace. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4C executed the bounded answer-form unit additions and kept generator-blocked/non-interactive exposure guardrails. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
-          "sprint": "GRAPH-UX-2",
-          "name": "Graph Game + Checkpoint UI Integration",
-          "completed": "no",
-          "currentState": "**USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Use MTU/operation-chain evidence where available. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use coherent UI language.",
+          "currentState": "**TRACKING DEPENDENCY, NOT A REFERENCE EXECUTION SPRINT.** Lesson L1.7A closed PASS WITH FLAGS and rejected broad companion scaling. Closed lesson prerequisites now include `L1.7B-C`, `L1.7B-R`, `GATE-L1.7B`, `L1.7C-0`, `L1.7C`, `L1.7D`, `L2.0`, `L1.7C-MATH`, `L1.7B-MAP`, `L1.7B-P23`, `SPEC-ET-1`, `EX-LESSON-1`, and platform `ENGINE-OP-1` and `SKILLMAP-OP-1`. Platform `GAME-UX-1` supplied shared skill-map runtime support; platform `GAME-UX-2` supplied source-controlled `1.1.1` checkpoint support; platform `GAME-UX-3A` supplied the shared task-shell runtime foundation; platform `ENGINE-OP-1` audited live student routes and found route panels empty/mis-scoped, task-shell use absent from generated output, and no target-equivalent checkpoints for `1.1.2`/`1.1.3`; platform `SKILLMAP-OP-1` made the route layer visible and scoped in live Book 1 output without target-equivalent, diagnostic, mastery, sequencing, summative, PV, or product-use authority. `L1.7C-MATH` restored scoped skill-tree math as primary `Rekenen`; `L1.7B-MAP` fixed checkpoint metadata and kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted the stop/handoff because choice-only checks cannot honestly cover `1.1.2` calculation/index or `1.1.3` graph/table operation chains; `SPEC-ET-1` corrected the stable specs so exit tickets are target-equivalent proof tasks, not readiness-to-try checks; `EX-LESSON-1` made exam ingestion operational as a paragraph-plan, shared-task-shell, route, exit-ticket, and answer-model trace. SYNC-4 makes the shared task-type UI part of the product end-state and adds the operational engine proof track. MTU-H4C executed the bounded answer-form unit additions and kept generator-blocked/non-interactive exposure guardrails. Reference/product planning must not treat the lesson companion pipeline as scale-approved until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, minimal curriculum-versioning readiness, and Scale Gate 1 resolve or are explicitly waived while preserving blocks on diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, and PV machine promotion.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1326,7 +1318,15 @@
           "sprint": "Product Gate",
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
-          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output and showed the route layer and task-shell integrations are not yet coherent product proof. Broad lesson-companion scaling remains blocked until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; and SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority. Broad lesson-companion scaling remains blocked until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "SKILLMAP-OP-1",
+          "name": "Student-Visible Skill-Map Route",
+          "completed": "yes",
+          "currentState": "Completed as a live route-visibility sprint. Added a route-display catalog so conceptual MTUs can appear in student routes without becoming runnable skill-tree exercises; added per-surface `skillMapRoutes` for Book 1 `1.1.1`, `1.1.2`, and `1.1.3`; rendered shared route panels in reasoning, graph/table, procedure support, and math/calculation surfaces; regenerated controlled Book 1 automated output through platform deploy only; and captured desktop/mobile screenshot proof. The route panels now show paragraph target, recommended focus, local progress, and practice action without visible MTU codes. No target-exercise fields, candidate storage, protected references, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use was authorized. Top operational next action is `GRAPH-UX-2`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1334,7 +1334,7 @@
           "sprint": "ENGINE-OP-1",
           "name": "Four-Engine Operational Proof Audit",
           "completed": "yes",
-          "currentState": "Completed as a screenshot-backed operational audit of the live generated routes for `1.1.1`, `1.1.2`, and `1.1.3`. Produced student-path traces, screenshots, screenshot manifest, and operational findings without generated lesson output, protected reference mutation, target-exercise field writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Audit findings: `1.1.3` graph practice is the strongest current operational route and gives neutral source/value/calculation feedback; `1.1.2` math practice is restored and scoped; `1.1.1` check remains a local short check only; generated output does not yet use the GAME-UX-3A shared task shell; `1.1.2` and `1.1.3` have no target-equivalent checkpoint route; and shared skill-map route panels are empty or mis-scoped in several places. Top operational next action is `SKILLMAP-OP-1`.",
+          "currentState": "Completed as a screenshot-backed operational audit of the live generated routes for `1.1.1`, `1.1.2`, and `1.1.3`. Produced student-path traces, screenshots, screenshot manifest, and operational findings without generated lesson output, protected reference mutation, target-exercise field writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Audit findings: `1.1.3` graph practice is the strongest current operational route and gives neutral source/value/calculation feedback; `1.1.2` math practice is restored and scoped; `1.1.1` check remains a local short check only; generated output does not yet use the GAME-UX-3A shared task shell; `1.1.2` and `1.1.3` have no target-equivalent checkpoint route; and shared skill-map route panels were empty or mis-scoped before SKILLMAP-OP-1. SKILLMAP-OP-1 has since closed route-visibility proof; top operational next action is `GRAPH-UX-2`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1342,7 +1342,7 @@
           "sprint": "GAME-UX-3A",
           "name": "Shared Task-Type UX Foundation",
           "completed": "yes",
-          "currentState": "Completed as a runtime-foundation sprint with no generated lesson output, protected reference mutation, target-exercise writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Added `task-shell-engine`, `task-shell-ui`, and `task-shell.css`; wired exit-ticket shells and deploy copy support; added focused tests for the shared task families and exit-ticket shell inclusion. Supported task families now include numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, graph-construction substitute, and structured reasoning. The shell carries neutral feedback and retry/self-check states while preserving no mastery, diagnostic, sequencing, summative, AI, PV, or product-use claims. ENGINE-OP-1 has since proved that generated output does not yet use the shell; top operational next action is `SKILLMAP-OP-1`.",
+          "currentState": "Completed as a runtime-foundation sprint with no generated lesson output, protected reference mutation, target-exercise writes, candidate storage, projection refresh, Scale Gate 1, or student/product use. Added `task-shell-engine`, `task-shell-ui`, and `task-shell.css`; wired exit-ticket shells and deploy copy support; added focused tests for the shared task families and exit-ticket shell inclusion. Supported task families now include numeric input, calculation/work capture, final-answer entry, unit/notation field, short constructed response, table-value selection, graph reading, point placement, graph-construction substitute, and structured reasoning. The shell carries neutral feedback and retry/self-check states while preserving no mastery, diagnostic, sequencing, summative, AI, PV, or product-use claims. ENGINE-OP-1 proved generated output did not yet use the shell; SKILLMAP-OP-1 has since closed route visibility; top operational next action is `GRAPH-UX-2`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1358,7 +1358,7 @@
           "sprint": "MTU-H4C",
           "name": "Answer-Form Bounded CLI Execution",
           "completed": "yes",
-          "currentState": "Completed as the bounded execution sprint authorized by GATE-MTU-H4B. Added `A96`, `A97`, `A98`, `A99`, `A80`, and `A81` through `unit-add.js` only; rebuilt generator readiness; kept missing generators generator-blocked/non-interactive; left `A71` held and `A100` invalid; kept graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation held; kept q3/q15 EX overlays visible with no candidate storage or writes; wrote no target-exercise `question_type` or `answer_form` fields; produced no lesson output and authorized no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use. EX-LESSON-1, GAME-UX-3A, and ENGINE-OP-1 have since closed; top operational next action is `SKILLMAP-OP-1`.",
+          "currentState": "Completed as the bounded execution sprint authorized by GATE-MTU-H4B. Added `A96`, `A97`, `A98`, `A99`, `A80`, and `A81` through `unit-add.js` only; rebuilt generator readiness; kept missing generators generator-blocked/non-interactive; left `A71` held and `A100` invalid; kept graph/draw/shade, Type 4 motiveer/classificatie, and analysis/evaluation held; kept q3/q15 EX overlays visible with no candidate storage or writes; wrote no target-exercise `question_type` or `answer_form` fields; produced no lesson output and authorized no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use. EX-LESSON-1, GAME-UX-3A, ENGINE-OP-1, and SKILLMAP-OP-1 have since closed; top operational next action is `GRAPH-UX-2`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2387,8 +2387,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 132,
-      "openCount": 16
+      "completedCount": 133,
+      "openCount": 15
     },
     {
       "id": "lessen",
@@ -2407,10 +2407,17 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "GRAPH-UX-2",
+              "name": "Graph Game + Checkpoint UI Integration",
+              "completed": "no",
+              "currentState": "**ACTIVE NEXT OPERATIONAL SPRINT AFTER SKILLMAP-OP-1 / USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use a coherent UI language. Preserve blocks on target-equivalent completion claims, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, and student/product use.",
+              "exitGate": ""
+            },
+            {
               "sprint": "SKILLMAP-OP-1",
               "name": "Student-Visible Skill-Map Route",
-              "completed": "no",
-              "currentState": "**ACTIVE NEXT SPRINT AFTER ENGINE-OP-1 / REQUIRED BEFORE ENGINE SCALE OR TARGET-EQUIVALENT CHECKPOINT RELIANCE.** ENGINE-OP-1 proved that the route layer is now the integration bottleneck: some route panels are useful, but `1.1.2` reasoning/graph routes are empty, `1.1.1` reasoning is mis-scoped toward unrelated calculation/graph skills, and math pages are not visibly unified with the shared route panel. Convert the shared skill-map runtime contract into a visible student route. For each practice mode, show only the relevant skill subset: reasoning, calculation, graph/table, or checkpoint. Show recommended next skill, current paragraph target, route progress, and practice link without exposing internal MTU codes. Validate desktop/mobile, light/dark, keyboard/focus order, and student-experience clarity.",
+              "completed": "yes",
+              "currentState": "**CLOSED LIVE ROUTE-VISIBILITY SPRINT / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added a route-display catalog, per-surface route scopes for Book 1 `1.1.1`, `1.1.2`, and `1.1.3`, shared route panels in reasoning, graph/table, procedure support, and math/calculation surfaces, and desktop/mobile screenshot proof. Students now see paragraph target, recommended focus, local progress, and practice action without internal MTU codes. This closes route visibility only; it authorizes no target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or student/product use. Records: `archive/sprints/SKILLMAP-OP-1/`.",
               "exitGate": ""
             },
             {
@@ -2439,13 +2446,6 @@
               "name": "Answer-Form Bounded CLI Execution",
               "completed": "yes",
               "currentState": "**CLOSED PLATFORM REFERENCE EXECUTION / NO LESSON OUTPUT.** Platform added `A80`, `A81`, and `A96`-`A99` through governed `unit-add.js` execution and rebuilt generator readiness. The new answer-form units remain generator-blocked/non-interactive until later generator implementation or no-exposure design authorizes use. No target-exercise `question_type`/`answer_form` fields, candidate storage, candidate writes, generated lesson output, diagnostics, mastery, sequencing, summative use, PV, Scale Gate 1, or student/product use were authorized.",
-              "exitGate": ""
-            },
-            {
-              "sprint": "GRAPH-UX-2",
-              "name": "Graph Game + Checkpoint UI Integration",
-              "completed": "no",
-              "currentState": "**USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use a coherent UI language.",
               "exitGate": ""
             },
             {
@@ -2501,7 +2501,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -2880,18 +2880,10 @@
       ],
       "sprints": [
         {
-          "sprint": "SKILLMAP-OP-1",
-          "name": "Student-Visible Skill-Map Route",
-          "completed": "no",
-          "currentState": "**ACTIVE NEXT SPRINT AFTER ENGINE-OP-1 / REQUIRED BEFORE ENGINE SCALE OR TARGET-EQUIVALENT CHECKPOINT RELIANCE.** ENGINE-OP-1 proved that the route layer is now the integration bottleneck: some route panels are useful, but `1.1.2` reasoning/graph routes are empty, `1.1.1` reasoning is mis-scoped toward unrelated calculation/graph skills, and math pages are not visibly unified with the shared route panel. Convert the shared skill-map runtime contract into a visible student route. For each practice mode, show only the relevant skill subset: reasoning, calculation, graph/table, or checkpoint. Show recommended next skill, current paragraph target, route progress, and practice link without exposing internal MTU codes. Validate desktop/mobile, light/dark, keyboard/focus order, and student-experience clarity.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "GRAPH-UX-2",
           "name": "Graph Game + Checkpoint UI Integration",
           "completed": "no",
-          "currentState": "**USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use a coherent UI language.",
+          "currentState": "**ACTIVE NEXT OPERATIONAL SPRINT AFTER SKILLMAP-OP-1 / USE THE SHARED TASK SHELL FOR GRAPH/TABLE OPERATIONS.** Upgrade graph/table practice by integrating the GAME-UX-3A shell. Add table-value selection, graph reading, economic axis convention, interpolation, point placement or graph-construction substitute, and less-labelled variants. Produce one working route for `1.1.3` and prove that graph game and checkpoint graph tasks use a coherent UI language. Preserve blocks on target-equivalent completion claims, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, and student/product use.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -2955,7 +2947,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3052,6 +3044,14 @@
           "name": "Green Gate Handoff",
           "completed": "no",
           "currentState": "",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SKILLMAP-OP-1",
+          "name": "Student-Visible Skill-Map Route",
+          "completed": "yes",
+          "currentState": "**CLOSED LIVE ROUTE-VISIBILITY SPRINT / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added a route-display catalog, per-surface route scopes for Book 1 `1.1.1`, `1.1.2`, and `1.1.3`, shared route panels in reasoning, graph/table, procedure support, and math/calculation surfaces, and desktop/mobile screenshot proof. Students now see paragraph target, recommended focus, local progress, and practice action without internal MTU codes. This closes route visibility only; it authorizes no target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or student/product use. Records: `archive/sprints/SKILLMAP-OP-1/`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3416,8 +3416,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 45,
-      "openCount": 22
+      "completedCount": 46,
+      "openCount": 21
     },
     {
       "id": "innovation",

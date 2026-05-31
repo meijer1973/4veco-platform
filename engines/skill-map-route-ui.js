@@ -82,11 +82,44 @@
     return null;
   }
 
+  function cloneRouteOptions(value) {
+    var out = {};
+    value = value || {};
+    for (var key in value) {
+      if (!Object.prototype.hasOwnProperty.call(value, key)) continue;
+      out[key] = Array.isArray(value[key]) ? value[key].slice() : value[key];
+    }
+    return out;
+  }
+
+  function routeConfigKey(surfaceKey) {
+    var key = String(surfaceKey || '');
+    if (key === 'procedure' || key === 'rekenen' || key === 'math') return 'calculation';
+    if (key === 'graph' || key === 'grafieken') return 'graphical';
+    if (key === 'redeneren') return 'reasoning';
+    if (key === 'exit-ticket') return 'checkpoint';
+    return key;
+  }
+
+  function getRouteOptions(surfaceKey, defaults, data) {
+    var root = getGlobalRoot();
+    var source = data || root.SKILL_TREE_DATA || {};
+    var routes = source.skillMapRoutes || {};
+    var key = routeConfigKey(surfaceKey);
+    var specific = routes[key] || routes[surfaceKey] || {};
+    return Object.assign({}, cloneRouteOptions(defaults), cloneRouteOptions(specific));
+  }
+
+  function routeElements(elements, useInteractiveSkillCatalog) {
+    if (!elements || useInteractiveSkillCatalog || !Array.isArray(elements.ROUTE_SKILLS)) return elements;
+    return Object.assign({}, elements, { SKILLS: elements.ROUTE_SKILLS });
+  }
+
   function buildView(config) {
     config = config || {};
     var root = getGlobalRoot();
     var Engine = config.SkillMapEngine || loadSkillMapEngine();
-    var elements = config.elements || root.SKILL_TREE_ELEMENTS;
+    var elements = routeElements(config.elements || root.SKILL_TREE_ELEMENTS, config.useInteractiveSkillCatalog === true);
     var data = config.data || root.SKILL_TREE_DATA;
     if (!Engine || !elements || !data) return null;
 
@@ -110,7 +143,7 @@
   function renderView(view, options) {
     if (!view) return '';
     options = options || {};
-    var title = options.title || ('Oefenroute ' + aspectLabel(view.aspectFilter));
+    var title = options.title || view.title || ('Oefenroute ' + aspectLabel(view.aspectFilter));
     var visible = Array.isArray(view.visibleSkills) ? view.visibleSkills : [];
     var items = visible.map(function (skill) {
       return [
@@ -137,14 +170,26 @@
       ? '<p class="skill-map-route-note">' + hiddenCount + ' vaardigheden zijn ingeklapt zodat deze oefenroute rustig blijft.</p>'
       : '';
 
+    var target = view.paragraphTarget
+      ? '<p class="skill-map-route-target"><span>Paragraafdoel</span>' + escapeHtml(view.paragraphTarget) + '</p>'
+      : '';
+    var purpose = view.routePurpose
+      ? '<p class="skill-map-route-purpose">' + escapeHtml(view.routePurpose) + '</p>'
+      : '';
+    var action = view.primaryAction && view.primaryAction.href
+      ? '<a class="skill-map-route-action" href="' + escapeHtml(view.primaryAction.href) + '">' + escapeHtml(view.primaryAction.label || 'Start oefenen') + '</a>'
+      : '<span class="skill-map-route-action">' + escapeHtml(view.primaryAction && view.primaryAction.label || 'Start oefenen') + '</span>';
+
     return [
       '<section class="skill-map-route" aria-label="' + escapeHtml(title) + '">',
       '<div class="skill-map-route-head">',
       '<p class="skill-map-route-kicker">' + escapeHtml(aspectLabel(view.aspectFilter)) + '</p>',
       '<h2>' + escapeHtml(title) + '</h2>',
+      target,
+      purpose,
       '</div>',
       '<div class="skill-map-route-primary">',
-      '<span class="skill-map-route-action">' + escapeHtml(view.primaryAction && view.primaryAction.label || 'Start oefenen') + '</span>',
+      action,
       nextFocusLabel ? '<span class="skill-map-route-next">Focus: ' + escapeHtml(nextFocusLabel) + '</span>' : '',
       '</div>',
       '<ul class="skill-map-route-list">',
@@ -158,6 +203,7 @@
 
   function renderRequest(request, options) {
     options = options || {};
+    if (options.enabled === false || (request && request.enabled === false)) return '';
     var view = buildView(Object.assign({}, options, { request: request }));
     return renderView(view, options);
   }
@@ -175,6 +221,7 @@
     renderView: renderView,
     renderRequest: renderRequest,
     renderInto: renderInto,
+    getRouteOptions: getRouteOptions,
     readStars: readStars
   };
 });

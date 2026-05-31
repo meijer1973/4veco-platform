@@ -5,6 +5,9 @@
  * SKILLS data is authoritatively sourced from
  *   references/machine/micro-teaching-units.json
  * (A-domain slice, edited only via CLI scripts under build-scripts/references/).
+ * ROUTE_SKILLS is the broader student-route display catalog. It may include
+ * non-interactive units, but those units are never treated as runnable
+ * skill-tree exercises by this adapter.
  *
  * GEN functions live in ./generators.js. LAYER_NAMES and LAYER_COLORS stay
  * inline here because they are presentation-layer concerns, not curriculum data.
@@ -37,6 +40,33 @@
         if (unit.id.charAt(0) !== 'A') continue;
         if (unit.deprecated) continue;
         if (generatorIds[unit.id]) interactiveSkillIds[unit.id] = true;
+    }
+
+    var routeSkillIds = {};
+    for (var r = 0; r < units.length; r++) {
+        var ru = units[r];
+        if (ru.deprecated) continue;
+        if (!Array.isArray(ru.aspects) || !ru.aspects.length) continue;
+        routeSkillIds[ru.id] = true;
+    }
+
+    var ROUTE_SKILLS = [];
+    for (var rs = 0; rs < units.length; rs++) {
+        var routeUnit = units[rs];
+        if (!routeSkillIds[routeUnit.id]) continue;
+        var routeNeeds = [];
+        var rawRouteNeeds = routeUnit.needs || [];
+        for (var rn = 0; rn < rawRouteNeeds.length; rn++) {
+            if (routeSkillIds[rawRouteNeeds[rn]]) routeNeeds.push(rawRouteNeeds[rn]);
+        }
+        ROUTE_SKILLS.push({
+            id: routeUnit.id,
+            name: routeUnit.name,
+            layer: routeUnit.layer,
+            needs: routeNeeds,
+            aspects: Array.isArray(routeUnit.aspects) ? routeUnit.aspects.slice() : [],
+            desc: routeUnit.kern || (routeUnit.procedure && routeUnit.procedure[0]) || ''
+        });
     }
 
     var SKILLS = [];
@@ -82,6 +112,7 @@
 
     return {
         SKILLS: SKILLS,
+        ROUTE_SKILLS: ROUTE_SKILLS,
         GENERATOR_BLOCKED_SKILLS: GENERATOR_BLOCKED_SKILLS,
         LAYER_NAMES: LAYER_NAMES,
         LAYER_COLORS: LAYER_COLORS,

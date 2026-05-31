@@ -17,6 +17,25 @@ function makeData() {
     };
 }
 
+function makeRouteData() {
+    return {
+        parNr: '1.1.1',
+        activeSkills: null,
+        skillMapRoutes: {
+            reasoning: {
+                title: 'Oefenroute Redeneren',
+                paragraphTarget: 'Schaarste en alternatieve kosten herkennen',
+                routePurpose: 'Oefen de keuze vanuit schaarste en het opgeofferde alternatief.',
+                aspectFilter: 'reasoning',
+                skillScope: ['B01', 'B02'],
+                targetSkills: ['B02'],
+                practiceHref: '1.1.1 Schaarste en economisch denken - redeneer-spel.html',
+                practiceLabel: 'Open redeneer-spel'
+            }
+        }
+    };
+}
+
 describe('SkillMapRouteUI', () => {
     test('renders a compact scoped route without exposing full catalog language', () => {
         const request = SkillMapEngine.createRequest('graphical-game', {
@@ -61,11 +80,31 @@ describe('SkillMapRouteUI', () => {
         expect(visibleText).not.toMatch(/\bA61\b/);
     });
 
+    test('uses per-surface route config and route display catalog without exposing IDs', () => {
+        const data = makeRouteData();
+        const options = SkillMapRouteUI.getRouteOptions('reasoning', { mode: 'compact', maxVisibleAvailable: 3 }, data);
+        const request = SkillMapEngine.createRequest('reasoning-game', options);
+        const html = SkillMapRouteUI.renderRequest(request, {
+            elements,
+            data,
+            stars: {},
+            ...options
+        });
+        const visibleText = html.replace(/<[^>]+>/g, ' ');
+
+        expect(visibleText).toContain('Schaarste als kerneconomisch probleem');
+        expect(visibleText).toContain('Alternatieve kosten in een keuze-situatie');
+        expect(visibleText).toContain('Paragraafdoel');
+        expect(html).toContain('href="1.1.1 Schaarste en economisch denken - redeneer-spel.html"');
+        expect(visibleText).not.toMatch(/\bB01\b|\bB02\b/);
+    });
+
     test('shell generators load shared route UI for all three practice games', () => {
         const files = [
             'build-scripts/platform/build-reasoning-engine.js',
             'build-scripts/platform/build-procedure-shells.js',
-            'build-scripts/platform/build-graphical-shells.js'
+            'build-scripts/platform/build-graphical-shells.js',
+            'build-scripts/platform/build-skilltree-shells.js'
         ];
         for (const relative of files) {
             const text = fs.readFileSync(path.resolve(__dirname, '..', '..', relative), 'utf8');

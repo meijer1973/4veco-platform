@@ -58,10 +58,11 @@
       host.id = "p-skill-route";
       sidebar.insertBefore(host, sidebar.firstChild);
     }
+    var routeOptions = window.SkillMapRouteUI.getRouteOptions("calculation", { mode: "compact", maxVisibleAvailable: 3 });
     window.SkillMapRouteUI.renderInto(
       host,
-      engine.getSkillMapRequest({ mode: "compact", maxVisibleAvailable: 3 }),
-      { title: "Oefenroute Rekenen" }
+      engine.getSkillMapRequest(routeOptions),
+      routeOptions
     );
   }
 

@@ -125,11 +125,22 @@ function copyEngines() {
 // browser with a single <script src="shared/skilltree/base-elements.js">.
 function buildSkilltreeBundleData(units, generatorMap) {
     const activeUnits = units.filter(u => u.id.charAt(0) === 'A' && !u.deprecated);
+    const routeUnits = units.filter(u => !u.deprecated && Array.isArray(u.aspects) && u.aspects.length);
+    const routeSkillIds = new Set(routeUnits.map(u => u.id));
     const interactiveSkillIds = new Set(
         activeUnits
             .filter(u => generatorMap[u.id])
             .map(u => u.id)
     );
+    const routeSkills = routeUnits
+        .map(u => ({
+            id: u.id,
+            name: u.name,
+            layer: u.layer,
+            needs: (u.needs || []).filter(id => routeSkillIds.has(id)),
+            aspects: Array.isArray(u.aspects) ? u.aspects.slice() : [],
+            desc: u.kern || (u.procedure && u.procedure[0]) || ''
+        }));
     const skills = activeUnits
         .filter(u => interactiveSkillIds.has(u.id))
         .map(u => ({
@@ -149,7 +160,7 @@ function buildSkilltreeBundleData(units, generatorMap) {
             status: 'missing_generator_implementation',
             studentFacingSkilltreeUseAllowed: false
         }));
-    return { skills, generatorBlockedSkills };
+    return { skills, routeSkills, generatorBlockedSkills };
 }
 
 function bundleSkilltreeBaseElements(skilltreeDir) {
@@ -189,7 +200,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
     }
     const innerGuts = generatorsSrc.slice(startIdx + startMarker.length, returnIdx).trim();
 
-    const { skills, generatorBlockedSkills } = buildSkilltreeBundleData(units, generatorMap);
+    const { skills, routeSkills, generatorBlockedSkills } = buildSkilltreeBundleData(units, generatorMap);
 
     const bundle = [
         HEADER.trimEnd(),
@@ -211,6 +222,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
         '    ' + innerGuts,
         '',
         '    var SKILLS = ' + JSON.stringify(skills, null, 8).replace(/\n/g, '\n    ') + ';',
+        '    var ROUTE_SKILLS = ' + JSON.stringify(routeSkills, null, 8).replace(/\n/g, '\n    ') + ';',
         '    var GENERATOR_BLOCKED_SKILLS = ' + JSON.stringify(generatorBlockedSkills, null, 8).replace(/\n/g, '\n    ') + ';',
         '',
         '    var LAYER_NAMES = [\'Fundament\', \'Bouwstenen\', \'Marginale grootheden\', \'Samengesteld\', \'Gevorderd\', \'Eindbazen\'];',
@@ -225,6 +237,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
         '',
         '    return {',
         '        SKILLS: SKILLS,',
+        '        ROUTE_SKILLS: ROUTE_SKILLS,',
         '        GENERATOR_BLOCKED_SKILLS: GENERATOR_BLOCKED_SKILLS,',
         '        LAYER_NAMES: LAYER_NAMES,',
         '        LAYER_COLORS: LAYER_COLORS,',
@@ -236,7 +249,7 @@ function bundleSkilltreeBaseElements(skilltreeDir) {
     ].join('\n');
 
     fs.writeFileSync(dst, bundle, 'utf8');
-    console.log(`  \u2713 skilltree/base-elements.js (bundled ${skills.length} interactive units + ${generatorBlockedSkills.length} blocked units)`);
+    console.log(`  \u2713 skilltree/base-elements.js (bundled ${skills.length} interactive units + ${routeSkills.length} route units + ${generatorBlockedSkills.length} blocked units)`);
 }
 
 // ── Step 2: Run build scripts ────────────────────────────────────

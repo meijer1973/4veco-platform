@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SKILLMAP-OP-1",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/SKILLMAP-OP-1-plan.md",
+  "baseline": "reports/sprints/SKILLMAP-OP-1-baseline.md",
+  "planning_review": "reports/sprints/SKILLMAP-OP-1-planning-review.md",
+  "result": "reports/sprints/SKILLMAP-OP-1-result.md",
+  "diff_summary": "reports/sprints/SKILLMAP-OP-1-diff-summary.md",
+  "student_route_proof": "reports/sprints/SKILLMAP-OP-1-student-route-proof.md",
+  "screenshot_manifest": "reports/sprints/SKILLMAP-OP-1-screenshot-manifest.md",
+  "screenshot_directory": "reports/sprints/SKILLMAP-OP-1-screenshots",
+  "lesson_archive_plan": "../4veco-lessen/archive/sprints/SKILLMAP-OP-1/SKILLMAP-OP-1-sprint-plan.md",
+  "lesson_archive_closure": "../4veco-lessen/archive/sprints/SKILLMAP-OP-1/SKILLMAP-OP-1-closure-log.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": true,
+  "lesson_output_mutated": true,
+  "lesson_output_mutation_route": "platform deploy/build commands only",
+  "student_product_use_allowed": false,
+  "active_next_sprint": "GRAPH-UX-2",
+  "route_cases_checked": 7,
+  "screenshot_count": 6,
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SKILLMAP-OP-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SKILLMAP-OP-1",
+      "status": "passed"
+    },
+    {
+      "command": "node .\\node_modules\\jest\\bin\\jest.js --testPathPatterns \"engines/tests/(skill-map-engine|skill-map-route-ui|skilltree-engine)\\.test\\.js\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts\\deploy.js \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts\\sprints\\check-skillmap-op1-route-output.js \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "Browser DOM inspection for six desktop/mobile route cases",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts\\sprints\\capture-skillmap-op1-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SKILLMAP-OP-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "Get-ChildItem reports/sprints/SKILLMAP-OP-1-screenshots -File | Measure-Object",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

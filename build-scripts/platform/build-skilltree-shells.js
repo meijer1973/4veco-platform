@@ -63,8 +63,13 @@ function generateDataFile(par) {
         ...DEFAULT_SKILL_MAP_REQUEST,
         ...(par.skilltree && par.skilltree.skillMapDefaults ? par.skilltree.skillMapDefaults : {})
     }, null, 4).replace(/\n/g, '\n    ');
+    const skillMapRoutes = JSON.stringify(
+        par.skilltree && par.skilltree.skillMapRoutes ? par.skilltree.skillMapRoutes : {},
+        null,
+        4
+    ).replace(/\n/g, '\n    ');
     const newSkills = JSON.stringify(par._newSkills || []);
-    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = full catalog source, not the default student route\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    chapterSkills: ${chapterSkills},\n    newSkills: ${newSkills},\n    skillMapDefaults: ${skillMapDefaults}\n};\n`;
+    return `/**\n * Skill Tree data for ${par.id} ${par.name}\n * activeSkills: null = full catalog source, not the default student route\n */\nwindow.SKILL_TREE_DATA = {\n    parNr: "${par.id}",\n    parName: "${par.name}",\n    activeSkills: ${activeSkills},\n    chapterSkills: ${chapterSkills},\n    newSkills: ${newSkills},\n    skillMapDefaults: ${skillMapDefaults},\n    skillMapRoutes: ${skillMapRoutes}\n};\n`;
 }
 
 // ── HTML shell ──────────────────────────────────────────────────────
@@ -81,6 +86,7 @@ function generateHTML(parNr, parName) {
     <title>${parNr} ${parName} – Wiskunde vaardigheden</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="${sharedPath}/skilltree.css">
+    <link rel="stylesheet" href="${sharedPath}/skill-map-route.css">
 </head>
 <body>
     <a class="back-to-overview" href="index.html">&larr; Terug naar overzicht</a>
@@ -123,6 +129,8 @@ function generateHTML(parNr, parName) {
             </header>
 
             <div class="st-goal-banner-slot" id="st-goal-banner-slot"></div>
+
+            <div class="st-shared-route-slot" id="st-shared-route-slot"></div>
 
             <div class="st-layers" id="st-layers"></div>
 
@@ -200,6 +208,7 @@ function generateHTML(parNr, parName) {
     <script src="${sharedPath}/adaptive-seam.js"></script>
     <script src="${sharedPath}/skill-map-engine.js"></script>
     <script src="${sharedPath}/skilltree-engine.js"></script>
+    <script src="${sharedPath}/skill-map-route-ui.js"></script>
     <script src="${sharedPath}/skilltree-ui.js"></script>
 </body>
 </html>`;

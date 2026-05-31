@@ -95,10 +95,11 @@
             host.id = 'r-skill-route';
             sidebarEl.insertBefore(host, sidebarEl.firstChild);
         }
+        var routeOptions = window.SkillMapRouteUI.getRouteOptions('reasoning', { mode: 'compact', maxVisibleAvailable: 3 });
         window.SkillMapRouteUI.renderInto(
             host,
-            engine.getSkillMapRequest({ mode: 'compact', maxVisibleAvailable: 3 }),
-            { title: 'Oefenroute Redeneren' }
+            engine.getSkillMapRequest(routeOptions),
+            routeOptions
         );
     }
 

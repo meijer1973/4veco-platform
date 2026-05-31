@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.21-engine-op1-operational-proof-audit` | `references/reference-team-roadmap.md` | Current operating roadmap after ENGINE-OP-1 completed the live student-route operational audit for `1.1.1`, `1.1.2`, and `1.1.3`; top operational next action is SKILLMAP-OP-1 because route panels are empty or mis-scoped in current generated output and GAME-UX-3A task-shell use is not yet student-visible. No generated lesson output, target-exercise field writes, candidate storage, projection refresh, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.22-skillmap-op1-student-route` | `references/reference-team-roadmap.md` | Current operating roadmap after SKILLMAP-OP-1 made the shared skill-map route visible in generated Book 1 output for `1.1.1`, `1.1.2`, and `1.1.3`; top operational next action is GRAPH-UX-2 for graph/table task-shell integration. No target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before SKILLMAP-OP-1 student-visible route | `v3.21-engine-op1-operational-proof-audit` | `docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before ENGINE-OP-1 operational proof audit | `v3.20-game-ux3a-task-shell-foundation` | `docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-UX-3A task-shell foundation | `v3.19-ex-lesson1-route-trace-handoff` | `docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before EX-LESSON-1 route-trace handoff | `v3.18-mtu-h4c-answer-form-executed` | `docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md` | `references/reference-team-roadmap.md` |

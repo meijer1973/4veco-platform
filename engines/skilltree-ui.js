@@ -33,6 +33,7 @@
         statTotal:$('st-stat-total-val'), statStars:$('st-stat-stars-val'),
         statMaxStars:$('st-stat-maxstars-val'), viewToggle:$('st-view-toggle'),
         themeToggle:$('st-theme-toggle'), goalBannerSlot:$('st-goal-banner-slot'),
+        sharedRouteSlot:$('st-shared-route-slot'),
         layers:$('st-layers'), resetBtn:$('st-reset'), depsBack:$('st-deps-back'),
         depsTitle:$('st-deps-title'), depsGraphSlot:$('st-deps-graph-slot'),
         depsGoalBtnSlot:$('st-deps-goal-btn-slot'), explBack:$('st-expl-back'),
@@ -155,8 +156,20 @@
         if (els.statStars) els.statStars.textContent = String(p.totalStars);
         if (els.statMaxStars) els.statMaxStars.textContent = String(p.maxStars);
         if (els.viewToggle) els.viewToggle.innerHTML = viewModeLabel(engine.getViewMode());
+        renderSharedSkillRoute();
         renderGoalBanner();
         renderLayers();
+    }
+    function renderSharedSkillRoute() {
+        if (!els.sharedRouteSlot || !window.SkillMapRouteUI || !window.SkillMapEngine) return;
+        var routeOptions = window.SkillMapRouteUI.getRouteOptions('calculation', { mode: 'compact', maxVisibleAvailable: 3 });
+        if (routeOptions.enabled === false) {
+            els.sharedRouteSlot.hidden = true;
+            els.sharedRouteSlot.innerHTML = '';
+            return;
+        }
+        var request = window.SkillMapEngine.createRequest('calculation-game', Object.assign({ paragraph: DATA.parNr }, routeOptions));
+        window.SkillMapRouteUI.renderInto(els.sharedRouteSlot, request, routeOptions);
     }
     function viewModeLabel(mode) {
         if (mode === 'chapter') return 'Hoofdstuk';
