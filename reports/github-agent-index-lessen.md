@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-31T15:27:53.076Z
+Generated: 2026-05-31T17:23:01.412Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1552
+Files indexed: 1568
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -81,8 +81,9 @@ _No files indexed in this group._
 
 ## validators
 
-Count: 14
+Count: 15
 
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-short-check-exit-ticket-boundary.md
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-validation-log.md
 - archive/sprints/L1.7A/L1.7A-validation-log.md
 - archive/sprints/L1.7B-MAP/L1.7B-MAP-validation-log.md
@@ -2413,7 +2414,7 @@ Count: 817
 
 ## other
 
-Count: 413
+Count: 428
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2465,6 +2466,21 @@ Count: 413
 - archive/sprints/ENGINE-OP-1/ENGINE-OP-1-sprint-plan.md
 - archive/sprints/EX-LESSON-1/EX-LESSON-1-closure-log.md
 - archive/sprints/EX-LESSON-1/EX-LESSON-1-sprint-plan.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-architecture-decision.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-baseline.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-canonical-ui-model.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-component-decision-matrix.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-diff-summary.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-lead-review-assignment.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-lead-review-corrections.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-lead-review-round1.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-lead-review-round2-recheck1.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-lead-review-round2.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-operation-chain-coverage.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-plan.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-planning-review.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-result.md
+- archive/sprints/GAME-ARCH-1/GAME-ARCH-1-student-path-trace.md
 - archive/sprints/GAME-UX-3A/GAME-UX-3A-closure-log.md
 - archive/sprints/GAME-UX-3A/GAME-UX-3A-sprint-plan.md
 - archive/sprints/GATE-L1.7B-Q2/GATE-L1.7B-Q2-sprint-plan.md

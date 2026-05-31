@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GAME-ARCH-2",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/GAME-ARCH-2-plan.md",
+  "baseline": "reports/sprints/GAME-ARCH-2-baseline.md",
+  "planning_review": "reports/sprints/GAME-ARCH-2-planning-review.md",
+  "result": "reports/sprints/GAME-ARCH-2-result.md",
+  "diff_summary": "reports/sprints/GAME-ARCH-2-diff-summary.md",
+  "architecture_map": "reports/sprints/GAME-ARCH-2-architecture-map.md",
+  "route_api": "reports/sprints/GAME-ARCH-2-route-api.md",
+  "task_shell_api": "reports/sprints/GAME-ARCH-2-task-shell-api.md",
+  "module_boundaries": "reports/sprints/GAME-ARCH-2-module-boundaries.md",
+  "file_disposition": "reports/sprints/GAME-ARCH-2-file-disposition.md",
+  "state_ownership": "reports/sprints/GAME-ARCH-2-state-ownership.md",
+  "feedback_ownership": "reports/sprints/GAME-ARCH-2-feedback-ownership.md",
+  "target_operation_coverage": "reports/sprints/GAME-ARCH-2-target-operation-coverage.md",
+  "gate_engine1_checklist": "reports/sprints/GAME-ARCH-2-gate-engine1-checklist.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "engine_implementation_executed": false,
+  "lesson_output_mutated": false,
+  "lesson_output_mutation_route": "none; read-only inspection only",
+  "student_product_use_allowed": false,
+  "active_next_sprint": "GATE-ENGINE-1",
+  "decision": {
+    "shared_route_layer": "keep_and_harden_with_route_api",
+    "shared_task_shell": "keep_core_architecture_with_task_shell_api",
+    "graph_table_route": "keep_refactor_reference_pattern",
+    "math_calculation_route": "refactor_around_target_operation_chain",
+    "reasoning_route": "refactor_around_answer_form_and_constructed_response",
+    "advisory_short_check": "keep_separate_non_binding_advice_surface",
+    "target_equivalent_exit_ticket": "hold_for_l1_7b_q2_and_gate_l1_7b_q2",
+    "duplicate_engine_paths": "wrap_deprecate_rebuild_or_remove_by_later_authorized_sprint"
+  },
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GAME-ARCH-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-ARCH-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-math-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-game-arch2-evidence.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/GAME-ARCH-2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-ARCH-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "rg -n \"GAME-ARCH-2|GATE-ENGINE-1|route-layer API|task-shell API|keep|wrap|deprecate|rebuild|short check|target-equivalent exit ticket\" reports/sprints references/reference-team-roadmap.md ../4veco-lessen/lessen-team-roadmap.md",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json source-data/book-1/exit-ticket",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/GAME-ARCH-2-lead-review-assignment.md",
+    "round1": "reports/sprints/GAME-ARCH-2-lead-review-round1.md",
+    "corrections": "reports/sprints/GAME-ARCH-2-lead-review-corrections.md",
+    "round2": "reports/sprints/GAME-ARCH-2-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GAME-ARCH-2-LR2-F1",
+        "description": "Lesson roadmap had stale Next 1 Week guidance naming GAME-ARCH-1 active after GAME-ARCH-2 was active.",
+        "disposition": "accepted_follow_up",
+        "owner": "platform/lesson roadmap closure",
+        "next_action": "Resolved during GAME-ARCH-2 closure roadmap update; no remaining action beyond GATE-ENGINE-1.",
+        "blocking": false
+      }
+    ]
+  }
+}

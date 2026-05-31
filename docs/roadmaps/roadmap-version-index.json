@@ -15,6 +15,16 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
+      "version": "v3.26-game-arch1-decision",
+      "title": "References Team Roadmap before GAME-ARCH-2 architecture plan",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-31",
+      "superseded_by": "references/reference-team-roadmap.md"
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
       "version": "v3.25-graph-ux2-task-shell-integration",
       "title": "References Team Roadmap before GAME-ARCH-1 decision",
       "status": "outdated",
@@ -45,13 +55,14 @@
     },
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.26-game-arch1-decision",
+      "version": "v3.27-game-arch2-architecture-plan",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-31",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md",

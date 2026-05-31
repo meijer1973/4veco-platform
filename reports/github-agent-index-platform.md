@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T15:27:53.040Z
+Generated: 2026-05-31T17:23:01.367Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2335
+Files indexed: 2355
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 333
+Count: 334
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -419,6 +419,7 @@ Count: 333
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -509,7 +510,7 @@ Count: 42
 
 ## validators
 
-Count: 133
+Count: 135
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -604,6 +605,7 @@ Count: 133
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -631,6 +633,7 @@ Count: 133
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-mobile.png
 - reports/sprints/EX-0-validation-log.md
+- reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -647,7 +650,7 @@ Count: 133
 
 ## references
 
-Count: 372
+Count: 374
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -745,6 +748,8 @@ Count: 372
 - references/data/sprints/EX-LESSON-1.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
+- references/data/sprints/GAME-ARCH-1.plan.json
+- references/data/sprints/GAME-ARCH-1.result.json
 - references/data/sprints/GAME-UX-1.plan.json
 - references/data/sprints/GAME-UX-1.result.json
 - references/data/sprints/GAME-UX-2.plan.json
@@ -1024,7 +1029,7 @@ Count: 372
 
 ## reports
 
-Count: 1224
+Count: 1240
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1791,6 +1796,22 @@ Count: 1224
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
 - reports/sprints/example-result.md
+- reports/sprints/GAME-ARCH-1-architecture-decision.md
+- reports/sprints/GAME-ARCH-1-baseline.md
+- reports/sprints/GAME-ARCH-1-canonical-ui-model.md
+- reports/sprints/GAME-ARCH-1-component-decision-matrix.md
+- reports/sprints/GAME-ARCH-1-diff-summary.md
+- reports/sprints/GAME-ARCH-1-lead-review-assignment.md
+- reports/sprints/GAME-ARCH-1-lead-review-corrections.md
+- reports/sprints/GAME-ARCH-1-lead-review-round1.md
+- reports/sprints/GAME-ARCH-1-lead-review-round2-recheck1.md
+- reports/sprints/GAME-ARCH-1-lead-review-round2.md
+- reports/sprints/GAME-ARCH-1-operation-chain-coverage.md
+- reports/sprints/GAME-ARCH-1-plan.md
+- reports/sprints/GAME-ARCH-1-planning-review.md
+- reports/sprints/GAME-ARCH-1-result.md
+- reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md
+- reports/sprints/GAME-ARCH-1-student-path-trace.md
 - reports/sprints/GAME-UX-1-baseline.md
 - reports/sprints/GAME-UX-1-diff-summary.md
 - reports/sprints/GAME-UX-1-lead-review-assignment.md
@@ -2271,7 +2292,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 269
+Count: 270
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2399,6 +2420,7 @@ Count: 269
 - docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
