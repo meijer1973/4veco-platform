@@ -17,7 +17,8 @@ const REQUIRED_SPRINT_FILES = [
   path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-assignment.md'),
   path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-round1.md'),
   path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-corrections.md'),
-  path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-round2.md')
+  path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-round2.md'),
+  path.join('reports', 'sprints', 'GATE-ENGINE-1-lead-review-round2-recheck1.md')
 ];
 
 const REQUIRED_EVIDENCE = [
@@ -79,13 +80,16 @@ function validateLeadReviewPacketStatus(packet) {
     assert(typeof lead[key] === 'string' && lead[key].trim(), `pre_gate_lead_review.${key} missing`);
     assert(fs.existsSync(lead[key]), `missing pre-gate lead review file: ${lead[key]}`);
   }
+  assert(typeof lead.recheck1 === 'string' && lead.recheck1.trim(), 'pre_gate_lead_review.recheck1 missing');
+  assert(fs.existsSync(lead.recheck1), `missing pre-gate lead review recheck file: ${lead.recheck1}`);
+  assert(['PASS', 'PASS WITH FLAGS'].includes(lead.recheck1_verdict), 'pre_gate_lead_review.recheck1_verdict must be PASS or PASS WITH FLAGS');
 }
 
-function validateLeadReviewRound2(file, expectedVerdict) {
+function validateLeadReviewReport(file, expectedVerdict, roundPattern) {
   const markdown = read(file);
   assert(/^# Lead Review Summary/m.test(markdown), `${file} must start with lead-review summary`);
   assert(new RegExp(`Sprint:\\s*\`${SPRINT_ID}\``).test(markdown), `${file} must identify sprint ${SPRINT_ID}`);
-  assert(/Round:\s*lead review round 2/i.test(markdown), `${file} must identify round 2`);
+  assert(roundPattern.test(markdown), `${file} must identify expected round`);
   assert(new RegExp(`Verdict:\\s*${expectedVerdict.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i').test(markdown), `${file} verdict mismatch`);
   for (const heading of [
     '## Scope',
@@ -125,7 +129,8 @@ function main() {
   assert(/no[_ ]product[_ ]authority/i.test(packet.status), 'packet status must state no product authority');
   assertFalseAuthority(packet.authority_boundary);
   validateLeadReviewPacketStatus(packet);
-  validateLeadReviewRound2(packet.pre_gate_lead_review.round2, packet.pre_gate_lead_review.final_verdict);
+  validateLeadReviewReport(packet.pre_gate_lead_review.round2, packet.pre_gate_lead_review.final_verdict, /Round:\s*lead review round 2/i);
+  validateLeadReviewReport(packet.pre_gate_lead_review.recheck1, packet.pre_gate_lead_review.recheck1_verdict, /Round:\s*lead review round 2 recheck 1/i);
 
   assert(/^# GATE-ENGINE-1 Four-Engine Operational Integration Review Packet/m.test(packetMd), 'review packet markdown title mismatch');
   for (const heading of [
@@ -140,12 +145,28 @@ function main() {
   ]) {
     assert(packetMd.includes(heading), `review packet missing heading: ${heading}`);
   }
-  assert((packetMd.match(/^### ENGINE1-Q\d+:/gm) || []).length === 12, 'review packet must include 12 ENGINE1 questions');
+  assert((packetMd.match(/^### ENGINE1-Q\d+:/gm) || []).length === 13, 'review packet must include 13 ENGINE1 questions');
   assert((packet.calibration_questions || []).length === 3, 'review packet JSON must include 3 calibration questions');
-  assert((packet.planned_questions || []).length === 12, 'review packet JSON must include 12 planned questions');
-  for (const questionId of ['ENGINE1-Q1', 'ENGINE1-Q7', 'ENGINE1-Q8', 'ENGINE1-Q12']) {
+  assert((packet.planned_questions || []).length === 13, 'review packet JSON must include 13 planned questions');
+  for (const questionId of ['ENGINE1-Q1', 'ENGINE1-Q7', 'ENGINE1-Q8', 'ENGINE1-Q11', 'ENGINE1-Q13']) {
     assert(packetMd.includes(questionId), `review packet missing ${questionId}`);
   }
+  assert(packetMd.includes('core-specification failures'), 'review packet must include core-specification failure question');
+  assert(!packetMd.includes('Authorize controlled engine implementation for accepted components'), 'review packet must not offer direct implementation authority');
+  assert(!packetMd.includes('Yes, but only for explicitly named low-risk implementation planning'), 'product-authority question must not conflate planning with product authority');
+  assert(packetMd.includes('not yet implemented for 1.1.1, 1.1.2, or 1.1.3'), 'target-equivalent row must cover all three paragraphs');
+  assert(packetMd.includes('## Minimum Live-Output Inspection'), 'review packet must include minimum live-output inspection checklist');
+  for (const requiredSurface of [
+    '1.1.1` landing page and advisory Check route',
+    '1.1.2` landing page and Rekenen/math route',
+    '1.1.3` landing page and Grafieken route',
+    'one mobile or narrow-viewport route-panel state',
+    'one dark-mode route/task state',
+    'one task-shell feedback state each for graph, math, and reasoning'
+  ]) {
+    assert(packetMd.includes(requiredSurface), `minimum live-output checklist missing ${requiredSurface}`);
+  }
+  assert(Array.isArray(packet.minimum_live_output_inspection) && packet.minimum_live_output_inspection.length === 7, 'JSON must include seven minimum live-output inspection items');
   for (const required of [
     'Show the full question list',
     'Ask calibration questions',

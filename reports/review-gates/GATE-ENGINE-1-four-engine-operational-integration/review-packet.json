@@ -3,7 +3,7 @@
   "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
   "sprint_id": "GATE-ENGINE-1",
   "generated_on": "2026-05-31",
-  "status": "review_packet_ready_pre_gate_lead_review_passed_no_product_authority",
+  "status": "review_packet_ready_pre_gate_lead_review_recheck_passed_no_product_authority",
   "human_interview_started": false,
   "remote_publication_required_before_review": true,
   "remote_publication_status": "Commit and push this packet, live-output evidence, pre-gate lead-review artifacts, GAME-ARCH-2 evidence, route-output proof, and cited evidence before human review starts.",
@@ -15,6 +15,8 @@
     "corrections": "reports/sprints/GATE-ENGINE-1-lead-review-corrections.md",
     "round2": "reports/sprints/GATE-ENGINE-1-lead-review-round2.md",
     "final_verdict": "PASS WITH FLAGS",
+    "recheck1": "reports/sprints/GATE-ENGINE-1-lead-review-round2-recheck1.md",
+    "recheck1_verdict": "PASS WITH FLAGS",
     "flags": [
       {
         "id": "GATE-ENGINE-1-R2-F1",
@@ -109,7 +111,17 @@
     "ENGINE1-Q9",
     "ENGINE1-Q10",
     "ENGINE1-Q11",
-    "ENGINE1-Q12"
+    "ENGINE1-Q12",
+    "ENGINE1-Q13"
+  ],
+  "minimum_live_output_inspection": [
+    "1.1.1 landing page and advisory Check route",
+    "1.1.2 landing page and Rekenen/math route",
+    "1.1.3 landing page and Grafieken route",
+    "one reasoning route using the shared task shell",
+    "one mobile or narrow-viewport route-panel state",
+    "one dark-mode route/task state",
+    "one task-shell feedback state each for graph, math, and reasoning"
   ],
   "future_interview_protocol": [
     "Show the full question list before starting.",
@@ -131,5 +143,5 @@
     "Stop if any answer authorizes diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use now.",
     "Stop if the gate cannot name keep/refactor/rebuild/hold for graph, math, reasoning, advisory short check, and target-equivalent checkpoint boundary."
   ],
-  "recommended_next_action": "Complete pre-gate lead review, commit and push this packet and cited evidence, then run the GATE-ENGINE-1 human interview before any downstream engine implementation, target-equivalent exit-ticket reliance, Scale Gate 1 reliance, or product-facing exposure."
+  "recommended_next_action": "Verify that the pre-gate lead review PASS WITH FLAGS, corrections, packet, live-output evidence, GAME-ARCH-2 evidence, and cited evidence are committed and pushed to the normal remote branch. Then run the GATE-ENGINE-1 human interview before any downstream engine implementation, target-equivalent exit-ticket reliance, Scale Gate 1 reliance, or product-facing exposure."
 }

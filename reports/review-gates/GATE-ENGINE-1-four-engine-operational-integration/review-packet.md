@@ -2,8 +2,9 @@
 
 Generated: 2026-05-31
 
-Status: review packet ready after pre-gate lead review PASS WITH FLAGS; no
-human interview started; no product authority.
+Status: review packet ready after pre-gate lead review PASS WITH FLAGS and
+post-audit recheck PASS WITH FLAGS; no human interview started; no product
+authority.
 
 ## Review Scope
 
@@ -73,9 +74,24 @@ promotion, Scale Gate 1, or student/product use.
 | math/calculation route | task-shell integrated for A38/A39 | decide operation-chain refactor needs |
 | reasoning route | structured self-check and richer feedback | decide answer-form/constructed-response refactor needs |
 | advisory short check | retained local check surface | preserve advice-only boundary |
-| target-equivalent exit ticket | separate proof task not yet implemented for 1.1.2/1.1.3 | preserve stronger exit-ticket standard |
+| target-equivalent exit ticket | not yet implemented for 1.1.1, 1.1.2, or 1.1.3; 1.1.1 has only an advisory/local short check | preserve stronger target-equivalent standard for L1.7B-Q2 and GATE-L1.7B-Q2 |
 | state/feedback ownership | GAME-ARCH-2 defines ownership rules | decide if rules are usable for next sprints |
 | file disposition | GAME-ARCH-2 lists keep/wrap/deprecate/rebuild decisions | decide next implementation/refactor/rebuild authority |
+
+## Minimum Live-Output Inspection
+
+Before answering binding review questions, inspect at minimum:
+
+- `1.1.1` landing page and advisory Check route;
+- `1.1.2` landing page and Rekenen/math route;
+- `1.1.3` landing page and Grafieken route;
+- one reasoning route using the shared task shell;
+- one mobile or narrow-viewport route-panel state;
+- one dark-mode route/task state;
+- one task-shell feedback state each for graph, math, and reasoning.
+
+If any of these surfaces cannot be inspected, stop and record whether the gate
+needs more live-output evidence, fresh screenshots, or a roadmap pause.
 
 ## Calibration Questions
 
@@ -173,8 +189,9 @@ Options:
 ### ENGINE1-Q7: advisory short check
 
 Should the current short check remain as an advisory local checkpoint that can
-recommend practice or proceeding, without target-equivalent proof or
-diagnostic claims?
+suggest local practice or suggest trying the paragraph target exercise,
+without target-equivalent proof, diagnostic claims, mastery claims, or
+sequencing authority?
 
 Options:
 - Yes, keep the short check as advisory local route advice.
@@ -190,7 +207,7 @@ from the short check and remain held for `L1.7B-Q2` and `GATE-L1.7B-Q2`?
 Options:
 - Yes, keep target-equivalent exit tickets separate and held.
 - Allow a limited target-equivalent planning sprint after this gate, but no claims.
-- Merge short-check and exit-ticket work into one future checkpoint route.
+- Merge UI surfaces only if advisory short-check status and target-equivalent proof status remain visibly distinct and separately reviewed.
 - Open answer / other, with rationale.
 
 ### ENGINE1-Q9: state and feedback ownership
@@ -215,17 +232,29 @@ Options:
 - Hold until a deeper source audit is done.
 - Open answer / other, with rationale.
 
-### ENGINE1-Q11: next authorized work
+### ENGINE1-Q11: core-specification failures
+
+Does any reviewed live output or GAME-ARCH-2 evidence violate a core
+requirement from `product-end-state.md` or
+`companion-core-specifications.md`?
+
+Options:
+- No core-specification failure found; only carried flags remain.
+- Yes, name the core-specification failure and return REVISE/PAUSE.
+- Unclear; require targeted follow-up review before closure.
+- Open answer / other, with rationale.
+
+### ENGINE1-Q12: next authorized work
 
 If GATE-ENGINE-1 closes, what should be authorized next?
 
 Options:
-- Authorize only bounded implementation/refactor/rebuild planning sprints named by the closure; no product use.
-- Authorize controlled engine implementation for accepted components, still no target-equivalent claims or product use.
+- Authorize only named downstream planning sprints; no implementation or product use.
+- Authorize preparation of implementation sprint plans for accepted components, with separate review before implementation.
 - Hold all downstream engine work and revise GAME-ARCH-2 or the roadmap.
 - Open answer / other, with rationale.
 
-### ENGINE1-Q12: product authority now
+### ENGINE1-Q13: product authority now
 
 Does this gate itself authorize generated lesson output, target-equivalent
 completion language, diagnostics, adaptive routing, mastery, sequencing,
@@ -233,8 +262,8 @@ student-facing AI, summative use, PV projection, PV machine promotion, Scale
 Gate 1, or student/product use now?
 
 Options:
-- No. This gate authorizes no product use or target-equivalent claims; closure may only name later bounded work.
-- Yes, but only for explicitly named low-risk implementation planning.
+- No. This gate authorizes no product use, generated output, implementation, or target-equivalent claims; closure may only name later bounded planning work.
+- No product authority, but closure may request named future implementation sprint plans for separate review.
 - Hold; authority cannot be decided until target-equivalent exit-ticket work is complete.
 - Open answer / other, with rationale.
 
@@ -270,7 +299,8 @@ Options:
 
 ## Recommended Next Action
 
-Complete pre-gate lead review, commit and push this packet and cited evidence,
-then run the GATE-ENGINE-1 human interview before any downstream engine
-implementation, target-equivalent exit-ticket reliance, Scale Gate 1 reliance,
-or product-facing exposure.
+Verify that the pre-gate lead review PASS WITH FLAGS, corrections, packet,
+live-output evidence, GAME-ARCH-2 evidence, and cited evidence are committed
+and pushed to the normal remote branch. Then run the GATE-ENGINE-1 human
+interview before any downstream engine implementation, target-equivalent
+exit-ticket reliance, Scale Gate 1 reliance, or product-facing exposure.

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T17:56:07.621Z
+Generated: 2026-05-31T18:28:26.925Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2377
+Files indexed: 2391
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 335
+Count: 336
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -411,6 +411,7 @@ Count: 335
 - build-scripts/review-gates/check-cp6e-113-part-a-rereview.js
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
+- build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -511,7 +512,7 @@ Count: 42
 
 ## validators
 
-Count: 136
+Count: 137
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -602,6 +603,7 @@ Count: 136
 - build-scripts/review-gates/check-cp6e-113-part-a-rereview.js
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
+- build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -652,7 +654,7 @@ Count: 136
 
 ## references
 
-Count: 376
+Count: 377
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -762,6 +764,7 @@ Count: 376
 - references/data/sprints/GAME-UX-3A.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
+- references/data/sprints/GATE-ENGINE-1.plan.json
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
@@ -1033,7 +1036,7 @@ Count: 376
 
 ## reports
 
-Count: 1258
+Count: 1270
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1292,6 +1295,11 @@ Count: 1258
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/remediation-lanes.md
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/bundle-urls.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.json
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.json
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/bundle-urls.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.json
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/gate-closure.md
@@ -1867,6 +1875,13 @@ Count: 1258
 - reports/sprints/GATE-CP6-lead-review-round2.md
 - reports/sprints/GATE-CP6-plan.md
 - reports/sprints/GATE-CP6-result.md
+- reports/sprints/GATE-ENGINE-1-baseline.md
+- reports/sprints/GATE-ENGINE-1-lead-review-assignment.md
+- reports/sprints/GATE-ENGINE-1-lead-review-corrections.md
+- reports/sprints/GATE-ENGINE-1-lead-review-round1.md
+- reports/sprints/GATE-ENGINE-1-lead-review-round2.md
+- reports/sprints/GATE-ENGINE-1-plan.md
+- reports/sprints/GATE-ENGINE-1-planning-review.md
 - reports/sprints/GRAPH-UX-2-accessibility-review.md
 - reports/sprints/GRAPH-UX-2-baseline.md
 - reports/sprints/GRAPH-UX-2-checkpoint-graph-task-fixture.md

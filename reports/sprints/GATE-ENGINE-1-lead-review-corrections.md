@@ -30,3 +30,29 @@ After round 1 was saved, the remaining required sealing steps are:
 ## Round-2 readiness
 
 The packet is ready for round-2 recheck.
+
+## Pre-interview packet-audit corrections
+
+After round 2, the human reviewer supplied a pre-interview packet audit and
+requested corrections before the GATE-ENGINE-1 human interview starts.
+
+Corrections applied:
+
+- Replaced the contradictory recommended next action that still said
+  "Complete pre-gate lead review" after lead review had passed.
+- Removed direct engine-implementation authority from Q11 and reframed next
+  work as named downstream planning or implementation-plan preparation with
+  separate review before implementation.
+- Rewrote product-authority Q12 as Q13 so all product-authority options are
+  clearly "No" or "Hold"; planning authority is no longer presented as
+  product authority.
+- Corrected the target-equivalent exit-ticket row to state that no paragraph,
+  including `1.1.1`, currently has a target-equivalent exit ticket.
+- Replaced "recommend practice or proceeding" with local, non-binding short
+  check language.
+- Added a core-specification-failure question.
+- Added a minimum live-output inspection checklist with exact surfaces,
+  viewport/theme states, and feedback states.
+
+These corrections require a lead-review recheck before the human interview can
+start.
