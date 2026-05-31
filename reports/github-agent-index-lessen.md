@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-31T17:23:01.412Z
+Generated: 2026-05-31T17:56:07.653Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1568
+Files indexed: 1586
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2414,7 +2414,7 @@ Count: 817
 
 ## other
 
-Count: 428
+Count: 446
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2481,6 +2481,24 @@ Count: 428
 - archive/sprints/GAME-ARCH-1/GAME-ARCH-1-planning-review.md
 - archive/sprints/GAME-ARCH-1/GAME-ARCH-1-result.md
 - archive/sprints/GAME-ARCH-1/GAME-ARCH-1-student-path-trace.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-architecture-map.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-baseline.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-diff-summary.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-feedback-ownership.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-file-disposition.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-gate-engine1-checklist.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-lead-review-assignment.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-lead-review-corrections.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-lead-review-round1.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-lead-review-round2.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-module-boundaries.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-plan.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-planning-review.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-result.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-route-api.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-state-ownership.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-target-operation-coverage.md
+- archive/sprints/GAME-ARCH-2/GAME-ARCH-2-task-shell-api.md
 - archive/sprints/GAME-UX-3A/GAME-UX-3A-closure-log.md
 - archive/sprints/GAME-UX-3A/GAME-UX-3A-sprint-plan.md
 - archive/sprints/GATE-L1.7B-Q2/GATE-L1.7B-Q2-sprint-plan.md

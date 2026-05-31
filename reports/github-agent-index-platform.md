@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T17:23:01.367Z
+Generated: 2026-05-31T17:56:07.621Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2355
+Files indexed: 2377
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 334
+Count: 335
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -420,6 +420,7 @@ Count: 334
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-game-arch1-evidence.js
+- build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -510,7 +511,7 @@ Count: 42
 
 ## validators
 
-Count: 135
+Count: 136
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -606,6 +607,7 @@ Count: 135
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-game-arch1-evidence.js
+- build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -650,7 +652,7 @@ Count: 135
 
 ## references
 
-Count: 374
+Count: 376
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -750,6 +752,8 @@ Count: 374
 - references/data/sprints/EX-NS0.result.json
 - references/data/sprints/GAME-ARCH-1.plan.json
 - references/data/sprints/GAME-ARCH-1.result.json
+- references/data/sprints/GAME-ARCH-2.plan.json
+- references/data/sprints/GAME-ARCH-2.result.json
 - references/data/sprints/GAME-UX-1.plan.json
 - references/data/sprints/GAME-UX-1.result.json
 - references/data/sprints/GAME-UX-2.plan.json
@@ -1029,7 +1033,7 @@ Count: 374
 
 ## reports
 
-Count: 1240
+Count: 1258
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1812,6 +1816,24 @@ Count: 1240
 - reports/sprints/GAME-ARCH-1-result.md
 - reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md
 - reports/sprints/GAME-ARCH-1-student-path-trace.md
+- reports/sprints/GAME-ARCH-2-architecture-map.md
+- reports/sprints/GAME-ARCH-2-baseline.md
+- reports/sprints/GAME-ARCH-2-diff-summary.md
+- reports/sprints/GAME-ARCH-2-feedback-ownership.md
+- reports/sprints/GAME-ARCH-2-file-disposition.md
+- reports/sprints/GAME-ARCH-2-gate-engine1-checklist.md
+- reports/sprints/GAME-ARCH-2-lead-review-assignment.md
+- reports/sprints/GAME-ARCH-2-lead-review-corrections.md
+- reports/sprints/GAME-ARCH-2-lead-review-round1.md
+- reports/sprints/GAME-ARCH-2-lead-review-round2.md
+- reports/sprints/GAME-ARCH-2-module-boundaries.md
+- reports/sprints/GAME-ARCH-2-plan.md
+- reports/sprints/GAME-ARCH-2-planning-review.md
+- reports/sprints/GAME-ARCH-2-result.md
+- reports/sprints/GAME-ARCH-2-route-api.md
+- reports/sprints/GAME-ARCH-2-state-ownership.md
+- reports/sprints/GAME-ARCH-2-target-operation-coverage.md
+- reports/sprints/GAME-ARCH-2-task-shell-api.md
 - reports/sprints/GAME-UX-1-baseline.md
 - reports/sprints/GAME-UX-1-diff-summary.md
 - reports/sprints/GAME-UX-1-lead-review-assignment.md
@@ -2292,7 +2314,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 270
+Count: 271
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2421,6 +2443,7 @@ Count: 270
 - docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
+  "sprint_id": "GATE-ENGINE-1",
+  "generated_on": "2026-05-31",
+  "status": "review_packet_ready_pre_gate_lead_review_passed_no_product_authority",
+  "human_interview_started": false,
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "Commit and push this packet, live-output evidence, pre-gate lead-review artifacts, GAME-ARCH-2 evidence, route-output proof, and cited evidence before human review starts.",
+  "pre_gate_lead_review": {
+    "required": true,
+    "status": "passed",
+    "assignment": "reports/sprints/GATE-ENGINE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/GATE-ENGINE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/GATE-ENGINE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/GATE-ENGINE-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GATE-ENGINE-1-R2-F1",
+        "description": "Unrelated untracked knowledge/exit-ticket-game-1.1.1.zip is outside the GATE-ENGINE-1 allowed output list.",
+        "disposition": "accepted_follow_up",
+        "owner": "integration/main agent",
+        "next_action": "Exclude the zip from the GATE-ENGINE-1 sealing commit unless separately justified under another authorized scope.",
+        "blocking": false
+      }
+    ]
+  },
+  "authority_boundary": {
+    "generated_lesson_output_authorized": false,
+    "engine_implementation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "source_exit_ticket_creation_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.md",
+    "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.json",
+    "reports/sprints/GATE-ENGINE-1-plan.md",
+    "reports/sprints/GATE-ENGINE-1-baseline.md",
+    "reports/sprints/GAME-ARCH-2-result.md",
+    "reports/sprints/GAME-ARCH-2-gate-engine1-checklist.md",
+    "reports/sprints/GAME-ARCH-2-architecture-map.md",
+    "reports/sprints/GAME-ARCH-2-route-api.md",
+    "reports/sprints/GAME-ARCH-2-task-shell-api.md",
+    "reports/sprints/GAME-ARCH-2-file-disposition.md",
+    "reports/sprints/GAME-ARCH-2-state-ownership.md",
+    "reports/sprints/GAME-ARCH-2-feedback-ownership.md",
+    "reports/sprints/GAME-ARCH-2-target-operation-coverage.md",
+    "reports/sprints/GAME-ARCH-1-student-path-trace.md",
+    "reports/sprints/SKILLMAP-OP-1-student-route-proof.md",
+    "reports/sprints/GRAPH-UX-2-student-route-proof.md",
+    "reports/sprints/MATH-UX-2-student-route-proof.md",
+    "reports/sprints/REASON-UX-2-student-route-proof.md",
+    "reports/sprints/SKILLMAP-OP-1-screenshot-manifest.md",
+    "reports/sprints/GRAPH-UX-2-screenshot-manifest.md",
+    "reports/sprints/MATH-UX-2-screenshot-manifest.md",
+    "reports/sprints/REASON-UX-2-screenshot-manifest.md",
+    "build-scripts/sprints/check-graph-ux2-route-output.js",
+    "build-scripts/sprints/check-math-ux2-route-output.js",
+    "build-scripts/sprints/check-reason-ux2-route-output.js",
+    "build-scripts/review-gates/check-gate-engine1-review-packet.js",
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "references/reference-team-roadmap.md",
+    "../4veco-lessen/lessen-team-roadmap.md"
+  ],
+  "calibration_questions": [
+    {
+      "id": "ENGINE1-CAL1",
+      "question": "Confirm this gate reviews operational engine integration only and does not itself authorize generated lesson output, engine implementation, target-equivalent completion language, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use."
+    },
+    {
+      "id": "ENGINE1-CAL2",
+      "question": "Confirm the review packet, live-output evidence, pre-gate lead-review artifacts, GAME-ARCH-2 evidence, route-output proof, and cited evidence have been pushed to the normal remote branch before human review starts."
+    },
+    {
+      "id": "ENGINE1-CAL3",
+      "question": "Confirm the short check remains an advisory local checkpoint only, and target-equivalent exit-ticket proof remains separate and unapproved until L1.7B-Q2 and GATE-L1.7B-Q2 explicitly authorize it."
+    }
+  ],
+  "planned_questions": [
+    "ENGINE1-Q1",
+    "ENGINE1-Q2",
+    "ENGINE1-Q3",
+    "ENGINE1-Q4",
+    "ENGINE1-Q5",
+    "ENGINE1-Q6",
+    "ENGINE1-Q7",
+    "ENGINE1-Q8",
+    "ENGINE1-Q9",
+    "ENGINE1-Q10",
+    "ENGINE1-Q11",
+    "ENGINE1-Q12"
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask calibration questions before binding answers.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a closure proposal only after evidence is complete.",
+    "Require explicit human confirmation before writing a closure record or authorizing downstream scope."
+  ],
+  "stop_conditions": [
+    "Stop if the packet/evidence has not been pushed before review.",
+    "Stop if pre-gate lead review has not passed before the human interview.",
+    "Stop if live rendered output is not inspected or is unavailable.",
+    "Stop if any answer treats the short check as target-equivalent proof.",
+    "Stop if any answer weakens the separate target-equivalent exit-ticket standard without explicit reviewer decision.",
+    "Stop if any answer authorizes generated lesson output, engine implementation, protected reference mutation, source exit-ticket creation, target-exercise field writes, candidate storage, candidate writes, or projection refresh from this gate.",
+    "Stop if any answer authorizes diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or student/product use now.",
+    "Stop if the gate cannot name keep/refactor/rebuild/hold for graph, math, reasoning, advisory short check, and target-equivalent checkpoint boundary."
+  ],
+  "recommended_next_action": "Complete pre-gate lead review, commit and push this packet and cited evidence, then run the GATE-ENGINE-1 human interview before any downstream engine implementation, target-equivalent exit-ticket reliance, Scale Gate 1 reliance, or product-facing exposure."
+}
