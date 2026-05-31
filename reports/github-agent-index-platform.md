@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T19:06:22.046Z
+Generated: 2026-05-31T19:47:42.607Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2392
+Files indexed: 2410
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 336
+Count: 337
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -403,6 +403,7 @@ Count: 336
 - build-scripts/reports/terms-coverage.js
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
+- build-scripts/review-gates/capture-gate-engine1-live-output.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
@@ -512,7 +513,7 @@ Count: 42
 
 ## validators
 
-Count: 137
+Count: 139
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -626,6 +627,8 @@ Count: 137
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/gate-closure.md
@@ -654,7 +657,7 @@ Count: 137
 
 ## references
 
-Count: 377
+Count: 378
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -765,6 +768,7 @@ Count: 377
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/GATE-ENGINE-1.plan.json
+- references/data/sprints/GATE-ENGINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
@@ -1036,7 +1040,7 @@ Count: 377
 
 ## reports
 
-Count: 1271
+Count: 1286
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1296,8 +1300,21 @@ Count: 1271
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.json
 - reports/review-gates/GATE-CP6-year-1-paragraph-coverage/review-packet.md
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/bundle-urls.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/gate-closure.json
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/gate-closure.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.json
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.md
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.json
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.json
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.md
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-reasoning-mobile-feedback.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/112-landing-math-route.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/112-math-mobile-dark-feedback.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/113-graph-feedback.png
+- reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/113-landing-graph-route.png
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.json
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.md
 - reports/review-gates/GATE-EX0-exam-ingestion-contract/bundle-urls.md
@@ -1876,6 +1893,7 @@ Count: 1271
 - reports/sprints/GATE-CP6-plan.md
 - reports/sprints/GATE-CP6-result.md
 - reports/sprints/GATE-ENGINE-1-baseline.md
+- reports/sprints/GATE-ENGINE-1-diff-summary.md
 - reports/sprints/GATE-ENGINE-1-lead-review-assignment.md
 - reports/sprints/GATE-ENGINE-1-lead-review-corrections.md
 - reports/sprints/GATE-ENGINE-1-lead-review-round1.md
@@ -1883,6 +1901,7 @@ Count: 1271
 - reports/sprints/GATE-ENGINE-1-lead-review-round2.md
 - reports/sprints/GATE-ENGINE-1-plan.md
 - reports/sprints/GATE-ENGINE-1-planning-review.md
+- reports/sprints/GATE-ENGINE-1-result.md
 - reports/sprints/GRAPH-UX-2-accessibility-review.md
 - reports/sprints/GRAPH-UX-2-baseline.md
 - reports/sprints/GRAPH-UX-2-checkpoint-graph-task-fixture.md
@@ -2330,7 +2349,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 271
+Count: 272
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2460,6 +2479,7 @@ Count: 271
 - docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

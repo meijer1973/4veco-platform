@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.28-gate-engine1-pass-with-flags` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-ENGINE-1 closed PASS WITH FLAGS. The gate kept the shared route layer and task shell, kept/refactored graph as reference pattern, required math/reasoning/checkpoint planning, and authorized only named downstream planning/preparation sprints. No implementation, generated output, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.29-graph-refine1-plan` | `references/reference-team-roadmap.md` | Current operating roadmap after GRAPH-REFINE-1 closed PASS WITH FLAGS as planning/preparation only. The sprint kept graph/table as local-practice reference pattern but blocked target-equivalent graph reliance until the `1.1.3` price-vertical / quantity-horizontal target-chain mismatch is repaired and proven. Remaining authorized planning/preparation lanes are `MATH-REFINE-1`, `REASON-REFINE-1`, and `CHECK-Q2-PLAN`. No implementation, generated output, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GRAPH-REFINE-1 closure | `v3.28-gate-engine1-pass-with-flags` | `docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GATE-ENGINE-1 closure | `v3.27-game-arch2-architecture-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-ARCH-2 architecture plan | `v3.26-game-arch1-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-ARCH-1 decision | `v3.25-graph-ux2-task-shell-integration` | `docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md` | `references/reference-team-roadmap.md` |
