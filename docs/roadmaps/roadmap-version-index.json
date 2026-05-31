@@ -86,12 +86,23 @@
     {
       "roadmap_id": "references-team-roadmap",
       "version": "v3.31-reason-refine1-plan",
+      "title": "References Team Roadmap before CHECK-Q2-PLAN closure",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-31",
+      "superseded_by": "references/reference-team-roadmap.md"
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.32-check-q2-plan",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-31",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md",

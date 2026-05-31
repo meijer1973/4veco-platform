@@ -225,7 +225,7 @@ const allowTestFixture =
   process.env.SPRINT_BUNDLE_ALLOW_TEST_FIXTURES === '1' && /^TEST-[A-Z-]+-\d+[A-Z]?$/.test(args.find((arg) => !arg.startsWith('--')) || '');
 
 if (!sprintId) fail('missing sprint id, for example R2.3');
-if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?|[A-Z]{2,}-(?:[A-Z]+\d+[A-Z]?|\d+[A-Z]?)|[A-Z]+(?:-[A-Z]+)*-\d+[A-Z]?)$/.test(sprintId) && sprintId !== 'EXAMPLE') {
+if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?|[A-Z]{2,}-(?:[A-Z]+\d+[A-Z]?|\d+[A-Z]?)|[A-Z]+(?:-[A-Z]+)*-\d+[A-Z]?|(?=.*\d)[A-Z0-9]+(?:-[A-Z0-9]+)+)$/.test(sprintId) && sprintId !== 'EXAMPLE') {
   fail(`unexpected sprint id format: ${sprintId}`);
 }
 

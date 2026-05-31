@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T21:06:14.519Z",
+  "generatedAt": "2026-05-31T21:40:39.151Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.31-reason-refine1-plan Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam q...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.32-check-q2-plan Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam questio...",
           "sprints": [
             {
               "sprint": "MATH-UX-2",
@@ -228,8 +228,8 @@
             {
               "sprint": "CHECK-Q2-PLAN",
               "name": "Target-Equivalent Exit-Ticket Implementation Plan",
-              "completed": "no",
-              "currentState": "**AUTHORIZED BY GATE-ENGINE-1 AS PLANNING/PREPARATION ONLY.** Prepare the target-equivalent exit-ticket implementation plan while preserving the advisory short check as a separate local advice surface. This plan may prepare `L1.7B-Q2`/`GATE-L1.7B-Q2` work but may not implement exit tickets, claim paragraph completion, or authorize diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2 PASS. Produced the advisory short-check boundary, operation-chain coverage model, target-equivalent design plan, implementation-prep, gate handoff, evidence checker, and result metadata. Confirmed that the current `1.1.1` `Korte check` remains advisory only with `targetReadinessEvidence: false`, and no current `1.1.1`, `1.1.2`, or `1.1.3` output is target-equivalent proof. Future `L1.7B-Q2` work must select one paragraph and resolve or explicitly scope its blockers before implementation: `1.1.1` needs full A43 coverage plus an A98 versus held-evaluation decision; `1.1.2` needs explicit D31 index-point versus percentage-change coverage; `1.1.3` needs graph-axis repair and A81 source-use plus underlying answer-form coverage. No implementation, source exit-ticket writes, generated output, target-equivalent completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
               "exitGate": ""
             },
             {
@@ -1260,14 +1260,6 @@
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "CHECK-Q2-PLAN",
-          "name": "Target-Equivalent Exit-Ticket Implementation Plan",
-          "completed": "no",
-          "currentState": "**AUTHORIZED BY GATE-ENGINE-1 AS PLANNING/PREPARATION ONLY.** Prepare the target-equivalent exit-ticket implementation plan while preserving the advisory short check as a separate local advice surface. This plan may prepare `L1.7B-Q2`/`GATE-L1.7B-Q2` work but may not implement exit tickets, claim paragraph completion, or authorize diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "MTU-H5",
           "name": "MTU Mapping Regression Validator",
           "completed": "no",
@@ -1400,6 +1392,14 @@
           "name": "Reasoning Answer-Form Integration Plan",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2. Kept the reasoning route and shared `structured_reasoning` task family as useful local practice, but found that target-equivalent reasoning reliance is blocked until answer-form-specific scaffolds are added and reviewed: generic self-check is not answer-form proof, `1.1.1` needs an explicit A98 versus held-evaluation decision, `1.1.2` D31 explanation must coordinate with math/D31 coverage, and `1.1.3` source/table reasoning needs A81 source-use scaffolding plus graph-axis repair. Produced answer-form integration plan, task-coverage matrix, implementation-prep, gate handoff, evidence checker, and sprint result. No implementation, reasoning CSV edits, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "CHECK-Q2-PLAN",
+          "name": "Target-Equivalent Exit-Ticket Implementation Plan",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2 PASS. Produced the advisory short-check boundary, operation-chain coverage model, target-equivalent design plan, implementation-prep, gate handoff, evidence checker, and result metadata. Confirmed that the current `1.1.1` `Korte check` remains advisory only with `targetReadinessEvidence: false`, and no current `1.1.1`, `1.1.2`, or `1.1.3` output is target-equivalent proof. Future `L1.7B-Q2` work must select one paragraph and resolve or explicitly scope its blockers before implementation: `1.1.1` needs full A43 coverage plus an A98 versus held-evaluation decision; `1.1.2` needs explicit D31 index-point versus percentage-change coverage; `1.1.3` needs graph-axis repair and A81 source-use plus underlying answer-form coverage. No implementation, source exit-ticket writes, generated output, target-equivalent completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2492,8 +2492,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 144,
-      "openCount": 11
+      "completedCount": 145,
+      "openCount": 10
     },
     {
       "id": "lessen",
@@ -2612,15 +2612,15 @@
             {
               "sprint": "CHECK-Q2-PLAN",
               "name": "Target-Equivalent Exit-Ticket Implementation Plan",
-              "completed": "no",
-              "currentState": "**PLATFORM/LESSON PLANNING/PREPARATION ONLY.** Prepare the implementation plan for `L1.7B-Q2` while preserving the advisory short check as a separate local advice surface. No exit-ticket implementation, paragraph-completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
+              "completed": "yes",
+              "currentState": "**CLOSED PLATFORM/LESSON PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform prepared the target-equivalent exit-ticket implementation plan while preserving advisory short checks as separate local advice surfaces. The plan confirms no current `1.1.1`, `1.1.2`, or `1.1.3` output is target-equivalent proof: `1.1.1` needs full A43 coverage plus an A98 versus held-evaluation decision; `1.1.2` needs explicit D31 index-point versus percentage-change coverage; `1.1.3` needs graph-axis repair and A81 source-use plus underlying answer-form coverage. Later `L1.7B-Q2` must select one paragraph and resolve or explicitly scope its blockers before implementation. No exit-ticket implementation, source-data writes, generated output, paragraph-completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/CHECK-Q2-PLAN-result.md`.",
               "exitGate": ""
             },
             {
               "sprint": "L1.7B-Q2",
               "name": "Exit Ticket Target-Equivalent Implementation",
               "completed": "no",
-              "currentState": "**BLOCKED PENDING ENGINE OPERATIONAL PROOF AND INTEGRATION / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md`. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+              "currentState": "**BLOCKED PENDING PARAGRAPH SELECTION AND BLOCKER RESOLUTION / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md` only after the implementation plan selects one paragraph and resolves or explicitly scopes its blockers from CHECK-Q2-PLAN. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, shared task-shell support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, lead review, and no generated-output hand patching.",
               "exitGate": ""
             },
             {
@@ -2641,7 +2641,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `REASON-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, reasoning self-check output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `REASON-REFINE-1`, `CHECK-Q2-PLAN`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, reasoning self-check output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -3034,18 +3034,10 @@
       ],
       "sprints": [
         {
-          "sprint": "CHECK-Q2-PLAN",
-          "name": "Target-Equivalent Exit-Ticket Implementation Plan",
-          "completed": "no",
-          "currentState": "**PLATFORM/LESSON PLANNING/PREPARATION ONLY.** Prepare the implementation plan for `L1.7B-Q2` while preserving the advisory short check as a separate local advice surface. No exit-ticket implementation, paragraph-completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "L1.7B-Q2",
           "name": "Exit Ticket Target-Equivalent Implementation",
           "completed": "no",
-          "currentState": "**BLOCKED PENDING ENGINE OPERATIONAL PROOF AND INTEGRATION / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md`. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, GAME-UX-3A task support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, and no generated-output hand patching.",
+          "currentState": "**BLOCKED PENDING PARAGRAPH SELECTION AND BLOCKER RESOLUTION / REQUIRED BEFORE TARGET-EQUIVALENT COMPLETION CLAIMS.** Upgrade one checkpoint into a target-equivalent proof task under `specifications/product-end-state.md` only after the implementation plan selects one paragraph and resolves or explicitly scopes its blockers from CHECK-Q2-PLAN. It must be at the same cognitive level as the paragraph target exercise and cover the complete reviewed target-exercise operation and answer-form chain through task types that fit the operation chain. The output remains non-summative but should answer: \"Has this student locally demonstrated that they can complete the paragraph target exercise?\" Requires metadata alignment, answer-model alignment, shared task-shell support, teacher-learning-quality review, student-experience review, screenshot/interaction QA, lead review, and no generated-output hand patching.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3069,7 +3061,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `REASON-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, reasoning self-check output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `REASON-REFINE-1`, `CHECK-Q2-PLAN`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, reasoning self-check output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3294,6 +3286,14 @@
           "name": "Reasoning Answer-Form Integration Plan",
           "completed": "yes",
           "currentState": "**CLOSED PLATFORM PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform kept the reasoning route and shared `structured_reasoning` task family as useful local practice, but found target-equivalent reasoning reliance blocked until answer-form-specific scaffolds are added and reviewed: generic self-check is not answer-form proof, `1.1.1` needs an A98 versus held-evaluation decision, `1.1.2` D31 explanation must coordinate with math/D31 coverage, and `1.1.3` source/table reasoning needs A81 source-use scaffolding plus graph-axis repair. No implementation, generated output, reasoning CSV edits, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/REASON-REFINE-1-result.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CHECK-Q2-PLAN",
+          "name": "Target-Equivalent Exit-Ticket Implementation Plan",
+          "completed": "yes",
+          "currentState": "**CLOSED PLATFORM/LESSON PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform prepared the target-equivalent exit-ticket implementation plan while preserving advisory short checks as separate local advice surfaces. The plan confirms no current `1.1.1`, `1.1.2`, or `1.1.3` output is target-equivalent proof: `1.1.1` needs full A43 coverage plus an A98 versus held-evaluation decision; `1.1.2` needs explicit D31 index-point versus percentage-change coverage; `1.1.3` needs graph-axis repair and A81 source-use plus underlying answer-form coverage. Later `L1.7B-Q2` must select one paragraph and resolve or explicitly scope its blockers before implementation. No exit-ticket implementation, source-data writes, generated output, paragraph-completion language, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/CHECK-Q2-PLAN-result.md`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3626,8 +3626,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 55,
-      "openCount": 19
+      "completedCount": 56,
+      "openCount": 18
     },
     {
       "id": "innovation",

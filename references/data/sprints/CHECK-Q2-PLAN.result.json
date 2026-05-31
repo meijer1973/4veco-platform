@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECK-Q2-PLAN",
+  "name": "Target-Equivalent Exit-Ticket Implementation Plan",
+  "status": "completed",
+  "completed": "2026-05-31",
+  "completed_on": "2026-05-31",
+  "verdict": "PASS WITH FLAGS",
+  "plan": "reports/sprints/CHECK-Q2-PLAN-plan.md",
+  "baseline": "reports/sprints/CHECK-Q2-PLAN-baseline.md",
+  "result": "reports/sprints/CHECK-Q2-PLAN-result.md",
+  "diff_summary": "reports/sprints/CHECK-Q2-PLAN-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "planning_preparation_only": true,
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": false,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_equivalent_claims_authorized": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/CHECK-Q2-PLAN-lead-review-assignment.md",
+    "round1": "reports/sprints/CHECK-Q2-PLAN-lead-review-round1.md",
+    "corrections": "reports/sprints/CHECK-Q2-PLAN-lead-review-corrections.md",
+    "round2": "reports/sprints/CHECK-Q2-PLAN-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECK-Q2-PLAN-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECK-Q2-PLAN",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-check-q2-plan-evidence.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/CHECK-Q2-PLAN-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECK-Q2-PLAN --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "git status --porcelain -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json source-data/book-1/exit-ticket source-data/book-1/reasoning",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --porcelain -- \"Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "implementation": false,
+    "generated_output": false,
+    "exit_ticket_source_data_writes": false,
+    "protected_reference_mutation": false,
+    "target_exercise_field_writes": false,
+    "candidate_storage": false,
+    "candidate_writes": false,
+    "target_equivalent_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "carried_flags": [
+    "No current 1.1.1, 1.1.2, or 1.1.3 checkpoint output is target-equivalent proof.",
+    "Current 1.1.1 Korte check remains advisory only with targetReadinessEvidence false.",
+    "1.1.1 needs full A43 coverage and A98 versus held-evaluation decision before proof use.",
+    "1.1.2 needs explicit D31 index-point versus percentage-change coverage before proof use.",
+    "1.1.3 needs graph-axis repair and A81 source-use plus underlying answer-form coverage before proof use.",
+    "GATE-L1.7B-Q2 remains required before target-equivalent completion copy."
+  ],
+  "authorized_next": [
+    "Prepare a more specific L1.7B-Q2 implementation plan only after selecting one paragraph and resolving or explicitly scoping its blockers.",
+    "Do not start implementation, generated lesson output, target-equivalent completion language, Scale Gate 1, or product use from CHECK-Q2-PLAN alone."
+  ]
+}

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T21:06:14.519Z
+Generated: 2026-05-31T21:40:39.162Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2444
+Files indexed: 2461
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 339
+Count: 340
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -428,6 +428,7 @@ Count: 339
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -515,7 +516,7 @@ Count: 42
 
 ## validators
 
-Count: 141
+Count: 142
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -618,6 +619,7 @@ Count: 141
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -661,7 +663,7 @@ Count: 141
 
 ## references
 
-Count: 382
+Count: 384
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -906,6 +908,8 @@ Count: 382
 - references/data/sprints/R9.1.result.json
 - references/data/sprints/R9.2.plan.json
 - references/data/sprints/R9.2.result.json
+- references/data/sprints/REASON-REFINE-1.plan.json
+- references/data/sprints/REASON-REFINE-1.result.json
 - references/data/sprints/REASON-UX-2.plan.json
 - references/data/sprints/REASON-UX-2.result.json
 - references/data/sprints/REF-CP6-remediation-readiness.json
@@ -1048,7 +1052,7 @@ Count: 382
 
 ## reports
 
-Count: 1312
+Count: 1325
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2208,6 +2212,19 @@ Count: 1312
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
 - reports/sprints/README.md
+- reports/sprints/REASON-REFINE-1-answer-form-integration-plan.md
+- reports/sprints/REASON-REFINE-1-baseline.md
+- reports/sprints/REASON-REFINE-1-diff-summary.md
+- reports/sprints/REASON-REFINE-1-gate-handoff.md
+- reports/sprints/REASON-REFINE-1-implementation-prep.md
+- reports/sprints/REASON-REFINE-1-lead-review-assignment.md
+- reports/sprints/REASON-REFINE-1-lead-review-corrections.md
+- reports/sprints/REASON-REFINE-1-lead-review-round1.md
+- reports/sprints/REASON-REFINE-1-lead-review-round2.md
+- reports/sprints/REASON-REFINE-1-plan.md
+- reports/sprints/REASON-REFINE-1-planning-review.md
+- reports/sprints/REASON-REFINE-1-result.md
+- reports/sprints/REASON-REFINE-1-task-coverage-matrix.md
 - reports/sprints/REASON-UX-2-accessibility-review.md
 - reports/sprints/REASON-UX-2-baseline.md
 - reports/sprints/REASON-UX-2-diff-summary.md
@@ -2383,7 +2400,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 274
+Count: 275
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2516,6 +2533,7 @@ Count: 274
 - docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
