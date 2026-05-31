@@ -20,7 +20,7 @@
   "lesson_output_mutation_route": "platform deploy/build commands only",
   "student_product_use_authorized": false,
   "human_review_required": false,
-  "lead_review_required": false,
+  "lead_review_required": true,
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SKILLMAP-OP-1-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js SKILLMAP-OP-1",

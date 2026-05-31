@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "sprint_id": "LEAD-REVIEW-1",
+  "name": "Lead-Review Protocol Repair",
+  "status": "planned_active",
+  "created": "2026-05-31",
+  "plan": "reports/sprints/LEAD-REVIEW-1-plan.md",
+  "baseline": "reports/sprints/LEAD-REVIEW-1-baseline.md",
+  "generated_output_statement": "LEAD-REVIEW-1 changes sprint protocol and review evidence only. It does not generate or mutate student-facing lesson output.",
+  "protected_reference_data_changes_allowed": false,
+  "protected_reference_data_changed": false,
+  "source_data_mutation_authorized": false,
+  "external_source_mutation_authorized": false,
+  "machine_reference_mutation_authorized": false,
+  "operation_registry_mutation_authorized": false,
+  "answer_skill_mutation_authorized": false,
+  "target_exercise_mutation_authorized": false,
+  "lesson_output_mutation_authorized": false,
+  "student_product_use_authorized": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/LEAD-REVIEW-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js LEAD-REVIEW-1",
+    "node build-scripts/sprints/check-sprint-bundle.js SPEC-ET-1 --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js EX-LESSON-1 --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-3A --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js ENGINE-OP-1 --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js SKILLMAP-OP-1 --complete",
+    "node build-scripts/sprints/check-sprint-bundle.js LEAD-REVIEW-1 --complete",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check"
+  ],
+  "excluded_from_retro_review": [
+    {
+      "sprint": "MTU-H4A",
+      "reason": "User stated MTU sprints with human gate artifacts do not need retroactive lead review."
+    },
+    {
+      "sprint": "MTU-H4B",
+      "reason": "User stated MTU sprints with human gate artifacts do not need retroactive lead review."
+    },
+    {
+      "sprint": "MTU-H4C",
+      "reason": "Execution sprint is part of the MTU human-gated lane and is excluded with the MTU review chain."
+    }
+  ],
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "protected_reference_mutation": false,
+    "target_exercise_mutation": false,
+    "candidate_storage": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

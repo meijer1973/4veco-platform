@@ -107,5 +107,14 @@
       "command": "git -C ../4veco-lessen diff --check",
       "status": "passed"
     }
-  ]
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/ENGINE-OP-1-lead-review-assignment.md",
+    "round1": "reports/sprints/ENGINE-OP-1-lead-review-round1.md",
+    "corrections": "reports/sprints/ENGINE-OP-1-lead-review-corrections.md",
+    "round2": "reports/sprints/ENGINE-OP-1-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS"
+  }
 }

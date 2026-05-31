@@ -57,6 +57,26 @@ function leadReviewPaths(sprintId) {
   };
 }
 
+const LEAD_REVIEW_POLICY_EFFECTIVE_ON = '2026-05-31';
+
+function dateOnOrAfter(value, cutoff) {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value) && value.slice(0, 10) >= cutoff;
+}
+
+function hasLeadReviewExemption(planJson) {
+  const exemption = planJson.lead_review_exemption;
+  return Boolean(
+    exemption &&
+      typeof exemption === 'object' &&
+      typeof exemption.reason === 'string' &&
+      exemption.reason.trim() &&
+      typeof exemption.approved_by === 'string' &&
+      exemption.approved_by.trim() &&
+      typeof exemption.reviewed_on === 'string' &&
+      exemption.reviewed_on.trim()
+  );
+}
+
 function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
   const pattern = new RegExp(`## ${sectionHeading}\\s+([\\s\\S]*?)(?=\\n## |$)`);
   const match = markdown.match(pattern);
@@ -97,6 +117,22 @@ if (!Array.isArray(planJson.acceptance_tests) || planJson.acceptance_tests.lengt
 }
 if (typeof planJson.protected_reference_data_changes_allowed !== 'boolean') {
   fail(`${planJsonPath} must declare protected_reference_data_changes_allowed`);
+}
+const leadPolicyApplies =
+  sprintId !== 'EXAMPLE' &&
+  (dateOnOrAfter(planJson.created, LEAD_REVIEW_POLICY_EFFECTIVE_ON) ||
+    planJson.lead_review_required === true);
+if (leadPolicyApplies && planJson.lead_review_required !== true && !hasLeadReviewExemption(planJson)) {
+  fail(
+    `${planJsonPath} must declare lead_review_required: true or a lead_review_exemption for sprints created on or after ${LEAD_REVIEW_POLICY_EFFECTIVE_ON}`
+  );
+}
+if (
+  leadPolicyApplies &&
+  planJson.human_review_required === true &&
+  planJson.lead_review_phase !== 'before_human_gate'
+) {
+  fail(`${planJsonPath} human-review sprints must set lead_review_phase: "before_human_gate"`);
 }
 if (/human-interview\.md|gate-closure\.json/i.test(readMarkdown(planPath))) {
   if (planJson.human_review_required !== true) fail(`${planJsonPath} must declare human_review_required: true`);
@@ -147,6 +183,7 @@ if (requireComplete) {
   }
 
   const leadReviewRequired =
+    leadPolicyApplies ||
     planJson.lead_review_required === true ||
     resultJson.lead_review_required === true ||
     Boolean(resultJson.lead_review);

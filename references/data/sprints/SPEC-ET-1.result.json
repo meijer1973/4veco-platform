@@ -87,5 +87,14 @@
     "pv_machine_promotion": false,
     "scale_gate_1": false,
     "student_product_use": false
+  },
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/SPEC-ET-1-lead-review-assignment.md",
+    "round1": "reports/sprints/SPEC-ET-1-lead-review-round1.md",
+    "corrections": "reports/sprints/SPEC-ET-1-lead-review-corrections.md",
+    "round2": "reports/sprints/SPEC-ET-1-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS"
   }
 }

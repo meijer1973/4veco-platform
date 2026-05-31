@@ -115,5 +115,18 @@
       "command": "git -C ../4veco-lessen diff --check",
       "status": "passed"
     }
-  ]
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/SKILLMAP-OP-1-lead-review-assignment.md",
+    "round1": "reports/sprints/SKILLMAP-OP-1-lead-review-round1.md",
+    "corrections": "reports/sprints/SKILLMAP-OP-1-lead-review-corrections.md",
+    "round2": "reports/sprints/SKILLMAP-OP-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "specialist_reviews": {
+    "student_experience": "reports/sprints/SKILLMAP-OP-1-student-experience-review.md",
+    "accessibility": "reports/sprints/SKILLMAP-OP-1-accessibility-review.md"
+  }
 }

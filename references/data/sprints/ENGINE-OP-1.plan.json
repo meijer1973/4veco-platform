@@ -18,7 +18,7 @@
   "lesson_output_mutation_authorized": false,
   "student_product_use_authorized": false,
   "human_review_required": false,
-  "lead_review_required": false,
+  "lead_review_required": true,
   "acceptance_tests": [
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/ENGINE-OP-1-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js ENGINE-OP-1",

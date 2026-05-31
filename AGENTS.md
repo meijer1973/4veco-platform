@@ -87,6 +87,13 @@ For roadmap sprints, use a separated-agent workflow:
 - the main agent executes the sprint and owns final integration
 - specialist subagents may be used for bounded pedagogy, evidence, data-integrity, or code-review questions
 - a verification subagent should review the finished artifacts or test plan. Do a thorough check on all required files are present including the basic plan  and other required logs, but also the other required files that were mentioned as output in the plan.
+- a structural lead-review cycle is required before closing non-trivial roadmap
+  sprints: lead-review assignment, round-1 review, correction log, and round-2
+  recheck. Do not set `lead_review_required: false` unless the sprint records
+  an explicit exemption with reason, reviewer/approver, and date.
+- human-review gates must receive lead review before the human interview starts.
+  Human gate artifacts do not replace the pre-gate lead-review check for future
+  gates.
 
 The main agent remains accountable. Subagents advise, test, or produce bounded artifacts; they do not replace the roadmap, validators, human gates, or final integration judgement.
 

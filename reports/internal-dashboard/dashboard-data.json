@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T08:12:15.844Z",
+  "generatedAt": "2026-05-31T08:56:20.810Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.22-skillmap-op1-student-route Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.23-lead-review-protocol-repair Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
           "sprints": [
             {
               "sprint": "GRAPH-UX-2",
@@ -265,6 +265,13 @@
               "name": "Re-Evaluate R10-R13 Product Surfaces",
               "completed": "no",
               "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; and SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority. Broad lesson-companion scaling remains blocked until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "LEAD-REVIEW-1",
+              "name": "Lead-Review Protocol Repair",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS. Repaired sprint-bundle enforcement so new non-trivial roadmap sprints cannot silently opt out of lead review, and future human-review gates require lead review before the human interview starts. Ran actual lead-reviewer-agent audits for `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, and `SKILLMAP-OP-1`; all five close lead review as PASS WITH FLAGS after corrections, with SKILLMAP specialist flags carried forward. MTU-H4A/H4B/H4C were excluded from retroactive re-review because their human gate artifacts already exist by explicit user direction. No generated lesson output, protected reference mutation, target-exercise mutation, candidate storage, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or student/product use was authorized. Top operational next action is `GRAPH-UX-2`.",
               "exitGate": ""
             },
             {
@@ -1319,6 +1326,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; and SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority. Broad lesson-companion scaling remains blocked until `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GATE-ENGINE-1`, lesson `L1.7B-Q2`, `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "LEAD-REVIEW-1",
+          "name": "Lead-Review Protocol Repair",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS. Repaired sprint-bundle enforcement so new non-trivial roadmap sprints cannot silently opt out of lead review, and future human-review gates require lead review before the human interview starts. Ran actual lead-reviewer-agent audits for `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, and `SKILLMAP-OP-1`; all five close lead review as PASS WITH FLAGS after corrections, with SKILLMAP specialist flags carried forward. MTU-H4A/H4B/H4C were excluded from retroactive re-review because their human gate artifacts already exist by explicit user direction. No generated lesson output, protected reference mutation, target-exercise mutation, candidate storage, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or student/product use was authorized. Top operational next action is `GRAPH-UX-2`.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2387,7 +2402,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 133,
+      "completedCount": 134,
       "openCount": 15
     },
     {
@@ -2827,6 +2842,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "LEAD-REVIEW-1",
+              "name": "Lead-Review Protocol Repair",
+              "completed": "no",
+              "currentState": "",
+              "exitGate": ""
+            },
+            {
               "sprint": "L1.5A",
               "name": "Easy Layout Round 2",
               "completed": "no",
@@ -2988,6 +3010,14 @@
           "name": "Target Exercise Distribution Audit",
           "completed": "no",
           "currentState": "**FUTURE QUALITY SPRINT.** Do not execute until the micro-teaching-unit layer and companion-quality instruments are mature enough. Evaluate target exercises across the new book structure using MTU dependencies, teacher-learning-quality review, student-experience review, and built paragraph evidence.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "LEAD-REVIEW-1",
+          "name": "Lead-Review Protocol Repair",
+          "completed": "no",
+          "currentState": "",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3417,7 +3447,7 @@
         }
       ],
       "completedCount": 46,
-      "openCount": 21
+      "openCount": 22
     },
     {
       "id": "innovation",

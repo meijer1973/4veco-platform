@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T08:12:09.202Z
+Generated: 2026-05-31T08:56:20.850Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2196
+Files indexed: 2215
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -122,7 +122,7 @@ Count: 76
 
 ## build scripts
 
-Count: 324
+Count: 326
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -412,9 +412,11 @@ Count: 324
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
+- build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
@@ -498,7 +500,7 @@ Count: 42
 
 ## validators
 
-Count: 127
+Count: 128
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -595,6 +597,7 @@ Count: 127
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
+- build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
@@ -630,7 +633,7 @@ Count: 127
 
 ## references
 
-Count: 359
+Count: 361
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -907,6 +910,8 @@ Count: 359
 - references/data/sprints/S9.result.json
 - references/data/sprints/S9a.plan.json
 - references/data/sprints/S9a.result.json
+- references/data/sprints/SKILLMAP-OP-1.plan.json
+- references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SPEC-ET-1.plan.json
 - references/data/sprints/SPEC-ET-1.result.json
 - references/data/sprints/SYNC-2.plan.json
@@ -994,7 +999,7 @@ Count: 359
 
 ## reports
 
-Count: 1113
+Count: 1127
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2081,6 +2086,20 @@ Count: 1113
 - reports/sprints/S9a-baseline.md
 - reports/sprints/S9a-diff-summary.md
 - reports/sprints/S9a-result.md
+- reports/sprints/SKILLMAP-OP-1-baseline.md
+- reports/sprints/SKILLMAP-OP-1-diff-summary.md
+- reports/sprints/SKILLMAP-OP-1-plan.md
+- reports/sprints/SKILLMAP-OP-1-planning-review.md
+- reports/sprints/SKILLMAP-OP-1-result.md
+- reports/sprints/SKILLMAP-OP-1-screenshot-manifest.md
+- reports/sprints/SKILLMAP-OP-1-screenshots/desktop-111-reasoning.png
+- reports/sprints/SKILLMAP-OP-1-screenshots/desktop-112-math.png
+- reports/sprints/SKILLMAP-OP-1-screenshots/desktop-112-reasoning.png
+- reports/sprints/SKILLMAP-OP-1-screenshots/desktop-113-graph.png
+- reports/sprints/SKILLMAP-OP-1-screenshots/manifest.json
+- reports/sprints/SKILLMAP-OP-1-screenshots/mobile-112-math.png
+- reports/sprints/SKILLMAP-OP-1-screenshots/mobile-113-graph.png
+- reports/sprints/SKILLMAP-OP-1-student-route-proof.md
 - reports/sprints/SPEC-ET-1-baseline.md
 - reports/sprints/SPEC-ET-1-diff-summary.md
 - reports/sprints/SPEC-ET-1-plan.md
@@ -2130,7 +2149,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 266
+Count: 267
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2255,6 +2274,7 @@ Count: 266
 - docs/roadmaps/outdated/reference-team-roadmap-v3.18-mtu-h4c-answer-form-executed.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

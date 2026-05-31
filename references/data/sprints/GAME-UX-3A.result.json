@@ -106,5 +106,14 @@
       "command": "git -C ../4veco-lessen diff --check",
       "status": "passed"
     }
-  ]
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/GAME-UX-3A-lead-review-assignment.md",
+    "round1": "reports/sprints/GAME-UX-3A-lead-review-round1.md",
+    "corrections": "reports/sprints/GAME-UX-3A-lead-review-corrections.md",
+    "round2": "reports/sprints/GAME-UX-3A-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS"
+  }
 }

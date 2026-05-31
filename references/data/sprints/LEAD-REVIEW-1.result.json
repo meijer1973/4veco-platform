@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "sprint_id": "LEAD-REVIEW-1",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/LEAD-REVIEW-1-plan.md",
+  "baseline": "reports/sprints/LEAD-REVIEW-1-baseline.md",
+  "result": "reports/sprints/LEAD-REVIEW-1-result.md",
+  "diff_summary": "reports/sprints/LEAD-REVIEW-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "lesson_output_mutated": false,
+  "engine_source_changed": true,
+  "student_product_use_allowed": false,
+  "retro_reviewed_sprints": [
+    "SPEC-ET-1",
+    "EX-LESSON-1",
+    "GAME-UX-3A",
+    "ENGINE-OP-1",
+    "SKILLMAP-OP-1"
+  ],
+  "excluded_from_retro_review": [
+    "MTU-H4A",
+    "MTU-H4B",
+    "MTU-H4C"
+  ],
+  "lead_review_required": true,
+  "lead_review": {
+    "assignment": "reports/sprints/LEAD-REVIEW-1-lead-review-assignment.md",
+    "round1": "reports/sprints/LEAD-REVIEW-1-lead-review-round1.md",
+    "corrections": "reports/sprints/LEAD-REVIEW-1-lead-review-corrections.md",
+    "round2": "reports/sprints/LEAD-REVIEW-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/LEAD-REVIEW-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js LEAD-REVIEW-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SPEC-ET-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js EX-LESSON-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-UX-3A --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js ENGINE-OP-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SKILLMAP-OP-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "negative policy fixture: check-sprint-bundle fails future human-review sprint without lead_review_phase before_human_gate",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js LEAD-REVIEW-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "protected reference diff check",
+      "status": "passed"
+    },
+    {
+      "command": "generated Book-output diff check under ../4veco-lessen/Boek*",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ..\\4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}
