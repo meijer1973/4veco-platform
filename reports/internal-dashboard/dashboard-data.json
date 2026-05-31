@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T19:47:42.518Z",
+  "generatedAt": "2026-05-31T20:18:43.297Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.29-graph-refine1-plan Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-05-31 Roadmap ID: references-team-roadmap Roadmap version: v3.30-math-refine1-plan Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam que...",
           "sprints": [
             {
               "sprint": "MATH-UX-2",
@@ -214,8 +214,8 @@
             {
               "sprint": "MATH-REFINE-1",
               "name": "Math Target-Operation-Chain Hardening Plan",
-              "completed": "no",
-              "currentState": "**AUTHORIZED BY GATE-ENGINE-1 AS PLANNING/PREPARATION ONLY.** Prepare the math route hardening plan around `1.1.2` target operations: calculation/work capture, final answer, percentage/index notation, unit/notation handling, and short explanation where needed. No implementation, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2. Kept MATH-UX-2 as useful local A38/A39 math/calculation practice and confirmed the route should be refactored rather than rebuilt, but found that target-equivalent `1.1.2` reliance is blocked until D31 is explicitly routed and checked: the target exercise requires old/new percentage change, price-index calculation, index-to-index percentage change, and a short explanation that 108 to 112 is 4 index points, not 4 percent. Produced operation-chain plan, task-coverage matrix, implementation-prep, gate handoff, evidence checker, and sprint result. `MATH-REFINE-2` is recommended only if explicitly authorized; it is not started or authorized by this sprint. No implementation, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
               "exitGate": ""
             },
             {
@@ -1260,14 +1260,6 @@
           "roadmap": "References roadmap"
         },
         {
-          "sprint": "MATH-REFINE-1",
-          "name": "Math Target-Operation-Chain Hardening Plan",
-          "completed": "no",
-          "currentState": "**AUTHORIZED BY GATE-ENGINE-1 AS PLANNING/PREPARATION ONLY.** Prepare the math route hardening plan around `1.1.2` target operations: calculation/work capture, final answer, percentage/index notation, unit/notation handling, and short explanation where needed. No implementation, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "REASON-REFINE-1",
           "name": "Reasoning Answer-Form Integration Plan",
           "completed": "no",
@@ -1400,6 +1392,14 @@
           "name": "Graph Route Operation-Chain Hardening Plan",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2. Kept GRAPH-UX-2 as useful local graph/table practice and the strongest current reference pattern, but found that target-equivalent graph reliance is blocked: the `1.1.3` target exercise requires price on the vertical axis and quantity on the horizontal axis, while current graph-route data contains contradictory price-as-horizontal/x wording. Produced operation-chain plan, task-coverage matrix, implementation-prep, gate handoff, evidence checker, and sprint result. `GRAPH-REFINE-2` is recommended only if explicitly authorized; it is not started or authorized by this sprint. No implementation, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "MATH-REFINE-1",
+          "name": "Math Target-Operation-Chain Hardening Plan",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS as planning/preparation only after planning review and lead-review round 2. Kept MATH-UX-2 as useful local A38/A39 math/calculation practice and confirmed the route should be refactored rather than rebuilt, but found that target-equivalent `1.1.2` reliance is blocked until D31 is explicitly routed and checked: the target exercise requires old/new percentage change, price-index calculation, index-to-index percentage change, and a short explanation that 108 to 112 is 4 index points, not 4 percent. Produced operation-chain plan, task-coverage matrix, implementation-prep, gate handoff, evidence checker, and sprint result. `MATH-REFINE-2` is recommended only if explicitly authorized; it is not started or authorized by this sprint. No implementation, generated lesson output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2492,8 +2492,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 142,
-      "openCount": 13
+      "completedCount": 143,
+      "openCount": 12
     },
     {
       "id": "lessen",
@@ -2598,8 +2598,8 @@
             {
               "sprint": "MATH-REFINE-1",
               "name": "Math Target-Operation-Chain Hardening Plan",
-              "completed": "no",
-              "currentState": "**PLATFORM PLANNING/PREPARATION ONLY.** Prepare a plan to harden math/calculation route coverage for `1.1.2` target operations: calculation/work capture, final answer, percentage/index notation, unit/notation handling, and short explanation where needed. No implementation, generated output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
+              "completed": "yes",
+              "currentState": "**CLOSED PLATFORM PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform kept MATH-UX-2 as useful local A38/A39 math/calculation practice and confirmed the route should be refactored rather than rebuilt, but found target-equivalent `1.1.2` reliance blocked until explicit D31 coverage is routed and checked: the target exercise requires old/new percentage change, price-index calculation, index-to-index percentage change, and a short explanation that 108 to 112 is 4 index points, not 4 percent. A later `MATH-REFINE-2` repair is recommended only if explicitly authorized. No implementation, generated output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/MATH-REFINE-1-result.md`.",
               "exitGate": ""
             },
             {
@@ -2641,7 +2641,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+              "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
               "exitGate": ""
             },
             {
@@ -3034,14 +3034,6 @@
       ],
       "sprints": [
         {
-          "sprint": "MATH-REFINE-1",
-          "name": "Math Target-Operation-Chain Hardening Plan",
-          "completed": "no",
-          "currentState": "**PLATFORM PLANNING/PREPARATION ONLY.** Prepare a plan to harden math/calculation route coverage for `1.1.2` target operations: calculation/work capture, final answer, percentage/index notation, unit/notation handling, and short explanation where needed. No implementation, generated output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "REASON-REFINE-1",
           "name": "Reasoning Answer-Form Integration Plan",
           "completed": "no",
@@ -3085,7 +3077,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
+          "currentState": "**BLOCKED.** `SPEC-ET-1`, `EX-LESSON-1`, `GAME-UX-3A`, `ENGINE-OP-1`, `SKILLMAP-OP-1`, `GRAPH-UX-2`, `MATH-UX-2`, `REASON-UX-2`, `GAME-ARCH-1`, `GAME-ARCH-2`, `GATE-ENGINE-1`, `GRAPH-REFINE-1`, `MATH-REFINE-1`, `MTU-H4C`, `L1.7C-MATH`, `L1.7B-MAP`, and `L1.7B-P23` are closed, but Scale Gate 1 may not run until `L1.7B-Q2`, `GATE-L1.7B-Q2`, and `REV-STD-1` are closed or explicitly waived by human decision with stated consequences. Scale Gate 1 must use `specifications/product-end-state.md` as the north-star baseline and may not treat engine architecture, shared skill-map runtime, answer-form MTUs, exam-target route traces, task-shell runtime support, advisory short-check output, graph-route practice output, math-route practice output, or exit-ticket output as scale or target-equivalent proof unless live student-route proof and Q2 target-equivalent evidence close. If target-equivalent status is waived, landing-page `Check` must be labelled as local practice check or checkpoint-only status, not paragraph-completion proof. Scale Gate 1 may authorize controlled production only, not adaptive diagnostics, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3294,6 +3286,14 @@
           "name": "Graph Route Operation-Chain Hardening Plan",
           "completed": "yes",
           "currentState": "**CLOSED PLATFORM PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform kept GRAPH-UX-2 as useful local graph/table practice and the strongest current reference pattern, but found target-equivalent graph reliance blocked: the `1.1.3` target exercise requires price on the vertical axis and quantity on the horizontal axis, while current graph-route data contains contradictory price-as-horizontal/x wording. A later `GRAPH-REFINE-2` repair is recommended only if explicitly authorized. No implementation, generated output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/GRAPH-REFINE-1-result.md`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "MATH-REFINE-1",
+          "name": "Math Target-Operation-Chain Hardening Plan",
+          "completed": "yes",
+          "currentState": "**CLOSED PLATFORM PLANNING/PREPARATION ONLY / PASS WITH FLAGS.** Platform kept MATH-UX-2 as useful local A38/A39 math/calculation practice and confirmed the route should be refactored rather than rebuilt, but found target-equivalent `1.1.2` reliance blocked until explicit D31 coverage is routed and checked: the target exercise requires old/new percentage change, price-index calculation, index-to-index percentage change, and a short explanation that 108 to 112 is 4 index points, not 4 percent. A later `MATH-REFINE-2` repair is recommended only if explicitly authorized. No implementation, generated output, target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product use was authorized. Records: platform `reports/sprints/MATH-REFINE-1-result.md`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3626,8 +3626,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 53,
-      "openCount": 21
+      "completedCount": 54,
+      "openCount": 20
     },
     {
       "id": "innovation",

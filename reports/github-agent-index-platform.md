@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T19:47:42.607Z
+Generated: 2026-05-31T20:18:43.340Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2410
+Files indexed: 2427
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 337
+Count: 338
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -423,6 +423,7 @@ Count: 337
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -513,7 +514,7 @@ Count: 42
 
 ## validators
 
-Count: 139
+Count: 140
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -611,6 +612,7 @@ Count: 139
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -657,7 +659,7 @@ Count: 139
 
 ## references
 
-Count: 378
+Count: 380
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -769,6 +771,8 @@ Count: 378
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/GATE-ENGINE-1.plan.json
 - references/data/sprints/GATE-ENGINE-1.result.json
+- references/data/sprints/GRAPH-REFINE-1.plan.json
+- references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
@@ -1040,7 +1044,7 @@ Count: 378
 
 ## reports
 
-Count: 1286
+Count: 1299
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1902,6 +1906,19 @@ Count: 1286
 - reports/sprints/GATE-ENGINE-1-plan.md
 - reports/sprints/GATE-ENGINE-1-planning-review.md
 - reports/sprints/GATE-ENGINE-1-result.md
+- reports/sprints/GRAPH-REFINE-1-baseline.md
+- reports/sprints/GRAPH-REFINE-1-diff-summary.md
+- reports/sprints/GRAPH-REFINE-1-gate-handoff.md
+- reports/sprints/GRAPH-REFINE-1-implementation-prep.md
+- reports/sprints/GRAPH-REFINE-1-lead-review-assignment.md
+- reports/sprints/GRAPH-REFINE-1-lead-review-corrections.md
+- reports/sprints/GRAPH-REFINE-1-lead-review-round1.md
+- reports/sprints/GRAPH-REFINE-1-lead-review-round2.md
+- reports/sprints/GRAPH-REFINE-1-operation-chain-plan.md
+- reports/sprints/GRAPH-REFINE-1-plan.md
+- reports/sprints/GRAPH-REFINE-1-planning-review.md
+- reports/sprints/GRAPH-REFINE-1-result.md
+- reports/sprints/GRAPH-REFINE-1-task-coverage-matrix.md
 - reports/sprints/GRAPH-UX-2-accessibility-review.md
 - reports/sprints/GRAPH-UX-2-baseline.md
 - reports/sprints/GRAPH-UX-2-checkpoint-graph-task-fixture.md
@@ -2349,7 +2366,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 272
+Count: 273
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2480,6 +2497,7 @@ Count: 272
 - docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
