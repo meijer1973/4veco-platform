@@ -127,6 +127,16 @@
   outline-offset: 2px;
 }
 
+.ts-choice.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 10%, var(--ts-panel));
+}
+
+.ts-choice.selected .ts-choice-mark {
+  background: var(--ts-primary);
+  box-shadow: inset 0 0 0 4px var(--ts-panel);
+}
+
 .ts-choice-mark {
   width: 18px;
   height: 18px;
@@ -184,6 +194,11 @@
   margin-top: 12px;
 }
 
+.ts-feedback:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.45);
+  outline-offset: 4px;
+}
+
 .ts-feedback-card {
   padding: 14px;
   border: 1px solid var(--ts-line);
@@ -209,6 +224,12 @@
 .ts-feedback-card a {
   color: var(--ts-primary);
   font-weight: 800;
+}
+
+.ts-feedback-card a:focus-visible {
+  outline: 2px solid var(--ts-focus);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 .ts-error {

@@ -77,6 +77,87 @@ function fixtureData() {
     };
 }
 
+function taskShellFixtureData() {
+    const data = fixtureData();
+    data.challenges = [
+        {
+            id: 'table-value',
+            type: 'table_value_selection',
+            title: 'Kies een tabelwaarde',
+            prompt: 'Welke waarde hoort bij 2025?',
+            graph: {
+                type: 'table',
+                title: 'Verkoop',
+                columns: ['jaar', 'aantal'],
+                rows: [
+                    { values: ['2024', '120'] },
+                    { values: ['2025', '150'] }
+                ]
+            },
+            task_shell: {
+                family: 'table_value_selection',
+                skillLabel: 'Tabelwaarde kiezen',
+                purpose: 'Kies de waarde uit de juiste rij.',
+                interaction: {
+                    inputLabel: 'Tabelwaarde',
+                    options: [
+                        { id: 'a', label: '120' },
+                        { id: 'b', label: '150' }
+                    ]
+                },
+                expected: { kind: 'choice', value: 'b' },
+                feedback: {
+                    matchTitle: 'Juiste rij',
+                    matchText: 'Je koos de waarde uit 2025.',
+                    retryTitle: 'Zoek opnieuw',
+                    retryText: 'Lees de rij met 2025.'
+                },
+                practiceRoute: { label: 'Oefen verder', href: '#g-app' }
+            },
+            feedback_steps: [
+                { label: 'Bron', text: 'Lees de tabel.' },
+                { label: 'Waarden', text: 'Kies de rij 2025.' },
+                { label: 'Berekening', text: 'Er is geen berekening nodig.' }
+            ]
+        },
+        {
+            id: 'point-value',
+            type: 'point_placement',
+            title: 'Plaats een punt',
+            prompt: 'Welk punt hoort bij prijs 4 en aantal 20?',
+            graph: {
+                type: 'table',
+                title: 'Vraag',
+                columns: ['prijs', 'aantal'],
+                rows: [
+                    { values: ['4', '20'] },
+                    { values: ['5', '10'] }
+                ]
+            },
+            task_shell: {
+                family: 'point_placement',
+                skillLabel: 'Punt plaatsen',
+                purpose: 'Gebruik x voor prijs en y voor aantal.',
+                interaction: { xLabel: 'prijs', yLabel: 'aantal' },
+                expected: { kind: 'point', x: 4, y: 20, toleranceX: 0, toleranceY: 0 },
+                feedback: {
+                    matchTitle: 'Punt klopt',
+                    matchText: 'Het punt is (4, 20).',
+                    retryTitle: 'Controleer x en y',
+                    retryText: 'Prijs is x en aantal is y.'
+                },
+                practiceRoute: { label: 'Oefen verder', href: '#g-app' }
+            },
+            feedback_steps: [
+                { label: 'Bron', text: 'Lees de tabel.' },
+                { label: 'Waarden', text: 'Prijs is x en aantal is y.' },
+                { label: 'Berekening', text: 'Geen berekening nodig.' }
+            ]
+        }
+    ];
+    return data;
+}
+
 describe('GraphicalEngine', () => {
     test('validates the MVP data shape', () => {
         expect(GraphicalEngine.validateData(fixtureData())).toBe(true);
@@ -124,5 +205,28 @@ describe('GraphicalEngine', () => {
         expect(correct.submitted.calculated_from_selected_values).toBeCloseTo(8);
         expect(engine.isComplete()).toBe(true);
         expect(engine.getSummary()).toEqual({ correct: 2, total: 2, completed: 2, perfect: true });
+    });
+
+    test('validates and evaluates task-shell graph/table challenges', () => {
+        const engine = new GraphicalEngine({ data: taskShellFixtureData() });
+        const firstTask = engine.getCurrentTaskShellTask();
+        expect(firstTask.family).toBe('table_value_selection');
+        expect(engine.evaluateTaskShellResponse('a')).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false,
+            family: 'table_value_selection'
+        }));
+        expect(engine.evaluateTaskShellResponse('b')).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+            family: 'table_value_selection'
+        }));
+        engine.nextChallenge();
+        expect(engine.getCurrentTaskShellTask().family).toBe('point_placement');
+        expect(engine.evaluateTaskShellResponse({ x: 4, y: 20 })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+            family: 'point_placement'
+        }));
     });
 });

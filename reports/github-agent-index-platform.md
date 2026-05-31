@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T10:22:13.359Z
+Generated: 2026-05-31T11:38:08.920Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2249
+Files indexed: 2262
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -122,7 +122,7 @@ Count: 76
 
 ## build scripts
 
-Count: 326
+Count: 327
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -414,6 +414,7 @@ Count: 326
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -500,7 +501,7 @@ Count: 42
 
 ## validators
 
-Count: 128
+Count: 129
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -595,6 +596,7 @@ Count: 128
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -633,7 +635,7 @@ Count: 128
 
 ## references
 
-Count: 363
+Count: 366
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -741,6 +743,9 @@ Count: 363
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
 - references/data/sprints/LEAD-REVIEW-1.result.json
+- references/data/sprints/LEAD-REVIEW-2.plan.json
+- references/data/sprints/LEAD-REVIEW-2.result.json
+- references/data/sprints/lead-review-policy-legacy-exemptions.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
 - references/data/sprints/MTU-H2.plan.json
@@ -1001,7 +1006,7 @@ Count: 363
 
 ## reports
 
-Count: 1158
+Count: 1166
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1812,6 +1817,14 @@ Count: 1158
 - reports/sprints/LEAD-REVIEW-1-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-1-plan.md
 - reports/sprints/LEAD-REVIEW-1-result.md
+- reports/sprints/LEAD-REVIEW-2-baseline.md
+- reports/sprints/LEAD-REVIEW-2-diff-summary.md
+- reports/sprints/LEAD-REVIEW-2-lead-review-assignment.md
+- reports/sprints/LEAD-REVIEW-2-lead-review-corrections.md
+- reports/sprints/LEAD-REVIEW-2-lead-review-round1.md
+- reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
+- reports/sprints/LEAD-REVIEW-2-plan.md
+- reports/sprints/LEAD-REVIEW-2-result.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md
@@ -2182,7 +2195,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 268
+Count: 269
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2309,6 +2322,7 @@ Count: 268
 - docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

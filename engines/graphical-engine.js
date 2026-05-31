@@ -1,5 +1,5 @@
 // Graphical Game - Engine (pure logic, no DOM)
-// MVP for reading values from simple graphs and using them in calculations.
+// Reads graph/table sources and evaluates local practice tasks.
 
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -13,7 +13,12 @@
   var ALLOWED_TYPES = {
     bar_value_read: true,
     line_value_read: true,
-    graph_values_percentage_change: true
+    graph_values_percentage_change: true,
+    table_value_selection: true,
+    axis_convention_check: true,
+    interpolation_read: true,
+    point_placement: true,
+    graph_construction_substitute: true
   };
 
   function readAdaptivePayload(paragraphId, storage) {
@@ -74,6 +79,14 @@
     return JSON.parse(JSON.stringify(obj));
   }
 
+  function resolveTaskShellEngine() {
+    if (typeof globalThis !== 'undefined' && globalThis.TaskShellEngine) return globalThis.TaskShellEngine;
+    if (typeof require === 'function') {
+      try { return require('./task-shell-engine'); } catch (e) { return null; }
+    }
+    return null;
+  }
+
   function isNumber(value) {
     return typeof value === "number" && isFinite(value);
   }
@@ -106,10 +119,23 @@
 
   function validateGraph(graph, challengeId) {
     if (!graph || typeof graph !== "object") throw new Error(challengeId + ".graph is required");
-    if (graph.type !== "bar" && graph.type !== "line") {
-      throw new Error(challengeId + ".graph.type must be bar or line");
+    if (graph.type !== "bar" && graph.type !== "line" && graph.type !== "table") {
+      throw new Error(challengeId + ".graph.type must be bar, line, or table");
     }
     requireString(graph.title, challengeId + ".graph.title");
+    if (graph.type === "table") {
+      requireArray(graph.columns, challengeId + ".graph.columns", 2);
+      graph.columns.forEach(function (column, idx) {
+        requireString(column, challengeId + ".graph.columns[" + idx + "]");
+      });
+      requireArray(graph.rows, challengeId + ".graph.rows", 2);
+      graph.rows.forEach(function (row, rowIdx) {
+        if (!Array.isArray(row.values) || row.values.length !== graph.columns.length) {
+          throw new Error(challengeId + ".graph.rows[" + rowIdx + "].values must match graph.columns");
+        }
+      });
+      return;
+    }
     requireString(graph.x_label, challengeId + ".graph.x_label");
     requireString(graph.y_label, challengeId + ".graph.y_label");
     requireString(graph.unit, challengeId + ".graph.unit");
@@ -123,6 +149,14 @@
   }
 
   function validateExpected(challenge) {
+    if (challenge.task_shell) {
+      var TaskShellEngine = resolveTaskShellEngine();
+      if (!TaskShellEngine || typeof TaskShellEngine.validateTask !== "function") {
+        throw new Error(challenge.id + ".task_shell requires TaskShellEngine");
+      }
+      TaskShellEngine.validateTask(buildTaskShellTask(challenge, 0));
+      return;
+    }
     var expected = challenge.expected_answer;
     if (!expected || typeof expected !== "object") {
       throw new Error(challenge.id + ".expected_answer is required");
@@ -148,6 +182,89 @@
         throw new Error(challenge.id + ".expected_answer.tolerance must be numeric");
       }
     }
+  }
+
+  function fallbackPracticeRoute() {
+    return {
+      label: "Oefen verder met grafieken",
+      href: "#g-app"
+    };
+  }
+
+  function deriveTaskShellTask(challenge) {
+    var expected = challenge.expected_answer || {};
+    if (challenge.type === "bar_value_read" || challenge.type === "line_value_read" || challenge.type === "interpolation_read") {
+      return {
+        family: "graph_reading",
+        skillLabel: "Grafiek aflezen",
+        purpose: "Lees eerst titel, assen en eenheid voordat je antwoordt.",
+        prompt: challenge.prompt,
+        interaction: {
+          inputLabel: "Afgelezen waarde",
+          placeholder: "Typ de waarde"
+        },
+        expected: {
+          kind: "number",
+          value: expected.value,
+          tolerance: getTolerance(expected),
+          unit: expected.unit
+        },
+        feedback: {
+          matchTitle: "Goed afgelezen",
+          matchText: "Je waarde past bij de bron en de gevraagde eenheid.",
+          retryTitle: "Lees de bron nog een keer",
+          retryText: "Zoek het gevraagde label en controleer de as en eenheid."
+        },
+        practiceRoute: fallbackPracticeRoute()
+      };
+    }
+    if (challenge.type === "graph_values_percentage_change") {
+      return {
+        family: "calculation_work_capture",
+        skillLabel: "Bronwaarden gebruiken",
+        purpose: "Laat zien welke bronwaarden je gebruikt en hoe je rekent.",
+        prompt: challenge.prompt,
+        interaction: {
+          workLabel: "Berekening met bronwaarden",
+          finalAnswerLabel: "Eindantwoord met procentteken",
+          finalAnswerPlaceholder: "Bijvoorbeeld -40%"
+        },
+        expected: {
+          kind: "self_check",
+          criteria: [
+            "Oude en nieuwe bronwaarde zijn zichtbaar.",
+            "Berekening gebruikt (nieuw - oud) / oud x 100%.",
+            "Eindantwoord heeft procentteken en richting."
+          ]
+        },
+        feedback: {
+          selfCheckTitle: "Controleer je uitwerking",
+          selfCheckText: "Vergelijk je antwoord met de bronwaarden en de rekenregel.",
+          retryTitle: "Schrijf eerst je berekening",
+          retryText: "Noteer oud, nieuw en de rekenstap voordat je vergelijkt."
+        },
+        practiceRoute: fallbackPracticeRoute()
+      };
+    }
+    throw new Error(challenge.type + " cannot be derived as task-shell task");
+  }
+
+  function buildTaskShellTask(challenge, index) {
+    var config = challenge.task_shell ? clone(challenge.task_shell) : deriveTaskShellTask(challenge);
+    var task = {
+      id: config.id || challenge.id,
+      family: config.family,
+      skillLabel: config.skillLabel || challenge.title,
+      familyLabel: config.familyLabel,
+      purpose: config.purpose || "Oefen deze grafiek- of tabelstap lokaal.",
+      prompt: config.prompt || challenge.prompt,
+      interaction: clone(config.interaction || {}),
+      expected: clone(config.expected || {}),
+      feedback: clone(config.feedback || {}),
+      practiceRoute: clone(config.practiceRoute || fallbackPracticeRoute())
+    };
+    if (index != null && task.id === challenge.id) task.id = challenge.id + "-task-" + (index + 1);
+    return task;
   }
 
   function validateChallenge(challenge) {
@@ -211,6 +328,7 @@
   GraphicalEngine.validateData = validateData;
   GraphicalEngine.validateChallenge = validateChallenge;
   GraphicalEngine.cleanNumber = cleanNumber;
+  GraphicalEngine.buildTaskShellTask = buildTaskShellTask;
 
   GraphicalEngine.prototype.getAdaptivePayload = function () {
     return clone(this.adaptivePayload);
@@ -222,6 +340,12 @@
 
   GraphicalEngine.prototype.getCurrentChallenge = function () {
     return this.data.challenges[this.index] || null;
+  };
+
+  GraphicalEngine.prototype.getCurrentTaskShellTask = function () {
+    var challenge = this.getCurrentChallenge();
+    if (!challenge) return null;
+    return buildTaskShellTask(challenge, this.index);
   };
 
   GraphicalEngine.prototype.getProgress = function () {
@@ -273,6 +397,32 @@
       },
       expected: clone(expected),
       feedback_steps: clone(challenge.feedback_steps)
+    });
+  };
+
+  GraphicalEngine.prototype.evaluateTaskShellResponse = function (response) {
+    var TaskShellEngine = resolveTaskShellEngine();
+    if (!TaskShellEngine || typeof TaskShellEngine.evaluateTask !== "function") {
+      throw new Error("TaskShellEngine is required for graphical task-shell responses");
+    }
+    var challenge = this.getCurrentChallenge();
+    if (!challenge) return null;
+    var task = this.getCurrentTaskShellTask();
+    var result = TaskShellEngine.evaluateTask(task, response);
+    return this._recordResult({
+      challenge_id: challenge.id,
+      task_id: task.id,
+      family: task.family,
+      type: challenge.type,
+      correct: result.matched === true,
+      state: result.state,
+      matched: result.matched,
+      submitted: clone(response),
+      feedbackTitle: result.feedbackTitle,
+      feedbackText: result.feedbackText,
+      selfCheckCriteria: result.selfCheckCriteria ? clone(result.selfCheckCriteria) : [],
+      practiceRoute: result.practiceRoute ? clone(result.practiceRoute) : null,
+      boundaryFlags: result.boundaryFlags ? clone(result.boundaryFlags) : {}
     });
   };
 

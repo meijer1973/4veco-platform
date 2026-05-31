@@ -37,7 +37,34 @@ function collectStudentStrings(data) {
         add(challenge.graph && challenge.graph.x_label);
         add(challenge.graph && challenge.graph.y_label);
         add(challenge.graph && challenge.graph.unit);
+        for (const column of (challenge.graph && challenge.graph.columns) || []) add(column);
+        for (const row of (challenge.graph && challenge.graph.rows) || []) {
+            for (const value of row.values || []) add(value);
+        }
         for (const point of (challenge.graph && challenge.graph.series) || []) add(point.label);
+        if (challenge.task_shell) {
+            add(challenge.task_shell.skillLabel);
+            add(challenge.task_shell.familyLabel);
+            add(challenge.task_shell.purpose);
+            add(challenge.task_shell.prompt);
+            add(challenge.task_shell.interaction && challenge.task_shell.interaction.inputLabel);
+            add(challenge.task_shell.interaction && challenge.task_shell.interaction.workLabel);
+            add(challenge.task_shell.interaction && challenge.task_shell.interaction.finalAnswerLabel);
+            add(challenge.task_shell.interaction && challenge.task_shell.interaction.xLabel);
+            add(challenge.task_shell.interaction && challenge.task_shell.interaction.yLabel);
+            for (const option of (challenge.task_shell.interaction && challenge.task_shell.interaction.options) || []) {
+                add(option.label);
+                add(option.description);
+            }
+            if (challenge.task_shell.feedback) {
+                add(challenge.task_shell.feedback.matchTitle);
+                add(challenge.task_shell.feedback.matchText);
+                add(challenge.task_shell.feedback.retryTitle);
+                add(challenge.task_shell.feedback.retryText);
+                add(challenge.task_shell.feedback.selfCheckTitle);
+                add(challenge.task_shell.feedback.selfCheckText);
+            }
+        }
         for (const step of challenge.feedback_steps || []) {
             add(step.label);
             add(step.text);
@@ -117,5 +144,17 @@ if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, data 
                 && graph.y_ticks.length >= 2;
         });
         expect(lessLabelled.length).toBeGreaterThanOrEqual(1);
+    });
+
+    test('GRAPH-UX-2 graph route includes required shared task-shell families', () => {
+        if (parNr !== '1.1.3') return;
+        const families = new Set(data.challenges.map(challenge => challenge.task_shell && challenge.task_shell.family));
+        expect(Array.from(families)).toEqual(expect.arrayContaining([
+            'table_value_selection',
+            'graph_reading',
+            'point_placement',
+            'calculation_work_capture',
+            'graph_construction_substitute'
+        ]));
     });
 });

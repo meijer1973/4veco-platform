@@ -18,6 +18,15 @@
       .replace(/'/g, '&#39;');
   }
 
+  function resolveTaskShellUI(rootObj) {
+    if (rootObj && rootObj.TaskShellUI) return rootObj.TaskShellUI;
+    if (typeof window !== 'undefined' && window.TaskShellUI) return window.TaskShellUI;
+    if (typeof require === 'function') {
+      try { return require('./task-shell-ui'); } catch (e) { return null; }
+    }
+    return null;
+  }
+
   function readStars(storage) {
     try {
       storage = storage || (typeof localStorage !== 'undefined' ? localStorage : null);
@@ -68,7 +77,22 @@
     }).join('');
   }
 
+  function renderTaskShellTask(task, index) {
+    var TaskShellUI = resolveTaskShellUI();
+    if (!TaskShellUI) {
+      return '<article class="et-task et-task-shell" data-task="' + escapeHtml(task.id) + '">' +
+        '<p class="et-error">Deze taakvorm kan nu niet worden getoond.</p>' +
+      '</article>';
+    }
+    return '<article class="et-task et-task-shell" data-task="' + escapeHtml(task.id) + '">' +
+      TaskShellUI.renderTask(task.taskShell, index) +
+      '<button type="button" class="et-task-shell-check" data-task-id="' + escapeHtml(task.id) + '">Controleer</button>' +
+      '<div class="et-feedback" id="feedback-' + escapeHtml(task.id) + '" aria-live="polite"></div>' +
+    '</article>';
+  }
+
   function renderTask(task, index) {
+    if (task.type === 'task_shell') return renderTaskShellTask(task, index);
     var options = task.options.map(function (option) {
       return '<button type="button" class="et-option" data-task-id="' + escapeHtml(task.id) + '" data-answer-id="' + escapeHtml(option.id) + '">' +
         '<span class="et-option-letter">' + escapeHtml(option.id.toUpperCase()) + '</span>' +
@@ -119,6 +143,37 @@
 
   function bindInteractions(app, engine) {
     app.addEventListener('click', function (event) {
+      var taskShellChoice = event.target.closest ? event.target.closest('.ts-choice') : null;
+      if (taskShellChoice && taskShellChoice.closest('.et-task-shell')) {
+        var shellTask = taskShellChoice.closest('.ts-task');
+        if (shellTask) {
+          var choices = shellTask.querySelectorAll('.ts-choice');
+          for (var c = 0; c < choices.length; c++) {
+            choices[c].classList.remove('selected');
+            choices[c].removeAttribute('aria-pressed');
+          }
+        }
+        taskShellChoice.classList.add('selected');
+        taskShellChoice.setAttribute('aria-pressed', 'true');
+        return;
+      }
+
+      var taskShellCheck = event.target.closest ? event.target.closest('.et-task-shell-check') : null;
+      if (taskShellCheck) {
+        var shellTaskId = taskShellCheck.getAttribute('data-task-id');
+        var shellWrapper = app.querySelector('[data-task="' + cssEscape(shellTaskId) + '"]');
+        var sourceTask = engine.data.tasks.find(function (item) { return item.id === shellTaskId; });
+        var shellResult = engine.checkTask(shellTaskId, collectTaskShellResponse(shellWrapper, sourceTask.taskShell));
+        var shellFeedback = app.querySelector('#feedback-' + shellTaskId);
+        var TaskShellUI = resolveTaskShellUI();
+        if (shellFeedback && TaskShellUI) {
+          shellFeedback.className = 'et-feedback ' + (shellResult.matched ? 'is-match' : 'is-retry');
+          shellFeedback.innerHTML = TaskShellUI.renderFeedback(shellResult);
+        }
+        updateCompletion(app, engine);
+        return;
+      }
+
       var button = event.target.closest ? event.target.closest('.et-option') : null;
       if (!button) return;
       var taskId = button.getAttribute('data-task-id');
@@ -144,6 +199,37 @@
       }
       updateCompletion(app, engine);
     });
+  }
+
+  function cssEscape(value) {
+    if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(value);
+    return String(value).replace(/"/g, '\\"');
+  }
+
+  function collectTaskShellResponse(wrapper, task) {
+    if (!wrapper || !task) return null;
+    var selected = wrapper.querySelector('.ts-choice.selected');
+    if (task.family === 'choice' || task.family === 'table_value_selection') {
+      return selected ? selected.getAttribute('data-choice-id') : '';
+    }
+    if (task.family === 'point_placement') {
+      return {
+        x: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-point-axis="x"]'),
+        y: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-point-axis="y"]')
+      };
+    }
+    if (task.family === 'calculation_work_capture') {
+      return {
+        work: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]'),
+        finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')
+      };
+    }
+    return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
+  }
+
+  function getValue(wrapper, selector) {
+    var el = wrapper.querySelector(selector);
+    return el ? el.value : '';
   }
 
   function init(options) {

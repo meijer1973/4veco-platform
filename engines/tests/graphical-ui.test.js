@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const source = fs.readFileSync(path.join(__dirname, '..', 'graphical-ui.js'), 'utf8');
+const shellSource = fs.readFileSync(path.join(__dirname, '..', '..', 'build-scripts', 'platform', 'build-graphical-shells.js'), 'utf8');
 
 describe('graphical ui safeguards', () => {
     test('answer placeholders do not reveal expected answers', () => {
@@ -34,5 +35,26 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('SkillMapRouteUI.getRouteOptions("graphical"');
         expect(source).toContain('graph.show_value_labels !== false');
         expect(source).toContain('renderYAxisTicks');
+    });
+
+    test('uses the shared task shell in graph practice output', () => {
+        expect(shellSource).toContain('task-shell.css');
+        expect(shellSource).toContain('task-shell-engine.js');
+        expect(shellSource).toContain('task-shell-ui.js');
+        expect(source).toContain('TaskShellUI.renderTask');
+        expect(source).toContain('engine.evaluateTaskShellResponse');
+        expect(source).toContain('data-graph-task-shell="GRAPH-UX-2"');
+    });
+
+    test('announces task-shell feedback and preserves keyboard flow after checking', () => {
+        expect(source).toContain('id="g-task-feedback"');
+        expect(source).toContain('aria-label="Feedback op je antwoord"');
+        expect(source).toContain('role="status"');
+        expect(source).toContain('feedbackRegion.focus');
+        expect(source).toContain('preventScroll: true');
+        expect(source).toContain('focusFeedbackAfterRender = true');
+        expect(source).toContain('other.setAttribute("aria-pressed", "false")');
+        expect(source).toContain('Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is.');
+        expect(source).not.toContain('Gebruik dezelfde taakvorm als in de paragraaf-check');
     });
 });

@@ -46,6 +46,14 @@
     return JSON.parse(JSON.stringify(value));
   }
 
+  function resolveTaskShellEngine() {
+    if (typeof globalThis !== 'undefined' && globalThis.TaskShellEngine) return globalThis.TaskShellEngine;
+    if (typeof require === 'function') {
+      try { return require('./task-shell-engine'); } catch (e) { return null; }
+    }
+    return null;
+  }
+
   function assert(condition, message) {
     if (!condition) throw new Error(message);
   }
@@ -90,16 +98,42 @@
       });
     }
     (data.tasks || []).forEach(function (task) {
-      push(task.skillLabel);
-      push(task.prompt);
-      (task.options || []).forEach(function (option) { push(option.label); });
-      if (task.feedback) {
-        push(task.feedback.matchTitle);
-        push(task.feedback.matchText);
-        push(task.feedback.retryTitle);
-        push(task.feedback.retryText);
+      if (task.type === 'task_shell' && task.taskShell) {
+        push(task.taskShell.skillLabel);
+        push(task.taskShell.familyLabel);
+        push(task.taskShell.purpose);
+        push(task.taskShell.prompt);
+        if (task.taskShell.interaction) {
+          push(task.taskShell.interaction.inputLabel);
+          push(task.taskShell.interaction.workLabel);
+          push(task.taskShell.interaction.finalAnswerLabel);
+          push(task.taskShell.interaction.xLabel);
+          push(task.taskShell.interaction.yLabel);
+          (task.taskShell.interaction.options || []).forEach(function (option) {
+            push(option.label);
+            push(option.description);
+          });
+        }
+        if (task.taskShell.feedback) {
+          push(task.taskShell.feedback.matchTitle);
+          push(task.taskShell.feedback.matchText);
+          push(task.taskShell.feedback.retryTitle);
+          push(task.taskShell.feedback.retryText);
+          push(task.taskShell.feedback.selfCheckTitle);
+          push(task.taskShell.feedback.selfCheckText);
+        }
+      } else {
+        push(task.skillLabel);
+        push(task.prompt);
+        (task.options || []).forEach(function (option) { push(option.label); });
+        if (task.feedback) {
+          push(task.feedback.matchTitle);
+          push(task.feedback.matchText);
+          push(task.feedback.retryTitle);
+          push(task.feedback.retryText);
+        }
+        if (task.practiceRoute) push(task.practiceRoute.label);
       }
-      if (task.practiceRoute) push(task.practiceRoute.label);
     });
     if (data.completion) {
       push(data.completion.title);
@@ -143,7 +177,14 @@
       assert(typeof task.id === 'string' && task.id, 'Task needs id');
       assert(!seen[task.id], 'Task id must be unique: ' + task.id);
       seen[task.id] = true;
-      assert(task.type === 'choice', 'Only choice tasks are supported in GAME-UX-2');
+      assert(task.type === 'choice' || task.type === 'task_shell', 'Only choice and task_shell tasks are supported');
+      if (task.type === 'task_shell') {
+        var TaskShellEngine = resolveTaskShellEngine();
+        assert(TaskShellEngine && typeof TaskShellEngine.validateTask === 'function', 'TaskShellEngine is required for task_shell tasks');
+        assert(task.taskShell && typeof task.taskShell === 'object', 'task_shell tasks need taskShell');
+        TaskShellEngine.validateTask(task.taskShell);
+        return;
+      }
       assert(typeof task.prompt === 'string' && task.prompt, 'Task needs prompt');
       assert(Array.isArray(task.options) && task.options.length >= 2, 'Task needs at least two options');
       assert(typeof task.answer === 'string' && task.answer, 'Task needs answer id');
@@ -241,6 +282,17 @@
   ExitTicketEngine.prototype.checkTask = function (taskId, answerId) {
     var task = getTask(this.data, taskId);
     assert(task, 'Unknown task: ' + taskId);
+    if (task.type === 'task_shell') {
+      var TaskShellEngine = resolveTaskShellEngine();
+      assert(TaskShellEngine && typeof TaskShellEngine.evaluateTask === 'function', 'TaskShellEngine is required for task_shell tasks');
+      var taskShellResult = TaskShellEngine.evaluateTask(task.taskShell, answerId);
+      this.responses[taskId] = {
+        answerId: clone(answerId),
+        matched: taskShellResult.matched,
+        viewedAt: new Date().toISOString()
+      };
+      return Object.assign({}, taskShellResult, { taskId: taskId });
+    }
     var matched = normalizeAnswer(answerId) === normalizeAnswer(task.answer);
     this.responses[taskId] = {
       answerId: answerId,

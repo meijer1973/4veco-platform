@@ -1,0 +1,106 @@
+{
+  "captured_on": "2026-05-31",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "cases": [
+    {
+      "name": "desktop-light-113-graph-task-shell",
+      "theme": "light",
+      "action": "none",
+      "url": "http://127.0.0.1:52029/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\GRAPH-UX-2-screenshots\\desktop-light-113-graph-task-shell.png",
+      "route_text": "GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer",
+      "task_family": "table_value_selection",
+      "feedback_state": null,
+      "shell_rect": {
+        "x": 846,
+        "y": 774,
+        "width": 355,
+        "height": 588
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1435
+      }
+    },
+    {
+      "name": "mobile-light-113-graph-route-first",
+      "theme": "light",
+      "action": "none",
+      "url": "http://127.0.0.1:52029/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\GRAPH-UX-2-screenshots\\mobile-light-113-graph-route-first.png",
+      "route_text": "GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer",
+      "task_family": "table_value_selection",
+      "feedback_state": null,
+      "shell_rect": {
+        "x": 35,
+        "y": 1503,
+        "width": 320,
+        "height": 577
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 2143
+      }
+    },
+    {
+      "name": "desktop-dark-113-graph-task-shell",
+      "theme": "dark",
+      "action": "none",
+      "url": "http://127.0.0.1:52029/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\GRAPH-UX-2-screenshots\\desktop-dark-113-graph-task-shell.png",
+      "route_text": "GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer",
+      "task_family": "table_value_selection",
+      "feedback_state": null,
+      "shell_rect": {
+        "x": 846,
+        "y": 774,
+        "width": 355,
+        "height": 588
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1435
+      }
+    },
+    {
+      "name": "mobile-dark-113-graph-feedback",
+      "theme": "dark",
+      "action": "answer-first",
+      "url": "http://127.0.0.1:52029/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\GRAPH-UX-2-screenshots\\mobile-dark-113-graph-feedback.png",
+      "route_text": "GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer Juiste tabelrij gekozen Je koppelt de prijs aan de juiste verkoopwaarde. Oefen verder in grafiekenspel Volgende opgave",
+      "task_family": "table_value_selection",
+      "feedback_state": "ts-feedback-card is-matched",
+      "shell_rect": {
+        "x": 35,
+        "y": 1503,
+        "width": 320,
+        "height": 778
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 2345
+      }
+    }
+  ]
+}

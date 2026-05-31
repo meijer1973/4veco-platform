@@ -31,7 +31,7 @@
   }
 
   function optionButton(task, option) {
-    return '<button type="button" class="ts-choice" data-task-id="' + escapeHtml(task.id) + '" data-choice-id="' + escapeHtml(option.id) + '">' +
+    return '<button type="button" class="ts-choice" aria-pressed="false" data-task-id="' + escapeHtml(task.id) + '" data-choice-id="' + escapeHtml(option.id) + '">' +
       '<span class="ts-choice-mark" aria-hidden="true"></span>' +
       '<span class="ts-choice-body">' +
         '<strong>' + escapeHtml(option.label) + '</strong>' +
@@ -132,7 +132,7 @@
       '<h2>' + escapeHtml(task.prompt) + '</h2>' +
       (task.purpose ? '<p class="ts-purpose">' + escapeHtml(task.purpose) + '</p>' : '') +
       renderControl(task) +
-      '<div class="ts-feedback" data-feedback-for="' + escapeHtml(task.id) + '" aria-live="polite"></div>' +
+      '<div class="ts-feedback" data-feedback-for="' + escapeHtml(task.id) + '" aria-live="polite" role="status" tabindex="-1"></div>' +
     '</article>';
   }
 
@@ -153,7 +153,7 @@
     var criteria = result && Array.isArray(result.selfCheckCriteria) && result.selfCheckCriteria.length
       ? '<ul>' + result.selfCheckCriteria.map(function (criterion) { return '<li>' + escapeHtml(criterion) + '</li>'; }).join('') + '</ul>'
       : '';
-    return '<div class="ts-feedback-card is-' + escapeHtml(state) + '">' +
+    return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       criteria +

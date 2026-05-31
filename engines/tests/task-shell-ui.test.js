@@ -73,8 +73,11 @@ describe('TaskShellUI', () => {
         expect(html).toContain('inputmode="decimal"');
         expect(html).toContain('textarea');
         expect(html).toContain('data-choice-id="b"');
+        expect(html).toContain('aria-pressed="false"');
         expect(html).toContain('data-point-axis="x"');
         expect(html).toContain('aria-live="polite"');
+        expect(html).toContain('role="status"');
+        expect(html).toContain('tabindex="-1"');
         expect(html).toContain('data-input-role="work"');
         expect(html).toContain('data-input-role="final-answer"');
     });
@@ -100,6 +103,7 @@ describe('TaskShellUI', () => {
         const result = TaskShellEngine.evaluateTask(data().tasks[1], { work: 'berekening', finalAnswer: '10%' });
         const html = TaskShellUI.renderFeedback(result);
         expect(html).toContain('is-self_check');
+        expect(html).toContain('data-feedback-state="self_check"');
         expect(html).toContain('Formule zichtbaar');
         expect(html).toContain('Oefen deze stap verder');
     });

@@ -5,6 +5,92 @@ function clone(value) {
     return JSON.parse(JSON.stringify(value));
 }
 
+function graphTaskShellCheckpointData() {
+    return {
+        schema_version: 1,
+        parNr: '1.1.3',
+        parName: 'Grafieken en tabellen',
+        title: 'Grafiektaak oefenvorm',
+        intro: 'Gebruik dezelfde taakvormen als het grafiekenspel. Dit is lokale oefening.',
+        targetSkillIds: ['A61', 'A62', 'A63'],
+        skillScopeIds: ['A61', 'A62', 'A63'],
+        metadataAlignment: {
+            status: 'paragraph_skill_aligned_not_target_readiness',
+            paragraphSkillIds: ['A61', 'A62', 'A63'],
+            targetExerciseSkillIds: ['A61', 'A62', 'A63', 'A38'],
+            targetReadinessEvidence: false
+        },
+        tasks: [
+            {
+                id: 'graph-table',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'graph-table',
+                    family: 'table_value_selection',
+                    skillLabel: 'Tabelwaarde kiezen',
+                    purpose: 'Kies de bronwaarde uit de juiste rij.',
+                    prompt: 'Welke waarde hoort bij prijs EUR 2,00?',
+                    interaction: {
+                        inputLabel: 'Tabelwaarde',
+                        options: [
+                            { id: 'a', label: '300 ijsjes' },
+                            { id: 'b', label: '400 ijsjes' }
+                        ]
+                    },
+                    expected: { kind: 'choice', value: 'a' },
+                    feedback: {
+                        matchTitle: 'Juiste bronwaarde',
+                        matchText: 'Je koos de waarde uit de juiste rij.',
+                        retryTitle: 'Zoek de rij opnieuw',
+                        retryText: 'Lees prijs en waarde in dezelfde rij.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
+            },
+            {
+                id: 'graph-read',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'graph-read',
+                    family: 'graph_reading',
+                    skillLabel: 'Grafiek aflezen',
+                    purpose: 'Lees de grafiekwaarde met eenheid.',
+                    prompt: 'Lees de waarde bij juni af.',
+                    interaction: { inputLabel: 'Afgelezen waarde' },
+                    expected: { kind: 'number', value: 70, tolerance: 0, unit: 'index' },
+                    feedback: {
+                        matchTitle: 'Goed afgelezen',
+                        matchText: 'Het punt bij juni staat op 70.',
+                        retryTitle: 'Lees opnieuw',
+                        retryText: 'Zoek juni en lees de verticale waarde.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
+            },
+            {
+                id: 'graph-point',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'graph-point',
+                    family: 'point_placement',
+                    skillLabel: 'Punt plaatsen',
+                    purpose: 'Gebruik prijs als x-waarde en aantal als y-waarde.',
+                    prompt: 'Welk punt hoort bij prijs 10 en aantal 100?',
+                    interaction: { xLabel: 'prijs', yLabel: 'aantal' },
+                    expected: { kind: 'point', x: 10, y: 100, toleranceX: 0, toleranceY: 0 },
+                    feedback: {
+                        matchTitle: 'Punt klopt',
+                        matchText: 'Het punt is (10, 100).',
+                        retryTitle: 'Controleer de asvolgorde',
+                        retryText: 'Prijs is x en aantal is y.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
+            }
+        ]
+    };
+}
+
 describe('ExitTicketEngine', () => {
     test('validates the bounded GAME-UX-2 data shape', () => {
         expect(ExitTicketEngine.validateData(data)).toBe(true);
@@ -113,5 +199,26 @@ describe('ExitTicketEngine', () => {
             total: data.tasks.length,
             pending: data.tasks.length - 1,
         });
+    });
+
+    test('validates checkpoint-compatible graph task-shell tasks without target-readiness evidence', () => {
+        const graphData = graphTaskShellCheckpointData();
+        expect(ExitTicketEngine.validateData(graphData)).toBe(true);
+        expect(graphData.metadataAlignment.targetReadinessEvidence).toBe(false);
+
+        const engine = new ExitTicketEngine({ data: graphData });
+        const tableResult = engine.checkTask('graph-table', 'a');
+        expect(tableResult).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+            family: 'table_value_selection'
+        }));
+        const pointResult = engine.checkTask('graph-point', { x: 10, y: 100 });
+        expect(pointResult).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+            family: 'point_placement'
+        }));
+        expect(pointResult.boundaryFlags.targetEquivalentProof).toBe(false);
     });
 });

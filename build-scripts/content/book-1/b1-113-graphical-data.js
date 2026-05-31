@@ -40,7 +40,7 @@ const data = {
   },
   aspect: 'grafische voorstelling',
   student_title: 'Grafieken en tabelwaarden lezen',
-  student_subtitle: 'Lees eerst titel, as en eenheid. Kies daarna pas waarden en reken rustig verder.',
+  student_subtitle: 'Lees eerst titel, assen en eenheid. Kies daarna pas waarden, punten of berekening.',
   internal_pv_boundary: {
     student_facing_pv_projection: false,
     pv_machine_promotion: false,
@@ -50,11 +50,53 @@ const data = {
   },
   challenges: [
     {
+      id: 'table-ice-price-200',
+      type: 'table_value_selection',
+      title: 'Kies een tabelwaarde',
+      prompt: 'Welke verkoop hoort in de tabel bij prijs EUR 2,00?',
+      graph: {
+        type: 'table',
+        title: 'IJsjesverkoop per prijs',
+        columns: ['Prijs', 'Verkoop per dag'],
+        rows: [
+          { values: ['EUR 1,00', '500 ijsjes'] },
+          { values: ['EUR 1,50', '400 ijsjes'] },
+          { values: ['EUR 2,00', '300 ijsjes'] },
+          { values: ['EUR 2,50', '200 ijsjes'] }
+        ]
+      },
+      task_shell: {
+        family: 'table_value_selection',
+        skillLabel: 'Tabelwaarde kiezen',
+        purpose: 'Kies eerst de bronrij die de vraag noemt.',
+        interaction: {
+          inputLabel: 'Tabelwaarde',
+          options: [
+            { id: 'a', label: '400 ijsjes', description: 'Hoort bij EUR 1,50.' },
+            { id: 'b', label: '300 ijsjes', description: 'Hoort bij EUR 2,00.' },
+            { id: 'c', label: '200 ijsjes', description: 'Hoort bij EUR 2,50.' }
+          ]
+        },
+        expected: { kind: 'choice', value: 'b' },
+        feedback: {
+          matchTitle: 'Juiste tabelrij gekozen',
+          matchText: 'Je koppelt de prijs aan de juiste verkoopwaarde.',
+          retryTitle: 'Zoek de rij opnieuw',
+          retryText: 'Lees eerst de prijskolom en neem daarna de verkoopwaarde uit dezelfde rij.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
+      feedback_steps: feedback(
+        'De tabel toont prijzen en verkoop per dag.',
+        'Bij EUR 2,00 staat 300 ijsjes in dezelfde rij.',
+        'Kies de waarde uit de bron voordat je gaat rekenen.'
+      )
+    },
+    {
       id: 'bar-ice-quantity-200',
       type: 'bar_value_read',
-      title: 'Lees een waarde uit de bron',
+      title: 'Lees een waarde uit de grafiek',
       prompt: 'Hoeveel ijsjes worden verkocht bij prijs EUR 2,00?',
-      target_label: 'EUR 2,00',
       graph: {
         type: 'bar',
         title: 'IJsjesverkoop per prijs',
@@ -69,7 +111,23 @@ const data = {
           { label: 'EUR 3,00', value: 100 }
         ]
       },
-      expected_answer: { kind: 'number', value: 300, unit: 'ijsjes', tolerance: 0 },
+      task_shell: {
+        family: 'graph_reading',
+        skillLabel: 'Grafiek aflezen',
+        purpose: 'Lees titel, horizontale as, verticale as en eenheid.',
+        interaction: {
+          inputLabel: 'Afgelezen waarde',
+          placeholder: 'Typ alleen het getal'
+        },
+        expected: { kind: 'number', value: 300, unit: 'ijsjes', tolerance: 0 },
+        feedback: {
+          matchTitle: 'Goed afgelezen',
+          matchText: 'Bij EUR 2,00 hoort de staaf van 300 ijsjes.',
+          retryTitle: 'Lees de staaf opnieuw',
+          retryText: 'Zoek EUR 2,00 op de horizontale as en lees de hoogte af.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
       feedback_steps: feedback(
         'De grafiek toont ijsjesverkoop bij verschillende prijzen.',
         'Zoek het label EUR 2,00. De staaf hoort bij 300 ijsjes.',
@@ -77,11 +135,60 @@ const data = {
       )
     },
     {
-      id: 'line-broodjes-price-350',
-      type: 'line_value_read',
-      title: 'Lees de prijs bij een hoeveelheid',
-      prompt: 'Welke prijs hoort bij 150 broodjes?',
-      target_label: '150 broodjes',
+      id: 'axis-price-quantity',
+      type: 'axis_convention_check',
+      title: 'Controleer de assenafspraak',
+      prompt: 'Welke as gebruik je voor prijs en welke as voor hoeveelheid in deze vraag?',
+      graph: {
+        type: 'bar',
+        title: 'Vraag naar bioscoopkaartjes',
+        x_label: 'prijs',
+        y_label: 'aantal kaartjes',
+        unit: 'kaartjes',
+        show_value_labels: false,
+        y_ticks: [0, 50, 100, 150, 200],
+        series: [
+          { label: 'EUR 6', value: 180 },
+          { label: 'EUR 8', value: 140 },
+          { label: 'EUR 10', value: 100 },
+          { label: 'EUR 12', value: 60 }
+        ]
+      },
+      task_shell: {
+        family: 'graph_construction_substitute',
+        skillLabel: 'Asafspraak gebruiken',
+        purpose: 'Beschrijf de asafspraak voordat je een punt of grafiek gebruikt.',
+        interaction: {
+          inputLabel: 'Asafspraak',
+          placeholder: 'Prijs op ..., hoeveelheid op ...'
+        },
+        expected: {
+          kind: 'self_check',
+          criteria: [
+            'Prijs staat op de horizontale as.',
+            'Hoeveelheid of aantal staat op de verticale as.',
+            'Eenheid of label blijft zichtbaar in je antwoord.'
+          ]
+        },
+        feedback: {
+          selfCheckTitle: 'Vergelijk je asafspraak',
+          selfCheckText: 'Controleer of je horizontale en verticale as niet hebt omgedraaid.',
+          retryTitle: 'Schrijf eerst je asafspraak',
+          retryText: 'Noteer welke grootheid op welke as staat voordat je verder gaat.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
+      feedback_steps: feedback(
+        'De horizontale as toont de prijs.',
+        'De verticale as toont het aantal kaartjes.',
+        'Een punt heeft dus prijs als x-waarde en hoeveelheid als y-waarde.'
+      )
+    },
+    {
+      id: 'line-broodjes-interpolation',
+      type: 'interpolation_read',
+      title: 'Schat tussen twee punten',
+      prompt: 'Schat de prijs bij 175 broodjes.',
       graph: {
         type: 'line',
         title: 'Broodjesverkoop',
@@ -98,11 +205,66 @@ const data = {
           { label: '300 broodjes', value: 2.00 }
         ]
       },
-      expected_answer: { kind: 'number', value: 3.5, unit: 'euro', tolerance: 0.05 },
+      task_shell: {
+        family: 'graph_reading',
+        skillLabel: 'Interpoleren in een grafiek',
+        purpose: 'Schat een waarde tussen twee bekende punten op de lijn.',
+        interaction: {
+          inputLabel: 'Geschatte prijs',
+          placeholder: 'Typ de prijs'
+        },
+        expected: { kind: 'number', value: 3.25, unit: 'euro', tolerance: 0.1 },
+        feedback: {
+          matchTitle: 'Goede schatting',
+          matchText: '175 ligt halverwege 150 en 200 broodjes; de prijs ligt rond EUR 3,25.',
+          retryTitle: 'Schat tussen de punten',
+          retryText: 'Zoek 150 en 200 broodjes en neem ongeveer het midden van EUR 3,50 en EUR 3,00.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
       feedback_steps: feedback(
-        'De grafiek koppelt hoeveelheid broodjes aan prijs.',
-        'Bij 150 broodjes hoort het punt op EUR 3,50.',
-        'Lees de waarde met eenheid: EUR 3,50.'
+        'De grafiek toont minder labels: je moet tussen twee punten schatten.',
+        '175 broodjes ligt halverwege 150 en 200 broodjes.',
+        'Halverwege EUR 3,50 en EUR 3,00 ligt ongeveer EUR 3,25.'
+      )
+    },
+    {
+      id: 'point-demand-price-10',
+      type: 'point_placement',
+      title: 'Plaats een punt als coördinaten',
+      prompt: 'Welk punt hoort bij prijs EUR 10 en 100 kaartjes?',
+      graph: {
+        type: 'table',
+        title: 'Vraag naar bioscoopkaartjes',
+        columns: ['Prijs', 'Aantal kaartjes'],
+        rows: [
+          { values: ['EUR 6', '180'] },
+          { values: ['EUR 8', '140'] },
+          { values: ['EUR 10', '100'] },
+          { values: ['EUR 12', '60'] }
+        ]
+      },
+      task_shell: {
+        family: 'point_placement',
+        skillLabel: 'Punt plaatsen',
+        purpose: 'Gebruik prijs als x-waarde en aantal als y-waarde.',
+        interaction: {
+          xLabel: 'x-waarde: prijs',
+          yLabel: 'y-waarde: aantal'
+        },
+        expected: { kind: 'point', x: 10, y: 100, toleranceX: 0, toleranceY: 0 },
+        feedback: {
+          matchTitle: 'Punt klopt',
+          matchText: 'Het punt is (10, 100): prijs op de horizontale as en aantal op de verticale as.',
+          retryTitle: 'Controleer de asvolgorde',
+          retryText: 'Prijs is de x-waarde; aantal kaartjes is de y-waarde.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
+      feedback_steps: feedback(
+        'De tabel geeft de bronwaarden voor een punt.',
+        'Prijs EUR 10 wordt x = 10 en 100 kaartjes wordt y = 100.',
+        'Een grafiekpunt noteer je als (x, y).'
       )
     },
     {
@@ -124,13 +286,30 @@ const data = {
           { label: 'EUR 3,00', value: 100 }
         ]
       },
-      expected_answer: {
-        kind: 'percentage_change',
-        old_label: 'EUR 1,00',
-        new_label: 'EUR 2,00',
-        value: -40,
-        unit: '%',
-        tolerance: 0.1
+      task_shell: {
+        family: 'calculation_work_capture',
+        skillLabel: 'Bronwaarden gebruiken',
+        purpose: 'Laat zien welke bronwaarden je gebruikt en hoe je rekent.',
+        interaction: {
+          workLabel: 'Berekening met bronwaarden',
+          finalAnswerLabel: 'Eindantwoord met procentteken',
+          finalAnswerPlaceholder: 'Bijvoorbeeld -40%'
+        },
+        expected: {
+          kind: 'self_check',
+          criteria: [
+            'Oud = 500 ijsjes en nieuw = 300 ijsjes.',
+            'Berekening gebruikt (nieuw - oud) / oud x 100%.',
+            'Eindantwoord: -40%, dus de verkoop daalt met 40%.'
+          ]
+        },
+        feedback: {
+          selfCheckTitle: 'Controleer je berekening',
+          selfCheckText: 'Vergelijk je werk met de bronwaarden en de procentregel.',
+          retryTitle: 'Schrijf eerst je berekening',
+          retryText: 'Noteer oud, nieuw en de rekenstap voordat je vergelijkt.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
       },
       feedback_steps: feedback(
         'De vraag vergelijkt de verkoop bij EUR 1,00 met de verkoop bij EUR 2,00.',
@@ -155,41 +334,27 @@ const data = {
           { label: 'juni', value: 70 }
         ]
       },
-      expected_answer: { kind: 'number', value: 70, unit: 'index', tolerance: 0 },
+      task_shell: {
+        family: 'graph_reading',
+        skillLabel: 'Indexgrafiek aflezen',
+        purpose: 'Lees de waarde en houd de indexnotatie apart van procenten.',
+        interaction: {
+          inputLabel: 'Afgelezen index',
+          placeholder: 'Typ de index'
+        },
+        expected: { kind: 'number', value: 70, unit: 'index', tolerance: 0 },
+        feedback: {
+          matchTitle: 'Index goed afgelezen',
+          matchText: 'Het punt bij juni staat op index 70.',
+          retryTitle: 'Lees de index opnieuw',
+          retryText: 'Zoek juni op de horizontale as en lees de indexwaarde af.'
+        },
+        practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
+      },
       feedback_steps: feedback(
         'De grafiek gebruikt januari als basis: januari = 100.',
         'Het punt bij juni staat op 70.',
         'Index 70 betekent dat de verkoop 30% lager is dan in januari.'
-      )
-    },
-    {
-      id: 'line-water-percentage-change',
-      type: 'graph_values_percentage_change',
-      title: 'Controleer een journalistieke claim',
-      prompt: 'Bereken de procentuele verandering van januari naar juni.',
-      graph: {
-        type: 'line',
-        title: 'Verkoop flesjes water',
-        x_label: 'periode',
-        y_label: 'aantal per week',
-        unit: 'flesjes',
-        series: [
-          { label: 'januari', value: 500 },
-          { label: 'juni', value: 350 }
-        ]
-      },
-      expected_answer: {
-        kind: 'percentage_change',
-        old_label: 'januari',
-        new_label: 'juni',
-        value: -30,
-        unit: '%',
-        tolerance: 0.1
-      },
-      feedback_steps: feedback(
-        'Je vergelijkt januari met juni, dus januari is de oude waarde.',
-        'Oud = 500 en nieuw = 350. Het verschil is -150.',
-        '-150 / 500 x 100% = -30%. Dat is niet precies een derde.'
       )
     }
   ]

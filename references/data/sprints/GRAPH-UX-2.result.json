@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GRAPH-UX-2",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/GRAPH-UX-2-plan.md",
+  "baseline": "reports/sprints/GRAPH-UX-2-baseline.md",
+  "planning_review": "reports/sprints/GRAPH-UX-2-planning-review.md",
+  "result": "reports/sprints/GRAPH-UX-2-result.md",
+  "diff_summary": "reports/sprints/GRAPH-UX-2-diff-summary.md",
+  "student_route_proof": "reports/sprints/GRAPH-UX-2-student-route-proof.md",
+  "checkpoint_graph_task_fixture": "reports/sprints/GRAPH-UX-2-checkpoint-graph-task-fixture.md",
+  "screenshot_manifest": "reports/sprints/GRAPH-UX-2-screenshot-manifest.md",
+  "screenshot_directory": "reports/sprints/GRAPH-UX-2-screenshots",
+  "lesson_archive_plan": "../4veco-lessen/archive/sprints/GRAPH-UX-2/GRAPH-UX-2-sprint-plan.md",
+  "lesson_archive_closure": "../4veco-lessen/archive/sprints/GRAPH-UX-2/GRAPH-UX-2-closure-log.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": true,
+  "lesson_output_mutated": true,
+  "lesson_output_mutation_route": "platform deploy/build commands only",
+  "student_product_use_allowed": false,
+  "active_next_sprint": "MATH-UX-2",
+  "route_cases_checked": 7,
+  "screenshot_count": 4,
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GRAPH-UX-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GRAPH-UX-2",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand --runTestsByPath engines/tests/graphical-engine.test.js engines/tests/graphical-ui.test.js engines/tests/graphical-data.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "cmd /c \"set MODULE_ROOT=..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod&& npx.cmd jest --runInBand --runTestsByPath engines/tests/graphical-data.test.js\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/content/book-1/b1-113-graphical-data.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-graph-ux2-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "live in-app browser graph route check over local HTTP",
+      "status": "passed"
+    },
+    {
+      "command": "live in-app browser feedback focus check over local HTTP",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GRAPH-UX-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "Get-ChildItem reports/sprints/GRAPH-UX-2-screenshots -File | Measure-Object",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json source-data/book-1/exit-ticket",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/GRAPH-UX-2-lead-review-assignment.md",
+    "round1": "reports/sprints/GRAPH-UX-2-lead-review-round1.md",
+    "corrections": "reports/sprints/GRAPH-UX-2-lead-review-corrections.md",
+    "round2": "reports/sprints/GRAPH-UX-2-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GRAPH-UX2-SE-1",
+        "description": "Desktop first viewport can show route/source before task controls; task controls begin below the first 1280 x 760 viewport.",
+        "disposition": "carry_forward",
+        "owner": "MATH-UX-2 / later engine UI polish",
+        "next_action": "Tighten vertical density when polishing engine UI, and compare against graph route evidence in GATE-ENGINE-1.",
+        "blocking": false
+      }
+    ]
+  },
+  "specialist_reviews": {
+    "student_experience": "reports/sprints/GRAPH-UX-2-student-experience-review.md",
+    "accessibility": "reports/sprints/GRAPH-UX-2-accessibility-review.md"
+  }
+}

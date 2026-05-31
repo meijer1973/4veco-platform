@@ -1,5 +1,5 @@
 // Graphical Game - UI
-// Depends on: theme.js, graphical/[par].js, adaptive-seam.js, graphical-engine.js
+// Depends on: theme.js, task-shell, graphical/[par].js, adaptive-seam.js, graphical-engine.js
 
 (function () {
   "use strict";
@@ -10,6 +10,7 @@
 
   var engine = new GraphicalEngine({ data: data });
   var lastResult = null;
+  var focusFeedbackAfterRender = false;
 
   function bindThemeToggle() {
     var btn = document.getElementById("theme-toggle");
@@ -83,6 +84,7 @@
 
   function renderChart(challenge) {
     var graph = challenge.graph;
+    if (graph.type === "table") return renderSourceTable(graph);
     var values = graph.series.map(function (p) { return p.value; });
     var max = Math.max.apply(null, values.concat([1]));
     var min = Math.min.apply(null, values.concat([0]));
@@ -162,6 +164,26 @@
       renderYAxisTicks(graph, 0, max, layout),
       bars,
       '</svg>'
+    ].join("");
+  }
+
+  function renderSourceTable(graph) {
+    var headers = graph.columns.map(function (column) {
+      return '<th scope="col">' + escapeHtml(column) + '</th>';
+    }).join("");
+    var rows = graph.rows.map(function (row) {
+      return '<tr>' + row.values.map(function (value) {
+        return '<td>' + escapeHtml(value) + '</td>';
+      }).join("") + '</tr>';
+    }).join("");
+    return [
+      '<div class="g-source-table-wrap" role="region" aria-label="' + escapeHtml(graph.title) + '">',
+      '<h3>' + escapeHtml(graph.title) + '</h3>',
+      '<table class="g-source-table">',
+      '<thead><tr>' + headers + '</tr></thead>',
+      '<tbody>' + rows + '</tbody>',
+      '</table>',
+      '</div>'
     ].join("");
   }
 
@@ -304,14 +326,62 @@
     ].join("");
   }
 
+  function renderTaskShellTask(challenge, progress) {
+    if (!window.TaskShellUI || typeof engine.getCurrentTaskShellTask !== "function") {
+      return renderInputs(challenge);
+    }
+    var task = engine.getCurrentTaskShellTask();
+    var taskMarkup = window.TaskShellUI.renderTask(task, progress.current - 1);
+    taskMarkup = removeTaskShellFeedbackRegion(taskMarkup, task.id);
+    return [
+      '<section class="g-task-shell" data-graph-task-shell="GRAPH-UX-2">',
+      '<div class="g-task-shell-head">',
+      '<p class="g-kicker">Taak ' + progress.current + ' van ' + progress.total + '</p>',
+      '<p>Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is.</p>',
+      '</div>',
+      taskMarkup,
+      '<button type="button" class="g-btn g-task-check" id="g-task-check-btn">Controleer</button>',
+      renderTaskShellFeedbackRegion(lastResult, task.id),
+      '</section>'
+    ].join("");
+  }
+
+  function removeTaskShellFeedbackRegion(markup, taskId) {
+    var marker = '<div class="ts-feedback" data-feedback-for="' + escapeHtml(taskId) + '" aria-live="polite" role="status" tabindex="-1"></div>';
+    return markup.replace(marker, "");
+  }
+
+  function renderTaskShellFeedbackRegion(result, taskId) {
+    var feedbackHtml = renderTaskShellFeedback(result);
+    return [
+      '<div class="ts-feedback" id="g-task-feedback" data-feedback-for="' + escapeHtml(taskId) + '" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">',
+      feedbackHtml,
+      '</div>',
+      result ? '<button type="button" class="g-btn g-btn-secondary" id="g-next-btn">' + (engine.index === data.challenges.length - 1 ? 'Bekijk resultaat' : 'Volgende opgave') + '</button>' : ''
+    ].join("");
+  }
+
+  function renderTaskShellFeedback(result) {
+    if (!result || !window.TaskShellUI) return "";
+    var feedback = {
+      state: result.state || (result.correct ? "matched" : "retry"),
+      feedbackTitle: result.feedbackTitle,
+      feedbackText: result.feedbackText,
+      selfCheckCriteria: result.selfCheckCriteria || [],
+      practiceRoute: result.practiceRoute
+    };
+    return window.TaskShellUI.renderFeedback(feedback);
+  }
+
   function renderSummary() {
     var summary = engine.getSummary();
+    var progress = engine.getProgress();
     return [
       '<main class="g-shell">',
       '<section class="g-panel g-summary">',
       '<p class="g-kicker">Klaar</p>',
-      '<h1>' + summary.correct + ' van ' + summary.total + ' goed</h1>',
-      '<p>Je hebt geoefend met grafieken aflezen en waarden gebruiken in een berekening.</p>',
+      '<h1>' + progress.completed + ' van ' + progress.total + ' taken gedaan</h1>',
+      '<p>Je hebt lokaal geoefend met grafieken, tabellen, assen en bronwaarden. Gebruik dit als oefenstap; het is geen cijfer of automatische route.</p>',
       '<button type="button" class="g-btn" id="g-restart-btn">Opnieuw oefenen</button>',
       '</section>',
       '</main>'
@@ -341,6 +411,9 @@
       '</div>',
       '<div class="g-progress" aria-label="Voortgang"><span>' + progress.current + '</span><small>/ ' + progress.total + '</small></div>',
       '</section>',
+      '<section class="g-route-cue">',
+      renderSkillMapRoute(),
+      '</section>',
       '<section class="g-grid">',
       '<article class="g-panel g-chart-panel">',
       '<div class="g-challenge-head">',
@@ -351,23 +424,88 @@
       '<div class="g-chart-wrap">' + renderChart(challenge) + '</div>',
       '</article>',
       '<aside class="g-panel g-work-panel">',
-      renderSkillMapRoute(),
-      renderInputs(challenge),
-      renderFeedback(lastResult),
+      renderTaskShellTask(challenge, progress),
       '</aside>',
       '</section>',
       '</main>'
     ].join("");
 
-    bindForm(challenge);
+    bindTaskShell(challenge);
     var nextBtn = document.getElementById("g-next-btn");
     if (nextBtn) {
       nextBtn.addEventListener("click", function () {
         lastResult = null;
+        focusFeedbackAfterRender = false;
         engine.nextChallenge();
         render();
       });
     }
+    if (focusFeedbackAfterRender) {
+      focusFeedbackAfterRender = false;
+      var feedbackRegion = document.getElementById("g-task-feedback");
+      if (feedbackRegion && typeof feedbackRegion.focus === "function") {
+        feedbackRegion.focus({ preventScroll: true });
+      }
+    }
+  }
+
+  function collectTaskShellResponse(task) {
+    if (!task) return null;
+    var selected = rootEl.querySelector('[data-task="' + escapeCss(task.id) + '"] .ts-choice.selected');
+    if (task.family === "choice" || task.family === "table_value_selection") {
+      return selected ? selected.getAttribute("data-choice-id") : "";
+    }
+    if (task.family === "point_placement") {
+      return {
+        x: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="x"]'),
+        y: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="y"]')
+      };
+    }
+    if (task.family === "calculation_work_capture") {
+      return {
+        work: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="work"]'),
+        finalAnswer: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="final-answer"]')
+      };
+    }
+    return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
+  }
+
+  function escapeCss(value) {
+    if (window.CSS && typeof window.CSS.escape === "function") return window.CSS.escape(value);
+    return String(value).replace(/"/g, '\\"');
+  }
+
+  function getValue(selector) {
+    var el = rootEl.querySelector(selector);
+    return el ? el.value : "";
+  }
+
+  function bindTaskShell(challenge) {
+    if (!window.TaskShellUI || typeof engine.getCurrentTaskShellTask !== "function") {
+      bindForm(challenge);
+      return;
+    }
+    var task = engine.getCurrentTaskShellTask();
+    rootEl.querySelectorAll(".ts-choice").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var taskEl = button.closest(".ts-task");
+        if (taskEl) {
+          taskEl.querySelectorAll(".ts-choice").forEach(function (other) {
+            other.classList.remove("selected");
+            other.setAttribute("aria-pressed", "false");
+          });
+        }
+        button.classList.add("selected");
+        button.setAttribute("aria-pressed", "true");
+      });
+    });
+    var checkBtn = document.getElementById("g-task-check-btn");
+    if (!checkBtn) return;
+    checkBtn.addEventListener("click", function () {
+      lastResult = engine.evaluateTaskShellResponse(collectTaskShellResponse(task));
+      focusFeedbackAfterRender = true;
+      render();
+    });
   }
 
   function bindForm(challenge) {

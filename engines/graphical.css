@@ -162,6 +162,14 @@ p {
   align-items: start;
 }
 
+.g-route-cue {
+  margin-bottom: 18px;
+}
+
+.g-route-cue .skill-map-route {
+  box-shadow: var(--g-shadow);
+}
+
 .g-chart-panel,
 .g-work-panel,
 .g-summary {
@@ -188,6 +196,38 @@ p {
   background: var(--g-surface-2);
   border: 1px solid var(--g-border);
   overflow: hidden;
+}
+
+.g-source-table-wrap {
+  padding: clamp(16px, 3vw, 24px);
+  overflow-x: auto;
+}
+
+.g-source-table-wrap h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.g-source-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+.g-source-table th,
+.g-source-table td {
+  border: 1px solid var(--g-border);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.g-source-table th {
+  background: var(--g-surface);
+  color: var(--g-primary);
+}
+
+.g-source-table td {
+  color: var(--g-text);
 }
 
 .g-chart-svg {
@@ -345,6 +385,41 @@ a:focus-visible {
   background: var(--g-surface-2);
   color: var(--g-text);
   border: 1px solid var(--g-border);
+}
+
+.g-task-shell {
+  display: grid;
+  gap: 14px;
+}
+
+.g-task-shell-head {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--g-border);
+}
+
+.g-task-shell-head p:last-child {
+  margin: 0;
+  color: var(--g-muted);
+  line-height: 1.45;
+}
+
+.g-work-panel .ts-task {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.g-work-panel .ts-task h2 {
+  font-size: clamp(1.12rem, 2vw, 1.38rem);
+}
+
+.g-work-panel .ts-feedback-card {
+  margin-top: 2px;
+}
+
+.g-task-check {
+  width: 100%;
 }
 
 .g-feedback {
