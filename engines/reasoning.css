@@ -338,6 +338,72 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #0f172a; }
 .r-feedback-title { font-weight: 700; font-size: 16px; margin-bottom: 6px; }
 .r-feedback-detail { font-size: 14px; line-height: 1.5; }
 
+.r-feedback-chain {
+    margin: 10px 0 0 20px;
+    display: grid;
+    gap: 8px;
+}
+.r-feedback-chain li { padding-left: 4px; }
+.r-feedback-chain strong { display: block; }
+.r-feedback-chain span,
+.r-feedback-selected,
+.r-reasoning-guide p {
+    color: inherit;
+    opacity: 0.9;
+}
+.r-feedback-chain code {
+    display: inline-block;
+    margin-top: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+.r-feedback-text-chain {
+    margin: 8px 0;
+    font-weight: 700;
+}
+.r-reasoning-guide { margin-top: 12px; }
+.r-reasoning-guide ul {
+    margin: 8px 0 0 18px;
+    display: grid;
+    gap: 8px;
+}
+.r-reasoning-guide li span {
+    display: block;
+    margin-top: 2px;
+}
+
+.r-task-shell-mode {
+    display: grid;
+    gap: 12px;
+}
+.r-task-route-cue {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--r-primary);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #475569;
+    font-weight: 700;
+}
+.r-task-shell-mode .ts-task {
+    box-shadow: none;
+    border-color: #e2e8f0;
+}
+.r-task-shell-mode .ts-task h2 {
+    color: var(--ts-text);
+    font-size: 1.08rem;
+}
+.r-task-shell-mode .ts-field span,
+.r-task-shell-mode .ts-criteria,
+.r-task-shell-mode .ts-purpose {
+    color: var(--ts-muted);
+}
+.r-task-shell-mode .ts-task-meta span:first-child { display: none; }
+.r-task-shell-mode .ts-feedback-card { margin-top: 8px; }
+
 /* ── Results screen ─────────────────────────────────────────────── */
 
 .r-results { text-align: center; padding: 40px 24px; }

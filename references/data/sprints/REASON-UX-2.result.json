@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-UX-2",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/REASON-UX-2-plan.md",
+  "baseline": "reports/sprints/REASON-UX-2-baseline.md",
+  "planning_review": "reports/sprints/REASON-UX-2-planning-review.md",
+  "result": "reports/sprints/REASON-UX-2-result.md",
+  "diff_summary": "reports/sprints/REASON-UX-2-diff-summary.md",
+  "student_route_proof": "reports/sprints/REASON-UX-2-student-route-proof.md",
+  "reasoning_task_shell_fixture": "reports/sprints/REASON-UX-2-reasoning-task-shell-fixture.md",
+  "screenshot_manifest": "reports/sprints/REASON-UX-2-screenshot-manifest.md",
+  "screenshot_directory": "reports/sprints/REASON-UX-2-screenshots",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": true,
+  "lesson_output_mutated": true,
+  "lesson_output_mutation_route": "platform deploy/build commands only",
+  "student_product_use_allowed": false,
+  "active_next_sprint": "GAME-ARCH-1",
+  "route_cases_checked": 3,
+  "reasoning_modes_checked": 6,
+  "task_shell_family": "structured_reasoning",
+  "screenshot_count": 4,
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-UX-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-UX-2",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand --runTestsByPath engines/tests/reasoning-engine.test.js engines/tests/reasoning-data.test.js engines/tests/reasoning-ui.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "cmd /c \"set MODULE_ROOT=..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod&& npx.cmd jest --runInBand --runTestsByPath engines/tests/reasoning-data.test.js\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-math-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-reason-ux2-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/REASON-UX-2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-UX-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json source-data/book-1/exit-ticket",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/REASON-UX-2-lead-review-assignment.md",
+    "round1": "reports/sprints/REASON-UX-2-lead-review-round1.md",
+    "corrections": "reports/sprints/REASON-UX-2-lead-review-corrections.md",
+    "round2": "reports/sprints/REASON-UX-2-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "recheck1": "reports/sprints/REASON-UX-2-lead-review-recheck1.md",
+    "recheck1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "REASON-UX-2-LR2-F1",
+        "description": "Mobile self-check feedback pages are long after the example route opens.",
+        "disposition": "carry_forward",
+        "owner": "GAME-ARCH-1 / practice-engine architecture owner",
+        "next_action": "Consider a compact cross-engine feedback pattern during the build-vs-rebuild decision.",
+        "blocking": false
+      },
+      {
+        "id": "REASON-UX-2-LR2-F2",
+        "description": "Some source reasoning labels remain terse because REASON-UX-2 did not rewrite CSV content.",
+        "disposition": "accepted_follow_up",
+        "owner": "future bounded source-data/content polish sprint",
+        "next_action": "Polish reasoning CSV labels if the current source-data path remains after GAME-ARCH-1.",
+        "blocking": false
+      },
+      {
+        "id": "REASON-UX-2-LR2-F3",
+        "description": "REASON-UX-2 is reasoning task-shell integration proof only, not target-equivalent proof, product use, diagnostics, mastery, or Scale Gate evidence.",
+        "disposition": "product_scale_blocker",
+        "owner": "GATE-ENGINE-1 and L1.7B-Q2/GATE-L1.7B-Q2 owners",
+        "next_action": "Keep product/scale reliance blocked until the named gates authorize live engine integration and target-equivalent checkpoint proof.",
+        "blocking": false
+      }
+    ]
+  },
+  "specialist_reviews": {
+    "student_experience": "reports/sprints/REASON-UX-2-student-experience-review.md",
+    "accessibility": "reports/sprints/REASON-UX-2-accessibility-review.md"
+  }
+}

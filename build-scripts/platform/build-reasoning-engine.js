@@ -36,6 +36,7 @@ function generateShell(parNr, parName) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="${sharedPath}/skill-map-route.css">
+    <link rel="stylesheet" href="${sharedPath}/task-shell.css">
     <link rel="stylesheet" href="${sharedPath}/reasoning.css">
 </head>
 <body>
@@ -108,6 +109,8 @@ function generateShell(parNr, parName) {
 <script src="${sharedPath}/reasoning/${parNr}.js"></script>
 <script src="${sharedPath}/reasoning/meta-categories.js"></script>
 <script src="${sharedPath}/adaptive-seam.js"></script>
+<script src="${sharedPath}/task-shell-engine.js"></script>
+<script src="${sharedPath}/task-shell-ui.js"></script>
 <script src="${sharedPath}/reasoning-engine.js"></script>
 <script src="${sharedPath}/reasoning-ui.js"></script>
 </body>

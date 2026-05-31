@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-31T12:50:44.424Z
+Generated: 2026-05-31T13:50:26.972Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1548
+Files indexed: 1550
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2413,7 +2413,7 @@ Count: 817
 
 ## other
 
-Count: 409
+Count: 411
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2788,6 +2788,8 @@ Count: 409
 - archive/sprints/L2.0/L2.0-student-experience-review.md
 - archive/sprints/L2.0/L2.0-teacher-learning-quality-review.md
 - archive/sprints/L2.0/L2.0-technical-qa-report.md
+- archive/sprints/MATH-UX-2/MATH-UX-2-closure-log.md
+- archive/sprints/MATH-UX-2/MATH-UX-2-sprint-plan.md
 - archive/sprints/QUALITY-STD-1/QUALITY-STD-1-closure-log.md
 - archive/sprints/QUALITY-STD-1/QUALITY-STD-1-sprint-plan.md
 - archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md

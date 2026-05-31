@@ -104,20 +104,22 @@
     }
 
     // ── Mode icons and descriptions ─────────────────────────────────
-    var MODE_ICONS = ['\uD83D\uDD22', '\u2753', '\uD83D\uDD0D', '\uD83D\uDCC8', '\uD83E\uDDE9'];
+    var MODE_ICONS = ['\uD83D\uDD22', '\u2753', '\uD83D\uDD0D', '\uD83D\uDCC8', '\uD83E\uDDE9', '\u270D\uFE0F'];
     var MODE_DESCS = [
         'Selecteer 3 juiste stappen en zet ze in de goede volgorde.',
         'Kies de 3 juiste deelvragen in de goede volgorde.',
         'Welke van de 3 stappen bevat een fout?',
         'Bouw een stroomdiagram door blokken in de juiste volgorde te plaatsen.',
-        'Koppel 6 opgaven aan 3 paren die dezelfde oplossingsstructuur delen.'
+        'Koppel 6 opgaven aan 3 paren die dezelfde oplossingsstructuur delen.',
+        'Schrijf zelf een korte oorzaak-tussenstap-conclusie redenering.'
     ];
     var MODE_INSTRUCTIONS = [
         'Je ziet 6 stappen: 3 zijn correct en 3 zijn afleidingsmanoeuvres. Selecteer de 3 juiste stappen en zet ze in de goede volgorde door erop te klikken.',
         'Je ziet 5 deelvragen: 3 zijn correct en 2 zijn afleidingsmanoeuvres. Selecteer de 3 juiste deelvragen in de goede volgorde.',
         'Je ziet 3 redeneerstappen. E\u00e9n stap bevat een fout. Klik op de stap die volgens jou fout is.',
         'Bouw het stroomdiagram door de blokken in de juiste volgorde te plaatsen. Klik op een blok om het toe te voegen. Klik op een geplaatst blok om het te verwijderen.',
-        'Je ziet 6 opgaven. Koppel steeds 2 opgaven die dezelfde oplossingsstructuur delen. Klik op een opgave om te selecteren, dan op een tweede om een paar te vormen.'
+        'Je ziet 6 opgaven. Koppel steeds 2 opgaven die dezelfde oplossingsstructuur delen. Klik op een opgave om te selecteren, dan op een tweede om een paar te vormen.',
+        'Schrijf een korte redenering en vergelijk die daarna met de zelfcheckpunten.'
     ];
 
     // ── DOM references ──────────────────────────────────────────────
@@ -214,6 +216,7 @@
     var placedBlocks = [];   // For mode 3
     var matchPairs = [];     // For mode 4: [[idA,idB], ...]
     var matchFirst = null;   // For mode 4: first card of current pair
+    var taskShellResponse = ''; // For mode 5: structured reasoning text
     var roundData = null;    // Current round presentation data
 
     // ── Screen management ───────────────────────────────────────────
@@ -232,7 +235,7 @@
     function renderMenu() {
         var modeNames = engine.getModeNames();
         var html = '';
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < modeNames.length; i++) {
             var rounds = (i === 4) ? '1 ronde' : Math.min(engine.getProblemCount(), 5) + ' rondes';
             html += '<button class="r-mode-btn" data-mode="' + i + '">'
                 + '<div class="r-mode-icon" style="background:' + getModeColor(i) + '">' + MODE_ICONS[i] + '</div>'
@@ -266,7 +269,7 @@
     }
 
     function getModeColor(idx) {
-        var colors = ['#e0f2fe', '#fce7f3', '#fee2e2', '#dcfce7', '#fef3c7'];
+        var colors = ['#e0f2fe', '#fce7f3', '#fee2e2', '#dcfce7', '#fef3c7', '#ede9fe'];
         return colors[idx] || '#f1f5f9';
     }
 
@@ -333,6 +336,7 @@
         placedBlocks = [];
         matchPairs = [];
         matchFirst = null;
+        taskShellResponse = '';
 
         // Update badges
         els.roundBadge.textContent = roundData.roundNumber + '/' + roundData.totalRounds;
@@ -357,6 +361,7 @@
             case 2: content = renderFindError(); break;
             case 3: content = renderFlowDiagram(); break;
             case 4: content = renderMatchStructures(); break;
+            case 5: content = renderStructuredReasoning(); break;
         }
         els.gameContent.innerHTML = instructionHtml + content;
         bindModeInteractions();
@@ -460,6 +465,16 @@
 
     // ── Bind interactions ───────────────────────────────────────────
 
+    function renderStructuredReasoning() {
+        if (!window.TaskShellUI || !roundData.taskShellTask) {
+            return '<div class="r-info-box">Deze taakvorm kan nu niet worden geladen.</div>';
+        }
+        return '<section class="r-task-shell-mode" data-reasoning-task-shell="REASON-UX-2">'
+            + '<div class="r-task-route-cue">Gebruik oorzaak, tussenstap en conclusie als een korte denkroute.</div>'
+            + window.TaskShellUI.renderTask(roundData.taskShellTask, 0)
+            + '</section>';
+    }
+
     function bindModeInteractions() {
         // Mode 3 uses #r-flow-bank, not #r-options — handle it before the options guard
         if (currentMode === 3) {
@@ -467,6 +482,10 @@
             for (var k = 0; k < blocks.length; k++) {
                 blocks[k].addEventListener('click', handleFlowBankClick);
             }
+            return;
+        }
+        if (currentMode === 5) {
+            bindStructuredReasoning();
             return;
         }
 
@@ -503,6 +522,16 @@
     }
 
     // ── Mode 0/1: Step/SubQ click handler ───────────────────────────
+
+    function bindStructuredReasoning() {
+        var input = document.querySelector('[data-reasoning-task-shell="REASON-UX-2"] [data-input-role="answer"]');
+        if (!input) return;
+        input.addEventListener('input', function () {
+            taskShellResponse = this.value || '';
+            els.checkBtn.disabled = taskShellResponse.trim().length === 0;
+        });
+        els.checkBtn.disabled = true;
+    }
 
     function handleStepClick() {
         var idx = parseInt(this.getAttribute('data-idx'));
@@ -579,13 +608,16 @@
         // Highlight
         if (result.correct) {
             this.classList.add('r-correct');
-            showFeedback(true, 'Goed gevonden!', 'Stap ' + (idx + 1) + ' bevatte inderdaad een fout.');
+            showFeedback(true, 'Goed gevonden!',
+                'Stap ' + (idx + 1) + ' bevatte inderdaad een fout. Vergelijk met de reparatie hieronder.'
+                + formatStepList([result.feedback.correctStep], 'r-feedback-chain'));
         } else {
             this.classList.add('r-wrong');
             var errorCard = cards[result.feedback.errorIdx];
             errorCard.classList.add('r-correct');
             showFeedback(false, 'Dat was niet de foute stap.',
-                'Stap ' + (result.feedback.errorIdx + 1) + ' was fout. Correct: "' + esc(result.feedback.correctStep.label) + '"');
+                'Stap ' + (result.feedback.errorIdx + 1) + ' was fout. De reparatie is:'
+                + formatStepList([result.feedback.correctStep], 'r-feedback-chain'));
         }
 
         // Reveal formulas if hidden
@@ -706,28 +738,39 @@
             case 4: // Match
                 answer = matchPairs;
                 break;
+            case 5: // Structured reasoning
+                answer = taskShellResponse;
+                break;
         }
 
         var stType = engine.getCurrentStructureType();
         var result = engine.submitAnswer(answer);
-        updateSessionProgress(stType, result.correct);
-        renderSessionProgress();
+        if (!result.selfCheckOnly) {
+            updateSessionProgress(stType, result.correct);
+            renderSessionProgress();
 
-        // Save progress immediately so it persists even if the user leaves mid-game
-        saveAnswerProgress(stType, result.correct);
+            // Save progress immediately so it persists even if the user leaves mid-game
+            saveAnswerProgress(stType, result.correct);
+        } else {
+            renderSessionProgress();
+        }
 
         // Disable interaction
         disableAllInteraction();
 
         // Show feedback
-        if (currentMode === 4) {
+        if (currentMode === 5) {
+            var taskResult = result.feedback.taskShellResult;
+            showFeedback(result.correct, 'Voorbeeldroute', formatReasoningGuide(result.feedback));
+            renderTaskShellFeedback(taskResult);
+        } else if (currentMode === 4) {
             // Match: show partial results
             var fb = result.feedback;
             if (result.correct) {
-                showFeedback(true, 'Alle paren kloppen!', fb.matchCount + ' van ' + fb.totalPairs + ' paren goed.');
+                showFeedback(true, 'Alle paren kloppen!', fb.matchCount + ' van ' + fb.totalPairs + ' paren goed.' + formatMatchGuide(fb));
             } else {
                 showFeedback(false, fb.matchCount + ' van ' + fb.totalPairs + ' paren goed.',
-                    'Bekijk de juiste koppelingen hieronder.');
+                    'Bekijk de juiste koppelingen hieronder.' + formatMatchGuide(fb));
             }
             // Reveal structure labels on all cards
             var cards = document.querySelectorAll('#r-options .r-match-card');
@@ -735,7 +778,7 @@
         } else if (result.correct) {
             showFeedback(true, 'Helemaal goed!', '');
         } else {
-            var correctHtml = formatCorrectAnswer();
+            var correctHtml = formatCorrectAnswer(result.feedback);
             showFeedback(false, 'Dat klopt niet helemaal.', correctHtml);
         }
 
@@ -743,22 +786,93 @@
         els.nextBtn.style.display = 'inline-block';
     }
 
-    function formatCorrectAnswer() {
+    function formatCorrectAnswer(feedback) {
+        feedback = feedback || {};
         if (currentMode === 0) {
-            return 'Juiste volgorde: ' + roundData.correctOrder.map(esc).join(' \u2192 ');
+            return '<p>Vergelijk je keuze met de denkroute:</p>' + formatStepList(feedback.correctOrder || [], 'r-feedback-chain');
         } else if (currentMode === 1) {
-            return 'Juiste volgorde: ' + roundData.correctOrder.map(esc).join(' \u2192 ');
+            return '<p>Deze deelvragen bouwen de redenering stap voor stap op:</p>'
+                + formatTextChain(feedback.correctOrder || [], '\u2192')
+                + formatSelectedChain(feedback.selectedOrder, '\u2192');
         } else if (currentMode === 3) {
-            return 'Juiste volgorde: ' + roundData.correctOrder.map(function (t) { return esc(t); }).join(' \u2193 ');
+            return '<p>Het diagram moet van beginpunt naar conclusie lopen:</p>'
+                + formatFlowList(feedback.correctOrder || [])
+                + formatSelectedChain(feedback.placedOrder, '\u2193');
         }
         return '';
     }
 
+    function formatStepList(steps, className) {
+        if (!steps || !steps.length) return '';
+        var html = '<ol class="' + (className || 'r-feedback-chain') + '">';
+        for (var i = 0; i < steps.length; i++) {
+            var step = steps[i];
+            html += '<li><strong>' + esc(step.label || step) + '</strong>';
+            if (step.detail) html += '<span>' + esc(step.detail) + '</span>';
+            if (step.formula) html += '<code>' + esc(step.formula) + '</code>';
+            html += '</li>';
+        }
+        html += '</ol>';
+        return html;
+    }
+
+    function formatFlowList(slots) {
+        if (!slots || !slots.length) return '';
+        var html = '<ol class="r-feedback-chain">';
+        for (var i = 0; i < slots.length; i++) {
+            html += '<li><strong>' + esc(slots[i].type || 'stap') + '</strong><span>' + esc(slots[i].text || slots[i]) + '</span></li>';
+        }
+        html += '</ol>';
+        return html;
+    }
+
+    function formatTextChain(items, arrow) {
+        if (!items || !items.length) return '';
+        return '<div class="r-feedback-text-chain">' + items.map(esc).join(' <span>' + arrow + '</span> ') + '</div>';
+    }
+
+    function formatSelectedChain(items, arrow) {
+        if (!items || !items.length) return '';
+        return '<p class="r-feedback-selected">Jouw keuze: ' + items.map(esc).join(' ' + arrow + ' ') + '</p>';
+    }
+
+    function formatReasoningGuide(feedback) {
+        return '<div class="r-reasoning-guide"><p>Voorbeeldroute om mee te vergelijken:</p>'
+            + formatStepList(feedback.reasoningGuide || [], 'r-feedback-chain')
+            + (feedback.flowGuide && feedback.flowGuide.length ? '<p>Flow in korte blokken:</p>' + formatFlowList(feedback.flowGuide) : '')
+            + '</div>';
+    }
+
+    function formatMatchGuide(feedback) {
+        if (!feedback || !feedback.correctPairs || !feedback.items) return '';
+        var byId = {};
+        for (var i = 0; i < feedback.items.length; i++) byId[feedback.items[i].id] = feedback.items[i];
+        var html = '<div class="r-reasoning-guide"><p>Juiste koppelingen delen dezelfde oplossingsstructuur:</p><ul>';
+        for (var j = 0; j < feedback.correctPairs.length; j++) {
+            var a = byId[feedback.correctPairs[j][0]];
+            var b = byId[feedback.correctPairs[j][1]];
+            if (a && b) {
+                html += '<li><strong>' + esc(a.structureLabel) + '</strong><span>' + esc(a.text) + ' / ' + esc(b.text) + '</span></li>';
+            }
+        }
+        html += '</ul></div>';
+        return html;
+    }
+
+    function renderTaskShellFeedback(taskResult) {
+        if (!window.TaskShellUI || !taskResult) return;
+        var target = document.querySelector('[data-feedback-for="' + taskResult.taskId + '"]');
+        if (!target) return;
+        target.innerHTML = window.TaskShellUI.renderFeedback(taskResult);
+        if (typeof target.focus === 'function') target.focus({ preventScroll: true });
+    }
+
     function disableAllInteraction() {
-        var items = document.querySelectorAll('.r-step-card, .r-subq-row, .r-flow-block, .r-flow-placed, .r-match-card');
+        var items = document.querySelectorAll('.r-step-card, .r-subq-row, .r-flow-block, .r-flow-placed, .r-match-card, .ts-textarea, .ts-input, .ts-choice');
         for (var i = 0; i < items.length; i++) {
             items[i].classList.add('r-disabled');
             items[i].style.pointerEvents = 'none';
+            if ('disabled' in items[i]) items[i].disabled = true;
         }
     }
 
@@ -787,8 +901,14 @@
         var result = engine.getResult();
         els.resultsEmoji.textContent = result.emoji;
         els.resultsTitle.textContent = result.modeName + ' klaar!';
-        els.resultsScore.textContent = result.score + ' van ' + result.total + ' goed';
-        var pct = result.total > 0 ? Math.round((result.score / result.total) * 100) : 0;
+        if (result.selfCheckOnlyMode) {
+            els.resultsScore.textContent = result.selfCheckCount + ' redeneringen geoefend';
+        } else {
+            els.resultsScore.textContent = result.score + ' van ' + result.total + ' goed';
+        }
+        var pct = result.total > 0
+            ? Math.round(((result.selfCheckOnlyMode ? result.selfCheckCount : result.score) / result.total) * 100)
+            : 0;
         els.progressFill.style.width = '0%';
         showScreen('results');
         setTimeout(function () { els.progressFill.style.width = pct + '%'; }, 100);
@@ -796,6 +916,15 @@
         // ── Render session breakdown (progress already saved per-answer) ──
         var breakdownEl = document.getElementById('r-session-breakdown');
         if (!breakdownEl || !catData) return;
+
+        if (result.selfCheckOnlyMode) {
+            breakdownEl.innerHTML = '<div class="r-session-divider">Deze sessie</div>'
+                + '<div class="r-session-row">'
+                + '<span>Redeneerantwoorden geoefend</span>'
+                + '<span class="r-session-level">' + result.selfCheckCount + '/' + result.total + ' zelfcheck</span>'
+                + '</div>';
+            return;
+        }
 
         var progress = loadProgress();
         var sessionCats = {};  // catId → { correct, total }

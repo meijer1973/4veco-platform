@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T12:50:44.394Z
+Generated: 2026-05-31T13:50:26.930Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2286
+Files indexed: 2310
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 76
+Count: 77
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -112,6 +112,7 @@ Count: 76
 - engines/tests/skill-map-route-ui.test.js
 - engines/tests/skilltree-data.test.js
 - engines/tests/skilltree-engine.test.js
+- engines/tests/skilltree-ui.test.js
 - engines/tests/skilltree-visible-copy.test.js
 - engines/tests/task-shell-engine.test.js
 - engines/tests/task-shell-ui.test.js
@@ -122,7 +123,7 @@ Count: 76
 
 ## build scripts
 
-Count: 329
+Count: 331
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -413,10 +414,12 @@ Count: 329
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
+- build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -503,7 +506,7 @@ Count: 42
 
 ## validators
 
-Count: 131
+Count: 132
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -600,6 +603,7 @@ Count: 131
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -639,7 +643,7 @@ Count: 131
 
 ## references
 
-Count: 368
+Count: 370
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -752,6 +756,8 @@ Count: 368
 - references/data/sprints/LEAD-REVIEW-2.plan.json
 - references/data/sprints/LEAD-REVIEW-2.result.json
 - references/data/sprints/lead-review-policy-legacy-exemptions.json
+- references/data/sprints/MATH-UX-2.plan.json
+- references/data/sprints/MATH-UX-2.result.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
 - references/data/sprints/MTU-H2.plan.json
@@ -1012,7 +1018,7 @@ Count: 368
 
 ## reports
 
-Count: 1185
+Count: 1204
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1850,6 +1856,25 @@ Count: 1185
 - reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-2-plan.md
 - reports/sprints/LEAD-REVIEW-2-result.md
+- reports/sprints/MATH-UX-2-accessibility-review.md
+- reports/sprints/MATH-UX-2-baseline.md
+- reports/sprints/MATH-UX-2-checkpoint-calculation-task-fixture.md
+- reports/sprints/MATH-UX-2-diff-summary.md
+- reports/sprints/MATH-UX-2-lead-review-assignment.md
+- reports/sprints/MATH-UX-2-lead-review-corrections.md
+- reports/sprints/MATH-UX-2-lead-review-round1.md
+- reports/sprints/MATH-UX-2-lead-review-round2.md
+- reports/sprints/MATH-UX-2-plan.md
+- reports/sprints/MATH-UX-2-planning-review.md
+- reports/sprints/MATH-UX-2-result.md
+- reports/sprints/MATH-UX-2-screenshot-manifest.md
+- reports/sprints/MATH-UX-2-screenshots/desktop-dark-112-math-task-shell.png
+- reports/sprints/MATH-UX-2-screenshots/desktop-light-112-math-task-shell.png
+- reports/sprints/MATH-UX-2-screenshots/manifest.json
+- reports/sprints/MATH-UX-2-screenshots/mobile-dark-112-math-feedback.png
+- reports/sprints/MATH-UX-2-screenshots/mobile-light-112-math-route-first.png
+- reports/sprints/MATH-UX-2-student-experience-review.md
+- reports/sprints/MATH-UX-2-student-route-proof.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md

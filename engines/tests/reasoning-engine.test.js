@@ -312,6 +312,56 @@ describe('Mode 4: Match Structures', () => {
     });
 });
 
+// â”€â”€ Mode 5: Build Reasoning Answer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+describe('Mode 5: Build Reasoning Answer', () => {
+    test('getRound returns a structured reasoning task-shell task', () => {
+        const engine = createEngine();
+        engine.startGame(5);
+        const round = engine.getRound();
+        expect(round.mode).toBe(5);
+        expect(round.taskShellTask).toBeDefined();
+        expect(round.taskShellTask.family).toBe('structured_reasoning');
+        expect(round.taskShellTask.expected.kind).toBe('self_check');
+        expect(round.reasoningGuide.length).toBe(3);
+    });
+
+    test('empty response asks for retry without incrementing score', () => {
+        const engine = createEngine();
+        engine.startGame(5);
+        engine.getRound();
+        const result = engine.submitAnswer('');
+        expect(result.correct).toBe(false);
+        expect(result.completed).toBe(false);
+        expect(result.score).toBe(0);
+        expect(result.feedback.taskShellResult.state).toBe('retry');
+    });
+
+    test('non-empty response completes local self-check', () => {
+        const engine = createEngine();
+        engine.startGame(5);
+        engine.getRound();
+        const result = engine.submitAnswer('Oorzaak, tussenstap en conclusie staan erin.');
+        expect(result.correct).toBe(true);
+        expect(result.selfCheckOnly).toBe(true);
+        expect(result.completed).toBe(true);
+        expect(result.score).toBe(0);
+        expect(result.feedback.taskShellResult.state).toBe('self_check');
+        expect(result.feedback.taskShellResult.boundaryFlags.targetEquivalentProof).toBe(false);
+    });
+
+    test('result names self-check practice without auto-scoring as goed', () => {
+        const engine = createEngine({ roundsPerGame: 1 });
+        engine.startGame(5);
+        engine.getRound();
+        engine.submitAnswer('Oorzaak, tussenstap en conclusie staan erin.');
+        const result = engine.getResult();
+        expect(result.selfCheckOnlyMode).toBe(true);
+        expect(result.selfCheckCount).toBe(1);
+        expect(result.score).toBe(0);
+    });
+});
+
 // ── Scoring & round advancement ─────────────────────────────────────
 
 describe('scoring and rounds', () => {
@@ -392,13 +442,14 @@ describe('edge cases', () => {
     test('mode names are in Dutch', () => {
         const engine = createEngine();
         const names = engine.getModeNames();
-        expect(names.length).toBe(5);
+        expect(names.length).toBe(6);
         expect(names[0]).toBe('Stappen ordenen');
+        expect(names[5]).toBe('Redeneerantwoord opbouwen');
     });
 
     test('invalid mode throws', () => {
         const engine = createEngine();
-        expect(() => engine.startGame(5)).toThrow('Invalid mode');
+        expect(() => engine.startGame(6)).toThrow('Invalid mode');
         expect(() => engine.startGame(-1)).toThrow('Invalid mode');
     });
 });

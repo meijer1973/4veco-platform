@@ -110,14 +110,14 @@ if (allData.length > 0) describe.each(allData)('$parNr ($file)', ({ parNr, csv, 
         expect(typesWithEnough.length).toBeGreaterThanOrEqual(3);
     });
 
-    test('all 5 game modes can start', () => {
+    test('all game modes can start', () => {
         const ReasoningEngine = require('../reasoning-engine');
         const engine = new ReasoningEngine({
             csvString: csv,
             domain: meta.domain,
             roundsPerGame: 3
         });
-        for (let mode = 0; mode <= 4; mode++) {
+        for (let mode = 0; mode < engine.getModeNames().length; mode++) {
             expect(() => {
                 engine.startGame(mode);
                 engine.getRound();
