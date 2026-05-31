@@ -16,12 +16,23 @@
     {
       "roadmap_id": "references-team-roadmap",
       "version": "v3.23-lead-review-protocol-repair",
+      "title": "References Team Roadmap before strict lead-review validation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md",
+      "owner": "references_team",
+      "updated_on": "2026-05-31",
+      "superseded_by": "references/reference-team-roadmap.md"
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.24-lead-review-strict-validation",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-05-31",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md",

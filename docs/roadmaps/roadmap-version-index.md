@@ -1,4 +1,4 @@
-# Roadmap Version Index
+﻿# Roadmap Version Index
 
 Updated: 2026-05-31
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.23-lead-review-protocol-repair` | `references/reference-team-roadmap.md` | Current operating roadmap during LEAD-REVIEW-1 process repair. The sprint repairs lead-review enforcement, runs real lead-reviewer-agent audits for recent non-MTU/non-human-gated sprints, and then returns the top operational next action to GRAPH-UX-2. No target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.24-lead-review-strict-validation` | `references/reference-team-roadmap.md` | Current operating roadmap after LEAD-REVIEW-2 strict validation hardening. GRAPH-UX-2 is the next operational sprint; strict lead-review validation now blocks backdating, human-gate exemption, thin-report, and untracked PASS WITH FLAGS loopholes. No target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before strict lead-review validation | `v3.23-lead-review-protocol-repair` | `docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before lead-review protocol repair | `v3.22-skillmap-op1-student-route` | `docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before SKILLMAP-OP-1 student-visible route | `v3.21-engine-op1-operational-proof-audit` | `docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before ENGINE-OP-1 operational proof audit | `v3.20-game-ux3a-task-shell-foundation` | `docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md` | `references/reference-team-roadmap.md` |

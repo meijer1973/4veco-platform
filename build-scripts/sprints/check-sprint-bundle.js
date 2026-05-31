@@ -58,6 +58,25 @@ function leadReviewPaths(sprintId) {
 }
 
 const LEAD_REVIEW_POLICY_EFFECTIVE_ON = '2026-05-31';
+const LEAD_REVIEW_STRICT_SCHEMA_VERSION = 2;
+const LEGACY_EXEMPTIONS_PATH = path.join(
+  'references',
+  'data',
+  'sprints',
+  'lead-review-policy-legacy-exemptions.json'
+);
+const REQUIRED_LEAD_REVIEW_SECTIONS = [
+  '## Scope',
+  '## Review Plan',
+  '## Consolidated Verdict',
+  '## Blocking Findings',
+  '## Specialist Findings',
+  '## Test Evidence',
+  '## Learning Quality Evidence',
+  '## Student Experience Evidence',
+  '## Ownership and Handoff',
+  '## Required Next Action',
+];
 
 function dateOnOrAfter(value, cutoff) {
   return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value) && value.slice(0, 10) >= cutoff;
@@ -72,9 +91,122 @@ function hasLeadReviewExemption(planJson) {
       exemption.reason.trim() &&
       typeof exemption.approved_by === 'string' &&
       exemption.approved_by.trim() &&
+      typeof exemption.approval_evidence === 'string' &&
+      exemption.approval_evidence.trim() &&
       typeof exemption.reviewed_on === 'string' &&
       exemption.reviewed_on.trim()
   );
+}
+
+function loadLegacyLeadReviewExemptions() {
+  if (!fs.existsSync(LEGACY_EXEMPTIONS_PATH)) {
+    fail(`missing lead-review legacy exemption list: ${LEGACY_EXEMPTIONS_PATH}`);
+  }
+  const data = readJson(LEGACY_EXEMPTIONS_PATH);
+  if (data.schema_version !== 1) fail(`${LEGACY_EXEMPTIONS_PATH} must have schema_version 1`);
+  if (!Array.isArray(data.grandfathered_sprint_ids)) {
+    fail(`${LEGACY_EXEMPTIONS_PATH} must include grandfathered_sprint_ids`);
+  }
+  return new Set(data.grandfathered_sprint_ids);
+}
+
+function inferHumanGate(planMarkdown, sprintId) {
+  return (
+    /^GATE-/.test(sprintId) ||
+    /human-interview\.md|gate-closure\.json|review-packet\.md|Review Packet|Calibration Questions|Full Planned Review Questions|Human Review And Gate Closure/i.test(
+      planMarkdown
+    )
+  );
+}
+
+function countBacktickedPaths(markdown) {
+  const matches = markdown.match(/`(?:reports|references|build-scripts|engines|docs|AGENTS\.md|..\/4veco-lessen)[^`]*`/g);
+  return matches ? matches.length : 0;
+}
+
+function section(markdown, heading) {
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = markdown.match(new RegExp(`${escaped}\\s+([\\s\\S]*?)(?=\\n## |$)`));
+  return match ? match[1].trim() : '';
+}
+
+function validateLeadReviewReport(file, sprintId, roundLabel, expectedFinalVerdict) {
+  const markdown = readMarkdown(file);
+  if (!/^# Lead Review Summary/m.test(markdown)) {
+    fail(`${file} must start with "# Lead Review Summary"`);
+  }
+  if (!new RegExp(`Sprint:\\s*\`${sprintId}\``).test(markdown)) {
+    fail(`${file} must identify Sprint: \`${sprintId}\``);
+  }
+  if (!new RegExp(`Round:\\s*${roundLabel}`, 'i').test(markdown)) {
+    fail(`${file} must identify Round: ${roundLabel}`);
+  }
+  for (const heading of REQUIRED_LEAD_REVIEW_SECTIONS) {
+    if (!markdown.includes(heading)) fail(`${file} missing required lead-review section: ${heading}`);
+  }
+  if (!/Evidence inspected:/i.test(section(markdown, '## Scope'))) {
+    fail(`${file} Scope must include Evidence inspected`);
+  }
+  if (countBacktickedPaths(markdown) < 3) {
+    fail(`${file} must cite at least three inspected paths in backticks`);
+  }
+  if (!/\|\s*Review\/Test\s*\|\s*Agent or tool\s*\|\s*Required evidence\s*\|\s*Status\s*\|/i.test(section(markdown, '## Review Plan'))) {
+    fail(`${file} Review Plan must include Review/Test, Agent or tool, Required evidence, and Status columns`);
+  }
+  const verdictMatch = section(markdown, '## Consolidated Verdict').match(/Verdict:\s*(PASS WITH FLAGS|PASS|REVISE|FAIL|PAUSE)/i);
+  if (!verdictMatch) fail(`${file} Consolidated Verdict must include a verdict`);
+  const verdict = verdictMatch[1].toUpperCase();
+  if (expectedFinalVerdict && verdict !== expectedFinalVerdict.toUpperCase()) {
+    fail(`${file} verdict ${verdict} must match result metadata final verdict ${expectedFinalVerdict}`);
+  }
+  if (expectedFinalVerdict && verdict === 'PASS WITH FLAGS' && !/flag/i.test(markdown)) {
+    fail(`${file} PASS WITH FLAGS must describe carried flags`);
+  }
+  if (!/(None|No blocking|blocking)/i.test(section(markdown, '## Blocking Findings'))) {
+    fail(`${file} Blocking Findings must explicitly state whether blockers exist`);
+  }
+  if (section(markdown, '## Required Next Action').length < 20) {
+    fail(`${file} Required Next Action must be concrete`);
+  }
+}
+
+function validateLeadReviewSupportFile(file, sprintId, label, requiredPatterns) {
+  const markdown = readMarkdown(file);
+  if (!new RegExp(sprintId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(markdown)) {
+    fail(`${file} must identify sprint ${sprintId}`);
+  }
+  for (const [name, pattern] of requiredPatterns) {
+    if (!pattern.test(markdown)) fail(`${file} missing ${label} content: ${name}`);
+  }
+}
+
+function validateLeadReviewFlags(resultJsonPath, leadReview) {
+  if (leadReview.final_verdict === 'PASS') {
+    if (Array.isArray(leadReview.flags) && leadReview.flags.length > 0) {
+      fail(`${resultJsonPath} lead_review.flags must be empty or omitted when final_verdict is PASS`);
+    }
+    return;
+  }
+  if (leadReview.final_verdict !== 'PASS WITH FLAGS') return;
+  if (!Array.isArray(leadReview.flags) || leadReview.flags.length === 0) {
+    fail(`${resultJsonPath} lead_review.flags must list carried flags when final_verdict is PASS WITH FLAGS`);
+  }
+  for (const [index, flag] of leadReview.flags.entries()) {
+    if (!flag || typeof flag !== 'object') {
+      fail(`${resultJsonPath} lead_review.flags[${index}] must be an object`);
+    }
+    for (const key of ['id', 'description', 'disposition', 'owner', 'next_action']) {
+      if (typeof flag[key] !== 'string' || !flag[key].trim()) {
+        fail(`${resultJsonPath} lead_review.flags[${index}].${key} must be a non-empty string`);
+      }
+    }
+    if (!/^(carry_forward|accepted_follow_up|product_scale_blocker|waived_by_human)$/.test(flag.disposition)) {
+      fail(`${resultJsonPath} lead_review.flags[${index}].disposition has unsupported value: ${flag.disposition}`);
+    }
+    if (flag.blocking !== false) {
+      fail(`${resultJsonPath} lead_review.flags[${index}].blocking must be false for PASS WITH FLAGS`);
+    }
+  }
 }
 
 function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
@@ -89,6 +221,8 @@ function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
 const args = process.argv.slice(2);
 const sprintId = args.find((arg) => !arg.startsWith('--'));
 const requireComplete = args.includes('--complete');
+const allowTestFixture =
+  process.env.SPRINT_BUNDLE_ALLOW_TEST_FIXTURES === '1' && /^TEST-[A-Z-]+-\d+[A-Z]?$/.test(args.find((arg) => !arg.startsWith('--')) || '');
 
 if (!sprintId) fail('missing sprint id, for example R2.3');
 if (!/^(?:[A-Z]\d+(?:\.\d+)?[a-z]?|[A-Z]{2,}\.\d+[a-z]?|[A-Z]{2,}-(?:[A-Z]+\d+[A-Z]?|\d+[A-Z]?)|[A-Z]+(?:-[A-Z]+)*-\d+[A-Z]?)$/.test(sprintId) && sprintId !== 'EXAMPLE') {
@@ -110,6 +244,7 @@ runNode(path.join('build-scripts', 'sprints', 'check-sprint-plan.js'), planPath)
 runNode(path.join('build-scripts', 'sprints', 'check-scope-language.js'), planJsonPath);
 
 const planJson = readJson(planJsonPath);
+const planMarkdown = readMarkdown(planPath);
 if (planJson.sprint_id !== sprintId) fail(`${planJsonPath} has wrong sprint_id`);
 if (planJson.plan !== toPosix(planPath)) fail(`${planJsonPath} must point to ${planPath}`);
 if (!Array.isArray(planJson.acceptance_tests) || planJson.acceptance_tests.length === 0) {
@@ -118,23 +253,33 @@ if (!Array.isArray(planJson.acceptance_tests) || planJson.acceptance_tests.lengt
 if (typeof planJson.protected_reference_data_changes_allowed !== 'boolean') {
   fail(`${planJsonPath} must declare protected_reference_data_changes_allowed`);
 }
+const legacyLeadReviewExemptions = loadLegacyLeadReviewExemptions();
+const isLegacyLeadReviewExempt = legacyLeadReviewExemptions.has(sprintId);
+const isHumanGate = planJson.human_review_required === true || inferHumanGate(planMarkdown, sprintId);
 const leadPolicyApplies =
   sprintId !== 'EXAMPLE' &&
-  (dateOnOrAfter(planJson.created, LEAD_REVIEW_POLICY_EFFECTIVE_ON) ||
+  (!isLegacyLeadReviewExempt ||
+    dateOnOrAfter(planJson.created, LEAD_REVIEW_POLICY_EFFECTIVE_ON) ||
     planJson.lead_review_required === true);
 if (leadPolicyApplies && planJson.lead_review_required !== true && !hasLeadReviewExemption(planJson)) {
   fail(
     `${planJsonPath} must declare lead_review_required: true or a lead_review_exemption for sprints created on or after ${LEAD_REVIEW_POLICY_EFFECTIVE_ON}`
   );
 }
+if (leadPolicyApplies && !isLegacyLeadReviewExempt && planJson.lead_review_schema_version !== LEAD_REVIEW_STRICT_SCHEMA_VERSION) {
+  fail(`${planJsonPath} must declare lead_review_schema_version: ${LEAD_REVIEW_STRICT_SCHEMA_VERSION}`);
+}
+if (leadPolicyApplies && isHumanGate && planJson.lead_review_exemption) {
+  fail(`${planJsonPath} human-review sprints cannot use lead_review_exemption`);
+}
 if (
   leadPolicyApplies &&
-  planJson.human_review_required === true &&
+  isHumanGate &&
   planJson.lead_review_phase !== 'before_human_gate'
 ) {
   fail(`${planJsonPath} human-review sprints must set lead_review_phase: "before_human_gate"`);
 }
-if (/human-interview\.md|gate-closure\.json/i.test(readMarkdown(planPath))) {
+if (inferHumanGate(planMarkdown, sprintId)) {
   if (planJson.human_review_required !== true) fail(`${planJsonPath} must declare human_review_required: true`);
   if (!planJson.gate_id) fail(`${planJsonPath} must declare gate_id`);
   if (!planJson.review_packet) fail(`${planJsonPath} must declare review_packet`);
@@ -187,6 +332,7 @@ if (requireComplete) {
     planJson.lead_review_required === true ||
     resultJson.lead_review_required === true ||
     Boolean(resultJson.lead_review);
+  const strictLeadPolicyApplies = leadPolicyApplies && !isLegacyLeadReviewExempt;
   if (leadReviewRequired) {
     const expected = leadReviewPaths(sprintId);
     const leadReview = resultJson.lead_review;
@@ -201,6 +347,24 @@ if (requireComplete) {
     }
     if (!['PASS', 'PASS WITH FLAGS'].includes(leadReview.final_verdict)) {
       fail(`${resultJsonPath} lead_review.final_verdict must be PASS or PASS WITH FLAGS`);
+    }
+    if (strictLeadPolicyApplies) {
+      if (resultJson.lead_review_schema_version !== LEAD_REVIEW_STRICT_SCHEMA_VERSION) {
+        fail(`${resultJsonPath} must declare lead_review_schema_version: ${LEAD_REVIEW_STRICT_SCHEMA_VERSION}`);
+      }
+      validateLeadReviewSupportFile(expected.assignment, sprintId, 'assignment', [
+        ['scope', /scope|artifact|task/i],
+        ['evidence', /evidence|inspect/i],
+        ['reviewer', /lead reviewer|agent/i],
+      ]);
+      validateLeadReviewReport(expected.round1, sprintId, 'lead review round 1');
+      validateLeadReviewSupportFile(expected.corrections, sprintId, 'corrections', [
+        ['round-1 verdict', /round-?1|round 1/i],
+        ['correction record', /correction|applied|resolved|accepted/i],
+        ['round-2 readiness', /round-?2|round 2|recheck/i],
+      ]);
+      validateLeadReviewReport(expected.round2, sprintId, 'lead review round 2', leadReview.final_verdict);
+      validateLeadReviewFlags(resultJsonPath, leadReview);
     }
   }
 
@@ -231,7 +395,7 @@ if (requireComplete) {
 }
 
 const roadmapPath = path.join('references', 'reference-team-roadmap.md');
-if (fs.existsSync(roadmapPath)) {
+if (fs.existsSync(roadmapPath) && !allowTestFixture) {
   const roadmap = readMarkdown(roadmapPath);
   const rowPattern = new RegExp(`\\| ${sprintId.replace('.', '\\.')} \\|[^\\n]+\\| (yes|no) \\|`);
   const row = roadmap.match(rowPattern);

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T08:56:20.850Z
+Generated: 2026-05-31T10:22:13.359Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2215
+Files indexed: 2249
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -633,7 +633,7 @@ Count: 128
 
 ## references
 
-Count: 361
+Count: 363
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -739,6 +739,8 @@ Count: 361
 - references/data/sprints/GAME-UX-3A.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
+- references/data/sprints/LEAD-REVIEW-1.plan.json
+- references/data/sprints/LEAD-REVIEW-1.result.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
 - references/data/sprints/MTU-H2.plan.json
@@ -999,7 +1001,7 @@ Count: 361
 
 ## reports
 
-Count: 1127
+Count: 1158
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1646,6 +1648,10 @@ Count: 1127
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-baseline.md
 - reports/sprints/ENGINE-OP-1-diff-summary.md
+- reports/sprints/ENGINE-OP-1-lead-review-assignment.md
+- reports/sprints/ENGINE-OP-1-lead-review-corrections.md
+- reports/sprints/ENGINE-OP-1-lead-review-round1.md
+- reports/sprints/ENGINE-OP-1-lead-review-round2.md
 - reports/sprints/ENGINE-OP-1-operational-audit.md
 - reports/sprints/ENGINE-OP-1-plan.md
 - reports/sprints/ENGINE-OP-1-planning-review.md
@@ -1746,6 +1752,10 @@ Count: 1127
 - reports/sprints/EX-LESSON-1-baseline.md
 - reports/sprints/EX-LESSON-1-diff-summary.md
 - reports/sprints/EX-LESSON-1-exam-target-route-checklist.md
+- reports/sprints/EX-LESSON-1-lead-review-assignment.md
+- reports/sprints/EX-LESSON-1-lead-review-corrections.md
+- reports/sprints/EX-LESSON-1-lead-review-round1.md
+- reports/sprints/EX-LESSON-1-lead-review-round2.md
 - reports/sprints/EX-LESSON-1-plan.md
 - reports/sprints/EX-LESSON-1-planning-review.md
 - reports/sprints/EX-LESSON-1-result.md
@@ -1775,6 +1785,10 @@ Count: 1127
 - reports/sprints/GAME-UX-2-result.md
 - reports/sprints/GAME-UX-3A-baseline.md
 - reports/sprints/GAME-UX-3A-diff-summary.md
+- reports/sprints/GAME-UX-3A-lead-review-assignment.md
+- reports/sprints/GAME-UX-3A-lead-review-corrections.md
+- reports/sprints/GAME-UX-3A-lead-review-round1.md
+- reports/sprints/GAME-UX-3A-lead-review-round2.md
 - reports/sprints/GAME-UX-3A-plan.md
 - reports/sprints/GAME-UX-3A-planning-review.md
 - reports/sprints/GAME-UX-3A-result.md
@@ -1790,6 +1804,14 @@ Count: 1127
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
 - reports/sprints/L2.0-platform-support-result.md
+- reports/sprints/LEAD-REVIEW-1-baseline.md
+- reports/sprints/LEAD-REVIEW-1-diff-summary.md
+- reports/sprints/LEAD-REVIEW-1-lead-review-assignment.md
+- reports/sprints/LEAD-REVIEW-1-lead-review-corrections.md
+- reports/sprints/LEAD-REVIEW-1-lead-review-round1.md
+- reports/sprints/LEAD-REVIEW-1-lead-review-round2.md
+- reports/sprints/LEAD-REVIEW-1-plan.md
+- reports/sprints/LEAD-REVIEW-1-result.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md
@@ -2005,6 +2027,7 @@ Count: 1127
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
 - reports/sprints/README.md
+- reports/sprints/recent-non-mtu-lead-review-summary.md
 - reports/sprints/REF-CP6-baseline.md
 - reports/sprints/REF-CP6-diff-summary.md
 - reports/sprints/REF-CP6-lead-review-assignment.md
@@ -2086,8 +2109,13 @@ Count: 1127
 - reports/sprints/S9a-baseline.md
 - reports/sprints/S9a-diff-summary.md
 - reports/sprints/S9a-result.md
+- reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
+- reports/sprints/SKILLMAP-OP-1-lead-review-assignment.md
+- reports/sprints/SKILLMAP-OP-1-lead-review-corrections.md
+- reports/sprints/SKILLMAP-OP-1-lead-review-round1.md
+- reports/sprints/SKILLMAP-OP-1-lead-review-round2.md
 - reports/sprints/SKILLMAP-OP-1-plan.md
 - reports/sprints/SKILLMAP-OP-1-planning-review.md
 - reports/sprints/SKILLMAP-OP-1-result.md
@@ -2099,9 +2127,14 @@ Count: 1127
 - reports/sprints/SKILLMAP-OP-1-screenshots/manifest.json
 - reports/sprints/SKILLMAP-OP-1-screenshots/mobile-112-math.png
 - reports/sprints/SKILLMAP-OP-1-screenshots/mobile-113-graph.png
+- reports/sprints/SKILLMAP-OP-1-student-experience-review.md
 - reports/sprints/SKILLMAP-OP-1-student-route-proof.md
 - reports/sprints/SPEC-ET-1-baseline.md
 - reports/sprints/SPEC-ET-1-diff-summary.md
+- reports/sprints/SPEC-ET-1-lead-review-assignment.md
+- reports/sprints/SPEC-ET-1-lead-review-corrections.md
+- reports/sprints/SPEC-ET-1-lead-review-round1.md
+- reports/sprints/SPEC-ET-1-lead-review-round2.md
 - reports/sprints/SPEC-ET-1-plan.md
 - reports/sprints/SPEC-ET-1-planning-review.md
 - reports/sprints/SPEC-ET-1-result.md
@@ -2149,7 +2182,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 267
+Count: 268
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2275,6 +2308,7 @@ Count: 267
 - docs/roadmaps/outdated/reference-team-roadmap-v3.19-ex-lesson1-route-trace-handoff.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.20-game-ux3a-task-shell-foundation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.21-engine-op1-operational-proof-audit.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
