@@ -8,6 +8,12 @@ const PACKET_MD = path.join(GATE_DIR, 'review-packet.md');
 const PACKET_JSON = path.join(GATE_DIR, 'review-packet.json');
 const LIVE_MD = path.join(GATE_DIR, 'live-output-evidence.md');
 const LIVE_JSON = path.join(GATE_DIR, 'live-output-evidence.json');
+const LIVE_INSPECTION_MD = path.join(GATE_DIR, 'live-output-inspection.md');
+const LIVE_INSPECTION_JSON = path.join(GATE_DIR, 'live-output-inspection.json');
+const HUMAN_MD = path.join(GATE_DIR, 'human-interview.md');
+const HUMAN_JSON = path.join(GATE_DIR, 'human-interview.json');
+const CLOSURE_MD = path.join(GATE_DIR, 'gate-closure.md');
+const CLOSURE_JSON = path.join(GATE_DIR, 'gate-closure.json');
 const SPRINT_ID = 'GATE-ENGINE-1';
 
 const REQUIRED_SPRINT_FILES = [
@@ -112,19 +118,35 @@ function main() {
     assert(fs.existsSync(file), `missing required artifact: ${file}`);
   }
 
-  assert(!fs.existsSync(path.join(GATE_DIR, 'human-interview.md')), 'human-interview.md must not exist before interview starts');
-  assert(!fs.existsSync(path.join(GATE_DIR, 'human-interview.json')), 'human-interview.json must not exist before interview starts');
-  assert(!fs.existsSync(path.join(GATE_DIR, 'gate-closure.md')), 'gate-closure.md must not exist before human confirmation');
-  assert(!fs.existsSync(path.join(GATE_DIR, 'gate-closure.json')), 'gate-closure.json must not exist before human confirmation');
-
   const packetMd = read(PACKET_MD);
   const packet = readJson(PACKET_JSON);
   const liveMd = read(LIVE_MD);
   const live = readJson(LIVE_JSON);
+  const hasHumanInterview = fs.existsSync(HUMAN_MD) || fs.existsSync(HUMAN_JSON);
+  const hasGateClosure = fs.existsSync(CLOSURE_MD) || fs.existsSync(CLOSURE_JSON);
 
   assert(packet.gate_id === GATE_ID, 'review packet JSON gate_id mismatch');
   assert(packet.sprint_id === SPRINT_ID, 'review packet JSON sprint_id mismatch');
-  assert(packet.human_interview_started === false, 'human_interview_started must be false');
+  if (packet.human_interview_started === false) {
+    assert(!hasHumanInterview, 'human interview files must not exist before interview starts');
+    assert(!hasGateClosure, 'gate closure files must not exist before human confirmation');
+  } else {
+    assert(fs.existsSync(HUMAN_MD), 'human-interview.md must exist after interview starts');
+    assert(fs.existsSync(HUMAN_JSON), 'human-interview.json must exist after interview starts');
+    assert(fs.existsSync(CLOSURE_MD), 'gate-closure.md must exist after closure');
+    assert(fs.existsSync(CLOSURE_JSON), 'gate-closure.json must exist after closure');
+    assert(fs.existsSync(LIVE_INSPECTION_MD), 'live-output-inspection.md must exist after closure');
+    assert(fs.existsSync(LIVE_INSPECTION_JSON), 'live-output-inspection.json must exist after closure');
+    const interview = readJson(HUMAN_JSON);
+    const closure = readJson(CLOSURE_JSON);
+    const inspection = readJson(LIVE_INSPECTION_JSON);
+    assert(interview.closure_confirmation && interview.closure_confirmation.confirmed_by_human === true, 'human interview must record closure confirmation');
+    assert(closure.status === 'pass_with_flags', 'GATE-ENGINE-1 closure must be pass_with_flags');
+    assert(closure.reviewed_remote_commit === packet.reviewed_remote_commit, 'closure reviewed commit must match packet');
+    assert(inspection.status === 'pass_minimum_live_output_inspection', 'live-output inspection must pass');
+    assert(inspection.reviewed_remote_commit === packet.reviewed_remote_commit, 'inspection reviewed commit must match packet');
+    assert(closure.authority_boundary && Object.values(closure.authority_boundary).every(value => value === false), 'closure authority boundary must remain false');
+  }
   assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
   assert(/no[_ ]product[_ ]authority/i.test(packet.status), 'packet status must state no product authority');
   assertFalseAuthority(packet.authority_boundary);

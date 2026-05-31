@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GATE-ENGINE-1",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/GATE-ENGINE-1-plan.md",
+  "baseline": "reports/sprints/GATE-ENGINE-1-baseline.md",
+  "result": "reports/sprints/GATE-ENGINE-1-result.md",
+  "diff_summary": "reports/sprints/GATE-ENGINE-1-diff-summary.md",
+  "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
+  "gate_closure": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/gate-closure.json",
+  "human_interview": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.json",
+  "live_output_inspection": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.json",
+  "reviewed_remote_commit": "1ac319c84643f5ee3f05f8556e012a39235c745a",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "engine_implementation_executed": false,
+  "lesson_output_mutated": false,
+  "lesson_output_mutation_route": "none; read-only local serving and browser inspection only",
+  "student_product_use_allowed": false,
+  "active_next_sprints": [
+    "GRAPH-REFINE-1",
+    "MATH-REFINE-1",
+    "REASON-REFINE-1",
+    "CHECK-Q2-PLAN"
+  ],
+  "decision": {
+    "shared_route_layer": "keep_and_harden",
+    "shared_task_shell": "keep_default_interaction_layer",
+    "graph_table_route": "keep_refactor_reference_pattern",
+    "math_calculation_route": "refactor_around_1_1_2_target_operation_chain",
+    "reasoning_route": "refactor_around_answer_form_and_constructed_response",
+    "advisory_short_check": "keep_local_advisory_relabel_if_needed",
+    "target_equivalent_exit_ticket": "hold_for_l1_7b_q2_and_gate_l1_7b_q2"
+  },
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/review-gates/capture-gate-engine1-live-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-math-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/check-gate-engine1-review-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-gate-bundle-urls.js GATE-ENGINE-1-four-engine-operational-integration",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/GATE-ENGINE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GATE-ENGINE-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/GATE-ENGINE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/GATE-ENGINE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/GATE-ENGINE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/GATE-ENGINE-1-lead-review-round2.md",
+    "recheck1": "reports/sprints/GATE-ENGINE-1-lead-review-round2-recheck1.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GE1-F1",
+        "description": "Advisory short check must remain visibly distinct from target-equivalent exit tickets.",
+        "disposition": "carry_forward",
+        "owner": "CHECK-Q2-PLAN",
+        "next_action": "Plan separate advisory-check and target-equivalent proof surfaces before L1.7B-Q2.",
+        "blocking": false
+      },
+      {
+        "id": "GE1-F2",
+        "description": "Graph/table route is the reference pattern but still needs target-operation validation before target-equivalent use.",
+        "disposition": "accepted_follow_up",
+        "owner": "GRAPH-REFINE-1",
+        "next_action": "Prepare graph route operation-chain hardening and validation plan.",
+        "blocking": false
+      },
+      {
+        "id": "GE1-F3",
+        "description": "Math route must be refactored around 1.1.2 target-operation coverage.",
+        "disposition": "accepted_follow_up",
+        "owner": "MATH-REFINE-1",
+        "next_action": "Prepare math target-operation-chain hardening plan.",
+        "blocking": false
+      },
+      {
+        "id": "GE1-F4",
+        "description": "Reasoning route must be refactored around answer-form and constructed-response standards.",
+        "disposition": "accepted_follow_up",
+        "owner": "REASON-REFINE-1",
+        "next_action": "Prepare reasoning answer-form integration plan.",
+        "blocking": false
+      },
+      {
+        "id": "GE1-F5",
+        "description": "Scale Gate 1 and target-equivalent completion claims remain blocked.",
+        "disposition": "product_scale_blocker",
+        "owner": "L1.7B-Q2 and GATE-L1.7B-Q2",
+        "next_action": "Do not authorize Scale Gate 1 or completion language until target-equivalent exit-ticket gates close.",
+        "blocking": false
+      }
+    ]
+  }
+}

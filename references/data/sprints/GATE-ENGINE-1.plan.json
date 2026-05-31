@@ -24,6 +24,7 @@
   "review_packet": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.md",
   "valid_gate_statuses": [
     "pass_with_conditions",
+    "pass_with_flags",
     "pass",
     "hold_and_revise_architecture",
     "hold_for_rebuild_plan",

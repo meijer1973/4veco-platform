@@ -3,8 +3,12 @@
   "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
   "sprint_id": "GATE-ENGINE-1",
   "generated_on": "2026-05-31",
-  "status": "review_packet_ready_pre_gate_lead_review_recheck_passed_no_product_authority",
-  "human_interview_started": false,
+  "status": "closed_pass_with_flags_no_product_authority",
+  "human_interview_started": true,
+  "gate_closed": true,
+  "gate_closure": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/gate-closure.json",
+  "human_interview": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.json",
+  "reviewed_remote_commit": "1ac319c84643f5ee3f05f8556e012a39235c745a",
   "remote_publication_required_before_review": true,
   "remote_publication_status": "Commit and push this packet, live-output evidence, pre-gate lead-review artifacts, GAME-ARCH-2 evidence, route-output proof, and cited evidence before human review starts.",
   "pre_gate_lead_review": {
@@ -56,6 +60,8 @@
   "evidence_base": [
     "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.md",
     "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.json",
+    "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.md",
+    "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.json",
     "reports/sprints/GATE-ENGINE-1-plan.md",
     "reports/sprints/GATE-ENGINE-1-baseline.md",
     "reports/sprints/GAME-ARCH-2-result.md",

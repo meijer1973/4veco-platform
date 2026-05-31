@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
+  "sprint_id": "GATE-ENGINE-1",
+  "date": "2026-05-31",
+  "closed_on": "2026-05-31",
+  "status": "pass_with_flags",
+  "status_detail": "operational_integration_review_only_authorize_named_downstream_planning_no_implementation_or_product_use",
+  "decision": "PASS WITH FLAGS for operational engine integration review",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "1ac319c84643f5ee3f05f8556e012a39235c745a",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "reviewed packet and cited evidence were fetchable remotely at the recorded commit before the human answers; Q1 live-output condition was satisfied before closure by a fresh rendered-output inspection artifact",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "engine_implementation_executed": false,
+  "human_interview": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.md",
+  "human_interview_json": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/human-interview.json",
+  "review_packet": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.md",
+  "live_output_evidence": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-evidence.md",
+  "live_output_inspection": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.md",
+  "live_output_inspection_json": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-inspection.json",
+  "live_output_screenshots": "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots",
+  "pre_gate_lead_review": {
+    "required": true,
+    "status": "passed",
+    "round1": "reports/sprints/GATE-ENGINE-1-lead-review-round1.md",
+    "round2": "reports/sprints/GATE-ENGINE-1-lead-review-round2.md",
+    "recheck1": "reports/sprints/GATE-ENGINE-1-lead-review-round2-recheck1.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "summary": "GATE-ENGINE-1 accepted the current operational integration baseline as PASS WITH FLAGS. It keeps the shared route layer and shared task shell, keeps/refactors graph as the reference pattern, refactors math around the 1.1.2 target-operation chain, refactors reasoning around answer-form and constructed-response standards, keeps the advisory short check separate from target-equivalent proof, and keeps target-equivalent exit-ticket claims held for L1.7B-Q2 and GATE-L1.7B-Q2. The gate authorizes only named downstream planning or implementation-preparation sprints and no implementation or product use.",
+  "decisions": {
+    "shared_route_layer": "keep_and_harden",
+    "shared_task_shell": "keep_as_default_interaction_layer",
+    "graph_table_route": "keep_refactor_as_reference_pattern_not_target_equivalent_evidence",
+    "math_calculation_route": "refactor_around_1_1_2_target_operation_chain",
+    "reasoning_route": "refactor_around_answer_form_and_constructed_response_standards",
+    "advisory_short_check": "keep_advisory_local_and_relabel_if_needed_to_avoid_exit_ticket_confusion",
+    "target_equivalent_exit_ticket": "keep_separate_and_held_for_l1_7b_q2_and_gate_l1_7b_q2",
+    "state_feedback_ownership": "accept_game_arch2_rules_as_planning_input",
+    "file_disposition": "accept_game_arch2_baseline_with_rebuild_or_remove_condition_for_non_wrapper_paths"
+  },
+  "live_output_condition": {
+    "required_by_human_answer_q1": true,
+    "satisfied": true,
+    "inspection_cases": 7,
+    "inspection_status": "pass_minimum_live_output_inspection",
+    "advisory_check_title": "Korte check",
+    "advisory_check_target_readiness_evidence": false,
+    "forbidden_proof_phrase_found": false
+  },
+  "flags": [
+    {
+      "id": "ENGINE1-F1",
+      "severity": "high_if_ignored",
+      "issue": "Advisory short check must remain visibly distinct from target-equivalent exit ticket.",
+      "next_action": "Use Korte check, Oefencheck, or Adviescheck style labelling if needed; do not use proof language."
+    },
+    {
+      "id": "ENGINE1-F2",
+      "severity": "medium",
+      "issue": "Graph route is strongest reference pattern but still lacks target-operation validation for target-equivalent use.",
+      "next_action": "Prepare GRAPH-REFINE-1 planning."
+    },
+    {
+      "id": "ENGINE1-F3",
+      "severity": "medium",
+      "issue": "Math route must be refactored around 1.1.2 target-operation coverage.",
+      "next_action": "Prepare MATH-REFINE-1 planning."
+    },
+    {
+      "id": "ENGINE1-F4",
+      "severity": "medium",
+      "issue": "Reasoning route must be refactored around answer-form and constructed-response standards.",
+      "next_action": "Prepare REASON-REFINE-1 planning."
+    },
+    {
+      "id": "ENGINE1-F5",
+      "severity": "medium_high",
+      "issue": "Engine-specific UI/state/feedback paths that cannot become thin wrappers must be rebuilt or removed.",
+      "next_action": "Each planning sprint must classify and route those paths explicitly."
+    },
+    {
+      "id": "ENGINE1-F6",
+      "severity": "high_governance",
+      "issue": "Scale Gate 1 remains blocked.",
+      "next_action": "Do not run Scale Gate 1 until remaining gates close or are explicitly waived with consequences."
+    },
+    {
+      "id": "ENGINE1-F7",
+      "severity": "high_governance",
+      "issue": "Target-equivalent exit-ticket claims remain blocked.",
+      "next_action": "Keep L1.7B-Q2 and GATE-L1.7B-Q2 as required before proof/completion language."
+    }
+  ],
+  "authorized_next": {
+    "authority": "named downstream planning or implementation-preparation sprints only",
+    "implementation_authorized": false,
+    "student_product_use_authorized": false,
+    "sprints": [
+      {
+        "sprint_id": "GRAPH-REFINE-1",
+        "name": "Graph Route Operation-Chain Hardening Plan",
+        "authority": "planning_only"
+      },
+      {
+        "sprint_id": "MATH-REFINE-1",
+        "name": "Math Target-Operation-Chain Hardening Plan",
+        "authority": "planning_only"
+      },
+      {
+        "sprint_id": "REASON-REFINE-1",
+        "name": "Reasoning Answer-Form Integration Plan",
+        "authority": "planning_only"
+      },
+      {
+        "sprint_id": "CHECK-Q2-PLAN",
+        "name": "Target-Equivalent Exit-Ticket Implementation Plan",
+        "authority": "planning_only"
+      }
+    ]
+  },
+  "authority_boundary": {
+    "generated_lesson_output_authorized": false,
+    "engine_implementation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "source_exit_ticket_creation_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-05-31T18:28:26.925Z",
-  "file_count": 2391,
+  "generated_at": "2026-05-31T19:06:22.046Z",
+  "file_count": 2392,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -1865,6 +1865,7 @@
       "reports/sprints/GATE-ENGINE-1-lead-review-assignment.md",
       "reports/sprints/GATE-ENGINE-1-lead-review-corrections.md",
       "reports/sprints/GATE-ENGINE-1-lead-review-round1.md",
+      "reports/sprints/GATE-ENGINE-1-lead-review-round2-recheck1.md",
       "reports/sprints/GATE-ENGINE-1-lead-review-round2.md",
       "reports/sprints/GATE-ENGINE-1-plan.md",
       "reports/sprints/GATE-ENGINE-1-planning-review.md",

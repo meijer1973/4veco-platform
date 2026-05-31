@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-ENGINE-1-four-engine-operational-integration",
+  "generated_on": "2026-05-31",
+  "status": "pass_minimum_live_output_inspection",
+  "reviewed_remote_commit": "",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "browser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "cases": [
+    {
+      "id": "111-landing-check-route",
+      "surface": "1.1.1 landing page",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/index.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "theme": "light",
+      "action": "none",
+      "requirements": [
+        "landing",
+        "advisory-check-link"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1932
+      },
+      "proof": {
+        "title": "1.1.1 Schaarste en economisch denken – Lesmateriaal",
+        "bodyText": "1.1.1 Schaarste en economisch denken LESMATERIAAL ← Hoofdstuk 1 – Economisch denken en rekenen Boek 1: Grondslagen, vraag en aanbod 1 Start ORIENTEER EN HAAL VOORKENNIS OP 2 Leer LEER DE KERNSTAPPEN 3 Oefen KIES STEUN OF EEN OEFENROUTE 4 Check ROND AF MET GERICHTE OEFENTIPS 5 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Hoofdstuk 1 – Economisch denken en rekenen PARAGRAAF 1.1.1 Schaarste en economisch denken Hoofdstuk 1 – Economisch denken en rekenen Licht 1 Start ORIENTEER EN HAAL VOORKENNIS OP Instapquiz Check snel wat je al weet Voorkennis Herhaal wat je nodig hebt voor deze les 2 Leer LEER DE KERNSTAPPEN Uitleg vaardigheden Leer de kernstappen met voorbeelden 3 Oefen KIES STEUN OF EEN OEFENROUTE OEFENROUTES Kies wat je wilt trainen Kies een oefenroute voor redeneren. REDENEREN Redeneren Leg oorzaken, gevolgen en keuzes stap voor stap uit. Oefenen → EERST STEUN NODIG? Stap voor stap oefenen Gebruik extra steun voordat je zelfstandig oefent. Rekenstappen Gebruik extra steun om de procedure stap voor stap te oefenen BEGELEID OEFENEN Begeleide inoefening Oefenen met denkstappen en hints Interactief 4 Check ROND AF MET GERICHTE OEFENTIPS Korte check Kies wat je nog wilt oefenen 5 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Verdiep je begrip Samenvatting, context en extra uitleg Lesboek en downloads Bronnen, presentatie en lesboek",
+        "routeText": "1 Start ORIENTEER EN HAAL VOORKENNIS OP",
+        "shellText": "",
+        "feedbackText": "",
+        "feedbackState": "",
+        "taskFamily": null,
+        "mathShell": false,
+        "graphShell": false,
+        "reasoningShell": false,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 1932
+        },
+        "heading": "1.1.1 Schaarste en economisch denken – Lesmateriaal"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\111-landing-check-route.png"
+    },
+    {
+      "id": "111-advisory-check-feedback",
+      "surface": "1.1.1 advisory Check route",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20exit-ticket.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "theme": "light",
+      "action": "exit-ticket-feedback",
+      "requirements": [
+        "advisory-check",
+        "feedback",
+        "not-target-equivalent"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1995
+      },
+      "proof": {
+        "title": "Schaarste en economisch denken - Korte check",
+        "bodyText": "← Overzicht §1.1.1 Schaarste en economisch denken Donkere modus AFRONDEN Korte check Kies per vraag wat het beste past bij de uitleg. Gebruik de oefentip als je nog wilt oefenen. Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten kiezen Vraag 1 Schaarste herkennen Wanneer is er sprake van schaarste? A Als iets bijna nergens voorkomt. B Als behoeften groter zijn dan de beschikbare middelen. C Als iedereen precies genoeg heeft. Kijk nog eens naar behoeften en middelen Vraag jezelf af of mensen meer willen dan er beschikbaar is. Oefen dit nog met Redeneren Vraag 2 Schaarste herkennen Een gemeente heeft grond voor of een park of nieuwe woningen. Welk middel is hier schaars? A Grond. B Alleen geld. C Alle woningen in Nederland. Vraag 3 Alternatieve kosten kiezen Lisa kiest een bioscoopkaartje van 12 euro en laat een pizza van 9 euro liggen. Wat zijn de alternatieve kosten? A 12 euro, want dat betaalt Lisa. B 9 euro, want dat is de opbrengst van het beste niet-gekozen alternatief. C 21 euro, want je telt beide bedragen op. Vraag 4 Economisch denken Waarom kan een gratis festivalkaartje toch met schaarste te maken hebben? A Omdat tijd, plekken en aandacht ook beperkt kunnen zijn. B Omdat gratis altijd betekent dat niemand iets opgeeft. C Omdat alleen geld een schaars middel kan zijn.",
+        "routeText": "Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten kiezen",
+        "shellText": "",
+        "feedbackText": "Kijk nog eens naar behoeften en middelen Vraag jezelf af of mensen meer willen dan er beschikbaar is. Oefen dit nog met Redeneren",
+        "feedbackState": "et-feedback is-retry",
+        "taskFamily": null,
+        "mathShell": false,
+        "graphShell": false,
+        "reasoningShell": false,
+        "exitTicketTitle": "Korte check",
+        "targetReadinessEvidence": false,
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 1995
+        },
+        "heading": "Schaarste en economisch denken - Korte check"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\111-advisory-check-feedback.png"
+    },
+    {
+      "id": "112-landing-math-route",
+      "surface": "1.1.2 landing page",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/index.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "theme": "light",
+      "action": "none",
+      "requirements": [
+        "landing",
+        "math-link"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1704
+      },
+      "proof": {
+        "title": "1.1.2 Percentages en indexcijfers – Lesmateriaal",
+        "bodyText": "1.1.2 Percentages en indexcijfers LESMATERIAAL ← Hoofdstuk 1 – Economisch denken en rekenen Boek 1: Grondslagen, vraag en aanbod 1 Start ORIENTEER EN HAAL VOORKENNIS OP 2 Leer LEER DE KERNSTAPPEN 3 Oefen KIES STEUN OF EEN OEFENROUTE 4 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Hoofdstuk 1 – Economisch denken en rekenen PARAGRAAF 1.1.2 Percentages en indexcijfers Hoofdstuk 1 – Economisch denken en rekenen Licht 1 Start ORIENTEER EN HAAL VOORKENNIS OP Instapquiz Check snel wat je al weet Voorkennis Herhaal wat je nodig hebt voor deze les 2 Leer LEER DE KERNSTAPPEN Uitleg vaardigheden Leer de kernstappen met voorbeelden 3 Oefen KIES STEUN OF EEN OEFENROUTE OEFENROUTES Kies wat je wilt trainen Kies een oefenroute voor redeneren, rekenen of grafieken lezen. REDENEREN Redeneren Leg oorzaken, gevolgen en keuzes stap voor stap uit. Oefenen → REKENEN Rekenen Train de berekeningen die je in deze paragraaf gebruikt. Oefenen → GRAFIEKEN Grafieken Lees waarden uit grafieken en reken ermee door. Oefenen → EERST STEUN NODIG? Stap voor stap oefenen Gebruik extra steun voordat je zelfstandig oefent. Rekenstappen Gebruik extra steun om de procedure stap voor stap te oefenen BEGELEID OEFENEN Begeleide inoefening Oefenen met denkstappen en hints Interactief 4 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Verdiep je begrip Samenvatting, context en extra uitleg Lesboek en downloads Bronnen, presentatie en lesboek",
+        "routeText": "1 Start ORIENTEER EN HAAL VOORKENNIS OP",
+        "shellText": "",
+        "feedbackText": "",
+        "feedbackState": "",
+        "taskFamily": null,
+        "mathShell": false,
+        "graphShell": false,
+        "reasoningShell": false,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 1704
+        },
+        "heading": "1.1.2 Percentages en indexcijfers – Lesmateriaal"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\112-landing-math-route.png"
+    },
+    {
+      "id": "112-math-mobile-dark-feedback",
+      "surface": "1.1.2 Rekenen/math route",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html",
+      "theme": "dark",
+      "action": "math-wrong-answer",
+      "requirements": [
+        "math-task-shell",
+        "feedback",
+        "mobile",
+        "dark"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 1095
+      },
+      "proof": {
+        "title": "1.1.2 Percentages en indexcijfers – Wiskunde vaardigheden",
+        "bodyText": "← Terug naar overzicht ← Overzicht §1.1.2 OEFENING Procentuele verandering berekenen 1 / 4 Een waarde verandert van 177 naar 212.4. Bereken de procentuele verandering. Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie. Taak 1 Verschil berekenen Rekenantwoord Bereken nieuw minus oud. Bepaal eerst de verandering in dezelfde eenheid als de bron. Verschil Controleer Controleer de volgorde Gebruik nieuw min oud: 212.4 - 177. Terug naar rekenroute Hint Fouten: 1 Hints: 0",
+        "routeText": "RekenenOefenroute RekenenParagraafdoelProcentuele verandering en indexcijfers controleerbaar berekenen.Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen.Open rekenrouteFocus: Procentuele verandering berekenenProcentuele verandering berekenenaanbevolen om nu te oefenen0/3Prijsindex (CPI) berekenenlater nodig0/3Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+        "shellText": "Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie. Taak 1 Verschil berekenen Rekenantwoord Bereken nieuw minus oud. Bepaal eerst de verandering in dezelfde eenheid als de bron. Verschil Controleer Controleer de volgorde Gebruik nieuw min oud: 212.4 - 177. Terug naar rekenroute Hint",
+        "feedbackText": "Controleer de volgorde Gebruik nieuw min oud: 212.4 - 177. Terug naar rekenroute",
+        "feedbackState": "retry",
+        "taskFamily": "numeric_input",
+        "mathShell": true,
+        "graphShell": false,
+        "reasoningShell": false,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 1095
+        },
+        "heading": "1.1.2 Percentages en indexcijfers – Wiskunde vaardigheden"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\112-math-mobile-dark-feedback.png"
+    },
+    {
+      "id": "113-landing-graph-route",
+      "surface": "1.1.3 landing page",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/index.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "theme": "light",
+      "action": "none",
+      "requirements": [
+        "landing",
+        "graph-link"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1704
+      },
+      "proof": {
+        "title": "1.1.3 Grafieken en tabellen – Lesmateriaal",
+        "bodyText": "1.1.3 Grafieken en tabellen LESMATERIAAL ← Hoofdstuk 1 – Economisch denken en rekenen Boek 1: Grondslagen, vraag en aanbod 1 Start ORIENTEER EN HAAL VOORKENNIS OP 2 Leer LEER DE KERNSTAPPEN 3 Oefen KIES STEUN OF EEN OEFENROUTE 4 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Hoofdstuk 1 – Economisch denken en rekenen PARAGRAAF 1.1.3 Grafieken en tabellen Hoofdstuk 1 – Economisch denken en rekenen Donker 1 Start ORIENTEER EN HAAL VOORKENNIS OP Instapquiz Check snel wat je al weet Voorkennis Herhaal wat je nodig hebt voor deze les 2 Leer LEER DE KERNSTAPPEN Uitleg vaardigheden Leer de kernstappen met voorbeelden 3 Oefen KIES STEUN OF EEN OEFENROUTE OEFENROUTES Kies wat je wilt trainen Kies een oefenroute voor redeneren, rekenen of grafieken lezen. REDENEREN Redeneren Leg oorzaken, gevolgen en keuzes stap voor stap uit. Oefenen → REKENEN Rekenen Train de berekeningen die je in deze paragraaf gebruikt. Oefenen → GRAFIEKEN Grafieken Lees waarden uit grafieken en reken ermee door. Oefenen → EERST STEUN NODIG? Stap voor stap oefenen Gebruik extra steun voordat je zelfstandig oefent. Rekenstappen Gebruik extra steun om de procedure stap voor stap te oefenen BEGELEID OEFENEN Begeleide inoefening Oefenen met denkstappen en hints Interactief 4 Verdiep EXTRA CONTEXT, BRONNEN EN DOWNLOADS Verdiep je begrip Samenvatting, context en extra uitleg Lesboek en downloads Bronnen, presentatie en lesboek",
+        "routeText": "1 Start ORIENTEER EN HAAL VOORKENNIS OP",
+        "shellText": "",
+        "feedbackText": "",
+        "feedbackState": "",
+        "taskFamily": null,
+        "mathShell": false,
+        "graphShell": false,
+        "reasoningShell": false,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 1704
+        },
+        "heading": "1.1.3 Grafieken en tabellen – Lesmateriaal"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\113-landing-graph-route.png"
+    },
+    {
+      "id": "113-graph-feedback",
+      "surface": "1.1.3 Grafieken route",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html",
+      "theme": "dark",
+      "action": "graph-answer-first",
+      "requirements": [
+        "graph-task-shell",
+        "feedback",
+        "dark"
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 1636
+      },
+      "proof": {
+        "title": "Grafieken en tabellen - Grafiekenspel",
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Lichte modus GRAFIEKENSPEL Grafieken en tabelwaarden lezen Lees eerst titel, assen en eenheid. Kies daarna pas waarden, punten of berekening. 1 / 7 GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route. OPGAVE 1 Kies een tabelwaarde Welke verkoop hoort in de tabel bij prijs EUR 2,00? IJsjesverkoop per prijs Prijs Verkoop per dag EUR 1,00 500 ijsjes EUR 1,50 400 ijsjes EUR 2,00 300 ijsjes EUR 2,50 200 ijsjes TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer Juiste tabelrij gekozen Je koppelt de prijs aan de juiste verkoopwaarde. Oefen verder in grafiekenspel Volgende opgave",
+        "routeText": "GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+        "shellText": "TAAK 1 VAN 7 Lees de bron, geef je antwoord en kijk rustig na wat je volgende stap is. Taak 1 Tabelwaarde kiezen Tabelwaarde kiezen Welke verkoop hoort in de tabel bij prijs EUR 2,00? Kies eerst de bronrij die de vraag noemt. 400 ijsjes Hoort bij EUR 1,50. 300 ijsjes Hoort bij EUR 2,00. 200 ijsjes Hoort bij EUR 2,50. Controleer Juiste tabelrij gekozen Je koppelt de prijs aan de juiste verkoopwaarde. Oefen verder in grafiekenspel Volgende opgave",
+        "feedbackText": "Juiste tabelrij gekozen Je koppelt de prijs aan de juiste verkoopwaarde. Oefen verder in grafiekenspel",
+        "feedbackState": "matched",
+        "taskFamily": "table_value_selection",
+        "mathShell": false,
+        "graphShell": true,
+        "reasoningShell": false,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 1636
+        },
+        "heading": "Grafieken en tabellen - Grafiekenspel"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\113-graph-feedback.png"
+    },
+    {
+      "id": "111-reasoning-mobile-feedback",
+      "surface": "reasoning route with shared task shell",
+      "url": "http://127.0.0.1:55932/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "source_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html",
+      "theme": "light",
+      "action": "reasoning-self-check",
+      "requirements": [
+        "reasoning-task-shell",
+        "feedback",
+        "mobile"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 3060
+      },
+      "proof": {
+        "title": "Schaarste en economisch denken – Redeneer-spel",
+        "bodyText": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel ← Menu Redeneerantwoord opbouwen 1/5 Een gemeente heeft €500.000 over voor een eenmalige investering. Opties: fietspad aanleggen (waarde €500.000), speeltuin renoveren (waarde €420.000) of bomen planten (waarde €380.000). De gemeente kiest het fietspad. Wat zijn de alternatieve kosten? Schrijf een korte redenering en vergelijk die daarna met de zelfcheckpunten. Gebruik oorzaak, tussenstap en conclusie als een korte denkroute. Redeneerantwoord opbouwen Gestructureerde redenering Schrijf een korte redenering bij de situatie hierboven. Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck. Jouw redenering Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren Voorbeeldroute Voorbeeldroute om mee te vergelijken: Som de alternatieven op De gemeente heeft drie alternatieven voor €500.000: fietspad, speeltuin of bomen. Bereken de opbrengst per alternatief Fietspad levert €500.000 aan maatschappelijke waarde op, speeltuin €420.000 en bomen €380.000. Bepaal de alternatieve kosten De gemeente kiest het fietspad. Niet-gekozen alternatieven: speeltuin (€420.000) en bomen (€380.000). Alternatieve kosten = beste niet-gekozen = €420.000 (speeltuin). Flow in korte blokken: cause Gemeente heeft €500.000 en drie investeringsopties reasoning Waardes: fietspad €500.000, speeltuin €420.000, bomen €380.000 reasoning Gemeente kiest fietspad, geeft speeltuin en bomen op effect Beste niet-gekozen alternatief is de speeltuin met €420.000 effect Alternatieve kosten = €420.000, niet het hele budget van €500.000 Volgende → REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze ui",
+        "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+        "shellText": "Gebruik oorzaak, tussenstap en conclusie als een korte denkroute. Redeneerantwoord opbouwen Gestructureerde redenering Schrijf een korte redenering bij de situatie hierboven. Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck. Jouw redenering Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+        "feedbackText": "Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+        "feedbackState": "self_check",
+        "taskFamily": "structured_reasoning",
+        "mathShell": false,
+        "graphShell": false,
+        "reasoningShell": true,
+        "exitTicketTitle": null,
+        "targetReadinessEvidence": null,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3060
+        },
+        "heading": "Schaarste en economisch denken – Redeneer-spel"
+      },
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\review-gates\\GATE-ENGINE-1-four-engine-operational-integration\\live-output-screenshots\\111-reasoning-mobile-feedback.png"
+    }
+  ]
+}

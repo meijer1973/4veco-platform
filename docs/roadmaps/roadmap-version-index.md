@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.27-game-arch2-architecture-plan` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-ARCH-2 produced the integrated practice-engine architecture plan, route API, task-shell API, file-level keep/wrap/deprecate/rebuild inventory, state/feedback ownership rules, target-operation coverage model, and GATE-ENGINE-1 live-output checklist. No generated output, target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.28-gate-engine1-pass-with-flags` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-ENGINE-1 closed PASS WITH FLAGS. The gate kept the shared route layer and task shell, kept/refactored graph as reference pattern, required math/reasoning/checkpoint planning, and authorized only named downstream planning/preparation sprints. No implementation, generated output, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-ENGINE-1 closure | `v3.27-game-arch2-architecture-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-ARCH-2 architecture plan | `v3.26-game-arch1-decision` | `docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GAME-ARCH-1 decision | `v3.25-graph-ux2-task-shell-integration` | `docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GRAPH-UX-2 task-shell integration | `v3.24-lead-review-strict-validation` | `docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md` | `references/reference-team-roadmap.md` |
