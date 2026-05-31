@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-05-31T11:38:08.957Z
+Generated: 2026-05-31T12:50:44.424Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1546
+Files indexed: 1548
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2413,7 +2413,7 @@ Count: 817
 
 ## other
 
-Count: 407
+Count: 409
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -2474,6 +2474,8 @@ Count: 407
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-lead-review-summary.md
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-product-boundary-review.md
 - archive/sprints/GATE-L1.7B/GATE-L1.7B-sprint-plan.md
+- archive/sprints/GRAPH-UX-2/GRAPH-UX-2-closure-log.md
+- archive/sprints/GRAPH-UX-2/GRAPH-UX-2-sprint-plan.md
 - archive/sprints/L-CP6A/L-CP6A-closure-log.md
 - archive/sprints/L-CP6A/L-CP6A-handoff-to-references.md
 - archive/sprints/L-CP6A/L-CP6A-remediation-report.md

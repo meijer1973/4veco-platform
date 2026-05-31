@@ -938,6 +938,59 @@ html[data-theme="dark"] .st-check-btn, html[data-theme="dark"] .st-finish-btn {
 /* Feedback */
 .st-wrong-msg { color: var(--red); font-size: 0.88rem; margin: 8px 0; }
 
+.st-task-shell-step {
+    display: grid;
+    gap: 14px;
+}
+.st-task-shell-step .ts-task {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+.st-task-shell-step .ts-task-meta {
+    margin-bottom: 8px;
+}
+.st-task-shell-step .ts-task h2 {
+    font-family: var(--heading-font);
+    font-style: var(--heading-style);
+    font-weight: var(--heading-weight);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--ink);
+}
+.st-task-shell-step .ts-purpose {
+    margin: 8px 0 12px;
+}
+.st-task-shell-step .ts-input,
+.st-task-shell-step .ts-textarea {
+    background: var(--bg-card);
+}
+html[data-theme="dark"] .st-task-shell-step .ts-input,
+html[data-theme="dark"] .st-task-shell-step .ts-textarea {
+    background: var(--bg-inset);
+}
+.st-task-shell-note {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    font-size: 0.92rem;
+}
+.st-task-shell-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.st-task-shell-next {
+    text-decoration: none;
+}
+#st-task-feedback:focus-visible {
+    outline: 3px solid rgba(23, 162, 184, 0.35);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
 /* Help row (hint + explanation) */
 .st-help-row { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
 .st-hint-btn, .st-explanation-btn {

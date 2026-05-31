@@ -1132,18 +1132,110 @@
         var pct = pick([-25, -20, -10, -5, 5, 10, 20, 25]);
         var newValue = round1(oldValue * (1 + pct / 100));
         var diff = round1(newValue - oldValue);
+        var pctText = String(pct);
+        var pctComma = pctText.replace('.', ',');
         return {
             context: 'Een waarde verandert van ' + oldValue + ' naar ' + newValue + '. Bereken de procentuele verandering.',
             steps: [
-                { q: 'Bereken nieuw minus oud.', a: diff, hint: 'Trek de oude waarde af van de nieuwe waarde.', expl: 'Verschil = ' + newValue + ' - ' + oldValue + ' = ' + diff + '.' },
-                { q: 'Bereken de procentuele verandering.', a: pct, hint: 'Gebruik: (nieuw - oud) / oud x 100.', expl: '(' + diff + ' / ' + oldValue + ') x 100 = ' + pct + '%.' },
-                mcStep(
-                    'Hoe interpreteer je het teken?',
-                    pct > 0 ? 'stijging' : 'daling',
-                    ['stijging', 'daling', 'procentpunt', 'indexcijfer'],
-                    'Een positief percentage betekent omhoog; een negatief percentage betekent omlaag.',
-                    'De uitkomst is ' + pct + '%, dus dit is een ' + (pct > 0 ? 'stijging' : 'daling') + '.'
-                )
+                {
+                    q: 'Bereken nieuw minus oud.',
+                    mode: 'task_shell',
+                    hint: 'Trek de oude waarde af van de nieuwe waarde.',
+                    expl: 'Verschil = ' + newValue + ' - ' + oldValue + ' = ' + diff + '.',
+                    taskShell: {
+                        id: 'a38-difference',
+                        family: 'numeric_input',
+                        skillLabel: 'Verschil berekenen',
+                        purpose: 'Bepaal eerst de verandering in dezelfde eenheid als de bron.',
+                        prompt: 'Bereken nieuw minus oud.',
+                        interaction: { inputLabel: 'Verschil', placeholder: 'Bijvoorbeeld -10' },
+                        expected: { kind: 'number', value: diff, tolerance: Math.max(0.05, Math.abs(diff) * 0.01) },
+                        feedback: {
+                            matchTitle: 'Verschil klopt',
+                            matchText: 'Je hebt nieuw en oud in de juiste volgorde afgetrokken.',
+                            retryTitle: 'Controleer de volgorde',
+                            retryText: 'Gebruik nieuw min oud: ' + newValue + ' - ' + oldValue + '.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Laat de berekening van de procentuele verandering zien.',
+                    mode: 'task_shell',
+                    hint: 'Gebruik: (nieuw - oud) / oud x 100.',
+                    expl: '(' + diff + ' / ' + oldValue + ') x 100 = ' + pct + '%.',
+                    taskShell: {
+                        id: 'a38-work',
+                        family: 'calculation_work_capture',
+                        skillLabel: 'Procentuele verandering',
+                        purpose: 'Maak je rekenwerk controleerbaar met formule, invulling en antwoord.',
+                        prompt: 'Laat de berekening van de procentuele verandering zien.',
+                        interaction: {
+                            workLabel: 'Berekening',
+                            finalAnswerLabel: 'Eindantwoord met procentteken',
+                            finalAnswerPlaceholder: 'Bijvoorbeeld ' + pctText + '%'
+                        },
+                        expected: {
+                            kind: 'self_check',
+                            criteria: [
+                                'Je gebruikt (nieuw - oud) / oud x 100.',
+                                'Oud = ' + oldValue + ' en nieuw = ' + newValue + ' staan zichtbaar in je berekening.',
+                                'Je eindantwoord heeft een procentteken.'
+                            ]
+                        },
+                        feedback: {
+                            selfCheckTitle: 'Vergelijk je berekening',
+                            selfCheckText: 'Loop formule, invulling en procentteken na voordat je verder gaat.',
+                            retryTitle: 'Schrijf eerst je uitwerking',
+                            retryText: 'Noteer formule, waarden en eindantwoord zodat je jezelf kunt controleren.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Geef het eindantwoord met procentteken.',
+                    mode: 'task_shell',
+                    hint: 'Schrijf de uitkomst als percentage.',
+                    expl: 'De procentuele verandering is ' + pct + '%.',
+                    taskShell: {
+                        id: 'a38-final-answer',
+                        family: 'final_answer_entry',
+                        skillLabel: 'Eindantwoord noteren',
+                        purpose: 'Sluit de berekening af met de juiste notatie.',
+                        prompt: 'Geef het eindantwoord met procentteken.',
+                        interaction: { inputLabel: 'Eindantwoord', placeholder: pctText + '%' },
+                        expected: { kind: 'text', accepted: [pctText + '%', pctText + ' %', pctComma + '%', pctComma + ' %'] },
+                        feedback: {
+                            matchTitle: 'Antwoord met notatie klopt',
+                            matchText: 'Je antwoord bevat de berekende procentuele verandering en het procentteken.',
+                            retryTitle: 'Controleer getal en teken',
+                            retryText: 'Gebruik de uitkomst van je berekening en zet er een procentteken achter.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Welke notatie hoort achter een procentuele verandering?',
+                    mode: 'task_shell',
+                    hint: 'Een procentuele verandering noteer je als percentage.',
+                    expl: 'Achter een procentuele verandering zet je %.',
+                    taskShell: {
+                        id: 'a38-notation',
+                        family: 'unit_notation_field',
+                        skillLabel: 'Procentnotatie',
+                        purpose: 'Controleer dat je de juiste notatie gebruikt.',
+                        prompt: 'Welke notatie hoort achter een procentuele verandering?',
+                        interaction: { inputLabel: 'Notatie', placeholder: 'Bijvoorbeeld %' },
+                        expected: { kind: 'text', accepted: ['%', 'procent', 'procentteken'] },
+                        feedback: {
+                            matchTitle: 'Juiste notatie',
+                            matchText: 'Een procentuele verandering noteer je met een procentteken.',
+                            retryTitle: 'Kies de procentnotatie',
+                            retryText: 'Een verandering in procenten krijgt het teken %.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                }
             ]
         };
     };
@@ -1155,18 +1247,110 @@
         var previousIndex = pick([90, 95, 100, 105, 110]);
         if (previousIndex === index) previousIndex += 5;
         var inflation = round2((index - previousIndex) / previousIndex * 100);
+        var inflationText = String(inflation);
+        var inflationComma = inflationText.replace('.', ',');
         return {
             context: 'Een boodschappenmand kost in het basisjaar ' + basePrice + '. In het doeljaar kost dezelfde mand ' + currentPrice + '.',
             steps: [
-                { q: 'Bereken de prijsindex van het doeljaar.', a: index, hint: 'Index = mandprijs doeljaar / mandprijs basisjaar x 100.', expl: 'Index = ' + currentPrice + ' / ' + basePrice + ' x 100 = ' + index + '.' },
-                { q: 'Als de vorige index ' + previousIndex + ' was, hoeveel procent inflatie is er dan?', a: inflation, hint: 'Gebruik de aanpak voor procentuele verandering op de indexwaarden.', expl: 'Inflatie = (' + index + ' - ' + previousIndex + ') / ' + previousIndex + ' x 100 = ' + inflation + '%.' },
-                mcStep(
-                    'Wat betekent een index van ' + index + '?',
-                    index > 100 ? 'de mand is duurder dan in het basisjaar' : 'de mand is goedkoper dan in het basisjaar',
-                    ['de mand is duurder dan in het basisjaar', 'de mand is goedkoper dan in het basisjaar', 'de inflatie is precies ' + index + '%', 'het basisjaar kost ' + index],
-                    'Vergelijk de index met 100.',
-                    'Het basisjaar is 100. Een index ' + (index > 100 ? 'boven' : 'onder') + ' 100 betekent dat de mand ' + (index > 100 ? 'duurder' : 'goedkoper') + ' is.'
-                )
+                {
+                    q: 'Bereken de prijsindex van het doeljaar.',
+                    mode: 'task_shell',
+                    hint: 'Index = mandprijs doeljaar / mandprijs basisjaar x 100.',
+                    expl: 'Index = ' + currentPrice + ' / ' + basePrice + ' x 100 = ' + index + '.',
+                    taskShell: {
+                        id: 'a39-index-numeric',
+                        family: 'numeric_input',
+                        skillLabel: 'Prijsindex berekenen',
+                        purpose: 'Gebruik het basisjaar als 100 en bereken de index van het doeljaar.',
+                        prompt: 'Bereken de prijsindex van het doeljaar.',
+                        interaction: { inputLabel: 'Prijsindex', placeholder: 'Bijvoorbeeld 105' },
+                        expected: { kind: 'number', value: index, tolerance: 0.05 },
+                        feedback: {
+                            matchTitle: 'Index klopt',
+                            matchText: 'Je hebt de doeljaarprijs gedeeld door de basisjaarprijs en vermenigvuldigd met 100.',
+                            retryTitle: 'Controleer basisjaar en doeljaar',
+                            retryText: 'Gebruik mandprijs doeljaar / mandprijs basisjaar x 100.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Laat zien hoe je de inflatie uit de indexcijfers berekent.',
+                    mode: 'task_shell',
+                    hint: 'Gebruik de aanpak voor procentuele verandering op de indexwaarden.',
+                    expl: 'Inflatie = (' + index + ' - ' + previousIndex + ') / ' + previousIndex + ' x 100 = ' + inflation + '%.',
+                    taskShell: {
+                        id: 'a39-inflation-work',
+                        family: 'calculation_work_capture',
+                        skillLabel: 'Inflatie uit indexcijfers',
+                        purpose: 'Gebruik de oude index als noemer en laat de rekenstap zien.',
+                        prompt: 'Laat zien hoe je de inflatie uit de indexcijfers berekent.',
+                        interaction: {
+                            workLabel: 'Berekening',
+                            finalAnswerLabel: 'Eindantwoord met procentteken',
+                            finalAnswerPlaceholder: 'Bijvoorbeeld ' + inflationText + '%'
+                        },
+                        expected: {
+                            kind: 'self_check',
+                            criteria: [
+                                'Oude index = ' + previousIndex + ' en nieuwe index = ' + index + ' staan zichtbaar.',
+                                'Je deelt het indexverschil door de oude index.',
+                                'Je eindantwoord heeft een procentteken.'
+                            ]
+                        },
+                        feedback: {
+                            selfCheckTitle: 'Vergelijk je indexberekening',
+                            selfCheckText: 'Loop oude index, nieuwe index, noemer en procentteken na.',
+                            retryTitle: 'Schrijf eerst je uitwerking',
+                            retryText: 'Noteer de twee indexcijfers en deel het verschil door de oude index.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Geef de inflatie met procentteken.',
+                    mode: 'task_shell',
+                    hint: 'Schrijf de procentuele verandering tussen de indexcijfers op.',
+                    expl: 'De inflatie is ' + inflation + '%.',
+                    taskShell: {
+                        id: 'a39-final-answer',
+                        family: 'final_answer_entry',
+                        skillLabel: 'Inflatie noteren',
+                        purpose: 'Sluit de indexberekening af met een percentage.',
+                        prompt: 'Geef de inflatie met procentteken.',
+                        interaction: { inputLabel: 'Inflatie', placeholder: inflationText + '%' },
+                        expected: { kind: 'text', accepted: [inflationText + '%', inflationText + ' %', inflationComma + '%', inflationComma + ' %'] },
+                        feedback: {
+                            matchTitle: 'Inflatie juist genoteerd',
+                            matchText: 'Je antwoord bevat de procentuele verandering tussen de indexcijfers.',
+                            retryTitle: 'Controleer getal en procentteken',
+                            retryText: 'Gebruik de uitkomst van je indexberekening en zet er een procentteken achter.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                },
+                {
+                    q: 'Hoe noteer je de prijsindex van het doeljaar zonder er inflatie van te maken?',
+                    mode: 'task_shell',
+                    hint: 'Een indexcijfer krijgt geen procentteken.',
+                    expl: 'De prijsindex noteer je als ' + index + ', met basisjaar 100.',
+                    taskShell: {
+                        id: 'a39-index-notation',
+                        family: 'unit_notation_field',
+                        skillLabel: 'Indexnotatie',
+                        purpose: 'Houd indexcijfer en inflatiepercentage uit elkaar.',
+                        prompt: 'Hoe noteer je de prijsindex van het doeljaar zonder er inflatie van te maken?',
+                        interaction: { inputLabel: 'Indexnotatie', placeholder: String(index) },
+                        expected: { kind: 'text', accepted: [String(index), 'index ' + index, 'indexcijfer ' + index] },
+                        feedback: {
+                            matchTitle: 'Indexnotatie klopt',
+                            matchText: 'Een prijsindex noteer je als indexcijfer met basisjaar 100, niet als inflatiepercentage.',
+                            retryTitle: 'Laat het procentteken weg',
+                            retryText: 'Schrijf het indexcijfer zelf op; inflatie bereken je pas tussen twee indexcijfers.'
+                        },
+                        practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                    }
+                }
             ]
         };
     };

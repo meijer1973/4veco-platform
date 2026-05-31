@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T11:38:08.920Z
+Generated: 2026-05-31T12:50:44.394Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2262
+Files indexed: 2286
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -122,7 +122,7 @@ Count: 76
 
 ## build scripts
 
-Count: 327
+Count: 329
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -412,8 +412,10 @@ Count: 327
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -501,7 +503,7 @@ Count: 42
 
 ## validators
 
-Count: 129
+Count: 131
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -596,6 +598,7 @@ Count: 129
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -606,6 +609,7 @@ Count: 129
 - build-scripts/sprints/check-sprint-result.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
@@ -635,7 +639,7 @@ Count: 129
 
 ## references
 
-Count: 366
+Count: 368
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -741,6 +745,8 @@ Count: 366
 - references/data/sprints/GAME-UX-3A.result.json
 - references/data/sprints/GATE-CP6.plan.json
 - references/data/sprints/GATE-CP6.result.json
+- references/data/sprints/GRAPH-UX-2.plan.json
+- references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
 - references/data/sprints/LEAD-REVIEW-1.result.json
 - references/data/sprints/LEAD-REVIEW-2.plan.json
@@ -1006,7 +1012,7 @@ Count: 366
 
 ## reports
 
-Count: 1166
+Count: 1185
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1806,6 +1812,25 @@ Count: 1166
 - reports/sprints/GATE-CP6-lead-review-round2.md
 - reports/sprints/GATE-CP6-plan.md
 - reports/sprints/GATE-CP6-result.md
+- reports/sprints/GRAPH-UX-2-accessibility-review.md
+- reports/sprints/GRAPH-UX-2-baseline.md
+- reports/sprints/GRAPH-UX-2-checkpoint-graph-task-fixture.md
+- reports/sprints/GRAPH-UX-2-diff-summary.md
+- reports/sprints/GRAPH-UX-2-lead-review-assignment.md
+- reports/sprints/GRAPH-UX-2-lead-review-corrections.md
+- reports/sprints/GRAPH-UX-2-lead-review-round1.md
+- reports/sprints/GRAPH-UX-2-lead-review-round2.md
+- reports/sprints/GRAPH-UX-2-plan.md
+- reports/sprints/GRAPH-UX-2-planning-review.md
+- reports/sprints/GRAPH-UX-2-result.md
+- reports/sprints/GRAPH-UX-2-screenshot-manifest.md
+- reports/sprints/GRAPH-UX-2-screenshots/desktop-dark-113-graph-task-shell.png
+- reports/sprints/GRAPH-UX-2-screenshots/desktop-light-113-graph-task-shell.png
+- reports/sprints/GRAPH-UX-2-screenshots/manifest.json
+- reports/sprints/GRAPH-UX-2-screenshots/mobile-dark-113-graph-feedback.png
+- reports/sprints/GRAPH-UX-2-screenshots/mobile-light-113-graph-route-first.png
+- reports/sprints/GRAPH-UX-2-student-experience-review.md
+- reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
 - reports/sprints/L2.0-platform-support-result.md

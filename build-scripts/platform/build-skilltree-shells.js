@@ -85,6 +85,7 @@ function generateHTML(parNr, parName) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${parNr} ${parName} – Wiskunde vaardigheden</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="${sharedPath}/task-shell.css">
     <link rel="stylesheet" href="${sharedPath}/skilltree.css">
     <link rel="stylesheet" href="${sharedPath}/skill-map-route.css">
 </head>
@@ -206,6 +207,8 @@ function generateHTML(parNr, parName) {
     <script src="${sharedPath}/skilltree/${parNr}.js"></script>
     <script src="${sharedPath}/skilltree/explanations.js"></script>
     <script src="${sharedPath}/adaptive-seam.js"></script>
+    <script src="${sharedPath}/task-shell-engine.js"></script>
+    <script src="${sharedPath}/task-shell-ui.js"></script>
     <script src="${sharedPath}/skill-map-engine.js"></script>
     <script src="${sharedPath}/skilltree-engine.js"></script>
     <script src="${sharedPath}/skill-map-route-ui.js"></script>

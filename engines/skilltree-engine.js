@@ -47,6 +47,33 @@
         return null;
     }
 
+    function loadTaskShellEngine() {
+        if (typeof globalThis !== 'undefined' && globalThis.TaskShellEngine) {
+            return globalThis.TaskShellEngine;
+        }
+        if (typeof require === 'function') {
+            try { return require('./task-shell-engine'); } catch (e) { return null; }
+        }
+        return null;
+    }
+
+    function clone(value) {
+        return JSON.parse(JSON.stringify(value));
+    }
+
+    function summarizeTaskShellAnswer(input) {
+        if (input == null) return '';
+        if (typeof input === 'string' || typeof input === 'number') return String(input);
+        if (Array.isArray(input)) return input.join(', ');
+        var parts = [];
+        for (var key in input) {
+            if (!input.hasOwnProperty(key)) continue;
+            if (input[key] == null || input[key] === '') continue;
+            parts.push(key + ': ' + String(input[key]));
+        }
+        return parts.join(' | ');
+    }
+
     function readAdaptivePayload(paragraphId, storage) {
         var seam = null;
         if (typeof globalThis !== 'undefined' && globalThis.AdaptiveSeam) {
@@ -83,6 +110,7 @@
         this._explanations = config.explanations || {};
         this._storage = config.storage || (typeof localStorage !== 'undefined' ? localStorage : null);
         this._SkillMapEngine = config.SkillMapEngine || loadSkillMapEngine();
+        this._TaskShellEngine = config.TaskShellEngine || loadTaskShellEngine();
         this.adaptivePayload = readAdaptivePayload(
             this._data.parNr,
             config.adaptiveStorage || this._storage
@@ -763,6 +791,13 @@
         };
     };
 
+    SkillTreeEngine.prototype.getCurrentTaskShellTask = function () {
+        if (!this._exercise) return null;
+        var step = this._exercise.steps[this._stepIdx];
+        if (!step || !(step.mode === 'task_shell' || step.taskShell)) return null;
+        return clone(step.taskShell);
+    };
+
     SkillTreeEngine.prototype.checkAnswer = function (input) {
         if (!this._exercise) return { valid: false, error: 'No active exercise' };
 
@@ -770,6 +805,7 @@
         var mode = step.mode || 'numeric';
 
         // Route to mode-specific validator
+        if (mode === 'task_shell' || step.taskShell) return this._checkTaskShell(input, step);
         if (mode === 'mc') return this._checkMC(input, step);
         if (mode === 'order') return this._checkOrder(input, step);
         if (mode === 'error') return this._checkError(input, step);
@@ -803,6 +839,39 @@
             this._streak = 0;
             return { correct: false, error: 'wrong_answer' };
         }
+    };
+
+    SkillTreeEngine.prototype._checkTaskShell = function (input, step) {
+        if (!this._TaskShellEngine || typeof this._TaskShellEngine.evaluateTask !== 'function') {
+            throw new Error('TaskShellEngine is required for task-shell skilltree steps');
+        }
+        if (!step.taskShell) {
+            throw new Error('task_shell step requires taskShell data');
+        }
+        var taskResult = this._TaskShellEngine.evaluateTask(step.taskShell, input);
+        var correct = taskResult.matched === true || taskResult.state === 'self_check';
+        if (correct) {
+            this._streak++;
+            this._completedSteps.push({
+                q: step.q || step.taskShell.prompt,
+                a: summarizeTaskShellAnswer(input),
+                userAnswer: summarizeTaskShellAnswer(input)
+            });
+            return {
+                correct: true,
+                explanation: taskResult.feedbackText || step.expl,
+                taskShellResult: taskResult,
+                isLastStep: this._stepIdx + 1 >= this._exercise.steps.length,
+                streak: this._streak
+            };
+        }
+        this._errors++;
+        this._streak = 0;
+        return {
+            correct: false,
+            error: 'task_shell_retry',
+            taskShellResult: taskResult
+        };
     };
 
     SkillTreeEngine.prototype._checkMC = function (input, step) {

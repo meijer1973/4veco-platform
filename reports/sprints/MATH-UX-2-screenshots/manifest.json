@@ -1,0 +1,101 @@
+{
+  "captured_on": "2026-05-31",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "cases": [
+    {
+      "name": "desktop-light-112-math-task-shell",
+      "theme": "light",
+      "action": "start-a38",
+      "url": "http://127.0.0.1:51102/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\MATH-UX-2-screenshots\\desktop-light-112-math-task-shell.png",
+      "route_text": "RekenenOefenroute RekenenParagraafdoelProcentuele verandering en indexcijfers controleerbaar berekenen.Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen.Open rekenrouteFocus: Procentuele verandering berekenenProcentuele verandering berekenenaanbevolen om nu te oefenen0/3Prijsindex (CPI) berekenenlater nodig0/3Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie. Taak 1 Verschil berekenen Rekenantwoord Bereken nieuw minus oud. Bepaal eerst de verandering in dezelfde eenheid als de bron. Verschil Controleer Hint",
+      "task_family": "numeric_input",
+      "feedback_state": null,
+      "shell_rect": {
+        "x": 300,
+        "y": 291,
+        "width": 680,
+        "height": 433
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 850
+      }
+    },
+    {
+      "name": "mobile-light-112-math-route-first",
+      "theme": "light",
+      "action": "route-only",
+      "url": "http://127.0.0.1:51102/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\MATH-UX-2-screenshots\\mobile-light-112-math-route-first.png",
+      "route_text": "REKENEN Oefenroute Rekenen PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen. Open rekenroute Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "",
+      "task_family": null,
+      "feedback_state": null,
+      "shell_rect": null,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 1271
+      }
+    },
+    {
+      "name": "desktop-dark-112-math-task-shell",
+      "theme": "dark",
+      "action": "start-a38",
+      "url": "http://127.0.0.1:51102/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\MATH-UX-2-screenshots\\desktop-dark-112-math-task-shell.png",
+      "route_text": "RekenenOefenroute RekenenParagraafdoelProcentuele verandering en indexcijfers controleerbaar berekenen.Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen.Open rekenrouteFocus: Procentuele verandering berekenenProcentuele verandering berekenenaanbevolen om nu te oefenen0/3Prijsindex (CPI) berekenenlater nodig0/3Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie. Taak 1 Verschil berekenen Rekenantwoord Bereken nieuw minus oud. Bepaal eerst de verandering in dezelfde eenheid als de bron. Verschil Controleer Hint",
+      "task_family": "numeric_input",
+      "feedback_state": null,
+      "shell_rect": {
+        "x": 300,
+        "y": 291,
+        "width": 680,
+        "height": 433
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "page": {
+        "width": 1280,
+        "height": 850
+      }
+    },
+    {
+      "name": "mobile-dark-112-math-feedback",
+      "theme": "dark",
+      "action": "wrong-answer",
+      "url": "http://127.0.0.1:51102/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\MATH-UX-2-screenshots\\mobile-dark-112-math-feedback.png",
+      "route_text": "RekenenOefenroute RekenenParagraafdoelProcentuele verandering en indexcijfers controleerbaar berekenen.Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen.Open rekenrouteFocus: Procentuele verandering berekenenProcentuele verandering berekenenaanbevolen om nu te oefenen0/3Prijsindex (CPI) berekenenlater nodig0/3Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie. Taak 1 Verschil berekenen Rekenantwoord Bereken nieuw minus oud. Bepaal eerst de verandering in dezelfde eenheid als de bron. Verschil Controleer Controleer de volgorde Gebruik nieuw min oud: 136.8 - 152. Terug naar rekenroute Hint",
+      "task_family": "numeric_input",
+      "feedback_state": "ts-feedback-card is-retry",
+      "shell_rect": {
+        "x": 14,
+        "y": 356,
+        "width": 362,
+        "height": 618
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 1095
+      }
+    }
+  ]
+}

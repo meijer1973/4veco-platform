@@ -10,6 +10,7 @@
 const path = require('path');
 const fs = require('fs');
 const elements = require('../skilltree/base-elements');
+const TaskShellEngine = require('../task-shell-engine');
 const catalog = require('../../references/machine/micro-teaching-units.json');
 const { buildSkilltreeBundleData } = require('../../scripts/deploy');
 
@@ -198,6 +199,10 @@ describe('exercise generators', () => {
                         expect(step.shownSteps.length).toBeGreaterThanOrEqual(3);
                         var errorCount = step.shownSteps.filter(function(s) { return s.isError; }).length;
                         expect(errorCount).toBe(1);
+                    } else if (step.mode === 'task_shell' || step.taskShell) {
+                        expect(step.taskShell).toBeTruthy();
+                        expect(TaskShellEngine.validateTask(step.taskShell)).toBe(true);
+                        expect(TaskShellEngine.findStudentTextViolations(step.taskShell)).toEqual([]);
                     } else {
                         expect(typeof step.a).toBe('number');
                         expect(isFinite(step.a)).toBe(true);
@@ -206,6 +211,23 @@ describe('exercise generators', () => {
             }
         });
     }
+
+    test('MATH-UX-2 A38/A39 expose the required shared task-shell families', () => {
+        const families = new Set();
+        for (const id of ['A38', 'A39']) {
+            const ex = elements.GEN[id]();
+            for (const step of ex.steps) {
+                if (step.taskShell) families.add(step.taskShell.family);
+            }
+        }
+
+        expect(Array.from(families)).toEqual(expect.arrayContaining([
+            'numeric_input',
+            'calculation_work_capture',
+            'final_answer_entry',
+            'unit_notation_field'
+        ]));
+    });
 });
 
 // ── Per-paragraph data files ──────────────────────────────────────

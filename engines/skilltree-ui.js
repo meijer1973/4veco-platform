@@ -63,7 +63,9 @@
             orderPlaced: [],
             hintShown: false,
             hintHtml: '',
-            autoAdvanceId: null
+            autoAdvanceId: null,
+            taskShellResult: null,
+            focusTaskFeedback: false
         },
         explOrigin: 'tree'
     };
@@ -102,6 +104,8 @@
         uiState.exercise.orderPlaced = [];
         uiState.exercise.hintShown = false;
         uiState.exercise.hintHtml = '';
+        uiState.exercise.taskShellResult = null;
+        uiState.exercise.focusTaskFeedback = false;
     }
     function rememberDepsReturnState() {
         if (!uiState.deps.activeSkillId) return;
@@ -308,6 +312,9 @@
     function buildStepCard(state) {
         var step = state.currentStep;
         var mode = step.mode || 'numeric';
+        if ((mode === 'task_shell' || step.taskShell) && window.TaskShellUI) {
+            return renderTaskShellStep(step, state);
+        }
         var h = '<div class="st-step-card"><div class="st-question">' + fmt(step.q) + '</div>';
         if (mode === 'mc') {
             h += '<div class="st-mc-grid">';
@@ -333,6 +340,30 @@
         h += '<div data-role="hint-box"></div><div data-role="expl-box"></div></div>';
         return h;
     }
+    function renderTaskShellStep(step, state) {
+        var task = step.taskShell;
+        var taskMarkup = window.TaskShellUI.renderTask(task, state.currentStepIdx);
+        taskMarkup = removeTaskShellFeedbackRegion(taskMarkup, task.id);
+        var result = uiState.exercise.taskShellResult;
+        var feedbackHtml = result && result.taskShellResult ? window.TaskShellUI.renderFeedback(result.taskShellResult) : '';
+        var h = '<div class="st-step-card st-task-shell-step" data-skilltree-task-shell="MATH-UX-2">';
+        h += '<p class="st-task-shell-note">Schrijf je rekenstap op dezelfde manier als in de route: waarden, berekening, antwoord en notatie.</p>';
+        h += taskMarkup;
+        h += '<div class="st-task-shell-controls">';
+        h += '<button class="st-check-btn" type="button" data-action="check-task-shell">Controleer</button>';
+        if (result && result.correct) {
+            h += '<button class="st-btn-next st-task-shell-next" type="button" data-action="task-shell-next">' + (result.isLastStep ? 'Afronden' : 'Volgende stap') + ' <i class="fa-solid fa-arrow-right"></i></button>';
+        }
+        h += '</div>';
+        h += '<div class="ts-feedback" id="st-task-feedback" data-feedback-for="' + esc(task.id) + '" aria-live="polite" role="status" aria-label="Feedback op je rekenstap" tabindex="-1">' + feedbackHtml + '</div>';
+        h += renderStepActions(step, state.skillId);
+        h += '<div data-role="hint-box"></div><div data-role="expl-box"></div></div>';
+        return h;
+    }
+    function removeTaskShellFeedbackRegion(markup, taskId) {
+        var marker = '<div class="ts-feedback" data-feedback-for="' + esc(taskId) + '" aria-live="polite" role="status" tabindex="-1"></div>';
+        return markup.replace(marker, '');
+    }
     function renderStep() {
         var state = engine.getExerciseState();
         if (!state) return;
@@ -350,6 +381,13 @@
             var inp = document.getElementById('st-numeric-input');
             if (inp) {
                 setTimeout(function () { try { inp.focus(); } catch (e) {} }, 30);
+            }
+        }
+        if (uiState.exercise.focusTaskFeedback) {
+            uiState.exercise.focusTaskFeedback = false;
+            var feedback = document.getElementById('st-task-feedback');
+            if (feedback && typeof feedback.focus === 'function') {
+                setTimeout(function () { feedback.focus({ preventScroll: true }); }, 30);
             }
         }
     }
@@ -396,6 +434,57 @@
         var v = inp.value.trim();
         if (v === '') return;
         handleSubmitResult(engine.checkAnswer(v));
+    }
+    function handleCheckTaskShell() {
+        var state = engine.getExerciseState();
+        if (!state || !state.currentStep || !state.currentStep.taskShell) return;
+        var response = collectTaskShellResponse(state.currentStep.taskShell);
+        uiState.exercise.taskShellResult = engine.checkAnswer(response);
+        uiState.exercise.focusTaskFeedback = true;
+        renderStep();
+        renderScoreTracker();
+    }
+    function handleTaskShellNext() {
+        var result = uiState.exercise.taskShellResult;
+        if (!result || !result.correct) return;
+        clearAutoAdvance();
+        if (result.isLastStep) {
+            finishAndShowResult();
+            return;
+        }
+        engine.nextStep();
+        resetStepUiState();
+        renderStep();
+        renderScoreTracker();
+    }
+    function collectTaskShellResponse(task) {
+        var root = els.exStepSlot;
+        if (!root || !task) return null;
+        var selected = root.querySelector('[data-task="' + escapeCss(task.id) + '"] .ts-choice.selected');
+        if (task.family === 'choice' || task.family === 'table_value_selection') {
+            return selected ? selected.getAttribute('data-choice-id') : '';
+        }
+        if (task.family === 'point_placement') {
+            return {
+                x: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="x"]'),
+                y: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="y"]')
+            };
+        }
+        if (task.family === 'calculation_work_capture') {
+            return {
+                work: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="work"]'),
+                finalAnswer: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="final-answer"]')
+            };
+        }
+        return getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
+    }
+    function escapeCss(value) {
+        if (window.CSS && typeof window.CSS.escape === 'function') return window.CSS.escape(value);
+        return String(value).replace(/"/g, '\\"');
+    }
+    function getTaskShellValue(selector) {
+        var el = els.exStepSlot ? els.exStepSlot.querySelector(selector) : null;
+        return el ? el.value : '';
     }
     function handleMC(idx) {
         var btns = els.exStepSlot.querySelectorAll('.st-mc-option');
@@ -807,6 +896,8 @@
                     if (act === 'open-expl') { openExplView(state.skillId, 'exercise'); return; }
                     if (act === 'minus') { handleMinus(); return; }
                     if (act === 'check-numeric') { handleCheckNumeric(); return; }
+                    if (act === 'check-task-shell') { handleCheckTaskShell(); return; }
+                    if (act === 'task-shell-next') { handleTaskShellNext(); return; }
                     if (act === 'reset-order') { resetStepUiState(); renderStep(); return; }
                     var mc = t.getAttribute('data-mc');
                     if (mc !== null && mode === 'mc') { handleMC(parseInt(mc, 10)); return; }
@@ -814,15 +905,34 @@
                     if (er !== null && mode === 'error') { handleError(parseInt(er, 10)); return; }
                     var ob = t.getAttribute('data-order-block');
                     if (ob !== null && mode === 'order') { handleOrderBlock(parseInt(ob, 10), step); return; }
+                    var choice = t.closest ? t.closest('.ts-choice') : null;
+                    if (choice && (mode === 'task_shell' || step.taskShell)) {
+                        var taskEl = choice.closest('.ts-task');
+                        if (taskEl) {
+                            var choices = taskEl.querySelectorAll('.ts-choice');
+                            for (var ci = 0; ci < choices.length; ci++) {
+                                choices[ci].classList.remove('selected');
+                                choices[ci].setAttribute('aria-pressed', 'false');
+                            }
+                        }
+                        choice.classList.add('selected');
+                        choice.setAttribute('aria-pressed', 'true');
+                        return;
+                    }
                 }
                 t = t.parentNode;
             }
         });
         if (els.exStepSlot) els.exStepSlot.addEventListener('keydown', function (e) {
-            if (!e.target || e.target.id !== 'st-numeric-input') return;
-            if (e.key === 'Enter' || e.keyCode === 13) {
+            if (!e.target) return;
+            if (e.target.id === 'st-numeric-input' && (e.key === 'Enter' || e.keyCode === 13)) {
                 e.preventDefault();
                 handleCheckNumeric();
+                return;
+            }
+            if (e.target.getAttribute && e.target.getAttribute('data-task-id') && e.target.tagName !== 'TEXTAREA' && (e.key === 'Enter' || e.keyCode === 13)) {
+                e.preventDefault();
+                handleCheckTaskShell();
             }
         });
         if (els.exResultSlot) els.exResultSlot.addEventListener('click', function (e) {

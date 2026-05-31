@@ -325,6 +325,121 @@ describe('checkAnswer', () => {
     });
 });
 
+describe('checkAnswer task-shell mode', () => {
+    function createTaskShellEngine() {
+        const customElements = Object.assign({}, elements, {
+            GEN: Object.assign({}, elements.GEN, {
+                A01: function () {
+                    return {
+                        context: 'Task-shell test',
+                        steps: [
+                            {
+                                q: 'Bereken het verschil.',
+                                mode: 'task_shell',
+                                hint: 'Nieuw min oud.',
+                                expl: '15 - 3 = 12.',
+                                taskShell: {
+                                    id: 'skilltree-task-numeric',
+                                    family: 'numeric_input',
+                                    skillLabel: 'Verschil berekenen',
+                                    purpose: 'Oefen een lokale rekenstap.',
+                                    prompt: 'Bereken het verschil.',
+                                    interaction: { inputLabel: 'Verschil' },
+                                    expected: { kind: 'number', value: 12, tolerance: 0.05 },
+                                    feedback: {
+                                        matchTitle: 'Verschil klopt',
+                                        matchText: 'Je hebt nieuw min oud gebruikt.',
+                                        retryTitle: 'Reken nog een keer',
+                                        retryText: 'Gebruik 15 min 3.'
+                                    },
+                                    practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                                }
+                            },
+                            {
+                                q: 'Laat je berekening zien.',
+                                mode: 'task_shell',
+                                hint: 'Schrijf formule en antwoord.',
+                                expl: 'Je berekening is controleerbaar.',
+                                taskShell: {
+                                    id: 'skilltree-task-work',
+                                    family: 'calculation_work_capture',
+                                    skillLabel: 'Berekening tonen',
+                                    purpose: 'Maak je rekenwerk controleerbaar.',
+                                    prompt: 'Laat je berekening zien.',
+                                    interaction: {
+                                        workLabel: 'Berekening',
+                                        finalAnswerLabel: 'Eindantwoord'
+                                    },
+                                    expected: {
+                                        kind: 'self_check',
+                                        criteria: [
+                                            'Formule staat zichtbaar.',
+                                            'Waarden zijn ingevuld.',
+                                            'Eindantwoord staat erbij.'
+                                        ]
+                                    },
+                                    feedback: {
+                                        selfCheckTitle: 'Vergelijk je berekening',
+                                        selfCheckText: 'Loop formule, waarden en antwoord na.',
+                                        retryTitle: 'Schrijf eerst je uitwerking',
+                                        retryText: 'Vul berekening en eindantwoord in.'
+                                    },
+                                    practiceRoute: { label: 'Terug naar rekenroute', href: '#skilltree-app' }
+                                }
+                            }
+                        ]
+                    };
+                }
+            })
+        });
+        return new SkillTreeEngine({
+            elements: customElements,
+            data: { parNr: 'test', activeSkills: ['A01'] },
+            storage: makeStorage()
+        });
+    }
+
+    test('validates deterministic task-shell answers and stores local feedback', () => {
+        const engine = createTaskShellEngine();
+        engine.startExercise('A01');
+
+        const result = engine.checkAnswer('12');
+        expect(result.correct).toBe(true);
+        expect(result.taskShellResult).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(engine.getExerciseState().completedSteps[0].userAnswer).toBe('12');
+    });
+
+    test('retries deterministic task-shell answers without advancing state', () => {
+        const engine = createTaskShellEngine();
+        engine.startExercise('A01');
+
+        const result = engine.checkAnswer('9');
+        expect(result.correct).toBe(false);
+        expect(result.error).toBe('task_shell_retry');
+        expect(result.taskShellResult.state).toBe('retry');
+        expect(engine.getExerciseState().errors).toBe(1);
+    });
+
+    test('uses self-check state for calculation work capture', () => {
+        const engine = createTaskShellEngine();
+        engine.startExercise('A01');
+        engine.checkAnswer('12');
+        engine.nextStep();
+
+        const empty = engine.checkAnswer({ work: '', finalAnswer: '' });
+        expect(empty.correct).toBe(false);
+        expect(empty.taskShellResult.state).toBe('retry');
+
+        const result = engine.checkAnswer({ work: '15 - 3', finalAnswer: '12' });
+        expect(result.correct).toBe(true);
+        expect(result.taskShellResult.state).toBe('self_check');
+        expect(result.taskShellResult.selfCheckCriteria).toHaveLength(3);
+    });
+});
+
 describe('nextStep', () => {
     test('advances to next step after correct answer', () => {
         const engine = createEngine();
