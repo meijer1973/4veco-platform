@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T20:18:43.340Z
+Generated: 2026-05-31T21:06:14.519Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2427
+Files indexed: 2444
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 338
+Count: 339
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -426,6 +426,7 @@ Count: 338
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
@@ -514,7 +515,7 @@ Count: 42
 
 ## validators
 
-Count: 140
+Count: 141
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -615,6 +616,7 @@ Count: 140
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
@@ -659,7 +661,7 @@ Count: 140
 
 ## references
 
-Count: 380
+Count: 382
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -780,6 +782,8 @@ Count: 380
 - references/data/sprints/LEAD-REVIEW-2.plan.json
 - references/data/sprints/LEAD-REVIEW-2.result.json
 - references/data/sprints/lead-review-policy-legacy-exemptions.json
+- references/data/sprints/MATH-REFINE-1.plan.json
+- references/data/sprints/MATH-REFINE-1.result.json
 - references/data/sprints/MATH-UX-2.plan.json
 - references/data/sprints/MATH-UX-2.result.json
 - references/data/sprints/MTU-H1.plan.json
@@ -1044,7 +1048,7 @@ Count: 380
 
 ## reports
 
-Count: 1299
+Count: 1312
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1957,6 +1961,19 @@ Count: 1299
 - reports/sprints/LEAD-REVIEW-2-lead-review-round2.md
 - reports/sprints/LEAD-REVIEW-2-plan.md
 - reports/sprints/LEAD-REVIEW-2-result.md
+- reports/sprints/MATH-REFINE-1-baseline.md
+- reports/sprints/MATH-REFINE-1-diff-summary.md
+- reports/sprints/MATH-REFINE-1-gate-handoff.md
+- reports/sprints/MATH-REFINE-1-implementation-prep.md
+- reports/sprints/MATH-REFINE-1-lead-review-assignment.md
+- reports/sprints/MATH-REFINE-1-lead-review-corrections.md
+- reports/sprints/MATH-REFINE-1-lead-review-round1.md
+- reports/sprints/MATH-REFINE-1-lead-review-round2.md
+- reports/sprints/MATH-REFINE-1-operation-chain-plan.md
+- reports/sprints/MATH-REFINE-1-plan.md
+- reports/sprints/MATH-REFINE-1-planning-review.md
+- reports/sprints/MATH-REFINE-1-result.md
+- reports/sprints/MATH-REFINE-1-task-coverage-matrix.md
 - reports/sprints/MATH-UX-2-accessibility-review.md
 - reports/sprints/MATH-UX-2-baseline.md
 - reports/sprints/MATH-UX-2-checkpoint-calculation-task-fixture.md
@@ -2366,7 +2383,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 273
+Count: 274
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2498,6 +2515,7 @@ Count: 273
 - docs/roadmaps/outdated/reference-team-roadmap-v3.26-game-arch1-decision.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.27-game-arch2-architecture-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
