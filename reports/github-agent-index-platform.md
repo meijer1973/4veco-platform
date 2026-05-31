@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T13:50:26.930Z
+Generated: 2026-05-31T15:27:53.040Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2310
+Files indexed: 2335
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 77
+Count: 78
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -107,6 +107,7 @@ Count: 77
 - engines/tests/quiz-engine.test.js
 - engines/tests/reasoning-data.test.js
 - engines/tests/reasoning-engine.test.js
+- engines/tests/reasoning-ui.test.js
 - engines/tests/REFACTOR-NOTES.md
 - engines/tests/skill-map-engine.test.js
 - engines/tests/skill-map-route-ui.test.js
@@ -123,7 +124,7 @@ Count: 77
 
 ## build scripts
 
-Count: 331
+Count: 333
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -415,11 +416,13 @@ Count: 331
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
+- build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -506,7 +509,7 @@ Count: 42
 
 ## validators
 
-Count: 132
+Count: 133
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -604,6 +607,7 @@ Count: 132
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -643,7 +647,7 @@ Count: 132
 
 ## references
 
-Count: 370
+Count: 372
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -878,6 +882,8 @@ Count: 370
 - references/data/sprints/R9.1.result.json
 - references/data/sprints/R9.2.plan.json
 - references/data/sprints/R9.2.result.json
+- references/data/sprints/REASON-UX-2.plan.json
+- references/data/sprints/REASON-UX-2.result.json
 - references/data/sprints/REF-CP6-remediation-readiness.json
 - references/data/sprints/REF-CP6.plan.json
 - references/data/sprints/REF-CP6.result.json
@@ -1018,7 +1024,7 @@ Count: 370
 
 ## reports
 
-Count: 1204
+Count: 1224
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2090,6 +2096,26 @@ Count: 1204
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
 - reports/sprints/README.md
+- reports/sprints/REASON-UX-2-accessibility-review.md
+- reports/sprints/REASON-UX-2-baseline.md
+- reports/sprints/REASON-UX-2-diff-summary.md
+- reports/sprints/REASON-UX-2-lead-review-assignment.md
+- reports/sprints/REASON-UX-2-lead-review-corrections.md
+- reports/sprints/REASON-UX-2-lead-review-recheck1.md
+- reports/sprints/REASON-UX-2-lead-review-round1.md
+- reports/sprints/REASON-UX-2-lead-review-round2.md
+- reports/sprints/REASON-UX-2-plan.md
+- reports/sprints/REASON-UX-2-planning-review.md
+- reports/sprints/REASON-UX-2-reasoning-task-shell-fixture.md
+- reports/sprints/REASON-UX-2-result.md
+- reports/sprints/REASON-UX-2-screenshot-manifest.md
+- reports/sprints/REASON-UX-2-screenshots/desktop-dark-112-reasoning-task-shell.png
+- reports/sprints/REASON-UX-2-screenshots/desktop-light-111-reasoning-task-shell.png
+- reports/sprints/REASON-UX-2-screenshots/manifest.json
+- reports/sprints/REASON-UX-2-screenshots/mobile-dark-113-reasoning-feedback.png
+- reports/sprints/REASON-UX-2-screenshots/mobile-light-111-reasoning-feedback.png
+- reports/sprints/REASON-UX-2-student-experience-review.md
+- reports/sprints/REASON-UX-2-student-route-proof.md
 - reports/sprints/recent-non-mtu-lead-review-summary.md
 - reports/sprints/REF-CP6-baseline.md
 - reports/sprints/REF-CP6-diff-summary.md

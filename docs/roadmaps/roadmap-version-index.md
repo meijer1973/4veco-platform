@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.25-graph-ux2-task-shell-integration` | `references/reference-team-roadmap.md` | Current operating roadmap after GRAPH-UX-2 integrated the shared task shell into the live `1.1.3` graph/table route and moved the top operational next action to MATH-UX-2. No target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.26-game-arch1-decision` | `references/reference-team-roadmap.md` | Current operating roadmap after GAME-ARCH-1 decided keep/refactor/rebuild direction, preserved the short check as advisory, added GAME-ARCH-2, and tightened GATE-ENGINE-1 around live rendered output. No generated output, target-exercise field writes, candidate storage, protected reference mutation, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GAME-ARCH-1 decision | `v3.25-graph-ux2-task-shell-integration` | `docs/roadmaps/outdated/reference-team-roadmap-v3.25-graph-ux2-task-shell-integration.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before GRAPH-UX-2 task-shell integration | `v3.24-lead-review-strict-validation` | `docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before strict lead-review validation | `v3.23-lead-review-protocol-repair` | `docs/roadmaps/outdated/reference-team-roadmap-v3.23-lead-review-protocol-repair.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before lead-review protocol repair | `v3.22-skillmap-op1-student-route` | `docs/roadmaps/outdated/reference-team-roadmap-v3.22-skillmap-op1-student-route.md` | `references/reference-team-roadmap.md` |

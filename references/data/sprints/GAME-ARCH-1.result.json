@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GAME-ARCH-1",
+  "status": "completed",
+  "completed_on": "2026-05-31",
+  "plan": "reports/sprints/GAME-ARCH-1-plan.md",
+  "baseline": "reports/sprints/GAME-ARCH-1-baseline.md",
+  "planning_review": "reports/sprints/GAME-ARCH-1-planning-review.md",
+  "result": "reports/sprints/GAME-ARCH-1-result.md",
+  "diff_summary": "reports/sprints/GAME-ARCH-1-diff-summary.md",
+  "student_path_trace": "reports/sprints/GAME-ARCH-1-student-path-trace.md",
+  "operation_chain_coverage": "reports/sprints/GAME-ARCH-1-operation-chain-coverage.md",
+  "component_decision_matrix": "reports/sprints/GAME-ARCH-1-component-decision-matrix.md",
+  "canonical_ui_model": "reports/sprints/GAME-ARCH-1-canonical-ui-model.md",
+  "short_check_exit_ticket_boundary": "reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md",
+  "architecture_decision": "reports/sprints/GAME-ARCH-1-architecture-decision.md",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "lesson_output_mutated": false,
+  "lesson_output_mutation_route": "none; read-only inspection only",
+  "student_product_use_allowed": false,
+  "active_next_sprint": "GAME-ARCH-2",
+  "decision": {
+    "shared_route_layer": "keep_and_harden",
+    "shared_task_shell": "keep_core_architecture",
+    "graph_table_route": "keep_refactor_reference_pattern",
+    "math_calculation_route": "refactor_operation_chain",
+    "reasoning_route": "refactor_answer_form_constructed_response",
+    "short_check": "keep_advisory_local_checkpoint",
+    "target_equivalent_exit_ticket": "hold_for_l1_7b_q2",
+    "duplicate_engine_paths": "rebuild_or_remove_by_later_plan_when_not_shell_compatible"
+  },
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GAME-ARCH-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-ARCH-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-math-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-ux2-route-output.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-game-arch1-evidence.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/GAME-ARCH-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GAME-ARCH-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --name-only -- references/machine references/external references/authored/course-target-exercises.json references/data/exam-ingestion/answer-skill-candidates.json source-data/book-1/exit-ticket",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/GAME-ARCH-1-lead-review-assignment.md",
+    "round1": "reports/sprints/GAME-ARCH-1-lead-review-round1.md",
+    "corrections": "reports/sprints/GAME-ARCH-1-lead-review-corrections.md",
+    "round2": "reports/sprints/GAME-ARCH-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "recheck1": "reports/sprints/GAME-ARCH-1-lead-review-round2-recheck1.md",
+    "recheck1_verdict": "REVISE",
+    "final_verdict": "PASS",
+    "flags": []
+  }
+}
