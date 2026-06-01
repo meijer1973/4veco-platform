@@ -92,6 +92,7 @@
 }
 
 .ts-options,
+.ts-multi-select,
 .ts-calculation,
 .ts-point-grid {
   display: grid;
@@ -127,6 +128,8 @@
 
 .ts-choice:hover,
 .ts-choice:focus-visible,
+.ts-multi-option:hover,
+.ts-multi-option:focus-visible,
 .ts-cloze-blank:hover,
 .ts-cloze-blank:focus-visible,
 .ts-cloze-clear:hover,
@@ -176,6 +179,70 @@
   margin-top: 2px;
   border: 2px solid var(--ts-primary);
   border-radius: 999px;
+}
+
+.ts-multi-option {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: transparent;
+  color: var(--ts-text);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ts-multi-option.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 10%, var(--ts-panel));
+}
+
+.ts-multi-option.selected .ts-multi-mark {
+  background: var(--ts-primary);
+  box-shadow: inset 0 0 0 4px var(--ts-panel);
+}
+
+.ts-multi-mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 2px solid var(--ts-primary);
+  border-radius: 5px;
+}
+
+.ts-multi-body {
+  display: grid;
+  gap: 4px;
+}
+
+.ts-multi-body span {
+  color: var(--ts-muted);
+  line-height: 1.4;
+}
+
+.ts-selection-feedback {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 90%, var(--ts-bg));
+}
+
+.ts-selection-feedback-group {
+  display: grid;
+  gap: 4px;
+}
+
+.ts-selection-feedback ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
 .ts-choice-body {

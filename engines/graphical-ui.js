@@ -455,6 +455,9 @@
     if (task.family === "choice" || task.family === "table_value_selection") {
       return selected ? selected.getAttribute("data-choice-id") : "";
     }
+    if (task.family === "multi_select" && window.TaskShellUI && window.TaskShellUI.collectMultiSelectResponse) {
+      return window.TaskShellUI.collectMultiSelectResponse(rootEl, task);
+    }
     if (task.family === "point_placement") {
       return {
         x: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="x"]'),
@@ -499,6 +502,11 @@
       return;
     }
     var task = engine.getCurrentTaskShellTask();
+    rootEl.querySelectorAll(".ts-multi-select").forEach(function (multi) {
+      multi.addEventListener("click", function (event) {
+        window.TaskShellUI.handleMultiSelectClick(rootEl, event);
+      });
+    });
     rootEl.querySelectorAll(".ts-cloze").forEach(function (cloze) {
       cloze.addEventListener("click", function (event) {
         window.TaskShellUI.handleClozeTileClick(rootEl, event);

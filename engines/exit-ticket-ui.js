@@ -174,6 +174,9 @@
   function bindInteractions(app, engine) {
     app.addEventListener('click', function (event) {
       var sharedTaskShellUI = resolveTaskShellUI();
+      if (sharedTaskShellUI && sharedTaskShellUI.handleMultiSelectClick && sharedTaskShellUI.handleMultiSelectClick(app, event)) {
+        return;
+      }
       if (sharedTaskShellUI && sharedTaskShellUI.handleClozeTileClick && sharedTaskShellUI.handleClozeTileClick(app, event)) {
         return;
       }
@@ -257,6 +260,12 @@
     var selected = wrapper.querySelector('.ts-choice.selected');
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return selected ? selected.getAttribute('data-choice-id') : '';
+    }
+    if (task.family === 'multi_select') {
+      var MultiTaskShellUI = resolveTaskShellUI();
+      return MultiTaskShellUI && MultiTaskShellUI.collectMultiSelectResponse
+        ? MultiTaskShellUI.collectMultiSelectResponse(wrapper, task)
+        : { values: [] };
     }
     if (task.family === 'point_placement') {
       return {

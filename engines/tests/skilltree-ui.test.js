@@ -26,6 +26,9 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('collectClozeTileResponse(root, task)');
         expect(source).toContain("task.family === 'cloze_text'");
         expect(source).toContain('collectClozeTextResponse(root, task)');
+        expect(source).toContain("task.family === 'multi_select'");
+        expect(source).toContain('collectMultiSelectResponse(root, task)');
+        expect(source).toContain('handleMultiSelectClick(els.exStepSlot, e)');
         expect(source).toContain('handleClozeTileClick(els.exStepSlot, e)');
         expect(source).toContain("task.family === 'sentence_builder'");
         expect(source).toContain('collectSentenceBuilderResponse(root, task)');
@@ -44,6 +47,7 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('focusTaskFeedback = true');
         expect(source).toContain('choices[ci].setAttribute(\'aria-pressed\', \'false\')');
         expect(source).toContain('e.target.tagName !== \'TEXTAREA\'');
+        expect(source).toContain("e.target.closest('.ts-multi-select')");
         expect(source).toContain("e.target.closest('.ts-formula')");
     });
 

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-MULTI-1",
+  "family": "multi_select",
+  "status": "runtime_fixture_proof",
+  "runtime_support": {
+    "family_declared": true,
+    "deterministic": true,
+    "input_label_required": true,
+    "exact_set_matching": true,
+    "order_insensitive": true,
+    "minimum_expected_values": 2,
+    "requires_distractor_option": true,
+    "raw_array_matches": false,
+    "extra_response_keys_match": false,
+    "duplicate_response_values_match": false,
+    "unknown_response_values_match": false,
+    "practice_only_partial_feedback": true,
+    "single_choice_path_reused": false
+  },
+  "rendered_fixture": {
+    "path": "reports/sprints/TASK-FAMILY-MULTI-1-rendered-fixture.html",
+    "uses_multi_select_marker": true,
+    "uses_data_multi_option_id": true,
+    "renders_independent_toggle_controls": true,
+    "renders_practice_feedback_details": true,
+    "one_feedback_region": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "boundary_flags": {
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "candidate_storage_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "follow_up_required_before_adoption": [
+    "generated-route desktop/mobile/dark screenshots",
+    "GATE-TASK-FAMILY-1 or later product gate rendered-output review",
+    "domain review that the task action is genuinely complete-set selection"
+  ]
+}

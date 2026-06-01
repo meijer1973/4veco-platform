@@ -18,6 +18,7 @@
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
     structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
     cloze_text: { label: 'Invultekst', deterministic: true },
+    multi_select: { label: 'Meerdere keuzes', deterministic: true },
     cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
     formula_builder: { label: 'Formule bouwen', deterministic: true },
@@ -270,6 +271,23 @@
       ids[option.id] = true;
     });
     return ids;
+  }
+
+  function optionLabelMap(options) {
+    var labels = {};
+    (options || []).forEach(function (option) {
+      labels[option.id] = option.label;
+    });
+    return labels;
+  }
+
+  function validateMultiSelectInteraction(task, path) {
+    requireString(task.interaction.inputLabel, path + '.inputLabel');
+    var optionIds = validateOptions(task.interaction.options, path + '.options');
+    return {
+      optionIds: optionIds,
+      optionLabels: optionLabelMap(task.interaction.options)
+    };
   }
 
   function validateInlineSegments(interaction, path, blankIds) {
@@ -538,6 +556,24 @@
       return;
     }
 
+    if (task.family === 'multi_select') {
+      assert(expected.kind === 'multi_select', task.id + '.expected.kind must be multi_select');
+      assert(expected.mode === 'exact_set', task.id + '.expected.mode must be exact_set');
+      requireArray(expected.values, task.id + '.expected.values', 2);
+      var seenMultiValues = {};
+      expected.values.forEach(function (value, idx) {
+        requireString(value, task.id + '.expected.values[' + idx + ']');
+        assert(optionIds[value], task.id + '.expected.values[' + idx + '] must match an option id');
+        assert(!seenMultiValues[value], task.id + '.expected.values contains duplicate option ' + value);
+        seenMultiValues[value] = true;
+      });
+      assert(Object.keys(optionIds).length > expected.values.length, task.id + '.interaction.options must include at least one distractor option');
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (task.family === 'numeric_input' || task.family === 'graph_reading') {
       assert(expected.kind === 'number', task.id + '.expected.kind must be number');
       assert(isNumber(expected.value), task.id + '.expected.value must be numeric');
@@ -756,6 +792,8 @@
 
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
+    } else if (task.family === 'multi_select') {
+      interactionInfo = validateMultiSelectInteraction(task, path);
     } else if (task.family === 'point_placement') {
       requireString(task.interaction.xLabel, path + '.xLabel');
       requireString(task.interaction.yLabel, path + '.yLabel');
@@ -980,9 +1018,79 @@
     });
   }
 
+  function normalizeIdSet(values) {
+    var out = {};
+    for (var i = 0; i < values.length; i++) {
+      if (typeof values[i] !== 'string') return null;
+      var id = values[i];
+      if (!id || out[id]) return null;
+      out[id] = true;
+    }
+    return out;
+  }
+
+  function multiSelectMatches(response, expected, optionIds) {
+    if (!response || typeof response !== 'object' || !Array.isArray(response.values)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'values') return false;
+    var selected = response.values;
+    var selectedSet = normalizeIdSet(selected);
+    if (!selectedSet) return false;
+    for (var i = 0; i < selected.length; i++) {
+      if (!Object.prototype.hasOwnProperty.call(optionIds, selected[i])) return false;
+    }
+    var expectedSet = normalizeIdSet(expected.values || []);
+    if (!expectedSet) return false;
+    var selectedIds = Object.keys(selectedSet);
+    var expectedIds = Object.keys(expectedSet);
+    if (selectedIds.length !== expectedIds.length) return false;
+    return expectedIds.every(function (id) { return selectedSet[id]; });
+  }
+
+  function multiSelectOptionEntry(optionId, labels) {
+    return {
+      id: optionId,
+      label: labels && labels[optionId] ? labels[optionId] : optionId
+    };
+  }
+
+  function multiSelectFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selected = response && response.values && Array.isArray(response.values) ? response.values : [];
+    var selectedSet = normalizeIdSet(selected) || {};
+    var expectedSet = normalizeIdSet(task.expected.values || []) || {};
+    var labels = optionLabelMap(task.interaction && task.interaction.options ? task.interaction.options : []);
+    var missingRequired = [];
+    var selectedDistractors = [];
+    var correctSelected = [];
+
+    Object.keys(expectedSet).forEach(function (optionId) {
+      if (selectedSet[optionId]) {
+        correctSelected.push(multiSelectOptionEntry(optionId, labels));
+      } else {
+        missingRequired.push(multiSelectOptionEntry(optionId, labels));
+      }
+    });
+    selected.forEach(function (optionId) {
+      if (typeof optionId !== 'string') return;
+      if (!expectedSet[optionId]) selectedDistractors.push(multiSelectOptionEntry(optionId, labels));
+    });
+
+    return {
+      mode: 'practice_only',
+      missingRequired: missingRequired,
+      selectedDistractors: selectedDistractors,
+      correctSelected: correctSelected
+    };
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
+    }
+    if (task.family === 'multi_select') {
+      var optionIds = validateOptions(task.interaction.options, task.id + '.interaction.options');
+      return multiSelectMatches(response, task.expected, optionIds);
     }
     if (task.family === 'numeric_input' || task.family === 'graph_reading') {
       return numberMatches(response && response.value != null ? response.value : response, task.expected);
@@ -1059,7 +1167,7 @@
     }
 
     var matched = deterministicMatch(task, response);
-    return {
+    var result = {
       taskId: task.id,
       family: task.family,
       state: matched ? 'matched' : 'retry',
@@ -1069,12 +1177,20 @@
       practiceRoute: clone(task.practiceRoute),
       boundaryFlags: clone(BOUNDARY_FLAGS)
     };
+    if (task.family === 'multi_select' && !matched) {
+      var selectionFeedback = multiSelectFeedback(response, task);
+      if (selectionFeedback) result.selectionFeedback = selectionFeedback;
+    }
+    return result;
   }
 
   function focusPlan(task) {
     validateTask(task);
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return ['[data-task-id="' + task.id + '"][data-choice-id]'];
+    }
+    if (task.family === 'multi_select') {
+      return ['[data-task-id="' + task.id + '"][data-multi-option-id]'];
     }
     if (task.family === 'point_placement') {
       return ['[data-task-id="' + task.id + '"][data-point-axis="x"]', '[data-task-id="' + task.id + '"][data-point-axis="y"]'];

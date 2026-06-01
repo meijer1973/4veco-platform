@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T18:16:55.270Z",
+  "generatedAt": "2026-06-01T18:56:10.363Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.48-cloze-text-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.49-multi-select-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -207,8 +207,8 @@
             {
               "sprint": "TASK-FAMILY-MULTI-1",
               "name": "Multi-Select Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement exact-set `multi_select` with optional practice-only partial self-check and feedback on missing required options/selected distractors. Must not stand in for calculation, graph/table, or constructed-response proof when those operations are required.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; multi-select cannot replace richer target-operation proof.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-MULTI-1",
-          "name": "Multi-Select Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement exact-set `multi_select` with optional practice-only partial self-check and feedback on missing required options/selected distractors. Must not stand in for calculation, graph/table, or constructed-response proof when those operations are required.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-ORDER-1",
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Cloze Text Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, accepted-value and bounded text-group validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots are deferred to adoption; `requiredTextGroups` is bounded phrase matching only.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-MULTI-1",
+          "name": "Multi-Select Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; multi-select cannot replace richer target-operation proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 159,
-      "openCount": 18
+      "completedCount": 160,
+      "openCount": 17
     },
     {
       "id": "lessen",
@@ -2914,8 +2914,8 @@
             {
               "sprint": "TASK-FAMILY-MULTI-1",
               "name": "Multi-Select Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `multi_select` with exact-set matching, practice-only partial self-check where approved, and feedback for missing required options or selected distractors.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-MULTI-1",
-          "name": "Multi-Select Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `multi_select` with exact-set matching, practice-only partial self-check where approved, and feedback for missing required options or selected distractors.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-ORDER-1",
           "name": "Step-Ordering Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route screenshots remain required before adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-MULTI-1",
+          "name": "Multi-Select Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 10,
-      "openCount": 37
+      "completedCount": 11,
+      "openCount": 36
     },
     {
       "id": "innovation",

@@ -215,6 +215,38 @@ function graphTaskShellData() {
                 }
             },
             {
+                id: 'multi-select-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'multi-select-task',
+                    family: 'multi_select',
+                    skillLabel: 'Bronvoorwaarden kiezen',
+                    purpose: 'Kies alle gegevens die je nodig hebt.',
+                    prompt: 'Welke gegevens gebruik je voor de verandering?',
+                    interaction: {
+                        inputLabel: 'Benodigde gegevens',
+                        options: [
+                            { id: 'oude-waarde', label: 'Oude waarde uit de bron' },
+                            { id: 'nieuwe-waarde', label: 'Nieuwe waarde uit de bron' },
+                            { id: 'titel', label: 'Titel van de paragraaf' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'multi_select',
+                        mode: 'exact_set',
+                        values: ['oude-waarde', 'nieuwe-waarde'],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Gegevens kloppen',
+                        matchText: 'Je kiest de oude en nieuwe bronwaarde.',
+                        retryTitle: 'Controleer je keuzes',
+                        retryText: 'Kies alleen de gegevens die nodig zijn voor de verandering.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met bronnen', href: 'grafiekenspel.html' }
+                }
+            },
+            {
                 id: 'formula-task',
                 type: 'task_shell',
                 taskShell: {
@@ -343,11 +375,13 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="point_placement"');
         expect(html).toContain('data-task-family="cloze_tile_select"');
         expect(html).toContain('data-task-family="cloze_text"');
+        expect(html).toContain('data-task-family="multi_select"');
         expect(html).toContain('data-task-family="sentence_builder"');
         expect(html).toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
+        expect(html).toContain('data-multi-option-id="titel"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
         expect(html).toContain('et-task-shell-check');
@@ -357,6 +391,9 @@ describe('ExitTicketUI', () => {
     test('exit-ticket wrapper delegates cloze tile collection to the shared task shell', () => {
         const source = fs.readFileSync(path.join(PLATFORM_ROOT, 'engines', 'exit-ticket-ui.js'), 'utf8');
         expect(source).toContain('handleClozeTileClick(app, event)');
+        expect(source).toContain('handleMultiSelectClick(app, event)');
+        expect(source).toContain('collectMultiSelectResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'multi_select'");
         expect(source).toContain('collectClozeTileResponse(wrapper, task)');
         expect(source).toContain("task.family === 'cloze_tile_select'");
         expect(source).toContain("task.family === 'cloze_text'");

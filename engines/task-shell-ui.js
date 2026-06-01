@@ -46,6 +46,22 @@
     '</div>';
   }
 
+  function multiOptionButton(task, option) {
+    return '<button type="button" class="ts-multi-option" aria-pressed="false" data-task-id="' + escapeHtml(task.id) + '" data-multi-option-id="' + escapeHtml(option.id) + '">' +
+      '<span class="ts-multi-mark" aria-hidden="true"></span>' +
+      '<span class="ts-multi-body">' +
+        '<strong>' + escapeHtml(option.label) + '</strong>' +
+        (option.description ? '<span>' + escapeHtml(option.description) + '</span>' : '') +
+      '</span>' +
+    '</button>';
+  }
+
+  function renderMultiSelect(task) {
+    return '<div class="ts-multi-select" role="group" aria-label="' + escapeHtml(task.interaction.inputLabel) + '">' +
+      task.interaction.options.map(function (option) { return multiOptionButton(task, option); }).join('') +
+    '</div>';
+  }
+
   function renderTextInput(task, role, inputMode) {
     var label = task.interaction.inputLabel || 'Antwoord';
     return '<label class="ts-field">' +
@@ -251,6 +267,8 @@
       case 'choice':
       case 'table_value_selection':
         return renderChoice(task);
+      case 'multi_select':
+        return renderMultiSelect(task);
       case 'numeric_input':
       case 'graph_reading':
         return renderTextInput(task, 'answer', 'decimal');
@@ -313,11 +331,30 @@
     var criteria = result && Array.isArray(result.selfCheckCriteria) && result.selfCheckCriteria.length
       ? '<ul>' + result.selfCheckCriteria.map(function (criterion) { return '<li>' + escapeHtml(criterion) + '</li>'; }).join('') + '</ul>'
       : '';
+    var selection = renderSelectionFeedback(result && result.selectionFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
+      selection +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
+    '</div>';
+  }
+
+  function renderSelectionList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) { return '<li>' + escapeHtml(item.label || item.id) + '</li>'; }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderSelectionFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-selection-feedback" aria-label="Aanwijzingen bij je keuzes">' +
+      renderSelectionList('Nog nodig', feedback.missingRequired) +
+      renderSelectionList('Niet nodig gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Al goed gekozen', feedback.correctSelected) +
     '</div>';
   }
 
@@ -339,6 +376,26 @@
       blanks[controls[i].getAttribute('data-cloze-text-blank-id')] = controls[i].value || '';
     }
     return { blanks: blanks };
+  }
+
+  function collectMultiSelectResponse(rootEl, task) {
+    if (!rootEl || !task) return { values: [] };
+    var values = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-multi-option-id].selected');
+    for (var i = 0; i < controls.length; i++) {
+      values.push(controls[i].getAttribute('data-multi-option-id') || '');
+    }
+    return { values: values };
+  }
+
+  function handleMultiSelectClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var option = event.target.closest('.ts-multi-option');
+    if (!option || !rootEl.contains(option)) return false;
+    var selected = !option.classList.contains('selected');
+    option.classList.toggle('selected', selected);
+    option.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    return true;
   }
 
   function handleClozeTileClick(rootEl, event) {
@@ -722,6 +779,8 @@
 
   return {
     escapeHtml: escapeHtml,
+    collectMultiSelectResponse: collectMultiSelectResponse,
+    handleMultiSelectClick: handleMultiSelectClick,
     collectClozeTextResponse: collectClozeTextResponse,
     collectClozeTileResponse: collectClozeTileResponse,
     handleClozeTileClick: handleClozeTileClick,

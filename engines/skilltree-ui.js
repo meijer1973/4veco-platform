@@ -464,6 +464,9 @@
         if (task.family === 'choice' || task.family === 'table_value_selection') {
             return selected ? selected.getAttribute('data-choice-id') : '';
         }
+        if (task.family === 'multi_select' && window.TaskShellUI && window.TaskShellUI.collectMultiSelectResponse) {
+            return window.TaskShellUI.collectMultiSelectResponse(root, task);
+        }
         if (task.family === 'point_placement') {
             return {
                 x: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="x"]'),
@@ -918,6 +921,9 @@
                     if (er !== null && mode === 'error') { handleError(parseInt(er, 10)); return; }
                     var ob = t.getAttribute('data-order-block');
                     if (ob !== null && mode === 'order') { handleOrderBlock(parseInt(ob, 10), step); return; }
+                    if (window.TaskShellUI && window.TaskShellUI.handleMultiSelectClick && window.TaskShellUI.handleMultiSelectClick(els.exStepSlot, e)) {
+                        return;
+                    }
                     if (window.TaskShellUI && window.TaskShellUI.handleClozeTileClick && window.TaskShellUI.handleClozeTileClick(els.exStepSlot, e)) {
                         return;
                     }
@@ -952,7 +958,7 @@
                 handleCheckNumeric();
                 return;
             }
-            if (e.target.closest && (e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula'))) {
+            if (e.target.closest && (e.target.closest('.ts-multi-select') || e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula'))) {
                 return;
             }
             if (e.target.getAttribute && e.target.getAttribute('data-task-id') && e.target.tagName !== 'TEXTAREA' && (e.key === 'Enter' || e.keyCode === 13)) {

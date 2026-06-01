@@ -50,6 +50,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('collectClozeTileResponse(rootEl, task)');
         expect(source).toContain('task.family === "cloze_text"');
         expect(source).toContain('collectClozeTextResponse(rootEl, task)');
+        expect(source).toContain('task.family === "multi_select"');
+        expect(source).toContain('collectMultiSelectResponse(rootEl, task)');
+        expect(source).toContain('handleMultiSelectClick(rootEl, event)');
         expect(source).toContain('handleClozeTileClick(rootEl, event)');
         expect(source).toContain('task.family === "sentence_builder"');
         expect(source).toContain('collectSentenceBuilderResponse(rootEl, task)');

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>TASK-FAMILY-MULTI-1 rendered fixture</title>
+</head>
+<body>
+  <section class="ts-shell" data-task-shell="GAME-UX-3A">
+    <header class="ts-shell-head">
+      <p class="ts-eyebrow">Rapportfixture</p>
+      <h1>Multi-select taakvorm</h1>
+      <p>Deze fixture bewijst de statische markup voor de gedeelde taakvorm.</p>
+    </header>
+    <div class="ts-task-list">
+      <article class="ts-task" data-task="multi-select-schaarste" data-task-family="multi_select">
+        <div class="ts-task-meta">
+          <span>Taak 1</span>
+          <span>Schaarste herkennen</span>
+          <span>Meerdere keuzes</span>
+        </div>
+        <h2>Welke uitspraken horen bij schaarste?</h2>
+        <p class="ts-purpose">Kies de complete set uitspraken die bij schaarste hoort.</p>
+        <div class="ts-multi-select" role="group" aria-label="Uitspraken over schaarste">
+          <button type="button" class="ts-multi-option selected" aria-pressed="true" data-task-id="multi-select-schaarste" data-multi-option-id="behoeften">
+            <span class="ts-multi-mark" aria-hidden="true"></span>
+            <span class="ts-multi-body"><strong>Behoeften zijn groter dan beschikbare middelen.</strong></span>
+          </button>
+          <button type="button" class="ts-multi-option" aria-pressed="false" data-task-id="multi-select-schaarste" data-multi-option-id="keuze">
+            <span class="ts-multi-mark" aria-hidden="true"></span>
+            <span class="ts-multi-body"><strong>Je moet kiezen tussen alternatieven.</strong></span>
+          </button>
+          <button type="button" class="ts-multi-option selected" aria-pressed="true" data-task-id="multi-select-schaarste" data-multi-option-id="alles-kan">
+            <span class="ts-multi-mark" aria-hidden="true"></span>
+            <span class="ts-multi-body"><strong>Iedereen kan alles krijgen wat hij wil.</strong></span>
+          </button>
+        </div>
+        <div class="ts-feedback" data-feedback-for="multi-select-schaarste" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">
+          <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+            <strong>Controleer je set</strong>
+            <p>Kies alle uitspraken die nodig zijn, en laat afleiders weg.</p>
+            <div class="ts-selection-feedback" aria-label="Aanwijzingen bij je keuzes">
+              <div class="ts-selection-feedback-group">
+                <strong>Nog nodig</strong>
+                <ul><li>Je moet kiezen tussen alternatieven.</li></ul>
+              </div>
+              <div class="ts-selection-feedback-group">
+                <strong>Niet nodig gekozen</strong>
+                <ul><li>Iedereen kan alles krijgen wat hij wil.</li></ul>
+              </div>
+              <div class="ts-selection-feedback-group">
+                <strong>Al goed gekozen</strong>
+                <ul><li>Behoeften zijn groter dan beschikbare middelen.</li></ul>
+              </div>
+            </div>
+            <div class="ts-feedback-actions"><a class="ts-feedback-action" href="redeneer-spel.html">Oefen verder met schaarste</a></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

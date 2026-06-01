@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-MULTI-1",
+  "name": "Multi-Select Task-Family Implementation",
+  "created": "2026-06-01",
+  "plan": "reports/sprints/TASK-FAMILY-MULTI-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-MULTI-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Implement multi_select as a first-class shared task-shell family.",
+    "Validate option ids, exact-set expected values, multi-answer use, and distractor presence.",
+    "Render checkbox-like option buttons with independent selected state and stable selectors.",
+    "Collect multi_select responses in exit-ticket, skilltree, and graph task-shell wrappers.",
+    "Add optional practice-only partial feedback on missing required options and selected distractors.",
+    "Add focused tests, rendered fixture proof, and a deterministic sprint checker.",
+    "Preserve generated-output, protected-reference, source-data, target-equivalent, and product-authority boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-MULTI-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-MULTI-1",
+    "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+    "node build-scripts/sprints/check-task-family-multi1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-MULTI-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-MULTI-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data/book-1/exit-ticket writes.",
+    "No reasoning CSV writes.",
+    "No target-exercise registry writes.",
+    "No generated Book 1 lesson output writes.",
+    "No candidate storage creation or candidate writes.",
+    "No protected reference mutation, machine reference mutation, external-source mutation, unit minting, unit update, unit split, or unit deprecation.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, CP-6/Year-1 promotion, Scale Gate 1, or product-wide use.",
+    "Do not touch knowledge/exit-ticket-game-1.1.1.zip."
+  ]
+}

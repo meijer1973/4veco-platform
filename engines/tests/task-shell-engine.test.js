@@ -191,6 +191,26 @@ function fixtures() {
             }
         }),
         baseTask({
+            id: 'multi-select',
+            family: 'multi_select',
+            skillLabel: 'Schaarste herkennen',
+            prompt: 'Kies alle uitspraken die bij schaarste horen.',
+            interaction: {
+                inputLabel: 'Uitspraken over schaarste',
+                options: [
+                    { id: 'behoeften', label: 'Behoeften zijn groter dan beschikbare middelen.' },
+                    { id: 'keuze', label: 'Je moet kiezen tussen alternatieven.' },
+                    { id: 'alles-kan', label: 'Iedereen kan alles krijgen wat hij wil.' }
+                ]
+            },
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften', 'keuze'],
+                partialFeedback: 'practice_only'
+            }
+        }),
+        baseTask({
             id: 'table-value',
             family: 'table_value_selection',
             skillLabel: 'Tabelwaarde kiezen',
@@ -313,6 +333,7 @@ describe('TaskShellEngine', () => {
             'short_constructed_response',
             'structured_short_response',
             'cloze_text',
+            'multi_select',
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
@@ -347,11 +368,12 @@ describe('TaskShellEngine', () => {
                 reden: 'De oude index 108 is de basis.'
             }
         }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[13], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[14], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[8], 'b').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[9], '149,5').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[10], { x: '20,2', y: '4,1' }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[8], { values: ['keuze', 'behoeften'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[14], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[15], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[9], 'b').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[10], '149,5').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[11], { x: '20,2', y: '4,1' }).matched).toBe(true);
     });
 
     test('uses self-check state for work capture and constructed responses', () => {
@@ -670,8 +692,163 @@ describe('TaskShellEngine', () => {
         ]);
     });
 
+    test('supports multi-select with exact order-insensitive set matching and practice feedback', () => {
+        const multi = fixtures()[8];
+
+        expect(TaskShellEngine.evaluateTask(multi, {
+            values: ['keuze', 'behoeften']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(multi, {
+            values: ['behoeften', 'alles-kan']
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.selectionFeedback).toEqual({
+            mode: 'practice_only',
+            missingRequired: [{ id: 'keuze', label: 'Je moet kiezen tussen alternatieven.' }],
+            selectedDistractors: [{ id: 'alles-kan', label: 'Iedereen kan alles krijgen wat hij wil.' }],
+            correctSelected: [{ id: 'behoeften', label: 'Behoeften zijn groter dan beschikbare middelen.' }]
+        });
+
+        expect(TaskShellEngine.evaluateTask(multi, {
+            values: ['behoeften']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(multi, {
+            values: ['behoeften', 'keuze', 'alles-kan']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(multi, {
+            values: ['behoeften', 'behoeften', 'keuze']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(multi, {
+            values: ['behoeften', 'keuze'],
+            extra: 'ignored'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(multi, ['behoeften', 'keuze'])).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        const numericIds = {
+            ...multi,
+            interaction: {
+                inputLabel: 'Numerieke ids als strings',
+                options: [
+                    { id: '1', label: 'Eerste juiste optie' },
+                    { id: '2', label: 'Tweede juiste optie' },
+                    { id: '3', label: 'Afleider' }
+                ]
+            },
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['1', '2'],
+                partialFeedback: 'practice_only'
+            }
+        };
+        expect(TaskShellEngine.validateTask(numericIds)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(numericIds, { values: ['1', '2'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(numericIds, { values: [1, '2'] }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(numericIds, { values: [{ id: '1' }, '2'] }).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(multi)).toEqual([
+            '[data-task-id="multi-select"][data-multi-option-id]'
+        ]);
+    });
+
+    test('rejects invalid multi-select schemas before rendering', () => {
+        const multi = fixtures()[8];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            interaction: {
+                ...multi.interaction,
+                inputLabel: ''
+            }
+        })).toThrow(/interaction.inputLabel/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            interaction: {
+                ...multi.interaction,
+                options: [
+                    { id: 'behoeften', label: 'Behoeften zijn groter dan middelen.' },
+                    { id: 'behoeften', label: 'Dubbel.' },
+                    { id: 'alles-kan', label: 'Iedereen kan alles krijgen.' }
+                ]
+            }
+        })).toThrow(/duplicate option id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften']
+            }
+        })).toThrow(/expected.values must contain at least 2 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            expected: {
+                kind: 'multi_select',
+                mode: 'partial',
+                values: ['behoeften', 'keuze']
+            }
+        })).toThrow(/expected.mode must be exact_set/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften', 'onbekend']
+            }
+        })).toThrow(/must match an option id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften', 'keuze', 'alles-kan']
+            }
+        })).toThrow(/must include at least one distractor option/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...multi,
+            expected: {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften', 'keuze'],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
     test('supports sentence builder with exact ordered token sequences', () => {
-        const sentence = fixtures()[13];
+        const sentence = fixtures()[14];
 
         expect(TaskShellEngine.evaluateTask(sentence, {
             tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
@@ -712,7 +889,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('rejects invalid sentence builder schemas before rendering', () => {
-        const sentence = fixtures()[13];
+        const sentence = fixtures()[14];
         expect(() => TaskShellEngine.validateTask({
             ...sentence,
             interaction: {
@@ -765,7 +942,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('supports formula builder with exact ordered token sequences', () => {
-        const formula = fixtures()[14];
+        const formula = fixtures()[15];
 
         expect(TaskShellEngine.evaluateTask(formula, {
             tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
@@ -819,7 +996,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('rejects invalid formula builder schemas before rendering', () => {
-        const formula = fixtures()[14];
+        const formula = fixtures()[15];
 
         expect(() => TaskShellEngine.validateTask({
             ...formula,

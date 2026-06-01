@@ -113,6 +113,19 @@ function data() {
                     basis: { accepted: ['108'] }
                 }
             }),
+            task('multi-select', 'multi_select', {
+                inputLabel: 'Uitspraken over schaarste',
+                options: [
+                    { id: 'behoeften', label: 'Behoeften zijn groter dan middelen.' },
+                    { id: 'keuze', label: 'Je moet kiezen tussen alternatieven.' },
+                    { id: 'alles-kan', label: 'Iedereen kan alles krijgen wat hij wil.' }
+                ]
+            }, {
+                kind: 'multi_select',
+                mode: 'exact_set',
+                values: ['behoeften', 'keuze'],
+                partialFeedback: 'practice_only'
+            }),
             task('sentence-builder', 'sentence_builder', {
                 tokens: [
                     { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
@@ -169,6 +182,7 @@ describe('TaskShellUI', () => {
             'short_constructed_response',
             'structured_short_response',
             'cloze_text',
+            'multi_select',
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
@@ -209,6 +223,10 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-cloze-text-label="Basis voor procentuele stijging"');
         expect(html).toContain('inputmode="decimal"');
         expect(html).toContain('aria-label="Basis voor procentuele stijging"');
+        expect(html).toContain('data-task-family="multi_select"');
+        expect(html).toContain('class="ts-multi-select"');
+        expect(html).toContain('data-multi-option-id="alles-kan"');
+        expect(html).toContain('role="group" aria-label="Uitspraken over schaarste"');
         expect(html).toContain('class="ts-sentence"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-sentence-sequence');
@@ -232,6 +250,14 @@ describe('TaskShellUI', () => {
         const feedback = TaskShellUI.renderFeedback(result);
         expect(feedback).toContain('class="ts-feedback-actions"');
         expect(feedback).toContain('class="ts-feedback-action"');
+
+        const multiResult = TaskShellEngine.evaluateTask(data().tasks[8], { values: ['behoeften', 'alles-kan'] });
+        const multiFeedback = TaskShellUI.renderFeedback(multiResult);
+        expect(multiFeedback).toContain('class="ts-selection-feedback"');
+        expect(multiFeedback).toContain('Nog nodig');
+        expect(multiFeedback).toContain('Je moet kiezen tussen alternatieven.');
+        expect(multiFeedback).toContain('Niet nodig gekozen');
+        expect(multiFeedback).toContain('Iedereen kan alles krijgen wat hij wil.');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -249,6 +275,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Berekening tonen');
         expect(html).toContain('Kort antwoord in stappen');
         expect(html).toContain('Invultekst');
+        expect(html).toContain('Meerdere keuzes');
         expect(html).toContain('Invullen met tegels');
         expect(html).toContain('Zin bouwen');
         expect(html).toContain('Formule bouwen');
@@ -290,10 +317,18 @@ describe('TaskShellUI', () => {
         ]);
     });
 
+    test('exports multi-select helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectMultiSelectResponse).toBe('function');
+        expect(typeof TaskShellUI.handleMultiSelectClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[8])).toEqual([
+            '[data-task-id="multi-select"][data-multi-option-id]'
+        ]);
+    });
+
     test('exports sentence builder helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectSentenceBuilderResponse).toBe('function');
         expect(typeof TaskShellUI.handleSentenceBuilderClick).toBe('function');
-        expect(TaskShellEngine.focusPlan(data().tasks[8])).toEqual([
+        expect(TaskShellEngine.focusPlan(data().tasks[9])).toEqual([
             '[data-task-id="sentence-builder"][data-sentence-token-id]',
             '[data-task-id="sentence-builder"][data-sentence-sequence]'
         ]);
@@ -302,7 +337,7 @@ describe('TaskShellUI', () => {
     test('exports formula builder helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectFormulaBuilderResponse).toBe('function');
         expect(typeof TaskShellUI.handleFormulaBuilderClick).toBe('function');
-        expect(TaskShellEngine.focusPlan(data().tasks[9])).toEqual([
+        expect(TaskShellEngine.focusPlan(data().tasks[10])).toEqual([
             '[data-task-id="formula-builder"][data-formula-token-id]',
             '[data-task-id="formula-builder"][data-formula-sequence]'
         ]);
