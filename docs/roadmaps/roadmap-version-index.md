@@ -1,6 +1,6 @@
 ﻿# Roadmap Version Index
 
-Updated: 2026-05-31
+Updated: 2026-06-01
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.32-check-q2-plan` | `references/reference-team-roadmap.md` | Current operating roadmap after CHECK-Q2-PLAN closed PASS WITH FLAGS as planning/preparation only. No current `1.1.1`, `1.1.2`, or `1.1.3` output is target-equivalent proof. `1.1.1` needs full A43 coverage plus A98 versus held-evaluation, `1.1.2` needs explicit D31/index-point versus percentage-change coverage, and `1.1.3` needs graph-axis repair plus A81 source-use with an underlying answer form. Future L1.7B-Q2 work must select one paragraph and resolve or explicitly scope blockers before implementation. No implementation, generated output, source exit-ticket writes, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized. |
+| References Team Roadmap | `v3.33-l1-7b-q2-planning` | `references/reference-team-roadmap.md` | Current operating roadmap after CHECK-Q2-PLAN closed and L1.7B-Q2 entered active planning/preflight. The active Q2 plan selects 1.1.2 as the first target-equivalent exit-ticket candidate, but authorizes no source-data creation, generated output, engine implementation, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before L1.7B-Q2 planning | `v3.32-check-q2-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CHECK-Q2-PLAN closure | `v3.31-reason-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REASON-REFINE-1 closure | `v3.30-math-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before MATH-REFINE-1 closure | `v3.29-graph-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md` | `references/reference-team-roadmap.md` |

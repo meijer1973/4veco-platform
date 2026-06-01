@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-05-31T21:40:39.162Z
+Generated: 2026-06-01T05:42:01.872Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2461
+Files indexed: 2479
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 340
+Count: 341
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -421,6 +421,7 @@ Count: 340
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -516,7 +517,7 @@ Count: 42
 
 ## validators
 
-Count: 142
+Count: 159
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -612,6 +613,7 @@ Count: 142
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
+- build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -633,6 +635,8 @@ Count: 142
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
+- references/data/sprints/CHECK-Q2-PLAN.plan.json
+- references/data/sprints/CHECK-Q2-PLAN.result.json
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
@@ -641,6 +645,20 @@ Count: 142
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/sprints/CHECK-Q2-PLAN-baseline.md
+- reports/sprints/CHECK-Q2-PLAN-diff-summary.md
+- reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
+- reports/sprints/CHECK-Q2-PLAN-implementation-prep.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-assignment.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-corrections.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-round1.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-round2.md
+- reports/sprints/CHECK-Q2-PLAN-operation-chain-coverage.md
+- reports/sprints/CHECK-Q2-PLAN-plan.md
+- reports/sprints/CHECK-Q2-PLAN-planning-review.md
+- reports/sprints/CHECK-Q2-PLAN-result.md
+- reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
+- reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
@@ -663,7 +681,7 @@ Count: 142
 
 ## references
 
-Count: 384
+Count: 386
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -720,6 +738,8 @@ Count: 384
 - references/data/skill-operation-registry.json
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
+- references/data/sprints/CHECK-Q2-PLAN.plan.json
+- references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
 - references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
@@ -1052,7 +1072,7 @@ Count: 384
 
 ## reports
 
-Count: 1325
+Count: 1339
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1659,6 +1679,20 @@ Count: 1325
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.md
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
+- reports/sprints/CHECK-Q2-PLAN-baseline.md
+- reports/sprints/CHECK-Q2-PLAN-diff-summary.md
+- reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
+- reports/sprints/CHECK-Q2-PLAN-implementation-prep.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-assignment.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-corrections.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-round1.md
+- reports/sprints/CHECK-Q2-PLAN-lead-review-round2.md
+- reports/sprints/CHECK-Q2-PLAN-operation-chain-coverage.md
+- reports/sprints/CHECK-Q2-PLAN-plan.md
+- reports/sprints/CHECK-Q2-PLAN-planning-review.md
+- reports/sprints/CHECK-Q2-PLAN-result.md
+- reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
+- reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
 - reports/sprints/CP.6a-baseline.md
 - reports/sprints/CP.6a-diff-summary.md
 - reports/sprints/CP.6a-lead-review-assignment.md
@@ -2400,7 +2434,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 275
+Count: 276
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2534,6 +2568,7 @@ Count: 275
 - docs/roadmaps/outdated/reference-team-roadmap-v3.28-gate-engine1-pass-with-flags.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

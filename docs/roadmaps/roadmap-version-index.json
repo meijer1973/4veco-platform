@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-05-31",
+  "updated_on": "2026-06-01",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -96,12 +96,23 @@
     {
       "roadmap_id": "references-team-roadmap",
       "version": "v3.32-check-q2-plan",
+      "title": "References Team Roadmap before L1.7B-Q2 planning",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md",
+      "owner": "references_team",
+      "updated_on": "2026-06-01",
+      "superseded_by": "references/reference-team-roadmap.md"
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.33-l1-7b-q2-planning",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-05-31",
+      "updated_on": "2026-06-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md",
@@ -233,7 +244,7 @@
         "knowledge/Exercise schema and quality/reference-team-roadmap Live version 28 April.md",
         "knowledge/Exercise schema and quality/roadmap-updated-repository-checked.md"
       ],
-      "notes": "Current operating roadmap after REASON-REFINE-1 closed PASS WITH FLAGS as planning/preparation only. GRAPH-REFINE-1 still blocks target-equivalent graph reliance until the 1.1.3 price-vertical / quantity-horizontal target-chain mismatch is repaired and proven. MATH-REFINE-1 blocks target-equivalent math reliance until explicit D31/index-point versus percentage-change coverage is routed and checked. REASON-REFINE-1 blocks target-equivalent reasoning reliance until answer-form-specific scaffolds, held-lane decisions, D31 coordination, and A81 source-use/graph coordination are reviewed. Remaining authorized planning/preparation lane is CHECK-Q2-PLAN. No implementation, generated lesson output, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority is authorized."
+      "notes": "Current operating roadmap after CHECK-Q2-PLAN closed and L1.7B-Q2 entered active planning/preflight. The active Q2 plan selects 1.1.2 as the first target-equivalent exit-ticket candidate, but authorizes no source-data creation, generated output, engine implementation, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority."
     },
     {
       "roadmap_id": "references-team-roadmap-v3.22",
