@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-06-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.42-structured-choice-task-families`
+Roadmap version: `v3.41-standard-exercises1-coverage`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -62,10 +62,6 @@ Core standard:
   learning exercises;
 - shared task-type UI is the default for overlapping graph/table, calculation,
   reasoning, and checkpoint actions;
-- structured choice task families (`cloze_text`, `multi_select`,
-  `matching_pairs`, `step_ordering`, `two_tier_choice`, and
-  `assertion_reason`) must be added only as reviewed student actions, not as
-  generic quiz variety or weak target-proof substitutes;
 - route items in graph, math, reasoning, and skill-map panels must be
   actionable;
 - the skill map must become a visible student product surface;
@@ -78,14 +74,6 @@ Core standard:
 | CHECK-SHORT-EXIT-1 | Paragraph Check Surface Inventory And Contract | yes | Closed audit/contract sprint. Inventory records `1.1.1` as advisory `Korte check` only with missing target-equivalent exit ticket, `1.1.2` as reviewed local target-equivalent exit ticket with missing advisory short check, and `1.1.3` as missing both short check and target-equivalent graph/table exit ticket. No generated output, source exit-ticket writes, engine implementation, protected reference mutation, target-exercise writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |
 | STANDARD-EXERCISES-1 | Unified Standard Exercise Coverage Audit | yes | Closed audit/contract sprint. Coverage matrix records the shared task-shell runtime as covering math, graph/table, reviewed `1.1.2` exit-ticket, and structured short response actions, while carrying reasoning standard-expansion flags for `step_ordering`, `cause_effect_chain`, `claim_reason_evidence`, `flow_diagram_build`, `classification_with_explanation`, and `source_based_explanation`. Guided practice and procedure support remain useful support surfaces outside target-equivalent proof. No implementation, generated output, source-data mutation, protected reference mutation, diagnostics, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |
 | TASK-SHELL-UX-2 | Shared Task Shell UX Hardening | yes | Closed PASS WITH FLAGS after implementation, generated-output proof, and actual lead-review cycle. Added separate unit/notation fields for calculation-work tasks, hidden/collapsible task-shell hints for allowed practice surfaces, controlled labelled feedback regions, neutral next-action markup, and exit-ticket display rules that hide pre-attempt criteria and answer-revealing placeholders while preserving source criteria for validation. Book 1 output was regenerated through platform deploy only. Carried flags: improve future screenshot manifest DOM proof, continue reasoning standard expansion in `REASON-STD-1`, and preserve source-versus-render boundaries in future exit tickets. No target-equivalent authority was broadened; `1.1.1` remains advisory, `1.1.3` exit-ticket source remains absent, and no diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use is authorized. |
-| TASK-FAMILY-CHOICE-1 | Structured Choice Task-Family Contract | no | Define the shared-shell contract, schema shape, validation/evaluation owners, feedback owners, focus/keyboard expectations, product-boundary flags, and route/checkpoint use cases for `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason`. No engine implementation or generated output. |
-| TASK-FAMILY-CLOZE-1 | Cloze Text Task-Family Implementation | no | Add first-class inline `cloze_text` support as the highest-priority bridge between recognition and open constructed response. Prove use cases for index-points-versus-percent, formula substitution, source-value labels, and cause-step-effect statements without answer-revealing scaffolding in exit tickets. |
-| TASK-FAMILY-MULTI-1 | Multi-Select Task-Family Implementation | no | Add `multi_select` with exact-set deterministic matching, optional partial self-check mode for practice, feedback on missing required options and selected distractors, and strict rules preventing multi-select from replacing richer target operations. |
-| TASK-FAMILY-ORDER-1 | Step-Ordering Task-Family Implementation | no | Add `step_ordering` as a shared-shell family for procedure control and reasoning sequence tasks so reasoning no longer keeps this as a private engine-only pattern. |
-| TASK-FAMILY-MATCH-1 | Matching-Pairs Task-Family Implementation | no | Add `matching_pairs` for concept-definition, graph-element-meaning, source-value-label, formula-component-interpretation, and event-to-shift matches, with accessible keyboard behavior and mobile proof. |
-| TASK-FAMILY-TWO-TIER-1 | Two-Tier Choice Task-Family Implementation | no | Add `two_tier_choice` for misconception repair where a student selects an answer and a reason, with feedback that distinguishes answer recognition from reasoning quality without making diagnostic or mastery claims. |
-| TASK-FAMILY-ASSERTION-1 | Assertion-Reason Task-Family Implementation | no | Add `assertion_reason` for compact exam-style reasoning checks after higher-priority families exist. Use sparingly and require task-quality review so it does not become artificial quiz variety. |
-| GATE-TASK-FAMILY-1 | Structured Choice Task-Family Review | no | Human/lead review before the new structured choice families are relied on by `REASON-STD-1`, `CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, or Scale Gate 1. Must inspect rendered output, feedback, keyboard/focus behavior, and target-proof boundaries. |
 | GAME-ROUTE-AFFORDANCE-1 | Clickable Route Items For Non-Exit Practice Games | no | Make graph/math/reasoning/skill-map route items actionable with direct target or explicit fallback. Preserve existing `1.1.2` exit-ticket route links and add regression guard. |
 | SKILLMAP-PRODUCT-1 | Student Skill Map Product Surface | no | Make the skill map accessible and useful as a student-facing route overview for the first three paragraphs, with actionable route links and no internal-code exposure. |
 | REASON-STD-1 | Reasoning Game Unified Exercise Migration | no | Bring reasoning game task types into the shared standard, including step-by-step and flow-diagram tasks. Decide whether the reasoning game becomes a thin wrapper or needs rebuild. |
@@ -106,14 +94,6 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
-| TASK-FAMILY-CHOICE-1 | Structured Choice Task-Family Contract | no | Next planning sprint. It must convert the multiple-choice family report into a shared-shell contract for `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason`, including response shapes, validation/evaluation ownership, feedback ownership, focus/keyboard behavior, product-boundary flags, route/checkpoint use cases, and explicit target-proof limits. No implementation or generated output. |
-| TASK-FAMILY-CLOZE-1 | Cloze Text Task-Family Implementation | no | Implement first-class inline cloze text after `TASK-FAMILY-CHOICE-1` accepts the contract. Highest-value family for index-points-versus-percent, formula substitution, source-value labels, cause-step-effect statements, and compact economic reasoning without brittle free-text regex. |
-| TASK-FAMILY-MULTI-1 | Multi-Select Task-Family Implementation | no | Implement exact-set `multi_select` with optional practice-only partial self-check and feedback on missing required options/selected distractors. Must not stand in for calculation, graph/table, or constructed-response proof when those operations are required. |
-| TASK-FAMILY-ORDER-1 | Step-Ordering Task-Family Implementation | no | Implement shared `step_ordering` for procedure-control and reasoning-sequence tasks so `REASON-STD-1` can migrate ordering out of private reasoning-engine logic. |
-| TASK-FAMILY-MATCH-1 | Matching-Pairs Task-Family Implementation | no | Implement `matching_pairs` for concept/definition, graph element/meaning, source value/label, formula component/interpretation, and event/curve-shift matching. Requires accessible interaction proof. |
-| TASK-FAMILY-TWO-TIER-1 | Two-Tier Choice Task-Family Implementation | no | Implement answer-plus-reason `two_tier_choice` for misconception repair and explanation-quality feedback, without diagnostics or mastery language. |
-| TASK-FAMILY-ASSERTION-1 | Assertion-Reason Task-Family Implementation | no | Implement `assertion_reason` after higher-priority families exist. Must remain a compact reasoning check, not an artificial default quiz type. |
-| GATE-TASK-FAMILY-1 | Structured Choice Task-Family Review | no | Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice families are relied on by reasoning migration, check implementation, or Scale Gate proof. |
 | TASK-SHELL-UX-2 | Shared Task Shell UX Hardening | yes | Closed PASS WITH FLAGS after implementation and lead-review round 2. Produced `reports/sprints/TASK-SHELL-UX-2-ui-contract.md`, screenshot proof, `reports/json/task-shell-ux2-proof.json`, and checker `build-scripts/sprints/check-task-shell-ux2.js`. Added separate unit/notation support, controlled feedback, hidden hints where allowed, and exit-ticket render suppression for criteria/answer placeholders. Generated output changed through deploy only. Flags: improve DOM-fact screenshot evidence, continue `REASON-STD-1`, and preserve source/render boundaries for future exit tickets. |
 | STANDARD-EXERCISES-1 | Unified Standard Exercise Coverage Audit | yes | Closed audit/contract sprint after planning review and lead-review cycle. Produced `reports/sprints/STANDARD-EXERCISES-1-exercise-family-audit.md`, `reports/json/standard-exercise-family-coverage.json`, and deterministic checker `build-scripts/sprints/check-standard-exercises1-coverage.js`. Findings: math, graph/table, and reviewed `1.1.2` exit-ticket actions are mostly covered by shared task-shell families; `structured_short_response` is runtime-supported and needs standard documentation/UX hardening; reasoning still needs standard expansion for ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation; guided practice and procedure support stay outside proof status. No implementation or product authority. |
 | CHECK-SHORT-EXIT-1 | Paragraph Check Surface Inventory And Contract | yes | Closed audit/contract sprint after planning review and lead-review cycle. Produced `reports/sprints/CHECK-SHORT-EXIT-1-inventory.md`, `reports/json/check-short-exit-inventory.json`, and deterministic checker `build-scripts/sprints/check-check-short-exit1-inventory.js`. Findings: `1.1.1` has only an advisory short check and lacks target-equivalent A43/B01/B02 proof; `1.1.2` has approved local target-equivalent proof/copy and lacks a separate advisory short check; `1.1.3` lacks both check surfaces and still needs graph/table proof work. No implementation or product authority. |
@@ -2567,28 +2547,20 @@ Update 2026-06-01: `STANDARD-EXERCISES-1 Unified Standard Exercise Coverage Audi
 
 Update 2026-06-01: `TASK-SHELL-UX-2 Shared Task Shell UX Hardening` closed PASS WITH FLAGS after implementation, generated Book 1 deploy proof, and actual lead-review round 1/round 2. It added optional/required unit/notation support to calculation-work tasks, rendered separate notation fields, updated exit-ticket/skilltree/graph wrappers, added collapsed hints where allowed, standardized feedback/action markup, and made exit-ticket display suppress pre-attempt criteria plus answer-revealing placeholders while keeping source criteria for validation. Round 1 caught placeholder leaks; round 2 passed after neutral placeholders, checker/tests, and screenshot proof were refreshed. No target-equivalent authority was broadened: `1.1.1` remains advisory, `1.1.3` exit-ticket source remains absent, and no diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or product-wide use is authorized.
 
-Update 2026-06-01: added the structured choice task-family expansion lane after the multiple-choice family report. The roadmap now requires `TASK-FAMILY-CHOICE-1`, `TASK-FAMILY-CLOZE-1`, `TASK-FAMILY-MULTI-1`, `TASK-FAMILY-ORDER-1`, `TASK-FAMILY-MATCH-1`, `TASK-FAMILY-TWO-TIER-1`, `TASK-FAMILY-ASSERTION-1`, and `GATE-TASK-FAMILY-1` before these new families may be relied on for reasoning migration, check implementation, first-three-paragraph product proof, or Scale Gate 1. The lane adds `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason` as reviewed student actions, not quiz variety. It preserves the rule that generic choice-only tasks cannot replace calculation, graph/table, constructed reasoning, or target-equivalent proof unless the target action itself is genuinely choice-like.
-
 ## Immediate Next Sprint
 
-Next action: proceed to `TASK-FAMILY-CHOICE-1` as the next low-risk Product
-Proof Track planning sprint. It should convert the multiple-choice family
-report into a reviewed shared-shell contract for `cloze_text`, `multi_select`,
-`matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason`
-before implementation begins. `GAME-ROUTE-AFFORDANCE-1` remains the next
-route-affordance implementation lane and may run after or alongside the
-structured-choice contract if capacity allows, but `REASON-STD-1`,
-`CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and Scale Gate 1 may not rely on the
-new task families before `GATE-TASK-FAMILY-1` reviews rendered output,
-feedback, focus/keyboard behavior, and target-proof boundaries.
+Next action: proceed to `GAME-ROUTE-AFFORDANCE-1` as the next Product Proof
+Track sprint. It should make non-exit graph, math, reasoning, and skill-map
+route items actionable with direct targets or explicit fallbacks while
+preserving the existing `1.1.2` exit-ticket route links and adding a regression
+guard.
 `REV-STD-1` remains required before Scale Gate 1, but Scale Gate 1 may not run
 until the Product Proof Track reaches `GATE-PRODUCT-3P` or a human waiver
 explicitly records consequences. The approved `1.1.2` completion copy is local
 and non-summative only; no diagnostics, adaptive routing, mastery/sequencing,
 student-facing AI, summative use, PV, Scale Gate 1, CP-6/Year-1 reliance, or
 product-wide use is authorized by `L1.7B-Q2-COPY`, `SYNC-PRODUCT-1`, or
-`CHECK-SHORT-EXIT-1`, `STANDARD-EXERCISES-1`, `TASK-SHELL-UX-2`, or the
-structured-choice roadmap insertion.
+`CHECK-SHORT-EXIT-1`, `STANDARD-EXERCISES-1`, or `TASK-SHELL-UX-2`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 

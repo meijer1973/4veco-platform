@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.41-standard-exercises1-coverage` | `references/reference-team-roadmap.md` | Current operating roadmap after STANDARD-EXERCISES-1 closed the unified standard exercise coverage audit. The Product Proof Track now proceeds to TASK-SHELL-UX-2. Math, graph/table, and reviewed 1.1.2 exit-ticket actions are covered by shared task-shell families; reasoning requires standard-family expansion; Scale Gate 1 remains blocked until GATE-PRODUCT-3P and REV-STD-1 close or receive explicit human waiver. |
+| References Team Roadmap | `v3.42-structured-choice-task-families` | `references/reference-team-roadmap.md` | Current operating roadmap after structured choice task-family expansion was added to the Product Proof Track. The next sprint is TASK-FAMILY-CHOICE-1, which must contract cloze_text, multi_select, matching_pairs, step_ordering, two_tier_choice, and assertion_reason before implementation. Scale Gate 1 remains blocked until GATE-PRODUCT-3P, REV-STD-1, and the required task-family review close or receive explicit human waiver. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before structured choice task-family track | `v3.41-standard-exercises1-coverage` | `docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before STANDARD-EXERCISES-1 coverage audit | `v3.40-check-short-exit1-inventory` | `docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7B-Q2 planning | `v3.32-check-q2-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CHECK-Q2-PLAN closure | `v3.31-reason-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md` | `references/reference-team-roadmap.md` |

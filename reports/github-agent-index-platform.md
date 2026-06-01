@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T13:21:34.907Z
+Generated: 2026-06-01T13:47:05.161Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2593
+Files indexed: 2616
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 349
+Count: 351
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -421,6 +421,7 @@ Count: 349
 - build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
+- build-scripts/sprints/capture-task-shell-ux2-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
@@ -446,6 +447,7 @@ Count: 349
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
+- build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
@@ -525,7 +527,7 @@ Count: 42
 
 ## validators
 
-Count: 182
+Count: 183
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -646,6 +648,7 @@ Count: 182
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
+- build-scripts/sprints/check-task-shell-ux2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
@@ -712,7 +715,7 @@ Count: 182
 
 ## references
 
-Count: 400
+Count: 402
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1036,6 +1039,8 @@ Count: 400
 - references/data/sprints/SYNC-4.result.json
 - references/data/sprints/SYNC-PRODUCT-1.plan.json
 - references/data/sprints/SYNC-PRODUCT-1.result.json
+- references/data/sprints/TASK-SHELL-UX-2.plan.json
+- references/data/sprints/TASK-SHELL-UX-2.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
@@ -1117,7 +1122,7 @@ Count: 400
 
 ## reports
 
-Count: 1428
+Count: 1447
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1174,6 +1179,7 @@ Count: 1428
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
 - reports/json/standard-exercise-family-coverage.json
+- reports/json/task-shell-ux2-proof.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
 - reports/json/unit-design-status.json
@@ -2542,6 +2548,24 @@ Count: 1428
 - reports/sprints/SYNC-PRODUCT-1-plan.md
 - reports/sprints/SYNC-PRODUCT-1-planning-review.md
 - reports/sprints/SYNC-PRODUCT-1-result.md
+- reports/sprints/TASK-SHELL-UX-2-baseline.md
+- reports/sprints/TASK-SHELL-UX-2-diff-summary.md
+- reports/sprints/TASK-SHELL-UX-2-lead-review-assignment.md
+- reports/sprints/TASK-SHELL-UX-2-lead-review-corrections.md
+- reports/sprints/TASK-SHELL-UX-2-lead-review-round1.md
+- reports/sprints/TASK-SHELL-UX-2-lead-review-round2.md
+- reports/sprints/TASK-SHELL-UX-2-plan.md
+- reports/sprints/TASK-SHELL-UX-2-planning-review.md
+- reports/sprints/TASK-SHELL-UX-2-result.md
+- reports/sprints/TASK-SHELL-UX-2-screenshot-manifest.md
+- reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-exit-ticket-unit-fields.png
+- reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-math-task-shell.png
+- reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-reasoning-task-shell.png
+- reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-113-graph-task-shell.png
+- reports/sprints/TASK-SHELL-UX-2-screenshots/manifest.json
+- reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-dark-112-exit-ticket-task-shell.png
+- reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-light-112-exit-ticket-unit-fields.png
+- reports/sprints/TASK-SHELL-UX-2-ui-contract.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md

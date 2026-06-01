@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.41-standard-exercises1-coverage",
+      "version": "v3.42-structured-choice-task-families",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md",
@@ -57,7 +58,17 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after STANDARD-EXERCISES-1 closed the unified standard exercise coverage audit. The Product Proof Track now proceeds to TASK-SHELL-UX-2. Math, graph/table, and reviewed 1.1.2 exit-ticket actions are covered by shared task-shell families; reasoning requires standard-family expansion; Scale Gate 1 remains blocked until GATE-PRODUCT-3P and REV-STD-1 close or receive explicit human waiver."
+      "notes": "Current operating roadmap after structured choice task-family expansion was added to the Product Proof Track. The next sprint is TASK-FAMILY-CHOICE-1, which must contract cloze_text, multi_select, matching_pairs, step_ordering, two_tier_choice, and assertion_reason before implementation. Scale Gate 1 remains blocked until GATE-PRODUCT-3P, REV-STD-1, and the required task-family review close or receive explicit human waiver."
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.41-standard-exercises1-coverage",
+      "title": "References Team Roadmap before structured choice task-family track",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md",
+      "owner": "references_team",
+      "updated_on": "2026-06-01",
+      "superseded_by": "references/reference-team-roadmap.md"
     },
     {
       "roadmap_id": "references-team-roadmap",
