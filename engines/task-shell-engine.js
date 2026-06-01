@@ -191,6 +191,10 @@
     return FAMILIES[family] && FAMILIES[family].deterministic === false;
   }
 
+  function isSelfCheckTask(task) {
+    return task && task.expected && task.expected.kind === 'self_check';
+  }
+
   function validatePracticeRoute(route, path) {
     assert(isObject(route), path + ' is required');
     requireString(route.label, path + '.label');
@@ -200,7 +204,7 @@
   function validateFeedback(task) {
     var path = task.id + '.feedback';
     assert(isObject(task.feedback), path + ' is required');
-    if (isSelfCheckFamily(task.family)) {
+    if (isSelfCheckTask(task)) {
       requireString(task.feedback.selfCheckTitle, path + '.selfCheckTitle');
       requireString(task.feedback.selfCheckText, path + '.selfCheckText');
       optionalString(task.feedback.retryTitle, path + '.retryTitle');
@@ -272,6 +276,38 @@
       return;
     }
 
+    if (task.family === 'calculation_work_capture' && expected.kind === 'calculation') {
+      assert(isObject(expected.finalAnswer), task.id + '.expected.finalAnswer is required');
+      assert(
+        expected.finalAnswer.kind === 'number' || expected.finalAnswer.kind === 'text',
+        task.id + '.expected.finalAnswer.kind must be number or text'
+      );
+      if (expected.finalAnswer.kind === 'number') {
+        assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
+        if (expected.finalAnswer.tolerance !== undefined) {
+          assert(isNumber(expected.finalAnswer.tolerance), task.id + '.expected.finalAnswer.tolerance must be numeric');
+        }
+      } else {
+        requireArray(expected.finalAnswer.accepted, task.id + '.expected.finalAnswer.accepted', 1);
+      }
+      if (expected.workRequired !== undefined) {
+        assert(typeof expected.workRequired === 'boolean', task.id + '.expected.workRequired must be boolean');
+      }
+      if (expected.criteria !== undefined) requireArray(expected.criteria, task.id + '.expected.criteria', 1);
+      if (expected.requiredWorkText !== undefined) validateTextGroups(expected.requiredWorkText, task.id + '.expected.requiredWorkText');
+      return;
+    }
+
+    if (
+      (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') &&
+      expected.kind === 'text_criteria'
+    ) {
+      requireArray(expected.criteria, task.id + '.expected.criteria', 1);
+      validateTextGroups(expected.requiredText, task.id + '.expected.requiredText');
+      if (expected.rejectText !== undefined) requireArray(expected.rejectText, task.id + '.expected.rejectText', 1);
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -279,6 +315,15 @@
     }
 
     throw new Error(task.family + ' is not supported');
+  }
+
+  function validateTextGroups(groups, path) {
+    requireArray(groups, path, 1);
+    groups.forEach(function (group, idx) {
+      assert(isObject(group), path + '[' + idx + '] must be an object');
+      requireString(group.label, path + '[' + idx + '].label');
+      requireArray(group.any, path + '[' + idx + '].any', 1);
+    });
   }
 
   function validateInteraction(task) {
@@ -367,6 +412,32 @@
     return Math.abs(x - expected.x) <= tx && Math.abs(y - expected.y) <= ty;
   }
 
+  function finalAnswerMatches(value, expected) {
+    if (!expected || !expected.kind) return false;
+    if (expected.kind === 'number') return numberMatches(value, expected);
+    if (expected.kind === 'text') return textMatches(value, expected.accepted);
+    return false;
+  }
+
+  function textGroupsMatch(value, groups) {
+    var normalized = normalizeText(value);
+    if (!normalized) return false;
+    return (groups || []).every(function (group) {
+      return (group.any || []).some(function (accepted) {
+        return normalized.indexOf(normalizeText(accepted)) !== -1;
+      });
+    });
+  }
+
+  function textCriteriaMatches(value, expected) {
+    var normalized = normalizeText(value);
+    if (!normalized) return false;
+    var rejected = (expected.rejectText || []).some(function (rejectedText) {
+      return normalized.indexOf(normalizeText(rejectedText)) !== -1;
+    });
+    return !rejected && textGroupsMatch(value, expected.requiredText || []);
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -384,13 +455,25 @@
     if (task.family === 'point_placement') {
       return pointMatches(response && response.point ? response.point : response, task.expected);
     }
+    if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
+      if (!response || typeof response !== 'object') return false;
+      if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
+      if (task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
+      return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer);
+    }
+    if (
+      (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') &&
+      task.expected.kind === 'text_criteria'
+    ) {
+      return textCriteriaMatches(response && response.value != null ? response.value : response, task.expected);
+    }
     return false;
   }
 
   function evaluateTask(task, response) {
     validateTask(task);
 
-    if (isSelfCheckFamily(task.family)) {
+    if (isSelfCheckTask(task)) {
       if (!hasValue(response)) {
         return {
           taskId: task.id,

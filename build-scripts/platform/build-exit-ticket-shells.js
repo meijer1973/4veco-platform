@@ -45,9 +45,10 @@ function writeDataFile(config, parNr, data) {
   fs.writeFileSync(path.join(targetDataDir, `${parNr}.js`), body, 'utf8');
 }
 
-function generateShell(parNr, parName) {
+function generateShell(parNr, parName, data = null) {
   const sharedPath = '../../shared';
-  const title = `${parName} - Korte check`;
+  const surfaceTitle = data && data.title ? data.title : 'Korte check';
+  const title = `${parName} - ${surfaceTitle}`;
 
   return `<!DOCTYPE html>
 <html lang="nl" data-theme="light">
@@ -125,7 +126,7 @@ function main() {
     writeDataFile(config, parNr, data);
     const fileName = `${parNr} ${p.name} ${DASH} exit-ticket.html`;
     const filePath = path.join(found.fullPath, fileName);
-    fs.writeFileSync(filePath, generateShell(parNr, p.name), 'utf8');
+    fs.writeFileSync(filePath, generateShell(parNr, p.name, data), 'utf8');
     console.log(`  [write] shared/exit-ticket/${parNr}.js`);
     console.log(`  [write] ${fileName}`);
     generated++;

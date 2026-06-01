@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "surface": "target_equivalent_exit_ticket",
+  "parNr": "1.1.2",
+  "parName": "Percentages en indexcijfers",
+  "title": "Exit ticket",
+  "intro": "Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie.",
+  "targetSkillIds": ["A38", "A39", "D31"],
+  "skillScopeIds": ["A38", "A39", "D31"],
+  "targetEquivalent": {
+    "candidate": true,
+    "gateApproved": false,
+    "completionLanguageEligible": false
+  },
+  "metadataAlignment": {
+    "status": "target_equivalent_aligned",
+    "paragraphSkillIds": ["A38", "A39", "D31"],
+    "targetExerciseSkillIds": ["A38", "A39", "D31"],
+    "targetReadinessEvidence": true,
+    "sourceRefs": {
+      "operationChain": "reports/sprints/L1.7B-Q2-operation-chain.md",
+      "answerModel": "reports/sprints/L1.7B-Q2-answer-model.md",
+      "targetExerciseRegistry": "references/authored/course-target-exercises.json",
+      "unitRegistry": "references/machine/micro-teaching-units.json"
+    },
+    "notes": [
+      "The task sequence covers percentage change, index conversion, percentage change between index values, and the required short notation explanation.",
+      "Gate approval and completion-language eligibility remain false until GATE-L1.7B-Q2 reviews live output."
+    ]
+  },
+  "skillMap": {
+    "title": "Oefenroute",
+    "routes": [
+      {
+        "label": "Percentages berekenen",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      },
+      {
+        "label": "Indexcijfers gebruiken",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      },
+      {
+        "label": "Uitleg bij indexpunten",
+        "surface": "Redeneren",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "prijsstijging-procent",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "prijsstijging-procent",
+        "family": "calculation_work_capture",
+        "skillLabel": "Procentuele verandering berekenen",
+        "purpose": "Bereken een procentuele stijging vanuit een oude en nieuwe prijs.",
+        "prompt": "Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.",
+        "interaction": {
+          "workLabel": "Berekening",
+          "finalAnswerLabel": "Eindantwoord in procenten",
+          "placeholder": "Laat formule, invulling en tussenstap zien."
+        },
+        "expected": {
+          "kind": "calculation",
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": ["15", "15%", "15 procent", "15,0", "15,0%", "15.0", "15.0%"]
+          },
+          "workRequired": true,
+          "criteria": [
+            "Gebruik nieuw min oud gedeeld door oud.",
+            "Vul 920 en 800 zichtbaar in.",
+            "Geef het eindantwoord in procenten."
+          ],
+          "requiredWorkText": [
+            {
+              "label": "nieuwe prijs",
+              "any": ["920"]
+            },
+            {
+              "label": "oude prijs",
+              "any": ["800"]
+            },
+            {
+              "label": "verandering",
+              "any": ["920 - 800", "920-800", "120"]
+            },
+            {
+              "label": "oude basis",
+              "any": ["/ 800", "/800", "gedeeld door 800"]
+            }
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Berekening klopt",
+          "matchText": "Je gebruikt de oude prijs als basis en komt uit op 15 procent.",
+          "retryTitle": "Controleer de basis",
+          "retryText": "Gebruik nieuw min oud gedeeld door oud. De oude prijs is hier 800 euro."
+        },
+        "practiceRoute": {
+          "label": "Oefen percentages nog met Rekenen",
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        }
+      }
+    },
+    {
+      "id": "index-naar-waarde",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "index-naar-waarde",
+        "family": "calculation_work_capture",
+        "skillLabel": "Indexcijfer berekenen",
+        "purpose": "Zet een waarde om naar een indexcijfer met basisjaar 100.",
+        "prompt": "In het basisjaar kost een boodschappenmand 150 euro. Dit jaar kost dezelfde mand 162 euro. Bereken het indexcijfer van dit jaar.",
+        "interaction": {
+          "workLabel": "Berekening",
+          "finalAnswerLabel": "Indexcijfer",
+          "placeholder": "Laat zien welke waarde gedeeld wordt door de basiswaarde."
+        },
+        "expected": {
+          "kind": "calculation",
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": ["108", "index 108", "indexcijfer 108"]
+          },
+          "workRequired": true,
+          "criteria": [
+            "Deel de nieuwe waarde door de basiswaarde.",
+            "Vermenigvuldig met 100.",
+            "Schrijf het antwoord als indexcijfer zonder procentteken."
+          ],
+          "requiredWorkText": [
+            {
+              "label": "nieuwe waarde",
+              "any": ["162"]
+            },
+            {
+              "label": "basiswaarde",
+              "any": ["150"]
+            },
+            {
+              "label": "deling door basis",
+              "any": ["162 / 150", "162/150", "gedeeld door 150"]
+            },
+            {
+              "label": "index naar 100",
+              "any": ["x 100", "* 100", "keer 100"]
+            }
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Index klopt",
+          "matchText": "162 gedeeld door 150 keer 100 geeft index 108.",
+          "retryTitle": "Gebruik het basisjaar als 100",
+          "retryText": "Deel de nieuwe waarde door 150 en vermenigvuldig met 100."
+        },
+        "practiceRoute": {
+          "label": "Oefen indexcijfers nog met Rekenen",
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        }
+      }
+    },
+    {
+      "id": "index-naar-procent",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "index-naar-procent",
+        "family": "calculation_work_capture",
+        "skillLabel": "Verandering tussen indexcijfers berekenen",
+        "purpose": "Bereken de procentuele verandering tussen twee indexcijfers.",
+        "prompt": "Een index stijgt van 108 naar 112. Bereken de procentuele stijging ten opzichte van 108.",
+        "interaction": {
+          "workLabel": "Berekening",
+          "finalAnswerLabel": "Eindantwoord in procenten",
+          "placeholder": "Gebruik het oude indexcijfer als basis."
+        },
+        "expected": {
+          "kind": "calculation",
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": ["3,7", "3.7", "3,7%", "3.7%", "3,70", "3.70", "3,70%", "3.70%", "3,7 procent", "3.7 procent"]
+          },
+          "workRequired": true,
+          "criteria": [
+            "Gebruik 112 min 108 als verandering.",
+            "Deel door het oude indexcijfer 108.",
+            "Rond het antwoord passend af in procenten."
+          ],
+          "requiredWorkText": [
+            {
+              "label": "nieuwe index",
+              "any": ["112"]
+            },
+            {
+              "label": "oude index",
+              "any": ["108"]
+            },
+            {
+              "label": "verandering",
+              "any": ["112 - 108", "112-108", "4"]
+            },
+            {
+              "label": "oude basis",
+              "any": ["/ 108", "/108", "gedeeld door 108"]
+            }
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Stijging klopt",
+          "matchText": "De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108.",
+          "retryTitle": "Gebruik het oude indexcijfer",
+          "retryText": "Deel de verandering van 4 door 108, niet door 100."
+        },
+        "practiceRoute": {
+          "label": "Oefen de indexstap nog met Rekenen",
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        }
+      }
+    },
+    {
+      "id": "indexpunten-uitleg",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "indexpunten-uitleg",
+        "family": "short_constructed_response",
+        "skillLabel": "Indexpunten kort uitleggen",
+        "purpose": "Leg kort uit waarom indexpunten niet hetzelfde zijn als procenten.",
+        "prompt": "Iemand zegt: de index stijgt van 108 naar 112, dus de stijging is 4 procent. Leg kort uit wat er misgaat.",
+        "interaction": {
+          "inputLabel": "Korte uitleg",
+          "placeholder": "Noem indexpunten, de oude basis en de procentuele stijging."
+        },
+        "expected": {
+          "kind": "text_criteria",
+          "criteria": [
+            "Noem dat 4 het aantal indexpunten is.",
+            "Gebruik 108 als basis voor de procentuele verandering.",
+            "Maak duidelijk dat de procentuele stijging ongeveer 3,7 procent is."
+          ],
+          "requiredText": [
+            {
+              "label": "indexpunten",
+              "any": ["4 indexpunten", "vier indexpunten"]
+            },
+            {
+              "label": "oude basis",
+              "any": ["ten opzichte van 108", "gedeeld door 108", "basis is 108", "basis 108"]
+            },
+            {
+              "label": "procentuele stijging",
+              "any": ["3,7 procent", "3.7 procent", "3,7%", "3.7%"]
+            },
+            {
+              "label": "afwijzing van 4 procent",
+              "any": ["niet 4 procent", "geen 4 procent", "4 procent klopt niet", "4% klopt niet", "4 procent is onjuist", "4% is onjuist"]
+            }
+          ],
+          "rejectText": [
+            "niet fout",
+            "4 procent is indexpunten",
+            "4% is indexpunten",
+            "klopt wel",
+            "is 4 procent"
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Uitleg sluit aan",
+          "matchText": "Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108.",
+          "retryTitle": "Maak het onderscheid expliciet",
+          "retryText": "Noem dat 4 indexpunten zijn en bereken de procentuele verandering ten opzichte van 108."
+        },
+        "practiceRoute": {
+          "label": "Oefen de uitleg nog met Redeneren",
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        }
+      }
+    }
+  ],
+  "completion": {
+    "title": "Check afgerond",
+    "text": "Je hebt deze check afgerond. Bekijk je feedback en bespreek de eindopgave met je docent."
+  }
+}

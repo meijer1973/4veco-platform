@@ -1,5 +1,6 @@
 const ExitTicketEngine = require('../exit-ticket-engine');
 const data = require('../../source-data/book-1/exit-ticket/1.1.1.json');
+const targetData = require('../../source-data/book-1/exit-ticket/1.1.2.json');
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -96,6 +97,23 @@ describe('ExitTicketEngine', () => {
         expect(ExitTicketEngine.validateData(data)).toBe(true);
         expect(data.tasks.length).toBeGreaterThanOrEqual(3);
         expect(data.tasks.length).toBeLessThanOrEqual(5);
+    });
+
+    test('validates the 1.1.2 target-equivalent candidate without gate approval', () => {
+        expect(ExitTicketEngine.validateData(targetData)).toBe(true);
+        expect(targetData.surface).toBe('target_equivalent_exit_ticket');
+        expect(targetData.targetSkillIds).toEqual(['A38', 'A39', 'D31']);
+        expect(targetData.metadataAlignment).toEqual(expect.objectContaining({
+            status: 'target_equivalent_aligned',
+            paragraphSkillIds: ['A38', 'A39', 'D31'],
+            targetExerciseSkillIds: ['A38', 'A39', 'D31'],
+            targetReadinessEvidence: true,
+        }));
+        expect(targetData.targetEquivalent).toEqual({
+            candidate: true,
+            gateApproved: false,
+            completionLanguageEligible: false,
+        });
     });
 
     test('declares B01/B02 as checkpoint-assessed skills without target-readiness claim', () => {
@@ -199,6 +217,90 @@ describe('ExitTicketEngine', () => {
             total: data.tasks.length,
             pending: data.tasks.length - 1,
         });
+    });
+
+    test('tracks 1.1.2 proof-candidate progress without authorizing completion language', () => {
+        const engine = new ExitTicketEngine({ data: targetData });
+        expect(engine.getProgress()).toEqual(expect.objectContaining({
+            practiceProgressOnly: false,
+            targetEquivalentAttempt: true,
+            pending: targetData.tasks.length,
+            proofCandidate: false,
+            gateApproved: false,
+            completionLanguageEligible: false,
+        }));
+
+        engine.checkTask('prijsstijging-procent', {
+            work: '(920 - 800) / 800 x 100',
+            finalAnswer: '15%'
+        });
+        engine.checkTask('index-naar-waarde', {
+            work: '162 / 150 x 100',
+            finalAnswer: '108'
+        });
+        engine.checkTask('index-naar-procent', {
+            work: '(112 - 108) / 108 x 100',
+            finalAnswer: '3,7%'
+        });
+        engine.checkTask('indexpunten-uitleg', 'Het is niet 4 procent. Het zijn 4 indexpunten; de basis is 108 en de stijging is ongeveer 3,7 procent.');
+
+        expect(engine.getProgress()).toEqual(expect.objectContaining({
+            pending: 0,
+            matched: targetData.tasks.length,
+            needsRepair: 0,
+            proofCandidate: true,
+            gateApproved: false,
+            completionLanguageEligible: false,
+        }));
+    });
+
+    test('does not mark 1.1.2 as proof-candidate when one operation needs repair', () => {
+        const engine = new ExitTicketEngine({ data: targetData });
+        engine.checkTask('prijsstijging-procent', {
+            work: '(920 - 800) / 800 x 100',
+            finalAnswer: '15%'
+        });
+        engine.checkTask('index-naar-waarde', {
+            work: '162 / 150 x 100',
+            finalAnswer: '108'
+        });
+        engine.checkTask('index-naar-procent', {
+            work: '(112 - 108) / 108 x 100',
+            finalAnswer: '4%'
+        });
+        engine.checkTask('indexpunten-uitleg', 'Het is niet 4 procent. Het zijn 4 indexpunten; de basis is 108 en de stijging is ongeveer 3,7 procent.');
+
+        expect(engine.getProgress()).toEqual(expect.objectContaining({
+            pending: 0,
+            matched: targetData.tasks.length - 1,
+            needsRepair: 1,
+            proofCandidate: false,
+        }));
+    });
+
+    test('does not accept bogus work or contradictory D31 wording as proof-candidate', () => {
+        const engine = new ExitTicketEngine({ data: targetData });
+        const badWork = engine.checkTask('prijsstijging-procent', {
+            work: 'ik gok',
+            finalAnswer: '15%'
+        });
+        expect(badWork.matched).toBe(false);
+
+        engine.checkTask('index-naar-waarde', {
+            work: '162 / 150 x 100',
+            finalAnswer: '108'
+        });
+        engine.checkTask('index-naar-procent', {
+            work: '(112 - 108) / 108 x 100',
+            finalAnswer: '3,7%'
+        });
+        const badD31 = engine.checkTask('indexpunten-uitleg', 'Het is niet fout: 4 procent is indexpunten, 108 en 3,7.');
+        expect(badD31.matched).toBe(false);
+
+        expect(engine.getProgress()).toEqual(expect.objectContaining({
+            proofCandidate: false,
+            needsRepair: 2,
+        }));
     });
 
     test('validates checkpoint-compatible graph task-shell tasks without target-readiness evidence', () => {

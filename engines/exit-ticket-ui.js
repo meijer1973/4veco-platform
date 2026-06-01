@@ -138,6 +138,10 @@
     var completion = app.querySelector('#et-completion');
     if (!completion) return;
     var progress = engine.getProgress();
+    if (progress.targetEquivalentAttempt) {
+      completion.hidden = progress.proofCandidate !== true;
+      return;
+    }
     completion.hidden = progress.pending !== 0;
   }
 

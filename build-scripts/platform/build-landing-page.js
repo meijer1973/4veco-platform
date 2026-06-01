@@ -298,6 +298,38 @@ function scanFiles(paragraafPath) {
   return result;
 }
 
+function readExitTicketSource(parNr) {
+  const sourcePath = path.join(__dirname, '..', '..', 'source-data', `book-${CONFIG.nr}`, 'exit-ticket', `${parNr}.json`);
+  if (!fs.existsSync(sourcePath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+  } catch (error) {
+    console.warn(`  WARN: cannot read exit-ticket source for ${parNr}: ${error.message}`);
+    return null;
+  }
+}
+
+function exitTicketPresentationMeta(parNr) {
+  const data = readExitTicketSource(parNr);
+  const targetEquivalent = Boolean(
+    data &&
+    (data.surface === 'target_equivalent_exit_ticket' ||
+      (data.targetEquivalent && data.targetEquivalent.candidate === true))
+  );
+  if (targetEquivalent) {
+    return {
+      cardTitle: 'Exit ticket',
+      cardDescription: 'Maak de volledige paragraaf-check',
+      sectionHint: 'Rond af met de paragraaf-check'
+    };
+  }
+  return {
+    cardTitle: 'Korte check',
+    cardDescription: 'Kies wat je nog wilt oefenen',
+    sectionHint: 'Rond af met gerichte oefentips'
+  };
+}
+
 function encPath(segments) { return segments.map(s => encodeURIComponent(s)).join("/"); }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -1279,8 +1311,9 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </div>` : "";
   const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
 
+  const checkMeta = exitTicketPresentationMeta(paragraaf.id);
   const checkCards = files.check && files.check.exitTicket
-    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Korte check", "Kies wat je nog wilt oefenen", "html")
+    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, checkMeta.cardTitle, checkMeta.cardDescription, "html")
     : "";
 
   const deepenCards = [
@@ -1333,7 +1366,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     layout: "custom",
     routeLayer: "practice"
   });
-  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: "Rond af met gerichte oefentips", body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
+  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkMeta.sectionHint, body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
   if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
   const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">

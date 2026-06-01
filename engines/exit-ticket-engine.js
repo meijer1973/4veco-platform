@@ -39,7 +39,9 @@
     summativeUse: false,
     pvProjection: false,
     pvMachinePromotion: false,
-    studentFacingOutput: false
+    studentFacingOutput: false,
+    studentProductUse: false,
+    targetEquivalentProof: false
   };
 
   function clone(value) {
@@ -72,6 +74,15 @@
 
   function text(value) {
     return String(value == null ? '' : value);
+  }
+
+  function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function containsBlockedTerm(value, term) {
+    var pattern = new RegExp('(^|[^a-z0-9])' + escapeRegExp(term.toLowerCase()) + '([^a-z0-9]|$)');
+    return pattern.test(value.toLowerCase());
   }
 
   function collectStudentText(data) {
@@ -148,7 +159,7 @@
     values.forEach(function (value) {
       var lower = value.toLowerCase();
       BLOCKED_STUDENT_TERMS.forEach(function (term) {
-        if (lower.indexOf(term.toLowerCase()) !== -1) {
+        if (containsBlockedTerm(lower, term)) {
           violations.push({ type: 'blocked_term', term: term, text: value });
         }
       });
@@ -165,6 +176,13 @@
     assert(typeof data.parNr === 'string' && data.parNr, 'Exit-ticket data needs parNr');
     assert(typeof data.parName === 'string' && data.parName, 'Exit-ticket data needs parName');
     assert(typeof data.title === 'string' && data.title, 'Exit-ticket data needs title');
+    if (data.surface !== undefined) {
+      assert(
+        data.surface === 'advisory_short_check' || data.surface === 'target_equivalent_exit_ticket',
+        'Exit-ticket surface must be advisory_short_check or target_equivalent_exit_ticket'
+      );
+    }
+    validateTargetEquivalentState(data);
     assert(isNonEmptyStringArray(data.targetSkillIds), 'Exit-ticket data needs targetSkillIds');
     assert(isNonEmptyStringArray(data.skillScopeIds), 'Exit-ticket data needs skillScopeIds');
     validateMetadataAlignment(data);
@@ -208,12 +226,41 @@
     assert(includesAll(data.targetSkillIds, meta.paragraphSkillIds), 'targetSkillIds must include paragraphSkillIds');
     assert(includesAll(data.skillScopeIds, meta.paragraphSkillIds), 'skillScopeIds must include paragraphSkillIds');
     if (meta.targetReadinessEvidence === true) {
-      assert(meta.status === 'target_exercise_readiness_aligned', 'target-readiness evidence requires aligned status');
+      assert(
+        meta.status === 'target_exercise_readiness_aligned' || meta.status === 'target_equivalent_aligned',
+        'target-readiness evidence requires aligned status'
+      );
       assert(includesAll(data.targetSkillIds, meta.targetExerciseSkillIds), 'target-readiness evidence must cover all targetExerciseSkillIds');
     } else {
-      assert(meta.status !== 'target_exercise_readiness_aligned', 'aligned target-readiness status requires targetReadinessEvidence true');
+      assert(
+        meta.status !== 'target_exercise_readiness_aligned' && meta.status !== 'target_equivalent_aligned',
+        'aligned target-readiness status requires targetReadinessEvidence true'
+      );
     }
     return true;
+  }
+
+  function validateTargetEquivalentState(data) {
+    var state = data.targetEquivalent;
+    if (data.surface === 'target_equivalent_exit_ticket') {
+      assert(state && typeof state === 'object', 'target-equivalent exit ticket needs targetEquivalent state');
+    }
+    if (!state) return true;
+    assert(typeof state.candidate === 'boolean', 'targetEquivalent.candidate must be boolean');
+    assert(typeof state.gateApproved === 'boolean', 'targetEquivalent.gateApproved must be boolean');
+    assert(typeof state.completionLanguageEligible === 'boolean', 'targetEquivalent.completionLanguageEligible must be boolean');
+    if (state.completionLanguageEligible) {
+      assert(state.gateApproved === true, 'completion language requires gate approval');
+    }
+    return true;
+  }
+
+  function isTargetEquivalentData(data) {
+    return Boolean(
+      data &&
+      (data.surface === 'target_equivalent_exit_ticket' ||
+        (data.targetEquivalent && data.targetEquivalent.candidate === true))
+    );
   }
 
   function normalizeAnswer(value) {
@@ -312,6 +359,27 @@
 
   ExitTicketEngine.prototype.getProgress = function () {
     var viewed = Object.keys(this.responses).length;
+    if (isTargetEquivalentData(this.data)) {
+      var responseValues = Object.keys(this.responses).map(function (key) {
+        return this.responses[key];
+      }, this);
+      var matched = responseValues.filter(function (response) { return response.matched === true; }).length;
+      var needsRepair = responseValues.filter(function (response) { return response.matched !== true; }).length;
+      var pending = Math.max(0, this.data.tasks.length - viewed);
+      var state = this.data.targetEquivalent || {};
+      return {
+        practiceProgressOnly: false,
+        targetEquivalentAttempt: true,
+        viewed: viewed,
+        total: this.data.tasks.length,
+        pending: pending,
+        matched: matched,
+        needsRepair: needsRepair,
+        proofCandidate: pending === 0 && matched === this.data.tasks.length,
+        gateApproved: state.gateApproved === true,
+        completionLanguageEligible: state.gateApproved === true && state.completionLanguageEligible === true
+      };
+    }
     return {
       practiceProgressOnly: true,
       viewed: viewed,

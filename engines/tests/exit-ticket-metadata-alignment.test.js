@@ -1,4 +1,5 @@
 const data = require('../../source-data/book-1/exit-ticket/1.1.1.json');
+const targetData = require('../../source-data/book-1/exit-ticket/1.1.2.json');
 const units = require('../../references/machine/micro-teaching-units.json');
 const targetRegistry = require('../../references/authored/course-target-exercises.json');
 
@@ -34,5 +35,32 @@ describe('exit-ticket metadata alignment', () => {
         expect(data.metadataAlignment.targetReadinessEvidence).toBe(false);
         expect(data.metadataAlignment.status).toBe('paragraph_skill_aligned_not_target_readiness');
         expect(data.metadataAlignment.notes.join(' ')).toMatch(/does not yet cover the full A43/i);
+    });
+
+    test('1.1.2 exit ticket candidate covers the selected target operation chain', () => {
+        const ids = unitIds();
+        const target = targetRegistry.exercises.find((exercise) => exercise.id === targetData.parNr);
+
+        expect(target).toBeTruthy();
+        expect(targetData.surface).toBe('target_equivalent_exit_ticket');
+        expect(targetData.metadataAlignment.paragraphSkillIds).toEqual(['A38', 'A39', 'D31']);
+        expect(targetData.targetSkillIds).toEqual(targetData.metadataAlignment.paragraphSkillIds);
+        expect(targetData.skillScopeIds).toEqual(targetData.metadataAlignment.paragraphSkillIds);
+        expect(targetData.metadataAlignment.targetExerciseSkillIds).toEqual(target.required_skills);
+        expect(targetData.metadataAlignment.targetReadinessEvidence).toBe(true);
+        expect(targetData.metadataAlignment.status).toBe('target_equivalent_aligned');
+        expect(targetData.targetEquivalent).toEqual({
+            candidate: true,
+            gateApproved: false,
+            completionLanguageEligible: false,
+        });
+
+        for (const id of [
+            ...targetData.targetSkillIds,
+            ...targetData.skillScopeIds,
+            ...targetData.metadataAlignment.targetExerciseSkillIds,
+        ]) {
+            expect(ids.has(id)).toBe(true);
+        }
     });
 });

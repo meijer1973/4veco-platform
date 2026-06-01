@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "sprint_id": "L1.7B-Q2",
+  "name": "Exit Ticket Target-Equivalent Implementation",
+  "status": "completed",
+  "completed": "2026-06-01",
+  "completed_on": "2026-06-01",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/L1.7B-Q2-plan.md",
+  "baseline": "reports/sprints/L1.7B-Q2-baseline.md",
+  "result": "reports/sprints/L1.7B-Q2-result.md",
+  "diff_summary": "reports/sprints/L1.7B-Q2-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "selected_paragraph": "1.1.2",
+  "target_equivalent_candidate_created": true,
+  "target_equivalent_gate_approved": false,
+  "completion_language_eligible": false,
+  "protected_reference_data_changed": false,
+  "generated_output_changed": true,
+  "implementation_changed": true,
+  "exit_ticket_source_data_changed": true,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/L1.7B-Q2-lead-review-assignment.md",
+    "round1": "reports/sprints/L1.7B-Q2-lead-review-round1.md",
+    "corrections": "reports/sprints/L1.7B-Q2-lead-review-corrections.md",
+    "round2": "reports/sprints/L1.7B-Q2-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "L1.7B-Q2-LR2-F1",
+        "description": "The proof matcher is deterministic text-group matching, not symbolic math parsing or semantic language understanding.",
+        "disposition": "carry_forward",
+        "owner": "GATE-L1.7B-Q2 reviewer",
+        "next_action": "Human review must explicitly decide whether the accepted calculation-work and D31 criteria are sufficient before local paragraph-completion language can be approved.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/L1.7B-Q2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js L1.7B-Q2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-implementation.js",
+      "status": "passed"
+    },
+    {
+      "command": "node node_modules/jest/bin/jest.js --testPathPatterns \"engines/tests/(task-shell|exit-ticket).*\\\\.test\\\\.js\"",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/L1.7B-Q2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js L1.7B-Q2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "carried_flags": [
+    "Deterministic matcher criteria must be reviewed by GATE-L1.7B-Q2 before completion language.",
+    "Completion language remains held: gateApproved false and completionLanguageEligible false.",
+    "Scale Gate 1 remains blocked until GATE-L1.7B-Q2 and REV-STD-1 close or are explicitly waived."
+  ],
+  "authorized_next": [
+    "Prepare GATE-L1.7B-Q2 human-review packet after remote publication.",
+    "Do not start the human interview until the packet and all cited evidence are committed and pushed."
+  ]
+}

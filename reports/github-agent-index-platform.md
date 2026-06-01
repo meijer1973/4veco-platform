@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T05:42:01.872Z
+Generated: 2026-06-01T06:38:48.419Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2479
+Files indexed: 2493
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 341
+Count: 342
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -426,6 +426,7 @@ Count: 341
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
+- build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -517,7 +518,7 @@ Count: 42
 
 ## validators
 
-Count: 159
+Count: 161
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -618,6 +619,7 @@ Count: 159
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
+- build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
@@ -633,6 +635,7 @@ Count: 159
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -681,7 +684,7 @@ Count: 159
 
 ## references
 
-Count: 386
+Count: 387
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -799,6 +802,7 @@ Count: 386
 - references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
+- references/data/sprints/L1.7B-Q2.plan.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
 - references/data/sprints/LEAD-REVIEW-1.result.json
 - references/data/sprints/LEAD-REVIEW-2.plan.json
@@ -1072,7 +1076,7 @@ Count: 386
 
 ## reports
 
-Count: 1339
+Count: 1350
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1980,6 +1984,17 @@ Count: 1339
 - reports/sprints/GRAPH-UX-2-screenshots/mobile-light-113-graph-route-first.png
 - reports/sprints/GRAPH-UX-2-student-experience-review.md
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
+- reports/sprints/L1.7B-Q2-answer-model.md
+- reports/sprints/L1.7B-Q2-baseline.md
+- reports/sprints/L1.7B-Q2-gate-handoff.md
+- reports/sprints/L1.7B-Q2-generated-output-plan.md
+- reports/sprints/L1.7B-Q2-implementation-prep.md
+- reports/sprints/L1.7B-Q2-operation-chain.md
+- reports/sprints/L1.7B-Q2-paragraph-selection.md
+- reports/sprints/L1.7B-Q2-plan.md
+- reports/sprints/L1.7B-Q2-planning-review.md
+- reports/sprints/L1.7B-Q2-source-data-contract.md
+- reports/sprints/L1.7B-Q2-state-metadata-contract.md
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
 - reports/sprints/L2.0-platform-support-result.md

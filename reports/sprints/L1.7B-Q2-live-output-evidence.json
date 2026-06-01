@@ -1,0 +1,86 @@
+{
+  "sprint_id": "L1.7B-Q2",
+  "generated_on": "2026-06-01",
+  "status": "implementation_evidence_captured_no_product_authority",
+  "paragraph": "1.1.2",
+  "paragraph_title": "Percentages en indexcijfers",
+  "source_data": "source-data/book-1/exit-ticket/1.1.2.json",
+  "generated_lesson_root": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+  "local_server": "http://127.0.0.1:56212",
+  "authority": {
+    "target_equivalent_candidate": true,
+    "gate_approved": false,
+    "completion_language_eligible": false,
+    "generated_lesson_output": true,
+    "product_use": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "scale_gate_1": false
+  },
+  "landing_facts": {
+    "title": "1.1.2 Percentages en indexcijfers \u2013 Lesmateriaal",
+    "has_exit_ticket_card": true,
+    "has_short_check_label": false,
+    "has_held_completion_claim": false,
+    "check_card_text": "Exit ticket\n\nMaak de volledige paragraaf-check"
+  },
+  "initial_exit_ticket_facts": {
+    "title": "Percentages en indexcijfers - Exit ticket",
+    "h1": "Exit ticket",
+    "task_count": 4,
+    "calculation_work_capture_count": 3,
+    "short_constructed_response_count": 1,
+    "completion_hidden_before_tasks": true,
+    "has_internal_codes": false,
+    "has_held_completion_claim": false
+  },
+  "completion_facts": {
+    "completion_hidden_after_correct_responses": false,
+    "feedback_count": 4,
+    "retry_count": 0,
+    "completion_text": "Check afgerond\n\nJe hebt deze check afgerond. Bekijk je feedback en bespreek de eindopgave met je docent.\n\nRekenen\nPercentages berekenen\nRekenen\nIndexcijfers gebruiken\nRedeneren\nUitleg bij indexpunten",
+    "has_held_completion_claim": false
+  },
+  "mobile_facts": {
+    "width": 390,
+    "route_visible": true,
+    "h1": "Exit ticket",
+    "has_held_completion_claim": false
+  },
+  "visual_correction": {
+    "issue": "task-shell check buttons used browser-default styling",
+    "fix": "styled .et-task-shell-check in engines/exit-ticket.css",
+    "screenshots_refreshed": true
+  },
+  "round1_correction": {
+    "issue": "lead review found bogus calculation work and contradictory D31 wording could match",
+    "fix": "calculation tasks now require reviewed work-text groups; D31 text criteria use stronger required phrases and rejectText",
+    "adversarial_tests_added": true,
+    "screenshots_refreshed": true
+  },
+  "screenshots": [
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-landing-card.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-initial.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-completion.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-mobile.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-dark.png"
+  ],
+  "validation": [
+    {
+      "command": "node scripts/deploy.js \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "pass"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-implementation.js",
+      "status": "pass"
+    },
+    {
+      "command": "node node_modules\\jest\\bin\\jest.js --testPathPatterns \"engines/tests/(task-shell|exit-ticket).*\\.test\\.js\"",
+      "status": "pass"
+    }
+  ]
+}

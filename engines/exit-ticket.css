@@ -235,6 +235,30 @@ body {
   font-weight: 800;
 }
 
+.et-task-shell-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 14px;
+  border: 1px solid var(--et-primary);
+  border-radius: var(--et-radius);
+  padding: 10px 16px;
+  background: var(--et-primary);
+  color: var(--et-panel);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.et-task-shell-check:hover,
+.et-task-shell-check:focus-visible {
+  border-color: var(--et-primary-strong);
+  background: var(--et-primary-strong);
+  outline: 2px solid color-mix(in srgb, var(--et-focus) 38%, transparent);
+  outline-offset: 2px;
+}
+
 .et-feedback {
   margin-top: 14px;
   border-radius: var(--et-radius);

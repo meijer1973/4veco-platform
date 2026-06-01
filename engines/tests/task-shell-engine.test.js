@@ -207,6 +207,95 @@ describe('TaskShellEngine', () => {
         expect(result.selfCheckCriteria).toHaveLength(3);
     });
 
+    test('supports deterministic calculation work capture when a final answer is reviewed', () => {
+        const calculation = baseTask({
+            id: 'target-equivalent-calculation',
+            family: 'calculation_work_capture',
+            skillLabel: 'Procentuele verandering berekenen',
+            prompt: 'Bereken de procentuele stijging.',
+            interaction: {
+                workLabel: 'Berekening',
+                finalAnswerLabel: 'Eindantwoord'
+            },
+            expected: {
+                kind: 'calculation',
+                finalAnswer: { kind: 'text', accepted: ['15', '15%', '15 procent'] },
+                workRequired: true,
+                requiredWorkText: [
+                    { label: 'new price', any: ['920'] },
+                    { label: 'old price', any: ['800'] },
+                    { label: 'difference', any: ['920 - 800', '120'] },
+                    { label: 'base', any: ['/ 800', 'gedeeld door 800'] }
+                ],
+                criteria: [
+                    'Gebruik nieuw min oud gedeeld door oud.',
+                    'Geef het eindantwoord in procenten.'
+                ]
+            }
+        });
+
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: '(920 - 800) / 800 x 100',
+            finalAnswer: '15%'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: '',
+            finalAnswer: '15%'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: 'ik gok',
+            finalAnswer: '15%'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
+
+    test('supports deterministic short responses with required text groups', () => {
+        const explanation = baseTask({
+            id: 'indexpunten-uitleg',
+            family: 'short_constructed_response',
+            skillLabel: 'Indexpunten kort uitleggen',
+            prompt: 'Leg uit waarom 4 indexpunten geen 4 procent is.',
+            interaction: { inputLabel: 'Korte uitleg' },
+            expected: {
+                kind: 'text_criteria',
+                criteria: [
+                    'Noem indexpunten.',
+                    'Gebruik 108 als basis.',
+                    'Noem ongeveer 3,7 procent.'
+                ],
+                requiredText: [
+                    { label: 'indexpunten', any: ['4 indexpunten'] },
+                    { label: 'basis', any: ['basis is 108', 'gedeeld door 108'] },
+                    { label: 'uitkomst', any: ['3,7 procent', '3.7 procent'] }
+                ],
+                rejectText: ['niet fout', '4 procent is indexpunten']
+            }
+        });
+
+        expect(TaskShellEngine.evaluateTask(explanation, 'Het gaat om 4 indexpunten; de basis is 108, dus het is ongeveer 3,7 procent.')).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(TaskShellEngine.evaluateTask(explanation, 'Het is 4 procent.')).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(TaskShellEngine.evaluateTask(explanation, 'Het is niet fout: 4 procent is indexpunten, 108 en 3,7.')).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
+
     test('keeps all boundary flags false for local practice output', () => {
         const result = TaskShellEngine.evaluateTask(fixtures()[0], '2,5');
         expect(result.boundaryFlags).toEqual(expect.objectContaining({
