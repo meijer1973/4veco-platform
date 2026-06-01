@@ -143,11 +143,11 @@
             },
             {
               "label": "deling door basis",
-              "any": ["162 / 150", "162/150", "gedeeld door 150"]
+              "any": ["162 / 150", "162/150", "162 : 150", "162:150", "gedeeld door 150"]
             },
             {
               "label": "index naar 100",
-              "any": ["x 100", "* 100", "keer 100"]
+              "any": ["x 100", "x100", "* 100", "*100", "keer 100", "maal 100"]
             }
           ]
         },

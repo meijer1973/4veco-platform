@@ -278,6 +278,18 @@ describe('ExitTicketEngine', () => {
         }));
     });
 
+    test('accepts compact task 2 index notation when calculation work is visible', () => {
+        const engine = new ExitTicketEngine({ data: targetData });
+        const result = engine.checkTask('index-naar-waarde', {
+            work: '162/150*100',
+            finalAnswer: '108'
+        });
+        expect(result).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+        }));
+    });
+
     test('does not accept bogus work or contradictory D31 wording as proof-candidate', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         const badWork = engine.checkTask('prijsstijging-procent', {

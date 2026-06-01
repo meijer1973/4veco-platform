@@ -106,6 +106,15 @@ if (progress.proofCandidate !== true) fail('correct 1.1.2 responses must become 
 if (progress.gateApproved !== true) fail('correct 1.1.2 progress must report gateApproved true');
 if (progress.completionLanguageEligible !== true) fail('correct 1.1.2 progress must report completionLanguageEligible true');
 
+const compactTask2Engine = new ExitTicketEngine({ data });
+const compactTask2Result = compactTask2Engine.checkTask('index-naar-waarde', {
+  work: '162/150*100',
+  finalAnswer: '108'
+});
+if (compactTask2Result.matched !== true) {
+  fail('1.1.2 task 2 must accept compact visible work 162/150*100 with final answer 108');
+}
+
 const partialEngine = new ExitTicketEngine({ data });
 partialEngine.checkTask('prijsstijging-procent', { work: '(920 - 800) / 800 x 100', finalAnswer: '15%' });
 if (partialEngine.getProgress().completionLanguageEligible !== false) {
