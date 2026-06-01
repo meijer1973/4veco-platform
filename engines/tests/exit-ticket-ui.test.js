@@ -175,6 +175,42 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met redeneren', href: 'redeneer-spel.html' }
                 }
+            },
+            {
+                id: 'formula-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'formula-task',
+                    family: 'formula_builder',
+                    skillLabel: 'Formule bouwen',
+                    purpose: 'Bouw eerst de formule voordat je gaat rekenen.',
+                    prompt: 'Bouw de formule voor procentuele verandering.',
+                    interaction: {
+                        tokens: [
+                            { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                            { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                            { id: 'keer-100-procent', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                            { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                        ],
+                        separator: ' ',
+                        tokenBankLabel: 'Formuleblokken',
+                        sequenceLabel: 'Opgebouwde formule'
+                    },
+                    expected: {
+                        kind: 'formula_builder',
+                        tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                        acceptedSequences: [
+                            ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
+                        ]
+                    },
+                    feedback: {
+                        matchTitle: 'Formule klopt',
+                        matchText: 'Je kiest de oude waarde als basis.',
+                        retryTitle: 'Controleer de basis',
+                        retryText: 'Bij procentuele verandering deel je door oud.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met rekenen', href: 'wiskundevaardigheden.html' }
+                }
             }
         ]
     };
@@ -269,9 +305,11 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="point_placement"');
         expect(html).toContain('data-task-family="cloze_tile_select"');
         expect(html).toContain('data-task-family="sentence_builder"');
+        expect(html).toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
+        expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -284,5 +322,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleSentenceBuilderClick(app, event)');
         expect(source).toContain('collectSentenceBuilderResponse(wrapper, task)');
         expect(source).toContain("task.family === 'sentence_builder'");
+        expect(source).toContain('handleFormulaBuilderClick(app, event)');
+        expect(source).toContain('collectFormulaBuilderResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'formula_builder'");
     });
 });

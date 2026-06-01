@@ -143,6 +143,16 @@
 .ts-sentence-remove:focus-visible,
 .ts-sentence-clear:hover,
 .ts-sentence-clear:focus-visible,
+.ts-formula-sequence:focus-visible,
+.ts-formula-token:hover,
+.ts-formula-token:focus-visible,
+.ts-formula-item:focus-visible,
+.ts-formula-move:hover,
+.ts-formula-move:focus-visible,
+.ts-formula-remove:hover,
+.ts-formula-remove:focus-visible,
+.ts-formula-clear:hover,
+.ts-formula-clear:focus-visible,
 .ts-input:focus-visible,
 .ts-textarea:focus-visible {
   border-color: var(--ts-focus);
@@ -359,6 +369,103 @@
 }
 
 .ts-sentence-clear {
+  justify-self: start;
+  min-height: 38px;
+  padding: 8px 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ts-formula {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-formula-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 10px;
+  border: 1px dashed var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-success) 5%, var(--ts-panel));
+}
+
+.ts-formula-placeholder {
+  color: var(--ts-muted);
+  font-weight: 700;
+}
+
+.ts-formula-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ts-formula-token,
+.ts-formula-item,
+.ts-formula-clear {
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+}
+
+.ts-formula-token {
+  min-height: 42px;
+  padding: 9px 12px;
+  display: inline-grid;
+  gap: 2px;
+  text-align: left;
+  cursor: pointer;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+.ts-formula-token:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.ts-formula-token-label,
+.ts-formula-item-label {
+  font-weight: 800;
+}
+
+.ts-formula-token-description {
+  color: var(--ts-muted);
+  font-size: 0.9rem;
+  line-height: 1.3;
+  font-family: inherit;
+}
+
+.ts-formula-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 38px;
+  padding: 5px 6px 5px 10px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+.ts-formula-move,
+.ts-formula-remove {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--ts-line);
+  border-radius: calc(var(--ts-radius) - 2px);
+  background: color-mix(in srgb, var(--ts-success) 7%, var(--ts-panel));
+  color: var(--ts-text);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ts-formula-clear {
   justify-self: start;
   min-height: 38px;
   padding: 8px 11px;

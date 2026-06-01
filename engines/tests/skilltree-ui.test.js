@@ -28,6 +28,9 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("task.family === 'sentence_builder'");
         expect(source).toContain('collectSentenceBuilderResponse(root, task)');
         expect(source).toContain('handleSentenceBuilderClick(els.exStepSlot, e)');
+        expect(source).toContain("task.family === 'formula_builder'");
+        expect(source).toContain('collectFormulaBuilderResponse(root, task)');
+        expect(source).toContain('handleFormulaBuilderClick(els.exStepSlot, e)');
     });
 
     test('announces task-shell feedback and preserves keyboard/focus flow', () => {
@@ -39,6 +42,7 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('focusTaskFeedback = true');
         expect(source).toContain('choices[ci].setAttribute(\'aria-pressed\', \'false\')');
         expect(source).toContain('e.target.tagName !== \'TEXTAREA\'');
+        expect(source).toContain("e.target.closest('.ts-formula')");
     });
 
     test('uses student-facing route language without internal codes', () => {

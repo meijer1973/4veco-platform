@@ -240,6 +240,29 @@ function fixtures() {
                     ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
                 ]
             }
+        }),
+        baseTask({
+            id: 'formula-builder',
+            family: 'formula_builder',
+            skillLabel: 'Formule bouwen',
+            prompt: 'Bouw de formule voor procentuele verandering.',
+            interaction: {
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'keer-100-procent', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ],
+                separator: ' ',
+                placeholder: 'Bouw de formule.'
+            },
+            expected: {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                acceptedSequences: [
+                    ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
+                ]
+            }
         })
     ];
 }
@@ -255,6 +278,7 @@ describe('TaskShellEngine', () => {
             'structured_short_response',
             'cloze_tile_select',
             'sentence_builder',
+            'formula_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -280,6 +304,7 @@ describe('TaskShellEngine', () => {
         expect(TaskShellEngine.evaluateTask(tasks[3], 'procent').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[6], { blanks: { indexpunten: 'vier', basis: 'honderdacht' } }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[12], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[13], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[7], 'b').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[8], '149,5').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[9], { x: '20,2', y: '4,1' }).matched).toBe(true);
@@ -619,6 +644,138 @@ describe('TaskShellEngine', () => {
                 kind: 'sentence_builder',
                 tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'],
                 acceptedSequences: [['prijs-stijgt', 'vraag-daalt']]
+            }
+        })).toThrow(/must include expected.tokens/);
+    });
+
+    test('supports formula builder with exact ordered token sequences', () => {
+        const formula = fixtures()[13];
+
+        expect(TaskShellEngine.evaluateTask(formula, {
+            tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(formula, {
+            tokens: ['nieuw-min-oud', 'keer-100-procent', 'delen-door-oud']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(formula, {
+            tokens: ['nieuw-min-oud', 'delen-door-oud']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(formula, {
+            tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent', 'delen-door-nieuw']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(formula, [
+            'nieuw-min-oud',
+            'delen-door-oud',
+            'keer-100-procent'
+        ])).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(formula, {
+            tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+            extra: 'ignored'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.focusPlan(formula)).toEqual([
+            '[data-task-id="formula-builder"][data-formula-token-id]',
+            '[data-task-id="formula-builder"][data-formula-sequence]'
+        ]);
+    });
+
+    test('rejects invalid formula builder schemas before rendering', () => {
+        const formula = fixtures()[13];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            interaction: {
+                ...formula.interaction,
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'nieuw-min-oud', label: 'Dubbel', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'nieuw-min-oud' }
+                ]
+            }
+        })).toThrow(/duplicate formula token id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            interaction: {
+                ...formula.interaction,
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ]
+            }
+        })).toThrow(/category must be a non-empty string/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            interaction: {
+                ...formula.interaction,
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'answer' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ]
+            }
+        })).toThrow(/category must be a formula token category/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            expected: {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'onbekend'],
+                acceptedSequences: [['nieuw-min-oud', 'onbekend']]
+            }
+        })).toThrow(/must match an interaction token/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            interaction: {
+                ...formula.interaction,
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' }
+                ]
+            }
+        })).toThrow(/tokens must include at least one distractor token/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            expected: {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'nieuw-min-oud'],
+                acceptedSequences: [['nieuw-min-oud', 'nieuw-min-oud']]
+            }
+        })).toThrow(/uses token more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...formula,
+            expected: {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                acceptedSequences: [['nieuw-min-oud', 'delen-door-oud']]
             }
         })).toThrow(/must include expected.tokens/);
     });

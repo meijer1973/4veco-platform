@@ -19,6 +19,7 @@
     structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
     cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
+    formula_builder: { label: 'Formule bouwen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -51,6 +52,17 @@
 
   var INTERNAL_CODE_RE = /\b(?:[A-Z]\d{2}|PV|MTU)\b/;
 
+  var FORMULA_TOKEN_CATEGORIES = {
+    numerator: true,
+    denominator: true,
+    operator: true,
+    grouping: true,
+    value: true,
+    variable: true,
+    multiplier: true,
+    notation: true
+  };
+
   var BOUNDARY_FLAGS = {
     diagnostics: false,
     adaptiveRouting: false,
@@ -82,6 +94,10 @@
 
   function optionalString(value, path) {
     if (value != null) requireString(value, path);
+  }
+
+  function optionalSeparator(value, path) {
+    if (value != null) assert(typeof value === 'string' && value.length > 0, path + ' must be a string separator');
   }
 
   function requireArray(value, path, minLength) {
@@ -329,7 +345,7 @@
     if (interaction.allowReuse !== undefined) {
       assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
     }
-    optionalString(interaction.separator, path + '.separator');
+    optionalSeparator(interaction.separator, path + '.separator');
     optionalString(interaction.placeholder, path + '.placeholder');
     optionalString(interaction.tokenBankLabel, path + '.tokenBankLabel');
     optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
@@ -344,6 +360,53 @@
       assert(/^(answer|distractor|neutral)$/.test(token.kind), path + '.tokens[' + idx + '].kind must be answer, distractor, or neutral');
       optionalString(token.description, path + '.tokens[' + idx + '].description');
       assert(!tokenIds[token.id], 'duplicate sentence token id: ' + token.id);
+      tokenIds[token.id] = true;
+      if (token.kind === 'distractor') distractorCount += 1;
+    });
+
+    interaction.tokens.forEach(function (token, idx) {
+      optionalString(token.distractorFor, path + '.tokens[' + idx + '].distractorFor');
+      if (token.distractorFor !== undefined) {
+        assert(tokenIds[token.distractorFor], path + '.tokens[' + idx + '].distractorFor must match an interaction token');
+      }
+    });
+
+    if (distractorCount === 0) {
+      assert(
+        interaction.fixture_only_no_distractor === true && typeof interaction.fixture_only_rationale === 'string' && interaction.fixture_only_rationale.trim(),
+        path + '.tokens must include at least one distractor token'
+      );
+    }
+
+    return {
+      tokenIds: tokenIds,
+      allowReuse: interaction.allowReuse === true
+    };
+  }
+
+  function validateFormulaInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.tokens, path + '.tokens', 2);
+    if (interaction.allowReuse !== undefined) {
+      assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
+    }
+    optionalSeparator(interaction.separator, path + '.separator');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    optionalString(interaction.tokenBankLabel, path + '.tokenBankLabel');
+    optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
+
+    var tokenIds = {};
+    var distractorCount = 0;
+    interaction.tokens.forEach(function (token, idx) {
+      assert(isObject(token), path + '.tokens[' + idx + '] must be an object');
+      requireString(token.id, path + '.tokens[' + idx + '].id');
+      requireString(token.label, path + '.tokens[' + idx + '].label');
+      requireString(token.kind, path + '.tokens[' + idx + '].kind');
+      assert(/^(answer|distractor|neutral)$/.test(token.kind), path + '.tokens[' + idx + '].kind must be answer, distractor, or neutral');
+      requireString(token.category, path + '.tokens[' + idx + '].category');
+      assert(FORMULA_TOKEN_CATEGORIES[token.category], path + '.tokens[' + idx + '].category must be a formula token category');
+      optionalString(token.description, path + '.tokens[' + idx + '].description');
+      assert(!tokenIds[token.id], 'duplicate formula token id: ' + token.id);
       tokenIds[token.id] = true;
       if (token.kind === 'distractor') distractorCount += 1;
     });
@@ -559,6 +622,36 @@
       return;
     }
 
+    if (task.family === 'formula_builder') {
+      assert(expected.kind === 'formula_builder', task.id + '.expected.kind must be formula_builder');
+      requireArray(expected.tokens, task.id + '.expected.tokens', 1);
+      requireArray(expected.acceptedSequences, task.id + '.expected.acceptedSequences', 1);
+      var formulaTokenIds = interactionInfo.tokenIds || {};
+
+      function validateFormulaSequence(sequence, path) {
+        requireArray(sequence, path, 1);
+        var seen = {};
+        sequence.forEach(function (tokenId, idx) {
+          requireString(tokenId, path + '[' + idx + ']');
+          assert(formulaTokenIds[tokenId], path + '[' + idx + '] must match an interaction token');
+          if (!interactionInfo.allowReuse) {
+            assert(!seen[tokenId], path + ' uses token more than once without allowReuse');
+            seen[tokenId] = true;
+          }
+        });
+      }
+
+      validateFormulaSequence(expected.tokens, task.id + '.expected.tokens');
+      var formulaCanonical = expected.tokens.join('\u0001');
+      var formulaIncludesCanonical = false;
+      expected.acceptedSequences.forEach(function (sequence, idx) {
+        validateFormulaSequence(sequence, task.id + '.expected.acceptedSequences[' + idx + ']');
+        if (sequence.join('\u0001') === formulaCanonical) formulaIncludesCanonical = true;
+      });
+      assert(formulaIncludesCanonical, task.id + '.expected.acceptedSequences must include expected.tokens');
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -613,6 +706,8 @@
       interactionInfo = validateClozeInteraction(task, path);
     } else if (task.family === 'sentence_builder') {
       interactionInfo = validateSentenceInteraction(task, path);
+    } else if (task.family === 'formula_builder') {
+      interactionInfo = validateFormulaInteraction(task, path);
     }
 
     return interactionInfo;
@@ -750,6 +845,20 @@
     });
   }
 
+  function formulaBuilderMatches(response, expected) {
+    if (!response || typeof response !== 'object' || !Array.isArray(response.tokens)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'tokens') return false;
+    var tokens = response.tokens;
+    return (expected.acceptedSequences || []).some(function (sequence) {
+      if (!Array.isArray(sequence) || sequence.length !== tokens.length) return false;
+      for (var i = 0; i < sequence.length; i++) {
+        if (normalizeText(tokens[i]) !== normalizeText(sequence[i])) return false;
+      }
+      return true;
+    });
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -788,6 +897,9 @@
     }
     if (task.family === 'sentence_builder' && task.expected.kind === 'sentence_builder') {
       return sentenceBuilderMatches(response, task.expected);
+    }
+    if (task.family === 'formula_builder' && task.expected.kind === 'formula_builder') {
+      return formulaBuilderMatches(response, task.expected);
     }
     return false;
   }
@@ -860,6 +972,12 @@
       return [
         '[data-task-id="' + task.id + '"][data-sentence-token-id]',
         '[data-task-id="' + task.id + '"][data-sentence-sequence]'
+      ];
+    }
+    if (task.family === 'formula_builder') {
+      return [
+        '[data-task-id="' + task.id + '"][data-formula-token-id]',
+        '[data-task-id="' + task.id + '"][data-formula-sequence]'
       ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];

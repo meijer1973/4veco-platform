@@ -202,6 +202,26 @@
     '</div>';
   }
 
+  function renderFormulaBuilder(task) {
+    var tokens = task.interaction.tokens || [];
+    var tokenHtml = tokens.map(function (token) {
+      return '<button type="button" class="ts-formula-token" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-formula-token-id="' + escapeHtml(token.id) + '" data-formula-token-category="' + escapeHtml(token.category || '') + '" aria-pressed="false">' +
+        '<span class="ts-formula-token-label">' + escapeHtml(token.label) + '</span>' +
+        (token.description ? '<span class="ts-formula-token-description">' + escapeHtml(token.description) + '</span>' : '') +
+      '</button>';
+    }).join('');
+    var placeholder = task.interaction.placeholder || 'Bouw de formule met de blokken.';
+    return '<div class="ts-formula" data-formula-task="' + escapeHtml(task.id) + '" data-allow-reuse="' + (task.interaction.allowReuse === true ? 'true' : 'false') + '" data-separator="' + escapeHtml(task.interaction.separator || ' ') + '">' +
+      '<div class="ts-formula-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-formula-sequence aria-label="' + escapeHtml(task.interaction.sequenceLabel || 'Opgebouwde formule') + '">' +
+        '<span class="ts-formula-placeholder">' + escapeHtml(placeholder) + '</span>' +
+      '</div>' +
+      '<div class="ts-formula-bank" role="group" aria-label="' + escapeHtml(task.interaction.tokenBankLabel || 'Formuleblokken') + '">' + tokenHtml + '</div>' +
+      '<button type="button" class="ts-formula-clear" data-task-id="' + escapeHtml(task.id) + '" data-formula-clear aria-label="Opgebouwde formule leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -227,6 +247,8 @@
         return renderClozeTileSelect(task);
       case 'sentence_builder':
         return renderSentenceBuilder(task);
+      case 'formula_builder':
+        return renderFormulaBuilder(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -367,6 +389,55 @@
     return false;
   }
 
+  function collectFormulaBuilderResponse(rootEl, task) {
+    if (!rootEl || !task) return { tokens: [] };
+    var tokens = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-formula-selected-token-id]');
+    for (var i = 0; i < controls.length; i++) {
+      tokens.push(controls[i].getAttribute('data-formula-selected-token-id') || '');
+    }
+    return { tokens: tokens };
+  }
+
+  function handleFormulaBuilderClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var formula = event.target.closest('.ts-formula');
+    if (!formula || !rootEl.contains(formula)) return false;
+
+    var token = event.target.closest('.ts-formula-token');
+    var remove = event.target.closest('.ts-formula-remove');
+    var move = event.target.closest('.ts-formula-move');
+    var clear = event.target.closest('.ts-formula-clear');
+    var sequence = formula.querySelector('[data-formula-sequence]');
+
+    if (token) {
+      if (token.disabled || !sequence) return true;
+      addFormulaToken(formula, sequence, token);
+      updateFormulaAvailability(formula);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-formula-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateFormulaPlaceholder(formula);
+      updateFormulaAvailability(formula);
+      focusElement(nextFocus || sequence);
+      return true;
+    }
+    if (move) {
+      moveFormulaItem(formula, move);
+      return true;
+    }
+    if (clear) {
+      clearFormula(formula);
+      updateFormulaAvailability(formula);
+      focusElement(sequence);
+      return true;
+    }
+    return false;
+  }
+
   function addSentenceToken(sentence, sequence, token) {
     var tokenId = token.getAttribute('data-sentence-token-id') || '';
     var label = sentenceTokenText(token);
@@ -390,11 +461,44 @@
     focusElement(item);
   }
 
+  function addFormulaToken(formula, sequence, token) {
+    var tokenId = token.getAttribute('data-formula-token-id') || '';
+    var label = formulaTokenText(token);
+    var item = document.createElement('span');
+    item.className = 'ts-formula-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', token.getAttribute('data-task-id') || '');
+    item.setAttribute('data-formula-selected-token-id', tokenId);
+    item.setAttribute('tabindex', '-1');
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-formula-item-label';
+    labelEl.textContent = label;
+
+    item.appendChild(labelEl);
+    item.appendChild(formulaButton('ts-formula-move', 'left', 'Naar links', '\u2039'));
+    item.appendChild(formulaButton('ts-formula-move', 'right', 'Naar rechts', '\u203a'));
+    item.appendChild(formulaButton('ts-formula-remove', '', 'Verwijder formuleblok ' + label, '\u00d7'));
+    sequence.appendChild(item);
+    updateFormulaPlaceholder(formula);
+    focusElement(item);
+  }
+
   function sentenceButton(className, direction, label, text) {
     var button = document.createElement('button');
     button.type = 'button';
     button.className = className;
     if (direction) button.setAttribute('data-sentence-move', direction);
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
+  }
+
+  function formulaButton(className, direction, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    if (direction) button.setAttribute('data-formula-move', direction);
     button.setAttribute('aria-label', label);
     button.textContent = text;
     return button;
@@ -417,6 +521,23 @@
     focusElement(item);
   }
 
+  function moveFormulaItem(formula, button) {
+    var item = button.closest('.ts-formula-item');
+    if (!item || !item.parentNode) return;
+    var direction = button.getAttribute('data-formula-move');
+    if (direction === 'left') {
+      var previous = item.previousElementSibling;
+      if (previous && !previous.classList.contains('ts-formula-placeholder')) {
+        item.parentNode.insertBefore(item, previous);
+      }
+    } else if (direction === 'right') {
+      var next = item.nextElementSibling;
+      if (next) item.parentNode.insertBefore(next, item);
+    }
+    updateFormulaPlaceholder(formula);
+    focusElement(item);
+  }
+
   function clearSentence(sentence) {
     var items = sentence.querySelectorAll('.ts-sentence-item');
     for (var i = 0; i < items.length; i++) {
@@ -425,10 +546,24 @@
     updateSentencePlaceholder(sentence);
   }
 
+  function clearFormula(formula) {
+    var items = formula.querySelectorAll('.ts-formula-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+    updateFormulaPlaceholder(formula);
+  }
+
   function updateSentencePlaceholder(sentence) {
     var placeholder = sentence.querySelector('.ts-sentence-placeholder');
     if (!placeholder) return;
     placeholder.hidden = sentence.querySelectorAll('.ts-sentence-item').length > 0;
+  }
+
+  function updateFormulaPlaceholder(formula) {
+    var placeholder = formula.querySelector('.ts-formula-placeholder');
+    if (!placeholder) return;
+    placeholder.hidden = formula.querySelectorAll('.ts-formula-item').length > 0;
   }
 
   function updateSentenceAvailability(sentence) {
@@ -449,8 +584,31 @@
     }
   }
 
+  function updateFormulaAvailability(formula) {
+    var allowReuse = formula.getAttribute('data-allow-reuse') === 'true';
+    var used = {};
+    var items = formula.querySelectorAll('.ts-formula-item');
+    for (var i = 0; i < items.length; i++) {
+      var tokenId = items[i].getAttribute('data-formula-selected-token-id');
+      if (tokenId) used[tokenId] = true;
+    }
+    var tokens = formula.querySelectorAll('.ts-formula-token');
+    for (var j = 0; j < tokens.length; j++) {
+      var id = tokens[j].getAttribute('data-formula-token-id');
+      var unavailable = !allowReuse && Boolean(used[id]);
+      tokens[j].disabled = unavailable;
+      tokens[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      tokens[j].setAttribute('aria-pressed', unavailable ? 'true' : 'false');
+    }
+  }
+
   function sentenceTokenText(token) {
     var label = token.querySelector('.ts-sentence-token-label');
+    return label ? label.textContent : token.textContent;
+  }
+
+  function formulaTokenText(token) {
+    var label = token.querySelector('.ts-formula-token-label');
     return label ? label.textContent : token.textContent;
   }
 
@@ -532,6 +690,8 @@
     handleClozeTileClick: handleClozeTileClick,
     collectSentenceBuilderResponse: collectSentenceBuilderResponse,
     handleSentenceBuilderClick: handleSentenceBuilderClick,
+    collectFormulaBuilderResponse: collectFormulaBuilderResponse,
+    handleFormulaBuilderClick: handleFormulaBuilderClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

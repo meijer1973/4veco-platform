@@ -474,6 +474,9 @@
     if (task.family === "sentence_builder" && window.TaskShellUI && window.TaskShellUI.collectSentenceBuilderResponse) {
       return window.TaskShellUI.collectSentenceBuilderResponse(rootEl, task);
     }
+    if (task.family === "formula_builder" && window.TaskShellUI && window.TaskShellUI.collectFormulaBuilderResponse) {
+      return window.TaskShellUI.collectFormulaBuilderResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -501,6 +504,11 @@
     rootEl.querySelectorAll(".ts-sentence").forEach(function (sentence) {
       sentence.addEventListener("click", function (event) {
         window.TaskShellUI.handleSentenceBuilderClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-formula").forEach(function (formula) {
+      formula.addEventListener("click", function (event) {
+        window.TaskShellUI.handleFormulaBuilderClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.46-sentence-builder-runtime` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-SENTENCE-1 closed PASS WITH FLAGS as the second constrained construction runtime implementation. `cloze_tile_select` and `sentence_builder` now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next construction implementation lane is TASK-FAMILY-FORMULA-1, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver. |
+| References Team Roadmap | `v3.47-formula-builder-runtime` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-FORMULA-1 closed PASS WITH FLAGS as the third constrained construction runtime implementation. `cloze_tile_select`, `sentence_builder`, and `formula_builder` now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next implementation lane is TASK-FAMILY-CLOZE-1 or GAME-ROUTE-AFFORDANCE-1 depending on priority, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before formula builder runtime implementation | `v3.46-sentence-builder-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.46-sentence-builder-runtime.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before sentence builder runtime implementation | `v3.45-cloze-tile-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.45-cloze-tile-runtime.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before cloze tile runtime implementation | `v3.44-task-family-contracts` | `docs/roadmaps/outdated/reference-team-roadmap-v3.44-task-family-contracts.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before task-family contract closures | `v3.43-construction-task-families` | `docs/roadmaps/outdated/reference-team-roadmap-v3.43-construction-task-families.md` | `references/reference-team-roadmap.md` |

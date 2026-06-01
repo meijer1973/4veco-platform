@@ -112,6 +112,24 @@ function data() {
                     ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
                 ]
             }),
+            task('formula-builder', 'formula_builder', {
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'keer-100-procent', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ],
+                separator: ' ',
+                placeholder: 'Bouw de formule.',
+                tokenBankLabel: 'Formuleblokken',
+                sequenceLabel: 'Opgebouwde formule'
+            }, {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                acceptedSequences: [
+                    ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
+                ]
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -133,6 +151,7 @@ describe('TaskShellUI', () => {
             'structured_short_response',
             'cloze_tile_select',
             'sentence_builder',
+            'formula_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -168,6 +187,11 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-sentence-sequence');
         expect(html).toContain('role="group" aria-label="Fragmentbank"');
+        expect(html).toContain('class="ts-formula"');
+        expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
+        expect(html).toContain('data-formula-token-category="denominator"');
+        expect(html).toContain('data-formula-sequence');
+        expect(html).toContain('role="group" aria-label="Formuleblokken"');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -200,6 +224,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Kort antwoord in stappen');
         expect(html).toContain('Invullen met tegels');
         expect(html).toContain('Zin bouwen');
+        expect(html).toContain('Formule bouwen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -237,6 +262,15 @@ describe('TaskShellUI', () => {
         expect(TaskShellEngine.focusPlan(data().tasks[7])).toEqual([
             '[data-task-id="sentence-builder"][data-sentence-token-id]',
             '[data-task-id="sentence-builder"][data-sentence-sequence]'
+        ]);
+    });
+
+    test('exports formula builder helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectFormulaBuilderResponse).toBe('function');
+        expect(typeof TaskShellUI.handleFormulaBuilderClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[8])).toEqual([
+            '[data-task-id="formula-builder"][data-formula-token-id]',
+            '[data-task-id="formula-builder"][data-formula-sequence]'
         ]);
     });
 
