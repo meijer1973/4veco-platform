@@ -138,6 +138,50 @@
     '</div>';
   }
 
+  function blankMeta(task, blankId) {
+    var blanks = task.interaction.blanks || [];
+    for (var i = 0; i < blanks.length; i++) {
+      if (blanks[i].id === blankId) return blanks[i];
+    }
+    return { id: blankId, label: blankId };
+  }
+
+  function renderClozeBlank(task, blankId) {
+    var blank = blankMeta(task, blankId);
+    var placeholder = blank.placeholder || 'Kies tegel';
+    return '<span class="ts-cloze-slot">' +
+      '<button type="button" class="ts-cloze-blank" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-cloze-blank-id="' + escapeHtml(blankId) + '" data-selected-tile="" ' +
+        'data-cloze-label="' + escapeHtml(blank.label) + '" data-cloze-placeholder="' + escapeHtml(placeholder) + '" ' +
+        'aria-label="' + escapeHtml(blank.label + ': nog leeg') + '">' +
+        '<span class="ts-cloze-blank-text">' + escapeHtml(placeholder) + '</span>' +
+      '</button>' +
+      '<button type="button" class="ts-cloze-clear" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-cloze-clear-id="' + escapeHtml(blankId) + '" aria-label="' + escapeHtml(blank.label + ' leegmaken') + '" hidden>&times;</button>' +
+    '</span>';
+  }
+
+  function renderClozeTileSelect(task) {
+    var segments = task.interaction.segments || [];
+    var tiles = task.interaction.tiles || [];
+    var line = segments.map(function (segment) {
+      if (segment.type === 'blank') return renderClozeBlank(task, segment.blankId);
+      return '<span class="ts-cloze-text">' + escapeHtml(segment.text) + '</span>';
+    }).join('');
+    var tileHtml = tiles.map(function (tile) {
+      return '<button type="button" class="ts-cloze-tile" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-cloze-tile-id="' + escapeHtml(tile.id) + '" aria-pressed="false">' +
+        '<span class="ts-cloze-tile-label">' + escapeHtml(tile.label) + '</span>' +
+        (tile.description ? '<span class="ts-cloze-tile-description">' + escapeHtml(tile.description) + '</span>' : '') +
+      '</button>';
+    }).join('');
+    return '<div class="ts-cloze" data-cloze-task="' + escapeHtml(task.id) + '" data-allow-reuse="' + (task.interaction.allowReuse === true ? 'true' : 'false') + '">' +
+      '<p class="ts-cloze-line">' + line + '</p>' +
+      '<div class="ts-cloze-bank" role="group" aria-label="' + escapeHtml(task.interaction.tileBankLabel || 'Tegelbank') + '">' + tileHtml + '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -159,6 +203,8 @@
         return renderTextArea(task, 'answer') + renderCriteria(task);
       case 'structured_short_response':
         return renderStructuredShortResponse(task);
+      case 'cloze_tile_select':
+        return renderClozeTileSelect(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -205,8 +251,127 @@
     '</div>';
   }
 
+  function collectClozeTileResponse(rootEl, task) {
+    if (!rootEl || !task) return { blanks: {} };
+    var blanks = {};
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-cloze-blank-id]');
+    for (var i = 0; i < controls.length; i++) {
+      blanks[controls[i].getAttribute('data-cloze-blank-id')] = controls[i].getAttribute('data-selected-tile') || '';
+    }
+    return { blanks: blanks };
+  }
+
+  function handleClozeTileClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var clear = event.target.closest('.ts-cloze-clear');
+    var blank = event.target.closest('.ts-cloze-blank');
+    var tile = event.target.closest('.ts-cloze-tile');
+    var cloze = event.target.closest('.ts-cloze');
+    if (!cloze || !rootEl.contains(cloze)) return false;
+
+    if (tile) {
+      if (tile.disabled) return true;
+      setSelectedTile(cloze, tile);
+      return true;
+    }
+    if (clear) {
+      var blankId = clear.getAttribute('data-cloze-clear-id');
+      var blankToClear = cloze.querySelector('[data-cloze-blank-id="' + cssEscape(blankId) + '"]');
+      if (blankToClear) {
+        setBlankValue(blankToClear, '', '');
+        updateTileAvailability(cloze);
+        focusElement(blankToClear);
+      }
+      return true;
+    }
+    if (blank) {
+      var selected = cloze.querySelector('.ts-cloze-tile.selected');
+      if (!selected) return true;
+      setBlankValue(blank, selected.getAttribute('data-cloze-tile-id'), selectedText(selected));
+      clearSelectedTile(cloze);
+      updateTileAvailability(cloze);
+      focusElement(blank);
+      return true;
+    }
+    return false;
+  }
+
+  function setSelectedTile(cloze, tile) {
+    var tiles = cloze.querySelectorAll('.ts-cloze-tile');
+    for (var i = 0; i < tiles.length; i++) {
+      tiles[i].classList.remove('selected');
+      tiles[i].setAttribute('aria-pressed', 'false');
+    }
+    tile.classList.add('selected');
+    tile.setAttribute('aria-pressed', 'true');
+  }
+
+  function clearSelectedTile(cloze) {
+    var selected = cloze.querySelectorAll('.ts-cloze-tile.selected');
+    for (var i = 0; i < selected.length; i++) {
+      selected[i].classList.remove('selected');
+      selected[i].setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  function setBlankValue(blank, tileId, tileLabel) {
+    var label = blank.getAttribute('data-cloze-label') || 'Invulling';
+    var placeholder = blank.getAttribute('data-cloze-placeholder') || 'Kies tegel';
+    var text = blank.querySelector('.ts-cloze-blank-text');
+    blank.setAttribute('data-selected-tile', tileId || '');
+    if (tileId) {
+      blank.classList.add('is-filled');
+      blank.setAttribute('aria-label', label + ': ' + tileLabel);
+      if (text) text.textContent = tileLabel;
+    } else {
+      blank.classList.remove('is-filled');
+      blank.setAttribute('aria-label', label + ': nog leeg');
+      if (text) text.textContent = placeholder;
+    }
+    var clear = blank.parentNode ? blank.parentNode.querySelector('.ts-cloze-clear') : null;
+    if (clear) clear.hidden = !tileId;
+  }
+
+  function selectedText(tile) {
+    var label = tile.querySelector('.ts-cloze-tile-label');
+    return label ? label.textContent : tile.textContent;
+  }
+
+  function updateTileAvailability(cloze) {
+    var allowReuse = cloze.getAttribute('data-allow-reuse') === 'true';
+    if (allowReuse) return;
+    var used = {};
+    var blanks = cloze.querySelectorAll('.ts-cloze-blank');
+    for (var i = 0; i < blanks.length; i++) {
+      var tileId = blanks[i].getAttribute('data-selected-tile');
+      if (tileId) used[tileId] = true;
+    }
+    var tiles = cloze.querySelectorAll('.ts-cloze-tile');
+    for (var j = 0; j < tiles.length; j++) {
+      var id = tiles[j].getAttribute('data-cloze-tile-id');
+      var unavailable = Boolean(used[id]);
+      tiles[j].disabled = unavailable;
+      tiles[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      if (unavailable) {
+        tiles[j].classList.remove('selected');
+        tiles[j].setAttribute('aria-pressed', 'false');
+      }
+    }
+  }
+
+  function focusElement(el) {
+    if (el && typeof el.focus === 'function') el.focus({ preventScroll: true });
+  }
+
+  function cssEscape(value) {
+    if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(value);
+    return String(value).replace(/"/g, '\\"');
+  }
+
   return {
     escapeHtml: escapeHtml,
+    collectClozeTileResponse: collectClozeTileResponse,
+    handleClozeTileClick: handleClozeTileClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

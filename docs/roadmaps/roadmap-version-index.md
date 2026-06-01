@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.44-task-family-contracts` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-CHOICE-1 and TASK-FAMILY-CONSTRUCT-1 closed no-implementation contracts for structured choice and constrained construction families. The next Product Proof Track sprint is TASK-FAMILY-CLOZE-TILE-1, followed by sentence_builder and formula_builder implementation lanes. Scale Gate 1 remains blocked until GATE-PRODUCT-3P, REV-STD-1, and the required task-family review close or receive explicit human waiver. |
+| References Team Roadmap | `v3.45-cloze-tile-runtime` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-CLOZE-TILE-1 closed PASS WITH FLAGS as the first constrained construction runtime implementation. `cloze_tile_select` now exists in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next construction implementation lanes are TASK-FAMILY-SENTENCE-1 and TASK-FAMILY-FORMULA-1, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before cloze tile runtime implementation | `v3.44-task-family-contracts` | `docs/roadmaps/outdated/reference-team-roadmap-v3.44-task-family-contracts.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before task-family contract closures | `v3.43-construction-task-families` | `docs/roadmaps/outdated/reference-team-roadmap-v3.43-construction-task-families.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before constrained construction task-family track | `v3.42-structured-choice-task-families` | `docs/roadmaps/outdated/reference-team-roadmap-v3.42-structured-choice-task-families.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before structured choice task-family track | `v3.41-standard-exercises1-coverage` | `docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md` | `references/reference-team-roadmap.md` |

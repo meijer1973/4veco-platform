@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-CLOZE-TILE-1",
+  "family": "cloze_tile_select",
+  "generated": "2026-06-01",
+  "runtime_contract": {
+    "response_shape": "{ blanks: { [blankId]: tileId } }",
+    "expected_shape": "{ kind: 'cloze_tile_select', blanks: { [blankId]: tileId } }",
+    "interaction_shape": [
+      "segments",
+      "blanks",
+      "tiles",
+      "allowReuse"
+    ],
+    "allow_reuse_default": false,
+    "distractor_required": true
+  },
+  "validated_behaviors": [
+    "first-class deterministic task-shell family declared",
+    "inline segments and blank ids validate before rendering",
+    "tile ids validate before matching",
+    "unknown blank or tile references are rejected",
+    "duplicate tile reuse is rejected by default",
+    "correct blank-to-tile mapping matches",
+    "missing or distractor-filled blanks retry",
+    "rendered output exposes inline blanks, tile bank, clear controls, and one feedback region"
+  ],
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "rendered_fixture": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-rendered-fixture.html",
+  "boundary_flags": {
+    "generated_lesson_output_changed": false,
+    "source_exit_ticket_data_changed": false,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "candidate_storage_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery_or_sequencing": false,
+    "summative_use": false,
+    "pv_or_scale_gate": false,
+    "product_wide_use": false
+  },
+  "follow_up_required_before_reliance": [
+    "rendered product route review before use in generated lesson output",
+    "target-equivalent review before exit-ticket proof use",
+    "future task adoption in practice or advisory-check sprints",
+    "GATE-TASK-FAMILY-1 before task-family reliance in product proof"
+  ]
+}

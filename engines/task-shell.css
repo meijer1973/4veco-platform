@@ -127,6 +127,12 @@
 
 .ts-choice:hover,
 .ts-choice:focus-visible,
+.ts-cloze-blank:hover,
+.ts-cloze-blank:focus-visible,
+.ts-cloze-clear:hover,
+.ts-cloze-clear:focus-visible,
+.ts-cloze-tile:hover,
+.ts-cloze-tile:focus-visible,
 .ts-input:focus-visible,
 .ts-textarea:focus-visible {
   border-color: var(--ts-focus);
@@ -160,6 +166,98 @@
 .ts-choice-body span {
   color: var(--ts-muted);
   line-height: 1.4;
+}
+
+.ts-cloze {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-cloze-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.ts-cloze-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+.ts-cloze-blank,
+.ts-cloze-clear,
+.ts-cloze-tile {
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.ts-cloze-blank {
+  min-width: 96px;
+  min-height: 38px;
+  padding: 7px 10px;
+  border-style: dashed;
+  font-weight: 800;
+}
+
+.ts-cloze-blank.is-filled {
+  border-style: solid;
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 12%, var(--ts-panel));
+}
+
+.ts-cloze-clear {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.ts-cloze-clear[hidden] {
+  display: none;
+}
+
+.ts-cloze-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ts-cloze-tile {
+  min-height: 42px;
+  padding: 9px 12px;
+  display: inline-grid;
+  gap: 2px;
+  text-align: left;
+}
+
+.ts-cloze-tile.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 12%, var(--ts-panel));
+}
+
+.ts-cloze-tile:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.ts-cloze-tile-label {
+  font-weight: 800;
+}
+
+.ts-cloze-tile-description {
+  color: var(--ts-muted);
+  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .ts-field {

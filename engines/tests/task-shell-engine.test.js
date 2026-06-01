@@ -124,6 +124,37 @@ function fixtures() {
             }
         }),
         baseTask({
+            id: 'cloze-tiles',
+            family: 'cloze_tile_select',
+            skillLabel: 'Indexpunten invullen',
+            prompt: 'Vul de ontbrekende stappen in.',
+            interaction: {
+                segments: [
+                    { type: 'text', text: 'De stijging is ' },
+                    { type: 'blank', blankId: 'indexpunten' },
+                    { type: 'text', text: ' indexpunten en je deelt door ' },
+                    { type: 'blank', blankId: 'basis' },
+                    { type: 'text', text: '.' }
+                ],
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'basis', label: 'Basis voor procentuele stijging' }
+                ],
+                tiles: [
+                    { id: 'vier', label: '4', kind: 'answer' },
+                    { id: 'honderdacht', label: '108', kind: 'answer' },
+                    { id: 'vier-procent', label: '4%', kind: 'distractor', distractorFor: 'indexpunten' }
+                ]
+            },
+            expected: {
+                kind: 'cloze_tile_select',
+                blanks: {
+                    indexpunten: 'vier',
+                    basis: 'honderdacht'
+                }
+            }
+        }),
+        baseTask({
             id: 'table-value',
             family: 'table_value_selection',
             skillLabel: 'Tabelwaarde kiezen',
@@ -199,6 +230,7 @@ describe('TaskShellEngine', () => {
             'unit_notation_field',
             'short_constructed_response',
             'structured_short_response',
+            'cloze_tile_select',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -222,9 +254,10 @@ describe('TaskShellEngine', () => {
         }));
         expect(TaskShellEngine.evaluateTask(tasks[2], '2.5%').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[3], 'procent').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[6], 'b').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[7], '149,5').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[8], { x: '20,2', y: '4,1' }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[6], { blanks: { indexpunten: 'vier', basis: 'honderdacht' } }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[7], 'b').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[8], '149,5').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[9], { x: '20,2', y: '4,1' }).matched).toBe(true);
     });
 
     test('uses self-check state for work capture and constructed responses', () => {
@@ -428,6 +461,94 @@ describe('TaskShellEngine', () => {
             state: 'retry',
             matched: false
         }));
+    });
+
+    test('supports cloze tile selection with exact blank-to-tile mapping', () => {
+        const cloze = fixtures()[6];
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: 'vier',
+                basis: 'honderdacht'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: 'vier-procent',
+                basis: 'honderdacht'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: 'vier'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            indexpunten: 'vier',
+            basis: 'honderdacht'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
+
+    test('rejects invalid cloze tile schemas before rendering', () => {
+        const cloze = fixtures()[6];
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            interaction: {
+                ...cloze.interaction,
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'indexpunten', label: 'Dubbel' }
+                ]
+            }
+        })).toThrow(/duplicate cloze blank id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            expected: {
+                kind: 'cloze_tile_select',
+                blanks: {
+                    indexpunten: 'onbekend',
+                    basis: 'honderdacht'
+                }
+            }
+        })).toThrow(/must match an interaction tile/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            interaction: {
+                ...cloze.interaction,
+                tiles: [
+                    { id: 'vier', label: '4', kind: 'answer' },
+                    { id: 'honderdacht', label: '108', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must include at least one distractor/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            expected: {
+                kind: 'cloze_tile_select',
+                blanks: {
+                    indexpunten: 'vier',
+                    basis: 'vier'
+                }
+            }
+        })).toThrow(/uses tile more than once/);
     });
 
     test('keeps all boundary flags false for local practice output', () => {

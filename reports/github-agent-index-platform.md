@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T14:47:34.396Z
+Generated: 2026-06-01T15:46:23.316Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2618
+Files indexed: 2647
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 351
+Count: 353
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -447,6 +447,8 @@ Count: 351
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
+- build-scripts/sprints/check-task-family-choice1-contract.js
+- build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -527,7 +529,7 @@ Count: 42
 
 ## validators
 
-Count: 183
+Count: 185
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -648,6 +650,8 @@ Count: 183
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
+- build-scripts/sprints/check-task-family-choice1-contract.js
+- build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
@@ -715,7 +719,7 @@ Count: 183
 
 ## references
 
-Count: 402
+Count: 406
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1039,6 +1043,10 @@ Count: 402
 - references/data/sprints/SYNC-4.result.json
 - references/data/sprints/SYNC-PRODUCT-1.plan.json
 - references/data/sprints/SYNC-PRODUCT-1.result.json
+- references/data/sprints/TASK-FAMILY-CHOICE-1.plan.json
+- references/data/sprints/TASK-FAMILY-CHOICE-1.result.json
+- references/data/sprints/TASK-FAMILY-CONSTRUCT-1.plan.json
+- references/data/sprints/TASK-FAMILY-CONSTRUCT-1.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
@@ -1122,7 +1130,7 @@ Count: 402
 
 ## reports
 
-Count: 1447
+Count: 1469
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1179,6 +1187,8 @@ Count: 1447
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
 - reports/json/standard-exercise-family-coverage.json
+- reports/json/task-family-choice-contract.json
+- reports/json/task-family-construction-contract.json
 - reports/json/task-shell-ux2-proof.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
@@ -2548,6 +2558,26 @@ Count: 1447
 - reports/sprints/SYNC-PRODUCT-1-plan.md
 - reports/sprints/SYNC-PRODUCT-1-planning-review.md
 - reports/sprints/SYNC-PRODUCT-1-result.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-baseline.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-contract.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-plan.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-planning-review.md
+- reports/sprints/TASK-FAMILY-CHOICE-1-result.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-baseline.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-contract.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-plan.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-planning-review.md
+- reports/sprints/TASK-FAMILY-CONSTRUCT-1-result.md
 - reports/sprints/TASK-SHELL-UX-2-baseline.md
 - reports/sprints/TASK-SHELL-UX-2-diff-summary.md
 - reports/sprints/TASK-SHELL-UX-2-lead-review-assignment.md
@@ -2592,7 +2622,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 279
+Count: 280
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2729,6 +2759,7 @@ Count: 279
 - docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.42-structured-choice-task-families.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.43-construction-task-families.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

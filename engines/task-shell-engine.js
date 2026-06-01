@@ -17,6 +17,7 @@
     unit_notation_field: { label: 'Eenheid/notatie', deterministic: true },
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
     structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
+    cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -157,6 +158,17 @@
         push(field.label);
         push(field.placeholder);
       });
+      (task.interaction.segments || []).forEach(function (segment) {
+        push(segment.text);
+      });
+      (task.interaction.blanks || []).forEach(function (blank) {
+        push(blank.label);
+        push(blank.placeholder);
+      });
+      (task.interaction.tiles || []).forEach(function (tile) {
+        push(tile.label);
+        push(tile.description);
+      });
       push(task.interaction.rows);
       push(task.interaction.columns);
       (task.interaction.options || []).forEach(function (option) {
@@ -238,6 +250,74 @@
     return ids;
   }
 
+  function validateClozeInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.blanks, path + '.blanks', 1);
+    requireArray(interaction.tiles, path + '.tiles', 2);
+    requireArray(interaction.segments, path + '.segments', 1);
+    if (interaction.allowReuse !== undefined) {
+      assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
+    }
+
+    var blankIds = {};
+    interaction.blanks.forEach(function (blank, idx) {
+      assert(isObject(blank), path + '.blanks[' + idx + '] must be an object');
+      requireString(blank.id, path + '.blanks[' + idx + '].id');
+      requireString(blank.label, path + '.blanks[' + idx + '].label');
+      optionalString(blank.placeholder, path + '.blanks[' + idx + '].placeholder');
+      assert(!blankIds[blank.id], 'duplicate cloze blank id: ' + blank.id);
+      blankIds[blank.id] = true;
+    });
+
+    var segmentBlankRefs = {};
+    interaction.segments.forEach(function (segment, idx) {
+      assert(isObject(segment), path + '.segments[' + idx + '] must be an object');
+      requireString(segment.type, path + '.segments[' + idx + '].type');
+      if (segment.type === 'text') {
+        requireString(segment.text, path + '.segments[' + idx + '].text');
+        return;
+      }
+      assert(segment.type === 'blank', path + '.segments[' + idx + '].type must be text or blank');
+      requireString(segment.blankId, path + '.segments[' + idx + '].blankId');
+      assert(blankIds[segment.blankId], path + '.segments[' + idx + '].blankId must match an interaction blank');
+      segmentBlankRefs[segment.blankId] = true;
+    });
+    Object.keys(blankIds).forEach(function (blankId) {
+      assert(segmentBlankRefs[blankId], path + '.segments must include blank ' + blankId);
+    });
+
+    var tileIds = {};
+    var distractorCount = 0;
+    interaction.tiles.forEach(function (tile, idx) {
+      assert(isObject(tile), path + '.tiles[' + idx + '] must be an object');
+      requireString(tile.id, path + '.tiles[' + idx + '].id');
+      requireString(tile.label, path + '.tiles[' + idx + '].label');
+      requireString(tile.kind, path + '.tiles[' + idx + '].kind');
+      assert(/^(answer|distractor|neutral)$/.test(tile.kind), path + '.tiles[' + idx + '].kind must be answer, distractor, or neutral');
+      optionalString(tile.description, path + '.tiles[' + idx + '].description');
+      optionalString(tile.distractorFor, path + '.tiles[' + idx + '].distractorFor');
+      if (tile.distractorFor !== undefined) {
+        assert(blankIds[tile.distractorFor], path + '.tiles[' + idx + '].distractorFor must match an interaction blank');
+      }
+      assert(!tileIds[tile.id], 'duplicate cloze tile id: ' + tile.id);
+      tileIds[tile.id] = true;
+      if (tile.kind === 'distractor') distractorCount += 1;
+    });
+
+    if (distractorCount === 0) {
+      assert(
+        interaction.fixture_only_no_distractor === true && typeof interaction.fixture_only_rationale === 'string' && interaction.fixture_only_rationale.trim(),
+        path + '.tiles must include at least one distractor tile'
+      );
+    }
+
+    return {
+      blankIds: blankIds,
+      tileIds: tileIds,
+      allowReuse: interaction.allowReuse === true
+    };
+  }
+
   function validateStructuredFields(fields, path) {
     requireArray(fields, path, 1);
     var ids = {};
@@ -269,7 +349,9 @@
     }
   }
 
-  function validateExpected(task, optionIds) {
+  function validateExpected(task, interactionInfo) {
+    interactionInfo = interactionInfo || {};
+    var optionIds = interactionInfo.optionIds || {};
     var expected = task.expected;
     assert(isObject(expected), task.id + '.expected is required');
     requireString(expected.kind, task.id + '.expected.kind');
@@ -277,7 +359,7 @@
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       assert(expected.kind === 'choice', task.id + '.expected.kind must be choice');
       requireString(expected.value, task.id + '.expected.value');
-      assert(optionIds && optionIds[expected.value], task.id + '.expected.value must match an option id');
+      assert(optionIds[expected.value], task.id + '.expected.value must match an option id');
       return;
     }
 
@@ -368,8 +450,32 @@
       if (expected.choice !== undefined) {
         assert(isObject(expected.choice), task.id + '.expected.choice must be an object');
         requireString(expected.choice.value, task.id + '.expected.choice.value');
-        assert(optionIds && optionIds[expected.choice.value], task.id + '.expected.choice.value must match an option id');
+        assert(optionIds[expected.choice.value], task.id + '.expected.choice.value must match an option id');
       }
+      return;
+    }
+
+    if (task.family === 'cloze_tile_select') {
+      assert(expected.kind === 'cloze_tile_select', task.id + '.expected.kind must be cloze_tile_select');
+      assert(isObject(expected.blanks), task.id + '.expected.blanks must be an object');
+      var expectedBlankIds = Object.keys(expected.blanks);
+      var interactionBlankIds = interactionInfo.blankIds || {};
+      var interactionTileIds = interactionInfo.tileIds || {};
+      var actualBlankIds = Object.keys(interactionBlankIds);
+      assert(expectedBlankIds.length === actualBlankIds.length, task.id + '.expected.blanks must match all interaction blanks');
+      var seenTiles = {};
+      actualBlankIds.forEach(function (blankId) {
+        assert(Object.prototype.hasOwnProperty.call(expected.blanks, blankId), task.id + '.expected.blanks missing ' + blankId);
+        requireString(expected.blanks[blankId], task.id + '.expected.blanks.' + blankId);
+        assert(interactionTileIds[expected.blanks[blankId]], task.id + '.expected.blanks.' + blankId + ' must match an interaction tile');
+        if (!interactionInfo.allowReuse) {
+          assert(!seenTiles[expected.blanks[blankId]], task.id + '.expected.blanks uses tile more than once without allowReuse');
+          seenTiles[expected.blanks[blankId]] = true;
+        }
+      });
+      expectedBlankIds.forEach(function (blankId) {
+        assert(interactionBlankIds[blankId], task.id + '.expected.blanks contains unknown blank ' + blankId);
+      });
       return;
     }
 
@@ -394,10 +500,10 @@
   function validateInteraction(task) {
     var path = task.id + '.interaction';
     assert(isObject(task.interaction), path + ' is required');
-    var optionIds = null;
+    var interactionInfo = {};
 
     if (task.family === 'choice' || task.family === 'table_value_selection') {
-      optionIds = validateOptions(task.interaction.options, path + '.options');
+      interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
     } else if (task.family === 'point_placement') {
       requireString(task.interaction.xLabel, path + '.xLabel');
       requireString(task.interaction.yLabel, path + '.yLabel');
@@ -422,10 +528,12 @@
       requireString(task.interaction.inputLabel, path + '.inputLabel');
     } else if (task.family === 'structured_short_response') {
       validateStructuredFields(task.interaction.fields, path + '.fields');
-      if (task.interaction.options !== undefined) optionIds = validateOptions(task.interaction.options, path + '.options');
+      if (task.interaction.options !== undefined) interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
+    } else if (task.family === 'cloze_tile_select') {
+      interactionInfo = validateClozeInteraction(task, path);
     }
 
-    return optionIds;
+    return interactionInfo;
   }
 
   function validateTask(task) {
@@ -534,6 +642,20 @@
     return true;
   }
 
+  function clozeTileMatches(response, expected) {
+    if (!response || typeof response !== 'object' || !isObject(response.blanks)) return false;
+    var blanks = response.blanks;
+    var expectedBlanks = expected.blanks || {};
+    var expectedIds = Object.keys(expectedBlanks);
+    var responseIds = Object.keys(blanks || {});
+    if (responseIds.some(function (id) { return !Object.prototype.hasOwnProperty.call(expectedBlanks, id); })) {
+      return false;
+    }
+    return expectedIds.every(function (blankId) {
+      return normalizeText(blanks[blankId]) === normalizeText(expectedBlanks[blankId]);
+    });
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -566,6 +688,9 @@
     }
     if (task.family === 'structured_short_response' && task.expected.kind === 'structured_text_criteria') {
       return structuredTextCriteriaMatches(response, task.expected);
+    }
+    if (task.family === 'cloze_tile_select' && task.expected.kind === 'cloze_tile_select') {
+      return clozeTileMatches(response, task.expected);
     }
     return false;
   }
@@ -627,6 +752,12 @@
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');
       }
       return plan;
+    }
+    if (task.family === 'cloze_tile_select') {
+      return [
+        '[data-task-id="' + task.id + '"][data-cloze-tile-id]',
+        '[data-task-id="' + task.id + '"][data-cloze-blank-id]'
+      ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];
   }

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-CLOZE-TILE-1",
+  "name": "Cloze Tile-Select Task-Family Implementation",
+  "status": "completed",
+  "completed": "2026-06-01",
+  "completed_on": "2026-06-01",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-baseline.md",
+  "result": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-result.md",
+  "diff_summary": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "untracked-zip-excluded",
+        "description": "Unrelated knowledge/exit-ticket-game-1.1.1.zip remains untracked and outside sprint scope.",
+        "disposition": "accepted_follow_up",
+        "owner": "main implementation agent",
+        "next_action": "Do not stage, move, delete, or include the zip in sprint closure.",
+        "blocking": false
+      },
+      {
+        "id": "product-route-screenshots-deferred",
+        "description": "Rendered product-route screenshots are deferred because this sprint adds runtime support only.",
+        "disposition": "carry_forward",
+        "owner": "future adoption sprint",
+        "next_action": "Capture generated-route rendered proof before using cloze_tile_select in practice, check, target-equivalent, or product-proof surfaces.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-CLOZE-TILE-1-plan.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-CLOZE-TILE-1", "status": "passed" },
+    { "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-task-family-cloze-tile1.js", "status": "passed" },
+    { "command": "npm.cmd run check:platform", "status": "passed" },
+    { "command": "npm.cmd run check:scope-language", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" },
+    { "command": "node build-scripts/references/check-roadmap-version-index.js", "status": "passed" },
+    { "command": "npm.cmd run agent:index", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js", "status": "passed" },
+    { "command": "npm.cmd run dashboard:internal", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-CLOZE-TILE-1-result.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-CLOZE-TILE-1 --complete", "status": "passed" },
+    { "command": "node build-scripts/sprints/emit-url-index.js --check", "status": "passed" },
+    { "command": "git diff --check", "status": "passed" },
+    { "command": "git -C ../4veco-lessen diff --check", "status": "passed" }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "carried_flags": [
+    "Do not stage or include knowledge/exit-ticket-game-1.1.1.zip.",
+    "Product-route screenshots remain required before cloze_tile_select adoption."
+  ],
+  "authorized_next": [
+    "Proceed to TASK-FAMILY-SENTENCE-1 or TASK-FAMILY-FORMULA-1 as later construction implementation sprints.",
+    "GAME-ROUTE-AFFORDANCE-1 may be prioritized if route affordance is the next product need.",
+    "Do not adopt cloze_tile_select in generated lesson routes or rely on it for target-equivalent/product proof before rendered route review and GATE-TASK-FAMILY-1."
+  ]
+}

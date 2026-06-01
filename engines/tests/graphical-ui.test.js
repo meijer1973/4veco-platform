@@ -46,6 +46,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('data-graph-task-shell="GRAPH-UX-2"');
         expect(source).toContain('unitNotation: getValue');
         expect(source).toContain('data-input-role="unit-notation"');
+        expect(source).toContain('task.family === "cloze_tile_select"');
+        expect(source).toContain('collectClozeTileResponse(rootEl, task)');
+        expect(source).toContain('handleClozeTileClick(rootEl, event)');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {

@@ -70,6 +70,30 @@ function data() {
                 ],
                 choice: { value: 'niet-vier-procent' }
             }),
+            task('cloze-tiles', 'cloze_tile_select', {
+                segments: [
+                    { type: 'text', text: 'De stijging is ' },
+                    { type: 'blank', blankId: 'indexpunten' },
+                    { type: 'text', text: ' indexpunten en de basis is ' },
+                    { type: 'blank', blankId: 'basis' },
+                    { type: 'text', text: '.' }
+                ],
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'basis', label: 'Basis voor procentuele stijging' }
+                ],
+                tiles: [
+                    { id: 'vier', label: '4', kind: 'answer' },
+                    { id: 'honderdacht', label: '108', kind: 'answer' },
+                    { id: 'vier-procent', label: '4%', kind: 'distractor', distractorFor: 'indexpunten' }
+                ]
+            }, {
+                kind: 'cloze_tile_select',
+                blanks: {
+                    indexpunten: 'vier',
+                    basis: 'honderdacht'
+                }
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -89,6 +113,7 @@ describe('TaskShellUI', () => {
             'unit_notation_field',
             'short_constructed_response',
             'structured_short_response',
+            'cloze_tile_select',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -115,6 +140,11 @@ describe('TaskShellUI', () => {
         expect(html).toContain('class="ts-answer-grid"');
         expect(html).toContain('data-input-role="structured-field"');
         expect(html).toContain('data-field-id="indexpunten"');
+        expect(html).toContain('class="ts-cloze"');
+        expect(html).toContain('data-cloze-blank-id="basis"');
+        expect(html).toContain('data-cloze-tile-id="vier-procent"');
+        expect(html).toContain('class="ts-cloze-clear"');
+        expect(html).toContain('role="group" aria-label="Tegelbank"');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -145,6 +175,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Rekenantwoord');
         expect(html).toContain('Berekening tonen');
         expect(html).toContain('Kort antwoord in stappen');
+        expect(html).toContain('Invullen met tegels');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -165,6 +196,15 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-feedback-state="self_check"');
         expect(html).toContain('Formule zichtbaar');
         expect(html).toContain('Oefen deze stap verder');
+    });
+
+    test('exports cloze tile helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectClozeTileResponse).toBe('function');
+        expect(typeof TaskShellUI.handleClozeTileClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[6])).toEqual([
+            '[data-task-id="cloze-tiles"][data-cloze-tile-id]',
+            '[data-task-id="cloze-tiles"][data-cloze-blank-id]'
+        ]);
     });
 
     test('escapes task text before rendering', () => {

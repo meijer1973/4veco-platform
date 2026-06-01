@@ -173,6 +173,11 @@
 
   function bindInteractions(app, engine) {
     app.addEventListener('click', function (event) {
+      var clozeTaskShellUI = resolveTaskShellUI();
+      if (clozeTaskShellUI && clozeTaskShellUI.handleClozeTileClick && clozeTaskShellUI.handleClozeTileClick(app, event)) {
+        return;
+      }
+
       var taskShellChoice = event.target.closest ? event.target.closest('.ts-choice') : null;
       if (taskShellChoice && taskShellChoice.closest('.et-task-shell')) {
         var shellTask = taskShellChoice.closest('.ts-task');
@@ -270,6 +275,12 @@
         fields: fields,
         choice: selected ? selected.getAttribute('data-choice-id') : ''
       };
+    }
+    if (task.family === 'cloze_tile_select') {
+      var TaskShellUI = resolveTaskShellUI();
+      return TaskShellUI && TaskShellUI.collectClozeTileResponse
+        ? TaskShellUI.collectClozeTileResponse(wrapper, task)
+        : { blanks: {} };
     }
     return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
   }

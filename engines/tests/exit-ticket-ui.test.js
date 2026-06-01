@@ -98,6 +98,49 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
                 }
+            },
+            {
+                id: 'cloze-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'cloze-task',
+                    family: 'cloze_tile_select',
+                    skillLabel: 'Conclusie aanvullen',
+                    purpose: 'Vul de bronconclusie aan met passende tegels.',
+                    prompt: 'Maak de conclusie af.',
+                    interaction: {
+                        segments: [
+                            { type: 'text', text: 'Bij prijs 2 hoort ' },
+                            { type: 'blank', blankId: 'waarde' },
+                            { type: 'text', text: ', dus de grafiek daalt als de prijs ' },
+                            { type: 'blank', blankId: 'richting' },
+                            { type: 'text', text: '.' }
+                        ],
+                        blanks: [
+                            { id: 'waarde', label: 'Bronwaarde' },
+                            { id: 'richting', label: 'Prijsrichting' }
+                        ],
+                        tiles: [
+                            { id: 'driehonderd', label: '300 ijsjes', kind: 'answer' },
+                            { id: 'stijgt', label: 'stijgt', kind: 'answer' },
+                            { id: 'vierhonderd', label: '400 ijsjes', kind: 'distractor', distractorFor: 'waarde' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'cloze_tile_select',
+                        blanks: {
+                            waarde: 'driehonderd',
+                            richting: 'stijgt'
+                        }
+                    },
+                    feedback: {
+                        matchTitle: 'Conclusie past',
+                        matchText: 'Je koppelt de bronwaarde aan de richting.',
+                        retryTitle: 'Controleer de bron',
+                        retryText: 'Lees de juiste waarde en richting opnieuw.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
             }
         ]
     };
@@ -190,7 +233,17 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="table_value_selection"');
         expect(html).toContain('data-task-family="graph_reading"');
         expect(html).toContain('data-task-family="point_placement"');
+        expect(html).toContain('data-task-family="cloze_tile_select"');
+        expect(html).toContain('data-cloze-blank-id="waarde"');
+        expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
+    });
+
+    test('exit-ticket wrapper delegates cloze tile collection to the shared task shell', () => {
+        const source = fs.readFileSync(path.join(PLATFORM_ROOT, 'engines', 'exit-ticket-ui.js'), 'utf8');
+        expect(source).toContain('handleClozeTileClick(app, event)');
+        expect(source).toContain('collectClozeTileResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'cloze_tile_select'");
     });
 });

@@ -468,6 +468,9 @@
         unitNotation: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="unit-notation"]')
       };
     }
+    if (task.family === "cloze_tile_select" && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
+      return window.TaskShellUI.collectClozeTileResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -487,6 +490,11 @@
       return;
     }
     var task = engine.getCurrentTaskShellTask();
+    rootEl.querySelectorAll(".ts-cloze").forEach(function (cloze) {
+      cloze.addEventListener("click", function (event) {
+        window.TaskShellUI.handleClozeTileClick(rootEl, event);
+      });
+    });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {
       button.addEventListener("click", function () {
         var taskEl = button.closest(".ts-task");

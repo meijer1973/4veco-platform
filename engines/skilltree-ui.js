@@ -477,6 +477,9 @@
                 unitNotation: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="unit-notation"]')
             };
         }
+        if (task.family === 'cloze_tile_select' && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
+            return window.TaskShellUI.collectClozeTileResponse(root, task);
+        }
         return getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
     }
     function escapeCss(value) {
@@ -906,6 +909,9 @@
                     if (er !== null && mode === 'error') { handleError(parseInt(er, 10)); return; }
                     var ob = t.getAttribute('data-order-block');
                     if (ob !== null && mode === 'order') { handleOrderBlock(parseInt(ob, 10), step); return; }
+                    if (window.TaskShellUI && window.TaskShellUI.handleClozeTileClick && window.TaskShellUI.handleClozeTileClick(els.exStepSlot, e)) {
+                        return;
+                    }
                     var choice = t.closest ? t.closest('.ts-choice') : null;
                     if (choice && (mode === 'task_shell' || step.taskShell)) {
                         var taskEl = choice.closest('.ts-task');

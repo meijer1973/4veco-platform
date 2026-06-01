@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T14:47:34.352Z",
+  "generatedAt": "2026-06-01T15:46:23.282Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.44-task-family-contracts Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.45-cloze-tile-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -179,8 +179,8 @@
             {
               "sprint": "TASK-FAMILY-CLOZE-TILE-1",
               "name": "Cloze Tile-Select Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement selectable-tile cloze tasks as the first construction family. Priority use cases: index-points versus percent, source labels, graph-reading conclusions, and compact reasoning completions where distractors expose misconceptions.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: unrelated zip remains out of scope and product-route screenshots are deferred to adoption.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
-          "name": "Cloze Tile-Select Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement selectable-tile cloze tasks as the first construction family. Priority use cases: index-points versus percent, source labels, graph-reading conclusions, and compact reasoning completions where distractors expose misconceptions.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-SENTENCE-1",
           "name": "Sentence Builder Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Constrained Construction Task-Family Contract",
           "completed": "yes",
           "currentState": "Closed no-implementation contract sprint. Produced `reports/sprints/TASK-FAMILY-CONSTRUCT-1-contract.md`, `reports/json/task-family-construction-contract.json`, and checker `build-scripts/sprints/check-task-family-construct1-contract.js`. It defines `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement` as operation-chain construction families with bank rules, distractor policy, ordering/placement semantics, accessibility expectations, and proof-use boundaries. No implementation or generated output.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+          "name": "Cloze Tile-Select Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: unrelated zip remains out of scope and product-route screenshots are deferred to adoption.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 155,
-      "openCount": 22
+      "completedCount": 156,
+      "openCount": 21
     },
     {
       "id": "lessen",
@@ -2886,8 +2886,8 @@
             {
               "sprint": "TASK-FAMILY-CLOZE-TILE-1",
               "name": "Cloze Tile-Select Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `cloze_tile_select` for index-points-versus-percent, source-label, formula-fill, graph-reading conclusion, and reasoning-sentence completion tasks, with distractors that expose misconceptions without turning the task into passive recognition.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Flags: unrelated `knowledge/exit-ticket-game-1.1.1.zip` remains unstaged/out of scope; product-route screenshots remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
-          "name": "Cloze Tile-Select Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `cloze_tile_select` for index-points-versus-percent, source-label, formula-fill, graph-reading conclusion, and reasoning-sentence completion tasks, with distractors that expose misconceptions without turning the task into passive recognition.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-SENTENCE-1",
           "name": "Sentence Builder Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED CONTRACT / NO IMPLEMENTATION OR GENERATED OUTPUT.** Platform defined construction contracts for `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement`, including token/tile-bank rules, distractor policy, ordering/placement semantics, accessibility expectations, use cases, and operation-chain proof limits. No engine implementation, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+          "name": "Cloze Tile-Select Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Flags: unrelated `knowledge/exit-ticket-game-1.1.1.zip` remains unstaged/out of scope; product-route screenshots remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 6,
-      "openCount": 41
+      "completedCount": 7,
+      "openCount": 40
     },
     {
       "id": "innovation",
