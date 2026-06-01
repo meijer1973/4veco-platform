@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T13:47:15.324Z",
+  "generatedAt": "2026-06-01T14:05:16.962Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,13 +160,41 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.42-structured-choice-task-families Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econ...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.43-construction-task-families Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
               "name": "Structured Choice Task-Family Contract",
               "completed": "no",
               "currentState": "Next planning sprint. It must convert the multiple-choice family report into a shared-shell contract for `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, and `assertion_reason`, including response shapes, validation/evaluation ownership, feedback ownership, focus/keyboard behavior, product-boundary flags, route/checkpoint use cases, and explicit target-proof limits. No implementation or generated output.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-CONSTRUCT-1",
+              "name": "Constrained Construction Task-Family Contract",
+              "completed": "no",
+              "currentState": "Planning sprint for construction-style shared tasks: `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement`. It must define response shapes, tile/token-bank rules, distractor policy, ordering/placement semantics, partial-feedback limits, accessibility expectations, and proof-use boundaries before implementation.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+              "name": "Cloze Tile-Select Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Implement selectable-tile cloze tasks as the first construction family. Priority use cases: index-points versus percent, source labels, graph-reading conclusions, and compact reasoning completions where distractors expose misconceptions.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-SENTENCE-1",
+              "name": "Sentence Builder Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Implement sentence/chain building from word or fragment banks for economic reasoning. It must force the causal or answer-form structure rather than merely assembling plausible words.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-FORMULA-1",
+              "name": "Formula Builder Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Implement formula construction from formula blocks/symbols for percentage change, index number, elasticity, revenue, profit, and later marginal/average procedures.",
               "exitGate": ""
             },
             {
@@ -188,6 +216,20 @@
               "name": "Step-Ordering Task-Family Implementation",
               "completed": "no",
               "currentState": "Implement shared `step_ordering` for procedure-control and reasoning-sequence tasks so `REASON-STD-1` can migrate ordering out of private reasoning-engine logic.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-SOURCE-1",
+              "name": "Source Value And Chain Builder Implementation",
+              "completed": "no",
+              "currentState": "Implement multi-value source selection plus source -> value -> operation -> answer chain construction for graph/table/source tasks, including old/new, x/y, price/quantity, cause/effect, and unit/label roles.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-LABEL-1",
+              "name": "Label-Placement Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Implement label-placement interactions for graphs, formulas, source structures, axes, lines, intersections, and representation components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
               "exitGate": ""
             },
             {
@@ -213,9 +255,9 @@
             },
             {
               "sprint": "GATE-TASK-FAMILY-1",
-              "name": "Structured Choice Task-Family Review",
+              "name": "Structured Choice And Construction Task-Family Review",
               "completed": "no",
-              "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
+              "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice or construction families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
               "exitGate": ""
             },
             {
@@ -1372,6 +1414,38 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "TASK-FAMILY-CONSTRUCT-1",
+          "name": "Constrained Construction Task-Family Contract",
+          "completed": "no",
+          "currentState": "Planning sprint for construction-style shared tasks: `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement`. It must define response shapes, tile/token-bank rules, distractor policy, ordering/placement semantics, partial-feedback limits, accessibility expectations, and proof-use boundaries before implementation.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+          "name": "Cloze Tile-Select Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Implement selectable-tile cloze tasks as the first construction family. Priority use cases: index-points versus percent, source labels, graph-reading conclusions, and compact reasoning completions where distractors expose misconceptions.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SENTENCE-1",
+          "name": "Sentence Builder Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Implement sentence/chain building from word or fragment banks for economic reasoning. It must force the causal or answer-form structure rather than merely assembling plausible words.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-FORMULA-1",
+          "name": "Formula Builder Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Implement formula construction from formula blocks/symbols for percentage change, index number, elasticity, revenue, profit, and later marginal/average procedures.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "TASK-FAMILY-CLOZE-1",
           "name": "Cloze Text Task-Family Implementation",
           "completed": "no",
@@ -1392,6 +1466,22 @@
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "no",
           "currentState": "Implement shared `step_ordering` for procedure-control and reasoning-sequence tasks so `REASON-STD-1` can migrate ordering out of private reasoning-engine logic.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SOURCE-1",
+          "name": "Source Value And Chain Builder Implementation",
+          "completed": "no",
+          "currentState": "Implement multi-value source selection plus source -> value -> operation -> answer chain construction for graph/table/source tasks, including old/new, x/y, price/quantity, cause/effect, and unit/label roles.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-LABEL-1",
+          "name": "Label-Placement Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Implement label-placement interactions for graphs, formulas, source structures, axes, lines, intersections, and representation components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1421,9 +1511,9 @@
         },
         {
           "sprint": "GATE-TASK-FAMILY-1",
-          "name": "Structured Choice Task-Family Review",
+          "name": "Structured Choice And Construction Task-Family Review",
           "completed": "no",
-          "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
+          "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice or construction families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2733,7 +2823,7 @@
         }
       ],
       "completedCount": 153,
-      "openCount": 18
+      "openCount": 24
     },
     {
       "id": "lessen",
@@ -2787,6 +2877,34 @@
               "exitGate": ""
             },
             {
+              "sprint": "TASK-FAMILY-CONSTRUCT-1",
+              "name": "Constrained Construction Task-Family Contract",
+              "completed": "no",
+              "currentState": "Platform must define the shared construction layer for `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement`, including token/tile banks, distractors, ordering/placement rules, partial-feedback limits, accessibility expectations, and target-operation use cases. No implementation or generated output.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+              "name": "Cloze Tile-Select Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Platform adds `cloze_tile_select` for index-points-versus-percent, source-label, formula-fill, graph-reading conclusion, and reasoning-sentence completion tasks, with distractors that expose misconceptions without turning the task into passive recognition.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-SENTENCE-1",
+              "name": "Sentence Builder Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Platform adds `sentence_builder` so students construct economic reasoning sentences or causal chains from fragments for `leg uit`, index-point explanations, curve-shift reasoning, surplus/welfare reasoning, and exam-answer phrasing.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-FORMULA-1",
+              "name": "Formula Builder Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Platform adds `formula_builder` so students construct formulas from symbols or terms before calculation work, including percentage change, index numbers, elasticity, revenue, profit, and later marginal/average procedures.",
+              "exitGate": ""
+            },
+            {
               "sprint": "TASK-FAMILY-CLOZE-1",
               "name": "Cloze Text Task-Family Implementation",
               "completed": "no",
@@ -2805,6 +2923,20 @@
               "name": "Step-Ordering Task-Family Implementation",
               "completed": "no",
               "currentState": "Platform adds shared `step_ordering` for procedure-control and reasoning-sequence tasks so reasoning can migrate out of private engine-only ordering logic.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-SOURCE-1",
+              "name": "Source Value And Chain Builder Implementation",
+              "completed": "no",
+              "currentState": "Platform adds `source_value_selection` and `source_chain_builder` so students select multiple source/table/graph values and label them as old/new, x/y, price/quantity, cause/effect, or source-to-operation-to-answer chains.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-FAMILY-LABEL-1",
+              "name": "Label-Placement Task-Family Implementation",
+              "completed": "no",
+              "currentState": "Platform adds `label_placement` for graph, table, formula, and representation tasks such as axes, lines, intersections, units, index labels, and curve-shift components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
               "exitGate": ""
             },
             {
@@ -2830,9 +2962,9 @@
             },
             {
               "sprint": "GATE-TASK-FAMILY-1",
-              "name": "Structured Choice Task-Family Review",
+              "name": "Structured Choice And Construction Task-Family Review",
               "completed": "no",
-              "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
+              "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these structured choice or construction families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
               "exitGate": ""
             },
             {
@@ -3051,6 +3183,38 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "TASK-FAMILY-CONSTRUCT-1",
+          "name": "Constrained Construction Task-Family Contract",
+          "completed": "no",
+          "currentState": "Platform must define the shared construction layer for `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement`, including token/tile banks, distractors, ordering/placement rules, partial-feedback limits, accessibility expectations, and target-operation use cases. No implementation or generated output.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-TILE-1",
+          "name": "Cloze Tile-Select Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Platform adds `cloze_tile_select` for index-points-versus-percent, source-label, formula-fill, graph-reading conclusion, and reasoning-sentence completion tasks, with distractors that expose misconceptions without turning the task into passive recognition.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SENTENCE-1",
+          "name": "Sentence Builder Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Platform adds `sentence_builder` so students construct economic reasoning sentences or causal chains from fragments for `leg uit`, index-point explanations, curve-shift reasoning, surplus/welfare reasoning, and exam-answer phrasing.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-FORMULA-1",
+          "name": "Formula Builder Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Platform adds `formula_builder` so students construct formulas from symbols or terms before calculation work, including percentage change, index numbers, elasticity, revenue, profit, and later marginal/average procedures.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "TASK-FAMILY-CLOZE-1",
           "name": "Cloze Text Task-Family Implementation",
           "completed": "no",
@@ -3071,6 +3235,22 @@
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "no",
           "currentState": "Platform adds shared `step_ordering` for procedure-control and reasoning-sequence tasks so reasoning can migrate out of private engine-only ordering logic.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SOURCE-1",
+          "name": "Source Value And Chain Builder Implementation",
+          "completed": "no",
+          "currentState": "Platform adds `source_value_selection` and `source_chain_builder` so students select multiple source/table/graph values and label them as old/new, x/y, price/quantity, cause/effect, or source-to-operation-to-answer chains.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-LABEL-1",
+          "name": "Label-Placement Task-Family Implementation",
+          "completed": "no",
+          "currentState": "Platform adds `label_placement` for graph, table, formula, and representation tasks such as axes, lines, intersections, units, index labels, and curve-shift components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3100,9 +3280,9 @@
         },
         {
           "sprint": "GATE-TASK-FAMILY-1",
-          "name": "Structured Choice Task-Family Review",
+          "name": "Structured Choice And Construction Task-Family Review",
           "completed": "no",
-          "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
+          "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these structured choice or construction families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3372,7 +3552,7 @@
         }
       ],
       "completedCount": 4,
-      "openCount": 37
+      "openCount": 43
     },
     {
       "id": "innovation",

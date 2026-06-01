@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "C:\\Projects\\4veco\\4veco-platform",
   "available": true,
-  "generated_at": "2026-06-01T13:47:05.161Z",
-  "file_count": 2616,
+  "generated_at": "2026-06-01T14:05:17.004Z",
+  "file_count": 2617,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -2695,6 +2695,7 @@
       "docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md",
       "docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md",
+      "docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md",
       "docs/roadmaps/README.md",
       "docs/roadmaps/roadmap-version-index.json",
       "docs/roadmaps/roadmap-version-index.md",

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T13:47:05.161Z
+Generated: 2026-06-01T14:05:17.004Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2616
+Files indexed: 2617
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2592,7 +2592,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 277
+Count: 278
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2727,6 +2727,7 @@ Count: 277
 - docs/roadmaps/outdated/reference-team-roadmap-v3.29-graph-refine1-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
