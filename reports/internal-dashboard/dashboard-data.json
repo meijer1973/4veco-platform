@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T11:54:12.107Z",
+  "generatedAt": "2026-06-01T13:21:42.941Z",
   "internalOnly": true,
   "teams": [
     {
@@ -162,6 +162,13 @@
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
           "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.41-standard-exercises1-coverage Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economi...",
           "sprints": [
+            {
+              "sprint": "TASK-SHELL-UX-2",
+              "name": "Shared Task Shell UX Hardening",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS after implementation and lead-review round 2. Produced `reports/sprints/TASK-SHELL-UX-2-ui-contract.md`, screenshot proof, `reports/json/task-shell-ux2-proof.json`, and checker `build-scripts/sprints/check-task-shell-ux2.js`. Added separate unit/notation support, controlled feedback, hidden hints where allowed, and exit-ticket render suppression for criteria/answer placeholders. Generated output changed through deploy only. Flags: improve DOM-fact screenshot evidence, continue `REASON-STD-1`, and preserve source/render boundaries for future exit tickets.",
+              "exitGate": ""
+            },
             {
               "sprint": "STANDARD-EXERCISES-1",
               "name": "Unified Standard Exercise Coverage Audit",
@@ -1377,6 +1384,14 @@
           "name": "Re-Evaluate R10-R13 Product Surfaces",
           "completed": "no",
           "currentState": "Blocked. Diagnostics, adaptive routing, student-facing AI, teacher cockpit deployment, automatic sequencing, mastery, and summative uses remain out of scope until data-quality gates justify them. Lesson L1.7A explicitly rejected broad companion scaling; `L1.7B-R` and `GATE-L1.7B` accepted only the non-summative `1.1.1` checkpoint boundary; `L1.7C-MATH` restored the old skill-tree math route; `L1.7B-MAP` fixed checkpoint metadata alignment but kept `targetReadinessEvidence: false`; `L1.7B-P23` accepted a stop/handoff rather than generating weak choice-only checks for calculation and graph/table paragraphs; `L1.7B-Q2` implemented the first `1.1.2` target-equivalent exit-ticket candidate while keeping completion language behind human review; `SPEC-ET-1` corrected exit-ticket semantics to target-equivalent proof without authorizing product use; and `EX-LESSON-1` made official-exam route traces operational without generating lesson output. GATE-EX5 closed PASS WITH CONDITIONS as design-contract review only; EX-6 completed validator/CLI planning without candidate writes; GATE-EX6 closed PASS WITH CONDITIONS for validator/dry-run CLI implementation only; EX-7 implemented validators and dry-run-only CLIs without candidate storage or writes; MTU-H4C executed the bounded answer-form MTU additions through CLI only and preserved no-exposure/product boundaries; GAME-UX-3A added the shared task-shell runtime foundation without generated lesson output or exposure; ENGINE-OP-1 audited live output; SKILLMAP-OP-1 made the shared route visible and scoped in live Book 1 output without granting product-use authority; GRAPH-UX-2 integrated the shared task shell into the live `1.1.3` graph/table route with checkpoint-style graph UI proof but no target-equivalent checkpoint publication; MATH-UX-2 integrated the shared task shell into the live `1.1.2` calculation/index route with no target-equivalent checkpoint publication; REASON-UX-2 integrated the shared task shell into the live reasoning route with structured self-check and richer feedback but no target-equivalent checkpoint publication; GAME-ARCH-1 kept the short check as advisory; GAME-ARCH-2 produced the integrated architecture plan before engine gate reliance; and GATE-ENGINE-1 closed PASS WITH FLAGS while authorizing only named downstream planning/preparation sprints. Broad lesson-companion scaling remains blocked until lesson `GATE-L1.7B-Q2`, `REV-STD-1`, and Scale Gate 1 establish the remaining target-equivalent proof, review-standard, curriculum-versioning, and game-row operational quality.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-SHELL-UX-2",
+          "name": "Shared Task Shell UX Hardening",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS after implementation and lead-review round 2. Produced `reports/sprints/TASK-SHELL-UX-2-ui-contract.md`, screenshot proof, `reports/json/task-shell-ux2-proof.json`, and checker `build-scripts/sprints/check-task-shell-ux2.js`. Added separate unit/notation support, controlled feedback, hidden hints where allowed, and exit-ticket render suppression for criteria/answer placeholders. Generated output changed through deploy only. Flags: improve DOM-fact screenshot evidence, continue `REASON-STD-1`, and preserve source/render boundaries for future exit tickets.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2597,7 +2612,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 152,
+      "completedCount": 153,
       "openCount": 10
     },
     {
@@ -2640,8 +2655,8 @@
             {
               "sprint": "TASK-SHELL-UX-2",
               "name": "Shared Task Shell UX Hardening",
-              "completed": "no",
-              "currentState": "Harden shared task-shell UX: hidden hints where allowed, no exit-ticket answer hints, separate unit/notation fields, controlled feedback, next-action clarity, keyboard/focus, mobile and dark-mode proof.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added separate unit/notation fields for calculation-work tasks, hidden/collapsible task-shell hints where allowed, controlled labelled feedback regions, and exit-ticket display rules that suppress pre-attempt criteria and answer-revealing placeholders while keeping source criteria for validation. Generated Book 1 shared output was refreshed through deploy only. Flags: improve future screenshot manifest DOM proof, continue reasoning standard expansion in `REASON-STD-1`, and preserve source/render boundaries in future exit tickets. No target-equivalent authority was broadened; `1.1.1` remains advisory, `1.1.3` exit-ticket source remains absent, and no diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use is authorized.",
               "exitGate": ""
             },
             {
@@ -2851,14 +2866,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-SHELL-UX-2",
-          "name": "Shared Task Shell UX Hardening",
-          "completed": "no",
-          "currentState": "Harden shared task-shell UX: hidden hints where allowed, no exit-ticket answer hints, separate unit/notation fields, controlled feedback, next-action clarity, keyboard/focus, mobile and dark-mode proof.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
           "name": "Clickable Route Items For Non-Exit Practice Games",
@@ -3114,10 +3121,18 @@
           "currentState": "**CLOSED AUDIT/CONTRACT / NO GENERATED OUTPUT.** Platform coverage matrix records math, graph/table, and reviewed `1.1.2` exit-ticket actions as mostly covered by existing shared task-shell families; `structured_short_response` is runtime-supported but needs standard documentation and UX hardening; reasoning requires standard expansion for step ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation. Guided practice and procedure support remain learning/support surfaces, not target-equivalent proof. No generated output, implementation, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-SHELL-UX-2",
+          "name": "Shared Task Shell UX Hardening",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added separate unit/notation fields for calculation-work tasks, hidden/collapsible task-shell hints where allowed, controlled labelled feedback regions, and exit-ticket display rules that suppress pre-attempt criteria and answer-revealing placeholders while keeping source criteria for validation. Generated Book 1 shared output was refreshed through deploy only. Flags: improve future screenshot manifest DOM proof, continue reasoning standard expansion in `REASON-STD-1`, and preserve source/render boundaries in future exit tickets. No target-equivalent authority was broadened; `1.1.1` remains advisory, `1.1.3` exit-ticket source remains absent, and no diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 3,
-      "openCount": 30
+      "completedCount": 4,
+      "openCount": 29
     },
     {
       "id": "innovation",

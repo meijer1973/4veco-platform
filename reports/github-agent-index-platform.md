@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T11:54:12.158Z
+Generated: 2026-06-01T13:21:34.907Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2578
+Files indexed: 2593
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 348
+Count: 349
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -444,6 +444,7 @@ Count: 348
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
 - build-scripts/sprints/check-sprint-result.js
+- build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -524,7 +525,7 @@ Count: 42
 
 ## validators
 
-Count: 180
+Count: 182
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -643,11 +644,13 @@ Count: 180
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
 - build-scripts/sprints/check-sprint-result.js
+- build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -709,7 +712,7 @@ Count: 180
 
 ## references
 
-Count: 398
+Count: 400
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1025,6 +1028,8 @@ Count: 398
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SPEC-ET-1.plan.json
 - references/data/sprints/SPEC-ET-1.result.json
+- references/data/sprints/STANDARD-EXERCISES-1.plan.json
+- references/data/sprints/STANDARD-EXERCISES-1.result.json
 - references/data/sprints/SYNC-2.plan.json
 - references/data/sprints/SYNC-2.result.json
 - references/data/sprints/SYNC-4.plan.json
@@ -1112,7 +1117,7 @@ Count: 398
 
 ## reports
 
-Count: 1417
+Count: 1428
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1168,6 +1173,7 @@ Count: 1417
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
+- reports/json/standard-exercise-family-coverage.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
 - reports/json/unit-design-status.json
@@ -2499,6 +2505,16 @@ Count: 1417
 - reports/sprints/SPEC-ET-1-plan.md
 - reports/sprints/SPEC-ET-1-planning-review.md
 - reports/sprints/SPEC-ET-1-result.md
+- reports/sprints/STANDARD-EXERCISES-1-baseline.md
+- reports/sprints/STANDARD-EXERCISES-1-diff-summary.md
+- reports/sprints/STANDARD-EXERCISES-1-exercise-family-audit.md
+- reports/sprints/STANDARD-EXERCISES-1-lead-review-assignment.md
+- reports/sprints/STANDARD-EXERCISES-1-lead-review-corrections.md
+- reports/sprints/STANDARD-EXERCISES-1-lead-review-round1.md
+- reports/sprints/STANDARD-EXERCISES-1-lead-review-round2.md
+- reports/sprints/STANDARD-EXERCISES-1-plan.md
+- reports/sprints/STANDARD-EXERCISES-1-planning-review.md
+- reports/sprints/STANDARD-EXERCISES-1-result.md
 - reports/sprints/SYNC-2-baseline.md
 - reports/sprints/SYNC-2-diff-summary.md
 - reports/sprints/SYNC-2-lead-review-assignment.md

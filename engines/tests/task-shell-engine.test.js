@@ -248,11 +248,14 @@ describe('TaskShellEngine', () => {
             prompt: 'Bereken de procentuele stijging.',
             interaction: {
                 workLabel: 'Berekening',
-                finalAnswerLabel: 'Eindantwoord'
+                finalAnswerLabel: 'Eindantwoord',
+                unitNotationLabel: 'Notatie',
+                unitNotationPlaceholder: 'Bijvoorbeeld %'
             },
             expected: {
                 kind: 'calculation',
                 finalAnswer: { kind: 'text', accepted: ['15', '15%', '15 procent'] },
+                unitNotation: { kind: 'text', accepted: ['%', 'procent'], required: true },
                 workRequired: true,
                 requiredWorkText: [
                     { label: 'new price', any: ['920'] },
@@ -269,15 +272,35 @@ describe('TaskShellEngine', () => {
 
         expect(TaskShellEngine.evaluateTask(calculation, {
             work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15%'
+            finalAnswer: '15',
+            unitNotation: '%'
         })).toEqual(expect.objectContaining({
             state: 'matched',
             matched: true
         }));
 
         expect(TaskShellEngine.evaluateTask(calculation, {
+            work: '(920 - 800) / 800 x 100',
+            finalAnswer: '15',
+            unitNotation: ''
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: '(920 - 800) / 800 x 100',
+            finalAnswer: '15',
+            unitNotation: 'indexcijfer'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(calculation, {
             work: '',
-            finalAnswer: '15%'
+            finalAnswer: '15',
+            unitNotation: '%'
         })).toEqual(expect.objectContaining({
             state: 'retry',
             matched: false
@@ -285,11 +308,61 @@ describe('TaskShellEngine', () => {
 
         expect(TaskShellEngine.evaluateTask(calculation, {
             work: 'ik gok',
-            finalAnswer: '15%'
+            finalAnswer: '15',
+            unitNotation: '%'
         })).toEqual(expect.objectContaining({
             state: 'retry',
             matched: false
         }));
+    });
+
+    test('supports optional unit or notation fields without blocking compact answers', () => {
+        const indexCalculation = baseTask({
+            id: 'index-naar-waarde',
+            family: 'calculation_work_capture',
+            skillLabel: 'Indexcijfer berekenen',
+            prompt: 'Bereken het indexcijfer.',
+            interaction: {
+                workLabel: 'Berekening',
+                finalAnswerLabel: 'Indexcijfer',
+                unitNotationLabel: 'Notatie'
+            },
+            expected: {
+                kind: 'calculation',
+                finalAnswer: { kind: 'text', accepted: ['108', 'index 108', 'indexcijfer 108'] },
+                unitNotation: { kind: 'text', accepted: ['index', 'indexcijfer'], required: false },
+                workRequired: true,
+                requiredWorkText: [
+                    { label: 'new value', any: ['162'] },
+                    { label: 'base value', any: ['150'] },
+                    { label: 'times hundred', any: ['x 100', '*100'] }
+                ]
+            }
+        });
+
+        expect(TaskShellEngine.evaluateTask(indexCalculation, {
+            work: '162 / 150 x 100',
+            finalAnswer: '108',
+            unitNotation: ''
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(indexCalculation, {
+            work: '162 / 150 x 100',
+            finalAnswer: '108',
+            unitNotation: 'indexcijfer'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.focusPlan(indexCalculation)).toEqual([
+            '[data-task-id="index-naar-waarde"][data-input-role="work"]',
+            '[data-task-id="index-naar-waarde"][data-input-role="final-answer"]',
+            '[data-task-id="index-naar-waarde"][data-input-role="unit-notation"]'
+        ]);
     });
 
     test('supports deterministic short responses with required text groups', () => {

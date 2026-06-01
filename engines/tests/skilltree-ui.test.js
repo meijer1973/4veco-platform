@@ -20,6 +20,8 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('check-task-shell');
         expect(source).toContain('task-shell-next');
         expect(source).toContain('collectTaskShellResponse');
+        expect(source).toContain('unitNotation: getTaskShellValue');
+        expect(source).toContain('data-input-role="unit-notation"');
     });
 
     test('announces task-shell feedback and preserves keyboard/focus flow', () => {

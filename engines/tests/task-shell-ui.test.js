@@ -36,7 +36,19 @@ function data() {
         intro: 'Gebruik dezelfde taaktaal voor verschillende oefenroutes.',
         tasks: [
             task('numeric', 'numeric_input', { inputLabel: 'Numeriek antwoord' }, { kind: 'number', value: 10 }),
-            task('work', 'calculation_work_capture', { workLabel: 'Berekening', finalAnswerLabel: 'Eindantwoord' }, { kind: 'self_check', criteria: ['Formule zichtbaar', 'Waarden ingevuld'] }),
+            {
+                ...task('work', 'calculation_work_capture', {
+                    workLabel: 'Berekening',
+                    finalAnswerLabel: 'Eindantwoord',
+                    finalAnswerPlaceholder: 'Bijvoorbeeld 15',
+                    unitNotationLabel: 'Notatie',
+                    unitNotationPlaceholder: 'Bijvoorbeeld %'
+                }, {
+                    kind: 'self_check',
+                    criteria: ['Formule zichtbaar', 'Waarden ingevuld']
+                }),
+                hints: ['Denk aan nieuw min oud, gedeeld door oud.']
+            },
             task('final', 'final_answer_entry', { inputLabel: 'Eindantwoord' }, { kind: 'text', accepted: ['10%'] }),
             task('unit', 'unit_notation_field', { inputLabel: 'Eenheid of notatie' }, { kind: 'text', accepted: ['%'] }),
             task('short', 'short_constructed_response', { inputLabel: 'Kort antwoord' }, { kind: 'self_check', criteria: ['Oorzaak genoemd'] }),
@@ -99,8 +111,33 @@ describe('TaskShellUI', () => {
         expect(html).toContain('tabindex="-1"');
         expect(html).toContain('data-input-role="work"');
         expect(html).toContain('data-input-role="final-answer"');
+        expect(html).toContain('data-input-role="unit-notation"');
+        expect(html).toContain('class="ts-answer-grid"');
         expect(html).toContain('data-input-role="structured-field"');
         expect(html).toContain('data-field-id="indexpunten"');
+        expect(html).toContain('aria-label="Feedback op je antwoord"');
+    });
+
+    test('renders hints collapsed and feedback actions with stable affordance styling', () => {
+        const html = TaskShellUI.renderStaticHtml(data());
+        expect(html).toContain('<details class="ts-hints">');
+        expect(html).toContain('<summary>Hint</summary>');
+        expect(html).toContain('Denk aan nieuw min oud, gedeeld door oud.');
+        expect(html).not.toContain('<details class="ts-hints" open>');
+
+        const result = TaskShellEngine.evaluateTask(data().tasks[0], '9');
+        const feedback = TaskShellUI.renderFeedback(result);
+        expect(feedback).toContain('class="ts-feedback-actions"');
+        expect(feedback).toContain('class="ts-feedback-action"');
+    });
+
+    test('can hide pre-attempt criteria while keeping the same task contract', () => {
+        const hiddenCriteria = data().tasks[1];
+        hiddenCriteria.interaction.showCriteriaBeforeCheck = false;
+        const html = TaskShellUI.renderTask(hiddenCriteria, 0);
+        expect(html).not.toContain('class="ts-criteria"');
+        expect(html).not.toContain('Formule zichtbaar');
+        expect(TaskShellEngine.validateTask(data().tasks[1])).toBe(true);
     });
 
     test('renders Dutch student-facing family labels', () => {

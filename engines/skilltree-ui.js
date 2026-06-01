@@ -361,8 +361,8 @@
         return h;
     }
     function removeTaskShellFeedbackRegion(markup, taskId) {
-        var marker = '<div class="ts-feedback" data-feedback-for="' + esc(taskId) + '" aria-live="polite" role="status" tabindex="-1"></div>';
-        return markup.replace(marker, '');
+        var id = esc(taskId).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return String(markup).replace(new RegExp('<div class="ts-feedback"[^>]*data-feedback-for="' + id + '"[^>]*></div>'), '');
     }
     function renderStep() {
         var state = engine.getExerciseState();
@@ -473,7 +473,8 @@
         if (task.family === 'calculation_work_capture') {
             return {
                 work: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="work"]'),
-                finalAnswer: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="final-answer"]')
+                finalAnswer: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="final-answer"]'),
+                unitNotation: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="unit-notation"]')
             };
         }
         return getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');

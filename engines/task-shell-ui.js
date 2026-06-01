@@ -65,6 +65,7 @@
   }
 
   function renderCriteria(task) {
+    if (task.interaction && task.interaction.showCriteriaBeforeCheck === false) return '';
     var criteria = task.expected && Array.isArray(task.expected.criteria) ? task.expected.criteria : task.interaction.criteria || [];
     if (!criteria.length) return '';
     return '<ul class="ts-criteria" aria-label="Zelfcheck punten">' +
@@ -73,17 +74,40 @@
   }
 
   function renderCalculation(task) {
-    return '<div class="ts-calculation">' +
-      renderTextArea(task, 'work', task.interaction.workLabel) +
-      renderTextInput({
+    var unitNotation = '';
+    if (task.interaction.unitNotationLabel || (task.expected && task.expected.unitNotation)) {
+      unitNotation = renderTextInput({
         id: task.id,
         interaction: {
-          inputLabel: task.interaction.finalAnswerLabel,
-          placeholder: task.interaction.finalAnswerPlaceholder || 'Eindantwoord'
+          inputLabel: task.interaction.unitNotationLabel || 'Eenheid of notatie',
+          placeholder: task.interaction.unitNotationPlaceholder || 'Bijvoorbeeld %, euro of indexcijfer'
         }
-      }, 'final-answer', 'decimal') +
+      }, 'unit-notation', 'text');
+    }
+    return '<div class="ts-calculation">' +
+      renderTextArea(task, 'work', task.interaction.workLabel) +
+      '<div class="ts-answer-grid">' +
+        renderTextInput({
+          id: task.id,
+          interaction: {
+            inputLabel: task.interaction.finalAnswerLabel,
+            placeholder: task.interaction.finalAnswerPlaceholder || 'Eindantwoord'
+          }
+        }, 'final-answer', 'decimal') +
+        unitNotation +
+      '</div>' +
       renderCriteria(task) +
     '</div>';
+  }
+
+  function renderHints(task) {
+    var hints = Array.isArray(task.hints) ? task.hints : [];
+    if (!hints.length) return '';
+    var label = hints.length === 1 ? 'Hint' : 'Hints';
+    return '<details class="ts-hints">' +
+      '<summary>' + escapeHtml(label) + '</summary>' +
+      '<ul>' + hints.map(function (hint) { return '<li>' + escapeHtml(hint) + '</li>'; }).join('') + '</ul>' +
+    '</details>';
   }
 
   function renderPointPlacement(task) {
@@ -150,8 +174,9 @@
       '</div>' +
       '<h2>' + escapeHtml(task.prompt) + '</h2>' +
       (task.purpose ? '<p class="ts-purpose">' + escapeHtml(task.purpose) + '</p>' : '') +
+      renderHints(task) +
       renderControl(task) +
-      '<div class="ts-feedback" data-feedback-for="' + escapeHtml(task.id) + '" aria-live="polite" role="status" tabindex="-1"></div>' +
+      '<div class="ts-feedback" data-feedback-for="' + escapeHtml(task.id) + '" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>' +
     '</article>';
   }
 
@@ -176,7 +201,7 @@
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       criteria +
-      (result && result.practiceRoute ? '<a href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a>' : '') +
+      (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
     '</div>';
   }
 

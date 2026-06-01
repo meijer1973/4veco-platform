@@ -98,6 +98,13 @@
   gap: 10px;
 }
 
+.ts-answer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.42fr);
+  gap: 10px;
+  align-items: end;
+}
+
 .ts-point-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -159,6 +166,34 @@
   display: grid;
   gap: 6px;
   font-weight: 700;
+}
+
+.ts-hints {
+  margin: 12px 0;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 7%, var(--ts-panel));
+}
+
+.ts-hints summary {
+  min-height: 42px;
+  padding: 10px 12px;
+  color: var(--ts-primary);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ts-hints summary:focus-visible {
+  outline: 2px solid var(--ts-focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.ts-hints ul {
+  margin: 0;
+  padding: 0 16px 12px 32px;
+  color: var(--ts-muted);
+  line-height: 1.55;
 }
 
 .ts-input,
@@ -226,7 +261,26 @@
   font-weight: 800;
 }
 
-.ts-feedback-card a:focus-visible {
+.ts-feedback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ts-feedback-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 11px;
+  border: 1px solid color-mix(in srgb, var(--ts-primary) 35%, var(--ts-line));
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  text-decoration: none;
+}
+
+.ts-feedback-card a:focus-visible,
+.ts-feedback-action:focus-visible {
   outline: 2px solid var(--ts-focus);
   outline-offset: 3px;
   border-radius: 6px;
@@ -238,6 +292,10 @@
 }
 
 @media (max-width: 640px) {
+  .ts-answer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .ts-point-grid {
     grid-template-columns: 1fr;
   }

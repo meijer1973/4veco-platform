@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-SHELL-UX-2",
+  "generated": "2026-06-01",
+  "status": "implementation_proof_complete_before_lead_review",
+  "unit_notation": {
+    "contract_documented": true,
+    "rendered_role": "data-input-role=\"unit-notation\"",
+    "wrappers_collect_unit_notation": true,
+    "task_2_accepts_108": true,
+    "task_2_accepts_108_with_indexcijfer": true,
+    "task_2_rejects_108_with_percent_notation": true
+  },
+  "hint_policy": {
+    "task_shell_hidden_hints_supported": true,
+    "hints_collapsed_by_default": true,
+    "exit_ticket_content_hints": false,
+    "exit_ticket_1_1_2_source_has_hints": false,
+    "exit_ticket_pre_attempt_criteria_visible": false,
+    "exit_ticket_answer_revealing_placeholders_visible": false
+  },
+  "feedback_flow": {
+    "single_controlled_region": true,
+    "feedback_regions_labelled": true,
+    "feedback_regions_focusable": true,
+    "wrappers_focus_feedback_after_check": true,
+    "next_action_markup": true
+  },
+  "structured_short_response": {
+    "documented": true,
+    "deterministic_field_based": true,
+    "broad_semantic_rubric_engine": false,
+    "broader_reasoning_families_deferred_to": "REASON-STD-1"
+  },
+  "rendered_proof_surfaces": {
+    "math": {
+      "surface": "1.1.2 Rekenen / wiskundevaardigheden task-shell route",
+      "status": "captured",
+      "screenshot": "reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-math-task-shell.png"
+    },
+    "graph": {
+      "surface": "1.1.3 Grafieken route task-shell route",
+      "status": "captured",
+      "screenshot": "reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-113-graph-task-shell.png"
+    },
+    "reasoning": {
+      "surface": "Book 1 reasoning structured task-shell mode",
+      "status": "captured",
+      "screenshot": "reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-reasoning-task-shell.png"
+    },
+    "exit_ticket": {
+      "surface": "1.1.2 target-equivalent exit-ticket task shell",
+      "status": "captured",
+      "screenshot": "reports/sprints/TASK-SHELL-UX-2-screenshots/desktop-light-112-exit-ticket-unit-fields.png"
+    }
+  },
+  "product_boundaries": {
+    "target_equivalent_completion_claims_broadened": false,
+    "paragraph_1_1_1_target_equivalent": false,
+    "paragraph_1_1_3_exit_ticket_created": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js engines/tests/reasoning-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-task-shell-ux2-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-shell-ux2.js",
+      "status": "passed"
+    }
+  ]
+}

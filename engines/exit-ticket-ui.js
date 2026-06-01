@@ -84,11 +84,37 @@
         '<p class="et-error">Deze taakvorm kan nu niet worden getoond.</p>' +
       '</article>';
     }
+    var taskMarkup = removeTaskShellFeedbackRegion(
+      TaskShellUI.renderTask(displayTaskShellForExitTicket(task.taskShell), index),
+      task.taskShell.id
+    );
     return '<article class="et-task et-task-shell" data-task="' + escapeHtml(task.id) + '">' +
-      TaskShellUI.renderTask(task.taskShell, index) +
+      taskMarkup +
       '<button type="button" class="et-task-shell-check" data-task-id="' + escapeHtml(task.id) + '">Controleer</button>' +
-      '<div class="et-feedback" id="feedback-' + escapeHtml(task.id) + '" aria-live="polite"></div>' +
+      '<div class="et-feedback" id="feedback-' + escapeHtml(task.id) + '" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>' +
     '</article>';
+  }
+
+  function removeTaskShellFeedbackRegion(markup, taskId) {
+    var id = escapeHtml(taskId).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return String(markup).replace(new RegExp('<div class="ts-feedback"[^>]*data-feedback-for="' + id + '"[^>]*></div>'), '');
+  }
+
+  function displayTaskShellForExitTicket(taskShell) {
+    var displayTask = JSON.parse(JSON.stringify(taskShell));
+    displayTask.interaction = displayTask.interaction || {};
+    displayTask.interaction.showCriteriaBeforeCheck = false;
+    displayTask.interaction.placeholder = 'Schrijf hier je uitwerking.';
+    displayTask.interaction.finalAnswerPlaceholder = 'Vul je eindantwoord in';
+    displayTask.interaction.unitNotationPlaceholder = 'Vul de notatie in';
+    if (Array.isArray(displayTask.interaction.fields)) {
+      displayTask.interaction.fields = displayTask.interaction.fields.map(function (field) {
+        var copy = JSON.parse(JSON.stringify(field));
+        copy.placeholder = 'Vul je antwoord in';
+        return copy;
+      });
+    }
+    return displayTask;
   }
 
   function renderTask(task, index) {
@@ -173,6 +199,7 @@
         if (shellFeedback && TaskShellUI) {
           shellFeedback.className = 'et-feedback ' + (shellResult.matched ? 'is-match' : 'is-retry');
           shellFeedback.innerHTML = TaskShellUI.renderFeedback(shellResult);
+          if (typeof shellFeedback.focus === 'function') shellFeedback.focus({ preventScroll: true });
         }
         updateCompletion(app, engine);
         return;
@@ -200,6 +227,10 @@
           '<strong>' + escapeHtml(result.feedbackTitle) + '</strong>' +
           '<p>' + escapeHtml(result.feedbackText) + '</p>' +
           '<a href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a>';
+        feedback.setAttribute('role', 'status');
+        feedback.setAttribute('tabindex', '-1');
+        feedback.setAttribute('aria-label', 'Feedback op je antwoord');
+        if (typeof feedback.focus === 'function') feedback.focus({ preventScroll: true });
       }
       updateCompletion(app, engine);
     });
@@ -225,7 +256,8 @@
     if (task.family === 'calculation_work_capture') {
       return {
         work: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]'),
-        finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')
+        finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]'),
+        unitNotation: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]')
       };
     }
     if (task.family === 'structured_short_response') {

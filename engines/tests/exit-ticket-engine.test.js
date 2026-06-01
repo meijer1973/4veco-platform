@@ -232,15 +232,18 @@ describe('ExitTicketEngine', () => {
 
         engine.checkTask('prijsstijging-procent', {
             work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15%'
+            finalAnswer: '15',
+            unitNotation: '%'
         });
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',
-            finalAnswer: '108'
+            finalAnswer: '108',
+            unitNotation: ''
         });
         engine.checkTask('index-naar-procent', {
             work: '(112 - 108) / 108 x 100',
-            finalAnswer: '3,7%'
+            finalAnswer: '3,7',
+            unitNotation: '%'
         });
         engine.checkTask('indexpunten-uitleg', {
             fields: {
@@ -265,15 +268,18 @@ describe('ExitTicketEngine', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         engine.checkTask('prijsstijging-procent', {
             work: '(920 - 800) / 800 x 100',
-            finalAnswer: '15%'
+            finalAnswer: '15',
+            unitNotation: '%'
         });
         engine.checkTask('index-naar-waarde', {
             work: '162 / 150 x 100',
-            finalAnswer: '108'
+            finalAnswer: '108',
+            unitNotation: 'indexcijfer'
         });
         engine.checkTask('index-naar-procent', {
             work: '(112 - 108) / 108 x 100',
-            finalAnswer: '4%'
+            finalAnswer: '4',
+            unitNotation: '%'
         });
         engine.checkTask('indexpunten-uitleg', {
             fields: {
@@ -296,11 +302,32 @@ describe('ExitTicketEngine', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         const result = engine.checkTask('index-naar-waarde', {
             work: '162/150*100',
-            finalAnswer: '108'
+            finalAnswer: '108',
+            unitNotation: ''
         });
         expect(result).toEqual(expect.objectContaining({
             state: 'matched',
             matched: true,
+        }));
+
+        const withNotation = engine.checkTask('index-naar-waarde', {
+            work: '162/150*100',
+            finalAnswer: '108',
+            unitNotation: 'indexcijfer'
+        });
+        expect(withNotation).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+        }));
+
+        const wrongNotation = engine.checkTask('index-naar-waarde', {
+            work: '162/150*100',
+            finalAnswer: '108',
+            unitNotation: '%'
+        });
+        expect(wrongNotation).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false,
         }));
     });
 

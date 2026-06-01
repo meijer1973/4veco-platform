@@ -44,6 +44,8 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('TaskShellUI.renderTask');
         expect(source).toContain('engine.evaluateTaskShellResponse');
         expect(source).toContain('data-graph-task-shell="GRAPH-UX-2"');
+        expect(source).toContain('unitNotation: getValue');
+        expect(source).toContain('data-input-role="unit-notation"');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {
