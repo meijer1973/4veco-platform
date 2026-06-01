@@ -1,0 +1,68 @@
+{
+  "sprint_id": "TASK-FAMILY-SOURCE-1",
+  "status": "runtime_fixture_proof",
+  "families": [
+    "source_value_selection",
+    "source_chain_builder"
+  ],
+  "runtime_support": {
+    "source_value_selection": {
+      "response_shape": {
+        "selections": [
+          {
+            "valueId": "string",
+            "role": "string"
+          }
+        ]
+      },
+      "exact_value_role_set": true,
+      "order_insensitive": true,
+      "full_answer_value_coverage_required": true,
+      "selected_distractors_fail": true,
+      "wrong_roles_fail": true,
+      "duplicate_selected_values_fail": true,
+      "practice_only_feedback": true
+    },
+    "source_chain_builder": {
+      "response_shape": {
+        "chain": [
+          "nodeId"
+        ]
+      },
+      "exact_ordered_chain": true,
+      "full_answer_node_coverage_required": true,
+      "required_node_roles": true,
+      "selected_distractors_fail": true,
+      "wrong_order_fails": true,
+      "duplicate_selected_nodes_fail": true,
+      "practice_only_feedback": true
+    }
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "planning_flags": {
+    "array_with_key_rejected": true,
+    "keyboard_screen_reader_proof": true,
+    "narrow_fixture_mobile_substitute": true
+  },
+  "boundary_flags": {
+    "runtime_only": true,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "summative_use": false,
+    "student_product_use": false
+  },
+  "evidence": {
+    "checker": "build-scripts/sprints/check-task-family-source1.js",
+    "rendered_fixture": "reports/sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.html",
+    "screenshot_manifest": "reports/sprints/TASK-FAMILY-SOURCE-1-screenshot-manifest.md"
+  }
+}

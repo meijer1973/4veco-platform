@@ -1,0 +1,123 @@
+{
+  "sprint_id": "TASK-FAMILY-SOURCE-1",
+  "generated": "2026-06-01",
+  "status": "completed",
+  "plan": "reports/sprints/TASK-FAMILY-SOURCE-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-SOURCE-1-baseline.md",
+  "result": "reports/sprints/TASK-FAMILY-SOURCE-1-result.md",
+  "diff_summary": "reports/sprints/TASK-FAMILY-SOURCE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "scope": {
+    "runtime_support": true,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "target_equivalent_reliance": false,
+    "product_authority": false
+  },
+  "implemented_families": [
+    "source_value_selection",
+    "source_chain_builder"
+  ],
+  "evidence": {
+    "plan": "reports/sprints/TASK-FAMILY-SOURCE-1-plan.md",
+    "baseline": "reports/sprints/TASK-FAMILY-SOURCE-1-baseline.md",
+    "planning_review": "reports/sprints/TASK-FAMILY-SOURCE-1-planning-review.md",
+    "result": "reports/sprints/TASK-FAMILY-SOURCE-1-result.md",
+    "diff_summary": "reports/sprints/TASK-FAMILY-SOURCE-1-diff-summary.md",
+    "proof_json": "reports/json/task-family-source1-proof.json",
+    "rendered_fixture": "reports/sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.html",
+    "screenshot_manifest": "reports/sprints/TASK-FAMILY-SOURCE-1-screenshot-manifest.md",
+    "checker": "build-scripts/sprints/check-task-family-source1.js"
+  },
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-SOURCE-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-SOURCE-1",
+    "npm.cmd exec -- jest --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+    "node build-scripts/sprints/check-task-family-source1.js"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-SOURCE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-SOURCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd exec -- jest --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-family-source1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-SOURCE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-SOURCE-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-FAMILY-SOURCE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-FAMILY-SOURCE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-FAMILY-SOURCE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-FAMILY-SOURCE-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "fixture-proof-only",
+        "description": "Rendered proof is a report fixture; generated-route screenshots are deferred until a later adoption/product sprint uses the families in live output.",
+        "disposition": "accepted_follow_up",
+        "owner": "future product-route adoption sprint",
+        "next_action": "Capture generated-route desktop, mobile, and dark-mode screenshots when source families are adopted into real routes.",
+        "blocking": false
+      },
+      {
+        "id": "no-product-route-adoption",
+        "description": "The families are runtime-capable but not wired into generated product routes or source exercise data in this sprint.",
+        "disposition": "carry_forward",
+        "owner": "future check, graph, route, or reasoning adoption sprint",
+        "next_action": "Adopt only through a reviewed sprint with source-data changes, route proof, and generated-output evidence.",
+        "blocking": false
+      },
+      {
+        "id": "source-chain-not-target-equivalent-alone",
+        "description": "source_chain_builder proves ordered source/control construction only and is not target-equivalent proof by itself.",
+        "disposition": "product_scale_blocker",
+        "owner": "future target-equivalent gate",
+        "next_action": "Pair source-chain tasks with required calculation, graph/table, or reasoning operation tasks before any target-equivalent claim.",
+        "blocking": false
+      }
+    ]
+  }
+}

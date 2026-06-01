@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl" data-fixture-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>TASK-FAMILY-SOURCE-1 Rendered Fixture</title>
+  <link rel="stylesheet" href="../../engines/task-shell.css">
+</head>
+<body data-fixture-viewport="narrow" data-fixture-state="after-click">
+  <main class="ts-shell" data-task-shell="TASK-FAMILY-SOURCE-1">
+    <article class="ts-task" data-task="source-values-procent" data-task-family="source_value_selection">
+      <div class="ts-task-meta">
+        <span>Taak 1</span>
+        <span>Bronwaarden kiezen</span>
+        <span>Bronwaarden kiezen</span>
+      </div>
+      <h2>Welke bronwaarden gebruik je voor de procentuele verandering?</h2>
+      <div class="ts-source-values" data-source-value-task="source-values-procent">
+        <div class="ts-source-value-bank" role="group" aria-label="Bronwaarden">
+          <div class="ts-source-value-card is-selected" data-task-id="source-values-procent" data-source-value-card="oud">
+            <button type="button" class="ts-source-value selected" data-task-id="source-values-procent" data-source-value-id="oud" aria-pressed="true">
+              <span class="ts-source-value-label">EUR 800</span>
+              <span class="ts-source-value-meta"><span>oude prijs</span><span>jaar 1</span><span>euro</span></span>
+            </button>
+            <label class="ts-source-role">
+              <span>Rol</span>
+              <select data-task-id="source-values-procent" data-source-role-value-id="oud" aria-label="Rol voor EUR 800">
+                <option value="">Kies rol</option>
+                <option value="old" selected>oude waarde</option>
+                <option value="new">nieuwe waarde</option>
+              </select>
+            </label>
+          </div>
+          <div class="ts-source-value-card" data-task-id="source-values-procent" data-source-value-card="btw">
+            <button type="button" class="ts-source-value" data-task-id="source-values-procent" data-source-value-id="btw" aria-pressed="false">
+              <span class="ts-source-value-label">21%</span>
+            </button>
+            <label class="ts-source-role">
+              <span>Rol</span>
+              <select data-task-id="source-values-procent" data-source-role-value-id="btw" aria-label="Rol voor 21%">
+                <option value="">Kies rol</option>
+                <option value="old">oude waarde</option>
+                <option value="new">nieuwe waarde</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="ts-feedback" data-feedback-for="source-values-procent" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">
+        <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+          <strong>Controleer je bronwaarden</strong>
+          <p>Kies alleen de waarden die nodig zijn voor deze berekening.</p>
+          <div class="ts-source-value-feedback" aria-label="Aanwijzingen bij je bronwaarden">
+            <div class="ts-selection-feedback-group"><strong>Rol controleren</strong><ul><li>EUR 800: verwacht oude waarde, gekozen nieuwe waarde</li></ul></div>
+            <div class="ts-selection-feedback-group"><strong>Niet nodig gekozen</strong><ul><li>21%</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="ts-task" data-task="source-chain-procent" data-task-family="source_chain_builder">
+      <div class="ts-task-meta">
+        <span>Taak 2</span>
+        <span>Bronketen bouwen</span>
+        <span>Bronketen bouwen</span>
+      </div>
+      <h2>Bouw de bronketen voor deze procentuele verandering.</h2>
+      <div class="ts-source-chain" data-source-chain-task="source-chain-procent" data-separator=" -&gt; ">
+        <div class="ts-source-chain-sequence" role="list" tabindex="0" data-task-id="source-chain-procent" data-source-chain-sequence aria-label="Opgebouwde bronketen">
+          <span class="ts-source-chain-item" role="listitem" data-task-id="source-chain-procent" data-source-selected-node-id="bron" data-source-selected-node-role="source" tabindex="-1">
+            <span class="ts-source-chain-item-label">Lees de prijstabel</span>
+          </span>
+        </div>
+        <div class="ts-source-node-bank" role="group" aria-label="Bronketen onderdelen">
+          <button type="button" class="ts-source-node" data-task-id="source-chain-procent" data-source-node-id="deel-door-nieuw" data-source-node-role="operation" aria-pressed="false">
+            <span class="ts-source-node-label">Deel door 920</span>
+            <span class="ts-source-node-role">bewerking</span>
+          </button>
+        </div>
+        <button type="button" class="ts-source-chain-clear" data-task-id="source-chain-procent" data-source-chain-clear aria-label="Opgebouwde bronketen leegmaken">Leegmaken</button>
+      </div>
+      <div class="ts-feedback" data-feedback-for="source-chain-procent" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">
+        <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+          <strong>Controleer de bronketen</strong>
+          <p>Begin bij de bron en eindig met de conclusie.</p>
+          <div class="ts-source-chain-feedback" aria-label="Aanwijzingen bij je bronketen">
+            <div class="ts-order-feedback-first">
+              <strong>Eerste onderdeel om te controleren</strong>
+              <p>Verwacht: (920 - 800) / 800 x 100%. Gekozen: Deel door 920.</p>
+            </div>
+            <div class="ts-selection-feedback-group"><strong>Ontbrekend type onderdeel</strong><ul><li>antwoord</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

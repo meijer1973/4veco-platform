@@ -342,6 +342,58 @@ function fixtures() {
                 order: ['verschil', 'deel-door-oud', 'keer-100'],
                 partialFeedback: 'practice_only'
             }
+        }),
+        baseTask({
+            id: 'source-values',
+            family: 'source_value_selection',
+            skillLabel: 'Bronwaarden kiezen',
+            prompt: 'Kies de waarden uit de bron en geef hun rol aan.',
+            interaction: {
+                valueBankLabel: 'Bronwaarden',
+                roleLabel: 'Rol in berekening',
+                values: [
+                    { id: 'prijs-oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'oude prijs', unit: 'euro', period: 'jaar 1' },
+                    { id: 'prijs-nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'nieuwe prijs', unit: 'euro', period: 'jaar 2' },
+                    { id: 'prijs-btw', label: '21%', kind: 'distractor', distractorFor: 'prijs-nieuw', description: 'Btw-percentage uit de bron' }
+                ],
+                roles: [
+                    { id: 'old', label: 'oude waarde' },
+                    { id: 'new', label: 'nieuwe waarde' }
+                ]
+            },
+            expected: {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-nieuw', role: 'new' }
+                ],
+                partialFeedback: 'practice_only'
+            }
+        }),
+        baseTask({
+            id: 'source-chain',
+            family: 'source_chain_builder',
+            skillLabel: 'Bronketen bouwen',
+            prompt: 'Bouw de bron naar berekening naar conclusie.',
+            interaction: {
+                nodeBankLabel: 'Bronketen onderdelen',
+                sequenceLabel: 'Opgebouwde bronketen',
+                placeholder: 'Bouw de keten.',
+                separator: ' -> ',
+                nodes: [
+                    { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
+                    { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+                    { id: 'bewerking', label: '(920 - 800) / 800 x 100%', kind: 'answer', nodeRole: 'operation' },
+                    { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
+                    { id: 'conclusie', label: 'De prijs stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+                    { id: 'deel-door-nieuw', label: 'Deel door 920', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
+                ]
+            },
+            expected: {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -361,6 +413,8 @@ describe('TaskShellEngine', () => {
             'sentence_builder',
             'formula_builder',
             'step_ordering',
+            'source_value_selection',
+            'source_chain_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -1269,6 +1323,391 @@ describe('TaskShellEngine', () => {
             expected: {
                 kind: 'step_ordering',
                 order: ['verschil', 'deel-door-oud', 'keer-100'],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
+    test('supports source value selection with exact value-role sets and practice feedback', () => {
+        const sourceValues = fixtures()[17];
+
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-nieuw', role: 'new' },
+                { valueId: 'prijs-oud', role: 'old' }
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'new' },
+                { valueId: 'prijs-btw', role: 'new' }
+            ]
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.sourceValueFeedback).toEqual({
+            mode: 'practice_only',
+            missingRequired: [{ id: 'prijs-nieuw', label: 'EUR 920' }],
+            wrongRoles: [{
+                id: 'prijs-oud',
+                label: 'EUR 800',
+                expectedRole: { id: 'old', label: 'oude waarde' },
+                actualRole: { id: 'new', label: 'nieuwe waarde' }
+            }],
+            selectedDistractors: [{ id: 'prijs-btw', label: '21%' }],
+            correctSelected: []
+        });
+
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'prijs-nieuw', role: 'old' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'prijs-nieuw', role: 'new' },
+                { valueId: 'prijs-btw', role: 'new' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'prijs-oud', role: 'new' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'onbekend', role: 'new' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'prijs-nieuw', role: 'basis' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old', extra: 'ignored' },
+                { valueId: 'prijs-nieuw', role: 'new' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 'prijs-nieuw', role: 'new' }
+            ],
+            extra: 'ignored'
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, [
+            { valueId: 'prijs-oud', role: 'old' },
+            { valueId: 'prijs-nieuw', role: 'new' }
+        ]).matched).toBe(false);
+        const arrayWithSelections = [];
+        arrayWithSelections.selections = [
+            { valueId: 'prijs-oud', role: 'old' },
+            { valueId: 'prijs-nieuw', role: 'new' }
+        ];
+        expect(TaskShellEngine.evaluateTask(sourceValues, arrayWithSelections).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(sourceValues, {
+            selections: [
+                { valueId: 'prijs-oud', role: 'old' },
+                { valueId: 920, role: 'new' }
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(sourceValues)).toEqual([
+            '[data-task-id="source-values"][data-source-value-id]',
+            '[data-task-id="source-values"][data-source-role-value-id]'
+        ]);
+    });
+
+    test('rejects invalid source value selection schemas before rendering', () => {
+        const sourceValues = fixtures()[17];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            interaction: {
+                ...sourceValues.interaction,
+                values: [
+                    { id: 'prijs-oud', label: 'EUR 800', kind: 'answer' },
+                    { id: 'prijs-oud', label: 'Dubbel', kind: 'answer' },
+                    { id: 'prijs-btw', label: '21%', kind: 'distractor', distractorFor: 'prijs-oud' }
+                ]
+            }
+        })).toThrow(/duplicate source value id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            interaction: {
+                ...sourceValues.interaction,
+                values: [
+                    { id: 'prijs-oud', label: 'EUR 800', kind: 'answer' },
+                    { id: 'prijs-nieuw', label: 'EUR 920', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must contain at least 3 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            interaction: {
+                ...sourceValues.interaction,
+                values: [
+                    { id: 'prijs-oud', label: 'EUR 800', kind: 'answer' },
+                    { id: 'prijs-nieuw', label: 'EUR 920', kind: 'answer' },
+                    { id: 'prijs-extra', label: 'EUR 1000', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must include at least one distractor value/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            interaction: {
+                ...sourceValues.interaction,
+                roles: [
+                    { id: 'old', label: 'oude waarde' },
+                    { id: 'old', label: 'dubbel' }
+                ]
+            }
+        })).toThrow(/duplicate source role id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            expected: {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-btw', role: 'new' }
+                ]
+            }
+        })).toThrow(/must be an answer value/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            interaction: {
+                ...sourceValues.interaction,
+                values: [
+                    ...sourceValues.interaction.values,
+                    { id: 'prijs-actie', label: 'EUR 1000', kind: 'answer' }
+                ]
+            },
+            expected: {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-nieuw', role: 'new' }
+                ]
+            }
+        })).toThrow(/must include all answer values/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            expected: {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-oud', role: 'new' }
+                ]
+            }
+        })).toThrow(/uses source value more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sourceValues,
+            expected: {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-nieuw', role: 'basis' }
+                ],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/role must match an interaction role/);
+    });
+
+    test('supports source chain builder with exact ordered chain and practice feedback', () => {
+        const chain = fixtures()[18];
+
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'deel-door-nieuw']
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.sourceChainFeedback).toEqual({
+            mode: 'practice_only',
+            firstMisplaced: {
+                expectedId: 'bewerking',
+                expectedLabel: '(920 - 800) / 800 x 100%',
+                actualId: 'deel-door-nieuw',
+                actualLabel: 'Deel door 920'
+            },
+            missingRequired: [
+                { id: 'bewerking', label: '(920 - 800) / 800 x 100%' },
+                { id: 'antwoord', label: '15%' },
+                { id: 'conclusie', label: 'De prijs stijgt met 15%' }
+            ],
+            selectedDistractors: [{ id: 'deel-door-nieuw', label: 'Deel door 920' }],
+            correctPrefix: [
+                { id: 'bron', label: 'Lees de prijstabel' },
+                { id: 'waarden', label: 'Gebruik 800 en 920' }
+            ],
+            missingRequiredRoles: [
+                { id: 'operation', label: 'bewerking' },
+                { id: 'answer', label: 'antwoord' },
+                { id: 'conclusion', label: 'conclusie' }
+            ]
+        });
+
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'antwoord', 'bewerking', 'conclusie']
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord']
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie', 'deel-door-nieuw']
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'antwoord']
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'onbekend']
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 15]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, {
+            chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
+            extra: 'ignored'
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(chain, [
+            'bron',
+            'waarden',
+            'bewerking',
+            'antwoord',
+            'conclusie'
+        ]).matched).toBe(false);
+        const arrayWithChain = [];
+        arrayWithChain.chain = ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'];
+        expect(TaskShellEngine.evaluateTask(chain, arrayWithChain).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(chain)).toEqual([
+            '[data-task-id="source-chain"][data-source-node-id]',
+            '[data-task-id="source-chain"][data-source-chain-sequence]'
+        ]);
+    });
+
+    test('rejects invalid source chain builder schemas before rendering', () => {
+        const chain = fixtures()[18];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            interaction: {
+                ...chain.interaction,
+                nodes: [
+                    { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
+                    { id: 'bron', label: 'Dubbel', kind: 'answer', nodeRole: 'value' },
+                    { id: 'bewerking', label: 'Bewerking', kind: 'answer', nodeRole: 'operation' },
+                    { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
+                    { id: 'conclusie', label: 'Conclusie', kind: 'answer', nodeRole: 'conclusion' },
+                    { id: 'afleider', label: 'Afleider', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
+                ]
+            }
+        })).toThrow(/duplicate source chain node id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            interaction: {
+                ...chain.interaction,
+                nodes: chain.interaction.nodes.map((node) => node.id === 'conclusie'
+                    ? { ...node, kind: 'distractor', distractorFor: 'antwoord' }
+                    : node)
+            }
+        })).toThrow(/nodeRole conclusion/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            interaction: {
+                ...chain.interaction,
+                nodes: chain.interaction.nodes.map((node) => node.kind === 'distractor'
+                    ? { ...node, kind: 'answer' }
+                    : node)
+            }
+        })).toThrow(/must include at least one distractor node/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            interaction: {
+                ...chain.interaction,
+                nodes: [
+                    { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
+                    { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+                    { id: 'bewerking', label: 'Bewerking', kind: 'answer', nodeRole: 'formula' },
+                    { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
+                    { id: 'conclusie', label: 'Conclusie', kind: 'answer', nodeRole: 'conclusion' },
+                    { id: 'afleider', label: 'Afleider', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
+                ]
+            }
+        })).toThrow(/nodeRole must be a source-chain node role/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            expected: {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'deel-door-nieuw', 'antwoord', 'conclusie']
+            }
+        })).toThrow(/must be an answer node/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            interaction: {
+                ...chain.interaction,
+                nodes: [
+                    ...chain.interaction.nodes,
+                    { id: 'controle', label: 'Controleer eenheid', kind: 'answer', nodeRole: 'conclusion' }
+                ]
+            },
+            expected: {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie']
+            }
+        })).toThrow(/must include all answer nodes/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            expected: {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'antwoord']
+            }
+        })).toThrow(/uses node more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...chain,
+            expected: {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
                 partialFeedback: 'diagnostic'
             }
         })).toThrow(/partialFeedback must be practice_only/);

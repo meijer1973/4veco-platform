@@ -486,6 +486,12 @@
     if (task.family === "step_ordering" && window.TaskShellUI && window.TaskShellUI.collectStepOrderingResponse) {
       return window.TaskShellUI.collectStepOrderingResponse(rootEl, task);
     }
+    if (task.family === "source_value_selection" && window.TaskShellUI && window.TaskShellUI.collectSourceValueSelectionResponse) {
+      return window.TaskShellUI.collectSourceValueSelectionResponse(rootEl, task);
+    }
+    if (task.family === "source_chain_builder" && window.TaskShellUI && window.TaskShellUI.collectSourceChainBuilderResponse) {
+      return window.TaskShellUI.collectSourceChainBuilderResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -528,6 +534,16 @@
     rootEl.querySelectorAll(".ts-step-ordering").forEach(function (ordering) {
       ordering.addEventListener("click", function (event) {
         window.TaskShellUI.handleStepOrderingClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-source-values").forEach(function (sourceValues) {
+      sourceValues.addEventListener("click", function (event) {
+        window.TaskShellUI.handleSourceValueSelectionClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-source-chain").forEach(function (sourceChain) {
+      sourceChain.addEventListener("click", function (event) {
+        window.TaskShellUI.handleSourceChainBuilderClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

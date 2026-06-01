@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T19:39:18.199Z",
+  "generatedAt": "2026-06-01T21:29:16.398Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.50-step-ordering-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.51-source-builder-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exa...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -221,8 +221,8 @@
             {
               "sprint": "TASK-FAMILY-SOURCE-1",
               "name": "Source Value And Chain Builder Implementation",
-              "completed": "no",
-              "currentState": "Implement multi-value source selection plus source -> value -> operation -> answer chain construction for graph/table/source tasks, including old/new, x/y, price/quantity, cause/effect, and unit/label roles.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-SOURCE-1",
-          "name": "Source Value And Chain Builder Implementation",
-          "completed": "no",
-          "currentState": "Implement multi-value source selection plus source -> value -> operation -> answer chain construction for graph/table/source tasks, including old/new, x/y, price/quantity, cause/effect, and unit/label roles.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-LABEL-1",
           "name": "Label-Placement Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict order-sensitive matching, practice-only order feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; `step_ordering` is procedure-control proof only.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SOURCE-1",
+          "name": "Source Value And Chain Builder Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 161,
-      "openCount": 16
+      "completedCount": 162,
+      "openCount": 15
     },
     {
       "id": "lessen",
@@ -2928,8 +2928,8 @@
             {
               "sprint": "TASK-FAMILY-SOURCE-1",
               "name": "Source Value And Chain Builder Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `source_value_selection` and `source_chain_builder` so students select multiple source/table/graph values and label them as old/new, x/y, price/quantity, cause/effect, or source-to-operation-to-answer chains.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption and generated-route screenshots remain later work; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-SOURCE-1",
-          "name": "Source Value And Chain Builder Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `source_value_selection` and `source_chain_builder` so students select multiple source/table/graph values and label them as old/new, x/y, price/quantity, cause/effect, or source-to-operation-to-answer chains.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-LABEL-1",
           "name": "Label-Placement Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `step_ordering` as a deterministic shared task-shell family with answer/distractor step-bank schema, at least two answer steps and one distractor, no neutral/no-distractor loopholes, full `expected.order` answer-step coverage, exact `{ order }` response matching with raw-array, array-with-`order`, non-string, duplicate, unknown, missing, and extra-key rejection, practice-only order feedback, distinct `.ts-step-*` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; `step_ordering` proves procedure control only and cannot replace final calculation, graph/table, source-chain, or constructed-response proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SOURCE-1",
+          "name": "Source Value And Chain Builder Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption and generated-route screenshots remain later work; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 12,
-      "openCount": 35
+      "completedCount": 13,
+      "openCount": 34
     },
     {
       "id": "innovation",

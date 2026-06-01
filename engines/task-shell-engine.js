@@ -23,6 +23,8 @@
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
     formula_builder: { label: 'Formule bouwen', deterministic: true },
     step_ordering: { label: 'Stappen ordenen', deterministic: true },
+    source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
+    source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -64,6 +66,14 @@
     variable: true,
     multiplier: true,
     notation: true
+  };
+
+  var SOURCE_CHAIN_NODE_ROLES = {
+    source: true,
+    value: true,
+    operation: true,
+    answer: true,
+    conclusion: true
   };
 
   var BOUNDARY_FLAGS = {
@@ -176,6 +186,9 @@
       push(task.interaction.unitNotationPlaceholder);
       push(task.interaction.stepBankLabel);
       push(task.interaction.sequenceLabel);
+      push(task.interaction.valueBankLabel);
+      push(task.interaction.roleLabel);
+      push(task.interaction.nodeBankLabel);
       (task.interaction.fields || []).forEach(function (field) {
         push(field.label);
         push(field.placeholder);
@@ -198,6 +211,21 @@
       (task.interaction.steps || []).forEach(function (step) {
         push(step.label);
         push(step.description);
+      });
+      (task.interaction.values || []).forEach(function (value) {
+        push(value.label);
+        push(value.description);
+        push(value.sourceLabel);
+        push(value.unit);
+        push(value.period);
+      });
+      (task.interaction.roles || []).forEach(function (role) {
+        push(role.label);
+        push(role.description);
+      });
+      (task.interaction.nodes || []).forEach(function (node) {
+        push(node.label);
+        push(node.description);
       });
       push(task.interaction.rows);
       push(task.interaction.columns);
@@ -539,6 +567,150 @@
     };
   }
 
+  function sourceValueLabelMap(values) {
+    var labels = {};
+    (values || []).forEach(function (value) {
+      labels[value.id] = value.label;
+    });
+    return labels;
+  }
+
+  function sourceRoleLabelMap(roles) {
+    var labels = {};
+    (roles || []).forEach(function (role) {
+      labels[role.id] = role.label;
+    });
+    return labels;
+  }
+
+  function validateSourceValueInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.values, path + '.values', 3);
+    requireArray(interaction.roles, path + '.roles', 1);
+    optionalString(interaction.valueBankLabel, path + '.valueBankLabel');
+    optionalString(interaction.roleLabel, path + '.roleLabel');
+
+    var valueIds = {};
+    var valueLabels = {};
+    var answerValueIds = [];
+    var answerValueSet = {};
+    var distractorCount = 0;
+    interaction.values.forEach(function (value, idx) {
+      assert(isObject(value), path + '.values[' + idx + '] must be an object');
+      requireString(value.id, path + '.values[' + idx + '].id');
+      requireString(value.label, path + '.values[' + idx + '].label');
+      requireString(value.kind, path + '.values[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(value.kind), path + '.values[' + idx + '].kind must be answer or distractor');
+      optionalString(value.description, path + '.values[' + idx + '].description');
+      optionalString(value.sourceLabel, path + '.values[' + idx + '].sourceLabel');
+      optionalString(value.unit, path + '.values[' + idx + '].unit');
+      optionalString(value.period, path + '.values[' + idx + '].period');
+      assert(!valueIds[value.id], 'duplicate source value id: ' + value.id);
+      valueIds[value.id] = true;
+      valueLabels[value.id] = value.label;
+      if (value.kind === 'answer') {
+        answerValueIds.push(value.id);
+        answerValueSet[value.id] = true;
+      }
+      if (value.kind === 'distractor') distractorCount += 1;
+    });
+
+    interaction.values.forEach(function (value, idx) {
+      optionalString(value.distractorFor, path + '.values[' + idx + '].distractorFor');
+      if (value.distractorFor !== undefined) {
+        assert(answerValueSet[value.distractorFor], path + '.values[' + idx + '].distractorFor must match an answer value');
+      }
+    });
+
+    var roleIds = {};
+    var roleLabels = {};
+    interaction.roles.forEach(function (role, idx) {
+      assert(isObject(role), path + '.roles[' + idx + '] must be an object');
+      requireString(role.id, path + '.roles[' + idx + '].id');
+      requireString(role.label, path + '.roles[' + idx + '].label');
+      optionalString(role.description, path + '.roles[' + idx + '].description');
+      assert(!roleIds[role.id], 'duplicate source role id: ' + role.id);
+      roleIds[role.id] = true;
+      roleLabels[role.id] = role.label;
+    });
+
+    assert(answerValueIds.length >= 2, path + '.values must include at least two answer values');
+    assert(distractorCount >= 1, path + '.values must include at least one distractor value');
+
+    return {
+      valueIds: valueIds,
+      valueLabels: valueLabels,
+      answerValueIds: answerValueIds,
+      roleIds: roleIds,
+      roleLabels: roleLabels
+    };
+  }
+
+  function sourceNodeLabelMap(nodes) {
+    var labels = {};
+    (nodes || []).forEach(function (node) {
+      labels[node.id] = node.label;
+    });
+    return labels;
+  }
+
+  function validateSourceChainInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.nodes, path + '.nodes', 6);
+    optionalSeparator(interaction.separator, path + '.separator');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    optionalString(interaction.nodeBankLabel, path + '.nodeBankLabel');
+    optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
+
+    var nodeIds = {};
+    var nodeLabels = {};
+    var nodeRoles = {};
+    var answerNodeIds = [];
+    var answerNodeIdSet = {};
+    var answerRoleCounts = {};
+    var distractorCount = 0;
+    interaction.nodes.forEach(function (node, idx) {
+      assert(isObject(node), path + '.nodes[' + idx + '] must be an object');
+      requireString(node.id, path + '.nodes[' + idx + '].id');
+      requireString(node.label, path + '.nodes[' + idx + '].label');
+      requireString(node.kind, path + '.nodes[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(node.kind), path + '.nodes[' + idx + '].kind must be answer or distractor');
+      requireString(node.nodeRole, path + '.nodes[' + idx + '].nodeRole');
+      assert(SOURCE_CHAIN_NODE_ROLES[node.nodeRole], path + '.nodes[' + idx + '].nodeRole must be a source-chain node role');
+      optionalString(node.description, path + '.nodes[' + idx + '].description');
+      assert(!nodeIds[node.id], 'duplicate source chain node id: ' + node.id);
+      nodeIds[node.id] = true;
+      nodeLabels[node.id] = node.label;
+      nodeRoles[node.id] = node.nodeRole;
+      if (node.kind === 'answer') {
+        answerNodeIds.push(node.id);
+        answerNodeIdSet[node.id] = true;
+        answerRoleCounts[node.nodeRole] = (answerRoleCounts[node.nodeRole] || 0) + 1;
+      }
+      if (node.kind === 'distractor') distractorCount += 1;
+    });
+
+    interaction.nodes.forEach(function (node, idx) {
+      optionalString(node.distractorFor, path + '.nodes[' + idx + '].distractorFor');
+      if (node.distractorFor !== undefined) {
+        assert(answerNodeIdSet[node.distractorFor], path + '.nodes[' + idx + '].distractorFor must match an answer node');
+      }
+    });
+
+    Object.keys(SOURCE_CHAIN_NODE_ROLES).forEach(function (role) {
+      assert(answerRoleCounts[role] >= 1, path + '.nodes must include at least one answer node with nodeRole ' + role);
+    });
+    assert(distractorCount >= 1, path + '.nodes must include at least one distractor node');
+
+    return {
+      nodeIds: nodeIds,
+      nodeLabels: nodeLabels,
+      nodeRoles: nodeRoles,
+      answerNodeIds: answerNodeIds,
+      answerRoleCounts: answerRoleCounts
+    };
+  }
+
   function validateStructuredFields(fields, path) {
     requireArray(fields, path, 1);
     var ids = {};
@@ -856,6 +1028,68 @@
       return;
     }
 
+    if (task.family === 'source_value_selection') {
+      assert(expected.kind === 'source_value_selection', task.id + '.expected.kind must be source_value_selection');
+      requireArray(expected.selections, task.id + '.expected.selections', 2);
+      var sourceValueIds = interactionInfo.valueIds || {};
+      var answerValueIds = interactionInfo.answerValueIds || [];
+      var answerValueSet = {};
+      answerValueIds.forEach(function (valueId) {
+        answerValueSet[valueId] = true;
+      });
+      var sourceRoleIds = interactionInfo.roleIds || {};
+      var seenExpectedValues = {};
+      var seenExpectedPairs = {};
+      expected.selections.forEach(function (selection, idx) {
+        assert(isObject(selection), task.id + '.expected.selections[' + idx + '] must be an object');
+        requireString(selection.valueId, task.id + '.expected.selections[' + idx + '].valueId');
+        requireString(selection.role, task.id + '.expected.selections[' + idx + '].role');
+        assert(sourceValueIds[selection.valueId], task.id + '.expected.selections[' + idx + '].valueId must match an interaction value');
+        assert(answerValueSet[selection.valueId], task.id + '.expected.selections[' + idx + '].valueId must be an answer value');
+        assert(sourceRoleIds[selection.role], task.id + '.expected.selections[' + idx + '].role must match an interaction role');
+        assert(!seenExpectedValues[selection.valueId], task.id + '.expected.selections uses source value more than once');
+        seenExpectedValues[selection.valueId] = true;
+        var expectedPairKey = selection.valueId + '\u0001' + selection.role;
+        assert(!seenExpectedPairs[expectedPairKey], task.id + '.expected.selections contains a duplicate value-role pair');
+        seenExpectedPairs[expectedPairKey] = true;
+      });
+      assert(expected.selections.length === answerValueIds.length, task.id + '.expected.selections must include all answer values');
+      answerValueIds.forEach(function (valueId) {
+        assert(seenExpectedValues[valueId], task.id + '.expected.selections missing answer value ' + valueId);
+      });
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
+    if (task.family === 'source_chain_builder') {
+      assert(expected.kind === 'source_chain_builder', task.id + '.expected.kind must be source_chain_builder');
+      requireArray(expected.chain, task.id + '.expected.chain', 5);
+      var sourceNodeIds = interactionInfo.nodeIds || {};
+      var answerNodeIds = interactionInfo.answerNodeIds || [];
+      var answerNodeSet = {};
+      answerNodeIds.forEach(function (nodeId) {
+        answerNodeSet[nodeId] = true;
+      });
+      var seenExpectedNodes = {};
+      expected.chain.forEach(function (nodeId, idx) {
+        requireString(nodeId, task.id + '.expected.chain[' + idx + ']');
+        assert(sourceNodeIds[nodeId], task.id + '.expected.chain[' + idx + '] must match an interaction node');
+        assert(answerNodeSet[nodeId], task.id + '.expected.chain[' + idx + '] must be an answer node');
+        assert(!seenExpectedNodes[nodeId], task.id + '.expected.chain uses node more than once');
+        seenExpectedNodes[nodeId] = true;
+      });
+      assert(expected.chain.length === answerNodeIds.length, task.id + '.expected.chain must include all answer nodes');
+      answerNodeIds.forEach(function (nodeId) {
+        assert(seenExpectedNodes[nodeId], task.id + '.expected.chain missing answer node ' + nodeId);
+      });
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -918,6 +1152,10 @@
       interactionInfo = validateFormulaInteraction(task, path);
     } else if (task.family === 'step_ordering') {
       interactionInfo = validateStepOrderingInteraction(task, path);
+    } else if (task.family === 'source_value_selection') {
+      interactionInfo = validateSourceValueInteraction(task, path);
+    } else if (task.family === 'source_chain_builder') {
+      interactionInfo = validateSourceChainInteraction(task, path);
     }
 
     return interactionInfo;
@@ -1125,6 +1363,57 @@
     return true;
   }
 
+  function sourceValueSelectionMatches(response, expected, valueIds, roleIds) {
+    if (!isObject(response) || !Array.isArray(response.selections)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'selections') return false;
+    var selections = response.selections;
+    var expectedSelections = expected.selections || [];
+    if (selections.length !== expectedSelections.length) return false;
+
+    var expectedPairs = {};
+    var seenExpectedValues = {};
+    expectedSelections.forEach(function (selection) {
+      expectedPairs[selection.valueId + '\u0001' + selection.role] = true;
+      seenExpectedValues[selection.valueId] = true;
+    });
+
+    var seenSelectedValues = {};
+    for (var i = 0; i < selections.length; i++) {
+      var selection = selections[i];
+      if (!isObject(selection)) return false;
+      var selectionKeys = Object.keys(selection);
+      if (selectionKeys.length !== 2 || !Object.prototype.hasOwnProperty.call(selection, 'valueId') || !Object.prototype.hasOwnProperty.call(selection, 'role')) return false;
+      if (typeof selection.valueId !== 'string' || !selection.valueId) return false;
+      if (typeof selection.role !== 'string' || !selection.role) return false;
+      if (!Object.prototype.hasOwnProperty.call(valueIds, selection.valueId)) return false;
+      if (!Object.prototype.hasOwnProperty.call(roleIds, selection.role)) return false;
+      if (seenSelectedValues[selection.valueId]) return false;
+      seenSelectedValues[selection.valueId] = true;
+      if (!expectedPairs[selection.valueId + '\u0001' + selection.role]) return false;
+    }
+
+    return Object.keys(seenExpectedValues).every(function (valueId) {
+      return seenSelectedValues[valueId];
+    });
+  }
+
+  function sourceChainMatches(response, expected, nodeIds) {
+    if (!isObject(response) || !Array.isArray(response.chain)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'chain') return false;
+    var chain = response.chain;
+    if (chain.length !== (expected.chain || []).length) return false;
+    var seen = {};
+    for (var i = 0; i < chain.length; i++) {
+      if (typeof chain[i] !== 'string' || !chain[i] || seen[chain[i]]) return false;
+      if (!Object.prototype.hasOwnProperty.call(nodeIds, chain[i])) return false;
+      seen[chain[i]] = true;
+      if (chain[i] !== expected.chain[i]) return false;
+    }
+    return true;
+  }
+
   function normalizeIdSet(values) {
     var out = {};
     for (var i = 0; i < values.length; i++) {
@@ -1250,6 +1539,164 @@
     };
   }
 
+  function sourceValueEntry(valueId, labels) {
+    return {
+      id: valueId,
+      label: labels && labels[valueId] ? labels[valueId] : valueId
+    };
+  }
+
+  function sourceRoleEntry(roleId, labels) {
+    return {
+      id: roleId,
+      label: labels && labels[roleId] ? labels[roleId] : roleId
+    };
+  }
+
+  function sourceValueFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selections = isObject(response) && Array.isArray(response.selections) ? response.selections : [];
+    var expectedSelections = task.expected.selections || [];
+    var labels = sourceValueLabelMap(task.interaction && task.interaction.values ? task.interaction.values : []);
+    var roleLabels = sourceRoleLabelMap(task.interaction && task.interaction.roles ? task.interaction.roles : []);
+    var expectedByValue = {};
+    var selectedByValue = {};
+    var missingRequired = [];
+    var wrongRoles = [];
+    var selectedDistractors = [];
+    var correctSelected = [];
+    var valueKinds = {};
+
+    (task.interaction.values || []).forEach(function (value) {
+      valueKinds[value.id] = value.kind;
+    });
+    expectedSelections.forEach(function (selection) {
+      expectedByValue[selection.valueId] = selection.role;
+    });
+    selections.forEach(function (selection) {
+      if (!isObject(selection) || typeof selection.valueId !== 'string') return;
+      if (!selectedByValue[selection.valueId]) selectedByValue[selection.valueId] = selection.role;
+      if (valueKinds[selection.valueId] === 'distractor') {
+        selectedDistractors.push(sourceValueEntry(selection.valueId, labels));
+      }
+    });
+
+    expectedSelections.forEach(function (selection) {
+      if (!Object.prototype.hasOwnProperty.call(selectedByValue, selection.valueId)) {
+        missingRequired.push(sourceValueEntry(selection.valueId, labels));
+        return;
+      }
+      if (selectedByValue[selection.valueId] === selection.role) {
+        correctSelected.push(sourceValueEntry(selection.valueId, labels));
+        return;
+      }
+      wrongRoles.push({
+        id: selection.valueId,
+        label: labels[selection.valueId] || selection.valueId,
+        expectedRole: sourceRoleEntry(selection.role, roleLabels),
+        actualRole: sourceRoleEntry(selectedByValue[selection.valueId], roleLabels)
+      });
+    });
+
+    return {
+      mode: 'practice_only',
+      missingRequired: missingRequired,
+      wrongRoles: wrongRoles,
+      selectedDistractors: selectedDistractors,
+      correctSelected: correctSelected
+    };
+  }
+
+  function sourceChainEntry(nodeId, labels) {
+    return {
+      id: nodeId,
+      label: labels && labels[nodeId] ? labels[nodeId] : nodeId
+    };
+  }
+
+  function roleLabel(role) {
+    var labels = {
+      source: 'bron',
+      value: 'waarde',
+      operation: 'bewerking',
+      answer: 'antwoord',
+      conclusion: 'conclusie'
+    };
+    return labels[role] || role;
+  }
+
+  function sourceChainFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selected = isObject(response) && Array.isArray(response.chain) ? response.chain : [];
+    var expectedChain = task.expected.chain || [];
+    var labels = sourceNodeLabelMap(task.interaction && task.interaction.nodes ? task.interaction.nodes : []);
+    var expectedSet = {};
+    var selectedSet = {};
+    var valueKinds = {};
+    var nodeRoles = {};
+    var missingRequired = [];
+    var selectedDistractors = [];
+    var correctPrefix = [];
+    var missingRequiredRoles = [];
+    var firstMisplaced = null;
+    var prefixStillCorrect = true;
+
+    (task.interaction.nodes || []).forEach(function (node) {
+      valueKinds[node.id] = node.kind;
+      nodeRoles[node.id] = node.nodeRole;
+    });
+    expectedChain.forEach(function (nodeId) {
+      expectedSet[nodeId] = true;
+    });
+    selected.forEach(function (nodeId) {
+      if (typeof nodeId === 'string') selectedSet[nodeId] = true;
+    });
+
+    expectedChain.forEach(function (nodeId, idx) {
+      if (!selectedSet[nodeId]) missingRequired.push(sourceChainEntry(nodeId, labels));
+      if (prefixStillCorrect && selected[idx] === nodeId) {
+        correctPrefix.push(sourceChainEntry(nodeId, labels));
+        return;
+      }
+      if (!firstMisplaced) {
+        var actualId = typeof selected[idx] === 'string' ? selected[idx] : '';
+        firstMisplaced = {
+          expectedId: nodeId,
+          expectedLabel: labels[nodeId] || nodeId,
+          actualId: actualId,
+          actualLabel: actualId ? (labels[actualId] || actualId) : 'Geen onderdeel gekozen'
+        };
+      }
+      prefixStillCorrect = false;
+    });
+
+    selected.forEach(function (nodeId) {
+      if (typeof nodeId !== 'string') return;
+      if (!expectedSet[nodeId] && valueKinds[nodeId] === 'distractor') {
+        selectedDistractors.push(sourceChainEntry(nodeId, labels));
+      }
+    });
+
+    Object.keys(SOURCE_CHAIN_NODE_ROLES).forEach(function (role) {
+      var hasSelectedRole = false;
+      selected.forEach(function (nodeId) {
+        if (expectedSet[nodeId] && nodeRoles[nodeId] === role) hasSelectedRole = true;
+      });
+      if (!hasSelectedRole) {
+        missingRequiredRoles.push({ id: role, label: roleLabel(role) });
+      }
+    });
+
+    return {
+      mode: 'practice_only',
+      firstMisplaced: firstMisplaced,
+      missingRequired: missingRequired,
+      selectedDistractors: selectedDistractors,
+      correctPrefix: correctPrefix,
+      missingRequiredRoles: missingRequiredRoles
+    };
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -1303,6 +1750,14 @@
       var stepIds = validateStepOrderingInteraction(task, task.id + '.interaction').stepIds;
       return stepOrderingMatches(response, task.expected, stepIds);
     }
+    if (task.family === 'source_value_selection' && task.expected.kind === 'source_value_selection') {
+      var sourceValueInfo = validateSourceValueInteraction(task, task.id + '.interaction');
+      return sourceValueSelectionMatches(response, task.expected, sourceValueInfo.valueIds, sourceValueInfo.roleIds);
+    }
+    if (task.family === 'source_chain_builder' && task.expected.kind === 'source_chain_builder') {
+      var sourceChainInfo = validateSourceChainInteraction(task, task.id + '.interaction');
+      return sourceChainMatches(response, task.expected, sourceChainInfo.nodeIds);
+    }
     return false;
   }
 
@@ -1355,6 +1810,14 @@
       var orderFeedback = stepOrderingFeedback(response, task);
       if (orderFeedback) result.orderFeedback = orderFeedback;
     }
+    if (task.family === 'source_value_selection' && !matched) {
+      var valueFeedback = sourceValueFeedback(response, task);
+      if (valueFeedback) result.sourceValueFeedback = valueFeedback;
+    }
+    if (task.family === 'source_chain_builder' && !matched) {
+      var chainFeedback = sourceChainFeedback(response, task);
+      if (chainFeedback) result.sourceChainFeedback = chainFeedback;
+    }
     return result;
   }
 
@@ -1403,6 +1866,18 @@
       return [
         '[data-task-id="' + task.id + '"][data-step-id]',
         '[data-task-id="' + task.id + '"][data-step-sequence]'
+      ];
+    }
+    if (task.family === 'source_value_selection') {
+      return [
+        '[data-task-id="' + task.id + '"][data-source-value-id]',
+        '[data-task-id="' + task.id + '"][data-source-role-value-id]'
+      ];
+    }
+    if (task.family === 'source_chain_builder') {
+      return [
+        '[data-task-id="' + task.id + '"][data-source-node-id]',
+        '[data-task-id="' + task.id + '"][data-source-chain-sequence]'
       ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];

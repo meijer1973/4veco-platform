@@ -63,6 +63,12 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('task.family === "step_ordering"');
         expect(source).toContain('collectStepOrderingResponse(rootEl, task)');
         expect(source).toContain('handleStepOrderingClick(rootEl, event)');
+        expect(source).toContain('task.family === "source_value_selection"');
+        expect(source).toContain('collectSourceValueSelectionResponse(rootEl, task)');
+        expect(source).toContain('handleSourceValueSelectionClick(rootEl, event)');
+        expect(source).toContain('task.family === "source_chain_builder"');
+        expect(source).toContain('collectSourceChainBuilderResponse(rootEl, task)');
+        expect(source).toContain('handleSourceChainBuilderClick(rootEl, event)');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {

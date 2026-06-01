@@ -282,6 +282,61 @@
     '</div>';
   }
 
+  function renderSourceValueSelection(task) {
+    var values = task.interaction.values || [];
+    var roles = task.interaction.roles || [];
+    var roleOptions = '<option value="">Kies rol</option>' + roles.map(function (role) {
+      return '<option value="' + escapeHtml(role.id) + '">' + escapeHtml(role.label) + '</option>';
+    }).join('');
+    var valueHtml = values.map(function (value) {
+      var meta = [
+        value.sourceLabel,
+        value.period,
+        value.unit
+      ].filter(Boolean).map(function (item) {
+        return '<span>' + escapeHtml(item) + '</span>';
+      }).join('');
+      return '<div class="ts-source-value-card" data-task-id="' + escapeHtml(task.id) + '" data-source-value-card="' + escapeHtml(value.id) + '">' +
+        '<button type="button" class="ts-source-value" data-task-id="' + escapeHtml(task.id) + '" data-source-value-id="' + escapeHtml(value.id) + '" aria-pressed="false">' +
+          '<span class="ts-source-value-label">' + escapeHtml(value.label) + '</span>' +
+          (value.description ? '<span class="ts-source-value-description">' + escapeHtml(value.description) + '</span>' : '') +
+          (meta ? '<span class="ts-source-value-meta">' + meta + '</span>' : '') +
+        '</button>' +
+        '<label class="ts-source-role">' +
+          '<span>' + escapeHtml(task.interaction.roleLabel || 'Rol') + '</span>' +
+          '<select data-task-id="' + escapeHtml(task.id) + '" data-source-role-value-id="' + escapeHtml(value.id) + '" aria-label="' + escapeHtml((task.interaction.roleLabel || 'Rol') + ' voor ' + value.label) + '">' +
+            roleOptions +
+          '</select>' +
+        '</label>' +
+      '</div>';
+    }).join('');
+    return '<div class="ts-source-values" data-source-value-task="' + escapeHtml(task.id) + '">' +
+      '<div class="ts-source-value-bank" role="group" aria-label="' + escapeHtml(task.interaction.valueBankLabel || 'Bronwaarden') + '">' + valueHtml + '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
+  function renderSourceChainBuilder(task) {
+    var nodes = task.interaction.nodes || [];
+    var nodeHtml = nodes.map(function (node) {
+      return '<button type="button" class="ts-source-node" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-source-node-id="' + escapeHtml(node.id) + '" data-source-node-role="' + escapeHtml(node.nodeRole || '') + '" aria-pressed="false">' +
+        '<span class="ts-source-node-label">' + escapeHtml(node.label) + '</span>' +
+        '<span class="ts-source-node-role">' + escapeHtml(sourceRoleLabel(node.nodeRole)) + '</span>' +
+        (node.description ? '<span class="ts-source-node-description">' + escapeHtml(node.description) + '</span>' : '') +
+      '</button>';
+    }).join('');
+    var placeholder = task.interaction.placeholder || 'Bouw de bronketen in de juiste volgorde.';
+    return '<div class="ts-source-chain" data-source-chain-task="' + escapeHtml(task.id) + '" data-separator="' + escapeHtml(task.interaction.separator || ' -> ') + '">' +
+      '<div class="ts-source-chain-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-source-chain-sequence aria-label="' + escapeHtml(task.interaction.sequenceLabel || 'Opgebouwde bronketen') + '">' +
+        '<span class="ts-source-chain-placeholder">' + escapeHtml(placeholder) + '</span>' +
+      '</div>' +
+      '<div class="ts-source-node-bank" role="group" aria-label="' + escapeHtml(task.interaction.nodeBankLabel || 'Bronketen onderdelen') + '">' + nodeHtml + '</div>' +
+      '<button type="button" class="ts-source-chain-clear" data-task-id="' + escapeHtml(task.id) + '" data-source-chain-clear aria-label="Opgebouwde bronketen leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -315,6 +370,10 @@
         return renderFormulaBuilder(task);
       case 'step_ordering':
         return renderStepOrdering(task);
+      case 'source_value_selection':
+        return renderSourceValueSelection(task);
+      case 'source_chain_builder':
+        return renderSourceChainBuilder(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -355,11 +414,15 @@
       : '';
     var selection = renderSelectionFeedback(result && result.selectionFeedback);
     var order = renderOrderFeedback(result && result.orderFeedback);
+    var sourceValue = renderSourceValueFeedback(result && result.sourceValueFeedback);
+    var sourceChain = renderSourceChainFeedback(result && result.sourceChainFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       selection +
       order +
+      sourceValue +
+      sourceChain +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
     '</div>';
@@ -395,6 +458,47 @@
     return '<div class="ts-order-feedback" aria-label="Aanwijzingen bij je volgorde">' +
       first +
       renderSelectionList('Nog nodig', feedback.missingRequired) +
+      renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Begin klopt al', feedback.correctPrefix) +
+    '</div>';
+  }
+
+  function renderWrongRoleList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var expected = item.expectedRole && item.expectedRole.label ? item.expectedRole.label : '';
+        var actual = item.actualRole && item.actualRole.label ? item.actualRole.label : 'geen rol';
+        return '<li>' + escapeHtml(item.label || item.id) + ': verwacht ' + escapeHtml(expected) + ', gekozen ' + escapeHtml(actual) + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderSourceValueFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-source-value-feedback" aria-label="Aanwijzingen bij je bronwaarden">' +
+      renderSelectionList('Nog nodig', feedback.missingRequired) +
+      renderWrongRoleList('Rol controleren', feedback.wrongRoles) +
+      renderSelectionList('Niet nodig gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Al goed gekozen', feedback.correctSelected) +
+    '</div>';
+  }
+
+  function renderSourceChainFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    var first = '';
+    if (feedback.firstMisplaced) {
+      first = '<div class="ts-order-feedback-first">' +
+        '<strong>Eerste onderdeel om te controleren</strong>' +
+        '<p>Verwacht: ' + escapeHtml(feedback.firstMisplaced.expectedLabel || feedback.firstMisplaced.expectedId) +
+        '. Gekozen: ' + escapeHtml(feedback.firstMisplaced.actualLabel || feedback.firstMisplaced.actualId || 'geen onderdeel') + '.</p>' +
+      '</div>';
+    }
+    return '<div class="ts-source-chain-feedback" aria-label="Aanwijzingen bij je bronketen">' +
+      first +
+      renderSelectionList('Nog nodig', feedback.missingRequired) +
+      renderSelectionList('Ontbrekend type onderdeel', feedback.missingRequiredRoles) +
       renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
       renderSelectionList('Begin klopt al', feedback.correctPrefix) +
     '</div>';
@@ -544,6 +648,45 @@
     return { order: order };
   }
 
+  function collectSourceValueSelectionResponse(rootEl, task) {
+    if (!rootEl || !task) return { selections: [] };
+    var selections = [];
+    var cards = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-source-value-card]');
+    for (var i = 0; i < cards.length; i++) {
+      var valueId = cards[i].getAttribute('data-source-value-card') || '';
+      var button = cards[i].querySelector('[data-source-value-id="' + cssEscape(valueId) + '"]');
+      var select = cards[i].querySelector('[data-source-role-value-id="' + cssEscape(valueId) + '"]');
+      var selected = button && button.classList.contains('selected');
+      var role = select ? select.value : '';
+      if (selected || role) selections.push({ valueId: valueId, role: role });
+    }
+    return { selections: selections };
+  }
+
+  function collectSourceChainBuilderResponse(rootEl, task) {
+    if (!rootEl || !task) return { chain: [] };
+    var chain = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-source-selected-node-id]');
+    for (var i = 0; i < controls.length; i++) {
+      chain.push(controls[i].getAttribute('data-source-selected-node-id') || '');
+    }
+    return { chain: chain };
+  }
+
+  function handleSourceValueSelectionClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var sourceValues = event.target.closest('.ts-source-values');
+    if (!sourceValues || !rootEl.contains(sourceValues)) return false;
+    var value = event.target.closest('.ts-source-value');
+    if (!value) return false;
+    var selected = !value.classList.contains('selected');
+    value.classList.toggle('selected', selected);
+    value.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    var card = value.closest('.ts-source-value-card');
+    if (card) card.classList.toggle('is-selected', selected);
+    return true;
+  }
+
   function handleFormulaBuilderClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var formula = event.target.closest('.ts-formula');
@@ -577,6 +720,45 @@
     if (clear) {
       clearFormula(formula);
       updateFormulaAvailability(formula);
+      focusElement(sequence);
+      return true;
+    }
+    return false;
+  }
+
+  function handleSourceChainBuilderClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var chain = event.target.closest('.ts-source-chain');
+    if (!chain || !rootEl.contains(chain)) return false;
+
+    var node = event.target.closest('.ts-source-node');
+    var remove = event.target.closest('.ts-source-chain-remove');
+    var move = event.target.closest('.ts-source-chain-move');
+    var clear = event.target.closest('.ts-source-chain-clear');
+    var sequence = chain.querySelector('[data-source-chain-sequence]');
+
+    if (node) {
+      if (node.disabled || !sequence) return true;
+      addSourceNode(chain, sequence, node);
+      updateSourceNodeAvailability(chain);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-source-chain-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateSourceChainPlaceholder(chain);
+      updateSourceNodeAvailability(chain);
+      focusElement(nextFocus || sequence);
+      return true;
+    }
+    if (move) {
+      moveSourceNode(chain, move);
+      return true;
+    }
+    if (clear) {
+      clearSourceChain(chain);
+      updateSourceNodeAvailability(chain);
       focusElement(sequence);
       return true;
     }
@@ -691,6 +873,31 @@
     focusElement(item);
   }
 
+  function addSourceNode(chain, sequence, node) {
+    var nodeId = node.getAttribute('data-source-node-id') || '';
+    var role = node.getAttribute('data-source-node-role') || '';
+    var label = sourceNodeText(node);
+    var item = document.createElement('span');
+    item.className = 'ts-source-chain-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', node.getAttribute('data-task-id') || '');
+    item.setAttribute('data-source-selected-node-id', nodeId);
+    item.setAttribute('data-source-selected-node-role', role);
+    item.setAttribute('tabindex', '-1');
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-source-chain-item-label';
+    labelEl.textContent = label;
+
+    item.appendChild(labelEl);
+    item.appendChild(sourceChainButton('ts-source-chain-move', 'left', 'Naar links', '\u2039'));
+    item.appendChild(sourceChainButton('ts-source-chain-move', 'right', 'Naar rechts', '\u203a'));
+    item.appendChild(sourceChainButton('ts-source-chain-remove', '', 'Verwijder onderdeel ' + label, '\u00d7'));
+    sequence.appendChild(item);
+    updateSourceChainPlaceholder(chain);
+    focusElement(item);
+  }
+
   function sentenceButton(className, direction, label, text) {
     var button = document.createElement('button');
     button.type = 'button';
@@ -716,6 +923,16 @@
     button.type = 'button';
     button.className = className;
     if (direction) button.setAttribute('data-step-move', direction);
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
+  }
+
+  function sourceChainButton(className, direction, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    if (direction) button.setAttribute('data-source-chain-move', direction);
     button.setAttribute('aria-label', label);
     button.textContent = text;
     return button;
@@ -772,6 +989,23 @@
     focusElement(item);
   }
 
+  function moveSourceNode(chain, button) {
+    var item = button.closest('.ts-source-chain-item');
+    if (!item || !item.parentNode) return;
+    var direction = button.getAttribute('data-source-chain-move');
+    if (direction === 'left') {
+      var previous = item.previousElementSibling;
+      if (previous && !previous.classList.contains('ts-source-chain-placeholder')) {
+        item.parentNode.insertBefore(item, previous);
+      }
+    } else if (direction === 'right') {
+      var next = item.nextElementSibling;
+      if (next) item.parentNode.insertBefore(next, item);
+    }
+    updateSourceChainPlaceholder(chain);
+    focusElement(item);
+  }
+
   function clearSentence(sentence) {
     var items = sentence.querySelectorAll('.ts-sentence-item');
     for (var i = 0; i < items.length; i++) {
@@ -796,6 +1030,14 @@
     updateStepPlaceholder(ordering);
   }
 
+  function clearSourceChain(chain) {
+    var items = chain.querySelectorAll('.ts-source-chain-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+    updateSourceChainPlaceholder(chain);
+  }
+
   function updateSentencePlaceholder(sentence) {
     var placeholder = sentence.querySelector('.ts-sentence-placeholder');
     if (!placeholder) return;
@@ -812,6 +1054,12 @@
     var placeholder = ordering.querySelector('.ts-step-placeholder');
     if (!placeholder) return;
     placeholder.hidden = ordering.querySelectorAll('.ts-step-item').length > 0;
+  }
+
+  function updateSourceChainPlaceholder(chain) {
+    var placeholder = chain.querySelector('.ts-source-chain-placeholder');
+    if (!placeholder) return;
+    placeholder.hidden = chain.querySelectorAll('.ts-source-chain-item').length > 0;
   }
 
   function updateSentenceAvailability(sentence) {
@@ -867,6 +1115,23 @@
     }
   }
 
+  function updateSourceNodeAvailability(chain) {
+    var used = {};
+    var items = chain.querySelectorAll('.ts-source-chain-item');
+    for (var i = 0; i < items.length; i++) {
+      var nodeId = items[i].getAttribute('data-source-selected-node-id');
+      if (nodeId) used[nodeId] = true;
+    }
+    var nodes = chain.querySelectorAll('.ts-source-node');
+    for (var j = 0; j < nodes.length; j++) {
+      var id = nodes[j].getAttribute('data-source-node-id');
+      var unavailable = Boolean(used[id]);
+      nodes[j].disabled = unavailable;
+      nodes[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      nodes[j].setAttribute('aria-pressed', unavailable ? 'true' : 'false');
+    }
+  }
+
   function sentenceTokenText(token) {
     var label = token.querySelector('.ts-sentence-token-label');
     return label ? label.textContent : token.textContent;
@@ -880,6 +1145,22 @@
   function stepTokenText(step) {
     var label = step.querySelector('.ts-step-token-label');
     return label ? label.textContent : step.textContent;
+  }
+
+  function sourceNodeText(node) {
+    var label = node.querySelector('.ts-source-node-label');
+    return label ? label.textContent : node.textContent;
+  }
+
+  function sourceRoleLabel(role) {
+    var labels = {
+      source: 'bron',
+      value: 'waarde',
+      operation: 'bewerking',
+      answer: 'antwoord',
+      conclusion: 'conclusie'
+    };
+    return labels[role] || role || 'onderdeel';
   }
 
   function setSelectedTile(cloze, tile) {
@@ -967,6 +1248,10 @@
     handleFormulaBuilderClick: handleFormulaBuilderClick,
     collectStepOrderingResponse: collectStepOrderingResponse,
     handleStepOrderingClick: handleStepOrderingClick,
+    collectSourceValueSelectionResponse: collectSourceValueSelectionResponse,
+    handleSourceValueSelectionClick: handleSourceValueSelectionClick,
+    collectSourceChainBuilderResponse: collectSourceChainBuilderResponse,
+    handleSourceChainBuilderClick: handleSourceChainBuilderClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

@@ -178,6 +178,44 @@ function data() {
                 order: ['verschil', 'deel-door-oud', 'keer-100'],
                 partialFeedback: 'practice_only'
             }),
+            task('source-values', 'source_value_selection', {
+                valueBankLabel: 'Bronwaarden',
+                roleLabel: 'Rol in berekening',
+                values: [
+                    { id: 'prijs-oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'oude prijs', unit: 'euro', period: 'jaar 1' },
+                    { id: 'prijs-nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'nieuwe prijs', unit: 'euro', period: 'jaar 2' },
+                    { id: 'prijs-btw', label: '21%', kind: 'distractor', distractorFor: 'prijs-nieuw' }
+                ],
+                roles: [
+                    { id: 'old', label: 'oude waarde' },
+                    { id: 'new', label: 'nieuwe waarde' }
+                ]
+            }, {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'prijs-oud', role: 'old' },
+                    { valueId: 'prijs-nieuw', role: 'new' }
+                ],
+                partialFeedback: 'practice_only'
+            }),
+            task('source-chain', 'source_chain_builder', {
+                nodeBankLabel: 'Bronketen onderdelen',
+                sequenceLabel: 'Opgebouwde bronketen',
+                placeholder: 'Bouw de keten.',
+                separator: ' -> ',
+                nodes: [
+                    { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
+                    { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+                    { id: 'bewerking', label: '(920 - 800) / 800 x 100%', kind: 'answer', nodeRole: 'operation' },
+                    { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
+                    { id: 'conclusie', label: 'De prijs stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+                    { id: 'deel-door-nieuw', label: 'Deel door 920', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
+                ]
+            }, {
+                kind: 'source_chain_builder',
+                chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
+                partialFeedback: 'practice_only'
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -203,6 +241,8 @@ describe('TaskShellUI', () => {
             'sentence_builder',
             'formula_builder',
             'step_ordering',
+            'source_value_selection',
+            'source_chain_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -258,6 +298,17 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-step-sequence');
         expect(html).toContain('role="group" aria-label="Stappenbank"');
         expect(html).toContain('aria-label="Gekozen volgorde"');
+        expect(html).toContain('class="ts-source-values"');
+        expect(html).toContain('data-source-value-id="prijs-btw"');
+        expect(html).toContain('data-source-role-value-id="prijs-oud"');
+        expect(html).toContain('role="group" aria-label="Bronwaarden"');
+        expect(html).toContain('aria-label="Rol in berekening voor EUR 800"');
+        expect(html).toContain('class="ts-source-chain"');
+        expect(html).toContain('data-source-node-id="deel-door-nieuw"');
+        expect(html).toContain('data-source-node-role="operation"');
+        expect(html).toContain('data-source-chain-sequence');
+        expect(html).toContain('role="group" aria-label="Bronketen onderdelen"');
+        expect(html).toContain('aria-label="Opgebouwde bronketen"');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -288,6 +339,29 @@ describe('TaskShellUI', () => {
         expect(orderFeedback).toContain('Deel door de oude waarde');
         expect(orderFeedback).toContain('Afleider gekozen');
         expect(orderFeedback).toContain('Deel door de nieuwe waarde');
+
+        const sourceValueResult = TaskShellEngine.evaluateTask(data().tasks[12], {
+            selections: [
+                { valueId: 'prijs-oud', role: 'new' },
+                { valueId: 'prijs-btw', role: 'new' }
+            ]
+        });
+        const sourceValueFeedback = TaskShellUI.renderFeedback(sourceValueResult);
+        expect(sourceValueFeedback).toContain('class="ts-source-value-feedback"');
+        expect(sourceValueFeedback).toContain('Rol controleren');
+        expect(sourceValueFeedback).toContain('verwacht oude waarde');
+        expect(sourceValueFeedback).toContain('Niet nodig gekozen');
+        expect(sourceValueFeedback).toContain('21%');
+
+        const sourceChainResult = TaskShellEngine.evaluateTask(data().tasks[13], {
+            chain: ['bron', 'waarden', 'deel-door-nieuw']
+        });
+        const sourceChainFeedback = TaskShellUI.renderFeedback(sourceChainResult);
+        expect(sourceChainFeedback).toContain('class="ts-source-chain-feedback"');
+        expect(sourceChainFeedback).toContain('Eerste onderdeel om te controleren');
+        expect(sourceChainFeedback).toContain('(920 - 800) / 800 x 100%');
+        expect(sourceChainFeedback).toContain('Ontbrekend type onderdeel');
+        expect(sourceChainFeedback).toContain('antwoord');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -310,6 +384,8 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Zin bouwen');
         expect(html).toContain('Formule bouwen');
         expect(html).toContain('Stappen ordenen');
+        expect(html).toContain('Bronwaarden kiezen');
+        expect(html).toContain('Bronketen bouwen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -380,6 +456,24 @@ describe('TaskShellUI', () => {
         expect(TaskShellEngine.focusPlan(data().tasks[11])).toEqual([
             '[data-task-id="step-ordering"][data-step-id]',
             '[data-task-id="step-ordering"][data-step-sequence]'
+        ]);
+    });
+
+    test('exports source value helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectSourceValueSelectionResponse).toBe('function');
+        expect(typeof TaskShellUI.handleSourceValueSelectionClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[12])).toEqual([
+            '[data-task-id="source-values"][data-source-value-id]',
+            '[data-task-id="source-values"][data-source-role-value-id]'
+        ]);
+    });
+
+    test('exports source chain helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectSourceChainBuilderResponse).toBe('function');
+        expect(typeof TaskShellUI.handleSourceChainBuilderClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[13])).toEqual([
+            '[data-task-id="source-chain"][data-source-node-id]',
+            '[data-task-id="source-chain"][data-source-chain-sequence]'
         ]);
     });
 

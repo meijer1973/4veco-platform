@@ -315,6 +315,80 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
                 }
+            },
+            {
+                id: 'source-values-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'source-values-task',
+                    family: 'source_value_selection',
+                    skillLabel: 'Bronwaarden kiezen',
+                    purpose: 'Kies oude en nieuwe waarde uit de bron.',
+                    prompt: 'Welke bronwaarden gebruik je voor de procentuele verandering?',
+                    interaction: {
+                        valueBankLabel: 'Bronwaarden',
+                        roleLabel: 'Rol',
+                        values: [
+                            { id: 'oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'oude prijs' },
+                            { id: 'nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'nieuwe prijs' },
+                            { id: 'btw', label: '21%', kind: 'distractor', distractorFor: 'nieuw' }
+                        ],
+                        roles: [
+                            { id: 'old', label: 'oude waarde' },
+                            { id: 'new', label: 'nieuwe waarde' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'source_value_selection',
+                        selections: [
+                            { valueId: 'oud', role: 'old' },
+                            { valueId: 'nieuw', role: 'new' }
+                        ],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Bronwaarden kloppen',
+                        matchText: 'Je kiest de oude en nieuwe waarde.',
+                        retryTitle: 'Controleer de bron',
+                        retryText: 'Kies alleen de waarden voor de berekening.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met bronnen', href: 'grafiekenspel.html' }
+                }
+            },
+            {
+                id: 'source-chain-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'source-chain-task',
+                    family: 'source_chain_builder',
+                    skillLabel: 'Bronketen bouwen',
+                    purpose: 'Bouw de route van bron naar conclusie.',
+                    prompt: 'Bouw de juiste bronketen.',
+                    interaction: {
+                        nodeBankLabel: 'Bronketen onderdelen',
+                        sequenceLabel: 'Opgebouwde bronketen',
+                        nodes: [
+                            { id: 'bron', label: 'Lees de tabel', kind: 'answer', nodeRole: 'source' },
+                            { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+                            { id: 'bewerking', label: '(920 - 800) / 800', kind: 'answer', nodeRole: 'operation' },
+                            { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
+                            { id: 'conclusie', label: 'De prijs stijgt', kind: 'answer', nodeRole: 'conclusion' },
+                            { id: 'deel-door-nieuw', label: 'Deel door nieuw', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'source_chain_builder',
+                        chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Bronketen klopt',
+                        matchText: 'Je koppelt bron, waarde, bewerking, antwoord en conclusie.',
+                        retryTitle: 'Controleer de keten',
+                        retryText: 'Begin bij de bron en eindig met de conclusie.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met bronnen', href: 'grafiekenspel.html' }
+                }
             }
         ]
     };
@@ -413,6 +487,8 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="sentence_builder"');
         expect(html).toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-task-family="step_ordering"');
+        expect(html).toContain('data-task-family="source_value_selection"');
+        expect(html).toContain('data-task-family="source_chain_builder"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -420,6 +496,8 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
         expect(html).toContain('data-step-id="rond-eerst-af"');
+        expect(html).toContain('data-source-value-id="btw"');
+        expect(html).toContain('data-source-node-id="deel-door-nieuw"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -443,5 +521,11 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleStepOrderingClick(app, event)');
         expect(source).toContain('collectStepOrderingResponse(wrapper, task)');
         expect(source).toContain("task.family === 'step_ordering'");
+        expect(source).toContain('handleSourceValueSelectionClick(app, event)');
+        expect(source).toContain('collectSourceValueSelectionResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'source_value_selection'");
+        expect(source).toContain('handleSourceChainBuilderClick(app, event)');
+        expect(source).toContain('collectSourceChainBuilderResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'source_chain_builder'");
     });
 });

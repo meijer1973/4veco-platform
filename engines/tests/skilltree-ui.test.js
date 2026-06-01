@@ -39,6 +39,12 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("task.family === 'step_ordering'");
         expect(source).toContain('collectStepOrderingResponse(root, task)');
         expect(source).toContain('handleStepOrderingClick(els.exStepSlot, e)');
+        expect(source).toContain("task.family === 'source_value_selection'");
+        expect(source).toContain('collectSourceValueSelectionResponse(root, task)');
+        expect(source).toContain('handleSourceValueSelectionClick(els.exStepSlot, e)');
+        expect(source).toContain("task.family === 'source_chain_builder'");
+        expect(source).toContain('collectSourceChainBuilderResponse(root, task)');
+        expect(source).toContain('handleSourceChainBuilderClick(els.exStepSlot, e)');
     });
 
     test('announces task-shell feedback and preserves keyboard/focus flow', () => {
@@ -53,6 +59,8 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("e.target.closest('.ts-multi-select')");
         expect(source).toContain("e.target.closest('.ts-formula')");
         expect(source).toContain("e.target.closest('.ts-step-ordering')");
+        expect(source).toContain("e.target.closest('.ts-source-values')");
+        expect(source).toContain("e.target.closest('.ts-source-chain')");
     });
 
     test('uses student-facing route language without internal codes', () => {
