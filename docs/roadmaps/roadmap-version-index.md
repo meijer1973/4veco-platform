@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.40-check-short-exit1-inventory` | `references/reference-team-roadmap.md` | Current operating roadmap after CHECK-SHORT-EXIT-1 closed the first three paragraph check-surface inventory. The Product Proof Track records 1.1.1 as advisory Korte check only with missing target-equivalent proof, 1.1.2 as reviewed local target-equivalent exit ticket with missing advisory short check, and 1.1.3 as missing both check surfaces. Next action is STANDARD-EXERCISES-1; Scale Gate 1 remains blocked until GATE-PRODUCT-3P and REV-STD-1 close or receive explicit human waiver. |
+| References Team Roadmap | `v3.41-standard-exercises1-coverage` | `references/reference-team-roadmap.md` | Current operating roadmap after STANDARD-EXERCISES-1 closed the unified standard exercise coverage audit. The Product Proof Track now proceeds to TASK-SHELL-UX-2. Math, graph/table, and reviewed 1.1.2 exit-ticket actions are covered by shared task-shell families; reasoning requires standard-family expansion; Scale Gate 1 remains blocked until GATE-PRODUCT-3P and REV-STD-1 close or receive explicit human waiver. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before STANDARD-EXERCISES-1 coverage audit | `v3.40-check-short-exit1-inventory` | `docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before L1.7B-Q2 planning | `v3.32-check-q2-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.32-check-q2-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before CHECK-Q2-PLAN closure | `v3.31-reason-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.31-reason-refine1-plan.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before REASON-REFINE-1 closure | `v3.30-math-refine1-plan` | `docs/roadmaps/outdated/reference-team-roadmap-v3.30-math-refine1-plan.md` | `references/reference-team-roadmap.md` |

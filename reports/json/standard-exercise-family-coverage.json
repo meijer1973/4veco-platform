@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "sprint_id": "STANDARD-EXERCISES-1",
+  "generated_on": "2026-06-01",
+  "status": "audit_complete_no_implementation",
+  "quality_floor": "Coverage decisions must describe the student-facing action, response shape, feedback model, current owner, shared-shell coverage, disposition, and follow-up owner for every inspected exercise family. The audit may not promote any practice or check surface to product authority.",
+  "source_evidence": [
+    "engines/task-shell-engine.js",
+    "engines/task-shell-ui.js",
+    "engines/reasoning-engine.js",
+    "engines/reasoning-ui.js",
+    "engines/skilltree/base-elements.js",
+    "engines/skilltree-engine.js",
+    "engines/skilltree-ui.js",
+    "engines/graphical-engine.js",
+    "build-scripts/content/book-1/b1-113-graphical-data.js",
+    "build-scripts/content/book-1/b1-112-graphical-data.js",
+    "engines/exit-ticket-engine.js",
+    "engines/exit-ticket-ui.js",
+    "source-data/book-1/exit-ticket/1.1.1.json",
+    "source-data/book-1/exit-ticket/1.1.2.json",
+    "source-data/book-1/reasoning/1.1.1.csv",
+    "source-data/book-1/reasoning/1.1.2.csv",
+    "build-scripts/platform/build-reasoning-questions.js",
+    "engines/procedure-engine.js",
+    "engines/procedure-ui.js",
+    "build-scripts/content/book-1/b1-111-procedure-data.js",
+    "build-scripts/content/book-1/b1-111-inoefening.js",
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \u2013 begeleide inoefening.html",
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \u2013 begeleide inoefening.html",
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \u2013 begeleide inoefening.html",
+    "reports/sprints/GAME-ARCH-2-task-shell-api.md",
+    "reports/sprints/GAME-ARCH-2-file-disposition.md",
+    "reports/sprints/CHECK-SHORT-EXIT-1-result.md"
+  ],
+  "shared_task_shell_runtime_families": [
+    "choice",
+    "numeric_input",
+    "calculation_work_capture",
+    "final_answer_entry",
+    "unit_notation_field",
+    "short_constructed_response",
+    "structured_short_response",
+    "table_value_selection",
+    "graph_reading",
+    "point_placement",
+    "graph_construction_substitute",
+    "structured_reasoning"
+  ],
+  "game_arch_2_documented_families": [
+    "choice",
+    "numeric_input",
+    "calculation_work_capture",
+    "final_answer_entry",
+    "unit_notation_field",
+    "short_constructed_response",
+    "table_value_selection",
+    "graph_reading",
+    "point_placement",
+    "graph_construction_substitute",
+    "structured_reasoning"
+  ],
+  "surfaces": [
+    {
+      "surface": "reasoning_game",
+      "current_state": "partial_shared_shell_coverage",
+      "summary": "Mode 5 uses shared structured_reasoning self-check; modes 0-4 remain local reasoning interactions with useful product value but no unified standard family yet.",
+      "coverage_decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js",
+        "source-data/book-1/reasoning/1.1.1.csv",
+        "source-data/book-1/reasoning/1.1.2.csv",
+        "build-scripts/platform/build-reasoning-questions.js"
+      ]
+    },
+    {
+      "surface": "math_skilltree",
+      "current_state": "shared_shell_integrated_for_primary_calculation_actions",
+      "summary": "A38/A39 route tasks are represented through numeric input, calculation/work capture, final-answer entry, and unit/notation fields.",
+      "coverage_decision": "covered_existing_but_needs_ux_hardening",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/skilltree/base-elements.js",
+        "engines/skilltree-engine.js",
+        "engines/skilltree-ui.js"
+      ]
+    },
+    {
+      "surface": "graph_table_game",
+      "current_state": "shared_shell_integrated_for_book_1_1_3_reference_pattern",
+      "summary": "The 1.1.3 graph route maps table selection, graph reading, axis convention, interpolation, point placement, graph-construction substitute, and calculation/work capture into shared task-shell families.",
+      "coverage_decision": "covered_existing_but_needs_target_chain_hardening",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/graphical-engine.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js",
+        "build-scripts/content/book-1/b1-112-graphical-data.js"
+      ]
+    },
+    {
+      "surface": "exit_ticket_checkpoint",
+      "current_state": "mixed_legacy_and_shared_shell",
+      "summary": "1.1.1 remains choice-based advisory short check; 1.1.2 target-equivalent exit ticket uses calculation_work_capture and structured_short_response.",
+      "coverage_decision": "covered_for_1_1_2_candidate_with_structured_short_response_alignment_flag",
+      "follow_up_owner": "CHECK-SHORT-EXIT-2",
+      "evidence_paths": [
+        "source-data/book-1/exit-ticket/1.1.1.json",
+        "source-data/book-1/exit-ticket/1.1.2.json",
+        "engines/exit-ticket-engine.js",
+        "engines/exit-ticket-ui.js"
+      ]
+    },
+    {
+      "surface": "guided_practice",
+      "current_state": "document_guidance_outside_shared_task_shell",
+      "summary": "Begeleide inoefening uses scaffolded open prompts, thinking steps, formula reminders, model answers, hidden/clickable hints in generated HTML, and visual scaffolds. It is learning support, not target-equivalent proof.",
+      "coverage_decision": "defer_to_task_shell_ux_and_engine_unify_policy",
+      "follow_up_owner": "ENGINE-UNIFY-1",
+      "evidence_paths": [
+        "build-scripts/content/book-1/b1-111-inoefening.js",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \u2013 begeleide inoefening.html",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \u2013 begeleide inoefening.html",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \u2013 begeleide inoefening.html"
+      ]
+    },
+    {
+      "surface": "procedure_support",
+      "current_state": "local_procedure_flow_outside_shared_task_shell",
+      "summary": "Procedure support uses given/choose steps and procedure templates. It is support-route practice and should be wrapped or kept as a support module unless later checkpoint tasks need the same action.",
+      "coverage_decision": "wrap_or_defer_to_engine_unify",
+      "follow_up_owner": "ENGINE-UNIFY-1",
+      "evidence_paths": [
+        "engines/procedure-engine.js",
+        "engines/procedure-ui.js",
+        "build-scripts/content/book-1/b1-111-procedure-data.js"
+      ]
+    }
+  ],
+  "family_rows": [
+    {
+      "id": "choice",
+      "surface": "task_shell_and_advisory_check",
+      "current_type": "choice",
+      "student_action": "Select one option from labelled alternatives.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Deterministic value match with matched/retry feedback.",
+      "feedback_owner": "engines/task-shell-engine.js and engines/exit-ticket-engine.js for legacy 1.1.1 choice tasks",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "choice",
+      "disposition": "keep_for_low-stakes_choice_and_table_actions_not_as_universal_exit_ticket_substitute",
+      "dual_coding_policy": "text_only_acceptable_when_target_action_is_choice_like",
+      "follow_up_owner": "CHECK-SHORT-EXIT-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "source-data/book-1/exit-ticket/1.1.1.json"
+      ]
+    },
+    {
+      "id": "numeric_input",
+      "surface": "math_skilltree",
+      "current_type": "task_shell_numeric_input",
+      "student_action": "Enter a numeric answer.",
+      "response_shape": "{ value: number|string } or number|string",
+      "feedback_model": "Deterministic numeric tolerance match.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "numeric_input",
+      "disposition": "keep_and_harden_focus_feedback",
+      "dual_coding_policy": "text_only_acceptable_unless_formula_or_visual_basis_is_needed",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "engines/skilltree/base-elements.js"
+      ]
+    },
+    {
+      "id": "calculation_work_capture",
+      "surface": "math_skilltree_graph_and_exit_ticket",
+      "current_type": "task_shell_calculation_work_capture",
+      "student_action": "Show work or calculation steps and enter final answer.",
+      "response_shape": "{ work: string, finalAnswer: string }",
+      "feedback_model": "Requires work when configured, required work text groups when configured, and final-answer matching.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "calculation_work_capture",
+      "disposition": "keep_and_add_unit_notation_split_where_relevant",
+      "dual_coding_policy": "structured_fields_recommended_for_formula_substitution",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "engines/skilltree/base-elements.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js",
+        "source-data/book-1/exit-ticket/1.1.2.json"
+      ]
+    },
+    {
+      "id": "final_answer_entry",
+      "surface": "math_skilltree",
+      "current_type": "task_shell_final_answer_entry",
+      "student_action": "Enter the final answer after a calculation step.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Deterministic number or accepted-text match.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "final_answer_entry",
+      "disposition": "keep_but_pair_with_calculation_work_when_target_requires_proof",
+      "dual_coding_policy": "text_only_acceptable_when_work_is_captured_elsewhere",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "engines/skilltree/base-elements.js"
+      ]
+    },
+    {
+      "id": "unit_notation_field",
+      "surface": "math_skilltree",
+      "current_type": "task_shell_unit_notation_field",
+      "student_action": "Enter the unit, percent sign, index notation, or other notation separately from the number.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Accepted text match.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "unit_notation_field",
+      "disposition": "keep_and_make_required_when_calculation_target_requires_notation",
+      "dual_coding_policy": "structured_fields_required_for_number_unit_separation",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "engines/skilltree/base-elements.js"
+      ]
+    },
+    {
+      "id": "short_constructed_response",
+      "surface": "task_shell",
+      "current_type": "task_shell_short_constructed_response",
+      "student_action": "Write a short free response checked against configured text criteria.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Text criteria matching when configured, or self-check if used without deterministic criteria.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "short_constructed_response",
+      "disposition": "keep_for_short_response_but_do_not_use_as_broad_semantic_engine",
+      "dual_coding_policy": "text_only_acceptable_for_short_explanation_unless_flow_or_source_structure_is central",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "reports/sprints/GAME-ARCH-2-task-shell-api.md"
+      ]
+    },
+    {
+      "id": "structured_short_response",
+      "surface": "exit_ticket_checkpoint",
+      "current_type": "task_shell_structured_short_response",
+      "student_action": "Fill several short fields and optionally choose a judgment to prove a compact explanation.",
+      "response_shape": "{ fields: { [fieldId]: string }, choice?: string }",
+      "feedback_model": "Structured text criteria matching with required field groups and optional choice.",
+      "feedback_owner": "engines/task-shell-engine.js",
+      "shared_shell_coverage": "runtime_covered_but_standard_documentation_gap",
+      "proposed_standard_family": "structured_short_response",
+      "disposition": "document_and_harden_in_TASK_SHELL_UX_2",
+      "dual_coding_policy": "structured_fields_required_when_free_regex_would_be_brittle",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "engines/task-shell-ui.js",
+        "source-data/book-1/exit-ticket/1.1.2.json"
+      ]
+    },
+    {
+      "id": "table_value_selection",
+      "surface": "graph_table_game",
+      "current_type": "task_shell_table_value_selection",
+      "student_action": "Select the row/value from a table or source.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Deterministic value match.",
+      "feedback_owner": "engines/task-shell-engine.js via engines/graphical-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "table_value_selection",
+      "disposition": "keep_as_graph_table_reference_pattern",
+      "dual_coding_policy": "graph_table_interaction_required_when_source_is_table_based",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js"
+      ]
+    },
+    {
+      "id": "graph_reading",
+      "surface": "graph_table_game",
+      "current_type": "task_shell_graph_reading",
+      "student_action": "Read a value from a graph or estimate a value between known points.",
+      "response_shape": "{ value: number|string } or number|string",
+      "feedback_model": "Deterministic numeric tolerance match.",
+      "feedback_owner": "engines/task-shell-engine.js via engines/graphical-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "graph_reading",
+      "disposition": "keep_as_graph_table_reference_pattern",
+      "dual_coding_policy": "graph_table_interaction_required",
+      "follow_up_owner": "TASK-SHELL-UX-2",
+      "evidence_paths": [
+        "engines/graphical-engine.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js",
+        "build-scripts/content/book-1/b1-112-graphical-data.js"
+      ]
+    },
+    {
+      "id": "point_placement",
+      "surface": "graph_table_game",
+      "current_type": "task_shell_point_placement",
+      "student_action": "Enter x/y coordinates that represent a graph point.",
+      "response_shape": "{ point: { x: number|string, y: number|string } } or { x, y }",
+      "feedback_model": "Deterministic point match.",
+      "feedback_owner": "engines/task-shell-engine.js via engines/graphical-engine.js",
+      "shared_shell_coverage": "covered_existing_standard",
+      "proposed_standard_family": "point_placement",
+      "disposition": "keep_and_later_validate_against_target_chain_for_1_1_3_exit_ticket",
+      "dual_coding_policy": "graph_table_interaction_required",
+      "follow_up_owner": "CHECK-SHORT-EXIT-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js"
+      ]
+    },
+    {
+      "id": "graph_construction_substitute",
+      "surface": "graph_table_game",
+      "current_type": "task_shell_graph_construction_substitute",
+      "student_action": "Describe graph construction steps or axis convention where full drawing is not yet available.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Self-check or text criteria, depending on configured expected data.",
+      "feedback_owner": "engines/task-shell-engine.js via engines/graphical-engine.js",
+      "shared_shell_coverage": "covered_existing_standard_but_not_full_drawing",
+      "proposed_standard_family": "graph_construction_substitute",
+      "disposition": "keep_as_substitute_until_full_graph_drawing_is_reviewed",
+      "dual_coding_policy": "graph_table_interaction_required",
+      "follow_up_owner": "CHECK-SHORT-EXIT-2",
+      "evidence_paths": [
+        "engines/task-shell-engine.js",
+        "build-scripts/content/book-1/b1-113-graphical-data.js"
+      ]
+    },
+    {
+      "id": "structured_reasoning",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_5_task_shell_structured_reasoning",
+      "student_action": "Write a short cause-intermediate-conclusion reasoning chain and compare it to self-check criteria.",
+      "response_shape": "{ value: string } or string",
+      "feedback_model": "Self-check criteria, not scored persistent goed progress.",
+      "feedback_owner": "engines/reasoning-engine.js delegates to engines/task-shell-engine.js; engines/reasoning-ui.js renders mode-specific guide",
+      "shared_shell_coverage": "covered_existing_but_self_check_only",
+      "proposed_standard_family": "structured_reasoning",
+      "disposition": "keep_and_refactor_around_answer_form_standards",
+      "dual_coding_policy": "flow_or_step_visual_recommended_when_chain_structure_is central",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js",
+        "engines/task-shell-engine.js"
+      ]
+    },
+    {
+      "id": "step_ordering",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_0_steps_ordenen",
+      "student_action": "Select reasoning steps in the correct order.",
+      "response_shape": "{ orderedStepIds: string[] } or local selected labels",
+      "feedback_model": "Local deterministic order check plus correct-chain and selected-chain comparison.",
+      "feedback_owner": "engines/reasoning-engine.js and engines/reasoning-ui.js",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "step_ordering",
+      "disposition": "standard_expansion_for_REASON_STD_1",
+      "dual_coding_policy": "dual_coding_recommended",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js"
+      ]
+    },
+    {
+      "id": "claim_reason_evidence",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_1_deelvragen_opbouwen",
+      "student_action": "Select the right subquestions in the right order to build a reasoning route.",
+      "response_shape": "{ orderedQuestionIds: string[] } or local selected question texts",
+      "feedback_model": "Local deterministic ordered-selection feedback with repair explanation.",
+      "feedback_owner": "engines/reasoning-engine.js and engines/reasoning-ui.js",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "claim_reason_evidence",
+      "disposition": "standard_expansion_for_REASON_STD_1",
+      "dual_coding_policy": "dual_coding_recommended",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js",
+        "source-data/book-1/reasoning/1.1.1.csv",
+        "source-data/book-1/reasoning/1.1.2.csv"
+      ]
+    },
+    {
+      "id": "cause_effect_chain",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_3_flow_data_and_mode_5_self_check",
+      "student_action": "Build or explain a cause-to-effect chain.",
+      "response_shape": "{ orderedNodes: string[] } for visual chain or { value: string } for prose self-check",
+      "feedback_model": "Local flow-order feedback for mode 3 and self-check criteria for mode 5.",
+      "feedback_owner": "engines/reasoning-engine.js, engines/reasoning-ui.js, and task-shell self-check for mode 5",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "cause_effect_chain",
+      "disposition": "standard_expansion_for_REASON_STD_1",
+      "dual_coding_policy": "flow_diagram_required_when_chain_order_is_the_learning_goal",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "source-data/book-1/reasoning/1.1.1.csv",
+        "source-data/book-1/reasoning/1.1.2.csv",
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js"
+      ]
+    },
+    {
+      "id": "flow_diagram_build",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_3_stroomdiagram_bouwen",
+      "student_action": "Place flow blocks in the correct visual order.",
+      "response_shape": "{ orderedBlockIds: string[] } or local placed block texts",
+      "feedback_model": "Local deterministic flow-order check with repair cues.",
+      "feedback_owner": "engines/reasoning-engine.js and engines/reasoning-ui.js",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "flow_diagram_build",
+      "disposition": "standard_expansion_for_REASON_STD_1",
+      "dual_coding_policy": "visual_construction_required",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js",
+        "build-scripts/platform/build-reasoning-questions.js"
+      ]
+    },
+    {
+      "id": "classification_with_explanation",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_4_structuren_matchen",
+      "student_action": "Match tasks that share the same reasoning structure, then later explain why the classification fits.",
+      "response_shape": "{ pairs: [ [id, id] ] } plus future explanation field",
+      "feedback_model": "Current local pair-matching feedback; explanation part is not yet standard.",
+      "feedback_owner": "engines/reasoning-engine.js and engines/reasoning-ui.js",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "classification_with_explanation",
+      "disposition": "standard_expansion_for_REASON_STD_1",
+      "dual_coding_policy": "dual_coding_recommended_for_structure_matching",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js"
+      ]
+    },
+    {
+      "id": "source_based_explanation",
+      "surface": "future_reasoning_and_checkpoint",
+      "current_type": "not_yet_first_three_standard_family",
+      "student_action": "Use a source observation as evidence or starting point, then finish the underlying answer form.",
+      "response_shape": "{ sourceObservation: string, explanation: string } or structured fields",
+      "feedback_model": "Not standardized yet; should combine source-use criteria with answer-form criteria.",
+      "feedback_owner": "future shared task shell plus domain module",
+      "shared_shell_coverage": "requires_standard_expansion",
+      "proposed_standard_family": "source_based_explanation",
+      "disposition": "standard_expansion_for_REASON_STD_1_and_later_answer_form_work",
+      "dual_coding_policy": "source_visual_or_table_context_required_when_source_is_visual",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/review-packet.md",
+        "reports/sprints/GAME-ARCH-2-task-shell-api.md"
+      ]
+    },
+    {
+      "id": "error_detection",
+      "surface": "reasoning_game",
+      "current_type": "reasoning_mode_2_vind_de_fout",
+      "student_action": "Identify the flawed reasoning step and read repair feedback.",
+      "response_shape": "{ selectedStepIndex: number }",
+      "feedback_model": "Local deterministic step-index check plus wrong-step explanation.",
+      "feedback_owner": "engines/reasoning-engine.js and engines/reasoning-ui.js",
+      "shared_shell_coverage": "defer_standardization",
+      "proposed_standard_family": "error_detection",
+      "disposition": "defer_to_REASON_STD_1_after_required_families",
+      "dual_coding_policy": "dual_coding_recommended_when_error_is_structural",
+      "follow_up_owner": "REASON-STD-1",
+      "evidence_paths": [
+        "engines/reasoning-engine.js",
+        "engines/reasoning-ui.js"
+      ]
+    },
+    {
+      "id": "guided_open_scaffolded_response",
+      "surface": "guided_practice",
+      "current_type": "begeleide_inoefening_open_prompt",
+      "student_action": "Use thinking steps, formula reminders, hints, answer lines, visual scaffolds, and model answers to practice a textbook exercise.",
+      "response_shape": "document_or_html_guided_response_not_machine_evaluated",
+      "feedback_model": "Model answers and explanations, not shared-shell evaluated feedback.",
+      "feedback_owner": "build-scripts/lib/lib-begeleide-inoefening.js and generated lesson HTML",
+      "shared_shell_coverage": "outside_standard_learning_support",
+      "proposed_standard_family": "guided_open_scaffolded_response",
+      "disposition": "keep_as_learning_support_but_do_not_count_as_exit_ticket_standard",
+      "dual_coding_policy": "visuals_required_when scaffoldImage or graph/table context is present",
+      "follow_up_owner": "ENGINE-UNIFY-1",
+      "evidence_paths": [
+        "build-scripts/content/book-1/b1-111-inoefening.js",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \u2013 begeleide inoefening.html"
+      ]
+    },
+    {
+      "id": "procedure_given_choose_flow",
+      "surface": "procedure_support",
+      "current_type": "procedure_steps_given_choose",
+      "student_action": "Read fixed procedure steps and choose the correct next procedure action or option.",
+      "response_shape": "{ selectedOptionId: string } in local procedure engine",
+      "feedback_model": "Local choose-step feedback and local procedure progress.",
+      "feedback_owner": "engines/procedure-engine.js and engines/procedure-ui.js",
+      "shared_shell_coverage": "outside_standard_support_module",
+      "proposed_standard_family": "procedure_given_choose_flow",
+      "disposition": "wrap_or_keep_as_support_unless_checkpoint_requires_same_action",
+      "dual_coding_policy": "procedure_visual_recommended_when_steps_have visual state",
+      "follow_up_owner": "ENGINE-UNIFY-1",
+      "evidence_paths": [
+        "engines/procedure-engine.js",
+        "engines/procedure-ui.js",
+        "build-scripts/content/book-1/b1-111-procedure-data.js"
+      ]
+    }
+  ],
+  "reasoning_required_decisions": [
+    {
+      "candidate": "structured_reasoning",
+      "decision": "covered_existing_but_self_check_only",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "step_ordering",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "cause_effect_chain",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "claim_reason_evidence",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "flow_diagram_build",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "classification_with_explanation",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "short_constructed_response",
+      "decision": "covered_existing_standard_but_not_broad_semantic_engine",
+      "follow_up_owner": "REASON-STD-1"
+    },
+    {
+      "candidate": "source_based_explanation",
+      "decision": "requires_standard_expansion",
+      "follow_up_owner": "REASON-STD-1"
+    }
+  ],
+  "follow_ups": [
+    {
+      "id": "SE1-F1",
+      "owner": "REASON-STD-1",
+      "description": "Reasoning modes 0-4 remain local interactions. Add shared standard families for step_ordering, cause_effect_chain, claim_reason_evidence, flow_diagram_build, classification_with_explanation, and source_based_explanation before calling reasoning unified."
+    },
+    {
+      "id": "SE1-F2",
+      "owner": "TASK-SHELL-UX-2",
+      "description": "Runtime supports structured_short_response, and 1.1.2 uses it, but GAME-ARCH-2 task-shell API did not list it as a documented standard family. Document and harden it instead of returning to brittle free regex."
+    },
+    {
+      "id": "SE1-F3",
+      "owner": "ENGINE-UNIFY-1",
+      "description": "Guided practice and procedure support remain useful local support surfaces outside the shared task shell. Decide whether to keep, wrap, or standardize their patterns in a later engine unification plan."
+    }
+  ],
+  "product_boundaries": {
+    "implementation_authorized": false,
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "target_equivalent_claims_authorized": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "authorized_next": [
+    "Proceed to TASK-SHELL-UX-2 after lead review and closure.",
+    "Do not start REASON-STD-1 implementation before task-shell UX hardening and route-affordance sequencing are explicitly handled.",
+    "Do not start CHECK-SHORT-EXIT-2, SCALE-PROOF-3P, GATE-PRODUCT-3P, or Scale Gate 1 from this audit alone."
+  ]
+}

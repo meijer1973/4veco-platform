@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sprint_id": "STANDARD-EXERCISES-1",
+  "name": "Unified Standard Exercise Coverage Audit",
+  "created": "2026-06-01",
+  "plan": "reports/sprints/STANDARD-EXERCISES-1-plan.md",
+  "baseline": "reports/sprints/STANDARD-EXERCISES-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Audit reasoning, math, graph/table, exit-ticket/checkpoint, guided-practice, and procedure/stappenplan exercise families.",
+    "Map each current task type to student action, feedback model, shared-shell coverage, disposition, and follow-up owner.",
+    "Make explicit covered/expand/rebuild decisions for reasoning task candidates.",
+    "Emit markdown and JSON coverage artifacts plus a deterministic checker.",
+    "Update platform and lesson roadmap status for STANDARD-EXERCISES-1 closure.",
+    "Preserve all implementation and product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/STANDARD-EXERCISES-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js STANDARD-EXERCISES-1",
+    "node build-scripts/sprints/check-standard-exercises1-coverage.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/STANDARD-EXERCISES-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js STANDARD-EXERCISES-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output.",
+    "No engine implementation or CSS/JS behavior changes.",
+    "No source exit-ticket data writes.",
+    "No reasoning CSV writes.",
+    "No skilltree, graph, procedure, guided-practice, or generated data writes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No candidate storage or candidate writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use.",
+    "Do not touch knowledge/exit-ticket-game-1.1.1.zip."
+  ]
+}

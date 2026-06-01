@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T11:08:05.509Z",
+  "generatedAt": "2026-06-01T11:54:12.107Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,8 +160,15 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.40-check-short-exit1-inventory Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.41-standard-exercises1-coverage Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economi...",
           "sprints": [
+            {
+              "sprint": "STANDARD-EXERCISES-1",
+              "name": "Unified Standard Exercise Coverage Audit",
+              "completed": "yes",
+              "currentState": "Closed audit/contract sprint after planning review and lead-review cycle. Produced `reports/sprints/STANDARD-EXERCISES-1-exercise-family-audit.md`, `reports/json/standard-exercise-family-coverage.json`, and deterministic checker `build-scripts/sprints/check-standard-exercises1-coverage.js`. Findings: math, graph/table, and reviewed `1.1.2` exit-ticket actions are mostly covered by shared task-shell families; `structured_short_response` is runtime-supported and needs standard documentation/UX hardening; reasoning still needs standard expansion for ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation; guided practice and procedure support stay outside proof status. No implementation or product authority.",
+              "exitGate": ""
+            },
             {
               "sprint": "CHECK-SHORT-EXIT-1",
               "name": "Paragraph Check Surface Inventory And Contract",
@@ -1374,6 +1381,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "STANDARD-EXERCISES-1",
+          "name": "Unified Standard Exercise Coverage Audit",
+          "completed": "yes",
+          "currentState": "Closed audit/contract sprint after planning review and lead-review cycle. Produced `reports/sprints/STANDARD-EXERCISES-1-exercise-family-audit.md`, `reports/json/standard-exercise-family-coverage.json`, and deterministic checker `build-scripts/sprints/check-standard-exercises1-coverage.js`. Findings: math, graph/table, and reviewed `1.1.2` exit-ticket actions are mostly covered by shared task-shell families; `structured_short_response` is runtime-supported and needs standard documentation/UX hardening; reasoning still needs standard expansion for ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation; guided practice and procedure support stay outside proof status. No implementation or product authority.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "CHECK-SHORT-EXIT-1",
           "name": "Paragraph Check Surface Inventory And Contract",
           "completed": "yes",
@@ -2582,7 +2597,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 151,
+      "completedCount": 152,
       "openCount": 10
     },
     {
@@ -2618,8 +2633,8 @@
             {
               "sprint": "STANDARD-EXERCISES-1",
               "name": "Unified Standard Exercise Coverage Audit",
-              "completed": "no",
-              "currentState": "Check whether reasoning, math, graph, exit-ticket, guided-practice, and procedure/stappenplan task types are covered by the shared standard. Expand the standard where needed. No implementation.",
+              "completed": "yes",
+              "currentState": "**CLOSED AUDIT/CONTRACT / NO GENERATED OUTPUT.** Platform coverage matrix records math, graph/table, and reviewed `1.1.2` exit-ticket actions as mostly covered by existing shared task-shell families; `structured_short_response` is runtime-supported but needs standard documentation and UX hardening; reasoning requires standard expansion for step ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation. Guided practice and procedure support remain learning/support surfaces, not target-equivalent proof. No generated output, implementation, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -2836,14 +2851,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "STANDARD-EXERCISES-1",
-          "name": "Unified Standard Exercise Coverage Audit",
-          "completed": "no",
-          "currentState": "Check whether reasoning, math, graph, exit-ticket, guided-practice, and procedure/stappenplan task types are covered by the shared standard. Expand the standard where needed. No implementation.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-SHELL-UX-2",
           "name": "Shared Task Shell UX Hardening",
@@ -3099,10 +3106,18 @@
           "currentState": "**CLOSED AUDIT/CONTRACT / NO GENERATED OUTPUT.** Platform inventory records `1.1.1` as advisory `Korte check` only with missing target-equivalent exit ticket, `1.1.2` as reviewed local target-equivalent exit ticket with missing advisory short check, and `1.1.3` as missing both short check and target-equivalent graph/table exit ticket. No generated output, source exit-ticket writes, engine implementation, diagnostics, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "STANDARD-EXERCISES-1",
+          "name": "Unified Standard Exercise Coverage Audit",
+          "completed": "yes",
+          "currentState": "**CLOSED AUDIT/CONTRACT / NO GENERATED OUTPUT.** Platform coverage matrix records math, graph/table, and reviewed `1.1.2` exit-ticket actions as mostly covered by existing shared task-shell families; `structured_short_response` is runtime-supported but needs standard documentation and UX hardening; reasoning requires standard expansion for step ordering, causal chains, claim/reason/evidence, flow diagrams, classification with explanation, and source-based explanation. Guided practice and procedure support remain learning/support surfaces, not target-equivalent proof. No generated output, implementation, diagnostics, adaptive routing, mastery/sequencing, summative use, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 2,
-      "openCount": 31
+      "completedCount": 3,
+      "openCount": 30
     },
     {
       "id": "innovation",

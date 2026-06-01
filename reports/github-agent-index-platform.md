@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T11:08:05.540Z
+Generated: 2026-06-01T11:54:12.158Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2564
+Files indexed: 2578
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 347
+Count: 348
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -423,6 +423,7 @@ Count: 347
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
+- build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -523,7 +524,7 @@ Count: 42
 
 ## validators
 
-Count: 166
+Count: 180
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -621,6 +622,7 @@ Count: 166
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
+- build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -650,6 +652,9 @@ Count: 166
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
+- references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
+- references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- reports/json/check-short-exit-inventory.json
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
@@ -672,6 +677,16 @@ Count: 166
 - reports/sprints/CHECK-Q2-PLAN-result.md
 - reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
 - reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-1-baseline.md
+- reports/sprints/CHECK-SHORT-EXIT-1-diff-summary.md
+- reports/sprints/CHECK-SHORT-EXIT-1-inventory.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-assignment.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-corrections.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round1.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round2.md
+- reports/sprints/CHECK-SHORT-EXIT-1-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
+- reports/sprints/CHECK-SHORT-EXIT-1-result.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
@@ -694,7 +709,7 @@ Count: 166
 
 ## references
 
-Count: 396
+Count: 398
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -753,6 +768,8 @@ Count: 396
 - references/data/source-document-registry.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
+- references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
+- references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
 - references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
@@ -1095,7 +1112,7 @@ Count: 396
 
 ## reports
 
-Count: 1406
+Count: 1417
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1117,6 +1134,7 @@ Count: 1406
 - reports/json/aspects-coverage.json
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
+- reports/json/check-short-exit-inventory.json
 - reports/json/dag-integrity.json
 - reports/json/dead-units.json
 - reports/json/empty-needs-audit-summary.json
@@ -1725,6 +1743,16 @@ Count: 1406
 - reports/sprints/CHECK-Q2-PLAN-result.md
 - reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
 - reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-1-baseline.md
+- reports/sprints/CHECK-SHORT-EXIT-1-diff-summary.md
+- reports/sprints/CHECK-SHORT-EXIT-1-inventory.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-assignment.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-corrections.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round1.md
+- reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round2.md
+- reports/sprints/CHECK-SHORT-EXIT-1-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
+- reports/sprints/CHECK-SHORT-EXIT-1-result.md
 - reports/sprints/CP.6a-baseline.md
 - reports/sprints/CP.6a-diff-summary.md
 - reports/sprints/CP.6a-lead-review-assignment.md
