@@ -483,6 +483,9 @@
     if (task.family === "formula_builder" && window.TaskShellUI && window.TaskShellUI.collectFormulaBuilderResponse) {
       return window.TaskShellUI.collectFormulaBuilderResponse(rootEl, task);
     }
+    if (task.family === "step_ordering" && window.TaskShellUI && window.TaskShellUI.collectStepOrderingResponse) {
+      return window.TaskShellUI.collectStepOrderingResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -520,6 +523,11 @@
     rootEl.querySelectorAll(".ts-formula").forEach(function (formula) {
       formula.addEventListener("click", function (event) {
         window.TaskShellUI.handleFormulaBuilderClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-step-ordering").forEach(function (ordering) {
+      ordering.addEventListener("click", function (event) {
+        window.TaskShellUI.handleStepOrderingClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

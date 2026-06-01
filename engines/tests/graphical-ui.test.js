@@ -60,6 +60,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('task.family === "formula_builder"');
         expect(source).toContain('collectFormulaBuilderResponse(rootEl, task)');
         expect(source).toContain('handleFormulaBuilderClick(rootEl, event)');
+        expect(source).toContain('task.family === "step_ordering"');
+        expect(source).toContain('collectStepOrderingResponse(rootEl, task)');
+        expect(source).toContain('handleStepOrderingClick(rootEl, event)');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {

@@ -186,6 +186,9 @@
       if (sharedTaskShellUI && sharedTaskShellUI.handleFormulaBuilderClick && sharedTaskShellUI.handleFormulaBuilderClick(app, event)) {
         return;
       }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleStepOrderingClick && sharedTaskShellUI.handleStepOrderingClick(app, event)) {
+        return;
+      }
 
       var taskShellChoice = event.target.closest ? event.target.closest('.ts-choice') : null;
       if (taskShellChoice && taskShellChoice.closest('.et-task-shell')) {
@@ -314,6 +317,12 @@
       return FormulaTaskShellUI && FormulaTaskShellUI.collectFormulaBuilderResponse
         ? FormulaTaskShellUI.collectFormulaBuilderResponse(wrapper, task)
         : { tokens: [] };
+    }
+    if (task.family === 'step_ordering') {
+      var StepTaskShellUI = resolveTaskShellUI();
+      return StepTaskShellUI && StepTaskShellUI.collectStepOrderingResponse
+        ? StepTaskShellUI.collectStepOrderingResponse(wrapper, task)
+        : { order: [] };
     }
     return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
   }

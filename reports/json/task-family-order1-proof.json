@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-ORDER-1",
+  "family": "step_ordering",
+  "generated": "2026-06-01",
+  "runtime_support": {
+    "first_class_family": true,
+    "exact_order_matching": true,
+    "order_sensitive": true,
+    "strict_response_shape": "{ order: string[] }",
+    "full_answer_step_coverage_required": true,
+    "neutral_steps_allowed": false,
+    "no_distractor_exemption": false,
+    "selected_distractors_match": false,
+    "duplicate_response_ids_match": false,
+    "non_string_response_ids_match": false,
+    "practice_only_order_feedback": true,
+    "accessible_labels_required": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "rendered_fixture_proof": {
+    "standard_state": "reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html#standard",
+    "narrow_state": "reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html#narrow",
+    "dark_state": "reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html#dark",
+    "after_click_state": "reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html#after-click"
+  },
+  "boundary_flags": {
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "protected_reference_data_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "carried_flags": [
+    "Generated-route desktop/mobile/dark screenshots remain required before product-route adoption.",
+    "After-click interaction proof is report-fixture proof only until a generated-route adoption sprint.",
+    "step_ordering proves procedure control only and cannot replace final calculation, graph/table, or constructed-response execution proof."
+  ]
+}

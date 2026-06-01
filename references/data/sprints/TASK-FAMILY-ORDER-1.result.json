@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-ORDER-1",
+  "name": "Step-Ordering Task-Family Implementation",
+  "status": "completed",
+  "verdict": "PASS WITH FLAGS",
+  "completed": "2026-06-01",
+  "plan": "reports/sprints/TASK-FAMILY-ORDER-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-ORDER-1-baseline.md",
+  "result": "reports/sprints/TASK-FAMILY-ORDER-1-result.md",
+  "diff_summary": "reports/sprints/TASK-FAMILY-ORDER-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-FAMILY-ORDER-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-FAMILY-ORDER-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-FAMILY-ORDER-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-FAMILY-ORDER-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "generated_route_screenshots_deferred",
+        "description": "Generated-route desktop, mobile, and dark screenshots remain required before product-route adoption.",
+        "disposition": "carry_forward",
+        "owner": "future adoption sprint or GATE-TASK-FAMILY-1",
+        "next_action": "Inspect generated output before relying on step_ordering in product routes.",
+        "blocking": false
+      },
+      {
+        "id": "procedure_control_only",
+        "description": "step_ordering proves procedure control only and cannot replace final calculation, graph/table execution, source-chain, or constructed-response proof.",
+        "disposition": "carry_forward",
+        "owner": "future check and reasoning migration sprints",
+        "next_action": "Pair step_ordering with execution tasks when target-equivalent proof requires doing the operation.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-ORDER-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-ORDER-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-family-order1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-ORDER-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-ORDER-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

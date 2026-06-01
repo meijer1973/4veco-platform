@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T18:56:10.344Z
+Generated: 2026-06-01T19:39:18.200Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2713
+Files indexed: 2745
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 357
+Count: 359
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -452,6 +452,8 @@ Count: 357
 - build-scripts/sprints/check-task-family-cloze1.js
 - build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-family-formula1.js
+- build-scripts/sprints/check-task-family-multi1.js
+- build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
@@ -533,7 +535,7 @@ Count: 42
 
 ## validators
 
-Count: 189
+Count: 191
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -659,6 +661,8 @@ Count: 189
 - build-scripts/sprints/check-task-family-cloze1.js
 - build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-family-formula1.js
+- build-scripts/sprints/check-task-family-multi1.js
+- build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
@@ -727,7 +731,7 @@ Count: 189
 
 ## references
 
-Count: 414
+Count: 418
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1061,6 +1065,10 @@ Count: 414
 - references/data/sprints/TASK-FAMILY-CONSTRUCT-1.result.json
 - references/data/sprints/TASK-FAMILY-FORMULA-1.plan.json
 - references/data/sprints/TASK-FAMILY-FORMULA-1.result.json
+- references/data/sprints/TASK-FAMILY-MULTI-1.plan.json
+- references/data/sprints/TASK-FAMILY-MULTI-1.result.json
+- references/data/sprints/TASK-FAMILY-ORDER-1.plan.json
+- references/data/sprints/TASK-FAMILY-ORDER-1.result.json
 - references/data/sprints/TASK-FAMILY-SENTENCE-1.plan.json
 - references/data/sprints/TASK-FAMILY-SENTENCE-1.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
@@ -1146,7 +1154,7 @@ Count: 414
 
 ## reports
 
-Count: 1517
+Count: 1541
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1208,6 +1216,8 @@ Count: 1517
 - reports/json/task-family-cloze1-proof.json
 - reports/json/task-family-construction-contract.json
 - reports/json/task-family-formula1-proof.json
+- reports/json/task-family-multi1-proof.json
+- reports/json/task-family-order1-proof.json
 - reports/json/task-family-sentence1-proof.json
 - reports/json/task-shell-ux2-proof.json
 - reports/json/terminology-drift.json
@@ -2631,6 +2641,28 @@ Count: 1517
 - reports/sprints/TASK-FAMILY-FORMULA-1-rendered-fixture.html
 - reports/sprints/TASK-FAMILY-FORMULA-1-result.md
 - reports/sprints/TASK-FAMILY-FORMULA-1-screenshot-manifest.md
+- reports/sprints/TASK-FAMILY-MULTI-1-baseline.md
+- reports/sprints/TASK-FAMILY-MULTI-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-MULTI-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-MULTI-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-MULTI-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-MULTI-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-MULTI-1-plan.md
+- reports/sprints/TASK-FAMILY-MULTI-1-planning-review.md
+- reports/sprints/TASK-FAMILY-MULTI-1-rendered-fixture.html
+- reports/sprints/TASK-FAMILY-MULTI-1-result.md
+- reports/sprints/TASK-FAMILY-MULTI-1-screenshot-manifest.md
+- reports/sprints/TASK-FAMILY-ORDER-1-baseline.md
+- reports/sprints/TASK-FAMILY-ORDER-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-ORDER-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-ORDER-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-ORDER-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-ORDER-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-ORDER-1-plan.md
+- reports/sprints/TASK-FAMILY-ORDER-1-planning-review.md
+- reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html
+- reports/sprints/TASK-FAMILY-ORDER-1-result.md
+- reports/sprints/TASK-FAMILY-ORDER-1-screenshot-manifest.md
 - reports/sprints/TASK-FAMILY-SENTENCE-1-baseline.md
 - reports/sprints/TASK-FAMILY-SENTENCE-1-diff-summary.md
 - reports/sprints/TASK-FAMILY-SENTENCE-1-lead-review-assignment.md
@@ -2686,7 +2718,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 286
+Count: 288
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2828,6 +2860,8 @@ Count: 286
 - docs/roadmaps/outdated/reference-team-roadmap-v3.45-cloze-tile-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.46-sentence-builder-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.47-formula-builder-runtime.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.48-cloze-text-runtime.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

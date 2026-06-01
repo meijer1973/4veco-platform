@@ -162,6 +162,22 @@ function data() {
                     ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
                 ]
             }),
+            task('step-ordering', 'step_ordering', {
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer', description: 'Nieuw min oud' },
+                    { id: 'deel-door-oud', label: 'Deel door de oude waarde', kind: 'answer' },
+                    { id: 'keer-100', label: 'Vermenigvuldig met 100%', kind: 'answer' },
+                    { id: 'deel-door-nieuw', label: 'Deel door de nieuwe waarde', kind: 'distractor', distractorFor: 'deel-door-oud' }
+                ],
+                separator: ' -> ',
+                placeholder: 'Orden de stappen.',
+                stepBankLabel: 'Stappenbank',
+                sequenceLabel: 'Gekozen volgorde'
+            }, {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-oud', 'keer-100'],
+                partialFeedback: 'practice_only'
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -186,6 +202,7 @@ describe('TaskShellUI', () => {
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
+            'step_ordering',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -236,6 +253,11 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-formula-token-category="denominator"');
         expect(html).toContain('data-formula-sequence');
         expect(html).toContain('role="group" aria-label="Formuleblokken"');
+        expect(html).toContain('class="ts-step-ordering"');
+        expect(html).toContain('data-step-id="deel-door-nieuw"');
+        expect(html).toContain('data-step-sequence');
+        expect(html).toContain('role="group" aria-label="Stappenbank"');
+        expect(html).toContain('aria-label="Gekozen volgorde"');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -258,6 +280,14 @@ describe('TaskShellUI', () => {
         expect(multiFeedback).toContain('Je moet kiezen tussen alternatieven.');
         expect(multiFeedback).toContain('Niet nodig gekozen');
         expect(multiFeedback).toContain('Iedereen kan alles krijgen wat hij wil.');
+
+        const orderResult = TaskShellEngine.evaluateTask(data().tasks[11], { order: ['verschil', 'keer-100', 'deel-door-nieuw'] });
+        const orderFeedback = TaskShellUI.renderFeedback(orderResult);
+        expect(orderFeedback).toContain('class="ts-order-feedback"');
+        expect(orderFeedback).toContain('Eerste plek om te controleren');
+        expect(orderFeedback).toContain('Deel door de oude waarde');
+        expect(orderFeedback).toContain('Afleider gekozen');
+        expect(orderFeedback).toContain('Deel door de nieuwe waarde');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -279,6 +309,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Invullen met tegels');
         expect(html).toContain('Zin bouwen');
         expect(html).toContain('Formule bouwen');
+        expect(html).toContain('Stappen ordenen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -340,6 +371,15 @@ describe('TaskShellUI', () => {
         expect(TaskShellEngine.focusPlan(data().tasks[10])).toEqual([
             '[data-task-id="formula-builder"][data-formula-token-id]',
             '[data-task-id="formula-builder"][data-formula-sequence]'
+        ]);
+    });
+
+    test('exports step ordering helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectStepOrderingResponse).toBe('function');
+        expect(typeof TaskShellUI.handleStepOrderingClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[11])).toEqual([
+            '[data-task-id="step-ordering"][data-step-id]',
+            '[data-task-id="step-ordering"][data-step-sequence]'
         ]);
     });
 

@@ -319,6 +319,29 @@ function fixtures() {
                     ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
                 ]
             }
+        }),
+        baseTask({
+            id: 'step-ordering',
+            family: 'step_ordering',
+            skillLabel: 'Stappen ordenen',
+            prompt: 'Zet de stappen voor procentuele verandering in de juiste volgorde.',
+            interaction: {
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer', description: 'Nieuw min oud' },
+                    { id: 'deel-door-oud', label: 'Deel door de oude waarde', kind: 'answer' },
+                    { id: 'keer-100', label: 'Vermenigvuldig met 100%', kind: 'answer' },
+                    { id: 'deel-door-nieuw', label: 'Deel door de nieuwe waarde', kind: 'distractor', distractorFor: 'deel-door-oud' }
+                ],
+                separator: ' -> ',
+                placeholder: 'Orden de stappen.',
+                stepBankLabel: 'Stappenbank',
+                sequenceLabel: 'Gekozen volgorde'
+            },
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-oud', 'keer-100'],
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -337,6 +360,7 @@ describe('TaskShellEngine', () => {
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
+            'step_ordering',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -1071,6 +1095,183 @@ describe('TaskShellEngine', () => {
                 acceptedSequences: [['nieuw-min-oud', 'delen-door-oud']]
             }
         })).toThrow(/must include expected.tokens/);
+    });
+
+    test('supports step ordering with exact ordered step sequences and practice feedback', () => {
+        const ordering = fixtures()[16];
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'deel-door-oud', 'keer-100']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'keer-100', 'deel-door-nieuw']
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.orderFeedback).toEqual({
+            mode: 'practice_only',
+            firstMisplaced: {
+                expectedId: 'deel-door-oud',
+                expectedLabel: 'Deel door de oude waarde',
+                actualId: 'keer-100',
+                actualLabel: 'Vermenigvuldig met 100%'
+            },
+            missingRequired: [{ id: 'deel-door-oud', label: 'Deel door de oude waarde' }],
+            selectedDistractors: [{ id: 'deel-door-nieuw', label: 'Deel door de nieuwe waarde' }],
+            correctPrefix: [{ id: 'verschil', label: 'Bereken het verschil' }]
+        });
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'keer-100', 'deel-door-oud']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'deel-door-oud']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'deel-door-oud', 'keer-100', 'deel-door-nieuw']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 'deel-door-oud', 'keer-100'],
+            extra: 'ignored'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(ordering, [
+            'verschil',
+            'deel-door-oud',
+            'keer-100'
+        ])).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        const arrayWithOrder = [];
+        arrayWithOrder.order = ['verschil', 'deel-door-oud', 'keer-100'];
+        expect(TaskShellEngine.evaluateTask(ordering, arrayWithOrder)).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(ordering, {
+            order: ['verschil', 2, 'keer-100']
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(ordering)).toEqual([
+            '[data-task-id="step-ordering"][data-step-id]',
+            '[data-task-id="step-ordering"][data-step-sequence]'
+        ]);
+    });
+
+    test('rejects invalid step ordering schemas before rendering', () => {
+        const ordering = fixtures()[16];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            interaction: {
+                ...ordering.interaction,
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer' },
+                    { id: 'verschil', label: 'Dubbel', kind: 'answer' },
+                    { id: 'deel-door-nieuw', label: 'Deel door nieuw', kind: 'distractor', distractorFor: 'verschil' }
+                ]
+            }
+        })).toThrow(/duplicate step id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            interaction: {
+                ...ordering.interaction,
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer' },
+                    { id: 'deel-door-oud', label: 'Deel door oud', kind: 'answer' },
+                    { id: 'neutraal', label: 'Lees rustig', kind: 'neutral' }
+                ]
+            }
+        })).toThrow(/kind must be answer or distractor/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            interaction: {
+                ...ordering.interaction,
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer' },
+                    { id: 'deel-door-oud', label: 'Deel door oud', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/steps must contain at least 3 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            interaction: {
+                ...ordering.interaction,
+                steps: [
+                    { id: 'verschil', label: 'Bereken het verschil', kind: 'answer' },
+                    { id: 'deel-door-oud', label: 'Deel door oud', kind: 'answer' },
+                    { id: 'keer-100', label: 'Vermenigvuldig met 100%', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must include at least one distractor step/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'onbekend', 'keer-100']
+            }
+        })).toThrow(/must match an interaction step/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-nieuw', 'keer-100']
+            }
+        })).toThrow(/must be an answer step/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-oud']
+            }
+        })).toThrow(/must include all answer steps/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-oud', 'deel-door-oud']
+            }
+        })).toThrow(/uses step more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...ordering,
+            expected: {
+                kind: 'step_ordering',
+                order: ['verschil', 'deel-door-oud', 'keer-100'],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
     });
 
     test('rejects invalid cloze tile schemas before rendering', () => {

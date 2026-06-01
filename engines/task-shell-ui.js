@@ -262,6 +262,26 @@
     '</div>';
   }
 
+  function renderStepOrdering(task) {
+    var steps = task.interaction.steps || [];
+    var stepHtml = steps.map(function (step) {
+      return '<button type="button" class="ts-step-token" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-step-id="' + escapeHtml(step.id) + '" aria-pressed="false">' +
+        '<span class="ts-step-token-label">' + escapeHtml(step.label) + '</span>' +
+        (step.description ? '<span class="ts-step-token-description">' + escapeHtml(step.description) + '</span>' : '') +
+      '</button>';
+    }).join('');
+    var placeholder = task.interaction.placeholder || 'Zet de stappen in de juiste volgorde.';
+    return '<div class="ts-step-ordering" data-step-task="' + escapeHtml(task.id) + '" data-separator="' + escapeHtml(task.interaction.separator || ' -> ') + '">' +
+      '<div class="ts-step-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-step-sequence aria-label="' + escapeHtml(task.interaction.sequenceLabel || 'Gekozen volgorde') + '">' +
+        '<span class="ts-step-placeholder">' + escapeHtml(placeholder) + '</span>' +
+      '</div>' +
+      '<div class="ts-step-bank" role="group" aria-label="' + escapeHtml(task.interaction.stepBankLabel || 'Stappen') + '">' + stepHtml + '</div>' +
+      '<button type="button" class="ts-step-clear" data-task-id="' + escapeHtml(task.id) + '" data-step-clear aria-label="Gekozen volgorde leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -293,6 +313,8 @@
         return renderSentenceBuilder(task);
       case 'formula_builder':
         return renderFormulaBuilder(task);
+      case 'step_ordering':
+        return renderStepOrdering(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -332,10 +354,12 @@
       ? '<ul>' + result.selfCheckCriteria.map(function (criterion) { return '<li>' + escapeHtml(criterion) + '</li>'; }).join('') + '</ul>'
       : '';
     var selection = renderSelectionFeedback(result && result.selectionFeedback);
+    var order = renderOrderFeedback(result && result.orderFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       selection +
+      order +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
     '</div>';
@@ -355,6 +379,24 @@
       renderSelectionList('Nog nodig', feedback.missingRequired) +
       renderSelectionList('Niet nodig gekozen', feedback.selectedDistractors) +
       renderSelectionList('Al goed gekozen', feedback.correctSelected) +
+    '</div>';
+  }
+
+  function renderOrderFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    var first = '';
+    if (feedback.firstMisplaced) {
+      first = '<div class="ts-order-feedback-first">' +
+        '<strong>Eerste plek om te controleren</strong>' +
+        '<p>Verwacht: ' + escapeHtml(feedback.firstMisplaced.expectedLabel || feedback.firstMisplaced.expectedId) +
+        '. Gekozen: ' + escapeHtml(feedback.firstMisplaced.actualLabel || feedback.firstMisplaced.actualId || 'geen stap') + '.</p>' +
+      '</div>';
+    }
+    return '<div class="ts-order-feedback" aria-label="Aanwijzingen bij je volgorde">' +
+      first +
+      renderSelectionList('Nog nodig', feedback.missingRequired) +
+      renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
+      renderSelectionList('Begin klopt al', feedback.correctPrefix) +
     '</div>';
   }
 
@@ -492,6 +534,16 @@
     return { tokens: tokens };
   }
 
+  function collectStepOrderingResponse(rootEl, task) {
+    if (!rootEl || !task) return { order: [] };
+    var order = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-step-selected-id]');
+    for (var i = 0; i < controls.length; i++) {
+      order.push(controls[i].getAttribute('data-step-selected-id') || '');
+    }
+    return { order: order };
+  }
+
   function handleFormulaBuilderClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var formula = event.target.closest('.ts-formula');
@@ -525,6 +577,45 @@
     if (clear) {
       clearFormula(formula);
       updateFormulaAvailability(formula);
+      focusElement(sequence);
+      return true;
+    }
+    return false;
+  }
+
+  function handleStepOrderingClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var ordering = event.target.closest('.ts-step-ordering');
+    if (!ordering || !rootEl.contains(ordering)) return false;
+
+    var step = event.target.closest('.ts-step-token');
+    var remove = event.target.closest('.ts-step-remove');
+    var move = event.target.closest('.ts-step-move');
+    var clear = event.target.closest('.ts-step-clear');
+    var sequence = ordering.querySelector('[data-step-sequence]');
+
+    if (step) {
+      if (step.disabled || !sequence) return true;
+      addStepToken(ordering, sequence, step);
+      updateStepAvailability(ordering);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-step-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateStepPlaceholder(ordering);
+      updateStepAvailability(ordering);
+      focusElement(nextFocus || sequence);
+      return true;
+    }
+    if (move) {
+      moveStepItem(ordering, move);
+      return true;
+    }
+    if (clear) {
+      clearSteps(ordering);
+      updateStepAvailability(ordering);
       focusElement(sequence);
       return true;
     }
@@ -577,6 +668,29 @@
     focusElement(item);
   }
 
+  function addStepToken(ordering, sequence, step) {
+    var stepId = step.getAttribute('data-step-id') || '';
+    var label = stepTokenText(step);
+    var item = document.createElement('span');
+    item.className = 'ts-step-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', step.getAttribute('data-task-id') || '');
+    item.setAttribute('data-step-selected-id', stepId);
+    item.setAttribute('tabindex', '-1');
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-step-item-label';
+    labelEl.textContent = label;
+
+    item.appendChild(labelEl);
+    item.appendChild(stepButton('ts-step-move', 'left', 'Naar links', '\u2039'));
+    item.appendChild(stepButton('ts-step-move', 'right', 'Naar rechts', '\u203a'));
+    item.appendChild(stepButton('ts-step-remove', '', 'Verwijder stap ' + label, '\u00d7'));
+    sequence.appendChild(item);
+    updateStepPlaceholder(ordering);
+    focusElement(item);
+  }
+
   function sentenceButton(className, direction, label, text) {
     var button = document.createElement('button');
     button.type = 'button';
@@ -592,6 +706,16 @@
     button.type = 'button';
     button.className = className;
     if (direction) button.setAttribute('data-formula-move', direction);
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
+  }
+
+  function stepButton(className, direction, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    if (direction) button.setAttribute('data-step-move', direction);
     button.setAttribute('aria-label', label);
     button.textContent = text;
     return button;
@@ -631,6 +755,23 @@
     focusElement(item);
   }
 
+  function moveStepItem(ordering, button) {
+    var item = button.closest('.ts-step-item');
+    if (!item || !item.parentNode) return;
+    var direction = button.getAttribute('data-step-move');
+    if (direction === 'left') {
+      var previous = item.previousElementSibling;
+      if (previous && !previous.classList.contains('ts-step-placeholder')) {
+        item.parentNode.insertBefore(item, previous);
+      }
+    } else if (direction === 'right') {
+      var next = item.nextElementSibling;
+      if (next) item.parentNode.insertBefore(next, item);
+    }
+    updateStepPlaceholder(ordering);
+    focusElement(item);
+  }
+
   function clearSentence(sentence) {
     var items = sentence.querySelectorAll('.ts-sentence-item');
     for (var i = 0; i < items.length; i++) {
@@ -647,6 +788,14 @@
     updateFormulaPlaceholder(formula);
   }
 
+  function clearSteps(ordering) {
+    var items = ordering.querySelectorAll('.ts-step-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+    updateStepPlaceholder(ordering);
+  }
+
   function updateSentencePlaceholder(sentence) {
     var placeholder = sentence.querySelector('.ts-sentence-placeholder');
     if (!placeholder) return;
@@ -657,6 +806,12 @@
     var placeholder = formula.querySelector('.ts-formula-placeholder');
     if (!placeholder) return;
     placeholder.hidden = formula.querySelectorAll('.ts-formula-item').length > 0;
+  }
+
+  function updateStepPlaceholder(ordering) {
+    var placeholder = ordering.querySelector('.ts-step-placeholder');
+    if (!placeholder) return;
+    placeholder.hidden = ordering.querySelectorAll('.ts-step-item').length > 0;
   }
 
   function updateSentenceAvailability(sentence) {
@@ -695,6 +850,23 @@
     }
   }
 
+  function updateStepAvailability(ordering) {
+    var used = {};
+    var items = ordering.querySelectorAll('.ts-step-item');
+    for (var i = 0; i < items.length; i++) {
+      var stepId = items[i].getAttribute('data-step-selected-id');
+      if (stepId) used[stepId] = true;
+    }
+    var steps = ordering.querySelectorAll('.ts-step-token');
+    for (var j = 0; j < steps.length; j++) {
+      var id = steps[j].getAttribute('data-step-id');
+      var unavailable = Boolean(used[id]);
+      steps[j].disabled = unavailable;
+      steps[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      steps[j].setAttribute('aria-pressed', unavailable ? 'true' : 'false');
+    }
+  }
+
   function sentenceTokenText(token) {
     var label = token.querySelector('.ts-sentence-token-label');
     return label ? label.textContent : token.textContent;
@@ -703,6 +875,11 @@
   function formulaTokenText(token) {
     var label = token.querySelector('.ts-formula-token-label');
     return label ? label.textContent : token.textContent;
+  }
+
+  function stepTokenText(step) {
+    var label = step.querySelector('.ts-step-token-label');
+    return label ? label.textContent : step.textContent;
   }
 
   function setSelectedTile(cloze, tile) {
@@ -788,6 +965,8 @@
     handleSentenceBuilderClick: handleSentenceBuilderClick,
     collectFormulaBuilderResponse: collectFormulaBuilderResponse,
     handleFormulaBuilderClick: handleFormulaBuilderClick,
+    collectStepOrderingResponse: collectStepOrderingResponse,
+    handleStepOrderingClick: handleStepOrderingClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

@@ -281,6 +281,40 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met rekenen', href: 'wiskundevaardigheden.html' }
                 }
+            },
+            {
+                id: 'step-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'step-task',
+                    family: 'step_ordering',
+                    skillLabel: 'Grafiekstappen ordenen',
+                    purpose: 'Zet de grafiekroute in volgorde.',
+                    prompt: 'Orden de stappen voor het aflezen uit een grafiek.',
+                    interaction: {
+                        steps: [
+                            { id: 'zoek-as', label: 'Zoek de juiste as', kind: 'answer' },
+                            { id: 'lees-waarde', label: 'Lees de waarde af', kind: 'answer' },
+                            { id: 'noteer-eenheid', label: 'Noteer de eenheid', kind: 'answer' },
+                            { id: 'rond-eerst-af', label: 'Rond eerst af', kind: 'distractor', distractorFor: 'lees-waarde' }
+                        ],
+                        separator: ' -> ',
+                        stepBankLabel: 'Grafiekstappen',
+                        sequenceLabel: 'Gekozen volgorde'
+                    },
+                    expected: {
+                        kind: 'step_ordering',
+                        order: ['zoek-as', 'lees-waarde', 'noteer-eenheid'],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Volgorde klopt',
+                        matchText: 'Je leest eerst, daarna noteer je met eenheid.',
+                        retryTitle: 'Controleer de volgorde',
+                        retryText: 'Begin bij de as en eindig met de eenheid.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
             }
         ]
     };
@@ -378,12 +412,14 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="multi_select"');
         expect(html).toContain('data-task-family="sentence_builder"');
         expect(html).toContain('data-task-family="formula_builder"');
+        expect(html).toContain('data-task-family="step_ordering"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
         expect(html).toContain('data-multi-option-id="titel"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
+        expect(html).toContain('data-step-id="rond-eerst-af"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -404,5 +440,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleFormulaBuilderClick(app, event)');
         expect(source).toContain('collectFormulaBuilderResponse(wrapper, task)');
         expect(source).toContain("task.family === 'formula_builder'");
+        expect(source).toContain('handleStepOrderingClick(app, event)');
+        expect(source).toContain('collectStepOrderingResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'step_ordering'");
     });
 });

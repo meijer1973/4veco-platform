@@ -22,6 +22,7 @@
     cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
     formula_builder: { label: 'Formule bouwen', deterministic: true },
+    step_ordering: { label: 'Stappen ordenen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -173,6 +174,8 @@
       push(task.interaction.yLabel);
       push(task.interaction.placeholder);
       push(task.interaction.unitNotationPlaceholder);
+      push(task.interaction.stepBankLabel);
+      push(task.interaction.sequenceLabel);
       (task.interaction.fields || []).forEach(function (field) {
         push(field.label);
         push(field.placeholder);
@@ -191,6 +194,10 @@
       (task.interaction.tokens || []).forEach(function (token) {
         push(token.label);
         push(token.description);
+      });
+      (task.interaction.steps || []).forEach(function (step) {
+        push(step.label);
+        push(step.description);
       });
       push(task.interaction.rows);
       push(task.interaction.columns);
@@ -474,6 +481,61 @@
     return {
       tokenIds: tokenIds,
       allowReuse: interaction.allowReuse === true
+    };
+  }
+
+  function stepLabelMap(steps) {
+    var labels = {};
+    (steps || []).forEach(function (step) {
+      labels[step.id] = step.label;
+    });
+    return labels;
+  }
+
+  function validateStepOrderingInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.steps, path + '.steps', 3);
+    optionalSeparator(interaction.separator, path + '.separator');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    optionalString(interaction.stepBankLabel, path + '.stepBankLabel');
+    optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
+
+    var stepIds = {};
+    var stepLabels = {};
+    var answerStepIds = [];
+    var answerStepIdSet = {};
+    var distractorCount = 0;
+    interaction.steps.forEach(function (step, idx) {
+      assert(isObject(step), path + '.steps[' + idx + '] must be an object');
+      requireString(step.id, path + '.steps[' + idx + '].id');
+      requireString(step.label, path + '.steps[' + idx + '].label');
+      requireString(step.kind, path + '.steps[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(step.kind), path + '.steps[' + idx + '].kind must be answer or distractor');
+      optionalString(step.description, path + '.steps[' + idx + '].description');
+      assert(!stepIds[step.id], 'duplicate step id: ' + step.id);
+      stepIds[step.id] = true;
+      stepLabels[step.id] = step.label;
+      if (step.kind === 'answer') {
+        answerStepIds.push(step.id);
+        answerStepIdSet[step.id] = true;
+      }
+      if (step.kind === 'distractor') distractorCount += 1;
+    });
+
+    interaction.steps.forEach(function (step, idx) {
+      optionalString(step.distractorFor, path + '.steps[' + idx + '].distractorFor');
+      if (step.distractorFor !== undefined) {
+        assert(answerStepIdSet[step.distractorFor], path + '.steps[' + idx + '].distractorFor must match an answer step');
+      }
+    });
+
+    assert(answerStepIds.length >= 2, path + '.steps must include at least two answer steps');
+    assert(distractorCount >= 1, path + '.steps must include at least one distractor step');
+
+    return {
+      stepIds: stepIds,
+      stepLabels: stepLabels,
+      answerStepIds: answerStepIds
     };
   }
 
@@ -767,6 +829,33 @@
       return;
     }
 
+    if (task.family === 'step_ordering') {
+      assert(expected.kind === 'step_ordering', task.id + '.expected.kind must be step_ordering');
+      requireArray(expected.order, task.id + '.expected.order', 2);
+      var stepIds = interactionInfo.stepIds || {};
+      var answerStepIds = interactionInfo.answerStepIds || [];
+      var answerStepSet = {};
+      answerStepIds.forEach(function (stepId) {
+        answerStepSet[stepId] = true;
+      });
+      var seenSteps = {};
+      expected.order.forEach(function (stepId, idx) {
+        requireString(stepId, task.id + '.expected.order[' + idx + ']');
+        assert(stepIds[stepId], task.id + '.expected.order[' + idx + '] must match an interaction step');
+        assert(answerStepSet[stepId], task.id + '.expected.order[' + idx + '] must be an answer step');
+        assert(!seenSteps[stepId], task.id + '.expected.order uses step more than once');
+        seenSteps[stepId] = true;
+      });
+      assert(expected.order.length === answerStepIds.length, task.id + '.expected.order must include all answer steps');
+      answerStepIds.forEach(function (stepId) {
+        assert(seenSteps[stepId], task.id + '.expected.order missing answer step ' + stepId);
+      });
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -827,6 +916,8 @@
       interactionInfo = validateSentenceInteraction(task, path);
     } else if (task.family === 'formula_builder') {
       interactionInfo = validateFormulaInteraction(task, path);
+    } else if (task.family === 'step_ordering') {
+      interactionInfo = validateStepOrderingInteraction(task, path);
     }
 
     return interactionInfo;
@@ -1018,6 +1109,22 @@
     });
   }
 
+  function stepOrderingMatches(response, expected, stepIds) {
+    if (!isObject(response) || !Array.isArray(response.order)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'order') return false;
+    var order = response.order;
+    if (order.length !== (expected.order || []).length) return false;
+    var seen = {};
+    for (var i = 0; i < order.length; i++) {
+      if (typeof order[i] !== 'string' || !order[i] || seen[order[i]]) return false;
+      if (!Object.prototype.hasOwnProperty.call(stepIds, order[i])) return false;
+      seen[order[i]] = true;
+      if (order[i] !== expected.order[i]) return false;
+    }
+    return true;
+  }
+
   function normalizeIdSet(values) {
     var out = {};
     for (var i = 0; i < values.length; i++) {
@@ -1084,6 +1191,65 @@
     };
   }
 
+  function stepOptionEntry(stepId, labels) {
+    return {
+      id: stepId,
+      label: labels && labels[stepId] ? labels[stepId] : stepId
+    };
+  }
+
+  function stepOrderingFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var selected = response && Array.isArray(response.order) ? response.order : [];
+    var expectedOrder = task.expected.order || [];
+    var labels = stepLabelMap(task.interaction && task.interaction.steps ? task.interaction.steps : []);
+    var expectedSet = {};
+    var selectedSet = {};
+    var missingRequired = [];
+    var selectedDistractors = [];
+    var correctPrefix = [];
+    var firstMisplaced = null;
+    var prefixStillCorrect = true;
+
+    expectedOrder.forEach(function (stepId) {
+      expectedSet[stepId] = true;
+    });
+    selected.forEach(function (stepId) {
+      if (typeof stepId === 'string') selectedSet[stepId] = true;
+    });
+
+    expectedOrder.forEach(function (stepId, idx) {
+      if (!selectedSet[stepId]) missingRequired.push(stepOptionEntry(stepId, labels));
+      if (prefixStillCorrect && selected[idx] === stepId) {
+        correctPrefix.push(stepOptionEntry(stepId, labels));
+        return;
+      }
+      if (!firstMisplaced) {
+        var actualId = typeof selected[idx] === 'string' ? selected[idx] : '';
+        firstMisplaced = {
+          expectedId: stepId,
+          expectedLabel: labels[stepId] || stepId,
+          actualId: actualId,
+          actualLabel: actualId ? (labels[actualId] || actualId) : 'Geen stap gekozen'
+        };
+      }
+      prefixStillCorrect = false;
+    });
+
+    selected.forEach(function (stepId) {
+      if (typeof stepId !== 'string') return;
+      if (!expectedSet[stepId]) selectedDistractors.push(stepOptionEntry(stepId, labels));
+    });
+
+    return {
+      mode: 'practice_only',
+      firstMisplaced: firstMisplaced,
+      missingRequired: missingRequired,
+      selectedDistractors: selectedDistractors,
+      correctPrefix: correctPrefix
+    };
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -1133,6 +1299,10 @@
     if (task.family === 'formula_builder' && task.expected.kind === 'formula_builder') {
       return formulaBuilderMatches(response, task.expected);
     }
+    if (task.family === 'step_ordering' && task.expected.kind === 'step_ordering') {
+      var stepIds = validateStepOrderingInteraction(task, task.id + '.interaction').stepIds;
+      return stepOrderingMatches(response, task.expected, stepIds);
+    }
     return false;
   }
 
@@ -1181,6 +1351,10 @@
       var selectionFeedback = multiSelectFeedback(response, task);
       if (selectionFeedback) result.selectionFeedback = selectionFeedback;
     }
+    if (task.family === 'step_ordering' && !matched) {
+      var orderFeedback = stepOrderingFeedback(response, task);
+      if (orderFeedback) result.orderFeedback = orderFeedback;
+    }
     return result;
   }
 
@@ -1223,6 +1397,12 @@
       return [
         '[data-task-id="' + task.id + '"][data-formula-token-id]',
         '[data-task-id="' + task.id + '"][data-formula-sequence]'
+      ];
+    }
+    if (task.family === 'step_ordering') {
+      return [
+        '[data-task-id="' + task.id + '"][data-step-id]',
+        '[data-task-id="' + task.id + '"][data-step-sequence]'
       ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];

@@ -492,6 +492,9 @@
         if (task.family === 'formula_builder' && window.TaskShellUI && window.TaskShellUI.collectFormulaBuilderResponse) {
             return window.TaskShellUI.collectFormulaBuilderResponse(root, task);
         }
+        if (task.family === 'step_ordering' && window.TaskShellUI && window.TaskShellUI.collectStepOrderingResponse) {
+            return window.TaskShellUI.collectStepOrderingResponse(root, task);
+        }
         return getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
     }
     function escapeCss(value) {
@@ -933,6 +936,9 @@
                     if (window.TaskShellUI && window.TaskShellUI.handleFormulaBuilderClick && window.TaskShellUI.handleFormulaBuilderClick(els.exStepSlot, e)) {
                         return;
                     }
+                    if (window.TaskShellUI && window.TaskShellUI.handleStepOrderingClick && window.TaskShellUI.handleStepOrderingClick(els.exStepSlot, e)) {
+                        return;
+                    }
                     var choice = t.closest ? t.closest('.ts-choice') : null;
                     if (choice && (mode === 'task_shell' || step.taskShell)) {
                         var taskEl = choice.closest('.ts-task');
@@ -958,7 +964,7 @@
                 handleCheckNumeric();
                 return;
             }
-            if (e.target.closest && (e.target.closest('.ts-multi-select') || e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula'))) {
+            if (e.target.closest && (e.target.closest('.ts-multi-select') || e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula') || e.target.closest('.ts-step-ordering'))) {
                 return;
             }
             if (e.target.getAttribute && e.target.getAttribute('data-task-id') && e.target.tagName !== 'TEXTAREA' && (e.key === 'Enter' || e.keyCode === 13)) {

@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.49-multi-select-runtime",
+      "version": "v3.50-step-ordering-runtime",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.48-cloze-text-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.47-formula-builder-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.46-sentence-builder-runtime.md",
@@ -65,7 +66,17 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after TASK-FAMILY-MULTI-1 closed PASS WITH FLAGS as the exact-set multi-select runtime implementation. cloze_tile_select, sentence_builder, formula_builder, cloze_text, and multi_select now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next implementation lane is TASK-FAMILY-ORDER-1 or GAME-ROUTE-AFFORDANCE-1 depending on priority, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver."
+      "notes": "Current operating roadmap after TASK-FAMILY-ORDER-1 closed PASS WITH FLAGS as the step-ordering runtime implementation. cloze_tile_select, sentence_builder, formula_builder, cloze_text, multi_select, and step_ordering now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next implementation lane is TASK-FAMILY-SOURCE-1 or GAME-ROUTE-AFFORDANCE-1 depending on priority, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver."
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.49-multi-select-runtime",
+      "title": "References Team Roadmap before step-ordering runtime implementation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md",
+      "owner": "references_team",
+      "updated_on": "2026-06-01",
+      "superseded_by": "references/reference-team-roadmap.md"
     },
     {
       "roadmap_id": "references-team-roadmap",
