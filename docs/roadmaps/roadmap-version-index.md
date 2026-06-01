@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.39-sync-product1-product-proof-track` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-PRODUCT-1 inserted the Product Proof Track before Scale Gate 1. The roadmaps and stable specs now require advisory short check plus target-equivalent exit ticket distinctions, shared task UI, actionable route items, visible student skill map, dual-coding task decisions, and three-paragraph product proof through GATE-PRODUCT-3P before Scale Gate 1 or explicit human waiver. |
+| References Team Roadmap | `v3.40-check-short-exit1-inventory` | `references/reference-team-roadmap.md` | Current operating roadmap after CHECK-SHORT-EXIT-1 closed the first three paragraph check-surface inventory. The Product Proof Track records 1.1.1 as advisory Korte check only with missing target-equivalent proof, 1.1.2 as reviewed local target-equivalent exit ticket with missing advisory short check, and 1.1.3 as missing both check surfaces. Next action is STANDARD-EXERCISES-1; Scale Gate 1 remains blocked until GATE-PRODUCT-3P and REV-STD-1 close or receive explicit human waiver. |
 
 ## Outdated Archive
 

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECK-SHORT-EXIT-1",
+  "name": "Paragraph Check Surface Inventory And Contract",
+  "status": "completed",
+  "completed": "2026-06-01",
+  "completed_on": "2026-06-01",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/CHECK-SHORT-EXIT-1-plan.md",
+  "baseline": "reports/sprints/CHECK-SHORT-EXIT-1-baseline.md",
+  "result": "reports/sprints/CHECK-SHORT-EXIT-1-result.md",
+  "diff_summary": "reports/sprints/CHECK-SHORT-EXIT-1-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": false,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/CHECK-SHORT-EXIT-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CHECK-SHORT-EXIT-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CHECK-SHORT-EXIT-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "CSE1-F1",
+        "description": "1.1.1 has only an advisory Korte check; target-equivalent proof remains missing.",
+        "disposition": "accepted_follow_up",
+        "owner": "later Product Proof Track sprint",
+        "next_action": "Build or explicitly block a 1.1.1 target-equivalent exit ticket in later check implementation work.",
+        "blocking": false
+      },
+      {
+        "id": "CSE1-F2",
+        "description": "1.1.2 has reviewed local target-equivalent proof but lacks a separate advisory short check.",
+        "disposition": "accepted_follow_up",
+        "owner": "later Product Proof Track sprint",
+        "next_action": "Add or explicitly scope the 1.1.2 advisory short check before three-paragraph product proof.",
+        "blocking": false
+      },
+      {
+        "id": "CSE1-F3",
+        "description": "1.1.3 lacks both advisory short check and target-equivalent graph/table exit ticket.",
+        "disposition": "accepted_follow_up",
+        "owner": "later Product Proof Track sprint",
+        "next_action": "Plan and implement graph/table check surfaces after standard exercise and task-shell hardening.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECK-SHORT-EXIT-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECK-SHORT-EXIT-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-check-short-exit1-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/CHECK-SHORT-EXIT-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECK-SHORT-EXIT-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "carried_flags": [
+    "1.1.1 target-equivalent exit ticket missing.",
+    "1.1.2 advisory short check missing.",
+    "1.1.3 advisory short check and target-equivalent graph/table exit ticket missing."
+  ],
+  "authorized_next": [
+    "Proceed to STANDARD-EXERCISES-1.",
+    "Do not start implementation, CHECK-SHORT-EXIT-2, SCALE-PROOF-3P, GATE-PRODUCT-3P, or Scale Gate 1 from this sprint alone."
+  ]
+}
