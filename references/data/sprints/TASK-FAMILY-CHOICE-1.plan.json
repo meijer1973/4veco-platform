@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-CHOICE-1",
+  "name": "Structured Choice Task-Family Contract",
+  "created": "2026-06-01",
+  "plan": "reports/sprints/TASK-FAMILY-CHOICE-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-CHOICE-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Define shared task-shell contracts for cloze_text, multi_select, matching_pairs, step_ordering, two_tier_choice, and assertion_reason.",
+    "Record response shapes, validation/evaluation ownership, feedback ownership, focus/keyboard expectations, route/checkpoint use cases, and target-proof limits.",
+    "Emit markdown and JSON contracts plus a deterministic checker.",
+    "Update platform and lesson roadmap status for TASK-FAMILY-CHOICE-1 closure.",
+    "Preserve all implementation, generated-output, protected-reference, and product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-CHOICE-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-CHOICE-1",
+    "node build-scripts/sprints/check-task-family-choice1-contract.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-CHOICE-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-CHOICE-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output.",
+    "No engine implementation or CSS/JS behavior changes.",
+    "No source exit-ticket data writes.",
+    "No reasoning CSV writes.",
+    "No skilltree, graph, procedure, guided-practice, or generated data writes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No candidate storage or candidate writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use.",
+    "Do not touch knowledge/exit-ticket-game-1.1.1.zip."
+  ]
+}

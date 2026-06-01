@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.43-construction-task-families` | `references/reference-team-roadmap.md` | Current operating roadmap after structured choice and constrained construction task-family expansion was added to the Product Proof Track. The next planning sprints are TASK-FAMILY-CHOICE-1 and TASK-FAMILY-CONSTRUCT-1, which must contract structured choice and construction families before implementation. Highest-priority construction implementation lanes are cloze_tile_select, sentence_builder, and formula_builder. Scale Gate 1 remains blocked until GATE-PRODUCT-3P, REV-STD-1, and the required task-family review close or receive explicit human waiver. |
+| References Team Roadmap | `v3.44-task-family-contracts` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-CHOICE-1 and TASK-FAMILY-CONSTRUCT-1 closed no-implementation contracts for structured choice and constrained construction families. The next Product Proof Track sprint is TASK-FAMILY-CLOZE-TILE-1, followed by sentence_builder and formula_builder implementation lanes. Scale Gate 1 remains blocked until GATE-PRODUCT-3P, REV-STD-1, and the required task-family review close or receive explicit human waiver. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before task-family contract closures | `v3.43-construction-task-families` | `docs/roadmaps/outdated/reference-team-roadmap-v3.43-construction-task-families.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before constrained construction task-family track | `v3.42-structured-choice-task-families` | `docs/roadmaps/outdated/reference-team-roadmap-v3.42-structured-choice-task-families.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before structured choice task-family track | `v3.41-standard-exercises1-coverage` | `docs/roadmaps/outdated/reference-team-roadmap-v3.41-standard-exercises1-coverage.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before STANDARD-EXERCISES-1 coverage audit | `v3.40-check-short-exit1-inventory` | `docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md` | `references/reference-team-roadmap.md` |

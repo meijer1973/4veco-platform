@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-CHOICE-1",
+  "contract_type": "structured_choice_task_families",
+  "status": "contract_ready_no_implementation",
+  "generated_output_allowed": false,
+  "implementation_allowed": false,
+  "product_authority": false,
+  "families": [
+    {
+      "id": "cloze_text",
+      "student_action": "Fill inline blanks in a sentence, formula statement, source statement, or reasoning chain.",
+      "response_shape": "{ blanks: { [blankId]: string } }",
+      "expected_shape": "{ kind: 'cloze_text', blanks: { [blankId]: { accepted: string[], requiredTextGroups?: string[][] } } }",
+      "validation_owner": "shared_task_shell_plus_domain_module",
+      "feedback_owner": "shared_task_shell_plus_domain_module",
+      "focus_keyboard": "tab through blanks; submit focuses one labelled feedback region; field-level errors are associated with blanks",
+      "route_checkpoint_use_cases": ["index_points_vs_percent", "formula_substitution", "source_value_labels", "cause_step_effect_statement"],
+      "target_proof_limit": "eligible only for bounded completion; not a full open-explanation substitute",
+      "implementation_sprint": "TASK-FAMILY-CLOZE-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    },
+    {
+      "id": "multi_select",
+      "student_action": "Select all options that satisfy a prompt.",
+      "response_shape": "{ values: string[] }",
+      "expected_shape": "{ kind: 'multi_select', values: string[], mode: 'exact_set' }",
+      "validation_owner": "shared_task_shell",
+      "feedback_owner": "shared_task_shell",
+      "focus_keyboard": "checkbox-like option operation with roving or tab focus; feedback identifies missing required options and selected distractors",
+      "route_checkpoint_use_cases": ["source_constraints", "valid_assumptions", "must_mention_elements", "multiple_causes_or_effects"],
+      "target_proof_limit": "eligible only when complete set selection is the reviewed target action",
+      "implementation_sprint": "TASK-FAMILY-MULTI-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    },
+    {
+      "id": "matching_pairs",
+      "student_action": "Match items to meanings, labels, formula components, graph parts, or events.",
+      "response_shape": "{ pairs: [[leftId, rightId]] }",
+      "expected_shape": "{ kind: 'matching_pairs', pairs: [[leftId, rightId]] }",
+      "validation_owner": "shared_task_shell",
+      "feedback_owner": "shared_task_shell",
+      "focus_keyboard": "keyboard operable pair selection; feedback reports unmatched, misplaced, or extra pairs",
+      "route_checkpoint_use_cases": ["concept_definition", "graph_element_meaning", "source_value_label", "formula_component_interpretation", "event_to_shift"],
+      "target_proof_limit": "mostly practice/advisory unless paired with application context",
+      "implementation_sprint": "TASK-FAMILY-MATCH-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    },
+    {
+      "id": "step_ordering",
+      "student_action": "Order steps in a procedure, calculation, reasoning chain, or answer form.",
+      "response_shape": "{ order: string[] }",
+      "expected_shape": "{ kind: 'step_ordering', order: string[] }",
+      "validation_owner": "shared_task_shell",
+      "feedback_owner": "shared_task_shell_plus_domain_module",
+      "focus_keyboard": "keyboard move controls or equivalent listbox pattern; feedback identifies first misplaced or missing step",
+      "route_checkpoint_use_cases": ["percentage_change_procedure", "graph_construction_sequence", "causal_chain_order", "answer_form_planning"],
+      "target_proof_limit": "eligible for procedure-control proof only; not enough for final-answer proof alone",
+      "implementation_sprint": "TASK-FAMILY-ORDER-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    },
+    {
+      "id": "two_tier_choice",
+      "student_action": "Select an answer and the reason that supports it.",
+      "response_shape": "{ answer: string, reason: string }",
+      "expected_shape": "{ kind: 'two_tier_choice', answer: string, reason: string }",
+      "validation_owner": "shared_task_shell",
+      "feedback_owner": "shared_task_shell_plus_domain_module",
+      "focus_keyboard": "two labelled option groups with independent keyboard operation and one combined feedback region",
+      "route_checkpoint_use_cases": ["index_points_misconception", "elasticity_interpretation", "curve_movement_vs_shift", "surplus_region_reasoning"],
+      "target_proof_limit": "eligible only for reviewed misconception or reasoning checkpoints; not a complete constructed-response substitute",
+      "implementation_sprint": "TASK-FAMILY-TWO-TIER-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    },
+    {
+      "id": "assertion_reason",
+      "student_action": "Judge a statement and reason pair, including whether the reason explains the statement.",
+      "response_shape": "{ value: string }",
+      "expected_shape": "{ kind: 'assertion_reason', value: string }",
+      "validation_owner": "shared_task_shell",
+      "feedback_owner": "shared_task_shell_plus_domain_module",
+      "focus_keyboard": "single labelled option group with relation-specific feedback",
+      "route_checkpoint_use_cases": ["exam_style_reasoning", "economic_language_precision", "cause_explanation_distinction"],
+      "target_proof_limit": "use sparingly; artificial assertion-reason tasks are learning-quality risks",
+      "implementation_sprint": "TASK-FAMILY-ASSERTION-1",
+      "partial_feedback_allowed": "practice_and_advisory_only"
+    }
+  ],
+  "boundary_flags": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "review_gate": "GATE-TASK-FAMILY-1"
+}
