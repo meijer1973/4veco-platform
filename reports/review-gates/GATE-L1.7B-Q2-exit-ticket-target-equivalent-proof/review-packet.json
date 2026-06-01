@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
+  "sprint_id": "GATE-L1.7B-Q2",
+  "generated_on": "2026-06-01",
+  "status": "review_packet_ready_after_pre_gate_lead_review_pass_with_flags_no_product_authority",
+  "human_interview_started": false,
+  "gate_closed": false,
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "Packet and cited evidence must be committed and pushed before human review starts.",
+  "implementation_commits": {
+    "platform": "31e035aaab656f8f64722ac62d26108f829d0f60",
+    "lesson": "971bf68402e6071804c44d3aa67c67320a987e33"
+  },
+  "pre_gate_lead_review": {
+    "required": true,
+    "status": "passed",
+    "assignment": "reports/sprints/GATE-L1.7B-Q2-lead-review-assignment.md",
+    "round1": "reports/sprints/GATE-L1.7B-Q2-lead-review-round1.md",
+    "corrections": "reports/sprints/GATE-L1.7B-Q2-lead-review-corrections.md",
+    "round2": "reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GATE-L1.7B-Q2-LR-F1",
+        "summary": "Deterministic matcher limitation remains carried into the human gate.",
+        "owner": "human gate reviewer",
+        "next_action": "Explicitly decide calculation criteria, D31 criteria, and deterministic matcher sufficiency before any completion-language implementation."
+      },
+      {
+        "id": "GATE-L1.7B-Q2-LR-F2",
+        "summary": "Remote publication is mandatory before interview.",
+        "owner": "main sprint executor",
+        "next_action": "Commit and push packet, evidence, lead-review artifacts, checker, bundle URLs, maps/indexes, and cited evidence before asking human-review questions."
+      },
+      {
+        "id": "GATE-L1.7B-Q2-LR-F3",
+        "summary": "Bundle URLs must be validated before final seal.",
+        "owner": "main sprint executor",
+        "next_action": "Keep emitted bundle URLs in the final validation and commit."
+      }
+    ]
+  },
+  "authority_boundary": {
+    "source_data_mutation_authorized": false,
+    "generated_output_mutation_authorized": false,
+    "engine_implementation_authorized": false,
+    "completion_language_enablement_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/live-output-evidence.md",
+    "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/live-output-evidence.json",
+    "reports/sprints/GATE-L1.7B-Q2-plan.md",
+    "reports/sprints/GATE-L1.7B-Q2-baseline.md",
+    "reports/sprints/GATE-L1.7B-Q2-lead-review-assignment.md",
+    "reports/sprints/GATE-L1.7B-Q2-lead-review-round1.md",
+    "reports/sprints/GATE-L1.7B-Q2-lead-review-corrections.md",
+    "reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md",
+    "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/bundle-urls.md",
+    "reports/sprints/L1.7B-Q2-result.md",
+    "reports/sprints/L1.7B-Q2-diff-summary.md",
+    "references/data/sprints/L1.7B-Q2.result.json",
+    "reports/sprints/L1.7B-Q2-operation-chain.md",
+    "reports/sprints/L1.7B-Q2-answer-model.md",
+    "reports/sprints/L1.7B-Q2-live-output-evidence.md",
+    "reports/sprints/L1.7B-Q2-live-output-evidence.json",
+    "reports/sprints/L1.7B-Q2-screenshot-manifest.md",
+    "reports/sprints/L1.7B-Q2-lead-review-round2.md",
+    "source-data/book-1/exit-ticket/1.1.2.json",
+    "build-scripts/sprints/check-l1-7b-q2-implementation.js",
+    "build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js",
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "references/reference-team-roadmap.md",
+    "../4veco-lessen/lessen-team-roadmap.md"
+  ],
+  "calibration_questions": [
+    "L1Q2-CAL1",
+    "L1Q2-CAL2",
+    "L1Q2-CAL3"
+  ],
+  "planned_questions": [
+    "L1Q2-Q1",
+    "L1Q2-Q2",
+    "L1Q2-Q3",
+    "L1Q2-Q4",
+    "L1Q2-Q5",
+    "L1Q2-Q6",
+    "L1Q2-Q7",
+    "L1Q2-Q8",
+    "L1Q2-Q9",
+    "L1Q2-Q10",
+    "L1Q2-Q11",
+    "L1Q2-Q12"
+  ],
+  "minimum_live_output_inspection": [
+    "1.1.2 landing page Check card",
+    "1.1.2 exit-ticket initial state",
+    "correct-response completion state",
+    "wrong/retry state for a calculation task",
+    "contradictory-D31 rejection path or validator evidence",
+    "mobile or narrow viewport route visibility",
+    "dark-mode route/task state",
+    "1.1.1 advisory short-check boundary evidence"
+  ],
+  "future_interview_protocol": [
+    "Show the full question list before starting.",
+    "Ask calibration questions before binding answers.",
+    "Ask one question at a time.",
+    "Record each answer before asking the next question.",
+    "Run pattern analysis after initial answers.",
+    "Ask targeted follow-ups for ambiguity or conflicting authority.",
+    "Draft a closure proposal only after evidence is complete.",
+    "Require explicit human confirmation before writing a closure record or authorizing downstream scope."
+  ],
+  "stop_conditions": [
+    "Stop if packet/evidence has not been pushed before review.",
+    "Stop if pre-gate lead review has not passed before the human interview.",
+    "Stop if live rendered output is not inspected or is unavailable.",
+    "Stop if deterministic matching is treated as broad reusable proof without explicit reviewer decision.",
+    "Stop if advisory short-check boundary is weakened.",
+    "Stop if mutation or product use is authorized from this gate."
+  ],
+  "recommended_next_action": "Verify pre-gate lead review PASS WITH FLAGS, packet, live-output evidence, implementation evidence, checker, bundle URLs, maps/indexes, and cited evidence are committed and pushed to the normal remote branch, then run the human interview before any completion-language implementation or product-facing exposure."
+}

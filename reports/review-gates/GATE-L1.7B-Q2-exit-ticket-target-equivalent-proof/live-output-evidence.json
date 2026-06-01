@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
+  "sprint_id": "GATE-L1.7B-Q2",
+  "generated_on": "2026-06-01",
+  "status": "packet_evidence_summary_no_product_authority",
+  "implementation": {
+    "source_sprint": "L1.7B-Q2",
+    "platform_commit": "31e035aaab656f8f64722ac62d26108f829d0f60",
+    "lesson_commit": "971bf68402e6071804c44d3aa67c67320a987e33",
+    "paragraph": "1.1.2",
+    "paragraph_title": "Percentages en indexcijfers",
+    "source_data": "source-data/book-1/exit-ticket/1.1.2.json",
+    "generated_exit_ticket": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html"
+  },
+  "target_equivalent_state": {
+    "candidate": true,
+    "gate_approved": false,
+    "completion_language_eligible": false
+  },
+  "operation_chain": [
+    {
+      "id": "prijsstijging-procent",
+      "operation": "percentage change from 800 to 920",
+      "expected": "15%",
+      "family": "calculation_work_capture"
+    },
+    {
+      "id": "index-naar-waarde",
+      "operation": "price index from 150 to 162",
+      "expected": "108",
+      "family": "calculation_work_capture"
+    },
+    {
+      "id": "index-naar-procent",
+      "operation": "percentage change from index 108 to 112",
+      "expected": "about 3.7%",
+      "family": "calculation_work_capture"
+    },
+    {
+      "id": "indexpunten-uitleg",
+      "operation": "explain 4 index points is not 4 percent",
+      "expected": "4 index points, old basis 108, about 3.7%, reject 4 percent",
+      "family": "short_constructed_response"
+    }
+  ],
+  "captured_live_facts": {
+    "landing_has_exit_ticket_card": true,
+    "landing_has_short_check_label": false,
+    "task_count": 4,
+    "calculation_work_capture_count": 3,
+    "short_constructed_response_count": 1,
+    "completion_hidden_before_tasks": true,
+    "correct_path_feedback_count": 4,
+    "correct_path_retry_count": 0,
+    "completion_copy_local_only": true,
+    "has_internal_codes": false,
+    "has_held_completion_claim": false,
+    "mobile_route_visible": true,
+    "dark_mode_readable": true
+  },
+  "adversarial_checks": {
+    "bogus_calculation_work_rejected": true,
+    "contradictory_d31_rejected": true,
+    "correct_path_proof_candidate": true,
+    "completion_language_still_held": true
+  },
+  "screenshots": [
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-landing-card.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-initial.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-completion.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-mobile.png",
+    "reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-dark.png"
+  ],
+  "product_boundaries": {
+    "source_data_mutation": false,
+    "generated_output_mutation": false,
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

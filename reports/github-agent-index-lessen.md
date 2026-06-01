@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-06-01T06:38:48.452Z
+Generated: 2026-06-01T07:11:39.028Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1586
+Files indexed: 1588
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -113,7 +113,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 842
+Count: 843
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -903,6 +903,7 @@ Count: 842
 - Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket.css
 - Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.1.js
+- Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-engine.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical-ui.js
 - Boek 1 - Grondslagen, vraag en aanbod/shared/graphical.css
@@ -960,7 +961,7 @@ Count: 842
 
 ## paragraph folders
 
-Count: 627
+Count: 628
 
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
 - "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
@@ -1027,6 +1028,7 @@ Count: 627
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.md"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.pdf"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 exit-ticket.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 grafiekenspel.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 instapquiz.html"
 - "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 nieuws met visual.html"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T06:38:48.388Z",
+  "generatedAt": "2026-06-01T07:11:38.959Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,8 +160,15 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.33-l1-7b-q2-planning Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam que...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.34-gate-l1-7b-q2-packet Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam...",
           "sprints": [
+            {
+              "sprint": "GATE-L1.7B-Q2",
+              "name": "Exit Ticket Target-Equivalent Proof Review",
+              "completed": "no",
+              "currentState": "Human-review packet prepared and lead-reviewed PASS WITH FLAGS; remote publication still required before the human interview starts. The packet makes live rendered output, operation-chain coverage, deterministic calculation/D31 criteria, advisory short-check separation, and completion-language options inspectable against `../4veco-lessen/specifications/product-end-state.md` and `../4veco-lessen/specifications/companion-core-specifications.md`. The gate remains open: no human interview, gate closure, source-data mutation, generated-output mutation, completion-language enablement, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use is authorized until the pushed packet is reviewed and explicitly closed.",
+              "exitGate": ""
+            },
             {
               "sprint": "L1.7B-Q2",
               "name": "Exit Ticket Target-Equivalent Implementation",
@@ -1258,6 +1265,14 @@
         }
       ],
       "sprints": [
+        {
+          "sprint": "GATE-L1.7B-Q2",
+          "name": "Exit Ticket Target-Equivalent Proof Review",
+          "completed": "no",
+          "currentState": "Human-review packet prepared and lead-reviewed PASS WITH FLAGS; remote publication still required before the human interview starts. The packet makes live rendered output, operation-chain coverage, deterministic calculation/D31 criteria, advisory short-check separation, and completion-language options inspectable against `../4veco-lessen/specifications/product-end-state.md` and `../4veco-lessen/specifications/companion-core-specifications.md`. The gate remains open: no human interview, gate closure, source-data mutation, generated-output mutation, completion-language enablement, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use is authorized until the pushed packet is reviewed and explicitly closed.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
         {
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
@@ -2508,7 +2523,7 @@
         }
       ],
       "completedCount": 146,
-      "openCount": 10
+      "openCount": 11
     },
     {
       "id": "lessen",

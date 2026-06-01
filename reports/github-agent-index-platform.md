@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T06:38:48.419Z
+Generated: 2026-06-01T07:11:38.988Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2493
+Files indexed: 2510
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 342
+Count: 343
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -426,6 +426,7 @@ Count: 342
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
+- build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
@@ -518,7 +519,7 @@ Count: 42
 
 ## validators
 
-Count: 161
+Count: 162
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -619,6 +620,7 @@ Count: 161
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
+- build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
@@ -684,7 +686,7 @@ Count: 161
 
 ## references
 
-Count: 387
+Count: 388
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -803,6 +805,7 @@ Count: 387
 - references/data/sprints/GRAPH-UX-2.plan.json
 - references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/L1.7B-Q2.plan.json
+- references/data/sprints/L1.7B-Q2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
 - references/data/sprints/LEAD-REVIEW-1.result.json
 - references/data/sprints/LEAD-REVIEW-2.plan.json
@@ -1076,7 +1079,7 @@ Count: 387
 
 ## reports
 
-Count: 1350
+Count: 1364
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1986,13 +1989,22 @@ Count: 1350
 - reports/sprints/GRAPH-UX-2-student-route-proof.md
 - reports/sprints/L1.7B-Q2-answer-model.md
 - reports/sprints/L1.7B-Q2-baseline.md
+- reports/sprints/L1.7B-Q2-diff-summary.md
 - reports/sprints/L1.7B-Q2-gate-handoff.md
 - reports/sprints/L1.7B-Q2-generated-output-plan.md
 - reports/sprints/L1.7B-Q2-implementation-prep.md
+- reports/sprints/L1.7B-Q2-lead-review-assignment.md
+- reports/sprints/L1.7B-Q2-lead-review-corrections.md
+- reports/sprints/L1.7B-Q2-lead-review-round1.md
+- reports/sprints/L1.7B-Q2-lead-review-round2.md
+- reports/sprints/L1.7B-Q2-live-output-evidence.json
+- reports/sprints/L1.7B-Q2-live-output-evidence.md
 - reports/sprints/L1.7B-Q2-operation-chain.md
 - reports/sprints/L1.7B-Q2-paragraph-selection.md
 - reports/sprints/L1.7B-Q2-plan.md
 - reports/sprints/L1.7B-Q2-planning-review.md
+- reports/sprints/L1.7B-Q2-result.md
+- reports/sprints/L1.7B-Q2-screenshot-manifest.md
 - reports/sprints/L1.7B-Q2-source-data-contract.md
 - reports/sprints/L1.7B-Q2-state-metadata-contract.md
 - reports/sprints/L1.7C-platform-support-result.md
@@ -2376,6 +2388,11 @@ Count: 1350
 - reports/sprints/S9a-baseline.md
 - reports/sprints/S9a-diff-summary.md
 - reports/sprints/S9a-result.md
+- reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-completion.png
+- reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-dark.png
+- reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-initial.png
+- reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-mobile.png
+- reports/sprints/screenshots/L1.7B-Q2-1.1.2-landing-card.png
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -2449,7 +2466,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 276
+Count: 277
 
 - .gitignore
 - BUILD-CHAPTER.md
@@ -2677,6 +2694,7 @@ Count: 276
 - package-lock.json
 - package.json
 - source-data/book-1/exit-ticket/1.1.1.json
+- source-data/book-1/exit-ticket/1.1.2.json
 - source-data/book-1/reasoning/1.1.1.csv
 - source-data/book-1/reasoning/1.1.2.csv
 - source-data/book-1/reasoning/README.md
