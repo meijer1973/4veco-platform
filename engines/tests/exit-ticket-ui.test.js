@@ -141,6 +141,40 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
                 }
+            },
+            {
+                id: 'sentence-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'sentence-task',
+                    family: 'sentence_builder',
+                    skillLabel: 'Conclusie bouwen',
+                    purpose: 'Bouw de bronredenering in volgorde.',
+                    prompt: 'Maak de economische redenering.',
+                    interaction: {
+                        tokens: [
+                            { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
+                            { id: 'vraag-daalt', label: 'de gevraagde hoeveelheid daalt', kind: 'answer' },
+                            { id: 'bronwaarde', label: 'volgens de bronwaarde', kind: 'answer' },
+                            { id: 'vraag-stijgt', label: 'de gevraagde hoeveelheid stijgt', kind: 'distractor', distractorFor: 'vraag-daalt' }
+                        ],
+                        separator: ' -> '
+                    },
+                    expected: {
+                        kind: 'sentence_builder',
+                        tokens: ['prijs-stijgt', 'vraag-daalt', 'bronwaarde'],
+                        acceptedSequences: [
+                            ['prijs-stijgt', 'vraag-daalt', 'bronwaarde']
+                        ]
+                    },
+                    feedback: {
+                        matchTitle: 'Redenering past',
+                        matchText: 'Je bouwt oorzaak, gevolg en bronkoppeling in volgorde.',
+                        retryTitle: 'Controleer de volgorde',
+                        retryText: 'Begin bij de oorzaak en sluit af met de bronkoppeling.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met redeneren', href: 'redeneer-spel.html' }
+                }
             }
         ]
     };
@@ -234,8 +268,10 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="graph_reading"');
         expect(html).toContain('data-task-family="point_placement"');
         expect(html).toContain('data-task-family="cloze_tile_select"');
+        expect(html).toContain('data-task-family="sentence_builder"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
+        expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -245,5 +281,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleClozeTileClick(app, event)');
         expect(source).toContain('collectClozeTileResponse(wrapper, task)');
         expect(source).toContain("task.family === 'cloze_tile_select'");
+        expect(source).toContain('handleSentenceBuilderClick(app, event)');
+        expect(source).toContain('collectSentenceBuilderResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'sentence_builder'");
     });
 });

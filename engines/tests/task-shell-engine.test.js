@@ -217,6 +217,29 @@ function fixtures() {
                 retryTitle: 'Schrijf eerst je redenering',
                 retryText: 'Noteer de schakels voordat je jezelf controleert.'
             }
+        }),
+        baseTask({
+            id: 'sentence-builder',
+            family: 'sentence_builder',
+            skillLabel: 'Redenering bouwen',
+            prompt: 'Bouw de economische redenering in de juiste volgorde.',
+            interaction: {
+                tokens: [
+                    { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
+                    { id: 'vraag-daalt', label: 'de gevraagde hoeveelheid daalt', kind: 'answer' },
+                    { id: 'hogere-prijs', label: 'bij een hogere prijs', kind: 'answer' },
+                    { id: 'vraag-stijgt', label: 'de gevraagde hoeveelheid stijgt', kind: 'distractor', distractorFor: 'vraag-daalt' }
+                ],
+                separator: ' -> ',
+                placeholder: 'Bouw je redenering.'
+            },
+            expected: {
+                kind: 'sentence_builder',
+                tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'],
+                acceptedSequences: [
+                    ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
+                ]
+            }
         })
     ];
 }
@@ -231,6 +254,7 @@ describe('TaskShellEngine', () => {
             'short_constructed_response',
             'structured_short_response',
             'cloze_tile_select',
+            'sentence_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -255,6 +279,7 @@ describe('TaskShellEngine', () => {
         expect(TaskShellEngine.evaluateTask(tasks[2], '2.5%').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[3], 'procent').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[6], { blanks: { indexpunten: 'vier', basis: 'honderdacht' } }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[12], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[7], 'b').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[8], '149,5').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[9], { x: '20,2', y: '4,1' }).matched).toBe(true);
@@ -502,6 +527,100 @@ describe('TaskShellEngine', () => {
             state: 'retry',
             matched: false
         }));
+    });
+
+    test('supports sentence builder with exact ordered token sequences', () => {
+        const sentence = fixtures()[12];
+
+        expect(TaskShellEngine.evaluateTask(sentence, {
+            tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(sentence, {
+            tokens: ['prijs-stijgt', 'hogere-prijs', 'vraag-daalt']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(sentence, {
+            tokens: ['prijs-stijgt', 'vraag-daalt']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(sentence, {
+            tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs', 'vraag-stijgt']
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(sentence, [
+            'prijs-stijgt',
+            'vraag-daalt',
+            'hogere-prijs'
+        ])).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
+
+    test('rejects invalid sentence builder schemas before rendering', () => {
+        const sentence = fixtures()[12];
+        expect(() => TaskShellEngine.validateTask({
+            ...sentence,
+            interaction: {
+                ...sentence.interaction,
+                tokens: [
+                    { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
+                    { id: 'prijs-stijgt', label: 'Dubbel', kind: 'answer' },
+                    { id: 'vraag-stijgt', label: 'de gevraagde hoeveelheid stijgt', kind: 'distractor', distractorFor: 'prijs-stijgt' }
+                ]
+            }
+        })).toThrow(/duplicate sentence token id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sentence,
+            expected: {
+                kind: 'sentence_builder',
+                tokens: ['prijs-stijgt', 'onbekend'],
+                acceptedSequences: [['prijs-stijgt', 'onbekend']]
+            }
+        })).toThrow(/must match an interaction token/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sentence,
+            interaction: {
+                ...sentence.interaction,
+                tokens: [
+                    { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
+                    { id: 'vraag-daalt', label: 'de gevraagde hoeveelheid daalt', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must include at least one distractor/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sentence,
+            expected: {
+                kind: 'sentence_builder',
+                tokens: ['prijs-stijgt', 'prijs-stijgt'],
+                acceptedSequences: [['prijs-stijgt', 'prijs-stijgt']]
+            }
+        })).toThrow(/uses token more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...sentence,
+            expected: {
+                kind: 'sentence_builder',
+                tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'],
+                acceptedSequences: [['prijs-stijgt', 'vraag-daalt']]
+            }
+        })).toThrow(/must include expected.tokens/);
     });
 
     test('rejects invalid cloze tile schemas before rendering', () => {

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-SENTENCE-1",
+  "status": "completed",
+  "verdict": "PASS WITH FLAGS",
+  "completed_on": "2026-06-01",
+  "plan": "reports/sprints/TASK-FAMILY-SENTENCE-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-SENTENCE-1-baseline.md",
+  "result": "reports/sprints/TASK-FAMILY-SENTENCE-1-result.md",
+  "diff_summary": "reports/sprints/TASK-FAMILY-SENTENCE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-SENTENCE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-SENTENCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-family-sentence1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-SENTENCE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-SENTENCE-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-FAMILY-SENTENCE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-FAMILY-SENTENCE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-FAMILY-SENTENCE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-FAMILY-SENTENCE-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "unrelated-local-zip",
+        "description": "knowledge/exit-ticket-game-1.1.1.zip remains unrelated local work outside sprint scope.",
+        "disposition": "carry_forward",
+        "owner": "main implementation agent",
+        "next_action": "Keep the zip unstaged and out of sprint closure unless a separate user-authorized task handles it.",
+        "blocking": false
+      },
+      {
+        "id": "product-route-screenshots-deferred",
+        "description": "Generated-route screenshots remain required before sentence_builder adoption in product routes.",
+        "disposition": "accepted_follow_up",
+        "owner": "future adoption sprint or GATE-TASK-FAMILY-1",
+        "next_action": "Inspect rendered generated output, including mobile/narrow and dark-mode states, before product-route reliance.",
+        "blocking": false
+      },
+      {
+        "id": "dynamic-interaction-proof-deferred",
+        "description": "After-click remove/reorder controls are source/checker-proven in this runtime sprint rather than captured in a static rendered fixture.",
+        "disposition": "accepted_follow_up",
+        "owner": "future adoption sprint or GATE-TASK-FAMILY-1",
+        "next_action": "Add rendered interaction proof before generated-route adoption or target-equivalent reliance.",
+        "blocking": false
+      }
+    ]
+  }
+}

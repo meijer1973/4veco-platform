@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T15:46:23.282Z",
+  "generatedAt": "2026-06-01T16:34:06.087Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.45-cloze-tile-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.46-sentence-builder-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics e...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -186,8 +186,8 @@
             {
               "sprint": "TASK-FAMILY-SENTENCE-1",
               "name": "Sentence Builder Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement sentence/chain building from word or fragment banks for economic reasoning. It must force the causal or answer-form structure rather than merely assembling plausible words.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: unrelated zip remains out of scope; product-route screenshots and dynamic rendered interaction proof are deferred to adoption.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-SENTENCE-1",
-          "name": "Sentence Builder Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement sentence/chain building from word or fragment banks for economic reasoning. It must force the causal or answer-form structure rather than merely assembling plausible words.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-FORMULA-1",
           "name": "Formula Builder Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Cloze Tile-Select Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: unrelated zip remains out of scope and product-route screenshots are deferred to adoption.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SENTENCE-1",
+          "name": "Sentence Builder Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: unrelated zip remains out of scope; product-route screenshots and dynamic rendered interaction proof are deferred to adoption.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 156,
-      "openCount": 21
+      "completedCount": 157,
+      "openCount": 20
     },
     {
       "id": "lessen",
@@ -2893,8 +2893,8 @@
             {
               "sprint": "TASK-FAMILY-SENTENCE-1",
               "name": "Sentence Builder Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `sentence_builder` so students construct economic reasoning sentences or causal chains from fragments for `leg uit`, index-point explanations, curve-shift reasoning, surplus/welfare reasoning, and exam-answer phrasing.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Flags: unrelated `knowledge/exit-ticket-game-1.1.1.zip` remains unstaged/out of scope; product-route screenshots and rendered interaction proof remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-SENTENCE-1",
-          "name": "Sentence Builder Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `sentence_builder` so students construct economic reasoning sentences or causal chains from fragments for `leg uit`, index-point explanations, curve-shift reasoning, surplus/welfare reasoning, and exam-answer phrasing.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-FORMULA-1",
           "name": "Formula Builder Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Flags: unrelated `knowledge/exit-ticket-game-1.1.1.zip` remains unstaged/out of scope; product-route screenshots remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-SENTENCE-1",
+          "name": "Sentence Builder Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Flags: unrelated `knowledge/exit-ticket-game-1.1.1.zip` remains unstaged/out of scope; product-route screenshots and rendered interaction proof remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 7,
-      "openCount": 40
+      "completedCount": 8,
+      "openCount": 39
     },
     {
       "id": "innovation",

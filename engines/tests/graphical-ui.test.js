@@ -49,6 +49,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('task.family === "cloze_tile_select"');
         expect(source).toContain('collectClozeTileResponse(rootEl, task)');
         expect(source).toContain('handleClozeTileClick(rootEl, event)');
+        expect(source).toContain('task.family === "sentence_builder"');
+        expect(source).toContain('collectSentenceBuilderResponse(rootEl, task)');
+        expect(source).toContain('handleSentenceBuilderClick(rootEl, event)');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {

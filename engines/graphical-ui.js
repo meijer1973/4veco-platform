@@ -471,6 +471,9 @@
     if (task.family === "cloze_tile_select" && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
       return window.TaskShellUI.collectClozeTileResponse(rootEl, task);
     }
+    if (task.family === "sentence_builder" && window.TaskShellUI && window.TaskShellUI.collectSentenceBuilderResponse) {
+      return window.TaskShellUI.collectSentenceBuilderResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -493,6 +496,11 @@
     rootEl.querySelectorAll(".ts-cloze").forEach(function (cloze) {
       cloze.addEventListener("click", function (event) {
         window.TaskShellUI.handleClozeTileClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-sentence").forEach(function (sentence) {
+      sentence.addEventListener("click", function (event) {
+        window.TaskShellUI.handleSentenceBuilderClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

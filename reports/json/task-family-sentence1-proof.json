@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-SENTENCE-1",
+  "family": "sentence_builder",
+  "generated": "2026-06-01",
+  "runtime_support": {
+    "engine_family_declared": true,
+    "deterministic_matching": true,
+    "strict_response_shape": "{ tokens: [tokenId] }",
+    "raw_array_matches": false,
+    "wrong_order_matches": false,
+    "unknown_tokens_rejected": true,
+    "duplicate_token_use_default": "rejected unless allowReuse is true",
+    "distractor_required": true
+  },
+  "ui_support": {
+    "fragment_bank": true,
+    "ordered_sequence_zone": true,
+    "remove_control": true,
+    "reorder_controls": true,
+    "clear_control": true,
+    "keyboard_native_buttons": true,
+    "single_feedback_region": true,
+    "mobile_wrapping_css": true,
+    "dark_mode_variables": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "boundary_flags": {
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "candidate_storage_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "follow_up_required": [
+    "Rendered generated-route screenshots before adoption in practice/check/product surfaces.",
+    "GATE-TASK-FAMILY-1 review before target-equivalent or product-proof reliance.",
+    "Domain-reviewed semantic equivalence before accepting anything beyond exact token sequences."
+  ]
+}

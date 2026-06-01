@@ -15,13 +15,14 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.45-cloze-tile-runtime",
+      "version": "v3.46-sentence-builder-runtime",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-01",
       "supersedes": [
+        "docs/roadmaps/outdated/reference-team-roadmap-v3.45-cloze-tile-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.44-task-family-contracts.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.43-construction-task-families.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.42-structured-choice-task-families.md",
@@ -61,7 +62,17 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after TASK-FAMILY-CLOZE-TILE-1 closed PASS WITH FLAGS as the first constrained construction runtime implementation. cloze_tile_select now exists in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next construction implementation lanes are TASK-FAMILY-SENTENCE-1 and TASK-FAMILY-FORMULA-1, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver."
+      "notes": "Current operating roadmap after TASK-FAMILY-SENTENCE-1 closed PASS WITH FLAGS as the second constrained construction runtime implementation. cloze_tile_select and sentence_builder now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next construction implementation lane is TASK-FAMILY-FORMULA-1, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver."
+    },
+    {
+      "roadmap_id": "references-team-roadmap",
+      "version": "v3.45-cloze-tile-runtime",
+      "title": "References Team Roadmap before sentence builder runtime implementation",
+      "status": "outdated",
+      "path": "docs/roadmaps/outdated/reference-team-roadmap-v3.45-cloze-tile-runtime.md",
+      "owner": "references_team",
+      "updated_on": "2026-06-01",
+      "superseded_by": "references/reference-team-roadmap.md"
     },
     {
       "roadmap_id": "references-team-roadmap",

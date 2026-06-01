@@ -18,6 +18,7 @@
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
     structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
     cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
+    sentence_builder: { label: 'Zin bouwen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -169,6 +170,10 @@
         push(tile.label);
         push(tile.description);
       });
+      (task.interaction.tokens || []).forEach(function (token) {
+        push(token.label);
+        push(token.description);
+      });
       push(task.interaction.rows);
       push(task.interaction.columns);
       (task.interaction.options || []).forEach(function (option) {
@@ -314,6 +319,51 @@
     return {
       blankIds: blankIds,
       tileIds: tileIds,
+      allowReuse: interaction.allowReuse === true
+    };
+  }
+
+  function validateSentenceInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.tokens, path + '.tokens', 2);
+    if (interaction.allowReuse !== undefined) {
+      assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
+    }
+    optionalString(interaction.separator, path + '.separator');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    optionalString(interaction.tokenBankLabel, path + '.tokenBankLabel');
+    optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
+
+    var tokenIds = {};
+    var distractorCount = 0;
+    interaction.tokens.forEach(function (token, idx) {
+      assert(isObject(token), path + '.tokens[' + idx + '] must be an object');
+      requireString(token.id, path + '.tokens[' + idx + '].id');
+      requireString(token.label, path + '.tokens[' + idx + '].label');
+      requireString(token.kind, path + '.tokens[' + idx + '].kind');
+      assert(/^(answer|distractor|neutral)$/.test(token.kind), path + '.tokens[' + idx + '].kind must be answer, distractor, or neutral');
+      optionalString(token.description, path + '.tokens[' + idx + '].description');
+      assert(!tokenIds[token.id], 'duplicate sentence token id: ' + token.id);
+      tokenIds[token.id] = true;
+      if (token.kind === 'distractor') distractorCount += 1;
+    });
+
+    interaction.tokens.forEach(function (token, idx) {
+      optionalString(token.distractorFor, path + '.tokens[' + idx + '].distractorFor');
+      if (token.distractorFor !== undefined) {
+        assert(tokenIds[token.distractorFor], path + '.tokens[' + idx + '].distractorFor must match an interaction token');
+      }
+    });
+
+    if (distractorCount === 0) {
+      assert(
+        interaction.fixture_only_no_distractor === true && typeof interaction.fixture_only_rationale === 'string' && interaction.fixture_only_rationale.trim(),
+        path + '.tokens must include at least one distractor token'
+      );
+    }
+
+    return {
+      tokenIds: tokenIds,
       allowReuse: interaction.allowReuse === true
     };
   }
@@ -479,6 +529,36 @@
       return;
     }
 
+    if (task.family === 'sentence_builder') {
+      assert(expected.kind === 'sentence_builder', task.id + '.expected.kind must be sentence_builder');
+      requireArray(expected.tokens, task.id + '.expected.tokens', 1);
+      requireArray(expected.acceptedSequences, task.id + '.expected.acceptedSequences', 1);
+      var tokenIds = interactionInfo.tokenIds || {};
+
+      function validateSequence(sequence, path) {
+        requireArray(sequence, path, 1);
+        var seen = {};
+        sequence.forEach(function (tokenId, idx) {
+          requireString(tokenId, path + '[' + idx + ']');
+          assert(tokenIds[tokenId], path + '[' + idx + '] must match an interaction token');
+          if (!interactionInfo.allowReuse) {
+            assert(!seen[tokenId], path + ' uses token more than once without allowReuse');
+            seen[tokenId] = true;
+          }
+        });
+      }
+
+      validateSequence(expected.tokens, task.id + '.expected.tokens');
+      var canonical = expected.tokens.join('\u0001');
+      var includesCanonical = false;
+      expected.acceptedSequences.forEach(function (sequence, idx) {
+        validateSequence(sequence, task.id + '.expected.acceptedSequences[' + idx + ']');
+        if (sequence.join('\u0001') === canonical) includesCanonical = true;
+      });
+      assert(includesCanonical, task.id + '.expected.acceptedSequences must include expected.tokens');
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -531,6 +611,8 @@
       if (task.interaction.options !== undefined) interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
     } else if (task.family === 'cloze_tile_select') {
       interactionInfo = validateClozeInteraction(task, path);
+    } else if (task.family === 'sentence_builder') {
+      interactionInfo = validateSentenceInteraction(task, path);
     }
 
     return interactionInfo;
@@ -656,6 +738,18 @@
     });
   }
 
+  function sentenceBuilderMatches(response, expected) {
+    if (!response || typeof response !== 'object' || !Array.isArray(response.tokens)) return false;
+    var tokens = response.tokens;
+    return (expected.acceptedSequences || []).some(function (sequence) {
+      if (!Array.isArray(sequence) || sequence.length !== tokens.length) return false;
+      for (var i = 0; i < sequence.length; i++) {
+        if (normalizeText(tokens[i]) !== normalizeText(sequence[i])) return false;
+      }
+      return true;
+    });
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -691,6 +785,9 @@
     }
     if (task.family === 'cloze_tile_select' && task.expected.kind === 'cloze_tile_select') {
       return clozeTileMatches(response, task.expected);
+    }
+    if (task.family === 'sentence_builder' && task.expected.kind === 'sentence_builder') {
+      return sentenceBuilderMatches(response, task.expected);
     }
     return false;
   }
@@ -757,6 +854,12 @@
       return [
         '[data-task-id="' + task.id + '"][data-cloze-tile-id]',
         '[data-task-id="' + task.id + '"][data-cloze-blank-id]'
+      ];
+    }
+    if (task.family === 'sentence_builder') {
+      return [
+        '[data-task-id="' + task.id + '"][data-sentence-token-id]',
+        '[data-task-id="' + task.id + '"][data-sentence-sequence]'
       ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];

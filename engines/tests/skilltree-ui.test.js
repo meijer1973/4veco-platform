@@ -25,6 +25,9 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("task.family === 'cloze_tile_select'");
         expect(source).toContain('collectClozeTileResponse(root, task)');
         expect(source).toContain('handleClozeTileClick(els.exStepSlot, e)');
+        expect(source).toContain("task.family === 'sentence_builder'");
+        expect(source).toContain('collectSentenceBuilderResponse(root, task)');
+        expect(source).toContain('handleSentenceBuilderClick(els.exStepSlot, e)');
     });
 
     test('announces task-shell feedback and preserves keyboard/focus flow', () => {

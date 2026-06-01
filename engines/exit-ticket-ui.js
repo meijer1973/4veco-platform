@@ -173,8 +173,11 @@
 
   function bindInteractions(app, engine) {
     app.addEventListener('click', function (event) {
-      var clozeTaskShellUI = resolveTaskShellUI();
-      if (clozeTaskShellUI && clozeTaskShellUI.handleClozeTileClick && clozeTaskShellUI.handleClozeTileClick(app, event)) {
+      var sharedTaskShellUI = resolveTaskShellUI();
+      if (sharedTaskShellUI && sharedTaskShellUI.handleClozeTileClick && sharedTaskShellUI.handleClozeTileClick(app, event)) {
+        return;
+      }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleSentenceBuilderClick && sharedTaskShellUI.handleSentenceBuilderClick(app, event)) {
         return;
       }
 
@@ -281,6 +284,12 @@
       return TaskShellUI && TaskShellUI.collectClozeTileResponse
         ? TaskShellUI.collectClozeTileResponse(wrapper, task)
         : { blanks: {} };
+    }
+    if (task.family === 'sentence_builder') {
+      var SentenceTaskShellUI = resolveTaskShellUI();
+      return SentenceTaskShellUI && SentenceTaskShellUI.collectSentenceBuilderResponse
+        ? SentenceTaskShellUI.collectSentenceBuilderResponse(wrapper, task)
+        : { tokens: [] };
     }
     return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
   }

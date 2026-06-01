@@ -480,6 +480,9 @@
         if (task.family === 'cloze_tile_select' && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
             return window.TaskShellUI.collectClozeTileResponse(root, task);
         }
+        if (task.family === 'sentence_builder' && window.TaskShellUI && window.TaskShellUI.collectSentenceBuilderResponse) {
+            return window.TaskShellUI.collectSentenceBuilderResponse(root, task);
+        }
         return getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
     }
     function escapeCss(value) {
@@ -912,6 +915,9 @@
                     if (window.TaskShellUI && window.TaskShellUI.handleClozeTileClick && window.TaskShellUI.handleClozeTileClick(els.exStepSlot, e)) {
                         return;
                     }
+                    if (window.TaskShellUI && window.TaskShellUI.handleSentenceBuilderClick && window.TaskShellUI.handleSentenceBuilderClick(els.exStepSlot, e)) {
+                        return;
+                    }
                     var choice = t.closest ? t.closest('.ts-choice') : null;
                     if (choice && (mode === 'task_shell' || step.taskShell)) {
                         var taskEl = choice.closest('.ts-task');
@@ -935,6 +941,9 @@
             if (e.target.id === 'st-numeric-input' && (e.key === 'Enter' || e.keyCode === 13)) {
                 e.preventDefault();
                 handleCheckNumeric();
+                return;
+            }
+            if (e.target.closest && (e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence'))) {
                 return;
             }
             if (e.target.getAttribute && e.target.getAttribute('data-task-id') && e.target.tagName !== 'TEXTAREA' && (e.key === 'Enter' || e.keyCode === 13)) {

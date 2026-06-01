@@ -182,6 +182,26 @@
     '</div>';
   }
 
+  function renderSentenceBuilder(task) {
+    var tokens = task.interaction.tokens || [];
+    var tokenHtml = tokens.map(function (token) {
+      return '<button type="button" class="ts-sentence-token" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-sentence-token-id="' + escapeHtml(token.id) + '" aria-pressed="false">' +
+        '<span class="ts-sentence-token-label">' + escapeHtml(token.label) + '</span>' +
+        (token.description ? '<span class="ts-sentence-token-description">' + escapeHtml(token.description) + '</span>' : '') +
+      '</button>';
+    }).join('');
+    var placeholder = task.interaction.placeholder || 'Bouw je redenering met de tegels.';
+    return '<div class="ts-sentence" data-sentence-task="' + escapeHtml(task.id) + '" data-allow-reuse="' + (task.interaction.allowReuse === true ? 'true' : 'false') + '" data-separator="' + escapeHtml(task.interaction.separator || ' ') + '">' +
+      '<div class="ts-sentence-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-sentence-sequence aria-label="' + escapeHtml(task.interaction.sequenceLabel || 'Opgebouwde zin') + '">' +
+        '<span class="ts-sentence-placeholder">' + escapeHtml(placeholder) + '</span>' +
+      '</div>' +
+      '<div class="ts-sentence-bank" role="group" aria-label="' + escapeHtml(task.interaction.tokenBankLabel || 'Fragmentbank') + '">' + tokenHtml + '</div>' +
+      '<button type="button" class="ts-sentence-clear" data-task-id="' + escapeHtml(task.id) + '" data-sentence-clear aria-label="Opgebouwde zin leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -205,6 +225,8 @@
         return renderStructuredShortResponse(task);
       case 'cloze_tile_select':
         return renderClozeTileSelect(task);
+      case 'sentence_builder':
+        return renderSentenceBuilder(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -296,6 +318,142 @@
     return false;
   }
 
+  function collectSentenceBuilderResponse(rootEl, task) {
+    if (!rootEl || !task) return { tokens: [] };
+    var tokens = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-sentence-selected-token-id]');
+    for (var i = 0; i < controls.length; i++) {
+      tokens.push(controls[i].getAttribute('data-sentence-selected-token-id') || '');
+    }
+    return { tokens: tokens };
+  }
+
+  function handleSentenceBuilderClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var sentence = event.target.closest('.ts-sentence');
+    if (!sentence || !rootEl.contains(sentence)) return false;
+
+    var token = event.target.closest('.ts-sentence-token');
+    var remove = event.target.closest('.ts-sentence-remove');
+    var move = event.target.closest('.ts-sentence-move');
+    var clear = event.target.closest('.ts-sentence-clear');
+    var sequence = sentence.querySelector('[data-sentence-sequence]');
+
+    if (token) {
+      if (token.disabled || !sequence) return true;
+      addSentenceToken(sentence, sequence, token);
+      updateSentenceAvailability(sentence);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-sentence-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateSentencePlaceholder(sentence);
+      updateSentenceAvailability(sentence);
+      focusElement(nextFocus || sequence);
+      return true;
+    }
+    if (move) {
+      moveSentenceItem(sentence, move);
+      return true;
+    }
+    if (clear) {
+      clearSentence(sentence);
+      updateSentenceAvailability(sentence);
+      focusElement(sequence);
+      return true;
+    }
+    return false;
+  }
+
+  function addSentenceToken(sentence, sequence, token) {
+    var tokenId = token.getAttribute('data-sentence-token-id') || '';
+    var label = sentenceTokenText(token);
+    var item = document.createElement('span');
+    item.className = 'ts-sentence-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', token.getAttribute('data-task-id') || '');
+    item.setAttribute('data-sentence-selected-token-id', tokenId);
+    item.setAttribute('tabindex', '-1');
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-sentence-item-label';
+    labelEl.textContent = label;
+
+    item.appendChild(labelEl);
+    item.appendChild(sentenceButton('ts-sentence-move', 'left', 'Naar links', '\u2039'));
+    item.appendChild(sentenceButton('ts-sentence-move', 'right', 'Naar rechts', '\u203a'));
+    item.appendChild(sentenceButton('ts-sentence-remove', '', 'Verwijder fragment ' + label, '\u00d7'));
+    sequence.appendChild(item);
+    updateSentencePlaceholder(sentence);
+    focusElement(item);
+  }
+
+  function sentenceButton(className, direction, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    if (direction) button.setAttribute('data-sentence-move', direction);
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
+  }
+
+  function moveSentenceItem(sentence, button) {
+    var item = button.closest('.ts-sentence-item');
+    if (!item || !item.parentNode) return;
+    var direction = button.getAttribute('data-sentence-move');
+    if (direction === 'left') {
+      var previous = item.previousElementSibling;
+      if (previous && !previous.classList.contains('ts-sentence-placeholder')) {
+        item.parentNode.insertBefore(item, previous);
+      }
+    } else if (direction === 'right') {
+      var next = item.nextElementSibling;
+      if (next) item.parentNode.insertBefore(next, item);
+    }
+    updateSentencePlaceholder(sentence);
+    focusElement(item);
+  }
+
+  function clearSentence(sentence) {
+    var items = sentence.querySelectorAll('.ts-sentence-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+    updateSentencePlaceholder(sentence);
+  }
+
+  function updateSentencePlaceholder(sentence) {
+    var placeholder = sentence.querySelector('.ts-sentence-placeholder');
+    if (!placeholder) return;
+    placeholder.hidden = sentence.querySelectorAll('.ts-sentence-item').length > 0;
+  }
+
+  function updateSentenceAvailability(sentence) {
+    var allowReuse = sentence.getAttribute('data-allow-reuse') === 'true';
+    var used = {};
+    var items = sentence.querySelectorAll('.ts-sentence-item');
+    for (var i = 0; i < items.length; i++) {
+      var tokenId = items[i].getAttribute('data-sentence-selected-token-id');
+      if (tokenId) used[tokenId] = true;
+    }
+    var tokens = sentence.querySelectorAll('.ts-sentence-token');
+    for (var j = 0; j < tokens.length; j++) {
+      var id = tokens[j].getAttribute('data-sentence-token-id');
+      var unavailable = !allowReuse && Boolean(used[id]);
+      tokens[j].disabled = unavailable;
+      tokens[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      tokens[j].setAttribute('aria-pressed', unavailable ? 'true' : 'false');
+    }
+  }
+
+  function sentenceTokenText(token) {
+    var label = token.querySelector('.ts-sentence-token-label');
+    return label ? label.textContent : token.textContent;
+  }
+
   function setSelectedTile(cloze, tile) {
     var tiles = cloze.querySelectorAll('.ts-cloze-tile');
     for (var i = 0; i < tiles.length; i++) {
@@ -372,6 +530,8 @@
     escapeHtml: escapeHtml,
     collectClozeTileResponse: collectClozeTileResponse,
     handleClozeTileClick: handleClozeTileClick,
+    collectSentenceBuilderResponse: collectSentenceBuilderResponse,
+    handleSentenceBuilderClick: handleSentenceBuilderClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

@@ -94,6 +94,24 @@ function data() {
                     basis: 'honderdacht'
                 }
             }),
+            task('sentence-builder', 'sentence_builder', {
+                tokens: [
+                    { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
+                    { id: 'vraag-daalt', label: 'de gevraagde hoeveelheid daalt', kind: 'answer' },
+                    { id: 'hogere-prijs', label: 'bij een hogere prijs', kind: 'answer' },
+                    { id: 'vraag-stijgt', label: 'de gevraagde hoeveelheid stijgt', kind: 'distractor', distractorFor: 'vraag-daalt' }
+                ],
+                separator: ' -> ',
+                placeholder: 'Bouw je redenering.',
+                tokenBankLabel: 'Fragmentbank',
+                sequenceLabel: 'Opgebouwde redenering'
+            }, {
+                kind: 'sentence_builder',
+                tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'],
+                acceptedSequences: [
+                    ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
+                ]
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -114,6 +132,7 @@ describe('TaskShellUI', () => {
             'short_constructed_response',
             'structured_short_response',
             'cloze_tile_select',
+            'sentence_builder',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -145,6 +164,10 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-cloze-tile-id="vier-procent"');
         expect(html).toContain('class="ts-cloze-clear"');
         expect(html).toContain('role="group" aria-label="Tegelbank"');
+        expect(html).toContain('class="ts-sentence"');
+        expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
+        expect(html).toContain('data-sentence-sequence');
+        expect(html).toContain('role="group" aria-label="Fragmentbank"');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -176,6 +199,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Berekening tonen');
         expect(html).toContain('Kort antwoord in stappen');
         expect(html).toContain('Invullen met tegels');
+        expect(html).toContain('Zin bouwen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -204,6 +228,15 @@ describe('TaskShellUI', () => {
         expect(TaskShellEngine.focusPlan(data().tasks[6])).toEqual([
             '[data-task-id="cloze-tiles"][data-cloze-tile-id]',
             '[data-task-id="cloze-tiles"][data-cloze-blank-id]'
+        ]);
+    });
+
+    test('exports sentence builder helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectSentenceBuilderResponse).toBe('function');
+        expect(typeof TaskShellUI.handleSentenceBuilderClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[7])).toEqual([
+            '[data-task-id="sentence-builder"][data-sentence-token-id]',
+            '[data-task-id="sentence-builder"][data-sentence-sequence]'
         ]);
     });
 
