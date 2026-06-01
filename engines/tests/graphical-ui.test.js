@@ -48,6 +48,8 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('data-input-role="unit-notation"');
         expect(source).toContain('task.family === "cloze_tile_select"');
         expect(source).toContain('collectClozeTileResponse(rootEl, task)');
+        expect(source).toContain('task.family === "cloze_text"');
+        expect(source).toContain('collectClozeTextResponse(rootEl, task)');
         expect(source).toContain('handleClozeTileClick(rootEl, event)');
         expect(source).toContain('task.family === "sentence_builder"');
         expect(source).toContain('collectSentenceBuilderResponse(rootEl, task)');

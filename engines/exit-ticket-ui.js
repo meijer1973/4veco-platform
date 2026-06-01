@@ -282,6 +282,12 @@
         choice: selected ? selected.getAttribute('data-choice-id') : ''
       };
     }
+    if (task.family === 'cloze_text') {
+      var ClozeTextTaskShellUI = resolveTaskShellUI();
+      return ClozeTextTaskShellUI && ClozeTextTaskShellUI.collectClozeTextResponse
+        ? ClozeTextTaskShellUI.collectClozeTextResponse(wrapper, task)
+        : { blanks: {} };
+    }
     if (task.family === 'cloze_tile_select') {
       var TaskShellUI = resolveTaskShellUI();
       return TaskShellUI && TaskShellUI.collectClozeTileResponse

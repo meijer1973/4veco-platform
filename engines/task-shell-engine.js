@@ -17,6 +17,7 @@
     unit_notation_field: { label: 'Eenheid/notatie', deterministic: true },
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
     structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
+    cloze_text: { label: 'Invultekst', deterministic: true },
     cloze_tile_select: { label: 'Invullen met tegels', deterministic: true },
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
     formula_builder: { label: 'Formule bouwen', deterministic: true },
@@ -271,25 +272,8 @@
     return ids;
   }
 
-  function validateClozeInteraction(task, path) {
-    var interaction = task.interaction;
-    requireArray(interaction.blanks, path + '.blanks', 1);
-    requireArray(interaction.tiles, path + '.tiles', 2);
+  function validateInlineSegments(interaction, path, blankIds) {
     requireArray(interaction.segments, path + '.segments', 1);
-    if (interaction.allowReuse !== undefined) {
-      assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
-    }
-
-    var blankIds = {};
-    interaction.blanks.forEach(function (blank, idx) {
-      assert(isObject(blank), path + '.blanks[' + idx + '] must be an object');
-      requireString(blank.id, path + '.blanks[' + idx + '].id');
-      requireString(blank.label, path + '.blanks[' + idx + '].label');
-      optionalString(blank.placeholder, path + '.blanks[' + idx + '].placeholder');
-      assert(!blankIds[blank.id], 'duplicate cloze blank id: ' + blank.id);
-      blankIds[blank.id] = true;
-    });
-
     var segmentBlankRefs = {};
     interaction.segments.forEach(function (segment, idx) {
       assert(isObject(segment), path + '.segments[' + idx + '] must be an object');
@@ -306,6 +290,50 @@
     Object.keys(blankIds).forEach(function (blankId) {
       assert(segmentBlankRefs[blankId], path + '.segments must include blank ' + blankId);
     });
+  }
+
+  function validateClozeTextInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.blanks, path + '.blanks', 1);
+    var blankIds = {};
+    interaction.blanks.forEach(function (blank, idx) {
+      assert(isObject(blank), path + '.blanks[' + idx + '] must be an object');
+      requireString(blank.id, path + '.blanks[' + idx + '].id');
+      requireString(blank.label, path + '.blanks[' + idx + '].label');
+      optionalString(blank.placeholder, path + '.blanks[' + idx + '].placeholder');
+      optionalString(blank.inputMode, path + '.blanks[' + idx + '].inputMode');
+      optionalString(blank.width, path + '.blanks[' + idx + '].width');
+      optionalString(blank.autocomplete, path + '.blanks[' + idx + '].autocomplete');
+      assert(!blankIds[blank.id], 'duplicate cloze text blank id: ' + blank.id);
+      blankIds[blank.id] = true;
+    });
+
+    validateInlineSegments(interaction, path, blankIds);
+
+    return {
+      blankIds: blankIds
+    };
+  }
+
+  function validateClozeInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.blanks, path + '.blanks', 1);
+    requireArray(interaction.tiles, path + '.tiles', 2);
+    if (interaction.allowReuse !== undefined) {
+      assert(typeof interaction.allowReuse === 'boolean', path + '.allowReuse must be boolean');
+    }
+
+    var blankIds = {};
+    interaction.blanks.forEach(function (blank, idx) {
+      assert(isObject(blank), path + '.blanks[' + idx + '] must be an object');
+      requireString(blank.id, path + '.blanks[' + idx + '].id');
+      requireString(blank.label, path + '.blanks[' + idx + '].label');
+      optionalString(blank.placeholder, path + '.blanks[' + idx + '].placeholder');
+      assert(!blankIds[blank.id], 'duplicate cloze blank id: ' + blank.id);
+      blankIds[blank.id] = true;
+    });
+
+    validateInlineSegments(interaction, path, blankIds);
 
     var tileIds = {};
     var distractorCount = 0;
@@ -462,6 +490,40 @@
     }
   }
 
+  function validateRequiredTextGroups(groups, path) {
+    requireArray(groups, path, 1);
+    groups.forEach(function (group, idx) {
+      requireArray(group, path + '[' + idx + ']', 1);
+      group.forEach(function (value, valueIdx) {
+        requireString(value, path + '[' + idx + '][' + valueIdx + ']');
+      });
+    });
+  }
+
+  function validateClozeTextExpectedBlank(blankExpected, path) {
+    assert(isObject(blankExpected), path + ' must be an object');
+    var hasAccepted = false;
+    var hasGroups = false;
+    if (blankExpected.accepted !== undefined) {
+      requireArray(blankExpected.accepted, path + '.accepted', 1);
+      blankExpected.accepted.forEach(function (value, idx) {
+        requireString(value, path + '.accepted[' + idx + ']');
+      });
+      hasAccepted = true;
+    }
+    if (blankExpected.requiredTextGroups !== undefined) {
+      validateRequiredTextGroups(blankExpected.requiredTextGroups, path + '.requiredTextGroups');
+      hasGroups = true;
+    }
+    assert(hasAccepted || hasGroups, path + ' must include accepted or requiredTextGroups');
+    if (blankExpected.rejectText !== undefined) {
+      requireArray(blankExpected.rejectText, path + '.rejectText', 1);
+      blankExpected.rejectText.forEach(function (value, idx) {
+        requireString(value, path + '.rejectText[' + idx + ']');
+      });
+    }
+  }
+
   function validateExpected(task, interactionInfo) {
     interactionInfo = interactionInfo || {};
     var optionIds = interactionInfo.optionIds || {};
@@ -565,6 +627,23 @@
         requireString(expected.choice.value, task.id + '.expected.choice.value');
         assert(optionIds[expected.choice.value], task.id + '.expected.choice.value must match an option id');
       }
+      return;
+    }
+
+    if (task.family === 'cloze_text') {
+      assert(expected.kind === 'cloze_text', task.id + '.expected.kind must be cloze_text');
+      assert(isObject(expected.blanks), task.id + '.expected.blanks must be an object');
+      var clozeTextExpectedBlankIds = Object.keys(expected.blanks);
+      var clozeTextInteractionBlankIds = interactionInfo.blankIds || {};
+      var clozeTextActualBlankIds = Object.keys(clozeTextInteractionBlankIds);
+      assert(clozeTextExpectedBlankIds.length === clozeTextActualBlankIds.length, task.id + '.expected.blanks must match all interaction blanks');
+      clozeTextActualBlankIds.forEach(function (blankId) {
+        assert(Object.prototype.hasOwnProperty.call(expected.blanks, blankId), task.id + '.expected.blanks missing ' + blankId);
+        validateClozeTextExpectedBlank(expected.blanks[blankId], task.id + '.expected.blanks.' + blankId);
+      });
+      clozeTextExpectedBlankIds.forEach(function (blankId) {
+        assert(clozeTextInteractionBlankIds[blankId], task.id + '.expected.blanks contains unknown blank ' + blankId);
+      });
       return;
     }
 
@@ -702,6 +781,8 @@
     } else if (task.family === 'structured_short_response') {
       validateStructuredFields(task.interaction.fields, path + '.fields');
       if (task.interaction.options !== undefined) interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
+    } else if (task.family === 'cloze_text') {
+      interactionInfo = validateClozeTextInteraction(task, path);
     } else if (task.family === 'cloze_tile_select') {
       interactionInfo = validateClozeInteraction(task, path);
     } else if (task.family === 'sentence_builder') {
@@ -801,6 +882,46 @@
     return !rejected && textGroupsMatch(value, expected.requiredText || []);
   }
 
+  function requiredTextGroupsMatch(value, groups) {
+    var normalized = normalizeText(value);
+    if (!normalized) return false;
+    return (groups || []).every(function (group) {
+      return (group || []).some(function (accepted) {
+        var needle = normalizeText(accepted);
+        return needle && normalized.indexOf(needle) !== -1;
+      });
+    });
+  }
+
+  function clozeTextBlankMatches(value, expected) {
+    if (typeof value !== 'string') return false;
+    var normalized = normalizeText(value);
+    if (!normalized) return false;
+    var rejected = (expected.rejectText || []).some(function (rejectedText) {
+      return normalized.indexOf(normalizeText(rejectedText)) !== -1;
+    });
+    if (rejected) return false;
+    if (expected.accepted && textMatches(value, expected.accepted)) return true;
+    if (expected.requiredTextGroups && requiredTextGroupsMatch(value, expected.requiredTextGroups)) return true;
+    return false;
+  }
+
+  function clozeTextMatches(response, expected) {
+    if (!response || typeof response !== 'object' || !isObject(response.blanks)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'blanks') return false;
+    var blanks = response.blanks;
+    var expectedBlanks = expected.blanks || {};
+    var expectedIds = Object.keys(expectedBlanks);
+    var responseIds = Object.keys(blanks || {});
+    if (responseIds.some(function (id) { return !Object.prototype.hasOwnProperty.call(expectedBlanks, id); })) {
+      return false;
+    }
+    return expectedIds.every(function (blankId) {
+      return clozeTextBlankMatches(blanks[blankId], expectedBlanks[blankId]);
+    });
+  }
+
   function structuredTextCriteriaMatches(response, expected) {
     if (!response || typeof response !== 'object') return false;
     var values = response.fields && typeof response.fields === 'object' ? response.fields : response;
@@ -892,6 +1013,9 @@
     if (task.family === 'structured_short_response' && task.expected.kind === 'structured_text_criteria') {
       return structuredTextCriteriaMatches(response, task.expected);
     }
+    if (task.family === 'cloze_text' && task.expected.kind === 'cloze_text') {
+      return clozeTextMatches(response, task.expected);
+    }
     if (task.family === 'cloze_tile_select' && task.expected.kind === 'cloze_tile_select') {
       return clozeTileMatches(response, task.expected);
     }
@@ -961,6 +1085,11 @@
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');
       }
       return plan;
+    }
+    if (task.family === 'cloze_text') {
+      return [
+        '[data-task-id="' + task.id + '"][data-cloze-text-blank-id]'
+      ];
     }
     if (task.family === 'cloze_tile_select') {
       return [

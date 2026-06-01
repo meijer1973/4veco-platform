@@ -155,6 +155,42 @@ function fixtures() {
             }
         }),
         baseTask({
+            id: 'cloze-text',
+            family: 'cloze_text',
+            skillLabel: 'Indexpunten invullen',
+            prompt: 'Vul de ontbrekende waarden in.',
+            interaction: {
+                segments: [
+                    { type: 'text', text: 'De stijging is ' },
+                    { type: 'blank', blankId: 'indexpunten' },
+                    { type: 'text', text: ' indexpunten. Je deelt door ' },
+                    { type: 'blank', blankId: 'basis' },
+                    { type: 'text', text: ', omdat ' },
+                    { type: 'blank', blankId: 'reden' },
+                    { type: 'text', text: '.' }
+                ],
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten', placeholder: 'bijv. 4', inputMode: 'decimal', width: 'short' },
+                    { id: 'basis', label: 'Oude index als basis', placeholder: 'bijv. 108', inputMode: 'decimal', width: 'short' },
+                    { id: 'reden', label: 'Waarom 108 de basis is', placeholder: 'oude index is de basis', width: 'wide' }
+                ]
+            },
+            expected: {
+                kind: 'cloze_text',
+                blanks: {
+                    indexpunten: { accepted: ['4', '4 indexpunten'], rejectText: ['4%'] },
+                    basis: { accepted: ['108', 'index 108'] },
+                    reden: {
+                        requiredTextGroups: [
+                            ['108', 'oude index'],
+                            ['basis', 'deler', 'delen']
+                        ],
+                        rejectText: ['altijd delen door 100']
+                    }
+                }
+            }
+        }),
+        baseTask({
             id: 'table-value',
             family: 'table_value_selection',
             skillLabel: 'Tabelwaarde kiezen',
@@ -276,6 +312,7 @@ describe('TaskShellEngine', () => {
             'unit_notation_field',
             'short_constructed_response',
             'structured_short_response',
+            'cloze_text',
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
@@ -303,11 +340,18 @@ describe('TaskShellEngine', () => {
         expect(TaskShellEngine.evaluateTask(tasks[2], '2.5%').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[3], 'procent').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[6], { blanks: { indexpunten: 'vier', basis: 'honderdacht' } }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[12], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[13], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[7], 'b').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[8], '149,5').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[9], { x: '20,2', y: '4,1' }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[7], {
+            blanks: {
+                indexpunten: '4 indexpunten',
+                basis: 'index 108',
+                reden: 'De oude index 108 is de basis.'
+            }
+        }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[13], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[14], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[8], 'b').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[9], '149,5').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[10], { x: '20,2', y: '4,1' }).matched).toBe(true);
     });
 
     test('uses self-check state for work capture and constructed responses', () => {
@@ -554,8 +598,80 @@ describe('TaskShellEngine', () => {
         }));
     });
 
+    test('supports cloze text with exact shape, accepted values, and bounded text groups', () => {
+        const cloze = fixtures()[7];
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: '4',
+                basis: '108',
+                reden: 'De oude index is de basis.'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: '4%',
+                basis: '108',
+                reden: 'De oude index is de basis.'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: '4',
+                basis: '108',
+                reden: 'Je moet altijd delen door 100.'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: '4',
+                basis: '108'
+            }
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            indexpunten: '4',
+            basis: '108',
+            reden: 'De oude index is de basis.'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(cloze, {
+            blanks: {
+                indexpunten: '4',
+                basis: '108',
+                reden: 'De oude index is de basis.'
+            },
+            extra: 'ignored'
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.focusPlan(cloze)).toEqual([
+            '[data-task-id="cloze-text"][data-cloze-text-blank-id]'
+        ]);
+    });
+
     test('supports sentence builder with exact ordered token sequences', () => {
-        const sentence = fixtures()[12];
+        const sentence = fixtures()[13];
 
         expect(TaskShellEngine.evaluateTask(sentence, {
             tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs']
@@ -596,7 +712,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('rejects invalid sentence builder schemas before rendering', () => {
-        const sentence = fixtures()[12];
+        const sentence = fixtures()[13];
         expect(() => TaskShellEngine.validateTask({
             ...sentence,
             interaction: {
@@ -649,7 +765,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('supports formula builder with exact ordered token sequences', () => {
-        const formula = fixtures()[13];
+        const formula = fixtures()[14];
 
         expect(TaskShellEngine.evaluateTask(formula, {
             tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
@@ -703,7 +819,7 @@ describe('TaskShellEngine', () => {
     });
 
     test('rejects invalid formula builder schemas before rendering', () => {
-        const formula = fixtures()[13];
+        const formula = fixtures()[14];
 
         expect(() => TaskShellEngine.validateTask({
             ...formula,
@@ -825,6 +941,71 @@ describe('TaskShellEngine', () => {
                 }
             }
         })).toThrow(/uses tile more than once/);
+    });
+
+    test('rejects invalid cloze text schemas before rendering', () => {
+        const cloze = fixtures()[7];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            interaction: {
+                ...cloze.interaction,
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'indexpunten', label: 'Dubbel' },
+                    { id: 'basis', label: 'Oude index als basis' },
+                    { id: 'reden', label: 'Waarom 108 de basis is' }
+                ]
+            }
+        })).toThrow(/duplicate cloze text blank id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            interaction: {
+                ...cloze.interaction,
+                segments: [
+                    { type: 'text', text: 'De stijging is ' },
+                    { type: 'blank', blankId: 'indexpunten' }
+                ]
+            }
+        })).toThrow(/segments must include blank basis/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            expected: {
+                kind: 'cloze_text',
+                blanks: {
+                    indexpunten: { accepted: ['4'] },
+                    basis: { accepted: ['108'] },
+                    reden: {}
+                }
+            }
+        })).toThrow(/must include accepted or requiredTextGroups/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            expected: {
+                kind: 'cloze_text',
+                blanks: {
+                    indexpunten: { accepted: ['4'] },
+                    basis: { accepted: ['108'] },
+                    reden: { requiredTextGroups: [{ label: 'basis', any: ['basis'] }] }
+                }
+            }
+        })).toThrow(/requiredTextGroups\[0\] must contain at least 1 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...cloze,
+            expected: {
+                kind: 'cloze_text',
+                blanks: {
+                    indexpunten: { accepted: ['4'] },
+                    basis: { accepted: ['108'] },
+                    reden: { requiredTextGroups: [['basis']] },
+                    extra: { accepted: ['x'] }
+                }
+            }
+        })).toThrow(/expected.blanks must match all interaction blanks/);
     });
 
     test('keeps all boundary flags false for local practice output', () => {

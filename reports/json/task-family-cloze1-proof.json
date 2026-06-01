@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-CLOZE-1",
+  "family": "cloze_text",
+  "status": "runtime_fixture_proof_only",
+  "runtime_support": {
+    "family_declared": true,
+    "deterministic": true,
+    "inline_segments": true,
+    "typed_blank_inputs": true,
+    "accepted_values": true,
+    "required_text_groups": true,
+    "reject_text": true,
+    "raw_blank_map_match": false,
+    "extra_response_keys_match": false,
+    "focus_plan": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "rendered_fixture": "reports/sprints/TASK-FAMILY-CLOZE-1-rendered-fixture.html",
+  "boundary_flags": {
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "candidate_storage_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "carried_flags": [
+    "Generated-route screenshots are still required before cloze_text adoption in product routes.",
+    "GATE-TASK-FAMILY-1 must review rendered output before cloze_text is relied on for target-equivalent proof or Scale Gate proof.",
+    "requiredTextGroups is bounded phrase matching, not broad semantic answer evaluation."
+  ]
+}

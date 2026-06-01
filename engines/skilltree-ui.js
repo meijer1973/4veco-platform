@@ -480,6 +480,9 @@
         if (task.family === 'cloze_tile_select' && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
             return window.TaskShellUI.collectClozeTileResponse(root, task);
         }
+        if (task.family === 'cloze_text' && window.TaskShellUI && window.TaskShellUI.collectClozeTextResponse) {
+            return window.TaskShellUI.collectClozeTextResponse(root, task);
+        }
         if (task.family === 'sentence_builder' && window.TaskShellUI && window.TaskShellUI.collectSentenceBuilderResponse) {
             return window.TaskShellUI.collectSentenceBuilderResponse(root, task);
         }

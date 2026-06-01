@@ -94,6 +94,25 @@ function data() {
                     basis: 'honderdacht'
                 }
             }),
+            task('cloze-text', 'cloze_text', {
+                segments: [
+                    { type: 'text', text: 'De stijging is ' },
+                    { type: 'blank', blankId: 'indexpunten' },
+                    { type: 'text', text: ' indexpunten en de basis is ' },
+                    { type: 'blank', blankId: 'basis' },
+                    { type: 'text', text: '.' }
+                ],
+                blanks: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten', placeholder: 'bijv. 4', inputMode: 'decimal', width: 'short' },
+                    { id: 'basis', label: 'Basis voor procentuele stijging', placeholder: 'bijv. 108', inputMode: 'decimal', width: 'short' }
+                ]
+            }, {
+                kind: 'cloze_text',
+                blanks: {
+                    indexpunten: { accepted: ['4', '4 indexpunten'] },
+                    basis: { accepted: ['108'] }
+                }
+            }),
             task('sentence-builder', 'sentence_builder', {
                 tokens: [
                     { id: 'prijs-stijgt', label: 'De prijs stijgt', kind: 'answer' },
@@ -149,6 +168,7 @@ describe('TaskShellUI', () => {
             'unit_notation_field',
             'short_constructed_response',
             'structured_short_response',
+            'cloze_text',
             'cloze_tile_select',
             'sentence_builder',
             'formula_builder',
@@ -183,6 +203,12 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-cloze-tile-id="vier-procent"');
         expect(html).toContain('class="ts-cloze-clear"');
         expect(html).toContain('role="group" aria-label="Tegelbank"');
+        expect(html).toContain('data-task-family="cloze_text"');
+        expect(html).toContain('class="ts-cloze-typed"');
+        expect(html).toContain('data-cloze-text-blank-id="basis"');
+        expect(html).toContain('data-cloze-text-label="Basis voor procentuele stijging"');
+        expect(html).toContain('inputmode="decimal"');
+        expect(html).toContain('aria-label="Basis voor procentuele stijging"');
         expect(html).toContain('class="ts-sentence"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-sentence-sequence');
@@ -222,6 +248,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Rekenantwoord');
         expect(html).toContain('Berekening tonen');
         expect(html).toContain('Kort antwoord in stappen');
+        expect(html).toContain('Invultekst');
         expect(html).toContain('Invullen met tegels');
         expect(html).toContain('Zin bouwen');
         expect(html).toContain('Formule bouwen');
@@ -256,10 +283,17 @@ describe('TaskShellUI', () => {
         ]);
     });
 
+    test('exports cloze text helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectClozeTextResponse).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[7])).toEqual([
+            '[data-task-id="cloze-text"][data-cloze-text-blank-id]'
+        ]);
+    });
+
     test('exports sentence builder helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectSentenceBuilderResponse).toBe('function');
         expect(typeof TaskShellUI.handleSentenceBuilderClick).toBe('function');
-        expect(TaskShellEngine.focusPlan(data().tasks[7])).toEqual([
+        expect(TaskShellEngine.focusPlan(data().tasks[8])).toEqual([
             '[data-task-id="sentence-builder"][data-sentence-token-id]',
             '[data-task-id="sentence-builder"][data-sentence-sequence]'
         ]);
@@ -268,7 +302,7 @@ describe('TaskShellUI', () => {
     test('exports formula builder helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectFormulaBuilderResponse).toBe('function');
         expect(typeof TaskShellUI.handleFormulaBuilderClick).toBe('function');
-        expect(TaskShellEngine.focusPlan(data().tasks[8])).toEqual([
+        expect(TaskShellEngine.focusPlan(data().tasks[9])).toEqual([
             '[data-task-id="formula-builder"][data-formula-token-id]',
             '[data-task-id="formula-builder"][data-formula-sequence]'
         ]);

@@ -280,6 +280,56 @@
   line-height: 1.3;
 }
 
+.ts-cloze-typed {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-cloze-text-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.ts-cloze-text-slot {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.ts-cloze-text-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ts-cloze-text-input {
+  min-width: 96px;
+  max-width: 100%;
+  width: 12rem;
+  min-height: 38px;
+  padding: 7px 10px;
+  font-weight: 800;
+}
+
+.ts-cloze-text-input[data-cloze-text-width="short"] {
+  width: 7rem;
+}
+
+.ts-cloze-text-input[data-cloze-text-width="wide"] {
+  width: 16rem;
+}
+
 .ts-sentence {
   display: grid;
   gap: 12px;

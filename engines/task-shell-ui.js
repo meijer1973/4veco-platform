@@ -182,6 +182,30 @@
     '</div>';
   }
 
+  function renderClozeTextBlank(task, blankId) {
+    var blank = blankMeta(task, blankId);
+    return '<label class="ts-cloze-text-slot">' +
+      '<span class="ts-cloze-text-label">' + escapeHtml(blank.label) + '</span>' +
+      '<input class="ts-input ts-cloze-text-input" type="text" inputmode="' + escapeHtml(blank.inputMode || 'text') + '" ' +
+        'autocomplete="' + escapeHtml(blank.autocomplete || 'off') + '" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-cloze-text-blank-id="' + escapeHtml(blankId) + '" data-cloze-text-label="' + escapeHtml(blank.label) + '" ' +
+        (blank.width ? 'data-cloze-text-width="' + escapeHtml(blank.width) + '" ' : '') +
+        'placeholder="' + escapeHtml(blank.placeholder || 'Antwoord') + '" aria-label="' + escapeHtml(blank.label) + '">' +
+    '</label>';
+  }
+
+  function renderClozeText(task) {
+    var segments = task.interaction.segments || [];
+    var line = segments.map(function (segment) {
+      if (segment.type === 'blank') return renderClozeTextBlank(task, segment.blankId);
+      return '<span class="ts-cloze-text-copy">' + escapeHtml(segment.text) + '</span>';
+    }).join('');
+    return '<div class="ts-cloze-typed" data-cloze-text-task="' + escapeHtml(task.id) + '">' +
+      '<p class="ts-cloze-text-line">' + line + '</p>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderSentenceBuilder(task) {
     var tokens = task.interaction.tokens || [];
     var tokenHtml = tokens.map(function (token) {
@@ -243,6 +267,8 @@
         return renderTextArea(task, 'answer') + renderCriteria(task);
       case 'structured_short_response':
         return renderStructuredShortResponse(task);
+      case 'cloze_text':
+        return renderClozeText(task);
       case 'cloze_tile_select':
         return renderClozeTileSelect(task);
       case 'sentence_builder':
@@ -301,6 +327,16 @@
     var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-cloze-blank-id]');
     for (var i = 0; i < controls.length; i++) {
       blanks[controls[i].getAttribute('data-cloze-blank-id')] = controls[i].getAttribute('data-selected-tile') || '';
+    }
+    return { blanks: blanks };
+  }
+
+  function collectClozeTextResponse(rootEl, task) {
+    if (!rootEl || !task) return { blanks: {} };
+    var blanks = {};
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-cloze-text-blank-id]');
+    for (var i = 0; i < controls.length; i++) {
+      blanks[controls[i].getAttribute('data-cloze-text-blank-id')] = controls[i].value || '';
     }
     return { blanks: blanks };
   }
@@ -686,6 +722,7 @@
 
   return {
     escapeHtml: escapeHtml,
+    collectClozeTextResponse: collectClozeTextResponse,
     collectClozeTileResponse: collectClozeTileResponse,
     handleClozeTileClick: handleClozeTileClick,
     collectSentenceBuilderResponse: collectSentenceBuilderResponse,

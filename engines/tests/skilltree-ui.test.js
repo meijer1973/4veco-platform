@@ -24,6 +24,8 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('data-input-role="unit-notation"');
         expect(source).toContain("task.family === 'cloze_tile_select'");
         expect(source).toContain('collectClozeTileResponse(root, task)');
+        expect(source).toContain("task.family === 'cloze_text'");
+        expect(source).toContain('collectClozeTextResponse(root, task)');
         expect(source).toContain('handleClozeTileClick(els.exStepSlot, e)');
         expect(source).toContain("task.family === 'sentence_builder'");
         expect(source).toContain('collectSentenceBuilderResponse(root, task)');

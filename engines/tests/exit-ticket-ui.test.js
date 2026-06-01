@@ -177,6 +177,44 @@ function graphTaskShellData() {
                 }
             },
             {
+                id: 'cloze-text-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'cloze-text-task',
+                    family: 'cloze_text',
+                    skillLabel: 'Bronconclusie invullen',
+                    purpose: 'Vul korte bronwoorden in zonder keuze-tegels.',
+                    prompt: 'Maak de bronconclusie af.',
+                    interaction: {
+                        segments: [
+                            { type: 'text', text: 'Bij prijs 2 hoort ' },
+                            { type: 'blank', blankId: 'waarde' },
+                            { type: 'text', text: ', dus de gevraagde hoeveelheid ' },
+                            { type: 'blank', blankId: 'richting' },
+                            { type: 'text', text: '.' }
+                        ],
+                        blanks: [
+                            { id: 'waarde', label: 'Bronwaarde', placeholder: 'bijv. 300 ijsjes' },
+                            { id: 'richting', label: 'Richting', placeholder: 'bijv. daalt' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'cloze_text',
+                        blanks: {
+                            waarde: { accepted: ['300 ijsjes', '300'] },
+                            richting: { accepted: ['daalt', 'dalen'] }
+                        }
+                    },
+                    feedback: {
+                        matchTitle: 'Conclusie past',
+                        matchText: 'Je vult de bronwaarde en richting controleerbaar in.',
+                        retryTitle: 'Controleer de bron',
+                        retryText: 'Lees de waarde en richting opnieuw.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
+            },
+            {
                 id: 'formula-task',
                 type: 'task_shell',
                 taskShell: {
@@ -304,10 +342,12 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="graph_reading"');
         expect(html).toContain('data-task-family="point_placement"');
         expect(html).toContain('data-task-family="cloze_tile_select"');
+        expect(html).toContain('data-task-family="cloze_text"');
         expect(html).toContain('data-task-family="sentence_builder"');
         expect(html).toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
+        expect(html).toContain('data-cloze-text-blank-id="richting"');
         expect(html).toContain('data-sentence-token-id="vraag-stijgt"');
         expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
         expect(html).toContain('et-task-shell-check');
@@ -319,6 +359,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleClozeTileClick(app, event)');
         expect(source).toContain('collectClozeTileResponse(wrapper, task)');
         expect(source).toContain("task.family === 'cloze_tile_select'");
+        expect(source).toContain("task.family === 'cloze_text'");
+        expect(source).toContain('collectClozeTextResponse(wrapper, task)');
         expect(source).toContain('handleSentenceBuilderClick(app, event)');
         expect(source).toContain('collectSentenceBuilderResponse(wrapper, task)');
         expect(source).toContain("task.family === 'sentence_builder'");

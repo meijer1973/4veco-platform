@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T17:38:55.661Z",
+  "generatedAt": "2026-06-01T18:16:55.270Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.47-formula-builder-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics ex...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.48-cloze-text-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exam qu...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -200,8 +200,8 @@
             {
               "sprint": "TASK-FAMILY-CLOZE-1",
               "name": "Cloze Text Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement first-class inline cloze text after `TASK-FAMILY-CHOICE-1` accepts the contract. Highest-value family for index-points-versus-percent, formula substitution, source-value labels, cause-step-effect statements, and compact economic reasoning without brittle free-text regex.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, accepted-value and bounded text-group validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots are deferred to adoption; `requiredTextGroups` is bounded phrase matching only.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-CLOZE-1",
-          "name": "Cloze Text Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement first-class inline cloze text after `TASK-FAMILY-CHOICE-1` accepts the contract. Highest-value family for index-points-versus-percent, formula substitution, source-value labels, cause-step-effect statements, and compact economic reasoning without brittle free-text regex.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-MULTI-1",
           "name": "Multi-Select Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Formula Builder Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, formula category validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and dynamic rendered interaction proof are deferred to adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-1",
+          "name": "Cloze Text Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, accepted-value and bounded text-group validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots are deferred to adoption; `requiredTextGroups` is bounded phrase matching only.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 158,
-      "openCount": 19
+      "completedCount": 159,
+      "openCount": 18
     },
     {
       "id": "lessen",
@@ -2907,8 +2907,8 @@
             {
               "sprint": "TASK-FAMILY-CLOZE-1",
               "name": "Cloze Text Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds inline `cloze_text` as the highest-priority bridge between recognition and open response, with proof for index-points-versus-percent, formula substitution, source-value labels, and causal statements.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route screenshots remain required before adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-CLOZE-1",
-          "name": "Cloze Text Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds inline `cloze_text` as the highest-priority bridge between recognition and open response, with proof for index-points-versus-percent, formula substitution, source-value labels, and causal statements.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-MULTI-1",
           "name": "Multi-Select Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `formula_builder` as a deterministic shared task-shell family with formula-block bank, ordered construction zone, formula category metadata, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching including extra-key rejection, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. Product-route screenshots and rendered interaction proof remain required before adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-CLOZE-1",
+          "name": "Cloze Text Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route screenshots remain required before adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 9,
-      "openCount": 38
+      "completedCount": 10,
+      "openCount": 37
     },
     {
       "id": "innovation",
