@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.33-l1-7b-q2-planning` | `references/reference-team-roadmap.md` | Current operating roadmap after CHECK-Q2-PLAN closed and L1.7B-Q2 entered active planning/preflight. The active Q2 plan selects 1.1.2 as the first target-equivalent exit-ticket candidate, but authorizes no source-data creation, generated output, engine implementation, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, product use, or Scale Gate 1 authority. |
+| References Team Roadmap | `v3.36-l1-7b-q2-copy-complete` | `references/reference-team-roadmap.md` | Current operating roadmap after L1.7B-Q2-COPY enabled exact reviewed 1.1.2 local non-summative completion copy while keeping 1.1.1 advisory, 1.1.3 held, and Scale Gate 1 blocked until REV-STD-1 and remaining scale readiness resolve. |
 
 ## Outdated Archive
 

@@ -366,6 +366,7 @@
       var matched = responseValues.filter(function (response) { return response.matched === true; }).length;
       var needsRepair = responseValues.filter(function (response) { return response.matched !== true; }).length;
       var pending = Math.max(0, this.data.tasks.length - viewed);
+      var proofCandidate = pending === 0 && matched === this.data.tasks.length;
       var state = this.data.targetEquivalent || {};
       return {
         practiceProgressOnly: false,
@@ -375,9 +376,10 @@
         pending: pending,
         matched: matched,
         needsRepair: needsRepair,
-        proofCandidate: pending === 0 && matched === this.data.tasks.length,
+        proofCandidate: proofCandidate,
         gateApproved: state.gateApproved === true,
-        completionLanguageEligible: state.gateApproved === true && state.completionLanguageEligible === true
+        completionLanguageEligible:
+          proofCandidate === true && state.gateApproved === true && state.completionLanguageEligible === true
       };
     }
     return {

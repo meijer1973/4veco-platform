@@ -99,7 +99,7 @@ describe('ExitTicketEngine', () => {
         expect(data.tasks.length).toBeLessThanOrEqual(5);
     });
 
-    test('validates the 1.1.2 target-equivalent candidate without gate approval', () => {
+    test('validates the 1.1.2 target-equivalent candidate with exact local copy approval', () => {
         expect(ExitTicketEngine.validateData(targetData)).toBe(true);
         expect(targetData.surface).toBe('target_equivalent_exit_ticket');
         expect(targetData.targetSkillIds).toEqual(['A38', 'A39', 'D31']);
@@ -111,8 +111,8 @@ describe('ExitTicketEngine', () => {
         }));
         expect(targetData.targetEquivalent).toEqual({
             candidate: true,
-            gateApproved: false,
-            completionLanguageEligible: false,
+            gateApproved: true,
+            completionLanguageEligible: true,
         });
     });
 
@@ -219,14 +219,14 @@ describe('ExitTicketEngine', () => {
         });
     });
 
-    test('tracks 1.1.2 proof-candidate progress without authorizing completion language', () => {
+    test('tracks 1.1.2 proof-candidate progress before showing approved completion language', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         expect(engine.getProgress()).toEqual(expect.objectContaining({
             practiceProgressOnly: false,
             targetEquivalentAttempt: true,
             pending: targetData.tasks.length,
             proofCandidate: false,
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false,
         }));
 
@@ -249,8 +249,8 @@ describe('ExitTicketEngine', () => {
             matched: targetData.tasks.length,
             needsRepair: 0,
             proofCandidate: true,
-            gateApproved: false,
-            completionLanguageEligible: false,
+            gateApproved: true,
+            completionLanguageEligible: true,
         }));
     });
 

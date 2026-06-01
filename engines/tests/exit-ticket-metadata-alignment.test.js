@@ -51,8 +51,8 @@ describe('exit-ticket metadata alignment', () => {
         expect(targetData.metadataAlignment.status).toBe('target_equivalent_aligned');
         expect(targetData.targetEquivalent).toEqual({
             candidate: true,
-            gateApproved: false,
-            completionLanguageEligible: false,
+            gateApproved: true,
+            completionLanguageEligible: true,
         });
 
         for (const id of [

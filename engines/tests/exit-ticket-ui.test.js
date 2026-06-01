@@ -119,16 +119,19 @@ describe('ExitTicketUI', () => {
         }
     });
 
-    test('renders the 1.1.2 exit ticket candidate without codes or completion claims', () => {
+    test('renders the 1.1.2 exit ticket candidate with approved local copy hidden before proof', () => {
         const html = targetVisibleHtml();
         expect(html).toContain('Exit ticket');
         expect(html).toContain('Procentuele verandering berekenen');
         expect(html).toContain('Indexpunten kort uitleggen');
+        expect(html).toContain('Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.');
+        expect(html).toContain('<section class="et-completion" id="et-completion" hidden>');
         expect(html).toContain('data-task-family="calculation_work_capture"');
         expect(html).toContain('data-task-family="short_constructed_response"');
         expect(html).not.toMatch(/\b(?:A\d{2}|D\d{2}|PV|MTU)\b/);
         expect(html.toLowerCase()).not.toContain('bewezen');
         expect(html.toLowerCase()).not.toContain('aangetoond');
+        expect(html.toLowerCase()).not.toContain('beheerst');
     });
 
     test('generator shell loads shared skill-map and exit-ticket runtime files', () => {
