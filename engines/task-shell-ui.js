@@ -337,6 +337,57 @@
     '</div>';
   }
 
+  function coordinateStyle(target) {
+    if (typeof target.x === 'number' && typeof target.y === 'number') {
+      return ' style="left:' + Math.max(0, Math.min(100, target.x)) + '%;top:' + Math.max(0, Math.min(100, target.y)) + '%;"';
+    }
+    return '';
+  }
+
+  function renderLabelPlacement(task) {
+    var labels = task.interaction.labels || [];
+    var targets = task.interaction.targets || [];
+    var visual = task.interaction.visual || {};
+    var labelHtml = labels.map(function (label) {
+      return '<button type="button" class="ts-label-token" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-label-id="' + escapeHtml(label.id) + '" aria-pressed="false" aria-label="' + escapeHtml(label.label + ': ' + label.description) + '">' +
+        '<span class="ts-label-token-label">' + escapeHtml(label.label) + '</span>' +
+        '<span class="ts-label-token-description">' + escapeHtml(label.description) + '</span>' +
+      '</button>';
+    }).join('');
+    var targetHtml = targets.map(function (target) {
+      return '<button type="button" class="ts-label-target" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-label-target-id="' + escapeHtml(target.id) + '" data-label-target-role="' + escapeHtml(target.targetRole || '') + '"' + coordinateStyle(target) + ' ' +
+        'aria-label="' + escapeHtml(target.label + ': ' + target.description) + '">' +
+        '<span class="ts-label-target-dot" aria-hidden="true"></span>' +
+        '<span class="ts-label-target-label">' + escapeHtml(target.label) + '</span>' +
+        '<span class="ts-label-target-assigned"></span>' +
+      '</button>';
+    }).join('');
+    var visualTitle = visual.title || task.interaction.targetRegionLabel || 'Visuele plaatsing';
+    var visualDescription = visual.description || 'Plaats de labels op de juiste plekken.';
+    return '<div class="ts-label-placement" data-label-placement-task="' + escapeHtml(task.id) + '">' +
+      '<div class="ts-label-bank" role="group" aria-label="' + escapeHtml(task.interaction.labelBankLabel || 'Labels') + '">' + labelHtml + '</div>' +
+      '<div class="ts-label-visual" data-label-visual-kind="' + escapeHtml(visual.kind || 'structure') + '">' +
+        '<div class="ts-label-visual-head">' +
+          '<strong>' + escapeHtml(visualTitle) + '</strong>' +
+          '<span>' + escapeHtml(visualDescription) + '</span>' +
+        '</div>' +
+        '<div class="ts-label-target-region" role="group" data-task-id="' + escapeHtml(task.id) + '" data-label-target-region aria-label="' + escapeHtml(task.interaction.targetRegionLabel || visualTitle) + '">' +
+          '<div class="ts-label-visual-axis ts-label-visual-axis-x" aria-hidden="true"></div>' +
+          '<div class="ts-label-visual-axis ts-label-visual-axis-y" aria-hidden="true"></div>' +
+          '<div class="ts-label-visual-line ts-label-visual-line-demand" aria-hidden="true"></div>' +
+          targetHtml +
+        '</div>' +
+      '</div>' +
+      '<div class="ts-label-placement-summary" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-label-placement-summary aria-label="' + escapeHtml(task.interaction.placementLabel || 'Geplaatste labels') + '">' +
+        '<span class="ts-label-placeholder">' + escapeHtml(task.interaction.placeholder || 'Kies een label en daarna een plek.') + '</span>' +
+      '</div>' +
+      '<button type="button" class="ts-label-clear" data-task-id="' + escapeHtml(task.id) + '" data-label-clear aria-label="Geplaatste labels leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -374,6 +425,8 @@
         return renderSourceValueSelection(task);
       case 'source_chain_builder':
         return renderSourceChainBuilder(task);
+      case 'label_placement':
+        return renderLabelPlacement(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }
@@ -416,6 +469,7 @@
     var order = renderOrderFeedback(result && result.orderFeedback);
     var sourceValue = renderSourceValueFeedback(result && result.sourceValueFeedback);
     var sourceChain = renderSourceChainFeedback(result && result.sourceChainFeedback);
+    var labelPlacement = renderLabelPlacementFeedback(result && result.labelPlacementFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
@@ -423,6 +477,7 @@
       order +
       sourceValue +
       sourceChain +
+      labelPlacement +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
     '</div>';
@@ -501,6 +556,44 @@
       renderSelectionList('Ontbrekend type onderdeel', feedback.missingRequiredRoles) +
       renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
       renderSelectionList('Begin klopt al', feedback.correctPrefix) +
+    '</div>';
+  }
+
+  function renderPlacementPairList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var label = item.label && item.label.label ? item.label.label : '';
+        var target = item.target && item.target.label ? item.target.label : '';
+        if (label && target) return '<li>' + escapeHtml(label + ' -> ' + target) + '</li>';
+        return '<li>' + escapeHtml(item.label || item.id || '') + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderMisplacedLabelList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var label = item.label && item.label.label ? item.label.label : '';
+        var expected = item.expectedTarget && item.expectedTarget.label ? item.expectedTarget.label : '';
+        var actual = item.actualTarget && item.actualTarget.label ? item.actualTarget.label : 'geen plek';
+        return '<li>' + escapeHtml(label) + ': verwacht ' + escapeHtml(expected) + ', gekozen ' + escapeHtml(actual) + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderLabelPlacementFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-label-feedback" aria-label="Aanwijzingen bij je labels">' +
+      renderSelectionList('Labels nog nodig', feedback.missingLabels) +
+      renderSelectionList('Plekken nog leeg', feedback.missingTargets) +
+      renderMisplacedLabelList('Label controleren', feedback.misplacedLabels) +
+      renderSelectionList('Afleidend label gekozen', feedback.selectedDistractorLabels) +
+      renderSelectionList('Afleidende plek gekozen', feedback.selectedDistractorTargets) +
+      renderPlacementPairList('Al goed geplaatst', feedback.correctPlacements) +
     '</div>';
   }
 
@@ -673,6 +766,19 @@
     return { chain: chain };
   }
 
+  function collectLabelPlacementResponse(rootEl, task) {
+    if (!rootEl || !task) return { placements: [] };
+    var placements = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-label-placed-label-id]');
+    for (var i = 0; i < controls.length; i++) {
+      placements.push({
+        labelId: controls[i].getAttribute('data-label-placed-label-id') || '',
+        targetId: controls[i].getAttribute('data-label-placed-target-id') || ''
+      });
+    }
+    return { placements: placements };
+  }
+
   function handleSourceValueSelectionClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var sourceValues = event.target.closest('.ts-source-values');
@@ -760,6 +866,47 @@
       clearSourceChain(chain);
       updateSourceNodeAvailability(chain);
       focusElement(sequence);
+      return true;
+    }
+    return false;
+  }
+
+  function handleLabelPlacementClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var placement = event.target.closest('.ts-label-placement');
+    if (!placement || !rootEl.contains(placement)) return false;
+
+    var label = event.target.closest('.ts-label-token');
+    var target = event.target.closest('.ts-label-target');
+    var remove = event.target.closest('.ts-label-remove');
+    var clear = event.target.closest('.ts-label-clear');
+    var summary = placement.querySelector('[data-label-placement-summary]');
+
+    if (label) {
+      if (label.disabled) return true;
+      setSelectedLabel(placement, label);
+      return true;
+    }
+    if (target) {
+      var selected = placement.querySelector('.ts-label-token.selected');
+      if (!selected || !summary) return true;
+      addLabelPlacement(placement, summary, selected, target);
+      clearSelectedLabels(placement);
+      updateLabelPlacementState(placement);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-label-placement-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateLabelPlacementState(placement);
+      focusElement(nextFocus || summary);
+      return true;
+    }
+    if (clear) {
+      clearLabelPlacements(placement);
+      updateLabelPlacementState(placement);
+      focusElement(summary);
       return true;
     }
     return false;
@@ -896,6 +1043,58 @@
     sequence.appendChild(item);
     updateSourceChainPlaceholder(chain);
     focusElement(item);
+  }
+
+  function addLabelPlacement(placement, summary, label, target) {
+    var labelId = label.getAttribute('data-label-id') || '';
+    var targetId = target.getAttribute('data-label-target-id') || '';
+    removeExistingLabelPlacement(summary, 'data-label-placed-label-id', labelId);
+    removeExistingLabelPlacement(summary, 'data-label-placed-target-id', targetId);
+
+    var labelText = labelTokenText(label);
+    var targetText = labelTargetText(target);
+    var item = document.createElement('span');
+    item.className = 'ts-label-placement-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', label.getAttribute('data-task-id') || '');
+    item.setAttribute('data-label-placed-label-id', labelId);
+    item.setAttribute('data-label-placed-target-id', targetId);
+    item.setAttribute('tabindex', '-1');
+
+    var labelEl = document.createElement('span');
+    labelEl.className = 'ts-label-placement-label';
+    labelEl.textContent = labelText;
+
+    var arrowEl = document.createElement('span');
+    arrowEl.className = 'ts-label-placement-arrow';
+    arrowEl.setAttribute('aria-hidden', 'true');
+    arrowEl.textContent = '->';
+
+    var targetEl = document.createElement('span');
+    targetEl.className = 'ts-label-placement-target';
+    targetEl.textContent = targetText;
+
+    item.appendChild(labelEl);
+    item.appendChild(arrowEl);
+    item.appendChild(targetEl);
+    item.appendChild(labelButton('ts-label-remove', 'Verwijder label ' + labelText, '\u00d7'));
+    summary.appendChild(item);
+    focusElement(item);
+  }
+
+  function removeExistingLabelPlacement(summary, attr, value) {
+    if (!summary || !value) return;
+    var existing = summary.querySelector('[' + attr + '="' + cssEscape(value) + '"]');
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+  }
+
+  function labelButton(className, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
   }
 
   function sentenceButton(className, direction, label, text) {
@@ -1038,6 +1237,13 @@
     updateSourceChainPlaceholder(chain);
   }
 
+  function clearLabelPlacements(placement) {
+    var items = placement.querySelectorAll('.ts-label-placement-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+  }
+
   function updateSentencePlaceholder(sentence) {
     var placeholder = sentence.querySelector('.ts-sentence-placeholder');
     if (!placeholder) return;
@@ -1060,6 +1266,52 @@
     var placeholder = chain.querySelector('.ts-source-chain-placeholder');
     if (!placeholder) return;
     placeholder.hidden = chain.querySelectorAll('.ts-source-chain-item').length > 0;
+  }
+
+  function updateLabelPlacementState(placement) {
+    var usedLabels = {};
+    var usedTargets = {};
+    var labelTextByTarget = {};
+    var labelIdByTarget = {};
+    var items = placement.querySelectorAll('.ts-label-placement-item');
+    for (var i = 0; i < items.length; i++) {
+      var labelId = items[i].getAttribute('data-label-placed-label-id') || '';
+      var targetId = items[i].getAttribute('data-label-placed-target-id') || '';
+      if (labelId) usedLabels[labelId] = true;
+      if (targetId) {
+        usedTargets[targetId] = true;
+        labelIdByTarget[targetId] = labelId;
+        var labelEl = items[i].querySelector('.ts-label-placement-label');
+        labelTextByTarget[targetId] = labelEl ? labelEl.textContent : labelId;
+      }
+    }
+
+    var labels = placement.querySelectorAll('.ts-label-token');
+    for (var j = 0; j < labels.length; j++) {
+      var id = labels[j].getAttribute('data-label-id');
+      var unavailable = Boolean(usedLabels[id]);
+      labels[j].disabled = unavailable;
+      labels[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      if (unavailable) {
+        labels[j].classList.remove('selected');
+        labels[j].setAttribute('aria-pressed', 'true');
+      } else if (!labels[j].classList.contains('selected')) {
+        labels[j].setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    var targets = placement.querySelectorAll('.ts-label-target');
+    for (var k = 0; k < targets.length; k++) {
+      var targetId = targets[k].getAttribute('data-label-target-id');
+      var assigned = Boolean(usedTargets[targetId]);
+      targets[k].classList.toggle('is-filled', assigned);
+      targets[k].setAttribute('data-label-assigned-label-id', assigned ? labelIdByTarget[targetId] : '');
+      var assignedEl = targets[k].querySelector('.ts-label-target-assigned');
+      if (assignedEl) assignedEl.textContent = assigned ? labelTextByTarget[targetId] : '';
+    }
+
+    var placeholder = placement.querySelector('.ts-label-placeholder');
+    if (placeholder) placeholder.hidden = items.length > 0;
   }
 
   function updateSentenceAvailability(sentence) {
@@ -1150,6 +1402,37 @@
   function sourceNodeText(node) {
     var label = node.querySelector('.ts-source-node-label');
     return label ? label.textContent : node.textContent;
+  }
+
+  function labelTokenText(label) {
+    var el = label.querySelector('.ts-label-token-label');
+    return el ? el.textContent : label.textContent;
+  }
+
+  function labelTargetText(target) {
+    var el = target.querySelector('.ts-label-target-label');
+    return el ? el.textContent : target.textContent;
+  }
+
+  function setSelectedLabel(placement, label) {
+    var labels = placement.querySelectorAll('.ts-label-token');
+    var wasSelected = label.classList.contains('selected');
+    for (var i = 0; i < labels.length; i++) {
+      labels[i].classList.remove('selected');
+      labels[i].setAttribute('aria-pressed', 'false');
+    }
+    if (!wasSelected) {
+      label.classList.add('selected');
+      label.setAttribute('aria-pressed', 'true');
+    }
+  }
+
+  function clearSelectedLabels(placement) {
+    var labels = placement.querySelectorAll('.ts-label-token.selected');
+    for (var i = 0; i < labels.length; i++) {
+      labels[i].classList.remove('selected');
+      labels[i].setAttribute('aria-pressed', 'false');
+    }
   }
 
   function sourceRoleLabel(role) {
@@ -1252,6 +1535,8 @@
     handleSourceValueSelectionClick: handleSourceValueSelectionClick,
     collectSourceChainBuilderResponse: collectSourceChainBuilderResponse,
     handleSourceChainBuilderClick: handleSourceChainBuilderClick,
+    collectLabelPlacementResponse: collectLabelPlacementResponse,
+    handleLabelPlacementClick: handleLabelPlacementClick,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

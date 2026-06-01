@@ -389,6 +389,52 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met bronnen', href: 'grafiekenspel.html' }
                 }
+            },
+            {
+                id: 'label-placement-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'label-placement-task',
+                    family: 'label_placement',
+                    skillLabel: 'Grafieklabels plaatsen',
+                    purpose: 'Plaats labels bij de juiste onderdelen van de grafiek.',
+                    prompt: 'Welke labels horen bij de assen?',
+                    interaction: {
+                        labelBankLabel: 'Labelbank',
+                        targetRegionLabel: 'Grafiekvlak',
+                        placementLabel: 'Geplaatste labels',
+                        visual: {
+                            kind: 'coordinate_plane',
+                            title: 'Prijs-hoeveelheidgrafiek',
+                            description: 'Een assenstelsel met prijs verticaal en hoeveelheid horizontaal.'
+                        },
+                        labels: [
+                            { id: 'prijs', label: 'Prijs', description: 'De prijs hoort op de verticale as.', kind: 'answer' },
+                            { id: 'hoeveelheid', label: 'Hoeveelheid', description: 'De hoeveelheid hoort op de horizontale as.', kind: 'answer' },
+                            { id: 'omzet', label: 'Omzet', description: 'Omzet is hier een afleider.', kind: 'distractor', distractorFor: 'prijs' }
+                        ],
+                        targets: [
+                            { id: 'y-as', label: 'Verticale as', description: 'Plaats hier het prijslabel.', kind: 'answer', targetRole: 'axis', x: 14, y: 26 },
+                            { id: 'x-as', label: 'Horizontale as', description: 'Plaats hier het hoeveelheidlabel.', kind: 'answer', targetRole: 'axis', x: 72, y: 84 },
+                            { id: 'caption', label: 'Bijschrift', description: 'Dit is geen aslabel.', kind: 'distractor', targetRole: 'structure_part', distractorFor: 'y-as', x: 78, y: 16 }
+                        ]
+                    },
+                    expected: {
+                        kind: 'label_placement',
+                        placements: [
+                            { labelId: 'prijs', targetId: 'y-as' },
+                            { labelId: 'hoeveelheid', targetId: 'x-as' }
+                        ],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Labels kloppen',
+                        matchText: 'Je plaatst prijs en hoeveelheid bij de juiste assen.',
+                        retryTitle: 'Controleer de assen',
+                        retryText: 'Prijs staat verticaal; hoeveelheid staat horizontaal.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
             }
         ]
     };
@@ -489,6 +535,7 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="step_ordering"');
         expect(html).toContain('data-task-family="source_value_selection"');
         expect(html).toContain('data-task-family="source_chain_builder"');
+        expect(html).toContain('data-task-family="label_placement"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -498,6 +545,8 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-step-id="rond-eerst-af"');
         expect(html).toContain('data-source-value-id="btw"');
         expect(html).toContain('data-source-node-id="deel-door-nieuw"');
+        expect(html).toContain('data-label-id="prijs"');
+        expect(html).toContain('data-label-target-id="y-as"');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -527,5 +576,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleSourceChainBuilderClick(app, event)');
         expect(source).toContain('collectSourceChainBuilderResponse(wrapper, task)');
         expect(source).toContain("task.family === 'source_chain_builder'");
+        expect(source).toContain('handleLabelPlacementClick(app, event)');
+        expect(source).toContain('collectLabelPlacementResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'label_placement'");
     });
 });

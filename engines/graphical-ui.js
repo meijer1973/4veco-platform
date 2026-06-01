@@ -492,6 +492,9 @@
     if (task.family === "source_chain_builder" && window.TaskShellUI && window.TaskShellUI.collectSourceChainBuilderResponse) {
       return window.TaskShellUI.collectSourceChainBuilderResponse(rootEl, task);
     }
+    if (task.family === "label_placement" && window.TaskShellUI && window.TaskShellUI.collectLabelPlacementResponse) {
+      return window.TaskShellUI.collectLabelPlacementResponse(rootEl, task);
+    }
     return getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="answer"]');
   }
 
@@ -544,6 +547,11 @@
     rootEl.querySelectorAll(".ts-source-chain").forEach(function (sourceChain) {
       sourceChain.addEventListener("click", function (event) {
         window.TaskShellUI.handleSourceChainBuilderClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-label-placement").forEach(function (labelPlacement) {
+      labelPlacement.addEventListener("click", function (event) {
+        window.TaskShellUI.handleLabelPlacementClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

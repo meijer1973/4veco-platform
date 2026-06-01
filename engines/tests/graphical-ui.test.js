@@ -69,6 +69,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('task.family === "source_chain_builder"');
         expect(source).toContain('collectSourceChainBuilderResponse(rootEl, task)');
         expect(source).toContain('handleSourceChainBuilderClick(rootEl, event)');
+        expect(source).toContain('task.family === "label_placement"');
+        expect(source).toContain('collectLabelPlacementResponse(rootEl, task)');
+        expect(source).toContain('handleLabelPlacementClick(rootEl, event)');
     });
 
     test('announces task-shell feedback and preserves keyboard flow after checking', () => {

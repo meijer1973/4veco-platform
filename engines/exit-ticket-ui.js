@@ -195,6 +195,9 @@
       if (sharedTaskShellUI && sharedTaskShellUI.handleSourceChainBuilderClick && sharedTaskShellUI.handleSourceChainBuilderClick(app, event)) {
         return;
       }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleLabelPlacementClick && sharedTaskShellUI.handleLabelPlacementClick(app, event)) {
+        return;
+      }
 
       var taskShellChoice = event.target.closest ? event.target.closest('.ts-choice') : null;
       if (taskShellChoice && taskShellChoice.closest('.et-task-shell')) {
@@ -341,6 +344,12 @@
       return SourceChainTaskShellUI && SourceChainTaskShellUI.collectSourceChainBuilderResponse
         ? SourceChainTaskShellUI.collectSourceChainBuilderResponse(wrapper, task)
         : { chain: [] };
+    }
+    if (task.family === 'label_placement') {
+      var LabelPlacementTaskShellUI = resolveTaskShellUI();
+      return LabelPlacementTaskShellUI && LabelPlacementTaskShellUI.collectLabelPlacementResponse
+        ? LabelPlacementTaskShellUI.collectLabelPlacementResponse(wrapper, task)
+        : { placements: [] };
     }
     return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
   }

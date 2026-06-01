@@ -216,6 +216,33 @@ function data() {
                 chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
                 partialFeedback: 'practice_only'
             }),
+            task('label-placement', 'label_placement', {
+                labelBankLabel: 'Labelbank',
+                targetRegionLabel: 'Grafiekvlak',
+                placementLabel: 'Geplaatste labels',
+                visual: {
+                    kind: 'coordinate_plane',
+                    title: 'Prijs-hoeveelheidgrafiek',
+                    description: 'Een assenstelsel met prijs op de verticale as en hoeveelheid op de horizontale as.'
+                },
+                labels: [
+                    { id: 'prijs', label: 'Prijs', description: 'De prijs hoort op de verticale as.', kind: 'answer' },
+                    { id: 'hoeveelheid', label: 'Hoeveelheid', description: 'De hoeveelheid hoort op de horizontale as.', kind: 'answer' },
+                    { id: 'omzet', label: 'Omzet', description: 'Omzet is hier een afleider.', kind: 'distractor', distractorFor: 'prijs' }
+                ],
+                targets: [
+                    { id: 'y-as', label: 'Verticale as', description: 'Plaats hier het prijslabel.', kind: 'answer', targetRole: 'axis', x: 14, y: 26 },
+                    { id: 'x-as', label: 'Horizontale as', description: 'Plaats hier het hoeveelheidlabel.', kind: 'answer', targetRole: 'axis', x: 72, y: 84 },
+                    { id: 'caption', label: 'Bijschrift', description: 'Dit is geen aslabel.', kind: 'distractor', targetRole: 'structure_part', distractorFor: 'y-as', x: 78, y: 16 }
+                ]
+            }, {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'x-as' }
+                ],
+                partialFeedback: 'practice_only'
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -243,6 +270,7 @@ describe('TaskShellUI', () => {
             'step_ordering',
             'source_value_selection',
             'source_chain_builder',
+            'label_placement',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -309,6 +337,15 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-source-chain-sequence');
         expect(html).toContain('role="group" aria-label="Bronketen onderdelen"');
         expect(html).toContain('aria-label="Opgebouwde bronketen"');
+        expect(html).toContain('class="ts-label-placement"');
+        expect(html).toContain('data-label-id="prijs"');
+        expect(html).toContain('data-label-target-id="y-as"');
+        expect(html).toContain('data-label-target-role="axis"');
+        expect(html).toContain('data-label-placement-summary');
+        expect(html).toContain('class="ts-label-target-region"');
+        expect(html).toContain('class="ts-label-visual-axis ts-label-visual-axis-x"');
+        expect(html).toContain('aria-label="Prijs: De prijs hoort op de verticale as."');
+        expect(html).toContain('aria-label="Verticale as: Plaats hier het prijslabel."');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -362,6 +399,20 @@ describe('TaskShellUI', () => {
         expect(sourceChainFeedback).toContain('(920 - 800) / 800 x 100%');
         expect(sourceChainFeedback).toContain('Ontbrekend type onderdeel');
         expect(sourceChainFeedback).toContain('antwoord');
+
+        const labelResult = TaskShellEngine.evaluateTask(data().tasks[14], {
+            placements: [
+                { labelId: 'prijs', targetId: 'x-as' },
+                { labelId: 'omzet', targetId: 'caption' }
+            ]
+        });
+        const labelFeedback = TaskShellUI.renderFeedback(labelResult);
+        expect(labelFeedback).toContain('class="ts-label-feedback"');
+        expect(labelFeedback).toContain('Label controleren');
+        expect(labelFeedback).toContain('verwacht Verticale as');
+        expect(labelFeedback).toContain('Afleidend label gekozen');
+        expect(labelFeedback).toContain('Afleidende plek gekozen');
+        expect(labelFeedback).toContain('Omzet');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -386,6 +437,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Stappen ordenen');
         expect(html).toContain('Bronwaarden kiezen');
         expect(html).toContain('Bronketen bouwen');
+        expect(html).toContain('Labels plaatsen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
@@ -474,6 +526,16 @@ describe('TaskShellUI', () => {
         expect(TaskShellEngine.focusPlan(data().tasks[13])).toEqual([
             '[data-task-id="source-chain"][data-source-node-id]',
             '[data-task-id="source-chain"][data-source-chain-sequence]'
+        ]);
+    });
+
+    test('exports label placement helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectLabelPlacementResponse).toBe('function');
+        expect(typeof TaskShellUI.handleLabelPlacementClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[14])).toEqual([
+            '[data-task-id="label-placement"][data-label-id]',
+            '[data-task-id="label-placement"][data-label-target-id]',
+            '[data-task-id="label-placement"][data-label-placement-summary]'
         ]);
     });
 

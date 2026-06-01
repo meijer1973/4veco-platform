@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>TASK-FAMILY-LABEL-1 rendered fixture</title>
+  <link rel="stylesheet" href="../../engines/task-shell.css">
+</head>
+<body>
+  <main class="ts-shell" data-fixture-source="TaskShellUI.renderTask">
+    <section class="ts-task" data-task-id="label-placement-axis" data-task-family="label_placement" data-fixture-viewport="standard" data-fixture-theme="light">
+      <div class="ts-task-meta"><span>Labels plaatsen</span><span>Grafieklabels plaatsen</span></div>
+      <h2>Welke labels horen bij de assen van deze grafiek?</h2>
+      <p class="ts-purpose">Plaats labels bij de juiste onderdelen van een grafiek.</p>
+      <div class="ts-label-placement" data-task-id="label-placement-axis">
+        <div class="ts-label-bank" role="group" aria-label="Labelbank">
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="prijs" aria-pressed="false" aria-label="Prijs: De prijs hoort op de verticale as.">
+            <span class="ts-label-token-label">Prijs</span>
+            <span class="ts-label-token-description">De prijs hoort op de verticale as.</span>
+          </button>
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="hoeveelheid" aria-pressed="false" aria-label="Hoeveelheid: De hoeveelheid hoort op de horizontale as.">
+            <span class="ts-label-token-label">Hoeveelheid</span>
+            <span class="ts-label-token-description">De hoeveelheid hoort op de horizontale as.</span>
+          </button>
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="omzet" aria-pressed="false" aria-label="Omzet: Omzet is hier een afleider.">
+            <span class="ts-label-token-label">Omzet</span>
+            <span class="ts-label-token-description">Omzet is hier een afleider.</span>
+          </button>
+        </div>
+        <div class="ts-label-visual">
+          <div class="ts-label-visual-head">
+            <strong>Prijs-hoeveelheidgrafiek</strong>
+            <span>Een assenstelsel met prijs op de verticale as en hoeveelheid op de horizontale as.</span>
+          </div>
+          <div class="ts-label-target-region" role="group" aria-label="Grafiekvlak">
+            <span class="ts-label-visual-axis ts-label-visual-axis-x" aria-hidden="true"></span>
+            <span class="ts-label-visual-axis ts-label-visual-axis-y" aria-hidden="true"></span>
+            <span class="ts-label-visual-line" aria-hidden="true"></span>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="y-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:14%;top:26%;" aria-label="Verticale as: Plaats hier het prijslabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Verticale as</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="x-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:72%;top:84%;" aria-label="Horizontale as: Plaats hier het hoeveelheidlabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Horizontale as</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="caption" data-label-target-role="structure_part" data-label-assigned-label-id="" style="left:78%;top:16%;" aria-label="Bijschrift: Dit is geen aslabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Bijschrift</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+          </div>
+        </div>
+        <div class="ts-label-placement-summary" data-task-id="label-placement-axis" data-label-placement-summary role="list" aria-label="Geplaatste labels">
+          <span class="ts-label-placeholder">Kies een label en daarna een plek.</span>
+        </div>
+        <button type="button" class="ts-label-clear">Wis labels</button>
+      </div>
+    </section>
+
+    <section class="ts-task" data-task-id="label-placement-axis" data-task-family="label_placement" data-fixture-viewport="narrow" data-fixture-theme="dark" data-fixture-state="after-click">
+      <div class="ts-label-placement">
+        <div class="ts-label-placement-summary" data-task-id="label-placement-axis" data-label-placement-summary role="list" aria-label="Geplaatste labels">
+          <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="prijs" data-label-placed-target-id="y-as" tabindex="-1">
+            <span class="ts-label-placement-label">Prijs</span>
+            <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
+            <span class="ts-label-placement-target">Verticale as</span>
+            <button type="button" class="ts-label-remove" aria-label="Verwijder label Prijs">x</button>
+          </span>
+          <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="hoeveelheid" data-label-placed-target-id="x-as" tabindex="-1">
+            <span class="ts-label-placement-label">Hoeveelheid</span>
+            <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
+            <span class="ts-label-placement-target">Horizontale as</span>
+            <button type="button" class="ts-label-remove" aria-label="Verwijder label Hoeveelheid">x</button>
+          </span>
+        </div>
+      </div>
+      <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+        <strong>Controleer de assen</strong>
+        <p>Prijs staat op de verticale as; hoeveelheid staat op de horizontale as.</p>
+        <div class="ts-label-feedback" aria-label="Aanwijzingen bij je labels">
+          <div class="ts-selection-feedback-group">
+            <strong>Label controleren</strong>
+            <ul><li>Prijs: verwacht Verticale as, gekozen Horizontale as</li></ul>
+          </div>
+          <div class="ts-selection-feedback-group">
+            <strong>Afleidend label gekozen</strong>
+            <ul><li>Omzet</li></ul>
+          </div>
+          <div class="ts-selection-feedback-group">
+            <strong>Afleidende plek gekozen</strong>
+            <ul><li>Bijschrift</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

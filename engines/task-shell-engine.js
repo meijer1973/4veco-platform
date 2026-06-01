@@ -25,6 +25,7 @@
     step_ordering: { label: 'Stappen ordenen', deterministic: true },
     source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
     source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
+    label_placement: { label: 'Labels plaatsen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -74,6 +75,19 @@
     operation: true,
     answer: true,
     conclusion: true
+  };
+
+  var LABEL_TARGET_ROLES = {
+    axis: true,
+    line: true,
+    intersection: true,
+    region: true,
+    unit: true,
+    index_label: true,
+    curve_shift: true,
+    formula_part: true,
+    table_cell: true,
+    structure_part: true
   };
 
   var BOUNDARY_FLAGS = {
@@ -189,6 +203,13 @@
       push(task.interaction.valueBankLabel);
       push(task.interaction.roleLabel);
       push(task.interaction.nodeBankLabel);
+      push(task.interaction.labelBankLabel);
+      push(task.interaction.targetRegionLabel);
+      push(task.interaction.placementLabel);
+      if (task.interaction.visual) {
+        push(task.interaction.visual.title);
+        push(task.interaction.visual.description);
+      }
       (task.interaction.fields || []).forEach(function (field) {
         push(field.label);
         push(field.placeholder);
@@ -226,6 +247,14 @@
       (task.interaction.nodes || []).forEach(function (node) {
         push(node.label);
         push(node.description);
+      });
+      (task.interaction.labels || []).forEach(function (label) {
+        push(label.label);
+        push(label.description);
+      });
+      (task.interaction.targets || []).forEach(function (target) {
+        push(target.label);
+        push(target.description);
       });
       push(task.interaction.rows);
       push(task.interaction.columns);
@@ -711,6 +740,132 @@
     };
   }
 
+  function labelOptionMap(labels) {
+    var out = {};
+    (labels || []).forEach(function (label) {
+      out[label.id] = label.label;
+    });
+    return out;
+  }
+
+  function targetOptionMap(targets) {
+    var out = {};
+    (targets || []).forEach(function (target) {
+      out[target.id] = target.label;
+    });
+    return out;
+  }
+
+  function optionalCoordinate(value, path) {
+    if (value === undefined) return;
+    assert(isNumber(value), path + ' must be a number from 0 to 100');
+    assert(value >= 0 && value <= 100, path + ' must be between 0 and 100');
+  }
+
+  function validateLabelPlacementInteraction(task, path) {
+    var interaction = task.interaction;
+    requireArray(interaction.labels, path + '.labels', 3);
+    requireArray(interaction.targets, path + '.targets', 3);
+    optionalString(interaction.labelBankLabel, path + '.labelBankLabel');
+    optionalString(interaction.targetRegionLabel, path + '.targetRegionLabel');
+    optionalString(interaction.placementLabel, path + '.placementLabel');
+    if (interaction.visual !== undefined) {
+      assert(isObject(interaction.visual), path + '.visual must be an object');
+      requireString(interaction.visual.kind, path + '.visual.kind');
+      requireString(interaction.visual.title, path + '.visual.title');
+      requireString(interaction.visual.description, path + '.visual.description');
+    }
+
+    var labelIds = {};
+    var labelLabels = {};
+    var answerLabelIds = [];
+    var answerLabelSet = {};
+    var labelDistractorCount = 0;
+    interaction.labels.forEach(function (label, idx) {
+      assert(isObject(label), path + '.labels[' + idx + '] must be an object');
+      requireString(label.id, path + '.labels[' + idx + '].id');
+      requireString(label.label, path + '.labels[' + idx + '].label');
+      requireString(label.description, path + '.labels[' + idx + '].description');
+      requireString(label.kind, path + '.labels[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(label.kind), path + '.labels[' + idx + '].kind must be answer or distractor');
+      assert(!labelIds[label.id], 'duplicate label placement label id: ' + label.id);
+      labelIds[label.id] = true;
+      labelLabels[label.id] = label.label;
+      if (label.kind === 'answer') {
+        answerLabelIds.push(label.id);
+        answerLabelSet[label.id] = true;
+      }
+      if (label.kind === 'distractor') labelDistractorCount += 1;
+    });
+
+    interaction.labels.forEach(function (label, idx) {
+      if (label.kind === 'distractor') {
+        requireString(label.distractorFor, path + '.labels[' + idx + '].distractorFor');
+        assert(answerLabelSet[label.distractorFor], path + '.labels[' + idx + '].distractorFor must match an answer label');
+      } else {
+        optionalString(label.distractorFor, path + '.labels[' + idx + '].distractorFor');
+        if (label.distractorFor !== undefined) {
+          assert(answerLabelSet[label.distractorFor], path + '.labels[' + idx + '].distractorFor must match an answer label');
+        }
+      }
+    });
+
+    var targetIds = {};
+    var targetLabels = {};
+    var targetRoles = {};
+    var answerTargetIds = [];
+    var answerTargetSet = {};
+    var targetDistractorCount = 0;
+    interaction.targets.forEach(function (target, idx) {
+      assert(isObject(target), path + '.targets[' + idx + '] must be an object');
+      requireString(target.id, path + '.targets[' + idx + '].id');
+      requireString(target.label, path + '.targets[' + idx + '].label');
+      requireString(target.description, path + '.targets[' + idx + '].description');
+      requireString(target.kind, path + '.targets[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(target.kind), path + '.targets[' + idx + '].kind must be answer or distractor');
+      requireString(target.targetRole, path + '.targets[' + idx + '].targetRole');
+      assert(LABEL_TARGET_ROLES[target.targetRole], path + '.targets[' + idx + '].targetRole must be a label-placement target role');
+      optionalCoordinate(target.x, path + '.targets[' + idx + '].x');
+      optionalCoordinate(target.y, path + '.targets[' + idx + '].y');
+      assert(!targetIds[target.id], 'duplicate label placement target id: ' + target.id);
+      targetIds[target.id] = true;
+      targetLabels[target.id] = target.label;
+      targetRoles[target.id] = target.targetRole;
+      if (target.kind === 'answer') {
+        answerTargetIds.push(target.id);
+        answerTargetSet[target.id] = true;
+      }
+      if (target.kind === 'distractor') targetDistractorCount += 1;
+    });
+
+    interaction.targets.forEach(function (target, idx) {
+      if (target.kind === 'distractor') {
+        requireString(target.distractorFor, path + '.targets[' + idx + '].distractorFor');
+        assert(answerTargetSet[target.distractorFor], path + '.targets[' + idx + '].distractorFor must match an answer target');
+      } else {
+        optionalString(target.distractorFor, path + '.targets[' + idx + '].distractorFor');
+        if (target.distractorFor !== undefined) {
+          assert(answerTargetSet[target.distractorFor], path + '.targets[' + idx + '].distractorFor must match an answer target');
+        }
+      }
+    });
+
+    assert(answerLabelIds.length >= 2, path + '.labels must include at least two answer labels');
+    assert(answerTargetIds.length >= 2, path + '.targets must include at least two answer targets');
+    assert(labelDistractorCount >= 1, path + '.labels must include at least one distractor label');
+    assert(targetDistractorCount >= 1, path + '.targets must include at least one distractor target');
+
+    return {
+      labelIds: labelIds,
+      labelLabels: labelLabels,
+      answerLabelIds: answerLabelIds,
+      targetIds: targetIds,
+      targetLabels: targetLabels,
+      targetRoles: targetRoles,
+      answerTargetIds: answerTargetIds
+    };
+  }
+
   function validateStructuredFields(fields, path) {
     requireArray(fields, path, 1);
     var ids = {};
@@ -1090,6 +1245,54 @@
       return;
     }
 
+    if (task.family === 'label_placement') {
+      assert(expected.kind === 'label_placement', task.id + '.expected.kind must be label_placement');
+      requireArray(expected.placements, task.id + '.expected.placements', 2);
+      var labelIds = interactionInfo.labelIds || {};
+      var answerLabelIds = interactionInfo.answerLabelIds || [];
+      var answerLabelSet = {};
+      answerLabelIds.forEach(function (labelId) {
+        answerLabelSet[labelId] = true;
+      });
+      var targetIds = interactionInfo.targetIds || {};
+      var answerTargetIds = interactionInfo.answerTargetIds || [];
+      var answerTargetSet = {};
+      answerTargetIds.forEach(function (targetId) {
+        answerTargetSet[targetId] = true;
+      });
+      var seenExpectedLabels = {};
+      var seenExpectedTargets = {};
+      var seenExpectedPairs = {};
+      expected.placements.forEach(function (placement, idx) {
+        assert(isObject(placement), task.id + '.expected.placements[' + idx + '] must be an object');
+        requireString(placement.labelId, task.id + '.expected.placements[' + idx + '].labelId');
+        requireString(placement.targetId, task.id + '.expected.placements[' + idx + '].targetId');
+        assert(labelIds[placement.labelId], task.id + '.expected.placements[' + idx + '].labelId must match an interaction label');
+        assert(answerLabelSet[placement.labelId], task.id + '.expected.placements[' + idx + '].labelId must be an answer label');
+        assert(targetIds[placement.targetId], task.id + '.expected.placements[' + idx + '].targetId must match an interaction target');
+        assert(answerTargetSet[placement.targetId], task.id + '.expected.placements[' + idx + '].targetId must be an answer target');
+        assert(!seenExpectedLabels[placement.labelId], task.id + '.expected.placements uses label more than once');
+        assert(!seenExpectedTargets[placement.targetId], task.id + '.expected.placements uses target more than once');
+        seenExpectedLabels[placement.labelId] = true;
+        seenExpectedTargets[placement.targetId] = true;
+        var placementKey = placement.labelId + '\u0001' + placement.targetId;
+        assert(!seenExpectedPairs[placementKey], task.id + '.expected.placements contains a duplicate label-target pair');
+        seenExpectedPairs[placementKey] = true;
+      });
+      assert(expected.placements.length === answerLabelIds.length, task.id + '.expected.placements must include all answer labels');
+      assert(expected.placements.length === answerTargetIds.length, task.id + '.expected.placements must include all answer targets');
+      answerLabelIds.forEach(function (labelId) {
+        assert(seenExpectedLabels[labelId], task.id + '.expected.placements missing answer label ' + labelId);
+      });
+      answerTargetIds.forEach(function (targetId) {
+        assert(seenExpectedTargets[targetId], task.id + '.expected.placements missing answer target ' + targetId);
+      });
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -1156,6 +1359,8 @@
       interactionInfo = validateSourceValueInteraction(task, path);
     } else if (task.family === 'source_chain_builder') {
       interactionInfo = validateSourceChainInteraction(task, path);
+    } else if (task.family === 'label_placement') {
+      interactionInfo = validateLabelPlacementInteraction(task, path);
     }
 
     return interactionInfo;
@@ -1412,6 +1617,48 @@
       if (chain[i] !== expected.chain[i]) return false;
     }
     return true;
+  }
+
+  function labelPlacementMatches(response, expected, labelIds, targetIds) {
+    if (!isObject(response) || !Array.isArray(response.placements)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'placements') return false;
+    var placements = response.placements;
+    var expectedPlacements = expected.placements || [];
+    if (placements.length !== expectedPlacements.length) return false;
+
+    var expectedPairs = {};
+    var seenExpectedLabels = {};
+    var seenExpectedTargets = {};
+    expectedPlacements.forEach(function (placement) {
+      expectedPairs[placement.labelId + '\u0001' + placement.targetId] = true;
+      seenExpectedLabels[placement.labelId] = true;
+      seenExpectedTargets[placement.targetId] = true;
+    });
+
+    var seenSelectedLabels = {};
+    var seenSelectedTargets = {};
+    for (var i = 0; i < placements.length; i++) {
+      var placement = placements[i];
+      if (!isObject(placement)) return false;
+      var placementKeys = Object.keys(placement);
+      if (placementKeys.length !== 2 || !Object.prototype.hasOwnProperty.call(placement, 'labelId') || !Object.prototype.hasOwnProperty.call(placement, 'targetId')) return false;
+      if (typeof placement.labelId !== 'string' || !placement.labelId) return false;
+      if (typeof placement.targetId !== 'string' || !placement.targetId) return false;
+      if (!Object.prototype.hasOwnProperty.call(labelIds, placement.labelId)) return false;
+      if (!Object.prototype.hasOwnProperty.call(targetIds, placement.targetId)) return false;
+      if (seenSelectedLabels[placement.labelId]) return false;
+      if (seenSelectedTargets[placement.targetId]) return false;
+      seenSelectedLabels[placement.labelId] = true;
+      seenSelectedTargets[placement.targetId] = true;
+      if (!expectedPairs[placement.labelId + '\u0001' + placement.targetId]) return false;
+    }
+
+    return Object.keys(seenExpectedLabels).every(function (labelId) {
+      return seenSelectedLabels[labelId];
+    }) && Object.keys(seenExpectedTargets).every(function (targetId) {
+      return seenSelectedTargets[targetId];
+    });
   }
 
   function normalizeIdSet(values) {
@@ -1697,6 +1944,88 @@
     };
   }
 
+  function labelPlacementEntry(id, labels) {
+    return {
+      id: id,
+      label: labels && labels[id] ? labels[id] : id
+    };
+  }
+
+  function labelPlacementFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var placements = isObject(response) && Array.isArray(response.placements) ? response.placements : [];
+    var expectedPlacements = task.expected.placements || [];
+    var labelLabels = labelOptionMap(task.interaction && task.interaction.labels ? task.interaction.labels : []);
+    var targetLabels = targetOptionMap(task.interaction && task.interaction.targets ? task.interaction.targets : []);
+    var labelKinds = {};
+    var targetKinds = {};
+    var expectedByLabel = {};
+    var selectedByLabel = {};
+    var selectedTargets = {};
+    var missingLabels = [];
+    var missingTargets = [];
+    var misplacedLabels = [];
+    var selectedDistractorLabels = [];
+    var selectedDistractorTargets = [];
+    var correctPlacements = [];
+
+    (task.interaction.labels || []).forEach(function (label) {
+      labelKinds[label.id] = label.kind;
+    });
+    (task.interaction.targets || []).forEach(function (target) {
+      targetKinds[target.id] = target.kind;
+    });
+    expectedPlacements.forEach(function (placement) {
+      expectedByLabel[placement.labelId] = placement.targetId;
+    });
+    placements.forEach(function (placement) {
+      if (!isObject(placement) || typeof placement.labelId !== 'string' || typeof placement.targetId !== 'string') return;
+      if (!selectedByLabel[placement.labelId]) selectedByLabel[placement.labelId] = placement.targetId;
+      selectedTargets[placement.targetId] = true;
+      if (labelKinds[placement.labelId] === 'distractor') {
+        selectedDistractorLabels.push(labelPlacementEntry(placement.labelId, labelLabels));
+      }
+      if (targetKinds[placement.targetId] === 'distractor') {
+        selectedDistractorTargets.push(labelPlacementEntry(placement.targetId, targetLabels));
+      }
+    });
+
+    expectedPlacements.forEach(function (placement) {
+      if (!Object.prototype.hasOwnProperty.call(selectedByLabel, placement.labelId)) {
+        missingLabels.push(labelPlacementEntry(placement.labelId, labelLabels));
+        return;
+      }
+      if (selectedByLabel[placement.labelId] === placement.targetId) {
+        correctPlacements.push({
+          label: labelPlacementEntry(placement.labelId, labelLabels),
+          target: labelPlacementEntry(placement.targetId, targetLabels)
+        });
+        return;
+      }
+      misplacedLabels.push({
+        label: labelPlacementEntry(placement.labelId, labelLabels),
+        expectedTarget: labelPlacementEntry(placement.targetId, targetLabels),
+        actualTarget: labelPlacementEntry(selectedByLabel[placement.labelId], targetLabels)
+      });
+    });
+
+    expectedPlacements.forEach(function (placement) {
+      if (!selectedTargets[placement.targetId]) {
+        missingTargets.push(labelPlacementEntry(placement.targetId, targetLabels));
+      }
+    });
+
+    return {
+      mode: 'practice_only',
+      missingLabels: missingLabels,
+      missingTargets: missingTargets,
+      misplacedLabels: misplacedLabels,
+      selectedDistractorLabels: selectedDistractorLabels,
+      selectedDistractorTargets: selectedDistractorTargets,
+      correctPlacements: correctPlacements
+    };
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -1758,6 +2087,10 @@
       var sourceChainInfo = validateSourceChainInteraction(task, task.id + '.interaction');
       return sourceChainMatches(response, task.expected, sourceChainInfo.nodeIds);
     }
+    if (task.family === 'label_placement' && task.expected.kind === 'label_placement') {
+      var labelPlacementInfo = validateLabelPlacementInteraction(task, task.id + '.interaction');
+      return labelPlacementMatches(response, task.expected, labelPlacementInfo.labelIds, labelPlacementInfo.targetIds);
+    }
     return false;
   }
 
@@ -1817,6 +2150,10 @@
     if (task.family === 'source_chain_builder' && !matched) {
       var chainFeedback = sourceChainFeedback(response, task);
       if (chainFeedback) result.sourceChainFeedback = chainFeedback;
+    }
+    if (task.family === 'label_placement' && !matched) {
+      var placementFeedback = labelPlacementFeedback(response, task);
+      if (placementFeedback) result.labelPlacementFeedback = placementFeedback;
     }
     return result;
   }
@@ -1878,6 +2215,13 @@
       return [
         '[data-task-id="' + task.id + '"][data-source-node-id]',
         '[data-task-id="' + task.id + '"][data-source-chain-sequence]'
+      ];
+    }
+    if (task.family === 'label_placement') {
+      return [
+        '[data-task-id="' + task.id + '"][data-label-id]',
+        '[data-task-id="' + task.id + '"][data-label-target-id]',
+        '[data-task-id="' + task.id + '"][data-label-placement-summary]'
       ];
     }
     return ['[data-task-id="' + task.id + '"][data-input-role="answer"]'];

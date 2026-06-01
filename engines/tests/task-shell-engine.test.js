@@ -394,6 +394,81 @@ function fixtures() {
                 chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
                 partialFeedback: 'practice_only'
             }
+        }),
+        baseTask({
+            id: 'label-placement',
+            family: 'label_placement',
+            skillLabel: 'Grafieklabels plaatsen',
+            prompt: 'Plaats de labels bij de juiste onderdelen van de grafiek.',
+            interaction: {
+                labelBankLabel: 'Labelbank',
+                targetRegionLabel: 'Grafiekvlak',
+                placementLabel: 'Geplaatste labels',
+                visual: {
+                    kind: 'coordinate_plane',
+                    title: 'Prijs-hoeveelheidgrafiek',
+                    description: 'Een assenstelsel met een horizontale hoeveelheid-as en een verticale prijs-as.'
+                },
+                labels: [
+                    {
+                        id: 'prijs',
+                        label: 'Prijs',
+                        description: 'De prijs staat op de verticale as.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'hoeveelheid',
+                        label: 'Hoeveelheid',
+                        description: 'De hoeveelheid staat op de horizontale as.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'omzet',
+                        label: 'Omzet',
+                        description: 'Omzet hoort niet als aslabel in deze grafiek.',
+                        kind: 'distractor',
+                        distractorFor: 'prijs'
+                    }
+                ],
+                targets: [
+                    {
+                        id: 'y-as',
+                        label: 'Verticale as',
+                        description: 'De verticale as toont de prijs.',
+                        kind: 'answer',
+                        targetRole: 'axis',
+                        x: 14,
+                        y: 26
+                    },
+                    {
+                        id: 'x-as',
+                        label: 'Horizontale as',
+                        description: 'De horizontale as toont de hoeveelheid.',
+                        kind: 'answer',
+                        targetRole: 'axis',
+                        x: 72,
+                        y: 84
+                    },
+                    {
+                        id: 'caption',
+                        label: 'Bijschrift',
+                        description: 'Dit is een bijschriftgebied, geen as.',
+                        kind: 'distractor',
+                        targetRole: 'structure_part',
+                        distractorFor: 'y-as',
+                        x: 78,
+                        y: 16
+                    }
+                ]
+            },
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'x-as' }
+                ],
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -415,6 +490,7 @@ describe('TaskShellEngine', () => {
             'step_ordering',
             'source_value_selection',
             'source_chain_builder',
+            'label_placement',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -1708,6 +1784,305 @@ describe('TaskShellEngine', () => {
             expected: {
                 kind: 'source_chain_builder',
                 chain: ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
+    test('supports label placement with exact order-insensitive placement sets and practice feedback', () => {
+        const labels = fixtures()[19];
+
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'hoeveelheid', targetId: 'x-as' },
+                { labelId: 'prijs', targetId: 'y-as' }
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'x-as' },
+                { labelId: 'omzet', targetId: 'caption' }
+            ]
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.labelPlacementFeedback).toEqual({
+            mode: 'practice_only',
+            missingLabels: [{ id: 'hoeveelheid', label: 'Hoeveelheid' }],
+            missingTargets: [{ id: 'y-as', label: 'Verticale as' }],
+            misplacedLabels: [{
+                label: { id: 'prijs', label: 'Prijs' },
+                expectedTarget: { id: 'y-as', label: 'Verticale as' },
+                actualTarget: { id: 'x-as', label: 'Horizontale as' }
+            }],
+            selectedDistractorLabels: [{ id: 'omzet', label: 'Omzet' }],
+            selectedDistractorTargets: [{ id: 'caption', label: 'Bijschrift' }],
+            correctPlacements: []
+        });
+
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'x-as' },
+                { labelId: 'hoeveelheid', targetId: 'y-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'hoeveelheid', targetId: 'x-as' },
+                { labelId: 'omzet', targetId: 'caption' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'prijs', targetId: 'x-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'hoeveelheid', targetId: 'y-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'onbekend', targetId: 'x-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'hoeveelheid', targetId: 'onbekend' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as', extra: 'ignored' },
+                { labelId: 'hoeveelheid', targetId: 'x-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'hoeveelheid', targetId: 'x-as' }
+            ],
+            extra: 'ignored'
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, [
+            { labelId: 'prijs', targetId: 'y-as' },
+            { labelId: 'hoeveelheid', targetId: 'x-as' }
+        ]).matched).toBe(false);
+        const arrayWithPlacements = [];
+        arrayWithPlacements.placements = [
+            { labelId: 'prijs', targetId: 'y-as' },
+            { labelId: 'hoeveelheid', targetId: 'x-as' }
+        ];
+        expect(TaskShellEngine.evaluateTask(labels, arrayWithPlacements).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 42, targetId: 'x-as' }
+            ]
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(labels, {
+            placements: [
+                { labelId: 'prijs', targetId: 'y-as' },
+                { labelId: 'hoeveelheid', targetId: 42 }
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(labels)).toEqual([
+            '[data-task-id="label-placement"][data-label-id]',
+            '[data-task-id="label-placement"][data-label-target-id]',
+            '[data-task-id="label-placement"][data-label-placement-summary]'
+        ]);
+    });
+
+    test('rejects invalid label placement schemas before rendering', () => {
+        const labels = fixtures()[19];
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                labels: [
+                    { id: 'prijs', label: 'Prijs', description: 'Prijsas', kind: 'answer' },
+                    { id: 'prijs', label: 'Dubbel', description: 'Dubbel label', kind: 'answer' },
+                    { id: 'omzet', label: 'Omzet', description: 'Afleider', kind: 'distractor', distractorFor: 'prijs' }
+                ]
+            }
+        })).toThrow(/duplicate label placement label id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                labels: labels.interaction.labels.map((label) => label.id === 'prijs'
+                    ? { id: label.id, label: label.label, kind: label.kind }
+                    : label)
+            }
+        })).toThrow(/description/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                labels: labels.interaction.labels.map((label) => label.kind === 'distractor'
+                    ? { ...label, distractorFor: undefined }
+                    : label)
+            }
+        })).toThrow(/distractorFor/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                targets: labels.interaction.targets.map((target) => target.id === 'x-as'
+                    ? { id: target.id, label: target.label, kind: target.kind, targetRole: target.targetRole }
+                    : target)
+            }
+        })).toThrow(/description/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                targets: labels.interaction.targets.map((target) => target.kind === 'distractor'
+                    ? { ...target, distractorFor: undefined }
+                    : target)
+            }
+        })).toThrow(/distractorFor/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                targets: labels.interaction.targets.map((target) => target.id === 'caption'
+                    ? { ...target, targetRole: 'caption' }
+                    : target)
+            }
+        })).toThrow(/targetRole must be a label-placement target role/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                targets: labels.interaction.targets.map((target) => target.id === 'x-as'
+                    ? { ...target, x: 120 }
+                    : target)
+            }
+        })).toThrow(/x must be between 0 and 100/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'onbekend', targetId: 'x-as' }
+                ]
+            }
+        })).toThrow(/must match an interaction label/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'onbekend' }
+                ]
+            }
+        })).toThrow(/must match an interaction target/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'omzet', targetId: 'x-as' }
+                ]
+            }
+        })).toThrow(/must be an answer label/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'caption' },
+                    { labelId: 'hoeveelheid', targetId: 'x-as' }
+                ]
+            }
+        })).toThrow(/must be an answer target/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            interaction: {
+                ...labels.interaction,
+                labels: [
+                    ...labels.interaction.labels,
+                    {
+                        id: 'vraaglijn',
+                        label: 'Vraaglijn',
+                        description: 'Een extra antwoordlabel.',
+                        kind: 'answer'
+                    }
+                ]
+            },
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'x-as' }
+                ]
+            }
+        })).toThrow(/must include all answer labels/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'prijs', targetId: 'x-as' }
+                ]
+            }
+        })).toThrow(/uses label more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'y-as' }
+                ]
+            }
+        })).toThrow(/uses target more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...labels,
+            expected: {
+                kind: 'label_placement',
+                placements: [
+                    { labelId: 'prijs', targetId: 'y-as' },
+                    { labelId: 'hoeveelheid', targetId: 'x-as' }
+                ],
                 partialFeedback: 'diagnostic'
             }
         })).toThrow(/partialFeedback must be practice_only/);

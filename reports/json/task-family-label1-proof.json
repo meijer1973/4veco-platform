@@ -1,0 +1,63 @@
+{
+  "sprint_id": "TASK-FAMILY-LABEL-1",
+  "family": "label_placement",
+  "status": "runtime_family_added_fixture_proven",
+  "runtime_support": {
+    "exact_placement_set": true,
+    "order_insensitive": true,
+    "full_answer_label_coverage_required": true,
+    "full_answer_target_coverage_required": true,
+    "distractor_labels_rejected": true,
+    "distractor_targets_rejected": true,
+    "unknown_expected_label_rejected": true,
+    "unknown_expected_target_rejected": true,
+    "duplicate_expected_label_rejected": true,
+    "duplicate_expected_target_rejected": true,
+    "description_required": true,
+    "distractor_for_required": true,
+    "target_role_enum": true,
+    "coordinate_bounds": true,
+    "practice_feedback_only": true
+  },
+  "ui_support": {
+    "label_bank": true,
+    "visual_target_region": true,
+    "target_buttons": true,
+    "placement_summary": true,
+    "clear_action": true,
+    "feedback_region": true,
+    "keyboard_focus_plan": true,
+    "screen_reader_labels": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "planning_flags": {
+    "array_with_key_rejected": true,
+    "visual_keyboard_screen_reader_proof": true,
+    "narrow_fixture_mobile_substitute": true,
+    "dark_fixture_substitute": true,
+    "target_equivalent_proof_for_graphs": false
+  },
+  "boundary_flags": {
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "notes": [
+    "label_placement is representation-proof support only; it does not prove a complete graph/table target-equivalent exit ticket.",
+    "Generated lesson-route screenshots remain deferred until a later adoption sprint places label_placement into source data and regenerates output."
+  ]
+}

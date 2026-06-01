@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T21:29:16.398Z",
+  "generatedAt": "2026-06-01T22:14:25.276Z",
   "internalOnly": true,
   "teams": [
     {
@@ -228,8 +228,8 @@
             {
               "sprint": "TASK-FAMILY-LABEL-1",
               "name": "Label-Placement Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement label-placement interactions for graphs, formulas, source structures, axes, lines, intersections, and representation components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; label placement is representation-placement support only.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-LABEL-1",
-          "name": "Label-Placement Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement label-placement interactions for graphs, formulas, source structures, axes, lines, intersections, and representation components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-MATCH-1",
           "name": "Matching-Pairs Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Source Value And Chain Builder Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-LABEL-1",
+          "name": "Label-Placement Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; label placement is representation-placement support only.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 162,
-      "openCount": 15
+      "completedCount": 163,
+      "openCount": 14
     },
     {
       "id": "lessen",
@@ -2935,8 +2935,8 @@
             {
               "sprint": "TASK-FAMILY-LABEL-1",
               "name": "Label-Placement Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `label_placement` for graph, table, formula, and representation tasks such as axes, lines, intersections, units, index labels, and curve-shift components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption and generated-route screenshots remain later work; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-LABEL-1",
-          "name": "Label-Placement Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `label_placement` for graph, table, formula, and representation tasks such as axes, lines, intersections, units, index labels, and curve-shift components. Requires visual, keyboard/focus, mobile, and dark-mode proof.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-MATCH-1",
           "name": "Matching-Pairs Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption and generated-route screenshots remain later work; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-LABEL-1",
+          "name": "Label-Placement Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption and generated-route screenshots remain later work; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 13,
-      "openCount": 34
+      "completedCount": 14,
+      "openCount": 33
     },
     {
       "id": "innovation",
