@@ -97,6 +97,23 @@
     '</div>';
   }
 
+  function renderStructuredShortResponse(task) {
+    var fields = task.interaction.fields || [];
+    var fieldHtml = fields.map(function (field) {
+      return '<label class="ts-field">' +
+        '<span>' + escapeHtml(field.label) + '</span>' +
+        '<input class="ts-input" type="text" inputmode="' + escapeHtml(field.inputMode || 'text') + '" autocomplete="off" ' +
+          'data-task-id="' + escapeHtml(task.id) + '" data-input-role="structured-field" ' +
+          'data-field-id="' + escapeHtml(field.id) + '" placeholder="' + escapeHtml(field.placeholder || 'Antwoord') + '">' +
+      '</label>';
+    }).join('');
+    return '<div class="ts-structured-response">' +
+      fieldHtml +
+      (task.interaction.options ? renderChoice(task) : '') +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderControl(task) {
     switch (task.family) {
       case 'choice':
@@ -116,6 +133,8 @@
       case 'graph_construction_substitute':
       case 'structured_reasoning':
         return renderTextArea(task, 'answer') + renderCriteria(task);
+      case 'structured_short_response':
+        return renderStructuredShortResponse(task);
       default:
         return '<p class="ts-error">Deze taakvorm kan nog niet worden getoond.</p>';
     }

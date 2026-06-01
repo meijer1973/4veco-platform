@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.36-l1-7b-q2-copy-complete` | `references/reference-team-roadmap.md` | Current operating roadmap after L1.7B-Q2-COPY enabled exact reviewed 1.1.2 local non-summative completion copy while keeping 1.1.1 advisory, 1.1.3 held, and Scale Gate 1 blocked until REV-STD-1 and remaining scale readiness resolve. |
+| References Team Roadmap | `v3.38-l1-7b-q2-d31-struct-complete` | `references/reference-team-roadmap.md` | Current operating roadmap after L1.7B-Q2-D31-STRUCT replaced the brittle 1.1.2 D31 free-text matcher with a structured short-response task while keeping 1.1.1 advisory, 1.1.3 held, and Scale Gate 1 blocked until REV-STD-1 and remaining scale readiness resolve. |
 
 ## Outdated Archive
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T08:39:20.913Z",
+  "generatedAt": "2026-06-01T09:36:22.791Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,8 +160,15 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.36-l1-7b-q2-copy-complete Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exa...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.38-l1-7b-q2-d31-struct-complete Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economi...",
           "sprints": [
+            {
+              "sprint": "L1.7B-Q2-D31-STRUCT",
+              "name": "Structured D31 Exit-Ticket Repair",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS after replacing only Task 4 of the reviewed `1.1.2 Percentages en indexcijfers` exit ticket with a shared `structured_short_response` task family: produced fields for index points, basis 108, approximate 3.7 percent, plus an explicit claim judgment. This removes the brittle single free-text D31 matcher without downgrading the target-equivalent proof to recognition-only checking. Task 2 now accepts plain `108` for the index-number final answer when the required work is present. Book 1 output was regenerated through the platform deploy route; `1.1.1` remains advisory, `1.1.3` remains blocked/absent, and approved `1.1.2` local completion copy remains exact. Carried flags: no general semantic prose or symbolic math engine is authorized, and no broad exit-ticket scaling, target-exercise registry writes, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized.",
+              "exitGate": ""
+            },
             {
               "sprint": "L1.7B-Q2-COPY",
               "name": "Exact 1.1.2 Target-Equivalent Completion Copy Enablement",
@@ -1353,6 +1360,14 @@
           "roadmap": "References roadmap"
         },
         {
+          "sprint": "L1.7B-Q2-D31-STRUCT",
+          "name": "Structured D31 Exit-Ticket Repair",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS after replacing only Task 4 of the reviewed `1.1.2 Percentages en indexcijfers` exit ticket with a shared `structured_short_response` task family: produced fields for index points, basis 108, approximate 3.7 percent, plus an explicit claim judgment. This removes the brittle single free-text D31 matcher without downgrading the target-equivalent proof to recognition-only checking. Task 2 now accepts plain `108` for the index-number final answer when the required work is present. Book 1 output was regenerated through the platform deploy route; `1.1.1` remains advisory, `1.1.3` remains blocked/absent, and approved `1.1.2` local completion copy remains exact. Carried flags: no general semantic prose or symbolic math engine is authorized, and no broad exit-ticket scaling, target-exercise registry writes, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
           "sprint": "L1.7B-Q2-COPY",
           "name": "Exact 1.1.2 Target-Equivalent Completion Copy Enablement",
           "completed": "yes",
@@ -2537,7 +2552,7 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 148,
+      "completedCount": 149,
       "openCount": 10
     },
     {

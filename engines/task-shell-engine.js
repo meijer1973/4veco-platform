@@ -16,6 +16,7 @@
     final_answer_entry: { label: 'Eindantwoord', deterministic: true },
     unit_notation_field: { label: 'Eenheid/notatie', deterministic: true },
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
+    structured_short_response: { label: 'Kort antwoord in stappen', deterministic: true },
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
@@ -150,6 +151,10 @@
       push(task.interaction.xLabel);
       push(task.interaction.yLabel);
       push(task.interaction.placeholder);
+      (task.interaction.fields || []).forEach(function (field) {
+        push(field.label);
+        push(field.placeholder);
+      });
       push(task.interaction.rows);
       push(task.interaction.columns);
       (task.interaction.options || []).forEach(function (option) {
@@ -226,6 +231,21 @@
       requireString(option.label, path + '[' + idx + '].label');
       assert(!ids[option.id], 'duplicate option id: ' + option.id);
       ids[option.id] = true;
+    });
+    return ids;
+  }
+
+  function validateStructuredFields(fields, path) {
+    requireArray(fields, path, 1);
+    var ids = {};
+    fields.forEach(function (field, idx) {
+      assert(isObject(field), path + '[' + idx + '] must be an object');
+      requireString(field.id, path + '[' + idx + '].id');
+      requireString(field.label, path + '[' + idx + '].label');
+      optionalString(field.placeholder, path + '[' + idx + '].placeholder');
+      optionalString(field.inputMode, path + '[' + idx + '].inputMode');
+      assert(!ids[field.id], 'duplicate structured field id: ' + field.id);
+      ids[field.id] = true;
     });
     return ids;
   }
@@ -308,6 +328,28 @@
       return;
     }
 
+    if (task.family === 'structured_short_response' && expected.kind === 'structured_text_criteria') {
+      requireArray(expected.criteria, task.id + '.expected.criteria', 1);
+      requireArray(expected.fields, task.id + '.expected.fields', 1);
+      var interactionFieldIds = {};
+      (task.interaction.fields || []).forEach(function (field) {
+        interactionFieldIds[field.id] = true;
+      });
+      expected.fields.forEach(function (field, idx) {
+        assert(isObject(field), task.id + '.expected.fields[' + idx + '] must be an object');
+        requireString(field.id, task.id + '.expected.fields[' + idx + '].id');
+        assert(interactionFieldIds[field.id], task.id + '.expected.fields[' + idx + '].id must match an interaction field');
+        requireArray(field.accepted, task.id + '.expected.fields[' + idx + '].accepted', 1);
+        if (field.rejectText !== undefined) requireArray(field.rejectText, task.id + '.expected.fields[' + idx + '].rejectText', 1);
+      });
+      if (expected.choice !== undefined) {
+        assert(isObject(expected.choice), task.id + '.expected.choice must be an object');
+        requireString(expected.choice.value, task.id + '.expected.choice.value');
+        assert(optionIds && optionIds[expected.choice.value], task.id + '.expected.choice.value must match an option id');
+      }
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -352,6 +394,9 @@
       task.family === 'structured_reasoning'
     ) {
       requireString(task.interaction.inputLabel, path + '.inputLabel');
+    } else if (task.family === 'structured_short_response') {
+      validateStructuredFields(task.interaction.fields, path + '.fields');
+      if (task.interaction.options !== undefined) optionIds = validateOptions(task.interaction.options, path + '.options');
     }
 
     return optionIds;
@@ -438,6 +483,24 @@
     return !rejected && textGroupsMatch(value, expected.requiredText || []);
   }
 
+  function structuredTextCriteriaMatches(response, expected) {
+    if (!response || typeof response !== 'object') return false;
+    var values = response.fields && typeof response.fields === 'object' ? response.fields : response;
+    var fieldsMatch = (expected.fields || []).every(function (field) {
+      var value = values[field.id];
+      if (!textMatches(value, field.accepted)) return false;
+      var normalized = normalizeText(value);
+      return !(field.rejectText || []).some(function (rejectedText) {
+        return normalized.indexOf(normalizeText(rejectedText)) !== -1;
+      });
+    });
+    if (!fieldsMatch) return false;
+    if (expected.choice) {
+      return normalizeText(response.choice) === normalizeText(expected.choice.value);
+    }
+    return true;
+  }
+
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
@@ -466,6 +529,9 @@
       task.expected.kind === 'text_criteria'
     ) {
       return textCriteriaMatches(response && response.value != null ? response.value : response, task.expected);
+    }
+    if (task.family === 'structured_short_response' && task.expected.kind === 'structured_text_criteria') {
+      return structuredTextCriteriaMatches(response, task.expected);
     }
     return false;
   }

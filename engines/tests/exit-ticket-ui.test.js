@@ -127,7 +127,9 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.');
         expect(html).toContain('<section class="et-completion" id="et-completion" hidden>');
         expect(html).toContain('data-task-family="calculation_work_capture"');
-        expect(html).toContain('data-task-family="short_constructed_response"');
+        expect(html).toContain('data-task-family="structured_short_response"');
+        expect(html).toContain('data-input-role="structured-field"');
+        expect(html).toContain('data-field-id="indexpunten"');
         expect(html).not.toMatch(/\b(?:A\d{2}|D\d{2}|PV|MTU)\b/);
         expect(html.toLowerCase()).not.toContain('bewezen');
         expect(html.toLowerCase()).not.toContain('aangetoond');

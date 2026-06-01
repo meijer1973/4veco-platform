@@ -225,46 +225,74 @@
       "type": "task_shell",
       "taskShell": {
         "id": "indexpunten-uitleg",
-        "family": "short_constructed_response",
+        "family": "structured_short_response",
         "skillLabel": "Indexpunten kort uitleggen",
         "purpose": "Leg kort uit waarom indexpunten niet hetzelfde zijn als procenten.",
         "prompt": "Iemand zegt: de index stijgt van 108 naar 112, dus de stijging is 4 procent. Leg kort uit wat er misgaat.",
         "interaction": {
-          "inputLabel": "Korte uitleg",
-          "placeholder": "Noem indexpunten, de oude basis en de procentuele stijging."
+          "fields": [
+            {
+              "id": "indexpunten",
+              "label": "Stijging in indexpunten",
+              "placeholder": "Bijvoorbeeld 4 indexpunten",
+              "inputMode": "text"
+            },
+            {
+              "id": "basis",
+              "label": "Basis voor de procentuele stijging",
+              "placeholder": "Bijvoorbeeld 108",
+              "inputMode": "decimal"
+            },
+            {
+              "id": "procentuele-stijging",
+              "label": "Procentuele stijging ongeveer",
+              "placeholder": "Bijvoorbeeld 3,7%",
+              "inputMode": "decimal"
+            }
+          ],
+          "options": [
+            {
+              "id": "niet-vier-procent",
+              "label": "De uitspraak klopt niet: 4 is indexpunten, niet procenten."
+            },
+            {
+              "id": "wel-vier-procent",
+              "label": "De uitspraak klopt: 4 is procenten."
+            },
+            {
+              "id": "niet-te-bepalen",
+              "label": "Je kunt dit niet bepalen zonder meer gegevens."
+            }
+          ]
         },
         "expected": {
-          "kind": "text_criteria",
+          "kind": "structured_text_criteria",
           "criteria": [
             "Noem dat 4 het aantal indexpunten is.",
             "Gebruik 108 als basis voor de procentuele verandering.",
-            "Maak duidelijk dat de procentuele stijging ongeveer 3,7 procent is."
+            "Maak duidelijk dat de procentuele stijging ongeveer 3,7 procent is.",
+            "Wijs de uitspraak 4 procent af."
           ],
-          "requiredText": [
+          "fields": [
             {
               "label": "indexpunten",
-              "any": ["4 indexpunten", "vier indexpunten"]
+              "id": "indexpunten",
+              "accepted": ["4", "4 indexpunten", "vier indexpunten", "4 punten", "vier punten"]
             },
             {
               "label": "oude basis",
-              "any": ["ten opzichte van 108", "gedeeld door 108", "basis is 108", "basis 108"]
+              "id": "basis",
+              "accepted": ["108", "basis 108", "oude index 108", "index 108"]
             },
             {
               "label": "procentuele stijging",
-              "any": ["3,7 procent", "3.7 procent", "3,7%", "3.7%"]
-            },
-            {
-              "label": "afwijzing van 4 procent",
-              "any": ["niet 4 procent", "geen 4 procent", "4 procent klopt niet", "4% klopt niet", "4 procent is onjuist", "4% is onjuist"]
+              "id": "procentuele-stijging",
+              "accepted": ["3,7", "3.7", "3,7%", "3.7%", "3,70", "3.70", "3,70%", "3.70%", "3,7 procent", "3.7 procent", "ongeveer 3,7%", "ongeveer 3.7%", "ongeveer 3,7 procent", "ongeveer 3.7 procent"]
             }
           ],
-          "rejectText": [
-            "niet fout",
-            "4 procent is indexpunten",
-            "4% is indexpunten",
-            "klopt wel",
-            "is 4 procent"
-          ]
+          "choice": {
+            "value": "niet-vier-procent"
+          }
         },
         "feedback": {
           "matchTitle": "Uitleg sluit aan",

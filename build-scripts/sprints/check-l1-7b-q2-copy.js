@@ -99,7 +99,14 @@ engine.checkTask('index-naar-waarde', { work: '162 / 150 x 100', finalAnswer: '1
 engine.checkTask('index-naar-procent', { work: '(112 - 108) / 108 x 100', finalAnswer: '3,7%' });
 engine.checkTask(
   'indexpunten-uitleg',
-  'Het is niet 4 procent. Het zijn 4 indexpunten; de basis is 108 en de stijging is ongeveer 3,7 procent.'
+  {
+    fields: {
+      indexpunten: '4 indexpunten',
+      basis: '108',
+      'procentuele-stijging': '3,7%'
+    },
+    choice: 'niet-vier-procent'
+  }
 );
 const progress = engine.getProgress();
 if (progress.proofCandidate !== true) fail('correct 1.1.2 responses must become proofCandidate true');
@@ -133,7 +140,14 @@ adversarialEngine.checkTask('index-naar-procent', { work: '(112 - 108) / 108 x 1
 if (
   adversarialEngine.checkTask(
     'indexpunten-uitleg',
-    'Het is niet fout: 4 procent is indexpunten, 108 en 3,7.'
+    {
+      fields: {
+        indexpunten: '4 procent',
+        basis: '100',
+        'procentuele-stijging': '4%'
+      },
+      choice: 'wel-vier-procent'
+    }
   ).matched !== false
 ) {
   fail('contradictory D31 answer must not match');

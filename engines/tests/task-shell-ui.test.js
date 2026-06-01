@@ -40,6 +40,24 @@ function data() {
             task('final', 'final_answer_entry', { inputLabel: 'Eindantwoord' }, { kind: 'text', accepted: ['10%'] }),
             task('unit', 'unit_notation_field', { inputLabel: 'Eenheid of notatie' }, { kind: 'text', accepted: ['%'] }),
             task('short', 'short_constructed_response', { inputLabel: 'Kort antwoord' }, { kind: 'self_check', criteria: ['Oorzaak genoemd'] }),
+            task('structured-short', 'structured_short_response', {
+                fields: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'basis', label: 'Basis voor procentuele verandering' }
+                ],
+                options: [
+                    { id: 'niet-vier-procent', label: 'Klopt niet' },
+                    { id: 'wel-vier-procent', label: 'Klopt wel' }
+                ]
+            }, {
+                kind: 'structured_text_criteria',
+                criteria: ['Noem indexpunten', 'Kies de juiste uitspraak'],
+                fields: [
+                    { id: 'indexpunten', accepted: ['4', '4 indexpunten'] },
+                    { id: 'basis', accepted: ['108'] }
+                ],
+                choice: { value: 'niet-vier-procent' }
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -58,6 +76,7 @@ describe('TaskShellUI', () => {
             'final_answer_entry',
             'unit_notation_field',
             'short_constructed_response',
+            'structured_short_response',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -80,12 +99,15 @@ describe('TaskShellUI', () => {
         expect(html).toContain('tabindex="-1"');
         expect(html).toContain('data-input-role="work"');
         expect(html).toContain('data-input-role="final-answer"');
+        expect(html).toContain('data-input-role="structured-field"');
+        expect(html).toContain('data-field-id="indexpunten"');
     });
 
     test('renders Dutch student-facing family labels', () => {
         const html = TaskShellUI.renderStaticHtml(data());
         expect(html).toContain('Rekenantwoord');
         expect(html).toContain('Berekening tonen');
+        expect(html).toContain('Kort antwoord in stappen');
         expect(html).toContain('Grafiekstappen');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');

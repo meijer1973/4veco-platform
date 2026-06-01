@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "sprint_id": "L1.7B-Q2-D31-STRUCT",
+  "name": "Structured D31 Exit-Ticket Repair",
+  "created": "2026-06-01",
+  "plan": "reports/sprints/L1.7B-Q2-D31-STRUCT-plan.md",
+  "baseline": "reports/sprints/L1.7B-Q2-D31-STRUCT-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "scope": [
+    "Add structured short-response task-shell support.",
+    "Repair only 1.1.2 Task 4 D31 matching.",
+    "Regenerate affected Book 1 lesson output through deploy."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/L1.7B-Q2-D31-STRUCT-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js L1.7B-Q2-D31-STRUCT",
+    "node node_modules/jest/bin/jest.js --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js",
+    "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "node build-scripts/sprints/check-l1-7b-q2-d31-struct.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-bundle.js L1.7B-Q2-D31-STRUCT --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No broad exit-ticket scaling.",
+    "No diagnostics, adaptive routing, mastery, sequencing, summative use, PV, Scale Gate 1, or product-wide use.",
+    "Do not touch knowledge/exit-ticket-game-1.1.1.zip."
+  ]
+}

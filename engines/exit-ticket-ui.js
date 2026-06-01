@@ -228,6 +228,17 @@
         finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')
       };
     }
+    if (task.family === 'structured_short_response') {
+      var fields = {};
+      var fieldInputs = wrapper.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="structured-field"]');
+      for (var i = 0; i < fieldInputs.length; i++) {
+        fields[fieldInputs[i].getAttribute('data-field-id')] = fieldInputs[i].value;
+      }
+      return {
+        fields: fields,
+        choice: selected ? selected.getAttribute('data-choice-id') : ''
+      };
+    }
     return getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
   }
 

@@ -92,6 +92,38 @@ function fixtures() {
             }
         }),
         baseTask({
+            id: 'structured-short',
+            family: 'structured_short_response',
+            skillLabel: 'Indexpunten kort uitleggen',
+            prompt: 'Leg in stappen uit waarom 4 indexpunten geen 4 procent is.',
+            interaction: {
+                fields: [
+                    { id: 'indexpunten', label: 'Stijging in indexpunten' },
+                    { id: 'basis', label: 'Basis voor procentuele verandering' },
+                    { id: 'procentuele-stijging', label: 'Procentuele stijging ongeveer' }
+                ],
+                options: [
+                    { id: 'niet-vier-procent', label: 'De uitspraak klopt niet.' },
+                    { id: 'wel-vier-procent', label: 'De uitspraak klopt wel.' }
+                ]
+            },
+            expected: {
+                kind: 'structured_text_criteria',
+                criteria: [
+                    'Noem indexpunten.',
+                    'Gebruik 108 als basis.',
+                    'Noem ongeveer 3,7 procent.',
+                    'Wijs 4 procent af.'
+                ],
+                fields: [
+                    { id: 'indexpunten', accepted: ['4', '4 indexpunten'] },
+                    { id: 'basis', accepted: ['108', 'basis 108'] },
+                    { id: 'procentuele-stijging', accepted: ['3,7%', '3.7%', '3,7 procent'] }
+                ],
+                choice: { value: 'niet-vier-procent' }
+            }
+        }),
+        baseTask({
             id: 'table-value',
             family: 'table_value_selection',
             skillLabel: 'Tabelwaarde kiezen',
@@ -166,6 +198,7 @@ describe('TaskShellEngine', () => {
             'final_answer_entry',
             'unit_notation_field',
             'short_constructed_response',
+            'structured_short_response',
             'table_value_selection',
             'graph_reading',
             'point_placement',
@@ -189,9 +222,9 @@ describe('TaskShellEngine', () => {
         }));
         expect(TaskShellEngine.evaluateTask(tasks[2], '2.5%').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[3], 'procent').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[5], 'b').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[6], '149,5').matched).toBe(true);
-        expect(TaskShellEngine.evaluateTask(tasks[7], { x: '20,2', y: '4,1' }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[6], 'b').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[7], '149,5').matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(tasks[8], { x: '20,2', y: '4,1' }).matched).toBe(true);
     });
 
     test('uses self-check state for work capture and constructed responses', () => {
@@ -291,6 +324,34 @@ describe('TaskShellEngine', () => {
             matched: false
         }));
         expect(TaskShellEngine.evaluateTask(explanation, 'Het is niet fout: 4 procent is indexpunten, 108 en 3,7.')).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
+
+    test('supports deterministic structured short responses without broad prose matching', () => {
+        const structured = fixtures()[5];
+
+        expect(TaskShellEngine.evaluateTask(structured, {
+            fields: {
+                indexpunten: '4 indexpunten',
+                basis: '108',
+                'procentuele-stijging': '3,7%'
+            },
+            choice: 'niet-vier-procent'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(TaskShellEngine.evaluateTask(structured, {
+            fields: {
+                indexpunten: '4 indexpunten',
+                basis: '100',
+                'procentuele-stijging': '4%'
+            },
+            choice: 'wel-vier-procent'
+        })).toEqual(expect.objectContaining({
             state: 'retry',
             matched: false
         }));
