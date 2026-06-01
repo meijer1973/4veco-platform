@@ -49,7 +49,7 @@ publication are still pending.
 
 ## Blocking Findings
 
-No packet-content blocker found.
+No blocking findings. No packet-content blocker found.
 
 Pre-interview blockers remain operational, not substantive:
 

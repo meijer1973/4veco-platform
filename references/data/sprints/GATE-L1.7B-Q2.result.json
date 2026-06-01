@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GATE-L1.7B-Q2",
+  "status": "completed",
+  "completed_on": "2026-06-01",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/GATE-L1.7B-Q2-plan.md",
+  "baseline": "reports/sprints/GATE-L1.7B-Q2-baseline.md",
+  "result": "reports/sprints/GATE-L1.7B-Q2-result.md",
+  "diff_summary": "reports/sprints/GATE-L1.7B-Q2-diff-summary.md",
+  "gate_id": "GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
+  "gate_closure": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/gate-closure.json",
+  "human_interview": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/human-interview.json",
+  "reviewed_remote_commit": "ca2b10333d2006ebe6351b5cf649539f6f12a369",
+  "protected_reference_data_changed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_changed": false,
+  "external_source_mutated": false,
+  "authored_reference_mutation_executed": false,
+  "source_data_mutated": false,
+  "exit_ticket_source_data_mutated": false,
+  "target_exercise_question_type_writes": false,
+  "target_exercise_answer_form_writes": false,
+  "candidate_storage_created": false,
+  "candidate_writes": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "generated_lesson_output_changed": false,
+  "engine_implementation_executed": false,
+  "lesson_output_mutated": false,
+  "lesson_output_mutation_route": "none; human gate closure records only",
+  "student_product_use_allowed": false,
+  "active_next_sprints": [
+    "L1.7B-Q2-COPY"
+  ],
+  "decision": {
+    "evidence_baseline": "accepted",
+    "target_operation_coverage": "accepted_for_exact_1_1_2",
+    "calculation_proof_criteria": "accepted_for_exact_1_1_2",
+    "d31_explanation_criteria": "accepted",
+    "deterministic_matcher": "accepted_for_exact_local_proof_with_carried_flag",
+    "student_facing_ui_feedback": "accepted",
+    "advisory_short_check_boundary": "preserved",
+    "completion_language": "approved_for_later_exact_1_1_2_packet",
+    "product_authority_now": "none"
+  },
+  "approved_later_completion_copy": "Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.",
+  "product_boundaries": {
+    "source_data_mutation_now": false,
+    "generated_output_mutation_now": false,
+    "completion_language_enablement_now": false,
+    "broad_exit_ticket_scaling": false,
+    "target_equivalent_1_1_1": false,
+    "target_equivalent_1_1_3": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GATE-L1.7B-Q2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GATE-L1.7B-Q2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-l1-7b-q2-implementation.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/GATE-L1.7B-Q2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js GATE-L1.7B-Q2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/GATE-L1.7B-Q2-lead-review-assignment.md",
+    "round1": "reports/sprints/GATE-L1.7B-Q2-lead-review-round1.md",
+    "corrections": "reports/sprints/GATE-L1.7B-Q2-lead-review-corrections.md",
+    "round2": "reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "GATE-L1.7B-Q2-F1",
+        "description": "Deterministic text-group matching is accepted only for this exact reviewed 1.1.2 local proof and is not broad symbolic or semantic proof.",
+        "disposition": "carry_forward",
+        "owner": "L1.7B-Q2-COPY",
+        "next_action": "Keep the copy-enablement scope exact to reviewed 1.1.2 and preserve broader proof limitations.",
+        "blocking": false
+      },
+      {
+        "id": "GATE-L1.7B-Q2-F2",
+        "description": "1.1.1 and 1.1.3 target-equivalent claims remain blocked.",
+        "disposition": "product_scale_blocker",
+        "owner": "future target-equivalent exit-ticket sprints",
+        "next_action": "Do not generalize this approval beyond reviewed 1.1.2.",
+        "blocking": false
+      },
+      {
+        "id": "GATE-L1.7B-Q2-F3",
+        "description": "Scale Gate 1 and product-wide use remain blocked.",
+        "disposition": "product_scale_blocker",
+        "owner": "Scale Gate 1",
+        "next_action": "Do not run Scale Gate 1 until remaining gates close or are explicitly waived with consequences.",
+        "blocking": false
+      }
+    ]
+  }
+}

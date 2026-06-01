@@ -2,8 +2,8 @@
 
 Generated: 2026-06-01
 
-Status: review packet ready after pre-gate lead review PASS WITH FLAGS; no
-human interview started; no product authority.
+Status: gate closed PASS WITH FLAGS after human review; no mutation or product
+authority.
 
 ## Review Scope
 

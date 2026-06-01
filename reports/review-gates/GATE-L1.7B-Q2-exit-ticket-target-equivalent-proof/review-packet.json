@@ -3,9 +3,10 @@
   "gate_id": "GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
   "sprint_id": "GATE-L1.7B-Q2",
   "generated_on": "2026-06-01",
-  "status": "review_packet_ready_after_pre_gate_lead_review_pass_with_flags_no_product_authority",
-  "human_interview_started": false,
-  "gate_closed": false,
+  "status": "gate_closed_pass_with_flags_no_mutation_no_product_authority",
+  "human_interview_started": true,
+  "gate_closed": true,
+  "reviewed_remote_commit": "ca2b10333d2006ebe6351b5cf649539f6f12a369",
   "remote_publication_required_before_review": true,
   "remote_publication_status": "Packet and cited evidence must be committed and pushed before human review starts.",
   "implementation_commits": {

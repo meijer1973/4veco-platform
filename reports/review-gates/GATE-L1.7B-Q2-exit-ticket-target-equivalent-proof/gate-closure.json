@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof",
+  "sprint_id": "GATE-L1.7B-Q2",
+  "date": "2026-06-01",
+  "closed_on": "2026-06-01",
+  "status": "pass_with_flags",
+  "status_detail": "exact_1_1_2_target_equivalent_proof_review_authorize_later_copy_packet_no_mutation_now",
+  "decision": "PASS WITH FLAGS for exact 1.1.2 target-equivalent proof review",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_commit": "ca2b10333d2006ebe6351b5cf649539f6f12a369",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "review packet, live-output evidence, lead-review artifacts, checker, bundle URLs, maps, indexes, and cited evidence were committed and pushed before the human answers were recorded",
+  "implementation_commits": {
+    "platform": "31e035aaab656f8f64722ac62d26108f829d0f60",
+    "lesson": "971bf68402e6071804c44d3aa67c67320a987e33"
+  },
+  "human_interview": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/human-interview.md",
+  "human_interview_json": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/human-interview.json",
+  "review_packet": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/review-packet.md",
+  "live_output_evidence": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/live-output-evidence.md",
+  "pre_gate_lead_review": {
+    "required": true,
+    "status": "passed",
+    "round1": "reports/sprints/GATE-L1.7B-Q2-lead-review-round1.md",
+    "round2": "reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "summary": "GATE-L1.7B-Q2 accepted the exact 1.1.2 Percentages en indexcijfers exit-ticket candidate as local target-equivalent proof. The reviewer accepted operation-chain coverage, calculation-work criteria, D31 criteria, UI/feedback, and advisory short-check separation. The gate authorizes only a later exact implementation packet for reviewed 1.1.2 local completion language and no mutation or product use now.",
+  "accepted": {
+    "evidence_baseline": true,
+    "target_operation_coverage": true,
+    "calculation_proof_criteria": true,
+    "d31_explanation_criteria": true,
+    "deterministic_matcher_for_exact_local_proof": true,
+    "student_facing_ui_feedback": true,
+    "advisory_short_check_boundary": true,
+    "core_specification_failure_found": false
+  },
+  "approved_later_completion_copy": {
+    "paragraph": "1.1.2",
+    "paragraph_title": "Percentages en indexcijfers",
+    "primary": "Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.",
+    "optional_supporting": "Je kunt nu door naar de eindopgave.",
+    "local_non_summative": true,
+    "direct_enablement_authorized_by_this_gate": false
+  },
+  "flags": [
+    {
+      "id": "GATE-L1.7B-Q2-F1",
+      "severity": "medium_high_for_broader_use",
+      "issue": "Deterministic text-group matching is not symbolic math parsing or semantic language understanding.",
+      "next_action": "Accept only for this exact reviewed 1.1.2 local proof; require further proof before broader constructed-response use."
+    },
+    {
+      "id": "GATE-L1.7B-Q2-F2",
+      "severity": "high_governance",
+      "issue": "Broad exit-ticket scaling remains blocked.",
+      "next_action": "Do not generalize this approval beyond reviewed 1.1.2."
+    },
+    {
+      "id": "GATE-L1.7B-Q2-F3",
+      "severity": "high_for_target_equivalent_scope",
+      "issue": "1.1.3 graph/table target-equivalent exit ticket remains unapproved.",
+      "next_action": "Prepare separate graph/table target-equivalent work after graph-route repairs and review."
+    },
+    {
+      "id": "GATE-L1.7B-Q2-F4",
+      "severity": "medium",
+      "issue": "1.1.1 remains advisory and has no target-equivalent claim.",
+      "next_action": "Keep 1.1.1 as advisory unless a later target-equivalent version is built and reviewed."
+    },
+    {
+      "id": "GATE-L1.7B-Q2-F5",
+      "severity": "high_governance",
+      "issue": "Scale Gate 1 remains blocked.",
+      "next_action": "Do not run Scale Gate 1 until remaining gates close or are explicitly waived with consequences."
+    }
+  ],
+  "authorized_next": {
+    "sprint_id": "L1.7B-Q2-COPY",
+    "name": "Exact 1.1.2 Target-Equivalent Completion Copy Enablement",
+    "authority": "later exact implementation packet only",
+    "direct_mutation_authorized_by_this_gate": false,
+    "student_product_use_authorized": false,
+    "allowed_scope": [
+      "set only reviewed 1.1.2 gate/copy flags or equivalent exact fields",
+      "enable only reviewed local completion copy",
+      "regenerate only affected 1.1.2 output through platform scripts",
+      "update evidence/checker so all other paragraphs remain blocked",
+      "preserve no product-wide authority"
+    ],
+    "out_of_scope": [
+      "broad exit-ticket scaling",
+      "1.1.1 target-equivalent status",
+      "1.1.3 target-equivalent status",
+      "target-exercise registry promotion",
+      "CP-6 or Year-1 reliance",
+      "diagnostics",
+      "adaptive routing",
+      "mastery",
+      "sequencing",
+      "student-facing AI",
+      "summative use",
+      "PV projection",
+      "PV machine promotion",
+      "Scale Gate 1",
+      "student/product use"
+    ]
+  },
+  "authority_boundary": {
+    "source_data_mutation_authorized_now": false,
+    "generated_output_mutation_authorized_now": false,
+    "engine_implementation_authorized_now": false,
+    "completion_language_enablement_authorized_now": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

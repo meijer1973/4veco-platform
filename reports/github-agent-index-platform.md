@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T07:11:38.988Z
+Generated: 2026-06-01T08:06:51.676Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2510
+Files indexed: 2523
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 343
+Count: 344
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -413,6 +413,7 @@ Count: 343
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
+- build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -519,7 +520,7 @@ Count: 42
 
 ## validators
 
-Count: 162
+Count: 163
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -611,6 +612,7 @@ Count: 162
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
+- build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -686,7 +688,7 @@ Count: 162
 
 ## references
 
-Count: 388
+Count: 389
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -800,6 +802,7 @@ Count: 388
 - references/data/sprints/GATE-CP6.result.json
 - references/data/sprints/GATE-ENGINE-1.plan.json
 - references/data/sprints/GATE-ENGINE-1.result.json
+- references/data/sprints/GATE-L1.7B-Q2.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
@@ -1079,7 +1082,7 @@ Count: 388
 
 ## reports
 
-Count: 1364
+Count: 1375
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1397,6 +1400,11 @@ Count: 1364
 - reports/review-gates/GATE-EX6-validator-cli-planning/human-interview.md
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.json
 - reports/review-gates/GATE-EX6-validator-cli-planning/review-packet.md
+- reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/bundle-urls.md
+- reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/live-output-evidence.json
+- reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/live-output-evidence.md
+- reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/review-packet.json
+- reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/review-packet.md
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.json
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/gate-closure.md
 - reports/review-gates/GATE-MTU-H2-solo-q1-q3-micro-cases/human-interview.json
@@ -1955,6 +1963,12 @@ Count: 1364
 - reports/sprints/GATE-ENGINE-1-plan.md
 - reports/sprints/GATE-ENGINE-1-planning-review.md
 - reports/sprints/GATE-ENGINE-1-result.md
+- reports/sprints/GATE-L1.7B-Q2-baseline.md
+- reports/sprints/GATE-L1.7B-Q2-lead-review-assignment.md
+- reports/sprints/GATE-L1.7B-Q2-lead-review-corrections.md
+- reports/sprints/GATE-L1.7B-Q2-lead-review-round1.md
+- reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md
+- reports/sprints/GATE-L1.7B-Q2-plan.md
 - reports/sprints/GRAPH-REFINE-1-baseline.md
 - reports/sprints/GRAPH-REFINE-1-diff-summary.md
 - reports/sprints/GRAPH-REFINE-1-gate-handoff.md
