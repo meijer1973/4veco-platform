@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-06-01
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.38-l1-7b-q2-d31-struct-complete`
+Roadmap version: `v3.39-sync-product1-product-proof-track`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -42,6 +42,48 @@ Do not mint units from syllabus prose alone. Exam questions, official
 correction models, and reviewed target exercises are stronger evidence than
 abstract syllabus descriptions.
 
+## Product Proof Track Before Scale Gate 1
+
+Scale Gate 1 is blocked until the first three paragraphs operate as a coherent
+student-visible product, not merely as improved engines or isolated checks.
+The track below is the required sequence unless a later human review explicitly
+waives a requirement with stated consequences.
+
+Acceptance baseline: `../4veco-lessen/specifications/product-end-state.md`
+and `../4veco-lessen/specifications/companion-core-specifications.md`.
+
+Core standard:
+
+- every paragraph must eventually have both an advisory short check and a
+  separate target-equivalent exit ticket;
+- short checks may provide hidden/clickable hints, repair feedback, and route
+  advice;
+- exit tickets must be same-level proof tasks and must not become hint-heavy
+  learning exercises;
+- shared task-type UI is the default for overlapping graph/table, calculation,
+  reasoning, and checkpoint actions;
+- route items in graph, math, reasoning, and skill-map panels must be
+  actionable;
+- the skill map must become a visible student product surface;
+- dual coding is a task-quality requirement, not decoration;
+- `GATE-PRODUCT-3P` must review rendered student paths before Scale Gate 1.
+
+| Sprint | Name | Completed | Current State |
+|--------|------|-----------|---------------|
+| SYNC-PRODUCT-1 | Product Proof Roadmap Alignment | yes | Closed roadmap/specification alignment sprint. Added this Product Proof Track to both roadmaps, tightened product specs around both check types, hint policy, route affordance, skill-map product surface, dual-coding task decisions, and first-three-paragraph proof before Scale Gate 1. No implementation, generated output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |
+| CHECK-SHORT-EXIT-1 | Paragraph Check Surface Inventory And Contract | no | Audit `1.1.1`-`1.1.3` for advisory short-check and target-equivalent exit-ticket status, landing visibility, hints, task types, target-readiness evidence, completion language, and missing work. No generated output. |
+| STANDARD-EXERCISES-1 | Unified Standard Exercise Coverage Audit | no | Audit reasoning/math/graph/exit-ticket/guided-practice/procedure task types against the shared standard. Decide which reasoning tasks are covered, require standard expansion, or require rebuild/refactor. No implementation. |
+| TASK-SHELL-UX-2 | Shared Task Shell UX Hardening | no | Improve shared task-shell UX: hidden hints where allowed, no exit-ticket answer hints, separate unit/notation fields, controlled feedback region, next-action clarity, keyboard/focus, mobile and dark-mode proof. |
+| GAME-ROUTE-AFFORDANCE-1 | Clickable Route Items For Non-Exit Practice Games | no | Make graph/math/reasoning/skill-map route items actionable with direct target or explicit fallback. Preserve existing `1.1.2` exit-ticket route links and add regression guard. |
+| SKILLMAP-PRODUCT-1 | Student Skill Map Product Surface | no | Make the skill map accessible and useful as a student-facing route overview for the first three paragraphs, with actionable route links and no internal-code exposure. |
+| REASON-STD-1 | Reasoning Game Unified Exercise Migration | no | Bring reasoning game task types into the shared standard, including step-by-step and flow-diagram tasks. Decide whether the reasoning game becomes a thin wrapper or needs rebuild. |
+| DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Require agents and reviewers to decide when a task should be visual, diagrammatic, graph/table based, or flow-based instead of text-only. |
+| ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, and accessibility models around the shared route and task shell. |
+| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. |
+| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket, feedback, and next action. |
+| GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
+| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
+
 ## Sprint Ledger
 
 The currently-active sprint sits at the top. Future sprints follow in sequence.
@@ -52,6 +94,7 @@ legacy bundles only.
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| SYNC-PRODUCT-1 | Product Proof Roadmap Alignment | yes | Closed roadmap/specification alignment sprint after planning review and lead-review cycle. Inserted the Product Proof Track before Scale Gate 1 into platform and lesson roadmaps, tightened stable specs where the supplied package was stronger than existing wording, and added deterministic evidence checking for the alignment. No implementation, generated lesson output, protected reference mutation, source exit-ticket writes, target-exercise registry writes, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |
 | L1.7B-Q2-D31-STRUCT | Structured D31 Exit-Ticket Repair | yes | Closed PASS WITH FLAGS after replacing only Task 4 of the reviewed `1.1.2 Percentages en indexcijfers` exit ticket with a shared `structured_short_response` task family: produced fields for index points, basis 108, approximate 3.7 percent, plus an explicit claim judgment. This removes the brittle single free-text D31 matcher without downgrading the target-equivalent proof to recognition-only checking. Task 2 now accepts plain `108` for the index-number final answer when the required work is present. Book 1 output was regenerated through the platform deploy route; `1.1.1` remains advisory, `1.1.3` remains blocked/absent, and approved `1.1.2` local completion copy remains exact. Carried flags: no general semantic prose or symbolic math engine is authorized, and no broad exit-ticket scaling, target-exercise registry writes, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized. |
 | L1.7B-Q2-COPY | Exact 1.1.2 Target-Equivalent Completion Copy Enablement | yes | Closed PASS WITH FLAGS as the exact implementation packet authorized by `GATE-L1.7B-Q2`. Set only reviewed `1.1.2 Percentages en indexcijfers` gate/copy flags, enabled the exact local non-summative copy `Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.`, tightened `ExitTicketEngine.getProgress()` so student-level completion eligibility appears only after full proof completion, regenerated Book 1 through the platform deploy route, and added a COPY checker proving `1.1.1` remains advisory and `1.1.3` remains unapproved/absent. Lead review round 1 returned REVISE for completion-eligibility semantics and generated-output guard gaps; corrections resolved both; final round 2 closed PASS WITH FLAGS. No broad exit-ticket scaling, `1.1.1` or `1.1.3` target-equivalent status, target-exercise registry promotion, CP-6/Year-1 reliance, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized. |
 | GATE-L1.7B-Q2 | Exit Ticket Target-Equivalent Proof Review | yes | Closed PASS WITH FLAGS at reviewed remote commit `ca2b10333d2006ebe6351b5cf649539f6f12a369`. The human reviewer accepted the exact `1.1.2 Percentages en indexcijfers` target-equivalent proof candidate: operation-chain coverage, calculation-work criteria, D31 criteria, UI/feedback, and advisory short-check separation are sufficient for local non-summative completion language. Approved only a later exact implementation packet for reviewed `1.1.2` copy: `Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.` Direct mutation and product use remain unauthorized. Carried flags: deterministic matching is accepted only for this exact local proof and not broad symbolic/semantic proof; no broad exit-ticket scaling; `1.1.1` and `1.1.3` target-equivalent claims remain blocked; Scale Gate 1 remains blocked; no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, CP-6/Year-1 reliance, or product-wide use. |
@@ -2499,7 +2542,14 @@ Update 2026-06-01: `L1.7B-Q2-COPY Exact 1.1.2 Target-Equivalent Completion Copy 
 
 ## Immediate Next Sprint
 
-Next action: proceed to `REV-STD-1` before any Scale Gate 1 attempt. The approved `1.1.2` completion copy is local and non-summative only; no diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, CP-6/Year-1 reliance, or product-wide use is authorized by `L1.7B-Q2-COPY`.
+Next action: proceed first to `CHECK-SHORT-EXIT-1` and
+`STANDARD-EXERCISES-1` as audit/contract sprints under the Product Proof Track.
+`REV-STD-1` remains required before Scale Gate 1, but Scale Gate 1 may not run
+until the Product Proof Track reaches `GATE-PRODUCT-3P` or a human waiver
+explicitly records consequences. The approved `1.1.2` completion copy is local
+and non-summative only; no diagnostics, adaptive routing, mastery/sequencing,
+student-facing AI, summative use, PV, Scale Gate 1, CP-6/Year-1 reliance, or
+product-wide use is authorized by `L1.7B-Q2-COPY` or `SYNC-PRODUCT-1`.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 

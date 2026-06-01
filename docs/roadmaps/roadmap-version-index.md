@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.38-l1-7b-q2-d31-struct-complete` | `references/reference-team-roadmap.md` | Current operating roadmap after L1.7B-Q2-D31-STRUCT replaced the brittle 1.1.2 D31 free-text matcher with a structured short-response task while keeping 1.1.1 advisory, 1.1.3 held, and Scale Gate 1 blocked until REV-STD-1 and remaining scale readiness resolve. |
+| References Team Roadmap | `v3.39-sync-product1-product-proof-track` | `references/reference-team-roadmap.md` | Current operating roadmap after SYNC-PRODUCT-1 inserted the Product Proof Track before Scale Gate 1. The roadmaps and stable specs now require advisory short check plus target-equivalent exit ticket distinctions, shared task UI, actionable route items, visible student skill map, dual-coding task decisions, and three-paragraph product proof through GATE-PRODUCT-3P before Scale Gate 1 or explicit human waiver. |
 
 ## Outdated Archive
 

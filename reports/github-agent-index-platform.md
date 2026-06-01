@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T09:36:22.149Z
+Generated: 2026-06-01T10:46:41.460Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2541
+Files indexed: 2552
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 345
+Count: 346
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -428,6 +428,7 @@ Count: 345
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
+- build-scripts/sprints/check-l1-7b-q2-d31-struct.js
 - build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
@@ -521,7 +522,7 @@ Count: 42
 
 ## validators
 
-Count: 164
+Count: 165
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -624,6 +625,7 @@ Count: 164
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
+- build-scripts/sprints/check-l1-7b-q2-d31-struct.js
 - build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
@@ -690,7 +692,7 @@ Count: 164
 
 ## references
 
-Count: 392
+Count: 394
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -812,6 +814,8 @@ Count: 392
 - references/data/sprints/GRAPH-UX-2.result.json
 - references/data/sprints/L1.7B-Q2-COPY.plan.json
 - references/data/sprints/L1.7B-Q2-COPY.result.json
+- references/data/sprints/L1.7B-Q2-D31-STRUCT.plan.json
+- references/data/sprints/L1.7B-Q2-D31-STRUCT.result.json
 - references/data/sprints/L1.7B-Q2.plan.json
 - references/data/sprints/L1.7B-Q2.result.json
 - references/data/sprints/LEAD-REVIEW-1.plan.json
@@ -1087,7 +1091,7 @@ Count: 392
 
 ## reports
 
-Count: 1389
+Count: 1397
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2022,6 +2026,14 @@ Count: 1389
 - reports/sprints/L1.7B-Q2-COPY-lead-review-round2.md
 - reports/sprints/L1.7B-Q2-COPY-plan.md
 - reports/sprints/L1.7B-Q2-COPY-result.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-baseline.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-diff-summary.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-lead-review-assignment.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-lead-review-corrections.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-lead-review-round1.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-lead-review-round2.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-plan.md
+- reports/sprints/L1.7B-Q2-D31-STRUCT-result.md
 - reports/sprints/L1.7B-Q2-diff-summary.md
 - reports/sprints/L1.7B-Q2-gate-handoff.md
 - reports/sprints/L1.7B-Q2-generated-output-plan.md
