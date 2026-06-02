@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-PLAY-1",
+  "name": "Reasoning Playability And Usability-Agent Test",
+  "created": "2026-06-02",
+  "plan": "reports/sprints/REASON-PLAY-1-plan.md",
+  "baseline": "reports/sprints/REASON-PLAY-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "generated_lesson_output_condition": "Only through scripts/deploy.js if usability-agent evidence requires an allowed UI/CSS/copy repair.",
+  "authority": {
+    "implementation_authorized": true,
+    "generated_output_authorized": true,
+    "source_data_mutation_authorized": false,
+    "target_equivalent_claims_authorized": false,
+    "student_or_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false
+  },
+  "scope": [
+    "Run separate usability-agent tests against generated reasoning routes.",
+    "Record whether agents understand goal, controls, feedback, retry, and next action without hidden instructions.",
+    "Repair only allowed UI/CSS/copy blockers if agent evidence requires it.",
+    "Preserve modes 2 and 4 as held/refactor-scoped.",
+    "Produce usability traces, analysis, screenshots, checker evidence, and lead-review artifacts."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-PLAY-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REASON-PLAY-1",
+    "npx.cmd jest --runInBand engines/tests/reasoning-engine.test.js engines/tests/reasoning-ui.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+    "node build-scripts/sprints/check-reason-adopt1-route-output.js",
+    "node build-scripts/sprints/check-reason-play1-usability.js",
+    "node build-scripts/sprints/capture-reason-play1-screenshots.js",
+    "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/REASON-PLAY-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REASON-PLAY-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No hand edits to generated Book 1 output.",
+    "No source-data/book-1/reasoning CSV writes.",
+    "No source-data/book-*/exit-ticket writes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No candidate storage creation or writes.",
+    "No target-equivalent claims or completion language.",
+    "No mode 2 or mode 4 adoption claim.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use."
+  ],
+  "stop_conditions": [
+    "Usability agents cannot complete mode 0, 1, 3, or 5 because page or controls are broken.",
+    "Agent traces show task cannot be understood without hidden instructions and repair exceeds allowed paths.",
+    "Repair would require reasoning CSV edits, source exit-ticket data, protected references, target-exercise fields, or candidate storage.",
+    "Generated output is changed by hand instead of deploy.",
+    "Mode 2 or mode 4 is described as unified/adopted.",
+    "Any artifact claims target-equivalent proof, diagnostics, mastery, sequencing, Scale Gate 1, or product use.",
+    "Lead review returns REVISE and corrections are not applied before closure."
+  ]
+}

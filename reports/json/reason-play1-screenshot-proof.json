@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-PLAY-1",
+  "generated_on": "2026-06-02",
+  "status": "screenshot_proof_captured",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "cases": [
+    {
+      "name": "desktop-light-111-mode0-compact-controls",
+      "paragraph": "1.1.1",
+      "mode": 0,
+      "theme": "light",
+      "action": "select-correct-no-check",
+      "proof": "selected sequence shows compact move/remove controls before check",
+      "url": "http://127.0.0.1:57347/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-PLAY-1-screenshots/desktop-light-111-mode0-compact-controls.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Kies alleen de stappen die de redenering vormen en zet ze in volgorde. Redeneerstappen ordenen Stappen ordenen Zet de juiste redeneerstappen in de goede volgorde. Kies de stappen die samen de economische redenering vormen en zet ze in volgorde. Herken de situatie ‹ › × Benoem de schaarste ‹ › × Bepaal de alternatieve kosten ‹ › × Herken de situatie Lisa's behoeften (bioscoop én boek, samen €27) zijn groter dan haar beschikbare middel (€20 zakgeld). Ze moet daarom een keuze maken. Benoem de schaarste Er is sprake van schaarste: de behoeften zijn groter dan de beschikbare middelen. Het schaarse middel is het geld van Lisa. Bepaal de alternatieve kosten Lisa kiest voor de bioscoop en geeft daarmee het boek op. De alternatieve kosten zijn de opbrengst van het beste niet-gekozen alternatief: het leesplezier van het boek van €15. Tel alle wensen bij elkaar op Lisa wil €12 + €15 = €27 uitgeven, dus ze heeft €27 aan behoeften. Bereken de prijs die Lisa betaalt Lisa betaalt €12 voor de bioscoop, dus dat is haar totale kostenpost. Bepaal het verschil tussen budget en wens €20 − €15 = €5 tekort, dus Lisa komt €5 tekort op het boek. Leegmaken",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": null,
+      "globalFeedbackVisible": false,
+      "nextVisible": false,
+      "selectedCount": 3,
+      "compactControlCount": 9,
+      "compactControlLabels": [
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Herken de situatie",
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Benoem de schaarste",
+        "Naar links",
+        "Naar rechts"
+      ],
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "shellRect": {
+        "x": 134,
+        "y": 395,
+        "width": 607,
+        "height": 866
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1368
+      }
+    },
+    {
+      "name": "desktop-light-111-mode0-retry-dual-feedback",
+      "paragraph": "1.1.1",
+      "mode": 0,
+      "theme": "light",
+      "action": "wrong-order",
+      "proof": "wrong order shows local task-shell retry feedback plus global reasoning feedback and next action",
+      "url": "http://127.0.0.1:57347/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-PLAY-1-screenshots/desktop-light-111-mode0-retry-dual-feedback.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Kies alleen de stappen die de redenering vormen en zet ze in volgorde. Redeneerstappen ordenen Stappen ordenen Zet de juiste redeneerstappen in de goede volgorde. Kies de stappen die samen de economische redenering vormen en zet ze in volgorde. Bereken de opbrengst per alternatief ‹ › × Som de alternatieven op ‹ › × Bepaal de alternatieve kosten ‹ › × Som de alternatieven op De boer heeft drie alternatieven voor de besteding van zijn 10 hectare: tarwe, maïs of zonnebloemen. Bereken de opbrengst per alternatief Tarwe: 10 × €500 = €5.000. Maïs: 10 × €350 = €3.500. Zonnebloemen: 10 × €300 = €3.000. Bepaal de alternatieve kosten De boer kiest tarwe (€5.000). De niet-gekozen alternatieven zijn maïs (€3.500) en zonnebloemen (€3.000). De alternatieve kosten = opbrengst beste niet-gekozen alternatief = €3.500 (maïs). Noteer alleen de gekozen optie De boer kiest tarwe, dus alleen tarwe is relevant voor de berekening. Bereken het gemiddelde van de alternatieven (€5.000 + €3.500 + €3.000) / 3 = €3.833 gemiddelde opbrengst. Tel de opbrengsten van alle gewassen op €5.000 + €3.500 + €3.000 = €11.500 totale marktwaarde van alle gewassen. Leegmaken Controleer de volgorde Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie. Eerste plek om te controleren Verwacht: Som de alternatieven op. Gekozen: Bereken de opbrengst per alternatief. Oefen verder met redeneren",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": "retry",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "selectedCount": 3,
+      "compactControlCount": 9,
+      "compactControlLabels": [
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Bereken de opbrengst per alternatief",
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Som de alternatieven op",
+        "Naar links",
+        "Naar rechts"
+      ],
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "shellRect": {
+        "x": 134,
+        "y": 395,
+        "width": 607,
+        "height": 1185
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "width": 1280,
+        "height": 2001
+      }
+    },
+    {
+      "name": "desktop-light-112-mode1-matched-next-action",
+      "paragraph": "1.1.2",
+      "mode": 1,
+      "theme": "light",
+      "action": "correct-order",
+      "proof": "correct claim/reason/evidence bridge shows matched feedback and next action",
+      "url": "http://127.0.0.1:57347/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-PLAY-1-screenshots/desktop-light-112-mode1-matched-next-action.png",
+      "title": "Percentages en indexcijfers – Redeneer-spel",
+      "routeText": "REKENEN Oefenroute Redeneren PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Gebruik het redeneer-spel om de rekenstappen en betekenis van percentages hardop te ordenen. Open redeneer-spel Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Bouw eerst de deelvragenroute; daarna kun je de redenering sterker opschrijven. Deelvragen als redeneerroute Stappen ordenen Zet de deelvragen in de volgorde waarin ze de redenering opbouwen. Bouw de claim-redenering-bewijs route met de vragen die je eerst moet beantwoorden. Wat is de basiswaarde? ‹ › × Welke formule gebruik je? ‹ › × Wat betekent index 108? ‹ › × Wat is de basiswaarde? Welke formule gebruik je? Wat betekent index 108? Welke energieleverancier is dit? Hoeveel maanden zitten in het jaar? Leegmaken De route klopt Je deelvragen bouwen de redenering logisch op. Oefen verder met redeneren",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": "matched",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "selectedCount": 3,
+      "compactControlCount": 9,
+      "compactControlLabels": [
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Wat is de basiswaarde?",
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Welke formule gebruik je?",
+        "Naar links",
+        "Naar rechts"
+      ],
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 410
+      },
+      "shellRect": {
+        "x": 134,
+        "y": 371,
+        "width": 607,
+        "height": 734
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1290
+      }
+    },
+    {
+      "name": "mobile-light-113-mode3-route-placement",
+      "paragraph": "1.1.3",
+      "mode": 3,
+      "theme": "light",
+      "action": "correct-order",
+      "proof": "mobile checked long task shows ordered-chain bridge, feedback, next action, and route-panel placement",
+      "url": "http://127.0.0.1:57347/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-PLAY-1-screenshots/mobile-light-113-mode3-route-placement.png",
+      "title": "Grafieken en tabellen – Redeneer-spel",
+      "routeText": "GRAFIEKEN Oefenroute Redeneren PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en uitleggen. Orden de bronstappen voordat je de grafiek- of tabelvraag beantwoordt. Open redeneer-spel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Bouw de keten van beginpunt naar gevolg. Het volledige visuele stroomdiagram blijft vervolgwerk. Causale keten bouwen Stappen ordenen Zet de blokken in de volgorde van de economische keten. Bouw de oorzaak-gevolgketen van beginpunt naar conclusie. Claim: een derde daling ‹ › × Oud = 500, nieuw = 350 ‹ › × Bereken verschil en deel door oud ‹ › × -30% ‹ › × Niet precies een derde ‹ › × Claim: een derde daling Rol in de keten: given Oud = 500, nieuw = 350 Rol in de keten: step Bereken verschil en deel door oud Rol in de keten: step -30% Rol in de keten: result Niet precies een derde Rol in de keten: result Bij procentuele verandering hoort oud in de noemer. Afleider: deze stap past niet als onderdeel van de gevraagde keten. Leegmaken De keten loopt logisch Je bouwt van beginpunt via tussenstappen naar conclusie. Oefen verder met redeneren",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": "matched",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "selectedCount": 5,
+      "compactControlCount": 15,
+      "compactControlLabels": [
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Claim: een derde daling",
+        "Naar links",
+        "Naar rechts",
+        "Verwijder stap Oud = 500, nieuw = 350",
+        "Naar links",
+        "Naar rechts"
+      ],
+      "routeRect": {
+        "x": 20,
+        "y": 1796,
+        "width": 350,
+        "height": 473
+      },
+      "shellRect": {
+        "x": 16,
+        "y": 413,
+        "width": 358,
+        "height": 1177
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": {
+        "width": 390,
+        "height": 2868
+      }
+    },
+    {
+      "name": "desktop-dark-111-mode5-route-contrast",
+      "paragraph": "1.1.1",
+      "mode": 5,
+      "theme": "dark",
+      "action": "self-check",
+      "proof": "dark-mode structured reasoning self-check includes route panel and feedback",
+      "url": "http://127.0.0.1:57347/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-PLAY-1-screenshots/desktop-dark-111-mode5-route-contrast.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Gebruik oorzaak, tussenstap en conclusie als een korte denkroute. Redeneerantwoord opbouwen Gestructureerde redenering Schrijf een korte redenering bij de situatie hierboven. Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck. Jouw redenering Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+      "taskFamily": "structured_reasoning",
+      "shellMarker": "REASON-UX-2",
+      "feedbackState": "self_check",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "selectedCount": 0,
+      "compactControlCount": 0,
+      "compactControlLabels": [],
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "shellRect": {
+        "x": 134,
+        "y": 399,
+        "width": 607,
+        "height": 628
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "width": 1280,
+        "height": 1722
+      }
+    }
+  ],
+  "authority": {
+    "target_equivalent_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  }
+}

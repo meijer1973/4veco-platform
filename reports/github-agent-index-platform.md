@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T14:46:06.917Z
+Generated: 2026-06-02T15:11:00.781Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2908
+Files indexed: 2930
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 372
+Count: 374
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -424,6 +424,7 @@ Count: 372
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
+- build-scripts/sprints/capture-reason-adopt1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
@@ -441,6 +442,7 @@ Count: 372
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
@@ -548,7 +550,7 @@ Count: 42
 
 ## validators
 
-Count: 200
+Count: 201
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -659,6 +661,7 @@ Count: 200
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
@@ -753,7 +756,7 @@ Count: 200
 
 ## references
 
-Count: 433
+Count: 435
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1013,6 +1016,8 @@ Count: 433
 - references/data/sprints/R9.1.result.json
 - references/data/sprints/R9.2.plan.json
 - references/data/sprints/R9.2.result.json
+- references/data/sprints/REASON-ADOPT-1.plan.json
+- references/data/sprints/REASON-ADOPT-1.result.json
 - references/data/sprints/REASON-REFINE-1.plan.json
 - references/data/sprints/REASON-REFINE-1.result.json
 - references/data/sprints/REASON-STD-1.plan.json
@@ -1191,7 +1196,7 @@ Count: 433
 
 ## reports
 
-Count: 1675
+Count: 1693
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1237,6 +1242,7 @@ Count: 1675
 - reports/json/procedure-visual-projection-mvp.json
 - reports/json/procedure-visual-promotion-pipeline-design.json
 - reports/json/procedure-visual-schema-status.json
+- reports/json/reason-adopt1-proof.json
 - reports/json/reason-std1-proof.json
 - reports/json/reason-std1-standard-family-map.json
 - reports/json/reference-cli-coverage.json
@@ -2502,6 +2508,23 @@ Count: 1675
 - reports/sprints/R9.2-diff-summary.md
 - reports/sprints/R9.2-result.md
 - reports/sprints/README.md
+- reports/sprints/REASON-ADOPT-1-baseline.md
+- reports/sprints/REASON-ADOPT-1-diff-summary.md
+- reports/sprints/REASON-ADOPT-1-lead-review-assignment.md
+- reports/sprints/REASON-ADOPT-1-lead-review-corrections.md
+- reports/sprints/REASON-ADOPT-1-lead-review-round1.md
+- reports/sprints/REASON-ADOPT-1-lead-review-round2.md
+- reports/sprints/REASON-ADOPT-1-plan.md
+- reports/sprints/REASON-ADOPT-1-planning-review.md
+- reports/sprints/REASON-ADOPT-1-playable-proof.md
+- reports/sprints/REASON-ADOPT-1-result.md
+- reports/sprints/REASON-ADOPT-1-screenshot-manifest.md
+- reports/sprints/REASON-ADOPT-1-screenshots/desktop-dark-111-mode5-self-check.png
+- reports/sprints/REASON-ADOPT-1-screenshots/desktop-light-111-mode0-initial.png
+- reports/sprints/REASON-ADOPT-1-screenshots/desktop-light-111-mode0-retry.png
+- reports/sprints/REASON-ADOPT-1-screenshots/desktop-light-112-mode1-matched.png
+- reports/sprints/REASON-ADOPT-1-screenshots/manifest.json
+- reports/sprints/REASON-ADOPT-1-screenshots/mobile-light-113-mode3-matched.png
 - reports/sprints/REASON-REFINE-1-answer-form-integration-plan.md
 - reports/sprints/REASON-REFINE-1-baseline.md
 - reports/sprints/REASON-REFINE-1-diff-summary.md
