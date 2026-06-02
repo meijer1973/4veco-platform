@@ -1,4 +1,4 @@
-# REASON-PLAY-1 Diff Summary
+# Sprint REASON-PLAY-1: Diff Summary
 
 Generated: 2026-06-02
 

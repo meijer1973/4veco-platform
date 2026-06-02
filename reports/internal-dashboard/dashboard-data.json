@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T15:11:01.311Z",
+  "generatedAt": "2026-06-02T15:59:56.929Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3027,8 +3027,8 @@
             {
               "sprint": "REASON-PLAY-1",
               "name": "Reasoning Playability And Usability-Agent Test",
-              "completed": "no",
-              "currentState": "Platform evidence prepared 2026-06-02, ready for structural lead review but not closed. Two counted usability agents returned PASS WITH FLAGS from generated proof/screenshot review; deterministic rendered capture proves modes 0, 1, 3, and 5 are playable with screenshots. No blocking repair was required, but dual feedback density, mobile route-panel placement, dark-theme consistency, compact controls, and mode 3 bridge-only status carry forward. Lead review round 1/round 2 are blocked by subagent null completions/usage-limit tooling and must run before closure or downstream human gate use.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / EVIDENCE ONLY.** Platform ran separate usability-agent evidence, deterministic rendered screenshot proof, and lead-review round 1/round 2. Two counted usability agents returned PASS WITH FLAGS from generated proof/screenshot review; deterministic rendered capture proves modes 0, 1, 3, and 5 are playable with screenshots. No blocking repair was required. Carried flags: dual feedback density, mobile route-panel placement, dark-theme consistency, compact controls, mode 3 bridge-only status, modes 2/4 held, and usability agents reviewed proof/screenshots rather than fresh live-clicking. This is practice-route playability proof only, not target-equivalent reasoning readiness or product authority.",
               "exitGate": ""
             },
             {
@@ -3244,14 +3244,6 @@
           "name": "Student Skill Map Product Surface",
           "completed": "no",
           "currentState": "Make the skill map accessible and useful as a student-facing route overview for the first three paragraphs.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "REASON-PLAY-1",
-          "name": "Reasoning Playability And Usability-Agent Test",
-          "completed": "no",
-          "currentState": "Platform evidence prepared 2026-06-02, ready for structural lead review but not closed. Two counted usability agents returned PASS WITH FLAGS from generated proof/screenshot review; deterministic rendered capture proves modes 0, 1, 3, and 5 are playable with screenshots. No blocking repair was required, but dual feedback density, mobile route-panel placement, dark-theme consistency, compact controls, and mode 3 bridge-only status carry forward. Lead review round 1/round 2 are blocked by subagent null completions/usage-limit tooling and must run before closure or downstream human gate use.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3654,10 +3646,18 @@
           "currentState": "Adopt the wrapped standard-family tasks into the generated Book 1 reasoning route with route-specific playable proof, desktop/mobile/dark screenshots, route-panel evidence, and validators. Preserve mode 2 and mode 4 held/refactor status unless separately reviewed. No target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product-wide use.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-PLAY-1",
+          "name": "Reasoning Playability And Usability-Agent Test",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / EVIDENCE ONLY.** Platform ran separate usability-agent evidence, deterministic rendered screenshot proof, and lead-review round 1/round 2. Two counted usability agents returned PASS WITH FLAGS from generated proof/screenshot review; deterministic rendered capture proves modes 0, 1, 3, and 5 are playable with screenshots. No blocking repair was required. Carried flags: dual feedback density, mobile route-panel placement, dark-theme consistency, compact controls, mode 3 bridge-only status, modes 2/4 held, and usability agents reviewed proof/screenshots rather than fresh live-clicking. This is practice-route playability proof only, not target-equivalent reasoning readiness or product authority.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 22,
-      "openCount": 31
+      "completedCount": 23,
+      "openCount": 30
     },
     {
       "id": "innovation",

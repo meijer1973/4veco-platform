@@ -2,7 +2,7 @@
 
 Generated: 2026-06-02
 
-Draft verdict: PASS WITH FLAGS, pending structural lead review
+Verdict: PASS WITH FLAGS
 
 ## Plan reference
 
@@ -92,11 +92,14 @@ Structural lead review:
   `reports/sprints/REASON-PLAY-1-lead-review-assignment.md`
 - attempt log exists:
   `reports/sprints/REASON-PLAY-1-lead-review-attempts.md`
-- round 1: blocked by subagent null completions / usage-limit tooling
-- correction log: pending
-- round 2: pending
+- round 1:
+  `reports/sprints/REASON-PLAY-1-lead-review-round1.md`
+- correction log:
+  `reports/sprints/REASON-PLAY-1-lead-review-corrections.md`
+- round 2:
+  `reports/sprints/REASON-PLAY-1-lead-review-round2.md`
 
-This sprint is ready for lead review, but not closed.
+Structural lead review closed PASS WITH FLAGS.
 
 ## Carried Flags
 
@@ -149,8 +152,7 @@ source reasoning CSVs, source exit-ticket data, or human-gate artifacts.
 
 ## Next Action
 
-Run structural lead review round 1 when subagent capacity is available, apply
-any corrections, run round 2 recheck, then close `REASON-PLAY-1` and proceed to
-the next named reasoning sprint. Do not start `GATE-REASON-STD-1` until the
-remaining reasoning sprints produce the full evidence packet and pre-gate lead
-review.
+Proceed to the next named reasoning sprint, carrying these flags into
+`REASON-ANSWERFORM-2`, `REASON-FLOW-1`, and `GATE-REASON-STD-1`. Do not start
+`GATE-REASON-STD-1` until the remaining reasoning sprints produce the full
+evidence packet and pre-gate lead review.
