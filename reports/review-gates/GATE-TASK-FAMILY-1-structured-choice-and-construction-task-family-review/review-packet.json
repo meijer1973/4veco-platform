@@ -3,7 +3,7 @@
   "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
   "sprint_id": "GATE-TASK-FAMILY-1",
   "generated": "2026-06-02",
-  "status": "review_packet_ready_after_pre_gate_lead_review_pass_with_flags_no_product_authority",
+  "status": "direct_comment_review_packet_ready_after_playable_repair_usability_recheck_no_product_authority",
   "human_interview_started": false,
   "remote_publication_required_before_review": true,
   "reviewed_remote_commit": null,
@@ -26,7 +26,7 @@
   },
   "pre_gate_lead_review": {
     "required": true,
-    "status": "passed",
+    "status": "passed_before_direct_review_comments",
     "final_verdict": "PASS WITH FLAGS",
     "assignment": "reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md",
     "round1": "reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md",
@@ -79,24 +79,42 @@
     "../4veco-lessen/specifications/product-end-state.md",
     "../4veco-lessen/specifications/companion-core-specifications.md",
     "references/reference-team-roadmap.md",
-    "../4veco-lessen/lessen-team-roadmap.md"
+    "../4veco-lessen/lessen-team-roadmap.md",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-initial.png",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-completed.png",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md",
+    "build-scripts/review-gates/emit-gate-task-family1-playable-lab.js",
+    "build-scripts/review-gates/capture-gate-task-family1-playable-proof.js"
   ],
   "minimum_rendered_evidence_inspection": [
-    "desktop/light screenshot overview",
+    "playable lab with twelve task cards and visible check controls",
+    "playable-proof.json desktop-initial, desktop-retry-feedback, desktop-next-action-focus, desktop-completed, and mobile-dark-completed cases",
+    "desktop playable initial screenshot",
+    "playable retry-feedback screenshot",
+    "playable next-action/focus screenshot",
+    "playable completed screenshot",
+    "playable mobile/dark completed screenshot",
+    "desktop/light static screenshot overview",
     "construction-family screenshot",
     "formula/source/label construction-detail screenshot",
-    "mobile/narrow screenshot",
-    "mobile/narrow task-control screenshot",
+    "mobile/narrow screenshot and mobile/narrow task-control screenshot",
     "dark-mode screenshot",
-    "feedback-state screenshot",
-    "visible feedback-card screenshot",
-    "consolidated rendered gallery if screenshot is ambiguous",
-    "proof JSON for at least one choice family and one construction family",
-    "focus-plan evidence for step_ordering, matching_pairs, two_tier_choice, source_chain_builder, and label_placement"
+    "feedback-state screenshots",
+    "focus-plan evidence for step_ordering, matching_pairs, two_tier_choice, source_chain_builder, and label_placement",
+    "usability-agent round 1, correction, round 2, and analysis artifacts"
   ],
   "calibration_questions": [
     "Confirm this gate reviews task-family readiness only and does not authorize generated output, source-data mutation, implementation, route adoption, target-equivalent claims, diagnostics, mastery, sequencing, Scale Gate 1, or product use.",
-    "Confirm the packet, live-output evidence, screenshots, pre-gate lead-review artifacts, task-family proof artifacts, checker, and cited evidence have been pushed before review starts.",
+    "Confirm the packet, playable lab, playable proof, live-output evidence, screenshots, pre-gate lead-review artifacts, usability-agent artifacts, task-family proof artifacts, checker, and cited evidence have been pushed before review comments start.",
     "Confirm these families remain operation-support or practice/check design candidates only and do not replace richer target-operation proof unless later explicitly reviewed."
   ],
   "planned_questions": [
@@ -112,5 +130,26 @@
     "TASKFAM1-Q10",
     "TASKFAM1-Q11",
     "TASKFAM1-Q12"
-  ]
+  ],
+  "human_review_comments_started": false,
+  "human_review_mode": "direct_packet_comments",
+  "usability_agent_review": {
+    "required": true,
+    "round1_status": "revise",
+    "corrections_status": "applied",
+    "round2_status": "ready_for_direct_comment_review",
+    "carried_flags": [
+      "compact sequence repair controls remain visually terse and require route-adoption accessibility proof"
+    ],
+    "round1": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
+    "corrections": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
+    "round2": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
+    "analysis": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md"
+  },
+  "direct_review_comment_protocol": {
+    "default_mode": true,
+    "interactive_interview_default": false,
+    "comment_resolution_log_required_before_closure": true,
+    "targeted_followups_only_for_ambiguity_or_conflicting_authority": true
+  }
 }

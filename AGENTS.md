@@ -73,10 +73,22 @@ Human-review packets have an extra remote-publication rule:
   against local-only evidence unless the user explicitly orders a local-only
   dry run.
 
-Human-review gates require actual review artifacts. Do not treat a casual "OK", "continue", or inferred approval as a completed human review when the plan requires an interview, decision record, or gate-closure file. 
-All other requirements for sprints are also  required for the Human review. So a checkable plan is made beforehand and that plan is tested afterwards. That will make sure that there is an actual log of the interview. 
+Human-review gates require actual review artifacts. Do not treat a casual
+"OK", "continue", or inferred approval as a completed human review when the
+plan requires reviewer comments, a decision record, or a gate-closure file.
+All other requirements for sprints are also required for human review. A
+checkable plan is made beforehand and tested afterwards so the review has an
+actual audit log.
 
-Human-review interviews must be interactive. Before starting the one-question-at-a-time interview, provide the human reviewer with the full list of planned review questions so they can see the scope of the gate. After that, ask one question at a time, preferably with clear multiple-choice options and an explicit open-answer option. Include enough context in each question that the human reviewer does not have to look up unit IDs, file names, or shorthand labels. After each answer, record or summarize the answer, then decide the next question or next interview mode.
+Human-review gates use direct review-packet comments by default, not an
+interactive one-question-at-a-time interview. The packet must contain the full
+calibration checks, planned review questions, evidence links, stop conditions,
+and comment prompts so the human reviewer can comment directly on the packet.
+After comments are returned, the agent must record a comment-resolution log,
+summarize decisions and unresolved issues, ask targeted follow-up questions
+only for ambiguous or conflicting authority, and draft closure only after the
+comment evidence is complete. Interactive interviews are now an exception for
+explicit reviewer request or unresolved ambiguity, not the default gate mode.
 
 
 ### Sprint agent structure
@@ -91,7 +103,7 @@ For roadmap sprints, use a separated-agent workflow:
   sprints: lead-review assignment, round-1 review, correction log, and round-2
   recheck. Do not set `lead_review_required: false` unless the sprint records
   an explicit exemption with reason, reviewer/approver, and date.
-- human-review gates must receive lead review before the human interview starts.
+- human-review gates must receive lead review before the human review starts.
   Human gate artifacts do not replace the pre-gate lead-review check for future
   gates.
 

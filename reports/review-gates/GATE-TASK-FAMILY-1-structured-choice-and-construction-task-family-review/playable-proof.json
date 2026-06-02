@@ -1,0 +1,207 @@
+{
+  "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
+  "captured_on": "2026-06-02",
+  "lab_path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html",
+  "local_url": "http://127.0.0.1:50200/reports%5Creview-gates%5CGATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review%5Cgate-playable-task-family-lab.html",
+  "product_authority": false,
+  "generated_lesson_output_mutated": false,
+  "cases": [
+    {
+      "id": "desktop-initial",
+      "status": "PASS",
+      "inspection": {
+        "title": "GATE-TASK-FAMILY-1 playable task-family lab",
+        "taskCount": 12,
+        "checkButtonCount": 12,
+        "feedbackCount": 12,
+        "progressText": "0 / 12 taken afgerond",
+        "completedVisible": false,
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": "",
+        "rootExists": true,
+        "rootHtmlLength": 36170,
+        "dataLength": 15961,
+        "matchedStates": 0,
+        "retryStates": 0,
+        "visibleNextActions": 0,
+        "text": "GATE-TASK-FAMILY-1 speelbaar reviewlab Deze pagina is reviewbewijs: de nieuwe taakvormen moeten klikbaar, invulbaar en controleerbaar zijn. Een taak telt pas mee wanneer de echte taak-shell evaluatie een match geeft. review-only geen lesoutput geen productautoriteit target-proof boundary held Testinstructie voor reviewer Gebruik deze pagina niet als bewijs voor productadoptie. Dit lab bewijst alleen of de families als speelbare taakvormen te beoordelen zijn. Klik of typ per taak. Klik daarna op ",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "screenshot": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-initial.png"
+    },
+    {
+      "id": "desktop-retry-feedback",
+      "status": "PASS",
+      "inspection": {
+        "title": "GATE-TASK-FAMILY-1 playable task-family lab",
+        "taskCount": 12,
+        "checkButtonCount": 12,
+        "feedbackCount": 12,
+        "progressText": "0 / 12 taken afgerond",
+        "completedVisible": false,
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": "",
+        "rootExists": true,
+        "rootHtmlLength": 36474,
+        "dataLength": 15961,
+        "matchedStates": 0,
+        "retryStates": 1,
+        "visibleNextActions": 0,
+        "text": "GATE-TASK-FAMILY-1 speelbaar reviewlab Deze pagina is reviewbewijs: de nieuwe taakvormen moeten klikbaar, invulbaar en controleerbaar zijn. Een taak telt pas mee wanneer de echte taak-shell evaluatie een match geeft. review-only geen lesoutput geen productautoriteit target-proof boundary held Testinstructie voor reviewer Gebruik deze pagina niet als bewijs voor productadoptie. Dit lab bewijst alleen of de families als speelbare taakvormen te beoordelen zijn. Klik of typ per taak. Klik daarna op ",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "retry": {
+        "state": "retry",
+        "feedback": "Nog niet klaar Gebruik de taakcontrols om de ontbrekende of verkeerde stap te herstellen. Review-only routeplaceholder"
+      },
+      "screenshot": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png"
+    },
+    {
+      "id": "desktop-next-action-focus",
+      "status": "PASS",
+      "inspection": {
+        "title": "GATE-TASK-FAMILY-1 playable task-family lab",
+        "taskCount": 12,
+        "checkButtonCount": 12,
+        "feedbackCount": 12,
+        "progressText": "1 / 12 taken afgerond",
+        "completedVisible": false,
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": "",
+        "rootExists": true,
+        "rootHtmlLength": 36452,
+        "dataLength": 15961,
+        "matchedStates": 1,
+        "retryStates": 0,
+        "visibleNextActions": 1,
+        "text": "GATE-TASK-FAMILY-1 speelbaar reviewlab Deze pagina is reviewbewijs: de nieuwe taakvormen moeten klikbaar, invulbaar en controleerbaar zijn. Een taak telt pas mee wanneer de echte taak-shell evaluatie een match geeft. review-only geen lesoutput geen productautoriteit target-proof boundary held Testinstructie voor reviewer Gebruik deze pagina niet als bewijs voor productadoptie. Dit lab bewijst alleen of de families als speelbare taakvormen te beoordelen zijn. Klik of typ per taak. Klik daarna op ",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "next_action": {
+        "before": {
+          "buttonText": "Ga naar volgende taak",
+          "visible": true,
+          "disabled": false,
+          "progress": "1 / 12 taken afgerond",
+          "activeFeedback": "cloze-text-index"
+        },
+        "after": {
+          "activeTask": "multi-select-schaarste",
+          "activeControl": "behoeften",
+          "progress": "1 / 12 taken afgerond"
+        }
+      },
+      "screenshot": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png"
+    },
+    {
+      "id": "desktop-completed",
+      "status": "PASS",
+      "inspection": {
+        "title": "GATE-TASK-FAMILY-1 playable task-family lab",
+        "taskCount": 12,
+        "checkButtonCount": 12,
+        "feedbackCount": 12,
+        "progressText": "12 / 12 taken afgerond",
+        "completedVisible": true,
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": "",
+        "rootExists": true,
+        "rootHtmlLength": 50505,
+        "dataLength": 15961,
+        "matchedStates": 12,
+        "retryStates": 0,
+        "visibleNextActions": 12,
+        "text": "GATE-TASK-FAMILY-1 speelbaar reviewlab Deze pagina is reviewbewijs: de nieuwe taakvormen moeten klikbaar, invulbaar en controleerbaar zijn. Een taak telt pas mee wanneer de echte taak-shell evaluatie een match geeft. review-only geen lesoutput geen productautoriteit target-proof boundary held Testinstructie voor reviewer Gebruik deze pagina niet als bewijs voor productadoptie. Dit lab bewijst alleen of de families als speelbare taakvormen te beoordelen zijn. Klik of typ per taak. Klik daarna op ",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "result": {
+        "total": 12,
+        "matched": 12,
+        "states": {
+          "cloze-text-index": true,
+          "multi-select-schaarste": true,
+          "matching-concepts": true,
+          "step-order-procent": true,
+          "two-tier-index": true,
+          "assertion-price": true,
+          "cloze-tile-index": true,
+          "sentence-demand": true,
+          "formula-percent": true,
+          "source-values-percent": true,
+          "source-chain-percent": true,
+          "label-placement-graph": true
+        }
+      },
+      "screenshot": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-completed.png"
+    },
+    {
+      "id": "mobile-dark-completed",
+      "status": "PASS",
+      "inspection": {
+        "title": "GATE-TASK-FAMILY-1 playable task-family lab",
+        "taskCount": 12,
+        "checkButtonCount": 12,
+        "feedbackCount": 12,
+        "progressText": "12 / 12 taken afgerond",
+        "completedVisible": true,
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": "",
+        "rootExists": true,
+        "rootHtmlLength": 50505,
+        "dataLength": 15961,
+        "matchedStates": 12,
+        "retryStates": 0,
+        "visibleNextActions": 12,
+        "text": "GATE-TASK-FAMILY-1 speelbaar reviewlab Deze pagina is reviewbewijs: de nieuwe taakvormen moeten klikbaar, invulbaar en controleerbaar zijn. Een taak telt pas mee wanneer de echte taak-shell evaluatie een match geeft. review-only geen lesoutput geen productautoriteit target-proof boundary held Testinstructie voor reviewer Gebruik deze pagina niet als bewijs voor productadoptie. Dit lab bewijst alleen of de families als speelbare taakvormen te beoordelen zijn. Klik of typ per taak. Klik daarna op ",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "theme": "dark"
+      },
+      "result": {
+        "total": 12,
+        "matched": 12,
+        "states": {
+          "cloze-text-index": true,
+          "multi-select-schaarste": true,
+          "matching-concepts": true,
+          "step-order-procent": true,
+          "two-tier-index": true,
+          "assertion-price": true,
+          "cloze-tile-index": true,
+          "sentence-demand": true,
+          "formula-percent": true,
+          "source-values-percent": true,
+          "source-chain-percent": true,
+          "label-placement-graph": true
+        }
+      },
+      "screenshot": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png"
+    }
+  ],
+  "all_playable_tasks_completed": true,
+  "completed_task_count": 12,
+  "required_task_count": 12
+}

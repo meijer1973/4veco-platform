@@ -2,7 +2,7 @@
 
 Date: 2026-06-02
 
-Status: planned active human-review gate preparation.
+Status: direct-comment human-review packet preparation after playable repair.
 
 ## Goal
 
@@ -12,10 +12,11 @@ construction shared task-shell families are safe as planning input for later
 reasoning migration, check implementation, first-three-paragraph product
 proof, and Scale Gate preparation.
 
-This sprint prepares the packet, baseline, rendered screenshot proof,
-lead-review artifacts, and deterministic checker. It does not run the human
-interview, close the gate, adopt the task families in product routes, generate
-lesson output, mutate source data, or authorize product use.
+This sprint prepares the packet, baseline, playable proof, rendered screenshot
+proof, lead-review artifacts, usability-agent review artifacts, and
+deterministic checker. It does not run direct human review comments, close the
+gate, adopt the task families in product routes, generate lesson output,
+mutate source data, or authorize product use.
 
 ## Context
 
@@ -34,15 +35,18 @@ implementation lane for the new shared-shell families:
 
 The recurring carried flag is that product-route screenshots and rendered
 interaction proof remain required before these families are relied on by later
-routes. This gate addresses that evidence gap at the review level by bundling
-rendered fixture proof, screenshots, focus/keyboard evidence, feedback
-evidence, and boundary questions into one human-review packet.
+routes. A first packet draft over-relied on static rendered fixtures. This
+repair stage adds a playable review lab, browser proof, and independent
+usability-agent testing so the packet can show whether a reviewer can actually
+click through to completion.
 
 ## Quality Standard
 
-The quality floor is not "the task family exists." The packet must let a
-reviewer inspect what a student-facing interaction would look like and decide
-whether the family set is good enough for later bounded adoption planning.
+The quality floor is not "the task family exists" or "the fixture renders."
+The packet must let a reviewer inspect what a student-facing interaction would
+look like, inspect rendered output, test a playable review lab through visible
+controls, and decide whether the family set is good enough for later bounded
+adoption planning.
 
 The gate must make these specification requirements auditable:
 
@@ -54,9 +58,9 @@ The gate must make these specification requirements auditable:
   reviewed as that action;
 - feedback remains practice-only and must not become diagnostics, mastery,
   sequencing, misconception profiles, summative status, or product authority;
-- rendered output, feedback states, keyboard/focus selectors, mobile/narrow
-  layout, and dark-mode readability are inspectable before the human
-  interview.
+- playable output, feedback states, keyboard/focus selectors, next-action
+  clarity, mobile/narrow layout, dark-mode readability, and independent
+  usability-agent evidence are inspectable before human review comments.
 
 Any omitted product-route requirement must be recorded as named follow-up
 work or an explicit blocker. A PASS WITH FLAGS may carry adoption-proof work
@@ -70,9 +74,11 @@ forward, but it may not hide missing core product requirements.
 | Shared task shell supports reviewed construction families | contract files, proof JSON, tests, rendered fixtures | gate asks whether `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, and `label_placement` are acceptable as shared-shell families | planned |
 | Rendered output is inspectable | consolidated gate fixture and screenshots | reviewer inspects desktop, mobile/narrow, dark-mode, and feedback screenshots | planned |
 | Keyboard/focus behavior is explicit | `TaskShellEngine.focusPlan` evidence and checker | packet asks whether focus plans are sufficient before adoption | planned |
+| Playability is proved | playable lab and browser proof | reviewer can inspect retry, next-action/focus, desktop completion, and mobile/dark completion | planned |
+| Understandability is tested | separate usability-agent rounds | packet blocks if agents need hidden expected-state evidence after repair | planned |
 | Feedback remains practice-only | proof JSON and rendered feedback states | packet asks whether feedback avoids diagnostics, mastery, sequencing, and target-equivalent language | planned |
 | Target-proof boundary remains intact | product specs, contracts, carried flags | packet asks whether families are planning input only and cannot replace target-equivalent proof | planned |
-| Human gate has pre-gate lead review | assignment, round 1, corrections, round 2 | checker fails if pre-gate lead review is missing before interview | planned |
+| Human gate has pre-gate lead review | assignment, round 1, corrections, round 2 | checker fails if pre-gate lead review is missing before direct review comments | planned |
 | Product authority remains false | packet authority flags and stop conditions | packet says no generated output, source-data mutation, product-route adoption, Scale Gate 1, or product use | planned |
 
 ## Quality Improvement Candidates
@@ -80,6 +86,8 @@ forward, but it may not hide missing core product requirements.
 | Candidate improvement | Classification | Reason |
 |---|---|---|
 | Consolidated rendered fixture gallery | `include_now` | The reviewer should not have to chase eleven separate fixture pages to orient. |
+| Playable review lab | `include_now` | Static galleries did not prove a human could click through to completion. |
+| Separate usability-agent review | `include_now` | The packet must test whether the task path is understandable, not just executable. |
 | Screenshot manifest with desktop/mobile/dark/feedback proof | `include_now` | User explicitly requested screenshot proof for the human reviewer. |
 | Deterministic gate-packet checker | `include_now` | The new stricter sprint process should fail missing artifacts or authority loopholes. |
 | Product-route adoption | `defer_named_follow_up` | This gate reviews readiness only; later adoption sprints must name product routes and generated-output changes. |
@@ -98,6 +106,9 @@ forward, but it may not hide missing core product requirements.
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.json`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html`
@@ -110,7 +121,13 @@ forward, but it may not hide missing core product requirements.
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/*.png`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md`
 - `build-scripts/review-gates/emit-gate-task-family1-gallery.js`
+- `build-scripts/review-gates/emit-gate-task-family1-playable-lab.js`
+- `build-scripts/review-gates/capture-gate-task-family1-playable-proof.js`
 - `build-scripts/review-gates/check-gate-task-family1-review-packet.js`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md`
 - generated repository maps, URL indexes, and internal dashboard files required
   for remote reviewer navigation
 
@@ -125,7 +142,7 @@ forward, but it may not hide missing core product requirements.
 - target-exercise registry writes
 - candidate storage or candidate writes
 - protected reference mutation
-- human-interview or gate-closure records before the packet is pushed and the
+- human-review comment or gate-closure records before the packet is pushed and the
   human review actually starts
 - diagnostics, adaptive routing, mastery, sequencing, student-facing AI,
   summative use, PV projection, PV machine promotion, Scale Gate 1, or
@@ -166,6 +183,9 @@ forward, but it may not hide missing core product requirements.
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.json`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html`
@@ -179,11 +199,17 @@ forward, but it may not hide missing core product requirements.
   `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md`
 - `build-scripts/review-gates/emit-gate-task-family1-gallery.js`
+- `build-scripts/review-gates/emit-gate-task-family1-playable-lab.js`
+- `build-scripts/review-gates/capture-gate-task-family1-playable-proof.js`
 - `build-scripts/review-gates/check-gate-task-family1-review-packet.js`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-corrections.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-round2.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md`
 
 ## Operationalized sprint procedure
 
@@ -193,27 +219,34 @@ forward, but it may not hide missing core product requirements.
 2. Build a consolidated rendered fixture gallery that embeds the already
    validated per-family rendered fixtures from the closed implementation
    sprints. Stop if a required fixture is missing.
-3. Capture screenshot proof for desktop/light, construction families,
+3. Build a playable review lab that exposes all twelve families through real
+   task-shell controls. Stop if the lab cannot reach matched completion
+   through visible controls.
+4. Capture screenshot proof for desktop/light, construction families,
    mobile/narrow, dark-mode, and feedback states. Stop if screenshots cannot
    be captured and record the missing proof.
-4. Draft live-output evidence and review packet with calibration questions,
-   full planned question list, stop conditions, future interview protocol, and
-   explicit product-boundary flags.
-5. Add a deterministic checker that verifies the packet, fixture, screenshots,
-   proof JSON references, lead-review artifacts, and authority boundaries.
-6. Run packet-prep checks before lead review where possible. The checker is
+5. Capture playable proof for retry, next-action/focus handoff, desktop
+   completion, and mobile/dark completion.
+6. Run separate usability agents. If agents need hidden expected-state
+   evidence to finish, repair the lab and rerun a recheck before human review.
+7. Draft live-output evidence and review packet with calibration questions,
+   full planned comment-prompt list, stop conditions, direct comment protocol,
+   and explicit product-boundary flags.
+8. Add a deterministic checker that verifies the packet, playable lab, fixture,
+   screenshots, proof JSON references, usability-agent artifacts, lead-review
+   artifacts, and authority boundaries.
+9. Run packet-prep checks before lead review where possible. The checker is
    expected to pass only after lead-review artifacts and screenshots exist.
-7. Assign the packet to a lead reviewer agent. Record round 1. If round 1
+10. Assign the packet to a lead reviewer agent. Record round 1. If round 1
    returns REVISE, FAIL, or PAUSE, correct or stop.
-8. Record correction log and obtain round 2. Stop if round 2 is not PASS or
+11. Record correction log and obtain round 2. Stop if round 2 is not PASS or
    PASS WITH FLAGS.
-9. Refresh repository maps/indexes, run final validators, fetch/prune remotes,
-   commit, and push before any human interview starts.
-10. The later human interview must show the full question list, ask
-   calibration questions, ask one binding question at a time, record answers,
-   run pattern analysis, ask targeted follow-ups if needed, draft a closure
-   proposal only after evidence is complete, and require explicit human
-   confirmation before writing closure.
+12. Refresh repository maps/indexes, run final validators, fetch/prune remotes,
+   commit, and push before any human review comments start.
+13. The later human review uses direct packet comments by default. After
+   comments return, record a comment-resolution log, ask targeted follow-ups
+   only for ambiguity/conflicting authority, draft closure only after evidence
+   is complete, and require explicit human confirmation before writing closure.
 
 ## Acceptance tests
 
@@ -221,6 +254,8 @@ forward, but it may not hide missing core product requirements.
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/GATE-TASK-FAMILY-1-plan.md
 node build-scripts/sprints/check-sprint-bundle.js GATE-TASK-FAMILY-1
 node build-scripts/review-gates/emit-gate-task-family1-gallery.js
+node build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+node build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
 node build-scripts/review-gates/check-gate-task-family1-review-packet.js
 npx.cmd jest --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js
 node build-scripts/sprints/check-task-family-cloze-tile1.js
@@ -252,18 +287,19 @@ git -C ../4veco-lessen diff --check
 
 This packet-prep sprint stage closes only as review-packet-ready after:
 
-- plan, baseline, plan JSON, review packet, live-output evidence, fixture,
-  screenshot manifest, screenshots, bundle URLs, and checker exist;
+- plan, baseline, plan JSON, review packet, live-output evidence, playable
+  lab, playable proof, fixture, screenshot manifest, screenshots, bundle URLs,
+  usability-agent artifacts, and checker exist;
 - all twelve reviewed families are represented in fixture/evidence;
 - pre-gate lead-review assignment, round 1, correction log, and round 2 exist;
 - pre-gate lead review is PASS or PASS WITH FLAGS;
-- packet status says no human interview has started;
-- no human-interview or gate-closure files exist;
+- packet status says no human review comments have started;
+- no human-review comment or gate-closure files exist;
 - no engine implementation, source-data mutation, generated lesson output,
   protected reference mutation, target-equivalent reliance, or product
   authority is introduced;
-- packet and cited evidence are committed and pushed before the human
-  interview starts.
+- packet and cited evidence are committed and pushed before human review
+  comments start.
 
 Closure proof must include the deterministic validator/test evidence from the
 acceptance stack, including the sprint-bundle checker, gate-packet checker,
@@ -284,6 +320,6 @@ code during rollback.
 Human review is required to close `GATE-TASK-FAMILY-1`, but it is not
 conducted in this local packet-prep stage.
 
-The human interview may start only after the review packet, screenshot proof,
-lead-review records, bundle URLs, and cited evidence are committed and pushed
-to the normal remote branch.
+Human review comments may start only after the review packet, playable proof,
+screenshot proof, usability-agent records, lead-review records, bundle URLs,
+and cited evidence are committed and pushed to the normal remote branch.

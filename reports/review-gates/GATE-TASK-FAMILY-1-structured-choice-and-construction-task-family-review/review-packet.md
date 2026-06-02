@@ -2,8 +2,9 @@
 
 Generated: 2026-06-02
 
-Status: review packet ready after pre-gate lead review PASS WITH FLAGS; no
-human interview started; no product authority.
+Status: direct-comment review packet ready after playable-lab correction and
+usability-agent recheck; no human review comments started; no product
+authority.
 
 ## Review Scope
 
@@ -11,9 +12,10 @@ Review whether the newly implemented structured choice and constrained
 construction shared task-shell families are acceptable as planning input for
 later bounded adoption sprints.
 
-The gate must inspect rendered output, screenshot proof, feedback states,
-keyboard/focus evidence, schema/validation evidence, and product-boundary
-flags. Contract-only or architecture-only proof is insufficient.
+The gate must inspect playable rendered output, screenshot proof, feedback
+states, keyboard/focus evidence, separate usability-agent evidence,
+schema/validation evidence, and product-boundary flags. Contract-only,
+architecture-only, or static-gallery-only proof is insufficient.
 
 This packet does not authorize generated lesson output, source-data mutation,
 engine implementation, product-route adoption, target-equivalent completion
@@ -21,17 +23,21 @@ language, diagnostics, adaptive routing, mastery, sequencing, student-facing
 AI, summative use, PV projection, PV machine promotion, Scale Gate 1, or
 student/product use.
 
-Remote evidence prerequisite: this review packet, live-output evidence,
-screenshots, pre-gate lead-review artifacts, sprint plan/baseline, task-family
-contracts, proof JSON, rendered fixtures, checker, and cited evidence must be
-committed and pushed to the normal remote branch before human review starts.
-The gate closure must record the reviewed remote commit/hash.
+Remote evidence prerequisite: this review packet, playable lab, live-output
+evidence, screenshots, pre-gate lead-review artifacts, usability-agent
+artifacts, sprint plan/baseline, task-family contracts, proof JSON, rendered
+fixtures, checker, and cited evidence must be committed and pushed to the
+normal remote branch before human review comments start. The gate closure must
+record the reviewed remote commit/hash.
 
 ## Evidence Base
 
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshot-manifest.md`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html`
@@ -48,12 +54,21 @@ The gate closure must record the reviewed remote commit/hash.
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-dark-mode.png`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-states.png`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-detail.png`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-initial.png`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-completed.png`
+- `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png`
 - `reports/sprints/GATE-TASK-FAMILY-1-plan.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-baseline.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-corrections.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-lead-review-round2.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md`
 - `reports/sprints/TASK-FAMILY-CHOICE-1-contract.md`
 - `reports/sprints/TASK-FAMILY-CONSTRUCT-1-contract.md`
 - `reports/json/task-family-choice-contract.json`
@@ -84,17 +99,28 @@ The gate closure must record the reviewed remote commit/hash.
 |---|---|---|
 | structured choice contracts | `cloze_text`, `multi_select`, `matching_pairs`, `step_ordering`, `two_tier_choice`, `assertion_reason` are implemented | decide whether they are acceptable shared-shell planning input |
 | construction contracts | `cloze_tile_select`, `sentence_builder`, `formula_builder`, `source_value_selection`, `source_chain_builder`, `label_placement` are implemented | decide whether they support constrained construction without becoming shallow quiz variety |
-| rendered output | consolidated gallery and screenshots exist | decide whether the rendered interactions are inspectable enough before adoption planning |
+| playable rendered output | playable lab, proof JSON, screenshots, and static gallery exist | decide whether the interactions are actually testable enough before adoption planning |
 | feedback | practice-only feedback exists for supported partial-feedback families | decide whether feedback remains non-diagnostic and non-mastery |
-| keyboard/focus | `focusPlan` coverage exists per family | decide whether focus evidence is sufficient as planning input |
+| keyboard/focus | `focusPlan` coverage exists per family plus playable next-action/focus proof | decide whether focus evidence is sufficient as planning input |
+| usability-agent evidence | separate agents tested whether completion was understandable without hidden answer lookup | decide whether remaining trial-and-error risks are flags or blockers |
 | target-proof boundary | all sprints carried no target-equivalent reliance | preserve separate target-operation and exit-ticket proof gates |
 | old exit-ticket archive | tracked as historical reference and unchanged by task-family sprints | preserve archive-only status |
 | authority | review only | decide later planning authority, not adoption or product use |
 
-## Minimum Rendered Evidence Inspection
+## Minimum Playable Evidence Inspection
 
-Before answering binding review questions, inspect at minimum:
+Before writing binding review comments, inspect at minimum:
 
+- the playable lab
+  `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html`;
+- `playable-proof.json`, including `desktop-initial`,
+  `desktop-retry-feedback`, `desktop-next-action-focus`,
+  `desktop-completed`, and `mobile-dark-completed`;
+- desktop playable initial screenshot;
+- playable retry-feedback screenshot;
+- playable next-action/focus screenshot;
+- playable completed screenshot;
+- playable mobile/dark completed screenshot;
 - desktop/light screenshot overview;
 - construction-family screenshot;
 - targeted formula/source/label construction-detail screenshot;
@@ -107,9 +133,12 @@ Before answering binding review questions, inspect at minimum:
 - proof JSON for at least one choice family and one construction family;
 - focus-plan evidence for at least `step_ordering`, `matching_pairs`,
   `two_tier_choice`, `source_chain_builder`, and `label_placement`.
+- usability-agent round 1, correction, round 2, and analysis artifacts.
 
-If any screenshot or rendered artifact cannot be inspected, stop and record
-whether the gate needs fresh screenshot proof or a roadmap pause.
+If any playable artifact cannot be inspected, if the lab cannot reach `12 / 12`
+through visible controls, or if a tester needs hidden expected-state evidence
+to finish, stop and record whether the gate needs repair, fresh screenshot
+proof, or a roadmap pause.
 
 ## Calibration Questions
 
@@ -131,33 +160,38 @@ Before taking binding answers, confirm:
 
 If any answer is no, stop and revise the packet or route a governance pause.
 
-## Full Planned Review Questions
+## Full Planned Review Comment Prompts
 
-The human review must show this complete list before starting, then ask one
-question at a time.
+The human reviewer comments directly on this packet. The reviewer should use
+this complete list as comment prompts and may answer inline or in a separate
+review note. Do not run a one-question-at-a-time interview unless the reviewer
+explicitly asks for it or the returned comments contain ambiguous/conflicting
+authority.
 
 ### TASKFAM1-Q1: evidence baseline
 
 Is the evidence baseline sufficient: contracts, implementation results, proof
-JSON, rendered fixtures, screenshot proof, focused tests, checker, and
-pre-gate lead review are available for review?
+JSON, playable lab, playable proof, rendered fixtures, screenshot proof,
+usability-agent evidence, focused tests, checker, and pre-gate lead review are
+available for review?
 
 Options:
 - Yes, accept the evidence baseline.
-- Add more rendered/screenshot evidence before review decisions.
+- Add more playable/rendered/screenshot evidence before review decisions.
 - Hold until proof JSON or fixtures are repaired; name the missing evidence.
 - Open answer / other, with rationale.
 
-### TASKFAM1-Q2: rendered output quality
+### TASKFAM1-Q2: playable output quality
 
-Does the rendered output look coherent enough for later bounded adoption
-planning, while still requiring product-route screenshots during adoption
+Does the playable lab prove that a reviewer can test the task families through
+visible controls to retry, next-action, focus handoff, and `12 / 12`
+completion, while still requiring product-route screenshots during adoption
 sprints?
 
 Options:
-- Yes, accept rendered output as planning input.
+- Yes, accept playable rendered output as planning input.
 - Accept only after named visual or layout corrections.
-- Hold; rendered output is too inconsistent for adoption planning.
+- Hold; playable output still requires hidden expected-state lookup or too much trial-and-error.
 - Open answer / other, with rationale.
 
 ### TASKFAM1-Q3: structured choice families
@@ -199,8 +233,8 @@ Options:
 ### TASKFAM1-Q6: keyboard and focus evidence
 
 Is the keyboard/focus evidence sufficient as planning input for later
-adoption, with product-route adoption still requiring rendered accessibility
-proof in context?
+adoption, including the playable next-action/focus proof, with product-route
+adoption still requiring rendered accessibility proof in context?
 
 Options:
 - Yes, accept focus-plan evidence as planning input.
@@ -280,23 +314,32 @@ Options:
 - Hold; authority cannot be decided until product-route proof exists.
 - Open answer / other, with rationale.
 
-## Future Interview Protocol
+## Direct Review Comment Protocol
 
-- Show the full question list before starting.
-- Ask calibration questions before binding answers.
-- Ask one question at a time.
-- Record each answer before asking the next question.
-- Run pattern analysis after initial answers.
-- Ask targeted follow-ups for ambiguity or conflicting authority.
-- Draft a closure proposal only after evidence is complete.
+- Publish this packet and all cited evidence before asking for review.
+- The reviewer comments directly on the packet or returns a written review note.
+- The reviewer should see the calibration questions, comment prompts, evidence
+  links, and stop conditions in one packet.
+- After reviewer comments are returned, record a comment-resolution log.
+- Summarize accepted decisions, unresolved issues, and authority conflicts.
+- Ask targeted follow-up questions only for ambiguity or conflicting authority.
+- Draft a closure proposal only after evidence and comment resolution are
+  complete.
 - Require explicit human confirmation before writing a closure record or
   authorizing downstream scope.
+- Use an interactive interview only if the reviewer explicitly requests one or
+  if direct comments leave an ambiguity that cannot be resolved from the packet.
 
 ## Current Stop Conditions
 
 - Stop if the packet/evidence has not been pushed before review.
-- Stop if pre-gate lead review has not passed before the human interview.
-- Stop if screenshots or rendered fixture evidence are unavailable.
+- Stop if pre-gate lead review has not passed before human review comments.
+- Stop if playable lab, playable proof, screenshots, rendered fixture evidence,
+  or usability-agent evidence are unavailable.
+- Stop if the playable lab cannot reach `12 / 12` through visible controls.
+- Stop if a reviewer or usability agent needs hidden expected-state evidence to
+  finish a task after the repair pass.
+- Stop if independent usability agents return unresolved REVISE/PAUSE findings.
 - Stop if any answer treats a task family as target-equivalent proof by
   default.
 - Stop if any answer authorizes generated lesson output, source-data mutation,
@@ -314,7 +357,8 @@ Options:
 ## Recommended Next Action
 
 Verify the pre-gate lead review PASS WITH FLAGS, commit and push this packet,
-screenshot proof, and cited evidence to the normal remote branch, then run the
-GATE-TASK-FAMILY-1 human interview before any downstream task-family reliance,
-generated lesson output, target-equivalent exit-ticket reliance, Scale Gate 1
-reliance, or product-facing exposure.
+screenshot proof, playable proof, usability-agent evidence, and cited evidence
+to the normal remote branch, then send the packet for direct human review
+comments before any downstream task-family reliance, generated lesson output,
+target-equivalent exit-ticket reliance, Scale Gate 1 reliance, or
+product-facing exposure.

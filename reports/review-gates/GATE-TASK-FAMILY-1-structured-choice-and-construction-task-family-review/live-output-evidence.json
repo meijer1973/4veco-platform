@@ -3,7 +3,7 @@
   "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
   "sprint_id": "GATE-TASK-FAMILY-1",
   "generated": "2026-06-02",
-  "status": "rendered_fixture_and_screenshot_proof_ready_after_lead_review",
+  "status": "playable_proof_ready_after_usability_agent_repair_and_recheck",
   "rendered_gallery": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html",
   "screenshot_support_pages": [
     "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html",
@@ -60,6 +60,26 @@
     {
       "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-detail.png",
       "purpose": "visible practice-only feedback cards and repair cues"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-initial.png",
+      "purpose": "playable lab initial state"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png",
+      "purpose": "playable retry feedback"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png",
+      "purpose": "playable next action and focus handoff"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-completed.png",
+      "purpose": "desktop playable completion"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png",
+      "purpose": "mobile dark playable completion"
     }
   ],
   "proof_inputs": {
@@ -110,5 +130,26 @@
     "pv_machine_promotion": false,
     "scale_gate_1": false,
     "student_product_use": false
+  },
+  "playable_lab": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html",
+  "playable_data": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json",
+  "playable_proof": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json",
+  "usability_agent_evidence": {
+    "round1": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
+    "corrections": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
+    "round2": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
+    "analysis": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md",
+    "final_status": "ready_for_direct_comment_human_review",
+    "carried_flags": [
+      "compact sequence repair controls remain visually terse and need route-adoption accessibility proof"
+    ]
+  },
+  "playable_proof_summary": {
+    "required_task_count": 12,
+    "desktop_completed_matched_count": 12,
+    "mobile_dark_completed_matched_count": 12,
+    "retry_state_proved": true,
+    "next_action_focus_proved": true,
+    "hidden_expected_state_lookup_required_after_repair": false
   }
 }

@@ -15,6 +15,9 @@ Support pages:
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-gallery.html`
 - `reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-controls-gallery.html`
 
+Playable lab:
+`reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html`
+
 ## Screenshots
 
 | File | Viewport/state | Review purpose |
@@ -27,11 +30,16 @@ Support pages:
 | `screenshots/gate-task-family1-dark-mode.png` | desktop, dark review section | Shows dark-mode review surface and embedded dark/narrow source fixture |
 | `screenshots/gate-task-family1-feedback-states.png` | desktop, feedback overview | Shows feedback-state support page orientation |
 | `screenshots/gate-task-family1-feedback-detail.png` | desktop, feedback detail | Shows visible practice-only feedback cards and repair cues |
+| `screenshots/gate-task-family1-playable-initial.png` | desktop, playable lab initial | Shows all twelve playable task cards with visible check controls |
+| `screenshots/gate-task-family1-playable-retry-feedback.png` | desktop, playable retry | Shows an empty submission producing retry feedback |
+| `screenshots/gate-task-family1-playable-next-action-focus.png` | desktop, playable next action | Shows correct feedback, visible `Ga naar volgende taak`, and focus handoff to the next task |
+| `screenshots/gate-task-family1-playable-completed.png` | desktop, playable completed | Shows desktop correct path reaching `12 / 12` |
+| `screenshots/gate-task-family1-playable-mobile-dark-completed.png` | mobile/narrow, dark, playable completed | Shows mobile/dark correct path reaching `12 / 12` |
 
 ## Interpretation
 
-These screenshots prove that the rendered fixture evidence is inspectable for
-the human reviewer. They do not prove product-route adoption and do not
-authorize generated lesson output, target-equivalent completion language,
-diagnostics, adaptive routing, mastery, sequencing, summative use, PV, Scale
-Gate 1, or student/product use.
+These screenshots prove that the review-only playable lab and rendered fixture
+evidence are inspectable for the human reviewer. They do not prove
+product-route adoption and do not authorize generated lesson output,
+target-equivalent completion language, diagnostics, adaptive routing, mastery,
+sequencing, summative use, PV, Scale Gate 1, or student/product use.

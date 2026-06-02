@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T08:03:16.482Z
+Generated: 2026-06-02T10:38:50.376Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2821
+Files indexed: 2852
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 364
+Count: 366
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -414,7 +414,9 @@ Count: 364
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
+- build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
@@ -540,7 +542,7 @@ Count: 42
 
 ## validators
 
-Count: 196
+Count: 197
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -633,6 +635,7 @@ Count: 196
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
@@ -741,7 +744,7 @@ Count: 196
 
 ## references
 
-Count: 428
+Count: 429
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -859,6 +862,7 @@ Count: 428
 - references/data/sprints/GATE-ENGINE-1.result.json
 - references/data/sprints/GATE-L1.7B-Q2.plan.json
 - references/data/sprints/GATE-L1.7B-Q2.result.json
+- references/data/sprints/GATE-TASK-FAMILY-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
@@ -1174,7 +1178,7 @@ Count: 428
 
 ## reports
 
-Count: 1601
+Count: 1629
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1806,6 +1810,28 @@ Count: 1601
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.md
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-dark-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-feedback-detail-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-feedback-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-controls-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-gallery.html
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.json
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshot-manifest.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-construction-detail.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-construction-overview.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-dark-mode.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-desktop-overview.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-detail.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-states.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-controls.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-narrow.png
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2093,6 +2119,12 @@ Count: 1601
 - reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md
 - reports/sprints/GATE-L1.7B-Q2-plan.md
 - reports/sprints/GATE-L1.7B-Q2-result.md
+- reports/sprints/GATE-TASK-FAMILY-1-baseline.md
+- reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md
+- reports/sprints/GATE-TASK-FAMILY-1-lead-review-corrections.md
+- reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md
+- reports/sprints/GATE-TASK-FAMILY-1-lead-review-round2.md
+- reports/sprints/GATE-TASK-FAMILY-1-plan.md
 - reports/sprints/GRAPH-REFINE-1-baseline.md
 - reports/sprints/GRAPH-REFINE-1-diff-summary.md
 - reports/sprints/GRAPH-REFINE-1-gate-handoff.md

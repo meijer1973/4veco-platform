@@ -2,7 +2,7 @@
   "schema_version": 1,
   "sprint_id": "GATE-TASK-FAMILY-1",
   "name": "Structured Choice And Construction Task-Family Review",
-  "status": "planned_active_pre_human_gate_packet",
+  "status": "direct_comment_review_packet_preparation_after_playable_repair",
   "created": "2026-06-02",
   "plan": "reports/sprints/GATE-TASK-FAMILY-1-plan.md",
   "baseline": "reports/sprints/GATE-TASK-FAMILY-1-baseline.md",
@@ -35,6 +35,8 @@
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/GATE-TASK-FAMILY-1-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js GATE-TASK-FAMILY-1",
     "node build-scripts/review-gates/emit-gate-task-family1-gallery.js",
+    "node build-scripts/review-gates/emit-gate-task-family1-playable-lab.js",
+    "node build-scripts/review-gates/capture-gate-task-family1-playable-proof.js",
     "node build-scripts/review-gates/check-gate-task-family1-review-packet.js",
     "npx.cmd jest --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
     "node build-scripts/sprints/check-task-family-cloze-tile1.js",
@@ -77,5 +79,15 @@
     "pv_machine_promotion": false,
     "scale_gate_1": false,
     "student_product_use": false
-  }
+  },
+  "human_review_mode": "direct_packet_comments",
+  "human_review_comments_started": false,
+  "playable_proof_required": true,
+  "usability_agent_review_required": true,
+  "usability_agent_artifacts": [
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md"
+  ]
 }
