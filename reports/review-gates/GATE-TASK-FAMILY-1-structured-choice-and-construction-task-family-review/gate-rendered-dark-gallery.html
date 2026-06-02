@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GATE-TASK-FAMILY-1 rendered task-family proof</title>
+  <link rel="stylesheet" href="../../../engines/task-shell.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --gate-bg: #f5f7fa;
+      --gate-panel: #ffffff;
+      --gate-text: #172033;
+      --gate-muted: #59677a;
+      --gate-line: #d7e0ea;
+      --gate-accent: #176c67;
+      --gate-warn: #9f5a1b;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --gate-bg: #0f1722;
+      --gate-panel: #182333;
+      --gate-text: #edf4fb;
+      --gate-muted: #b7c4d2;
+      --gate-line: #31445a;
+      --gate-accent: #65c7bb;
+      --gate-warn: #f0a765;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--gate-bg);
+      color: var(--gate-text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+    .gate-hero, .gate-section, section {
+      background: var(--gate-panel);
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 1.08;
+      overflow-wrap: anywhere;
+    }
+    h2 { font-size: clamp(1.2rem, 3vw, 1.55rem); }
+    h3 { font-size: 1rem; }
+    p { color: var(--gate-muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid var(--gate-line);
+      border-radius: 999px;
+      color: var(--gate-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .warning {
+      border-left: 4px solid var(--gate-warn);
+      padding: 12px 14px;
+      background: color-mix(in srgb, var(--gate-warn) 10%, var(--gate-panel));
+      color: var(--gate-text);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .family-card {
+      overflow: hidden;
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      background: var(--gate-bg);
+    }
+    .family-head {
+      padding: 14px;
+      border-bottom: 1px solid var(--gate-line);
+      background: var(--gate-panel);
+    }
+    .family-head p { margin: 5px 0 0; }
+    .family-id {
+      margin: 0;
+      color: var(--gate-accent);
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+    .family-head a {
+      display: inline-flex;
+      margin-top: 8px;
+      color: var(--gate-accent);
+      font-weight: 800;
+    }
+    .embedded-fixture {
+      max-height: 560px;
+      overflow: auto;
+      padding: 12px;
+      background: var(--gate-bg);
+    }
+    .embedded-fixture .fixture-shell,
+    .embedded-fixture .ts-shell,
+    .embedded-fixture main {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .embedded-fixture section {
+      box-shadow: none;
+      margin: 0 0 12px;
+    }
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+      padding: 0;
+      list-style: none;
+    }
+    .focus-list li {
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      padding: 10px;
+      color: var(--gate-muted);
+      background: var(--gate-bg);
+    }
+    @media (max-width: 720px) {
+      main { width: min(680px, calc(100% - 18px)); padding-top: 14px; }
+      .gate-hero, .gate-section, section { padding: 14px; }
+      .grid, .focus-list { grid-template-columns: 1fr; }
+      .embedded-fixture { max-height: 620px; }
+    }
+    [data-mobile-proof] main {
+      width: min(360px, calc(100% - 16px));
+      padding-top: 12px;
+    }
+    [data-mobile-proof] .gate-hero,
+    [data-mobile-proof] .gate-section,
+    [data-mobile-proof] section {
+      padding: 12px;
+    }
+    [data-mobile-proof] .grid,
+    [data-mobile-proof] .focus-list {
+      grid-template-columns: 1fr;
+    }
+    [data-mobile-proof] h1 {
+      font-size: 1.35rem;
+    }
+    [data-mobile-proof] .meta {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    [data-mobile-proof] .embedded-fixture {
+      max-height: 620px;
+    }
+    [data-controls-proof] #review-boundary,
+    [data-feedback-proof] #review-boundary {
+      display: none;
+    }
+    [data-controls-proof] .gate-hero {
+      margin-bottom: 10px;
+    }
+    [data-controls-proof] .family-head p,
+    [data-controls-proof] .family-head a {
+      display: none;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-task > *:not(.ts-feedback),
+    [data-feedback-proof] .embedded-fixture .ts-task > .ts-feedback:empty {
+      display: none;
+    }
+    [data-feedback-proof] .family-head p,
+    [data-feedback-proof] .family-head a,
+    [data-feedback-proof] .embedded-fixture .ts-shell-head,
+    [data-feedback-proof] .embedded-fixture section:not(:has(.ts-feedback-card)),
+    [data-feedback-proof] .embedded-fixture .ts-task:not(:has(.ts-feedback-card)) {
+      display: none;
+    }
+    [data-feedback-proof] .embedded-fixture {
+      max-height: 700px;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-feedback {
+      margin-top: 0;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-feedback:empty::before {
+      content: "No rendered feedback card in this fixture state.";
+      display: block;
+      color: var(--gate-muted);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <main>
+    <header class="gate-hero">
+      <h1>GATE-TASK-FAMILY-1 dark-mode proof</h1>
+      <p>Dark-mode screenshot support page for the human reviewer.</p>
+      <div class="meta">
+        <span class="pill">review-only</span>
+        <span class="pill">no generated lesson output</span>
+        <span class="pill">no product authority</span>
+        <span class="pill">target-proof boundary held</span>
+      </div>
+    </header>
+
+    <section id="review-boundary" class="gate-section">
+      <h2>Review boundary</h2>
+      <p class="warning">These families may support later practice or check designs only after separate bounded adoption planning. They do not by themselves prove target-equivalent readiness, diagnostics, mastery, sequencing, summative status, or Scale Gate 1 readiness.</p>
+    </section>
+
+    
+  <section id="dark-surface" class="gate-section" data-theme="dark">
+    <h2>Dark-mode review surface</h2>
+    <p>This support page uses the gate fixture dark-mode variables and embeds the dark/narrow source fixture plus assertion-reason dark-state evidence.</p>
+    <p class="warning">Dark mode must remain readable, but this gate still does not authorize product-route adoption.</p>
+    <div class="grid">
+      
+    <article class="family-card" data-family="assertion_reason">
+      <header class="family-head">
+        <p class="family-id">assertion_reason</p>
+        <h3>Assertion and reason relation</h3>
+        <p>Sparse reviewed relation judgement, not generic quiz variety.</p>
+        <a href="../../sprints/TASK-FAMILY-ASSERTION-1-rendered-fixture.html">Open validated fixture</a>
+      </header>
+      <div class="embedded-fixture">
+        <main class="fixture-shell">
+    <section id="standard" data-fixture-viewport="standard" data-fixture-theme="light">
+      <article class="ts-task" data-task="assertion-price-demand" data-task-family="assertion_reason">
+        <div class="ts-task-meta">
+          <span>Taak 1</span>
+          <span>Stelling en reden beoordelen</span>
+          <span>Stelling en reden beoordelen</span>
+        </div>
+        <h2>Kies de juiste relatie tussen stelling en reden.</h2>
+        <div class="ts-assertion" data-assertion-task="assertion-price-demand">
+          <div class="ts-assertion-panel">
+            <div class="ts-assertion-card">
+              <strong class="ts-assertion-label">Stelling</strong>
+              <p class="ts-assertion-text">Als de prijs stijgt, daalt de gevraagde hoeveelheid.</p>
+            </div>
+            <div class="ts-assertion-card">
+              <strong class="ts-assertion-label">Reden</strong>
+              <p class="ts-assertion-text">Bij een hogere prijs kopen consumenten meestal minder.</p>
+            </div>
+          </div>
+          <div class="ts-assertion-options" role="group" aria-label="Kies de juiste relatie">
+            <strong class="ts-assertion-group-label">Kies de juiste relatie</strong>
+            <button type="button" class="ts-assertion-option" aria-pressed="false" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-explains">
+              <span class="ts-assertion-mark" aria-hidden="true"></span>
+              <span class="ts-assertion-option-body">
+                <strong>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</strong>
+                <span>De reden legt uit waarom de gevraagde hoeveelheid daalt.</span>
+              </span>
+            </button>
+            <button type="button" class="ts-assertion-option" aria-pressed="false" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-no-explain">
+              <span class="ts-assertion-mark" aria-hidden="true"></span>
+              <span class="ts-assertion-option-body">
+                <strong>Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.</strong>
+                <span>Gebruik dit alleen wanneer de reden losstaat van de stelling.</span>
+              </span>
+            </button>
+          </div>
+          <div class="ts-assertion-summary" tabindex="0" data-task-id="assertion-price-demand" data-assertion-summary aria-label="Gekozen relatie">
+            <span>Relatie: nog niet gekozen</span>
+          </div>
+        </div>
+        <div class="ts-feedback" data-feedback-for="assertion-price-demand" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>
+      </article>
+    </section>
+
+    <section id="narrow" data-fixture-viewport="narrow" data-fixture-theme="light">
+      <p>Fixture proof: the assertion and reason cards collapse to one column in narrow viewport CSS.</p>
+    </section>
+
+    <section id="dark" data-fixture-viewport="standard" data-fixture-theme="dark">
+      <p>Fixture proof: assertion cards, option buttons, selected state, and feedback use theme variables and remain readable in dark mode.</p>
+    </section>
+
+    <section id="after-click" data-fixture-state="after-click">
+      <div class="ts-assertion" data-assertion-task="assertion-price-demand">
+        <button type="button" class="ts-assertion-option selected" aria-pressed="true" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-explains">
+          <span class="ts-assertion-mark" aria-hidden="true"></span>
+          <span class="ts-assertion-option-body">
+            <strong>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</strong>
+            <span>De gekozen relatie is zichtbaar geselecteerd.</span>
+          </span>
+        </button>
+        <div class="ts-assertion-summary" tabindex="0" data-task-id="assertion-price-demand" data-assertion-summary aria-label="Gekozen relatie">Relatie: Stelling en reden zijn juist, en de reden ondersteunt de stelling.</div>
+      </div>
+    </section>
+
+    <section id="feedback" data-fixture-state="feedback">
+      <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+        <strong>Controleer de relatie</strong>
+        <p>Kijk of de gekozen relatie de stelling en reden goed verbindt.</p>
+        <div class="ts-assertion-feedback" aria-label="Aanwijzingen bij stelling en reden">
+          <div class="ts-assertion-feedback-row">
+            <strong>Gekozen relatie</strong>
+            <span>Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.</span>
+            <em>kijk dit na</em>
+          </div>
+          <div class="ts-assertion-feedback-row">
+            <strong>Verwachte relatie</strong>
+            <span>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</span>
+            <em>vergelijk</em>
+          </div>
+          <p>Controleer of de gekozen relatie klopt bij stelling en reden.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+      </div>
+    </article>
+
+    <article class="family-card" data-family="source_value_selection / source_chain_builder">
+      <header class="family-head">
+        <p class="family-id">source_value_selection / source_chain_builder</p>
+        <h3>Source value and chain builder</h3>
+        <p>Choose values, roles, and source-to-answer chain elements.</p>
+        <a href="../../sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.html">Open validated fixture</a>
+      </header>
+      <div class="embedded-fixture">
+        <main class="ts-shell" data-task-shell="TASK-FAMILY-SOURCE-1">
+    <article class="ts-task" data-task="source-values-procent" data-task-family="source_value_selection">
+      <div class="ts-task-meta">
+        <span>Taak 1</span>
+        <span>Bronwaarden kiezen</span>
+        <span>Bronwaarden kiezen</span>
+      </div>
+      <h2>Welke bronwaarden gebruik je voor de procentuele verandering?</h2>
+      <div class="ts-source-values" data-source-value-task="source-values-procent">
+        <div class="ts-source-value-bank" role="group" aria-label="Bronwaarden">
+          <div class="ts-source-value-card is-selected" data-task-id="source-values-procent" data-source-value-card="oud">
+            <button type="button" class="ts-source-value selected" data-task-id="source-values-procent" data-source-value-id="oud" aria-pressed="true">
+              <span class="ts-source-value-label">EUR 800</span>
+              <span class="ts-source-value-meta"><span>oude prijs</span><span>jaar 1</span><span>euro</span></span>
+            </button>
+            <label class="ts-source-role">
+              <span>Rol</span>
+              <select data-task-id="source-values-procent" data-source-role-value-id="oud" aria-label="Rol voor EUR 800">
+                <option value="">Kies rol</option>
+                <option value="old" selected>oude waarde</option>
+                <option value="new">nieuwe waarde</option>
+              </select>
+            </label>
+          </div>
+          <div class="ts-source-value-card" data-task-id="source-values-procent" data-source-value-card="btw">
+            <button type="button" class="ts-source-value" data-task-id="source-values-procent" data-source-value-id="btw" aria-pressed="false">
+              <span class="ts-source-value-label">21%</span>
+            </button>
+            <label class="ts-source-role">
+              <span>Rol</span>
+              <select data-task-id="source-values-procent" data-source-role-value-id="btw" aria-label="Rol voor 21%">
+                <option value="">Kies rol</option>
+                <option value="old">oude waarde</option>
+                <option value="new">nieuwe waarde</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="ts-feedback" data-feedback-for="source-values-procent" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">
+        <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+          <strong>Controleer je bronwaarden</strong>
+          <p>Kies alleen de waarden die nodig zijn voor deze berekening.</p>
+          <div class="ts-source-value-feedback" aria-label="Aanwijzingen bij je bronwaarden">
+            <div class="ts-selection-feedback-group"><strong>Rol controleren</strong><ul><li>EUR 800: verwacht oude waarde, gekozen nieuwe waarde</li></ul></div>
+            <div class="ts-selection-feedback-group"><strong>Niet nodig gekozen</strong><ul><li>21%</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="ts-task" data-task="source-chain-procent" data-task-family="source_chain_builder">
+      <div class="ts-task-meta">
+        <span>Taak 2</span>
+        <span>Bronketen bouwen</span>
+        <span>Bronketen bouwen</span>
+      </div>
+      <h2>Bouw de bronketen voor deze procentuele verandering.</h2>
+      <div class="ts-source-chain" data-source-chain-task="source-chain-procent" data-separator=" -&gt; ">
+        <div class="ts-source-chain-sequence" role="list" tabindex="0" data-task-id="source-chain-procent" data-source-chain-sequence aria-label="Opgebouwde bronketen">
+          <span class="ts-source-chain-item" role="listitem" data-task-id="source-chain-procent" data-source-selected-node-id="bron" data-source-selected-node-role="source" tabindex="-1">
+            <span class="ts-source-chain-item-label">Lees de prijstabel</span>
+          </span>
+        </div>
+        <div class="ts-source-node-bank" role="group" aria-label="Bronketen onderdelen">
+          <button type="button" class="ts-source-node" data-task-id="source-chain-procent" data-source-node-id="deel-door-nieuw" data-source-node-role="operation" aria-pressed="false">
+            <span class="ts-source-node-label">Deel door 920</span>
+            <span class="ts-source-node-role">bewerking</span>
+          </button>
+        </div>
+        <button type="button" class="ts-source-chain-clear" data-task-id="source-chain-procent" data-source-chain-clear aria-label="Opgebouwde bronketen leegmaken">Leegmaken</button>
+      </div>
+      <div class="ts-feedback" data-feedback-for="source-chain-procent" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1">
+        <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+          <strong>Controleer de bronketen</strong>
+          <p>Begin bij de bron en eindig met de conclusie.</p>
+          <div class="ts-source-chain-feedback" aria-label="Aanwijzingen bij je bronketen">
+            <div class="ts-order-feedback-first">
+              <strong>Eerste onderdeel om te controleren</strong>
+              <p>Verwacht: (920 - 800) / 800 x 100%. Gekozen: Deel door 920.</p>
+            </div>
+            <div class="ts-selection-feedback-group"><strong>Ontbrekend type onderdeel</strong><ul><li>antwoord</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+      </div>
+    </article>
+
+    <article class="family-card" data-family="label_placement">
+      <header class="family-head">
+        <p class="family-id">label_placement</p>
+        <h3>Label placement</h3>
+        <p>Place graph/formula/source labels on visible targets.</p>
+        <a href="../../sprints/TASK-FAMILY-LABEL-1-rendered-fixture.html">Open validated fixture</a>
+      </header>
+      <div class="embedded-fixture">
+        <main class="ts-shell" data-fixture-source="TaskShellUI.renderTask">
+    <section class="ts-task" data-task-id="label-placement-axis" data-task-family="label_placement" data-fixture-viewport="standard" data-fixture-theme="light">
+      <div class="ts-task-meta"><span>Labels plaatsen</span><span>Grafieklabels plaatsen</span></div>
+      <h2>Welke labels horen bij de assen van deze grafiek?</h2>
+      <p class="ts-purpose">Plaats labels bij de juiste onderdelen van een grafiek.</p>
+      <div class="ts-label-placement" data-task-id="label-placement-axis">
+        <div class="ts-label-bank" role="group" aria-label="Labelbank">
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="prijs" aria-pressed="false" aria-label="Prijs: De prijs hoort op de verticale as.">
+            <span class="ts-label-token-label">Prijs</span>
+            <span class="ts-label-token-description">De prijs hoort op de verticale as.</span>
+          </button>
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="hoeveelheid" aria-pressed="false" aria-label="Hoeveelheid: De hoeveelheid hoort op de horizontale as.">
+            <span class="ts-label-token-label">Hoeveelheid</span>
+            <span class="ts-label-token-description">De hoeveelheid hoort op de horizontale as.</span>
+          </button>
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="omzet" aria-pressed="false" aria-label="Omzet: Omzet is hier een afleider.">
+            <span class="ts-label-token-label">Omzet</span>
+            <span class="ts-label-token-description">Omzet is hier een afleider.</span>
+          </button>
+        </div>
+        <div class="ts-label-visual">
+          <div class="ts-label-visual-head">
+            <strong>Prijs-hoeveelheidgrafiek</strong>
+            <span>Een assenstelsel met prijs op de verticale as en hoeveelheid op de horizontale as.</span>
+          </div>
+          <div class="ts-label-target-region" role="group" aria-label="Grafiekvlak">
+            <span class="ts-label-visual-axis ts-label-visual-axis-x" aria-hidden="true"></span>
+            <span class="ts-label-visual-axis ts-label-visual-axis-y" aria-hidden="true"></span>
+            <span class="ts-label-visual-line" aria-hidden="true"></span>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="y-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:14%;top:26%;" aria-label="Verticale as: Plaats hier het prijslabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Verticale as</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="x-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:72%;top:84%;" aria-label="Horizontale as: Plaats hier het hoeveelheidlabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Horizontale as</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="caption" data-label-target-role="structure_part" data-label-assigned-label-id="" style="left:78%;top:16%;" aria-label="Bijschrift: Dit is geen aslabel.">
+              <span class="ts-label-target-dot" aria-hidden="true"></span>
+              <span class="ts-label-target-label">Bijschrift</span>
+              <span class="ts-label-target-assigned"></span>
+            </button>
+          </div>
+        </div>
+        <div class="ts-label-placement-summary" data-task-id="label-placement-axis" data-label-placement-summary role="list" aria-label="Geplaatste labels">
+          <span class="ts-label-placeholder">Kies een label en daarna een plek.</span>
+        </div>
+        <button type="button" class="ts-label-clear">Wis labels</button>
+      </div>
+    </section>
+
+    <section class="ts-task" data-task-id="label-placement-axis" data-task-family="label_placement" data-fixture-viewport="narrow" data-fixture-theme="dark" data-fixture-state="after-click">
+      <div class="ts-label-placement">
+        <div class="ts-label-placement-summary" data-task-id="label-placement-axis" data-label-placement-summary role="list" aria-label="Geplaatste labels">
+          <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="prijs" data-label-placed-target-id="y-as" tabindex="-1">
+            <span class="ts-label-placement-label">Prijs</span>
+            <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
+            <span class="ts-label-placement-target">Verticale as</span>
+            <button type="button" class="ts-label-remove" aria-label="Verwijder label Prijs">x</button>
+          </span>
+          <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="hoeveelheid" data-label-placed-target-id="x-as" tabindex="-1">
+            <span class="ts-label-placement-label">Hoeveelheid</span>
+            <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
+            <span class="ts-label-placement-target">Horizontale as</span>
+            <button type="button" class="ts-label-remove" aria-label="Verwijder label Hoeveelheid">x</button>
+          </span>
+        </div>
+      </div>
+      <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+        <strong>Controleer de assen</strong>
+        <p>Prijs staat op de verticale as; hoeveelheid staat op de horizontale as.</p>
+        <div class="ts-label-feedback" aria-label="Aanwijzingen bij je labels">
+          <div class="ts-selection-feedback-group">
+            <strong>Label controleren</strong>
+            <ul><li>Prijs: verwacht Verticale as, gekozen Horizontale as</li></ul>
+          </div>
+          <div class="ts-selection-feedback-group">
+            <strong>Afleidend label gekozen</strong>
+            <ul><li>Omzet</li></ul>
+          </div>
+          <div class="ts-selection-feedback-group">
+            <strong>Afleidende plek gekozen</strong>
+            <ul><li>Bijschrift</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+      </div>
+    </article>
+    </div>
+  </section>
+
+    <section id="focus-proof" class="gate-section">
+      <h2>Focus and keyboard proof to review</h2>
+      <p>The checker requires focus-plan coverage for the task families below. The human reviewer should still inspect whether the visible controls make keyboard order understandable.</p>
+      <ul class="focus-list">
+        <li>tiles/blanks for cloze tile selection</li>
+        <li>tokens and sequence regions for sentence/formula/step/source-chain builders</li>
+        <li>left/right controls and pair summary for matching pairs</li>
+        <li>answer/reason controls and summary for two-tier choice</li>
+        <li>assertion relation controls and summary</li>
+        <li>label bank, visual targets, and placement summary</li>
+      </ul>
+    </section>
+
+    <section id="dark-surface" class="gate-section" data-theme="dark">
+      <h2>Dark-mode review surface</h2>
+      <p>This section uses the gate fixture dark-mode variables. Inspect alongside the embedded source fixture, which carries a dark/narrow state from the implementation sprint.</p>
+      <p class="warning">Dark mode must remain readable, but this gate still does not authorize product-route adoption.</p>
+    </section>
+  </main>
+</body>
+</html>

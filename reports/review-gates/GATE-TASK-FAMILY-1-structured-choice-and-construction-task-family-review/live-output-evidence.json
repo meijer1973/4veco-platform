@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
+  "sprint_id": "GATE-TASK-FAMILY-1",
+  "generated": "2026-06-02",
+  "status": "rendered_fixture_and_screenshot_proof_ready_after_lead_review",
+  "rendered_gallery": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html",
+  "screenshot_support_pages": [
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-feedback-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-feedback-detail-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-dark-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-gallery.html",
+    "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-controls-gallery.html"
+  ],
+  "families_reviewed": [
+    "cloze_text",
+    "multi_select",
+    "matching_pairs",
+    "step_ordering",
+    "two_tier_choice",
+    "assertion_reason",
+    "cloze_tile_select",
+    "sentence_builder",
+    "formula_builder",
+    "source_value_selection",
+    "source_chain_builder",
+    "label_placement"
+  ],
+  "screenshots": [
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-desktop-overview.png",
+      "purpose": "desktop light overview and structured-choice families"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-construction-overview.png",
+      "purpose": "construction-family overview"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-construction-detail.png",
+      "purpose": "formula, source-chain, and label-placement construction detail"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-narrow.png",
+      "purpose": "mobile/narrow reviewer layout proof"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-controls.png",
+      "purpose": "mobile/narrow task-control proof"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-dark-mode.png",
+      "purpose": "dark-mode review surface"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-states.png",
+      "purpose": "feedback-state overview"
+    },
+    {
+      "path": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-detail.png",
+      "purpose": "visible practice-only feedback cards and repair cues"
+    }
+  ],
+  "proof_inputs": {
+    "contracts": [
+      "reports/json/task-family-choice-contract.json",
+      "reports/json/task-family-construction-contract.json"
+    ],
+    "proof_json": [
+      "reports/json/task-family-cloze-tile1-proof.json",
+      "reports/json/task-family-sentence1-proof.json",
+      "reports/json/task-family-formula1-proof.json",
+      "reports/json/task-family-cloze1-proof.json",
+      "reports/json/task-family-multi1-proof.json",
+      "reports/json/task-family-order1-proof.json",
+      "reports/json/task-family-source1-proof.json",
+      "reports/json/task-family-label1-proof.json",
+      "reports/json/task-family-match1-proof.json",
+      "reports/json/task-family-two-tier1-proof.json",
+      "reports/json/task-family-assertion1-proof.json"
+    ],
+    "rendered_fixtures": [
+      "reports/sprints/TASK-FAMILY-CLOZE-TILE-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-SENTENCE-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-FORMULA-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-CLOZE-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-MULTI-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-ORDER-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-LABEL-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-TWO-TIER-1-rendered-fixture.html",
+      "reports/sprints/TASK-FAMILY-ASSERTION-1-rendered-fixture.html"
+    ]
+  },
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "engine_implementation": false,
+    "product_route_adoption": false,
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

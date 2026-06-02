@@ -56,6 +56,21 @@ function urlToRelativePath(url, owner, repo, branch) {
     .join('/');
 }
 
+function listGateArtifacts(gateDir, relativeRoot = '') {
+  const currentDir = path.join(gateDir, relativeRoot);
+  return fs
+    .readdirSync(currentDir, { withFileTypes: true })
+    .flatMap((entry) => {
+      const relativePath = relativeRoot
+        ? path.posix.join(relativeRoot.replace(/\\/g, '/'), entry.name)
+        : entry.name;
+      if (entry.isDirectory()) return listGateArtifacts(gateDir, relativePath);
+      if (entry.isFile()) return [relativePath];
+      return [];
+    })
+    .sort();
+}
+
 function check({ gateId, branch }) {
   const { owner, repo } = parseRepoFromPackageJson();
   const gateDirRel = path.posix.join('reports', 'review-gates', gateId);
@@ -69,11 +84,7 @@ function check({ gateId, branch }) {
     );
   }
 
-  const diskFiles = fs
-    .readdirSync(gateDirAbs, { withFileTypes: true })
-    .filter((entry) => entry.isFile())
-    .map((entry) => entry.name)
-    .sort();
+  const diskFiles = listGateArtifacts(gateDirAbs);
 
   const markdown = fs.readFileSync(bundlePath, 'utf8');
   const listedUrls = extractListedUrls(markdown);
@@ -91,10 +102,7 @@ function check({ gateId, branch }) {
       fail(`URL points outside gate directory: ${url}`);
     }
     const filename = rel.slice(expectedPrefix.length);
-    if (filename.includes('/')) {
-      fail(`URL points into a subdirectory (gate listing must be flat): ${url}`);
-    }
-    const abs = path.join(gateDirAbs, filename);
+    const abs = path.join(gateDirAbs, ...filename.split('/'));
     if (!fs.existsSync(abs)) {
       fail(`listed URL has no file on disk: ${url}`);
     }

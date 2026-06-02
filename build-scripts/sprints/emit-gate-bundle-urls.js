@@ -58,12 +58,21 @@ function parseArgs(argv) {
   return { gateId, branch };
 }
 
-function listGateArtifacts(gateDir) {
-  const entries = fs.readdirSync(gateDir, { withFileTypes: true });
-  return entries
-    .filter((entry) => entry.isFile())
-    .map((entry) => entry.name)
-    .sort();
+function listGateArtifacts(gateDir, relativeRoot = '') {
+  const currentDir = path.join(gateDir, relativeRoot);
+  const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const relativePath = relativeRoot
+      ? path.posix.join(relativeRoot.replace(/\\/g, '/'), entry.name)
+      : entry.name;
+    if (entry.isDirectory()) {
+      files.push(...listGateArtifacts(gateDir, relativePath));
+    } else if (entry.isFile()) {
+      files.push(relativePath);
+    }
+  }
+  return files.sort();
 }
 
 function emit(gateId, branch) {

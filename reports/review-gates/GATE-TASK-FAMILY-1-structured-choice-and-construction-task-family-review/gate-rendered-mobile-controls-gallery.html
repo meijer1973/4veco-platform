@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GATE-TASK-FAMILY-1 rendered task-family proof</title>
+  <link rel="stylesheet" href="../../../engines/task-shell.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --gate-bg: #f5f7fa;
+      --gate-panel: #ffffff;
+      --gate-text: #172033;
+      --gate-muted: #59677a;
+      --gate-line: #d7e0ea;
+      --gate-accent: #176c67;
+      --gate-warn: #9f5a1b;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --gate-bg: #0f1722;
+      --gate-panel: #182333;
+      --gate-text: #edf4fb;
+      --gate-muted: #b7c4d2;
+      --gate-line: #31445a;
+      --gate-accent: #65c7bb;
+      --gate-warn: #f0a765;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--gate-bg);
+      color: var(--gate-text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+    .gate-hero, .gate-section, section {
+      background: var(--gate-panel);
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 1.08;
+      overflow-wrap: anywhere;
+    }
+    h2 { font-size: clamp(1.2rem, 3vw, 1.55rem); }
+    h3 { font-size: 1rem; }
+    p { color: var(--gate-muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid var(--gate-line);
+      border-radius: 999px;
+      color: var(--gate-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .warning {
+      border-left: 4px solid var(--gate-warn);
+      padding: 12px 14px;
+      background: color-mix(in srgb, var(--gate-warn) 10%, var(--gate-panel));
+      color: var(--gate-text);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .family-card {
+      overflow: hidden;
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      background: var(--gate-bg);
+    }
+    .family-head {
+      padding: 14px;
+      border-bottom: 1px solid var(--gate-line);
+      background: var(--gate-panel);
+    }
+    .family-head p { margin: 5px 0 0; }
+    .family-id {
+      margin: 0;
+      color: var(--gate-accent);
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+    .family-head a {
+      display: inline-flex;
+      margin-top: 8px;
+      color: var(--gate-accent);
+      font-weight: 800;
+    }
+    .embedded-fixture {
+      max-height: 560px;
+      overflow: auto;
+      padding: 12px;
+      background: var(--gate-bg);
+    }
+    .embedded-fixture .fixture-shell,
+    .embedded-fixture .ts-shell,
+    .embedded-fixture main {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .embedded-fixture section {
+      box-shadow: none;
+      margin: 0 0 12px;
+    }
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+      padding: 0;
+      list-style: none;
+    }
+    .focus-list li {
+      border: 1px solid var(--gate-line);
+      border-radius: 8px;
+      padding: 10px;
+      color: var(--gate-muted);
+      background: var(--gate-bg);
+    }
+    @media (max-width: 720px) {
+      main { width: min(680px, calc(100% - 18px)); padding-top: 14px; }
+      .gate-hero, .gate-section, section { padding: 14px; }
+      .grid, .focus-list { grid-template-columns: 1fr; }
+      .embedded-fixture { max-height: 620px; }
+    }
+    [data-mobile-proof] main {
+      width: min(360px, calc(100% - 16px));
+      padding-top: 12px;
+    }
+    [data-mobile-proof] .gate-hero,
+    [data-mobile-proof] .gate-section,
+    [data-mobile-proof] section {
+      padding: 12px;
+    }
+    [data-mobile-proof] .grid,
+    [data-mobile-proof] .focus-list {
+      grid-template-columns: 1fr;
+    }
+    [data-mobile-proof] h1 {
+      font-size: 1.35rem;
+    }
+    [data-mobile-proof] .meta {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    [data-mobile-proof] .embedded-fixture {
+      max-height: 620px;
+    }
+    [data-controls-proof] #review-boundary,
+    [data-feedback-proof] #review-boundary {
+      display: none;
+    }
+    [data-controls-proof] .gate-hero {
+      margin-bottom: 10px;
+    }
+    [data-controls-proof] .family-head p,
+    [data-controls-proof] .family-head a {
+      display: none;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-task > *:not(.ts-feedback),
+    [data-feedback-proof] .embedded-fixture .ts-task > .ts-feedback:empty {
+      display: none;
+    }
+    [data-feedback-proof] .family-head p,
+    [data-feedback-proof] .family-head a,
+    [data-feedback-proof] .embedded-fixture .ts-shell-head,
+    [data-feedback-proof] .embedded-fixture section:not(:has(.ts-feedback-card)),
+    [data-feedback-proof] .embedded-fixture .ts-task:not(:has(.ts-feedback-card)) {
+      display: none;
+    }
+    [data-feedback-proof] .embedded-fixture {
+      max-height: 700px;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-feedback {
+      margin-top: 0;
+    }
+    [data-feedback-proof] .embedded-fixture .ts-feedback:empty::before {
+      content: "No rendered feedback card in this fixture state.";
+      display: block;
+      color: var(--gate-muted);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body data-mobile-proof="true" data-controls-proof="true">
+  <main>
+    <header class="gate-hero">
+      <h1>GATE-TASK-FAMILY-1 mobile controls proof</h1>
+      <p>Narrow-layout screenshot support page with actual task controls visible.</p>
+      <div class="meta">
+        <span class="pill">review-only</span>
+        <span class="pill">no generated lesson output</span>
+        <span class="pill">no product authority</span>
+        <span class="pill">target-proof boundary held</span>
+      </div>
+    </header>
+
+    <section id="review-boundary" class="gate-section">
+      <h2>Review boundary</h2>
+      <p class="warning">These families may support later practice or check designs only after separate bounded adoption planning. They do not by themselves prove target-equivalent readiness, diagnostics, mastery, sequencing, summative status, or Scale Gate 1 readiness.</p>
+    </section>
+
+    
+  <section id="mobile-controls">
+    <h2>Narrow viewport with visible controls</h2>
+    <div class="grid">
+      
+    <article class="family-card" data-family="cloze_text">
+      <header class="family-head">
+        <p class="family-id">cloze_text</p>
+        <h3>Typed inline blanks</h3>
+        <p>Bounded typed blanks for index, source-label, or reasoning statements.</p>
+        <a href="../../sprints/TASK-FAMILY-CLOZE-1-rendered-fixture.html">Open validated fixture</a>
+      </header>
+      <div class="embedded-fixture">
+        <article class="ts-task" data-task="cloze-text-indexpoints" data-task-family="cloze_text"><div class="ts-task-meta"><span>Taak 1</span><span>Indexpunten invullen</span><span>Invultekst</span></div><h2>Vul de indexpunten en basis in.</h2><p class="ts-purpose">Vul de ontbrekende waarden in een begrensde economische zin in.</p><div class="ts-cloze-typed" data-cloze-text-task="cloze-text-indexpoints"><p class="ts-cloze-text-line"><span class="ts-cloze-text-copy">De stijging is </span><label class="ts-cloze-text-slot"><span class="ts-cloze-text-label">Stijging in indexpunten</span><input class="ts-input ts-cloze-text-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="cloze-text-indexpoints" data-cloze-text-blank-id="indexpunten" data-cloze-text-label="Stijging in indexpunten" data-cloze-text-width="short" placeholder="bijv. 4" aria-label="Stijging in indexpunten"></label><span class="ts-cloze-text-copy"> indexpunten. Je deelt door </span><label class="ts-cloze-text-slot"><span class="ts-cloze-text-label">Oude index als basis</span><input class="ts-input ts-cloze-text-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="cloze-text-indexpoints" data-cloze-text-blank-id="basis" data-cloze-text-label="Oude index als basis" data-cloze-text-width="short" placeholder="bijv. 108" aria-label="Oude index als basis"></label><span class="ts-cloze-text-copy">, omdat </span><label class="ts-cloze-text-slot"><span class="ts-cloze-text-label">Waarom 108 de basis is</span><input class="ts-input ts-cloze-text-input" type="text" inputmode="text" autocomplete="off" data-task-id="cloze-text-indexpoints" data-cloze-text-blank-id="reden" data-cloze-text-label="Waarom 108 de basis is" data-cloze-text-width="wide" placeholder="oude index is de basis" aria-label="Waarom 108 de basis is"></label><span class="ts-cloze-text-copy">.</span></p></div><div class="ts-feedback" data-feedback-for="cloze-text-indexpoints" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div></article>
+      </div>
+    </article>
+
+    <article class="family-card" data-family="cloze_tile_select">
+      <header class="family-head">
+        <p class="family-id">cloze_tile_select</p>
+        <h3>Tile-select cloze</h3>
+        <p>Inline blanks filled from a controlled tile bank.</p>
+        <a href="../../sprints/TASK-FAMILY-CLOZE-TILE-1-rendered-fixture.html">Open validated fixture</a>
+      </header>
+      <div class="embedded-fixture">
+        <section class="ts-shell" data-task-shell="GAME-UX-3A">
+    <article class="ts-task" data-task="cloze-indexpunten" data-task-family="cloze_tile_select">
+      <div class="ts-task-meta">
+        <span>Taak 1</span>
+        <span>Indexpunten invullen</span>
+        <span>Invullen met tegels</span>
+      </div>
+      <h2>Maak de zin over indexpunten af.</h2>
+      <p class="ts-purpose">Vul een gecontroleerde indexzin aan met tegels.</p>
+      <div class="ts-cloze" data-cloze-task="cloze-indexpunten" data-allow-reuse="false">
+        <p class="ts-cloze-line">
+          <span class="ts-cloze-text">De stijging van 108 naar 112 is </span>
+          <span class="ts-cloze-slot">
+            <button type="button" class="ts-cloze-blank" data-task-id="cloze-indexpunten" data-cloze-blank-id="indexpunten" data-selected-tile="" data-cloze-label="Stijging in indexpunten" data-cloze-placeholder="Kies tegel" aria-label="Stijging in indexpunten: nog leeg"><span class="ts-cloze-blank-text">Kies tegel</span></button>
+            <button type="button" class="ts-cloze-clear" data-task-id="cloze-indexpunten" data-cloze-clear-id="indexpunten" aria-label="Stijging in indexpunten leegmaken" hidden>&times;</button>
+          </span>
+          <span class="ts-cloze-text"> indexpunten. De procentuele stijging deel je door </span>
+          <span class="ts-cloze-slot">
+            <button type="button" class="ts-cloze-blank" data-task-id="cloze-indexpunten" data-cloze-blank-id="basis" data-selected-tile="" data-cloze-label="Basis voor procentuele stijging" data-cloze-placeholder="Kies tegel" aria-label="Basis voor procentuele stijging: nog leeg"><span class="ts-cloze-blank-text">Kies tegel</span></button>
+            <button type="button" class="ts-cloze-clear" data-task-id="cloze-indexpunten" data-cloze-clear-id="basis" aria-label="Basis voor procentuele stijging leegmaken" hidden>&times;</button>
+          </span>
+          <span class="ts-cloze-text">.</span>
+        </p>
+        <div class="ts-cloze-bank" role="group" aria-label="Tegelbank">
+          <button type="button" class="ts-cloze-tile" data-task-id="cloze-indexpunten" data-cloze-tile-id="vier" aria-pressed="false"><span class="ts-cloze-tile-label">4</span></button>
+          <button type="button" class="ts-cloze-tile" data-task-id="cloze-indexpunten" data-cloze-tile-id="honderdacht" aria-pressed="false"><span class="ts-cloze-tile-label">108</span></button>
+          <button type="button" class="ts-cloze-tile" data-task-id="cloze-indexpunten" data-cloze-tile-id="vier-procent" aria-pressed="false"><span class="ts-cloze-tile-label">4%</span></button>
+          <button type="button" class="ts-cloze-tile" data-task-id="cloze-indexpunten" data-cloze-tile-id="honderd" aria-pressed="false"><span class="ts-cloze-tile-label">100</span></button>
+        </div>
+      </div>
+      <div class="ts-feedback" data-feedback-for="cloze-indexpunten" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>
+    </article>
+  </section>
+      </div>
+    </article>
+    </div>
+  </section>
+
+    <section id="focus-proof" class="gate-section">
+      <h2>Focus and keyboard proof to review</h2>
+      <p>The checker requires focus-plan coverage for the task families below. The human reviewer should still inspect whether the visible controls make keyboard order understandable.</p>
+      <ul class="focus-list">
+        <li>tiles/blanks for cloze tile selection</li>
+        <li>tokens and sequence regions for sentence/formula/step/source-chain builders</li>
+        <li>left/right controls and pair summary for matching pairs</li>
+        <li>answer/reason controls and summary for two-tier choice</li>
+        <li>assertion relation controls and summary</li>
+        <li>label bank, visual targets, and placement summary</li>
+      </ul>
+    </section>
+
+    <section id="dark-surface" class="gate-section" data-theme="dark">
+      <h2>Dark-mode review surface</h2>
+      <p>This section uses the gate fixture dark-mode variables. Inspect alongside the embedded source fixture, which carries a dark/narrow state from the implementation sprint.</p>
+      <p class="warning">Dark mode must remain readable, but this gate still does not authorize product-route adoption.</p>
+    </section>
+  </main>
+</body>
+</html>
