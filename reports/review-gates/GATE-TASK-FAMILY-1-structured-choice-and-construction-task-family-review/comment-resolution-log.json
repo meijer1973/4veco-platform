@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
+  "sprint_id": "GATE-TASK-FAMILY-1",
+  "generated": "2026-06-02",
+  "review_mode": "direct_packet_comments",
+  "reviewed_remote_commit": "e35b7c58eded4d4d4544fbd39f8c5365a58785c9",
+  "review_verdict": "PASS WITH FLAGS",
+  "ambiguity_or_conflicting_authority_found": false,
+  "targeted_followup_needed": false,
+  "closure_record_allowed": true,
+  "accepted_decisions": [
+    "evidence_baseline_accepted",
+    "playable_output_quality_accepted_as_planning_input_with_downstream_flag",
+    "structured_choice_families_accepted_with_limits",
+    "constrained_construction_families_accepted_with_limits",
+    "feedback_boundary_accepted",
+    "keyboard_focus_evidence_accepted_with_adoption_accessibility_flag",
+    "target_proof_boundary_preserved",
+    "product_route_adoption_requires_named_bounded_adoption_sprints",
+    "carried_flags_accepted",
+    "no_core_specification_failure_found",
+    "only_named_downstream_planning_or_adoption_preparation_authorized",
+    "no_product_authority_now"
+  ],
+  "resolved_flags": [
+    {
+      "id": "TASKFAM1-F1",
+      "issue": "Reviewed remote commit must be recorded in closure.",
+      "resolution": "Resolved in gate-closure.json."
+    },
+    {
+      "id": "TASKFAM1-F2",
+      "issue": "Compact repair controls remain an adoption/accessibility polish issue.",
+      "resolution": "Carried forward."
+    },
+    {
+      "id": "TASKFAM1-F3",
+      "issue": "Product-route adoption still needs route-specific rendered proof.",
+      "resolution": "Carried forward."
+    },
+    {
+      "id": "TASKFAM1-F4",
+      "issue": "Target-equivalence must remain separate.",
+      "resolution": "Carried forward."
+    },
+    {
+      "id": "TASKFAM1-F5",
+      "issue": "Human-precheck corrections must remain guarded.",
+      "resolution": "Carried forward."
+    }
+  ]
+}

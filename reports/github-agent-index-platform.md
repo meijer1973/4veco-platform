@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T11:23:03.284Z
+Generated: 2026-06-02T13:27:36.192Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2866
+Files indexed: 2874
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 368
+Count: 369
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -404,6 +404,7 @@ Count: 368
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
+- build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js
 - build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
@@ -544,7 +545,7 @@ Count: 42
 
 ## validators
 
-Count: 197
+Count: 198
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -730,6 +731,7 @@ Count: 197
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-mobile.png
 - reports/sprints/EX-0-validation-log.md
 - reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md
+- reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -1180,7 +1182,7 @@ Count: 429
 
 ## reports
 
-Count: 1641
+Count: 1648
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1813,6 +1815,12 @@ Count: 1641
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/direct-review-comments.json
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/direct-review-comments.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-closure.json
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html
@@ -2130,6 +2138,7 @@ Count: 1641
 - reports/sprints/GATE-L1.7B-Q2-plan.md
 - reports/sprints/GATE-L1.7B-Q2-result.md
 - reports/sprints/GATE-TASK-FAMILY-1-baseline.md
+- reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md

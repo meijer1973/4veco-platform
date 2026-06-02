@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
+  "sprint_id": "GATE-TASK-FAMILY-1",
+  "review_type": "direct_packet_comments",
+  "reviewed_on": "2026-06-02",
+  "reviewed_remote_commit": "e35b7c58eded4d4d4544fbd39f8c5365a58785c9",
+  "verdict": "PASS WITH FLAGS",
+  "closure_allowed": true,
+  "authority": {
+    "planning_input_for_later_bounded_adoption_sprints": true,
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized_from_this_gate": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "decisions": {
+    "TASKFAM1-Q1": "PASS",
+    "TASKFAM1-Q2": "PASS WITH DOWNSTREAM FLAG",
+    "TASKFAM1-Q3": "PASS WITH LIMITS",
+    "TASKFAM1-Q4": "PASS WITH LIMITS",
+    "TASKFAM1-Q5": "PASS",
+    "TASKFAM1-Q6": "PASS WITH FLAG",
+    "TASKFAM1-Q7": "PASS",
+    "TASKFAM1-Q8": "PASS",
+    "TASKFAM1-Q9": "PASS WITH CARRIED FLAGS",
+    "TASKFAM1-Q10": "PASS_NO_CORE_SPEC_FAILURE",
+    "TASKFAM1-Q11": "AUTHORIZE_ONLY_NAMED_DOWNSTREAM_PLANNING_OR_ADOPTION_PREPARATION",
+    "TASKFAM1-Q12": "NO_PRODUCT_AUTHORITY_NOW"
+  },
+  "carried_flags": [
+    "Closure must record the reviewed remote commit.",
+    "Compact repair controls remain an adoption/accessibility polish issue.",
+    "Product-route adoption still needs route-specific rendered proof.",
+    "Target-equivalence remains separate from task-family readiness.",
+    "Human-precheck corrections for Tasks 3, 10, 11, and 12 must remain guarded."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
+  "sprint_id": "GATE-TASK-FAMILY-1",
+  "date": "2026-06-02",
+  "closed_on": "2026-06-02",
+  "status": "pass_with_flags",
+  "status_detail": "task_family_review_only_authorize_named_downstream_planning_or_adoption_preparation_no_product_use",
+  "decision": "PASS WITH FLAGS for structured choice and constrained construction task-family review",
+  "closure_confirmed_by_human": true,
+  "human_review_mode": "direct_packet_comments",
+  "reviewed_remote_commit": "e35b7c58eded4d4d4544fbd39f8c5365a58785c9",
+  "remote_evidence_pushed_before_review": true,
+  "remote_publication_status_resolution": "review packet, playable lab, playable proof, live-output evidence, screenshot proof, pre-gate lead-review artifacts, usability-agent artifacts, human-precheck corrections, task-family proof artifacts, checker, repository maps, URL index, and cited evidence were committed and pushed before the direct human review comments were recorded",
+  "review_packet": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.md",
+  "review_packet_json": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json",
+  "direct_review_comments": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/direct-review-comments.md",
+  "direct_review_comments_json": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/direct-review-comments.json",
+  "comment_resolution_log": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.md",
+  "comment_resolution_log_json": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json",
+  "closure_proposal": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md",
+  "live_output_evidence": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md",
+  "playable_lab": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html",
+  "playable_proof": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json",
+  "pre_gate_lead_review": {
+    "required": true,
+    "status": "passed_before_direct_review_comments",
+    "round1": "reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md",
+    "round2": "reports/sprints/GATE-TASK-FAMILY-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS"
+  },
+  "usability_agent_review": {
+    "required": true,
+    "round1_status": "REVISE",
+    "round2_status": "ready_for_direct_comment_review",
+    "round1": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
+    "corrections": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
+    "round2": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
+    "analysis": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md"
+  },
+  "summary": "GATE-TASK-FAMILY-1 accepts the newly implemented structured choice and constrained construction task-shell families only as planning input for later bounded adoption-preparation. The review accepted the evidence baseline, playable lab, screenshot proof, feedback boundary, keyboard/focus evidence, and target-proof boundary, while carrying route-adoption and target-equivalence flags. No product-route adoption or product authority is granted.",
+  "accepted_families": {
+    "structured_choice": [
+      "cloze_text",
+      "multi_select",
+      "matching_pairs",
+      "step_ordering",
+      "two_tier_choice",
+      "assertion_reason"
+    ],
+    "constrained_construction": [
+      "cloze_tile_select",
+      "sentence_builder",
+      "formula_builder",
+      "source_value_selection",
+      "source_chain_builder",
+      "label_placement"
+    ]
+  },
+  "decisions": {
+    "evidence_baseline": "pass",
+    "playable_output_quality": "pass_with_downstream_flag",
+    "structured_choice_families": "pass_with_limits",
+    "constrained_construction_families": "pass_with_limits",
+    "feedback_boundary": "pass",
+    "keyboard_focus_evidence": "pass_with_flag",
+    "target_proof_boundary": "pass",
+    "product_route_adoption_boundary": "pass",
+    "carried_flags": "pass_with_carried_flags",
+    "core_specification_failure_found": false,
+    "next_authorized_work": "named_downstream_planning_or_adoption_preparation_only",
+    "product_authority_now": false
+  },
+  "flags": [
+    {
+      "id": "TASKFAM1-F1",
+      "severity": "medium_for_adoption",
+      "issue": "Compact repair controls remain visually terse.",
+      "next_action": "Later route-adoption packets must provide contextual accessibility and usability proof for compact sequence repair controls."
+    },
+    {
+      "id": "TASKFAM1-F2",
+      "severity": "high_for_product_route_adoption",
+      "issue": "Product-route adoption still needs route-specific rendered proof.",
+      "next_action": "Require route-specific screenshots, validators, keyboard/focus proof, mobile/dark proof, and interaction QA before any product-route use."
+    },
+    {
+      "id": "TASKFAM1-F3",
+      "severity": "high_governance",
+      "issue": "Target-equivalence remains separate from task-family readiness.",
+      "next_action": "Do not treat these families as target-equivalent proof unless a later gate reviews the exact target operation at the same cognitive level."
+    },
+    {
+      "id": "TASKFAM1-F4",
+      "severity": "medium_high_content_quality",
+      "issue": "Human-precheck corrections for Tasks 3, 10, 11, and 12 must remain guarded.",
+      "next_action": "Keep checker guards for invalid distractors, source-label giveaways, invisible source data, and label-placement answer leakage."
+    },
+    {
+      "id": "TASKFAM1-F5",
+      "severity": "medium_for_future_use",
+      "issue": "Formula equivalence remains exact-sequence only, many-to-one matching is deferred, source-chain and label-placement are not complete graph/table proof, and two-tier/assertion feedback must not become diagnostic.",
+      "next_action": "Carry family-specific limitations into every later adoption-preparation packet."
+    }
+  ],
+  "authorized_next": {
+    "authority": "named downstream planning or adoption-preparation only",
+    "implementation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "student_product_use_authorized": false,
+    "sprints": [
+      {
+        "sprint_id": "GAME-ROUTE-AFFORDANCE-1",
+        "authority": "may use accepted families as planning input only where route-action proof requires task-family affordance analysis"
+      },
+      {
+        "sprint_id": "REASON-STD-1",
+        "authority": "may use accepted families as planning/adoption-preparation input for reasoning task standardization only"
+      },
+      {
+        "sprint_id": "CHECK-SHORT-EXIT-2",
+        "authority": "may prepare later route-specific adoption packets for accepted families only after required prerequisite planning; no generated output from this gate"
+      },
+      {
+        "sprint_id": "SCALE-PROOF-3P",
+        "authority": "remains blocked from relying on these families until route-specific adoption proof exists"
+      }
+    ]
+  },
+  "authority_boundary": {
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized_from_this_gate": false,
+    "product_route_adoption_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "target_exercise_mutation_authorized": false,
+    "question_type_field_writes_authorized": false,
+    "answer_form_field_writes_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "generated_projection_refresh_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}
