@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T13:36:31.209Z
+Generated: 2026-06-02T13:49:31.644Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2874
+Files indexed: 2889
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 369
+Count: 370
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -443,6 +443,7 @@ Count: 369
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -545,7 +546,7 @@ Count: 42
 
 ## validators
 
-Count: 198
+Count: 199
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -658,6 +659,7 @@ Count: 198
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
@@ -748,7 +750,7 @@ Count: 198
 
 ## references
 
-Count: 429
+Count: 431
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -805,6 +807,8 @@ Count: 429
 - references/data/skill-operation-registry.json
 - references/data/source_manifest.json
 - references/data/source-document-registry.json
+- references/data/sprints/BOOK1-FIX-1.plan.json
+- references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
@@ -1182,7 +1186,7 @@ Count: 429
 
 ## reports
 
-Count: 1648
+Count: 1660
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1235,6 +1239,7 @@ Count: 1648
 - reports/json/representation-operation-coverage.json
 - reports/json/representation-operation-inventory.json
 - reports/json/representation-transfer-gaps.json
+- reports/json/roadmap-flag-cleanup1.json
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
@@ -1850,6 +1855,14 @@ Count: 1648
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/sprints/BOOK1-FIX-1-baseline.md
+- reports/sprints/BOOK1-FIX-1-diff-summary.md
+- reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
+- reports/sprints/BOOK1-FIX-1-lead-review-corrections.md
+- reports/sprints/BOOK1-FIX-1-lead-review-round1.md
+- reports/sprints/BOOK1-FIX-1-lead-review-round2.md
+- reports/sprints/BOOK1-FIX-1-plan.md
+- reports/sprints/BOOK1-FIX-1-result.md
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2548,6 +2561,9 @@ Count: 1648
 - reports/sprints/REF-CT2-lead-review-round2.md
 - reports/sprints/REF-CT2-plan.md
 - reports/sprints/REF-CT2-result.md
+- reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
+- reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
+- reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
 - reports/sprints/RX.1-baseline.md
 - reports/sprints/RX.1-diff-summary.md
 - reports/sprints/RX.1-result.md

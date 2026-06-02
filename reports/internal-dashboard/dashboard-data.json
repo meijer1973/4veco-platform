@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T10:38:50.334Z",
+  "generatedAt": "2026-06-02T13:49:31.592Z",
   "internalOnly": true,
   "teams": [
     {
@@ -180,21 +180,21 @@
               "sprint": "TASK-FAMILY-CLOZE-TILE-1",
               "name": "Cloze Tile-Select Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots are deferred to adoption.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-SENTENCE-1",
               "name": "Sentence Builder Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots and dynamic rendered interaction proof are deferred to adoption.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-FORMULA-1",
               "name": "Formula Builder Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, formula category validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and dynamic rendered interaction proof are deferred to adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, formula category validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work.",
               "exitGate": ""
             },
             {
@@ -208,56 +208,63 @@
               "sprint": "TASK-FAMILY-MULTI-1",
               "name": "Multi-Select Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; multi-select cannot replace richer target-operation proof.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; multi-select cannot replace richer target-operation proof.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-ORDER-1",
               "name": "Step-Ordering Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict order-sensitive matching, practice-only order feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; `step_ordering` is procedure-control proof only.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict order-sensitive matching, practice-only order feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; `step_ordering` is procedure-control proof only.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-SOURCE-1",
               "name": "Source Value And Chain Builder Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-LABEL-1",
               "name": "Label-Placement Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; label placement is representation-placement support only.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; label placement is representation-placement support only.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-MATCH-1",
               "name": "Matching-Pairs Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `matching_pairs`, one-to-one-only validation, strict exact response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `matching_pairs`, one-to-one-only validation, strict exact response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; Many-to-one matching unsupported; conditional capability note only; matching pairs cannot replace richer target-operation proof.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-TWO-TIER-1",
               "name": "Two-Tier Choice Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-ASSERTION-1",
               "name": "Assertion-Reason Task-Family Implementation",
               "completed": "yes",
-              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
               "exitGate": ""
             },
             {
               "sprint": "GATE-TASK-FAMILY-1",
               "name": "Structured Choice And Construction Task-Family Review",
-              "completed": "no",
-              "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice or construction families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS at reviewed remote commit `e35b7c58eded4d4d4544fbd39f8c5365a58785c9`. Direct human packet comments accepted the playable lab, schema/validation, feedback boundary, keyboard/focus evidence, and target-proof boundary as planning input only. Authorized next work is named downstream planning/adoption-preparation only; no product-route adoption, generated output, source-data mutation, target-equivalent claim, diagnostics, adaptive routing, mastery/sequencing, PV, Scale Gate 1, or student/product use.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "ROADMAP-FLAG-CLEANUP-1",
+              "name": "Roadmap Flag Semantics Cleanup",
+              "completed": "yes",
+              "currentState": "Closed bounded roadmap cleanup. Produced `reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md`, `reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md`, `reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md`, `reports/json/roadmap-flag-cleanup1.json`, and checker `build-scripts/sprints/check-roadmap-flag-cleanup1.js`. Active roadmap flags are now typed as adoption blockers, target-proof boundaries, conditional capability notes, read-only invariants, or regression guards. No generated output or product authority.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1413,6 @@
       ],
       "sprints": [
         {
-          "sprint": "GATE-TASK-FAMILY-1",
-          "name": "Structured Choice And Construction Task-Family Review",
-          "completed": "no",
-          "currentState": "Review rendered output, schema/validation, feedback, keyboard/focus behavior, and target-proof boundaries before structured choice or construction families are relied on by reasoning migration, check implementation, or Scale Gate proof.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "LESSON-SCALE-1",
           "name": "Lesson Companion Pre-Scale Gates Tracking",
           "completed": "no",
@@ -1513,7 +1512,7 @@
           "sprint": "TASK-FAMILY-CLOZE-TILE-1",
           "name": "Cloze Tile-Select Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots are deferred to adoption.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1521,7 +1520,7 @@
           "sprint": "TASK-FAMILY-SENTENCE-1",
           "name": "Sentence Builder Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Flags: product-route screenshots and dynamic rendered interaction proof are deferred to adoption.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1529,7 +1528,7 @@
           "sprint": "TASK-FAMILY-FORMULA-1",
           "name": "Formula Builder Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, formula category validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and dynamic rendered interaction proof are deferred to adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, formula category validation, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for extra response keys being accepted; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; formula equivalence beyond exact sequences and calculation execution remain separate follow-up work.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1545,7 +1544,7 @@
           "sprint": "TASK-FAMILY-MULTI-1",
           "name": "Multi-Select Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; multi-select cannot replace richer target-operation proof.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict exact-set matching, practice-only partial feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; multi-select cannot replace richer target-operation proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1553,7 +1552,7 @@
           "sprint": "TASK-FAMILY-ORDER-1",
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict order-sensitive matching, practice-only order feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: product-route screenshots and after-click rendered proof are deferred to adoption; `step_ordering` is procedure-control proof only.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support, strict order-sensitive matching, practice-only order feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; `step_ordering` is procedure-control proof only.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1561,7 +1560,7 @@
           "sprint": "TASK-FAMILY-SOURCE-1",
           "name": "Source Value And Chain Builder Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `source_value_selection` and `source_chain_builder`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for result-report schema; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; source-chain construction is not target-equivalent proof without paired operation tasks and later review.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1569,7 +1568,7 @@
           "sprint": "TASK-FAMILY-LABEL-1",
           "name": "Label-Placement Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; label placement is representation-placement support only.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `label_placement`, strict validation/matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; label placement is representation-placement support only.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1577,7 +1576,7 @@
           "sprint": "TASK-FAMILY-MATCH-1",
           "name": "Matching-Pairs Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `matching_pairs`, one-to-one-only validation, strict exact response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `matching_pairs`, one-to-one-only validation, strict exact response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; Many-to-one matching unsupported; conditional capability note only; matching pairs cannot replace richer target-operation proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1585,7 +1584,7 @@
           "sprint": "TASK-FAMILY-TWO-TIER-1",
           "name": "Two-Tier Choice Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -1593,7 +1592,23 @@
           "sprint": "TASK-FAMILY-ASSERTION-1",
           "name": "Assertion-Reason Task-Family Implementation",
           "completed": "yes",
-          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Route-specific rendered proof required before product-route adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "GATE-TASK-FAMILY-1",
+          "name": "Structured Choice And Construction Task-Family Review",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS at reviewed remote commit `e35b7c58eded4d4d4544fbd39f8c5365a58785c9`. Direct human packet comments accepted the playable lab, schema/validation, feedback boundary, keyboard/focus evidence, and target-proof boundary as planning input only. Authorized next work is named downstream planning/adoption-preparation only; no product-route adoption, generated output, source-data mutation, target-equivalent claim, diagnostics, adaptive routing, mastery/sequencing, PV, Scale Gate 1, or student/product use.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "ROADMAP-FLAG-CLEANUP-1",
+          "name": "Roadmap Flag Semantics Cleanup",
+          "completed": "yes",
+          "currentState": "Closed bounded roadmap cleanup. Produced `reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md`, `reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md`, `reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md`, `reports/json/roadmap-flag-cleanup1.json`, and checker `build-scripts/sprints/check-roadmap-flag-cleanup1.js`. Active roadmap flags are now typed as adoption blockers, target-proof boundaries, conditional capability notes, read-only invariants, or regression guards. No generated output or product authority.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2837,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 166,
-      "openCount": 11
+      "completedCount": 168,
+      "openCount": 10
     },
     {
       "id": "lessen",
@@ -2841,6 +2856,13 @@
           "scope": "- `uitleg voorkennis.html`",
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
+            {
+              "sprint": "BOOK1-FIX-1",
+              "name": "Book 1 TOC, Exercise Label, And Figure-Text Concordance Fix",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS.** Added Book 1 TOC page-number structure, standardized the post-start exercise label as `Zelfstandige oefening`, repaired the `1.1.3` Figure 2/Figure 3 aggregate-asset mismatch, strengthened chapter/book figure concordance checks, improved the `1.1.3` math-versus-economics graph-axis explanation, and updated review/testing guidance so rendered figure-caption mismatch blocks closure. Generated Book 1 output was refreshed through platform workflow only. No protected reference mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized.",
+              "exitGate": ""
+            },
             {
               "sprint": "SYNC-PRODUCT-1",
               "name": "Product Proof Roadmap Alignment",
@@ -2887,14 +2909,14 @@
               "sprint": "TASK-FAMILY-CLOZE-TILE-1",
               "name": "Cloze Tile-Select Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Product-route screenshots remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Route-specific rendered proof required before product-route adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-SENTENCE-1",
               "name": "Sentence Builder Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Product-route screenshots and rendered interaction proof remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Route-specific rendered proof required before product-route adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -2908,63 +2930,70 @@
               "sprint": "TASK-FAMILY-CLOZE-1",
               "name": "Cloze Text Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route screenshots remain required before adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Route-specific rendered proof required before product-route adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-MULTI-1",
               "name": "Multi-Select Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Route-specific rendered proof required before product-route adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-ORDER-1",
               "name": "Step-Ordering Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `step_ordering` as a deterministic shared task-shell family with answer/distractor step-bank schema, at least two answer steps and one distractor, no neutral/no-distractor loopholes, full `expected.order` answer-step coverage, exact `{ order }` response matching with raw-array, array-with-`order`, non-string, duplicate, unknown, missing, and extra-key rejection, practice-only order feedback, distinct `.ts-step-*` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; `step_ordering` proves procedure control only and cannot replace final calculation, graph/table, source-chain, or constructed-response proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `step_ordering` as a deterministic shared task-shell family with answer/distractor step-bank schema, at least two answer steps and one distractor, no neutral/no-distractor loopholes, full `expected.order` answer-step coverage, exact `{ order }` response matching with raw-array, array-with-`order`, non-string, duplicate, unknown, missing, and extra-key rejection, practice-only order feedback, distinct `.ts-step-*` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. Route-specific rendered proof required before product-route adoption; `step_ordering` proves procedure control only and cannot replace final calculation, graph/table, source-chain, or constructed-response proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-SOURCE-1",
               "name": "Source Value And Chain Builder Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption and generated-route screenshots remain later work; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption requires later route-specific rendered proof; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-LABEL-1",
               "name": "Label-Placement Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption and generated-route screenshots remain later work; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption requires later route-specific rendered proof; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-MATCH-1",
               "name": "Matching-Pairs Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `matching_pairs` as a deterministic shared task-shell family with left/right item banks, accessible descriptions, one-to-one-only answer coverage, strict `{ pairs }` response validation, practice-only feedback, matching-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route adoption and generated-route screenshots remain later work; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `matching_pairs` as a deterministic shared task-shell family with left/right item banks, accessible descriptions, one-to-one-only answer coverage, strict `{ pairs }` response validation, practice-only feedback, matching-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route adoption requires later route-specific rendered proof; Many-to-one matching unsupported; conditional capability note only; matching pairs cannot replace richer target-operation proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-TWO-TIER-1",
               "name": "Two-Tier Choice Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Product-route adoption requires later route-specific rendered proof; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-FAMILY-ASSERTION-1",
               "name": "Assertion-Reason Task-Family Implementation",
               "completed": "yes",
-              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Product-route adoption requires later route-specific rendered proof; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
               "sprint": "GATE-TASK-FAMILY-1",
               "name": "Structured Choice And Construction Task-Family Review",
-              "completed": "no",
-              "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these structured choice or construction families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / PLANNING INPUT ONLY.** Platform gate closed at reviewed remote commit `e35b7c58eded4d4d4544fbd39f8c5365a58785c9`. Accepted structured choice and constrained construction task families only as planning input for later bounded adoption-preparation. No generated lesson output, source-data mutation, engine implementation from this gate, product-route adoption, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "ROADMAP-FLAG-CLEANUP-1",
+              "name": "Roadmap Flag Semantics Cleanup",
+              "completed": "yes",
+              "currentState": "**CLOSED ROADMAP CLEANUP / NO GENERATED OUTPUT.** Platform cleaned active roadmap flag language so route-specific rendered proof blocks product-route adoption, target-equivalence flags block target-equivalent claims, many-to-one matching is a conditional unsupported capability, and historical archive no-change evidence is a read-only invariant. Many-to-one matching unsupported; conditional capability note only. Historical archive remains read-only. No generated output, implementation, source-data mutation, product-route adoption, target-equivalent claim, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use is authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3203,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "GATE-TASK-FAMILY-1",
-          "name": "Structured Choice And Construction Task-Family Review",
-          "completed": "no",
-          "currentState": "Human/lead review of rendered output, feedback, schema/validation, focus/keyboard behavior, and target-proof boundaries before these structured choice or construction families are relied on in reasoning migration, check implementation, product proof, or Scale Gate 1.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "GAME-ROUTE-AFFORDANCE-1",
           "name": "Clickable Route Items For Non-Exit Practice Games",
@@ -3415,6 +3436,14 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "BOOK1-FIX-1",
+          "name": "Book 1 TOC, Exercise Label, And Figure-Text Concordance Fix",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS.** Added Book 1 TOC page-number structure, standardized the post-start exercise label as `Zelfstandige oefening`, repaired the `1.1.3` Figure 2/Figure 3 aggregate-asset mismatch, strengthened chapter/book figure concordance checks, improved the `1.1.3` math-versus-economics graph-axis explanation, and updated review/testing guidance so rendered figure-caption mismatch blocks closure. Generated Book 1 output was refreshed through platform workflow only. No protected reference mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "SYNC-PRODUCT-1",
           "name": "Product Proof Roadmap Alignment",
           "completed": "yes",
@@ -3466,7 +3495,7 @@
           "sprint": "TASK-FAMILY-CLOZE-TILE-1",
           "name": "Cloze Tile-Select Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Product-route screenshots remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_tile_select` as a deterministic shared task-shell family with inline blanks, selectable tile bank, distractor validation, default no-reuse behavior, exact `{ blanks }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Route-specific rendered proof required before product-route adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3474,7 +3503,7 @@
           "sprint": "TASK-FAMILY-SENTENCE-1",
           "name": "Sentence Builder Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Product-route screenshots and rendered interaction proof remain required before adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `sentence_builder` as a deterministic shared task-shell family with fragment bank, ordered construction zone, clear/remove/reorder controls, distractor validation, default no-reuse behavior, exact `{ tokens }` response matching, shared UI helpers, wrapper collection support, focused tests, rendered report fixture, proof JSON, and checker. Route-specific rendered proof required before product-route adoption. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3490,7 +3519,7 @@
           "sprint": "TASK-FAMILY-CLOZE-1",
           "name": "Cloze Text Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route screenshots remain required before adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `cloze_text` as a deterministic shared task-shell family with typed inline blanks, accepted-value matching, bounded `requiredTextGroups`, per-blank `rejectText`, exact `{ blanks }` response matching including raw-map and extra-key rejection, shared UI helper, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Route-specific rendered proof required before product-route adoption; `requiredTextGroups` is bounded phrase matching, not broad semantic answer evaluation. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3498,7 +3527,7 @@
           "sprint": "TASK-FAMILY-MULTI-1",
           "name": "Multi-Select Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `multi_select` as a deterministic shared task-shell family with exact-set order-insensitive matching, strict string-only `{ values }` response shape, duplicate/unknown/extra-key rejection, required distractor option, practice-only partial feedback for missing required options and selected distractors, distinct `.ts-multi-option` / `data-multi-option-id` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for numeric/object response-id coercion; corrections resolved this and round 2 passed with flags. Route-specific rendered proof required before product-route adoption; multi-select cannot replace richer target-operation proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3506,7 +3535,7 @@
           "sprint": "TASK-FAMILY-ORDER-1",
           "name": "Step-Ordering Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `step_ordering` as a deterministic shared task-shell family with answer/distractor step-bank schema, at least two answer steps and one distractor, no neutral/no-distractor loopholes, full `expected.order` answer-step coverage, exact `{ order }` response matching with raw-array, array-with-`order`, non-string, duplicate, unknown, missing, and extra-key rejection, practice-only order feedback, distinct `.ts-step-*` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. Product-route screenshots and after-click rendered proof remain required before adoption; `step_ordering` proves procedure control only and cannot replace final calculation, graph/table, source-chain, or constructed-response proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `step_ordering` as a deterministic shared task-shell family with answer/distractor step-bank schema, at least two answer steps and one distractor, no neutral/no-distractor loopholes, full `expected.order` answer-step coverage, exact `{ order }` response matching with raw-array, array-with-`order`, non-string, duplicate, unknown, missing, and extra-key rejection, practice-only order feedback, distinct `.ts-step-*` UI, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for array-with-`order` response-shape acceptance; corrections resolved this and round 2 passed with flags. Route-specific rendered proof required before product-route adoption; `step_ordering` proves procedure control only and cannot replace final calculation, graph/table, source-chain, or constructed-response proof. No source-data writes, generated output, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3514,7 +3543,7 @@
           "sprint": "TASK-FAMILY-SOURCE-1",
           "name": "Source Value And Chain Builder Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption and generated-route screenshots remain later work; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `source_value_selection` and `source_chain_builder` as deterministic shared task-shell families for multi-value source selection, role assignment, and source-to-value-to-operation-to-answer-to-conclusion chain construction, with strict response-shape validation, practice-only feedback, wrapper collection support, proof artifacts, and lead-review records. Product-route adoption requires later route-specific rendered proof; source-chain construction is not target-equivalent proof without paired operation tasks and later review. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3522,7 +3551,7 @@
           "sprint": "TASK-FAMILY-LABEL-1",
           "name": "Label-Placement Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption and generated-route screenshots remain later work; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `label_placement` as a deterministic shared task-shell family with label bank, visual target region, target buttons, placement summary, strict `{ placements }` response validation, practice-only feedback, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Round 1 returned REVISE for missing symmetric negative coverage; corrections resolved this and round 2 passed with flags. Product-route adoption requires later route-specific rendered proof; label placement is representation-placement support only, not complete graph/table target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3530,7 +3559,7 @@
           "sprint": "TASK-FAMILY-MATCH-1",
           "name": "Matching-Pairs Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `matching_pairs` as a deterministic shared task-shell family with left/right item banks, accessible descriptions, one-to-one-only answer coverage, strict `{ pairs }` response validation, practice-only feedback, matching-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route adoption and generated-route screenshots remain later work; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `matching_pairs` as a deterministic shared task-shell family with left/right item banks, accessible descriptions, one-to-one-only answer coverage, strict `{ pairs }` response validation, practice-only feedback, matching-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route adoption requires later route-specific rendered proof; Many-to-one matching unsupported; conditional capability note only; matching pairs cannot replace richer target-operation proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3538,7 +3567,7 @@
           "sprint": "TASK-FAMILY-TWO-TIER-1",
           "name": "Two-Tier Choice Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Product-route adoption requires later route-specific rendered proof; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3546,13 +3575,29 @@
           "sprint": "TASK-FAMILY-ASSERTION-1",
           "name": "Assertion-Reason Task-Family Implementation",
           "completed": "yes",
-          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, historical archive read-only evidence, and lead-review records. Product-route adoption requires later route-specific rendered proof; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "GATE-TASK-FAMILY-1",
+          "name": "Structured Choice And Construction Task-Family Review",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / PLANNING INPUT ONLY.** Platform gate closed at reviewed remote commit `e35b7c58eded4d4d4544fbd39f8c5365a58785c9`. Accepted structured choice and constrained construction task families only as planning input for later bounded adoption-preparation. No generated lesson output, source-data mutation, engine implementation from this gate, product-route adoption, target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "ROADMAP-FLAG-CLEANUP-1",
+          "name": "Roadmap Flag Semantics Cleanup",
+          "completed": "yes",
+          "currentState": "**CLOSED ROADMAP CLEANUP / NO GENERATED OUTPUT.** Platform cleaned active roadmap flag language so route-specific rendered proof blocks product-route adoption, target-equivalence flags block target-equivalent claims, many-to-one matching is a conditional unsupported capability, and historical archive no-change evidence is a read-only invariant. Many-to-one matching unsupported; conditional capability note only. Historical archive remains read-only. No generated output, implementation, source-data mutation, product-route adoption, target-equivalent claim, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use is authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 17,
-      "openCount": 30
+      "completedCount": 20,
+      "openCount": 29
     },
     {
       "id": "innovation",

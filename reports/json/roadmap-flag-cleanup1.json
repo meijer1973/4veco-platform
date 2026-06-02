@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "sprint_id": "ROADMAP-FLAG-CLEANUP-1",
+  "generated": "2026-06-02",
+  "status": "completed",
+  "scope": "roadmap flag semantics cleanup only",
+  "authority": {
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "cleanup_rules": [
+    "A flag blocks only the claim or authority it names.",
+    "Route-specific rendered proof blocks route adoption, not planning.",
+    "Target-equivalence flags block target-equivalent claims, not task-family acceptance.",
+    "Many-to-one matching is a conditional unsupported capability, not a broad matching-pairs blocker.",
+    "Historical archive no-change evidence is a read-only invariant."
+  ],
+  "updated_files": [
+    "references/reference-team-roadmap.md",
+    "../4veco-lessen/lessen-team-roadmap.md"
+  ]
+}
