@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T14:12:46.720Z
+Generated: 2026-06-02T14:46:06.917Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2889
+Files indexed: 2908
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 370
+Count: 372
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -442,6 +442,7 @@ Count: 370
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
+- build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
@@ -469,6 +470,7 @@ Count: 370
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
+- build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
@@ -546,7 +548,7 @@ Count: 42
 
 ## validators
 
-Count: 199
+Count: 200
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -658,6 +660,7 @@ Count: 199
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
+- build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
@@ -750,7 +753,7 @@ Count: 199
 
 ## references
 
-Count: 431
+Count: 433
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1012,6 +1015,8 @@ Count: 431
 - references/data/sprints/R9.2.result.json
 - references/data/sprints/REASON-REFINE-1.plan.json
 - references/data/sprints/REASON-REFINE-1.result.json
+- references/data/sprints/REASON-STD-1.plan.json
+- references/data/sprints/REASON-STD-1.result.json
 - references/data/sprints/REASON-UX-2.plan.json
 - references/data/sprints/REASON-UX-2.result.json
 - references/data/sprints/REF-CP6-remediation-readiness.json
@@ -1186,7 +1191,7 @@ Count: 431
 
 ## reports
 
-Count: 1660
+Count: 1675
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1232,6 +1237,8 @@ Count: 1660
 - reports/json/procedure-visual-projection-mvp.json
 - reports/json/procedure-visual-promotion-pipeline-design.json
 - reports/json/procedure-visual-schema-status.json
+- reports/json/reason-std1-proof.json
+- reports/json/reason-std1-standard-family-map.json
 - reports/json/reference-cli-coverage.json
 - reports/json/reference-health.json
 - reports/json/reference-quality-issues.json
@@ -2508,6 +2515,19 @@ Count: 1660
 - reports/sprints/REASON-REFINE-1-planning-review.md
 - reports/sprints/REASON-REFINE-1-result.md
 - reports/sprints/REASON-REFINE-1-task-coverage-matrix.md
+- reports/sprints/REASON-STD-1-baseline.md
+- reports/sprints/REASON-STD-1-build-vs-rebuild-note.md
+- reports/sprints/REASON-STD-1-diff-summary.md
+- reports/sprints/REASON-STD-1-lead-review-assignment.md
+- reports/sprints/REASON-STD-1-lead-review-corrections.md
+- reports/sprints/REASON-STD-1-lead-review-round1.md
+- reports/sprints/REASON-STD-1-lead-review-round2.md
+- reports/sprints/REASON-STD-1-plan.md
+- reports/sprints/REASON-STD-1-planning-review.md
+- reports/sprints/REASON-STD-1-rendered-fixture.html
+- reports/sprints/REASON-STD-1-result.md
+- reports/sprints/REASON-STD-1-screenshot-manifest.md
+- reports/sprints/REASON-STD-1-standard-family-map.md
 - reports/sprints/REASON-UX-2-accessibility-review.md
 - reports/sprints/REASON-UX-2-baseline.md
 - reports/sprints/REASON-UX-2-diff-summary.md

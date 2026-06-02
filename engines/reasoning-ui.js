@@ -217,6 +217,7 @@
     var matchPairs = [];     // For mode 4: [[idA,idB], ...]
     var matchFirst = null;   // For mode 4: first card of current pair
     var taskShellResponse = ''; // For mode 5: structured reasoning text
+    var taskShellOrderingResponse = null; // For modes 0/1/3: shared step-ordering response
     var roundData = null;    // Current round presentation data
 
     // ── Screen management ───────────────────────────────────────────
@@ -337,6 +338,7 @@
         matchPairs = [];
         matchFirst = null;
         taskShellResponse = '';
+        taskShellOrderingResponse = null;
 
         // Update badges
         els.roundBadge.textContent = roundData.roundNumber + '/' + roundData.totalRounds;
@@ -356,10 +358,10 @@
             + esc(MODE_INSTRUCTIONS[currentMode]) + '</div>';
         var content = '';
         switch (currentMode) {
-            case 0: content = renderOrderSteps(); break;
-            case 1: content = renderSubQuestions(); break;
+            case 0: content = hasStandardOrderingTask() ? renderStandardOrderingTask('Kies alleen de stappen die de redenering vormen en zet ze in volgorde.') : renderOrderSteps(); break;
+            case 1: content = hasStandardOrderingTask() ? renderStandardOrderingTask('Bouw eerst de deelvragenroute; daarna kun je de redenering sterker opschrijven.') : renderSubQuestions(); break;
             case 2: content = renderFindError(); break;
-            case 3: content = renderFlowDiagram(); break;
+            case 3: content = hasStandardOrderingTask() ? renderStandardOrderingTask('Bouw de keten van beginpunt naar gevolg. Het volledige visuele stroomdiagram blijft vervolgwerk.') : renderFlowDiagram(); break;
             case 4: content = renderMatchStructures(); break;
             case 5: content = renderStructuredReasoning(); break;
         }
@@ -475,7 +477,37 @@
             + '</section>';
     }
 
+    function hasStandardOrderingTask() {
+        return (currentMode === 0 || currentMode === 1 || currentMode === 3)
+            && roundData
+            && roundData.taskShellTask
+            && roundData.taskShellTask.family === 'step_ordering';
+    }
+
+    function canUseStandardOrderingTask() {
+        return hasStandardOrderingTask()
+            && window.TaskShellUI
+            && typeof window.TaskShellUI.renderTask === 'function'
+            && typeof window.TaskShellUI.handleStepOrderingClick === 'function'
+            && typeof window.TaskShellUI.collectStepOrderingResponse === 'function';
+    }
+
+    function renderStandardOrderingTask(routeCue) {
+        if (!window.TaskShellUI || !roundData.taskShellTask) {
+            return '<div class="r-info-box">Deze gedeelde taakvorm kan nu niet worden geladen.</div>';
+        }
+        return '<section class="r-task-shell-mode" data-reasoning-task-shell="REASON-ADOPT-1" data-reasoning-mode="' + currentMode + '">'
+            + '<div class="r-task-route-cue">' + esc(routeCue) + '</div>'
+            + window.TaskShellUI.renderTask(roundData.taskShellTask, 0)
+            + '</section>';
+    }
+
     function bindModeInteractions() {
+        if (canUseStandardOrderingTask()) {
+            bindStandardOrderingTask();
+            return;
+        }
+
         // Mode 3 uses #r-flow-bank, not #r-options — handle it before the options guard
         if (currentMode === 3) {
             var blocks = document.querySelectorAll('#r-flow-bank .r-flow-block');
@@ -531,6 +563,44 @@
             els.checkBtn.disabled = taskShellResponse.trim().length === 0;
         });
         els.checkBtn.disabled = true;
+    }
+
+    function bindStandardOrderingTask() {
+        var root = document.querySelector('[data-reasoning-task-shell="REASON-ADOPT-1"]');
+        if (!root) return;
+
+        root.addEventListener('click', function (event) {
+            var handled = window.TaskShellUI.handleStepOrderingClick(root, event);
+            if (!handled) return;
+            taskShellOrderingResponse = window.TaskShellUI.collectStepOrderingResponse(root, roundData.taskShellTask);
+            els.checkBtn.disabled = !isStandardOrderingComplete(taskShellOrderingResponse);
+        });
+        taskShellOrderingResponse = window.TaskShellUI.collectStepOrderingResponse(root, roundData.taskShellTask);
+        els.checkBtn.disabled = !isStandardOrderingComplete(taskShellOrderingResponse);
+    }
+
+    function isStandardOrderingComplete(response) {
+        var expected = roundData && roundData.taskShellTask && roundData.taskShellTask.expected
+            ? roundData.taskShellTask.expected.order || []
+            : [];
+        return !!response && Array.isArray(response.order) && response.order.length === expected.length;
+    }
+
+    function collectStandardOrderingResponse() {
+        var root = document.querySelector('[data-reasoning-task-shell="REASON-ADOPT-1"]');
+        if (!root || !window.TaskShellUI) return { order: [] };
+        return window.TaskShellUI.collectStepOrderingResponse(root, roundData.taskShellTask);
+    }
+
+    function standardOrderingToLegacyAnswer(response) {
+        var steps = (roundData.taskShellTask.interaction && roundData.taskShellTask.interaction.steps) || [];
+        var labelById = {};
+        for (var i = 0; i < steps.length; i++) {
+            labelById[steps[i].id] = steps[i].label;
+        }
+        return (response && response.order ? response.order : []).map(function (stepId) {
+            return labelById[stepId] || stepId;
+        });
     }
 
     function handleStepClick() {
@@ -723,6 +793,14 @@
 
     function handleCheck() {
         var answer;
+        var taskShellResult = null;
+        if (canUseStandardOrderingTask()) {
+            taskShellOrderingResponse = collectStandardOrderingResponse();
+            taskShellResult = window.TaskShellEngine && typeof window.TaskShellEngine.evaluateTask === 'function'
+                ? window.TaskShellEngine.evaluateTask(roundData.taskShellTask, taskShellOrderingResponse)
+                : null;
+            answer = standardOrderingToLegacyAnswer(taskShellOrderingResponse);
+        } else {
         switch (currentMode) {
             case 0: // Order Steps
                 answer = selection.map(function (idx) { return roundData.options[idx].label; });
@@ -742,6 +820,7 @@
                 answer = taskShellResponse;
                 break;
         }
+        }
 
         var stType = engine.getCurrentStructureType();
         var result = engine.submitAnswer(answer);
@@ -759,7 +838,15 @@
         disableAllInteraction();
 
         // Show feedback
-        if (currentMode === 5) {
+        if (canUseStandardOrderingTask()) {
+            if (result.correct) {
+                showFeedback(true, 'Helemaal goed!', 'Je hebt de denkroute in de goede volgorde opgebouwd.');
+            } else {
+                var correctHtmlForShell = formatCorrectAnswer(result.feedback);
+                showFeedback(false, 'Dat klopt niet helemaal.', correctHtmlForShell);
+            }
+            renderTaskShellFeedback(taskShellResult);
+        } else if (currentMode === 5) {
             var taskResult = result.feedback.taskShellResult;
             showFeedback(result.correct, 'Voorbeeldroute', formatReasoningGuide(result.feedback));
             renderTaskShellFeedback(taskResult);
@@ -868,7 +955,7 @@
     }
 
     function disableAllInteraction() {
-        var items = document.querySelectorAll('.r-step-card, .r-subq-row, .r-flow-block, .r-flow-placed, .r-match-card, .ts-textarea, .ts-input, .ts-choice');
+        var items = document.querySelectorAll('.r-step-card, .r-subq-row, .r-flow-block, .r-flow-placed, .r-match-card, .ts-textarea, .ts-input, .ts-choice, .ts-step-token, .ts-step-remove, .ts-step-move, .ts-step-clear');
         for (var i = 0; i < items.length; i++) {
             items[i].classList.add('r-disabled');
             items[i].style.pointerEvents = 'none';

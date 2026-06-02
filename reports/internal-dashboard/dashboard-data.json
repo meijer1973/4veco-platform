@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T14:12:51.346Z",
+  "generatedAt": "2026-06-02T14:46:06.933Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3020,7 +3020,7 @@
             {
               "sprint": "REASON-ADOPT-1",
               "name": "Reasoning Shared-Shell Route Adoption",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Adopt the wrapped standard-family tasks into the generated Book 1 reasoning route with route-specific playable proof, desktop/mobile/dark screenshots, route-panel evidence, and validators. Preserve mode 2 and mode 4 held/refactor status unless separately reviewed. No target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product-wide use.",
               "exitGate": ""
             },
@@ -3244,14 +3244,6 @@
           "name": "Student Skill Map Product Surface",
           "completed": "no",
           "currentState": "Make the skill map accessible and useful as a student-facing route overview for the first three paragraphs.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "REASON-ADOPT-1",
-          "name": "Reasoning Shared-Shell Route Adoption",
-          "completed": "no",
-          "currentState": "Adopt the wrapped standard-family tasks into the generated Book 1 reasoning route with route-specific playable proof, desktop/mobile/dark screenshots, route-panel evidence, and validators. Preserve mode 2 and mode 4 held/refactor status unless separately reviewed. No target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product-wide use.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3654,10 +3646,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / PLATFORM RUNTIME MAPPING ONLY.** Platform added engine-emitted shared task-shell tasks for reasoning modes 0, 1, 3, and 5; generated fixture/proof JSON from actual `ReasoningEngine` `taskShellTask` objects; strengthened checker/Jest proof so wrong standard-task orders are rejected; kept mode 2 `error_detection` deferred and mode 4 `classification_with_explanation` refactor-scoped. Decision: keep the reasoning engine as content provider and wrap/refactor around shared families; rebuild only modes that cannot consume shared route/task shell cleanly. No generated lesson output, source-data mutation, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-ADOPT-1",
+          "name": "Reasoning Shared-Shell Route Adoption",
+          "completed": "yes",
+          "currentState": "Adopt the wrapped standard-family tasks into the generated Book 1 reasoning route with route-specific playable proof, desktop/mobile/dark screenshots, route-panel evidence, and validators. Preserve mode 2 and mode 4 held/refactor status unless separately reviewed. No target-equivalent claims, diagnostics, mastery/sequencing, Scale Gate 1, or product-wide use.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 21,
-      "openCount": 32
+      "completedCount": 22,
+      "openCount": 31
     },
     {
       "id": "innovation",

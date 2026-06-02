@@ -1,0 +1,166 @@
+{
+  "captured_on": "2026-06-02",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "cases": [
+    {
+      "name": "desktop-light-111-mode0-initial",
+      "parNr": "1.1.1",
+      "mode": 0,
+      "theme": "light",
+      "action": "initial",
+      "url": "http://127.0.0.1:59202/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\REASON-ADOPT-1-screenshots\\desktop-light-111-mode0-initial.png",
+      "route_text": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Kies alleen de stappen die de redenering vormen en zet ze in volgorde. Redeneerstappen ordenen Stappen ordenen Zet de juiste redeneerstappen in de goede volgorde. Kies de stappen die samen de economische redenering vormen en zet ze in volgorde. Bouw de redenering stap voor stap. Herken de misconceptie De spreker verwart 'geen prijs betalen' met 'geen alternatieve kosten'. Alternatieve kosten gaan niet over wat je betaalt, maar over wat je opgeeft door je tijd of middelen aan iets anders te besteden. Pas de canonical term toe Alternatieve kosten zijn de opbrengst van het beste niet-gekozen alternatief. Wanneer je een uur in de zon zit, geef je de opbrengst op van andere dingen die je in dat uur had kunnen doen — huiswerk, werken, sporten. Rond de correcte redenering af Zonlicht is financieel gratis, maar niet economisch. Wie in de zon zit, gebruikt schaarse tijd en geeft daarmee andere alternatieven op. 'Gratis' in economische zin betekent: zonder alternatieve kosten, en dat is bijna nooit waar. Bevestig: gratis betekent geen kosten Zonlicht kost niets en je geeft niets tastbaars op, dus alternatieve kosten zijn €0. Corrigeer naar: zonlicht kost stroom Als je in je tuin zit gebruik je geen stroom, maar je kruipt wel op de bank, dus er zijn huur-alternatieve kosten. Corrigeer naar: zonlicht is zeldzaam De spreker vergeet dat zonlicht in Nederland zeldzaam is, dus schaars en dus duur. Leegmaken",
+      "task_family": "step_ordering",
+      "shell_marker": "REASON-ADOPT-1",
+      "feedback_state": null,
+      "global_feedback_visible": false,
+      "next_visible": false,
+      "check_visible": true,
+      "selected_count": 0,
+      "shell_rect": {
+        "x": 134,
+        "y": 395,
+        "width": 607,
+        "height": 870
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1372
+      }
+    },
+    {
+      "name": "desktop-light-111-mode0-retry",
+      "parNr": "1.1.1",
+      "mode": 0,
+      "theme": "light",
+      "action": "wrong-order",
+      "url": "http://127.0.0.1:59202/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\REASON-ADOPT-1-screenshots\\desktop-light-111-mode0-retry.png",
+      "route_text": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Kies alleen de stappen die de redenering vormen en zet ze in volgorde. Redeneerstappen ordenen Stappen ordenen Zet de juiste redeneerstappen in de goede volgorde. Kies de stappen die samen de economische redenering vormen en zet ze in volgorde. Pas de canonical term toe ‹ › × Herken de misconceptie ‹ › × Rond de correcte redenering af ‹ › × Herken de misconceptie De spreker verwart 'geen prijs betalen' met 'geen alternatieve kosten'. Alternatieve kosten gaan niet over wat je betaalt, maar over wat je opgeeft door je tijd of middelen aan iets anders te besteden. Pas de canonical term toe Alternatieve kosten zijn de opbrengst van het beste niet-gekozen alternatief. Wanneer je een uur in de zon zit, geef je de opbrengst op van andere dingen die je in dat uur had kunnen doen — huiswerk, werken, sporten. Rond de correcte redenering af Zonlicht is financieel gratis, maar niet economisch. Wie in de zon zit, gebruikt schaarse tijd en geeft daarmee andere alternatieven op. 'Gratis' in economische zin betekent: zonder alternatieve kosten, en dat is bijna nooit waar. Bevestig: gratis betekent geen kosten Zonlicht kost niets en je geeft niets tastbaars op, dus alternatieve kosten zijn €0. Corrigeer naar: zonlicht kost stroom Als je in je tuin zit gebruik je geen stroom, maar je kruipt wel op de bank, dus er zijn huur-alternatieve kosten. Corrigeer naar: zonlicht is zeldzaam De spreker vergeet dat zonlicht in Nederland zeldzaam is, dus schaars en dus duur. Leegmaken Controleer de volgorde Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie. Eerste plek om te controleren Verwacht: Herken de misconceptie. Gekozen: Pas de canonical term toe. Oefen verder met redeneren",
+      "task_family": "step_ordering",
+      "shell_marker": "REASON-ADOPT-1",
+      "feedback_state": "retry",
+      "global_feedback_visible": true,
+      "next_visible": true,
+      "check_visible": false,
+      "selected_count": 3,
+      "shell_rect": {
+        "x": 134,
+        "y": 395,
+        "width": 607,
+        "height": 1217
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 2074
+      }
+    },
+    {
+      "name": "desktop-light-112-mode1-matched",
+      "parNr": "1.1.2",
+      "mode": 1,
+      "theme": "light",
+      "action": "correct-order",
+      "url": "http://127.0.0.1:59202/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\REASON-ADOPT-1-screenshots\\desktop-light-112-mode1-matched.png",
+      "route_text": "REKENEN Oefenroute Redeneren PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Gebruik het redeneer-spel om de rekenstappen en betekenis van percentages hardop te ordenen. Open redeneer-spel Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Bouw eerst de deelvragenroute; daarna kun je de redenering sterker opschrijven. Deelvragen als redeneerroute Stappen ordenen Zet de deelvragen in de volgorde waarin ze de redenering opbouwen. Bouw de claim-redenering-bewijs route met de vragen die je eerst moet beantwoorden. Wat is de oude waarde? ‹ › × Hoe groot is het verschil? ‹ › × Wat is de procentuele stijging? ‹ › × Wat is de oude waarde? Hoe groot is het verschil? Wat is de procentuele stijging? Wat is de gemiddelde telefoonprijs? Welke telefoon koopt Sanne? Leegmaken De route klopt Je deelvragen bouwen de redenering logisch op. Oefen verder met redeneren",
+      "task_family": "step_ordering",
+      "shell_marker": "REASON-ADOPT-1",
+      "feedback_state": "matched",
+      "global_feedback_visible": true,
+      "next_visible": true,
+      "check_visible": false,
+      "selected_count": 3,
+      "shell_rect": {
+        "x": 134,
+        "y": 371,
+        "width": 607,
+        "height": 734
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1290
+      }
+    },
+    {
+      "name": "mobile-light-113-mode3-matched",
+      "parNr": "1.1.3",
+      "mode": 3,
+      "theme": "light",
+      "action": "correct-order",
+      "url": "http://127.0.0.1:59202/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\REASON-ADOPT-1-screenshots\\mobile-light-113-mode3-matched.png",
+      "route_text": "GRAFIEKEN Oefenroute Redeneren PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en uitleggen. Orden de bronstappen voordat je de grafiek- of tabelvraag beantwoordt. Open redeneer-spel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Bouw de keten van beginpunt naar gevolg. Het volledige visuele stroomdiagram blijft vervolgwerk. Causale keten bouwen Stappen ordenen Zet de blokken in de volgorde van de economische keten. Bouw de oorzaak-gevolgketen van beginpunt naar conclusie. Vraag vergelijkt twee prijzen ‹ › × Controleer kolommen en eenheden ‹ › × Selecteer 500 en 300 ‹ › × Label oud en nieuw ‹ › × Nu pas rekenen ‹ › × Vraag vergelijkt twee prijzen Rol in de keten: given Controleer kolommen en eenheden Rol in de keten: step Selecteer 500 en 300 Rol in de keten: step Label oud en nieuw Rol in de keten: result Nu pas rekenen Rol in de keten: result Je gebruikt dan euro's alsof het stuks zijn. Afleider: deze stap past niet als onderdeel van de gevraagde keten. Leegmaken De keten loopt logisch Je bouwt van beginpunt via tussenstappen naar conclusie. Oefen verder met redeneren",
+      "task_family": "step_ordering",
+      "shell_marker": "REASON-ADOPT-1",
+      "feedback_state": "matched",
+      "global_feedback_visible": true,
+      "next_visible": true,
+      "check_visible": false,
+      "selected_count": 5,
+      "shell_rect": {
+        "x": 16,
+        "y": 413,
+        "width": 358,
+        "height": 1168
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 2859
+      }
+    },
+    {
+      "name": "desktop-dark-111-mode5-self-check",
+      "parNr": "1.1.1",
+      "mode": 5,
+      "theme": "dark",
+      "action": "self-check",
+      "url": "http://127.0.0.1:59202/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "C:\\Projects\\4veco\\4veco-platform\\reports\\sprints\\REASON-ADOPT-1-screenshots\\desktop-dark-111-mode5-self-check.png",
+      "route_text": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shell_text": "Gebruik oorzaak, tussenstap en conclusie als een korte denkroute. Redeneerantwoord opbouwen Gestructureerde redenering Schrijf een korte redenering bij de situatie hierboven. Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck. Jouw redenering Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+      "task_family": "structured_reasoning",
+      "shell_marker": "REASON-UX-2",
+      "feedback_state": "self_check",
+      "global_feedback_visible": true,
+      "next_visible": true,
+      "check_visible": false,
+      "selected_count": 0,
+      "shell_rect": {
+        "x": 134,
+        "y": 375,
+        "width": 607,
+        "height": 628
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1813
+      }
+    }
+  ]
+}
