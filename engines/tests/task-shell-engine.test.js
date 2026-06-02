@@ -571,6 +571,51 @@ function fixtures() {
                 reason: 'verschil-in-punten',
                 partialFeedback: 'practice_only'
             }
+        }),
+        baseTask({
+            id: 'assertion-reason',
+            family: 'assertion_reason',
+            skillLabel: 'Stelling en reden beoordelen',
+            prompt: 'Beoordeel of de reden de stelling ondersteunt.',
+            interaction: {
+                assertionLabel: 'Stelling',
+                assertionText: 'Als de prijs stijgt, daalt de gevraagde hoeveelheid.',
+                reasonLabel: 'Reden',
+                reasonText: 'Bij een hogere prijs kopen consumenten meestal minder.',
+                optionLabel: 'Kies de juiste relatie',
+                options: [
+                    {
+                        id: 'both-correct-explains',
+                        label: 'Stelling en reden zijn juist, en de reden ondersteunt de stelling.',
+                        description: 'De reden legt uit waarom de gevraagde hoeveelheid daalt.'
+                    },
+                    {
+                        id: 'both-correct-no-explain',
+                        label: 'Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.',
+                        description: 'Gebruik dit alleen wanneer de reden losstaat van de stelling.'
+                    },
+                    {
+                        id: 'assertion-correct-reason-wrong',
+                        label: 'De stelling is juist, maar de reden is onjuist.',
+                        description: 'De richting klopt, maar de uitleg niet.'
+                    },
+                    {
+                        id: 'assertion-wrong-reason-correct',
+                        label: 'De stelling is onjuist, maar de reden is juist.',
+                        description: 'De uitleg kan kloppen, terwijl de stelling niet klopt.'
+                    },
+                    {
+                        id: 'both-wrong',
+                        label: 'Stelling en reden zijn allebei onjuist.',
+                        description: 'Kies dit als beide onderdelen niet kloppen.'
+                    }
+                ]
+            },
+            expected: {
+                kind: 'assertion_reason',
+                value: 'both-correct-explains',
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -592,6 +637,7 @@ describe('TaskShellEngine', () => {
             'step_ordering',
             'matching_pairs',
             'two_tier_choice',
+            'assertion_reason',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -1736,6 +1782,60 @@ describe('TaskShellEngine', () => {
         ]);
     });
 
+    test('supports assertion-reason relation judgement with strict value matching and practice-only feedback', () => {
+        const assertion = fixtures().find((task) => task.id === 'assertion-reason');
+
+        expect(TaskShellEngine.evaluateTask(assertion, {
+            value: 'both-correct-explains'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const wrongRelation = TaskShellEngine.evaluateTask(assertion, {
+            value: 'both-correct-no-explain'
+        });
+        expect(wrongRelation).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(wrongRelation.assertionReasonFeedback).toEqual({
+            mode: 'practice_only',
+            selected: {
+                id: 'both-correct-no-explain',
+                label: 'Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.'
+            },
+            expected: {
+                id: 'both-correct-explains',
+                label: 'Stelling en reden zijn juist, en de reden ondersteunt de stelling.'
+            },
+            relationMatches: false
+        });
+
+        for (const response of [
+            {},
+            { value: '' },
+            { value: 'both-correct-explains', extra: 'ignored' },
+            { value: ['both-correct-explains'] },
+            { value: { id: 'both-correct-explains' } },
+            { value: 1 },
+            { answer: 'both-correct-explains' },
+            ['both-correct-explains'],
+            'both-correct-explains',
+            { value: 'unknown-option' }
+        ]) {
+            expect(TaskShellEngine.evaluateTask(assertion, response)).toEqual(expect.objectContaining({
+                state: 'retry',
+                matched: false
+            }));
+        }
+
+        expect(TaskShellEngine.focusPlan(assertion)).toEqual([
+            '[data-task-id="assertion-reason"][data-assertion-option-id]',
+            '[data-task-id="assertion-reason"][data-assertion-summary]'
+        ]);
+    });
+
     test('rejects invalid matching pair schemas before rendering', () => {
         const matching = fixtures().find((task) => task.id === 'matching-pairs');
 
@@ -1999,6 +2099,53 @@ describe('TaskShellEngine', () => {
             ...twoTier,
             expected: {
                 ...twoTier.expected,
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
+    test('rejects invalid assertion-reason schemas before rendering', () => {
+        const assertion = fixtures().find((task) => task.id === 'assertion-reason');
+        const clone = (value) => JSON.parse(JSON.stringify(value));
+
+        for (const field of ['assertionLabel', 'assertionText', 'reasonLabel', 'reasonText', 'optionLabel']) {
+            const missing = clone(assertion);
+            delete missing.interaction[field];
+            expect(() => TaskShellEngine.validateTask(missing)).toThrow(new RegExp(field + ' must be a non-empty string'));
+        }
+
+        const tooFewOptions = clone(assertion);
+        tooFewOptions.interaction.options = tooFewOptions.interaction.options.slice(0, 3);
+        expect(() => TaskShellEngine.validateTask(tooFewOptions)).toThrow(/options must contain at least 4 item/);
+
+        const duplicateOption = clone(assertion);
+        duplicateOption.interaction.options[1].id = duplicateOption.interaction.options[0].id;
+        expect(() => TaskShellEngine.validateTask(duplicateOption)).toThrow(/duplicate assertion-reason option id/);
+
+        const missingDescription = clone(assertion);
+        delete missingDescription.interaction.options[0].description;
+        expect(() => TaskShellEngine.validateTask(missingDescription)).toThrow(/description must be a non-empty string/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...assertion,
+            expected: {
+                ...assertion.expected,
+                kind: 'choice'
+            }
+        })).toThrow(/expected\.kind must be assertion_reason/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...assertion,
+            expected: {
+                ...assertion.expected,
+                value: 'unknown-option'
+            }
+        })).toThrow(/expected\.value must match an assertion-reason option id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...assertion,
+            expected: {
+                ...assertion.expected,
                 partialFeedback: 'diagnostic'
             }
         })).toThrow(/partialFeedback must be practice_only/);

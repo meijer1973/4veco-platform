@@ -25,6 +25,7 @@
     step_ordering: { label: 'Stappen ordenen', deterministic: true },
     matching_pairs: { label: 'Koppels maken', deterministic: true },
     two_tier_choice: { label: 'Antwoord en reden kiezen', deterministic: true },
+    assertion_reason: { label: 'Stelling en reden beoordelen', deterministic: true },
     source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
     source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
     label_placement: { label: 'Labels plaatsen', deterministic: true },
@@ -213,6 +214,10 @@
       push(task.interaction.pairLabel);
       push(task.interaction.answerLabel);
       push(task.interaction.reasonLabel);
+      push(task.interaction.assertionLabel);
+      push(task.interaction.assertionText);
+      push(task.interaction.reasonText);
+      push(task.interaction.optionLabel);
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -738,6 +743,40 @@
       answerOptionLabels: answers.labels,
       reasonOptionIds: reasons.ids,
       reasonOptionLabels: reasons.labels
+    };
+  }
+
+  function validateAssertionReasonOptions(options, path) {
+    requireArray(options, path, 4);
+    var ids = {};
+    var labels = {};
+    options.forEach(function (option, idx) {
+      assert(isObject(option), path + '[' + idx + '] must be an object');
+      requireString(option.id, path + '[' + idx + '].id');
+      requireString(option.label, path + '[' + idx + '].label');
+      requireString(option.description, path + '[' + idx + '].description');
+      assert(!ids[option.id], 'duplicate assertion-reason option id: ' + option.id);
+      ids[option.id] = true;
+      labels[option.id] = option.label;
+    });
+    return {
+      ids: ids,
+      labels: labels
+    };
+  }
+
+  function validateAssertionReasonInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.assertionLabel, path + '.assertionLabel');
+    requireString(interaction.assertionText, path + '.assertionText');
+    requireString(interaction.reasonLabel, path + '.reasonLabel');
+    requireString(interaction.reasonText, path + '.reasonText');
+    requireString(interaction.optionLabel, path + '.optionLabel');
+
+    var options = validateAssertionReasonOptions(interaction.options, path + '.options');
+    return {
+      assertionOptionIds: options.ids,
+      assertionOptionLabels: options.labels
     };
   }
 
@@ -1390,6 +1429,17 @@
       return;
     }
 
+    if (task.family === 'assertion_reason') {
+      assert(expected.kind === 'assertion_reason', task.id + '.expected.kind must be assertion_reason');
+      requireString(expected.value, task.id + '.expected.value');
+      var assertionOptionIds = interactionInfo.assertionOptionIds || {};
+      assert(assertionOptionIds[expected.value], task.id + '.expected.value must match an assertion-reason option id');
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (task.family === 'source_value_selection') {
       assert(expected.kind === 'source_value_selection', task.id + '.expected.kind must be source_value_selection');
       requireArray(expected.selections, task.id + '.expected.selections', 2);
@@ -1566,6 +1616,8 @@
       interactionInfo = validateMatchingPairsInteraction(task, path);
     } else if (task.family === 'two_tier_choice') {
       interactionInfo = validateTwoTierInteraction(task, path);
+    } else if (task.family === 'assertion_reason') {
+      interactionInfo = validateAssertionReasonInteraction(task, path);
     } else if (task.family === 'source_value_selection') {
       interactionInfo = validateSourceValueInteraction(task, path);
     } else if (task.family === 'source_chain_builder') {
@@ -2107,6 +2159,37 @@
     };
   }
 
+  function assertionReasonMatches(response, expected, optionIds) {
+    if (!isObject(response)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || !Object.prototype.hasOwnProperty.call(response, 'value')) return false;
+    if (typeof response.value !== 'string' || !response.value) return false;
+    if (!Object.prototype.hasOwnProperty.call(optionIds, response.value)) return false;
+    return response.value === expected.value;
+  }
+
+  function assertionReasonEntry(optionId, labels) {
+    return {
+      id: optionId,
+      label: labels && labels[optionId] ? labels[optionId] : optionId
+    };
+  }
+
+  function assertionReasonFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var labels = optionLabelMap(task.interaction && task.interaction.options ? task.interaction.options : []);
+    var selected = isObject(response) && typeof response.value === 'string' && response.value
+      ? assertionReasonEntry(response.value, labels)
+      : null;
+    var expected = assertionReasonEntry(task.expected.value, labels);
+    return {
+      mode: 'practice_only',
+      selected: selected,
+      expected: expected,
+      relationMatches: Boolean(selected && response.value === task.expected.value)
+    };
+  }
+
   function stepOrderingFeedback(response, task) {
     if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
     var selected = response && Array.isArray(response.order) ? response.order : [];
@@ -2460,6 +2543,10 @@
       var twoTierInfo = validateTwoTierInteraction(task, task.id + '.interaction');
       return twoTierChoiceMatches(response, task.expected, twoTierInfo.answerOptionIds, twoTierInfo.reasonOptionIds);
     }
+    if (task.family === 'assertion_reason' && task.expected.kind === 'assertion_reason') {
+      var assertionInfo = validateAssertionReasonInteraction(task, task.id + '.interaction');
+      return assertionReasonMatches(response, task.expected, assertionInfo.assertionOptionIds);
+    }
     if (task.family === 'source_value_selection' && task.expected.kind === 'source_value_selection') {
       var sourceValueInfo = validateSourceValueInteraction(task, task.id + '.interaction');
       return sourceValueSelectionMatches(response, task.expected, sourceValueInfo.valueIds, sourceValueInfo.roleIds);
@@ -2531,6 +2618,10 @@
     if (task.family === 'two_tier_choice' && !matched) {
       var twoTierFeedback = twoTierChoiceFeedback(response, task);
       if (twoTierFeedback) result.twoTierFeedback = twoTierFeedback;
+    }
+    if (task.family === 'assertion_reason' && !matched) {
+      var assertionFeedback = assertionReasonFeedback(response, task);
+      if (assertionFeedback) result.assertionReasonFeedback = assertionFeedback;
     }
     if (task.family === 'source_value_selection' && !matched) {
       var valueFeedback = sourceValueFeedback(response, task);
@@ -2606,6 +2697,12 @@
         '[data-task-id="' + task.id + '"][data-two-tier-answer-id]',
         '[data-task-id="' + task.id + '"][data-two-tier-reason-id]',
         '[data-task-id="' + task.id + '"][data-two-tier-summary]'
+      ];
+    }
+    if (task.family === 'assertion_reason') {
+      return [
+        '[data-task-id="' + task.id + '"][data-assertion-option-id]',
+        '[data-task-id="' + task.id + '"][data-assertion-summary]'
       ];
     }
     if (task.family === 'source_value_selection') {

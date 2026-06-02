@@ -195,6 +195,9 @@
       if (sharedTaskShellUI && sharedTaskShellUI.handleTwoTierChoiceClick && sharedTaskShellUI.handleTwoTierChoiceClick(app, event)) {
         return;
       }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleAssertionReasonClick && sharedTaskShellUI.handleAssertionReasonClick(app, event)) {
+        return;
+      }
       if (sharedTaskShellUI && sharedTaskShellUI.handleSourceValueSelectionClick && sharedTaskShellUI.handleSourceValueSelectionClick(app, event)) {
         return;
       }
@@ -350,6 +353,12 @@
       return TwoTierTaskShellUI && TwoTierTaskShellUI.collectTwoTierChoiceResponse
         ? TwoTierTaskShellUI.collectTwoTierChoiceResponse(wrapper, task)
         : { answer: '', reason: '' };
+    }
+    if (task.family === 'assertion_reason') {
+      var AssertionTaskShellUI = resolveTaskShellUI();
+      return AssertionTaskShellUI && AssertionTaskShellUI.collectAssertionReasonResponse
+        ? AssertionTaskShellUI.collectAssertionReasonResponse(wrapper, task)
+        : { value: '' };
     }
     if (task.family === 'source_value_selection') {
       var SourceValueTaskShellUI = resolveTaskShellUI();

@@ -99,6 +99,41 @@
     '</div>';
   }
 
+  function assertionReasonOptionButton(task, option) {
+    return '<button type="button" class="ts-assertion-option" aria-pressed="false" data-task-id="' + escapeHtml(task.id) + '" data-assertion-option-id="' + escapeHtml(option.id) + '">' +
+      '<span class="ts-assertion-mark" aria-hidden="true"></span>' +
+      '<span class="ts-assertion-option-body">' +
+        '<strong>' + escapeHtml(option.label) + '</strong>' +
+        '<span>' + escapeHtml(option.description) + '</span>' +
+      '</span>' +
+    '</button>';
+  }
+
+  function renderAssertionReason(task) {
+    var optionsHtml = task.interaction.options.map(function (option) {
+      return assertionReasonOptionButton(task, option);
+    }).join('');
+    return '<div class="ts-assertion" data-assertion-task="' + escapeHtml(task.id) + '">' +
+      '<div class="ts-assertion-panel">' +
+        '<div class="ts-assertion-card">' +
+          '<strong class="ts-assertion-label">' + escapeHtml(task.interaction.assertionLabel) + '</strong>' +
+          '<p class="ts-assertion-text">' + escapeHtml(task.interaction.assertionText) + '</p>' +
+        '</div>' +
+        '<div class="ts-assertion-card">' +
+          '<strong class="ts-assertion-label">' + escapeHtml(task.interaction.reasonLabel) + '</strong>' +
+          '<p class="ts-assertion-text">' + escapeHtml(task.interaction.reasonText) + '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ts-assertion-options" role="group" aria-label="' + escapeHtml(task.interaction.optionLabel) + '">' +
+        '<strong class="ts-assertion-group-label">' + escapeHtml(task.interaction.optionLabel) + '</strong>' +
+        optionsHtml +
+      '</div>' +
+      '<div class="ts-assertion-summary" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-assertion-summary aria-label="Gekozen relatie">' +
+        '<span>Relatie: nog niet gekozen</span>' +
+      '</div>' +
+    '</div>';
+  }
+
   function renderTextInput(task, role, inputMode) {
     var label = task.interaction.inputLabel || 'Antwoord';
     return '<label class="ts-field">' +
@@ -493,6 +528,8 @@
         return renderMatchingPairs(task);
       case 'two_tier_choice':
         return renderTwoTierChoice(task);
+      case 'assertion_reason':
+        return renderAssertionReason(task);
       case 'source_value_selection':
         return renderSourceValueSelection(task);
       case 'source_chain_builder':
@@ -544,6 +581,7 @@
     var labelPlacement = renderLabelPlacementFeedback(result && result.labelPlacementFeedback);
     var matchingPairs = renderMatchingPairsFeedback(result && result.matchingPairsFeedback);
     var twoTier = renderTwoTierFeedback(result && result.twoTierFeedback);
+    var assertionReason = renderAssertionReasonFeedback(result && result.assertionReasonFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
@@ -551,6 +589,7 @@
       order +
       matchingPairs +
       twoTier +
+      assertionReason +
       sourceValue +
       sourceChain +
       labelPlacement +
@@ -733,6 +772,26 @@
     '</div>';
   }
 
+  function renderAssertionReasonFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    var selected = feedback.selected ? (feedback.selected.label || feedback.selected.id) : 'nog niet gekozen';
+    var expected = feedback.expected ? (feedback.expected.label || feedback.expected.id) : '';
+    var status = feedback.relationMatches ? 'past' : 'kijk dit na';
+    return '<div class="ts-assertion-feedback" aria-label="Aanwijzingen bij stelling en reden">' +
+      '<div class="ts-assertion-feedback-row">' +
+        '<strong>Gekozen relatie</strong>' +
+        '<span>' + escapeHtml(selected) + '</span>' +
+        '<em>' + escapeHtml(status) + '</em>' +
+      '</div>' +
+      '<div class="ts-assertion-feedback-row">' +
+        '<strong>Verwachte relatie</strong>' +
+        '<span>' + escapeHtml(expected) + '</span>' +
+        '<em>vergelijk</em>' +
+      '</div>' +
+      '<p>Controleer of de gekozen relatie klopt bij stelling en reden.</p>' +
+    '</div>';
+  }
+
   function collectClozeTileResponse(rootEl, task) {
     if (!rootEl || !task) return { blanks: {} };
     var blanks = {};
@@ -897,6 +956,14 @@
     return {
       answer: answer ? answer.getAttribute('data-two-tier-answer-id') || '' : '',
       reason: reason ? reason.getAttribute('data-two-tier-reason-id') || '' : ''
+    };
+  }
+
+  function collectAssertionReasonResponse(rootEl, task) {
+    if (!rootEl || !task) return { value: '' };
+    var selected = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-assertion-option-id].selected');
+    return {
+      value: selected ? selected.getAttribute('data-assertion-option-id') || '' : ''
     };
   }
 
@@ -1121,6 +1188,18 @@
     if (!option || !twoTier.contains(option)) return false;
     setSelectedTwoTierOption(twoTier, option);
     updateTwoTierSummary(twoTier);
+    return true;
+  }
+
+  function handleAssertionReasonClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var assertion = event.target.closest('.ts-assertion');
+    if (!assertion || !rootEl.contains(assertion)) return false;
+
+    var option = event.target.closest('.ts-assertion-option');
+    if (!option || !assertion.contains(option)) return false;
+    setSelectedAssertionOption(assertion, option);
+    updateAssertionSummary(assertion);
     return true;
   }
 
@@ -1749,6 +1828,11 @@
     return el ? el.textContent : option.textContent;
   }
 
+  function assertionOptionText(option) {
+    var el = option.querySelector('.ts-assertion-option-body strong');
+    return el ? el.textContent : option.textContent;
+  }
+
   function setSelectedTwoTierOption(twoTier, option) {
     var tier = option.getAttribute('data-two-tier-tier');
     if (!tier) return;
@@ -1768,6 +1852,22 @@
     var reasonSummary = twoTier.querySelector('.ts-two-tier-summary-reason');
     if (answerSummary) answerSummary.textContent = 'Antwoord: ' + (answer ? twoTierOptionText(answer) : 'nog niet gekozen');
     if (reasonSummary) reasonSummary.textContent = 'Reden: ' + (reason ? twoTierOptionText(reason) : 'nog niet gekozen');
+  }
+
+  function setSelectedAssertionOption(assertion, option) {
+    var controls = assertion.querySelectorAll('.ts-assertion-option');
+    for (var i = 0; i < controls.length; i++) {
+      controls[i].classList.remove('selected');
+      controls[i].setAttribute('aria-pressed', 'false');
+    }
+    option.classList.add('selected');
+    option.setAttribute('aria-pressed', 'true');
+  }
+
+  function updateAssertionSummary(assertion) {
+    var selected = assertion.querySelector('.ts-assertion-option.selected');
+    var summary = assertion.querySelector('[data-assertion-summary]');
+    if (summary) summary.textContent = 'Relatie: ' + (selected ? assertionOptionText(selected) : 'nog niet gekozen');
   }
 
   function setSelectedMatchLeft(matching, left) {
@@ -1912,6 +2012,8 @@
     handleMatchingPairsClick: handleMatchingPairsClick,
     collectTwoTierChoiceResponse: collectTwoTierChoiceResponse,
     handleTwoTierChoiceClick: handleTwoTierChoiceClick,
+    collectAssertionReasonResponse: collectAssertionReasonResponse,
+    handleAssertionReasonClick: handleAssertionReasonClick,
     collectSourceValueSelectionResponse: collectSourceValueSelectionResponse,
     handleSourceValueSelectionClick: handleSourceValueSelectionClick,
     collectSourceChainBuilderResponse: collectSourceChainBuilderResponse,

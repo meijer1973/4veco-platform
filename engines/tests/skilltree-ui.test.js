@@ -47,6 +47,10 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('collectTwoTierChoiceResponse(root, task)');
         expect(source).toContain('handleTwoTierChoiceClick(els.exStepSlot, e)');
         expect(source).toContain("e.target.closest('.ts-two-tier-choice')");
+        expect(source).toContain("task.family === 'assertion_reason'");
+        expect(source).toContain('collectAssertionReasonResponse(root, task)');
+        expect(source).toContain('handleAssertionReasonClick(els.exStepSlot, e)');
+        expect(source).toContain("e.target.closest('.ts-assertion')");
         expect(source).toContain("task.family === 'source_value_selection'");
         expect(source).toContain('collectSourceValueSelectionResponse(root, task)');
         expect(source).toContain('handleSourceValueSelectionClick(els.exStepSlot, e)');

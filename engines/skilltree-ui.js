@@ -501,6 +501,9 @@
         if (task.family === 'two_tier_choice' && window.TaskShellUI && window.TaskShellUI.collectTwoTierChoiceResponse) {
             return window.TaskShellUI.collectTwoTierChoiceResponse(root, task);
         }
+        if (task.family === 'assertion_reason' && window.TaskShellUI && window.TaskShellUI.collectAssertionReasonResponse) {
+            return window.TaskShellUI.collectAssertionReasonResponse(root, task);
+        }
         if (task.family === 'source_value_selection' && window.TaskShellUI && window.TaskShellUI.collectSourceValueSelectionResponse) {
             return window.TaskShellUI.collectSourceValueSelectionResponse(root, task);
         }
@@ -960,6 +963,9 @@
                     if (window.TaskShellUI && window.TaskShellUI.handleTwoTierChoiceClick && window.TaskShellUI.handleTwoTierChoiceClick(els.exStepSlot, e)) {
                         return;
                     }
+                    if (window.TaskShellUI && window.TaskShellUI.handleAssertionReasonClick && window.TaskShellUI.handleAssertionReasonClick(els.exStepSlot, e)) {
+                        return;
+                    }
                     if (window.TaskShellUI && window.TaskShellUI.handleSourceValueSelectionClick && window.TaskShellUI.handleSourceValueSelectionClick(els.exStepSlot, e)) {
                         return;
                     }
@@ -994,7 +1000,7 @@
                 handleCheckNumeric();
                 return;
             }
-            if (e.target.closest && (e.target.closest('.ts-multi-select') || e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula') || e.target.closest('.ts-step-ordering') || e.target.closest('.ts-matching-pairs') || e.target.closest('.ts-two-tier-choice') || e.target.closest('.ts-source-values') || e.target.closest('.ts-source-chain') || e.target.closest('.ts-label-placement'))) {
+            if (e.target.closest && (e.target.closest('.ts-multi-select') || e.target.closest('.ts-cloze') || e.target.closest('.ts-sentence') || e.target.closest('.ts-formula') || e.target.closest('.ts-step-ordering') || e.target.closest('.ts-matching-pairs') || e.target.closest('.ts-two-tier-choice') || e.target.closest('.ts-assertion') || e.target.closest('.ts-source-values') || e.target.closest('.ts-source-chain') || e.target.closest('.ts-label-placement'))) {
                 return;
             }
             if (e.target.getAttribute && e.target.getAttribute('data-task-id') && e.target.tagName !== 'TEXTAREA' && (e.key === 'Enter' || e.keyCode === 13)) {

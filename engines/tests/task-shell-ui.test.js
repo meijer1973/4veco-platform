@@ -303,7 +303,45 @@ function data() {
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
             task('construct', 'graph_construction_substitute', { inputLabel: 'Grafiekstappen' }, { kind: 'self_check', criteria: ['Punten genoemd', 'Lijn beschreven'] }),
-            task('reasoning', 'structured_reasoning', { inputLabel: 'Redenering' }, { kind: 'self_check', criteria: ['Oorzaak genoemd', 'Conclusie gekoppeld'] })
+            task('reasoning', 'structured_reasoning', { inputLabel: 'Redenering' }, { kind: 'self_check', criteria: ['Oorzaak genoemd', 'Conclusie gekoppeld'] }),
+            task('assertion-reason', 'assertion_reason', {
+                assertionLabel: 'Stelling',
+                assertionText: 'Als de prijs stijgt, daalt de gevraagde hoeveelheid.',
+                reasonLabel: 'Reden',
+                reasonText: 'Bij een hogere prijs kopen consumenten meestal minder.',
+                optionLabel: 'Kies de juiste relatie',
+                options: [
+                    {
+                        id: 'both-correct-explains',
+                        label: 'Stelling en reden zijn juist, en de reden ondersteunt de stelling.',
+                        description: 'De reden legt uit waarom de gevraagde hoeveelheid daalt.'
+                    },
+                    {
+                        id: 'both-correct-no-explain',
+                        label: 'Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.',
+                        description: 'Gebruik dit alleen wanneer de reden losstaat van de stelling.'
+                    },
+                    {
+                        id: 'assertion-correct-reason-wrong',
+                        label: 'De stelling is juist, maar de reden is onjuist.',
+                        description: 'De richting klopt, maar de uitleg niet.'
+                    },
+                    {
+                        id: 'assertion-wrong-reason-correct',
+                        label: 'De stelling is onjuist, maar de reden is juist.',
+                        description: 'De uitleg kan kloppen, terwijl de stelling niet klopt.'
+                    },
+                    {
+                        id: 'both-wrong',
+                        label: 'Stelling en reden zijn allebei onjuist.',
+                        description: 'Kies dit als beide onderdelen niet kloppen.'
+                    }
+                ]
+            }, {
+                kind: 'assertion_reason',
+                value: 'both-correct-explains',
+                partialFeedback: 'practice_only'
+            })
         ]
     };
 }
@@ -326,6 +364,7 @@ describe('TaskShellUI', () => {
             'step_ordering',
             'matching_pairs',
             'two_tier_choice',
+            'assertion_reason',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -424,6 +463,14 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Het verschil tussen 112 en 108 wordt in indexpunten genoemd.');
         expect(html).toContain('Indexpunten bereken je door indexgetallen af te trekken.');
         expect(html).toContain('112 min 108 is 4 indexpunten.');
+        expect(html).toContain('data-task-family="assertion_reason"');
+        expect(html).toContain('class="ts-assertion"');
+        expect(html).toContain('class="ts-assertion-card"');
+        expect(html).toContain('Als de prijs stijgt, daalt de gevraagde hoeveelheid.');
+        expect(html).toContain('Bij een hogere prijs kopen consumenten meestal minder.');
+        expect(html).toContain('role="group" aria-label="Kies de juiste relatie"');
+        expect(html).toContain('data-assertion-option-id="both-correct-explains"');
+        expect(html).toContain('data-assertion-summary');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -517,6 +564,16 @@ describe('TaskShellUI', () => {
         expect(twoTierFeedback).toContain('Reden');
         expect(twoTierFeedback).toContain('past');
         expect(twoTierFeedback).toContain('Controleer of je reden het gekozen antwoord echt ondersteunt.');
+
+        const assertionResult = TaskShellEngine.evaluateTask(data().tasks.find((task) => task.id === 'assertion-reason'), {
+            value: 'both-correct-no-explain'
+        });
+        const assertionFeedback = TaskShellUI.renderFeedback(assertionResult);
+        expect(assertionFeedback).toContain('class="ts-assertion-feedback"');
+        expect(assertionFeedback).toContain('Gekozen relatie');
+        expect(assertionFeedback).toContain('Verwachte relatie');
+        expect(assertionFeedback).toContain('kijk dit na');
+        expect(assertionFeedback).toContain('Controleer of de gekozen relatie klopt bij stelling en reden.');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -541,6 +598,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Stappen ordenen');
         expect(html).toContain('Koppels maken');
         expect(html).toContain('Antwoord en reden kiezen');
+        expect(html).toContain('Stelling en reden beoordelen');
         expect(html).toContain('Bronwaarden kiezen');
         expect(html).toContain('Bronketen bouwen');
         expect(html).toContain('Labels plaatsen');
@@ -662,6 +720,16 @@ describe('TaskShellUI', () => {
             '[data-task-id="two-tier-choice"][data-two-tier-answer-id]',
             '[data-task-id="two-tier-choice"][data-two-tier-reason-id]',
             '[data-task-id="two-tier-choice"][data-two-tier-summary]'
+        ]);
+    });
+
+    test('exports assertion-reason helpers for consuming wrappers', () => {
+        const assertion = data().tasks.find((task) => task.id === 'assertion-reason');
+        expect(typeof TaskShellUI.collectAssertionReasonResponse).toBe('function');
+        expect(typeof TaskShellUI.handleAssertionReasonClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(assertion)).toEqual([
+            '[data-task-id="assertion-reason"][data-assertion-option-id]',
+            '[data-task-id="assertion-reason"][data-assertion-summary]'
         ]);
     });
 

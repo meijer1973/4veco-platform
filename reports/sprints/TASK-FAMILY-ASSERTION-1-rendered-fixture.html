@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>TASK-FAMILY-ASSERTION-1 rendered fixture</title>
+  <link rel="stylesheet" href="../../engines/task-shell.css">
+</head>
+<body>
+  <main class="fixture-shell">
+    <section id="standard" data-fixture-viewport="standard" data-fixture-theme="light">
+      <article class="ts-task" data-task="assertion-price-demand" data-task-family="assertion_reason">
+        <div class="ts-task-meta">
+          <span>Taak 1</span>
+          <span>Stelling en reden beoordelen</span>
+          <span>Stelling en reden beoordelen</span>
+        </div>
+        <h2>Kies de juiste relatie tussen stelling en reden.</h2>
+        <div class="ts-assertion" data-assertion-task="assertion-price-demand">
+          <div class="ts-assertion-panel">
+            <div class="ts-assertion-card">
+              <strong class="ts-assertion-label">Stelling</strong>
+              <p class="ts-assertion-text">Als de prijs stijgt, daalt de gevraagde hoeveelheid.</p>
+            </div>
+            <div class="ts-assertion-card">
+              <strong class="ts-assertion-label">Reden</strong>
+              <p class="ts-assertion-text">Bij een hogere prijs kopen consumenten meestal minder.</p>
+            </div>
+          </div>
+          <div class="ts-assertion-options" role="group" aria-label="Kies de juiste relatie">
+            <strong class="ts-assertion-group-label">Kies de juiste relatie</strong>
+            <button type="button" class="ts-assertion-option" aria-pressed="false" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-explains">
+              <span class="ts-assertion-mark" aria-hidden="true"></span>
+              <span class="ts-assertion-option-body">
+                <strong>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</strong>
+                <span>De reden legt uit waarom de gevraagde hoeveelheid daalt.</span>
+              </span>
+            </button>
+            <button type="button" class="ts-assertion-option" aria-pressed="false" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-no-explain">
+              <span class="ts-assertion-mark" aria-hidden="true"></span>
+              <span class="ts-assertion-option-body">
+                <strong>Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.</strong>
+                <span>Gebruik dit alleen wanneer de reden losstaat van de stelling.</span>
+              </span>
+            </button>
+          </div>
+          <div class="ts-assertion-summary" tabindex="0" data-task-id="assertion-price-demand" data-assertion-summary aria-label="Gekozen relatie">
+            <span>Relatie: nog niet gekozen</span>
+          </div>
+        </div>
+        <div class="ts-feedback" data-feedback-for="assertion-price-demand" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>
+      </article>
+    </section>
+
+    <section id="narrow" data-fixture-viewport="narrow" data-fixture-theme="light">
+      <p>Fixture proof: the assertion and reason cards collapse to one column in narrow viewport CSS.</p>
+    </section>
+
+    <section id="dark" data-fixture-viewport="standard" data-fixture-theme="dark">
+      <p>Fixture proof: assertion cards, option buttons, selected state, and feedback use theme variables and remain readable in dark mode.</p>
+    </section>
+
+    <section id="after-click" data-fixture-state="after-click">
+      <div class="ts-assertion" data-assertion-task="assertion-price-demand">
+        <button type="button" class="ts-assertion-option selected" aria-pressed="true" data-task-id="assertion-price-demand" data-assertion-option-id="both-correct-explains">
+          <span class="ts-assertion-mark" aria-hidden="true"></span>
+          <span class="ts-assertion-option-body">
+            <strong>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</strong>
+            <span>De gekozen relatie is zichtbaar geselecteerd.</span>
+          </span>
+        </button>
+        <div class="ts-assertion-summary" tabindex="0" data-task-id="assertion-price-demand" data-assertion-summary aria-label="Gekozen relatie">Relatie: Stelling en reden zijn juist, en de reden ondersteunt de stelling.</div>
+      </div>
+    </section>
+
+    <section id="feedback" data-fixture-state="feedback">
+      <div class="ts-feedback-card is-retry" data-feedback-state="retry">
+        <strong>Controleer de relatie</strong>
+        <p>Kijk of de gekozen relatie de stelling en reden goed verbindt.</p>
+        <div class="ts-assertion-feedback" aria-label="Aanwijzingen bij stelling en reden">
+          <div class="ts-assertion-feedback-row">
+            <strong>Gekozen relatie</strong>
+            <span>Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.</span>
+            <em>kijk dit na</em>
+          </div>
+          <div class="ts-assertion-feedback-row">
+            <strong>Verwachte relatie</strong>
+            <span>Stelling en reden zijn juist, en de reden ondersteunt de stelling.</span>
+            <em>vergelijk</em>
+          </div>
+          <p>Controleer of de gekozen relatie klopt bij stelling en reden.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

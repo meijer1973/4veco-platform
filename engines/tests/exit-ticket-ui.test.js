@@ -528,6 +528,63 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met indexpunten', href: 'wiskundevaardigheden.html' }
                 }
+            },
+            {
+                id: 'assertion-reason-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'assertion-reason-task',
+                    family: 'assertion_reason',
+                    skillLabel: 'Stelling en reden beoordelen',
+                    purpose: 'Kies de relatie tussen stelling en reden.',
+                    prompt: 'Beoordeel de economische relatie.',
+                    interaction: {
+                        assertionLabel: 'Stelling',
+                        assertionText: 'Als de prijs stijgt, daalt de gevraagde hoeveelheid.',
+                        reasonLabel: 'Reden',
+                        reasonText: 'Bij een hogere prijs kopen consumenten meestal minder.',
+                        optionLabel: 'Kies de juiste relatie',
+                        options: [
+                            {
+                                id: 'both-correct-explains',
+                                label: 'Stelling en reden zijn juist, en de reden ondersteunt de stelling.',
+                                description: 'De reden legt uit waarom de gevraagde hoeveelheid daalt.'
+                            },
+                            {
+                                id: 'both-correct-no-explain',
+                                label: 'Stelling en reden zijn juist, maar de reden ondersteunt de stelling niet.',
+                                description: 'Gebruik dit alleen wanneer de reden losstaat van de stelling.'
+                            },
+                            {
+                                id: 'assertion-correct-reason-wrong',
+                                label: 'De stelling is juist, maar de reden is onjuist.',
+                                description: 'De richting klopt, maar de uitleg niet.'
+                            },
+                            {
+                                id: 'assertion-wrong-reason-correct',
+                                label: 'De stelling is onjuist, maar de reden is juist.',
+                                description: 'De uitleg kan kloppen, terwijl de stelling niet klopt.'
+                            },
+                            {
+                                id: 'both-wrong',
+                                label: 'Stelling en reden zijn allebei onjuist.',
+                                description: 'Kies dit als beide onderdelen niet kloppen.'
+                            }
+                        ]
+                    },
+                    expected: {
+                        kind: 'assertion_reason',
+                        value: 'both-correct-explains',
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Relatie klopt',
+                        matchText: 'Je beoordeelt stelling en reden samen.',
+                        retryTitle: 'Controleer de relatie',
+                        retryText: 'Kijk of de reden de stelling echt ondersteunt.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met redeneren', href: 'redeneer-spel.html' }
+                }
             }
         ]
     };
@@ -631,6 +688,7 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="label_placement"');
         expect(html).toContain('data-task-family="matching_pairs"');
         expect(html).toContain('data-task-family="two_tier_choice"');
+        expect(html).toContain('data-task-family="assertion_reason"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -648,6 +706,8 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-two-tier-answer-id="vier-indexpunten"');
         expect(html).toContain('data-two-tier-reason-id="verschil-in-punten"');
         expect(html).toContain('data-two-tier-summary');
+        expect(html).toContain('data-assertion-option-id="both-correct-explains"');
+        expect(html).toContain('data-assertion-summary');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -677,6 +737,9 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleTwoTierChoiceClick(app, event)');
         expect(source).toContain('collectTwoTierChoiceResponse(wrapper, task)');
         expect(source).toContain("task.family === 'two_tier_choice'");
+        expect(source).toContain('handleAssertionReasonClick(app, event)');
+        expect(source).toContain('collectAssertionReasonResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'assertion_reason'");
         expect(source).toContain('handleSourceValueSelectionClick(app, event)');
         expect(source).toContain('collectSourceValueSelectionResponse(wrapper, task)');
         expect(source).toContain("task.family === 'source_value_selection'");

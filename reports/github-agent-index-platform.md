@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T06:32:20.115Z
+Generated: 2026-06-02T07:07:03.125Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2791
+Files indexed: 2806
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 362
+Count: 363
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -458,6 +458,7 @@ Count: 362
 - build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
 - build-scripts/sprints/check-task-family-source1.js
+- build-scripts/sprints/check-task-family-two-tier1.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -538,7 +539,7 @@ Count: 42
 
 ## validators
 
-Count: 194
+Count: 195
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -670,6 +671,7 @@ Count: 194
 - build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
 - build-scripts/sprints/check-task-family-source1.js
+- build-scripts/sprints/check-task-family-two-tier1.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
@@ -737,7 +739,7 @@ Count: 194
 
 ## references
 
-Count: 424
+Count: 426
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1083,6 +1085,8 @@ Count: 424
 - references/data/sprints/TASK-FAMILY-SENTENCE-1.result.json
 - references/data/sprints/TASK-FAMILY-SOURCE-1.plan.json
 - references/data/sprints/TASK-FAMILY-SOURCE-1.result.json
+- references/data/sprints/TASK-FAMILY-TWO-TIER-1.plan.json
+- references/data/sprints/TASK-FAMILY-TWO-TIER-1.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
@@ -1166,7 +1170,7 @@ Count: 424
 
 ## reports
 
-Count: 1577
+Count: 1589
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1234,6 +1238,7 @@ Count: 1577
 - reports/json/task-family-order1-proof.json
 - reports/json/task-family-sentence1-proof.json
 - reports/json/task-family-source1-proof.json
+- reports/json/task-family-two-tier1-proof.json
 - reports/json/task-shell-ux2-proof.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
@@ -2722,6 +2727,17 @@ Count: 1577
 - reports/sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.html
 - reports/sprints/TASK-FAMILY-SOURCE-1-result.md
 - reports/sprints/TASK-FAMILY-SOURCE-1-screenshot-manifest.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-baseline.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-plan.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-planning-review.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-rendered-fixture.html
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-result.md
+- reports/sprints/TASK-FAMILY-TWO-TIER-1-screenshot-manifest.md
 - reports/sprints/TASK-SHELL-UX-2-baseline.md
 - reports/sprints/TASK-SHELL-UX-2-diff-summary.md
 - reports/sprints/TASK-SHELL-UX-2-lead-review-assignment.md

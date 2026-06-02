@@ -133,6 +133,9 @@
 .ts-two-tier-option:hover,
 .ts-two-tier-option:focus-visible,
 .ts-two-tier-summary:focus-visible,
+.ts-assertion-option:hover,
+.ts-assertion-option:focus-visible,
+.ts-assertion-summary:focus-visible,
 .ts-cloze-blank:hover,
 .ts-cloze-blank:focus-visible,
 .ts-cloze-clear:hover,
@@ -329,6 +332,114 @@
 }
 
 .ts-two-tier-feedback-row em {
+  color: var(--ts-muted);
+  font-style: normal;
+}
+
+.ts-assertion {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-assertion-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ts-assertion-card,
+.ts-assertion-options {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+}
+
+.ts-assertion-label,
+.ts-assertion-group-label {
+  color: var(--ts-primary);
+}
+
+.ts-assertion-text {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.ts-assertion-options {
+  gap: 10px;
+}
+
+.ts-assertion-option {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-bg);
+  color: var(--ts-text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.ts-assertion-option.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 10%, var(--ts-panel));
+}
+
+.ts-assertion-option.selected .ts-assertion-mark {
+  background: var(--ts-primary);
+  box-shadow: inset 0 0 0 4px var(--ts-panel);
+}
+
+.ts-assertion-mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 2px solid var(--ts-primary);
+  border-radius: 999px;
+}
+
+.ts-assertion-option-body {
+  display: grid;
+  gap: 4px;
+  line-height: 1.35;
+}
+
+.ts-assertion-option-body span {
+  color: var(--ts-muted);
+}
+
+.ts-assertion-summary {
+  min-height: 48px;
+  padding: 12px;
+  border: 1px dashed var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 5%, var(--ts-panel));
+  color: var(--ts-muted);
+}
+
+.ts-assertion-feedback {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 6%, transparent);
+}
+
+.ts-assertion-feedback-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.25fr) minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.ts-assertion-feedback-row em {
   color: var(--ts-muted);
   font-style: normal;
 }
@@ -1514,7 +1625,9 @@
   }
 
   .ts-two-tier-grid,
-  .ts-two-tier-feedback-row {
+  .ts-two-tier-feedback-row,
+  .ts-assertion-panel,
+  .ts-assertion-feedback-row {
     grid-template-columns: 1fr;
   }
 

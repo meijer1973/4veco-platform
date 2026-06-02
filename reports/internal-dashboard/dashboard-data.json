@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T06:32:27.895Z",
+  "generatedAt": "2026-06-02T07:07:03.117Z",
   "internalOnly": true,
   "teams": [
     {
@@ -249,8 +249,8 @@
             {
               "sprint": "TASK-FAMILY-ASSERTION-1",
               "name": "Assertion-Reason Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement `assertion_reason` after higher-priority families exist. Must remain a compact reasoning check, not an artificial default quiz type.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-ASSERTION-1",
-          "name": "Assertion-Reason Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement `assertion_reason` after higher-priority families exist. Must remain a compact reasoning check, not an artificial default quiz type.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "GATE-TASK-FAMILY-1",
           "name": "Structured Choice And Construction Task-Family Review",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Two-Tier Choice Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-ASSERTION-1",
+          "name": "Assertion-Reason Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `assertion_reason`, strict relation-option validation, exact `{ value }` response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot replace constructed response, target-equivalent proof, or richer reasoning tasks.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 165,
-      "openCount": 12
+      "completedCount": 166,
+      "openCount": 11
     },
     {
       "id": "lessen",
@@ -2956,8 +2956,8 @@
             {
               "sprint": "TASK-FAMILY-ASSERTION-1",
               "name": "Assertion-Reason Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds `assertion_reason` only after the higher-priority families exist; it must remain a reviewed compact reasoning task, not default quiz variety.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-ASSERTION-1",
-          "name": "Assertion-Reason Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds `assertion_reason` only after the higher-priority families exist; it must remain a reviewed compact reasoning task, not default quiz variety.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "GATE-TASK-FAMILY-1",
           "name": "Structured Choice And Construction Task-Family Review",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-ASSERTION-1",
+          "name": "Assertion-Reason Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `assertion_reason` as a deterministic shared task-shell family with required assertion/reason text, labelled relation option bank, minimum four described relation options, exact `{ value }` response validation, neutral practice-only selected/expected relation feedback, assertion-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; assertion-reason cannot become generic quiz variety, default reasoning-game format, constructed-response replacement, or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 16,
-      "openCount": 31
+      "completedCount": 17,
+      "openCount": 30
     },
     {
       "id": "innovation",

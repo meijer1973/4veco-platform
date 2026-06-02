@@ -492,6 +492,9 @@
     if (task.family === "two_tier_choice" && window.TaskShellUI && window.TaskShellUI.collectTwoTierChoiceResponse) {
       return window.TaskShellUI.collectTwoTierChoiceResponse(rootEl, task);
     }
+    if (task.family === "assertion_reason" && window.TaskShellUI && window.TaskShellUI.collectAssertionReasonResponse) {
+      return window.TaskShellUI.collectAssertionReasonResponse(rootEl, task);
+    }
     if (task.family === "source_value_selection" && window.TaskShellUI && window.TaskShellUI.collectSourceValueSelectionResponse) {
       return window.TaskShellUI.collectSourceValueSelectionResponse(rootEl, task);
     }
@@ -553,6 +556,11 @@
     rootEl.querySelectorAll(".ts-two-tier-choice").forEach(function (twoTierChoice) {
       twoTierChoice.addEventListener("click", function (event) {
         window.TaskShellUI.handleTwoTierChoiceClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-assertion").forEach(function (assertionReason) {
+      assertionReason.addEventListener("click", function (event) {
+        window.TaskShellUI.handleAssertionReasonClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-source-values").forEach(function (sourceValues) {
