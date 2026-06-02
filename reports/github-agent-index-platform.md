@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T17:17:18.592Z
+Generated: 2026-06-02T18:15:29.548Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2981
+Files indexed: 3005
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 378
+Count: 379
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -416,6 +416,7 @@ Count: 378
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
@@ -554,7 +555,7 @@ Count: 42
 
 ## validators
 
-Count: 203
+Count: 204
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -647,6 +648,7 @@ Count: 203
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -762,7 +764,7 @@ Count: 203
 
 ## references
 
-Count: 439
+Count: 440
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -882,6 +884,7 @@ Count: 439
 - references/data/sprints/GATE-ENGINE-1.result.json
 - references/data/sprints/GATE-L1.7B-Q2.plan.json
 - references/data/sprints/GATE-L1.7B-Q2.result.json
+- references/data/sprints/GATE-REASON-STD-1.plan.json
 - references/data/sprints/GATE-TASK-FAMILY-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.result.json
@@ -1206,7 +1209,7 @@ Count: 439
 
 ## reports
 
-Count: 1736
+Count: 1758
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1743,6 +1746,22 @@ Count: 1736
 - reports/review-gates/GATE-R7-rag/subagent-evidence-surfacing.json
 - reports/review-gates/GATE-R7-rag/subagent-rag-retrieval.json
 - reports/review-gates/GATE-R7-rag/subagent-summary.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/bundle-urls.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.json
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.json
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshot-manifest.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mobile-mode3.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode0-initial.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode1-matched.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a97-index-cue.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a98-cue.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-mobile-mode3.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-dark-mode5.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mobile-route-placement.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode0-retry-feedback.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode1-next-action.png
 - reports/review-gates/GATE-RX1-representation-unit-scope/bundle-urls.md
 - reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.json
 - reports/review-gates/GATE-RX1-representation-unit-scope/duplicate-overlap-report.md
@@ -2177,6 +2196,12 @@ Count: 1736
 - reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md
 - reports/sprints/GATE-L1.7B-Q2-plan.md
 - reports/sprints/GATE-L1.7B-Q2-result.md
+- reports/sprints/GATE-REASON-STD-1-baseline.md
+- reports/sprints/GATE-REASON-STD-1-lead-review-assignment.md
+- reports/sprints/GATE-REASON-STD-1-lead-review-corrections.md
+- reports/sprints/GATE-REASON-STD-1-lead-review-round1.md
+- reports/sprints/GATE-REASON-STD-1-lead-review-round2.md
+- reports/sprints/GATE-REASON-STD-1-plan.md
 - reports/sprints/GATE-TASK-FAMILY-1-baseline.md
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md

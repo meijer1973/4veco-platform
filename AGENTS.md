@@ -98,7 +98,11 @@ provide a playable or reproducible artifact when the surface is interactive,
 state evidence such as JSON/proof logs, screenshots for initial/retry/feedback/
 next-action/completed states where relevant, mobile and dark-mode proof when
 the surface is student-facing, and a checker that verifies the proof artifacts
-exist. Present the proof so a human can see where problems are, then decide.
+exist. For game/task-shell gates, use the `GATE-TASK-FAMILY-1` pattern unless
+there is an explicit waiver: a review-only playable lab or live route, visible
+controls a human can use, deterministic proof that the path reaches completion,
+and packet/checker requirements for the lab, data, proof JSON, and screenshots.
+Present the proof so a human can see where problems are, then decide.
 
 
 ### Sprint agent structure

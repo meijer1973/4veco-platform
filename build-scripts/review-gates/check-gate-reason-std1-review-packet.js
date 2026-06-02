@@ -11,6 +11,10 @@ const PACKET_JSON = path.join(GATE_DIR, 'review-packet.json');
 const LIVE_MD = path.join(GATE_DIR, 'live-output-evidence.md');
 const LIVE_JSON = path.join(GATE_DIR, 'live-output-evidence.json');
 const MANIFEST_MD = path.join(GATE_DIR, 'screenshot-manifest.md');
+const PLAYABLE_LAB = path.join(GATE_DIR, 'gate-playable-reasoning-lab.html');
+const PLAYABLE_DATA = path.join(GATE_DIR, 'gate-playable-reasoning-data.json');
+const PLAYABLE_PROOF = path.join(GATE_DIR, 'playable-proof.json');
+const PLAYABLE_RECHECK = path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-playable-proof-recheck.md`);
 
 const REQUIRED_SPRINT_FILES = [
   path.join('reports', 'sprints', `${SPRINT_ID}-plan.md`),
@@ -19,7 +23,8 @@ const REQUIRED_SPRINT_FILES = [
   path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-assignment.md`),
   path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-round1.md`),
   path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-corrections.md`),
-  path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-round2.md`)
+  path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-round2.md`),
+  PLAYABLE_RECHECK
 ];
 
 const REQUIRED_SCREENSHOTS = [
@@ -32,7 +37,12 @@ const REQUIRED_SCREENSHOTS = [
   path.join(GATE_DIR, 'screenshots', 'reason-play-mobile-route-placement.png'),
   path.join(GATE_DIR, 'screenshots', 'reason-answerform-a98-cue.png'),
   path.join(GATE_DIR, 'screenshots', 'reason-answerform-a97-index-cue.png'),
-  path.join(GATE_DIR, 'screenshots', 'reason-answerform-mobile-mode3.png')
+  path.join(GATE_DIR, 'screenshots', 'reason-answerform-mobile-mode3.png'),
+  path.join(GATE_DIR, 'screenshots', 'gate-reason-std1-playable-initial.png'),
+  path.join(GATE_DIR, 'screenshots', 'gate-reason-std1-playable-retry-feedback.png'),
+  path.join(GATE_DIR, 'screenshots', 'gate-reason-std1-playable-next-action-focus.png'),
+  path.join(GATE_DIR, 'screenshots', 'gate-reason-std1-playable-completed.png'),
+  path.join(GATE_DIR, 'screenshots', 'gate-reason-std1-playable-mobile-dark-completed.png')
 ];
 
 const REQUIRED_PROOF_JSON = [
@@ -191,6 +201,46 @@ function validatePacket() {
     assert(manifest.includes(path.basename(file)), `manifest missing screenshot ${file}`);
   });
 
+  exists(PLAYABLE_LAB);
+  exists(PLAYABLE_DATA);
+  exists(PLAYABLE_PROOF);
+  assert(packetMd.includes(toPosix(PLAYABLE_LAB)), 'packet missing playable lab path');
+  assert(packetMd.includes(toPosix(PLAYABLE_DATA)), 'packet missing playable data path');
+  assert(packetMd.includes(toPosix(PLAYABLE_PROOF)), 'packet missing playable proof path');
+  assert(packet.evidence_base.includes(toPosix(PLAYABLE_LAB)), 'packet JSON missing playable lab');
+  assert(packet.evidence_base.includes(toPosix(PLAYABLE_DATA)), 'packet JSON missing playable data');
+  assert(packet.evidence_base.includes(toPosix(PLAYABLE_PROOF)), 'packet JSON missing playable proof');
+  assert(packet.evidence_base.includes(toPosix(PLAYABLE_RECHECK)), 'packet JSON missing playable-proof recheck');
+  assert(packetMd.includes(toPosix(PLAYABLE_RECHECK)), 'packet missing playable-proof recheck path');
+
+  const playableLab = read(PLAYABLE_LAB);
+  const playableData = readJson(PLAYABLE_DATA);
+  const playableProof = readJson(PLAYABLE_PROOF);
+  assert(playableLab.includes('window.gateReasonStd1'), 'playable lab must expose gateReasonStd1 test API');
+  assert(playableLab.includes('Controleer case'), 'playable lab must expose visible check controls');
+  assert(playableLab.includes('Speel correct pad automatisch'), 'playable lab must expose auto-correct proof action');
+  assert(playableLab.includes('Held lanes'), 'playable lab must show held lanes');
+  assert(Array.isArray(playableData.cases) && playableData.cases.length === 4, 'playable data must include four cases');
+  assert(playableData.cases.some((entry) => entry.paragraph === '1.1.3' && entry.provenance === 'generated_lesson_reasoning_data'), 'playable data must include 1.1.3 generated lesson-data case');
+  assert(playableData.cases.some((entry) => entry.task && entry.task.family === 'structured_reasoning'), 'playable data must include structured_reasoning self-check case');
+  assert(Array.isArray(playableData.heldLanes) && playableData.heldLanes.some((entry) => entry.mode === 2) && playableData.heldLanes.some((entry) => entry.mode === 4), 'playable data must show modes 2 and 4 held/local status');
+  assertAllFalse(playableData.boundaries, 'playable data boundaries');
+  assert(playableProof.status === 'passed', 'playable proof must pass');
+  assert(playableProof.summary && playableProof.summary.required_case_count === 4, 'playable proof must require four cases');
+  assert(playableProof.summary.desktop_initial_case_count === 4, 'playable proof must show four initial cases');
+  assert(playableProof.summary.desktop_initial_check_buttons === 4, 'playable proof must show four check buttons');
+  assert(playableProof.summary.retry_state_proved === true, 'playable proof must prove retry state');
+  assert(playableProof.summary.next_action_focus_proved === true, 'playable proof must prove next-action focus');
+  assert(playableProof.summary.desktop_completed_count === 4 && playableProof.summary.desktop_completed_visible === true, 'playable proof must prove desktop completion');
+  assert(playableProof.summary.mobile_dark_completed_count === 4 && playableProof.summary.mobile_dark_completed_visible === true, 'playable proof must prove mobile/dark completion');
+  assert(playableProof.summary.hidden_expected_state_lookup_required_after_repair === false, 'playable proof must not require hidden expected-state lookup');
+  assert((playableProof.screenshots || []).length >= 5, 'playable proof must record playable screenshots');
+  assert(/manually (try|test) at least one case/i.test(packetMd), 'packet must instruct human reviewer to manually test at least one playable case');
+  assert(/local static server/i.test(packetMd) && /127\.0\.0\.1/.test(packetMd), 'packet must include localhost/static-server fallback for playable lab');
+  assert(live.supplemental_playable_proof_recheck && live.supplemental_playable_proof_recheck.manual_case_test_instruction === true, 'live evidence must require manual playable case test');
+  assert(live.supplemental_playable_proof_recheck.autoplay_helper_may_not_replace_human_review === true, 'live evidence must not let autoplay replace human review');
+  assert(live.supplemental_playable_proof_recheck.localhost_static_server_fallback_required === true, 'live evidence must require localhost/static-server fallback');
+
   REQUIRED_PROOF_JSON.forEach((file) => {
     exists(file);
     assert(packet.evidence_base.includes(file), `packet JSON missing proof JSON ${file}`);
@@ -226,7 +276,12 @@ function validatePacket() {
   REQUIRED_SPRINT_FILES.forEach(exists);
   const round1Verdict = validateLeadReviewReport(path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-round1.md`), 'round 1');
   const round2Verdict = validateLeadReviewReport(path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-round2.md`), 'round 2');
+  const playableRecheckVerdict = validateLeadReviewReport(PLAYABLE_RECHECK, 'playable proof recheck');
   assert(['PASS', 'PASS WITH FLAGS'].includes(round2Verdict), 'lead review round 2 must pass before human review');
+  assert(['PASS', 'PASS WITH FLAGS'].includes(playableRecheckVerdict), 'playable-proof recheck must pass before human review');
+  const playableRecheck = read(PLAYABLE_RECHECK);
+  assert(/GATE-TASK-FAMILY-1/i.test(playableRecheck), 'playable-proof recheck must compare to GATE-TASK-FAMILY-1 pattern');
+  assert(/human reviewers should still test at least one case manually/i.test(playableRecheck), 'playable-proof recheck must require manual case testing');
 
   const corrections = read(path.join('reports', 'sprints', `${SPRINT_ID}-lead-review-corrections.md`));
   assert(corrections.includes(SPRINT_ID), 'corrections log must identify sprint');
@@ -237,9 +292,10 @@ function validatePacket() {
   }
 
   assert(/Status: direct-comment review packet/i.test(packetMd), 'packet status must be direct-comment packet');
-  assert(/pending pre-gate lead review|ready after pre-gate lead review/i.test(packetMd), 'packet must state lead-review readiness state');
+  assert(/ready after pre-gate lead review/i.test(packetMd), 'packet must state lead-review readiness state');
+  assert(/supplemental playable-proof recheck PASS WITH FLAGS/i.test(packetMd), 'packet must state supplemental playable-proof recheck status');
   assert(/no product authority/i.test(packetMd), 'packet status must deny product authority');
-  assert(/pre-gate lead review/i.test(liveMd), 'live evidence must mention pre-gate lead review context or packet flow');
+  assert(/pre-gate lead review|supplemental lead review/i.test(liveMd), 'live evidence must mention lead review context or packet flow');
 }
 
 validatePacket();

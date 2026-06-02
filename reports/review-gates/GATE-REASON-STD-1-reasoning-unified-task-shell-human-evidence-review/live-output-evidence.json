@@ -3,7 +3,25 @@
   "gate_id": "GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review",
   "sprint_id": "GATE-REASON-STD-1",
   "generated": "2026-06-02",
-  "status": "prepared_for_direct_comment_human_review_no_product_authority",
+  "status": "prepared_for_direct_comment_human_review_after_playable_proof_recheck_pass_with_flags_no_product_authority",
+  "playable_lab": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html",
+  "playable_data": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json",
+  "playable_proof": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json",
+  "playable_proof_summary": {
+    "required_case_count": 4,
+    "desktop_completed_count": 4,
+    "mobile_dark_completed_count": 4,
+    "retry_state_proved": true,
+    "next_action_focus_proved": true,
+    "hidden_expected_state_lookup_required_after_repair": false
+  },
+  "supplemental_playable_proof_recheck": {
+    "path": "reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md",
+    "verdict": "PASS WITH FLAGS",
+    "manual_case_test_instruction": true,
+    "autoplay_helper_may_not_replace_human_review": true,
+    "localhost_static_server_fallback_required": true
+  },
   "source_sprints": [
     "REASON-STD-1",
     "REASON-ADOPT-1",
@@ -89,6 +107,26 @@
     {
       "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-mobile-mode3.png",
       "purpose": "mobile checked chain with answer-form scaffold and route context"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-initial.png",
+      "purpose": "playable lab initial state"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-retry-feedback.png",
+      "purpose": "playable lab retry feedback"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-next-action-focus.png",
+      "purpose": "playable lab next-action/focus handoff"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-completed.png",
+      "purpose": "desktop playable lab completion"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-mobile-dark-completed.png",
+      "purpose": "mobile dark playable lab completion"
     }
   ],
   "proof_inputs": {
@@ -106,6 +144,15 @@
     "reason_answerform2": [
       "reports/json/reason-answerform2-proof.json",
       "reports/json/reason-answerform2-scaffold-map.json"
+    ],
+    "playable_lab": [
+      "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html",
+      "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json",
+      "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json"
+    ],
+    "lead_review": [
+      "reports/sprints/GATE-REASON-STD-1-lead-review-round2.md",
+      "reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md"
     ]
   },
   "usability_evidence": {

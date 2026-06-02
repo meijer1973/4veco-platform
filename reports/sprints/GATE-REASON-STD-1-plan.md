@@ -123,10 +123,15 @@ must present:
 - `reports/sprints/GATE-REASON-STD-1-lead-review-round2.md`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.md`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.json`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.md`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.json`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshot-manifest.md`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/`
+- `build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js`
+- `build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js`
 - `build-scripts/review-gates/check-gate-reason-std1-review-packet.js`
 
 ## Operationalized sprint procedure
@@ -155,6 +160,8 @@ must present:
 ```powershell
 node build-scripts\sprints\check-sprint-plan.js reports\sprints\GATE-REASON-STD-1-plan.md
 node build-scripts\sprints\check-sprint-bundle.js GATE-REASON-STD-1
+node build-scripts\review-gates\emit-gate-reason-std1-playable-lab.js
+node build-scripts\review-gates\capture-gate-reason-std1-playable-proof.js
 node build-scripts\review-gates\check-gate-reason-std1-review-packet.js
 node build-scripts\sprints\check-reason-adopt1-route-output.js
 node build-scripts\sprints\check-reason-play1-usability.js

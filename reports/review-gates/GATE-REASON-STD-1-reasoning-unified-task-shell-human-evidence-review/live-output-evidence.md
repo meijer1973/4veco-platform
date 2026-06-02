@@ -3,13 +3,14 @@
 Generated: 2026-06-02
 
 Status: evidence packet prepared for direct-comment human review after
-`REASON-STD-1`, `REASON-ADOPT-1`, `REASON-PLAY-1`, and
-`REASON-ANSWERFORM-2`; no human review comments started; no product authority.
+`REASON-STD-1`, `REASON-ADOPT-1`, `REASON-PLAY-1`,
+`REASON-ANSWERFORM-2`, and supplemental playable-proof lead review PASS WITH
+FLAGS; no human review comments started; no product authority.
 
 ## Scope
 
 This evidence covers the current generated Book 1 reasoning route as a local
-practice surface:
+practice surface and includes a playable review lab that humans can test:
 
 - shared task-shell adoption for modes 0, 1, 3, and 5;
 - playable route proof and screenshot proof for reasoning practice;
@@ -22,6 +23,44 @@ practice surface:
 The evidence is review-only. It does not authorize target-equivalent reasoning
 proof, generated output mutation, source-data mutation, diagnostics, adaptive
 routing, mastery, sequencing, Scale Gate 1, or student/product use.
+
+## Playable Review Lab
+
+Playable lab:
+`reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html`
+
+Playable data:
+`reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json`
+
+Playable proof:
+`reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json`
+
+The lab is generated from current reasoning-engine task-shell objects:
+
+- `1.1.1` mode 0 from platform source CSV;
+- `1.1.2` mode 1 from platform source CSV;
+- `1.1.3` mode 3 from generated lesson reasoning data;
+- `1.1.2` mode 5 from platform source CSV.
+
+The playable proof verifies:
+
+- four playable cases and four visible `Controleer case` buttons render;
+- empty submission produces retry feedback;
+- correct submission exposes a next-action/focus handoff;
+- desktop correct path reaches `4 / 4`;
+- mobile/dark correct path reaches `4 / 4`;
+- no hidden expected-state lookup is required after repair.
+
+Supplemental lead review:
+`reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md`
+
+That recheck records `PASS WITH FLAGS`, confirms the proof is now human-testable
+in the `GATE-TASK-FAMILY-1` style, and carries one review instruction: the
+auto-play/correct-path helper is useful proof, but human reviewers should still
+manually test at least one case.
+
+If direct `file://` opening blocks scripts, serve the repository root with a
+local static server and open the lab via `http://127.0.0.1:<port>/...`.
 
 ## Evidence Chain
 
@@ -61,6 +100,11 @@ Screenshots copied into the gate folder for human review:
 | `screenshots/reason-answerform-a98-cue.png` | `Leg uit of` scaffold cue in mode 5 |
 | `screenshots/reason-answerform-a97-index-cue.png` | `Leg uit dat` scaffold cue for index-points reasoning |
 | `screenshots/reason-answerform-mobile-mode3.png` | mobile checked chain with answer-form scaffold and route context |
+| `screenshots/gate-reason-std1-playable-initial.png` | playable lab initial state with four testable cases |
+| `screenshots/gate-reason-std1-playable-retry-feedback.png` | empty submission retry feedback in the playable lab |
+| `screenshots/gate-reason-std1-playable-next-action-focus.png` | next-action/focus handoff after a correct case |
+| `screenshots/gate-reason-std1-playable-completed.png` | desktop playable lab completion at `4 / 4` |
+| `screenshots/gate-reason-std1-playable-mobile-dark-completed.png` | mobile/dark playable lab completion at `4 / 4` |
 
 ## Playability And Usability Evidence
 
@@ -106,6 +150,12 @@ The gate packet cites:
 - `reports/json/reason-play1-usability.json`
 - `reports/json/reason-answerform2-proof.json`
 - `reports/json/reason-answerform2-scaffold-map.json`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json`
+- `build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js`
+- `build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js`
+- `reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md`
 - `build-scripts/sprints/check-reason-std1.js`
 - `build-scripts/sprints/check-reason-adopt1-route-output.js`
 - `build-scripts/sprints/check-reason-play1-usability.js`

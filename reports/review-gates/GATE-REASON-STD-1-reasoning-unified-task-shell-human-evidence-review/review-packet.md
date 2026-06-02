@@ -3,7 +3,8 @@
 Generated: 2026-06-02
 
 Status: direct-comment review packet ready after pre-gate lead review PASS
-WITH FLAGS; no human review comments started; no product authority.
+WITH FLAGS and supplemental playable-proof recheck PASS WITH FLAGS; no human
+review comments started; no product authority.
 
 ## Review Scope
 
@@ -17,9 +18,10 @@ This gate reviews evidence from:
 - `REASON-PLAY-1`
 - `REASON-ANSWERFORM-2`
 
-The gate must inspect rendered output screenshots, proof JSON, usability-agent
-evidence, mode dispositions, and answer-form scaffold evidence. Architecture-only
-or contract-only proof is insufficient.
+The gate must inspect the playable reasoning review lab, playable proof JSON,
+rendered output screenshots, usability-agent evidence, mode dispositions, and
+answer-form scaffold evidence. Architecture-only, contract-only, or
+screenshots-only proof is insufficient.
 
 This packet does not authorize generated lesson output, source-data mutation,
 engine implementation, product-route adoption, target-equivalent reasoning
@@ -38,6 +40,9 @@ closure must record the reviewed remote commit/hash.
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.md`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.json`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshot-manifest.md`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode0-initial.png`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode1-matched.png`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mobile-mode3.png`
@@ -48,12 +53,18 @@ closure must record the reviewed remote commit/hash.
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a98-cue.png`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a97-index-cue.png`
 - `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-mobile-mode3.png`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-initial.png`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-retry-feedback.png`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-next-action-focus.png`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-completed.png`
+- `reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-mobile-dark-completed.png`
 - `reports/sprints/GATE-REASON-STD-1-plan.md`
 - `reports/sprints/GATE-REASON-STD-1-baseline.md`
 - `reports/sprints/GATE-REASON-STD-1-lead-review-assignment.md`
 - `reports/sprints/GATE-REASON-STD-1-lead-review-round1.md`
 - `reports/sprints/GATE-REASON-STD-1-lead-review-corrections.md`
 - `reports/sprints/GATE-REASON-STD-1-lead-review-round2.md`
+- `reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md`
 - `reports/sprints/REASON-STD-1-result.md`
 - `reports/sprints/REASON-STD-1-standard-family-map.md`
 - `reports/sprints/REASON-STD-1-build-vs-rebuild-note.md`
@@ -83,6 +94,8 @@ closure must record the reviewed remote commit/hash.
 - `build-scripts/sprints/check-reason-adopt1-route-output.js`
 - `build-scripts/sprints/check-reason-play1-usability.js`
 - `build-scripts/sprints/check-reason-answerform2-route-output.js`
+- `build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js`
+- `build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js`
 - `build-scripts/review-gates/check-gate-reason-std1-review-packet.js`
 - `../4veco-lessen/specifications/product-end-state.md`
 - `../4veco-lessen/specifications/companion-core-specifications.md`
@@ -94,6 +107,7 @@ closure must record the reviewed remote commit/hash.
 | Surface | Current state | Review issue |
 |---|---|---|
 | shared task-shell reasoning modes | modes 0, 1, 3, and 5 have shared-shell evidence | decide whether this is acceptable local practice integration proof |
+| playable reasoning lab | four cases can be tested through visible controls and proof reaches `4 / 4` | decide whether human-testable evidence is sufficient |
 | mode 2 | local error repair only | preserve held/deferred status until reviewed two-tier/error-repair adoption |
 | mode 3 | ordered-chain bridge | preserve flag that full visual flow-diagram construction is not yet proven |
 | mode 4 | held/refactor-scoped | preserve held status until classification-with-explanation design |
@@ -110,7 +124,11 @@ Before writing binding review comments, inspect at minimum:
 - `live-output-evidence.md`;
 - `live-output-evidence.json`;
 - `screenshot-manifest.md`;
-- all ten gate screenshots listed in the screenshot manifest;
+- `gate-playable-reasoning-lab.html`;
+- `gate-playable-reasoning-data.json`;
+- `playable-proof.json`, including desktop initial, retry feedback,
+  next-action/focus, desktop completed, and mobile/dark completed states;
+- all gate screenshots listed in the screenshot manifest;
 - `reports/json/reason-adopt1-proof.json`;
 - `reports/json/reason-play1-screenshot-proof.json`;
 - `reports/json/reason-play1-usability.json`;
@@ -118,11 +136,23 @@ Before writing binding review comments, inspect at minimum:
 - `reports/json/reason-answerform2-scaffold-map.json`;
 - `reports/sprints/REASON-PLAY-1-usability-analysis.md`;
 - `reports/sprints/REASON-ANSWERFORM-2-mode-disposition.md`;
-- pre-gate lead-review round 2.
+- pre-gate lead-review round 2;
+- supplemental playable-proof lead-review recheck.
 
-If any evidence cannot be inspected, if screenshots are missing/blank, or if the
-reviewer cannot tell what the student is supposed to do from the proof, stop
-and record whether the gate needs route repair, fresh proof, or roadmap pause.
+Open `gate-playable-reasoning-lab.html` directly when local file execution is
+allowed. If the browser blocks `file://` scripts, serve the repository root with
+a local static server and open:
+
+`http://127.0.0.1:<port>/reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html`
+
+The reviewer must manually try at least one case; the auto-play helper is proof
+support, not a replacement for human interaction.
+
+If the playable lab cannot be opened, if it cannot reach `4 / 4` through
+visible controls, if any evidence cannot be inspected, if screenshots are
+missing/blank, or if the reviewer cannot tell what the student is supposed to
+do from the proof, stop and record whether the gate needs route repair, fresh
+proof, or roadmap pause.
 
 ## Calibration Checks
 
@@ -154,8 +184,9 @@ authority.
 ### REASONSTD1-Q1: evidence baseline
 
 Is the evidence baseline sufficient: `REASON-STD-1`, `REASON-ADOPT-1`,
-`REASON-PLAY-1`, and `REASON-ANSWERFORM-2` are closed; proof JSON,
-screenshots, usability-agent artifacts, checkers, and pre-gate lead review are
+`REASON-PLAY-1`, and `REASON-ANSWERFORM-2` are closed; the playable reasoning
+lab reaches `4 / 4`; proof JSON, screenshots, usability-agent artifacts,
+checkers, pre-gate lead review, and supplemental playable-proof recheck are
 available?
 
 Options:
@@ -246,7 +277,7 @@ Options:
 
 ### REASONSTD1-Q9: core-specification failures
 
-Does any reviewed evidence violate a core requirement from
+Does any reviewed evidence, including the playable lab, violate a core requirement from
 `product-end-state.md` or `companion-core-specifications.md`?
 
 Options:
@@ -296,6 +327,8 @@ Options:
 
 - Stop if packet/evidence has not been pushed before human comments.
 - Stop if pre-gate lead review has not passed before human comments.
+- Stop if supplemental playable-proof recheck is missing or not PASS/PASS WITH
+  FLAGS before human comments.
 - Stop if screenshots or proof JSON are missing or not inspectable.
 - Stop if the packet reverts to the old interactive interview protocol as the
   default.
@@ -309,7 +342,9 @@ Options:
 
 ## Recommended Next Action
 
-Complete pre-gate lead review, publish this packet and all cited evidence to
-the normal remote branch, then send the packet for direct human review comments.
-Do not start downstream reasoning implementation, target-equivalent reasoning
-claims, Scale Gate 1, or product-facing exposure from this packet.
+Publish this packet and all cited evidence to the normal remote branch, then
+send the packet for direct human review comments. Human reviewers should open
+the playable lab and manually try at least one case, even though the packet also
+contains deterministic proof capture. Do not start downstream reasoning
+implementation, target-equivalent reasoning claims, Scale Gate 1, or
+product-facing exposure from this packet.

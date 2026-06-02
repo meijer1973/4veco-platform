@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GATE-REASON-STD-1 speelbaar reasoning reviewlab</title>
+  <link rel="stylesheet" href="../../../engines/task-shell.css">
+  <style>
+    :root { color-scheme: light; --bg:#f4f7fb; --panel:#fff; --text:#132033; --muted:#5d6b80; --line:#d7e1ee; --accent:#176c67; --ok:#176c45; --warn:#9f5a1b; --soft:#eef7f6; }
+    [data-theme="dark"] { color-scheme: dark; --bg:#101927; --panel:#182536; --text:#f1f7fc; --muted:#bcc8d7; --line:#33465d; --accent:#69c9bd; --ok:#7fd7a2; --warn:#f3ae72; --soft:#162d33; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(1120px, calc(100% - 32px)); margin:0 auto; padding:28px 0 44px; }
+    .gate-hero, .gate-panel, .gate-case, .gate-held-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; margin-bottom:16px; }
+    h1, h2, h3 { margin:0; letter-spacing:0; }
+    h1 { font-size:clamp(1.65rem,4vw,2.35rem); line-height:1.08; overflow-wrap:anywhere; }
+    h2 { font-size:1.22rem; }
+    h3 { font-size:1rem; }
+    p { color:var(--muted); line-height:1.55; }
+    .pills, .case-meta, .gate-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .pill { border:1px solid var(--line); border-radius:999px; padding:6px 10px; color:var(--muted); font-weight:800; font-size:.88rem; }
+    .warning { border-left:4px solid var(--warn); background:color-mix(in srgb, var(--warn) 10%, var(--panel)); padding:10px 12px; color:var(--text); }
+    .gate-summary { position:sticky; top:0; z-index:5; display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between; box-shadow:0 8px 24px rgba(15,23,42,.10); }
+    .progress { font-weight:900; color:var(--accent); }
+    .gate-button, .gate-check-case { border:1px solid var(--accent); background:var(--accent); color:#fff; border-radius:8px; padding:9px 12px; font-weight:900; cursor:pointer; }
+    .gate-button.secondary { background:transparent; color:var(--accent); }
+    .gate-case-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px, 34%); gap:14px; align-items:start; margin-bottom:14px; }
+    .scaffold { border:1px solid var(--line); border-radius:8px; padding:12px; background:var(--soft); }
+    .scaffold ul { margin:8px 0 0 18px; padding:0; color:var(--muted); }
+    .case-actions { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:14px; padding-top:12px; border-top:1px solid var(--line); }
+    .case-state { color:var(--muted); font-weight:800; }
+    .case-state[data-state="complete"] { color:var(--ok); }
+    .case-next-action { display:none; border:1px solid color-mix(in srgb, var(--ok) 65%, var(--line)); background:color-mix(in srgb, var(--ok) 12%, var(--panel)); color:var(--ok); border-radius:8px; padding:8px 10px; font-weight:900; cursor:pointer; }
+    .case-next-action.is-visible { display:inline-flex; align-items:center; }
+    .gate-complete { display:none; border:1px solid color-mix(in srgb, var(--ok) 45%, var(--line)); background:color-mix(in srgb, var(--ok) 12%, var(--panel)); border-radius:8px; padding:12px; font-weight:900; color:var(--ok); }
+    .gate-complete.is-visible { display:block; }
+    .ts-task { margin:0; }
+    .ts-feedback-card.is-self_check { border-color:color-mix(in srgb, var(--accent) 55%, var(--line)); background:color-mix(in srgb, var(--accent) 10%, var(--panel)); }
+    @media (max-width:760px) {
+      main { width:min(520px, calc(100% - 18px)); padding-top:12px; }
+      .gate-hero,.gate-panel,.gate-case,.gate-held-card { padding:14px; }
+      .gate-summary { position:static; }
+      .gate-case-head { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="gate-hero">
+      <h1>GATE-REASON-STD-1 speelbaar reasoning reviewlab</h1>
+      <p>Gebruik de zichtbare taakcontrols en klik per case op Controleer case. Het lab telt pas af wanneer de echte task-shell evaluatie de verwachte eindstaat bereikt.</p>
+      <div class="pills">
+        <span class="pill">review-only</span>
+        <span class="pill">playable proof</span>
+        <span class="pill">actual task-shell evaluation</span>
+        <span class="pill">no product authority</span>
+      </div>
+    </header>
+    <section class="gate-panel" id="review-only">
+      <h2>Testinstructie voor reviewer</h2>
+      <p class="warning">Deze pagina is geen lesoutput en geen productroute. Gebruik de zichtbare knoppen, tekstvelden en volgordeblokken om de reasoning evidence echt te testen.</p>
+      <p>Een case telt pas mee wanneer de task-shell engine een correcte eindstaat geeft. Voor mode 5 telt alleen de zelfcheck-eindstaat, niet een inhoudelijke beoordeling.</p>
+    </section>
+    <section class="gate-panel gate-summary">
+      <div>
+        <strong>Voortgang</strong>
+        <div class="progress" data-gate-progress>0 / 4 cases afgerond</div>
+      </div>
+      <div class="gate-actions">
+        <button type="button" class="gate-button secondary" data-gate-reset>Reset lab</button>
+        <button type="button" class="gate-button" data-gate-autoplay>Speel correct pad automatisch</button>
+      </div>
+    </section>
+    <section class="gate-panel gate-complete" data-gate-complete>
+      Alle speelbare reasoning cases hebben de verwachte eindstaat bereikt.
+    </section>
+    <div id="playable-root"></div>
+    <section class="gate-panel">
+      <h2>Held lanes</h2>
+      <div id="held-root"></div>
+    </section>
+  </main>
+  <script src="../../../engines/task-shell-engine.js"></script>
+  <script src="../../../engines/task-shell-ui.js"></script>
+  <script id="gate-reasoning-data" type="application/json">{"schema_version":1,"gate_id":"GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review","generated":"2026-06-02","status":"review_only_playable_reasoning_lab","title":"GATE-REASON-STD-1 speelbaar reasoning reviewlab","intro":"Gebruik de zichtbare taakcontrols en klik per case op Controleer case. Het lab telt pas af wanneer de echte task-shell evaluatie de verwachte eindstaat bereikt.","cases":[{"id":"play-p111-mode0-order","paragraph":"1.1.1","mode":0,"title":"1.1.1 mode 0 - Stappen ordenen","reviewIssue":"Proves local shared-shell step_ordering practice.","provenance":"platform_source_csv","sourcePath":"source-data/book-1/reasoning/1.1.1.csv","domain":"economics","standardFamily":{"candidateFamily":"step_ordering","standardAction":"step_ordering","disposition":"wrap_now"},"scaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.1","problemId":10,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}},"task":{"id":"play-p111-mode0-order","family":"step_ordering","skillLabel":"Redeneerstappen ordenen","purpose":"Kies de stappen die samen de economische redenering vormen en zet ze in volgorde.","prompt":"Zet de juiste redeneerstappen in de goede volgorde.","interaction":{"stepBankLabel":"Redeneerstappen","sequenceLabel":"Jouw denkroute","placeholder":"Bouw de redenering stap voor stap.","separator":" -> ","steps":[{"id":"step-1","label":"Herken de misconceptie","description":"De leerling verwart schaarste met 'weinig zijn' of zeldzaamheid. Schaarste gaat niet over hoeveelheid, maar over de verhouding tussen behoeften en beschikbare middelen.","kind":"answer"},{"id":"step-2","label":"Pas de canonical term toe","description":"Schaarste is: behoeften zijn groter dan de beschikbare middelen. Of iets 'veel' of 'weinig' is, hangt af van de vraag ernaar. Water uit de kraan kan schaars zijn in een droog land of tijdens een hittegolf.","kind":"answer"},{"id":"step-3","label":"Rond de correcte redenering af","description":"Zelfs een overvloedig lijkend middel zoals water kan schaars zijn als de behoefte eraan groter is dan het aanbod — denk aan drinkwater in een droogteperiode of irrigatiewater voor boeren in een hete zomer.","kind":"answer"},{"id":"distractor-1","label":"Bevestig: water is inderdaad niet schaars","description":"Omdat Nederland veel regen heeft, is water hier nooit schaars en klopt de redenering van de leerling.","kind":"distractor","distractorFor":"step-1"},{"id":"distractor-2","label":"Corrigeer naar: water is zeldzaam","description":"Water is wel degelijk zeldzaam omdat zoet water maar 3% van al het water op aarde uitmaakt.","kind":"distractor","distractorFor":"step-2"},{"id":"distractor-3","label":"Corrigeer naar: water is een tekort","description":"De juiste economische term hiervoor is 'tekort', want er is te weinig water voor iedereen.","kind":"distractor","distractorFor":"step-3"}]},"expected":{"kind":"step_ordering","order":["step-1","step-2","step-3"],"partialFeedback":"practice_only"},"feedback":{"matchTitle":"De denkroute klopt","matchText":"Je hebt de noodzakelijke stappen in de juiste volgorde gezet.","retryTitle":"Controleer de volgorde","retryText":"Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie."},"practiceRoute":{"label":"Review-only routeplaceholder","href":"#review-only"},"answerFormScaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.1","problemId":10,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}}},"completionStates":["matched"],"correctResponse":{"order":["step-1","step-2","step-3"]}},{"id":"play-p112-mode1-claim-route","paragraph":"1.1.2","mode":1,"title":"1.1.2 mode 1 - Deelvragen opbouwen","reviewIssue":"Proves claim-reason-evidence as a step_ordering bridge.","provenance":"platform_source_csv","sourcePath":"source-data/book-1/reasoning/1.1.2.csv","domain":"economics","standardFamily":{"candidateFamily":"claim_reason_evidence","standardAction":"step_ordering","disposition":"wrap_now"},"scaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.2","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}},"task":{"id":"play-p112-mode1-claim-route","family":"step_ordering","skillLabel":"Deelvragen als redeneerroute","purpose":"Bouw de claim-redenering-bewijs route met de vragen die je eerst moet beantwoorden.","prompt":"Zet de deelvragen in de volgorde waarin ze de redenering opbouwen.","interaction":{"stepBankLabel":"Deelvragen","sequenceLabel":"Jouw redeneerroute","placeholder":"Kies de deelvragen die nodig zijn.","separator":" -> ","steps":[{"id":"question-1","label":"Hoeveel indexpunten verschil is er?","kind":"answer"},{"id":"question-2","label":"Wat is de oude basis voor de procentuele verandering?","kind":"answer"},{"id":"question-3","label":"Wat is de correcte stijging?","kind":"answer"},{"id":"question-distractor-1","label":"Wat is het basisjaar?","kind":"distractor","distractorFor":"question-1"},{"id":"question-distractor-2","label":"Welke grafiek hoort erbij?","kind":"distractor","distractorFor":"question-2"}]},"expected":{"kind":"step_ordering","order":["question-1","question-2","question-3"],"partialFeedback":"practice_only"},"feedback":{"matchTitle":"De route klopt","matchText":"Je deelvragen bouwen de redenering logisch op.","retryTitle":"Kijk naar de denkroute","retryText":"Laat losse weetjes weg en kies alleen vragen die helpen om de conclusie te onderbouwen."},"practiceRoute":{"label":"Review-only routeplaceholder","href":"#review-only"},"answerFormScaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.2","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}}},"completionStates":["matched"],"correctResponse":{"order":["question-1","question-2","question-3"]}},{"id":"play-p113-mode3-flow-bridge","paragraph":"1.1.3","mode":3,"title":"1.1.3 mode 3 - Stroomdiagram bouwen bridge","reviewIssue":"Proves ordered-chain bridge only; not full visual flow construction.","provenance":"generated_lesson_reasoning_data","sourcePath":"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning/1.1.3.js","domain":"math-economics","standardFamily":{"candidateFamily":"flow_diagram_build","standardAction":"step_ordering","disposition":"wrap_now_visual_flow_follow_up"},"scaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A97","unitIds":["A97","A96"],"modifierUnitIds":[],"coordinationUnitIds":["A96"],"lane":"leg_uit_dat","studentLabel":"Leg uit dat","studentPurpose":"Leg de rekenroute uit met zichtbaar gegeven, bewerking en conclusie.","checklist":["Neem de conclusie uit de vraag als eindpunt.","Start bij het gegeven of de oorzaak in de context.","Schrijf minstens een controleerbare tussenstap.","Koppel je redenering terug aan de conclusie.","Gebruik de juiste basiswaarde.","Sluit af met de betekenis van het rekenantwoord."],"repairFocus":["Ontbreekt de tussenstap?","Komt de conclusie nog terug?","Is het economische begrip duidelijk gebruikt?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.3","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}},"task":{"id":"play-p113-mode3-flow-bridge","family":"step_ordering","skillLabel":"Causale keten bouwen","purpose":"Bouw de oorzaak-gevolgketen van beginpunt naar conclusie.","prompt":"Zet de blokken in de volgorde van de economische keten.","interaction":{"stepBankLabel":"Ketenblokken","sequenceLabel":"Jouw stroomdiagram","placeholder":"Bouw de keten van oorzaak naar gevolg.","separator":" -> ","steps":[{"id":"flow-1","label":"Gevraagd: prijs EUR 9,00","description":"Rol in de keten: given","kind":"answer"},{"id":"flow-2","label":"Zoek prijs op y-as","description":"Rol in de keten: step","kind":"answer"},{"id":"flow-3","label":"Trek lijn naar grafiek","description":"Rol in de keten: step","kind":"answer"},{"id":"flow-4","label":"Lees Q af","description":"Rol in de keten: result","kind":"answer"},{"id":"flow-5","label":"500 bezoekers","description":"Rol in de keten: result","kind":"answer"},{"id":"flow-distractor-1","label":"In economie staat prijs op de verticale as.","description":"Afleider: deze stap past niet als onderdeel van de gevraagde keten.","kind":"distractor","distractorFor":"flow-1"}]},"expected":{"kind":"step_ordering","order":["flow-1","flow-2","flow-3","flow-4","flow-5"],"partialFeedback":"practice_only"},"feedback":{"matchTitle":"De keten loopt logisch","matchText":"Je bouwt van beginpunt via tussenstappen naar conclusie.","retryTitle":"Controleer de keten","retryText":"Zoek eerst het beginpunt, daarna de tussenstap en eindig bij het effect of de conclusie."},"practiceRoute":{"label":"Review-only routeplaceholder","href":"#review-only"},"answerFormScaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A97","unitIds":["A97","A96"],"modifierUnitIds":[],"coordinationUnitIds":["A96"],"lane":"leg_uit_dat","studentLabel":"Leg uit dat","studentPurpose":"Leg de rekenroute uit met zichtbaar gegeven, bewerking en conclusie.","checklist":["Neem de conclusie uit de vraag als eindpunt.","Start bij het gegeven of de oorzaak in de context.","Schrijf minstens een controleerbare tussenstap.","Koppel je redenering terug aan de conclusie.","Gebruik de juiste basiswaarde.","Sluit af met de betekenis van het rekenantwoord."],"repairFocus":["Ontbreekt de tussenstap?","Komt de conclusie nog terug?","Is het economische begrip duidelijk gebruikt?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.3","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}}},"completionStates":["matched"],"correctResponse":{"order":["flow-1","flow-2","flow-3","flow-4","flow-5"]}},{"id":"play-p112-mode5-self-check","paragraph":"1.1.2","mode":5,"title":"1.1.2 mode 5 - Redeneerantwoord opbouwen","reviewIssue":"Proves structured_reasoning self-check only; not evaluated answer-quality proof.","provenance":"platform_source_csv","sourcePath":"source-data/book-1/reasoning/1.1.2.csv","domain":"economics","standardFamily":{"candidateFamily":"structured_reasoning","standardAction":"structured_reasoning","disposition":"already_wrapped_self_check"},"scaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.2","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}},"task":{"id":"play-p112-mode5-self-check","family":"structured_reasoning","skillLabel":"Leg uit of","purpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","prompt":"Schrijf je antwoord met deze antwoordvorm in gedachten.","interaction":{"inputLabel":"Jouw redenering","placeholder":"Oorzaak -> tussenstap -> conclusie"},"expected":{"kind":"self_check","criteria":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."]},"feedback":{"selfCheckTitle":"Vergelijk je redenering","selfCheckText":"Loop oorzaak, tussenstap en conclusie rustig na.","retryTitle":"Schrijf eerst je redenering","retryText":"Noteer minimaal de oorzaak, een tussenstap en de conclusie."},"practiceRoute":{"label":"Review-only routeplaceholder","href":"#review-only"},"answerFormScaffold":{"schemaVersion":1,"visibility":"practice_scaffold","primaryUnitId":"A98","unitIds":["A98"],"modifierUnitIds":[],"coordinationUnitIds":[],"lane":"leg_uit_of","studentLabel":"Leg uit of","studentPurpose":"Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.","checklist":["Kies eerst je richting of oordeel.","Zet die richting in je eerste zin.","Leg de economische oorzaak of regel uit.","Laat je antwoord niet beide kanten open."],"repairFocus":["Staat de richting duidelijk vooraan?","Is de oorzaak of regel genoemd?","Wordt de andere kant niet alsnog open gelaten?"],"requiresUnderlyingAnswerForm":false,"underlyingAnswerFormUnitId":null,"routeStatus":"local_practice_scaffold","paragraphId":"1.1.2","problemId":5,"boundaryFlags":{"diagnostics":false,"adaptiveRouting":false,"masteryDecisions":false,"automaticSequencing":false,"studentFacingAI":false,"summativeUse":false,"pvProjection":false,"pvMachinePromotion":false,"scaleGate1":false,"targetEquivalentProof":false,"studentProductUse":false}}},"completionStates":["self_check"],"correctResponse":"De index stijgt van 108 naar 112. Dat is 4 indexpunten. Voor procentuele stijging deel je door de oude index 108, dus ongeveer 3,7 procent."}],"heldLanes":[{"mode":2,"label":"Vind de fout","status":"local_error_repair_only","reason":"Nog geen reviewed shared-shell error-repair/two-tier adoption."},{"mode":4,"label":"Structuren matchen","status":"held_for_classification_with_explanation_redesign","reason":"Classification-with-explanation needs a separate reviewed task-family design."}],"boundaries":{"generated_lesson_output_mutation":false,"source_data_mutation":false,"engine_implementation":false,"target_equivalent_reasoning_proof":false,"diagnostics":false,"mastery":false,"sequencing":false,"scale_gate_1":false,"student_product_use":false}}</script>
+  <script>
+    (function () {
+      'use strict';
+      try {
+        var data = JSON.parse(document.getElementById('gate-reasoning-data').textContent);
+        var root = document.getElementById('playable-root');
+        var heldRoot = document.getElementById('held-root');
+        var state = {};
+
+        function escapeHtml(value) {
+          return window.TaskShellUI.escapeHtml(value == null ? '' : String(value));
+        }
+
+        function cssEscape(value) {
+          if (window.CSS && CSS.escape) return CSS.escape(value);
+          return String(value).replace(/["\\]/g, '\\$&');
+        }
+
+        function caseById(caseId) {
+          return data.cases.find(function (entry) { return entry.id === caseId; });
+        }
+
+        function nextCaseId(caseId) {
+          var index = data.cases.findIndex(function (entry) { return entry.id === caseId; });
+          return index >= 0 && index + 1 < data.cases.length ? data.cases[index + 1].id : '';
+        }
+
+        function articleFor(caseId) {
+          return root.querySelector('[data-task="' + cssEscape(caseId) + '"]');
+        }
+
+        function caseEl(caseId) {
+          return root.querySelector('[data-case-id="' + cssEscape(caseId) + '"]');
+        }
+
+        function feedbackRegion(caseId) {
+          var article = articleFor(caseId);
+          return article ? article.querySelector('[data-feedback-for="' + cssEscape(caseId) + '"]') : null;
+        }
+
+        function firstFocusableIn(caseId) {
+          var el = caseEl(caseId);
+          return el ? el.querySelector('input:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]') : null;
+        }
+
+        function scaffoldHtml(scaffold) {
+          if (!scaffold) return '<div class="scaffold"><strong>Geen antwoordvorm-cue</strong><p>Deze case test alleen de taak-shell interactie.</p></div>';
+          var items = (scaffold.checklist || []).slice(0, 4).map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; }).join('');
+          return '<div class="scaffold">' +
+            '<strong>Antwoordvorm oefenen: ' + escapeHtml(scaffold.studentLabel || scaffold.lane || 'scaffold') + '</strong>' +
+            '<p>' + escapeHtml(scaffold.studentPurpose || 'Lokale oefencue voor antwoordopbouw.') + '</p>' +
+            (items ? '<ul>' + items + '</ul>' : '') +
+          '</div>';
+        }
+
+        function renderCase(entry, index) {
+          return '<section class="gate-case" data-case-id="' + escapeHtml(entry.id) + '">' +
+            '<div class="gate-case-head">' +
+              '<div>' +
+                '<h2>' + escapeHtml(entry.title) + '</h2>' +
+                '<p>' + escapeHtml(entry.reviewIssue) + '</p>' +
+                '<div class="case-meta">' +
+                  '<span class="pill">' + escapeHtml(entry.paragraph) + '</span>' +
+                  '<span class="pill">mode ' + escapeHtml(entry.mode) + '</span>' +
+                  '<span class="pill">' + escapeHtml(entry.task.family) + '</span>' +
+                  '<span class="pill">' + escapeHtml(entry.provenance) + '</span>' +
+                '</div>' +
+              '</div>' +
+              scaffoldHtml(entry.scaffold) +
+            '</div>' +
+            window.TaskShellUI.renderTask(entry.task, index) +
+            '<div class="case-actions">' +
+              '<button type="button" class="gate-check-case" data-gate-check-case="' + escapeHtml(entry.id) + '">Controleer case</button>' +
+              '<span class="case-state" data-case-state data-state="pending">Nog niet afgerond</span>' +
+              '<button type="button" class="case-next-action" data-gate-next-case="' + escapeHtml(entry.id) + '" data-gate-next-target="' + escapeHtml(nextCaseId(entry.id)) + '" disabled>Ga naar volgende case</button>' +
+            '</div>' +
+          '</section>';
+        }
+
+        function renderHeldLanes() {
+          heldRoot.innerHTML = data.heldLanes.map(function (lane) {
+            return '<article class="gate-held-card">' +
+              '<h3>Mode ' + escapeHtml(lane.mode) + ' - ' + escapeHtml(lane.label) + '</h3>' +
+              '<p><strong>Status:</strong> ' + escapeHtml(lane.status) + '</p>' +
+              '<p>' + escapeHtml(lane.reason) + '</p>' +
+            '</article>';
+          }).join('');
+        }
+
+        function collect(entry, article) {
+          if (entry.task.family === 'step_ordering') return window.TaskShellUI.collectStepOrderingResponse(article, entry.task);
+          if (entry.task.family === 'structured_reasoning') {
+            var textarea = article.querySelector('[data-input-role="answer"]');
+            return textarea ? textarea.value : '';
+          }
+          return {};
+        }
+
+        function isComplete(entry, result) {
+          return entry.completionStates.indexOf(result.state) !== -1;
+        }
+
+        function updateProgress() {
+          var done = Object.keys(state).filter(function (caseId) { return state[caseId] === true; }).length;
+          document.querySelector('[data-gate-progress]').textContent = done + ' / ' + data.cases.length + ' cases afgerond';
+          document.querySelector('[data-gate-complete]').classList.toggle('is-visible', done === data.cases.length);
+        }
+
+        function checkCase(caseId) {
+          var entry = caseById(caseId);
+          var article = articleFor(caseId);
+          var feedback = feedbackRegion(caseId);
+          if (!entry || !article || !feedback) return null;
+          var result = window.TaskShellEngine.evaluateTask(entry.task, collect(entry, article));
+          feedback.innerHTML = window.TaskShellUI.renderFeedback(result);
+          feedback.focus();
+          var complete = isComplete(entry, result);
+          state[caseId] = complete;
+          var wrapper = caseEl(caseId);
+          var label = wrapper && wrapper.querySelector('[data-case-state]');
+          if (label) {
+            label.textContent = complete ? 'Afgerond' : 'Nog niet afgerond';
+            label.setAttribute('data-state', complete ? 'complete' : 'retry');
+          }
+          var nextButton = wrapper && wrapper.querySelector('[data-gate-next-case]');
+          if (nextButton) {
+            nextButton.classList.toggle('is-visible', complete);
+            nextButton.disabled = !complete;
+            nextButton.textContent = nextButton.getAttribute('data-gate-next-target') ? 'Ga naar volgende case' : 'Laatste case afgerond';
+          }
+          updateProgress();
+          return result;
+        }
+
+        function setStructuredAnswer(entry) {
+          var article = articleFor(entry.id);
+          var textarea = article && article.querySelector('[data-input-role="answer"]');
+          if (textarea) {
+            textarea.value = entry.correctResponse;
+            textarea.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+        }
+
+        function selectStepOrder(entry) {
+          var article = articleFor(entry.id);
+          var order = entry.correctResponse.order || [];
+          order.forEach(function (stepId) {
+            var button = article && article.querySelector('[data-task-id="' + cssEscape(entry.id) + '"][data-step-id="' + cssEscape(stepId) + '"]');
+            if (!button) throw new Error('Missing step selector for ' + entry.id + ': ' + stepId);
+            button.click();
+          });
+        }
+
+        function runCorrectPathFor(caseId) {
+          var entry = caseById(caseId);
+          if (!entry) throw new Error('Missing case: ' + caseId);
+          if (entry.task.family === 'step_ordering') selectStepOrder(entry);
+          else if (entry.task.family === 'structured_reasoning') setStructuredAnswer(entry);
+          else throw new Error('Unsupported playable family: ' + entry.task.family);
+          return checkCase(caseId);
+        }
+
+        function runAllCorrect() {
+          data.cases.forEach(function (entry) {
+            runCorrectPathFor(entry.id);
+          });
+          return inspectState();
+        }
+
+        function inspectState() {
+          return {
+            title: document.title,
+            caseCount: data.cases.length,
+            taskCount: root.querySelectorAll('.ts-task').length,
+            checkButtonCount: root.querySelectorAll('[data-gate-check-case]').length,
+            feedbackCount: root.querySelectorAll('.ts-feedback').length,
+            completedCount: Object.keys(state).filter(function (caseId) { return state[caseId] === true; }).length,
+            completedVisible: document.querySelector('[data-gate-complete]').classList.contains('is-visible'),
+            progressText: document.querySelector('[data-gate-progress]').textContent,
+            visibleNextActions: root.querySelectorAll('.case-next-action.is-visible').length,
+            retryStates: root.querySelectorAll('[data-case-state][data-state="retry"]').length,
+            completeStates: root.querySelectorAll('[data-case-state][data-state="complete"]').length,
+            activeElementText: document.activeElement ? document.activeElement.textContent.trim().slice(0, 80) : '',
+            activeElementTag: document.activeElement ? document.activeElement.tagName : '',
+            theme: document.documentElement.getAttribute('data-theme') || 'light',
+            hasTaskShellUI: typeof window.TaskShellUI,
+            hasTaskShellEngine: typeof window.TaskShellEngine,
+            initError: window.gateReasonStd1InitError || ''
+          };
+        }
+
+        function handleClick(event) {
+          if (window.TaskShellUI.handleStepOrderingClick(root, event)) return;
+          var check = event.target.closest('[data-gate-check-case]');
+          if (check) {
+            checkCase(check.getAttribute('data-gate-check-case'));
+            return;
+          }
+          var next = event.target.closest('[data-gate-next-case]');
+          if (next) {
+            var target = next.getAttribute('data-gate-next-target');
+            if (target) {
+              var focusTarget = firstFocusableIn(target);
+              if (focusTarget) focusTarget.focus({ preventScroll: false });
+            }
+            return;
+          }
+          if (event.target.closest('[data-gate-reset]')) {
+            window.location.reload();
+            return;
+          }
+          if (event.target.closest('[data-gate-autoplay]')) {
+            runAllCorrect();
+          }
+        }
+
+        root.innerHTML = data.cases.map(renderCase).join('');
+        renderHeldLanes();
+        document.addEventListener('click', handleClick);
+        updateProgress();
+        window.gateReasonStd1 = {
+          checkCase: checkCase,
+          runCorrectPathFor: runCorrectPathFor,
+          runAllCorrect: runAllCorrect,
+          inspectState: inspectState,
+          data: data
+        };
+      } catch (error) {
+        window.gateReasonStd1InitError = error && error.stack ? error.stack : String(error);
+        document.body.insertAdjacentHTML('afterbegin', '<pre style="white-space:pre-wrap;background:#fee;color:#600;padding:16px;">' + String(window.gateReasonStd1InitError).replace(/[&<>]/g, function (ch) { return ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]); }) + '</pre>');
+      }
+    })();
+  </script>
+</body>
+</html>
