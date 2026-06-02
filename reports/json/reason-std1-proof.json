@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-STD-1",
+  "generated": "2026-06-02",
+  "proof_type": "platform-runtime standard-family mapping and rendered report fixture",
+  "provenance": {
+    "generated_by": "build-scripts/sprints/generate-reason-std1-proof.js",
+    "task_source": "actual ReasoningEngine round.taskShellTask objects"
+  },
+  "sample_source": "source-data/book-1/reasoning/1.1.1.csv",
+  "validated_modes": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "deferred_modes": [
+    2,
+    4
+  ],
+  "validated_task_families": [
+    "step_ordering",
+    "structured_reasoning"
+  ],
+  "mode_proof": [
+    {
+      "mode": 0,
+      "has_task_shell_task": true,
+      "candidate_family": "step_ordering",
+      "runtime_family": "step_ordering",
+      "task_id": "reasoning-step-order-2",
+      "validation": "passed",
+      "correct_response_state": "matched",
+      "wrong_response_state": "retry",
+      "wrong_response_matched": false
+    },
+    {
+      "mode": 1,
+      "has_task_shell_task": true,
+      "candidate_family": "claim_reason_evidence",
+      "runtime_family": "step_ordering",
+      "task_id": "reasoning-claim-route-7",
+      "validation": "passed",
+      "correct_response_state": "matched",
+      "wrong_response_state": "retry",
+      "wrong_response_matched": false
+    },
+    {
+      "mode": 3,
+      "has_task_shell_task": true,
+      "candidate_family": "flow_diagram_build",
+      "runtime_family": "step_ordering",
+      "task_id": "reasoning-flow-chain-5",
+      "validation": "passed",
+      "correct_response_state": "matched",
+      "wrong_response_state": "retry",
+      "wrong_response_matched": false
+    },
+    {
+      "mode": 5,
+      "has_task_shell_task": true,
+      "candidate_family": "structured_reasoning",
+      "runtime_family": "structured_reasoning",
+      "task_id": "reasoning-answer-7",
+      "validation": "passed",
+      "empty_response_state": "retry",
+      "filled_response_state": "self_check",
+      "target_equivalent_proof": false
+    }
+  ],
+  "deferred_mode_proof": [
+    {
+      "mode": 2,
+      "has_task_shell_task": false,
+      "candidate_family": "error_detection",
+      "disposition": "defer_mapping"
+    },
+    {
+      "mode": 4,
+      "has_task_shell_task": false,
+      "candidate_family": "classification_with_explanation",
+      "disposition": "refactor_before_adoption"
+    }
+  ],
+  "rendered_fixture": "reports/sprints/REASON-STD-1-rendered-fixture.html",
+  "boundaries": {
+    "generated_lesson_output_changed": false,
+    "reasoning_csv_changed": false,
+    "protected_reference_data_changed": false,
+    "target_equivalent_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  }
+}

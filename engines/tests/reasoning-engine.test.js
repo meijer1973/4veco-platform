@@ -2,6 +2,7 @@
  * Unit tests for ReasoningEngine — the pure game logic module.
  */
 const ReasoningEngine = require('../reasoning-engine');
+const TaskShellEngine = require('../task-shell-engine');
 
 // ── Test fixtures ───────────────────────────────────────────────────
 
@@ -21,6 +22,10 @@ function createEngine(overrides) {
         roundsPerGame: 3,
         ...overrides
     });
+}
+
+function reversedOrder(order) {
+    return order.slice().reverse();
 }
 
 // ── Constructor ─────────────────────────────────────────────────────
@@ -98,6 +103,22 @@ describe('structure types', () => {
 
 // ── Domain config ───────────────────────────────────────────────────
 
+describe('reasoning standard family map', () => {
+    test('names all current reasoning modes and source-based explanation follow-up', () => {
+        const engine = createEngine();
+        const map = engine.getStandardFamilyMap();
+        expect(map).toEqual(expect.arrayContaining([
+            expect.objectContaining({ mode: 0, candidateFamily: 'step_ordering', disposition: 'wrap_now' }),
+            expect.objectContaining({ mode: 1, candidateFamily: 'claim_reason_evidence', disposition: 'wrap_now' }),
+            expect.objectContaining({ mode: 2, candidateFamily: 'error_detection', disposition: 'defer_mapping' }),
+            expect.objectContaining({ mode: 3, candidateFamily: 'flow_diagram_build', disposition: 'wrap_now_visual_flow_follow_up' }),
+            expect.objectContaining({ mode: 4, candidateFamily: 'classification_with_explanation', disposition: 'refactor_before_adoption' }),
+            expect.objectContaining({ mode: 5, candidateFamily: 'structured_reasoning', disposition: 'already_wrapped_self_check' }),
+            expect.objectContaining({ mode: null, candidateFamily: 'source_based_explanation', disposition: 'future_composed_pattern' })
+        ]));
+    });
+});
+
 describe('domain config', () => {
     test('economics domain has correct flow types', () => {
         const engine = createEngine({ domain: 'economics' });
@@ -140,6 +161,31 @@ describe('Mode 0: Order Steps', () => {
         expect(round.options.length).toBe(6);
         expect(round.maxSelections).toBe(3);
         expect(round.correctOrder.length).toBe(3);
+    });
+
+    test('getRound exposes a validated shared step_ordering task', () => {
+        const engine = createEngine();
+        engine.startGame(0);
+        const round = engine.getRound();
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'step_ordering',
+            standardAction: 'step_ordering',
+            disposition: 'wrap_now'
+        }));
+        expect(round.taskShellTask.family).toBe('step_ordering');
+        expect(TaskShellEngine.validateTask(round.taskShellTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: round.taskShellTask.expected.order
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: reversedOrder(round.taskShellTask.expected.order)
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
     });
 
     test('correct order accepted', () => {
@@ -187,6 +233,32 @@ describe('Mode 1: Build Sub-Questions', () => {
         const result = engine.submitAnswer(round.correctOrder);
         expect(result.correct).toBe(true);
     });
+
+    test('getRound exposes claim-reason-evidence as a shared step_ordering task', () => {
+        const engine = createEngine();
+        engine.startGame(1);
+        const round = engine.getRound();
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'claim_reason_evidence',
+            standardAction: 'step_ordering',
+            disposition: 'wrap_now'
+        }));
+        expect(round.taskShellTask.family).toBe('step_ordering');
+        expect(round.taskShellTask.skillLabel).toContain('Deelvragen');
+        expect(TaskShellEngine.validateTask(round.taskShellTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: round.taskShellTask.expected.order
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: reversedOrder(round.taskShellTask.expected.order)
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+    });
 });
 
 // ── Mode 2: Find the Error ──────────────────────────────────────────
@@ -226,6 +298,18 @@ describe('Mode 2: Find the Error', () => {
         const round = engine.getRound();
         expect(round.hideFormulaBeforeAnswer).toBe(true);
     });
+
+    test('standard disposition defers error detection instead of forcing a weak mapping', () => {
+        const engine = createEngine();
+        engine.startGame(2);
+        const round = engine.getRound();
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'error_detection',
+            standardAction: 'two_tier_choice_or_choice',
+            disposition: 'defer_mapping'
+        }));
+        expect(round.taskShellTask).toBeUndefined();
+    });
 });
 
 // ── Mode 3: Build Flow Diagram ──────────────────────────────────────
@@ -255,6 +339,32 @@ describe('Mode 3: Build Flow Diagram', () => {
         const wrong = round.correctOrder.slice().reverse();
         const result = engine.submitAnswer(wrong);
         expect(result.correct).toBe(false);
+    });
+
+    test('getRound exposes a validated ordered chain task for flow work', () => {
+        const engine = createEngine();
+        engine.startGame(3);
+        const round = engine.getRound();
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'flow_diagram_build',
+            standardAction: 'step_ordering',
+            disposition: 'wrap_now_visual_flow_follow_up'
+        }));
+        expect(round.taskShellTask.family).toBe('step_ordering');
+        expect(round.taskShellTask.skillLabel).toContain('Causale keten');
+        expect(TaskShellEngine.validateTask(round.taskShellTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: round.taskShellTask.expected.order
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(TaskShellEngine.evaluateTask(round.taskShellTask, {
+            order: reversedOrder(round.taskShellTask.expected.order)
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
     });
 });
 
@@ -310,6 +420,18 @@ describe('Mode 4: Match Structures', () => {
         // May or may not be fully correct depending on overlap
         expect(result.feedback.matchCount).toBeLessThanOrEqual(3);
     });
+
+    test('standard disposition keeps classification with explanation as refactor before adoption', () => {
+        const engine = createEngine();
+        engine.startGame(4);
+        const round = engine.getRound();
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'classification_with_explanation',
+            standardAction: 'matching_pairs_plus_structured_short_response',
+            disposition: 'refactor_before_adoption'
+        }));
+        expect(round.taskShellTask).toBeUndefined();
+    });
 });
 
 // â”€â”€ Mode 5: Build Reasoning Answer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -323,6 +445,11 @@ describe('Mode 5: Build Reasoning Answer', () => {
         expect(round.taskShellTask).toBeDefined();
         expect(round.taskShellTask.family).toBe('structured_reasoning');
         expect(round.taskShellTask.expected.kind).toBe('self_check');
+        expect(round.standardFamily).toEqual(expect.objectContaining({
+            candidateFamily: 'structured_reasoning',
+            standardAction: 'structured_reasoning',
+            disposition: 'already_wrapped_self_check'
+        }));
         expect(round.reasoningGuide.length).toBe(3);
     });
 

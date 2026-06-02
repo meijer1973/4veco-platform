@@ -264,6 +264,213 @@
         };
     }
 
+    function practiceRoute() {
+        return {
+            label: 'Oefen verder met redeneren',
+            href: 'redeneer-spel.html'
+        };
+    }
+
+    function appendFormula(text, formula) {
+        if (!formula) return text;
+        return text + ' (' + formula + ')';
+    }
+
+    function validateStandardTask(task) {
+        var taskShell = getTaskShellEngine();
+        if (taskShell && typeof taskShell.validateTask === 'function') {
+            taskShell.validateTask(task);
+        }
+        return task;
+    }
+
+    function buildStepOrderingTask(problem) {
+        var steps = [];
+        var order = [];
+        for (var i = 0; i < problem.steps.length; i++) {
+            var id = 'step-' + (i + 1);
+            order.push(id);
+            steps.push({
+                id: id,
+                label: problem.steps[i].label,
+                description: appendFormula(problem.steps[i].detail, problem.steps[i].formula),
+                kind: 'answer'
+            });
+        }
+        for (var j = 0; j < problem.distractorSteps.length; j++) {
+            if (!problem.distractorSteps[j].label) continue;
+            steps.push({
+                id: 'distractor-' + (j + 1),
+                label: problem.distractorSteps[j].label,
+                description: appendFormula(problem.distractorSteps[j].detail, problem.distractorSteps[j].formula),
+                kind: 'distractor',
+                distractorFor: order[Math.min(j, order.length - 1)]
+            });
+        }
+        return validateStandardTask({
+            id: 'reasoning-step-order-' + problem.id,
+            family: 'step_ordering',
+            skillLabel: 'Redeneerstappen ordenen',
+            purpose: 'Kies de stappen die samen de economische redenering vormen en zet ze in volgorde.',
+            prompt: 'Zet de juiste redeneerstappen in de goede volgorde.',
+            interaction: {
+                stepBankLabel: 'Redeneerstappen',
+                sequenceLabel: 'Jouw denkroute',
+                placeholder: 'Bouw de redenering stap voor stap.',
+                separator: ' -> ',
+                steps: steps
+            },
+            expected: {
+                kind: 'step_ordering',
+                order: order,
+                partialFeedback: 'practice_only'
+            },
+            feedback: {
+                matchTitle: 'De denkroute klopt',
+                matchText: 'Je hebt de noodzakelijke stappen in de juiste volgorde gezet.',
+                retryTitle: 'Controleer de volgorde',
+                retryText: 'Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie.'
+            },
+            practiceRoute: practiceRoute()
+        });
+    }
+
+    function buildClaimReasonEvidenceTask(problem) {
+        var steps = [];
+        var order = [];
+        for (var i = 0; i < problem.subQuestions.correct.length; i++) {
+            var id = 'question-' + (i + 1);
+            order.push(id);
+            steps.push({
+                id: id,
+                label: problem.subQuestions.correct[i],
+                kind: 'answer'
+            });
+        }
+        for (var j = 0; j < problem.subQuestions.distractors.length; j++) {
+            if (!problem.subQuestions.distractors[j]) continue;
+            steps.push({
+                id: 'question-distractor-' + (j + 1),
+                label: problem.subQuestions.distractors[j],
+                kind: 'distractor',
+                distractorFor: order[Math.min(j, order.length - 1)]
+            });
+        }
+        return validateStandardTask({
+            id: 'reasoning-claim-route-' + problem.id,
+            family: 'step_ordering',
+            skillLabel: 'Deelvragen als redeneerroute',
+            purpose: 'Bouw de claim-redenering-bewijs route met de vragen die je eerst moet beantwoorden.',
+            prompt: 'Zet de deelvragen in de volgorde waarin ze de redenering opbouwen.',
+            interaction: {
+                stepBankLabel: 'Deelvragen',
+                sequenceLabel: 'Jouw redeneerroute',
+                placeholder: 'Kies de deelvragen die nodig zijn.',
+                separator: ' -> ',
+                steps: steps
+            },
+            expected: {
+                kind: 'step_ordering',
+                order: order,
+                partialFeedback: 'practice_only'
+            },
+            feedback: {
+                matchTitle: 'De route klopt',
+                matchText: 'Je deelvragen bouwen de redenering logisch op.',
+                retryTitle: 'Kijk naar de denkroute',
+                retryText: 'Laat losse weetjes weg en kies alleen vragen die helpen om de conclusie te onderbouwen.'
+            },
+            practiceRoute: practiceRoute()
+        });
+    }
+
+    function buildFlowOrderingTask(problem) {
+        var steps = [];
+        var order = [];
+        for (var i = 0; i < problem.flowSlots.length; i++) {
+            var id = 'flow-' + (i + 1);
+            order.push(id);
+            steps.push({
+                id: id,
+                label: problem.flowSlots[i].text,
+                description: 'Rol in de keten: ' + problem.flowSlots[i].type,
+                kind: 'answer'
+            });
+        }
+        var distractor = problem.errorInfo && problem.errorInfo.wrong && problem.errorInfo.wrong.detail
+            ? problem.errorInfo.wrong.detail
+            : (problem.distractorSteps[0] && problem.distractorSteps[0].detail) || 'Afleidende stap die niet in deze keten hoort';
+        steps.push({
+            id: 'flow-distractor-1',
+            label: distractor,
+            description: 'Afleider: deze stap past niet als onderdeel van de gevraagde keten.',
+            kind: 'distractor',
+            distractorFor: order[0]
+        });
+        return validateStandardTask({
+            id: 'reasoning-flow-chain-' + problem.id,
+            family: 'step_ordering',
+            skillLabel: 'Causale keten bouwen',
+            purpose: 'Bouw de oorzaak-gevolgketen van beginpunt naar conclusie.',
+            prompt: 'Zet de blokken in de volgorde van de economische keten.',
+            interaction: {
+                stepBankLabel: 'Ketenblokken',
+                sequenceLabel: 'Jouw stroomdiagram',
+                placeholder: 'Bouw de keten van oorzaak naar gevolg.',
+                separator: ' -> ',
+                steps: steps
+            },
+            expected: {
+                kind: 'step_ordering',
+                order: order,
+                partialFeedback: 'practice_only'
+            },
+            feedback: {
+                matchTitle: 'De keten loopt logisch',
+                matchText: 'Je bouwt van beginpunt via tussenstappen naar conclusie.',
+                retryTitle: 'Controleer de keten',
+                retryText: 'Zoek eerst het beginpunt, daarna de tussenstap en eindig bij het effect of de conclusie.'
+            },
+            practiceRoute: practiceRoute()
+        });
+    }
+
+    function reasoningStandardDisposition(modeIndex) {
+        var map = {
+            0: {
+                candidateFamily: 'step_ordering',
+                standardAction: 'step_ordering',
+                disposition: 'wrap_now'
+            },
+            1: {
+                candidateFamily: 'claim_reason_evidence',
+                standardAction: 'step_ordering',
+                disposition: 'wrap_now'
+            },
+            2: {
+                candidateFamily: 'error_detection',
+                standardAction: 'two_tier_choice_or_choice',
+                disposition: 'defer_mapping'
+            },
+            3: {
+                candidateFamily: 'flow_diagram_build',
+                standardAction: 'step_ordering',
+                disposition: 'wrap_now_visual_flow_follow_up'
+            },
+            4: {
+                candidateFamily: 'classification_with_explanation',
+                standardAction: 'matching_pairs_plus_structured_short_response',
+                disposition: 'refactor_before_adoption'
+            },
+            5: {
+                candidateFamily: 'structured_reasoning',
+                standardAction: 'structured_reasoning',
+                disposition: 'already_wrapped_self_check'
+            }
+        };
+        return map[modeIndex] || null;
+    }
+
     // ── Shuffle (Fisher-Yates) ──────────────────────────────────────
 
     function shuffle(arr) {
@@ -330,6 +537,28 @@
 
     ReasoningEngine.prototype.getSkillMapRequest = function (options) {
         return buildSkillMapRequest('reasoning-game', 'reasoning', this.paragraphId, options);
+    };
+
+    ReasoningEngine.prototype.getStandardFamilyMap = function () {
+        var out = [];
+        for (var i = 0; i < MODE_NAMES_NL.length; i++) {
+            var row = reasoningStandardDisposition(i);
+            out.push({
+                mode: i,
+                modeName: MODE_NAMES_NL[i],
+                candidateFamily: row.candidateFamily,
+                standardAction: row.standardAction,
+                disposition: row.disposition
+            });
+        }
+        out.push({
+            mode: null,
+            modeName: 'Source-based explanation',
+            candidateFamily: 'source_based_explanation',
+            standardAction: 'source_value_selection + source_chain_builder + structured_short_response',
+            disposition: 'future_composed_pattern'
+        });
+        return out;
     };
 
     // ── Session management ──────────────────────────────────────────
@@ -442,7 +671,9 @@
             maxSelections: 3,
             roundNumber: this._roundIdx + 1,
             totalRounds: this._rounds.length,
-            showFormula: this.domainConfig.showFormula
+            showFormula: this.domainConfig.showFormula,
+            standardFamily: reasoningStandardDisposition(0),
+            taskShellTask: buildStepOrderingTask(problem)
         };
     };
 
@@ -462,7 +693,9 @@
             correctOrder: problem.subQuestions.correct.slice(),
             maxSelections: 3,
             roundNumber: this._roundIdx + 1,
-            totalRounds: this._rounds.length
+            totalRounds: this._rounds.length,
+            standardFamily: reasoningStandardDisposition(1),
+            taskShellTask: buildClaimReasonEvidenceTask(problem)
         };
     };
 
@@ -499,7 +732,8 @@
             roundNumber: this._roundIdx + 1,
             totalRounds: this._rounds.length,
             showFormula: this.domainConfig.showFormula,
-            hideFormulaBeforeAnswer: this.domainConfig.hideFormulaInErrorMode
+            hideFormulaBeforeAnswer: this.domainConfig.hideFormulaInErrorMode,
+            standardFamily: reasoningStandardDisposition(2)
         };
     };
 
@@ -521,7 +755,9 @@
             correctOrder: problem.flowSlots.map(function (s) { return s.text; }),
             flowTypeColors: this.domainConfig.flowTypeColors,
             roundNumber: this._roundIdx + 1,
-            totalRounds: this._rounds.length
+            totalRounds: this._rounds.length,
+            standardFamily: reasoningStandardDisposition(3),
+            taskShellTask: buildFlowOrderingTask(problem)
         };
     };
 
@@ -533,7 +769,8 @@
             items: this._matchData.items,
             correctPairs: this._matchData.correctPairs,
             roundNumber: 1,
-            totalRounds: 1
+            totalRounds: 1,
+            standardFamily: reasoningStandardDisposition(4)
         };
     };
 
@@ -563,7 +800,8 @@
                 };
             }),
             roundNumber: this._roundIdx + 1,
-            totalRounds: this._rounds.length
+            totalRounds: this._rounds.length,
+            standardFamily: reasoningStandardDisposition(5)
         };
     };
 
@@ -851,6 +1089,7 @@
     ReasoningEngine.DOMAINS = DOMAINS;
     ReasoningEngine.MODE_NAMES = MODE_NAMES;
     ReasoningEngine.MODE_NAMES_NL = MODE_NAMES_NL;
+    ReasoningEngine.reasoningStandardDisposition = reasoningStandardDisposition;
 
     return ReasoningEngine;
 });

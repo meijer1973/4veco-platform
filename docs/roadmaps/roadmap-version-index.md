@@ -1,6 +1,6 @@
 ﻿# Roadmap Version Index
 
-Updated: 2026-06-01
+Updated: 2026-06-02
 
 The JSON file is canonical for tooling:
 
@@ -12,7 +12,7 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.50-step-ordering-runtime` | `references/reference-team-roadmap.md` | Current operating roadmap after TASK-FAMILY-ORDER-1 closed PASS WITH FLAGS as the step-ordering runtime implementation. `cloze_tile_select`, `sentence_builder`, `formula_builder`, `cloze_text`, `multi_select`, and `step_ordering` now exist in the shared task shell, but product-route adoption and target-equivalent reliance remain blocked until later rendered-output review. The next implementation lane is TASK-FAMILY-SOURCE-1 or GAME-ROUTE-AFFORDANCE-1 depending on priority, with Scale Gate 1 still blocked until GATE-PRODUCT-3P, REV-STD-1, and required task-family review close or receive explicit human waiver. |
+| References Team Roadmap | `v3.52-reason-std1-migration` | `references/reference-team-roadmap.md` | Current operating roadmap after REASON-STD-1 closed PASS WITH FLAGS as the reasoning standard-family runtime migration. Reasoning modes 0, 1, 3, and 5 now emit shared task-shell proof objects, while mode 2 and mode 4 remain deferred/refactor-scoped. The next reasoning sequence is REASON-ADOPT-1, REASON-PLAY-1, REASON-ANSWERFORM-2, and GATE-REASON-STD-1 before reasoning can be treated as unified route evidence. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates. |
 
 ## Outdated Archive
 

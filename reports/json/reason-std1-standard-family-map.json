@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-STD-1",
+  "generated": "2026-06-02",
+  "source": {
+    "engine": "engines/reasoning-engine.js",
+    "task_shell_engine": "engines/task-shell-engine.js",
+    "task_shell_ui": "engines/task-shell-ui.js",
+    "sample_csv": "source-data/book-1/reasoning/1.1.1.csv"
+  },
+  "provenance": {
+    "generated_by": "build-scripts/sprints/generate-reason-std1-proof.js",
+    "task_source": "actual ReasoningEngine round.taskShellTask objects"
+  },
+  "boundaries": {
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  },
+  "modes": [
+    {
+      "mode": 0,
+      "mode_name": "Stappen ordenen",
+      "candidate_family": "step_ordering",
+      "standard_action": "step_ordering",
+      "disposition": "wrap_now",
+      "student_action": "Choose relevant reasoning steps and order them.",
+      "runtime_family": "step_ordering",
+      "response_shape": "{ order: string[] }"
+    },
+    {
+      "mode": 1,
+      "mode_name": "Deelvragen opbouwen",
+      "candidate_family": "claim_reason_evidence",
+      "standard_action": "step_ordering",
+      "disposition": "wrap_now",
+      "student_action": "Order the subquestions that build the reasoning route.",
+      "runtime_family": "step_ordering",
+      "response_shape": "{ order: string[] }"
+    },
+    {
+      "mode": 2,
+      "mode_name": "Vind de fout",
+      "candidate_family": "error_detection",
+      "standard_action": "two_tier_choice_or_choice",
+      "disposition": "defer_mapping",
+      "student_action": "Identify the faulty reasoning step.",
+      "runtime_family": null,
+      "response_shape": null,
+      "follow_up": "Decide between two_tier_choice, bounded choice, or a new error_detection family after content review."
+    },
+    {
+      "mode": 3,
+      "mode_name": "Stroomdiagram bouwen",
+      "candidate_family": "flow_diagram_build",
+      "standard_action": "step_ordering",
+      "disposition": "wrap_now_visual_flow_follow_up",
+      "student_action": "Build a causal or procedural flow from blocks.",
+      "runtime_family": "step_ordering",
+      "response_shape": "{ order: string[] }"
+    },
+    {
+      "mode": 4,
+      "mode_name": "Structuren matchen",
+      "candidate_family": "classification_with_explanation",
+      "standard_action": "matching_pairs_plus_structured_short_response",
+      "disposition": "refactor_before_adoption",
+      "student_action": "Match problems that share a reasoning structure.",
+      "runtime_family": null,
+      "response_shape": null,
+      "follow_up": "Requires reviewed one-to-one matching banks and explanation/repair step before shared-shell adoption."
+    },
+    {
+      "mode": 5,
+      "mode_name": "Redeneerantwoord opbouwen",
+      "candidate_family": "structured_reasoning",
+      "standard_action": "structured_reasoning",
+      "disposition": "already_wrapped_self_check",
+      "student_action": "Write a short reasoning answer and self-check against criteria.",
+      "runtime_family": "structured_reasoning",
+      "response_shape": "string self-check"
+    },
+    {
+      "mode": null,
+      "mode_name": "Source-based explanation",
+      "candidate_family": "source_based_explanation",
+      "standard_action": "source_value_selection + source_chain_builder + structured_short_response",
+      "disposition": "future_composed_pattern",
+      "student_action": "Use a source value as evidence and finish the underlying answer form.",
+      "runtime_family": "composed_pattern",
+      "response_shape": "source_value_selection + source_chain_builder + structured_short_response"
+    }
+  ]
+}

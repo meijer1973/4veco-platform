@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-STD-1",
+  "name": "Reasoning Game Unified Exercise Migration",
+  "created": "2026-06-02",
+  "plan": "reports/sprints/REASON-STD-1-plan.md",
+  "baseline": "reports/sprints/REASON-STD-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "authority": {
+    "implementation_authorized": true,
+    "generated_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "target_equivalent_claims_authorized": false,
+    "student_or_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false
+  },
+  "scope": [
+    "Add platform-runtime reasoning standard task mappings for modes that current shared families can represent.",
+    "Prove mapped reasoning standard tasks validate and evaluate through the shared task-shell engine.",
+    "Produce report-fixture proof and a standard-family map for later adoption.",
+    "Decide keep/wrap/refactor/rebuild for reasoning modes and name follow-up reasoning sprints.",
+    "Preserve generated-output, source-data, target-equivalent, diagnostic, mastery/sequencing, Scale Gate 1, and product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-STD-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REASON-STD-1",
+    "npx.cmd jest --runInBand engines/tests/reasoning-engine.test.js engines/tests/reasoning-ui.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+    "node build-scripts/sprints/check-reason-std1.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/REASON-STD-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REASON-STD-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No hand edits to generated Book 1 output.",
+    "No source-data/book-1/reasoning CSV writes.",
+    "No source-data/book-*/exit-ticket writes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No candidate storage creation or writes.",
+    "No target-equivalent claims or completion language.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-STD-1",
+  "name": "Reasoning Game Unified Exercise Migration",
+  "status": "completed",
+  "completed": "2026-06-02",
+  "completed_on": "2026-06-02",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/REASON-STD-1-plan.md",
+  "baseline": "reports/sprints/REASON-STD-1-baseline.md",
+  "result": "reports/sprints/REASON-STD-1-result.md",
+  "diff_summary": "reports/sprints/REASON-STD-1-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "reasoning_csv_changed": false,
+  "exit_ticket_source_data_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/REASON-STD-1-lead-review-assignment.md",
+    "round1": "reports/sprints/REASON-STD-1-lead-review-round1.md",
+    "corrections": "reports/sprints/REASON-STD-1-lead-review-corrections.md",
+    "round2": "reports/sprints/REASON-STD-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "RSTD1-F1",
+        "description": "No product-route screenshots or playable generated-route proof exist in this sprint.",
+        "disposition": "accepted_follow_up",
+        "owner": "REASON-ADOPT-1 / REASON-PLAY-1",
+        "next_action": "Produce route-specific playable proof, screenshots, and usability-agent traces before the reasoning human evidence gate.",
+        "blocking": false
+      },
+      {
+        "id": "RSTD1-F2",
+        "description": "Mode 1 is a semantic claim_reason_evidence mapping over step_ordering, not a richer claim/evidence engine.",
+        "disposition": "accepted_follow_up",
+        "owner": "REASON-ANSWERFORM-2",
+        "next_action": "Define richer claim/reason/evidence or answer-form scaffolds before route proof claims rely on this distinction.",
+        "blocking": false
+      },
+      {
+        "id": "RSTD1-F3",
+        "description": "Mode 3 remains an ordered-chain bridge, not a full visual flow-diagram implementation.",
+        "disposition": "accepted_follow_up",
+        "owner": "REASON-ADOPT-1",
+        "next_action": "Route adoption must decide whether visual flow-diagram UI is needed before human review.",
+        "blocking": false
+      },
+      {
+        "id": "RSTD1-F4",
+        "description": "Modes 2 and 4 remain deferred/refactor-before-adoption.",
+        "disposition": "accepted_follow_up",
+        "owner": "REASON-ANSWERFORM-2",
+        "next_action": "Decide the error-detection and classification-with-explanation routes before treating reasoning as unified.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-STD-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-STD-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/reasoning-engine.test.js engines/tests/reasoning-ui.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/generate-reason-std1-proof.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-std1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/REASON-STD-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-STD-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "carried_flags": [
+    "No product-route screenshots or playable generated-route proof exist in this sprint.",
+    "Mode 1 remains a semantic claim_reason_evidence mapping over step_ordering.",
+    "Mode 3 remains an ordered-chain bridge, not a full visual flow-diagram implementation.",
+    "Modes 2 and 4 remain deferred/refactor-before-adoption."
+  ],
+  "authorized_next": [
+    "Proceed to REASON-ADOPT-1.",
+    "Do not claim generated-route adoption, target-equivalent proof, diagnostics, mastery, sequencing, Scale Gate 1, or product use from REASON-STD-1."
+  ]
+}
+
