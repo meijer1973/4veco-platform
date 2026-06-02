@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review",
+  "sprint_id": "GATE-REASON-STD-1",
+  "generated": "2026-06-02",
+  "status": "prepared_for_direct_comment_human_review_no_product_authority",
+  "source_sprints": [
+    "REASON-STD-1",
+    "REASON-ADOPT-1",
+    "REASON-PLAY-1",
+    "REASON-ANSWERFORM-2"
+  ],
+  "mode_status": [
+    {
+      "mode": 0,
+      "student_label": "Stappen ordenen",
+      "status": "shared_shell_adopted",
+      "family": "step_ordering"
+    },
+    {
+      "mode": 1,
+      "student_label": "Deelvragen opbouwen",
+      "status": "shared_shell_bridge_adopted",
+      "family": "step_ordering",
+      "semantic_bridge": "claim_reason_evidence"
+    },
+    {
+      "mode": 2,
+      "student_label": "Vind de fout",
+      "status": "local_error_repair_only_held_for_reviewed_adoption"
+    },
+    {
+      "mode": 3,
+      "student_label": "Stroomdiagram bouwen",
+      "status": "ordered_chain_bridge_adopted",
+      "family": "step_ordering",
+      "semantic_bridge": "flow_diagram_build",
+      "full_visual_flow_builder_proven": false
+    },
+    {
+      "mode": 4,
+      "student_label": "Structuren matchen",
+      "status": "held_for_classification_with_explanation_redesign"
+    },
+    {
+      "mode": 5,
+      "student_label": "Redeneerantwoord opbouwen",
+      "status": "structured_reasoning_self_check_only",
+      "family": "structured_reasoning"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode0-initial.png",
+      "purpose": "1.1.1 mode 0 initial step-ordering route"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode1-matched.png",
+      "purpose": "1.1.2 mode 1 matched claim-reason-evidence bridge"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mobile-mode3.png",
+      "purpose": "1.1.3 mobile ordered-chain bridge"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode0-retry-feedback.png",
+      "purpose": "wrong-order retry feedback with local and global feedback"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mode1-next-action.png",
+      "purpose": "correct mode 1 path with next action"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-dark-mode5.png",
+      "purpose": "dark-mode structured reasoning self-check"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-play-mobile-route-placement.png",
+      "purpose": "mobile route-panel placement after long checked mode 3 task"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a98-cue.png",
+      "purpose": "Leg uit of scaffold cue"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-a97-index-cue.png",
+      "purpose": "Leg uit dat scaffold cue for index-points reasoning"
+    },
+    {
+      "path": "reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-answerform-mobile-mode3.png",
+      "purpose": "mobile checked chain with answer-form scaffold and route context"
+    }
+  ],
+  "proof_inputs": {
+    "reason_std1": [
+      "reports/json/reason-std1-proof.json",
+      "reports/json/reason-std1-standard-family-map.json"
+    ],
+    "reason_adopt1": [
+      "reports/json/reason-adopt1-proof.json"
+    ],
+    "reason_play1": [
+      "reports/json/reason-play1-screenshot-proof.json",
+      "reports/json/reason-play1-usability.json"
+    ],
+    "reason_answerform2": [
+      "reports/json/reason-answerform2-proof.json",
+      "reports/json/reason-answerform2-scaffold-map.json"
+    ]
+  },
+  "usability_evidence": {
+    "status": "pass_with_flags",
+    "analysis": "reports/sprints/REASON-PLAY-1-usability-analysis.md",
+    "agent_reports": [
+      "reports/sprints/REASON-PLAY-1-usability-agent-1.md",
+      "reports/sprints/REASON-PLAY-1-usability-agent-2.md"
+    ],
+    "carried_flags": [
+      "compact controls remain visually terse",
+      "dual local/global feedback can be visually busy after checking",
+      "mobile route panel can appear below long checked tasks",
+      "mode 3 is an ordered-chain bridge, not full visual flow construction",
+      "dark route/progress surroundings need contextual accessibility proof"
+    ]
+  },
+  "answer_form_scaffold_evidence": {
+    "active_scaffolds": [
+      "A97",
+      "A98"
+    ],
+    "catalog_scaffolds": [
+      "A96",
+      "A97",
+      "A98",
+      "A99",
+      "A81"
+    ],
+    "a81_modifier_only": true,
+    "a99_live_evidence_missing": true,
+    "internal_code_leak_detected": false,
+    "product_claim_leak_detected": false
+  },
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "engine_implementation": false,
+    "product_route_adoption": false,
+    "target_equivalent_reasoning_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T17:02:35.305Z
+Generated: 2026-06-02T17:17:18.592Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2956
+Files indexed: 2981
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 376
+Count: 378
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -425,6 +425,7 @@ Count: 376
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
+- build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
@@ -444,6 +445,7 @@ Count: 376
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
+- build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
@@ -552,7 +554,7 @@ Count: 42
 
 ## validators
 
-Count: 202
+Count: 203
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -664,6 +666,7 @@ Count: 202
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
+- build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
@@ -759,7 +762,7 @@ Count: 202
 
 ## references
 
-Count: 437
+Count: 439
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1021,6 +1024,8 @@ Count: 437
 - references/data/sprints/R9.2.result.json
 - references/data/sprints/REASON-ADOPT-1.plan.json
 - references/data/sprints/REASON-ADOPT-1.result.json
+- references/data/sprints/REASON-ANSWERFORM-2.plan.json
+- references/data/sprints/REASON-ANSWERFORM-2.result.json
 - references/data/sprints/REASON-PLAY-1.plan.json
 - references/data/sprints/REASON-PLAY-1.result.json
 - references/data/sprints/REASON-REFINE-1.plan.json
@@ -1201,7 +1206,7 @@ Count: 437
 
 ## reports
 
-Count: 1715
+Count: 1736
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1248,6 +1253,8 @@ Count: 1715
 - reports/json/procedure-visual-promotion-pipeline-design.json
 - reports/json/procedure-visual-schema-status.json
 - reports/json/reason-adopt1-proof.json
+- reports/json/reason-answerform2-proof.json
+- reports/json/reason-answerform2-scaffold-map.json
 - reports/json/reason-play1-screenshot-proof.json
 - reports/json/reason-play1-usability.json
 - reports/json/reason-std1-proof.json
@@ -2532,6 +2539,25 @@ Count: 1715
 - reports/sprints/REASON-ADOPT-1-screenshots/desktop-light-112-mode1-matched.png
 - reports/sprints/REASON-ADOPT-1-screenshots/manifest.json
 - reports/sprints/REASON-ADOPT-1-screenshots/mobile-light-113-mode3-matched.png
+- reports/sprints/REASON-ANSWERFORM-2-agent-review-attempts.md
+- reports/sprints/REASON-ANSWERFORM-2-answer-form-scaffold-map.md
+- reports/sprints/REASON-ANSWERFORM-2-baseline.md
+- reports/sprints/REASON-ANSWERFORM-2-diff-summary.md
+- reports/sprints/REASON-ANSWERFORM-2-lead-review-assignment.md
+- reports/sprints/REASON-ANSWERFORM-2-lead-review-corrections.md
+- reports/sprints/REASON-ANSWERFORM-2-lead-review-round1.md
+- reports/sprints/REASON-ANSWERFORM-2-lead-review-round2.md
+- reports/sprints/REASON-ANSWERFORM-2-mode-disposition.md
+- reports/sprints/REASON-ANSWERFORM-2-plan.md
+- reports/sprints/REASON-ANSWERFORM-2-planning-review.md
+- reports/sprints/REASON-ANSWERFORM-2-playable-proof.md
+- reports/sprints/REASON-ANSWERFORM-2-result.md
+- reports/sprints/REASON-ANSWERFORM-2-screenshot-manifest.md
+- reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-dark-111-mode0-scaffold.png
+- reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-111-mode2-error-local.png
+- reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-111-mode5-a98-cue.png
+- reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-112-mode5-a97-index-cue.png
+- reports/sprints/REASON-ANSWERFORM-2-screenshots/mobile-light-112-mode3-scaffold.png
 - reports/sprints/REASON-PLAY-1-baseline.md
 - reports/sprints/REASON-PLAY-1-diff-summary.md
 - reports/sprints/REASON-PLAY-1-lead-review-assignment.md
