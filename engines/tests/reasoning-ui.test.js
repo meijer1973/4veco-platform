@@ -37,6 +37,25 @@ describe('reasoning ui task-shell safeguards', () => {
         expect(source).toContain('preventScroll: true');
     });
 
+    test('renders answer-form scaffold cues without exposing internal unit codes', () => {
+        expect(source).toContain('renderAnswerFormCue');
+        expect(source).toContain('data-answer-form-scaffold="practice"');
+        expect(source).toContain('Antwoordvorm oefenen');
+        expect(source).toContain('Gebruik de antwoordvorm hierboven als checklist');
+        expect(source).not.toContain('A97');
+        expect(source).not.toContain('A98');
+        expect(source).not.toContain('A99');
+        expect(source).not.toContain('A81');
+    });
+
+    test('engine keeps answer-form scaffolds as local practice metadata', () => {
+        expect(engineSource).toContain('ANSWER_FORM_SCAFFOLDS');
+        expect(engineSource).toContain('requiresUnderlyingAnswerForm');
+        expect(engineSource).toContain('targetEquivalentProof: false');
+        expect(engineSource).toContain('local_error_repair_only');
+        expect(engineSource).toContain('held_for_classification_with_explanation_design');
+    });
+
     test('adopts only reviewed step-ordering modes and keeps held modes private', () => {
         expect(source).toContain('case 0: content = hasStandardOrderingTask() ? renderStandardOrderingTask');
         expect(source).toContain('case 1: content = hasStandardOrderingTask() ? renderStandardOrderingTask');

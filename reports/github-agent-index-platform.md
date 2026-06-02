@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T15:59:56.509Z
+Generated: 2026-06-02T17:02:35.305Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2953
+Files indexed: 2956
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1201,7 +1201,7 @@ Count: 437
 
 ## reports
 
-Count: 1712
+Count: 1715
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2536,6 +2536,9 @@ Count: 1712
 - reports/sprints/REASON-PLAY-1-diff-summary.md
 - reports/sprints/REASON-PLAY-1-lead-review-assignment.md
 - reports/sprints/REASON-PLAY-1-lead-review-attempts.md
+- reports/sprints/REASON-PLAY-1-lead-review-corrections.md
+- reports/sprints/REASON-PLAY-1-lead-review-round1.md
+- reports/sprints/REASON-PLAY-1-lead-review-round2.md
 - reports/sprints/REASON-PLAY-1-plan.md
 - reports/sprints/REASON-PLAY-1-planning-review.md
 - reports/sprints/REASON-PLAY-1-result.md

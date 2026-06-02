@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-ANSWERFORM-2",
+  "generated_on": "2026-06-02",
+  "maps": {
+    "1.1.1": {
+      "schemaVersion": 1,
+      "paragraphId": "1.1.1",
+      "routeStatus": "local_practice_scaffold",
+      "activeScaffolds": [
+        {
+          "schemaVersion": 1,
+          "visibility": "practice_scaffold",
+          "primaryUnitId": "A97",
+          "unitIds": [
+            "A97"
+          ],
+          "modifierUnitIds": [],
+          "coordinationUnitIds": [],
+          "lane": "leg_uit_dat",
+          "studentLabel": "Leg uit dat",
+          "studentPurpose": "Onderbouw een gegeven conclusie met een duidelijke oorzaak-gevolgketen.",
+          "checklist": [
+            "Neem de conclusie uit de vraag als eindpunt.",
+            "Start bij het gegeven of de oorzaak in de context.",
+            "Schrijf minstens een controleerbare tussenstap.",
+            "Koppel je redenering terug aan de conclusie."
+          ],
+          "repairFocus": [
+            "Ontbreekt de tussenstap?",
+            "Komt de conclusie nog terug?",
+            "Is het economische begrip duidelijk gebruikt?"
+          ],
+          "requiresUnderlyingAnswerForm": false,
+          "underlyingAnswerFormUnitId": null,
+          "routeStatus": "local_practice_scaffold",
+          "paragraphId": "1.1.1",
+          "problemId": 1,
+          "boundaryFlags": {
+            "diagnostics": false,
+            "adaptiveRouting": false,
+            "masteryDecisions": false,
+            "automaticSequencing": false,
+            "studentFacingAI": false,
+            "summativeUse": false,
+            "pvProjection": false,
+            "pvMachinePromotion": false,
+            "scaleGate1": false,
+            "targetEquivalentProof": false,
+            "studentProductUse": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "visibility": "practice_scaffold",
+          "primaryUnitId": "A98",
+          "unitIds": [
+            "A98"
+          ],
+          "modifierUnitIds": [],
+          "coordinationUnitIds": [],
+          "lane": "leg_uit_of",
+          "studentLabel": "Leg uit of",
+          "studentPurpose": "Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.",
+          "checklist": [
+            "Kies eerst je richting of oordeel.",
+            "Zet die richting in je eerste zin.",
+            "Leg de economische oorzaak of regel uit.",
+            "Laat je antwoord niet beide kanten open."
+          ],
+          "repairFocus": [
+            "Staat de richting duidelijk vooraan?",
+            "Is de oorzaak of regel genoemd?",
+            "Wordt de andere kant niet alsnog open gelaten?"
+          ],
+          "requiresUnderlyingAnswerForm": false,
+          "underlyingAnswerFormUnitId": null,
+          "routeStatus": "local_practice_scaffold",
+          "paragraphId": "1.1.1",
+          "problemId": 9,
+          "boundaryFlags": {
+            "diagnostics": false,
+            "adaptiveRouting": false,
+            "masteryDecisions": false,
+            "automaticSequencing": false,
+            "studentFacingAI": false,
+            "summativeUse": false,
+            "pvProjection": false,
+            "pvMachinePromotion": false,
+            "scaleGate1": false,
+            "targetEquivalentProof": false,
+            "studentProductUse": false
+          }
+        }
+      ],
+      "availableScaffolds": {
+        "A97": {
+          "unitId": "A97",
+          "lane": "leg_uit_dat",
+          "studentLabel": "Leg uit dat",
+          "studentPurpose": "Onderbouw een gegeven conclusie met een duidelijke oorzaak-gevolgketen.",
+          "checklist": [
+            "Neem de conclusie uit de vraag als eindpunt.",
+            "Start bij het gegeven of de oorzaak in de context.",
+            "Schrijf minstens een controleerbare tussenstap.",
+            "Koppel je redenering terug aan de conclusie."
+          ],
+          "repairFocus": [
+            "Ontbreekt de tussenstap?",
+            "Komt de conclusie nog terug?",
+            "Is het economische begrip duidelijk gebruikt?"
+          ]
+        },
+        "A98": {
+          "unitId": "A98",
+          "lane": "leg_uit_of",
+          "studentLabel": "Leg uit of",
+          "studentPurpose": "Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.",
+          "checklist": [
+            "Kies eerst je richting of oordeel.",
+            "Zet die richting in je eerste zin.",
+            "Leg de economische oorzaak of regel uit.",
+            "Laat je antwoord niet beide kanten open."
+          ],
+          "repairFocus": [
+            "Staat de richting duidelijk vooraan?",
+            "Is de oorzaak of regel genoemd?",
+            "Wordt de andere kant niet alsnog open gelaten?"
+          ]
+        },
+        "A99": {
+          "unitId": "A99",
+          "lane": "leg_uit_met_voorbeeld",
+          "studentLabel": "Leg uit met voorbeeld",
+          "studentPurpose": "Gebruik een concreet voorbeeld en leg uit waarom dat voorbeeld past.",
+          "checklist": [
+            "Kies een voorbeeld dat bij de context past.",
+            "Benoem welk kenmerk van het voorbeeld belangrijk is.",
+            "Leg uit waarom dat kenmerk bij het begrip hoort.",
+            "Koppel het voorbeeld terug aan de vraag."
+          ],
+          "repairFocus": [
+            "Is het voorbeeld concreet?",
+            "Leg je uit waarom het voorbeeld past?",
+            "Sluit het voorbeeld aan op de context?"
+          ]
+        },
+        "A81": {
+          "unitId": "A81",
+          "lane": "bron_modifier",
+          "studentLabel": "Bron gebruiken",
+          "studentPurpose": "Gebruik een brongegeven als startpunt en maak daarna de onderliggende antwoordvorm af.",
+          "checklist": [
+            "Noem het relevante brongegeven met label, periode, eenheid of richting.",
+            "Zeg wat dat gegeven economisch betekent.",
+            "Verbind het brongegeven met je uitleg, berekening of conclusie.",
+            "Stop niet bij alleen aflezen of citeren."
+          ],
+          "repairFocus": [
+            "Is de bron echt gebruikt?",
+            "Staat de eenheid of richting erbij?",
+            "Is er ook een onderliggende uitleg of berekening?"
+          ],
+          "requiresUnderlyingAnswerForm": true
+        },
+        "A96": {
+          "unitId": "A96",
+          "lane": "bereken",
+          "studentLabel": "Berekening tonen",
+          "studentPurpose": "Toon formule, invulling, tussenstappen, eindantwoord en notatie.",
+          "checklist": [
+            "Kies de juiste formule of rekenregel.",
+            "Vul de gegevens zichtbaar in.",
+            "Werk de tussenstappen uit.",
+            "Geef het eindantwoord met eenheid of notatie."
+          ],
+          "repairFocus": [
+            "Is de basiswaarde juist?",
+            "Ontbreekt de notatie?",
+            "Is er te vroeg afgerond?"
+          ]
+        }
+      },
+      "sourceUsePattern": {
+        "schemaVersion": 1,
+        "visibility": "practice_scaffold",
+        "primaryUnitId": "A97",
+        "unitIds": [
+          "A97",
+          "A81"
+        ],
+        "modifierUnitIds": [
+          "A81"
+        ],
+        "coordinationUnitIds": [],
+        "lane": "leg_uit_dat",
+        "studentLabel": "Bron gebruiken bij leg uit dat",
+        "studentPurpose": "Gebruik eerst het brongegeven en bouw daarna de leg uit dat-redenering af.",
+        "checklist": [
+          "Neem de conclusie uit de vraag als eindpunt.",
+          "Start bij het gegeven of de oorzaak in de context.",
+          "Schrijf minstens een controleerbare tussenstap.",
+          "Koppel je redenering terug aan de conclusie.",
+          "Noem het relevante brongegeven met label, periode, eenheid of richting.",
+          "Zeg wat dat gegeven economisch betekent.",
+          "Verbind het brongegeven met je uitleg, berekening of conclusie.",
+          "Stop niet bij alleen aflezen of citeren."
+        ],
+        "repairFocus": [
+          "Ontbreekt de tussenstap?",
+          "Komt de conclusie nog terug?",
+          "Is het economische begrip duidelijk gebruikt?",
+          "Is de bron echt gebruikt?",
+          "Staat de eenheid of richting erbij?",
+          "Is er ook een onderliggende uitleg of berekening?"
+        ],
+        "requiresUnderlyingAnswerForm": true,
+        "underlyingAnswerFormUnitId": "A97",
+        "routeStatus": "future_source_use_pattern",
+        "paragraphId": "1.1.1",
+        "problemId": null,
+        "boundaryFlags": {
+          "diagnostics": false,
+          "adaptiveRouting": false,
+          "masteryDecisions": false,
+          "automaticSequencing": false,
+          "studentFacingAI": false,
+          "summativeUse": false,
+          "pvProjection": false,
+          "pvMachinePromotion": false,
+          "scaleGate1": false,
+          "targetEquivalentProof": false,
+          "studentProductUse": false
+        },
+        "sourceUseModifier": true
+      },
+      "modeDisposition": [
+        {
+          "mode": 0,
+          "modeName": "Stappen ordenen",
+          "candidateFamily": "step_ordering",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 1,
+          "modeName": "Deelvragen opbouwen",
+          "candidateFamily": "claim_reason_evidence",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 2,
+          "modeName": "Vind de fout",
+          "candidateFamily": "error_detection",
+          "standardAction": "two_tier_choice_or_choice",
+          "disposition": "defer_mapping",
+          "answerFormRoute": "local_error_repair_only"
+        },
+        {
+          "mode": 3,
+          "modeName": "Stroomdiagram bouwen",
+          "candidateFamily": "flow_diagram_build",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now_visual_flow_follow_up",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 4,
+          "modeName": "Structuren matchen",
+          "candidateFamily": "classification_with_explanation",
+          "standardAction": "matching_pairs_plus_structured_short_response",
+          "disposition": "refactor_before_adoption",
+          "answerFormRoute": "held_for_classification_with_explanation_design"
+        },
+        {
+          "mode": 5,
+          "modeName": "Redeneerantwoord opbouwen",
+          "candidateFamily": "structured_reasoning",
+          "standardAction": "structured_reasoning",
+          "disposition": "already_wrapped_self_check",
+          "answerFormRoute": null
+        },
+        {
+          "mode": null,
+          "modeName": "Source-based explanation",
+          "candidateFamily": "source_based_explanation",
+          "standardAction": "source_value_selection + source_chain_builder + structured_short_response",
+          "disposition": "future_composed_pattern"
+        }
+      ],
+      "boundaryFlags": {
+        "diagnostics": false,
+        "adaptiveRouting": false,
+        "masteryDecisions": false,
+        "automaticSequencing": false,
+        "studentFacingAI": false,
+        "summativeUse": false,
+        "pvProjection": false,
+        "pvMachinePromotion": false,
+        "scaleGate1": false,
+        "targetEquivalentProof": false,
+        "studentProductUse": false
+      }
+    },
+    "1.1.2": {
+      "schemaVersion": 1,
+      "paragraphId": "1.1.2",
+      "routeStatus": "local_practice_scaffold",
+      "activeScaffolds": [
+        {
+          "schemaVersion": 1,
+          "visibility": "practice_scaffold",
+          "primaryUnitId": "A97",
+          "unitIds": [
+            "A97",
+            "A96"
+          ],
+          "modifierUnitIds": [],
+          "coordinationUnitIds": [
+            "A96"
+          ],
+          "lane": "leg_uit_dat",
+          "studentLabel": "Leg uit dat",
+          "studentPurpose": "Leg de rekenroute uit met zichtbaar gegeven, bewerking en conclusie.",
+          "checklist": [
+            "Neem de conclusie uit de vraag als eindpunt.",
+            "Start bij het gegeven of de oorzaak in de context.",
+            "Schrijf minstens een controleerbare tussenstap.",
+            "Koppel je redenering terug aan de conclusie.",
+            "Gebruik de juiste basiswaarde.",
+            "Sluit af met de betekenis van het rekenantwoord."
+          ],
+          "repairFocus": [
+            "Ontbreekt de tussenstap?",
+            "Komt de conclusie nog terug?",
+            "Is het economische begrip duidelijk gebruikt?"
+          ],
+          "requiresUnderlyingAnswerForm": false,
+          "underlyingAnswerFormUnitId": null,
+          "routeStatus": "local_practice_scaffold",
+          "paragraphId": "1.1.2",
+          "problemId": 1,
+          "boundaryFlags": {
+            "diagnostics": false,
+            "adaptiveRouting": false,
+            "masteryDecisions": false,
+            "automaticSequencing": false,
+            "studentFacingAI": false,
+            "summativeUse": false,
+            "pvProjection": false,
+            "pvMachinePromotion": false,
+            "scaleGate1": false,
+            "targetEquivalentProof": false,
+            "studentProductUse": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "visibility": "practice_scaffold",
+          "primaryUnitId": "A98",
+          "unitIds": [
+            "A98"
+          ],
+          "modifierUnitIds": [],
+          "coordinationUnitIds": [],
+          "lane": "leg_uit_of",
+          "studentLabel": "Leg uit of",
+          "studentPurpose": "Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.",
+          "checklist": [
+            "Kies eerst je richting of oordeel.",
+            "Zet die richting in je eerste zin.",
+            "Leg de economische oorzaak of regel uit.",
+            "Laat je antwoord niet beide kanten open."
+          ],
+          "repairFocus": [
+            "Staat de richting duidelijk vooraan?",
+            "Is de oorzaak of regel genoemd?",
+            "Wordt de andere kant niet alsnog open gelaten?"
+          ],
+          "requiresUnderlyingAnswerForm": false,
+          "underlyingAnswerFormUnitId": null,
+          "routeStatus": "local_practice_scaffold",
+          "paragraphId": "1.1.2",
+          "problemId": 5,
+          "boundaryFlags": {
+            "diagnostics": false,
+            "adaptiveRouting": false,
+            "masteryDecisions": false,
+            "automaticSequencing": false,
+            "studentFacingAI": false,
+            "summativeUse": false,
+            "pvProjection": false,
+            "pvMachinePromotion": false,
+            "scaleGate1": false,
+            "targetEquivalentProof": false,
+            "studentProductUse": false
+          }
+        }
+      ],
+      "availableScaffolds": {
+        "A97": {
+          "unitId": "A97",
+          "lane": "leg_uit_dat",
+          "studentLabel": "Leg uit dat",
+          "studentPurpose": "Onderbouw een gegeven conclusie met een duidelijke oorzaak-gevolgketen.",
+          "checklist": [
+            "Neem de conclusie uit de vraag als eindpunt.",
+            "Start bij het gegeven of de oorzaak in de context.",
+            "Schrijf minstens een controleerbare tussenstap.",
+            "Koppel je redenering terug aan de conclusie."
+          ],
+          "repairFocus": [
+            "Ontbreekt de tussenstap?",
+            "Komt de conclusie nog terug?",
+            "Is het economische begrip duidelijk gebruikt?"
+          ]
+        },
+        "A98": {
+          "unitId": "A98",
+          "lane": "leg_uit_of",
+          "studentLabel": "Leg uit of",
+          "studentPurpose": "Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.",
+          "checklist": [
+            "Kies eerst je richting of oordeel.",
+            "Zet die richting in je eerste zin.",
+            "Leg de economische oorzaak of regel uit.",
+            "Laat je antwoord niet beide kanten open."
+          ],
+          "repairFocus": [
+            "Staat de richting duidelijk vooraan?",
+            "Is de oorzaak of regel genoemd?",
+            "Wordt de andere kant niet alsnog open gelaten?"
+          ]
+        },
+        "A99": {
+          "unitId": "A99",
+          "lane": "leg_uit_met_voorbeeld",
+          "studentLabel": "Leg uit met voorbeeld",
+          "studentPurpose": "Gebruik een concreet voorbeeld en leg uit waarom dat voorbeeld past.",
+          "checklist": [
+            "Kies een voorbeeld dat bij de context past.",
+            "Benoem welk kenmerk van het voorbeeld belangrijk is.",
+            "Leg uit waarom dat kenmerk bij het begrip hoort.",
+            "Koppel het voorbeeld terug aan de vraag."
+          ],
+          "repairFocus": [
+            "Is het voorbeeld concreet?",
+            "Leg je uit waarom het voorbeeld past?",
+            "Sluit het voorbeeld aan op de context?"
+          ]
+        },
+        "A81": {
+          "unitId": "A81",
+          "lane": "bron_modifier",
+          "studentLabel": "Bron gebruiken",
+          "studentPurpose": "Gebruik een brongegeven als startpunt en maak daarna de onderliggende antwoordvorm af.",
+          "checklist": [
+            "Noem het relevante brongegeven met label, periode, eenheid of richting.",
+            "Zeg wat dat gegeven economisch betekent.",
+            "Verbind het brongegeven met je uitleg, berekening of conclusie.",
+            "Stop niet bij alleen aflezen of citeren."
+          ],
+          "repairFocus": [
+            "Is de bron echt gebruikt?",
+            "Staat de eenheid of richting erbij?",
+            "Is er ook een onderliggende uitleg of berekening?"
+          ],
+          "requiresUnderlyingAnswerForm": true
+        },
+        "A96": {
+          "unitId": "A96",
+          "lane": "bereken",
+          "studentLabel": "Berekening tonen",
+          "studentPurpose": "Toon formule, invulling, tussenstappen, eindantwoord en notatie.",
+          "checklist": [
+            "Kies de juiste formule of rekenregel.",
+            "Vul de gegevens zichtbaar in.",
+            "Werk de tussenstappen uit.",
+            "Geef het eindantwoord met eenheid of notatie."
+          ],
+          "repairFocus": [
+            "Is de basiswaarde juist?",
+            "Ontbreekt de notatie?",
+            "Is er te vroeg afgerond?"
+          ]
+        }
+      },
+      "sourceUsePattern": {
+        "schemaVersion": 1,
+        "visibility": "practice_scaffold",
+        "primaryUnitId": "A97",
+        "unitIds": [
+          "A97",
+          "A81"
+        ],
+        "modifierUnitIds": [
+          "A81"
+        ],
+        "coordinationUnitIds": [],
+        "lane": "leg_uit_dat",
+        "studentLabel": "Bron gebruiken bij leg uit dat",
+        "studentPurpose": "Gebruik eerst het brongegeven en bouw daarna de leg uit dat-redenering af.",
+        "checklist": [
+          "Neem de conclusie uit de vraag als eindpunt.",
+          "Start bij het gegeven of de oorzaak in de context.",
+          "Schrijf minstens een controleerbare tussenstap.",
+          "Koppel je redenering terug aan de conclusie.",
+          "Noem het relevante brongegeven met label, periode, eenheid of richting.",
+          "Zeg wat dat gegeven economisch betekent.",
+          "Verbind het brongegeven met je uitleg, berekening of conclusie.",
+          "Stop niet bij alleen aflezen of citeren."
+        ],
+        "repairFocus": [
+          "Ontbreekt de tussenstap?",
+          "Komt de conclusie nog terug?",
+          "Is het economische begrip duidelijk gebruikt?",
+          "Is de bron echt gebruikt?",
+          "Staat de eenheid of richting erbij?",
+          "Is er ook een onderliggende uitleg of berekening?"
+        ],
+        "requiresUnderlyingAnswerForm": true,
+        "underlyingAnswerFormUnitId": "A97",
+        "routeStatus": "future_source_use_pattern",
+        "paragraphId": "1.1.2",
+        "problemId": null,
+        "boundaryFlags": {
+          "diagnostics": false,
+          "adaptiveRouting": false,
+          "masteryDecisions": false,
+          "automaticSequencing": false,
+          "studentFacingAI": false,
+          "summativeUse": false,
+          "pvProjection": false,
+          "pvMachinePromotion": false,
+          "scaleGate1": false,
+          "targetEquivalentProof": false,
+          "studentProductUse": false
+        },
+        "sourceUseModifier": true
+      },
+      "modeDisposition": [
+        {
+          "mode": 0,
+          "modeName": "Stappen ordenen",
+          "candidateFamily": "step_ordering",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 1,
+          "modeName": "Deelvragen opbouwen",
+          "candidateFamily": "claim_reason_evidence",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 2,
+          "modeName": "Vind de fout",
+          "candidateFamily": "error_detection",
+          "standardAction": "two_tier_choice_or_choice",
+          "disposition": "defer_mapping",
+          "answerFormRoute": "local_error_repair_only"
+        },
+        {
+          "mode": 3,
+          "modeName": "Stroomdiagram bouwen",
+          "candidateFamily": "flow_diagram_build",
+          "standardAction": "step_ordering",
+          "disposition": "wrap_now_visual_flow_follow_up",
+          "answerFormRoute": null
+        },
+        {
+          "mode": 4,
+          "modeName": "Structuren matchen",
+          "candidateFamily": "classification_with_explanation",
+          "standardAction": "matching_pairs_plus_structured_short_response",
+          "disposition": "refactor_before_adoption",
+          "answerFormRoute": "held_for_classification_with_explanation_design"
+        },
+        {
+          "mode": 5,
+          "modeName": "Redeneerantwoord opbouwen",
+          "candidateFamily": "structured_reasoning",
+          "standardAction": "structured_reasoning",
+          "disposition": "already_wrapped_self_check",
+          "answerFormRoute": null
+        },
+        {
+          "mode": null,
+          "modeName": "Source-based explanation",
+          "candidateFamily": "source_based_explanation",
+          "standardAction": "source_value_selection + source_chain_builder + structured_short_response",
+          "disposition": "future_composed_pattern"
+        }
+      ],
+      "boundaryFlags": {
+        "diagnostics": false,
+        "adaptiveRouting": false,
+        "masteryDecisions": false,
+        "automaticSequencing": false,
+        "studentFacingAI": false,
+        "summativeUse": false,
+        "pvProjection": false,
+        "pvMachinePromotion": false,
+        "scaleGate1": false,
+        "targetEquivalentProof": false,
+        "studentProductUse": false
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T15:59:56.929Z",
+  "generatedAt": "2026-06-02T17:02:35.262Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3034,8 +3034,8 @@
             {
               "sprint": "REASON-ANSWERFORM-2",
               "name": "Reasoning Answer-Form And Source-Use Scaffolds",
-              "completed": "no",
-              "currentState": "Connect reasoning practice to A97/A98/A99/A81 answer-form scaffolds, decide the mode 2 error-detection route and mode 4 classification-with-explanation route, and define source-based explanation adoption without target-equivalent claims.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added local practice answer-form scaffold cues for A97/A98/A99/A81 patterns, kept A81 modifier-only with an underlying answer form, kept A97/A98/A99 distinct, preserved mode 2 as local error repair, and kept mode 4 held for classification-with-explanation redesign. Generated Book 1 reasoning output changed through platform deploy only. Carried flags: late planning review accepted as protocol variance, A99 lacks a live 1.1.1/1.1.2 evidence case, A81 remains future source-use modifier only, mode 2/mode 4 need reviewed adoption, mode 3 remains ordered-chain bridge, mobile route panel can sit below first viewport, and no target-equivalent/product authority is authorized.",
               "exitGate": ""
             },
             {
@@ -3244,14 +3244,6 @@
           "name": "Student Skill Map Product Surface",
           "completed": "no",
           "currentState": "Make the skill map accessible and useful as a student-facing route overview for the first three paragraphs.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "REASON-ANSWERFORM-2",
-          "name": "Reasoning Answer-Form And Source-Use Scaffolds",
-          "completed": "no",
-          "currentState": "Connect reasoning practice to A97/A98/A99/A81 answer-form scaffolds, decide the mode 2 error-detection route and mode 4 classification-with-explanation route, and define source-based explanation adoption without target-equivalent claims.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3654,10 +3646,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / EVIDENCE ONLY.** Platform ran separate usability-agent evidence, deterministic rendered screenshot proof, and lead-review round 1/round 2. Two counted usability agents returned PASS WITH FLAGS from generated proof/screenshot review; deterministic rendered capture proves modes 0, 1, 3, and 5 are playable with screenshots. No blocking repair was required. Carried flags: dual feedback density, mobile route-panel placement, dark-theme consistency, compact controls, mode 3 bridge-only status, modes 2/4 held, and usability agents reviewed proof/screenshots rather than fresh live-clicking. This is practice-route playability proof only, not target-equivalent reasoning readiness or product authority.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-ANSWERFORM-2",
+          "name": "Reasoning Answer-Form And Source-Use Scaffolds",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added local practice answer-form scaffold cues for A97/A98/A99/A81 patterns, kept A81 modifier-only with an underlying answer form, kept A97/A98/A99 distinct, preserved mode 2 as local error repair, and kept mode 4 held for classification-with-explanation redesign. Generated Book 1 reasoning output changed through platform deploy only. Carried flags: late planning review accepted as protocol variance, A99 lacks a live 1.1.1/1.1.2 evidence case, A81 remains future source-use modifier only, mode 2/mode 4 need reviewed adoption, mode 3 remains ordered-chain bridge, mobile route panel can sit below first viewport, and no target-equivalent/product authority is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 23,
-      "openCount": 30
+      "completedCount": 24,
+      "openCount": 29
     },
     {
       "id": "innovation",

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-ANSWERFORM-2",
+  "generated_on": "2026-06-02",
+  "status": "screenshot_proof_captured",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "scaffold_map": "reports/json/reason-answerform2-scaffold-map.json",
+  "cases": [
+    {
+      "name": "desktop-light-111-mode5-a98-cue",
+      "paragraph": "1.1.1",
+      "mode": 5,
+      "theme": "light",
+      "action": "self-check",
+      "proof": "mode 5 shows an A98-style direction-first scaffold and self-check feedback",
+      "url": "http://127.0.0.1:55238/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-111-mode5-a98-cue.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Gebruik de antwoordvorm hierboven als checklist voor je redenering. Leg uit of Gestructureerde redenering Schrijf je antwoord met deze antwoordvorm in gedachten. Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom. Jouw redenering Kies eerst je richting of oordeel. Zet die richting in je eerste zin. Leg de economische oorzaak of regel uit. Laat je antwoord niet beide kanten open. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+      "scaffoldText": "ANTWOORDVORM OEFENEN Leg uit of Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom. Kies eerst je richting of oordeel. Zet die richting in je eerste zin. Leg de economische oorzaak of regel uit. Laat je antwoord niet beide kanten open.",
+      "taskFamily": "structured_reasoning",
+      "shellMarker": "REASON-UX-2",
+      "feedbackState": "self_check",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "internalCodeLeak": false,
+      "productClaimLeak": false,
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "cueRect": {
+        "x": 134,
+        "y": 375,
+        "width": 607,
+        "height": 193
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "width": 1280,
+        "height": 2024
+      }
+    },
+    {
+      "name": "desktop-light-112-mode5-a97-index-cue",
+      "paragraph": "1.1.2",
+      "mode": 5,
+      "theme": "light",
+      "action": "self-check",
+      "proof": "mode 5 shows a calculation-coordinated A97-style index-points scaffold",
+      "url": "http://127.0.0.1:55238/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-112-mode5-a97-index-cue.png",
+      "title": "Percentages en indexcijfers – Redeneer-spel",
+      "routeText": "REKENEN Oefenroute Redeneren PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Gebruik het redeneer-spel om de rekenstappen en betekenis van percentages hardop te ordenen. Open redeneer-spel Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Gebruik de antwoordvorm hierboven als checklist voor je redenering. Leg uit dat Gestructureerde redenering Schrijf je antwoord met deze antwoordvorm in gedachten. Leg de indexpuntenfout uit en koppel de uitleg aan de berekening. Jouw redenering Neem de conclusie uit de vraag als eindpunt. Start bij het gegeven of de oorzaak in de context. Schrijf minstens een controleerbare tussenstap. Koppel je redenering terug aan de conclusie. Noem indexpunten en procentuele verandering apart. Gebruik het oude indexcijfer als basis voor de procentuele verandering. Vergelijk je redenering Loop oorzaak, tussenstap en conclusie rustig na. Noem de beginsituatie of oorzaak. Leg de economische tussenstap uit. Sluit af met de conclusie in de context. Oefen verder met redeneren",
+      "scaffoldText": "ANTWOORDVORM OEFENEN Leg uit dat Leg de indexpuntenfout uit en koppel de uitleg aan de berekening. Neem de conclusie uit de vraag als eindpunt. Start bij het gegeven of de oorzaak in de context. Schrijf minstens een controleerbare tussenstap. Koppel je redenering terug aan de conclusie.",
+      "taskFamily": "structured_reasoning",
+      "shellMarker": "REASON-UX-2",
+      "feedbackState": "self_check",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "internalCodeLeak": false,
+      "productClaimLeak": false,
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 410
+      },
+      "cueRect": {
+        "x": 134,
+        "y": 351,
+        "width": 607,
+        "height": 193
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "width": 1280,
+        "height": 1970
+      }
+    },
+    {
+      "name": "desktop-light-111-mode2-error-local",
+      "paragraph": "1.1.1",
+      "mode": 2,
+      "theme": "light",
+      "action": "click-error",
+      "proof": "mode 2 remains local error repair with answer-form cue but no shared-shell adoption claim",
+      "url": "http://127.0.0.1:55238/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-111-mode2-error-local.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "",
+      "scaffoldText": "ANTWOORDVORM OEFENEN Leg uit of Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom. Kies eerst je richting of oordeel. Zet die richting in je eerste zin. Leg de economische oorzaak of regel uit. Laat je antwoord niet beide kanten open.",
+      "taskFamily": null,
+      "shellMarker": null,
+      "feedbackState": null,
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "internalCodeLeak": false,
+      "productClaimLeak": false,
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "cueRect": {
+        "x": 134,
+        "y": 375,
+        "width": 607,
+        "height": 193
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": {
+        "width": 1280,
+        "height": 1188
+      }
+    },
+    {
+      "name": "mobile-light-112-mode3-scaffold",
+      "paragraph": "1.1.2",
+      "mode": 3,
+      "theme": "light",
+      "action": "correct-order",
+      "proof": "mobile checked chain shows scaffold cue, task-shell feedback, next action, and route context",
+      "url": "http://127.0.0.1:55238/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-ANSWERFORM-2-screenshots/mobile-light-112-mode3-scaffold.png",
+      "title": "Percentages en indexcijfers – Redeneer-spel",
+      "routeText": "REKENEN Oefenroute Redeneren PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Gebruik het redeneer-spel om de rekenstappen en betekenis van percentages hardop te ordenen. Open redeneer-spel Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Bouw de keten van beginpunt naar gevolg. Het volledige visuele stroomdiagram blijft vervolgwerk. Causale keten bouwen Stappen ordenen Zet de blokken in de volgorde van de economische keten. Bouw de oorzaak-gevolgketen van beginpunt naar conclusie. Oude index 108, nieuwe index 112 ‹ › × Verschil 4 indexpunten ‹ › × Deel door de oude index 108 ‹ › × 4 / 108 x 100% = 3,7% ‹ › × 4 indexpunten is 3,7% ‹ › × Oude index 108, nieuwe index 112 Rol in de keten: given Verschil 4 indexpunten Rol in de keten: step Deel door de oude index 108 Rol in de keten: step 4 / 108 x 100% = 3,7% Rol in de keten: result 4 indexpunten is 3,7% Rol in de keten: result Bij procentuele verandering hoort de oude waarde in de noemer. Afleider: deze stap past niet als onderdeel van de gevraagde keten. Leegmaken De keten loopt logisch Je bouwt van beginpunt via tussenstappen naar conclusie. Oefen verder met redeneren",
+      "scaffoldText": "ANTWOORDVORM OEFENEN Leg uit dat Leg de indexpuntenfout uit en koppel de uitleg aan de berekening. Neem de conclusie uit de vraag als eindpunt. Start bij het gegeven of de oorzaak in de context. Schrijf minstens een controleerbare tussenstap. Koppel je redenering terug aan de conclusie.",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": "matched",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "internalCodeLeak": false,
+      "productClaimLeak": false,
+      "routeRect": {
+        "x": 20,
+        "y": 2010,
+        "width": 350,
+        "height": 410
+      },
+      "cueRect": {
+        "x": 16,
+        "y": 391,
+        "width": 358,
+        "height": 212
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "page": {
+        "width": 390,
+        "height": 3034
+      }
+    },
+    {
+      "name": "desktop-dark-111-mode0-scaffold",
+      "paragraph": "1.1.1",
+      "mode": 0,
+      "theme": "dark",
+      "action": "wrong-order",
+      "proof": "dark-mode scaffold cue stays readable with task-shell retry feedback",
+      "url": "http://127.0.0.1:55238/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20redeneer-spel.html",
+      "screenshot": "reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-dark-111-mode0-scaffold.png",
+      "title": "Schaarste en economisch denken – Redeneer-spel",
+      "routeText": "REDENEREN Oefenroute Redeneren PARAGRAAFDOEL Schaarste en alternatieve kosten herkennen in keuzes. Oefen hoe je een keuze uitlegt vanuit schaarste en het opgeofferde alternatief. Open redeneer-spel Focus: Schaarste als kerneconomisch probleem Schaarste als kerneconomisch probleem aanbevolen om nu te oefenen 0/3 Alternatieve kosten in een keuze-situatie later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route.",
+      "shellText": "Kies alleen de stappen die de redenering vormen en zet ze in volgorde. Redeneerstappen ordenen Stappen ordenen Zet de juiste redeneerstappen in de goede volgorde. Kies de stappen die samen de economische redenering vormen en zet ze in volgorde. Pas de canonical term toe ‹ › × Herken de misconceptie ‹ › × Rond de correcte redenering af ‹ › × Herken de misconceptie De spreker verwart 'geen prijs betalen' met 'geen alternatieve kosten'. Alternatieve kosten gaan niet over wat je betaalt, maar over wat je opgeeft door je tijd of middelen aan iets anders te besteden. Pas de canonical term toe Alternatieve kosten zijn de opbrengst van het beste niet-gekozen alternatief. Wanneer je een uur in de zon zit, geef je de opbrengst op van andere dingen die je in dat uur had kunnen doen — huiswerk, werken, sporten. Rond de correcte redenering af Zonlicht is financieel gratis, maar niet economisch. Wie in de zon zit, gebruikt schaarse tijd en geeft daarmee andere alternatieven op. 'Gratis' in economische zin betekent: zonder alternatieve kosten, en dat is bijna nooit waar. Bevestig: gratis betekent geen kosten Zonlicht kost niets en je geeft niets tastbaars op, dus alternatieve kosten zijn €0. Corrigeer naar: zonlicht kost stroom Als je in je tuin zit gebruik je geen stroom, maar je kruipt wel op de bank, dus er zijn huur-alternatieve kosten. Corrigeer naar: zonlicht is zeldzaam De spreker vergeet dat zonlicht in Nederland zeldzaam is, dus schaars en dus duur. Leegmaken Controleer de volgorde Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie. Eerste plek om te controleren Verwacht: Herken de misconceptie. Gekozen: Pas de canonical term toe. Oefen verder met redeneren",
+      "scaffoldText": "ANTWOORDVORM OEFENEN Leg uit of Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom. Kies eerst je richting of oordeel. Zet die richting in je eerste zin. Leg de economische oorzaak of regel uit. Laat je antwoord niet beide kanten open.",
+      "taskFamily": "step_ordering",
+      "shellMarker": "REASON-ADOPT-1",
+      "feedbackState": "retry",
+      "globalFeedbackVisible": true,
+      "nextVisible": true,
+      "internalCodeLeak": false,
+      "productClaimLeak": false,
+      "routeRect": {
+        "x": 786,
+        "y": 121,
+        "width": 364,
+        "height": 392
+      },
+      "cueRect": {
+        "x": 134,
+        "y": 395,
+        "width": 607,
+        "height": 193
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "width": 1280,
+        "height": 2281
+      }
+    }
+  ],
+  "authority": {
+    "target_equivalent_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  }
+}

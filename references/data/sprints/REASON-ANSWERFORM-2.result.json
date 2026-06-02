@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-ANSWERFORM-2",
+  "name": "Reasoning Answer-Form And Source-Use Scaffolds",
+  "status": "completed",
+  "verdict": "PASS WITH FLAGS",
+  "generated_on": "2026-06-02",
+  "plan": "reports/sprints/REASON-ANSWERFORM-2-plan.md",
+  "baseline": "reports/sprints/REASON-ANSWERFORM-2-baseline.md",
+  "result": "reports/sprints/REASON-ANSWERFORM-2-result.md",
+  "diff_summary": "reports/sprints/REASON-ANSWERFORM-2-diff-summary.md",
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/REASON-ANSWERFORM-2-lead-review-assignment.md",
+    "round1": "reports/sprints/REASON-ANSWERFORM-2-lead-review-round1.md",
+    "corrections": "reports/sprints/REASON-ANSWERFORM-2-lead-review-corrections.md",
+    "round2": "reports/sprints/REASON-ANSWERFORM-2-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "protocol_variance": "Planning review was completed late after implementation because earlier reviewer attempts returned null or hit tool/usage limits. Round 2 accepted this as a carried variance, not a precedent.",
+    "flags": [
+      {
+        "id": "late-planning-review",
+        "description": "Planning review was completed late and is accepted only as a carried protocol variance.",
+        "disposition": "carry_forward",
+        "owner": "main sprint owner",
+        "next_action": "Do not treat late planning review as precedent; require planning review before implementation in future sprints.",
+        "blocking": false
+      },
+      {
+        "id": "a99-no-live-case",
+        "description": "A99 scaffold exists but lacks a live generated 1.1.1/1.1.2 evidence case.",
+        "disposition": "accepted_follow_up",
+        "owner": "reasoning route owner",
+        "next_action": "Add a reviewed live example-answer route case before claiming A99 rendered coverage.",
+        "blocking": false
+      },
+      {
+        "id": "a81-future-source-use",
+        "description": "A81 remains future source-use modifier only; no live source-based explanation route is proven.",
+        "disposition": "accepted_follow_up",
+        "owner": "reasoning route owner",
+        "next_action": "Plan source-use adoption with source/value evidence and underlying answer-form proof.",
+        "blocking": false
+      },
+      {
+        "id": "mode2-mode4-held",
+        "description": "Mode 2 needs reviewed error-repair/two-tier adoption and mode 4 remains held for classification-with-explanation redesign.",
+        "disposition": "accepted_follow_up",
+        "owner": "reasoning standard owner",
+        "next_action": "Create bounded follow-up sprints for error-repair and classification-with-explanation adoption.",
+        "blocking": false
+      },
+      {
+        "id": "mobile-route-placement",
+        "description": "Mobile route panel can sit below the first viewport after long checked tasks.",
+        "disposition": "carry_forward",
+        "owner": "student-experience owner",
+        "next_action": "Improve mobile route placement or carry this flag into the final reasoning human gate.",
+        "blocking": false
+      }
+    ]
+  },
+  "evidence": [
+    "reports/sprints/REASON-ANSWERFORM-2-planning-review.md",
+    "reports/sprints/REASON-ANSWERFORM-2-answer-form-scaffold-map.md",
+    "reports/sprints/REASON-ANSWERFORM-2-mode-disposition.md",
+    "reports/sprints/REASON-ANSWERFORM-2-playable-proof.md",
+    "reports/json/reason-answerform2-proof.json",
+    "reports/json/reason-answerform2-scaffold-map.json",
+    "reports/sprints/REASON-ANSWERFORM-2-screenshot-manifest.md",
+    "reports/sprints/REASON-ANSWERFORM-2-screenshots/",
+    "reports/sprints/REASON-ANSWERFORM-2-diff-summary.md"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-ANSWERFORM-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-ANSWERFORM-2",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/reasoning-engine.test.js engines/tests/reasoning-ui.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+      "status": "passed",
+      "details": "4 suites, 130 tests"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-reason-answerform2-route-output.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-reason-answerform2-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "protected_reference_data_changed": false,
+  "generated_lesson_output": {
+    "changed_only_through_deploy": true,
+    "changed_paths": [
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning-engine.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning-ui.js",
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/reasoning.css"
+    ]
+  },
+  "authority": {
+    "target_equivalent_reasoning_proof_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "target_exercise_field_writes_authorized": false,
+    "candidate_storage_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "student_facing_ai_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  },
+  "carried_flags": [
+    "Late planning review accepted as protocol variance, not erased.",
+    "A99 scaffold exists but lacks live generated 1.1.1/1.1.2 evidence case.",
+    "A81 remains future source-use modifier only.",
+    "Mode 2 needs reviewed error-repair/two-tier adoption.",
+    "Mode 3 remains ordered-chain bridge, not full visual flow construction.",
+    "Mode 4 remains held for classification-with-explanation redesign.",
+    "Mobile route panel can sit below the first viewport after long checked tasks.",
+    "No target-equivalent, diagnostic, mastery, sequencing, Scale Gate 1, product-use, or student-use authority."
+  ],
+  "next": {
+    "recommended": "Prepare GATE-REASON-STD-1 direct-comment human review packet after commit/push and map refresh.",
+    "blocked_until": "This sprint is committed and pushed with evidence and maps current."
+  }
+}

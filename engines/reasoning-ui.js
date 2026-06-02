@@ -356,6 +356,7 @@
         // Render instruction box + mode-specific content
         var instructionHtml = '<div class="r-instruction-box"><i class="fa-solid fa-circle-info"></i> '
             + esc(MODE_INSTRUCTIONS[currentMode]) + '</div>';
+        var scaffoldHtml = renderAnswerFormCue(roundData.answerFormScaffold);
         var content = '';
         switch (currentMode) {
             case 0: content = hasStandardOrderingTask() ? renderStandardOrderingTask('Kies alleen de stappen die de redenering vormen en zet ze in volgorde.') : renderOrderSteps(); break;
@@ -365,8 +366,29 @@
             case 4: content = renderMatchStructures(); break;
             case 5: content = renderStructuredReasoning(); break;
         }
-        els.gameContent.innerHTML = instructionHtml + content;
+        els.gameContent.innerHTML = instructionHtml + scaffoldHtml + content;
         bindModeInteractions();
+    }
+
+    function renderAnswerFormCue(scaffold) {
+        if (!scaffold || scaffold.visibility !== 'practice_scaffold') return '';
+        var checklist = scaffold.checklist || [];
+        var html = '<aside class="r-answer-form-cue" data-answer-form-scaffold="practice">'
+            + '<div class="r-answer-form-kicker">Antwoordvorm oefenen</div>'
+            + '<div class="r-answer-form-title">' + esc(scaffold.studentLabel) + '</div>'
+            + '<p>' + esc(scaffold.studentPurpose) + '</p>';
+        if (checklist.length) {
+            html += '<ul>';
+            for (var i = 0; i < Math.min(checklist.length, 4); i++) {
+                html += '<li>' + esc(checklist[i]) + '</li>';
+            }
+            html += '</ul>';
+        }
+        if (scaffold.sourceUseModifier) {
+            html += '<p class="r-answer-form-boundary">Brongebruik is hier een hulp bij je antwoord, niet het hele antwoord.</p>';
+        }
+        html += '</aside>';
+        return html;
     }
 
     // ── Mode 0: Order Steps ─────────────────────────────────────────
@@ -472,7 +494,7 @@
             return '<div class="r-info-box">Deze taakvorm kan nu niet worden geladen.</div>';
         }
         return '<section class="r-task-shell-mode" data-reasoning-task-shell="REASON-UX-2">'
-            + '<div class="r-task-route-cue">Gebruik oorzaak, tussenstap en conclusie als een korte denkroute.</div>'
+            + '<div class="r-task-route-cue">Gebruik de antwoordvorm hierboven als checklist voor je redenering.</div>'
             + window.TaskShellUI.renderTask(roundData.taskShellTask, 0)
             + '</section>';
     }

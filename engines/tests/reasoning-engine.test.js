@@ -119,6 +119,60 @@ describe('reasoning standard family map', () => {
     });
 });
 
+describe('reasoning answer-form scaffolds', () => {
+    test('catalog keeps explanation lanes distinct and source use as a modifier', () => {
+        const catalog = ReasoningEngine.getAnswerFormScaffoldCatalog();
+        expect(catalog.A97.lane).toBe('leg_uit_dat');
+        expect(catalog.A98.lane).toBe('leg_uit_of');
+        expect(catalog.A99.lane).toBe('leg_uit_met_voorbeeld');
+        expect(catalog.A81.lane).toBe('bron_modifier');
+        expect(catalog.A81.requiresUnderlyingAnswerForm).toBe(true);
+    });
+
+    test('source-use scaffold requires an underlying non-source answer form', () => {
+        expect(() => ReasoningEngine.buildSourceUseScaffold('A81')).toThrow('underlying answer form');
+        const sourceScaffold = ReasoningEngine.buildSourceUseScaffold('A97', {
+            paragraphId: '1.1.3'
+        });
+        expect(sourceScaffold.sourceUseModifier).toBe(true);
+        expect(sourceScaffold.modifierUnitIds).toContain('A81');
+        expect(sourceScaffold.underlyingAnswerFormUnitId).toBe('A97');
+        expect(sourceScaffold.boundaryFlags.targetEquivalentProof).toBe(false);
+    });
+
+    test('scaffold map includes available A99 but keeps route as local practice', () => {
+        const engine = createEngine({ paragraphId: '1.1.1' });
+        const map = engine.getAnswerFormScaffoldMap();
+        expect(map.routeStatus).toBe('local_practice_scaffold');
+        expect(map.availableScaffolds.A99.lane).toBe('leg_uit_met_voorbeeld');
+        expect(map.sourceUsePattern.modifierUnitIds).toContain('A81');
+        expect(map.sourceUsePattern.underlyingAnswerFormUnitId).toBe('A97');
+        expect(map.boundaryFlags.targetEquivalentProof).toBe(false);
+        expect(map.activeScaffolds.length).toBeGreaterThan(0);
+    });
+
+    test('math-economics index-point repair infers A97 coordinated with A96', () => {
+        const row = ReasoningEngine.parseCSV(MINIMAL_CSV)[4];
+        const problem = ReasoningEngine.buildProblem(row);
+        const scaffold = ReasoningEngine.inferAnswerFormScaffold(problem, 'math-economics', '1.1.2');
+        expect(scaffold.primaryUnitId).toBe('A97');
+        expect(scaffold.coordinationUnitIds).toContain('A96');
+        expect(scaffold.checklist.join(' ')).toContain('indexpunten');
+        expect(scaffold.boundaryFlags.targetEquivalentProof).toBe(false);
+    });
+
+    test('mode 5 task carries answer-form scaffold without breaking task-shell validation', () => {
+        const engine = createEngine();
+        engine.startGame(5);
+        const round = engine.getRound();
+        expect(round.answerFormScaffold).toBeDefined();
+        expect(round.answerFormScaffold.visibility).toBe('practice_scaffold');
+        expect(round.taskShellTask.answerFormScaffold.primaryUnitId).toBe(round.answerFormScaffold.primaryUnitId);
+        expect(round.taskShellTask.skillLabel).not.toMatch(/\bA\d{2}\b/);
+        expect(TaskShellEngine.validateTask(round.taskShellTask)).toBe(true);
+    });
+});
+
 describe('domain config', () => {
     test('economics domain has correct flow types', () => {
         const engine = createEngine({ domain: 'economics' });

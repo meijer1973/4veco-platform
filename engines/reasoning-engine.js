@@ -76,6 +76,10 @@
         return null;
     }
 
+    function clone(value) {
+        return JSON.parse(JSON.stringify(value));
+    }
+
     // ── Domain configurations ───────────────────────────────────────
 
     var DOMAINS = {
@@ -130,6 +134,222 @@
         'Structuren matchen',
         'Redeneerantwoord opbouwen'
     ];
+
+    var ANSWER_FORM_SCAFFOLDS = {
+        A97: {
+            unitId: 'A97',
+            lane: 'leg_uit_dat',
+            studentLabel: 'Leg uit dat',
+            studentPurpose: 'Onderbouw een gegeven conclusie met een duidelijke oorzaak-gevolgketen.',
+            checklist: [
+                'Neem de conclusie uit de vraag als eindpunt.',
+                'Start bij het gegeven of de oorzaak in de context.',
+                'Schrijf minstens een controleerbare tussenstap.',
+                'Koppel je redenering terug aan de conclusie.'
+            ],
+            repairFocus: [
+                'Ontbreekt de tussenstap?',
+                'Komt de conclusie nog terug?',
+                'Is het economische begrip duidelijk gebruikt?'
+            ]
+        },
+        A98: {
+            unitId: 'A98',
+            lane: 'leg_uit_of',
+            studentLabel: 'Leg uit of',
+            studentPurpose: 'Kies eerst de richting of ja/nee-uitkomst en leg daarna uit waarom.',
+            checklist: [
+                'Kies eerst je richting of oordeel.',
+                'Zet die richting in je eerste zin.',
+                'Leg de economische oorzaak of regel uit.',
+                'Laat je antwoord niet beide kanten open.'
+            ],
+            repairFocus: [
+                'Staat de richting duidelijk vooraan?',
+                'Is de oorzaak of regel genoemd?',
+                'Wordt de andere kant niet alsnog open gelaten?'
+            ]
+        },
+        A99: {
+            unitId: 'A99',
+            lane: 'leg_uit_met_voorbeeld',
+            studentLabel: 'Leg uit met voorbeeld',
+            studentPurpose: 'Gebruik een concreet voorbeeld en leg uit waarom dat voorbeeld past.',
+            checklist: [
+                'Kies een voorbeeld dat bij de context past.',
+                'Benoem welk kenmerk van het voorbeeld belangrijk is.',
+                'Leg uit waarom dat kenmerk bij het begrip hoort.',
+                'Koppel het voorbeeld terug aan de vraag.'
+            ],
+            repairFocus: [
+                'Is het voorbeeld concreet?',
+                'Leg je uit waarom het voorbeeld past?',
+                'Sluit het voorbeeld aan op de context?'
+            ]
+        },
+        A81: {
+            unitId: 'A81',
+            lane: 'bron_modifier',
+            studentLabel: 'Bron gebruiken',
+            studentPurpose: 'Gebruik een brongegeven als startpunt en maak daarna de onderliggende antwoordvorm af.',
+            checklist: [
+                'Noem het relevante brongegeven met label, periode, eenheid of richting.',
+                'Zeg wat dat gegeven economisch betekent.',
+                'Verbind het brongegeven met je uitleg, berekening of conclusie.',
+                'Stop niet bij alleen aflezen of citeren.'
+            ],
+            repairFocus: [
+                'Is de bron echt gebruikt?',
+                'Staat de eenheid of richting erbij?',
+                'Is er ook een onderliggende uitleg of berekening?'
+            ],
+            requiresUnderlyingAnswerForm: true
+        },
+        A96: {
+            unitId: 'A96',
+            lane: 'bereken',
+            studentLabel: 'Berekening tonen',
+            studentPurpose: 'Toon formule, invulling, tussenstappen, eindantwoord en notatie.',
+            checklist: [
+                'Kies de juiste formule of rekenregel.',
+                'Vul de gegevens zichtbaar in.',
+                'Werk de tussenstappen uit.',
+                'Geef het eindantwoord met eenheid of notatie.'
+            ],
+            repairFocus: [
+                'Is de basiswaarde juist?',
+                'Ontbreekt de notatie?',
+                'Is er te vroeg afgerond?'
+            ]
+        }
+    };
+
+    function answerFormBoundaryFlags() {
+        return {
+            diagnostics: false,
+            adaptiveRouting: false,
+            masteryDecisions: false,
+            automaticSequencing: false,
+            studentFacingAI: false,
+            summativeUse: false,
+            pvProjection: false,
+            pvMachinePromotion: false,
+            scaleGate1: false,
+            targetEquivalentProof: false,
+            studentProductUse: false
+        };
+    }
+
+    function mergeChecklist(base, extra) {
+        var out = (base || []).slice();
+        for (var i = 0; i < (extra || []).length; i++) out.push(extra[i]);
+        return out;
+    }
+
+    function makeAnswerFormScaffold(unitId, options) {
+        options = options || {};
+        var base = ANSWER_FORM_SCAFFOLDS[unitId];
+        if (!base) throw new Error('Unknown answer-form scaffold: ' + unitId);
+        var unitIds = [unitId];
+        var modifierUnitIds = options.modifierUnitIds || [];
+        var coordinationUnitIds = options.coordinationUnitIds || [];
+        for (var i = 0; i < modifierUnitIds.length; i++) unitIds.push(modifierUnitIds[i]);
+        for (var j = 0; j < coordinationUnitIds.length; j++) unitIds.push(coordinationUnitIds[j]);
+        return {
+            schemaVersion: 1,
+            visibility: 'practice_scaffold',
+            primaryUnitId: unitId,
+            unitIds: unitIds,
+            modifierUnitIds: modifierUnitIds,
+            coordinationUnitIds: coordinationUnitIds,
+            lane: base.lane,
+            studentLabel: options.studentLabel || base.studentLabel,
+            studentPurpose: options.studentPurpose || base.studentPurpose,
+            checklist: mergeChecklist(base.checklist, options.additionalChecklist),
+            repairFocus: mergeChecklist(base.repairFocus, options.additionalRepairFocus),
+            requiresUnderlyingAnswerForm: !!base.requiresUnderlyingAnswerForm,
+            underlyingAnswerFormUnitId: options.underlyingAnswerFormUnitId || null,
+            routeStatus: options.routeStatus || 'local_practice_scaffold',
+            paragraphId: options.paragraphId || null,
+            problemId: options.problemId || null,
+            boundaryFlags: answerFormBoundaryFlags()
+        };
+    }
+
+    function makeSourceUseScaffold(underlyingUnitId, options) {
+        options = options || {};
+        var underlying = ANSWER_FORM_SCAFFOLDS[underlyingUnitId];
+        if (!underlying || underlyingUnitId === 'A81') {
+            throw new Error('A81 source-use scaffold requires a non-A81 underlying answer form');
+        }
+        var scaffold = makeAnswerFormScaffold(underlyingUnitId, {
+            paragraphId: options.paragraphId || null,
+            problemId: options.problemId || null,
+            modifierUnitIds: ['A81'],
+            underlyingAnswerFormUnitId: underlyingUnitId,
+            studentLabel: 'Bron gebruiken bij ' + underlying.studentLabel.toLowerCase(),
+            studentPurpose: 'Gebruik eerst het brongegeven en bouw daarna de ' + underlying.studentLabel.toLowerCase() + '-redenering af.',
+            additionalChecklist: ANSWER_FORM_SCAFFOLDS.A81.checklist,
+            additionalRepairFocus: ANSWER_FORM_SCAFFOLDS.A81.repairFocus,
+            routeStatus: options.routeStatus || 'future_source_use_pattern'
+        });
+        scaffold.requiresUnderlyingAnswerForm = true;
+        scaffold.sourceUseModifier = true;
+        return scaffold;
+    }
+
+    function inferAnswerFormScaffold(problem, domain, paragraphId) {
+        var text = ((problem && problem.text) || '').toLowerCase();
+        var label = ((problem && problem.structureLabel) || '').toLowerCase();
+        var structureType = (problem && problem.structureType) || '';
+        var baseOptions = {
+            paragraphId: paragraphId || null,
+            problemId: problem && problem.id || null
+        };
+
+        if (text.indexOf('voorbeeld') >= 0 || label.indexOf('voorbeeld') >= 0) {
+            return makeAnswerFormScaffold('A99', baseOptions);
+        }
+
+        if (
+            text.indexOf('klopt') >= 0 ||
+            text.indexOf('corrigeer') >= 0 ||
+            text.indexOf('welke keuze') >= 0
+        ) {
+            return makeAnswerFormScaffold('A98', baseOptions);
+        }
+
+        if (domain === 'math-economics') {
+            if (structureType === 'C') {
+                return makeAnswerFormScaffold('A97', Object.assign({}, baseOptions, {
+                    coordinationUnitIds: ['A96'],
+                    studentPurpose: 'Leg de indexpuntenfout uit en koppel de uitleg aan de berekening.',
+                    additionalChecklist: [
+                        'Noem indexpunten en procentuele verandering apart.',
+                        'Gebruik het oude indexcijfer als basis voor de procentuele verandering.'
+                    ],
+                    additionalRepairFocus: [
+                        'Worden indexpunten verward met procenten?',
+                        'Is de oude index als basis gebruikt?'
+                    ]
+                }));
+            }
+            return makeAnswerFormScaffold('A97', Object.assign({}, baseOptions, {
+                coordinationUnitIds: ['A96'],
+                studentPurpose: 'Leg de rekenroute uit met zichtbaar gegeven, bewerking en conclusie.',
+                additionalChecklist: [
+                    'Gebruik de juiste basiswaarde.',
+                    'Sluit af met de betekenis van het rekenantwoord.'
+                ]
+            }));
+        }
+
+        if (structureType === 'C') {
+            return makeAnswerFormScaffold('A98', baseOptions);
+        }
+
+        return makeAnswerFormScaffold('A97', baseOptions);
+    }
 
     // ── CSV Parser ──────────────────────────────────────────────────
 
@@ -231,18 +451,18 @@
         };
     }
 
-    function buildStructuredReasoningTask(problem) {
-        var criteria = [
+    function buildStructuredReasoningTask(problem, scaffold) {
+        var criteria = scaffold && scaffold.checklist && scaffold.checklist.length ? scaffold.checklist : [
             'Noem de beginsituatie of oorzaak.',
             'Leg de economische tussenstap uit.',
             'Sluit af met de conclusie in de context.'
         ];
-        return {
+        var task = {
             id: 'reasoning-answer-' + problem.id,
             family: 'structured_reasoning',
-            skillLabel: 'Redeneerantwoord opbouwen',
-            purpose: 'Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck.',
-            prompt: 'Schrijf een korte redenering bij de situatie hierboven.',
+            skillLabel: scaffold ? scaffold.studentLabel : 'Redeneerantwoord opbouwen',
+            purpose: scaffold ? scaffold.studentPurpose : 'Schrijf de denkroute in woorden en vergelijk daarna met de zelfcheck.',
+            prompt: scaffold ? 'Schrijf je antwoord met deze antwoordvorm in gedachten.' : 'Schrijf een korte redenering bij de situatie hierboven.',
             interaction: {
                 inputLabel: 'Jouw redenering',
                 placeholder: 'Oorzaak -> tussenstap -> conclusie'
@@ -262,6 +482,8 @@
                 href: 'redeneer-spel.html'
             }
         };
+        if (scaffold) task.answerFormScaffold = clone(scaffold);
+        return task;
     }
 
     function practiceRoute() {
@@ -284,7 +506,7 @@
         return task;
     }
 
-    function buildStepOrderingTask(problem) {
+    function buildStepOrderingTask(problem, scaffold) {
         var steps = [];
         var order = [];
         for (var i = 0; i < problem.steps.length; i++) {
@@ -307,7 +529,7 @@
                 distractorFor: order[Math.min(j, order.length - 1)]
             });
         }
-        return validateStandardTask({
+        var task = {
             id: 'reasoning-step-order-' + problem.id,
             family: 'step_ordering',
             skillLabel: 'Redeneerstappen ordenen',
@@ -332,10 +554,12 @@
                 retryText: 'Begin bij de oorzaak of gegevens, werk via de tussenstap en sluit af met de conclusie.'
             },
             practiceRoute: practiceRoute()
-        });
+        };
+        if (scaffold) task.answerFormScaffold = clone(scaffold);
+        return validateStandardTask(task);
     }
 
-    function buildClaimReasonEvidenceTask(problem) {
+    function buildClaimReasonEvidenceTask(problem, scaffold) {
         var steps = [];
         var order = [];
         for (var i = 0; i < problem.subQuestions.correct.length; i++) {
@@ -356,7 +580,7 @@
                 distractorFor: order[Math.min(j, order.length - 1)]
             });
         }
-        return validateStandardTask({
+        var task = {
             id: 'reasoning-claim-route-' + problem.id,
             family: 'step_ordering',
             skillLabel: 'Deelvragen als redeneerroute',
@@ -381,10 +605,12 @@
                 retryText: 'Laat losse weetjes weg en kies alleen vragen die helpen om de conclusie te onderbouwen.'
             },
             practiceRoute: practiceRoute()
-        });
+        };
+        if (scaffold) task.answerFormScaffold = clone(scaffold);
+        return validateStandardTask(task);
     }
 
-    function buildFlowOrderingTask(problem) {
+    function buildFlowOrderingTask(problem, scaffold) {
         var steps = [];
         var order = [];
         for (var i = 0; i < problem.flowSlots.length; i++) {
@@ -407,7 +633,7 @@
             kind: 'distractor',
             distractorFor: order[0]
         });
-        return validateStandardTask({
+        var task = {
             id: 'reasoning-flow-chain-' + problem.id,
             family: 'step_ordering',
             skillLabel: 'Causale keten bouwen',
@@ -432,7 +658,9 @@
                 retryText: 'Zoek eerst het beginpunt, daarna de tussenstap en eindig bij het effect of de conclusie.'
             },
             practiceRoute: practiceRoute()
-        });
+        };
+        if (scaffold) task.answerFormScaffold = clone(scaffold);
+        return validateStandardTask(task);
     }
 
     function reasoningStandardDisposition(modeIndex) {
@@ -450,7 +678,8 @@
             2: {
                 candidateFamily: 'error_detection',
                 standardAction: 'two_tier_choice_or_choice',
-                disposition: 'defer_mapping'
+                disposition: 'defer_mapping',
+                answerFormRoute: 'local_error_repair_only'
             },
             3: {
                 candidateFamily: 'flow_diagram_build',
@@ -460,7 +689,8 @@
             4: {
                 candidateFamily: 'classification_with_explanation',
                 standardAction: 'matching_pairs_plus_structured_short_response',
-                disposition: 'refactor_before_adoption'
+                disposition: 'refactor_before_adoption',
+                answerFormRoute: 'held_for_classification_with_explanation_design'
             },
             5: {
                 candidateFamily: 'structured_reasoning',
@@ -548,7 +778,8 @@
                 modeName: MODE_NAMES_NL[i],
                 candidateFamily: row.candidateFamily,
                 standardAction: row.standardAction,
-                disposition: row.disposition
+                disposition: row.disposition,
+                answerFormRoute: row.answerFormRoute || null
             });
         }
         out.push({
@@ -559,6 +790,32 @@
             disposition: 'future_composed_pattern'
         });
         return out;
+    };
+
+    ReasoningEngine.prototype.getAnswerFormScaffoldMap = function () {
+        var active = [];
+        var seen = {};
+        for (var i = 0; i < this.problems.length; i++) {
+            var scaffold = inferAnswerFormScaffold(this.problems[i], this.domain, this.paragraphId);
+            var key = scaffold.primaryUnitId + ':' + scaffold.routeStatus;
+            if (!seen[key]) {
+                seen[key] = true;
+                active.push(scaffold);
+            }
+        }
+        return {
+            schemaVersion: 1,
+            paragraphId: this.paragraphId,
+            routeStatus: 'local_practice_scaffold',
+            activeScaffolds: active,
+            availableScaffolds: clone(ANSWER_FORM_SCAFFOLDS),
+            sourceUsePattern: makeSourceUseScaffold('A97', {
+                paragraphId: this.paragraphId,
+                routeStatus: 'future_source_use_pattern'
+            }),
+            modeDisposition: this.getStandardFamilyMap(),
+            boundaryFlags: answerFormBoundaryFlags()
+        };
     };
 
     // ── Session management ──────────────────────────────────────────
@@ -621,6 +878,7 @@
 
     // Mode 0: Order Steps
     ReasoningEngine.prototype._presentOrderSteps = function (problem) {
+        var scaffold = inferAnswerFormScaffold(problem, this.domain, this.paragraphId);
         var allSteps = problem.steps.concat(problem.distractorSteps);
         var options;
 
@@ -673,12 +931,14 @@
             totalRounds: this._rounds.length,
             showFormula: this.domainConfig.showFormula,
             standardFamily: reasoningStandardDisposition(0),
-            taskShellTask: buildStepOrderingTask(problem)
+            answerFormScaffold: scaffold,
+            taskShellTask: buildStepOrderingTask(problem, scaffold)
         };
     };
 
     // Mode 1: Build Sub-Questions
     ReasoningEngine.prototype._presentSubQuestions = function (problem) {
+        var scaffold = inferAnswerFormScaffold(problem, this.domain, this.paragraphId);
         var all = problem.subQuestions.correct.map(function (q, i) {
             return { text: q, isCorrect: true, correctIdx: i };
         }).concat(problem.subQuestions.distractors.map(function (q) {
@@ -695,12 +955,14 @@
             roundNumber: this._roundIdx + 1,
             totalRounds: this._rounds.length,
             standardFamily: reasoningStandardDisposition(1),
-            taskShellTask: buildClaimReasonEvidenceTask(problem)
+            answerFormScaffold: scaffold,
+            taskShellTask: buildClaimReasonEvidenceTask(problem, scaffold)
         };
     };
 
     // Mode 2: Find the Error
     ReasoningEngine.prototype._presentFindError = function (problem) {
+        var scaffold = inferAnswerFormScaffold(problem, this.domain, this.paragraphId);
         var steps = [];
         for (var i = 0; i < 3; i++) {
             if (i === problem.errorInfo.errorIdx) {
@@ -733,12 +995,15 @@
             totalRounds: this._rounds.length,
             showFormula: this.domainConfig.showFormula,
             hideFormulaBeforeAnswer: this.domainConfig.hideFormulaInErrorMode,
-            standardFamily: reasoningStandardDisposition(2)
+            standardFamily: reasoningStandardDisposition(2),
+            answerFormScaffold: scaffold,
+            modeDisposition: 'local_error_repair_only'
         };
     };
 
     // Mode 3: Build Flow Diagram
     ReasoningEngine.prototype._presentFlowDiagram = function (problem) {
+        var scaffold = inferAnswerFormScaffold(problem, this.domain, this.paragraphId);
         var blocks = problem.flowSlots.map(function (slot, idx) {
             return {
                 type: slot.type,
@@ -757,7 +1022,8 @@
             roundNumber: this._roundIdx + 1,
             totalRounds: this._rounds.length,
             standardFamily: reasoningStandardDisposition(3),
-            taskShellTask: buildFlowOrderingTask(problem)
+            answerFormScaffold: scaffold,
+            taskShellTask: buildFlowOrderingTask(problem, scaffold)
         };
     };
 
@@ -770,13 +1036,15 @@
             correctPairs: this._matchData.correctPairs,
             roundNumber: 1,
             totalRounds: 1,
-            standardFamily: reasoningStandardDisposition(4)
+            standardFamily: reasoningStandardDisposition(4),
+            modeDisposition: 'held_for_classification_with_explanation_design'
         };
     };
 
     // Mode 5: Build Reasoning Answer
     ReasoningEngine.prototype._presentStructuredReasoning = function (problem) {
-        var task = buildStructuredReasoningTask(problem);
+        var scaffold = inferAnswerFormScaffold(problem, this.domain, this.paragraphId);
+        var task = buildStructuredReasoningTask(problem, scaffold);
         var taskShell = getTaskShellEngine();
         if (taskShell && typeof taskShell.validateTask === 'function') {
             taskShell.validateTask(task);
@@ -786,6 +1054,7 @@
             modeName: MODE_NAMES_NL[5],
             problemText: problem.text,
             taskShellTask: task,
+            answerFormScaffold: scaffold,
             reasoningGuide: problem.steps.map(function (step) {
                 return {
                     label: step.label,
@@ -1090,6 +1359,11 @@
     ReasoningEngine.MODE_NAMES = MODE_NAMES;
     ReasoningEngine.MODE_NAMES_NL = MODE_NAMES_NL;
     ReasoningEngine.reasoningStandardDisposition = reasoningStandardDisposition;
+    ReasoningEngine.getAnswerFormScaffoldCatalog = function () {
+        return clone(ANSWER_FORM_SCAFFOLDS);
+    };
+    ReasoningEngine.inferAnswerFormScaffold = inferAnswerFormScaffold;
+    ReasoningEngine.buildSourceUseScaffold = makeSourceUseScaffold;
 
     return ReasoningEngine;
 });
