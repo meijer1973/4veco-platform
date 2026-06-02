@@ -243,6 +243,29 @@ function data() {
                 ],
                 partialFeedback: 'practice_only'
             }),
+            task('matching-pairs', 'matching_pairs', {
+                leftBankLabel: 'Begrippen',
+                rightBankLabel: 'Betekenissen',
+                pairLabel: 'Gemaakte koppels',
+                placeholder: 'Kies een begrip en daarna de juiste betekenis.',
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', description: 'Begrip over beperkte middelen.', kind: 'answer' },
+                    { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' },
+                    { id: 'winst', label: 'Winst', description: 'Afleider buiten deze koppeling.', kind: 'distractor', distractorFor: 'schaarste' }
+                ],
+                rightItems: [
+                    { id: 'behoeften-middelen', label: 'Behoeften zijn groter dan middelen', description: 'Betekenis van schaarste.', kind: 'answer' },
+                    { id: 'beste-alternatief', label: 'Beste niet-gekozen alternatief', description: 'Betekenis van alternatieve kosten.', kind: 'answer' },
+                    { id: 'opbrengst-kosten', label: 'Opbrengst min kosten', description: 'Afleider die bij winst hoort.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
+                ]
+            }, {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ],
+                partialFeedback: 'practice_only'
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -268,6 +291,7 @@ describe('TaskShellUI', () => {
             'sentence_builder',
             'formula_builder',
             'step_ordering',
+            'matching_pairs',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -346,6 +370,15 @@ describe('TaskShellUI', () => {
         expect(html).toContain('class="ts-label-visual-axis ts-label-visual-axis-x"');
         expect(html).toContain('aria-label="Prijs: De prijs hoort op de verticale as."');
         expect(html).toContain('aria-label="Verticale as: Plaats hier het prijslabel."');
+        expect(html).toContain('data-task-family="matching_pairs"');
+        expect(html).toContain('class="ts-matching-pairs"');
+        expect(html).toContain('data-match-left-id="schaarste"');
+        expect(html).toContain('data-match-right-id="behoeften-middelen"');
+        expect(html).toContain('data-match-pair-summary');
+        expect(html).toContain('role="group" aria-label="Begrippen"');
+        expect(html).toContain('role="group" aria-label="Betekenissen"');
+        expect(html).toContain('aria-label="Schaarste: Begrip over beperkte middelen."');
+        expect(html).toContain('aria-label="Behoeften zijn groter dan middelen: Betekenis van schaarste."');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -413,6 +446,20 @@ describe('TaskShellUI', () => {
         expect(labelFeedback).toContain('Afleidend label gekozen');
         expect(labelFeedback).toContain('Afleidende plek gekozen');
         expect(labelFeedback).toContain('Omzet');
+
+        const matchingResult = TaskShellEngine.evaluateTask(data().tasks[15], {
+            pairs: [
+                ['schaarste', 'beste-alternatief'],
+                ['winst', 'opbrengst-kosten']
+            ]
+        });
+        const matchingFeedback = TaskShellUI.renderFeedback(matchingResult);
+        expect(matchingFeedback).toContain('class="ts-match-feedback"');
+        expect(matchingFeedback).toContain('Koppel controleren');
+        expect(matchingFeedback).toContain('verwacht Behoeften zijn groter dan middelen');
+        expect(matchingFeedback).toContain('Afleider links gekozen');
+        expect(matchingFeedback).toContain('Afleider rechts gekozen');
+        expect(matchingFeedback).toContain('Winst');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -435,6 +482,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Zin bouwen');
         expect(html).toContain('Formule bouwen');
         expect(html).toContain('Stappen ordenen');
+        expect(html).toContain('Koppels maken');
         expect(html).toContain('Bronwaarden kiezen');
         expect(html).toContain('Bronketen bouwen');
         expect(html).toContain('Labels plaatsen');
@@ -536,6 +584,16 @@ describe('TaskShellUI', () => {
             '[data-task-id="label-placement"][data-label-id]',
             '[data-task-id="label-placement"][data-label-target-id]',
             '[data-task-id="label-placement"][data-label-placement-summary]'
+        ]);
+    });
+
+    test('exports matching pair helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectMatchingPairsResponse).toBe('function');
+        expect(typeof TaskShellUI.handleMatchingPairsClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[15])).toEqual([
+            '[data-task-id="matching-pairs"][data-match-left-id]',
+            '[data-task-id="matching-pairs"][data-match-right-id]',
+            '[data-task-id="matching-pairs"][data-match-pair-summary]'
         ]);
     });
 

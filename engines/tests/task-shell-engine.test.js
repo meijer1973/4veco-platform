@@ -469,6 +469,68 @@ function fixtures() {
                 ],
                 partialFeedback: 'practice_only'
             }
+        }),
+        baseTask({
+            id: 'matching-pairs',
+            family: 'matching_pairs',
+            skillLabel: 'Begrippen koppelen',
+            prompt: 'Koppel elk begrip aan de juiste betekenis.',
+            interaction: {
+                leftBankLabel: 'Begrippen',
+                rightBankLabel: 'Betekenissen',
+                pairLabel: 'Gemaakte koppels',
+                placeholder: 'Kies een begrip en daarna de juiste betekenis.',
+                leftItems: [
+                    {
+                        id: 'schaarste',
+                        label: 'Schaarste',
+                        description: 'Begrip over beperkte middelen.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'alternatieve-kosten',
+                        label: 'Alternatieve kosten',
+                        description: 'Begrip over het beste niet-gekozen alternatief.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'winst',
+                        label: 'Winst',
+                        description: 'Afleider buiten deze begrippenkoppeling.',
+                        kind: 'distractor',
+                        distractorFor: 'schaarste'
+                    }
+                ],
+                rightItems: [
+                    {
+                        id: 'behoeften-middelen',
+                        label: 'Behoeften zijn groter dan middelen',
+                        description: 'Betekenis van schaarste.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'beste-alternatief',
+                        label: 'Beste niet-gekozen alternatief',
+                        description: 'Betekenis van alternatieve kosten.',
+                        kind: 'answer'
+                    },
+                    {
+                        id: 'opbrengst-kosten',
+                        label: 'Opbrengst min kosten',
+                        description: 'Afleider die bij winst hoort.',
+                        kind: 'distractor',
+                        distractorFor: 'behoeften-middelen'
+                    }
+                ]
+            },
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ],
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -488,6 +550,7 @@ describe('TaskShellEngine', () => {
             'sentence_builder',
             'formula_builder',
             'step_ordering',
+            'matching_pairs',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -525,6 +588,13 @@ describe('TaskShellEngine', () => {
         expect(TaskShellEngine.evaluateTask(tasks[8], { values: ['keuze', 'behoeften'] }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[14], { tokens: ['prijs-stijgt', 'vraag-daalt', 'hogere-prijs'] }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[15], { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] }).matched).toBe(true);
+        const matching = tasks.find((task) => task.id === 'matching-pairs');
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['alternatieve-kosten', 'beste-alternatief'],
+                ['schaarste', 'behoeften-middelen']
+            ]
+        }).matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[9], 'b').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[10], '149,5').matched).toBe(true);
         expect(TaskShellEngine.evaluateTask(tasks[11], { x: '20,2', y: '4,1' }).matched).toBe(true);
@@ -1399,6 +1469,373 @@ describe('TaskShellEngine', () => {
             expected: {
                 kind: 'step_ordering',
                 order: ['verschil', 'deel-door-oud', 'keer-100'],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
+    test('supports matching pairs with exact one-to-one pair sets and practice feedback', () => {
+        const matching = fixtures().find((task) => task.id === 'matching-pairs');
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['alternatieve-kosten', 'beste-alternatief'],
+                ['schaarste', 'behoeften-middelen']
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const retry = TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'beste-alternatief'],
+                ['winst', 'opbrengst-kosten']
+            ]
+        });
+        expect(retry).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(retry.matchingPairsFeedback).toEqual({
+            mode: 'practice_only',
+            missingLeftItems: [{ id: 'alternatieve-kosten', label: 'Alternatieve kosten' }],
+            missingRightItems: [{ id: 'behoeften-middelen', label: 'Behoeften zijn groter dan middelen' }],
+            misplacedPairs: [{
+                left: { id: 'schaarste', label: 'Schaarste' },
+                expectedRight: { id: 'behoeften-middelen', label: 'Behoeften zijn groter dan middelen' },
+                actualRight: { id: 'beste-alternatief', label: 'Beste niet-gekozen alternatief' }
+            }],
+            selectedDistractorLeftItems: [{ id: 'winst', label: 'Winst' }],
+            selectedDistractorRightItems: [{ id: 'opbrengst-kosten', label: 'Opbrengst min kosten' }],
+            correctPairs: []
+        });
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'beste-alternatief'],
+                ['alternatieve-kosten', 'behoeften-middelen']
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen']
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['alternatieve-kosten', 'beste-alternatief'],
+                ['winst', 'opbrengst-kosten']
+            ]
+        })).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['schaarste', 'beste-alternatief']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['alternatieve-kosten', 'behoeften-middelen']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['alternatieve-kosten', 'beste-alternatief']
+            ],
+            extra: 'ignored'
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, [
+            ['schaarste', 'behoeften-middelen'],
+            ['alternatieve-kosten', 'beste-alternatief']
+        ])).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        const arrayWithPairs = [];
+        arrayWithPairs.pairs = [
+            ['schaarste', 'behoeften-middelen'],
+            ['alternatieve-kosten', 'beste-alternatief']
+        ];
+        expect(TaskShellEngine.evaluateTask(matching, arrayWithPairs)).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                { leftId: 'schaarste', rightId: 'behoeften-middelen' },
+                ['alternatieve-kosten', 'beste-alternatief']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen', 'extra'],
+                ['alternatieve-kosten', 'beste-alternatief']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                [42, 'beste-alternatief']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['alternatieve-kosten', 42]
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['onbekend', 'beste-alternatief']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(matching, {
+            pairs: [
+                ['schaarste', 'behoeften-middelen'],
+                ['alternatieve-kosten', 'onbekend']
+            ]
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.focusPlan(matching)).toEqual([
+            '[data-task-id="matching-pairs"][data-match-left-id]',
+            '[data-task-id="matching-pairs"][data-match-right-id]',
+            '[data-task-id="matching-pairs"][data-match-pair-summary]'
+        ]);
+    });
+
+    test('rejects invalid matching pair schemas before rendering', () => {
+        const matching = fixtures().find((task) => task.id === 'matching-pairs');
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', description: 'Een begrip.', kind: 'answer' },
+                    { id: 'schaarste', label: 'Dubbel', description: 'Dubbel id.', kind: 'answer' },
+                    { id: 'winst', label: 'Winst', description: 'Afleider.', kind: 'distractor', distractorFor: 'schaarste' }
+                ]
+            }
+        })).toThrow(/duplicate matching left item id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                rightItems: [
+                    { id: 'behoeften-middelen', label: 'Behoeften > middelen', description: 'Betekenis.', kind: 'answer' },
+                    { id: 'behoeften-middelen', label: 'Dubbel', description: 'Dubbel id.', kind: 'answer' },
+                    { id: 'opbrengst-kosten', label: 'Opbrengst min kosten', description: 'Afleider.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
+                ]
+            }
+        })).toThrow(/duplicate matching right item id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', kind: 'answer' },
+                    { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' },
+                    { id: 'winst', label: 'Winst', description: 'Afleider.', kind: 'distractor', distractorFor: 'schaarste' }
+                ]
+            }
+        })).toThrow(/description must be a non-empty string/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', description: 'Een begrip.', kind: 'answer' },
+                    { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' },
+                    { id: 'winst', label: 'Winst', description: 'Afleider.', kind: 'distractor' }
+                ]
+            }
+        })).toThrow(/distractorFor must be a non-empty string/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                rightItems: [
+                    { id: 'behoeften-middelen', label: 'Behoeften > middelen', description: 'Betekenis.', kind: 'answer' },
+                    { id: 'beste-alternatief', label: 'Beste alternatief', description: 'Betekenis.', kind: 'answer' },
+                    { id: 'opbrengst-kosten', label: 'Opbrengst min kosten', description: 'Afleider.', kind: 'distractor', distractorFor: 'onbekend' }
+                ]
+            }
+        })).toThrow(/distractorFor must match an answer item in the same bank/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', description: 'Een begrip.', kind: 'answer' },
+                    { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/leftItems must contain at least 3 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    { id: 'schaarste', label: 'Schaarste', description: 'Een begrip.', kind: 'answer' },
+                    { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' },
+                    { id: 'vraag', label: 'Vraag', description: 'Nog een antwoord.', kind: 'answer' }
+                ]
+            }
+        })).toThrow(/must include at least one distractor item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                rightItems: [
+                    { id: 'behoeften-middelen', label: 'Behoeften > middelen', description: 'Betekenis.', kind: 'answer' },
+                    { id: 'beste-alternatief', label: 'Beste alternatief', description: 'Betekenis.', kind: 'answer' },
+                    { id: 'keuze', label: 'Je moet kiezen', description: 'Extra antwoord.', kind: 'answer' },
+                    { id: 'opbrengst-kosten', label: 'Opbrengst min kosten', description: 'Afleider.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
+                ]
+            }
+        })).toThrow(/one-to-one matching requires equal answer counts/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['onbekend', 'beste-alternatief']
+                ]
+            }
+        })).toThrow(/must match a left item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'onbekend']
+                ]
+            }
+        })).toThrow(/must match a right item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['winst', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ]
+            }
+        })).toThrow(/must be an answer left item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'opbrengst-kosten'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ]
+            }
+        })).toThrow(/must be an answer right item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            interaction: {
+                ...matching.interaction,
+                leftItems: [
+                    ...matching.interaction.leftItems,
+                    { id: 'vraag', label: 'Vraag', description: 'Extra antwoordbegrip.', kind: 'answer' }
+                ],
+                rightItems: [
+                    ...matching.interaction.rightItems,
+                    { id: 'gevraagde-hoeveelheid', label: 'Aantal dat consumenten willen kopen', description: 'Extra antwoordbetekenis.', kind: 'answer' }
+                ]
+            },
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ]
+            }
+        })).toThrow(/must include all answer left items/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['schaarste', 'beste-alternatief']
+                ]
+            }
+        })).toThrow(/uses left item more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'behoeften-middelen']
+                ]
+            }
+        })).toThrow(/uses right item more than once/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten']
+                ]
+            }
+        })).toThrow(/must be \[leftId, rightId\]/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...matching,
+            expected: {
+                kind: 'matching_pairs',
+                pairs: [
+                    ['schaarste', 'behoeften-middelen'],
+                    ['alternatieve-kosten', 'beste-alternatief']
+                ],
                 partialFeedback: 'diagnostic'
             }
         })).toThrow(/partialFeedback must be practice_only/);

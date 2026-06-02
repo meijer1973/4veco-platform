@@ -486,6 +486,9 @@
     if (task.family === "step_ordering" && window.TaskShellUI && window.TaskShellUI.collectStepOrderingResponse) {
       return window.TaskShellUI.collectStepOrderingResponse(rootEl, task);
     }
+    if (task.family === "matching_pairs" && window.TaskShellUI && window.TaskShellUI.collectMatchingPairsResponse) {
+      return window.TaskShellUI.collectMatchingPairsResponse(rootEl, task);
+    }
     if (task.family === "source_value_selection" && window.TaskShellUI && window.TaskShellUI.collectSourceValueSelectionResponse) {
       return window.TaskShellUI.collectSourceValueSelectionResponse(rootEl, task);
     }
@@ -537,6 +540,11 @@
     rootEl.querySelectorAll(".ts-step-ordering").forEach(function (ordering) {
       ordering.addEventListener("click", function (event) {
         window.TaskShellUI.handleStepOrderingClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-matching-pairs").forEach(function (matchingPairs) {
+      matchingPairs.addEventListener("click", function (event) {
+        window.TaskShellUI.handleMatchingPairsClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-source-values").forEach(function (sourceValues) {

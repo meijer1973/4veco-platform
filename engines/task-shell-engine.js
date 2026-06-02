@@ -23,6 +23,7 @@
     sentence_builder: { label: 'Zin bouwen', deterministic: true },
     formula_builder: { label: 'Formule bouwen', deterministic: true },
     step_ordering: { label: 'Stappen ordenen', deterministic: true },
+    matching_pairs: { label: 'Koppels maken', deterministic: true },
     source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
     source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
     label_placement: { label: 'Labels plaatsen', deterministic: true },
@@ -206,6 +207,9 @@
       push(task.interaction.labelBankLabel);
       push(task.interaction.targetRegionLabel);
       push(task.interaction.placementLabel);
+      push(task.interaction.leftBankLabel);
+      push(task.interaction.rightBankLabel);
+      push(task.interaction.pairLabel);
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -255,6 +259,14 @@
       (task.interaction.targets || []).forEach(function (target) {
         push(target.label);
         push(target.description);
+      });
+      (task.interaction.leftItems || []).forEach(function (item) {
+        push(item.label);
+        push(item.description);
+      });
+      (task.interaction.rightItems || []).forEach(function (item) {
+        push(item.label);
+        push(item.description);
       });
       push(task.interaction.rows);
       push(task.interaction.columns);
@@ -593,6 +605,89 @@
       stepIds: stepIds,
       stepLabels: stepLabels,
       answerStepIds: answerStepIds
+    };
+  }
+
+  function matchingOptionMap(items) {
+    var labels = {};
+    (items || []).forEach(function (item) {
+      labels[item.id] = item.label;
+    });
+    return labels;
+  }
+
+  function validateMatchingItemBank(items, path, sideLabel) {
+    requireArray(items, path, 3);
+    var itemIds = {};
+    var itemLabels = {};
+    var itemKinds = {};
+    var answerIds = [];
+    var answerSet = {};
+    var distractorCount = 0;
+
+    items.forEach(function (item, idx) {
+      assert(isObject(item), path + '[' + idx + '] must be an object');
+      requireString(item.id, path + '[' + idx + '].id');
+      requireString(item.label, path + '[' + idx + '].label');
+      requireString(item.description, path + '[' + idx + '].description');
+      requireString(item.kind, path + '[' + idx + '].kind');
+      assert(/^(answer|distractor)$/.test(item.kind), path + '[' + idx + '].kind must be answer or distractor');
+      assert(!itemIds[item.id], 'duplicate matching ' + sideLabel + ' item id: ' + item.id);
+      itemIds[item.id] = true;
+      itemLabels[item.id] = item.label;
+      itemKinds[item.id] = item.kind;
+      if (item.kind === 'answer') {
+        answerIds.push(item.id);
+        answerSet[item.id] = true;
+      }
+      if (item.kind === 'distractor') distractorCount += 1;
+    });
+
+    items.forEach(function (item, idx) {
+      if (item.kind === 'distractor') {
+        requireString(item.distractorFor, path + '[' + idx + '].distractorFor');
+        assert(answerSet[item.distractorFor], path + '[' + idx + '].distractorFor must match an answer item in the same bank');
+      } else {
+        optionalString(item.distractorFor, path + '[' + idx + '].distractorFor');
+        if (item.distractorFor !== undefined) {
+          assert(answerSet[item.distractorFor], path + '[' + idx + '].distractorFor must match an answer item in the same bank');
+        }
+      }
+    });
+
+    assert(answerIds.length >= 2, path + ' must include at least two answer items');
+    assert(distractorCount >= 1, path + ' must include at least one distractor item');
+
+    return {
+      itemIds: itemIds,
+      itemLabels: itemLabels,
+      itemKinds: itemKinds,
+      answerIds: answerIds,
+      answerSet: answerSet
+    };
+  }
+
+  function validateMatchingPairsInteraction(task, path) {
+    var interaction = task.interaction;
+    optionalString(interaction.leftBankLabel, path + '.leftBankLabel');
+    optionalString(interaction.rightBankLabel, path + '.rightBankLabel');
+    optionalString(interaction.pairLabel, path + '.pairLabel');
+    optionalString(interaction.placeholder, path + '.placeholder');
+
+    var left = validateMatchingItemBank(interaction.leftItems, path + '.leftItems', 'left');
+    var right = validateMatchingItemBank(interaction.rightItems, path + '.rightItems', 'right');
+
+    assert(left.answerIds.length === right.answerIds.length, path + ' one-to-one matching requires equal answer counts in both banks');
+
+    return {
+      leftIds: left.itemIds,
+      leftLabels: left.itemLabels,
+      leftKinds: left.itemKinds,
+      answerLeftIds: left.answerIds,
+      rightIds: right.itemIds,
+      rightLabels: right.itemLabels,
+      rightKinds: right.itemKinds,
+      answerRightIds: right.answerIds
     };
   }
 
@@ -957,6 +1052,54 @@
         seenMultiValues[value] = true;
       });
       assert(Object.keys(optionIds).length > expected.values.length, task.id + '.interaction.options must include at least one distractor option');
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
+    if (task.family === 'matching_pairs') {
+      assert(expected.kind === 'matching_pairs', task.id + '.expected.kind must be matching_pairs');
+      requireArray(expected.pairs, task.id + '.expected.pairs', 2);
+      var leftIds = interactionInfo.leftIds || {};
+      var rightIds = interactionInfo.rightIds || {};
+      var answerLeftIds = interactionInfo.answerLeftIds || [];
+      var answerLeftSet = {};
+      answerLeftIds.forEach(function (leftId) {
+        answerLeftSet[leftId] = true;
+      });
+      var answerRightIds = interactionInfo.answerRightIds || [];
+      var answerRightSet = {};
+      answerRightIds.forEach(function (rightId) {
+        answerRightSet[rightId] = true;
+      });
+      var seenExpectedLeft = {};
+      var seenExpectedRight = {};
+      var seenExpectedPair = {};
+      expected.pairs.forEach(function (pair, idx) {
+        assert(Array.isArray(pair) && pair.length === 2, task.id + '.expected.pairs[' + idx + '] must be [leftId, rightId]');
+        requireString(pair[0], task.id + '.expected.pairs[' + idx + '][0]');
+        requireString(pair[1], task.id + '.expected.pairs[' + idx + '][1]');
+        assert(leftIds[pair[0]], task.id + '.expected.pairs[' + idx + '][0] must match a left item');
+        assert(answerLeftSet[pair[0]], task.id + '.expected.pairs[' + idx + '][0] must be an answer left item');
+        assert(rightIds[pair[1]], task.id + '.expected.pairs[' + idx + '][1] must match a right item');
+        assert(answerRightSet[pair[1]], task.id + '.expected.pairs[' + idx + '][1] must be an answer right item');
+        assert(!seenExpectedLeft[pair[0]], task.id + '.expected.pairs uses left item more than once');
+        assert(!seenExpectedRight[pair[1]], task.id + '.expected.pairs uses right item more than once');
+        seenExpectedLeft[pair[0]] = true;
+        seenExpectedRight[pair[1]] = true;
+        var pairKey = pair[0] + '\u0001' + pair[1];
+        assert(!seenExpectedPair[pairKey], task.id + '.expected.pairs contains a duplicate left-right pair');
+        seenExpectedPair[pairKey] = true;
+      });
+      assert(expected.pairs.length === answerLeftIds.length, task.id + '.expected.pairs must include all answer left items');
+      assert(expected.pairs.length === answerRightIds.length, task.id + '.expected.pairs must include all answer right items');
+      answerLeftIds.forEach(function (leftId) {
+        assert(seenExpectedLeft[leftId], task.id + '.expected.pairs missing answer left item ' + leftId);
+      });
+      answerRightIds.forEach(function (rightId) {
+        assert(seenExpectedRight[rightId], task.id + '.expected.pairs missing answer right item ' + rightId);
+      });
       if (expected.partialFeedback !== undefined) {
         assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
       }
@@ -1355,6 +1498,8 @@
       interactionInfo = validateFormulaInteraction(task, path);
     } else if (task.family === 'step_ordering') {
       interactionInfo = validateStepOrderingInteraction(task, path);
+    } else if (task.family === 'matching_pairs') {
+      interactionInfo = validateMatchingPairsInteraction(task, path);
     } else if (task.family === 'source_value_selection') {
       interactionInfo = validateSourceValueInteraction(task, path);
     } else if (task.family === 'source_chain_builder') {
@@ -1568,6 +1713,48 @@
     return true;
   }
 
+  function matchingPairsMatches(response, expected, leftIds, rightIds) {
+    if (!isObject(response) || !Array.isArray(response.pairs)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 1 || keys[0] !== 'pairs') return false;
+    var pairs = response.pairs;
+    var expectedPairs = expected.pairs || [];
+    if (pairs.length !== expectedPairs.length) return false;
+
+    var expectedPairSet = {};
+    var seenExpectedLeft = {};
+    var seenExpectedRight = {};
+    expectedPairs.forEach(function (pair) {
+      expectedPairSet[pair[0] + '\u0001' + pair[1]] = true;
+      seenExpectedLeft[pair[0]] = true;
+      seenExpectedRight[pair[1]] = true;
+    });
+
+    var seenSelectedLeft = {};
+    var seenSelectedRight = {};
+    for (var i = 0; i < pairs.length; i++) {
+      var pair = pairs[i];
+      if (!Array.isArray(pair) || pair.length !== 2) return false;
+      var leftId = pair[0];
+      var rightId = pair[1];
+      if (typeof leftId !== 'string' || !leftId) return false;
+      if (typeof rightId !== 'string' || !rightId) return false;
+      if (!Object.prototype.hasOwnProperty.call(leftIds, leftId)) return false;
+      if (!Object.prototype.hasOwnProperty.call(rightIds, rightId)) return false;
+      if (seenSelectedLeft[leftId]) return false;
+      if (seenSelectedRight[rightId]) return false;
+      seenSelectedLeft[leftId] = true;
+      seenSelectedRight[rightId] = true;
+      if (!expectedPairSet[leftId + '\u0001' + rightId]) return false;
+    }
+
+    return Object.keys(seenExpectedLeft).every(function (leftId) {
+      return seenSelectedLeft[leftId];
+    }) && Object.keys(seenExpectedRight).every(function (rightId) {
+      return seenSelectedRight[rightId];
+    });
+  }
+
   function sourceValueSelectionMatches(response, expected, valueIds, roleIds) {
     if (!isObject(response) || !Array.isArray(response.selections)) return false;
     var keys = Object.keys(response);
@@ -1731,6 +1918,86 @@
     return {
       id: stepId,
       label: labels && labels[stepId] ? labels[stepId] : stepId
+    };
+  }
+
+  function matchingPairEntry(id, labels) {
+    return {
+      id: id,
+      label: labels && labels[id] ? labels[id] : id
+    };
+  }
+
+  function matchingPairsFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var pairs = isObject(response) && Array.isArray(response.pairs) ? response.pairs : [];
+    var expectedPairs = task.expected.pairs || [];
+    var leftLabels = matchingOptionMap(task.interaction && task.interaction.leftItems ? task.interaction.leftItems : []);
+    var rightLabels = matchingOptionMap(task.interaction && task.interaction.rightItems ? task.interaction.rightItems : []);
+    var leftKinds = {};
+    var rightKinds = {};
+    var selectedByLeft = {};
+    var selectedRight = {};
+    var missingLeftItems = [];
+    var missingRightItems = [];
+    var misplacedPairs = [];
+    var selectedDistractorLeftItems = [];
+    var selectedDistractorRightItems = [];
+    var correctPairs = [];
+
+    (task.interaction.leftItems || []).forEach(function (item) {
+      leftKinds[item.id] = item.kind;
+    });
+    (task.interaction.rightItems || []).forEach(function (item) {
+      rightKinds[item.id] = item.kind;
+    });
+    pairs.forEach(function (pair) {
+      if (!Array.isArray(pair) || pair.length !== 2 || typeof pair[0] !== 'string' || typeof pair[1] !== 'string') return;
+      if (!selectedByLeft[pair[0]]) selectedByLeft[pair[0]] = pair[1];
+      selectedRight[pair[1]] = true;
+      if (leftKinds[pair[0]] === 'distractor') {
+        selectedDistractorLeftItems.push(matchingPairEntry(pair[0], leftLabels));
+      }
+      if (rightKinds[pair[1]] === 'distractor') {
+        selectedDistractorRightItems.push(matchingPairEntry(pair[1], rightLabels));
+      }
+    });
+
+    expectedPairs.forEach(function (pair) {
+      var leftId = pair[0];
+      var rightId = pair[1];
+      if (!Object.prototype.hasOwnProperty.call(selectedByLeft, leftId)) {
+        missingLeftItems.push(matchingPairEntry(leftId, leftLabels));
+        return;
+      }
+      if (selectedByLeft[leftId] === rightId) {
+        correctPairs.push({
+          left: matchingPairEntry(leftId, leftLabels),
+          right: matchingPairEntry(rightId, rightLabels)
+        });
+        return;
+      }
+      misplacedPairs.push({
+        left: matchingPairEntry(leftId, leftLabels),
+        expectedRight: matchingPairEntry(rightId, rightLabels),
+        actualRight: matchingPairEntry(selectedByLeft[leftId], rightLabels)
+      });
+    });
+
+    expectedPairs.forEach(function (pair) {
+      if (!selectedRight[pair[1]]) {
+        missingRightItems.push(matchingPairEntry(pair[1], rightLabels));
+      }
+    });
+
+    return {
+      mode: 'practice_only',
+      missingLeftItems: missingLeftItems,
+      missingRightItems: missingRightItems,
+      misplacedPairs: misplacedPairs,
+      selectedDistractorLeftItems: selectedDistractorLeftItems,
+      selectedDistractorRightItems: selectedDistractorRightItems,
+      correctPairs: correctPairs
     };
   }
 
@@ -2079,6 +2346,10 @@
       var stepIds = validateStepOrderingInteraction(task, task.id + '.interaction').stepIds;
       return stepOrderingMatches(response, task.expected, stepIds);
     }
+    if (task.family === 'matching_pairs' && task.expected.kind === 'matching_pairs') {
+      var matchingInfo = validateMatchingPairsInteraction(task, task.id + '.interaction');
+      return matchingPairsMatches(response, task.expected, matchingInfo.leftIds, matchingInfo.rightIds);
+    }
     if (task.family === 'source_value_selection' && task.expected.kind === 'source_value_selection') {
       var sourceValueInfo = validateSourceValueInteraction(task, task.id + '.interaction');
       return sourceValueSelectionMatches(response, task.expected, sourceValueInfo.valueIds, sourceValueInfo.roleIds);
@@ -2143,6 +2414,10 @@
       var orderFeedback = stepOrderingFeedback(response, task);
       if (orderFeedback) result.orderFeedback = orderFeedback;
     }
+    if (task.family === 'matching_pairs' && !matched) {
+      var matchFeedback = matchingPairsFeedback(response, task);
+      if (matchFeedback) result.matchingPairsFeedback = matchFeedback;
+    }
     if (task.family === 'source_value_selection' && !matched) {
       var valueFeedback = sourceValueFeedback(response, task);
       if (valueFeedback) result.sourceValueFeedback = valueFeedback;
@@ -2203,6 +2478,13 @@
       return [
         '[data-task-id="' + task.id + '"][data-step-id]',
         '[data-task-id="' + task.id + '"][data-step-sequence]'
+      ];
+    }
+    if (task.family === 'matching_pairs') {
+      return [
+        '[data-task-id="' + task.id + '"][data-match-left-id]',
+        '[data-task-id="' + task.id + '"][data-match-right-id]',
+        '[data-task-id="' + task.id + '"][data-match-pair-summary]'
       ];
     }
     if (task.family === 'source_value_selection') {

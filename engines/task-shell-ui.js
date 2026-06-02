@@ -282,6 +282,37 @@
     '</div>';
   }
 
+  function renderMatchingPairs(task) {
+    var leftItems = task.interaction.leftItems || [];
+    var rightItems = task.interaction.rightItems || [];
+    var leftHtml = leftItems.map(function (item) {
+      return '<button type="button" class="ts-match-left" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-match-left-id="' + escapeHtml(item.id) + '" aria-pressed="false" aria-label="' + escapeHtml(item.label + ': ' + item.description) + '">' +
+        '<span class="ts-match-left-label">' + escapeHtml(item.label) + '</span>' +
+        '<span class="ts-match-left-description">' + escapeHtml(item.description) + '</span>' +
+      '</button>';
+    }).join('');
+    var rightHtml = rightItems.map(function (item) {
+      return '<button type="button" class="ts-match-right" data-task-id="' + escapeHtml(task.id) + '" ' +
+        'data-match-right-id="' + escapeHtml(item.id) + '" aria-pressed="false" aria-label="' + escapeHtml(item.label + ': ' + item.description) + '">' +
+        '<span class="ts-match-right-label">' + escapeHtml(item.label) + '</span>' +
+        '<span class="ts-match-right-description">' + escapeHtml(item.description) + '</span>' +
+        '<span class="ts-match-right-assigned"></span>' +
+      '</button>';
+    }).join('');
+    return '<div class="ts-matching-pairs" data-matching-pairs-task="' + escapeHtml(task.id) + '">' +
+      '<div class="ts-match-banks">' +
+        '<div class="ts-match-bank ts-match-left-bank" role="group" aria-label="' + escapeHtml(task.interaction.leftBankLabel || 'Linker kolom') + '">' + leftHtml + '</div>' +
+        '<div class="ts-match-bank ts-match-right-bank" role="group" aria-label="' + escapeHtml(task.interaction.rightBankLabel || 'Rechter kolom') + '">' + rightHtml + '</div>' +
+      '</div>' +
+      '<div class="ts-match-pair-summary" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-match-pair-summary aria-label="' + escapeHtml(task.interaction.pairLabel || 'Gemaakte koppels') + '">' +
+        '<span class="ts-match-placeholder">' + escapeHtml(task.interaction.placeholder || 'Kies links een item en daarna rechts de passende betekenis.') + '</span>' +
+      '</div>' +
+      '<button type="button" class="ts-match-clear" data-task-id="' + escapeHtml(task.id) + '" data-match-clear aria-label="Gemaakte koppels leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderSourceValueSelection(task) {
     var values = task.interaction.values || [];
     var roles = task.interaction.roles || [];
@@ -421,6 +452,8 @@
         return renderFormulaBuilder(task);
       case 'step_ordering':
         return renderStepOrdering(task);
+      case 'matching_pairs':
+        return renderMatchingPairs(task);
       case 'source_value_selection':
         return renderSourceValueSelection(task);
       case 'source_chain_builder':
@@ -470,11 +503,13 @@
     var sourceValue = renderSourceValueFeedback(result && result.sourceValueFeedback);
     var sourceChain = renderSourceChainFeedback(result && result.sourceChainFeedback);
     var labelPlacement = renderLabelPlacementFeedback(result && result.labelPlacementFeedback);
+    var matchingPairs = renderMatchingPairsFeedback(result && result.matchingPairsFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       selection +
       order +
+      matchingPairs +
       sourceValue +
       sourceChain +
       labelPlacement +
@@ -594,6 +629,44 @@
       renderSelectionList('Afleidend label gekozen', feedback.selectedDistractorLabels) +
       renderSelectionList('Afleidende plek gekozen', feedback.selectedDistractorTargets) +
       renderPlacementPairList('Al goed geplaatst', feedback.correctPlacements) +
+    '</div>';
+  }
+
+  function renderMatchingPairList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var left = item.left && item.left.label ? item.left.label : '';
+        var right = item.right && item.right.label ? item.right.label : '';
+        if (left && right) return '<li>' + escapeHtml(left + ' -> ' + right) + '</li>';
+        return '<li>' + escapeHtml(item.label || item.id || '') + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderMisplacedMatchingList(title, items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return '<div class="ts-selection-feedback-group">' +
+      '<strong>' + escapeHtml(title) + '</strong>' +
+      '<ul>' + items.map(function (item) {
+        var left = item.left && item.left.label ? item.left.label : '';
+        var expected = item.expectedRight && item.expectedRight.label ? item.expectedRight.label : '';
+        var actual = item.actualRight && item.actualRight.label ? item.actualRight.label : 'geen koppeling';
+        return '<li>' + escapeHtml(left) + ': verwacht ' + escapeHtml(expected) + ', gekozen ' + escapeHtml(actual) + '</li>';
+      }).join('') + '</ul>' +
+    '</div>';
+  }
+
+  function renderMatchingPairsFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-match-feedback" aria-label="Aanwijzingen bij je koppels">' +
+      renderSelectionList('Linker items nog nodig', feedback.missingLeftItems) +
+      renderSelectionList('Rechter items nog nodig', feedback.missingRightItems) +
+      renderMisplacedMatchingList('Koppel controleren', feedback.misplacedPairs) +
+      renderSelectionList('Afleider links gekozen', feedback.selectedDistractorLeftItems) +
+      renderSelectionList('Afleider rechts gekozen', feedback.selectedDistractorRightItems) +
+      renderMatchingPairList('Al goed gekoppeld', feedback.correctPairs) +
     '</div>';
   }
 
@@ -739,6 +812,19 @@
       order.push(controls[i].getAttribute('data-step-selected-id') || '');
     }
     return { order: order };
+  }
+
+  function collectMatchingPairsResponse(rootEl, task) {
+    if (!rootEl || !task) return { pairs: [] };
+    var pairs = [];
+    var controls = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-match-paired-left-id]');
+    for (var i = 0; i < controls.length; i++) {
+      pairs.push([
+        controls[i].getAttribute('data-match-paired-left-id') || '',
+        controls[i].getAttribute('data-match-paired-right-id') || ''
+      ]);
+    }
+    return { pairs: pairs };
   }
 
   function collectSourceValueSelectionResponse(rootEl, task) {
@@ -912,6 +998,47 @@
     return false;
   }
 
+  function handleMatchingPairsClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var matching = event.target.closest('.ts-matching-pairs');
+    if (!matching || !rootEl.contains(matching)) return false;
+
+    var left = event.target.closest('.ts-match-left');
+    var right = event.target.closest('.ts-match-right');
+    var remove = event.target.closest('.ts-match-remove');
+    var clear = event.target.closest('.ts-match-clear');
+    var summary = matching.querySelector('[data-match-pair-summary]');
+
+    if (left) {
+      if (left.disabled) return true;
+      setSelectedMatchLeft(matching, left);
+      return true;
+    }
+    if (right) {
+      var selectedLeft = matching.querySelector('.ts-match-left.selected');
+      if (!selectedLeft || !summary) return true;
+      addMatchingPair(matching, summary, selectedLeft, right);
+      clearSelectedMatchLeft(matching);
+      updateMatchingPairsState(matching);
+      return true;
+    }
+    if (remove) {
+      var item = remove.closest('.ts-match-pair-item');
+      var nextFocus = item && (item.nextElementSibling || item.previousElementSibling);
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      updateMatchingPairsState(matching);
+      focusElement(nextFocus || summary);
+      return true;
+    }
+    if (clear) {
+      clearMatchingPairs(matching);
+      updateMatchingPairsState(matching);
+      focusElement(summary);
+      return true;
+    }
+    return false;
+  }
+
   function handleStepOrderingClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var ordering = event.target.closest('.ts-step-ordering');
@@ -1043,6 +1170,58 @@
     sequence.appendChild(item);
     updateSourceChainPlaceholder(chain);
     focusElement(item);
+  }
+
+  function addMatchingPair(matching, summary, left, right) {
+    var leftId = left.getAttribute('data-match-left-id') || '';
+    var rightId = right.getAttribute('data-match-right-id') || '';
+    removeExistingMatchingPair(summary, 'data-match-paired-left-id', leftId);
+    removeExistingMatchingPair(summary, 'data-match-paired-right-id', rightId);
+
+    var leftText = matchLeftText(left);
+    var rightText = matchRightText(right);
+    var item = document.createElement('span');
+    item.className = 'ts-match-pair-item';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('data-task-id', left.getAttribute('data-task-id') || '');
+    item.setAttribute('data-match-paired-left-id', leftId);
+    item.setAttribute('data-match-paired-right-id', rightId);
+    item.setAttribute('tabindex', '-1');
+
+    var leftEl = document.createElement('span');
+    leftEl.className = 'ts-match-pair-left';
+    leftEl.textContent = leftText;
+
+    var arrowEl = document.createElement('span');
+    arrowEl.className = 'ts-match-pair-arrow';
+    arrowEl.setAttribute('aria-hidden', 'true');
+    arrowEl.textContent = '->';
+
+    var rightEl = document.createElement('span');
+    rightEl.className = 'ts-match-pair-right';
+    rightEl.textContent = rightText;
+
+    item.appendChild(leftEl);
+    item.appendChild(arrowEl);
+    item.appendChild(rightEl);
+    item.appendChild(matchButton('ts-match-remove', 'Verwijder koppel ' + leftText, '\u00d7'));
+    summary.appendChild(item);
+    focusElement(item);
+  }
+
+  function removeExistingMatchingPair(summary, attr, value) {
+    if (!summary || !value) return;
+    var existing = summary.querySelector('[' + attr + '="' + cssEscape(value) + '"]');
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+  }
+
+  function matchButton(className, label, text) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = className;
+    button.setAttribute('aria-label', label);
+    button.textContent = text;
+    return button;
   }
 
   function addLabelPlacement(placement, summary, label, target) {
@@ -1244,6 +1423,13 @@
     }
   }
 
+  function clearMatchingPairs(matching) {
+    var items = matching.querySelectorAll('.ts-match-pair-item');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].parentNode) items[i].parentNode.removeChild(items[i]);
+    }
+  }
+
   function updateSentencePlaceholder(sentence) {
     var placeholder = sentence.querySelector('.ts-sentence-placeholder');
     if (!placeholder) return;
@@ -1311,6 +1497,55 @@
     }
 
     var placeholder = placement.querySelector('.ts-label-placeholder');
+    if (placeholder) placeholder.hidden = items.length > 0;
+  }
+
+  function updateMatchingPairsState(matching) {
+    var usedLeft = {};
+    var usedRight = {};
+    var leftTextByRight = {};
+    var leftIdByRight = {};
+    var items = matching.querySelectorAll('.ts-match-pair-item');
+    for (var i = 0; i < items.length; i++) {
+      var leftId = items[i].getAttribute('data-match-paired-left-id') || '';
+      var rightId = items[i].getAttribute('data-match-paired-right-id') || '';
+      if (leftId) usedLeft[leftId] = true;
+      if (rightId) {
+        usedRight[rightId] = true;
+        leftIdByRight[rightId] = leftId;
+        var leftEl = items[i].querySelector('.ts-match-pair-left');
+        leftTextByRight[rightId] = leftEl ? leftEl.textContent : leftId;
+      }
+    }
+
+    var leftControls = matching.querySelectorAll('.ts-match-left');
+    for (var j = 0; j < leftControls.length; j++) {
+      var id = leftControls[j].getAttribute('data-match-left-id');
+      var unavailable = Boolean(usedLeft[id]);
+      leftControls[j].disabled = unavailable;
+      leftControls[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
+      if (unavailable) {
+        leftControls[j].classList.remove('selected');
+        leftControls[j].setAttribute('aria-pressed', 'true');
+      } else if (!leftControls[j].classList.contains('selected')) {
+        leftControls[j].setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    var rightControls = matching.querySelectorAll('.ts-match-right');
+    for (var k = 0; k < rightControls.length; k++) {
+      var rightId = rightControls[k].getAttribute('data-match-right-id');
+      var assigned = Boolean(usedRight[rightId]);
+      rightControls[k].disabled = assigned;
+      rightControls[k].setAttribute('aria-disabled', assigned ? 'true' : 'false');
+      rightControls[k].setAttribute('aria-pressed', assigned ? 'true' : 'false');
+      rightControls[k].classList.toggle('is-filled', assigned);
+      rightControls[k].setAttribute('data-match-assigned-left-id', assigned ? leftIdByRight[rightId] : '');
+      var assignedEl = rightControls[k].querySelector('.ts-match-right-assigned');
+      if (assignedEl) assignedEl.textContent = assigned ? leftTextByRight[rightId] : '';
+    }
+
+    var placeholder = matching.querySelector('.ts-match-placeholder');
     if (placeholder) placeholder.hidden = items.length > 0;
   }
 
@@ -1412,6 +1647,37 @@
   function labelTargetText(target) {
     var el = target.querySelector('.ts-label-target-label');
     return el ? el.textContent : target.textContent;
+  }
+
+  function matchLeftText(left) {
+    var el = left.querySelector('.ts-match-left-label');
+    return el ? el.textContent : left.textContent;
+  }
+
+  function matchRightText(right) {
+    var el = right.querySelector('.ts-match-right-label');
+    return el ? el.textContent : right.textContent;
+  }
+
+  function setSelectedMatchLeft(matching, left) {
+    var controls = matching.querySelectorAll('.ts-match-left');
+    var wasSelected = left.classList.contains('selected');
+    for (var i = 0; i < controls.length; i++) {
+      controls[i].classList.remove('selected');
+      controls[i].setAttribute('aria-pressed', 'false');
+    }
+    if (!wasSelected) {
+      left.classList.add('selected');
+      left.setAttribute('aria-pressed', 'true');
+    }
+  }
+
+  function clearSelectedMatchLeft(matching) {
+    var selected = matching.querySelectorAll('.ts-match-left.selected');
+    for (var i = 0; i < selected.length; i++) {
+      selected[i].classList.remove('selected');
+      selected[i].setAttribute('aria-pressed', 'false');
+    }
   }
 
   function setSelectedLabel(placement, label) {
@@ -1531,6 +1797,8 @@
     handleFormulaBuilderClick: handleFormulaBuilderClick,
     collectStepOrderingResponse: collectStepOrderingResponse,
     handleStepOrderingClick: handleStepOrderingClick,
+    collectMatchingPairsResponse: collectMatchingPairsResponse,
+    handleMatchingPairsClick: handleMatchingPairsClick,
     collectSourceValueSelectionResponse: collectSourceValueSelectionResponse,
     handleSourceValueSelectionClick: handleSourceValueSelectionClick,
     collectSourceChainBuilderResponse: collectSourceChainBuilderResponse,

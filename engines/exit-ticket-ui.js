@@ -189,6 +189,9 @@
       if (sharedTaskShellUI && sharedTaskShellUI.handleStepOrderingClick && sharedTaskShellUI.handleStepOrderingClick(app, event)) {
         return;
       }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleMatchingPairsClick && sharedTaskShellUI.handleMatchingPairsClick(app, event)) {
+        return;
+      }
       if (sharedTaskShellUI && sharedTaskShellUI.handleSourceValueSelectionClick && sharedTaskShellUI.handleSourceValueSelectionClick(app, event)) {
         return;
       }
@@ -332,6 +335,12 @@
       return StepTaskShellUI && StepTaskShellUI.collectStepOrderingResponse
         ? StepTaskShellUI.collectStepOrderingResponse(wrapper, task)
         : { order: [] };
+    }
+    if (task.family === 'matching_pairs') {
+      var MatchingTaskShellUI = resolveTaskShellUI();
+      return MatchingTaskShellUI && MatchingTaskShellUI.collectMatchingPairsResponse
+        ? MatchingTaskShellUI.collectMatchingPairsResponse(wrapper, task)
+        : { pairs: [] };
     }
     if (task.family === 'source_value_selection') {
       var SourceValueTaskShellUI = resolveTaskShellUI();

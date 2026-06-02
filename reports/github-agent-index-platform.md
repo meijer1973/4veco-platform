@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-01T22:14:25.304Z
+Generated: 2026-06-02T05:59:17.858Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2761
+Files indexed: 2791
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 360
+Count: 362
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -452,6 +452,8 @@ Count: 360
 - build-scripts/sprints/check-task-family-cloze1.js
 - build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-family-formula1.js
+- build-scripts/sprints/check-task-family-label1.js
+- build-scripts/sprints/check-task-family-match1.js
 - build-scripts/sprints/check-task-family-multi1.js
 - build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
@@ -536,7 +538,7 @@ Count: 42
 
 ## validators
 
-Count: 192
+Count: 194
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -662,6 +664,8 @@ Count: 192
 - build-scripts/sprints/check-task-family-cloze1.js
 - build-scripts/sprints/check-task-family-construct1-contract.js
 - build-scripts/sprints/check-task-family-formula1.js
+- build-scripts/sprints/check-task-family-label1.js
+- build-scripts/sprints/check-task-family-match1.js
 - build-scripts/sprints/check-task-family-multi1.js
 - build-scripts/sprints/check-task-family-order1.js
 - build-scripts/sprints/check-task-family-sentence1.js
@@ -733,7 +737,7 @@ Count: 192
 
 ## references
 
-Count: 420
+Count: 424
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1067,6 +1071,10 @@ Count: 420
 - references/data/sprints/TASK-FAMILY-CONSTRUCT-1.result.json
 - references/data/sprints/TASK-FAMILY-FORMULA-1.plan.json
 - references/data/sprints/TASK-FAMILY-FORMULA-1.result.json
+- references/data/sprints/TASK-FAMILY-LABEL-1.plan.json
+- references/data/sprints/TASK-FAMILY-LABEL-1.result.json
+- references/data/sprints/TASK-FAMILY-MATCH-1.plan.json
+- references/data/sprints/TASK-FAMILY-MATCH-1.result.json
 - references/data/sprints/TASK-FAMILY-MULTI-1.plan.json
 - references/data/sprints/TASK-FAMILY-MULTI-1.result.json
 - references/data/sprints/TASK-FAMILY-ORDER-1.plan.json
@@ -1158,7 +1166,7 @@ Count: 420
 
 ## reports
 
-Count: 1553
+Count: 1577
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1220,6 +1228,8 @@ Count: 1553
 - reports/json/task-family-cloze1-proof.json
 - reports/json/task-family-construction-contract.json
 - reports/json/task-family-formula1-proof.json
+- reports/json/task-family-label1-proof.json
+- reports/json/task-family-match1-proof.json
 - reports/json/task-family-multi1-proof.json
 - reports/json/task-family-order1-proof.json
 - reports/json/task-family-sentence1-proof.json
@@ -2646,6 +2656,28 @@ Count: 1553
 - reports/sprints/TASK-FAMILY-FORMULA-1-rendered-fixture.html
 - reports/sprints/TASK-FAMILY-FORMULA-1-result.md
 - reports/sprints/TASK-FAMILY-FORMULA-1-screenshot-manifest.md
+- reports/sprints/TASK-FAMILY-LABEL-1-baseline.md
+- reports/sprints/TASK-FAMILY-LABEL-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-LABEL-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-LABEL-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-LABEL-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-LABEL-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-LABEL-1-plan.md
+- reports/sprints/TASK-FAMILY-LABEL-1-planning-review.md
+- reports/sprints/TASK-FAMILY-LABEL-1-rendered-fixture.html
+- reports/sprints/TASK-FAMILY-LABEL-1-result.md
+- reports/sprints/TASK-FAMILY-LABEL-1-screenshot-manifest.md
+- reports/sprints/TASK-FAMILY-MATCH-1-baseline.md
+- reports/sprints/TASK-FAMILY-MATCH-1-diff-summary.md
+- reports/sprints/TASK-FAMILY-MATCH-1-lead-review-assignment.md
+- reports/sprints/TASK-FAMILY-MATCH-1-lead-review-corrections.md
+- reports/sprints/TASK-FAMILY-MATCH-1-lead-review-round1.md
+- reports/sprints/TASK-FAMILY-MATCH-1-lead-review-round2.md
+- reports/sprints/TASK-FAMILY-MATCH-1-plan.md
+- reports/sprints/TASK-FAMILY-MATCH-1-planning-review.md
+- reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html
+- reports/sprints/TASK-FAMILY-MATCH-1-result.md
+- reports/sprints/TASK-FAMILY-MATCH-1-screenshot-manifest.md
 - reports/sprints/TASK-FAMILY-MULTI-1-baseline.md
 - reports/sprints/TASK-FAMILY-MULTI-1-diff-summary.md
 - reports/sprints/TASK-FAMILY-MULTI-1-lead-review-assignment.md

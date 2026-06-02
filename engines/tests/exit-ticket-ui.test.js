@@ -435,6 +435,47 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
                 }
+            },
+            {
+                id: 'matching-pairs-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'matching-pairs-task',
+                    family: 'matching_pairs',
+                    skillLabel: 'Begrippen koppelen',
+                    purpose: 'Koppel begrippen aan betekenissen.',
+                    prompt: 'Welke betekenis hoort bij elk begrip?',
+                    interaction: {
+                        leftBankLabel: 'Begrippen',
+                        rightBankLabel: 'Betekenissen',
+                        pairLabel: 'Gemaakte koppels',
+                        leftItems: [
+                            { id: 'schaarste', label: 'Schaarste', description: 'Beperkte middelen.', kind: 'answer' },
+                            { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Beste niet-gekozen alternatief.', kind: 'answer' },
+                            { id: 'winst', label: 'Winst', description: 'Afleider.', kind: 'distractor', distractorFor: 'schaarste' }
+                        ],
+                        rightItems: [
+                            { id: 'behoeften-middelen', label: 'Behoeften groter dan middelen', description: 'Betekenis van schaarste.', kind: 'answer' },
+                            { id: 'beste-alternatief', label: 'Beste niet-gekozen alternatief', description: 'Betekenis van alternatieve kosten.', kind: 'answer' },
+                            { id: 'opbrengst-kosten', label: 'Opbrengst min kosten', description: 'Afleider.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
+                        ]
+                    },
+                    expected: {
+                        kind: 'matching_pairs',
+                        pairs: [
+                            ['schaarste', 'behoeften-middelen'],
+                            ['alternatieve-kosten', 'beste-alternatief']
+                        ],
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Koppels kloppen',
+                        matchText: 'Je koppelt begrip en betekenis.',
+                        retryTitle: 'Controleer je koppels',
+                        retryText: 'Kies per begrip de passende betekenis.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met begrippen', href: 'redeneer-spel.html' }
+                }
             }
         ]
     };
@@ -536,6 +577,7 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="source_value_selection"');
         expect(html).toContain('data-task-family="source_chain_builder"');
         expect(html).toContain('data-task-family="label_placement"');
+        expect(html).toContain('data-task-family="matching_pairs"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -547,6 +589,9 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-source-node-id="deel-door-nieuw"');
         expect(html).toContain('data-label-id="prijs"');
         expect(html).toContain('data-label-target-id="y-as"');
+        expect(html).toContain('data-match-left-id="schaarste"');
+        expect(html).toContain('data-match-right-id="behoeften-middelen"');
+        expect(html).toContain('data-match-pair-summary');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -570,6 +615,9 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleStepOrderingClick(app, event)');
         expect(source).toContain('collectStepOrderingResponse(wrapper, task)');
         expect(source).toContain("task.family === 'step_ordering'");
+        expect(source).toContain('handleMatchingPairsClick(app, event)');
+        expect(source).toContain('collectMatchingPairsResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'matching_pairs'");
         expect(source).toContain('handleSourceValueSelectionClick(app, event)');
         expect(source).toContain('collectSourceValueSelectionResponse(wrapper, task)');
         expect(source).toContain("task.family === 'source_value_selection'");

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-FAMILY-MATCH-1",
+  "family": "matching_pairs",
+  "generated": "2026-06-02",
+  "status": "runtime_support_ready_for_lead_review",
+  "runtime_support": {
+    "first_class_family": true,
+    "deterministic": true,
+    "exact_pair_set": true,
+    "order_insensitive": true,
+    "one_to_one_only": true,
+    "full_answer_left_coverage_required": true,
+    "full_answer_right_coverage_required": true,
+    "left_bank_required": true,
+    "right_bank_required": true,
+    "description_required": true,
+    "same_bank_distractor_for_required": true,
+    "practice_only_feedback": true,
+    "keyboard_button_pairing": true,
+    "single_feedback_region": true
+  },
+  "strict_response_shape": {
+    "expected_shape": "{ pairs: [[leftId, rightId]] }",
+    "raw_arrays_rejected": true,
+    "array_with_key_rejected": true,
+    "extra_response_keys_rejected": true,
+    "object_pair_entries_rejected": true,
+    "wrong_length_pair_arrays_rejected": true,
+    "non_string_left_ids_rejected": true,
+    "non_string_right_ids_rejected": true,
+    "unknown_left_ids_rejected": true,
+    "unknown_right_ids_rejected": true,
+    "duplicate_selected_left_ids_rejected": true,
+    "duplicate_selected_right_ids_rejected": true,
+    "selected_distractors_rejected": true
+  },
+  "planning_flags": {
+    "one_to_one_only": true,
+    "many_to_one_deferred": true,
+    "array_with_key_rejected": true,
+    "object_pair_entries_rejected": true,
+    "wrong_length_pair_arrays_rejected": true,
+    "fixture_proof_only": true,
+    "generated_route_screenshots_deferred": true
+  },
+  "wrapper_collection": {
+    "exit_ticket": true,
+    "skilltree": true,
+    "graphical": true
+  },
+  "rendered_fixture": {
+    "standard_state": "reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html#standard",
+    "narrow_state": "reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html#narrow",
+    "dark_state": "reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html#dark",
+    "after_click_state": "reports/sprints/TASK-FAMILY-MATCH-1-rendered-fixture.html#after-click"
+  },
+  "boundary_flags": {
+    "generated_lesson_output_changed": false,
+    "source_data_changed": false,
+    "protected_reference_changed": false,
+    "target_exercise_registry_changed": false,
+    "candidate_storage_changed": false,
+    "old_exit_ticket_archive_changed": false,
+    "target_equivalent_reliance": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "product_wide_use": false
+  },
+  "old_exit_ticket_archive": {
+    "path": "knowledge/exit-ticket-game-1.1.1.zip",
+    "expected_git_status": "unchanged",
+    "changed_by_sprint": false
+  },
+  "review_gate": "GATE-TASK-FAMILY-1 before product-route reliance"
+}

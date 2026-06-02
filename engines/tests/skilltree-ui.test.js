@@ -39,6 +39,10 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("task.family === 'step_ordering'");
         expect(source).toContain('collectStepOrderingResponse(root, task)');
         expect(source).toContain('handleStepOrderingClick(els.exStepSlot, e)');
+        expect(source).toContain("task.family === 'matching_pairs'");
+        expect(source).toContain('collectMatchingPairsResponse(root, task)');
+        expect(source).toContain('handleMatchingPairsClick(els.exStepSlot, e)');
+        expect(source).toContain("e.target.closest('.ts-matching-pairs')");
         expect(source).toContain("task.family === 'source_value_selection'");
         expect(source).toContain('collectSourceValueSelectionResponse(root, task)');
         expect(source).toContain('handleSourceValueSelectionClick(els.exStepSlot, e)');
