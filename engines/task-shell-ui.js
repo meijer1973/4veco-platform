@@ -451,6 +451,10 @@
     var labels = task.interaction.labels || [];
     var targets = task.interaction.targets || [];
     var visual = task.interaction.visual || {};
+    var targetRegionClass = 'ts-label-target-region' + (visual.showGrid === false ? ' ts-label-target-region-clean' : '');
+    var visualLineHtml = visual.showLine === false
+      ? ''
+      : '<div class="ts-label-visual-line ts-label-visual-line-demand" aria-hidden="true"></div>';
     var labelHtml = labels.map(function (label) {
       return '<button type="button" class="ts-label-token" data-task-id="' + escapeHtml(task.id) + '" ' +
         'data-label-id="' + escapeHtml(label.id) + '" aria-pressed="false" aria-label="' + escapeHtml(label.label + ': ' + label.description) + '">' +
@@ -476,10 +480,10 @@
           '<strong>' + escapeHtml(visualTitle) + '</strong>' +
           '<span>' + escapeHtml(visualDescription) + '</span>' +
         '</div>' +
-        '<div class="ts-label-target-region" role="group" data-task-id="' + escapeHtml(task.id) + '" data-label-target-region aria-label="' + escapeHtml(task.interaction.targetRegionLabel || visualTitle) + '">' +
+        '<div class="' + targetRegionClass + '" role="group" data-task-id="' + escapeHtml(task.id) + '" data-label-target-region aria-label="' + escapeHtml(task.interaction.targetRegionLabel || visualTitle) + '">' +
           '<div class="ts-label-visual-axis ts-label-visual-axis-x" aria-hidden="true"></div>' +
           '<div class="ts-label-visual-axis ts-label-visual-axis-y" aria-hidden="true"></div>' +
-          '<div class="ts-label-visual-line ts-label-visual-line-demand" aria-hidden="true"></div>' +
+          visualLineHtml +
           targetHtml +
         '</div>' +
       '</div>' +

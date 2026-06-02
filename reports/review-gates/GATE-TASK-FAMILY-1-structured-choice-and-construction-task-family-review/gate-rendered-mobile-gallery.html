@@ -423,9 +423,9 @@
                 <span class="ts-match-left-label">Alternatieve kosten</span>
                 <span class="ts-match-left-description">Begrip over het beste niet-gekozen alternatief.</span>
               </button>
-              <button type="button" class="ts-match-left" data-task-id="matching-pairs-concepts" data-match-left-id="winst" aria-pressed="false" aria-label="Winst: Afleider buiten deze begrippenkoppeling.">
-                <span class="ts-match-left-label">Winst</span>
-                <span class="ts-match-left-description">Afleider buiten deze begrippenkoppeling.</span>
+              <button type="button" class="ts-match-left" data-task-id="matching-pairs-concepts" data-match-left-id="onbeperkte-middelen" aria-pressed="false" aria-label="Onbeperkte middelen: Afleider: dit is het tegenovergestelde van schaarste.">
+                <span class="ts-match-left-label">Onbeperkte middelen</span>
+                <span class="ts-match-left-description">Afleider: dit is het tegenovergestelde van schaarste.</span>
               </button>
             </div>
             <div class="ts-match-bank ts-match-right-bank" role="group" aria-label="Betekenissen">
@@ -439,9 +439,9 @@
                 <span class="ts-match-right-description">Betekenis van alternatieve kosten.</span>
                 <span class="ts-match-right-assigned"></span>
               </button>
-              <button type="button" class="ts-match-right" data-task-id="matching-pairs-concepts" data-match-right-id="opbrengst-kosten" aria-pressed="false" aria-label="Opbrengst min kosten: Afleider die bij winst hoort.">
-                <span class="ts-match-right-label">Opbrengst min kosten</span>
-                <span class="ts-match-right-description">Afleider die bij winst hoort.</span>
+              <button type="button" class="ts-match-right" data-task-id="matching-pairs-concepts" data-match-right-id="geen-keuze-nodig" aria-pressed="false" aria-label="Er is geen keuze nodig: Afleider: dit past niet bij kiezen onder schaarste.">
+                <span class="ts-match-right-label">Er is geen keuze nodig</span>
+                <span class="ts-match-right-description">Afleider: dit past niet bij kiezen onder schaarste.</span>
                 <span class="ts-match-right-assigned"></span>
               </button>
             </div>
@@ -490,11 +490,11 @@
           </div>
           <div class="ts-selection-feedback-group">
             <strong>Afleider links gekozen</strong>
-            <ul><li>Winst</li></ul>
+            <ul><li>Onbeperkte middelen</li></ul>
           </div>
           <div class="ts-selection-feedback-group">
             <strong>Afleider rechts gekozen</strong>
-            <ul><li>Opbrengst min kosten</li></ul>
+            <ul><li>Er is geen keuze nodig</li></ul>
           </div>
         </div>
       </div>
@@ -848,33 +848,34 @@
         <span>Bronwaarden kiezen</span>
         <span>Bronwaarden kiezen</span>
       </div>
-      <h2>Welke bronwaarden gebruik je voor de procentuele verandering?</h2>
+      <h2>Een fietsenwinkel vergelijkt de prijs van e-bike model Stad in 2024 en 2025. Welke bronwaarden gebruik je voor de procentuele prijsverandering?</h2>
       <div class="ts-source-values" data-source-value-task="source-values-procent">
         <div class="ts-source-value-bank" role="group" aria-label="Bronwaarden">
           <div class="ts-source-value-card is-selected" data-task-id="source-values-procent" data-source-value-card="oud">
             <button type="button" class="ts-source-value selected" data-task-id="source-values-procent" data-source-value-id="oud" aria-pressed="true">
               <span class="ts-source-value-label">EUR 800</span>
-              <span class="ts-source-value-meta"><span>oude prijs</span><span>jaar 1</span><span>euro</span></span>
+              <span class="ts-source-value-meta"><span>E-bike model Stad</span><span>2024</span><span>euro</span></span>
             </button>
             <label class="ts-source-role">
               <span>Rol</span>
               <select data-task-id="source-values-procent" data-source-role-value-id="oud" aria-label="Rol voor EUR 800">
                 <option value="">Kies rol</option>
-                <option value="old" selected>oude waarde</option>
-                <option value="new">nieuwe waarde</option>
+                <option value="old" selected>beginwaarde</option>
+                <option value="new">eindwaarde</option>
               </select>
             </label>
           </div>
-          <div class="ts-source-value-card" data-task-id="source-values-procent" data-source-value-card="btw">
-            <button type="button" class="ts-source-value" data-task-id="source-values-procent" data-source-value-id="btw" aria-pressed="false">
-              <span class="ts-source-value-label">21%</span>
+          <div class="ts-source-value-card" data-task-id="source-values-procent" data-source-value-card="accessoires">
+            <button type="button" class="ts-source-value" data-task-id="source-values-procent" data-source-value-id="accessoires" aria-pressed="false">
+              <span class="ts-source-value-label">EUR 120</span>
+              <span class="ts-source-value-meta"><span>Accessoirespakket</span><span>2025</span><span>euro</span></span>
             </button>
             <label class="ts-source-role">
               <span>Rol</span>
-              <select data-task-id="source-values-procent" data-source-role-value-id="btw" aria-label="Rol voor 21%">
+              <select data-task-id="source-values-procent" data-source-role-value-id="accessoires" aria-label="Rol voor EUR 120">
                 <option value="">Kies rol</option>
-                <option value="old">oude waarde</option>
-                <option value="new">nieuwe waarde</option>
+                <option value="old">beginwaarde</option>
+                <option value="new">eindwaarde</option>
               </select>
             </label>
           </div>
@@ -885,8 +886,8 @@
           <strong>Controleer je bronwaarden</strong>
           <p>Kies alleen de waarden die nodig zijn voor deze berekening.</p>
           <div class="ts-source-value-feedback" aria-label="Aanwijzingen bij je bronwaarden">
-            <div class="ts-selection-feedback-group"><strong>Rol controleren</strong><ul><li>EUR 800: verwacht oude waarde, gekozen nieuwe waarde</li></ul></div>
-            <div class="ts-selection-feedback-group"><strong>Niet nodig gekozen</strong><ul><li>21%</li></ul></div>
+            <div class="ts-selection-feedback-group"><strong>Rol controleren</strong><ul><li>EUR 800: verwacht beginwaarde, gekozen eindwaarde</li></ul></div>
+            <div class="ts-selection-feedback-group"><strong>Niet nodig gekozen</strong><ul><li>EUR 120</li></ul></div>
           </div>
         </div>
       </div>
@@ -898,11 +899,11 @@
         <span>Bronketen bouwen</span>
         <span>Bronketen bouwen</span>
       </div>
-      <h2>Bouw de bronketen voor deze procentuele verandering.</h2>
+      <h2>Bron 1 geeft de prijzen van e-bike model Stad: 2024 = EUR 800 en 2025 = EUR 920. Bouw de bronketen voor deze procentuele verandering.</h2>
       <div class="ts-source-chain" data-source-chain-task="source-chain-procent" data-separator=" -&gt; ">
         <div class="ts-source-chain-sequence" role="list" tabindex="0" data-task-id="source-chain-procent" data-source-chain-sequence aria-label="Opgebouwde bronketen">
           <span class="ts-source-chain-item" role="listitem" data-task-id="source-chain-procent" data-source-selected-node-id="bron" data-source-selected-node-role="source" tabindex="-1">
-            <span class="ts-source-chain-item-label">Lees de prijstabel</span>
+            <span class="ts-source-chain-item-label">Lees bron 1: model Stad in 2024 en 2025</span>
           </span>
         </div>
         <div class="ts-source-node-bank" role="group" aria-label="Bronketen onderdelen">
@@ -946,41 +947,40 @@
       <p class="ts-purpose">Plaats labels bij de juiste onderdelen van een grafiek.</p>
       <div class="ts-label-placement" data-task-id="label-placement-axis">
         <div class="ts-label-bank" role="group" aria-label="Labelbank">
-          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="prijs" aria-pressed="false" aria-label="Prijs: De prijs hoort op de verticale as.">
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="prijs" aria-pressed="false" aria-label="Prijs: Grootheid uit een prijs-hoeveelheidgrafiek.">
             <span class="ts-label-token-label">Prijs</span>
-            <span class="ts-label-token-description">De prijs hoort op de verticale as.</span>
+            <span class="ts-label-token-description">Grootheid uit een prijs-hoeveelheidgrafiek.</span>
           </button>
-          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="hoeveelheid" aria-pressed="false" aria-label="Hoeveelheid: De hoeveelheid hoort op de horizontale as.">
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="hoeveelheid" aria-pressed="false" aria-label="Hoeveelheid: Grootheid uit een prijs-hoeveelheidgrafiek.">
             <span class="ts-label-token-label">Hoeveelheid</span>
-            <span class="ts-label-token-description">De hoeveelheid hoort op de horizontale as.</span>
+            <span class="ts-label-token-description">Grootheid uit een prijs-hoeveelheidgrafiek.</span>
           </button>
-          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="omzet" aria-pressed="false" aria-label="Omzet: Omzet is hier een afleider.">
+          <button type="button" class="ts-label-token" data-task-id="label-placement-axis" data-label-id="omzet" aria-pressed="false" aria-label="Omzet: Berekende uitkomst, geen asgrootheid in dit assenstelsel.">
             <span class="ts-label-token-label">Omzet</span>
-            <span class="ts-label-token-description">Omzet is hier een afleider.</span>
+            <span class="ts-label-token-description">Berekende uitkomst, geen asgrootheid in dit assenstelsel.</span>
           </button>
         </div>
         <div class="ts-label-visual">
           <div class="ts-label-visual-head">
-            <strong>Prijs-hoeveelheidgrafiek</strong>
-            <span>Een assenstelsel met prijs op de verticale as en hoeveelheid op de horizontale as.</span>
+            <strong>Leeg assenstelsel</strong>
+            <span>Plaats de grootheden op het juiste onderdeel van het grafiekvlak.</span>
           </div>
-          <div class="ts-label-target-region" role="group" aria-label="Grafiekvlak">
+          <div class="ts-label-target-region ts-label-target-region-clean" role="group" aria-label="Grafiekvlak">
             <span class="ts-label-visual-axis ts-label-visual-axis-x" aria-hidden="true"></span>
             <span class="ts-label-visual-axis ts-label-visual-axis-y" aria-hidden="true"></span>
-            <span class="ts-label-visual-line" aria-hidden="true"></span>
-            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="y-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:14%;top:26%;" aria-label="Verticale as: Plaats hier het prijslabel.">
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="y-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:18%;top:48%;" aria-label="As links: De verticale as van het grafiekvlak.">
               <span class="ts-label-target-dot" aria-hidden="true"></span>
-              <span class="ts-label-target-label">Verticale as</span>
+              <span class="ts-label-target-label">As links</span>
               <span class="ts-label-target-assigned"></span>
             </button>
-            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="x-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:72%;top:84%;" aria-label="Horizontale as: Plaats hier het hoeveelheidlabel.">
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="x-as" data-label-target-role="axis" data-label-assigned-label-id="" style="left:64%;top:82%;" aria-label="As onder: De horizontale as van het grafiekvlak.">
               <span class="ts-label-target-dot" aria-hidden="true"></span>
-              <span class="ts-label-target-label">Horizontale as</span>
+              <span class="ts-label-target-label">As onder</span>
               <span class="ts-label-target-assigned"></span>
             </button>
-            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="caption" data-label-target-role="structure_part" data-label-assigned-label-id="" style="left:78%;top:16%;" aria-label="Bijschrift: Dit is geen aslabel.">
+            <button type="button" class="ts-label-target" data-task-id="label-placement-axis" data-label-target-id="caption" data-label-target-role="structure_part" data-label-assigned-label-id="" style="left:78%;top:18%;" aria-label="Los vak: Een los tekstvak buiten de assen.">
               <span class="ts-label-target-dot" aria-hidden="true"></span>
-              <span class="ts-label-target-label">Bijschrift</span>
+              <span class="ts-label-target-label">Los vak</span>
               <span class="ts-label-target-assigned"></span>
             </button>
           </div>
@@ -998,24 +998,24 @@
           <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="prijs" data-label-placed-target-id="y-as" tabindex="-1">
             <span class="ts-label-placement-label">Prijs</span>
             <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
-            <span class="ts-label-placement-target">Verticale as</span>
+            <span class="ts-label-placement-target">As links</span>
             <button type="button" class="ts-label-remove" aria-label="Verwijder label Prijs">x</button>
           </span>
           <span class="ts-label-placement-item" role="listitem" data-task-id="label-placement-axis" data-label-placed-label-id="hoeveelheid" data-label-placed-target-id="x-as" tabindex="-1">
             <span class="ts-label-placement-label">Hoeveelheid</span>
             <span class="ts-label-placement-arrow" aria-hidden="true">-&gt;</span>
-            <span class="ts-label-placement-target">Horizontale as</span>
+            <span class="ts-label-placement-target">As onder</span>
             <button type="button" class="ts-label-remove" aria-label="Verwijder label Hoeveelheid">x</button>
           </span>
         </div>
       </div>
       <div class="ts-feedback-card is-retry" data-feedback-state="retry">
         <strong>Controleer de assen</strong>
-        <p>Prijs staat op de verticale as; hoeveelheid staat op de horizontale as.</p>
+        <p>Controleer of elk label bij het juiste onderdeel van het assenstelsel staat.</p>
         <div class="ts-label-feedback" aria-label="Aanwijzingen bij je labels">
           <div class="ts-selection-feedback-group">
             <strong>Label controleren</strong>
-            <ul><li>Prijs: verwacht Verticale as, gekozen Horizontale as</li></ul>
+            <ul><li>Prijs: verwacht As links, gekozen As onder</li></ul>
           </div>
           <div class="ts-selection-feedback-group">
             <strong>Afleidend label gekozen</strong>
@@ -1023,7 +1023,7 @@
           </div>
           <div class="ts-selection-feedback-group">
             <strong>Afleidende plek gekozen</strong>
-            <ul><li>Bijschrift</li></ul>
+            <ul><li>Los vak</li></ul>
           </div>
         </div>
       </div>

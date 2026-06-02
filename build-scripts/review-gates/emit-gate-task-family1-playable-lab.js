@@ -98,12 +98,12 @@ const data = {
         leftItems: [
           { id: 'schaarste', label: 'Schaarste', description: 'Beperkte middelen tegenover behoeften.', kind: 'answer' },
           { id: 'alternatieve-kosten', label: 'Alternatieve kosten', description: 'Kosten van de keuze die je niet maakt.', kind: 'answer' },
-          { id: 'omzet', label: 'Omzet', description: 'Afleider in deze taak.', kind: 'distractor', distractorFor: 'schaarste' }
+          { id: 'onbeperkte-middelen', label: 'Onbeperkte middelen', description: 'Afleider: dit is juist het tegenovergestelde van schaarste.', kind: 'distractor', distractorFor: 'schaarste' }
         ],
         rightItems: [
           { id: 'behoeften-middelen', label: 'Behoeften groter dan middelen', description: 'Betekenis van schaarste.', kind: 'answer' },
           { id: 'beste-alternatief', label: 'Beste niet-gekozen alternatief', description: 'Betekenis van alternatieve kosten.', kind: 'answer' },
-          { id: 'prijs-keer-afzet', label: 'Prijs keer afzet', description: 'Afleider bij omzet.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
+          { id: 'geen-keuze-nodig', label: 'Er is geen keuze nodig', description: 'Afleider: dit past niet bij kiezen onder schaarste.', kind: 'distractor', distractorFor: 'behoeften-middelen' }
         ]
       },
       {
@@ -275,26 +275,27 @@ const data = {
       'source-values-percent',
       'source_value_selection',
       'Bronwaarden kiezen',
-      'Welke bronwaarden gebruik je voor de procentuele verandering?',
-      'Klik de oude en nieuwe bronwaarde aan en kies bij elke aangeklikte waarde de rol in de dropdown.',
+      'Een fietsenwinkel vergelijkt de prijs van dezelfde e-bike in twee jaren. Welke bronwaarden gebruik je voor de procentuele prijsverandering?',
+      'Lees de bronregels, kies de twee prijsregels die bij dezelfde e-bike horen en geef daarna zelf aan welke waarde de beginwaarde en welke de eindwaarde is.',
       {
         valueBankLabel: 'Bronwaarden',
         roleLabel: 'Rol',
         values: [
-          { id: 'prijs-oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'oude prijs', unit: 'euro', period: 'jaar 1' },
-          { id: 'prijs-nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'nieuwe prijs', unit: 'euro', period: 'jaar 2' },
-          { id: 'btw', label: '21%', kind: 'distractor', sourceLabel: 'btw-percentage', unit: 'procent' }
+          { id: 'model-stad-2024', label: 'EUR 800', kind: 'answer', sourceLabel: 'E-bike model Stad', unit: 'euro', period: '2024' },
+          { id: 'model-stad-2025', label: 'EUR 920', kind: 'answer', sourceLabel: 'E-bike model Stad', unit: 'euro', period: '2025' },
+          { id: 'accessoires-2025', label: 'EUR 120', kind: 'distractor', sourceLabel: 'Accessoirespakket', unit: 'euro', period: '2025' },
+          { id: 'model-sport-2025', label: 'EUR 1040', kind: 'distractor', sourceLabel: 'E-bike model Sport', unit: 'euro', period: '2025' }
         ],
         roles: [
-          { id: 'old', label: 'oude waarde' },
-          { id: 'new', label: 'nieuwe waarde' }
+          { id: 'old', label: 'beginwaarde' },
+          { id: 'new', label: 'eindwaarde' }
         ]
       },
       {
         kind: 'source_value_selection',
         selections: [
-          { valueId: 'prijs-oud', role: 'old' },
-          { valueId: 'prijs-nieuw', role: 'new' }
+          { valueId: 'model-stad-2024', role: 'old' },
+          { valueId: 'model-stad-2025', role: 'new' }
         ],
         partialFeedback: 'practice_only'
       }
@@ -303,19 +304,20 @@ const data = {
       'source-chain-percent',
       'source_chain_builder',
       'Bronketen bouwen',
-      'Bouw de keten van bron naar antwoord.',
-      'Klik de onderdelen in volgorde: bron, waarden, bewerking, antwoord, conclusie.',
+      'Bron 1 geeft de prijzen van e-bike model Stad: 2024 = EUR 800 en 2025 = EUR 920. Bouw de keten van bron naar antwoord.',
+      'Klik de onderdelen in volgorde: bronregel, waarden, bewerking, antwoord, conclusie.',
       {
         nodeBankLabel: 'Bronketen onderdelen',
         sequenceLabel: 'Opgebouwde bronketen',
         placeholder: 'Bouw de bronketen.',
         separator: ' -> ',
         nodes: [
-          { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
-          { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+          { id: 'bron', label: 'Lees bron 1: model Stad in 2024 en 2025', kind: 'answer', nodeRole: 'source' },
+          { id: 'waarden', label: 'Gebruik 2024 EUR 800 en 2025 EUR 920', kind: 'answer', nodeRole: 'value' },
           { id: 'bewerking', label: '(920 - 800) / 800 x 100%', kind: 'answer', nodeRole: 'operation' },
           { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
-          { id: 'conclusie', label: 'De prijs stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+          { id: 'conclusie', label: 'De prijs van model Stad stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+          { id: 'accessoires', label: 'Gebruik accessoirespakket 2025 EUR 120', kind: 'distractor', nodeRole: 'value', distractorFor: 'waarden' },
           { id: 'deel-door-nieuw', label: 'Deel door 920', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
         ]
       },
@@ -337,25 +339,27 @@ const data = {
         placementLabel: 'Geplaatste labels',
         visual: {
           kind: 'coordinate_plane',
-          title: 'Prijs-hoeveelheidgrafiek',
-          description: 'Prijs hoort op de verticale as; hoeveelheid op de horizontale as.'
+          title: 'Leeg assenstelsel',
+          description: 'Plaats de grootheden op het juiste onderdeel van het grafiekvlak.',
+          showLine: false,
+          showGrid: false
         },
         labels: [
-          { id: 'prijs', label: 'Prijs', description: 'De prijs hoort op de verticale as.', kind: 'answer' },
-          { id: 'hoeveelheid', label: 'Hoeveelheid', description: 'De hoeveelheid hoort op de horizontale as.', kind: 'answer' },
-          { id: 'omzet', label: 'Omzet', description: 'Afleider in deze grafiek.', kind: 'distractor', distractorFor: 'prijs' }
+          { id: 'prijs', label: 'Prijs', description: 'Grootheid uit een prijs-hoeveelheidgrafiek.', kind: 'answer' },
+          { id: 'hoeveelheid', label: 'Hoeveelheid', description: 'Grootheid uit een prijs-hoeveelheidgrafiek.', kind: 'answer' },
+          { id: 'omzet', label: 'Omzet', description: 'Berekende uitkomst, geen asgrootheid in dit assenstelsel.', kind: 'distractor', distractorFor: 'prijs' }
         ],
         targets: [
-          { id: 'y-as', label: 'Verticale as', description: 'Plaats hier het prijslabel.', kind: 'answer', targetRole: 'axis', x: 14, y: 26 },
-          { id: 'x-as', label: 'Horizontale as', description: 'Plaats hier het hoeveelheidlabel.', kind: 'answer', targetRole: 'axis', x: 72, y: 84 },
-          { id: 'caption', label: 'Bijschrift', description: 'Dit is geen aslabel.', kind: 'distractor', targetRole: 'structure_part', distractorFor: 'y-as', x: 78, y: 16 }
+          { id: 'axis-left', label: 'As links', description: 'De verticale as van het grafiekvlak.', kind: 'answer', targetRole: 'axis', x: 18, y: 48 },
+          { id: 'axis-bottom', label: 'As onder', description: 'De horizontale as van het grafiekvlak.', kind: 'answer', targetRole: 'axis', x: 64, y: 82 },
+          { id: 'loose-box', label: 'Los vak', description: 'Een los tekstvak buiten de assen.', kind: 'distractor', targetRole: 'structure_part', distractorFor: 'axis-left', x: 78, y: 18 }
         ]
       },
       {
         kind: 'label_placement',
         placements: [
-          { labelId: 'prijs', targetId: 'y-as' },
-          { labelId: 'hoeveelheid', targetId: 'x-as' }
+          { labelId: 'prijs', targetId: 'axis-left' },
+          { labelId: 'hoeveelheid', targetId: 'axis-bottom' }
         ],
         partialFeedback: 'practice_only'
       }
@@ -629,19 +633,19 @@ const html = `<!doctype html>
             ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'].forEach(function (id) { click(q('[data-formula-token-id="' + id + '"]')); });
             break;
           case 'source-values-percent':
-            click(q('[data-source-value-id="prijs-oud"]'));
-            setSelect(q('[data-source-role-value-id="prijs-oud"]'), 'old');
-            click(q('[data-source-value-id="prijs-nieuw"]'));
-            setSelect(q('[data-source-role-value-id="prijs-nieuw"]'), 'new');
+            click(q('[data-source-value-id="model-stad-2024"]'));
+            setSelect(q('[data-source-role-value-id="model-stad-2024"]'), 'old');
+            click(q('[data-source-value-id="model-stad-2025"]'));
+            setSelect(q('[data-source-role-value-id="model-stad-2025"]'), 'new');
             break;
           case 'source-chain-percent':
             ['bron', 'waarden', 'bewerking', 'antwoord', 'conclusie'].forEach(function (id) { click(q('[data-source-node-id="' + id + '"]')); });
             break;
           case 'label-placement-graph':
             click(q('[data-label-id="prijs"]'));
-            click(q('[data-label-target-id="y-as"]'));
+            click(q('[data-label-target-id="axis-left"]'));
             click(q('[data-label-id="hoeveelheid"]'));
-            click(q('[data-label-target-id="x-as"]'));
+            click(q('[data-label-target-id="axis-bottom"]'));
             break;
           default:
             throw new Error('No correct path for ' + taskId);

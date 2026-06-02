@@ -37,19 +37,19 @@ const sourceValueTask = {
   id: 'source-values-procent',
   family: 'source_value_selection',
   skillLabel: 'Bronwaarden kiezen',
-  purpose: 'Kies oude en nieuwe waarde uit de bron voordat je rekent.',
-  prompt: 'Welke bronwaarden gebruik je voor de procentuele verandering?',
+  purpose: 'Kies de twee bronregels voor hetzelfde product en wijs beginwaarde en eindwaarde toe.',
+  prompt: 'Een fietsenwinkel vergelijkt de prijs van e-bike model Stad in 2024 en 2025. Welke bronwaarden gebruik je voor de procentuele prijsverandering?',
   interaction: {
     valueBankLabel: 'Bronwaarden',
     roleLabel: 'Rol',
     values: [
-      { id: 'oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'oude prijs', unit: 'euro', period: 'jaar 1' },
-      { id: 'nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'nieuwe prijs', unit: 'euro', period: 'jaar 2' },
-      { id: 'btw', label: '21%', kind: 'distractor', distractorFor: 'nieuw' }
+      { id: 'oud', label: 'EUR 800', kind: 'answer', sourceLabel: 'E-bike model Stad', unit: 'euro', period: '2024' },
+      { id: 'nieuw', label: 'EUR 920', kind: 'answer', sourceLabel: 'E-bike model Stad', unit: 'euro', period: '2025' },
+      { id: 'accessoires', label: 'EUR 120', kind: 'distractor', sourceLabel: 'Accessoirespakket', unit: 'euro', period: '2025', distractorFor: 'nieuw' }
     ],
     roles: [
-      { id: 'old', label: 'oude waarde' },
-      { id: 'new', label: 'nieuwe waarde' }
+      { id: 'old', label: 'beginwaarde' },
+      { id: 'new', label: 'eindwaarde' }
     ]
   },
   expected: {
@@ -77,18 +77,19 @@ const sourceChainTask = {
   family: 'source_chain_builder',
   skillLabel: 'Bronketen bouwen',
   purpose: 'Bouw de route van bron naar berekening naar conclusie.',
-  prompt: 'Bouw de bronketen voor deze procentuele verandering.',
+  prompt: 'Bron 1 geeft de prijzen van e-bike model Stad: 2024 = EUR 800 en 2025 = EUR 920. Bouw de bronketen voor deze procentuele verandering.',
   interaction: {
     nodeBankLabel: 'Bronketen onderdelen',
     sequenceLabel: 'Opgebouwde bronketen',
     placeholder: 'Bouw de keten.',
     separator: ' -> ',
     nodes: [
-      { id: 'bron', label: 'Lees de prijstabel', kind: 'answer', nodeRole: 'source' },
-      { id: 'waarden', label: 'Gebruik 800 en 920', kind: 'answer', nodeRole: 'value' },
+      { id: 'bron', label: 'Lees bron 1: model Stad in 2024 en 2025', kind: 'answer', nodeRole: 'source' },
+      { id: 'waarden', label: 'Gebruik 2024 EUR 800 en 2025 EUR 920', kind: 'answer', nodeRole: 'value' },
       { id: 'bewerking', label: '(920 - 800) / 800 x 100%', kind: 'answer', nodeRole: 'operation' },
       { id: 'antwoord', label: '15%', kind: 'answer', nodeRole: 'answer' },
-      { id: 'conclusie', label: 'De prijs stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+      { id: 'conclusie', label: 'De prijs van model Stad stijgt met 15%', kind: 'answer', nodeRole: 'conclusion' },
+      { id: 'accessoires', label: 'Gebruik accessoirespakket 2025 EUR 120', kind: 'distractor', nodeRole: 'value', distractorFor: 'waarden' },
       { id: 'deel-door-nieuw', label: 'Deel door 920', kind: 'distractor', nodeRole: 'operation', distractorFor: 'bewerking' }
     ]
   },
@@ -137,7 +138,7 @@ assert(TaskShellEngine.evaluateTask(sourceValueTask, {
   selections: [
     { valueId: 'oud', role: 'old' },
     { valueId: 'nieuw', role: 'new' },
-    { valueId: 'btw', role: 'new' }
+    { valueId: 'accessoires', role: 'new' }
   ]
 }).matched === false, 'source_value_selection must fail selected distractors');
 assert(TaskShellEngine.evaluateTask(sourceValueTask, {
@@ -191,7 +192,7 @@ assert(TaskShellEngine.evaluateTask(sourceValueTask, {
 const sourceValueRetry = TaskShellEngine.evaluateTask(sourceValueTask, {
   selections: [
     { valueId: 'oud', role: 'new' },
-    { valueId: 'btw', role: 'new' }
+    { valueId: 'accessoires', role: 'new' }
   ]
 });
 assert(sourceValueRetry.sourceValueFeedback.mode === 'practice_only', 'source value feedback must be practice_only');
@@ -212,7 +213,7 @@ omittedExpectedValue.interaction.values.push({ id: 'actie', label: 'EUR 1000', k
 assertThrows(() => TaskShellEngine.validateTask(omittedExpectedValue), 'expected source selections must cover all answer values');
 
 const expectedDistractorValue = JSON.parse(JSON.stringify(sourceValueTask));
-expectedDistractorValue.expected.selections[1].valueId = 'btw';
+expectedDistractorValue.expected.selections[1].valueId = 'accessoires';
 assertThrows(() => TaskShellEngine.validateTask(expectedDistractorValue), 'expected source selections must reject distractors');
 
 const duplicateExpectedValue = JSON.parse(JSON.stringify(sourceValueTask));
@@ -322,7 +323,7 @@ const sourceChainRendered = TaskShellUI.renderTask(sourceChainTask, 1);
 for (const fragment of [
   'data-task-family="source_value_selection"',
   'class="ts-source-values"',
-  'data-source-value-id="btw"',
+  'data-source-value-id="accessoires"',
   'data-source-role-value-id="oud"',
   'role="group" aria-label="Bronwaarden"',
   'aria-label="Rol voor EUR 800"',
@@ -330,6 +331,8 @@ for (const fragment of [
 ]) {
   assert(sourceValueRendered.includes(fragment), `rendered source-value fixture missing ${fragment}`);
 }
+assert(!/oude prijs|nieuwe prijs/i.test(sourceValueRendered), 'source-value rendered fixture must not label rows as old/new price');
+assert(sourceValueRendered.includes('E-bike model Stad') && sourceValueRendered.includes('2024') && sourceValueRendered.includes('2025'), 'source-value rendered fixture must show product/year context');
 for (const fragment of [
   'data-task-family="source_chain_builder"',
   'class="ts-source-chain"',
@@ -342,13 +345,14 @@ for (const fragment of [
 ]) {
   assert(sourceChainRendered.includes(fragment), `rendered source-chain fixture missing ${fragment}`);
 }
+assert(sourceChainRendered.includes('Bron 1') && sourceChainRendered.includes('2024 EUR 800 en 2025 EUR 920'), 'source-chain rendered fixture must show visible source data');
 
 const sourceValueFeedbackHtml = TaskShellUI.renderFeedback(sourceValueRetry);
 for (const fragment of [
   'class="ts-source-value-feedback"',
   'Rol controleren',
   'EUR 800',
-  '21%'
+  'EUR 120'
 ]) {
   assert(sourceValueFeedbackHtml.includes(fragment), `source-value feedback HTML missing ${fragment}`);
 }
@@ -411,7 +415,7 @@ const fixtureHtml = read('reports/sprints/TASK-FAMILY-SOURCE-1-rendered-fixture.
 for (const fragment of [
   'data-task-family="source_value_selection"',
   'data-task-family="source_chain_builder"',
-  'data-source-value-id="btw"',
+  'data-source-value-id="accessoires"',
   'data-source-role-value-id="oud"',
   'data-source-selected-node-id="bron"',
   'data-source-chain-sequence',

@@ -1317,6 +1317,10 @@
     color-mix(in srgb, var(--ts-panel) 86%, var(--ts-bg));
 }
 
+.ts-label-target-region-clean {
+  background: color-mix(in srgb, var(--ts-panel) 86%, var(--ts-bg));
+}
+
 .ts-label-visual-axis {
   position: absolute;
   background: color-mix(in srgb, var(--ts-text) 55%, transparent);

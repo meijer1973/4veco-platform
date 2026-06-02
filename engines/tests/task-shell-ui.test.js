@@ -474,6 +474,18 @@ describe('TaskShellUI', () => {
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
+    test('allows label placement visuals to suppress the default graph line', () => {
+        const fixture = data();
+        const labelTask = fixture.tasks.find((item) => item.family === 'label_placement');
+        labelTask.interaction.visual.showLine = false;
+        labelTask.interaction.visual.showGrid = false;
+        const html = TaskShellUI.renderStaticHtml(fixture);
+
+        expect(html).toContain('class="ts-label-visual-axis ts-label-visual-axis-x"');
+        expect(html).toContain('ts-label-target-region-clean');
+        expect(html).not.toContain('ts-label-visual-line');
+    });
+
     test('renders hints collapsed and feedback actions with stable affordance styling', () => {
         const html = TaskShellUI.renderStaticHtml(data());
         expect(html).toContain('<details class="ts-hints">');

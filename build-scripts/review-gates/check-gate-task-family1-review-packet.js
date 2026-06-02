@@ -14,6 +14,7 @@ const MANIFEST_MD = path.join(GATE_DIR, 'screenshot-manifest.md');
 const PLAYABLE_LAB = path.join(GATE_DIR, 'gate-playable-task-family-lab.html');
 const PLAYABLE_DATA = path.join(GATE_DIR, 'gate-playable-task-family-data.json');
 const PLAYABLE_PROOF = path.join(GATE_DIR, 'playable-proof.json');
+const GALLERY_CAPTURE_SCRIPT = path.join('build-scripts', 'review-gates', 'capture-gate-task-family1-gallery-screenshots.js');
 
 const REQUIRED_SPRINT_FILES = [
   path.join('reports', 'sprints', `${SPRINT_ID}-plan.md`),
@@ -57,6 +58,10 @@ const REQUIRED_USABILITY_ARTIFACTS = [
   path.join('reports', 'sprints', `${SPRINT_ID}-usability-agent-corrections.md`),
   path.join('reports', 'sprints', `${SPRINT_ID}-usability-agent-round2.md`),
   path.join('reports', 'sprints', `${SPRINT_ID}-usability-agent-analysis.md`)
+];
+
+const REQUIRED_HUMAN_PRECHECK_ARTIFACTS = [
+  path.join('reports', 'sprints', `${SPRINT_ID}-human-precheck-corrections.md`)
 ];
 
 const REQUIRED_FAMILIES = [
@@ -181,7 +186,7 @@ function validatePacket() {
     '## Evidence Base',
     '## Planned Review Focus',
     '## Minimum Playable Evidence Inspection',
-    '## Calibration Questions',
+    '## Calibration Checks',
     '## Full Planned Review Comment Prompts',
     '## Direct Review Comment Protocol',
     '## Current Stop Conditions',
@@ -230,6 +235,7 @@ function validatePacket() {
   assert(packet.evidence_base.includes(toPosix(PLAYABLE_LAB)), 'packet JSON missing playable lab');
   assert(packet.evidence_base.includes(toPosix(PLAYABLE_DATA)), 'packet JSON missing playable data');
   assert(packet.evidence_base.includes(toPosix(PLAYABLE_PROOF)), 'packet JSON missing playable proof');
+  assert(packet.evidence_base.includes(toPosix(GALLERY_CAPTURE_SCRIPT)), 'packet JSON missing gallery screenshot capture script');
   assert(playableLab.includes('Ga naar volgende taak'), 'playable lab must expose next-task action');
   assert(playableLab.includes('Review-only routeplaceholder'), 'playable lab must keep review-only route placeholder explicit');
   assert(playableLab.includes('oorzaak, context, gevolg'), 'playable lab must include repaired sentence-builder instruction');
@@ -239,6 +245,50 @@ function validatePacket() {
   assert(
     sentence.expected.acceptedSequences.some((sequence) => sequence.join('|') === 'prijs-stijgt|hogere-prijs|vraag-daalt'),
     'sentence builder must accept natural cause-context-effect order'
+  );
+  const matching = playableData.tasks.find((task) => task.id === 'matching-concepts');
+  assert(matching, 'playable data missing matching-concepts task');
+  assert(
+    !matching.interaction.leftItems.some((item) => item.id === 'omzet') &&
+      !matching.interaction.rightItems.some((item) => item.id === 'prijs-keer-afzet'),
+    'matching-concepts distractors must not form a correct economic pair outside the expected set'
+  );
+  const sourceValues = playableData.tasks.find((task) => task.id === 'source-values-percent');
+  assert(sourceValues, 'playable data missing source-values-percent task');
+  const sourceValueText = JSON.stringify(sourceValues.interaction);
+  assert(!/oude prijs|nieuwe prijs/i.test(sourceValueText), 'source-values-percent must not label source rows as old/new price');
+  assert(/fietsenwinkel|e-bike/i.test(sourceValues.prompt), 'source-values-percent must include real context before source selection');
+  assert(
+    sourceValues.expected.selections.some((item) => item.valueId === 'model-stad-2024' && item.role === 'old') &&
+      sourceValues.expected.selections.some((item) => item.valueId === 'model-stad-2025' && item.role === 'new'),
+    'source-values-percent must require the student to map same-product source rows to begin/eind roles'
+  );
+  const sourceChain = playableData.tasks.find((task) => task.id === 'source-chain-percent');
+  assert(sourceChain, 'playable data missing source-chain-percent task');
+  assert(/Bron 1/i.test(sourceChain.prompt) && /2024/.test(sourceChain.prompt) && /2025/.test(sourceChain.prompt), 'source-chain-percent must introduce the source data in the prompt');
+  assert(
+    sourceChain.interaction.nodes.some((node) => /2024 EUR 800 en 2025 EUR 920/.test(node.label)),
+    'source-chain-percent must show the values instead of requiring number guessing'
+  );
+  const labelPlacement = playableData.tasks.find((task) => task.id === 'label-placement-graph');
+  assert(labelPlacement, 'playable data missing label-placement-graph task');
+  const labelTargetText = JSON.stringify(labelPlacement.interaction.targets);
+  assert(
+    !/prijslabel|hoeveelheidlabel/i.test(labelTargetText),
+    'label-placement target labels/descriptions must not give away the answer'
+  );
+  assert(
+    labelPlacement.expected.placements.some((item) => item.labelId === 'prijs' && item.targetId === 'axis-left') &&
+      labelPlacement.expected.placements.some((item) => item.labelId === 'hoeveelheid' && item.targetId === 'axis-bottom'),
+    'label-placement must use neutral graph target ids after repair'
+  );
+  assert(
+    labelPlacement.interaction.visual && labelPlacement.interaction.visual.showLine === false,
+    'label-placement repaired visual must suppress the default graph line'
+  );
+  assert(
+    labelPlacement.interaction.visual && labelPlacement.interaction.visual.showGrid === false,
+    'label-placement repaired visual must suppress the center guide grid'
   );
   assert(playableProof.all_playable_tasks_completed === true, 'playable proof must complete all tasks');
   assert(playableProof.required_task_count === 12, 'playable proof required task count must be 12');
@@ -262,10 +312,22 @@ function validatePacket() {
   assert(/Ready for sending to direct-comment human review/i.test(round2), 'usability round 2 must approve direct-comment review');
   assert(packet.usability_agent_review && packet.usability_agent_review.round2_status === 'ready_for_direct_comment_review', 'packet JSON usability review must be ready');
 
+  REQUIRED_HUMAN_PRECHECK_ARTIFACTS.forEach((file) => {
+    const artifact = read(file);
+    assert(packet.evidence_base.includes(toPosix(file)), `packet JSON missing human-precheck artifact ${file}`);
+    assert(/Task 3/i.test(artifact) && /Task 10/i.test(artifact) && /Task 11/i.test(artifact) && /Task 12/i.test(artifact), `${file} must record the human-precheck task corrections`);
+    assert(/proof presentation policy/i.test(artifact), `${file} must record the proof presentation policy carry-forward`);
+  });
+
   REQUIRED_GALLERIES.forEach((file) => {
     const html = read(file);
     assert(html.includes('target-proof boundary held'), `${file} missing review boundary`);
     assert(html.includes('Open validated fixture'), `${file} missing fixture link`);
+    assert(!/oude prijs|nieuwe prijs|Lees de prijstabel|prijslabel|hoeveelheidlabel|Prijs keer afzet|Opbrengst min kosten/i.test(html), `${file} still contains stale answer-giving or invalid-distractor text`);
+    if (/label_placement/.test(html)) {
+      assert(!html.includes('ts-label-visual-line'), `${file} still renders the old default graph line in label-placement proof`);
+      assert(html.includes('ts-label-target-region-clean'), `${file} label-placement proof must suppress the center guide grid`);
+    }
     assert(packet.evidence_base.includes(toPosix(file)), `packet JSON missing gallery ${file}`);
   });
 
@@ -330,7 +392,7 @@ function validatePacket() {
 }
 
 try {
-  [...REQUIRED_SPRINT_FILES, ...REQUIRED_USABILITY_ARTIFACTS, PACKET_MD, PACKET_JSON, LIVE_MD, LIVE_JSON, MANIFEST_MD, PLAYABLE_LAB, PLAYABLE_DATA, PLAYABLE_PROOF].forEach(exists);
+  [...REQUIRED_SPRINT_FILES, ...REQUIRED_USABILITY_ARTIFACTS, ...REQUIRED_HUMAN_PRECHECK_ARTIFACTS, PACKET_MD, PACKET_JSON, LIVE_MD, LIVE_JSON, MANIFEST_MD, PLAYABLE_LAB, PLAYABLE_DATA, PLAYABLE_PROOF, GALLERY_CAPTURE_SCRIPT].forEach(exists);
   validatePacket();
 } catch (error) {
   fail(error.message);

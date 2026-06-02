@@ -143,9 +143,9 @@
             "kind": "answer"
           },
           {
-            "id": "omzet",
-            "label": "Omzet",
-            "description": "Afleider in deze taak.",
+            "id": "onbeperkte-middelen",
+            "label": "Onbeperkte middelen",
+            "description": "Afleider: dit is juist het tegenovergestelde van schaarste.",
             "kind": "distractor",
             "distractorFor": "schaarste"
           }
@@ -164,9 +164,9 @@
             "kind": "answer"
           },
           {
-            "id": "prijs-keer-afzet",
-            "label": "Prijs keer afzet",
-            "description": "Afleider bij omzet.",
+            "id": "geen-keuze-nodig",
+            "label": "Er is geen keuze nodig",
+            "description": "Afleider: dit past niet bij kiezen onder schaarste.",
             "kind": "distractor",
             "distractorFor": "behoeften-middelen"
           }
@@ -572,44 +572,53 @@
       "id": "source-values-percent",
       "family": "source_value_selection",
       "skillLabel": "Bronwaarden kiezen",
-      "prompt": "Welke bronwaarden gebruik je voor de procentuele verandering?",
-      "purpose": "Klik de oude en nieuwe bronwaarde aan en kies bij elke aangeklikte waarde de rol in de dropdown.",
+      "prompt": "Een fietsenwinkel vergelijkt de prijs van dezelfde e-bike in twee jaren. Welke bronwaarden gebruik je voor de procentuele prijsverandering?",
+      "purpose": "Lees de bronregels, kies de twee prijsregels die bij dezelfde e-bike horen en geef daarna zelf aan welke waarde de beginwaarde en welke de eindwaarde is.",
       "interaction": {
         "valueBankLabel": "Bronwaarden",
         "roleLabel": "Rol",
         "values": [
           {
-            "id": "prijs-oud",
+            "id": "model-stad-2024",
             "label": "EUR 800",
             "kind": "answer",
-            "sourceLabel": "oude prijs",
+            "sourceLabel": "E-bike model Stad",
             "unit": "euro",
-            "period": "jaar 1"
+            "period": "2024"
           },
           {
-            "id": "prijs-nieuw",
+            "id": "model-stad-2025",
             "label": "EUR 920",
             "kind": "answer",
-            "sourceLabel": "nieuwe prijs",
+            "sourceLabel": "E-bike model Stad",
             "unit": "euro",
-            "period": "jaar 2"
+            "period": "2025"
           },
           {
-            "id": "btw",
-            "label": "21%",
+            "id": "accessoires-2025",
+            "label": "EUR 120",
             "kind": "distractor",
-            "sourceLabel": "btw-percentage",
-            "unit": "procent"
+            "sourceLabel": "Accessoirespakket",
+            "unit": "euro",
+            "period": "2025"
+          },
+          {
+            "id": "model-sport-2025",
+            "label": "EUR 1040",
+            "kind": "distractor",
+            "sourceLabel": "E-bike model Sport",
+            "unit": "euro",
+            "period": "2025"
           }
         ],
         "roles": [
           {
             "id": "old",
-            "label": "oude waarde"
+            "label": "beginwaarde"
           },
           {
             "id": "new",
-            "label": "nieuwe waarde"
+            "label": "eindwaarde"
           }
         ]
       },
@@ -617,11 +626,11 @@
         "kind": "source_value_selection",
         "selections": [
           {
-            "valueId": "prijs-oud",
+            "valueId": "model-stad-2024",
             "role": "old"
           },
           {
-            "valueId": "prijs-nieuw",
+            "valueId": "model-stad-2025",
             "role": "new"
           }
         ],
@@ -642,8 +651,8 @@
       "id": "source-chain-percent",
       "family": "source_chain_builder",
       "skillLabel": "Bronketen bouwen",
-      "prompt": "Bouw de keten van bron naar antwoord.",
-      "purpose": "Klik de onderdelen in volgorde: bron, waarden, bewerking, antwoord, conclusie.",
+      "prompt": "Bron 1 geeft de prijzen van e-bike model Stad: 2024 = EUR 800 en 2025 = EUR 920. Bouw de keten van bron naar antwoord.",
+      "purpose": "Klik de onderdelen in volgorde: bronregel, waarden, bewerking, antwoord, conclusie.",
       "interaction": {
         "nodeBankLabel": "Bronketen onderdelen",
         "sequenceLabel": "Opgebouwde bronketen",
@@ -652,13 +661,13 @@
         "nodes": [
           {
             "id": "bron",
-            "label": "Lees de prijstabel",
+            "label": "Lees bron 1: model Stad in 2024 en 2025",
             "kind": "answer",
             "nodeRole": "source"
           },
           {
             "id": "waarden",
-            "label": "Gebruik 800 en 920",
+            "label": "Gebruik 2024 EUR 800 en 2025 EUR 920",
             "kind": "answer",
             "nodeRole": "value"
           },
@@ -676,9 +685,16 @@
           },
           {
             "id": "conclusie",
-            "label": "De prijs stijgt met 15%",
+            "label": "De prijs van model Stad stijgt met 15%",
             "kind": "answer",
             "nodeRole": "conclusion"
+          },
+          {
+            "id": "accessoires",
+            "label": "Gebruik accessoirespakket 2025 EUR 120",
+            "kind": "distractor",
+            "nodeRole": "value",
+            "distractorFor": "waarden"
           },
           {
             "id": "deel-door-nieuw",
@@ -723,58 +739,60 @@
         "placementLabel": "Geplaatste labels",
         "visual": {
           "kind": "coordinate_plane",
-          "title": "Prijs-hoeveelheidgrafiek",
-          "description": "Prijs hoort op de verticale as; hoeveelheid op de horizontale as."
+          "title": "Leeg assenstelsel",
+          "description": "Plaats de grootheden op het juiste onderdeel van het grafiekvlak.",
+          "showLine": false,
+          "showGrid": false
         },
         "labels": [
           {
             "id": "prijs",
             "label": "Prijs",
-            "description": "De prijs hoort op de verticale as.",
+            "description": "Grootheid uit een prijs-hoeveelheidgrafiek.",
             "kind": "answer"
           },
           {
             "id": "hoeveelheid",
             "label": "Hoeveelheid",
-            "description": "De hoeveelheid hoort op de horizontale as.",
+            "description": "Grootheid uit een prijs-hoeveelheidgrafiek.",
             "kind": "answer"
           },
           {
             "id": "omzet",
             "label": "Omzet",
-            "description": "Afleider in deze grafiek.",
+            "description": "Berekende uitkomst, geen asgrootheid in dit assenstelsel.",
             "kind": "distractor",
             "distractorFor": "prijs"
           }
         ],
         "targets": [
           {
-            "id": "y-as",
-            "label": "Verticale as",
-            "description": "Plaats hier het prijslabel.",
+            "id": "axis-left",
+            "label": "As links",
+            "description": "De verticale as van het grafiekvlak.",
             "kind": "answer",
             "targetRole": "axis",
-            "x": 14,
-            "y": 26
+            "x": 18,
+            "y": 48
           },
           {
-            "id": "x-as",
-            "label": "Horizontale as",
-            "description": "Plaats hier het hoeveelheidlabel.",
+            "id": "axis-bottom",
+            "label": "As onder",
+            "description": "De horizontale as van het grafiekvlak.",
             "kind": "answer",
             "targetRole": "axis",
-            "x": 72,
-            "y": 84
+            "x": 64,
+            "y": 82
           },
           {
-            "id": "caption",
-            "label": "Bijschrift",
-            "description": "Dit is geen aslabel.",
+            "id": "loose-box",
+            "label": "Los vak",
+            "description": "Een los tekstvak buiten de assen.",
             "kind": "distractor",
             "targetRole": "structure_part",
-            "distractorFor": "y-as",
+            "distractorFor": "axis-left",
             "x": 78,
-            "y": 16
+            "y": 18
           }
         ]
       },
@@ -783,11 +801,11 @@
         "placements": [
           {
             "labelId": "prijs",
-            "targetId": "y-as"
+            "targetId": "axis-left"
           },
           {
             "labelId": "hoeveelheid",
-            "targetId": "x-as"
+            "targetId": "axis-bottom"
           }
         ],
         "partialFeedback": "practice_only"

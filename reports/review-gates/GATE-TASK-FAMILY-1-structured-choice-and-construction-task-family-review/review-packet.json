@@ -3,7 +3,7 @@
   "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
   "sprint_id": "GATE-TASK-FAMILY-1",
   "generated": "2026-06-02",
-  "status": "direct_comment_review_packet_ready_after_playable_repair_usability_recheck_no_product_authority",
+  "status": "direct_comment_review_packet_ready_after_playable_repair_human_precheck_corrections_usability_recheck_no_product_authority",
   "human_interview_started": false,
   "remote_publication_required_before_review": true,
   "reviewed_remote_commit": null,
@@ -75,6 +75,7 @@
     "reports/json/task-family-two-tier1-proof.json",
     "reports/json/task-family-assertion1-proof.json",
     "build-scripts/review-gates/emit-gate-task-family1-gallery.js",
+    "build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js",
     "build-scripts/review-gates/check-gate-task-family1-review-packet.js",
     "../4veco-lessen/specifications/product-end-state.md",
     "../4veco-lessen/specifications/companion-core-specifications.md",
@@ -92,6 +93,7 @@
     "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
     "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md",
     "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md",
+    "reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md",
     "build-scripts/review-gates/emit-gate-task-family1-playable-lab.js",
     "build-scripts/review-gates/capture-gate-task-family1-playable-proof.js"
   ],
@@ -110,7 +112,8 @@
     "dark-mode screenshot",
     "feedback-state screenshots",
     "focus-plan evidence for step_ordering, matching_pairs, two_tier_choice, source_chain_builder, and label_placement",
-    "usability-agent round 1, correction, round 2, and analysis artifacts"
+    "usability-agent round 1, correction, round 2, and analysis artifacts",
+    "human-precheck corrections for Task 3, Task 10, Task 11, and Task 12"
   ],
   "calibration_questions": [
     "Confirm this gate reviews task-family readiness only and does not authorize generated output, source-data mutation, implementation, route adoption, target-equivalent claims, diagnostics, mastery, sequencing, Scale Gate 1, or product use.",

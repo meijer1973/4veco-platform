@@ -49,26 +49,28 @@ const labelPlacementTask = {
     placementLabel: 'Geplaatste labels',
     visual: {
       kind: 'coordinate_plane',
-      title: 'Prijs-hoeveelheidgrafiek',
-      description: 'Een assenstelsel met prijs op de verticale as en hoeveelheid op de horizontale as.'
+      title: 'Leeg assenstelsel',
+      description: 'Plaats de grootheden op het juiste onderdeel van het grafiekvlak.',
+      showLine: false,
+      showGrid: false
     },
     labels: [
       {
         id: 'prijs',
         label: 'Prijs',
-        description: 'De prijs hoort op de verticale as.',
+        description: 'Grootheid uit een prijs-hoeveelheidgrafiek.',
         kind: 'answer'
       },
       {
         id: 'hoeveelheid',
         label: 'Hoeveelheid',
-        description: 'De hoeveelheid hoort op de horizontale as.',
+        description: 'Grootheid uit een prijs-hoeveelheidgrafiek.',
         kind: 'answer'
       },
       {
         id: 'omzet',
         label: 'Omzet',
-        description: 'Omzet is hier een afleider.',
+        description: 'Berekende uitkomst, geen asgrootheid in dit assenstelsel.',
         kind: 'distractor',
         distractorFor: 'prijs'
       }
@@ -76,31 +78,31 @@ const labelPlacementTask = {
     targets: [
       {
         id: 'y-as',
-        label: 'Verticale as',
-        description: 'Plaats hier het prijslabel.',
+        label: 'As links',
+        description: 'De verticale as van het grafiekvlak.',
         kind: 'answer',
         targetRole: 'axis',
-        x: 14,
-        y: 26
+        x: 18,
+        y: 48
       },
       {
         id: 'x-as',
-        label: 'Horizontale as',
-        description: 'Plaats hier het hoeveelheidlabel.',
+        label: 'As onder',
+        description: 'De horizontale as van het grafiekvlak.',
         kind: 'answer',
         targetRole: 'axis',
-        x: 72,
-        y: 84
+        x: 64,
+        y: 82
       },
       {
         id: 'caption',
-        label: 'Bijschrift',
-        description: 'Dit is geen aslabel.',
+        label: 'Los vak',
+        description: 'Een los tekstvak buiten de assen.',
         kind: 'distractor',
         targetRole: 'structure_part',
         distractorFor: 'y-as',
         x: 78,
-        y: 16
+        y: 18
       }
     ]
   },
@@ -319,27 +321,30 @@ const rendered = TaskShellUI.renderTask(labelPlacementTask, 0);
 for (const fragment of [
   'data-task-family="label_placement"',
   'class="ts-label-placement"',
-  'class="ts-label-target-region"',
+  'class="ts-label-target-region ts-label-target-region-clean"',
   'class="ts-label-visual-axis ts-label-visual-axis-x"',
   'data-label-id="prijs"',
   'data-label-target-id="y-as"',
   'data-label-target-role="axis"',
   'data-label-placement-summary',
-  'aria-label="Prijs: De prijs hoort op de verticale as."',
-  'aria-label="Verticale as: Plaats hier het prijslabel."'
+  'aria-label="Prijs: Grootheid uit een prijs-hoeveelheidgrafiek."',
+  'aria-label="As links: De verticale as van het grafiekvlak."'
 ]) {
   assert(rendered.includes(fragment), `rendered label-placement fixture missing ${fragment}`);
 }
+assert(!/prijslabel|hoeveelheidlabel/i.test(rendered), 'rendered label-placement fixture must not give away answers in target text');
+assert(!rendered.includes('ts-label-visual-line'), 'empty-axis label-placement fixture must not render a default graph line');
+assert(rendered.includes('ts-label-target-region-clean'), 'empty-axis label-placement fixture must suppress the center guide grid');
 
 const feedbackHtml = TaskShellUI.renderFeedback(retry);
 for (const fragment of [
   'class="ts-label-feedback"',
   'Label controleren',
-  'verwacht Verticale as',
+  'verwacht As links',
   'Afleidend label gekozen',
   'Afleidende plek gekozen',
   'Omzet',
-  'Bijschrift'
+  'Los vak'
 ]) {
   assert(feedbackHtml.includes(fragment), `label-placement feedback HTML missing ${fragment}`);
 }
@@ -390,7 +395,7 @@ const fixtureHtml = read('reports/sprints/TASK-FAMILY-LABEL-1-rendered-fixture.h
 for (const fragment of [
   'data-task-family="label_placement"',
   'class="ts-label-placement"',
-  'class="ts-label-target-region"',
+  'class="ts-label-target-region ts-label-target-region-clean"',
   'data-label-id="prijs"',
   'data-label-target-id="y-as"',
   'data-label-placement-summary',
@@ -404,6 +409,8 @@ for (const fragment of [
 ]) {
   assert(fixtureHtml.includes(fragment), `rendered fixture artifact missing ${fragment}`);
 }
+assert(!fixtureHtml.includes('ts-label-visual-line'), 'rendered fixture artifact must not include a default graph line');
+assert(fixtureHtml.includes('ts-label-target-region-clean'), 'rendered fixture artifact must suppress the center guide grid');
 
 const manifest = read('reports/sprints/TASK-FAMILY-LABEL-1-screenshot-manifest.md');
 assert(/standard/i.test(manifest) && /narrow/i.test(manifest) && /dark/i.test(manifest), 'screenshot manifest must describe standard/narrow/dark fixture proof');

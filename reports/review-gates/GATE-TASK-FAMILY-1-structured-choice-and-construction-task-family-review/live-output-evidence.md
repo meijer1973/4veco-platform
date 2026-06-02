@@ -2,8 +2,8 @@
 
 Generated: 2026-06-02
 
-Status: playable proof captured after usability-agent repair/recheck; no
-human review comments started.
+Status: playable proof captured after usability-agent repair/recheck and
+human-precheck task corrections; no human review comments started.
 
 ## Scope
 
@@ -97,6 +97,8 @@ The gate packet cites:
 - all twelve task-family proof JSON files under `reports/json/`
 - all rendered family fixtures under `reports/sprints/`
 - focused Jest tests for shared task-shell engine/UI and wrappers
+- the gallery screenshot capture script
+  `build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js`
 - the custom checker
   `build-scripts/review-gates/check-gate-task-family1-review-packet.js`
 
@@ -116,6 +118,15 @@ two-part action, and next action after correct feedback was weak. The repair
 updated the playable lab and proof. Round 2 found the earlier blockers
 resolved and recommended direct-comment human review, carrying only the
 compact repair controls as an adoption/accessibility polish flag.
+
+## Human Precheck Corrections
+
+Human precheck corrections are recorded in:
+`reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md`
+
+Those corrections repaired the Task 3 matching distractors, Task 10 source
+value context, Task 11 visible source context, and Task 12 graph-label leakage
+before direct-comment human review.
 
 ## Boundary Evidence
 

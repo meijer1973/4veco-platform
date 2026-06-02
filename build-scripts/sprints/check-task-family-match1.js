@@ -62,9 +62,9 @@ const matchingPairsTask = {
         kind: 'answer'
       },
       {
-        id: 'winst',
-        label: 'Winst',
-        description: 'Afleider buiten deze begrippenkoppeling.',
+        id: 'onbeperkte-middelen',
+        label: 'Onbeperkte middelen',
+        description: 'Afleider: dit is het tegenovergestelde van schaarste.',
         kind: 'distractor',
         distractorFor: 'schaarste'
       }
@@ -83,9 +83,9 @@ const matchingPairsTask = {
         kind: 'answer'
       },
       {
-        id: 'opbrengst-kosten',
-        label: 'Opbrengst min kosten',
-        description: 'Afleider die bij winst hoort.',
+        id: 'geen-keuze-nodig',
+        label: 'Er is geen keuze nodig',
+        description: 'Afleider: dit past niet bij kiezen onder schaarste.',
         kind: 'distractor',
         distractorFor: 'behoeften-middelen'
       }
@@ -115,6 +115,11 @@ assert(TaskShellEngine.FAMILIES.matching_pairs, 'TaskShellEngine must declare ma
 assert(TaskShellEngine.FAMILIES.matching_pairs.deterministic === true, 'matching_pairs must be deterministic');
 assert(TaskShellEngine.validateTask(matchingPairsTask) === true, 'matching-pairs fixture must validate');
 assert(TaskShellEngine.findStudentTextViolations(matchingPairsTask).length === 0, 'matching-pairs fixture must not expose internal codes or restricted claims');
+assert(
+  !matchingPairsTask.interaction.leftItems.some((item) => item.id === 'winst') &&
+    !matchingPairsTask.interaction.rightItems.some((item) => item.id === 'opbrengst-kosten'),
+  'matching-pairs fixture distractors must not form a correct hidden pair'
+);
 
 assert(TaskShellEngine.evaluateTask(matchingPairsTask, {
   pairs: [
@@ -137,7 +142,7 @@ assert(TaskShellEngine.evaluateTask(matchingPairsTask, {
   pairs: [
     ['schaarste', 'behoeften-middelen'],
     ['alternatieve-kosten', 'beste-alternatief'],
-    ['winst', 'opbrengst-kosten']
+    ['onbeperkte-middelen', 'geen-keuze-nodig']
   ]
 }).matched === false, 'matching_pairs must fail selected distractors');
 assert(TaskShellEngine.evaluateTask(matchingPairsTask, {
@@ -209,7 +214,7 @@ assert(TaskShellEngine.evaluateTask(matchingPairsTask, {
 const retry = TaskShellEngine.evaluateTask(matchingPairsTask, {
   pairs: [
     ['schaarste', 'beste-alternatief'],
-    ['winst', 'opbrengst-kosten']
+    ['onbeperkte-middelen', 'geen-keuze-nodig']
   ]
 });
 assert(retry.matchingPairsFeedback.mode === 'practice_only', 'matching-pairs feedback must be practice_only');
@@ -261,11 +266,11 @@ unknownExpectedRight.expected.pairs[1][1] = 'onbekend';
 assertThrows(() => TaskShellEngine.validateTask(unknownExpectedRight), 'expected pairs must reject unknown right ids');
 
 const expectedDistractorLeft = clone(matchingPairsTask);
-expectedDistractorLeft.expected.pairs[1][0] = 'winst';
+expectedDistractorLeft.expected.pairs[1][0] = 'onbeperkte-middelen';
 assertThrows(() => TaskShellEngine.validateTask(expectedDistractorLeft), 'expected pairs must reject left distractors');
 
 const expectedDistractorRight = clone(matchingPairsTask);
-expectedDistractorRight.expected.pairs[0][1] = 'opbrengst-kosten';
+expectedDistractorRight.expected.pairs[0][1] = 'geen-keuze-nodig';
 assertThrows(() => TaskShellEngine.validateTask(expectedDistractorRight), 'expected pairs must reject right distractors');
 
 const omittedAnswerLeft = clone(matchingPairsTask);
@@ -329,8 +334,8 @@ for (const fragment of [
   'verwacht Behoeften zijn groter dan middelen',
   'Afleider links gekozen',
   'Afleider rechts gekozen',
-  'Winst',
-  'Opbrengst min kosten'
+  'Onbeperkte middelen',
+  'Er is geen keuze nodig'
 ]) {
   assert(feedbackHtml.includes(fragment), `matching-pairs feedback HTML missing ${fragment}`);
 }

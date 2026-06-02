@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T10:38:50.376Z
+Generated: 2026-06-02T11:23:03.284Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 2852
+Files indexed: 2866
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 366
+Count: 368
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -404,6 +404,7 @@ Count: 366
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
+- build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
 - build-scripts/review-gates/check-cp6a-lesson-side-recheck.js
 - build-scripts/review-gates/check-cp6b-target-exercise-review.js
@@ -417,6 +418,7 @@ Count: 366
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
+- build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
@@ -1178,7 +1180,7 @@ Count: 429
 
 ## reports
 
-Count: 1629
+Count: 1641
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1811,6 +1813,8 @@ Count: 1629
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-detail-gallery.html
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-dark-gallery.html
@@ -1821,6 +1825,7 @@ Count: 1629
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-mobile-gallery.html
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.json
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/live-output-evidence.md
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.json
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshot-manifest.md
@@ -1832,6 +1837,11 @@ Count: 1629
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-feedback-states.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-controls.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-mobile-narrow.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-completed.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-initial.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
+- reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -2125,6 +2135,10 @@ Count: 1629
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-round1.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-round2.md
 - reports/sprints/GATE-TASK-FAMILY-1-plan.md
+- reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md
+- reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md
+- reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md
+- reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md
 - reports/sprints/GRAPH-REFINE-1-baseline.md
 - reports/sprints/GRAPH-REFINE-1-diff-summary.md
 - reports/sprints/GRAPH-REFINE-1-gate-handoff.md

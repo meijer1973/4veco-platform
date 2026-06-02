@@ -2,9 +2,9 @@
 
 Generated: 2026-06-02
 
-Status: direct-comment review packet ready after playable-lab correction and
-usability-agent recheck; no human review comments started; no product
-authority.
+Status: direct-comment review packet ready after playable-lab correction,
+human-precheck task repair, and usability-agent recheck; no human review
+comments started; no product authority.
 
 ## Review Scope
 
@@ -69,6 +69,7 @@ record the reviewed remote commit/hash.
 - `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md`
 - `reports/sprints/GATE-TASK-FAMILY-1-usability-agent-analysis.md`
+- `reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md`
 - `reports/sprints/TASK-FAMILY-CHOICE-1-contract.md`
 - `reports/sprints/TASK-FAMILY-CONSTRUCT-1-contract.md`
 - `reports/json/task-family-choice-contract.json`
@@ -87,6 +88,7 @@ record the reviewed remote commit/hash.
 - rendered task-family fixture files under `reports/sprints/`
 - focused shared task-shell tests under `engines/tests/`
 - `build-scripts/review-gates/emit-gate-task-family1-gallery.js`
+- `build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js`
 - `build-scripts/review-gates/check-gate-task-family1-review-packet.js`
 - `../4veco-lessen/specifications/product-end-state.md`
 - `../4veco-lessen/specifications/companion-core-specifications.md`
@@ -134,15 +136,16 @@ Before writing binding review comments, inspect at minimum:
 - focus-plan evidence for at least `step_ordering`, `matching_pairs`,
   `two_tier_choice`, `source_chain_builder`, and `label_placement`.
 - usability-agent round 1, correction, round 2, and analysis artifacts.
+- human-precheck corrections for Task 3, Task 10, Task 11, and Task 12.
 
 If any playable artifact cannot be inspected, if the lab cannot reach `12 / 12`
 through visible controls, or if a tester needs hidden expected-state evidence
 to finish, stop and record whether the gate needs repair, fresh screenshot
 proof, or a roadmap pause.
 
-## Calibration Questions
+## Calibration Checks
 
-Before taking binding answers, confirm:
+Before writing binding review comments, confirm:
 
 1. This gate reviews task-family readiness only and does not itself authorize
    generated lesson output, source-data mutation, engine implementation,

@@ -3,7 +3,7 @@
   "gate_id": "GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review",
   "sprint_id": "GATE-TASK-FAMILY-1",
   "generated": "2026-06-02",
-  "status": "playable_proof_ready_after_usability_agent_repair_and_recheck",
+  "status": "playable_proof_ready_after_usability_agent_repair_human_precheck_corrections_and_recheck",
   "rendered_gallery": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-family-gallery.html",
   "screenshot_support_pages": [
     "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-rendered-construction-gallery.html",
@@ -134,6 +134,7 @@
   "playable_lab": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-lab.html",
   "playable_data": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/gate-playable-task-family-data.json",
   "playable_proof": "reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/playable-proof.json",
+  "gallery_screenshot_capture_script": "build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js",
   "usability_agent_evidence": {
     "round1": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md",
     "corrections": "reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md",
@@ -144,6 +145,7 @@
       "compact sequence repair controls remain visually terse and need route-adoption accessibility proof"
     ]
   },
+  "human_precheck_corrections": "reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md",
   "playable_proof_summary": {
     "required_task_count": 12,
     "desktop_completed_matched_count": 12,

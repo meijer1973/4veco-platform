@@ -90,6 +90,15 @@ only for ambiguous or conflicting authority, and draft closure only after the
 comment evidence is complete. Interactive interviews are now an exception for
 explicit reviewer request or unresolved ambiguity, not the default gate mode.
 
+Human-review proof must be inspectable in the same shape a reviewer needs to
+judge the product. For UI, game, task-shell, route, or exit-ticket gates, a
+packet is not ready with text claims or static fixture fragments alone. It must
+provide a playable or reproducible artifact when the surface is interactive,
+state evidence such as JSON/proof logs, screenshots for initial/retry/feedback/
+next-action/completed states where relevant, mobile and dark-mode proof when
+the surface is student-facing, and a checker that verifies the proof artifacts
+exist. Present the proof so a human can see where problems are, then decide.
+
 
 ### Sprint agent structure
 
