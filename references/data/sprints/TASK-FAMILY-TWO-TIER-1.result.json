@@ -1,0 +1,160 @@
+{
+  "sprint_id": "TASK-FAMILY-TWO-TIER-1",
+  "generated": "2026-06-02",
+  "status": "completed",
+  "plan": "reports/sprints/TASK-FAMILY-TWO-TIER-1-plan.md",
+  "baseline": "reports/sprints/TASK-FAMILY-TWO-TIER-1-baseline.md",
+  "result": "reports/sprints/TASK-FAMILY-TWO-TIER-1-result.md",
+  "diff_summary": "reports/sprints/TASK-FAMILY-TWO-TIER-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "scope": {
+    "runtime_support": true,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "target_equivalent_reliance": false,
+    "product_authority": false,
+    "old_exit_ticket_archive_changed": false
+  },
+  "implemented_families": [
+    "two_tier_choice"
+  ],
+  "evidence": {
+    "plan": "reports/sprints/TASK-FAMILY-TWO-TIER-1-plan.md",
+    "baseline": "reports/sprints/TASK-FAMILY-TWO-TIER-1-baseline.md",
+    "planning_review": "reports/sprints/TASK-FAMILY-TWO-TIER-1-planning-review.md",
+    "result": "reports/sprints/TASK-FAMILY-TWO-TIER-1-result.md",
+    "diff_summary": "reports/sprints/TASK-FAMILY-TWO-TIER-1-diff-summary.md",
+    "proof_json": "reports/json/task-family-two-tier1-proof.json",
+    "rendered_fixture": "reports/sprints/TASK-FAMILY-TWO-TIER-1-rendered-fixture.html",
+    "screenshot_manifest": "reports/sprints/TASK-FAMILY-TWO-TIER-1-screenshot-manifest.md",
+    "checker": "build-scripts/sprints/check-task-family-two-tier1.js"
+  },
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-TWO-TIER-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-TWO-TIER-1",
+    "npx.cmd jest --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+    "node build-scripts/sprints/check-task-family-two-tier1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-TWO-TIER-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-TWO-TIER-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-FAMILY-TWO-TIER-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-TWO-TIER-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand --runTestsByPath engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js engines/tests/skilltree-ui.test.js engines/tests/graphical-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-family-two-tier1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-FAMILY-TWO-TIER-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-FAMILY-TWO-TIER-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "exited 0 with line-ending normalization warnings only"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-FAMILY-TWO-TIER-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "fixture-proof-only",
+        "description": "Rendered proof is a report fixture; generated-route screenshots are deferred until a later adoption/product sprint uses two_tier_choice in live output.",
+        "disposition": "accepted_follow_up",
+        "owner": "future product-route adoption sprint",
+        "next_action": "Capture generated-route desktop, mobile, and dark-mode screenshots when two_tier_choice is adopted into real routes.",
+        "blocking": false
+      },
+      {
+        "id": "no-diagnostic-or-profile-output",
+        "description": "two_tier_choice feedback may report selected answer/reason status but may not become diagnostics, misconception profiles, mastery, sequencing, or target-equivalent proof.",
+        "disposition": "carry_forward",
+        "owner": "future task-family adoption sprint",
+        "next_action": "Review any adoption copy and feedback before using two_tier_choice in generated product routes.",
+        "blocking": false
+      },
+      {
+        "id": "no-product-route-adoption",
+        "description": "two_tier_choice is runtime-capable but not wired into generated product routes or source exercise data in this sprint.",
+        "disposition": "carry_forward",
+        "owner": "future check, graph, route, or reasoning adoption sprint",
+        "next_action": "Adopt only through a reviewed sprint with source-data changes, route proof, and generated-output evidence.",
+        "blocking": false
+      },
+      {
+        "id": "no-target-equivalent-reliance",
+        "description": "two_tier_choice may support practice/advisory answer-plus-reason tasks but does not authorize target-equivalent proof, reasoning migration reliance, check implementation reliance, or Scale Gate 1.",
+        "disposition": "product_scale_blocker",
+        "owner": "future product proof gate",
+        "next_action": "Review target-operation coverage and generated output before any target-equivalent or Scale Gate reliance.",
+        "blocking": false
+      }
+    ]
+  }
+}

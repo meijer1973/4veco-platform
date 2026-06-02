@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>TASK-FAMILY-TWO-TIER-1 rendered fixture</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; color: #1f2937; background: #f8fafc; }
+    section { margin: 0 0 28px; padding: 18px; border: 1px solid #cbd5e1; background: #fff; }
+    .ts-two-tier-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .ts-two-tier-group { display: grid; gap: 8px; }
+    .ts-two-tier-option { text-align: left; border: 1px solid #cbd5e1; background: #fff; padding: 10px; }
+    .ts-two-tier-option.selected { border-color: #2563eb; background: #eff6ff; }
+    .ts-two-tier-body { display: grid; gap: 4px; }
+    .ts-two-tier-body span { color: #475569; }
+    .ts-two-tier-summary, .ts-two-tier-feedback { margin-top: 12px; padding: 10px; border: 1px solid #cbd5e1; background: #f8fafc; }
+    .ts-two-tier-feedback-row { display: grid; grid-template-columns: 90px 1fr auto; gap: 8px; }
+    [data-fixture-viewport="narrow"] .ts-two-tier-grid { grid-template-columns: 1fr; }
+    [data-fixture-theme="dark"] { color: #e5e7eb; background: #111827; border-color: #374151; }
+    [data-fixture-theme="dark"] .ts-two-tier-option { color: #e5e7eb; background: #1f2937; border-color: #4b5563; }
+    [data-fixture-theme="dark"] .ts-two-tier-summary,
+    [data-fixture-theme="dark"] .ts-two-tier-feedback { color: #e5e7eb; background: #1f2937; border-color: #4b5563; }
+  </style>
+</head>
+<body>
+  <h1>TASK-FAMILY-TWO-TIER-1 rendered fixture</h1>
+
+  <section id="standard" data-fixture-state="standard">
+    <article class="ts-task" data-task="two-tier-indexpunten" data-task-family="two_tier_choice">
+      <h2>Welke uitspraak over indexpunten klopt, en waarom?</h2>
+      <div class="ts-two-tier-choice" data-two-tier-task="two-tier-indexpunten">
+        <div class="ts-two-tier-grid">
+          <div class="ts-two-tier-group" role="group" aria-label="Kies het antwoord">
+            <strong class="ts-two-tier-group-label">Kies het antwoord</strong>
+            <button type="button" class="ts-two-tier-option ts-two-tier-answer" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="answer" data-two-tier-answer-id="vier-indexpunten">
+              <span class="ts-two-tier-body"><strong>De stijging is 4 indexpunten.</strong><span>Dit benoemt het verschil tussen 112 en 108.</span></span>
+            </button>
+            <button type="button" class="ts-two-tier-option ts-two-tier-answer" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="answer" data-two-tier-answer-id="vier-procent">
+              <span class="ts-two-tier-body"><strong>De stijging is 4 procent.</strong><span>Dit verwart punten met procentuele verandering.</span></span>
+            </button>
+          </div>
+          <div class="ts-two-tier-group" role="group" aria-label="Kies de reden">
+            <strong class="ts-two-tier-group-label">Kies de reden</strong>
+            <button type="button" class="ts-two-tier-option ts-two-tier-reason" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="reason" data-two-tier-reason-id="verschil-in-punten">
+              <span class="ts-two-tier-body"><strong>Je trekt 112 en 108 van elkaar af.</strong><span>Het verschil is 4 punten.</span></span>
+            </button>
+            <button type="button" class="ts-two-tier-option ts-two-tier-reason" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="reason" data-two-tier-reason-id="delen-door-honderd">
+              <span class="ts-two-tier-body"><strong>Je deelt altijd door 100.</strong><span>Dit is geen goede reden voor deze puntenstap.</span></span>
+            </button>
+          </div>
+        </div>
+        <div class="ts-two-tier-summary" tabindex="0" data-task-id="two-tier-indexpunten" data-two-tier-summary aria-label="Gekozen antwoord en reden">
+          <span class="ts-two-tier-summary-answer">Antwoord: nog niet gekozen</span>
+          <span class="ts-two-tier-summary-reason">Reden: nog niet gekozen</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="after-click" data-fixture-state="after-click">
+    <article class="ts-task" data-task="two-tier-indexpunten" data-task-family="two_tier_choice">
+      <h2>Na selectie</h2>
+      <div class="ts-two-tier-choice" data-two-tier-task="two-tier-indexpunten">
+        <div class="ts-two-tier-grid">
+          <div class="ts-two-tier-group" role="group" aria-label="Kies het antwoord">
+            <button type="button" class="ts-two-tier-option ts-two-tier-answer selected" aria-pressed="true" data-task-id="two-tier-indexpunten" data-two-tier-tier="answer" data-two-tier-answer-id="vier-indexpunten">
+              <span class="ts-two-tier-body"><strong>De stijging is 4 indexpunten.</strong><span>Dit benoemt het verschil tussen 112 en 108.</span></span>
+            </button>
+          </div>
+          <div class="ts-two-tier-group" role="group" aria-label="Kies de reden">
+            <button type="button" class="ts-two-tier-option ts-two-tier-reason selected" aria-pressed="true" data-task-id="two-tier-indexpunten" data-two-tier-tier="reason" data-two-tier-reason-id="verschil-in-punten">
+              <span class="ts-two-tier-body"><strong>Je trekt 112 en 108 van elkaar af.</strong><span>Het verschil is 4 punten.</span></span>
+            </button>
+          </div>
+        </div>
+        <div class="ts-two-tier-summary" tabindex="0" data-task-id="two-tier-indexpunten" data-two-tier-summary aria-label="Gekozen antwoord en reden">
+          <span class="ts-two-tier-summary-answer">Antwoord: De stijging is 4 indexpunten.</span>
+          <span class="ts-two-tier-summary-reason">Reden: Je trekt 112 en 108 van elkaar af.</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="feedback" data-fixture-state="feedback">
+    <div class="ts-two-tier-feedback" role="status" tabindex="-1" aria-label="Aanwijzingen bij antwoord en reden">
+      <div class="ts-two-tier-feedback-row"><strong>Antwoord</strong><span>De stijging is 4 procent.</span><em>kijk dit na</em></div>
+      <div class="ts-two-tier-feedback-row"><strong>Reden</strong><span>Je trekt 112 en 108 van elkaar af.</span><em>past</em></div>
+      <p>Controleer of je reden het gekozen antwoord echt ondersteunt.</p>
+    </div>
+  </section>
+
+  <section id="narrow" data-fixture-viewport="narrow">
+    <article class="ts-task" data-task="two-tier-indexpunten" data-task-family="two_tier_choice">
+      <h2>Narrow/mobile proof</h2>
+      <div class="ts-two-tier-choice" data-two-tier-task="two-tier-indexpunten">
+        <div class="ts-two-tier-grid">
+          <div class="ts-two-tier-group" role="group" aria-label="Kies het antwoord">
+            <button type="button" class="ts-two-tier-option ts-two-tier-answer" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="answer" data-two-tier-answer-id="vier-indexpunten">De stijging is 4 indexpunten.</button>
+          </div>
+          <div class="ts-two-tier-group" role="group" aria-label="Kies de reden">
+            <button type="button" class="ts-two-tier-option ts-two-tier-reason" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="reason" data-two-tier-reason-id="verschil-in-punten">Je trekt 112 en 108 van elkaar af.</button>
+          </div>
+        </div>
+        <div class="ts-two-tier-summary" tabindex="0" data-task-id="two-tier-indexpunten" data-two-tier-summary aria-label="Gekozen antwoord en reden"></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="dark" data-fixture-theme="dark">
+    <article class="ts-task" data-task="two-tier-indexpunten" data-task-family="two_tier_choice">
+      <h2>Dark-mode proof</h2>
+      <div class="ts-two-tier-choice" data-two-tier-task="two-tier-indexpunten">
+        <div class="ts-two-tier-grid">
+          <div class="ts-two-tier-group" role="group" aria-label="Kies het antwoord">
+            <button type="button" class="ts-two-tier-option ts-two-tier-answer" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="answer" data-two-tier-answer-id="vier-indexpunten">De stijging is 4 indexpunten.</button>
+          </div>
+          <div class="ts-two-tier-group" role="group" aria-label="Kies de reden">
+            <button type="button" class="ts-two-tier-option ts-two-tier-reason" aria-pressed="false" data-task-id="two-tier-indexpunten" data-two-tier-tier="reason" data-two-tier-reason-id="verschil-in-punten">Je trekt 112 en 108 van elkaar af.</button>
+          </div>
+        </div>
+        <div class="ts-two-tier-summary" tabindex="0" data-task-id="two-tier-indexpunten" data-two-tier-summary aria-label="Gekozen antwoord en reden"></div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

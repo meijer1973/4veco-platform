@@ -130,6 +130,9 @@
 .ts-choice:focus-visible,
 .ts-multi-option:hover,
 .ts-multi-option:focus-visible,
+.ts-two-tier-option:hover,
+.ts-two-tier-option:focus-visible,
+.ts-two-tier-summary:focus-visible,
 .ts-cloze-blank:hover,
 .ts-cloze-blank:focus-visible,
 .ts-cloze-clear:hover,
@@ -228,6 +231,106 @@
 .ts-multi-body {
   display: grid;
   gap: 4px;
+}
+
+.ts-two-tier-choice {
+  display: grid;
+  gap: 12px;
+}
+
+.ts-two-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ts-two-tier-group {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-soft) 45%, transparent);
+}
+
+.ts-two-tier-group-label {
+  color: var(--ts-primary);
+}
+
+.ts-two-tier-option {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ts-two-tier-option.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 10%, var(--ts-panel));
+}
+
+.ts-two-tier-option.selected .ts-two-tier-mark {
+  background: var(--ts-primary);
+  box-shadow: inset 0 0 0 4px var(--ts-panel);
+}
+
+.ts-two-tier-mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 2px solid var(--ts-primary);
+  border-radius: 999px;
+}
+
+.ts-two-tier-body {
+  display: grid;
+  gap: 4px;
+  line-height: 1.35;
+}
+
+.ts-two-tier-body span {
+  color: var(--ts-muted);
+}
+
+.ts-two-tier-summary {
+  display: grid;
+  gap: 6px;
+  min-height: 54px;
+  padding: 12px;
+  border: 1px dashed var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-soft) 35%, transparent);
+  color: var(--ts-text);
+}
+
+.ts-two-tier-feedback {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-soft) 58%, transparent);
+}
+
+.ts-two-tier-feedback-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 0.25fr) minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.ts-two-tier-feedback-row em {
+  color: var(--ts-muted);
+  font-style: normal;
 }
 
 .ts-multi-body span {
@@ -1407,6 +1510,11 @@
   }
 
   .ts-match-banks {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-two-tier-grid,
+  .ts-two-tier-feedback-row {
     grid-template-columns: 1fr;
   }
 

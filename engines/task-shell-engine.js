@@ -24,6 +24,7 @@
     formula_builder: { label: 'Formule bouwen', deterministic: true },
     step_ordering: { label: 'Stappen ordenen', deterministic: true },
     matching_pairs: { label: 'Koppels maken', deterministic: true },
+    two_tier_choice: { label: 'Antwoord en reden kiezen', deterministic: true },
     source_value_selection: { label: 'Bronwaarden kiezen', deterministic: true },
     source_chain_builder: { label: 'Bronketen bouwen', deterministic: true },
     label_placement: { label: 'Labels plaatsen', deterministic: true },
@@ -210,6 +211,8 @@
       push(task.interaction.leftBankLabel);
       push(task.interaction.rightBankLabel);
       push(task.interaction.pairLabel);
+      push(task.interaction.answerLabel);
+      push(task.interaction.reasonLabel);
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -267,6 +270,14 @@
       (task.interaction.rightItems || []).forEach(function (item) {
         push(item.label);
         push(item.description);
+      });
+      (task.interaction.answerOptions || []).forEach(function (option) {
+        push(option.label);
+        push(option.description);
+      });
+      (task.interaction.reasonOptions || []).forEach(function (option) {
+        push(option.label);
+        push(option.description);
       });
       push(task.interaction.rows);
       push(task.interaction.columns);
@@ -688,6 +699,45 @@
       rightLabels: right.itemLabels,
       rightKinds: right.itemKinds,
       answerRightIds: right.answerIds
+    };
+  }
+
+  function validateTwoTierOptionBank(options, path, tierLabel) {
+    requireArray(options, path, 2);
+    var ids = {};
+    var labels = {};
+    options.forEach(function (option, idx) {
+      assert(isObject(option), path + '[' + idx + '] must be an object');
+      requireString(option.id, path + '[' + idx + '].id');
+      requireString(option.label, path + '[' + idx + '].label');
+      requireString(option.description, path + '[' + idx + '].description');
+      assert(!ids[option.id], 'duplicate two-tier ' + tierLabel + ' option id: ' + option.id);
+      ids[option.id] = true;
+      labels[option.id] = option.label;
+    });
+    return {
+      ids: ids,
+      labels: labels
+    };
+  }
+
+  function validateTwoTierInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.answerLabel, path + '.answerLabel');
+    requireString(interaction.reasonLabel, path + '.reasonLabel');
+
+    var answers = validateTwoTierOptionBank(interaction.answerOptions, path + '.answerOptions', 'answer');
+    var reasons = validateTwoTierOptionBank(interaction.reasonOptions, path + '.reasonOptions', 'reason');
+
+    Object.keys(answers.ids).forEach(function (answerId) {
+      assert(!reasons.ids[answerId], path + ' must not reuse option id across answerOptions and reasonOptions: ' + answerId);
+    });
+
+    return {
+      answerOptionIds: answers.ids,
+      answerOptionLabels: answers.labels,
+      reasonOptionIds: reasons.ids,
+      reasonOptionLabels: reasons.labels
     };
   }
 
@@ -1326,6 +1376,20 @@
       return;
     }
 
+    if (task.family === 'two_tier_choice') {
+      assert(expected.kind === 'two_tier_choice', task.id + '.expected.kind must be two_tier_choice');
+      requireString(expected.answer, task.id + '.expected.answer');
+      requireString(expected.reason, task.id + '.expected.reason');
+      var answerOptionIds = interactionInfo.answerOptionIds || {};
+      var reasonOptionIds = interactionInfo.reasonOptionIds || {};
+      assert(answerOptionIds[expected.answer], task.id + '.expected.answer must match an answer option id');
+      assert(reasonOptionIds[expected.reason], task.id + '.expected.reason must match a reason option id');
+      if (expected.partialFeedback !== undefined) {
+        assert(expected.partialFeedback === 'practice_only', task.id + '.expected.partialFeedback must be practice_only when present');
+      }
+      return;
+    }
+
     if (task.family === 'source_value_selection') {
       assert(expected.kind === 'source_value_selection', task.id + '.expected.kind must be source_value_selection');
       requireArray(expected.selections, task.id + '.expected.selections', 2);
@@ -1500,6 +1564,8 @@
       interactionInfo = validateStepOrderingInteraction(task, path);
     } else if (task.family === 'matching_pairs') {
       interactionInfo = validateMatchingPairsInteraction(task, path);
+    } else if (task.family === 'two_tier_choice') {
+      interactionInfo = validateTwoTierInteraction(task, path);
     } else if (task.family === 'source_value_selection') {
       interactionInfo = validateSourceValueInteraction(task, path);
     } else if (task.family === 'source_chain_builder') {
@@ -2001,6 +2067,46 @@
     };
   }
 
+  function twoTierChoiceMatches(response, expected, answerOptionIds, reasonOptionIds) {
+    if (!isObject(response)) return false;
+    var keys = Object.keys(response);
+    if (keys.length !== 2 || !Object.prototype.hasOwnProperty.call(response, 'answer') || !Object.prototype.hasOwnProperty.call(response, 'reason')) return false;
+    if (typeof response.answer !== 'string' || !response.answer) return false;
+    if (typeof response.reason !== 'string' || !response.reason) return false;
+    if (!Object.prototype.hasOwnProperty.call(answerOptionIds, response.answer)) return false;
+    if (!Object.prototype.hasOwnProperty.call(reasonOptionIds, response.reason)) return false;
+    return response.answer === expected.answer && response.reason === expected.reason;
+  }
+
+  function twoTierOptionEntry(optionId, labels) {
+    return {
+      id: optionId,
+      label: labels && labels[optionId] ? labels[optionId] : optionId
+    };
+  }
+
+  function twoTierChoiceFeedback(response, task) {
+    if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
+    var answerLabels = optionLabelMap(task.interaction && task.interaction.answerOptions ? task.interaction.answerOptions : []);
+    var reasonLabels = optionLabelMap(task.interaction && task.interaction.reasonOptions ? task.interaction.reasonOptions : []);
+    var selectedAnswer = isObject(response) && typeof response.answer === 'string' && response.answer
+      ? twoTierOptionEntry(response.answer, answerLabels)
+      : null;
+    var selectedReason = isObject(response) && typeof response.reason === 'string' && response.reason
+      ? twoTierOptionEntry(response.reason, reasonLabels)
+      : null;
+    var answerMatches = Boolean(selectedAnswer && response.answer === task.expected.answer);
+    var reasonMatches = Boolean(selectedReason && response.reason === task.expected.reason);
+    return {
+      mode: 'practice_only',
+      selectedAnswer: selectedAnswer,
+      selectedReason: selectedReason,
+      answerMatches: answerMatches,
+      reasonMatches: reasonMatches,
+      combinationMatches: answerMatches && reasonMatches
+    };
+  }
+
   function stepOrderingFeedback(response, task) {
     if (!task.expected || task.expected.partialFeedback !== 'practice_only') return null;
     var selected = response && Array.isArray(response.order) ? response.order : [];
@@ -2350,6 +2456,10 @@
       var matchingInfo = validateMatchingPairsInteraction(task, task.id + '.interaction');
       return matchingPairsMatches(response, task.expected, matchingInfo.leftIds, matchingInfo.rightIds);
     }
+    if (task.family === 'two_tier_choice' && task.expected.kind === 'two_tier_choice') {
+      var twoTierInfo = validateTwoTierInteraction(task, task.id + '.interaction');
+      return twoTierChoiceMatches(response, task.expected, twoTierInfo.answerOptionIds, twoTierInfo.reasonOptionIds);
+    }
     if (task.family === 'source_value_selection' && task.expected.kind === 'source_value_selection') {
       var sourceValueInfo = validateSourceValueInteraction(task, task.id + '.interaction');
       return sourceValueSelectionMatches(response, task.expected, sourceValueInfo.valueIds, sourceValueInfo.roleIds);
@@ -2418,6 +2528,10 @@
       var matchFeedback = matchingPairsFeedback(response, task);
       if (matchFeedback) result.matchingPairsFeedback = matchFeedback;
     }
+    if (task.family === 'two_tier_choice' && !matched) {
+      var twoTierFeedback = twoTierChoiceFeedback(response, task);
+      if (twoTierFeedback) result.twoTierFeedback = twoTierFeedback;
+    }
     if (task.family === 'source_value_selection' && !matched) {
       var valueFeedback = sourceValueFeedback(response, task);
       if (valueFeedback) result.sourceValueFeedback = valueFeedback;
@@ -2485,6 +2599,13 @@
         '[data-task-id="' + task.id + '"][data-match-left-id]',
         '[data-task-id="' + task.id + '"][data-match-right-id]',
         '[data-task-id="' + task.id + '"][data-match-pair-summary]'
+      ];
+    }
+    if (task.family === 'two_tier_choice') {
+      return [
+        '[data-task-id="' + task.id + '"][data-two-tier-answer-id]',
+        '[data-task-id="' + task.id + '"][data-two-tier-reason-id]',
+        '[data-task-id="' + task.id + '"][data-two-tier-summary]'
       ];
     }
     if (task.family === 'source_value_selection') {

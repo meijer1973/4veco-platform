@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T05:59:17.780Z",
+  "generatedAt": "2026-06-02T06:32:27.895Z",
   "internalOnly": true,
   "teams": [
     {
@@ -242,8 +242,8 @@
             {
               "sprint": "TASK-FAMILY-TWO-TIER-1",
               "name": "Two-Tier Choice Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Implement answer-plus-reason `two_tier_choice` for misconception repair and explanation-quality feedback, without diagnostics or mastery language.",
+              "completed": "yes",
+              "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
               "exitGate": ""
             },
             {
@@ -1406,14 +1406,6 @@
       ],
       "sprints": [
         {
-          "sprint": "TASK-FAMILY-TWO-TIER-1",
-          "name": "Two-Tier Choice Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Implement answer-plus-reason `two_tier_choice` for misconception repair and explanation-quality feedback, without diagnostics or mastery language.",
-          "exitGate": "",
-          "roadmap": "References roadmap"
-        },
-        {
           "sprint": "TASK-FAMILY-ASSERTION-1",
           "name": "Assertion-Reason Task-Family Implementation",
           "completed": "no",
@@ -1594,6 +1586,14 @@
           "name": "Matching-Pairs Task-Family Implementation",
           "completed": "yes",
           "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `matching_pairs`, one-to-one-only validation, strict exact response matching, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof.",
+          "exitGate": "",
+          "roadmap": "References roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-TWO-TIER-1",
+          "name": "Two-Tier Choice Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "Closed PASS WITH FLAGS runtime implementation sprint. Produced shared task-shell engine/UI/CSS support for `two_tier_choice`, strict answer-plus-reason validation, practice-only feedback, wrapper collection support, focused tests, rendered fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Round 1 and round 2 passed with flags. No generated lesson output or product-route adoption. Flags: generated-route screenshots remain required before adoption; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace richer target-operation proof.",
           "exitGate": "",
           "roadmap": "References roadmap"
         },
@@ -2822,8 +2822,8 @@
           "roadmap": "References roadmap"
         }
       ],
-      "completedCount": 164,
-      "openCount": 13
+      "completedCount": 165,
+      "openCount": 12
     },
     {
       "id": "lessen",
@@ -2949,8 +2949,8 @@
             {
               "sprint": "TASK-FAMILY-TWO-TIER-1",
               "name": "Two-Tier Choice Task-Family Implementation",
-              "completed": "no",
-              "currentState": "Platform adds answer-plus-reason `two_tier_choice` for misconception repair and explanation-quality feedback without diagnostics or mastery claims.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
               "exitGate": ""
             },
             {
@@ -3174,14 +3174,6 @@
         }
       ],
       "sprints": [
-        {
-          "sprint": "TASK-FAMILY-TWO-TIER-1",
-          "name": "Two-Tier Choice Task-Family Implementation",
-          "completed": "no",
-          "currentState": "Platform adds answer-plus-reason `two_tier_choice` for misconception repair and explanation-quality feedback without diagnostics or mastery claims.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
         {
           "sprint": "TASK-FAMILY-ASSERTION-1",
           "name": "Assertion-Reason Task-Family Implementation",
@@ -3549,10 +3541,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `matching_pairs` as a deterministic shared task-shell family with left/right item banks, accessible descriptions, one-to-one-only answer coverage, strict `{ pairs }` response validation, practice-only feedback, matching-specific UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, and lead-review records. Product-route adoption and generated-route screenshots remain later work; many-to-one matching is deferred; matching pairs cannot replace richer target-operation proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-FAMILY-TWO-TIER-1",
+          "name": "Two-Tier Choice Task-Family Implementation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / NO GENERATED LESSON OUTPUT.** Platform added `two_tier_choice` as a deterministic shared task-shell family with separate answer/reason option banks, accessible descriptions, exact `{ answer, reason }` response validation, neutral practice-only feedback, two-tier UI controls, wrapper collection support, focused tests, rendered report fixture, proof JSON, checker, old exit-ticket archive no-change evidence, and lead-review records. Product-route adoption and generated-route screenshots remain later work; feedback must not become diagnostic or misconception-profile output; two-tier choice cannot replace constructed-response or target-equivalent proof. No source-data writes, generated output, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product-wide use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 15,
-      "openCount": 32
+      "completedCount": 16,
+      "openCount": 31
     },
     {
       "id": "innovation",

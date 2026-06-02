@@ -531,6 +531,46 @@ function fixtures() {
                 ],
                 partialFeedback: 'practice_only'
             }
+        }),
+        baseTask({
+            id: 'two-tier-choice',
+            family: 'two_tier_choice',
+            skillLabel: 'Antwoord en reden koppelen',
+            prompt: 'Kies de juiste uitspraak en de reden die die uitspraak ondersteunt.',
+            interaction: {
+                answerLabel: 'Kies het antwoord',
+                reasonLabel: 'Kies de reden',
+                answerOptions: [
+                    {
+                        id: 'vier-indexpunten',
+                        label: 'De stijging is 4 indexpunten.',
+                        description: 'Dit noemt het verschil tussen 112 en 108 in indexpunten.'
+                    },
+                    {
+                        id: 'vier-procent',
+                        label: 'De stijging is 4 procent.',
+                        description: 'Dit verwart indexpunten met procentuele verandering.'
+                    }
+                ],
+                reasonOptions: [
+                    {
+                        id: 'verschil-in-punten',
+                        label: 'Je trekt de indexcijfers af voor indexpunten.',
+                        description: '112 min 108 geeft het verschil in indexpunten.'
+                    },
+                    {
+                        id: 'delen-door-honderd',
+                        label: 'Je deelt altijd door 100.',
+                        description: 'Dit is geen juiste reden voor procentuele verandering tussen indexcijfers.'
+                    }
+                ]
+            },
+            expected: {
+                kind: 'two_tier_choice',
+                answer: 'vier-indexpunten',
+                reason: 'verschil-in-punten',
+                partialFeedback: 'practice_only'
+            }
         })
     ];
 }
@@ -551,6 +591,7 @@ describe('TaskShellEngine', () => {
             'formula_builder',
             'step_ordering',
             'matching_pairs',
+            'two_tier_choice',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -1630,6 +1671,71 @@ describe('TaskShellEngine', () => {
         ]);
     });
 
+    test('supports two-tier choice with strict answer-plus-reason matching and practice-only feedback', () => {
+        const twoTier = fixtures().find((task) => task.id === 'two-tier-choice');
+
+        expect(TaskShellEngine.evaluateTask(twoTier, {
+            answer: 'vier-indexpunten',
+            reason: 'verschil-in-punten'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        const wrongAnswer = TaskShellEngine.evaluateTask(twoTier, {
+            answer: 'vier-procent',
+            reason: 'verschil-in-punten'
+        });
+        expect(wrongAnswer).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false
+        }));
+        expect(wrongAnswer.twoTierFeedback).toEqual({
+            mode: 'practice_only',
+            selectedAnswer: { id: 'vier-procent', label: 'De stijging is 4 procent.' },
+            selectedReason: { id: 'verschil-in-punten', label: 'Je trekt de indexcijfers af voor indexpunten.' },
+            answerMatches: false,
+            reasonMatches: true,
+            combinationMatches: false
+        });
+
+        expect(TaskShellEngine.evaluateTask(twoTier, {
+            answer: 'vier-indexpunten',
+            reason: 'delen-door-honderd'
+        }).matched).toBe(false);
+
+        expect(TaskShellEngine.evaluateTask(twoTier, {
+            answer: 'vier-procent',
+            reason: 'delen-door-honderd'
+        }).matched).toBe(false);
+
+        for (const response of [
+            { answer: 'vier-indexpunten' },
+            { reason: 'verschil-in-punten' },
+            { answer: 'vier-indexpunten', reason: 'verschil-in-punten', extra: 'ignored' },
+            'vier-indexpunten',
+            ['vier-indexpunten', 'verschil-in-punten'],
+            { answer: { value: 'vier-indexpunten' }, reason: 'verschil-in-punten' },
+            { answer: 'vier-indexpunten', reason: { value: 'verschil-in-punten' } },
+            { answer: 42, reason: 'verschil-in-punten' },
+            { answer: 'vier-indexpunten', reason: 42 },
+            { answer: 'onbekend', reason: 'verschil-in-punten' },
+            { answer: 'vier-indexpunten', reason: 'onbekend' },
+            { answer: 'verschil-in-punten', reason: 'vier-indexpunten' }
+        ]) {
+            expect(TaskShellEngine.evaluateTask(twoTier, response)).toEqual(expect.objectContaining({
+                state: 'retry',
+                matched: false
+            }));
+        }
+
+        expect(TaskShellEngine.focusPlan(twoTier)).toEqual([
+            '[data-task-id="two-tier-choice"][data-two-tier-answer-id]',
+            '[data-task-id="two-tier-choice"][data-two-tier-reason-id]',
+            '[data-task-id="two-tier-choice"][data-two-tier-summary]'
+        ]);
+    });
+
     test('rejects invalid matching pair schemas before rendering', () => {
         const matching = fixtures().find((task) => task.id === 'matching-pairs');
 
@@ -1836,6 +1942,63 @@ describe('TaskShellEngine', () => {
                     ['schaarste', 'behoeften-middelen'],
                     ['alternatieve-kosten', 'beste-alternatief']
                 ],
+                partialFeedback: 'diagnostic'
+            }
+        })).toThrow(/partialFeedback must be practice_only/);
+    });
+
+    test('rejects invalid two-tier choice schemas before rendering', () => {
+        const twoTier = fixtures().find((task) => task.id === 'two-tier-choice');
+        const clone = (value) => JSON.parse(JSON.stringify(value));
+
+        const duplicateAnswer = clone(twoTier);
+        duplicateAnswer.interaction.answerOptions[1].id = duplicateAnswer.interaction.answerOptions[0].id;
+        expect(() => TaskShellEngine.validateTask(duplicateAnswer)).toThrow(/duplicate two-tier answer option id/);
+
+        const duplicateReason = clone(twoTier);
+        duplicateReason.interaction.reasonOptions[1].id = duplicateReason.interaction.reasonOptions[0].id;
+        expect(() => TaskShellEngine.validateTask(duplicateReason)).toThrow(/duplicate two-tier reason option id/);
+
+        const crossTierDuplicate = clone(twoTier);
+        crossTierDuplicate.interaction.reasonOptions[0].id = crossTierDuplicate.interaction.answerOptions[0].id;
+        expect(() => TaskShellEngine.validateTask(crossTierDuplicate)).toThrow(/must not reuse option id across answerOptions and reasonOptions/);
+
+        const missingAnswerDescription = clone(twoTier);
+        delete missingAnswerDescription.interaction.answerOptions[0].description;
+        expect(() => TaskShellEngine.validateTask(missingAnswerDescription)).toThrow(/description must be a non-empty string/);
+
+        const missingReasonDescription = clone(twoTier);
+        delete missingReasonDescription.interaction.reasonOptions[0].description;
+        expect(() => TaskShellEngine.validateTask(missingReasonDescription)).toThrow(/description must be a non-empty string/);
+
+        const oneAnswerOption = clone(twoTier);
+        oneAnswerOption.interaction.answerOptions = [oneAnswerOption.interaction.answerOptions[0]];
+        expect(() => TaskShellEngine.validateTask(oneAnswerOption)).toThrow(/answerOptions must contain at least 2 item/);
+
+        const oneReasonOption = clone(twoTier);
+        oneReasonOption.interaction.reasonOptions = [oneReasonOption.interaction.reasonOptions[0]];
+        expect(() => TaskShellEngine.validateTask(oneReasonOption)).toThrow(/reasonOptions must contain at least 2 item/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...twoTier,
+            expected: {
+                ...twoTier.expected,
+                answer: 'verschil-in-punten'
+            }
+        })).toThrow(/expected\.answer must match an answer option id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...twoTier,
+            expected: {
+                ...twoTier.expected,
+                reason: 'vier-indexpunten'
+            }
+        })).toThrow(/expected\.reason must match a reason option id/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...twoTier,
+            expected: {
+                ...twoTier.expected,
                 partialFeedback: 'diagnostic'
             }
         })).toThrow(/partialFeedback must be practice_only/);

@@ -66,6 +66,9 @@ describe('graphical ui safeguards', () => {
         expect(source).toContain('task.family === "matching_pairs"');
         expect(source).toContain('collectMatchingPairsResponse(rootEl, task)');
         expect(source).toContain('handleMatchingPairsClick(rootEl, event)');
+        expect(source).toContain('task.family === "two_tier_choice"');
+        expect(source).toContain('collectTwoTierChoiceResponse(rootEl, task)');
+        expect(source).toContain('handleTwoTierChoiceClick(rootEl, event)');
         expect(source).toContain('task.family === "source_value_selection"');
         expect(source).toContain('collectSourceValueSelectionResponse(rootEl, task)');
         expect(source).toContain('handleSourceValueSelectionClick(rootEl, event)');

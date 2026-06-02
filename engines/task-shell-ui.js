@@ -62,6 +62,43 @@
     '</div>';
   }
 
+  function twoTierOptionButton(task, tier, option) {
+    var attr = tier === 'answer' ? 'data-two-tier-answer-id' : 'data-two-tier-reason-id';
+    var tierClass = tier === 'answer' ? 'ts-two-tier-answer' : 'ts-two-tier-reason';
+    return '<button type="button" class="ts-two-tier-option ' + tierClass + '" aria-pressed="false" data-task-id="' + escapeHtml(task.id) + '" data-two-tier-tier="' + escapeHtml(tier) + '" ' + attr + '="' + escapeHtml(option.id) + '">' +
+      '<span class="ts-two-tier-mark" aria-hidden="true"></span>' +
+      '<span class="ts-two-tier-body">' +
+        '<strong>' + escapeHtml(option.label) + '</strong>' +
+        '<span>' + escapeHtml(option.description) + '</span>' +
+      '</span>' +
+    '</button>';
+  }
+
+  function renderTwoTierChoice(task) {
+    var answerHtml = task.interaction.answerOptions.map(function (option) {
+      return twoTierOptionButton(task, 'answer', option);
+    }).join('');
+    var reasonHtml = task.interaction.reasonOptions.map(function (option) {
+      return twoTierOptionButton(task, 'reason', option);
+    }).join('');
+    return '<div class="ts-two-tier-choice" data-two-tier-task="' + escapeHtml(task.id) + '">' +
+      '<div class="ts-two-tier-grid">' +
+        '<div class="ts-two-tier-group" role="group" aria-label="' + escapeHtml(task.interaction.answerLabel) + '">' +
+          '<strong class="ts-two-tier-group-label">' + escapeHtml(task.interaction.answerLabel) + '</strong>' +
+          answerHtml +
+        '</div>' +
+        '<div class="ts-two-tier-group" role="group" aria-label="' + escapeHtml(task.interaction.reasonLabel) + '">' +
+          '<strong class="ts-two-tier-group-label">' + escapeHtml(task.interaction.reasonLabel) + '</strong>' +
+          reasonHtml +
+        '</div>' +
+      '</div>' +
+      '<div class="ts-two-tier-summary" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-two-tier-summary aria-label="Gekozen antwoord en reden">' +
+        '<span class="ts-two-tier-summary-answer">Antwoord: nog niet gekozen</span>' +
+        '<span class="ts-two-tier-summary-reason">Reden: nog niet gekozen</span>' +
+      '</div>' +
+    '</div>';
+  }
+
   function renderTextInput(task, role, inputMode) {
     var label = task.interaction.inputLabel || 'Antwoord';
     return '<label class="ts-field">' +
@@ -454,6 +491,8 @@
         return renderStepOrdering(task);
       case 'matching_pairs':
         return renderMatchingPairs(task);
+      case 'two_tier_choice':
+        return renderTwoTierChoice(task);
       case 'source_value_selection':
         return renderSourceValueSelection(task);
       case 'source_chain_builder':
@@ -504,12 +543,14 @@
     var sourceChain = renderSourceChainFeedback(result && result.sourceChainFeedback);
     var labelPlacement = renderLabelPlacementFeedback(result && result.labelPlacementFeedback);
     var matchingPairs = renderMatchingPairsFeedback(result && result.matchingPairsFeedback);
+    var twoTier = renderTwoTierFeedback(result && result.twoTierFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
       selection +
       order +
       matchingPairs +
+      twoTier +
       sourceValue +
       sourceChain +
       labelPlacement +
@@ -670,6 +711,28 @@
     '</div>';
   }
 
+  function renderTwoTierStatus(label, selected, matches) {
+    var value = selected ? (selected.label || selected.id) : 'nog niet gekozen';
+    var status = selected ? (matches ? 'past' : 'kijk dit na') : 'kies nog een optie';
+    return '<div class="ts-two-tier-feedback-row">' +
+      '<strong>' + escapeHtml(label) + '</strong>' +
+      '<span>' + escapeHtml(value) + '</span>' +
+      '<em>' + escapeHtml(status) + '</em>' +
+    '</div>';
+  }
+
+  function renderTwoTierFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    var combinationText = feedback.combinationMatches
+      ? 'Je gekozen antwoord en reden passen bij elkaar.'
+      : 'Controleer of je reden het gekozen antwoord echt ondersteunt.';
+    return '<div class="ts-two-tier-feedback" aria-label="Aanwijzingen bij antwoord en reden">' +
+      renderTwoTierStatus('Antwoord', feedback.selectedAnswer, feedback.answerMatches) +
+      renderTwoTierStatus('Reden', feedback.selectedReason, feedback.reasonMatches) +
+      '<p>' + escapeHtml(combinationText) + '</p>' +
+    '</div>';
+  }
+
   function collectClozeTileResponse(rootEl, task) {
     if (!rootEl || !task) return { blanks: {} };
     var blanks = {};
@@ -825,6 +888,16 @@
       ]);
     }
     return { pairs: pairs };
+  }
+
+  function collectTwoTierChoiceResponse(rootEl, task) {
+    if (!rootEl || !task) return { answer: '', reason: '' };
+    var answer = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-two-tier-answer-id].selected');
+    var reason = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-two-tier-reason-id].selected');
+    return {
+      answer: answer ? answer.getAttribute('data-two-tier-answer-id') || '' : '',
+      reason: reason ? reason.getAttribute('data-two-tier-reason-id') || '' : ''
+    };
   }
 
   function collectSourceValueSelectionResponse(rootEl, task) {
@@ -1037,6 +1110,18 @@
       return true;
     }
     return false;
+  }
+
+  function handleTwoTierChoiceClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var twoTier = event.target.closest('.ts-two-tier-choice');
+    if (!twoTier || !rootEl.contains(twoTier)) return false;
+
+    var option = event.target.closest('.ts-two-tier-option');
+    if (!option || !twoTier.contains(option)) return false;
+    setSelectedTwoTierOption(twoTier, option);
+    updateTwoTierSummary(twoTier);
+    return true;
   }
 
   function handleStepOrderingClick(rootEl, event) {
@@ -1659,6 +1744,32 @@
     return el ? el.textContent : right.textContent;
   }
 
+  function twoTierOptionText(option) {
+    var el = option.querySelector('.ts-two-tier-body strong');
+    return el ? el.textContent : option.textContent;
+  }
+
+  function setSelectedTwoTierOption(twoTier, option) {
+    var tier = option.getAttribute('data-two-tier-tier');
+    if (!tier) return;
+    var controls = twoTier.querySelectorAll('[data-two-tier-tier="' + cssEscape(tier) + '"]');
+    for (var i = 0; i < controls.length; i++) {
+      controls[i].classList.remove('selected');
+      controls[i].setAttribute('aria-pressed', 'false');
+    }
+    option.classList.add('selected');
+    option.setAttribute('aria-pressed', 'true');
+  }
+
+  function updateTwoTierSummary(twoTier) {
+    var answer = twoTier.querySelector('.ts-two-tier-answer.selected');
+    var reason = twoTier.querySelector('.ts-two-tier-reason.selected');
+    var answerSummary = twoTier.querySelector('.ts-two-tier-summary-answer');
+    var reasonSummary = twoTier.querySelector('.ts-two-tier-summary-reason');
+    if (answerSummary) answerSummary.textContent = 'Antwoord: ' + (answer ? twoTierOptionText(answer) : 'nog niet gekozen');
+    if (reasonSummary) reasonSummary.textContent = 'Reden: ' + (reason ? twoTierOptionText(reason) : 'nog niet gekozen');
+  }
+
   function setSelectedMatchLeft(matching, left) {
     var controls = matching.querySelectorAll('.ts-match-left');
     var wasSelected = left.classList.contains('selected');
@@ -1799,6 +1910,8 @@
     handleStepOrderingClick: handleStepOrderingClick,
     collectMatchingPairsResponse: collectMatchingPairsResponse,
     handleMatchingPairsClick: handleMatchingPairsClick,
+    collectTwoTierChoiceResponse: collectTwoTierChoiceResponse,
+    handleTwoTierChoiceClick: handleTwoTierChoiceClick,
     collectSourceValueSelectionResponse: collectSourceValueSelectionResponse,
     handleSourceValueSelectionClick: handleSourceValueSelectionClick,
     collectSourceChainBuilderResponse: collectSourceChainBuilderResponse,

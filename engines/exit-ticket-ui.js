@@ -192,6 +192,9 @@
       if (sharedTaskShellUI && sharedTaskShellUI.handleMatchingPairsClick && sharedTaskShellUI.handleMatchingPairsClick(app, event)) {
         return;
       }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleTwoTierChoiceClick && sharedTaskShellUI.handleTwoTierChoiceClick(app, event)) {
+        return;
+      }
       if (sharedTaskShellUI && sharedTaskShellUI.handleSourceValueSelectionClick && sharedTaskShellUI.handleSourceValueSelectionClick(app, event)) {
         return;
       }
@@ -341,6 +344,12 @@
       return MatchingTaskShellUI && MatchingTaskShellUI.collectMatchingPairsResponse
         ? MatchingTaskShellUI.collectMatchingPairsResponse(wrapper, task)
         : { pairs: [] };
+    }
+    if (task.family === 'two_tier_choice') {
+      var TwoTierTaskShellUI = resolveTaskShellUI();
+      return TwoTierTaskShellUI && TwoTierTaskShellUI.collectTwoTierChoiceResponse
+        ? TwoTierTaskShellUI.collectTwoTierChoiceResponse(wrapper, task)
+        : { answer: '', reason: '' };
     }
     if (task.family === 'source_value_selection') {
       var SourceValueTaskShellUI = resolveTaskShellUI();

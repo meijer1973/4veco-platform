@@ -266,6 +266,39 @@ function data() {
                 ],
                 partialFeedback: 'practice_only'
             }),
+            task('two-tier-choice', 'two_tier_choice', {
+                answerLabel: 'Kies het antwoord',
+                reasonLabel: 'Kies de reden',
+                answerOptions: [
+                    {
+                        id: 'vier-indexpunten',
+                        label: 'De stijging is 4 indexpunten.',
+                        description: 'Het verschil tussen 112 en 108 wordt in indexpunten genoemd.'
+                    },
+                    {
+                        id: 'vier-procent',
+                        label: 'De stijging is 4 procent.',
+                        description: 'Dit verwart indexpunten met procentuele verandering.'
+                    }
+                ],
+                reasonOptions: [
+                    {
+                        id: 'verschil-in-punten',
+                        label: 'Indexpunten bereken je door indexgetallen af te trekken.',
+                        description: '112 min 108 is 4 indexpunten.'
+                    },
+                    {
+                        id: 'delen-door-honderd',
+                        label: 'Je deelt altijd door 100.',
+                        description: 'Dit is geen goede reden voor procentuele verandering.'
+                    }
+                ]
+            }, {
+                kind: 'two_tier_choice',
+                answer: 'vier-indexpunten',
+                reason: 'verschil-in-punten',
+                partialFeedback: 'practice_only'
+            }),
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
@@ -292,6 +325,7 @@ describe('TaskShellUI', () => {
             'formula_builder',
             'step_ordering',
             'matching_pairs',
+            'two_tier_choice',
             'source_value_selection',
             'source_chain_builder',
             'label_placement',
@@ -379,6 +413,17 @@ describe('TaskShellUI', () => {
         expect(html).toContain('role="group" aria-label="Betekenissen"');
         expect(html).toContain('aria-label="Schaarste: Begrip over beperkte middelen."');
         expect(html).toContain('aria-label="Behoeften zijn groter dan middelen: Betekenis van schaarste."');
+        expect(html).toContain('data-task-family="two_tier_choice"');
+        expect(html).toContain('class="ts-two-tier-choice"');
+        expect(html).toContain('data-two-tier-answer-id="vier-indexpunten"');
+        expect(html).toContain('data-two-tier-reason-id="verschil-in-punten"');
+        expect(html).toContain('data-two-tier-summary');
+        expect(html).toContain('role="group" aria-label="Kies het antwoord"');
+        expect(html).toContain('role="group" aria-label="Kies de reden"');
+        expect(html).toContain('De stijging is 4 indexpunten.');
+        expect(html).toContain('Het verschil tussen 112 en 108 wordt in indexpunten genoemd.');
+        expect(html).toContain('Indexpunten bereken je door indexgetallen af te trekken.');
+        expect(html).toContain('112 min 108 is 4 indexpunten.');
         expect(html).toContain('aria-label="Feedback op je antwoord"');
     });
 
@@ -460,6 +505,18 @@ describe('TaskShellUI', () => {
         expect(matchingFeedback).toContain('Afleider links gekozen');
         expect(matchingFeedback).toContain('Afleider rechts gekozen');
         expect(matchingFeedback).toContain('Winst');
+
+        const twoTierResult = TaskShellEngine.evaluateTask(data().tasks[16], {
+            answer: 'vier-procent',
+            reason: 'verschil-in-punten'
+        });
+        const twoTierFeedback = TaskShellUI.renderFeedback(twoTierResult);
+        expect(twoTierFeedback).toContain('class="ts-two-tier-feedback"');
+        expect(twoTierFeedback).toContain('Antwoord');
+        expect(twoTierFeedback).toContain('kijk dit na');
+        expect(twoTierFeedback).toContain('Reden');
+        expect(twoTierFeedback).toContain('past');
+        expect(twoTierFeedback).toContain('Controleer of je reden het gekozen antwoord echt ondersteunt.');
     });
 
     test('can hide pre-attempt criteria while keeping the same task contract', () => {
@@ -483,6 +540,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Formule bouwen');
         expect(html).toContain('Stappen ordenen');
         expect(html).toContain('Koppels maken');
+        expect(html).toContain('Antwoord en reden kiezen');
         expect(html).toContain('Bronwaarden kiezen');
         expect(html).toContain('Bronketen bouwen');
         expect(html).toContain('Labels plaatsen');
@@ -594,6 +652,16 @@ describe('TaskShellUI', () => {
             '[data-task-id="matching-pairs"][data-match-left-id]',
             '[data-task-id="matching-pairs"][data-match-right-id]',
             '[data-task-id="matching-pairs"][data-match-pair-summary]'
+        ]);
+    });
+
+    test('exports two-tier choice helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectTwoTierChoiceResponse).toBe('function');
+        expect(typeof TaskShellUI.handleTwoTierChoiceClick).toBe('function');
+        expect(TaskShellEngine.focusPlan(data().tasks[16])).toEqual([
+            '[data-task-id="two-tier-choice"][data-two-tier-answer-id]',
+            '[data-task-id="two-tier-choice"][data-two-tier-reason-id]',
+            '[data-task-id="two-tier-choice"][data-two-tier-summary]'
         ]);
     });
 

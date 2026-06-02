@@ -43,6 +43,10 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain('collectMatchingPairsResponse(root, task)');
         expect(source).toContain('handleMatchingPairsClick(els.exStepSlot, e)');
         expect(source).toContain("e.target.closest('.ts-matching-pairs')");
+        expect(source).toContain("task.family === 'two_tier_choice'");
+        expect(source).toContain('collectTwoTierChoiceResponse(root, task)');
+        expect(source).toContain('handleTwoTierChoiceClick(els.exStepSlot, e)');
+        expect(source).toContain("e.target.closest('.ts-two-tier-choice')");
         expect(source).toContain("task.family === 'source_value_selection'");
         expect(source).toContain('collectSourceValueSelectionResponse(root, task)');
         expect(source).toContain('handleSourceValueSelectionClick(els.exStepSlot, e)');
@@ -66,6 +70,7 @@ describe('skilltree ui task-shell safeguards', () => {
         expect(source).toContain("e.target.closest('.ts-multi-select')");
         expect(source).toContain("e.target.closest('.ts-formula')");
         expect(source).toContain("e.target.closest('.ts-step-ordering')");
+        expect(source).toContain("e.target.closest('.ts-two-tier-choice')");
         expect(source).toContain("e.target.closest('.ts-source-values')");
         expect(source).toContain("e.target.closest('.ts-source-chain')");
         expect(source).toContain("e.target.closest('.ts-label-placement')");

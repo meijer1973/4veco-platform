@@ -476,6 +476,58 @@ function graphTaskShellData() {
                     },
                     practiceRoute: { label: 'Oefen verder met begrippen', href: 'redeneer-spel.html' }
                 }
+            },
+            {
+                id: 'two-tier-choice-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'two-tier-choice-task',
+                    family: 'two_tier_choice',
+                    skillLabel: 'Antwoord met reden kiezen',
+                    purpose: 'Kies een conclusie en de reden die deze conclusie ondersteunt.',
+                    prompt: 'Welke uitspraak over indexpunten klopt, en waarom?',
+                    interaction: {
+                        answerLabel: 'Antwoord',
+                        reasonLabel: 'Reden',
+                        answerOptions: [
+                            {
+                                id: 'vier-indexpunten',
+                                label: 'De stijging is 4 indexpunten.',
+                                description: 'Dit benoemt het verschil tussen 112 en 108.'
+                            },
+                            {
+                                id: 'vier-procent',
+                                label: 'De stijging is 4 procent.',
+                                description: 'Dit verwart indexpunten met procentuele verandering.'
+                            }
+                        ],
+                        reasonOptions: [
+                            {
+                                id: 'verschil-in-punten',
+                                label: 'Indexpunten bereken je door indexcijfers af te trekken.',
+                                description: '112 min 108 is 4 indexpunten.'
+                            },
+                            {
+                                id: 'delen-door-honderd',
+                                label: 'Je deelt altijd door 100.',
+                                description: 'Dit is geen juiste reden bij indexpunten.'
+                            }
+                        ]
+                    },
+                    expected: {
+                        kind: 'two_tier_choice',
+                        answer: 'vier-indexpunten',
+                        reason: 'verschil-in-punten',
+                        partialFeedback: 'practice_only'
+                    },
+                    feedback: {
+                        matchTitle: 'Antwoord en reden passen',
+                        matchText: 'Je koppelt de uitspraak aan de juiste reden.',
+                        retryTitle: 'Controleer de koppeling',
+                        retryText: 'Kijk of de reden het gekozen antwoord ondersteunt.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met indexpunten', href: 'wiskundevaardigheden.html' }
+                }
             }
         ]
     };
@@ -578,6 +630,7 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="source_chain_builder"');
         expect(html).toContain('data-task-family="label_placement"');
         expect(html).toContain('data-task-family="matching_pairs"');
+        expect(html).toContain('data-task-family="two_tier_choice"');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -592,6 +645,9 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-match-left-id="schaarste"');
         expect(html).toContain('data-match-right-id="behoeften-middelen"');
         expect(html).toContain('data-match-pair-summary');
+        expect(html).toContain('data-two-tier-answer-id="vier-indexpunten"');
+        expect(html).toContain('data-two-tier-reason-id="verschil-in-punten"');
+        expect(html).toContain('data-two-tier-summary');
         expect(html).toContain('et-task-shell-check');
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
@@ -618,6 +674,9 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleMatchingPairsClick(app, event)');
         expect(source).toContain('collectMatchingPairsResponse(wrapper, task)');
         expect(source).toContain("task.family === 'matching_pairs'");
+        expect(source).toContain('handleTwoTierChoiceClick(app, event)');
+        expect(source).toContain('collectTwoTierChoiceResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'two_tier_choice'");
         expect(source).toContain('handleSourceValueSelectionClick(app, event)');
         expect(source).toContain('collectSourceValueSelectionResponse(wrapper, task)');
         expect(source).toContain("task.family === 'source_value_selection'");
