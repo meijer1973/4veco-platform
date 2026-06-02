@@ -523,6 +523,22 @@ After generating any SVG with economic curves:
 4. **Cross-check**: do the SVG hardcoded coordinates match the computed values? (This catches copy-paste errors where computation is correct but SVG uses old values.)
 5. **Never deliver** a graph without completing both the economic and visual checks
 
+### Figure-caption concordance
+Every graph or figure must match the caption, nearby explanation, and source
+text that introduce it. A rendered figure with the correct filename or figure
+number can still fail if it shows a different concept, operation, table value,
+axis convention, or example than the surrounding text describes.
+
+Before delivery, compare:
+
+- visible title and labels inside the SVG/PNG;
+- caption or alt text;
+- paragraph explanation immediately before and after the figure;
+- any table, formula, or worked example the figure is supposed to represent.
+
+If these do not match, return REVISE rather than accepting the asset as
+technically present.
+
 ### Cost curve graphs
 7. Is the GTK curve U-shaped with a clear minimum?
 8. Does MK cross GTK at GTK's minimum point?

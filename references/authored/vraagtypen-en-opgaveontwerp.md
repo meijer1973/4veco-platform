@@ -89,10 +89,10 @@ The exercise set follows a mandatory progression:
 |-------|-----------|------------|-------------|---------|
 | 1 | Worked example | — | Full (Niveau 5) | Fully solved; same procedure as target, simpler context. Students read and study, not solve. |
 | 2 | Startoefeningen (guided practice) | ~50% | Fading (5→0) | 4-stage dual coding fading sequence (see Part 3) |
-| 3 | Independent practice | ~20% | None (Niveau 0) | 1–3 exercises at target difficulty, different contexts |
+| 3 | Zelfstandige oefening (independent practice) | ~20% | None (Niveau 0) | 1–3 exercises at target difficulty, different contexts; this is the student-facing label after start exercises |
 | 4 | Interleaving exercises | ~15% | None (Niveau 0) | 1–4 quick exercises (2–4 min each) from previous paragraphs |
 | 5 | Target exercise (doeloefening) | ~15% | None (Niveau 0) | From blueprint, verbatim or lightly adapted; capstone |
-| 6 | Verdiepingsopdracht (enrichment) | Outside budget | None | Open question at Bloom analyseren/evalueren/creeren; labeled "Denkertje" or "Bonusopgave" |
+| 6 | Optional stretch task | Outside budget | None | Open question at Bloom analyseren/evalueren/creeren; labeled "Denkertje" or "Bonusopgave", not as the normal post-start exercise block |
 
 **Time adjustment by paragraph difficulty:**
 - Light paragraph: shorter guided practice, more interleaving (3–4 exercises)

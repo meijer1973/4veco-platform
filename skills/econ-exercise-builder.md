@@ -1,6 +1,6 @@
 ---
 name: econ-exercise-builder
-description: "Generates a complete exercise set with answer models for a single textbook paragraph, based on the course blueprint. Produces exercises.md and answers.md with worked examples, guided practice (dual coding fading), independent practice, interleaving exercises, the target exercise, and a verdiepingsopdracht. Total exercise time budget: 40-60 minutes of student work. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
+description: "Generates a complete exercise set with answer models for a single textbook paragraph, based on the course blueprint. Produces exercises.md and answers.md with worked examples, guided practice (dual coding fading), independent practice labelled Zelfstandige oefening in student-facing output, interleaving exercises, the target exercise, and optional stretch material labelled Denkertje or Bonusopgave. Total exercise time budget: 40-60 minutes of student work. Use this skill when the user provides a paragraph spec from the blueprint and wants exercises generated. Trigger when the user mentions oefeningen maken, opgavenset, antwoordmodel, doeloefening uitwerken, or exercise generation for a specific paragraph. Always use in combination with econ-didactiek (pedagogical principles) and economic-graph (for graph specifications within exercises)."
 pipeline: "Part A producer"
 ---
 
@@ -58,18 +58,20 @@ There is no fixed time per exercise. Estimate case by case:
 | Short explanation (1–2 sentences) | 2–4 min | Abstract concept, requires precise terminology |
 | Reasoning chain (3+ links) | 5–8 min | More links, ambiguous causality |
 | Definition / classification | 1–2 min | Straightforward recall |
-| Verdiepingsopdracht (open, evaluative) | 8–15 min | Requires argumentation, model critique |
+| Optional stretch task (open, evaluative) | 8–15 min | Requires argumentation, model critique; student-facing label is "Denkertje" or "Bonusopgave" |
 
 ### 2.3 Budget allocation
 
 | Component | Time share | Notes |
 |-----------|------------|-------|
 | Guided practice (with fading) | ~50% | Core skill acquisition |
-| Independent practice | ~20% | Same skill, no scaffolding |
+| Zelfstandige oefening | ~20% | Same skill, no scaffolding |
 | Interleaving exercises | ~15% | Earlier skills, quick |
 | Target exercise | ~15% | The doeloefening from the blueprint |
 
-The verdiepingsopdracht is **outside** the 40–60 min budget — it is optional stretch material.
+Optional stretch material is **outside** the 40–60 min budget. Do not label
+the normal post-start exercise block as `Verdieping`; the student-facing label
+for that block is `Zelfstandige oefening`.
 
 ### 2.4 Adjusting for difficulty
 
@@ -102,7 +104,7 @@ The verdiepingsopdracht is **outside** the 40–60 min budget — it is optional
        Text-only question. Student reasons about what would happen.
        (No visual provided; visual not required in answer.)
 
-3. INDEPENDENT PRACTICE
+3. ZELFSTANDIGE OEFENING
    1–3 exercises at target difficulty, no scaffolding, no visuals provided.
    Different contexts from guided practice.
    Stage 4 of the fading: students draw their own graph from scratch

@@ -212,6 +212,9 @@ Questions:
 Hard fail:
 
 - A graph, flow chart, or diagram is used without enough explanation, uses different concepts or vocabulary than the text, or is correct but not understandable for the intended student.
+- A figure caption, description, or nearby explanation refers to a different
+  visual than the one rendered. This is a REVISE condition even if the figure
+  number sequence and image file links are technically valid.
 
 ### Pass 7 - Transfer between representations
 
@@ -294,6 +297,7 @@ The artifact fails student-experience review if:
 - mathematical steps assume knowledge not yet taught
 - feedback is absent after student action
 - graphs or visuals create more confusion than support
+- a figure caption or nearby explanation does not match the rendered figure
 - important information is hidden or visually de-emphasized
 - the task feels like a test before sufficient instruction has occurred
 - the student could complete the task by guessing without understanding

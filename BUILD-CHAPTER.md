@@ -126,6 +126,8 @@ This checks:
 - Every image reference resolves to a file
 - No orphaned assets
 - Chapter assembly files exist (hoofdstuk.md/.pdf, antwoorden.md/.pdf, build_chapter.py)
+- Chapter aggregate `_assets/` copies match the paragraph source assets they
+  reference; stale aggregate assets are errors
 - Chapter PDF > 500KB (images embedded)
 - build_chapter.py uses correct path (MODULE = BASE)
 - No paragraph folders at parent level
@@ -143,7 +145,8 @@ For a command-by-command validation report, use `agents/testing-agent.md`. For c
 | 3 | Front page: title, TOC, leerdoelen, catchy intro — all on one page | □ |
 | 4 | Front page leerdoelen match blueprint goals (every blueprint goal appears on front page, no invented goals) | □ |
 | 5 | Chapter PDF: images render, pages break correctly (visual check) | □ |
-| 6 | Answer booklet PDF: images render, pages break correctly | □ |
+| 6 | Chapter PDF: figure captions/descriptions match the rendered figures, not only the file numbers | □ |
+| 7 | Answer booklet PDF: images render, pages break correctly | □ |
 
 **A chapter is complete when ALL items are checked. Not before.**
 

@@ -74,6 +74,10 @@ function fail(msg) { console.error(`  ✗ ${msg}`); errors++; }
 function warn(msg) { console.warn(`  ⚠ ${msg}`); warnings++; }
 function pass(msg) { console.log(`  ✓ ${msg}`); }
 
+function filesDiffer(left, right) {
+  return fs.readFileSync(left).compare(fs.readFileSync(right)) !== 0;
+}
+
 // ── Discover paragraph folders ─────────────────────────────────
 
 console.log('── Paragraph discovery ──');
@@ -386,6 +390,30 @@ if (fs.existsSync(chapterAssets)) {
     if ((f.endsWith('.svg') || f.endsWith('.png')) && !f.startsWith(expectedPrefix)) {
       fail(`Chapter asset wrong prefix: ${f} (expected ${expectedPrefix}*)`);
     }
+  }
+
+  let parityChecks = 0;
+  for (const folderName of paraFolders) {
+    const paragraphDir = path.join(CHAPTER, folderName);
+    const refs = extractImageRefs(paragraphDir);
+    for (const ref of refs) {
+      const baseName = path.basename(ref);
+      const candidateNames = new Set([baseName]);
+      if (/\.svg$/i.test(baseName)) candidateNames.add(baseName.replace(/\.svg$/i, '.png'));
+      if (/\.png$/i.test(baseName)) candidateNames.add(baseName.replace(/\.png$/i, '.svg'));
+      for (const assetName of candidateNames) {
+        const paragraphAsset = path.join(paragraphDir, '_assets', assetName);
+        const chapterAsset = path.join(chapterAssets, assetName);
+        if (!fs.existsSync(paragraphAsset) || !fs.existsSync(chapterAsset)) continue;
+        parityChecks += 1;
+        if (filesDiffer(paragraphAsset, chapterAsset)) {
+          fail(`Chapter aggregate asset differs from paragraph source: ${assetName}`);
+        }
+      }
+    }
+  }
+  if (parityChecks > 0) {
+    pass(`${parityChecks} chapter aggregate asset copies match paragraph source`);
   }
 } else {
   fail('MISSING chapter _assets/ folder');

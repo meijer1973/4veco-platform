@@ -110,6 +110,10 @@ Report:
 - Which additional command would reduce the main risk.
 - Whether any classroom-readiness or learning-quality claim still needs `agents/teacher-learning-quality-review-agent.md`. Tests can prove commands and validators passed; they do not prove that students learned efficiently.
 - Whether any student-readiness or student-facing usability claim still needs `agents/student-experience-review-agent.md`. Tests can prove the page works technically; they do not prove that a 15-year-old student can orient, understand the task, or interpret the visual support.
+- For graph-heavy or figure-heavy output, whether validators checked
+  figure-caption/source-output concordance. If validators only prove that image
+  files exist, record a residual risk that the rendered figure may still be the
+  wrong figure for the surrounding explanation.
 
 ## Automatic failure conditions
 
@@ -119,6 +123,9 @@ The Testing Agent must return FAIL or BLOCKED when:
 - A test command fails and no successful rerun is recorded.
 - The report claims tests passed without command and exit-code evidence.
 - Generated output changed but no relevant validation was run.
+- A figure or graph issue is tested only by file-existence checks while the
+  sprint claim depends on the figure matching the caption, source text, or
+  nearby explanation.
 - A review gate requires proof files and they are missing.
 - The selected tests do not cover the modified surface.
 - The report uses passing tests as the only evidence for a classroom-readiness or learning-quality claim when a teacher-learning-quality review is required.

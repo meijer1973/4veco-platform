@@ -58,6 +58,30 @@ const FORBIDDEN_VISIBLE_PATTERNS = [
   { pattern: /welvaart op de markt/i, label: 'stale welfare-forward-reference wording' },
 ];
 
+const ASSET_REF_RE = /!\[([^\]]*)\]\(([^)]+)\)/g;
+const FIGURE_STOPWORDS = new Set([
+  'figuur',
+  'links',
+  'rechts',
+  'correct',
+  'niet',
+  'gebruik',
+  'gebruiken',
+  'waarde',
+  'waarden',
+  'boven',
+  'onder',
+  'horizontale',
+  'verticale',
+  'horizontaal',
+  'verticaal',
+  'grafiek',
+  'grafieken',
+  'afbeelding',
+  'voor',
+  'achter',
+]);
+
 function usage() {
   console.error('Usage: node scripts/check-book-print-scope.js <book-folder-path>');
 }
@@ -119,6 +143,80 @@ function extractParagraphBodies(md) {
   return bodies;
 }
 
+function normalizeText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/economieconventie/g, 'economie conventie')
+    .replace(/wiskundeconventie/g, 'wiskunde conventie')
+    .replace(/interpoleren/g, 'interpolatie')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function stripSvgText(svg) {
+  return normalizeText(String(svg || '')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z]+;/gi, ' '));
+}
+
+function meaningfulFigureTokens(altText) {
+  const withoutFigurePrefix = normalizeText(altText).replace(/\bfiguur\s+\d+\b/g, ' ');
+  const tokens = withoutFigurePrefix
+    .split(/\s+/)
+    .filter(token => token.length >= 5 && !FIGURE_STOPWORDS.has(token) && !/^\d+$/.test(token));
+  return [...new Set(tokens)];
+}
+
+function tokenMatchesVisibleText(token, visibleText) {
+  if (visibleText.includes(token)) return true;
+  if (token.length >= 8 && visibleText.includes(token.slice(0, 7))) return true;
+  return false;
+}
+
+function extractImageRefsWithAlt(md) {
+  const refs = [];
+  let match;
+  ASSET_REF_RE.lastIndex = 0;
+  while ((match = ASSET_REF_RE.exec(md)) !== null) {
+    refs.push({ alt: match[1], ref: match[2] });
+  }
+  return refs;
+}
+
+function figureConcordanceErrors(md, bookRoot) {
+  const errors = [];
+  for (const { alt, ref } of extractImageRefsWithAlt(md)) {
+    if (!/^figuur\s+\d+/i.test(alt)) continue;
+    if (/^(?:https?:|data:)/i.test(ref)) continue;
+    const svgName = path.basename(ref).replace(/\.png$/i, '.svg');
+    const svgPath = path.join(bookRoot, '_assets', svgName);
+    if (!fs.existsSync(svgPath)) continue;
+    const visibleText = stripSvgText(fs.readFileSync(svgPath, 'utf8'));
+    const altNumber = alt.match(/figuur\s+(\d+)/i)?.[1];
+    const svgNumber = visibleText.match(/\bfiguur\s+(\d+)\b/i)?.[1];
+    if (altNumber && svgNumber && altNumber !== svgNumber) {
+      errors.push(`Figure ${altNumber} references ${svgName}, but SVG visible text says Figure ${svgNumber}`);
+      continue;
+    }
+
+    const tokens = meaningfulFigureTokens(alt);
+    if (tokens.length === 0) continue;
+    const matched = tokens.filter(token => tokenMatchesVisibleText(token, visibleText));
+    const requiredMatches = 1;
+    if (matched.length < requiredMatches) {
+      errors.push(
+        `Figure caption/asset mismatch for ${svgName}: caption tokens "${tokens.slice(0, 5).join(', ')}" do not match SVG visible text`
+      );
+    }
+  }
+  return errors;
+}
+
 function assertBookPrintScope(bookRoot) {
   const bookMd = findBookMd(bookRoot);
   const md = fs.readFileSync(bookMd, 'utf8');
@@ -139,6 +237,13 @@ function assertBookPrintScope(bookRoot) {
     if (!paragraphBodies.has(nr)) {
       errors.push(`Missing visible body heading for print paragraph ${nr}`);
     }
+  }
+
+  if (!/class="toc-page"/.test(toc)) {
+    errors.push('Book TOC lacks page-number column cells');
+  }
+  if (!/href="#book-toc-/.test(toc)) {
+    errors.push('Book TOC lacks internal page target links');
   }
 
   for (const nr of numbers) {
@@ -165,6 +270,8 @@ function assertBookPrintScope(bookRoot) {
       errors.push(`Paragraph ${nr} has duplicate Opgaven sections (${opgavenCount})`);
     }
   }
+
+  errors.push(...figureConcordanceErrors(md, bookRoot));
 
   if (/vijf hoofdstukken/i.test(md)) {
     errors.push('Voorwoord still says "vijf hoofdstukken"');
@@ -218,5 +325,6 @@ module.exports = {
   extractBookToc,
   extractParagraphBodies,
   extractParagraphNumbers,
+  figureConcordanceErrors,
   visibleMarkdown,
 };

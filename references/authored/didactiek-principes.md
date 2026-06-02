@@ -579,11 +579,13 @@ Total exercise set: **40–60 minutes** of student work (excluding worked exampl
 | Component | Time share |
 |-----------|------------|
 | Guided practice (with fading) | ~50% |
-| Independent practice | ~20% |
+| Zelfstandige oefening (independent practice) | ~20% |
 | Interleaving exercises | ~15% |
 | Target exercise | ~15% |
 
-Verdiepingsopdracht is **outside** the 40–60 min budget — optional stretch material.
+Optional stretch material is **outside** the 40–60 min budget and is labelled
+`Denkertje` or `Bonusopgave`. The standard student-facing exercise block after
+start exercises is `Zelfstandige oefening`, not `Verdieping`.
 
 ### 9.3 Answer model rules
 

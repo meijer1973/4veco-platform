@@ -61,7 +61,8 @@ Normal closure for non-trivial work now includes:
 - run `git fetch --prune origin` before final commit/push and resolve any behind/diverged state explicitly
 - refresh repository maps and GitHub-facing indexes whenever paths, roadmaps, generated reports, agents, skills, or review surfaces change: `npm.cmd run agent:index`, `node build-scripts/sprints/emit-url-index.js`, and `npm.cmd run dashboard:internal` when dashboard or roadmap state changes
 - keep `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_MAP_REFERENCES.md`, `AGENT_GITHUB_ENTRY.md`, `reports/url-index.md`, and `reports/github-agent-index-*.md` aligned with the real repository layout
-- after validation and commit, push to the normal remote branch unless the user explicitly asks to keep work local
+- after validation, commit and push to the normal remote branch unless the user explicitly asks to keep work local
+- do not leave a completed sprint or non-trivial generated-output task in a dirty local worktree; if a blocker prevents commit/push, report the exact dirty status and blocker before ending
 - report both the local commit hash and whether it has been pushed
 
 Human-review packets have an extra remote-publication rule:

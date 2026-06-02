@@ -485,11 +485,11 @@ Each scripted-manual asset follows the same pattern: **read source → write bui
 | **Hard rule** | Every exercise that asks students to draw, describe, or interpret a graph MUST have a `scaffoldImage` from `_assets/`. This is dual coding applied to scaffolding — weaker students need visual anchors alongside text-based denkstappen. |
 | **HTML-first rule** | In the student-web profile, the HTML version may be authored natively instead of converted from DOCX, but it must still cover the actual textbook opgaven and answer model. Each source subquestion needs a visible prompt plus revealable denkstappen, hint, answer, and explanation unless the sprint plan documents an intentional scope exception. |
 
-#### Opgavensets — basis, midden, verrijking (6 .docx files)
+#### Opgavensets — zelfstandige oefening and optional stretch files
 | | |
 |---|---|
-| **Raw input** | Textbook exercises, graded by difficulty. Basis = knowledge recall. Midden = application. Verrijking = analysis/evaluation. |
-| **Agent process** | Write questions at 3 levels (basis 8-10, midden 6-8, verrijking 4-6) + full answer models for each. |
+| **Raw input** | Textbook exercises after start exercises are student-facing `Zelfstandige oefening`. Optional stretch tasks may use `Denkertje` or `Bonusopgave`; do not label the normal post-start exercise block as `Verdieping`. |
+| **Agent process** | Write coherent independent exercises plus any explicitly authorized optional stretch tasks, with full answer models for each. |
 | **Reference script** | `opgaven-351-afsluiting.js` — copy, replace exercise content. Generates all 6 files. |
 | **Reusable** | Document scaffold (headers, numbering, answer formatting). |
 | **Custom** | All questions and answers. |

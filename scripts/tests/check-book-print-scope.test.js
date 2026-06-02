@@ -45,8 +45,11 @@ function defaultBody(numbers) {
 function writeBook(numbers, options = {}) {
   const book = path.join(TMP, 'Boek 1 - Test');
   fs.mkdirSync(book, { recursive: true });
+  fs.mkdirSync(path.join(book, '_assets'), { recursive: true });
   const rows = numbers.map(nr => (
-    `<tr class="toc-paragraph"><td class="toc-nr">${nr}</td><td class="toc-title">Titel ${nr}</td></tr>`
+    options.omitPageCells
+      ? `<tr class="toc-paragraph"><td class="toc-nr">${nr}</td><td class="toc-title">Titel ${nr}</td></tr>`
+      : `<tr class="toc-paragraph"><td class="toc-nr">${nr}</td><td class="toc-title"><a href="#book-toc-paragraph-${nr.replace(/\./g, '-')}">Titel ${nr}</a></td><td class="toc-page"><a href="#book-toc-paragraph-${nr.replace(/\./g, '-')}"></a></td></tr>`
   )).join('\n');
   const md = [
     '<div class="book-voorwoord">',
@@ -60,6 +63,9 @@ function writeBook(numbers, options = {}) {
     options.body || defaultBody(numbers),
   ].join('\n');
   fs.writeFileSync(path.join(book, `Boek 1 Test ${DASH} boek.md`), md, 'utf8');
+  for (const [name, content] of Object.entries(options.assets || {})) {
+    fs.writeFileSync(path.join(book, '_assets', name), content, 'utf8');
+  }
   return book;
 }
 
@@ -78,6 +84,13 @@ describe('check-book-print-scope.js', () => {
     const { exitCode, output } = run([book]);
     expect(exitCode).toBe(0);
     expect(output).toContain('OK Book print scope');
+  });
+
+  test('fails when the TOC has no page-number cells', () => {
+    const book = writeBook(REQUIRED, { omitPageCells: true });
+    const { exitCode, output } = run([book]);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('Book TOC lacks page-number column cells');
   });
 
   test('fails when old chapter 1.4 appears in the print TOC', () => {
@@ -120,5 +133,22 @@ describe('check-book-print-scope.js', () => {
     const { exitCode, output } = run([book]);
     expect(exitCode).not.toBe(0);
     expect(output).toContain('Paragraph 1.3.2 has duplicate Opgaven sections');
+  });
+
+  test('fails when a figure caption points to a semantically different SVG', () => {
+    const body = [
+      defaultBody(REQUIRED),
+      '',
+      '![Figuur 2: Links de economieconventie, rechts de wiskundeconventie](_assets/1.1.3_fig_2.svg)',
+    ].join('\n');
+    const book = writeBook(REQUIRED, {
+      body,
+      assets: {
+        '1.1.3_fig_2.svg': '<svg><text>Figuur 2: Interpolatie - aflezen bij P = 1,75</text></svg>',
+      },
+    });
+    const { exitCode, output } = run([book]);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('Figure caption/asset mismatch');
   });
 });

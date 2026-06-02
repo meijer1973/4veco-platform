@@ -10,6 +10,7 @@ See skills/econ-book-builder.md for the design.
 from __future__ import annotations
 
 import base64
+import filecmp
 import json
 import os
 import re
@@ -311,14 +312,18 @@ def render_toc_html(toc_entries: list[dict]) -> str:
         '<tbody>',
     ]
     for entry in toc_entries:
+        chapter_href = f'#{html_escape(entry["anchor"])}'
         parts.append(
             f'<tr class="toc-chapter"><td class="toc-nr">Hoofdstuk {html_escape(entry["chapter_nr"])}</td>'
-            f'<td class="toc-title">{html_escape(entry["chapter_title"])}</td></tr>'
+            f'<td class="toc-title"><a href="{chapter_href}">{html_escape(entry["chapter_title"])}</a></td>'
+            f'<td class="toc-page"><a href="{chapter_href}" aria-label="Pagina voor hoofdstuk {html_escape(entry["chapter_nr"])}"></a></td></tr>'
         )
         for p in entry.get("paragraphs", []):
+            paragraph_href = f'#{html_escape(p["anchor"])}'
             parts.append(
                 f'<tr class="toc-paragraph"><td class="toc-nr">§{html_escape(p["nr"])}</td>'
-                f'<td class="toc-title">{html_escape(p["title"])}</td></tr>'
+                f'<td class="toc-title"><a href="{paragraph_href}">{html_escape(p["title"])}</a></td>'
+                f'<td class="toc-page"><a href="{paragraph_href}" aria-label="Pagina voor paragraaf {html_escape(p["nr"])}"></a></td></tr>'
             )
     parts.append('</tbody></table></div>')
     return "\n".join(parts)
@@ -328,6 +333,35 @@ def render_toc_html(toc_entries: list[dict]) -> str:
 # ---------------------------------------------------------------------------
 H1_CHAPTER_RE = re.compile(r"<h1>Hoofdstuk\s+\d+(?:\.\d+)?\s+[—-]\s+(.+?)</h1>")
 TOC_ROW_RE = re.compile(r"<tr>\s*<td>\s*(\d+\.\d+\.\d+)\s*</td>\s*<td>\s*(.+?)\s*</td>\s*</tr>")
+
+def toc_anchor_id(kind: str, value: str) -> str:
+    slug = re.sub(r"[^0-9A-Za-z]+", "-", value).strip("-").lower()
+    return f"book-toc-{kind}-{slug}"
+
+def anchor_span(anchor_id: str) -> str:
+    return f'<span id="{html_escape(anchor_id)}" class="book-toc-anchor"></span>'
+
+def add_toc_anchors(md_text: str, entry: dict) -> str:
+    """Add invisible anchors used by generated TOC page-number links."""
+    result = md_text
+    chapter_anchor = anchor_span(entry["anchor"])
+    if re.search(r"<h1>Hoofdstuk\b", result):
+        result = re.sub(r"(<h1>Hoofdstuk\b)", chapter_anchor + "\n" + r"\1", result, count=1)
+    elif re.search(r"^#\s+", result, flags=re.MULTILINE):
+        result = re.sub(r"(^#\s+)", chapter_anchor + "\n" + r"\1", result, count=1, flags=re.MULTILINE)
+    else:
+        result = chapter_anchor + "\n\n" + result
+
+    for paragraph in entry.get("paragraphs", []):
+        paragraph_anchor = anchor_span(paragraph["anchor"])
+        direct_heading = re.compile(rf"(^#\s+{re.escape(paragraph['nr'])}\b.*$)", flags=re.MULTILINE)
+        if direct_heading.search(result):
+            result = direct_heading.sub(paragraph_anchor + "\n" + r"\1", result, count=1)
+            continue
+        numbered_heading = re.compile(rf"(^#\s+.*\b{re.escape(paragraph['nr'])}\b.*$)", flags=re.MULTILINE)
+        if numbered_heading.search(result):
+            result = numbered_heading.sub(paragraph_anchor + "\n" + r"\1", result, count=1)
+    return result
 
 def extract_chapter_title(chapter_md_text: str, fallback: str) -> str:
     match = H1_CHAPTER_RE.search(chapter_md_text)
@@ -344,10 +378,14 @@ def build_toc_entries(chapter_pairs: list[tuple[str, Path, str, str]]) -> list[d
     entries = []
     for chapter_nr, chapter_dir, md_text, fallback_title in chapter_pairs:
         title = extract_chapter_title(md_text, fallback=fallback_title)
-        paragraphs = extract_chapter_toc_rows(md_text)
+        paragraphs = [
+            {**paragraph, "anchor": toc_anchor_id("paragraph", paragraph["nr"])}
+            for paragraph in extract_chapter_toc_rows(md_text)
+        ]
         entries.append({
             "chapter_nr": chapter_nr,
             "chapter_title": title,
+            "anchor": toc_anchor_id("chapter", chapter_nr),
             "paragraphs": paragraphs,
         })
     return entries
@@ -485,8 +523,26 @@ def rewrite_chapter_asset_paths(md: str) -> str:
         return f"![{alt}](_assets/{filename})"
     return ASSET_REF_RE.sub(repl, md)
 
-def collect_assets(chapter_dirs: list[Path], book_assets_dir: Path) -> int:
+def referenced_asset_names(md_text: str) -> set[str]:
+    names: set[str] = set()
+    for match in ASSET_REF_RE.finditer(md_text):
+        path = match.group(2)
+        if path.startswith(("http://", "https://", "data:")):
+            continue
+        filename = os.path.basename(path)
+        if not filename:
+            continue
+        names.add(filename)
+        if filename.endswith(".svg"):
+            names.add(filename[:-4] + ".png")
+        elif filename.endswith(".png"):
+            names.add(filename[:-4] + ".svg")
+    return names
+
+
+def collect_assets(chapter_dirs: list[Path], book_assets_dir: Path, book_md_text: str) -> int:
     book_assets_dir.mkdir(parents=True, exist_ok=True)
+    needed_names = referenced_asset_names(book_md_text)
     copied = 0
     for chapter_dir in chapter_dirs:
         src = chapter_dir / "_assets"
@@ -495,8 +551,10 @@ def collect_assets(chapter_dirs: list[Path], book_assets_dir: Path) -> int:
         for asset in src.iterdir():
             if not asset.is_file():
                 continue
+            if asset.name not in needed_names:
+                continue
             dest = book_assets_dir / asset.name
-            if dest.exists():
+            if dest.exists() and filecmp.cmp(asset, dest, shallow=False):
                 continue
             shutil.copy2(asset, dest)
             copied += 1
@@ -804,6 +862,10 @@ p { margin: 0 0 10pt 0; }
   padding: 2pt 6pt;
   background: transparent;
 }
+.book-toc .toc-table a {
+  color: inherit;
+  text-decoration: none;
+}
 .book-toc tr.toc-chapter td {
   font-weight: bold;
   color: #1A5276;
@@ -818,6 +880,18 @@ p { margin: 0 0 10pt 0; }
   color: #555;
 }
 .book-toc tr.toc-paragraph td.toc-title { color: #333; }
+.book-toc td.toc-page {
+  width: 32pt;
+  text-align: right;
+  color: #555;
+  white-space: nowrap;
+}
+.book-toc td.toc-page a::after {
+  content: target-counter(attr(href), page);
+}
+.book-toc-anchor {
+  display: inline;
+}
 
 /* ==========================================================================
    BOOK-LEVEL BACK MATTER
@@ -1074,9 +1148,9 @@ def assemble_book_md(manifest: dict, lessen_root: Path, platform_root: Path):
 
     # 3. Body: chapter markdowns with rewritten asset paths
     body_parts: list[str] = [BOOK_CONTENT_START]
-    for chapter_nr, chapter_dir, md_text, fallback_title in chapter_data:
+    for (chapter_nr, chapter_dir, md_text, fallback_title), entry in zip(chapter_data, toc_entries):
         body_parts.append('<div style="break-before: page;"></div>')
-        body_parts.append(rewrite_chapter_asset_paths(md_text))
+        body_parts.append(rewrite_chapter_asset_paths(add_toc_anchors(md_text, entry)))
     body_parts.append(BOOK_CONTENT_END)
 
     # 4. Back matter needs the assembled book text to know which terms to include
@@ -1216,8 +1290,8 @@ def build_book(manifest_path: Path, lessen_root: Path, platform_root: Path):
 
     print(f"\n=== Collecting assets into {book_output_dir.name}/_assets/ ===")
     book_output_dir.mkdir(parents=True, exist_ok=True)
-    copied = collect_assets(asset_sources, book_output_dir / "_assets")
-    print(f"  Copied {copied} new assets")
+    copied = collect_assets(asset_sources, book_output_dir / "_assets", book_md)
+    print(f"  Copied or refreshed {copied} asset(s)")
 
     missing = verify_asset_refs(book_md, book_output_dir / "_assets")
     if missing:

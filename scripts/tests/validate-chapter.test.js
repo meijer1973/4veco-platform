@@ -239,6 +239,27 @@ describe('validate-chapter.js', () => {
     expect(output).toContain('Non-compliant asset name');
   });
 
+  test('fails when a chapter aggregate asset differs from the paragraph source asset', () => {
+    const paragraafMd = '9.9.1 Theory - paragraaf.md';
+    const dir = setupChapter('9.9 Hoofdstuk TestAggregateAssetParity', [
+      {
+        folder: '9.9.1 Theory',
+        mdFiles: [paragraafMd, '9.9.1 Theory - opgaven.md', '9.9.1 Theory - antwoorden.md'],
+        mdContents: {
+          [paragraafMd]: '# Test content\n\n![Figuur 1: Correcte bronfiguur](_assets/9.9.1_fig_1.svg)\n',
+        },
+        pdfFiles: ['9.9.1 Theory - paragraaf.pdf', '9.9.1 Theory - opgaven.pdf', '9.9.1 Theory - antwoorden.pdf'],
+        assets: ['9.9.1_fig_1.svg', '9.9.1_fig_1.png'],
+        review: validReview(),
+        qualityRef: validQualityRef(),
+      },
+    ]);
+    fs.writeFileSync(path.join(dir, '_assets', '9.9.1_fig_1.svg'), '<svg><text>Stale aggregate figure</text></svg>');
+    const { exitCode, output } = run(dir);
+    expect(exitCode).not.toBe(0);
+    expect(output).toContain('Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg');
+  });
+
   test('accepts test prep summary (samenvatting.md, no paragraaf)', () => {
     const dir = setupChapter('9.5 Hoofdstuk Toetsvoorbereiding', [
       {
