@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-CONTEXT-SPEC-1",
+  "generated_on": "2026-06-03T00:00:00.000Z",
+  "status": "context_contract_only",
+  "sourceAuthority": {
+    "kind": "external_primary",
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "overlay_path": "references/data/exam-ingestion/exam-item-overlays.json",
+    "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+    "source_material_id": "table-1-zoohee-zorgverzekering"
+  },
+  "allowedBlockTypes": [
+    "markdown",
+    "source_excerpt",
+    "table",
+    "svg_figure",
+    "graph",
+    "flowchart",
+    "formula",
+    "info_box"
+  ],
+  "blockTypeRules": {
+    "markdown": {
+      "required": ["id", "type", "title", "bodyMarkdown", "accessibilitySummary"],
+      "captionPrefix": null,
+      "altTextRequired": false
+    },
+    "source_excerpt": {
+      "required": ["id", "type", "sourceLabel", "caption", "bodyMarkdown", "sourceRefs", "accessibilitySummary"],
+      "captionPrefix": "Bron",
+      "altTextRequired": false
+    },
+    "table": {
+      "required": ["id", "type", "sourceLabel", "caption", "columns", "rows", "altText", "sourceMaterialId"],
+      "captionPrefix": "Tabel",
+      "altTextRequired": true
+    },
+    "svg_figure": {
+      "required": ["id", "type", "sourceLabel", "caption", "svg", "viewBox", "altText", "sourceMaterialId", "reconstruction"],
+      "captionPrefix": "Figuur",
+      "altTextRequired": true
+    },
+    "graph": {
+      "required": ["id", "type", "sourceLabel", "caption", "axes", "series", "altText", "sourceMaterialId"],
+      "captionPrefix": "Figuur",
+      "altTextRequired": true
+    },
+    "flowchart": {
+      "required": ["id", "type", "sourceLabel", "caption", "nodes", "edges", "altText", "sourceMaterialId"],
+      "captionPrefix": "Figuur",
+      "altTextRequired": true
+    },
+    "formula": {
+      "required": ["id", "type", "sourceLabel", "caption", "expression", "variables", "altText", "sourceMaterialId"],
+      "captionPrefix": "Formule",
+      "altTextRequired": true
+    },
+    "info_box": {
+      "required": ["id", "type", "title", "bodyMarkdown", "accessibilitySummary"],
+      "captionPrefix": null,
+      "altTextRequired": false
+    }
+  },
+  "positiveFixture": {
+    "bundle_id": "ctx-spec1-zoohee-authoring-fixture",
+    "schema_version": 1,
+    "status": "contract_fixture_not_rendered",
+    "sourceAuthority": {
+      "kind": "external_primary",
+      "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "overlay_path": "references/data/exam-ingestion/exam-item-overlays.json",
+      "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+      "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+      "source_material_id": "table-1-zoohee-zorgverzekering"
+    },
+    "contextBlocks": [
+      {
+        "id": "ctx-zoohee-intro",
+        "type": "markdown",
+        "title": "Vergelijk twee zorgverzekeringen",
+        "bodyMarkdown": "Een jongere vergelijkt een wettelijk eigen risico met een verhoogd eigen risico.",
+        "accessibilitySummary": "Korte tekstuele inleiding zonder antwoordhint."
+      },
+      {
+        "id": "ctx-zoohee-source",
+        "type": "source_excerpt",
+        "sourceLabel": "Bron 1",
+        "caption": "Bron 1: Zoohee zorgverzekering",
+        "bodyMarkdown": "Zoohee biedt twee varianten met verschillende premie en eigen risico.",
+        "sourceRefs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-3"],
+        "accessibilitySummary": "Tekstbron met de context voor de vergelijking."
+      },
+      {
+        "id": "ctx-zoohee-table",
+        "type": "table",
+        "sourceLabel": "Tabel 1",
+        "caption": "Tabel 1: Zoohee zorgverzekering",
+        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+        "columns": ["variant", "eigen_risico_per_jaar_eur", "premie_per_maand_eur"],
+        "rows": [
+          ["wettelijk eigen risico", 385, 108.25],
+          ["verhoogd eigen risico", 885, 86.25]
+        ],
+        "altText": "Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."
+      },
+      {
+        "id": "ctx-zoohee-svg",
+        "type": "svg_figure",
+        "sourceLabel": "Figuur 1",
+        "caption": "Figuur 1: Premieverschil per maand",
+        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+        "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect x=\"60\" y=\"50\" width=\"80\" height=\"90\"></rect><rect x=\"180\" y=\"70\" width=\"80\" height=\"70\"></rect></svg>",
+        "viewBox": "0 0 320 180",
+        "altText": "Staafdiagram dat laat zien dat de maandpremie lager is bij verhoogd eigen risico.",
+        "reconstruction": {
+          "status": "reconstructed_from_source",
+          "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+          "rawCopiedImage": false
+        }
+      },
+      {
+        "id": "ctx-zoohee-graph",
+        "type": "graph",
+        "sourceLabel": "Figuur 2",
+        "caption": "Figuur 2: Jaarpremie per variant",
+        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+        "axes": {
+          "x": { "label": "Variant" },
+          "y": { "label": "Jaarpremie in euro" }
+        },
+        "series": [
+          {
+            "label": "Jaarpremie",
+            "points": [
+              { "x": "wettelijk", "y": 1299 },
+              { "x": "verhoogd", "y": 1035 }
+            ]
+          }
+        ],
+        "altText": "Grafiek met jaarpremies 1299 euro en 1035 euro voor de twee varianten."
+      },
+      {
+        "id": "ctx-zoohee-flow",
+        "type": "flowchart",
+        "sourceLabel": "Figuur 3",
+        "caption": "Figuur 3: Denkroute premie naar jaarkosten",
+        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+        "nodes": [
+          { "id": "monthly-premium", "label": "Premie per maand" },
+          { "id": "annual-premium", "label": "Premie per jaar" },
+          { "id": "deductible", "label": "Eigen risico" }
+        ],
+        "edges": [
+          { "from": "monthly-premium", "to": "annual-premium", "label": "keer 12" },
+          { "from": "annual-premium", "to": "deductible", "label": "vergelijk met risico" }
+        ],
+        "altText": "Stroomschema van maandpremie naar jaarpremie en vergelijking met eigen risico."
+      },
+      {
+        "id": "ctx-zoohee-formula",
+        "type": "formula",
+        "sourceLabel": "Formule 1",
+        "caption": "Formule 1: Jaarpremie berekenen",
+        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+        "expression": "jaarpremie = maandpremie * 12",
+        "variables": [
+          { "symbol": "maandpremie", "meaning": "premie per maand in euro" },
+          { "symbol": "jaarpremie", "meaning": "premie per jaar in euro" }
+        ],
+        "altText": "Formule: jaarpremie is maandpremie keer twaalf."
+      },
+      {
+        "id": "ctx-zoohee-info",
+        "type": "info_box",
+        "title": "Let op de eenheid",
+        "bodyMarkdown": "Premie staat per maand in de bron; eigen risico staat per jaar.",
+        "accessibilitySummary": "Informatiekader over maand- en jaarbedragen."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "task-zoohee-select-values",
+        "family": "source_value_selection",
+        "prompt": "Kies de bronwaarden die nodig zijn om jaarpremies te vergelijken.",
+        "contextRefs": [
+          "ctx-zoohee-intro",
+          "ctx-zoohee-source",
+          "ctx-zoohee-table",
+          "ctx-zoohee-svg",
+          "ctx-zoohee-graph",
+          "ctx-zoohee-flow",
+          "ctx-zoohee-formula",
+          "ctx-zoohee-info"
+        ]
+      }
+    ]
+  },
+  "negativeFixtureInventory": [
+    "missing_alt_text",
+    "missing_context_refs",
+    "unknown_context_ref",
+    "unreferenced_source_block",
+    "answer_hint_leakage",
+    "raw_copied_image",
+    "inconsistent_caption",
+    "internal_code_exposure"
+  ],
+  "productBoundary": {
+    "runtime_rendering_authorized": false,
+    "source_reconstruction_authorized": false,
+    "task_transformation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

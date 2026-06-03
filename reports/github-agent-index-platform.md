@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-03T19:54:58.250Z
+Generated: 2026-06-03T20:53:29.275Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3113
+Files indexed: 3129
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 390
+Count: 391
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -440,6 +440,7 @@ Count: 390
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -566,7 +567,7 @@ Count: 42
 
 ## validators
 
-Count: 210
+Count: 211
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -669,6 +670,7 @@ Count: 210
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -781,7 +783,7 @@ Count: 210
 
 ## references
 
-Count: 451
+Count: 453
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -885,6 +887,8 @@ Count: 451
 - references/data/sprints/EX-LESSON-1.result.json
 - references/data/sprints/EX-NS0.plan.json
 - references/data/sprints/EX-NS0.result.json
+- references/data/sprints/EXAM-SOURCE-AUTH-1.plan.json
+- references/data/sprints/EXAM-SOURCE-AUTH-1.result.json
 - references/data/sprints/GAME-ARCH-1.plan.json
 - references/data/sprints/GAME-ARCH-1.result.json
 - references/data/sprints/GAME-ARCH-2.plan.json
@@ -1237,7 +1241,7 @@ Count: 451
 
 ## reports
 
-Count: 1844
+Count: 1857
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1266,6 +1270,7 @@ Count: 1844
 - reports/json/evidence-anchor-status.json
 - reports/json/exam-ingestion-coverage.json
 - reports/json/exam-question-extraction-gaps.json
+- reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
@@ -2169,6 +2174,18 @@ Count: 1844
 - reports/sprints/EX-NS0-lead-review-round2.md
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-baseline.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-command-log.jsonl
+- reports/sprints/EXAM-SOURCE-AUTH-1-command-log.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-diff-summary.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-lead-review-assignment.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-lead-review-corrections.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-lead-review-round1.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-lead-review-round2.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-plan.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-planning-review.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-result.md
+- reports/sprints/EXAM-SOURCE-AUTH-1-source-authority.md
 - reports/sprints/example-result.md
 - reports/sprints/GAME-ARCH-1-architecture-decision.md
 - reports/sprints/GAME-ARCH-1-baseline.md

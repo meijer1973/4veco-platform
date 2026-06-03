@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-CONTEXT-SPEC-1",
+  "generated": "2026-06-03",
+  "status": "completed",
+  "plan": "reports/sprints/TASK-CONTEXT-SPEC-1-plan.md",
+  "baseline": "reports/sprints/TASK-CONTEXT-SPEC-1-baseline.md",
+  "result": "reports/sprints/TASK-CONTEXT-SPEC-1-result.md",
+  "diff_summary": "reports/sprints/TASK-CONTEXT-SPEC-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/TASK-CONTEXT-SPEC-1-command-log.jsonl",
+    "markdown": "reports/sprints/TASK-CONTEXT-SPEC-1-command-log.md"
+  },
+  "scope": {
+    "context_contract": true,
+    "context_runtime_rendering": false,
+    "source_reconstruction": false,
+    "task_transformation": false,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics_or_mastery_authority": false,
+    "scale_gate_1_authority": false
+  },
+  "evidence": {
+    "plan": "reports/sprints/TASK-CONTEXT-SPEC-1-plan.md",
+    "baseline": "reports/sprints/TASK-CONTEXT-SPEC-1-baseline.md",
+    "planning_review": "reports/sprints/TASK-CONTEXT-SPEC-1-planning-review.md",
+    "context_contract_report": "reports/sprints/TASK-CONTEXT-SPEC-1-context-contract.md",
+    "result": "reports/sprints/TASK-CONTEXT-SPEC-1-result.md",
+    "diff_summary": "reports/sprints/TASK-CONTEXT-SPEC-1-diff-summary.md",
+    "command_log_jsonl": "reports/sprints/TASK-CONTEXT-SPEC-1-command-log.jsonl",
+    "command_log_markdown": "reports/sprints/TASK-CONTEXT-SPEC-1-command-log.md",
+    "contract": "reports/json/task-context-spec1-contract.json",
+    "source_authority_contract": "reports/json/exam-source-authority1-contract.json",
+    "checker": "build-scripts/sprints/check-task-context-spec1.js"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-CONTEXT-SPEC-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-SPEC-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-context-spec1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TASK-CONTEXT-SPEC-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-CONTEXT-SPEC-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-CONTEXT-SPEC-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-SPEC-1",
+    "node build-scripts/sprints/check-task-context-spec1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js TASK-CONTEXT-SPEC-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-CONTEXT-SPEC-1-result.md",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check"
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-round2.md",
+    "final_verdict": "PASS"
+  },
+  "blocked_claims": [
+    "runtime context rendering",
+    "source reconstruction",
+    "exam task transformation",
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "TASK-CONTEXT-RUNTIME-1"
+}

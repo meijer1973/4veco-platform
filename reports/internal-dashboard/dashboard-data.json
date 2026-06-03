@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T19:55:10.846Z",
+  "generatedAt": "2026-06-03T20:53:40.925Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3153,8 +3153,8 @@
             {
               "sprint": "TASK-CONTEXT-SPEC-1",
               "name": "Shared Task Context Contract",
-              "completed": "no",
-              "currentState": "After `EXAM-SOURCE-AUTH-1`, define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
+              "completed": "yes",
+              "currentState": "Closed 2026-06-03. Mirrored platform closure for the context-contract-only schema, fixture, and checker in `reports/json/task-context-spec1-contract.json` and `build-scripts/sprints/check-task-context-spec1.js`. Proves `contextBlocks`, task `contextRefs`, source-authority provenance, required block coverage, accessibility/caption rules, and rejection coverage. No runtime rendering, source reconstruction, task transformation, generated lesson output, product adoption, PV, Scale Gate, or student use authorized. Next: `TASK-CONTEXT-RUNTIME-1`.",
               "exitGate": ""
             },
             {
@@ -3462,14 +3462,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-CONTEXT-SPEC-1",
-          "name": "Shared Task Context Contract",
-          "completed": "no",
-          "currentState": "After `EXAM-SOURCE-AUTH-1`, define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / AUTHORITY CONTRACT ONLY.** Platform added an authority contract and checker for `vw-1022-a-25-1-o:opgave-1:question-3`, requiring `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, table-only source-material matching, Zoohee table value matching, answer-model refs, EUR 649 threshold evidence, exact forbidden-term rejection for `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source`, and full boundary flags set to false. No source reconstruction, task-shell context rendering, task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-SPEC-1",
+          "name": "Shared Task Context Contract",
+          "completed": "yes",
+          "currentState": "Closed 2026-06-03. Mirrored platform closure for the context-contract-only schema, fixture, and checker in `reports/json/task-context-spec1-contract.json` and `build-scripts/sprints/check-task-context-spec1.js`. Proves `contextBlocks`, task `contextRefs`, source-authority provenance, required block coverage, accessibility/caption rules, and rejection coverage. No runtime rendering, source reconstruction, task transformation, generated lesson output, product adoption, PV, Scale Gate, or student use authorized. Next: `TASK-CONTEXT-RUNTIME-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 32,
-      "openCount": 43
+      "completedCount": 33,
+      "openCount": 42
     },
     {
       "id": "innovation",
