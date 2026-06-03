@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T14:16:10.432Z",
+  "generatedAt": "2026-06-03T18:09:41.401Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3125,42 +3125,42 @@
             {
               "sprint": "SYNC-TASK-CONTEXT-INGEST-1",
               "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-CONTEXT-SPEC-1",
               "name": "Shared Task Context Contract",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-CONTEXT-RUNTIME-1",
               "name": "Shared Task Context Runtime",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
               "exitGate": ""
             },
             {
               "sprint": "CONTEXT-VISUAL-STD-1",
               "name": "Source Context Visual Standard",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
               "exitGate": ""
             },
             {
               "sprint": "SOURCE-RECONSTRUCT-1",
               "name": "Exam And Textbook Source Reconstruction Examples",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source.",
               "exitGate": ""
             },
             {
               "sprint": "TASK-INGEST-TRANSFORM-1",
               "name": "Source Exercise To Task-Family Transformation",
-              "completed": "no",
+              "completed": "yes",
               "currentState": "Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
               "exitGate": ""
             },
@@ -3426,54 +3426,6 @@
           "name": "Reasoning Product-Route Adoption Preparation",
           "completed": "no",
           "currentState": "Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "SYNC-TASK-CONTEXT-INGEST-1",
-          "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
-          "completed": "no",
-          "currentState": "Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-CONTEXT-SPEC-1",
-          "name": "Shared Task Context Contract",
-          "completed": "no",
-          "currentState": "Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-CONTEXT-RUNTIME-1",
-          "name": "Shared Task Context Runtime",
-          "completed": "no",
-          "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "CONTEXT-VISUAL-STD-1",
-          "name": "Source Context Visual Standard",
-          "completed": "no",
-          "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "SOURCE-RECONSTRUCT-1",
-          "name": "Exam And Textbook Source Reconstruction Examples",
-          "completed": "no",
-          "currentState": "Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-INGEST-TRANSFORM-1",
-          "name": "Source Exercise To Task-Family Transformation",
-          "completed": "no",
-          "currentState": "Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3924,10 +3876,58 @@
           "currentState": "**CLOSED PASS WITH FLAGS / PLANNING-ADOPTION PREPARATION ONLY.** Platform gate closed at reviewed remote commit `13c460df35219b3b52c30098dcfc50796f3654e3`. Repaired the previous `GATE-REASON-STD-1` revise defects: visible water-scarcity wrong-answer context, mode 3 reasoning-chain wording, stale mode-disposition cleanup, replacement audit, and playable proof. No generated lesson output, source-data mutation, product-route adoption, reasoning-game replacement, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SYNC-TASK-CONTEXT-INGEST-1",
+          "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
+          "completed": "yes",
+          "currentState": "Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-SPEC-1",
+          "name": "Shared Task Context Contract",
+          "completed": "yes",
+          "currentState": "Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-RUNTIME-1",
+          "name": "Shared Task Context Runtime",
+          "completed": "yes",
+          "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CONTEXT-VISUAL-STD-1",
+          "name": "Source Context Visual Standard",
+          "completed": "yes",
+          "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SOURCE-RECONSTRUCT-1",
+          "name": "Exam And Textbook Source Reconstruction Examples",
+          "completed": "yes",
+          "currentState": "Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-INGEST-TRANSFORM-1",
+          "name": "Source Exercise To Task-Family Transformation",
+          "completed": "yes",
+          "currentState": "Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 29,
-      "openCount": 42
+      "completedCount": 35,
+      "openCount": 36
     },
     {
       "id": "innovation",

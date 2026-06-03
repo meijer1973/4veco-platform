@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SPRINT-PROTOCOL-HARDEN-2",
+  "name": "Sprint Protocol Evidence Hardening",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+  "baseline": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add a command runner that records JSONL and markdown command evidence for sprint commands.",
+    "Require passed sprint acceptance-test claims to match command-log evidence with exit_code 0.",
+    "Add validation for lead-review substance so reviews inspect actual output artifacts and command-log evidence.",
+    "Add batch-closure validation so multiple completed sprints require a human waiver.",
+    "Add negative fixture proof for missing logs, non-zero logs, weak lead review, and unwaived batch closure.",
+    "Preserve protected-reference, generated-lesson-output, source-data, target-equivalent, diagnostic, mastery, sequencing, PV, Scale Gate, and student/product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/check-sprint-command-log.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/check-lead-review-substance.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/check-batch-sprint-closure.js --working-tree",
+    "node build-scripts/sprints/check-sprint-protocol-harden2.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SPRINT-PROTOCOL-HARDEN-2 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data/book-1/exit-ticket writes.",
+    "No source-data/book-1/reasoning writes.",
+    "No target-exercise registry writes.",
+    "No generated Book 1 lesson output writes.",
+    "No candidate storage creation or candidate writes.",
+    "No changes to knowledge/exit-ticket-game-1.1.1.zip.",
+    "No protected reference mutation, machine reference mutation, external-source mutation, unit minting, unit update, unit split, or unit deprecation.",
+    "No shared task context runtime, source reconstruction, exam task transformation, product-route adoption, target-equivalent reliance, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use."
+  ]
+}

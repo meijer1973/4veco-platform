@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SPRINT-PROTOCOL-HARDEN-2",
+  "generated": "2026-06-03",
+  "status": "completed",
+  "plan": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+  "baseline": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-baseline.md",
+  "result": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md",
+  "diff_summary": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.jsonl",
+    "markdown": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.md"
+  },
+  "scope": {
+    "protocol_hardening": true,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics_or_mastery_authority": false,
+    "scale_gate_1_authority": false
+  },
+  "evidence": {
+    "plan": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+    "baseline": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-baseline.md",
+    "planning_review": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-planning-review.md",
+    "result": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md",
+    "diff_summary": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-diff-summary.md",
+    "command_log_jsonl": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.jsonl",
+    "command_log_markdown": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.md",
+    "fixture_checker": "build-scripts/sprints/check-sprint-protocol-harden2.js"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js SPRINT-PROTOCOL-HARDEN-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js SPRINT-PROTOCOL-HARDEN-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-batch-sprint-closure.js --working-tree",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-protocol-harden2.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js SPRINT-PROTOCOL-HARDEN-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md",
+      "status": "passed"
+    }
+  ],
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/check-sprint-command-log.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/check-batch-sprint-closure.js --working-tree",
+    "node build-scripts/sprints/check-sprint-protocol-harden2.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js SPRINT-PROTOCOL-HARDEN-2",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SPRINT-PROTOCOL-HARDEN-2 --complete"
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-assignment.md",
+    "round1": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-round1.md",
+    "corrections": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-corrections.md",
+    "round2": "reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "shared task context runtime",
+    "source reconstruction",
+    "exam task transformation",
+    "generated lesson output",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "EXAM-SOURCE-AUTH-1 or explicit roadmap synchronization before downstream actual-exam repair sprint renaming"
+}

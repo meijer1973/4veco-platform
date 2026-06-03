@@ -59,6 +59,7 @@ function leadReviewPaths(sprintId) {
 
 const LEAD_REVIEW_POLICY_EFFECTIVE_ON = '2026-05-31';
 const LEAD_REVIEW_STRICT_SCHEMA_VERSION = 2;
+const COMMAND_LOG_POLICY_EFFECTIVE_ON = '2026-06-03';
 const LEGACY_EXEMPTIONS_PATH = path.join(
   'references',
   'data',
@@ -209,6 +210,51 @@ function validateLeadReviewFlags(resultJsonPath, leadReview) {
   }
 }
 
+function readCommandLog(sprintId) {
+  const file = path.join('reports', 'sprints', `${sprintId}-command-log.jsonl`);
+  if (!fs.existsSync(file)) fail(`missing command log: ${file}`);
+  return fs
+    .readFileSync(file, 'utf8')
+    .split(/\r?\n/)
+    .filter(Boolean)
+    .map((line, index) => {
+      try {
+        return JSON.parse(line);
+      } catch (error) {
+        fail(`${file}:${index + 1} invalid JSON: ${error.message}`);
+      }
+    });
+}
+
+function validateCommandLogEvidence(sprintId, resultJsonPath, resultJson) {
+  const entries = readCommandLog(sprintId);
+  for (const [index, test] of resultJson.acceptance_tests.entries()) {
+    if (!test || test.status !== 'passed') continue;
+    if (typeof test.command !== 'string' || !test.command.trim()) {
+      fail(`${resultJsonPath} acceptance_tests[${index}].command must be a non-empty string`);
+    }
+    if (canSkipCurrentlyRunningCommand(test.command)) continue;
+    const matched = entries.some((entry) => entry.command === test.command && entry.exit_code === 0);
+    if (!matched) {
+      fail(`${resultJsonPath} passed command lacks command-log exit_code 0 evidence: ${test.command}`);
+    }
+  }
+}
+
+function quoteArg(arg) {
+  if (/^[A-Za-z0-9_./:+=@%-]+$/.test(arg)) return arg;
+  return JSON.stringify(arg);
+}
+
+function currentInvocationCommand() {
+  const script = path.relative(process.cwd(), process.argv[1]).replace(/\\/g, '/');
+  return ['node', script, ...process.argv.slice(2)].map(quoteArg).join(' ');
+}
+
+function canSkipCurrentlyRunningCommand(command) {
+  return process.env.SPRINT_COMMAND_UNDER_RUN === command && currentInvocationCommand() === command;
+}
+
 function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
   const pattern = new RegExp(`## ${sectionHeading}\\s+([\\s\\S]*?)(?=\\n## |$)`);
   const match = markdown.match(pattern);
@@ -261,6 +307,7 @@ const leadPolicyApplies =
   (!isLegacyLeadReviewExempt ||
     dateOnOrAfter(planJson.created, LEAD_REVIEW_POLICY_EFFECTIVE_ON) ||
     planJson.lead_review_required === true);
+const commandLogPolicyApplies = dateOnOrAfter(planJson.created, COMMAND_LOG_POLICY_EFFECTIVE_ON);
 if (leadPolicyApplies && planJson.lead_review_required !== true && !hasLeadReviewExemption(planJson)) {
   fail(
     `${planJsonPath} must declare lead_review_required: true or a lead_review_exemption for sprints created on or after ${LEAD_REVIEW_POLICY_EFFECTIVE_ON}`
@@ -323,6 +370,9 @@ if (requireComplete) {
       fail(`${resultJsonPath} acceptance_tests[${index}] has unsupported status: ${test.status}`);
     }
   }
+  if (commandLogPolicyApplies) {
+    validateCommandLogEvidence(sprintId, resultJsonPath, resultJson);
+  }
   if (typeof resultJson.protected_reference_data_changed !== 'boolean') {
     fail(`${resultJsonPath} must declare protected_reference_data_changed`);
   }
@@ -365,6 +415,31 @@ if (requireComplete) {
       ]);
       validateLeadReviewReport(expected.round2, sprintId, 'lead review round 2', leadReview.final_verdict);
       validateLeadReviewFlags(resultJsonPath, leadReview);
+      if (commandLogPolicyApplies) {
+        const substanceResult = spawnSync(
+          process.execPath,
+          [path.join('build-scripts', 'sprints', 'check-lead-review-substance.js'), sprintId],
+          { cwd: process.cwd(), encoding: 'utf8' }
+        );
+        if (substanceResult.status !== 0) {
+          process.stderr.write(substanceResult.stdout || '');
+          process.stderr.write(substanceResult.stderr || '');
+          fail(`validator failed: node build-scripts/sprints/check-lead-review-substance.js ${sprintId}`);
+        }
+      }
+    }
+  }
+
+  if (commandLogPolicyApplies) {
+    const batchResult = spawnSync(
+      process.execPath,
+      [path.join('build-scripts', 'sprints', 'check-batch-sprint-closure.js'), '--working-tree'],
+      { cwd: process.cwd(), encoding: 'utf8' }
+    );
+    if (batchResult.status !== 0) {
+      process.stderr.write(batchResult.stdout || '');
+      process.stderr.write(batchResult.stderr || '');
+      fail('validator failed: node build-scripts/sprints/check-batch-sprint-closure.js --working-tree');
     }
   }
 
