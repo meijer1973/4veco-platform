@@ -93,16 +93,6 @@
     structure_part: true
   };
 
-  var CONTEXT_BLOCK_TYPES = {
-    markdown: true,
-    table: true,
-    svg: true,
-    graph: true,
-    flowchart: true,
-    formula: true,
-    info: true
-  };
-
   var BOUNDARY_FLAGS = {
     diagnostics: false,
     adaptiveRouting: false,
@@ -318,37 +308,6 @@
     return out;
   }
 
-  function collectContextText(block) {
-    var out = [];
-    function push(value) {
-      if (value == null) return;
-      if (Array.isArray(value)) {
-        value.forEach(push);
-        return;
-      }
-      if (isObject(value)) {
-        Object.keys(value).forEach(function (key) {
-          push(value[key]);
-        });
-        return;
-      }
-      var str = String(value).trim();
-      if (str) out.push(str);
-    }
-
-    push(block.title);
-    push(block.label);
-    push(block.body);
-    push(block.caption);
-    push(block.altText);
-    push(block.notes);
-    push(block.sourceRef);
-    push(block.columns);
-    push(block.rows);
-    push(block.formula);
-    return out;
-  }
-
   function findStudentTextViolations(task) {
     var violations = [];
     collectStudentText(task || {}).forEach(function (value) {
@@ -375,85 +334,6 @@
     assert(isObject(route), path + ' is required');
     requireString(route.label, path + '.label');
     requireString(route.href, path + '.href');
-  }
-
-  function validateContextBlocks(blocks, path) {
-    requireArray(blocks, path, 1);
-    var ids = {};
-    blocks.forEach(function (block, idx) {
-      var blockPath = path + '[' + idx + ']';
-      assert(isObject(block), blockPath + ' must be an object');
-      requireString(block.id, blockPath + '.id');
-      requireString(block.type, blockPath + '.type');
-      assert(CONTEXT_BLOCK_TYPES[block.type], blockPath + '.type is not supported');
-      optionalString(block.title, blockPath + '.title');
-      optionalString(block.label, blockPath + '.label');
-      optionalString(block.caption, blockPath + '.caption');
-      requireString(block.sourceRef, blockPath + '.sourceRef');
-      optionalString(block.notes, blockPath + '.notes');
-      assert(block.label || block.title, blockPath + ' requires a student-facing label or title');
-      assert(!ids[block.id], 'duplicate context block id: ' + block.id);
-      assert(/^[a-z0-9][a-z0-9-]*$/.test(block.id), blockPath + '.id must be a stable kebab-case id');
-      ids[block.id] = true;
-
-      if (block.type === 'markdown' || block.type === 'info') {
-        requireString(block.body, blockPath + '.body');
-        assert(!/!\[[^\]]*\]\(|<img\b/i.test(block.body), blockPath + '.body must not embed raw images');
-      }
-      if (block.type === 'formula') {
-        requireString(block.formula, blockPath + '.formula');
-      }
-      if (block.type === 'table') {
-        requireString(block.title, blockPath + '.title');
-        requireArray(block.columns, blockPath + '.columns', 2);
-        requireArray(block.rows, blockPath + '.rows', 1);
-        block.columns.forEach(function (column, columnIdx) {
-          requireString(column, blockPath + '.columns[' + columnIdx + ']');
-        });
-        block.rows.forEach(function (row, rowIdx) {
-          requireArray(row, blockPath + '.rows[' + rowIdx + ']', block.columns.length);
-          assert(row.length === block.columns.length, blockPath + '.rows[' + rowIdx + '] must match columns length');
-          row.forEach(function (cell, cellIdx) {
-            requireString(cell, blockPath + '.rows[' + rowIdx + '][' + cellIdx + ']');
-          });
-        });
-      }
-      if (block.type === 'svg' || block.type === 'graph' || block.type === 'flowchart') {
-        requireString(block.title, blockPath + '.title');
-        requireString(block.altText, blockPath + '.altText');
-        assert(
-          typeof block.svg === 'string' && /<svg[\s>]/i.test(block.svg),
-          blockPath + '.svg must contain reconstructed SVG markup'
-        );
-        assert(!/<script\b|on[a-z]+\s*=/i.test(block.svg), blockPath + '.svg must not contain script or inline event handlers');
-        assert(!/<image\b|href=["'][^"']+\.(?:png|jpg|jpeg|gif|webp)/i.test(block.svg), blockPath + '.svg must not depend on copied bitmap images');
-      }
-
-      collectContextText(block).forEach(function (value) {
-        var lower = value.toLowerCase();
-        BLOCKED_STUDENT_TERMS.forEach(function (term) {
-          assert(!containsBlockedTerm(lower, term), blockPath + ' student-facing text has blocked term ' + term);
-        });
-        assert(!INTERNAL_CODE_RE.test(value), blockPath + ' student-facing text exposes internal code');
-      });
-    });
-    return ids;
-  }
-
-  function validateContextRefs(task, contextIds, referenced) {
-    if (!contextIds) {
-      assert(task.contextRefs === undefined, task.id + '.contextRefs requires task-set contextBlocks');
-      return;
-    }
-    requireArray(task.contextRefs, task.id + '.contextRefs', 1);
-    var seen = {};
-    task.contextRefs.forEach(function (ref, idx) {
-      requireString(ref, task.id + '.contextRefs[' + idx + ']');
-      assert(contextIds[ref], task.id + '.contextRefs[' + idx + '] references missing context block');
-      assert(!seen[ref], task.id + '.contextRefs contains duplicate ref ' + ref);
-      seen[ref] = true;
-      referenced[ref] = true;
-    });
   }
 
   function validateFeedback(task) {
@@ -1772,21 +1652,13 @@
     assert(isObject(data), 'task shell data must be an object');
     assert(data.schema_version === 1, 'task shell data must use schema_version 1');
     requireString(data.title, 'title');
-    var contextIds = data.contextBlocks !== undefined ? validateContextBlocks(data.contextBlocks, 'contextBlocks') : null;
-    var referencedContextIds = {};
     requireArray(data.tasks, 'tasks', 1);
     var ids = {};
     data.tasks.forEach(function (task) {
       validateTask(task);
-      validateContextRefs(task, contextIds, referencedContextIds);
       assert(!ids[task.id], 'duplicate task id: ' + task.id);
       ids[task.id] = true;
     });
-    if (contextIds) {
-      Object.keys(contextIds).forEach(function (contextId) {
-        assert(referencedContextIds[contextId], 'context block is not referenced by any task: ' + contextId);
-      });
-    }
     return true;
   }
 
@@ -2857,7 +2729,6 @@
 
   return {
     FAMILIES: clone(FAMILIES),
-    CONTEXT_BLOCK_TYPES: clone(CONTEXT_BLOCK_TYPES),
     BOUNDARY_FLAGS: clone(BOUNDARY_FLAGS),
     BLOCKED_STUDENT_TERMS: BLOCKED_STUDENT_TERMS.slice(),
     INTERNAL_CODE_RE: INTERNAL_CODE_RE,
