@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-CONTEXT-1",
+  "generated_on": "2026-06-03",
+  "status": "pass_with_flags",
+  "evidence": {
+    "playable_lab": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-lab.html",
+    "playable_data": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-data.json",
+    "playable_proof": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/playable-proof.json",
+    "screenshots": [
+      "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-initial.png",
+      "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-retry-feedback.png",
+      "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-next-action-focus.png",
+      "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-completed.png",
+      "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-mobile-dark-completed.png"
+    ]
+  },
+  "proof_summary": {
+    "case_count": 4,
+    "desktop_completed_count": 4,
+    "mobile_dark_completed_count": 4,
+    "retry_state_proved": true,
+    "next_action_focus_proved": true,
+    "context_repair_proved": true,
+    "mode3_label_repair_proved": true,
+    "replacement_authority_denied": true
+  },
+  "revision_facts": {
+    "water_context_visible": true,
+    "water_wrong_answer_visible": true,
+    "mode3_soft_label_visible": true,
+    "visual_flow_overclaim_absent": true,
+    "replacement_denial_visible": true
+  },
+  "authority": {
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "reasoning_game_replacement_authorized": false,
+    "target_equivalent_reasoning_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  },
+  "carried_flags": [
+    "The lab is review-only and does not replace the current reasoning game.",
+    "Mode 3 remains a reasoning-chain ordering bridge, not full visual flow-diagram construction.",
+    "The repaired context is proven for the review lab; product-route adoption still needs separate route-specific rendered evidence."
+  ]
+}

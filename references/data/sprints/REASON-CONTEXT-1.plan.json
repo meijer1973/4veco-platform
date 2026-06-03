@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-CONTEXT-1",
+  "name": "Reasoning Context And Label Revision Proof",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/REASON-CONTEXT-1-plan.md",
+  "baseline": "reports/sprints/REASON-CONTEXT-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "authority": {
+    "implementation_authorized": true,
+    "review_only_evidence_authorized": true,
+    "generated_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_claims_authorized": false,
+    "student_or_product_use_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false
+  },
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-CONTEXT-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REASON-CONTEXT-1",
+    "node build-scripts/review-gates/emit-gate-reason-revision1-playable-lab.js",
+    "node build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js",
+    "node build-scripts/review-gates/check-gate-reason-revision1-review-packet.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "git diff --check"
+  ]
+}

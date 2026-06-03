@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-02T18:15:29.548Z
+Generated: 2026-06-03T13:32:11.554Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3005
+Files indexed: 3016
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 379
+Count: 381
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -404,6 +404,7 @@ Count: 379
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
+- build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js
 - build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js
 - build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
 - build-scripts/review-gates/check-cp6a-lesson-side-alignment.js
@@ -419,6 +420,7 @@ Count: 379
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
+- build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/validate-gate.js
@@ -1209,7 +1211,7 @@ Count: 440
 
 ## reports
 
-Count: 1758
+Count: 1767
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1747,11 +1749,19 @@ Count: 1758
 - reports/review-gates/GATE-R7-rag/subagent-rag-retrieval.json
 - reports/review-gates/GATE-R7-rag/subagent-summary.md
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/bundle-urls.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.json
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/live-output-evidence.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/playable-proof.json
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.json
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/review-packet.md
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshot-manifest.md
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-completed.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-initial.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-mobile-dark-completed.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-next-action-focus.png
+- reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/gate-reason-std1-playable-retry-feedback.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mobile-mode3.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode0-initial.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/screenshots/reason-adopt-mode1-matched.png
@@ -2199,6 +2209,7 @@ Count: 1758
 - reports/sprints/GATE-REASON-STD-1-baseline.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-assignment.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-corrections.md
+- reports/sprints/GATE-REASON-STD-1-lead-review-playable-proof-recheck.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-round1.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-round2.md
 - reports/sprints/GATE-REASON-STD-1-plan.md

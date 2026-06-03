@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-REASON-REVISION-1-reasoning-revision-evidence-review",
+  "generated_on": "2026-06-03",
+  "status": "playable_revision_proof_captured",
+  "playable_lab": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-lab.html",
+  "playable_data": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-data.json",
+  "playable_proof": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/playable-proof.json",
+  "screenshots": [
+    "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-initial.png",
+    "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-retry-feedback.png",
+    "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-next-action-focus.png",
+    "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-completed.png",
+    "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-mobile-dark-completed.png"
+  ],
+  "revision_evidence": {
+    "water_context_repaired": true,
+    "water_wrong_answer_visible": true,
+    "mode3_label_repaired": true,
+    "mode3_visual_flow_boundary_visible": true,
+    "replacement_authority_denied": true,
+    "desktop_completed_count": 4,
+    "mobile_dark_completed_count": 4
+  },
+  "replacement_audit": {
+    "audit": "reports/sprints/REASON-REPLACE-AUDIT-1-replacement-audit.md",
+    "audit_json": "reports/json/reason-replace-audit1.json",
+    "full_reasoning_game_replacement_ready": false,
+    "product_route_adoption_ready": false
+  },
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "engine_implementation": false,
+    "product_route_adoption": false,
+    "reasoning_game_replacement": false,
+    "target_equivalent_reasoning_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

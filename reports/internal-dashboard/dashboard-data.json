@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T18:15:29.485Z",
+  "generatedAt": "2026-06-03T13:32:11.587Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3041,8 +3041,36 @@
             {
               "sprint": "GATE-REASON-STD-1",
               "name": "Reasoning Unified Task-Shell Human Evidence Review",
+              "completed": "yes",
+              "currentState": "**REVIEWED / REVISION ROUTED.** Human comments accepted the packet only as local shared-shell reasoning-practice evidence with flags and returned `REVISE` for adoption/replacement readiness. The water-scarcity task lacked visible wrong-answer context, mode 3 wording over-suggested visual flow construction, stale evidence text remained, and current tasks cannot replace the reasoning game. No generated output, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-REVISION-0",
+              "name": "Reasoning Gate Comment Resolution And Revision Routing",
+              "completed": "yes",
+              "currentState": "**CLOSED ROUTING / NO GENERATED OUTPUT.** Platform recorded the split verdict from `GATE-REASON-STD-1`: local evidence accepted with flags, adoption/replacement revised.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-CONTEXT-1",
+              "name": "Reasoning Context And Label Revision Proof",
+              "completed": "yes",
+              "currentState": "**CLOSED REVIEW-ONLY PROOF / NO GENERATED LESSON OUTPUT.** Platform produced playable revision proof that the water-scarcity task has visible wrong-answer context, mode 3 uses reasoning-chain language rather than visual-flow overclaim, and replacement authority remains denied.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-REPLACE-AUDIT-1",
+              "name": "Reasoning Game Replacement Audit",
+              "completed": "yes",
+              "currentState": "**CLOSED AUDIT / NO IMPLEMENTATION.** Platform audited reasoning modes and source/example follow-ups as keep/wrap/refactor/rebuild/hold before any replacement claim. Names UX, mode 2, mode 4, A81 source-use, A99 example, and visual-flow follow-up work.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-REASON-REVISION-1",
+              "name": "Reasoning Revision Evidence Human Review",
               "completed": "no",
-              "currentState": "Direct-comment human evidence gate after reasoning adoption/playability work. Packet must present playable output, screenshots, validators, usability-agent thinking traces, carried flags, and no-authority boundaries like `GATE-TASK-FAMILY-1`. No old interactive interview protocol.",
+              "currentState": "Direct-comment human gate reviewing the repaired context/label proof, stale-evidence cleanup, and replacement audit. Must include playable lab, proof JSON, screenshots, lead review, manual-test instruction, and no-authority boundaries.",
               "exitGate": ""
             },
             {
@@ -3084,7 +3112,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-STD-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+              "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-REVISION-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
               "exitGate": ""
             },
             {
@@ -3248,10 +3276,10 @@
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "GATE-REASON-STD-1",
-          "name": "Reasoning Unified Task-Shell Human Evidence Review",
+          "sprint": "GATE-REASON-REVISION-1",
+          "name": "Reasoning Revision Evidence Human Review",
           "completed": "no",
-          "currentState": "Direct-comment human evidence gate after reasoning adoption/playability work. Packet must present playable output, screenshots, validators, usability-agent thinking traces, carried flags, and no-authority boundaries like `GATE-TASK-FAMILY-1`. No old interactive interview protocol.",
+          "currentState": "Direct-comment human gate reviewing the repaired context/label proof, stale-evidence cleanup, and replacement audit. Must include playable lab, proof JSON, screenshots, lead review, manual-test instruction, and no-authority boundaries.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3299,7 +3327,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-STD-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+          "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-REVISION-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3654,9 +3682,41 @@
           "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform added local practice answer-form scaffold cues for A97/A98/A99/A81 patterns, kept A81 modifier-only with an underlying answer form, kept A97/A98/A99 distinct, preserved mode 2 as local error repair, and kept mode 4 held for classification-with-explanation redesign. Generated Book 1 reasoning output changed through platform deploy only. Carried flags: late planning review accepted as protocol variance, A99 lacks a live 1.1.1/1.1.2 evidence case, A81 remains future source-use modifier only, mode 2/mode 4 need reviewed adoption, mode 3 remains ordered-chain bridge, mobile route panel can sit below first viewport, and no target-equivalent/product authority is authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "GATE-REASON-STD-1",
+          "name": "Reasoning Unified Task-Shell Human Evidence Review",
+          "completed": "yes",
+          "currentState": "**REVIEWED / REVISION ROUTED.** Human comments accepted the packet only as local shared-shell reasoning-practice evidence with flags and returned `REVISE` for adoption/replacement readiness. The water-scarcity task lacked visible wrong-answer context, mode 3 wording over-suggested visual flow construction, stale evidence text remained, and current tasks cannot replace the reasoning game. No generated output, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-REVISION-0",
+          "name": "Reasoning Gate Comment Resolution And Revision Routing",
+          "completed": "yes",
+          "currentState": "**CLOSED ROUTING / NO GENERATED OUTPUT.** Platform recorded the split verdict from `GATE-REASON-STD-1`: local evidence accepted with flags, adoption/replacement revised.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-CONTEXT-1",
+          "name": "Reasoning Context And Label Revision Proof",
+          "completed": "yes",
+          "currentState": "**CLOSED REVIEW-ONLY PROOF / NO GENERATED LESSON OUTPUT.** Platform produced playable revision proof that the water-scarcity task has visible wrong-answer context, mode 3 uses reasoning-chain language rather than visual-flow overclaim, and replacement authority remains denied.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-REPLACE-AUDIT-1",
+          "name": "Reasoning Game Replacement Audit",
+          "completed": "yes",
+          "currentState": "**CLOSED AUDIT / NO IMPLEMENTATION.** Platform audited reasoning modes and source/example follow-ups as keep/wrap/refactor/rebuild/hold before any replacement claim. Names UX, mode 2, mode 4, A81 source-use, A99 example, and visual-flow follow-up work.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 24,
+      "completedCount": 28,
       "openCount": 29
     },
     {

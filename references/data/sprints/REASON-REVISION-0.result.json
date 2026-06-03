@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-REVISION-0",
+  "name": "Reasoning Gate Comment Resolution And Revision Routing",
+  "completed": "2026-06-03",
+  "completed_on": "2026-06-03",
+  "status": "completed",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "final_verdict": "PASS WITH FLAGS",
+  "plan": "reports/sprints/REASON-REVISION-0-plan.md",
+  "baseline": "reports/sprints/REASON-REVISION-0-baseline.md",
+  "result": "reports/sprints/REASON-REVISION-0-result.md",
+  "diff_summary": "reports/sprints/REASON-REVISION-0-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": false,
+  "reasoning_csv_changed": false,
+  "source_data_mutation_executed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/REASON-REVISION-0-lead-review-assignment.md",
+    "round1": "reports/sprints/REASON-REVISION-0-lead-review-round1.md",
+    "corrections": "reports/sprints/REASON-REVISION-0-lead-review-corrections.md",
+    "round2": "reports/sprints/REASON-REVISION-0-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "RREV0-F1",
+        "description": "GATE-REASON-STD-1 remains accepted only as local reasoning-practice evidence; adoption/replacement readiness is revised.",
+        "disposition": "carry_forward",
+        "owner": "GATE-REASON-REVISION-1",
+        "next_action": "Use the revision gate to review repaired context and replacement-audit evidence before downstream planning.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-REVISION-0-plan.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-REVISION-0", "status": "passed" },
+    { "command": "node build-scripts/review-gates/check-gate-reason-revision1-review-packet.js", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" }
+  ],
+  "comment_resolution": "reports/sprints/REASON-REVISION-0-human-comment-resolution.md",
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "engine_implementation": false,
+    "product_route_adoption": false,
+    "reasoning_game_replacement": false,
+    "target_equivalent_reasoning_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

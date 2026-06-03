@@ -2,8 +2,9 @@
 
 Generated: 2026-06-02
 
-Status: implementation evidence captured; sprint closure blocked until real
-planning/lead-review artifacts are available.
+Status: current after REASON-ANSWERFORM-2 closure. The earlier planning and
+lead-review artifact gap was resolved in the sprint result and remains recorded
+as a protocol variance, not as an active closure blocker.
 
 ## Purpose
 
@@ -18,7 +19,7 @@ only practice cues.
 | 0 | Stappen ordenen | `step_ordering` | Wrapped now. | Uses local answer-form cue for the selected problem. |
 | 1 | Deelvragen opbouwen | `step_ordering` bridge for claim/reason/evidence planning | Wrapped now as a bridge. | Uses local answer-form cue for the selected problem. |
 | 2 | Vind de fout | none yet | Local error-repair only; no shared-shell adoption claim. | Uses local answer-form cue; mapping to `two_tier_choice` or error-repair family deferred. |
-| 3 | Stroomdiagram bouwen | `step_ordering` bridge | Wrapped now, with visual flow-diagram builder still follow-up. | Uses local answer-form cue for the selected problem. |
+| 3 | Redeneerketen ordenen | `step_ordering` bridge | Wrapped now, with visual flow-diagram builder still follow-up. | Uses local answer-form cue for the selected problem. |
 | 4 | Structuren matchen | none yet | Held for classification-with-explanation redesign. | No complete answer-form route claim. |
 | 5 | Redeneerantwoord opbouwen | `structured_reasoning` | Wrapped self-check practice. | Uses answer-form cue plus structured self-check; not scored target proof. |
 | future | Source-based explanation | `source_value_selection` + `source_chain_builder` + `structured_short_response` | Future composed pattern. | A81 must combine with an underlying answer form. |

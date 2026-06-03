@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-REPLACE-AUDIT-1",
+  "name": "Reasoning Game Replacement Audit",
+  "completed": "2026-06-03",
+  "completed_on": "2026-06-03",
+  "status": "completed",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "final_verdict": "PASS WITH FLAGS",
+  "plan": "reports/sprints/REASON-REPLACE-AUDIT-1-plan.md",
+  "baseline": "reports/sprints/REASON-REPLACE-AUDIT-1-baseline.md",
+  "result": "reports/sprints/REASON-REPLACE-AUDIT-1-result.md",
+  "diff_summary": "reports/sprints/REASON-REPLACE-AUDIT-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": false,
+  "reasoning_csv_changed": false,
+  "source_data_mutation_executed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-assignment.md",
+    "round1": "reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-round1.md",
+    "corrections": "reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-corrections.md",
+    "round2": "reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-round2.md",
+    "round1_verdict": "PASS WITH FLAGS",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "RREPL1-F1",
+        "description": "No reasoning lane is replacement-ready without product-route rendered proof and human review.",
+        "disposition": "carry_forward",
+        "owner": "GATE-REASON-REVISION-1 / REASON-ADOPT-2",
+        "next_action": "Require a later adoption packet before any product-route replacement claim.",
+        "blocking": false
+      },
+      {
+        "id": "RREPL1-F2",
+        "description": "Modes 2 and 4, A81, A99, and true visual flow construction remain named follow-up work.",
+        "disposition": "accepted_follow_up",
+        "owner": "future reasoning hardening sprints",
+        "next_action": "Plan and prove the named follow-up sprints before broad reasoning adoption.",
+        "blocking": false
+      }
+    ]
+  },
+  "audit": {
+    "replacement_audit": "reports/sprints/REASON-REPLACE-AUDIT-1-replacement-audit.md",
+    "audit_json": "reports/json/reason-replace-audit1.json",
+    "full_reasoning_game_replacement_ready": false,
+    "product_route_adoption_ready": false,
+    "replacement_authority_denied": true
+  },
+  "acceptance_tests": [
+    { "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REASON-REPLACE-AUDIT-1-plan.md", "status": "passed" },
+    { "command": "node build-scripts/sprints/check-sprint-bundle.js REASON-REPLACE-AUDIT-1", "status": "passed" },
+    { "command": "node build-scripts/review-gates/check-gate-reason-revision1-review-packet.js", "status": "passed" },
+    { "command": "node build-scripts/reports/validate-report-json.js", "status": "passed" }
+  ],
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "engine_implementation": false,
+    "product_route_adoption": false,
+    "reasoning_game_replacement": false,
+    "target_equivalent_reasoning_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

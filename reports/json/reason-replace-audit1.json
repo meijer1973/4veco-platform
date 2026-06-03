@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REASON-REPLACE-AUDIT-1",
+  "generated_on": "2026-06-03",
+  "status": "pass_with_flags",
+  "summary": {
+    "full_reasoning_game_replacement_ready": false,
+    "local_practice_evidence_accepted_with_flags": true,
+    "product_route_adoption_ready": false,
+    "replacement_authority_denied": true
+  },
+  "mode_dispositions": [
+    {
+      "mode": 0,
+      "name": "Stappen ordenen",
+      "current_family": "step_ordering",
+      "disposition": "wrap_refactor",
+      "replacement_ready": false,
+      "required_follow_up": "product-route rendered proof, clearer controls, feedback hierarchy"
+    },
+    {
+      "mode": 1,
+      "name": "Deelvragen opbouwen",
+      "current_family": "step_ordering_bridge",
+      "disposition": "wrap_refactor",
+      "replacement_ready": false,
+      "required_follow_up": "question-planning or claim-reason-evidence family proof"
+    },
+    {
+      "mode": 2,
+      "name": "Vind de fout",
+      "current_family": "local_error_repair",
+      "disposition": "hold",
+      "replacement_ready": false,
+      "required_follow_up": "REASON-ERROR-REPAIR-1"
+    },
+    {
+      "mode": 3,
+      "name": "Redeneerketen ordenen",
+      "current_family": "step_ordering_bridge",
+      "disposition": "refactor",
+      "replacement_ready": false,
+      "required_follow_up": "REASON-FLOW-1 visual flow-builder proof"
+    },
+    {
+      "mode": 4,
+      "name": "Structuren matchen",
+      "current_family": "held",
+      "disposition": "hold",
+      "replacement_ready": false,
+      "required_follow_up": "REASON-CLASSIFY-1"
+    },
+    {
+      "mode": 5,
+      "name": "Redeneerantwoord opbouwen",
+      "current_family": "structured_reasoning_self_check",
+      "disposition": "wrap_refactor",
+      "replacement_ready": false,
+      "required_follow_up": "model-answer/rubric comparison and self-check boundary proof"
+    }
+  ],
+  "answer_form_dispositions": [
+    {
+      "lane": "A97",
+      "name": "Leg uit dat",
+      "decision": "keep_scaffold",
+      "replacement_ready": false
+    },
+    {
+      "lane": "A98",
+      "name": "Leg uit of",
+      "decision": "keep_scaffold",
+      "replacement_ready": false
+    },
+    {
+      "lane": "A99",
+      "name": "Leg uit met voorbeeld",
+      "decision": "hold",
+      "replacement_ready": false,
+      "required_follow_up": "REASON-EXAMPLE-1"
+    },
+    {
+      "lane": "A81",
+      "name": "Source-use modifier",
+      "decision": "hold",
+      "replacement_ready": false,
+      "required_follow_up": "REASON-SOURCE-1"
+    }
+  ],
+  "downstream_sprints": [
+    "REASON-UX-HARDEN-1",
+    "REASON-FLOW-1",
+    "REASON-ERROR-REPAIR-1",
+    "REASON-CLASSIFY-1",
+    "REASON-SOURCE-1",
+    "REASON-EXAMPLE-1",
+    "REASON-ADOPT-2"
+  ],
+  "authority": {
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "reasoning_game_replacement_authorized": false,
+    "target_equivalent_reasoning_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_or_product_use_authorized": false
+  }
+}

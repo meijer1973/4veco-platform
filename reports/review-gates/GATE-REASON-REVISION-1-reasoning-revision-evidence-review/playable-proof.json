@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-REASON-REVISION-1-reasoning-revision-evidence-review",
+  "generated": "2026-06-03",
+  "lab": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-lab.html",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "desktop-initial",
+      "state": {
+        "title": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab",
+        "caseCount": 4,
+        "taskCount": 4,
+        "checkButtonCount": 4,
+        "feedbackCount": 4,
+        "completedCount": 0,
+        "completedVisible": false,
+        "progressText": "0 / 4 cases afgerond",
+        "visibleNextActions": 0,
+        "retryStates": 0,
+        "completeStates": 0,
+        "activeElementText": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab\n      Gebruik de zichtbare",
+        "activeElementTag": "BODY",
+        "theme": "light",
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": ""
+      }
+    },
+    {
+      "name": "desktop-retry-feedback",
+      "state": {
+        "title": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab",
+        "caseCount": 4,
+        "taskCount": 4,
+        "checkButtonCount": 4,
+        "feedbackCount": 4,
+        "completedCount": 0,
+        "completedVisible": false,
+        "progressText": "0 / 4 cases afgerond",
+        "visibleNextActions": 0,
+        "retryStates": 1,
+        "completeStates": 0,
+        "activeElementText": "Controleer de volgordeBegin bij de oorzaak of gegevens, werk via de tussenstap e",
+        "activeElementTag": "DIV",
+        "theme": "light",
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": ""
+      }
+    },
+    {
+      "name": "desktop-next-action-focus",
+      "state": {
+        "title": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab",
+        "caseCount": 4,
+        "taskCount": 4,
+        "checkButtonCount": 4,
+        "feedbackCount": 4,
+        "completedCount": 1,
+        "completedVisible": false,
+        "progressText": "1 / 4 cases afgerond",
+        "visibleNextActions": 1,
+        "retryStates": 0,
+        "completeStates": 1,
+        "activeElementText": "Kies de deelvragen die nodig zijn.",
+        "activeElementTag": "DIV",
+        "theme": "light",
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": ""
+      }
+    },
+    {
+      "name": "desktop-completed",
+      "state": {
+        "title": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab",
+        "caseCount": 4,
+        "taskCount": 4,
+        "checkButtonCount": 4,
+        "feedbackCount": 4,
+        "completedCount": 4,
+        "completedVisible": true,
+        "progressText": "4 / 4 cases afgerond",
+        "visibleNextActions": 4,
+        "retryStates": 0,
+        "completeStates": 4,
+        "activeElementText": "Vergelijk je redeneringLoop oorzaak, tussenstap en conclusie rustig na.Kies eers",
+        "activeElementTag": "DIV",
+        "theme": "light",
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": ""
+      }
+    },
+    {
+      "name": "mobile-dark-completed",
+      "state": {
+        "title": "GATE-REASON-REVISION-1 speelbaar reasoning revisielab",
+        "caseCount": 4,
+        "taskCount": 4,
+        "checkButtonCount": 4,
+        "feedbackCount": 4,
+        "completedCount": 4,
+        "completedVisible": true,
+        "progressText": "4 / 4 cases afgerond",
+        "visibleNextActions": 4,
+        "retryStates": 0,
+        "completeStates": 4,
+        "activeElementText": "Vergelijk je redeneringLoop oorzaak, tussenstap en conclusie rustig na.Kies eers",
+        "activeElementTag": "DIV",
+        "theme": "dark",
+        "hasTaskShellUI": "object",
+        "hasTaskShellEngine": "object",
+        "initError": ""
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "gate-reason-revision1-playable-initial",
+      "path": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-initial.png"
+    },
+    {
+      "name": "gate-reason-revision1-playable-retry-feedback",
+      "path": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-retry-feedback.png"
+    },
+    {
+      "name": "gate-reason-revision1-playable-next-action-focus",
+      "path": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-next-action-focus.png"
+    },
+    {
+      "name": "gate-reason-revision1-playable-completed",
+      "path": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-completed.png"
+    },
+    {
+      "name": "gate-reason-revision1-playable-mobile-dark-completed",
+      "path": "reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-mobile-dark-completed.png"
+    }
+  ],
+  "summary": {
+    "required_case_count": 4,
+    "desktop_initial_case_count": 4,
+    "desktop_initial_check_buttons": 4,
+    "retry_state_proved": true,
+    "next_action_focus_proved": true,
+    "desktop_completed_count": 4,
+    "desktop_completed_visible": true,
+    "mobile_dark_completed_count": 4,
+    "mobile_dark_completed_visible": true,
+    "hidden_expected_state_lookup_required_after_repair": false,
+    "context_repair_proved": true,
+    "mode3_label_repair_proved": true,
+    "replacement_authority_denied": true
+  },
+  "revision_facts": {
+    "waterContextVisible": true,
+    "mode3SoftLabelVisible": true,
+    "visualFlowOverclaimAbsent": true,
+    "replacementDeniedVisible": true,
+    "contextBoxCount": 2
+  }
+}
