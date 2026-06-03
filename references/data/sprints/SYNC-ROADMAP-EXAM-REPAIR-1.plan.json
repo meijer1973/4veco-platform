@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SYNC-ROADMAP-EXAM-REPAIR-1",
+  "name": "Roadmap Exam Repair Alignment",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md",
+  "baseline": "reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Synchronize platform and lesson roadmap active authority after rollback.",
+    "Record SPRINT-PROTOCOL-HARDEN-2 as closed evidence protocol baseline in both roadmaps.",
+    "Remove false completed status for invalid context/ingestion proof in the lesson roadmap.",
+    "Name EXAM-SOURCE-AUTH-1 as the next authorized repair sprint before actual exam reconstruction.",
+    "Rename downstream actual-exam, textbook, and gate repair rows to avoid old invalid gate continuity.",
+    "Preserve no generated lesson output, no protected reference mutation, no source-data mutation, no product-route adoption, no target-equivalent proof, no diagnostics, no mastery/sequencing, no PV, no Scale Gate 1, and no student/product use."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-ROADMAP-EXAM-REPAIR-1",
+    "node build-scripts/sprints/check-sync-roadmap-exam-repair1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js SYNC-ROADMAP-EXAM-REPAIR-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SYNC-ROADMAP-EXAM-REPAIR-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No target-exercise registry writes.",
+    "No generated Book 1 lesson output writes.",
+    "No candidate storage creation or candidate writes.",
+    "No PV machine promotion or projection output writes.",
+    "No protected reference mutation, machine reference mutation, external-source mutation, unit minting, unit update, unit split, or unit deprecation.",
+    "No shared task context runtime, source reconstruction, exam task transformation, product-route adoption, target-equivalent reliance, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use."
+  ]
+}

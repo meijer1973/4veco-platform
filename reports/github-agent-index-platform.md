@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-03T18:09:29.063Z
+Generated: 2026-06-03T19:36:31.484Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3081
+Files indexed: 3099
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 384
+Count: 389
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -436,6 +436,7 @@ Count: 384
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
+- build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
@@ -448,6 +449,7 @@ Count: 384
 - build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-lead-review-substance.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
@@ -461,8 +463,10 @@ Count: 384
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-sprint-bundle.js
+- build-scripts/sprints/check-sprint-command-log.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
+- build-scripts/sprints/check-sprint-protocol-harden2.js
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
@@ -484,6 +488,7 @@ Count: 384
 - build-scripts/sprints/emit-url-index.js
 - build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
+- build-scripts/sprints/run-sprint-command.js
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
@@ -560,7 +565,7 @@ Count: 42
 
 ## validators
 
-Count: 205
+Count: 209
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -659,6 +664,7 @@ Count: 205
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
@@ -671,6 +677,7 @@ Count: 205
 - build-scripts/sprints/check-l1-7b-q2-implementation.js
 - build-scripts/sprints/check-l1-7b-q2-plan-evidence.js
 - build-scripts/sprints/check-lead-review-strict-fixtures.js
+- build-scripts/sprints/check-lead-review-substance.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
@@ -684,8 +691,10 @@ Count: 205
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-sprint-bundle.js
+- build-scripts/sprints/check-sprint-command-log.js
 - build-scripts/sprints/check-sprint-plan.js
 - build-scripts/sprints/check-sprint-plan.test.js
+- build-scripts/sprints/check-sprint-protocol-harden2.js
 - build-scripts/sprints/check-sprint-result.js
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
@@ -770,7 +779,7 @@ Count: 205
 
 ## references
 
-Count: 447
+Count: 449
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1105,6 +1114,8 @@ Count: 447
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SPEC-ET-1.plan.json
 - references/data/sprints/SPEC-ET-1.result.json
+- references/data/sprints/SPRINT-PROTOCOL-HARDEN-2.plan.json
+- references/data/sprints/SPRINT-PROTOCOL-HARDEN-2.result.json
 - references/data/sprints/STANDARD-EXERCISES-1.plan.json
 - references/data/sprints/STANDARD-EXERCISES-1.result.json
 - references/data/sprints/SYNC-2.plan.json
@@ -1222,7 +1233,7 @@ Count: 447
 
 ## reports
 
-Count: 1822
+Count: 1833
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2845,6 +2856,17 @@ Count: 1822
 - reports/sprints/SPEC-ET-1-plan.md
 - reports/sprints/SPEC-ET-1-planning-review.md
 - reports/sprints/SPEC-ET-1-result.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-baseline.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.jsonl
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-command-log.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-diff-summary.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-assignment.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-corrections.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-round1.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-lead-review-round2.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-plan.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-planning-review.md
+- reports/sprints/SPRINT-PROTOCOL-HARDEN-2-result.md
 - reports/sprints/STANDARD-EXERCISES-1-baseline.md
 - reports/sprints/STANDARD-EXERCISES-1-diff-summary.md
 - reports/sprints/STANDARD-EXERCISES-1-exercise-family-audit.md

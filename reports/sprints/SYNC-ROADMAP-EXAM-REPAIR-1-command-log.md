@@ -1,0 +1,836 @@
+# Sprint SYNC-ROADMAP-EXAM-REPAIR-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:17:01.604Z`
+- finished_at: `2026-06-03T19:17:01.724Z`
+- duration_ms: `120`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a76453cbbbe0e3917391f98516d11f7c1194f6f76e56d4bf24c799b28bd1cc9c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint plan check failed: Quality Standard must mention specification
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:17:36.512Z`
+- finished_at: `2026-06-03T19:17:36.618Z`
+- duration_ms: `106`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3ebe0b31b472fa805cc4dcd3d8054124c2bc03c99539c9f61a210bb0675e8486`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint plan check failed: Proof Required to Close must name closure proof and review/validator/test evidence
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:17:48.369Z`
+- finished_at: `2026-06-03T19:17:48.523Z`
+- duration_ms: `154`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3ebe0b31b472fa805cc4dcd3d8054124c2bc03c99539c9f61a210bb0675e8486`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint plan check failed: Proof Required to Close must name closure proof and review/validator/test evidence
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:17:59.648Z`
+- finished_at: `2026-06-03T19:17:59.756Z`
+- duration_ms: `108`
+- exit_code: `0`
+- stdout_sha256: `18e4f7e5ac54eda25586b0bf951addd2689ab9cbe71cc08b8f5a991d71b602d7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SYNC-ROADMAP-EXAM-REPAIR-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:18:06.842Z`
+- finished_at: `2026-06-03T19:18:07.025Z`
+- duration_ms: `183`
+- exit_code: `0`
+- stdout_sha256: `3f2d7c99693c6fa5226488182a33572c4138ec8e431e822ba59b8a655ddfe008`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: SYNC-ROADMAP-EXAM-REPAIR-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:24:16.091Z`
+- finished_at: `2026-06-03T19:24:16.161Z`
+- duration_ms: `70`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `182b6f601ec73ea77fd8d790d6ce5e732772c8a213caabbd154b626bbb2d7915`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Roadmap exam repair sync check failed: platform roadmap row SCALE-PROOF-3P must mention GATE-SHARED-TASK-INGEST-REPAIR-1
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:24:37.575Z`
+- finished_at: `2026-06-03T19:24:37.636Z`
+- duration_ms: `61`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `f3609c2ea5ab574caea4598150d4ed7c09a0bd17fd37fd984753c039e83faeba`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Roadmap exam repair sync check failed: lesson roadmap row Scale Gate 1 must mention GATE-SHARED-TASK-INGEST-REPAIR-1
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:25:00.883Z`
+- finished_at: `2026-06-03T19:25:00.959Z`
+- duration_ms: `76`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `9330b782ea75952eed459cec7014852974ccbd91454ad6579bb27fdf36252fb2`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Roadmap exam repair sync check failed: lesson roadmap row GATE-SHARED-TASK-INGEST-REPAIR-1 must mention no Scale Gate 1
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:25:17.688Z`
+- finished_at: `2026-06-03T19:25:17.756Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `e5d20b6f57844221d7b9621cf1bd8e1f1b71295b1c1d75da862e370da464bc65`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap exam repair sync: platform and lesson roadmaps agree on repaired source-ingestion authority
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:26:18.522Z`
+- finished_at: `2026-06-03T19:26:31.942Z`
+- duration_ms: `13420`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `6fc9463e4941909c965dc0dc3a098b58b193fe2039e098b694338f7eac8aebac`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 42 passed, 42 of 48 total
+Tests:       8 skipped, 677 passed, 685 total
+Snapshots:   0 total
+Time:        12.626 s, estimated 14 s
+Ran all test suites.
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:26:38.888Z`
+- finished_at: `2026-06-03T19:26:39.182Z`
+- duration_ms: `294`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:26:44.259Z`
+- finished_at: `2026-06-03T19:26:44.337Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:26:50.498Z`
+- finished_at: `2026-06-03T19:26:50.603Z`
+- duration_ms: `105`
+- exit_code: `0`
+- stdout_sha256: `11e87d4777784e85f7c62e2c8f46d474a7ec29c451dbacdc5b3f363e9ce03246`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 146 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:30:24.669Z`
+- finished_at: `2026-06-03T19:30:24.758Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `e5d20b6f57844221d7b9621cf1bd8e1f1b71295b1c1d75da862e370da464bc65`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap exam repair sync: platform and lesson roadmaps agree on repaired source-ingestion authority
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:34:26.986Z`
+- finished_at: `2026-06-03T19:34:27.056Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `e5d20b6f57844221d7b9621cf1bd8e1f1b71295b1c1d75da862e370da464bc65`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap exam repair sync: platform and lesson roadmaps agree on repaired source-ingestion authority
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:34:35.941Z`
+- finished_at: `2026-06-03T19:34:36.358Z`
+- duration_ms: `417`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:34:41.268Z`
+- finished_at: `2026-06-03T19:34:41.352Z`
+- duration_ms: `84`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:34:46.204Z`
+- finished_at: `2026-06-03T19:34:46.570Z`
+- duration_ms: `366`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js SYNC-ROADMAP-EXAM-REPAIR-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:34:53.105Z`
+- finished_at: `2026-06-03T19:34:53.185Z`
+- duration_ms: `80`
+- exit_code: `0`
+- stdout_sha256: `d7124404bfdb813d963460e8ac5ec801776dbd96dd46420edf731187af5c93c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: SYNC-ROADMAP-EXAM-REPAIR-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:15.546Z`
+- finished_at: `2026-06-03T19:36:15.914Z`
+- duration_ms: `368`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:21.032Z`
+- finished_at: `2026-06-03T19:36:21.114Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:25.956Z`
+- finished_at: `2026-06-03T19:36:26.024Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `11e87d4777784e85f7c62e2c8f46d474a7ec29c451dbacdc5b3f363e9ce03246`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 146 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:31.168Z`
+- finished_at: `2026-06-03T19:36:31.561Z`
+- duration_ms: `393`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:37.192Z`
+- finished_at: `2026-06-03T19:36:37.266Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:43.291Z`
+- finished_at: `2026-06-03T19:36:43.674Z`
+- duration_ms: `383`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js SYNC-ROADMAP-EXAM-REPAIR-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:50.974Z`
+- finished_at: `2026-06-03T19:36:51.045Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `d7124404bfdb813d963460e8ac5ec801776dbd96dd46420edf731187af5c93c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: SYNC-ROADMAP-EXAM-REPAIR-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:36:57.516Z`
+- finished_at: `2026-06-03T19:36:57.588Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `286dae389629f519e42e3779bff5cb72c8810d6bd96c382b946559c498ab45ec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:37:13.680Z`
+- finished_at: `2026-06-03T19:37:13.766Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:37:20.060Z`
+- finished_at: `2026-06-03T19:37:20.154Z`
+- duration_ms: `94`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `cd59a3c2a144a8de09f1bf44cec9f3e285bb0ab6ce7a042d0bd8ffa00523d01d`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/reference-team-roadmap.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/dashboard-data.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/url-index.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:37:26.283Z`
+- finished_at: `2026-06-03T19:37:26.355Z`
+- duration_ms: `72`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:37:46.130Z`
+- finished_at: `2026-06-03T19:37:46.191Z`
+- duration_ms: `61`
+- exit_code: `0`
+- stdout_sha256: `286dae389629f519e42e3779bff5cb72c8810d6bd96c382b946559c498ab45ec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SYNC-ROADMAP-EXAM-REPAIR-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:37:52.739Z`
+- finished_at: `2026-06-03T19:37:53.011Z`
+- duration_ms: `272`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `7bfee6a975efe62375068cc9326fb6aad735167d2110847b2168244cf41b49db`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: reports\sprints\SYNC-ROADMAP-EXAM-REPAIR-1-lead-review-round1.md Blocking Findings must explicitly state whether blockers exist
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js SYNC-ROADMAP-EXAM-REPAIR-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:38:06.366Z`
+- finished_at: `2026-06-03T19:38:06.447Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `d7124404bfdb813d963460e8ac5ec801776dbd96dd46420edf731187af5c93c6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: SYNC-ROADMAP-EXAM-REPAIR-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js SYNC-ROADMAP-EXAM-REPAIR-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-03T19:38:13.508Z`
+- finished_at: `2026-06-03T19:38:14.170Z`
+- duration_ms: `662`
+- exit_code: `0`
+- stdout_sha256: `d1c41022e4c17ac92cd031699214b357be0d1c8bb9a00fdccce87ef2350a3e68`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: SYNC-ROADMAP-EXAM-REPAIR-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

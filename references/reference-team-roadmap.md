@@ -127,19 +127,22 @@ Core standard:
 | REASON-EXAMPLE-1 | Live Example-Answer Evidence Plan | no | Plan A99 live example-answer scaffold evidence with rendered, human-testable proof. Catalog-only scaffold status remains until this closes. |
 | REASON-ADOPT-2 | Reasoning Product-Route Adoption Preparation | no | Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate. |
 | SPRINT-PROTOCOL-HARDEN-2 | Sprint Protocol Evidence Hardening | yes | Closed PASS after command-log wrapper, command-log validator, result/bundle command-evidence enforcement for 2026-06-03+ sprints, lead-review substance validation, batch-closure blocking, negative fixtures, and actual lead-review round 1/round 2. Round 1 returned REVISE for missing direct result/bundle negative fixtures, loose output-artifact substance checks, and broad current-command skipping; corrections resolved all three and round 2 passed. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized. |
-| SYNC-TASK-CONTEXT-INGEST-1 | Shared Task Context And Source Ingestion Roadmap Alignment | no | Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output. |
-| TASK-CONTEXT-SPEC-1 | Shared Task Context Contract | no | Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` for markdown, table, SVG, graph, flowchart, formula/info blocks, and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure. |
+| SYNC-ROADMAP-EXAM-REPAIR-1 | Roadmap Exam Repair Alignment | yes | Closed PASS WITH FLAGS after planning review and lead-review round 1/round 2. Aligned platform and lesson roadmaps after rollback and protocol hardening, corrected false-complete lesson context/ingestion statuses, made `EXAM-SOURCE-AUTH-1` the next repair sprint, replaced old active source reconstruction, task transformation, and human gate identifiers with the actual-exam/textbook repair sequence, and added a checker for duplicate blocker rows. Flag: checker hardens duplicate handling for named blocker rows, not a global duplicate-ID policy. No implementation, generated lesson output, source-data mutation, protected reference mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized. |
+| EXAM-SOURCE-AUTH-1 | Exam Source Authority Contract | no | Define and validate what counts as real exam evidence before any source reconstruction or transformed shared-task proof. Must require `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, source table/graph value matching, and answer-model references; must reject `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source` as exam proof. No source reconstruction, task-shell context rendering, generated output, or source-data mutation. |
+| SYNC-TASK-CONTEXT-INGEST-1 | Shared Task Context And Source Ingestion Roadmap Alignment | no | Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output. |
+| TASK-CONTEXT-SPEC-1 | Shared Task Context Contract | no | After `EXAM-SOURCE-AUTH-1`, define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` for markdown, table, SVG, graph, flowchart, formula/info blocks, and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure. |
 | TASK-CONTEXT-RUNTIME-1 | Shared Task Context Runtime | no | Implement context rendering above task lists in the shared task shell. Prove context-before-task display, stable block IDs, task references, captions, alt text, mobile/dark rendering, no unauthorized hints in exit tickets, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion. |
 | CONTEXT-VISUAL-STD-1 | Source Context Visual Standard | no | Define the unified visual style for context blocks: semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`. |
-| SOURCE-RECONSTRUCT-1 | Exam And Textbook Source Reconstruction Examples | no | Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source. No copy-paste screenshot dependency unless explicitly justified. |
-| TASK-INGEST-TRANSFORM-1 | Source Exercise To Task-Family Transformation | no | Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing calculation, graph/table, source, or constructed reasoning operations to shallow recognition. |
-| GATE-SHARED-TASK-INGEST-1 | Shared Task Context And Ingestion Human Review | no | Human gate for exam/textbook source-context ingestion into shared tasks. Requires review packet, packet JSON, playable exam and textbook labs, reconstruction maps, source references, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only; no Scale Gate 1 or broad product use. |
+| SOURCE-RECONSTRUCT-2-ACTUAL-EXAM | Actual Exam Source Reconstruction | no | Build governed reconstruction for the authorized external-primary exam item only after `EXAM-SOURCE-AUTH-1`, `TASK-CONTEXT-SPEC-1`, `TASK-CONTEXT-RUNTIME-1`, and `CONTEXT-VISUAL-STD-1` close. Produce normalized markdown, semantic tables or reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts tied to official prompt/correction PDFs. No official-style substitutes or copy-paste screenshot dependency. |
+| TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM | Actual Exam Source Exercise Transformation | no | Transform the actual reconstructed exam source into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, sourceAuthority references, and reviewer notes. Must preserve cognitive level and avoid reducing calculation, graph/table, source, or constructed reasoning operations to shallow recognition. |
+| TASK-INGEST-TRANSFORM-3-TEXTBOOK | Textbook Source Exercise Transformation | no | Prepare the textbook-style source-context transformation only after the actual-exam path has proved the source-authority and context contracts. Must use governed source maps, visual variants, operation traces, and task-family maps without weakening the real-exam evidence standard. |
+| GATE-SHARED-TASK-INGEST-REPAIR-1 | Shared Task Context And Ingestion Repair Human Review | no | Human gate for repaired exam/textbook source-context ingestion into shared tasks. Requires review packet, packet JSON, playable actual-exam and textbook labs, external-primary source references, reconstruction maps, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only; no Scale Gate 1 or broad product use. |
 | DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint; any remaining scope should ask when a task needs text, table, graph, flowchart, diagram, formula box, or plain text. |
 | ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell. |
-| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Hold until `GATE-SHARED-TASK-INGEST-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch. |
-| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Hold until the shared task context/ingestion track closes or is explicitly waived. Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action. |
+| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch. |
+| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or the repaired shared task context/ingestion track is explicitly waived. Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action. |
 | GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
-| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
+| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the repaired shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-REPAIR-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
 
 ## Sprint Ledger
 
@@ -2651,34 +2654,44 @@ Update 2026-06-02: `GATE-TASK-FAMILY-1 Structured Choice And Construction Task-F
 
 ## Immediate Next Sprint
 
-Next action: proceed to named downstream planning/adoption-preparation only.
-`GAME-ROUTE-AFFORDANCE-1` remains the next route-affordance implementation lane
-and may use the accepted task families only as planning input where route-item
-affordance analysis requires it. `REASON-STD-1` may prepare route-specific
-reasoning adoption plans, but no generated route may rely on these families
-without a later bounded adoption packet with rendered proof. The closed
-`TASK-FAMILY-CLOZE-TILE-1`,
-`TASK-FAMILY-SENTENCE-1`, `TASK-FAMILY-FORMULA-1`, `TASK-FAMILY-CLOZE-1`,
-`TASK-FAMILY-MULTI-1`, `TASK-FAMILY-ORDER-1`, `TASK-FAMILY-SOURCE-1`,
-`TASK-FAMILY-LABEL-1`, `TASK-FAMILY-MATCH-1`,
-`TASK-FAMILY-TWO-TIER-1`, and `TASK-FAMILY-ASSERTION-1`
+Next action after `SYNC-ROADMAP-EXAM-REPAIR-1` closes: proceed to
+`EXAM-SOURCE-AUTH-1`.
+
+The repaired shared task context/ingestion lane must run in this order unless
+a later human waiver explicitly records consequences:
+
+```text
+EXAM-SOURCE-AUTH-1
+-> TASK-CONTEXT-SPEC-1
+-> TASK-CONTEXT-RUNTIME-1
+-> CONTEXT-VISUAL-STD-1
+-> SOURCE-RECONSTRUCT-2-ACTUAL-EXAM
+-> TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM
+-> TASK-INGEST-TRANSFORM-3-TEXTBOOK
+-> GATE-SHARED-TASK-INGEST-REPAIR-1
+```
+
+`SYNC-TASK-CONTEXT-INGEST-1` is superseded by
+`SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row. The
+old active identifiers `SOURCE-RECONSTRUCT-1`,
+`TASK-INGEST-TRANSFORM-1`, and `GATE-SHARED-TASK-INGEST-1` may remain only as
+historical audit references, not as open authority for future source-ingestion
+work.
+
+`GAME-ROUTE-AFFORDANCE-1` and reasoning follow-up lanes remain valid later
+planning/adoption-preparation work, but they are no longer the immediate next
+action while real exam source authority is unresolved. The closed task-family
 runtimes may not be adopted in generated lesson routes before a later adoption
 sprint supplies product-route rendered proof.
-`CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and Scale Gate 1 may not rely on the
-new task families until route-specific adoption proof and the relevant later
-review gates explicitly authorize that use.
-`REV-STD-1` remains required before Scale Gate 1, but Scale Gate 1 may not run
-until the Product Proof Track reaches `GATE-PRODUCT-3P` or a human waiver
-explicitly records consequences. The approved `1.1.2` completion copy is local
-and non-summative only; no diagnostics, adaptive routing, mastery/sequencing,
+
+`CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and Scale Gate 1 may not rely on
+source-context ingestion until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or a
+human waiver explicitly records consequences. `REV-STD-1` remains required
+before Scale Gate 1. The approved `1.1.2` completion copy is local and
+non-summative only; no diagnostics, adaptive routing, mastery/sequencing,
 student-facing AI, summative use, PV, Scale Gate 1, CP-6/Year-1 reliance, or
-product-wide use is authorized by `L1.7B-Q2-COPY`, `SYNC-PRODUCT-1`,
-`CHECK-SHORT-EXIT-1`, `STANDARD-EXERCISES-1`, `TASK-SHELL-UX-2`, the
-structured-choice/construction contract sprints, `TASK-FAMILY-CLOZE-TILE-1`,
-`TASK-FAMILY-SENTENCE-1`, `TASK-FAMILY-FORMULA-1`, `TASK-FAMILY-MULTI-1`,
-`TASK-FAMILY-ORDER-1`, `TASK-FAMILY-SOURCE-1`, `TASK-FAMILY-LABEL-1`,
-`TASK-FAMILY-MATCH-1`, `TASK-FAMILY-TWO-TIER-1`,
-`TASK-FAMILY-ASSERTION-1`, or `GATE-TASK-FAMILY-1`.
+product-wide use is authorized by the closed task-family and product-proof
+preparation sprints.
 
 R4.5 has closed the bounded micro-unit mutation lane, CP-1 has closed the non-mutating schema audit gate as `pass_with_conditions`, CP-2 has closed the owned-source scope gate as `pass_with_conditions`, R9.1 has registered the owned-source surfaces, R9.2 has completed owned-content projection, S4/CP-3 has closed as `pass_with_conditions`, S4.1 has implemented the CP-3 condition artifacts, RX.1 has prepared the non-mutating representation-operation inventory, `GATE-RX1-representation-unit-scope` has closed as `pass_with_conditions`, RX.2/GATE-RX2 has added the bounded six-unit first lane through CLI-only mutation, RX.2b/GATE-RX2b has added the bounded seven-unit graphical foundation lane through CLI-only mutation while holding `A71`, R8.1 has added the scoped internal QC issue model, S6 has created the source-document registry MVP under `references/data/`, S7/CP-4 has closed as `pass_with_conditions`, RX.3a/RX.3b/RX.4 have applied producer and elasticity representation lanes through CLI-only mutation, PV.3 through PV.6 have completed pilot templates, projection proof, and coverage dashboards, RX.5 has added representation-operation reports, RX.6 has completed skill-tree generator readiness, PV.7 has closed the machine-promotion review gate without authorizing promotion, PV.8 has completed the promotion-pipeline design, PV-G4 has closed as `pass_with_conditions` with two reconciled lesson-team proofs, S8 has created the bounded internal misconception registry under `references/data/`, S9 has closed CP-5 as a D04 decision-only gate, and S9a has applied the D04 retirement through CLI-only mutation.
 
