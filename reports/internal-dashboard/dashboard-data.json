@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T19:36:43.642Z",
+  "generatedAt": "2026-06-03T19:55:10.846Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3139,8 +3139,8 @@
             {
               "sprint": "EXAM-SOURCE-AUTH-1",
               "name": "Exam Source Authority Contract",
-              "completed": "no",
-              "currentState": "Define and validate what counts as real exam evidence before any source reconstruction or transformed shared-task proof. Must require `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, source table/graph value matching, and answer-model references; must reject `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source` as exam proof.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / AUTHORITY CONTRACT ONLY.** Platform added an authority contract and checker for `vw-1022-a-25-1-o:opgave-1:question-3`, requiring `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, table-only source-material matching, Zoohee table value matching, answer-model refs, EUR 649 threshold evidence, exact forbidden-term rejection for `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source`, and full boundary flags set to false. No source reconstruction, task-shell context rendering, task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized.",
               "exitGate": ""
             },
             {
@@ -3454,14 +3454,6 @@
           "name": "Reasoning Product-Route Adoption Preparation",
           "completed": "no",
           "currentState": "Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "EXAM-SOURCE-AUTH-1",
-          "name": "Exam Source Authority Contract",
-          "completed": "no",
-          "currentState": "Define and validate what counts as real exam evidence before any source reconstruction or transformed shared-task proof. Must require `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, source table/graph value matching, and answer-model references; must reject `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source` as exam proof.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "**CLOSED PASS WITH FLAGS / ROADMAP SYNC ONLY.** Platform aligned the platform and lesson roadmaps after rollback and protocol hardening, corrected false-complete lesson context/ingestion statuses, made `EXAM-SOURCE-AUTH-1` the next repair sprint, replaced old broad source reconstruction, task transformation, and human gate identifiers with the actual-exam/textbook repair sequence, and added a checker for duplicate blocker rows. Flag: checker hardens duplicate handling for named blocker rows, not a global duplicate-ID policy. No implementation, generated lesson output, source-data mutation, protected reference mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "EXAM-SOURCE-AUTH-1",
+          "name": "Exam Source Authority Contract",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / AUTHORITY CONTRACT ONLY.** Platform added an authority contract and checker for `vw-1022-a-25-1-o:opgave-1:question-3`, requiring `sourceAuthority.kind: external_primary`, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, table-only source-material matching, Zoohee table value matching, answer-model refs, EUR 649 threshold evidence, exact forbidden-term rejection for `official-style`, `exam-style`, `local review data`, `local official-style source`, and `reconstructed local source`, and full boundary flags set to false. No source reconstruction, task-shell context rendering, task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 31,
-      "openCount": 44
+      "completedCount": 32,
+      "openCount": 43
     },
     {
       "id": "innovation",

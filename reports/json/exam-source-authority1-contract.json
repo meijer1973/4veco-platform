@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXAM-SOURCE-AUTH-1",
+  "generated_on": "2026-06-03T00:00:00.000Z",
+  "status": "authority_contract_only",
+  "sourceAuthority": {
+    "kind": "external_primary",
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "overlay_path": "references/data/exam-ingestion/exam-item-overlays.json",
+    "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+    "source_material_id": "table-1-zoohee-zorgverzekering"
+  },
+  "sourceRecord": {
+    "exam": "vw-1022-a-25-1-o",
+    "level": "vwo",
+    "year": 2025,
+    "tijdvak": 1,
+    "opgave_num": 1,
+    "question_num": 3,
+    "points": 2,
+    "question_type": "berekenen",
+    "exam_codes": ["A2.4", "A2.5"]
+  },
+  "sourceMaterial": {
+    "source_material_id": "table-1-zoohee-zorgverzekering",
+    "type": "table",
+    "title": "Zoohee zorgverzekering",
+    "columns": ["variant", "eigen_risico_per_jaar_eur", "premie_per_maand_eur"],
+    "rows": [
+      ["wettelijk eigen risico", 385, 108.25],
+      ["verhoogd eigen risico", 885, 86.25]
+    ]
+  },
+  "answerModelAuthority": {
+    "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+    "required_step_ids": ["q3-step-1", "q3-step-2"],
+    "required_point_rule_ids": ["q3-pr-1", "q3-pr-2"],
+    "required_threshold": "EUR 649",
+    "required_terms": ["eigen risico", "premie", "zorgkosten per jaar"]
+  },
+  "futureTransformedTaskAuthorityShape": {
+    "status": "validation_shape_only_not_a_task",
+    "required_fields": [
+      "sourceAuthority",
+      "sourceMaterialRefs",
+      "answerModelRefs",
+      "operationTrace"
+    ],
+    "sourceMaterialRefs": ["table-1-zoohee-zorgverzekering"],
+    "answerModelRefs": [
+      "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-1",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-2"
+    ],
+    "operationTrace": [
+      "annualize_monthly_premium",
+      "compare_deductible_exposure",
+      "derive_equal_cost_threshold",
+      "state_threshold_with_direction"
+    ]
+  },
+  "forbiddenProofTerms": [
+    "official-style",
+    "exam-style",
+    "local review data",
+    "local official-style source",
+    "reconstructed local source"
+  ],
+  "productBoundary": {
+    "source_reconstruction_authorized": false,
+    "task_shell_context_runtime_authorized": false,
+    "task_transformation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

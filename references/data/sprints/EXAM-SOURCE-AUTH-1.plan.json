@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXAM-SOURCE-AUTH-1",
+  "name": "Exam Source Authority Contract",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/EXAM-SOURCE-AUTH-1-plan.md",
+  "baseline": "reports/sprints/EXAM-SOURCE-AUTH-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Define the sourceAuthority contract for real exam evidence.",
+    "Use selected item vw-1022-a-25-1-o:opgave-1:question-3 only.",
+    "Require external_primary authority, official exam item ID, overlay path, prompt PDF, correction PDF, source material ID, table value matching, and answer-model references.",
+    "Reject official-style, exam-style, local review data, local official-style source, and reconstructed local source as exam proof.",
+    "Add a deterministic checker with positive and negative fixtures.",
+    "Preserve no source reconstruction, no task-shell context rendering, no task transformation, no generated lesson output, no protected reference mutation, no source-data mutation, no product-route adoption, no target-equivalent proof, no diagnostics, no mastery/sequencing, no PV, no Scale Gate 1, and no student/product use."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/EXAM-SOURCE-AUTH-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EXAM-SOURCE-AUTH-1",
+    "node build-scripts/sprints/check-exam-source-authority1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js EXAM-SOURCE-AUTH-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/EXAM-SOURCE-AUTH-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js EXAM-SOURCE-AUTH-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No target-exercise registry writes.",
+    "No generated Book 1 lesson output writes.",
+    "No candidate storage creation or candidate writes.",
+    "No PV machine promotion or projection output writes.",
+    "No protected reference mutation, machine reference mutation, external-source mutation, unit minting, unit update, unit split, or unit deprecation.",
+    "No source reconstruction, task-shell context runtime, exam task transformation, product-route adoption, target-equivalent reliance, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, or student/product use."
+  ]
+}
