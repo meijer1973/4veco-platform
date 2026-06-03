@@ -545,7 +545,82 @@
     }
   }
 
-  function renderTask(task, index) {
+  function contextLabelMap(data) {
+    var map = {};
+    (data.contextBlocks || []).forEach(function (block) {
+      map[block.id] = block.label || block.title || block.id;
+    });
+    return map;
+  }
+
+  function renderContextRefs(task, labels) {
+    var refs = Array.isArray(task.contextRefs) ? task.contextRefs : [];
+    if (!refs.length || !labels) return '';
+    return '<div class="ts-context-refs" aria-label="Gebruikte bronnen">' +
+      refs.map(function (ref) {
+        return '<span class="ts-context-ref">' + escapeHtml(labels[ref] || ref) + '</span>';
+      }).join('') +
+    '</div>';
+  }
+
+  function renderTextBlockBody(body) {
+    return String(body || '')
+      .split(/\n{2,}/)
+      .map(function (paragraph) {
+        return '<p>' + escapeHtml(paragraph).replace(/\n/g, '<br>') + '</p>';
+      })
+      .join('');
+  }
+
+  function renderContextBlock(block) {
+    var label = block.label || block.title || block.id;
+    var heading = '<div class="ts-context-block-head">' +
+      '<span class="ts-context-label">' + escapeHtml(label) + '</span>' +
+      (block.title ? '<h2>' + escapeHtml(block.title) + '</h2>' : '') +
+    '</div>';
+    var source = '<p class="ts-context-source">' + escapeHtml(block.sourceRef) + '</p>';
+    var caption = block.caption ? '<p class="ts-context-caption">' + escapeHtml(block.caption) + '</p>' : '';
+    var notes = block.notes ? '<p class="ts-context-notes">' + escapeHtml(block.notes) + '</p>' : '';
+    var body = '';
+
+    if (block.type === 'markdown' || block.type === 'info') {
+      body = '<div class="ts-context-copy">' + renderTextBlockBody(block.body) + '</div>';
+    } else if (block.type === 'formula') {
+      body = '<pre class="ts-context-formula"><code>' + escapeHtml(block.formula) + '</code></pre>';
+    } else if (block.type === 'table') {
+      var headers = block.columns.map(function (column) {
+        return '<th scope="col">' + escapeHtml(column) + '</th>';
+      }).join('');
+      var rows = block.rows.map(function (row) {
+        return '<tr>' + row.map(function (cell) {
+          return '<td>' + escapeHtml(cell) + '</td>';
+        }).join('') + '</tr>';
+      }).join('');
+      body = '<div class="ts-context-table-wrap"><table class="ts-context-table">' +
+        '<thead><tr>' + headers + '</tr></thead><tbody>' + rows + '</tbody>' +
+      '</table></div>';
+    } else if (block.type === 'svg' || block.type === 'graph' || block.type === 'flowchart') {
+      body = '<figure class="ts-context-figure" role="group" aria-label="' + escapeHtml(block.altText) + '">' +
+        '<div class="ts-context-svg">' + block.svg + '</div>' +
+        caption +
+      '</figure>';
+      caption = '';
+    }
+
+    return '<article class="ts-context-block ts-context-' + escapeHtml(block.type) + '" data-context-block-id="' + escapeHtml(block.id) + '" data-context-type="' + escapeHtml(block.type) + '">' +
+      heading + body + caption + notes + source +
+    '</article>';
+  }
+
+  function renderContextBlocks(data) {
+    var blocks = Array.isArray(data.contextBlocks) ? data.contextBlocks : [];
+    if (!blocks.length) return '';
+    return '<section class="ts-context" aria-label="Bronnen en context">' +
+      '<div class="ts-context-list">' + blocks.map(renderContextBlock).join('') + '</div>' +
+    '</section>';
+  }
+
+  function renderTask(task, index, labels) {
     if (TaskShellEngine) TaskShellEngine.validateTask(task);
     return '<article class="ts-task" data-task="' + escapeHtml(task.id) + '" data-task-family="' + escapeHtml(task.family) + '">' +
       '<div class="ts-task-meta">' +
@@ -553,6 +628,7 @@
         '<span>' + escapeHtml(task.skillLabel) + '</span>' +
         '<span>' + escapeHtml(familyLabel(task)) + '</span>' +
       '</div>' +
+      renderContextRefs(task, labels) +
       '<h2>' + escapeHtml(task.prompt) + '</h2>' +
       (task.purpose ? '<p class="ts-purpose">' + escapeHtml(task.purpose) + '</p>' : '') +
       renderHints(task) +
@@ -563,13 +639,15 @@
 
   function renderStaticHtml(data) {
     if (TaskShellEngine) TaskShellEngine.validateTaskSet(data);
+    var labels = contextLabelMap(data);
     return '<section class="ts-shell" data-task-shell="GAME-UX-3A">' +
       '<header class="ts-shell-head">' +
         '<p class="ts-eyebrow">' + escapeHtml(data.eyebrow || 'Oefentaak') + '</p>' +
         '<h1>' + escapeHtml(data.title) + '</h1>' +
         (data.intro ? '<p>' + escapeHtml(data.intro) + '</p>' : '') +
       '</header>' +
-      '<div class="ts-task-list">' + data.tasks.map(renderTask).join('') + '</div>' +
+      renderContextBlocks(data) +
+      '<div class="ts-task-list">' + data.tasks.map(function (task, index) { return renderTask(task, index, labels); }).join('') + '</div>' +
     '</section>';
   }
 

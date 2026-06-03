@@ -1,0 +1,15 @@
+{
+  "sprint_id": "TASK-CONTEXT-SPEC-1",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/TASK-CONTEXT-SPEC-1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_closure",
+  "human_review_required": false,
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-task-context-runtime1.js",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-SPEC-1",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-SPEC-1 --complete"
+  ]
+}

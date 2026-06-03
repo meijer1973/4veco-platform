@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-1",
+  "generated": "2026-06-03",
+  "exam_case": {
+    "source_action": "Read source table and calculate price percentage change.",
+    "transformed_chain": [
+      "source_value_selection",
+      "formula_builder",
+      "calculation_work_capture",
+      "source_chain_builder"
+    ],
+    "cognitive_level_preserved": true,
+    "notes": "The transformation requires source selection, formula construction, calculation, and conclusion chain; it is not choice-only."
+  },
+  "textbook_case": {
+    "source_action": "Read graph/table and explain price-quantity relation.",
+    "transformed_chain": [
+      "graph_reading",
+      "label_placement",
+      "step_ordering",
+      "sentence_builder"
+    ],
+    "cognitive_level_preserved": true,
+    "notes": "The transformation keeps graph reading and reasoning construction separate."
+  }
+}

@@ -346,6 +346,98 @@ function data() {
     };
 }
 
+function contextData() {
+    return {
+        schema_version: 1,
+        title: 'Bronnen gebruiken in de taakschil',
+        intro: 'Lees eerst de bron en werk daarna de taken af.',
+        contextBlocks: [
+            {
+                id: 'bron-water',
+                type: 'markdown',
+                label: 'Bron 1',
+                title: 'Keuze bij watertekort',
+                sourceRef: 'Reconstructed local source, 2026',
+                body: 'Een gemeente heeft in een droge zomer niet genoeg water om alle wensen tegelijk uit te voeren.\n\nDe raad moet kiezen tussen sportvelden sproeien en de drinkwaterbuffer aanvullen.'
+            },
+            {
+                id: 'tabel-watergebruik',
+                type: 'table',
+                label: 'Tabel 1',
+                title: 'Watergebruik per activiteit',
+                sourceRef: 'Reconstructed local source, 2026',
+                columns: ['Activiteit', 'Water per dag'],
+                rows: [
+                    ['Sportvelden sproeien', '120.000 liter'],
+                    ['Drinkwaterbuffer aanvullen', '180.000 liter']
+                ],
+                caption: 'De tabel toont twee concurrerende gebruiken.'
+            },
+            {
+                id: 'figuur-vraag',
+                type: 'graph',
+                label: 'Figuur 1',
+                title: 'Vraag naar drinkwater',
+                sourceRef: 'Reconstructed local source, 2026',
+                altText: 'Een dalende vraaglijn in een prijs-hoeveelheidgrafiek.',
+                svg: '<svg viewBox="0 0 240 140" role="img" aria-label="Dalende vraaglijn"><rect width="240" height="140" fill="white"/><line x1="34" y1="112" x2="210" y2="112" stroke="#152033"/><line x1="34" y1="112" x2="34" y2="18" stroke="#152033"/><path d="M48 35 L200 105" stroke="#176c67" stroke-width="4" fill="none"/><text x="190" y="130" font-size="12">Q</text><text x="12" y="24" font-size="12">P</text></svg>',
+                caption: 'Gereconstrueerde grafiek in de gedeelde stijl.'
+            },
+            {
+                id: 'formule-procent',
+                type: 'formula',
+                label: 'Formule 1',
+                title: 'Procentuele verandering',
+                sourceRef: 'Reconstructed local source, 2026',
+                formula: '(nieuw - oud) / oud x 100%'
+            }
+        ],
+        tasks: [
+            task('context-values', 'source_value_selection', {
+                valueBankLabel: 'Bronwaarden',
+                roleLabel: 'Rol',
+                values: [
+                    { id: 'sportvelden', label: 'Sportvelden sproeien', kind: 'answer', sourceLabel: 'activiteit' },
+                    { id: 'buffer', label: 'Drinkwaterbuffer aanvullen', kind: 'answer', sourceLabel: 'activiteit' },
+                    { id: 'zwembad', label: 'Nieuw zwembad vullen', kind: 'distractor', distractorFor: 'buffer' }
+                ],
+                roles: [
+                    { id: 'choice-a', label: 'keuze A' },
+                    { id: 'choice-b', label: 'keuze B' }
+                ]
+            }, {
+                kind: 'source_value_selection',
+                selections: [
+                    { valueId: 'sportvelden', role: 'choice-a' },
+                    { valueId: 'buffer', role: 'choice-b' }
+                ],
+                partialFeedback: 'practice_only'
+            }),
+            task('context-formula', 'formula_builder', {
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'keer-100', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ],
+                separator: ' ',
+                placeholder: 'Bouw de formule.',
+                tokenBankLabel: 'Formuleblokken',
+                sequenceLabel: 'Opgebouwde formule'
+            }, {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100'],
+                acceptedSequences: [['nieuw-min-oud', 'delen-door-oud', 'keer-100']]
+            })
+        ].map((item) => ({
+            ...item,
+            contextRefs: item.id === 'context-values'
+                ? ['bron-water', 'tabel-watergebruik']
+                : ['figuur-vraag', 'formule-procent']
+        }))
+    };
+}
+
 describe('TaskShellUI', () => {
     test('renders all accepted task families with stable task markers', () => {
         const html = TaskShellUI.renderStaticHtml(data());
@@ -376,6 +468,30 @@ describe('TaskShellUI', () => {
         ]) {
             expect(html).toContain(`data-task-family="${family}"`);
         }
+    });
+
+    test('renders context blocks before cited tasks', () => {
+        const html = TaskShellUI.renderStaticHtml(contextData());
+        expect(html).toContain('class="ts-context"');
+        expect(html).toContain('data-context-block-id="bron-water"');
+        expect(html).toContain('data-context-type="table"');
+        expect(html).toContain('<table class="ts-context-table">');
+        expect(html).toContain('Watergebruik per activiteit');
+        expect(html).toContain('role="group" aria-label="Een dalende vraaglijn in een prijs-hoeveelheidgrafiek."');
+        expect(html).toContain('class="ts-context-formula"');
+        expect(html).toContain('(nieuw - oud) / oud x 100%');
+        expect(html).toContain('<span class="ts-context-ref">Bron 1</span>');
+        expect(html).toContain('<span class="ts-context-ref">Tabel 1</span>');
+        expect(html).toContain('<span class="ts-context-ref">Figuur 1</span>');
+        expect(html.indexOf('class="ts-context"')).toBeLessThan(html.indexOf('class="ts-task-list"'));
+        expect(html).not.toContain('>bron-water<');
+        expect(html).not.toContain('>figuur-vraag<');
+    });
+
+    test('uses engine validation for unsafe context before rendering', () => {
+        const fixture = contextData();
+        fixture.contextBlocks[0].body = '![kopie](source.png)';
+        expect(() => TaskShellUI.renderStaticHtml(fixture)).toThrow(/raw images/);
     });
 
     test('renders keyboard-focusable controls and neutral feedback containers', () => {

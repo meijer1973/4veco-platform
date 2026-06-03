@@ -1,0 +1,23 @@
+{
+  "sprint_id": "GATE-SHARED-TASK-INGEST-1",
+  "created": "2026-06-03",
+  "plan": "reports/sprints/GATE-SHARED-TASK-INGEST-1-plan.md",
+  "protected_reference_data_changes_allowed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_human_gate",
+  "human_review_required": true,
+  "gate_id": "GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review",
+  "review_packet": "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/review-packet.md",
+  "valid_gate_statuses": [
+    "PASS",
+    "PASS WITH FLAGS",
+    "REVISE",
+    "PAUSE",
+    "FAIL"
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-bundle.js GATE-SHARED-TASK-INGEST-1",
+    "node build-scripts/review-gates/check-gate-shared-task-ingest1-review-packet.js"
+  ]
+}

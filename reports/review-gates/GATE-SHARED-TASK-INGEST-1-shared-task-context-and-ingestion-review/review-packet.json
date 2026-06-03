@@ -1,0 +1,52 @@
+{
+  "gate_id": "GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-1",
+  "generated": "2026-06-03",
+  "status": "ready_for_direct_human_comments",
+  "human_review_mode": "direct_packet_comments",
+  "human_review_comments_started": false,
+  "reviewed_remote_commit": null,
+  "remote_publication_required_before_review": true,
+  "evidence_base": [
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/review-packet.md",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/live-output-evidence.md",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/live-output-evidence.json",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/screenshot-manifest.md",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/gate-playable-shared-task-ingest-exam-lab.html",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/gate-playable-shared-task-ingest-textbook-lab.html",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/gate-playable-shared-task-ingest-data.json",
+    "reports/review-gates/GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review/playable-proof.json",
+    "reports/json/task-context-spec1-contract.json",
+    "reports/json/task-ingest-transform1-operation-trace.json"
+  ],
+  "authority_boundary": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "protected_reference_mutation": false,
+    "product_route_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "planned_questions": [
+    "SHAREDINGEST1-Q1",
+    "SHAREDINGEST1-Q2",
+    "SHAREDINGEST1-Q3",
+    "SHAREDINGEST1-Q4",
+    "SHAREDINGEST1-Q5",
+    "SHAREDINGEST1-Q6",
+    "SHAREDINGEST1-Q7",
+    "SHAREDINGEST1-Q8",
+    "SHAREDINGEST1-Q9",
+    "SHAREDINGEST1-Q10"
+  ],
+  "calibration_questions": [
+    "No product authority now?",
+    "Evidence pushed before comments?",
+    "No shallow reduction?"
+  ]
+}

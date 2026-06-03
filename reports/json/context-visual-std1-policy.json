@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CONTEXT-VISUAL-STD-1",
+  "generated": "2026-06-03",
+  "rules": [
+    "Source context appears before task controls.",
+    "Tables are semantic HTML tables.",
+    "Graphs, figures, and flowcharts are reconstructed SVG unless explicitly waived.",
+    "Visual blocks require captions, source references, and alt text.",
+    "Formula blocks use a visual formula container.",
+    "Mobile and dark mode are required before route adoption."
+  ]
+}

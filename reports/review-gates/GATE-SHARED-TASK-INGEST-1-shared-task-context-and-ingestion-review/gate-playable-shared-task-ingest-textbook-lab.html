@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textbook shared task ingest lab</title>
+  <link rel="stylesheet" href="../../../engines/task-shell.css">
+  <style>
+    body { margin:0; background:var(--ts-bg); color:var(--ts-text); font-family:Inter, system-ui, -apple-system, Segoe UI, sans-serif; }
+    main { width:min(1120px, calc(100% - 32px)); margin:0 auto; padding:28px 0 44px; }
+    .gate-panel { margin:0 0 16px; padding:16px; border:1px solid var(--ts-line); border-radius:var(--ts-radius); background:var(--ts-panel); box-shadow:var(--ts-shadow); }
+    .gate-actions, .gate-task-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; }
+    .gate-button, .gate-check-task, .gate-next-action { min-height:40px; padding:8px 12px; border:1px solid var(--ts-primary); border-radius:var(--ts-radius); background:var(--ts-primary); color:var(--ts-panel); font:inherit; font-weight:800; cursor:pointer; }
+    .gate-button.secondary { background:var(--ts-panel); color:var(--ts-primary); }
+    .gate-next-action { display:none; background:var(--ts-panel); color:var(--ts-primary); }
+    .gate-next-action.is-visible { display:inline-flex; }
+    .gate-task-state { font-weight:800; color:var(--ts-muted); }
+    .gate-complete { display:none; border-color:var(--ts-success); }
+    .gate-complete.is-visible { display:block; }
+    .pill { display:inline-flex; margin:4px 6px 0 0; padding:4px 9px; border-radius:999px; background:color-mix(in srgb, var(--ts-primary) 10%, var(--ts-panel)); color:var(--ts-primary); font-weight:800; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="gate-panel">
+    <p class="ts-eyebrow">Human review lab</p>
+    <h1>Textbook-style source ingestion</h1>
+    <p>Open deze pagina als mens-testbare review evidence. Gebruik de zichtbare controls; de autoplay-knop is alleen reproduceerbare ondersteuning.</p>
+    <span class="pill">review-only</span><span class="pill">geen lesoutput</span><span class="pill">geen productautoriteit</span>
+  </header>
+  <section class="gate-panel" id="review-only">
+    <strong>Voortgang</strong>
+    <div data-gate-progress>0 / 4 taken afgerond</div>
+    <div class="gate-actions">
+      <button type="button" class="gate-button secondary" data-gate-reset>Reset lab</button>
+      <button type="button" class="gate-button" data-gate-autoplay>Speel correct pad automatisch</button>
+    </div>
+  </section>
+  <section class="gate-panel gate-complete" data-gate-complete>Alle taken in dit contextlab zijn afgerond.</section>
+  <div id="playable-root"></div>
+</main>
+<script src="../../../engines/task-shell-engine.js"></script>
+<script src="../../../engines/task-shell-ui.js"></script>
+<script id="gate-shared-task-ingest-data" type="application/json">{"schema_version":1,"gate_id":"GATE-SHARED-TASK-INGEST-1-shared-task-context-and-ingestion-review","kind":"textbook","taskSet":{"schema_version":1,"eyebrow":"Contextlab leermateriaal","title":"Grafiekcontext omzetten naar taken","intro":"Gebruik de tabel, grafiek en het schema als context voor de vragen.","contextBlocks":[{"id":"bron-ijs","type":"markdown","label":"Bron 1","title":"IJsverkoop op een warme dag","sourceRef":"4veco textbook-style reconstructed source, local review data 2026","body":"Een ijssalon ziet dat de verkoop verandert als de prijs per ijsje stijgt. In de les gebruiken leerlingen de grafiek en tabel om de samenhang tussen prijs en gevraagde hoeveelheid te lezen."},{"id":"tabel-ijs","type":"table","label":"Tabel 1","title":"Prijs en gevraagde hoeveelheid","sourceRef":"4veco textbook-style reconstructed source, local review data 2026","columns":["Prijs per ijsje","Gevraagde hoeveelheid"],"rows":[["EUR 1,00","500 ijsjes"],["EUR 1,50","400 ijsjes"],["EUR 2,00","300 ijsjes"],["EUR 2,50","200 ijsjes"]],"caption":"De tabel ondersteunt het aflezen uit de grafiek."},{"id":"figuur-ijs-vraag","type":"graph","label":"Figuur 1","title":"Vraaglijn voor ijsjes","sourceRef":"4veco textbook-style reconstructed source, local review data 2026","altText":"Vraaggrafiek met prijs op de verticale as en gevraagde hoeveelheid op de horizontale as.","svg":"\u003csvg viewBox=\"0 0 320 190\" role=\"img\" aria-label=\"Vraaggrafiek ijsjes\">\u003crect width=\"320\" height=\"190\" fill=\"white\"/>\u003cline x1=\"48\" y1=\"152\" x2=\"286\" y2=\"152\" stroke=\"#152033\" stroke-width=\"2\"/>\u003cline x1=\"48\" y1=\"152\" x2=\"48\" y2=\"24\" stroke=\"#152033\" stroke-width=\"2\"/>\u003cpath d=\"M78 42 L250 140\" stroke=\"#176c67\" stroke-width=\"5\" fill=\"none\"/>\u003ctext x=\"266\" y=\"174\" font-size=\"14\" fill=\"#152033\">Q ijsjes\u003c/text>\u003ctext x=\"12\" y=\"30\" font-size=\"14\" fill=\"#152033\">P euro\u003c/text>\u003ccircle cx=\"162\" cy=\"92\" r=\"5\" fill=\"#b76524\"/>\u003ctext x=\"170\" y=\"88\" font-size=\"12\" fill=\"#152033\">EUR 2,00 -> 300\u003c/text>\u003c/svg>","caption":"Reconstructed web SVG using the shared context style."},{"id":"schema-oorzaak-gevolg","type":"flowchart","label":"Schema 1","title":"Van prijs naar hoeveelheid","sourceRef":"4veco textbook-style reconstructed source, local review data 2026","altText":"Flowchart met drie stappen: prijs stijgt, consumenten kopen minder, gevraagde hoeveelheid daalt.","svg":"\u003csvg viewBox=\"0 0 420 120\" role=\"img\" aria-label=\"Oorzaak-gevolg schema\">\u003crect width=\"420\" height=\"120\" fill=\"white\"/>\u003crect x=\"18\" y=\"35\" width=\"110\" height=\"44\" rx=\"8\" fill=\"#edf7f4\" stroke=\"#176c67\"/>\u003crect x=\"160\" y=\"35\" width=\"120\" height=\"44\" rx=\"8\" fill=\"#fff4e8\" stroke=\"#b76524\"/>\u003crect x=\"312\" y=\"35\" width=\"90\" height=\"44\" rx=\"8\" fill=\"#edf7f4\" stroke=\"#176c67\"/>\u003cpath d=\"M128 57 H158 M280 57 H310\" stroke=\"#152033\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\u003cdefs>\u003cmarker id=\"arrow\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\">\u003cpath d=\"M0 0 L6 3 L0 6 Z\" fill=\"#152033\"/>\u003c/marker>\u003c/defs>\u003ctext x=\"34\" y=\"62\" font-size=\"13\" fill=\"#152033\">prijs stijgt\u003c/text>\u003ctext x=\"173\" y=\"55\" font-size=\"12\" fill=\"#152033\">consumenten\u003c/text>\u003ctext x=\"174\" y=\"70\" font-size=\"12\" fill=\"#152033\">kopen minder\u003c/text>\u003ctext x=\"323\" y=\"62\" font-size=\"12\" fill=\"#152033\">Q daalt\u003c/text>\u003c/svg>","caption":"Flow-style reconstruction for reasoning practice."}],"tasks":[{"id":"textbook-graph-reading","family":"graph_reading","skillLabel":"Grafiek aflezen","prompt":"Lees uit Figuur 1 af hoeveel ijsjes gevraagd worden bij een prijs van EUR 2,00.","purpose":"De tabel ondersteunt de aflezing, maar de taak vraagt om de grafiekwaarde.","contextRefs":["figuur-ijs-vraag","tabel-ijs"],"interaction":{"inputLabel":"Afgelezen hoeveelheid","placeholder":"Bijvoorbeeld 300"},"expected":{"kind":"number","value":300,"tolerance":5,"unit":"ijsjes"},"feedback":{"matchTitle":"Past bij de bron","matchText":"Je hebt de Grafiek aflezen correct aan de bron gekoppeld.","retryTitle":"Kijk opnieuw naar de bron","retryText":"Controleer welke bronblokken de taak noemt en herstel je keuze of volgorde."},"practiceRoute":{"label":"Review-only contextlab","href":"#review-only"}},{"id":"textbook-label-placement","family":"label_placement","skillLabel":"Grafieklabels plaatsen","prompt":"Plaats de labels voor prijs en gevraagde hoeveelheid bij het grafiekvlak.","purpose":"De contextgrafiek gebruikt de economische assenconventie.","contextRefs":["figuur-ijs-vraag"],"interaction":{"labelBankLabel":"Labelbank","targetRegionLabel":"Grafiekvlak","placementLabel":"Geplaatste labels","visual":{"kind":"coordinate_plane","title":"Vraaglijn","description":"Een grafiekvlak met verticale en horizontale as.","showLine":true},"labels":[{"id":"prijs","label":"Prijs","description":"De prijs hoort op de verticale as.","kind":"answer"},{"id":"hoeveelheid","label":"Gevraagde hoeveelheid","description":"De hoeveelheid hoort op de horizontale as.","kind":"answer"},{"id":"omzet","label":"Omzet","description":"Omzet is hier geen aslabel.","kind":"distractor","distractorFor":"prijs"}],"targets":[{"id":"axis-left","label":"Verticale as","description":"Plaats hier het prijslabel.","kind":"answer","targetRole":"axis","x":14,"y":25},{"id":"axis-bottom","label":"Horizontale as","description":"Plaats hier het hoeveelheidslabel.","kind":"answer","targetRole":"axis","x":72,"y":84},{"id":"caption","label":"Bijschrift","description":"Dit is geen aslabel.","kind":"distractor","targetRole":"structure_part","distractorFor":"axis-left","x":78,"y":16}]},"expected":{"kind":"label_placement","placements":[{"labelId":"prijs","targetId":"axis-left"},{"labelId":"hoeveelheid","targetId":"axis-bottom"}],"partialFeedback":"practice_only"},"feedback":{"matchTitle":"Past bij de bron","matchText":"Je hebt de Grafieklabels plaatsen correct aan de bron gekoppeld.","retryTitle":"Kijk opnieuw naar de bron","retryText":"Controleer welke bronblokken de taak noemt en herstel je keuze of volgorde."},"practiceRoute":{"label":"Review-only contextlab","href":"#review-only"}},{"id":"textbook-step-order","family":"step_ordering","skillLabel":"Redeneerstappen ordenen","prompt":"Orden de stappen uit Schema 1.","purpose":"De taak maakt de oorzaak-gevolgketen expliciet.","contextRefs":["schema-oorzaak-gevolg"],"interaction":{"steps":[{"id":"prijs-stijgt","label":"De prijs per ijsje stijgt","kind":"answer","description":"Begin bij de prijsverandering."},{"id":"consumenten-kopen-minder","label":"Consumenten kopen minder ijsjes","kind":"answer","description":"Verbind prijs met koopgedrag."},{"id":"gevraagde-hoeveelheid-daalt","label":"De gevraagde hoeveelheid daalt","kind":"answer","description":"Sluit af met de grafiekgrootheid."},{"id":"aanbod-daalt","label":"Het aanbod daalt automatisch","kind":"distractor","distractorFor":"consumenten-kopen-minder"}],"separator":" -> ","placeholder":"Orden de keten.","stepBankLabel":"Stappenbank","sequenceLabel":"Gekozen volgorde"},"expected":{"kind":"step_ordering","order":["prijs-stijgt","consumenten-kopen-minder","gevraagde-hoeveelheid-daalt"],"partialFeedback":"practice_only"},"feedback":{"matchTitle":"Past bij de bron","matchText":"Je hebt de Redeneerstappen ordenen correct aan de bron gekoppeld.","retryTitle":"Kijk opnieuw naar de bron","retryText":"Controleer welke bronblokken de taak noemt en herstel je keuze of volgorde."},"practiceRoute":{"label":"Review-only contextlab","href":"#review-only"}},{"id":"textbook-sentence","family":"sentence_builder","skillLabel":"Redeneerzin bouwen","prompt":"Bouw de conclusie bij de grafiek.","purpose":"De zin verbindt de afgelezen bronwaarde met de economische conclusie.","contextRefs":["bron-ijs","figuur-ijs-vraag","schema-oorzaak-gevolg"],"interaction":{"tokens":[{"id":"bij-twee-euro","label":"Bij EUR 2,00","kind":"answer"},{"id":"worden-300","label":"worden ongeveer 300 ijsjes gevraagd","kind":"answer"},{"id":"prijs-hoger","label":"als de prijs hoger wordt","kind":"answer"},{"id":"daalt-q","label":"daalt de gevraagde hoeveelheid","kind":"answer"},{"id":"stijgt-q","label":"stijgt de gevraagde hoeveelheid","kind":"distractor","distractorFor":"daalt-q"}],"separator":" -> ","placeholder":"Bouw de conclusie.","tokenBankLabel":"Fragmentbank","sequenceLabel":"Opgebouwde conclusie"},"expected":{"kind":"sentence_builder","tokens":["bij-twee-euro","worden-300","prijs-hoger","daalt-q"],"acceptedSequences":[["bij-twee-euro","worden-300","prijs-hoger","daalt-q"]]},"feedback":{"matchTitle":"Past bij de bron","matchText":"Je hebt de Redeneerzin bouwen correct aan de bron gekoppeld.","retryTitle":"Kijk opnieuw naar de bron","retryText":"Controleer welke bronblokken de taak noemt en herstel je keuze of volgorde."},"practiceRoute":{"label":"Review-only contextlab","href":"#review-only"}}]},"correctPaths":{"textbook-graph-reading":[["fill","[data-input-role=\"answer\"]","300"]],"textbook-label-placement":[["click","[data-label-id=\"prijs\"]"],["click","[data-label-target-id=\"axis-left\"]"],["click","[data-label-id=\"hoeveelheid\"]"],["click","[data-label-target-id=\"axis-bottom\"]"]],"textbook-step-order":[["click","[data-step-id=\"prijs-stijgt\"]"],["click","[data-step-id=\"consumenten-kopen-minder\"]"],["click","[data-step-id=\"gevraagde-hoeveelheid-daalt\"]"]],"textbook-sentence":[["click","[data-sentence-token-id=\"bij-twee-euro\"]"],["click","[data-sentence-token-id=\"worden-300\"]"],["click","[data-sentence-token-id=\"prijs-hoger\"]"],["click","[data-sentence-token-id=\"daalt-q\"]"]]}}</script>
+<script>
+(function () {
+  'use strict';
+  var labData = JSON.parse(document.getElementById('gate-shared-task-ingest-data').textContent);
+  var taskSet = labData.taskSet;
+  var root = document.getElementById('playable-root');
+  var state = {};
+  function cssEscape(value) { return String(value).replace(/["\\]/g, '\\$&'); }
+  function taskById(id) { return taskSet.tasks.find(function (task) { return task.id === id; }); }
+  function taskArticle(id) { return root.querySelector('[data-task="' + cssEscape(id) + '"]'); }
+  function feedbackRegion(id) { var article = taskArticle(id); return article && article.querySelector('[data-feedback-for="' + cssEscape(id) + '"]'); }
+  function collect(article, task) {
+    switch (task.family) {
+      case 'source_value_selection': return TaskShellUI.collectSourceValueSelectionResponse(article, task);
+      case 'formula_builder': return TaskShellUI.collectFormulaBuilderResponse(article, task);
+      case 'source_chain_builder': return TaskShellUI.collectSourceChainBuilderResponse(article, task);
+      case 'label_placement': return TaskShellUI.collectLabelPlacementResponse(article, task);
+      case 'step_ordering': return TaskShellUI.collectStepOrderingResponse(article, task);
+      case 'sentence_builder': return TaskShellUI.collectSentenceBuilderResponse(article, task);
+      case 'calculation_work_capture':
+        return {
+          work: article.querySelector('[data-input-role="work"]')?.value || '',
+          finalAnswer: article.querySelector('[data-input-role="final-answer"]')?.value || '',
+          unitNotation: article.querySelector('[data-input-role="unit-notation"]')?.value || ''
+        };
+      case 'graph_reading':
+      case 'numeric_input':
+        return { value: article.querySelector('[data-input-role="answer"]')?.value || '' };
+      default: return {};
+    }
+  }
+  function updateProgress() {
+    var done = Object.keys(state).filter(function (id) { return state[id] === true; }).length;
+    document.querySelector('[data-gate-progress]').textContent = done + ' / ' + taskSet.tasks.length + ' taken afgerond';
+    document.querySelector('[data-gate-complete]').classList.toggle('is-visible', done === taskSet.tasks.length);
+  }
+  function checkTask(id) {
+    var task = taskById(id);
+    var article = taskArticle(id);
+    var feedback = feedbackRegion(id);
+    var result = TaskShellEngine.evaluateTask(task, collect(article, task));
+    feedback.innerHTML = TaskShellUI.renderFeedback(result);
+    feedback.focus();
+    state[id] = result.matched === true;
+    var label = article.querySelector('[data-gate-task-state]');
+    label.textContent = state[id] ? 'Afgerond' : 'Nog niet afgerond';
+    label.setAttribute('data-state', state[id] ? 'matched' : 'retry');
+    var next = article.querySelector('[data-gate-next-task]');
+    next.classList.toggle('is-visible', state[id]);
+    next.disabled = !state[id];
+    updateProgress();
+    return result;
+  }
+  function addCheckButtons() {
+    root.querySelectorAll('.ts-task').forEach(function (article, index) {
+      var taskId = article.getAttribute('data-task');
+      var nextTask = taskSet.tasks[index + 1];
+      article.insertAdjacentHTML('beforeend',
+        '<div class="gate-task-actions">' +
+        '<button type="button" class="gate-check-task" data-gate-check-task="' + taskId + '">Controleer taak</button>' +
+        '<span class="gate-task-state" data-gate-task-state data-state="pending">Nog niet afgerond</span>' +
+        '<button type="button" class="gate-next-action" data-gate-next-task="' + taskId + '" data-gate-next-target="' + (nextTask ? nextTask.id : '') + '" disabled>Ga naar volgende taak</button>' +
+        '</div>'
+      );
+    });
+  }
+  function dispatchTaskShellClick(event) {
+    return TaskShellUI.handleSourceValueSelectionClick(root, event) ||
+      TaskShellUI.handleFormulaBuilderClick(root, event) ||
+      TaskShellUI.handleSourceChainBuilderClick(root, event) ||
+      TaskShellUI.handleLabelPlacementClick(root, event) ||
+      TaskShellUI.handleStepOrderingClick(root, event) ||
+      TaskShellUI.handleSentenceBuilderClick(root, event);
+  }
+  function click(selector) {
+    var el = root.querySelector(selector);
+    if (!el) throw new Error('Missing selector: ' + selector);
+    el.click();
+  }
+  function fill(selector, value) {
+    var el = root.querySelector(selector);
+    if (!el) throw new Error('Missing selector: ' + selector);
+    el.value = value;
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  function select(selector, value) {
+    var el = root.querySelector(selector);
+    if (!el) throw new Error('Missing selector: ' + selector);
+    el.value = value;
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  function runAction(action) {
+    if (action[0] === 'click') click('[data-task-id="' + currentTaskId + '"]' + action[1]);
+    if (action[0] === 'fill') fill('[data-task-id="' + currentTaskId + '"]' + action[1], action[2]);
+    if (action[0] === 'select') select('[data-task-id="' + currentTaskId + '"]' + action[1], action[2]);
+  }
+  var currentTaskId = '';
+  function correctPathFor(id) {
+    currentTaskId = id;
+    (labData.correctPaths[id] || []).forEach(runAction);
+    currentTaskId = '';
+  }
+  function autoplayCorrect() {
+    taskSet.tasks.forEach(function (task) {
+      correctPathFor(task.id);
+      checkTask(task.id);
+    });
+    return inspect();
+  }
+  function resetLab() {
+    state = {};
+    root.innerHTML = TaskShellUI.renderStaticHtml(taskSet);
+    addCheckButtons();
+    updateProgress();
+  }
+  function inspect() {
+    return {
+      kind: labData.kind,
+      contextBlocks: root.querySelectorAll('[data-context-block-id]').length,
+      tasks: root.querySelectorAll('.ts-task').length,
+      checkButtons: root.querySelectorAll('[data-gate-check-task]').length,
+      matched: Object.keys(state).filter(function (id) { return state[id] === true; }).length,
+      total: taskSet.tasks.length,
+      progressText: document.querySelector('[data-gate-progress]').textContent,
+      completeVisible: document.querySelector('[data-gate-complete]').classList.contains('is-visible'),
+      text: document.body.innerText.replace(/\s+/g, ' ').slice(0, 600),
+      theme: document.documentElement.getAttribute('data-theme') || 'light',
+      viewport: { width: window.innerWidth, height: window.innerHeight }
+    };
+  }
+  document.addEventListener('click', function (event) {
+    var check = event.target.closest && event.target.closest('[data-gate-check-task]');
+    var next = event.target.closest && event.target.closest('[data-gate-next-task]');
+    var autoplay = event.target.closest && event.target.closest('[data-gate-autoplay]');
+    var reset = event.target.closest && event.target.closest('[data-gate-reset]');
+    if (check) { checkTask(check.getAttribute('data-gate-check-task')); return; }
+    if (next) {
+      var target = next.getAttribute('data-gate-next-target');
+      var article = target ? taskArticle(target) : null;
+      if (article) article.scrollIntoView({ block: 'start', behavior: 'instant' });
+      return;
+    }
+    if (autoplay) { resetLab(); autoplayCorrect(); return; }
+    if (reset) { resetLab(); return; }
+    dispatchTaskShellClick(event);
+  });
+  resetLab();
+  window.GateSharedTaskIngestLab = { inspect: inspect, autoplayCorrect: autoplayCorrect, checkTask: checkTask, correctPathFor: correctPathFor };
+  if (new URLSearchParams(window.location.search).get('autoplay') === 'correct') {
+    window.setTimeout(autoplayCorrect, 50);
+  }
+})();
+</script>
+</body>
+</html>
