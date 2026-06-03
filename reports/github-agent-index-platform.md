@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-03T13:32:11.554Z
+Generated: 2026-06-03T14:11:52.668Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3016
+Files indexed: 3074
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 381
+Count: 384
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -404,6 +404,7 @@ Count: 381
 - build-scripts/reports/unresolved-refs.js
 - build-scripts/reports/validate-report-json.js
 - build-scripts/review-gates/capture-gate-engine1-live-output.js
+- build-scripts/review-gates/capture-gate-reason-revision1-playable-proof.js
 - build-scripts/review-gates/capture-gate-reason-std1-playable-proof.js
 - build-scripts/review-gates/capture-gate-task-family1-gallery-screenshots.js
 - build-scripts/review-gates/capture-gate-task-family1-playable-proof.js
@@ -417,9 +418,11 @@ Count: 381
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-reason-revision1-review-packet.js
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
+- build-scripts/review-gates/emit-gate-reason-revision1-playable-lab.js
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
@@ -557,7 +560,7 @@ Count: 42
 
 ## validators
 
-Count: 204
+Count: 205
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -650,6 +653,7 @@ Count: 204
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
+- build-scripts/review-gates/check-gate-reason-revision1-review-packet.js
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
@@ -766,7 +770,7 @@ Count: 204
 
 ## references
 
-Count: 440
+Count: 447
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -886,6 +890,7 @@ Count: 440
 - references/data/sprints/GATE-ENGINE-1.result.json
 - references/data/sprints/GATE-L1.7B-Q2.plan.json
 - references/data/sprints/GATE-L1.7B-Q2.result.json
+- references/data/sprints/GATE-REASON-REVISION-1.plan.json
 - references/data/sprints/GATE-REASON-STD-1.plan.json
 - references/data/sprints/GATE-TASK-FAMILY-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
@@ -1031,10 +1036,16 @@ Count: 440
 - references/data/sprints/REASON-ADOPT-1.result.json
 - references/data/sprints/REASON-ANSWERFORM-2.plan.json
 - references/data/sprints/REASON-ANSWERFORM-2.result.json
+- references/data/sprints/REASON-CONTEXT-1.plan.json
+- references/data/sprints/REASON-CONTEXT-1.result.json
 - references/data/sprints/REASON-PLAY-1.plan.json
 - references/data/sprints/REASON-PLAY-1.result.json
 - references/data/sprints/REASON-REFINE-1.plan.json
 - references/data/sprints/REASON-REFINE-1.result.json
+- references/data/sprints/REASON-REPLACE-AUDIT-1.plan.json
+- references/data/sprints/REASON-REPLACE-AUDIT-1.result.json
+- references/data/sprints/REASON-REVISION-0.plan.json
+- references/data/sprints/REASON-REVISION-0.result.json
 - references/data/sprints/REASON-STD-1.plan.json
 - references/data/sprints/REASON-STD-1.result.json
 - references/data/sprints/REASON-UX-2.plan.json
@@ -1211,7 +1222,7 @@ Count: 440
 
 ## reports
 
-Count: 1767
+Count: 1815
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1260,8 +1271,10 @@ Count: 1767
 - reports/json/reason-adopt1-proof.json
 - reports/json/reason-answerform2-proof.json
 - reports/json/reason-answerform2-scaffold-map.json
+- reports/json/reason-context1-proof.json
 - reports/json/reason-play1-screenshot-proof.json
 - reports/json/reason-play1-usability.json
+- reports/json/reason-replace-audit1.json
 - reports/json/reason-std1-proof.json
 - reports/json/reason-std1-standard-family-map.json
 - reports/json/reference-cli-coverage.json
@@ -1748,6 +1761,20 @@ Count: 1767
 - reports/review-gates/GATE-R7-rag/subagent-evidence-surfacing.json
 - reports/review-gates/GATE-R7-rag/subagent-rag-retrieval.json
 - reports/review-gates/GATE-R7-rag/subagent-summary.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/bundle-urls.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-data.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-lab.html
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/live-output-evidence.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/live-output-evidence.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/playable-proof.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/review-packet.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/review-packet.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshot-manifest.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-completed.png
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-initial.png
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-mobile-dark-completed.png
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-next-action-focus.png
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshots/gate-reason-revision1-playable-retry-feedback.png
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/bundle-urls.md
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-data.json
 - reports/review-gates/GATE-REASON-STD-1-reasoning-unified-task-shell-human-evidence-review/gate-playable-reasoning-lab.html
@@ -2206,6 +2233,12 @@ Count: 1767
 - reports/sprints/GATE-L1.7B-Q2-lead-review-round2.md
 - reports/sprints/GATE-L1.7B-Q2-plan.md
 - reports/sprints/GATE-L1.7B-Q2-result.md
+- reports/sprints/GATE-REASON-REVISION-1-baseline.md
+- reports/sprints/GATE-REASON-REVISION-1-lead-review-assignment.md
+- reports/sprints/GATE-REASON-REVISION-1-lead-review-corrections.md
+- reports/sprints/GATE-REASON-REVISION-1-lead-review-round1.md
+- reports/sprints/GATE-REASON-REVISION-1-lead-review-round2.md
+- reports/sprints/GATE-REASON-REVISION-1-plan.md
 - reports/sprints/GATE-REASON-STD-1-baseline.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-assignment.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-corrections.md
@@ -2594,6 +2627,14 @@ Count: 1767
 - reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-111-mode5-a98-cue.png
 - reports/sprints/REASON-ANSWERFORM-2-screenshots/desktop-light-112-mode5-a97-index-cue.png
 - reports/sprints/REASON-ANSWERFORM-2-screenshots/mobile-light-112-mode3-scaffold.png
+- reports/sprints/REASON-CONTEXT-1-baseline.md
+- reports/sprints/REASON-CONTEXT-1-diff-summary.md
+- reports/sprints/REASON-CONTEXT-1-lead-review-assignment.md
+- reports/sprints/REASON-CONTEXT-1-lead-review-corrections.md
+- reports/sprints/REASON-CONTEXT-1-lead-review-round1.md
+- reports/sprints/REASON-CONTEXT-1-lead-review-round2.md
+- reports/sprints/REASON-CONTEXT-1-plan.md
+- reports/sprints/REASON-CONTEXT-1-result.md
 - reports/sprints/REASON-PLAY-1-baseline.md
 - reports/sprints/REASON-PLAY-1-diff-summary.md
 - reports/sprints/REASON-PLAY-1-lead-review-assignment.md
@@ -2627,6 +2668,24 @@ Count: 1767
 - reports/sprints/REASON-REFINE-1-planning-review.md
 - reports/sprints/REASON-REFINE-1-result.md
 - reports/sprints/REASON-REFINE-1-task-coverage-matrix.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-baseline.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-diff-summary.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-assignment.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-corrections.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-round1.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-lead-review-round2.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-plan.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-replacement-audit.md
+- reports/sprints/REASON-REPLACE-AUDIT-1-result.md
+- reports/sprints/REASON-REVISION-0-baseline.md
+- reports/sprints/REASON-REVISION-0-diff-summary.md
+- reports/sprints/REASON-REVISION-0-human-comment-resolution.md
+- reports/sprints/REASON-REVISION-0-lead-review-assignment.md
+- reports/sprints/REASON-REVISION-0-lead-review-corrections.md
+- reports/sprints/REASON-REVISION-0-lead-review-round1.md
+- reports/sprints/REASON-REVISION-0-lead-review-round2.md
+- reports/sprints/REASON-REVISION-0-plan.md
+- reports/sprints/REASON-REVISION-0-result.md
 - reports/sprints/REASON-STD-1-baseline.md
 - reports/sprints/REASON-STD-1-build-vs-rebuild-note.md
 - reports/sprints/REASON-STD-1-diff-summary.md

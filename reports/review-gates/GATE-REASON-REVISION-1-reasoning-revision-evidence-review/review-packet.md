@@ -2,9 +2,9 @@
 
 Generated: 2026-06-03
 
-Status: direct-comment review packet ready after reasoning revision sprint
-series and pre-gate lead review PASS WITH FLAGS; no human review comments
-started; no product authority.
+Status: closed PASS WITH FLAGS after direct human review comments; reasoning
+revision evidence accepted for bounded downstream planning/adoption-preparation
+only; no product authority.
 
 ## Review Scope
 
@@ -42,6 +42,13 @@ start. The gate closure must record the reviewed remote commit/hash.
 
 ## Evidence Base
 
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/direct-review-comments.md`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/direct-review-comments.json`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/comment-resolution-log.md`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/comment-resolution-log.json`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/closure-proposal.md`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-closure.md`
+- `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-closure.json`
 - `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/live-output-evidence.md`
 - `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/live-output-evidence.json`
 - `reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/screenshot-manifest.md`
@@ -304,9 +311,10 @@ Options:
 
 ## Recommended Next Action
 
-Publish this packet and all cited evidence to the normal remote branch, then
-send the packet for direct human review comments. Human reviewers should open
-the playable lab and manually try at least one case. Do not start downstream
-reasoning implementation, product-route adoption, reasoning-game replacement,
-target-equivalent reasoning claims, Scale Gate 1, or product-facing exposure
-from this packet.
+Use the closure record as the authority boundary for the next reasoning work.
+Only named downstream planning/adoption-preparation is authorized:
+`REASON-UX-HARDEN-1`, `REASON-FLOW-1`, `REASON-ERROR-REPAIR-1`,
+`REASON-CLASSIFY-1`, `REASON-SOURCE-1`, `REASON-EXAMPLE-1`, and later
+`REASON-ADOPT-2`. Do not start implementation, product-route adoption,
+reasoning-game replacement, target-equivalent reasoning claims, Scale Gate 1,
+or product-facing exposure from this packet.

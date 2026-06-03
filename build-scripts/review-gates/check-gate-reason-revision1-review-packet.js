@@ -7,6 +7,13 @@ const GATE_ID = 'GATE-REASON-REVISION-1-reasoning-revision-evidence-review';
 const GATE_DIR = path.join('reports', 'review-gates', GATE_ID);
 const PACKET_MD = path.join(GATE_DIR, 'review-packet.md');
 const PACKET_JSON = path.join(GATE_DIR, 'review-packet.json');
+const DIRECT_REVIEW_MD = path.join(GATE_DIR, 'direct-review-comments.md');
+const DIRECT_REVIEW_JSON = path.join(GATE_DIR, 'direct-review-comments.json');
+const COMMENT_RESOLUTION_MD = path.join(GATE_DIR, 'comment-resolution-log.md');
+const COMMENT_RESOLUTION_JSON = path.join(GATE_DIR, 'comment-resolution-log.json');
+const CLOSURE_PROPOSAL_MD = path.join(GATE_DIR, 'closure-proposal.md');
+const GATE_CLOSURE_MD = path.join(GATE_DIR, 'gate-closure.md');
+const GATE_CLOSURE_JSON = path.join(GATE_DIR, 'gate-closure.json');
 const LIVE_MD = path.join(GATE_DIR, 'live-output-evidence.md');
 const LIVE_JSON = path.join(GATE_DIR, 'live-output-evidence.json');
 const MANIFEST_MD = path.join(GATE_DIR, 'screenshot-manifest.md');
@@ -52,6 +59,10 @@ function exists(file) {
   if (!fs.existsSync(resolve(file))) fail(`missing required artifact: ${file}`);
 }
 
+function fileExists(file) {
+  return fs.existsSync(resolve(file));
+}
+
 function read(file) {
   exists(file);
   return fs.readFileSync(resolve(file), 'utf8');
@@ -92,6 +103,7 @@ function validateSprintArtifacts(sprintId) {
 
 const packetMd = read(PACKET_MD);
 const packet = readJson(PACKET_JSON);
+const closureExists = fileExists(GATE_CLOSURE_JSON);
 const liveMd = read(LIVE_MD);
 const live = readJson(LIVE_JSON);
 const manifest = read(MANIFEST_MD);
@@ -102,7 +114,55 @@ const proof = readJson(PROOF);
 assert(packet.gate_id === GATE_ID, 'packet gate_id mismatch');
 assert(packet.human_review_mode === 'direct_packet_comments', 'packet must use direct packet comments');
 assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
-assert(packet.reviewed_remote_commit === null, 'reviewed_remote_commit must stay null before closure');
+if (closureExists) {
+  [
+    DIRECT_REVIEW_MD,
+    DIRECT_REVIEW_JSON,
+    COMMENT_RESOLUTION_MD,
+    COMMENT_RESOLUTION_JSON,
+    CLOSURE_PROPOSAL_MD,
+    GATE_CLOSURE_MD,
+    GATE_CLOSURE_JSON,
+  ].forEach(exists);
+  const directReview = readJson(DIRECT_REVIEW_JSON);
+  const resolution = readJson(COMMENT_RESOLUTION_JSON);
+  const closure = readJson(GATE_CLOSURE_JSON);
+  assert(packet.human_review_comments_started === true, 'closed packet must record human_review_comments_started true');
+  assert(packet.human_review_completed === true, 'closed packet must record human_review_completed true');
+  assert(packet.gate_closed === true, 'closed packet must record gate_closed true');
+  assert(packet.final_verdict === 'PASS WITH FLAGS', 'closed packet must record PASS WITH FLAGS');
+  assert(closure.status === 'pass_with_flags', 'closure status must be pass_with_flags');
+  assert(closure.reviewed_remote_commit && /^[0-9a-f]{40}$/i.test(closure.reviewed_remote_commit), 'closure must record a 40-character reviewed remote commit');
+  assert(packet.reviewed_remote_commit === closure.reviewed_remote_commit, 'packet reviewed_remote_commit must match closure');
+  assert(directReview.reviewed_remote_commit === closure.reviewed_remote_commit, 'direct review commit must match closure');
+  assert(resolution.reviewed_remote_commit === closure.reviewed_remote_commit, 'resolution commit must match closure');
+  assert(directReview.verdict === 'PASS WITH FLAGS', 'direct review verdict must be PASS WITH FLAGS');
+  assert(resolution.review_verdict === 'PASS WITH FLAGS', 'resolution verdict must be PASS WITH FLAGS');
+  assert(resolution.closure_record_allowed === true, 'resolution must allow closure');
+  assert(closure.authorized_next && closure.authorized_next.implementation_authorized === false, 'closure must deny implementation authority');
+  assertAllFalse(closure.authority_boundary, 'closure authority_boundary');
+  [
+    DIRECT_REVIEW_MD,
+    DIRECT_REVIEW_JSON,
+    COMMENT_RESOLUTION_MD,
+    COMMENT_RESOLUTION_JSON,
+    CLOSURE_PROPOSAL_MD,
+    GATE_CLOSURE_MD,
+    GATE_CLOSURE_JSON,
+  ].forEach((file) => assert(packet.evidence_base.includes(toPosix(file)), `packet JSON missing closure artifact ${file}`));
+  [
+    'PASS WITH FLAGS',
+    'REASON-UX-HARDEN-1',
+    'REASON-FLOW-1',
+    'REASON-ERROR-REPAIR-1',
+    'REASON-CLASSIFY-1',
+    'REASON-SOURCE-1',
+    'REASON-EXAMPLE-1',
+    'REASON-ADOPT-2',
+  ].forEach((phrase) => assert(packetMd.includes(phrase), `closed packet missing ${phrase}`));
+} else {
+  assert(packet.reviewed_remote_commit === null, 'reviewed_remote_commit must stay null before closure');
+}
 assertAllFalse(packet.authority_boundary, 'packet authority_boundary');
 assert(live.gate_id === GATE_ID, 'live evidence gate_id mismatch');
 assertAllFalse(live.product_boundaries, 'live product_boundaries');

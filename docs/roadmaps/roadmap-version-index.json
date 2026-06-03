@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-02",
+  "updated_on": "2026-06-03",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,12 +15,12 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.52-reason-std1-migration",
+      "version": "v3.53-reason-revision-gate-closed",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-02",
+      "updated_on": "2026-06-03",
       "supersedes": [
         "docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md",
@@ -67,7 +67,7 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after REASON-STD-1 closed PASS WITH FLAGS as the reasoning standard-family runtime migration. Reasoning modes 0, 1, 3, and 5 now emit shared task-shell proof objects, while mode 2 and mode 4 remain deferred/refactor-scoped. The next reasoning sequence is REASON-ADOPT-1, REASON-PLAY-1, REASON-ANSWERFORM-2, and GATE-REASON-STD-1 before reasoning can be treated as unified route evidence. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates."
+      "notes": "Current operating roadmap after GATE-REASON-REVISION-1 closed PASS WITH FLAGS at reviewed remote commit 13c460df35219b3b52c30098dcfc50796f3654e3. The revision repairs the earlier reasoning gate defects only for bounded downstream planning/adoption-preparation. REASON-UX-HARDEN-1, REASON-FLOW-1, REASON-ERROR-REPAIR-1, REASON-CLASSIFY-1, REASON-SOURCE-1, REASON-EXAMPLE-1, and later REASON-ADOPT-2 remain required before any reasoning product-route adoption or replacement claim. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates."
     },
     {
       "roadmap_id": "references-team-roadmap",

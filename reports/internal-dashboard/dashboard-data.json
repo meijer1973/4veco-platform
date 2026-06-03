@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T13:32:11.587Z",
+  "generatedAt": "2026-06-03T14:11:52.600Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-01 Roadmap ID: references-team-roadmap Roadmap version: v3.51-source-builder-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economics exa...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-03 Roadmap ID: references-team-roadmap Roadmap version: v3.53-reason-revision-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -3069,8 +3069,57 @@
             {
               "sprint": "GATE-REASON-REVISION-1",
               "name": "Reasoning Revision Evidence Human Review",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / PLANNING-ADOPTION PREPARATION ONLY.** Platform gate closed at reviewed remote commit `13c460df35219b3b52c30098dcfc50796f3654e3`. Repaired the previous `GATE-REASON-STD-1` revise defects: visible water-scarcity wrong-answer context, mode 3 reasoning-chain wording, stale mode-disposition cleanup, replacement audit, and playable proof. No generated lesson output, source-data mutation, product-route adoption, reasoning-game replacement, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-UX-HARDEN-1",
+              "name": "Reasoning UX Hardening Plan",
               "completed": "no",
-              "currentState": "Direct-comment human gate reviewing the repaired context/label proof, stale-evidence cleanup, and replacement audit. Must include playable lab, proof JSON, screenshots, lead review, manual-test instruction, and no-authority boundaries.",
+              "currentState": "Plan and prove repairs for feedback hierarchy, compact controls, mobile route placement, dark-theme consistency, and manual playability evidence. Planning/adoption-preparation only.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-FLOW-1",
+              "name": "Visual Flow Reasoning Planning And Proof",
+              "completed": "no",
+              "currentState": "Plan true visual flow-builder evidence for reasoning chains so mode 3 is no longer only ordered-chain practice. Must include rendered/playable proof requirements before adoption.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-ERROR-REPAIR-1",
+              "name": "Reasoning Error Repair Task Design",
+              "completed": "no",
+              "currentState": "Plan reviewed error categories and bounded response forms for mode 2. Must avoid guessing-game error detection and diagnostic/misconception-profile claims.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-CLASSIFY-1",
+              "name": "Classification With Explanation Reasoning Design",
+              "completed": "no",
+              "currentState": "Plan mode 4 classification-with-explanation so matching structures requires explanation/repair rather than shallow pattern recognition.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-SOURCE-1",
+              "name": "Source-Based Explanation Route Plan",
+              "completed": "no",
+              "currentState": "Plan A81 source-use route proof combining source-value/source-chain work with an underlying answer form. No standalone A81 claim.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-EXAMPLE-1",
+              "name": "Live Example-Answer Evidence Plan",
+              "completed": "no",
+              "currentState": "Plan A99 live example-answer scaffold evidence with rendered, human-testable proof. Catalog-only scaffold status remains until this closes.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "REASON-ADOPT-2",
+              "name": "Reasoning Product-Route Adoption Preparation",
+              "completed": "no",
+              "currentState": "Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate.",
               "exitGate": ""
             },
             {
@@ -3112,7 +3161,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-REVISION-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+              "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
               "exitGate": ""
             },
             {
@@ -3276,10 +3325,58 @@
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "GATE-REASON-REVISION-1",
-          "name": "Reasoning Revision Evidence Human Review",
+          "sprint": "REASON-UX-HARDEN-1",
+          "name": "Reasoning UX Hardening Plan",
           "completed": "no",
-          "currentState": "Direct-comment human gate reviewing the repaired context/label proof, stale-evidence cleanup, and replacement audit. Must include playable lab, proof JSON, screenshots, lead review, manual-test instruction, and no-authority boundaries.",
+          "currentState": "Plan and prove repairs for feedback hierarchy, compact controls, mobile route placement, dark-theme consistency, and manual playability evidence. Planning/adoption-preparation only.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-FLOW-1",
+          "name": "Visual Flow Reasoning Planning And Proof",
+          "completed": "no",
+          "currentState": "Plan true visual flow-builder evidence for reasoning chains so mode 3 is no longer only ordered-chain practice. Must include rendered/playable proof requirements before adoption.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-ERROR-REPAIR-1",
+          "name": "Reasoning Error Repair Task Design",
+          "completed": "no",
+          "currentState": "Plan reviewed error categories and bounded response forms for mode 2. Must avoid guessing-game error detection and diagnostic/misconception-profile claims.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-CLASSIFY-1",
+          "name": "Classification With Explanation Reasoning Design",
+          "completed": "no",
+          "currentState": "Plan mode 4 classification-with-explanation so matching structures requires explanation/repair rather than shallow pattern recognition.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-SOURCE-1",
+          "name": "Source-Based Explanation Route Plan",
+          "completed": "no",
+          "currentState": "Plan A81 source-use route proof combining source-value/source-chain work with an underlying answer form. No standalone A81 claim.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-EXAMPLE-1",
+          "name": "Live Example-Answer Evidence Plan",
+          "completed": "no",
+          "currentState": "Plan A99 live example-answer scaffold evidence with rendered, human-testable proof. Catalog-only scaffold status remains until this closes.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "REASON-ADOPT-2",
+          "name": "Reasoning Product-Route Adoption Preparation",
+          "completed": "no",
+          "currentState": "Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3327,7 +3424,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "Blocked until the Product Proof Track closes, including `GATE-REASON-REVISION-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+          "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3714,10 +3811,18 @@
           "currentState": "**CLOSED AUDIT / NO IMPLEMENTATION.** Platform audited reasoning modes and source/example follow-ups as keep/wrap/refactor/rebuild/hold before any replacement claim. Names UX, mode 2, mode 4, A81 source-use, A99 example, and visual-flow follow-up work.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "GATE-REASON-REVISION-1",
+          "name": "Reasoning Revision Evidence Human Review",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / PLANNING-ADOPTION PREPARATION ONLY.** Platform gate closed at reviewed remote commit `13c460df35219b3b52c30098dcfc50796f3654e3`. Repaired the previous `GATE-REASON-STD-1` revise defects: visible water-scarcity wrong-answer context, mode 3 reasoning-chain wording, stale mode-disposition cleanup, replacement audit, and playable proof. No generated lesson output, source-data mutation, product-route adoption, reasoning-game replacement, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 28,
-      "openCount": 29
+      "completedCount": 29,
+      "openCount": 35
     },
     {
       "id": "innovation",

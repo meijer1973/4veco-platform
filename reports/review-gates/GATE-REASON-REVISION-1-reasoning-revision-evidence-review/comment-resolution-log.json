@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-REASON-REVISION-1-reasoning-revision-evidence-review",
+  "sprint_id": "GATE-REASON-REVISION-1",
+  "generated": "2026-06-03",
+  "review_mode": "direct_packet_comments",
+  "reviewed_remote_commit": "13c460df35219b3b52c30098dcfc50796f3654e3",
+  "review_verdict": "PASS WITH FLAGS",
+  "ambiguity_or_conflicting_authority_found": false,
+  "targeted_followup_needed": false,
+  "closure_record_allowed": true,
+  "accepted_decisions": [
+    "evidence_baseline_accepted",
+    "water_context_repair_accepted",
+    "mode3_wording_repair_accepted_with_visual_flow_follow_up",
+    "replacement_audit_accepted_as_boundary",
+    "held_lanes_accepted_as_named_downstream_follow_ups",
+    "playable_output_quality_accepted_for_revision_evidence",
+    "target_proof_and_product_authority_boundary_preserved",
+    "no_core_specification_failure_found",
+    "only_named_downstream_planning_or_adoption_preparation_authorized",
+    "no_product_authority_now"
+  ],
+  "resolved_flags": [
+    {
+      "id": "REASONREV1-F1",
+      "issue": "Reviewed remote commit must be recorded.",
+      "resolution": "Resolved in gate closure."
+    },
+    {
+      "id": "REASONREV1-F2",
+      "issue": "No reasoning-game replacement authority.",
+      "resolution": "Carried forward."
+    },
+    {
+      "id": "REASONREV1-F3",
+      "issue": "No target-equivalent reasoning proof.",
+      "resolution": "Carried forward."
+    },
+    {
+      "id": "REASONREV1-F4",
+      "issue": "Mode 2 remains local error repair only.",
+      "resolution": "Routed to REASON-ERROR-REPAIR-1."
+    },
+    {
+      "id": "REASONREV1-F5",
+      "issue": "Mode 3 still needs true visual flow-builder proof.",
+      "resolution": "Routed to REASON-FLOW-1."
+    },
+    {
+      "id": "REASONREV1-F6",
+      "issue": "Mode 4 remains held for classification-with-explanation.",
+      "resolution": "Routed to REASON-CLASSIFY-1."
+    },
+    {
+      "id": "REASONREV1-F7",
+      "issue": "A81 and A99 remain not live-proven.",
+      "resolution": "Routed to REASON-SOURCE-1 and REASON-EXAMPLE-1."
+    },
+    {
+      "id": "REASONREV1-F8",
+      "issue": "Route-specific product proof is still required before adoption.",
+      "resolution": "Routed to later REASON-ADOPT-2."
+    },
+    {
+      "id": "REASONREV1-F9",
+      "issue": "Manual lab interaction was not recorded in the review comment.",
+      "resolution": "Carried as a later adoption/product-route proof flag; current closure relies on the accepted proof bundle and explicit human verdict."
+    }
+  ]
+}

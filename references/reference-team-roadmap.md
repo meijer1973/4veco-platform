@@ -2,9 +2,9 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-06-01
+Last strategic update: 2026-06-03
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.51-source-builder-runtime`
+Roadmap version: `v3.53-reason-revision-gate-closed`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -112,13 +112,20 @@ Core standard:
 | REASON-REVISION-0 | Reasoning Gate Comment Resolution And Revision Routing | yes | Records the split verdict from `GATE-REASON-STD-1`: local evidence accepted with flags, adoption/replacement revised. Routes required repairs without product authority. |
 | REASON-CONTEXT-1 | Reasoning Context And Label Revision Proof | yes | Produces review-only playable proof that the water-scarcity task includes visible wrong-answer context, mode 3 uses reasoning-chain language rather than visual-flow overclaim, and replacement authority remains denied. No generated lesson output or product-route adoption. |
 | REASON-REPLACE-AUDIT-1 | Reasoning Game Replacement Audit | yes | Audits each reasoning mode and source/example follow-up as keep/wrap/refactor/rebuild/hold before any replacement claim. Names UX, mode 2, mode 4, A81 source-use, A99 example, and visual-flow follow-up work. No implementation or product authority. |
-| GATE-REASON-REVISION-1 | Reasoning Revision Evidence Human Review | no | Direct-comment human gate reviewing the repaired context/label proof, stale-evidence cleanup, and replacement audit. Must include playable lab, proof JSON, screenshots, lead review, manual-test instruction, and no-authority boundaries. |
+| GATE-REASON-REVISION-1 | Reasoning Revision Evidence Human Review | yes | Closed PASS WITH FLAGS at reviewed remote commit `13c460df35219b3b52c30098dcfc50796f3654e3`. Repaired the previous `GATE-REASON-STD-1` revise defects: visible water-scarcity wrong-answer context, mode 3 reasoning-chain wording, stale mode-disposition cleanup, replacement audit, and playable proof. Accepted only for bounded downstream planning/adoption-preparation. No generated lesson output, source-data mutation, engine implementation, product-route adoption, reasoning-game replacement, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or product use was authorized. |
+| REASON-UX-HARDEN-1 | Reasoning UX Hardening Plan | no | Plan and prove repairs for feedback hierarchy, compact controls, mobile route placement, dark-theme consistency, and manual playability evidence. Planning/adoption-preparation only; no implementation or product-route adoption from the gate closure. |
+| REASON-FLOW-1 | Visual Flow Reasoning Planning And Proof | no | Plan true visual flow-builder evidence for reasoning chains so mode 3 is no longer only ordered-chain practice. Must include rendered/playable proof requirements before adoption. |
+| REASON-ERROR-REPAIR-1 | Reasoning Error Repair Task Design | no | Plan reviewed error categories and bounded response forms for mode 2. Must avoid guessing-game error detection and diagnostic/misconception-profile claims. |
+| REASON-CLASSIFY-1 | Classification With Explanation Reasoning Design | no | Plan mode 4 classification-with-explanation so matching structures requires explanation/repair rather than shallow pattern recognition. |
+| REASON-SOURCE-1 | Source-Based Explanation Route Plan | no | Plan A81 source-use route proof combining source-value/source-chain work with an underlying answer form. No standalone A81 claim. |
+| REASON-EXAMPLE-1 | Live Example-Answer Evidence Plan | no | Plan A99 live example-answer scaffold evidence with rendered, human-testable proof. Catalog-only scaffold status remains until this closes. |
+| REASON-ADOPT-2 | Reasoning Product-Route Adoption Preparation | no | Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate. |
 | DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Require agents and reviewers to decide when a task should be visual, diagrammatic, graph/table based, or flow-based instead of text-only. |
 | ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, and accessibility models around the shared route and task shell. |
 | CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. |
 | SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket, feedback, and next action. |
 | GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
-| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including `GATE-REASON-REVISION-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
+| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
 
 ## Sprint Ledger
 

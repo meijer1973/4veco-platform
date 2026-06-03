@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-REASON-REVISION-1-reasoning-revision-evidence-review",
+  "sprint_id": "GATE-REASON-REVISION-1",
+  "review_type": "direct_packet_comments",
+  "reviewed_on": "2026-06-03",
+  "reviewed_remote_commit": "13c460df35219b3b52c30098dcfc50796f3654e3",
+  "verdict": "PASS WITH FLAGS",
+  "closure_allowed": true,
+  "authority": {
+    "bounded_downstream_planning_or_adoption_preparation_authorized": true,
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "engine_implementation_authorized_from_this_gate": false,
+    "product_route_adoption_authorized": false,
+    "reasoning_game_replacement_authorized": false,
+    "target_equivalent_reasoning_proof_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "decisions": {
+    "REASONREV1-Q1": "PASS",
+    "REASONREV1-Q2": "PASS",
+    "REASONREV1-Q3": "PASS_WITH_FOLLOW_UP",
+    "REASONREV1-Q4": "PASS",
+    "REASONREV1-Q5": "PASS_WITH_FLAGS",
+    "REASONREV1-Q6": "PASS",
+    "REASONREV1-Q7": "PASS",
+    "REASONREV1-Q8": "PASS_NO_CORE_SPEC_FAILURE",
+    "REASONREV1-Q9": "AUTHORIZE_ONLY_NAMED_DOWNSTREAM_PLANNING_OR_ADOPTION_PREPARATION",
+    "REASONREV1-Q10": "NO_PRODUCT_AUTHORITY_NOW"
+  },
+  "accepted_repairs": [
+    "water_scarcity_wrong_answer_context_visible",
+    "mode3_uses_reasoning_chain_language",
+    "replacement_audit_denies_replacement_readiness",
+    "stale_mode_disposition_status_repaired",
+    "playable_lab_and_proof_json_added"
+  ],
+  "carried_flags": [
+    "No reasoning-game replacement authority.",
+    "No target-equivalent reasoning proof.",
+    "Mode 2 remains local error repair only and needs REASON-ERROR-REPAIR-1.",
+    "Mode 3 still needs true visual flow-builder proof in REASON-FLOW-1.",
+    "Mode 4 remains held for classification-with-explanation work in REASON-CLASSIFY-1.",
+    "A99 and A81 remain not live-proven and need REASON-EXAMPLE-1 and REASON-SOURCE-1.",
+    "Route-specific product proof is still required before adoption.",
+    "Closure must record reviewed remote commit/hash.",
+    "Manual lab interaction remains important for later adoption/product-route proof; no fresh browser-lab case tried was recorded in this comment."
+  ]
+}
