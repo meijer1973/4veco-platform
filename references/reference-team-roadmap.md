@@ -4,7 +4,7 @@ Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
 Last strategic update: 2026-06-03
 Roadmap ID: `references-team-roadmap`
-Roadmap version: `v3.53-reason-revision-gate-closed`
+Roadmap version: `v3.54-shared-task-context-ingest-track`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Scope: `references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`
@@ -70,6 +70,12 @@ Core standard:
   `sentence_builder`, `formula_builder`, `source_value_selection`,
   `source_chain_builder`, and `label_placement`) must ask students to build
   the relevant reasoning, formula, source, graph, or answer chain from parts;
+- shared tasks must support a context-first exercise structure: source/context
+  blocks first, then one or more task-family questions derived from that
+  context. Context blocks include text stimulus, source excerpts, tables,
+  graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions,
+  source labels, alt text, and student-facing references such as `Bron 1`,
+  `Figuur 1`, and `Tabel 1`;
 - route items in graph, math, reasoning, and skill-map panels must be
   actionable;
 - the skill map must become a visible student product surface;
@@ -120,12 +126,19 @@ Core standard:
 | REASON-SOURCE-1 | Source-Based Explanation Route Plan | no | Plan A81 source-use route proof combining source-value/source-chain work with an underlying answer form. No standalone A81 claim. |
 | REASON-EXAMPLE-1 | Live Example-Answer Evidence Plan | no | Plan A99 live example-answer scaffold evidence with rendered, human-testable proof. Catalog-only scaffold status remains until this closes. |
 | REASON-ADOPT-2 | Reasoning Product-Route Adoption Preparation | no | Later adoption-preparation gate candidate only after UX, flow, error repair, classification, source, and example lanes produce route-specific proof. Must not claim reasoning-game replacement, target-equivalent reasoning proof, or product use without a separate human gate. |
-| DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Require agents and reviewers to decide when a task should be visual, diagrammatic, graph/table based, or flow-based instead of text-only. |
-| ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, and accessibility models around the shared route and task shell. |
-| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. |
-| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket, feedback, and next action. |
+| SYNC-TASK-CONTEXT-INGEST-1 | Shared Task Context And Source Ingestion Roadmap Alignment | no | Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output. |
+| TASK-CONTEXT-SPEC-1 | Shared Task Context Contract | no | Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` for markdown, table, SVG, graph, flowchart, formula/info blocks, and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure. |
+| TASK-CONTEXT-RUNTIME-1 | Shared Task Context Runtime | no | Implement context rendering above task lists in the shared task shell. Prove context-before-task display, stable block IDs, task references, captions, alt text, mobile/dark rendering, no unauthorized hints in exit tickets, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion. |
+| CONTEXT-VISUAL-STD-1 | Source Context Visual Standard | no | Define the unified visual style for context blocks: semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`. |
+| SOURCE-RECONSTRUCT-1 | Exam And Textbook Source Reconstruction Examples | no | Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source. No copy-paste screenshot dependency unless explicitly justified. |
+| TASK-INGEST-TRANSFORM-1 | Source Exercise To Task-Family Transformation | no | Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing calculation, graph/table, source, or constructed reasoning operations to shallow recognition. |
+| GATE-SHARED-TASK-INGEST-1 | Shared Task Context And Ingestion Human Review | no | Human gate for exam/textbook source-context ingestion into shared tasks. Requires review packet, packet JSON, playable exam and textbook labs, reconstruction maps, source references, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only; no Scale Gate 1 or broad product use. |
+| DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint; any remaining scope should ask when a task needs text, table, graph, flowchart, diagram, formula box, or plain text. |
+| ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell. |
+| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Hold until `GATE-SHARED-TASK-INGEST-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch. |
+| SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Hold until the shared task context/ingestion track closes or is explicitly waived. Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action. |
 | GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
-| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
+| Scale Gate 1 | Foundation Hardening Scale Gate | no | Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences. May not authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, or PV machine promotion. |
 
 ## Sprint Ledger
 

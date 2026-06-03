@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-03T14:11:52.668Z
+Generated: 2026-06-03T14:16:10.478Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3074
+Files indexed: 3081
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1222,7 +1222,7 @@ Count: 447
 
 ## reports
 
-Count: 1815
+Count: 1822
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1762,6 +1762,13 @@ Count: 1815
 - reports/review-gates/GATE-R7-rag/subagent-rag-retrieval.json
 - reports/review-gates/GATE-R7-rag/subagent-summary.md
 - reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/bundle-urls.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/closure-proposal.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/comment-resolution-log.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/comment-resolution-log.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/direct-review-comments.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/direct-review-comments.md
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-closure.json
+- reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-closure.md
 - reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-data.json
 - reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/gate-playable-reasoning-revision-lab.html
 - reports/review-gates/GATE-REASON-REVISION-1-reasoning-revision-evidence-review/live-output-evidence.json

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T14:11:52.600Z",
+  "generatedAt": "2026-06-03T14:16:10.432Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-03 Roadmap ID: references-team-roadmap Roadmap version: v3.53-reason-revision-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-03 Roadmap ID: references-team-roadmap Roadmap version: v3.54-shared-task-context-ingest-track Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -3123,31 +3123,80 @@
               "exitGate": ""
             },
             {
+              "sprint": "SYNC-TASK-CONTEXT-INGEST-1",
+              "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
+              "completed": "no",
+              "currentState": "Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-CONTEXT-SPEC-1",
+              "name": "Shared Task Context Contract",
+              "completed": "no",
+              "currentState": "Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-CONTEXT-RUNTIME-1",
+              "name": "Shared Task Context Runtime",
+              "completed": "no",
+              "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CONTEXT-VISUAL-STD-1",
+              "name": "Source Context Visual Standard",
+              "completed": "no",
+              "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SOURCE-RECONSTRUCT-1",
+              "name": "Exam And Textbook Source Reconstruction Examples",
+              "completed": "no",
+              "currentState": "Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "TASK-INGEST-TRANSFORM-1",
+              "name": "Source Exercise To Task-Family Transformation",
+              "completed": "no",
+              "currentState": "Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "GATE-SHARED-TASK-INGEST-1",
+              "name": "Shared Task Context And Ingestion Human Review",
+              "completed": "no",
+              "currentState": "Human gate for exam/textbook source-context ingestion into shared tasks. Requires playable exam and textbook labs, reconstruction maps, source references, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only.",
+              "exitGate": ""
+            },
+            {
               "sprint": "DUAL-CODING-STD-1",
               "name": "Dual-Coding Exercise Standard",
               "completed": "no",
-              "currentState": "Require task authors and reviewers to decide when visual, graph/table, or flow-diagram interaction is needed.",
+              "currentState": "Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint.",
               "exitGate": ""
             },
             {
               "sprint": "ENGINE-UNIFY-1",
               "name": "Unified Engine Experience Refactor Plan",
               "completed": "no",
-              "currentState": "Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, and accessibility models around the shared route and task shell.",
+              "currentState": "Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell.",
               "exitGate": ""
             },
             {
               "sprint": "CHECK-SHORT-EXIT-2",
               "name": "Implement Both Check Types For First Three Paragraphs",
               "completed": "no",
-              "currentState": "Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers.",
+              "currentState": "Hold until `GATE-SHARED-TASK-INGEST-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch.",
               "exitGate": ""
             },
             {
               "sprint": "SCALE-PROOF-3P",
               "name": "Three-Paragraph Product Proof",
               "completed": "no",
-              "currentState": "Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
+              "currentState": "Hold until the shared task context/ingestion track closes or is explicitly waived. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
               "exitGate": ""
             },
             {
@@ -3161,7 +3210,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+              "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
               "exitGate": ""
             },
             {
@@ -3381,10 +3430,66 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "SYNC-TASK-CONTEXT-INGEST-1",
+          "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
+          "completed": "no",
+          "currentState": "Align both roadmaps and product specs around context-first shared tasks: source/context block first, then task-family questions. Must name text stimulus, source excerpts, tables, graphs, reconstructed SVG figures, diagrams/flow charts, formulas, captions, source labels, alt text, and `Bron`/`Figuur`/`Tabel` references as first-class context surfaces. No engine implementation or generated lesson output.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-SPEC-1",
+          "name": "Shared Task Context Contract",
+          "completed": "no",
+          "currentState": "Define the task-shell context schema and authoring/interchange model: markdown/source-map authoring plus validated runtime `contextBlocks` and task `contextRefs`. Include fixtures and checker rejection for missing alt text, missing refs, unreferenced source blocks, answer-hint leakage, raw copied images where reconstruction is required, inconsistent captions, and internal-code exposure.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-RUNTIME-1",
+          "name": "Shared Task Context Runtime",
+          "completed": "no",
+          "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CONTEXT-VISUAL-STD-1",
+          "name": "Source Context Visual Standard",
+          "completed": "no",
+          "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SOURCE-RECONSTRUCT-1",
+          "name": "Exam And Textbook Source Reconstruction Examples",
+          "completed": "no",
+          "currentState": "Build a governed source-reconstruction pipeline that transforms allowed exam/textbook contexts into normalized markdown, semantic tables, reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts. Prepare at least one official/CvTE-style source and one 4veco/textbook-style source.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-INGEST-TRANSFORM-1",
+          "name": "Source Exercise To Task-Family Transformation",
+          "completed": "no",
+          "currentState": "Transform the reconstructed examples into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "GATE-SHARED-TASK-INGEST-1",
+          "name": "Shared Task Context And Ingestion Human Review",
+          "completed": "no",
+          "currentState": "Human gate for exam/textbook source-context ingestion into shared tasks. Requires playable exam and textbook labs, reconstruction maps, source references, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "DUAL-CODING-STD-1",
           "name": "Dual-Coding Exercise Standard",
           "completed": "no",
-          "currentState": "Require task authors and reviewers to decide when visual, graph/table, or flow-diagram interaction is needed.",
+          "currentState": "Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3392,7 +3497,7 @@
           "sprint": "ENGINE-UNIFY-1",
           "name": "Unified Engine Experience Refactor Plan",
           "completed": "no",
-          "currentState": "Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, and accessibility models around the shared route and task shell.",
+          "currentState": "Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3400,7 +3505,7 @@
           "sprint": "CHECK-SHORT-EXIT-2",
           "name": "Implement Both Check Types For First Three Paragraphs",
           "completed": "no",
-          "currentState": "Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers.",
+          "currentState": "Hold until `GATE-SHARED-TASK-INGEST-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3408,7 +3513,7 @@
           "sprint": "SCALE-PROOF-3P",
           "name": "Three-Paragraph Product Proof",
           "completed": "no",
-          "currentState": "Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
+          "currentState": "Hold until the shared task context/ingestion track closes or is explicitly waived. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3424,7 +3529,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+          "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3822,7 +3927,7 @@
         }
       ],
       "completedCount": 29,
-      "openCount": 35
+      "openCount": 42
     },
     {
       "id": "innovation",

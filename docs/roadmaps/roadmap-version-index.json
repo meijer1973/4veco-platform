@@ -15,7 +15,7 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.53-reason-revision-gate-closed",
+      "version": "v3.54-shared-task-context-ingest-track",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
@@ -67,7 +67,7 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after GATE-REASON-REVISION-1 closed PASS WITH FLAGS at reviewed remote commit 13c460df35219b3b52c30098dcfc50796f3654e3. The revision repairs the earlier reasoning gate defects only for bounded downstream planning/adoption-preparation. REASON-UX-HARDEN-1, REASON-FLOW-1, REASON-ERROR-REPAIR-1, REASON-CLASSIFY-1, REASON-SOURCE-1, REASON-EXAMPLE-1, and later REASON-ADOPT-2 remain required before any reasoning product-route adoption or replacement claim. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates."
+      "notes": "Current operating roadmap after inserting the Shared Task Context And Source Ingestion hardening track. The roadmap now requires SYNC-TASK-CONTEXT-INGEST-1, TASK-CONTEXT-SPEC-1, TASK-CONTEXT-RUNTIME-1, CONTEXT-VISUAL-STD-1, SOURCE-RECONSTRUCT-1, TASK-INGEST-TRANSFORM-1, and GATE-SHARED-TASK-INGEST-1 before CHECK-SHORT-EXIT-2 or SCALE-PROOF-3P may rely on source-context task ingestion. DUAL-CODING-STD-1 is narrowed to residual scope if CONTEXT-VISUAL-STD-1 does not fully absorb the visual-source policy. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates."
     },
     {
       "roadmap_id": "references-team-roadmap",
