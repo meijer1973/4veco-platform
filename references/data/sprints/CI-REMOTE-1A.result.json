@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-REMOTE-1A",
+  "generated": "2026-06-04",
+  "status": "completed",
+  "plan": "reports/sprints/CI-REMOTE-1A-plan.md",
+  "baseline": "reports/sprints/CI-REMOTE-1A-baseline.md",
+  "result": "reports/sprints/CI-REMOTE-1A-result.md",
+  "diff_summary": "reports/sprints/CI-REMOTE-1A-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/CI-REMOTE-1A-command-log.jsonl",
+    "markdown": "reports/sprints/CI-REMOTE-1A-command-log.md"
+  },
+  "remote_ci": {
+    "workflow_name": "platform-ci",
+    "job_name": "validate-platform",
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/26954512486",
+    "run_id": "26954512486",
+    "job_id": "79528031593",
+    "commit_sha": "9f6e5cbf645143bcf06de3bd2800e7cb226b6877",
+    "conclusion": "success",
+    "artifacts_uploaded": true,
+    "artifact_name": "platform-ci-diagnostics",
+    "artifact_id": "7412612729"
+  },
+  "branch_protection": {
+    "configured": true,
+    "branch": "main",
+    "strict": true,
+    "required_contexts": [
+      "validate-platform"
+    ],
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "enforce_admins": true,
+    "note": "Branch protection is enforced for admins/owners as well as normal contributors."
+  },
+  "acceptance_tests": [
+    {
+      "command": "gh run view 26954512486 --repo meijer1973/4veco-platform --json \"databaseId,workflowName,displayTitle,headSha,status,conclusion,url,jobs\"",
+      "status": "passed"
+    },
+    {
+      "command": "gh api repos/meijer1973/4veco-platform/actions/runs/26954512486/artifacts",
+      "status": "passed"
+    },
+    {
+      "command": "gh api repos/meijer1973/4veco-platform/branches/main/protection --jq \"{strict:.required_status_checks.strict,contexts:.required_status_checks.contexts,enforce_admins:.enforce_admins.enabled,allow_force_pushes:.allow_force_pushes.enabled,allow_deletions:.allow_deletions.enabled}\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-REMOTE-1A-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js CI-REMOTE-1A",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/CI-REMOTE-1A-lead-review-assignment.md",
+    "round1": "reports/sprints/CI-REMOTE-1A-lead-review-round1.md",
+    "corrections": "reports/sprints/CI-REMOTE-1A-lead-review-corrections.md",
+    "round2": "reports/sprints/CI-REMOTE-1A-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1"
+}

@@ -21,25 +21,28 @@ Implemented:
 - `.gitattributes` policy plus workflow checkout-index normalization for the
   byte-checked generated URL index;
 - sibling checkout of `4veco-platform` and `4veco-lessen`;
-- read-only workflow permissions and non-persisted checkout credentials;
+- read-only repository contents permission, artifact-metadata write for
+  diagnostic artifact upload, and non-persisted checkout credentials;
 - remote Windows validation for `npm ci`, `check:platform`,
   `check:scope-language`, report JSON, roadmap version index, URL-index
   freshness, and platform/lessen diff hygiene;
 - bounded artifact upload as `platform-ci-diagnostics`;
 - branch protection on `main` requiring status-check context
   `validate-platform` with strict branch freshness, force pushes disabled, and
-  branch deletion disabled.
+  branch deletion disabled;
+- follow-up `CI-REMOTE-1A` evidence proving the hardened workflow on current
+  head and enabling branch-protection admin enforcement.
 
 Remote proof:
 
 - workflow name: `platform-ci`
 - job name: `validate-platform`
-- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/26953558150`
-- run ID: `26953558150`
-- job ID: `79524686512`
-- commit SHA: `c70cf1cf9320a5de9f8a2f4e490b934ae822246b`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/26954512486`
+- run ID: `26954512486`
+- job ID: `79528031593`
+- commit SHA: `9f6e5cbf645143bcf06de3bd2800e7cb226b6877`
 - conclusion: `success`
-- artifacts uploaded: yes, `platform-ci-diagnostics`, artifact id `7412205668`
+- artifacts uploaded: yes, `platform-ci-diagnostics`, artifact id `7412612729`
 
 Three remote failures were diagnosed and fixed before closure:
 
@@ -80,7 +83,9 @@ Passed through `run-sprint-command.js`:
 Remote GitHub Actions:
 
 - `platform-ci / validate-platform` passed on commit
-  `c70cf1cf9320a5de9f8a2f4e490b934ae822246b`.
+  `9f6e5cbf645143bcf06de3bd2800e7cb226b6877`.
+- `CI-REMOTE-1A` records this current-head proof and confirms branch
+  protection now has `enforce_admins: true`.
 
 ## Changed files
 
@@ -138,10 +143,7 @@ protected reference data.
 
 - `CI-RUNNER-LABEL-1`: monitor GitHub's `windows-latest` runner-label
   migration notice if CI later fails without code changes. Current run
-  `26953558150` passes.
-- Direct pushes by the repository owner can bypass branch protection, as shown
-  during the closure maintenance push. Pull request merges now have the
-  required `validate-platform` check available.
+  `26954512486` passes.
 - The optional screenshot-heavy manual workflow remains deferred.
 
 ## Rollback instructions

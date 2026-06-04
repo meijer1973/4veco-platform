@@ -22,14 +22,14 @@
     "job_name": "validate-platform",
     "required_status_check_display": "platform-ci / validate-platform",
     "required_status_check_context": "validate-platform",
-    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/26953558150",
-    "run_id": "26953558150",
-    "job_id": "79524686512",
-    "commit_sha": "c70cf1cf9320a5de9f8a2f4e490b934ae822246b",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/26954512486",
+    "run_id": "26954512486",
+    "job_id": "79528031593",
+    "commit_sha": "9f6e5cbf645143bcf06de3bd2800e7cb226b6877",
     "conclusion": "success",
     "artifacts_uploaded": true,
     "artifact_name": "platform-ci-diagnostics",
-    "artifact_id": "7412205668"
+    "artifact_id": "7412612729"
   },
   "branch_protection": {
     "configured": true,
@@ -40,8 +40,8 @@
     ],
     "allow_force_pushes": false,
     "allow_deletions": false,
-    "enforce_admins": false,
-    "note": "Repository-owner direct pushes can bypass; pull request merges have the required status check available."
+    "enforce_admins": true,
+    "note": "Branch protection is enforced for admins/owners as well as normal contributors."
   },
   "scope": {
     "remote_ci": true,
@@ -63,7 +63,7 @@
     "diff_summary": "reports/sprints/CI-REMOTE-1-diff-summary.md",
     "command_log_jsonl": "reports/sprints/CI-REMOTE-1-command-log.jsonl",
     "command_log_markdown": "reports/sprints/CI-REMOTE-1-command-log.md",
-    "remote_run": "https://github.com/meijer1973/4veco-platform/actions/runs/26953558150"
+    "remote_run": "https://github.com/meijer1973/4veco-platform/actions/runs/26954512486"
   },
   "acceptance_tests": [
     {

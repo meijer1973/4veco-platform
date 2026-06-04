@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T14:24:03.805Z
+Generated: 2026-06-04T16:11:54.128Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3305
+Files indexed: 3340
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -803,7 +803,7 @@ Count: 218
 
 ## references
 
-Count: 468
+Count: 471
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -868,6 +868,8 @@ Count: 468
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
 - references/data/sprints/CI-REMOTE-1.result.json
+- references/data/sprints/CI-REMOTE-1A.plan.json
+- references/data/sprints/CI-REMOTE-1A.result.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.plan.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
@@ -1141,6 +1143,7 @@ Count: 468
 - references/data/sprints/S9.result.json
 - references/data/sprints/S9a.plan.json
 - references/data/sprints/S9a.result.json
+- references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -1276,7 +1279,7 @@ Count: 468
 
 ## reports
 
-Count: 2002
+Count: 2033
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1974,6 +1977,10 @@ Count: 2002
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
@@ -2057,6 +2064,16 @@ Count: 2002
 - reports/sprints/CI-REMOTE-1-plan.md
 - reports/sprints/CI-REMOTE-1-planning-review.md
 - reports/sprints/CI-REMOTE-1-result.md
+- reports/sprints/CI-REMOTE-1A-baseline.md
+- reports/sprints/CI-REMOTE-1A-command-log.jsonl
+- reports/sprints/CI-REMOTE-1A-command-log.md
+- reports/sprints/CI-REMOTE-1A-diff-summary.md
+- reports/sprints/CI-REMOTE-1A-lead-review-assignment.md
+- reports/sprints/CI-REMOTE-1A-lead-review-corrections.md
+- reports/sprints/CI-REMOTE-1A-lead-review-round1.md
+- reports/sprints/CI-REMOTE-1A-lead-review-round2.md
+- reports/sprints/CI-REMOTE-1A-plan.md
+- reports/sprints/CI-REMOTE-1A-result.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md
@@ -2931,6 +2948,17 @@ Count: 2002
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-initial.png
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-exit-ticket-mobile.png
 - reports/sprints/screenshots/L1.7B-Q2-1.1.2-landing-card.png
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-baseline.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-command-log.jsonl
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-command-log.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-assignment.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-corrections.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-round1.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-round2.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-plan.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review-resolution.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-verification-review.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -3227,10 +3255,13 @@ Count: 2002
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-result.md
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-reviewer-notes.md
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md
-- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/manifest.json
-- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png
-- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark-completed.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-task-family-map.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-answer-form-trace.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-baseline.md
@@ -3249,10 +3280,13 @@ Count: 2002
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md
-- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/manifest.json
-- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png
-- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark-completed.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-task-family-map.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-verification-review.md
@@ -3301,12 +3335,13 @@ _No files indexed in this group._
 
 ## other
 
-Count: 292
+Count: 293
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
