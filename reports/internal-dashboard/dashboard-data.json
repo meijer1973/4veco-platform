@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T07:36:03.445Z",
+  "generatedAt": "2026-06-04T08:42:39.838Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3181,8 +3181,8 @@
             {
               "sprint": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
               "name": "Actual Exam Source Exercise Transformation",
-              "completed": "no",
-              "currentState": "Transform the actual reconstructed exam source into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, sourceAuthority references, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / TASK TRANSFORMATION ONLY.** Platform added review-ready task transformation for `vw-1022-a-25-1-o:opgave-1:question-3`: exact reconstructed context blocks, six shared task-family cards, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official source reconstruction. Preserves source selection, formula conversion, step ordering, visible calculation work, source-chain construction, and threshold-direction formulation while rejecting source-only, choice-only, and final-answer-only reductions. No textbook transformation, human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`.",
               "exitGate": ""
             },
             {
@@ -3462,14 +3462,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
-          "name": "Actual Exam Source Exercise Transformation",
-          "completed": "no",
-          "currentState": "Transform the actual reconstructed exam source into shared task-family compositions with operation-chain traces, answer-form traces, task-family maps, sourceAuthority references, and reviewer notes. Must preserve cognitive level and avoid reducing rich operations to shallow recognition.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "**CLOSED PASS / SOURCE RECONSTRUCTION ONLY.** Platform added governed reconstruction for `vw-1022-a-25-1-o:opgave-1:question-3`: normalized source markdown, source map, visual-fidelity notes, reviewer comparison, semantic table/context blocks, reconstruction JSON, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official prompt/correction PDFs. No task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
+          "name": "Actual Exam Source Exercise Transformation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / TASK TRANSFORMATION ONLY.** Platform added review-ready task transformation for `vw-1022-a-25-1-o:opgave-1:question-3`: exact reconstructed context blocks, six shared task-family cards, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official source reconstruction. Preserves source selection, formula conversion, step ordering, visible calculation work, source-chain construction, and threshold-direction formulation while rejecting source-only, choice-only, and final-answer-only reductions. No textbook transformation, human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 36,
-      "openCount": 39
+      "completedCount": 37,
+      "openCount": 38
     },
     {
       "id": "innovation",

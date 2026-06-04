@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T07:36:03.489Z
+Generated: 2026-06-04T08:42:31.974Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3185
+Files indexed: 3212
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 396
+Count: 398
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -435,6 +435,7 @@ Count: 396
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
+- build-scripts/sprints/capture-source-reconstruct2-screenshots.js
 - build-scripts/sprints/capture-task-context-runtime1-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
@@ -465,6 +466,7 @@ Count: 396
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
+- build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-command-log.js
 - build-scripts/sprints/check-sprint-plan.js
@@ -572,7 +574,7 @@ Count: 42
 
 ## validators
 
-Count: 214
+Count: 215
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -699,6 +701,7 @@ Count: 214
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
+- build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
 - build-scripts/sprints/check-sprint-command-log.js
 - build-scripts/sprints/check-sprint-plan.js
@@ -791,7 +794,7 @@ Count: 214
 
 ## references
 
-Count: 459
+Count: 461
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1128,6 +1131,8 @@ Count: 459
 - references/data/sprints/S9a.result.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
+- references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
+- references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.result.json
 - references/data/sprints/SPEC-ET-1.plan.json
 - references/data/sprints/SPEC-ET-1.result.json
 - references/data/sprints/SPRINT-PROTOCOL-HARDEN-2.plan.json
@@ -1255,7 +1260,7 @@ Count: 459
 
 ## reports
 
-Count: 1902
+Count: 1925
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1323,6 +1328,8 @@ Count: 1902
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
+- reports/json/source-reconstruct2-actual-exam-proof.json
+- reports/json/source-reconstruct2-actual-exam.json
 - reports/json/standard-exercise-family-coverage.json
 - reports/json/task-context-runtime1-proof.json
 - reports/json/task-context-spec1-contract.json
@@ -2897,6 +2904,27 @@ Count: 1902
 - reports/sprints/SKILLMAP-OP-1-screenshots/mobile-113-graph.png
 - reports/sprints/SKILLMAP-OP-1-student-experience-review.md
 - reports/sprints/SKILLMAP-OP-1-student-route-proof.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-baseline.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-command-log.jsonl
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-command-log.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-diff-summary.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-lead-review-assignment.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-lead-review-corrections.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-lead-review-round1.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-lead-review-round2.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-normalized-source.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-plan.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-planning-review.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-result.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-reviewer-comparison.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshot-manifest.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/desktop-light.png
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/manifest.json
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-dark.png
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-light.png
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-source-map.md
+- reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-visual-fidelity-notes.md
 - reports/sprints/SPEC-ET-1-baseline.md
 - reports/sprints/SPEC-ET-1-diff-summary.md
 - reports/sprints/SPEC-ET-1-lead-review-assignment.md

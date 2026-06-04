@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
+  "generated": "2026-06-04T08:41:40.620Z",
+  "status": "task_transformation_rendering_proof_complete",
+  "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
+  "screenshots": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1982
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3222
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3222
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    }
+  ],
+  "task_transformation": {
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "source_material_id": "table-1-zoohee-zorgverzekering",
+    "task_count": 6,
+    "context_block_count": 4,
+    "required_families": [
+      "source_value_selection",
+      "source_chain_builder",
+      "formula_builder",
+      "step_ordering",
+      "calculation_work_capture",
+      "structured_short_response"
+    ],
+    "rendered_families": [
+      "source_value_selection",
+      "formula_builder",
+      "step_ordering",
+      "calculation_work_capture",
+      "source_chain_builder",
+      "structured_short_response"
+    ],
+    "context_before_tasks": true,
+    "answer_amount_visible_in_context": false,
+    "answer_amount_visible_in_task_cards": false,
+    "visible_internal_ids": false,
+    "raw_image_count": 0,
+    "responsive_mobile_viewports": [
+      {
+        "case": "mobile-light",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "light"
+      },
+      {
+        "case": "mobile-dark",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "dark"
+      }
+    ]
+  },
+  "boundary_evidence": {
+    "protected_reference_status": "",
+    "source_data_status": "",
+    "book1_generated_output_status": ""
+  },
+  "product_boundaries": {
+    "task_transformation": true,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

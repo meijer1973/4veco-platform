@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
+  "cases": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1982
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3222
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3222
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerAmountVisibleInContext": false,
+        "answerAmountVisibleInTaskCards": false
+      }
+    }
+  ]
+}
