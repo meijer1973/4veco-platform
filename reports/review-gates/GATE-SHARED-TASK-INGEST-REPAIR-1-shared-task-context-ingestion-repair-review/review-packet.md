@@ -35,7 +35,7 @@ comments start. The packet metadata records the remote evidence snapshot that a
 reviewer should inspect.
 
 Reviewed remote evidence snapshot: `main` at
-`0984b83b366b6759819dde5f8bd5d277b66f7a8d`.
+`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8`.
 
 Direct review comments were returned on 2026-06-04 and recorded in
 `direct-review-comments.md/json`. The decision was `hold_for_playable_repair`.

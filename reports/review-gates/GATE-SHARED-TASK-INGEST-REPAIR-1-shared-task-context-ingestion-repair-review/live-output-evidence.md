@@ -70,7 +70,7 @@ Textbook:
 
 Remote publication is required before renewed review comments start. The
 reviewed remote evidence snapshot is `main` at
-`0984b83b366b6759819dde5f8bd5d277b66f7a8d`. Renewed human review comments may
+`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8`. Renewed human review comments may
 start only after the final repair metadata update is pushed.
 
 ## Recommended Next Action
