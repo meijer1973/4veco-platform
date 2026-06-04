@@ -484,3 +484,104 @@ OK sprint bundle: CI-REMOTE-1 planned/active
 ```text
 
 ```
+## gh run view 26953117464 --repo meijer1973/4veco-platform --log-failed
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:58:53.911Z`
+- finished_at: `2026-06-04T12:58:55.747Z`
+- duration_ms: `1836`
+- exit_code: `0`
+- stdout_sha256: `40c9f7253f8d22ec4914afcb48b87202b5254214c8fdcaf24c9bc11cf954bd6e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+validate-platform	Check URL index is current	﻿2026-06-04T12:58:32.0400304Z ##[group]Run node build-scripts/sprints/emit-url-index.js --check
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0400847Z [36;1mnode build-scripts/sprints/emit-url-index.js --check[0m
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0460078Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0460434Z env:
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0460710Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.13\x64
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0461179Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.13\x64/lib/pkgconfig
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0461630Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.13\x64
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0462034Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.13\x64
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0462429Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.13\x64
+validate-platform	Check URL index is current	2026-06-04T12:58:32.0462737Z ##[endgroup]
+validate-platform	Check URL index is current	2026-06-04T12:58:32.3355365Z emit-url-index: reports/url-index.md is stale. Regenerate: node build-scripts/sprints/emit-url-index.js
+validate-platform	Check URL index is current	2026-06-04T12:58:32.4346547Z ##[error]Process completed with exit code 1.
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:59:02.637Z`
+- finished_at: `2026-06-04T12:59:02.704Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:59:34.542Z`
+- finished_at: `2026-06-04T12:59:34.605Z`
+- duration_ms: `63`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `123997837b702cded7b5da0062b6bf1a6ea2c7960f3309c375a9ed167d8771d2`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of '.github/workflows/platform-ci.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:59:34.544Z`
+- finished_at: `2026-06-04T12:59:34.729Z`
+- duration_ms: `185`
+- exit_code: `0`
+- stdout_sha256: `e7f583a5b6e43b0d8b169f180ca1c89a266ae00d2a80787cb4db17d23780ddc5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: CI-REMOTE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
