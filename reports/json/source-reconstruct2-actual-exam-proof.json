@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+  "generated": "2026-06-04T07:31:40.916Z",
+  "status": "source_reconstruction_rendering_proof_complete",
+  "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshot-manifest.md",
+  "screenshots": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 860
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1108
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 1398
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 1398
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    }
+  ],
+  "source_reconstruction": {
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "source_material_id": "table-1-zoohee-zorgverzekering",
+    "context_before_comparison": true,
+    "table_count": 1,
+    "source_card_count": 1,
+    "formula_count": 1,
+    "visible_internal_context_ids": false,
+    "answer_amount_visible": false,
+    "raw_image_count": 0,
+    "table_values_visible": true,
+    "responsive_mobile_viewports": [
+      {
+        "case": "mobile-light",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "light"
+      },
+      {
+        "case": "mobile-dark",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "dark"
+      }
+    ]
+  },
+  "boundary_evidence": {
+    "protected_reference_status": "",
+    "source_data_status": "",
+    "book1_generated_output_status": ""
+  },
+  "product_boundaries": {
+    "source_reconstruction": true,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "task_transformation": false,
+    "product_route_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

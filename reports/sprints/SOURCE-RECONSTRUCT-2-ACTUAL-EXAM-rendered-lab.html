@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOURCE-RECONSTRUCT-2-ACTUAL-EXAM Rendered Source Lab</title>
+  <style>
+    :root {
+      --ts-bg: #f7f5ef;
+      --ts-panel: #ffffff;
+      --ts-soft: #eef5f1;
+      --ts-text: #1d2523;
+      --ts-muted: #5b6965;
+      --ts-line: #b8c5be;
+      --ts-primary: #11605f;
+      --ts-accent: #8f4f20;
+      --ts-focus: #1a73e8;
+      --ts-formula: #f4f7f6;
+    }
+    [data-theme="dark"] {
+      --ts-bg: #161b1d;
+      --ts-panel: #22282b;
+      --ts-soft: #26342f;
+      --ts-text: #f4f7f3;
+      --ts-muted: #b8c4bd;
+      --ts-line: #53635c;
+      --ts-primary: #69d2c8;
+      --ts-accent: #f0b35e;
+      --ts-focus: #9ecbff;
+      --ts-formula: #14191a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ts-bg);
+      color: var(--ts-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(1040px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+    header {
+      margin-bottom: 18px;
+      border-bottom: 2px solid var(--ts-line);
+      padding-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 2.4vw, 2.25rem);
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 4px 0 10px;
+      font-size: 1.15rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 10px; }
+    .kicker,
+    .source-label,
+    .source-ref {
+      color: var(--ts-muted);
+      font-size: 0.92rem;
+    }
+    .source-label {
+      margin: 0 0 2px;
+      color: var(--ts-primary);
+      font-weight: 700;
+    }
+    .source-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+    }
+    .source-block {
+      background: var(--ts-panel);
+      border: 1px solid var(--ts-line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .source-block-text {
+      background: transparent;
+      border-color: transparent;
+      padding: 0;
+    }
+    .source-card,
+    .source-table-block,
+    .source-formula {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--ts-line);
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      min-width: 620px;
+      border-collapse: collapse;
+      background: var(--ts-panel);
+    }
+    caption {
+      text-align: left;
+      font-weight: 700;
+      padding: 10px 12px;
+      color: var(--ts-text);
+    }
+    th,
+    td {
+      border-top: 1px solid var(--ts-line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    thead th {
+      background: var(--ts-soft);
+      color: var(--ts-text);
+    }
+    tbody th { font-weight: 700; }
+    pre {
+      margin: 0 0 10px;
+      overflow-x: auto;
+      padding: 12px;
+      background: var(--ts-formula);
+      border: 1px solid var(--ts-line);
+      border-radius: 8px;
+      color: var(--ts-text);
+      font-size: 1rem;
+    }
+    dl {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+    }
+    dl div {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 10px;
+    }
+    dt { font-weight: 700; }
+    dd { margin: 0; color: var(--ts-muted); }
+    .review-panel {
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: var(--ts-soft);
+      border: 1px solid var(--ts-line);
+      border-radius: 8px;
+      color: var(--ts-text);
+    }
+    @media (max-width: 640px) {
+      main {
+        width: min(100vw - 20px, 390px);
+        padding-top: 18px;
+      }
+      h1 { font-size: 1.45rem; }
+      .source-block { padding: 13px; }
+      dl div { grid-template-columns: 1fr; gap: 2px; }
+      table { min-width: 100%; }
+      th, td {
+        padding: 8px 7px;
+        white-space: normal;
+        font-size: 0.86rem;
+        line-height: 1.35;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="kicker">Review-only source reconstruction proof</p>
+      <h1>Zoohee! zorgverzekering</h1>
+      <p>De bron staat voor de vergelijking. Het antwoordbedrag blijft buiten dit scherm.</p>
+    </header>
+    <section class="source-grid" aria-label="Gereconstrueerde broncontext">
+      
+      <section class="source-block source-block-text" data-block-type="markdown" data-context-id="ctx-zoohee-prompt">
+        <h2>Vraag 3</h2>
+        <p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p>
+      </section>
+
+      <section class="source-block source-card" data-block-type="source_excerpt" data-context-id="ctx-zoohee-source">
+        <p class="source-label">Bron 1</p>
+        <h2>Bron 1: Zoohee! zorgverzekering</h2>
+        <p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p>
+        <p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p>
+      </section>
+
+      <section class="source-block source-table-block" data-block-type="table" data-context-id="ctx-zoohee-table" aria-label="Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand.">
+        <p class="source-label">Tabel 1</p>
+        <h2>Tabel 1: Zoohee! zorgverzekering</h2>
+        <div class="table-scroll">
+          <table>
+            <caption>Tabel 1: Zoohee! zorgverzekering</caption>
+            <thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead>
+            <tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="source-block source-formula" data-block-type="formula" data-context-id="ctx-zoohee-formula" aria-label="Formule: jaarpremie is maandpremie keer twaalf.">
+        <p class="source-label">Formule 1</p>
+        <h2>Formule 1: Jaarpremie uit maandpremie</h2>
+        <pre><code>jaarpremie = maandpremie * 12</code></pre>
+        <dl>
+          <div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div>
+        </dl>
+      </section>
+    </section>
+    <aside class="review-panel">
+      <strong>Reviewer check:</strong> controleer bronlabel, tabelwaarden, eenheden, rijvolgorde en mobiel/donker renderen.
+    </aside>
+  </main>
+  <script>
+    window.SourceReconstruct2Lab = {
+      inspect() {
+        const text = document.body.innerText;
+        const blocks = [...document.querySelectorAll('.source-block')];
+        const tables = [...document.querySelectorAll('table')];
+        const images = [...document.querySelectorAll('img')];
+        const sourceLabels = [...document.querySelectorAll('.source-label')].map((item) => item.textContent.trim());
+        const captions = [...document.querySelectorAll('caption, .source-card h2, .source-table-block h2, .source-formula h2')].map((item) => item.textContent.trim());
+        const overflowing = [...document.querySelectorAll('body *')].filter((item) => {
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll');
+        });
+        const contextTop = document.querySelector('.source-grid').getBoundingClientRect().top;
+        const reviewTop = document.querySelector('.review-panel').getBoundingClientRect().top;
+        return {
+          theme: document.documentElement.getAttribute('data-theme'),
+          viewport: { width: window.innerWidth, height: window.innerHeight },
+          contextBlockCount: blocks.length,
+          contextBeforeComparison: contextTop < reviewTop,
+          sourceCardCount: document.querySelectorAll('.source-card').length,
+          tableCount: tables.length,
+          formulaCount: document.querySelectorAll('.source-formula').length,
+          sourceLabels,
+          captions,
+          tableHeaders: [...document.querySelectorAll('thead th')].map((item) => item.textContent.trim()),
+          tableValues: ['wettelijk eigen risico', '385', '108,25', 'verhoogd eigen risico', '885', '86,25'].map((value) => ({
+            value,
+            visible: text.includes(value)
+          })),
+          sourceRefsVisible: text.includes('references/external/exams/vw-1022-a-25-1-o.pdf#question-3'),
+          rawImageCount: images.length,
+          altCarrierCount: document.querySelectorAll('[aria-label]').length,
+          visibleInternalContextIds: /ctx-zoohee/.test(text),
+          overflowingCount: overflowing.length,
+          overflowingTags: overflowing.slice(0, 8).map((item) => item.tagName.toLowerCase())
+        };
+      }
+    };
+  </script>
+</body>
+</html>

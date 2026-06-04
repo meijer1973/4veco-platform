@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+  "name": "Actual Exam Source Reconstruction",
+  "created": "2026-06-04",
+  "plan": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-plan.md",
+  "baseline": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "source_reconstruction_allowed": true,
+  "scope": [
+    "Reconstruct only the authorized external-primary exam item vw-1022-a-25-1-o:opgave-1:question-3.",
+    "Produce normalized markdown, semantic source table/context blocks, source map, visual-fidelity notes, reviewer comparison artifacts, rendered proof, screenshots, and proof JSON tied to official prompt and correction PDFs.",
+    "Use the source authority, context contract, runtime proof, and visual standard as acceptance baselines.",
+    "Do not perform task transformation, generated lesson output adoption, protected reference mutation, source-data mutation, diagnostics, mastery, PV, Scale Gate authority, or student/product use."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+    "node build-scripts/sprints/capture-source-reconstruct2-screenshots.js",
+    "node build-scripts/sprints/check-source-reconstruct2-actual-exam.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SOURCE-RECONSTRUCT-2-ACTUAL-EXAM --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No generated Book 1 lesson output writes.",
+    "No task-family exercise transformation.",
+    "No target-exercise registry writes.",
+    "No candidate storage creation or candidate writes.",
+    "No unit minting, unit update, unit split, or unit deprecation.",
+    "No PV machine promotion or projection output writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1 authority, or student/product use.",
+    "No legacy Module 3 target changes."
+  ]
+}

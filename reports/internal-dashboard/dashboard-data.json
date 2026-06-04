@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T06:40:14.063Z",
+  "generatedAt": "2026-06-04T07:36:03.445Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3174,8 +3174,8 @@
             {
               "sprint": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
               "name": "Actual Exam Source Reconstruction",
-              "completed": "no",
-              "currentState": "Build governed reconstruction for the authorized external-primary exam item only after `EXAM-SOURCE-AUTH-1`, `TASK-CONTEXT-SPEC-1`, `TASK-CONTEXT-RUNTIME-1`, and `CONTEXT-VISUAL-STD-1` close. Produce normalized markdown, semantic tables or reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts tied to official prompt/correction PDFs.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / SOURCE RECONSTRUCTION ONLY.** Platform added governed reconstruction for `vw-1022-a-25-1-o:opgave-1:question-3`: normalized source markdown, source map, visual-fidelity notes, reviewer comparison, semantic table/context blocks, reconstruction JSON, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official prompt/correction PDFs. No task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM`.",
               "exitGate": ""
             },
             {
@@ -3462,14 +3462,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
-          "name": "Actual Exam Source Reconstruction",
-          "completed": "no",
-          "currentState": "Build governed reconstruction for the authorized external-primary exam item only after `EXAM-SOURCE-AUTH-1`, `TASK-CONTEXT-SPEC-1`, `TASK-CONTEXT-RUNTIME-1`, and `CONTEXT-VISUAL-STD-1` close. Produce normalized markdown, semantic tables or reconstructed SVG/graph/flow blocks, source maps, visual-fidelity notes, and reviewer comparison artifacts tied to official prompt/correction PDFs.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "Closed 2026-06-04 as a standard/checker sprint. Platform added `reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md`, `reports/json/context-visual-std1-contract.json`, and `build-scripts/sprints/check-context-visual-std1.js`. Defines source context visual rules for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, source-label rules, source-output parity proof, and reviewer evidence. Covers all eight context block types and absorbs the visual-source scope previously implied by `DUAL-CODING-STD-1`. No source reconstruction, exam/textbook ingestion, generated lesson output, runtime CSS/UI implementation, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, PV, diagnostics, mastery/sequencing, Scale Gate, or student/product use authorized. Next: `SOURCE-RECONSTRUCT-2-ACTUAL-EXAM`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+          "name": "Actual Exam Source Reconstruction",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / SOURCE RECONSTRUCTION ONLY.** Platform added governed reconstruction for `vw-1022-a-25-1-o:opgave-1:question-3`: normalized source markdown, source map, visual-fidelity notes, reviewer comparison, semantic table/context blocks, reconstruction JSON, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official prompt/correction PDFs. No task transformation, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 35,
-      "openCount": 40
+      "completedCount": 36,
+      "openCount": 39
     },
     {
       "id": "innovation",

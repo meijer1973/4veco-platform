@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+  "cases": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 860
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1108
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 1398
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 1398
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 4,
+        "contextBeforeComparison": true,
+        "sourceCardCount": 1,
+        "tableCount": 1,
+        "formulaCount": 1,
+        "sourceLabels": [
+          "Bron 1",
+          "Tabel 1",
+          "Formule 1"
+        ],
+        "captions": [
+          "Bron 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Tabel 1: Zoohee! zorgverzekering",
+          "Formule 1: Jaarpremie uit maandpremie"
+        ],
+        "tableHeaders": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
+        "tableValues": [
+          {
+            "value": "wettelijk eigen risico",
+            "visible": true
+          },
+          {
+            "value": "385",
+            "visible": true
+          },
+          {
+            "value": "108,25",
+            "visible": true
+          },
+          {
+            "value": "verhoogd eigen risico",
+            "visible": true
+          },
+          {
+            "value": "885",
+            "visible": true
+          },
+          {
+            "value": "86,25",
+            "visible": true
+          }
+        ],
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "altCarrierCount": 3,
+        "visibleInternalContextIds": false,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "answerAmountVisible": false
+      }
+    }
+  ]
+}

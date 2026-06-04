@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T06:40:08.165Z
+Generated: 2026-06-04T07:36:03.489Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3169
+Files indexed: 3185
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 395
+Count: 396
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -441,6 +441,7 @@ Count: 395
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
@@ -571,7 +572,7 @@ Count: 42
 
 ## validators
 
-Count: 213
+Count: 214
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -674,6 +675,7 @@ Count: 213
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
@@ -789,7 +791,7 @@ Count: 213
 
 ## references
 
-Count: 457
+Count: 459
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -852,6 +854,8 @@ Count: 457
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- references/data/sprints/CONTEXT-VISUAL-STD-1.plan.json
+- references/data/sprints/CONTEXT-VISUAL-STD-1.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
 - references/data/sprints/CP.6a-lesson-side-recheck.json
 - references/data/sprints/CP.6a.plan.json
@@ -1251,7 +1255,7 @@ Count: 457
 
 ## reports
 
-Count: 1889
+Count: 1902
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1274,6 +1278,7 @@ Count: 1889
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-short-exit-inventory.json
+- reports/json/context-visual-std1-contract.json
 - reports/json/dag-integrity.json
 - reports/json/dead-units.json
 - reports/json/empty-needs-audit-summary.json
@@ -2009,6 +2014,18 @@ Count: 1889
 - reports/sprints/CHECK-SHORT-EXIT-1-plan.md
 - reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
 - reports/sprints/CHECK-SHORT-EXIT-1-result.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl
+- reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-diff-summary.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-assignment.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-corrections.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-round1.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-round2.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-plan.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-planning-review.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-result.md
+- reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md
 - reports/sprints/CP.6a-baseline.md
 - reports/sprints/CP.6a-diff-summary.md
 - reports/sprints/CP.6a-lead-review-assignment.md

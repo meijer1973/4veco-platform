@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
+  "generated": "2026-06-04",
+  "status": "actual_exam_source_reconstructed",
+  "sourceAuthority": {
+    "kind": "external_primary",
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "overlay_path": "references/data/exam-ingestion/exam-item-overlays.json",
+    "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+    "source_material_id": "table-1-zoohee-zorgverzekering"
+  },
+  "inputs": {
+    "authority_contract": "reports/json/exam-source-authority1-contract.json",
+    "context_contract": "reports/json/task-context-spec1-contract.json",
+    "visual_standard_contract": "reports/json/context-visual-std1-contract.json",
+    "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf",
+    "source_annex_overlay": "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "answer_model_overlay": "references/data/exam-ingestion/exam-answer-model-overlays.json"
+  },
+  "normalizedSource": {
+    "question_label": "Opgave 1, vraag 3",
+    "source_title": "Zoohee! zorgverzekering",
+    "student_prompt": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
+    "surrounding_context_summary": "Een jongere vergelijkt twee varianten van dezelfde zorgverzekering. De bron geeft per variant het eigen risico per jaar en de premie per maand.",
+    "source_role": "The source supplies the values a student must use before calculating yearly premium and deductible exposure."
+  },
+  "sourceMaterials": [
+    {
+      "source_material_id": "table-1-zoohee-zorgverzekering",
+      "type": "semantic_table",
+      "sourceLabel": "Tabel 1",
+      "caption": "Tabel 1: Zoohee! zorgverzekering",
+      "columns": [
+        { "id": "variant", "label": "Variant", "unit": null },
+        { "id": "eigen_risico_per_jaar_eur", "label": "Eigen risico per jaar", "unit": "euro" },
+        { "id": "premie_per_maand_eur", "label": "Premie per maand", "unit": "euro" }
+      ],
+      "rows": [
+        {
+          "variant": "wettelijk eigen risico",
+          "eigen_risico_per_jaar_eur": 385,
+          "premie_per_maand_eur": 108.25
+        },
+        {
+          "variant": "verhoogd eigen risico",
+          "eigen_risico_per_jaar_eur": 885,
+          "premie_per_maand_eur": 86.25
+        }
+      ],
+      "row_order": ["wettelijk eigen risico", "verhoogd eigen risico"],
+      "rawCopiedImage": false,
+      "source_pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2"
+    }
+  ],
+  "contextBlocks": [
+    {
+      "id": "ctx-zoohee-prompt",
+      "type": "markdown",
+      "title": "Vraag 3",
+      "bodyMarkdown": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
+      "accessibilitySummary": "Korte opdrachttekst die de berekening vraagt zonder antwoordbedrag."
+    },
+    {
+      "id": "ctx-zoohee-source",
+      "type": "source_excerpt",
+      "sourceLabel": "Bron 1",
+      "caption": "Bron 1: Zoohee! zorgverzekering",
+      "bodyMarkdown": "Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.",
+      "sourceRefs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-3"],
+      "accessibilitySummary": "Tekstbron met de context voor het vergelijken van eigen risico en premie."
+    },
+    {
+      "id": "ctx-zoohee-table",
+      "type": "table",
+      "sourceLabel": "Tabel 1",
+      "caption": "Tabel 1: Zoohee! zorgverzekering",
+      "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+      "columns": ["Variant", "Eigen risico per jaar (euro)", "Premie per maand (euro)"],
+      "rows": [
+        ["wettelijk eigen risico", "385", "108,25"],
+        ["verhoogd eigen risico", "885", "86,25"]
+      ],
+      "altText": "Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."
+    },
+    {
+      "id": "ctx-zoohee-formula",
+      "type": "formula",
+      "sourceLabel": "Formule 1",
+      "caption": "Formule 1: Jaarpremie uit maandpremie",
+      "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+      "expression": "jaarpremie = maandpremie * 12",
+      "variables": [
+        { "symbol": "maandpremie", "meaning": "premie per maand in euro" },
+        { "symbol": "jaarpremie", "meaning": "premie per jaar in euro" }
+      ],
+      "altText": "Formule: jaarpremie is maandpremie keer twaalf.",
+      "sourceRefs": ["references/external/exams/vw-1022-a-25-1-c.pdf#question-3"],
+      "reconstructionRole": "correction_model_operation_note"
+    }
+  ],
+  "sourceMap": {
+    "prompt_pdf_page": 2,
+    "correction_pdf_page": 6,
+    "prompt_refs": [
+      {
+        "reconstruction_field": "normalizedSource.student_prompt",
+        "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2",
+        "evidence_anchor": "Bereken tot welk bedrag"
+      },
+      {
+        "reconstruction_field": "sourceMaterials[0].caption",
+        "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2",
+        "evidence_anchor": "Tabel 1 Zoohee! zorgverzekering"
+      }
+    ],
+    "table_value_refs": [
+      { "value": "wettelijk eigen risico", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" },
+      { "value": "385", "unit": "euro per jaar", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" },
+      { "value": "108,25", "unit": "euro per maand", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" },
+      { "value": "verhoogd eigen risico", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" },
+      { "value": "885", "unit": "euro per jaar", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" },
+      { "value": "86,25", "unit": "euro per maand", "pdf_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2" }
+    ],
+    "answer_model_refs": [
+      {
+        "step_id": "q3-step-1",
+        "operation": "annualize_monthly_premium_and_add_standard_deductible",
+        "pdf_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#page=6"
+      },
+      {
+        "step_id": "q3-step-2",
+        "operation": "annualize_lower_premium_and_derive_threshold",
+        "pdf_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#page=6"
+      }
+    ]
+  },
+  "visualFidelity": {
+    "source_block_types_present": ["markdown", "source_excerpt", "table", "formula"],
+    "semantic_table": true,
+    "raw_copied_images": false,
+    "graph_or_figure_present_in_selected_source": false,
+    "flowchart_present_in_selected_source": false,
+    "parity_checks": {
+      "values": "pass",
+      "labels": "pass",
+      "units": "pass",
+      "row_order": "pass",
+      "caption": "pass",
+      "alt_text": "pass",
+      "answer_amount_hidden_from_rendered_lab": "pass"
+    },
+    "required_rendered_evidence": [
+      "desktop_light_screenshot",
+      "mobile_light_screenshot_390px",
+      "mobile_dark_screenshot_390px",
+      "proof_json",
+      "checker_output",
+      "lead_review_rendered_output"
+    ]
+  },
+  "correctionModelComparison": {
+    "source_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+    "required_step_ids": ["q3-step-1", "q3-step-2"],
+    "required_point_rule_ids": ["q3-pr-1", "q3-pr-2"],
+    "required_threshold": "EUR 649",
+    "operationIds": [
+      "annualize_monthly_premium",
+      "compare_deductible_exposure",
+      "derive_equal_cost_threshold",
+      "state_threshold_with_direction"
+    ],
+    "comparison_only": true,
+    "rendered_lab_answer_amount_visible": false
+  },
+  "renderedProof": {
+    "lab": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html",
+    "screenshot_manifest": "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshot-manifest.md",
+    "screenshots": [
+      "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshots/mobile-dark.png"
+    ],
+    "proof_json": "reports/json/source-reconstruct2-actual-exam-proof.json"
+  },
+  "productBoundary": {
+    "source_reconstruction_authorized": true,
+    "task_shell_context_runtime_authorized": false,
+    "task_transformation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}
