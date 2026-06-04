@@ -13,7 +13,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 1982
+        "height": 3631
       },
       "proof": {
         "theme": "light",
@@ -32,7 +32,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,
@@ -53,7 +64,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 3222
+        "height": 4799
       },
       "proof": {
         "theme": "light",
@@ -72,7 +83,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,
@@ -93,7 +115,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 3222
+        "height": 4799
       },
       "proof": {
         "theme": "dark",
@@ -112,7 +134,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,

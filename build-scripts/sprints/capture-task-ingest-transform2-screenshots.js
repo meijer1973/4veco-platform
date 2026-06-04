@@ -6,6 +6,7 @@ const net = require('net');
 const os = require('os');
 const path = require('path');
 const { spawn, spawnSync } = require('child_process');
+const { buildPlayableLabHtml } = require('./task-ingest-playable-lab');
 
 const sprintId = 'TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM';
 const platformRoot = path.resolve(__dirname, '..', '..');
@@ -155,6 +156,18 @@ async function openCdp(wsUrl) {
 
 function labUrl(serverPort) {
   return `http://127.0.0.1:${serverPort}/reports/sprints/${sprintId}-rendered-lab.html`;
+}
+
+function playableLabHtml(transform) {
+  return buildPlayableLabHtml({
+    sprintId,
+    transform,
+    windowName: 'TaskIngestTransform2Lab',
+    title: 'Zoohee zorgverzekering',
+    kicker: 'Review-only actual-exam playable task transformation proof',
+    intro: 'Broncontext en vraag blijven naast elkaar zichtbaar; daarna kun je de taakkaarten doorlopen.',
+    reviewCheck: 'controleer dat bronwaarden, formule, stappen, berekening, bronketen en conclusie samen de examenbewerking dragen.'
+  });
 }
 
 function gitStatus(args) {
@@ -527,7 +540,7 @@ async function main() {
   const transform = JSON.parse(await fsp.readFile(transformPath, 'utf8'));
   await fsp.mkdir(outputDir, { recursive: true });
   await fsp.mkdir(path.dirname(proofPath), { recursive: true });
-  await fsp.writeFile(labPath, labHtml(transform), 'utf8');
+  await fsp.writeFile(labPath, playableLabHtml(transform), 'utf8');
 
   const serverPort = await findFreePort();
   const devtoolsPort = await findFreePort();
@@ -572,6 +585,14 @@ async function main() {
       await waitForLab(cdp, sessionId);
       await applyTheme(cdp, sessionId, item.theme);
       await sleep(250);
+      await cdp.send(
+        'Runtime.evaluate',
+        {
+          expression: 'window.TaskIngestTransform2Lab.completeDemoPath()',
+          returnByValue: true,
+        },
+        sessionId
+      );
       const proof = await inspect(cdp, sessionId);
       const bodyTextSnapshot = proof.bodyTextSnapshot || '';
       const contextTextSnapshot = proof.contextTextSnapshot || '';
@@ -637,6 +658,13 @@ async function main() {
         answer_amount_visible_in_task_cards: captured.some((item) => item.proof.answerAmountVisibleInTaskCards),
         visible_internal_ids: captured.some((item) => item.proof.visibleInternalIds),
         raw_image_count: captured.reduce((total, item) => total + item.proof.rawImageCount, 0),
+        playable_lab: {
+          interactive_controls_rendered: captured.every((item) => item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
+          check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
+          completion_path_reaches_done: captured.every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
+          source_pane_independent_scroll: captured.every((item) => item.proof.sourcePaneIndependentScroll === true),
+          question_visible_after_source_scroll: captured.every((item) => item.proof.questionVisibleAfterSourceScroll === true)
+        },
         responsive_mobile_viewports: captured.filter((item) => item.viewport.width < 500).map((item) => ({
           case: item.case,
           requested_width: item.viewport.width,

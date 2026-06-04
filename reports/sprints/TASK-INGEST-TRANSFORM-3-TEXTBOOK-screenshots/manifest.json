@@ -13,7 +13,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 2960
+        "height": 5044
       },
       "proof": {
         "theme": "light",
@@ -35,6 +35,15 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 20,
+        "checkButtonCount": 9,
+        "completedTaskCount": 9,
+        "labCompleted": true,
         "tableCount": 1,
         "graphCount": 1,
         "flowchartCount": 1,
@@ -58,7 +67,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4904
+        "height": 6460
       },
       "proof": {
         "theme": "light",
@@ -80,6 +89,15 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 20,
+        "checkButtonCount": 9,
+        "completedTaskCount": 9,
+        "labCompleted": true,
         "tableCount": 1,
         "graphCount": 1,
         "flowchartCount": 1,
@@ -103,7 +121,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4904
+        "height": 6460
       },
       "proof": {
         "theme": "dark",
@@ -125,6 +143,15 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 20,
+        "checkButtonCount": 9,
+        "completedTaskCount": 9,
+        "labCompleted": true,
         "tableCount": 1,
         "graphCount": 1,
         "flowchartCount": 1,

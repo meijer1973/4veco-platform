@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
-  "generated": "2026-06-04T08:41:40.620Z",
+  "generated": "2026-06-04T12:28:54.301Z",
   "status": "task_transformation_rendering_proof_complete",
   "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
   "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
@@ -17,7 +17,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 1982
+        "height": 3631
       },
       "proof": {
         "theme": "light",
@@ -36,7 +36,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,
@@ -57,7 +68,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 3222
+        "height": 4799
       },
       "proof": {
         "theme": "light",
@@ -76,7 +87,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,
@@ -97,7 +119,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 3222
+        "height": 4799
       },
       "proof": {
         "theme": "dark",
@@ -116,7 +138,18 @@
           "structured_short_response"
         ],
         "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 12,
+        "checkButtonCount": 6,
+        "completedTaskCount": 6,
+        "labCompleted": true,
         "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
         "sourceRefsVisible": true,
         "rawImageCount": 0,
         "overflowingCount": 0,
@@ -153,6 +186,13 @@
     "answer_amount_visible_in_task_cards": false,
     "visible_internal_ids": false,
     "raw_image_count": 0,
+    "playable_lab": {
+      "interactive_controls_rendered": true,
+      "check_buttons_rendered": true,
+      "completion_path_reaches_done": true,
+      "source_pane_independent_scroll": true,
+      "question_visible_after_source_scroll": true
+    },
     "responsive_mobile_viewports": [
       {
         "case": "mobile-light",

@@ -1,0 +1,528 @@
+# Sprint GATE-SHARED-TASK-INGEST-REPAIR-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:20:18.016Z`
+- finished_at: `2026-06-04T12:20:18.130Z`
+- duration_ms: `114`
+- exit_code: `0`
+- stdout_sha256: `0aa0e01852d2d1c250fedbb778476309782dcefd2088a03633661a6067b3dfab`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\GATE-SHARED-TASK-INGEST-REPAIR-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js GATE-SHARED-TASK-INGEST-REPAIR-1 --active
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:20:23.465Z`
+- finished_at: `2026-06-04T12:20:23.634Z`
+- duration_ms: `169`
+- exit_code: `0`
+- stdout_sha256: `c90464b84d4c900493de9aeb97beb6bafea494bfb27fa279d272d66eda01bb6c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: GATE-SHARED-TASK-INGEST-REPAIR-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:20:28.528Z`
+- finished_at: `2026-06-04T12:20:28.693Z`
+- duration_ms: `165`
+- exit_code: `0`
+- stdout_sha256: `368933085ee39cb1a6b4fd2a1e476c0e3c85d79cb110400c56b990aa804e0e45`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM actual exam task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform3-textbook.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:20:34.405Z`
+- finished_at: `2026-06-04T12:20:34.572Z`
+- duration_ms: `167`
+- exit_code: `0`
+- stdout_sha256: `087937298241dcffc7b5158c889d9a1c034d75cb2c2d2d0146565afc1fb54628`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-3-TEXTBOOK textbook source task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/capture-task-ingest-transform2-screenshots.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:20:42.315Z`
+- finished_at: `2026-06-04T12:20:59.115Z`
+- duration_ms: `16800`
+- exit_code: `0`
+- stdout_sha256: `43e7a2f11fcabae6cae402b994ccc0878d481237dae2408379ff4c2a78885edb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM screenshots captured: 3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:21:05.334Z`
+- finished_at: `2026-06-04T12:21:22.214Z`
+- duration_ms: `16880`
+- exit_code: `0`
+- stdout_sha256: `a1b223b08b30566128018be856066be92cdc2ed1dac5387dab7de3a2fd98e8da`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+TASK-INGEST-TRANSFORM-3-TEXTBOOK screenshots captured: 3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform3-textbook.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:21:30.753Z`
+- finished_at: `2026-06-04T12:21:30.949Z`
+- duration_ms: `196`
+- exit_code: `0`
+- stdout_sha256: `087937298241dcffc7b5158c889d9a1c034d75cb2c2d2d0146565afc1fb54628`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-3-TEXTBOOK textbook source task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:21:30.768Z`
+- finished_at: `2026-06-04T12:21:30.971Z`
+- duration_ms: `203`
+- exit_code: `0`
+- stdout_sha256: `368933085ee39cb1a6b4fd2a1e476c0e3c85d79cb110400c56b990aa804e0e45`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM actual exam task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js GATE-SHARED-TASK-INGEST-REPAIR-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:26:59.736Z`
+- finished_at: `2026-06-04T12:26:59.801Z`
+- duration_ms: `65`
+- exit_code: `0`
+- stdout_sha256: `c9ff2825e07f205c07a9c815e629a06ca9e18156de185a99ee19bf198ed07881`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: GATE-SHARED-TASK-INGEST-REPAIR-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/capture-task-ingest-transform2-screenshots.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:28:52.377Z`
+- finished_at: `2026-06-04T12:29:09.149Z`
+- duration_ms: `16772`
+- exit_code: `0`
+- stdout_sha256: `43e7a2f11fcabae6cae402b994ccc0878d481237dae2408379ff4c2a78885edb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM screenshots captured: 3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:29:16.376Z`
+- finished_at: `2026-06-04T12:29:33.301Z`
+- duration_ms: `16925`
+- exit_code: `0`
+- stdout_sha256: `a1b223b08b30566128018be856066be92cdc2ed1dac5387dab7de3a2fd98e8da`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+TASK-INGEST-TRANSFORM-3-TEXTBOOK screenshots captured: 3
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:29:40.534Z`
+- finished_at: `2026-06-04T12:29:40.712Z`
+- duration_ms: `178`
+- exit_code: `0`
+- stdout_sha256: `368933085ee39cb1a6b4fd2a1e476c0e3c85d79cb110400c56b990aa804e0e45`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM actual exam task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-task-ingest-transform3-textbook.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:29:40.549Z`
+- finished_at: `2026-06-04T12:29:40.728Z`
+- duration_ms: `179`
+- exit_code: `0`
+- stdout_sha256: `087937298241dcffc7b5158c889d9a1c034d75cb2c2d2d0146565afc1fb54628`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK TASK-INGEST-TRANSFORM-3-TEXTBOOK textbook source task transformation
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:29:54.061Z`
+- finished_at: `2026-06-04T12:29:54.413Z`
+- duration_ms: `352`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:29:59.448Z`
+- finished_at: `2026-06-04T12:30:07.822Z`
+- duration_ms: `8374`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `cdece763e3cd020a43a58b746ec8b7c27da3943a15153a096b6e469aa47f2d31`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 42 passed, 42 of 48 total
+Tests:       8 skipped, 684 passed, 692 total
+Snapshots:   0 total
+Time:        7.701 s, estimated 11 s
+Ran all test suites.
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:17.313Z`
+- finished_at: `2026-06-04T12:30:17.388Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:21.838Z`
+- finished_at: `2026-06-04T12:30:22.256Z`
+- duration_ms: `418`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-gate-bundle-urls.js GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:28.800Z`
+- finished_at: `2026-06-04T12:30:28.875Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `d829dc9900994951703f5d53aa4677a557e6748fbd8c6cddb4ca3f7bed548dcb`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md (5 artifacts)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:34.063Z`
+- finished_at: `2026-06-04T12:30:34.124Z`
+- duration_ms: `61`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:38.984Z`
+- finished_at: `2026-06-04T12:30:39.048Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:30:44.322Z`
+- finished_at: `2026-06-04T12:30:44.623Z`
+- duration_ms: `301`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```

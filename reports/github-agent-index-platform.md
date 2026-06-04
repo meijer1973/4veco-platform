@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T10:48:42.262Z
+Generated: 2026-06-04T12:30:22.182Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3239
+Files indexed: 3270
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 400
+Count: 402
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -438,6 +438,7 @@ Count: 400
 - build-scripts/sprints/capture-source-reconstruct2-screenshots.js
 - build-scripts/sprints/capture-task-context-runtime1-screenshots.js
 - build-scripts/sprints/capture-task-ingest-transform2-screenshots.js
+- build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
@@ -493,6 +494,7 @@ Count: 400
 - build-scripts/sprints/check-task-family-source1.js
 - build-scripts/sprints/check-task-family-two-tier1.js
 - build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
+- build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
@@ -576,7 +578,7 @@ Count: 42
 
 ## validators
 
-Count: 216
+Count: 217
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -729,6 +731,7 @@ Count: 216
 - build-scripts/sprints/check-task-family-source1.js
 - build-scripts/sprints/check-task-family-two-tier1.js
 - build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
+- build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
@@ -797,7 +800,7 @@ Count: 216
 
 ## references
 
-Count: 463
+Count: 465
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1182,6 +1185,8 @@ Count: 463
 - references/data/sprints/TASK-FAMILY-TWO-TIER-1.result.json
 - references/data/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM.plan.json
 - references/data/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM.result.json
+- references/data/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK.plan.json
+- references/data/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
@@ -1265,7 +1270,7 @@ Count: 463
 
 ## reports
 
-Count: 1948
+Count: 1975
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1353,6 +1358,8 @@ Count: 1948
 - reports/json/task-family-two-tier1-proof.json
 - reports/json/task-ingest-transform2-actual-exam-proof.json
 - reports/json/task-ingest-transform2-actual-exam.json
+- reports/json/task-ingest-transform3-textbook-proof.json
+- reports/json/task-ingest-transform3-textbook.json
 - reports/json/task-shell-ux2-proof.json
 - reports/json/terminology-drift.json
 - reports/json/terms-coverage.json
@@ -3192,6 +3199,31 @@ Count: 1948
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-task-family-map.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-answer-form-trace.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-baseline.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-command-log.jsonl
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-command-log.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-diff-summary.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-assignment.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-corrections.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-round1.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-round2.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-operation-chain-trace.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-plan.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-planning-review-resolution.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-planning-review.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/manifest.json
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-task-family-map.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-verification-review.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-visual-variant-map.md
 - reports/sprints/TASK-SHELL-UX-2-baseline.md
 - reports/sprints/TASK-SHELL-UX-2-diff-summary.md
 - reports/sprints/TASK-SHELL-UX-2-lead-review-assignment.md

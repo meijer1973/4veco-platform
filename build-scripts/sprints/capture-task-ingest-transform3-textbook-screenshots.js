@@ -6,6 +6,7 @@ const net = require('net');
 const os = require('os');
 const path = require('path');
 const { spawn, spawnSync } = require('child_process');
+const { buildPlayableLabHtml } = require('./task-ingest-playable-lab');
 
 const sprintId = 'TASK-INGEST-TRANSFORM-3-TEXTBOOK';
 const platformRoot = path.resolve(__dirname, '..', '..');
@@ -155,6 +156,18 @@ async function openCdp(wsUrl) {
 
 function labUrl(serverPort) {
   return `http://127.0.0.1:${serverPort}/reports/sprints/${sprintId}-rendered-lab.html`;
+}
+
+function playableLabHtml(transform) {
+  return buildPlayableLabHtml({
+    sprintId,
+    transform,
+    windowName: 'TaskIngestTransform3Lab',
+    title: 'IJskraam tabel en P-Q-grafiek',
+    kicker: 'Review-only textbook-source playable task transformation proof',
+    intro: 'Bronnen, tabel en grafiek blijven leesbaar terwijl je de vragen doorloopt.',
+    reviewCheck: 'controleer dat tabelwaarden, assen, grafiekpunten, interpolatie, berekening en claimzin samen de bronbewerking dragen.'
+  });
 }
 
 function gitStatus(args) {
@@ -635,7 +648,7 @@ async function main() {
   const transform = JSON.parse(await fsp.readFile(transformPath, 'utf8'));
   await fsp.mkdir(outputDir, { recursive: true });
   await fsp.mkdir(path.dirname(proofPath), { recursive: true });
-  await fsp.writeFile(labPath, labHtml(transform), 'utf8');
+  await fsp.writeFile(labPath, playableLabHtml(transform), 'utf8');
 
   const serverPort = await findFreePort();
   const devtoolsPort = await findFreePort();
@@ -680,6 +693,14 @@ async function main() {
       await waitForLab(cdp, sessionId);
       await applyTheme(cdp, sessionId, item.theme);
       await sleep(250);
+      await cdp.send(
+        'Runtime.evaluate',
+        {
+          expression: 'window.TaskIngestTransform3Lab.completeDemoPath()',
+          returnByValue: true,
+        },
+        sessionId
+      );
       const proof = await inspect(cdp, sessionId);
       const bodyTextSnapshot = proof.bodyTextSnapshot || '';
       const contextTextSnapshot = proof.contextTextSnapshot || '';
@@ -755,6 +776,13 @@ async function main() {
         answer_signal_visible_in_task_cards: captured.some((item) => item.proof.answerSignalVisibleInTaskCards),
         visible_internal_ids: captured.some((item) => item.proof.visibleInternalIds),
         raw_image_count: captured.reduce((total, item) => total + item.proof.rawImageCount, 0),
+        playable_lab: {
+          interactive_controls_rendered: captured.every((item) => item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
+          check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
+          completion_path_reaches_done: captured.every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
+          source_pane_independent_scroll: captured.every((item) => item.proof.sourcePaneIndependentScroll === true),
+          question_visible_after_source_scroll: captured.every((item) => item.proof.questionVisibleAfterSourceScroll === true)
+        },
         visual_counts: {
           tables: captured[0].proof.tableCount,
           graphs: captured[0].proof.graphCount,

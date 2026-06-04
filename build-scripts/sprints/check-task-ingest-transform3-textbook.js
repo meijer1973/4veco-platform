@@ -268,6 +268,11 @@ function main() {
   assert(proof.task_transformation.context_before_tasks === true, 'proof aggregate context ordering failed');
   assert(proof.task_transformation.visible_internal_ids === false, 'proof aggregate exposes internal ids');
   assert(proof.task_transformation.raw_image_count === 0, 'proof aggregate contains raw images');
+  assert(proof.task_transformation.playable_lab.interactive_controls_rendered === true, 'proof aggregate missing interactive controls');
+  assert(proof.task_transformation.playable_lab.check_buttons_rendered === true, 'proof aggregate missing check buttons');
+  assert(proof.task_transformation.playable_lab.completion_path_reaches_done === true, 'proof aggregate demo path did not complete');
+  assert(proof.task_transformation.playable_lab.source_pane_independent_scroll === true, 'proof aggregate source pane is not independently scrollable');
+  assert(proof.task_transformation.playable_lab.question_visible_after_source_scroll === true, 'proof aggregate prompt is not retained while sources scroll');
   assert(proof.task_transformation.visual_counts.tables === 1, 'proof must render one table');
   assert(proof.task_transformation.visual_counts.graphs === 1, 'proof must render one graph');
   assert(proof.task_transformation.visual_counts.flowcharts === 1, 'proof must render one flowchart');
@@ -303,6 +308,17 @@ function main() {
     assert(capture.proof.answerSignalVisibleInTaskCards === false, `${capture.case} exposes derived answer signal in task cards`);
     assert(capture.proof.rawImageCount === 0, `${capture.case} contains raw images`);
     assert(capture.proof.overflowingCount === 0, `${capture.case} has non-table/formula overflow`);
+    assert(capture.proof.sourcePanePresent === true, `${capture.case} missing source pane`);
+    assert(capture.proof.taskPanePresent === true, `${capture.case} missing task pane`);
+    assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
+    assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
+    assert(
+      capture.proof.interactiveControlCount >= transform.taskSet.tasks.length,
+      `${capture.case} missing interactive controls`
+    );
+    assert(capture.proof.checkButtonCount === transform.taskSet.tasks.length, `${capture.case} missing check buttons`);
+    assert(capture.proof.completedTaskCount === transform.taskSet.tasks.length, `${capture.case} demo path did not complete all tasks`);
+    assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
     for (const family of requiredFamilies) assert(capture.proof.families.includes(family), `${capture.case} missing rendered family ${family}`);
   }
   assert(fs.existsSync(paths.lab), `missing ${rel(paths.lab)}`);

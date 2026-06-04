@@ -1,9 +1,131 @@
-<!doctype html>
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function paragraphs(markdown) {
+  return String(markdown)
+    .split(/\n{2,}/)
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join('\n');
+}
+
+function graphSvg(block) {
+  const points = block.series[0].points;
+  const xMin = block.axes.x.min || 0;
+  const xMax = block.axes.x.max || Math.max(...points.map((point) => Number(point.x)));
+  const yMin = block.axes.y.min || 0;
+  const yMax = block.axes.y.max || Math.max(...points.map((point) => Number(point.y)));
+  const width = 560;
+  const height = 320;
+  const padL = 70;
+  const padR = 28;
+  const padT = 24;
+  const padB = 58;
+  const sx = (x) => padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * (width - padL - padR);
+  const sy = (y) => height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * (height - padT - padB);
+  const line = points.map((point) => `${sx(point.x).toFixed(1)},${sy(point.y).toFixed(1)}`).join(' ');
+  const circles = points
+    .map((point) => `<circle cx="${sx(point.x).toFixed(1)}" cy="${sy(point.y).toFixed(1)}" r="4.8"></circle>`)
+    .join('');
+  return `<svg class="graph-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(block.altText)}">
+    <rect width="${width}" height="${height}" rx="8"></rect>
+    <line class="axis" x1="${padL}" y1="${height - padB}" x2="${width - padR}" y2="${height - padB}"></line>
+    <line class="axis" x1="${padL}" y1="${height - padB}" x2="${padL}" y2="${padT}"></line>
+    <polyline class="series" points="${line}"></polyline>
+    <g class="points">${circles}</g>
+    <text class="axis-label" x="${(width + padL - padR) / 2}" y="${height - 14}">${escapeHtml(block.axes.x.label)}</text>
+    <text class="axis-label y-label" transform="translate(18 ${(height - padB + padT) / 2}) rotate(-90)">${escapeHtml(block.axes.y.label)}</text>
+  </svg>`;
+}
+
+function blockHtml(block) {
+  if (block.type === 'markdown') {
+    return `<section class="ctx-block ctx-text" data-block-type="markdown"><h2>${escapeHtml(block.title)}</h2>${paragraphs(block.bodyMarkdown)}</section>`;
+  }
+  if (block.type === 'source_excerpt') {
+    return `<section class="ctx-block ctx-card" data-block-type="source_excerpt"><p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${paragraphs(block.bodyMarkdown)}<p class="source-ref">Bronbestand: ${escapeHtml(block.sourceRefs.join(', '))}</p></section>`;
+  }
+  if (block.type === 'table') {
+    const headers = block.columns.map((column) => `<th scope="col">${escapeHtml(column)}</th>`).join('');
+    const rows = block.rows
+      .map((row) => `<tr>${row.map((cell, index) => `<${index === 0 ? 'th scope="row"' : 'td'}>${escapeHtml(cell)}</${index === 0 ? 'th' : 'td'}>`).join('')}</tr>`)
+      .join('');
+    return `<section class="ctx-block ctx-table" data-block-type="table" aria-label="${escapeHtml(block.altText)}"><p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><div class="table-scroll"><table><caption>${escapeHtml(block.caption)}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+  }
+  if (block.type === 'graph') {
+    return `<section class="ctx-block ctx-graph" data-block-type="graph"><p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${graphSvg(block)}</section>`;
+  }
+  if (block.type === 'formula') {
+    const vars = block.variables.map((item) => `<div><dt>${escapeHtml(item.symbol)}</dt><dd>${escapeHtml(item.meaning)}</dd></div>`).join('');
+    return `<section class="ctx-block ctx-formula" data-block-type="formula" aria-label="${escapeHtml(block.altText)}"><p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><div class="formula-scroll"><pre><code>${escapeHtml(block.expression)}</code></pre></div><dl>${vars}</dl></section>`;
+  }
+  if (block.type === 'flowchart') {
+    const nodes = block.nodes.map((node) => `<li>${escapeHtml(node.label)}</li>`).join('');
+    return `<section class="ctx-block ctx-flow" data-block-type="flowchart" aria-label="${escapeHtml(block.altText)}"><p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><ol class="flow-list">${nodes}</ol></section>`;
+  }
+  return '';
+}
+
+function operationLabel(operationId) {
+  return String(operationId || '').replace(/_/g, ' ');
+}
+
+function controlHtml(task, index) {
+  if (task.family === 'calculation_work_capture') {
+    return `<label>Uitwerking<textarea class="play-control" rows="3"></textarea></label><div class="control-row"><label>Antwoord<input class="play-control" type="text"></label><label>Eenheid<input class="play-control" type="text"></label></div>`;
+  }
+  if (task.family === 'structured_short_response' && task.interaction && Array.isArray(task.interaction.fields)) {
+    return `<div class="field-grid">${task.interaction.fields.map((field) => `<label>${escapeHtml(field.label)}<input class="play-control" type="text"></label>`).join('')}</div>`;
+  }
+  if (task.family === 'point_placement') {
+    return `<div class="control-row"><label>${escapeHtml(task.interaction.xLabel)}<input class="play-control" type="text"></label><label>${escapeHtml(task.interaction.yLabel)}<input class="play-control" type="text"></label></div>`;
+  }
+  if (task.family === 'graph_reading' || task.family === 'numeric_input') {
+    return `<label>${escapeHtml(task.interaction.inputLabel || 'Antwoord')}<input class="play-control" type="text"></label>`;
+  }
+  if (task.family === 'table_value_selection' || task.family === 'choice') {
+    const name = `choice-${index}`;
+    return `<div class="generic-options"><label><input class="play-control" type="radio" name="${name}"> Keuze A</label><label><input class="play-control" type="radio" name="${name}"> Keuze B</label></div>`;
+  }
+  if (task.family === 'source_value_selection') {
+    return `<div class="field-grid"><label>Bronwaarde 1<input class="play-control" type="text"></label><label>Rol 1<input class="play-control" type="text"></label><label>Bronwaarde 2<input class="play-control" type="text"></label><label>Rol 2<input class="play-control" type="text"></label></div>`;
+  }
+  if (task.family === 'formula_builder' || task.family === 'step_ordering' || task.family === 'source_chain_builder') {
+    return `<label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label>`;
+  }
+  return `<label>Reactie<textarea class="play-control" rows="3"></textarea></label>`;
+}
+
+function taskHtml(task, index, transform) {
+  const mapped = (transform.taskFamilyMap || []).find((item) => item.task_id === task.id);
+  const opText = mapped ? mapped.mapped_operations.map(operationLabel).join(', ') : task.family;
+  return `<article class="task-card" data-task-family="${escapeHtml(task.family)}" data-task-index="${index}" data-context-ref-count="${task.contextRefs.length}">
+    <p class="card-kicker">Taakkaart ${index + 1}</p>
+    <h2>${escapeHtml(task.skillLabel)}</h2>
+    <p class="task-purpose">${escapeHtml(task.purpose || '')}</p>
+    <p class="prompt">${escapeHtml(task.prompt)}</p>
+    <div class="play-area">${controlHtml(task, index)}</div>
+    <button type="button" class="check-button">Controleer</button>
+    <p class="feedback" aria-live="polite"></p>
+    <p class="mapped">Bewaakt: ${escapeHtml(opText)}</p>
+  </article>`;
+}
+
+function buildPlayableLabHtml(options) {
+  const { sprintId, transform, windowName, title, kicker, intro, reviewCheck } = options;
+  const blocks = transform.taskSet.contextBlocks.map(blockHtml).join('\n');
+  const tasks = transform.taskSet.tasks.map((task, index) => taskHtml(task, index, transform)).join('\n');
+  const firstPrompt = transform.taskSet.tasks[0] ? transform.taskSet.tasks[0].prompt : '';
+  return `<!doctype html>
 <html lang="nl" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Playable Review Lab</title>
+  <title>${escapeHtml(sprintId)} Playable Review Lab</title>
   <style>
     :root {
       --bg: #f5f2e8;
@@ -263,81 +385,19 @@
 </head>
 <body>
   <header>
-    <p class="kicker">Review-only actual-exam playable task transformation proof</p>
-    <h1>Zoohee zorgverzekering</h1>
-    <p>Broncontext en vraag blijven naast elkaar zichtbaar; daarna kun je de taakkaarten doorlopen.</p>
+    <p class="kicker">${escapeHtml(kicker)}</p>
+    <h1>${escapeHtml(title)}</h1>
+    <p>${escapeHtml(intro)}</p>
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
-      <p class="current-prompt">Welke waarden uit Tabel 1 heb je nodig om de twee varianten te vergelijken?</p>
-      <p class="progress">0 / 6</p>
+      <p class="current-prompt">${escapeHtml(firstPrompt)}</p>
+      <p class="progress">0 / ${transform.taskSet.tasks.length}</p>
     </div>
   </section>
   <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen"><section class="ctx-grid"><section class="ctx-block ctx-text" data-block-type="markdown"><h2>Vraag 3</h2><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section>
-<section class="ctx-block ctx-card" data-block-type="source_excerpt"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
-<section class="ctx-block ctx-table" data-block-type="table" aria-label="Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
-<section class="ctx-block ctx-formula" data-block-type="formula" aria-label="Formule: jaarpremie is maandpremie keer twaalf."><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></section></section></aside>
-    <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 1</p>
-    <h2>Bronwaarden kiezen</h2>
-    <p class="task-purpose">Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.</p>
-    <p class="prompt">Welke waarden uit Tabel 1 heb je nodig om de twee varianten te vergelijken?</p>
-    <div class="play-area"><div class="field-grid"><label>Bronwaarde 1<input class="play-control" type="text"></label><label>Rol 1<input class="play-control" type="text"></label><label>Bronwaarde 2<input class="play-control" type="text"></label><label>Rol 2<input class="play-control" type="text"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select source values</p>
-  </article>
-<article class="task-card" data-task-family="formula_builder" data-task-index="1" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 2</p>
-    <h2>Jaarpremie bouwen</h2>
-    <p class="task-purpose">Bouw de formule die een maandpremie omzet naar een jaarpremie.</p>
-    <p class="prompt">Welke formule gebruik je om de maandpremie naar een jaarpremie om te zetten?</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium</p>
-  </article>
-<article class="task-card" data-task-family="step_ordering" data-task-index="2" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 3</p>
-    <h2>Berekeningsstappen ordenen</h2>
-    <p class="task-purpose">Orden de route van bronwaarden naar grensbedrag.</p>
-    <p class="prompt">Zet de stappen in de volgorde die bij deze berekening hoort.</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="calculation_work_capture" data-task-index="3" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 4</p>
-    <h2>Grensbedrag berekenen</h2>
-    <p class="task-purpose">Laat de berekening zien waarmee je het grensbedrag vindt.</p>
-    <p class="prompt">Bereken het grensbedrag en schrijf je tussenstappen op.</p>
-    <div class="play-area"><label>Uitwerking<textarea class="play-control" rows="3"></textarea></label><div class="control-row"><label>Antwoord<input class="play-control" type="text"></label><label>Eenheid<input class="play-control" type="text"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold</p>
-  </article>
-<article class="task-card" data-task-family="source_chain_builder" data-task-index="4" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 5</p>
-    <h2>Bronketen bouwen</h2>
-    <p class="task-purpose">Bouw de route van bron naar berekening naar conclusie.</p>
-    <p class="prompt">Bouw de bronketen die laat zien hoe de tabelwaarden tot het grensbedrag leiden.</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select source values, annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="structured_short_response" data-task-index="5" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 6</p>
-    <h2>Grens met richting formuleren</h2>
-    <p class="task-purpose">Formuleer het berekende grensbedrag als antwoordzin.</p>
-    <p class="prompt">Vul het grensbedrag en de richting in.</p>
-    <div class="play-area"><div class="field-grid"><label>Grensbedrag<input class="play-control" type="text"></label><label>Richting<input class="play-control" type="text"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: state threshold with direction</p>
-  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat bronwaarden, formule, stappen, berekening, bronketen en conclusie samen de examenbewerking dragen.</aside></section>
+    <aside class="source-pane" aria-label="Bronnen"><section class="ctx-grid">${blocks}</section></aside>
+    <section class="task-pane" aria-label="Vragen"><section class="task-grid">${tasks}</section><aside class="review-panel"><strong>Reviewer check:</strong> ${escapeHtml(reviewCheck)}</aside></section>
   </main>
   <script>
     (function () {
@@ -411,7 +471,7 @@
           overflowingTags: overflowing.slice(0, 8).map((item) => item.tagName.toLowerCase())
         };
       }
-      window.TaskIngestTransform2Lab = {
+      window.${windowName} = {
         inspect,
         completeDemoPath() {
           cards.forEach((card, index) => {
@@ -425,4 +485,7 @@
     })();
   </script>
 </body>
-</html>
+</html>`;
+}
+
+module.exports = { buildPlayableLabHtml };

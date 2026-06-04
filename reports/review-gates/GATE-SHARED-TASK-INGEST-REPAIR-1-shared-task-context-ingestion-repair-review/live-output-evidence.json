@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "generated": "2026-06-04",
+  "status": "playable_lab_evidence_ready_pending_remote_publication",
+  "remote_publication": {
+    "reviewed_remote_branch": "main",
+    "reviewed_remote_commit_hash": "PENDING_REMOTE_PUBLICATION",
+    "reviewed_remote_status": "pending_first_packet_push_then_metadata_update",
+    "review_may_start": false
+  },
+  "playable_labs": {
+    "actual_exam": {
+      "source_authority_kind": "external_primary",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "proof": "reports/json/task-ingest-transform2-actual-exam-proof.json",
+      "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
+      "screenshots": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png"
+      ],
+      "task_count": 6,
+      "context_block_count": 4,
+      "playable_lab": {
+        "interactive_controls_rendered": true,
+        "check_buttons_rendered": true,
+        "completion_path_reaches_done": true,
+        "source_pane_independent_scroll": true,
+        "question_visible_after_source_scroll": true
+      }
+    },
+    "textbook": {
+      "source_authority_kind": "owned_textbook_source",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "proof": "reports/json/task-ingest-transform3-textbook-proof.json",
+      "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
+      "screenshots": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png"
+      ],
+      "task_count": 9,
+      "context_block_count": 6,
+      "playable_lab": {
+        "interactive_controls_rendered": true,
+        "check_buttons_rendered": true,
+        "completion_path_reaches_done": true,
+        "source_pane_independent_scroll": true,
+        "question_visible_after_source_scroll": true
+      }
+    }
+  },
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "protected_reference_mutation": false,
+    "product_route_adoption": false,
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}
