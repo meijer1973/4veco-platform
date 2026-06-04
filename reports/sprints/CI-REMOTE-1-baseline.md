@@ -58,7 +58,7 @@ removal of the sibling checkout.
 The specified action tags exist:
 
 - `actions/checkout@v6`
-- `actions/setup-node@v4`
+- `actions/setup-node@v6`
 - `actions/setup-python@v6`
 - `actions/upload-artifact@v7`
 

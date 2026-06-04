@@ -39,7 +39,7 @@ a read-only repository secret, not to weaken the checkout requirement.
 Action tag checks before implementation confirmed:
 
 - `actions/checkout@v6` exists.
-- `actions/setup-node@v4` exists.
+- `actions/setup-node@v6` exists.
 - `actions/setup-python@v6` exists.
 - `actions/upload-artifact@v7` exists.
 
