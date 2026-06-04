@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CONTEXT-VISUAL-STD-1",
+  "name": "Source Context Visual Standard",
+  "created": "2026-06-04",
+  "plan": "reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+  "baseline": "reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Define the unified visual standard for source context blocks.",
+    "Cover semantic tables, reconstructed SVG graphs, figures, flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis and legend conventions, SVG sizing, alt text, and source-label rules.",
+    "Encode the standard in a machine-readable contract and deterministic checker.",
+    "Cross-check against TASK-CONTEXT-SPEC-1 block types and TASK-CONTEXT-RUNTIME-1 runtime proof boundaries.",
+    "Do not perform exam/textbook ingestion, source reconstruction, generated lesson output adoption, protected reference mutation, diagnostics, mastery, PV, Scale Gate authority, or student/product use."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CONTEXT-VISUAL-STD-1",
+    "node build-scripts/sprints/check-context-visual-std1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js CONTEXT-VISUAL-STD-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CONTEXT-VISUAL-STD-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CONTEXT-VISUAL-STD-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No generated Book 1 lesson output writes.",
+    "No actual exam/textbook ingestion.",
+    "No source reconstruction.",
+    "No target-exercise registry writes.",
+    "No candidate storage creation or candidate writes.",
+    "No unit minting, unit update, unit split, or unit deprecation.",
+    "No PV machine promotion or projection output writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1 authority, or student/product use.",
+    "No legacy Module 3 target changes."
+  ]
+}

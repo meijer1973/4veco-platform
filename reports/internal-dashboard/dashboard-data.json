@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T06:14:56.390Z",
+  "generatedAt": "2026-06-04T06:40:14.063Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3167,8 +3167,8 @@
             {
               "sprint": "CONTEXT-VISUAL-STD-1",
               "name": "Source Context Visual Standard",
-              "completed": "no",
-              "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
+              "completed": "yes",
+              "currentState": "Closed 2026-06-04 as a standard/checker sprint. Platform added `reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md`, `reports/json/context-visual-std1-contract.json`, and `build-scripts/sprints/check-context-visual-std1.js`. Defines source context visual rules for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, source-label rules, source-output parity proof, and reviewer evidence. Covers all eight context block types and absorbs the visual-source scope previously implied by `DUAL-CODING-STD-1`. No source reconstruction, exam/textbook ingestion, generated lesson output, runtime CSS/UI implementation, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, PV, diagnostics, mastery/sequencing, Scale Gate, or student/product use authorized. Next: `SOURCE-RECONSTRUCT-2-ACTUAL-EXAM`.",
               "exitGate": ""
             },
             {
@@ -3203,7 +3203,7 @@
               "sprint": "DUAL-CODING-STD-1",
               "name": "Dual-Coding Exercise Standard",
               "completed": "no",
-              "currentState": "Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint.",
+              "currentState": "Residual task-selection policy only. `CONTEXT-VISUAL-STD-1` absorbed the visual-source policy for source context blocks, so any remaining scope must decide when a task needs plain text, table, graph, flowchart, diagram, formula box, or visual construction based on target-exercise operations. Must not remain a generic decoration sprint.",
               "exitGate": ""
             },
             {
@@ -3466,14 +3466,6 @@
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "CONTEXT-VISUAL-STD-1",
-          "name": "Source Context Visual Standard",
-          "completed": "no",
-          "currentState": "Define the unified visual style for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, and source-label rules. Absorbs the main visual-source scope previously implied by `DUAL-CODING-STD-1`.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM",
           "name": "Actual Exam Source Reconstruction",
           "completed": "no",
@@ -3509,7 +3501,7 @@
           "sprint": "DUAL-CODING-STD-1",
           "name": "Dual-Coding Exercise Standard",
           "completed": "no",
-          "currentState": "Residual dual-coding standard only if `CONTEXT-VISUAL-STD-1` does not fully absorb the visual-source policy. Must not remain a generic decoration sprint.",
+          "currentState": "Residual task-selection policy only. `CONTEXT-VISUAL-STD-1` absorbed the visual-source policy for source context blocks, so any remaining scope must decide when a task needs plain text, table, graph, flowchart, diagram, formula box, or visual construction based on target-exercise operations. Must not remain a generic decoration sprint.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "Closed 2026-06-04. Platform added context rendering above shared task-shell task lists with stable block IDs, task references, captions/source labels, alt/accessibility text, mobile/dark proof, no exit-ticket hint leakage, playable review lab, screenshots, and checker coverage. This proves context placement/runtime behavior only; no exam/textbook ingestion, source reconstruction, generated lesson output, product-route adoption, target-equivalent proof, PV, Scale Gate, or student/product use authorized. Next: `CONTEXT-VISUAL-STD-1`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CONTEXT-VISUAL-STD-1",
+          "name": "Source Context Visual Standard",
+          "completed": "yes",
+          "currentState": "Closed 2026-06-04 as a standard/checker sprint. Platform added `reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md`, `reports/json/context-visual-std1-contract.json`, and `build-scripts/sprints/check-context-visual-std1.js`. Defines source context visual rules for semantic tables, reconstructed SVG graphs/figures/flowcharts, formula boxes, source cards, captions, labels, color tokens, typography, spacing, mobile behavior, dark mode, axis/legend conventions, SVG sizing, alt text, source-label rules, source-output parity proof, and reviewer evidence. Covers all eight context block types and absorbs the visual-source scope previously implied by `DUAL-CODING-STD-1`. No source reconstruction, exam/textbook ingestion, generated lesson output, runtime CSS/UI implementation, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, PV, diagnostics, mastery/sequencing, Scale Gate, or student/product use authorized. Next: `SOURCE-RECONSTRUCT-2-ACTUAL-EXAM`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 34,
-      "openCount": 41
+      "completedCount": 35,
+      "openCount": 40
     },
     {
       "id": "innovation",

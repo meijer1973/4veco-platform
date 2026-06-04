@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T06:14:56.424Z
+Generated: 2026-06-04T06:40:08.165Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3145
+Files indexed: 3169
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 392
+Count: 395
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -435,6 +435,7 @@ Count: 392
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
+- build-scripts/sprints/capture-task-context-runtime1-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
@@ -472,6 +473,7 @@ Count: 392
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+- build-scripts/sprints/check-task-context-runtime1.js
 - build-scripts/sprints/check-task-context-spec1.js
 - build-scripts/sprints/check-task-family-assertion1.js
 - build-scripts/sprints/check-task-family-choice1-contract.js
@@ -492,6 +494,7 @@ Count: 392
 - build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
 - build-scripts/sprints/run-sprint-command.js
+- build-scripts/sprints/task-context-runtime1-fixture.js
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
@@ -568,7 +571,7 @@ Count: 42
 
 ## validators
 
-Count: 212
+Count: 213
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -703,6 +706,7 @@ Count: 212
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+- build-scripts/sprints/check-task-context-runtime1.js
 - build-scripts/sprints/check-task-context-spec1.js
 - build-scripts/sprints/check-task-family-assertion1.js
 - build-scripts/sprints/check-task-family-choice1-contract.js
@@ -785,7 +789,7 @@ Count: 212
 
 ## references
 
-Count: 455
+Count: 457
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1134,6 +1138,8 @@ Count: 455
 - references/data/sprints/SYNC-PRODUCT-1.result.json
 - references/data/sprints/SYNC-ROADMAP-EXAM-REPAIR-1.plan.json
 - references/data/sprints/SYNC-ROADMAP-EXAM-REPAIR-1.result.json
+- references/data/sprints/TASK-CONTEXT-RUNTIME-1.plan.json
+- references/data/sprints/TASK-CONTEXT-RUNTIME-1.result.json
 - references/data/sprints/TASK-CONTEXT-SPEC-1.plan.json
 - references/data/sprints/TASK-CONTEXT-SPEC-1.result.json
 - references/data/sprints/TASK-FAMILY-ASSERTION-1.plan.json
@@ -1245,7 +1251,7 @@ Count: 455
 
 ## reports
 
-Count: 1870
+Count: 1889
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1313,6 +1319,7 @@ Count: 1870
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
 - reports/json/standard-exercise-family-coverage.json
+- reports/json/task-context-runtime1-proof.json
 - reports/json/task-context-spec1-contract.json
 - reports/json/task-family-assertion1-proof.json
 - reports/json/task-family-choice-contract.json
@@ -2941,6 +2948,24 @@ Count: 1870
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-planning-review.md
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-baseline.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.jsonl
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-diff-summary.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-assignment.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-corrections.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-round1.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-round2.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-plan.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-planning-review.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-result.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshot-manifest.md
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/desktop-light-feedback.png
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/desktop-light-initial.png
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/manifest.json
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/mobile-dark-initial.png
+- reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/mobile-light-initial.png
 - reports/sprints/TASK-CONTEXT-SPEC-1-baseline.md
 - reports/sprints/TASK-CONTEXT-SPEC-1-command-log.jsonl
 - reports/sprints/TASK-CONTEXT-SPEC-1-command-log.md

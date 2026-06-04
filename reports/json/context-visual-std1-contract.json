@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CONTEXT-VISUAL-STD-1",
+  "generated": "2026-06-04",
+  "status": "visual_standard_only",
+  "standard_path": "reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md",
+  "source_contract_path": "reports/json/task-context-spec1-contract.json",
+  "runtime_proof_path": "reports/json/task-context-runtime1-proof.json",
+  "roadmap_terms": [
+    "semantic_tables",
+    "reconstructed_svg_graphs",
+    "reconstructed_svg_figures",
+    "reconstructed_svg_flowcharts",
+    "formula_boxes",
+    "source_cards",
+    "captions",
+    "labels",
+    "color_tokens",
+    "typography",
+    "spacing",
+    "mobile_behavior",
+    "dark_mode",
+    "axis_conventions",
+    "legend_conventions",
+    "svg_sizing",
+    "alt_text",
+    "source_label_rules"
+  ],
+  "allowedBlockTypes": [
+    "markdown",
+    "source_excerpt",
+    "table",
+    "svg_figure",
+    "graph",
+    "flowchart",
+    "formula",
+    "info_box"
+  ],
+  "visualTokens": {
+    "surface": { "baseline": "--ts-bg", "purpose": "page or task-shell background" },
+    "panel": { "baseline": "--ts-panel", "purpose": "source card and visual panel background" },
+    "soft_panel": { "baseline": "--ts-soft", "purpose": "table header, formula backing, and subtle visual surface" },
+    "text_primary": { "baseline": "--ts-text", "purpose": "main text, values, and labels" },
+    "text_muted": { "baseline": "--ts-muted", "purpose": "secondary descriptions, units, and notes" },
+    "border": { "baseline": "--ts-line", "purpose": "block, table, axis, and source separation" },
+    "source_accent": { "baseline": "--ts-primary", "purpose": "source labels, reference links, and primary graph series" },
+    "comparison_accent": { "baseline": "--ts-accent", "purpose": "secondary series and unit warnings" },
+    "focus_ring": { "baseline": "--ts-focus", "purpose": "keyboard focus and target highlight" },
+    "formula_surface": { "baseline": "--ts-panel_on_soft", "purpose": "monospace formula expression surface" }
+  },
+  "labelRules": {
+    "allowedFamilies": ["Bron", "Tabel", "Figuur", "Schema", "Formule"],
+    "internalIdsVisible": false,
+    "contextRefLabel": "Gebruik:",
+    "byBlockType": {
+      "markdown": { "labelFamily": "title", "captionPrefix": null },
+      "source_excerpt": { "labelFamily": "Bron", "captionPrefix": "Bron" },
+      "table": { "labelFamily": "Tabel", "captionPrefix": "Tabel" },
+      "svg_figure": { "labelFamily": "Figuur", "captionPrefix": "Figuur" },
+      "graph": { "labelFamily": "Figuur", "captionPrefix": "Figuur" },
+      "flowchart": { "labelFamily": "Schema", "alternateLabelFamily": "Figuur", "captionPrefix": "Schema" },
+      "formula": { "labelFamily": "Formule", "captionPrefix": "Formule" },
+      "info_box": { "labelFamily": "title", "captionPrefix": null }
+    }
+  },
+  "blockVisualRules": {
+    "markdown": {
+      "layout": ["short_paragraphs", "context_region", "no_pseudo_source_frame"],
+      "typography": ["normal_text", "student_language", "no_internal_ids"],
+      "source_label": ["title_only"],
+      "caption": ["not_required_unless_source"],
+      "accessibility": ["accessibilitySummary_when_contextual"],
+      "mobile": ["single_column", "no_text_overlap"],
+      "dark_mode": ["uses_theme_text_tokens"],
+      "source_output_parity": ["not_source_reconstruction"],
+      "proof": ["included_in_rendered_context_screenshots_when_mixed"]
+    },
+    "source_excerpt": {
+      "layout": ["source_card", "label_then_caption_then_excerpt", "source_refs_visible_to_reviewers"],
+      "typography": ["normal_text", "preserve_source_wording_boundary", "no_answer_model_language"],
+      "source_label": ["Bron_N"],
+      "caption": ["starts_with_Bron", "names_source_in_student_language"],
+      "accessibility": ["accessibilitySummary_required"],
+      "mobile": ["single_column", "excerpt_wraps"],
+      "dark_mode": ["panel_border_text_contrast"],
+      "source_output_parity": ["source_map_required", "excerpt_compared_to_source"],
+      "proof": ["source_map", "rendered_screenshot", "reviewer_comparison"]
+    },
+    "table": {
+      "layout": ["semantic_table", "header_cells", "horizontal_overflow_on_mobile", "no_image_table_shortcut"],
+      "typography": ["units_in_header_or_values", "readable_values", "row_column_labels"],
+      "source_label": ["Tabel_N"],
+      "caption": ["starts_with_Tabel", "names_table_content"],
+      "accessibility": ["altText_required", "caption_in_markup", "column_headers_scoped"],
+      "mobile": ["horizontal_scroll_allowed", "no_unreadable_column_compression"],
+      "dark_mode": ["header_background_contrast", "borders_visible"],
+      "source_output_parity": ["values_units_headers_row_order_checked"],
+      "proof": ["desktop_light_screenshot", "mobile_light_screenshot", "mobile_dark_screenshot", "source_value_parity"]
+    },
+    "svg_figure": {
+      "layout": ["reconstructed_svg_figure", "stable_viewBox", "responsive_width", "no_raw_copied_image"],
+      "typography": ["readable_svg_labels", "no_text_as_inaccessible_raster"],
+      "source_label": ["Figuur_N"],
+      "caption": ["starts_with_Figuur", "names_figure_content"],
+      "accessibility": ["altText_required", "role_img_or_named_wrapper"],
+      "mobile": ["scales_without_overflow", "labels_wrap_or_stack"],
+      "dark_mode": ["no_light_only_background", "labels_axes_arrows_visible"],
+      "source_output_parity": ["source_map_required", "reconstruction_status_required", "raw_copied_image_false"],
+      "proof": ["svg_safety_check", "source_comparison", "desktop_light_screenshot", "mobile_dark_screenshot"]
+    },
+    "graph": {
+      "layout": ["structured_graph_or_svg", "axis_labels", "legend_or_direct_labels", "source_faithful_data"],
+      "typography": ["axis_units_readable", "ticks_readable", "series_labels_readable"],
+      "source_label": ["Figuur_N"],
+      "caption": ["starts_with_Figuur", "names_relationship_shown"],
+      "accessibility": ["altText_required", "trend_or_relationship_and_key_values"],
+      "mobile": ["aspect_ratio_preserved", "legend_adjacent_or_stacked", "no_label_overlap"],
+      "dark_mode": ["axes_ticks_legend_visible", "series_contrast"],
+      "axis_convention": ["both_axes_labeled", "units_included", "zero_visible_when_meaningful", "no_misleading_crop"],
+      "legend_convention": ["direct_labels_preferred", "legend_if_space_constrained", "color_not_only_encoding"],
+      "source_output_parity": ["data_values_transformations_checked", "source_map_required"],
+      "proof": ["axis_legend_review", "value_parity", "desktop_light_screenshot", "mobile_light_screenshot", "mobile_dark_screenshot"]
+    },
+    "flowchart": {
+      "layout": ["reconstructed_svg_flowchart_or_semantic_schema", "clear_reading_order", "arrow_direction_visible"],
+      "typography": ["compact_labels", "edge_labels_readable", "no_decorative_only_shapes"],
+      "source_label": ["Schema_N", "Figuur_N_allowed"],
+      "caption": ["starts_with_Schema_or_Figuur", "names_process_or_reasoning_route"],
+      "accessibility": ["altText_required", "sequence_or_relationship_chain"],
+      "mobile": ["stacks_in_reading_order", "arrows_do_not_overlap_labels"],
+      "dark_mode": ["arrows_labels_borders_visible"],
+      "source_output_parity": ["nodes_edges_order_checked", "source_map_required"],
+      "proof": ["order_review", "edge_label_review", "mobile_dark_screenshot"]
+    },
+    "formula": {
+      "layout": ["formula_box", "monospace_expression", "variable_list"],
+      "typography": ["operators_readable", "units_readable", "normal_text_variable_meanings"],
+      "source_label": ["Formule_N"],
+      "caption": ["starts_with_Formule", "names_operation"],
+      "accessibility": ["altText_required", "variables_textual"],
+      "mobile": ["expression_wraps_without_overlap", "variable_list_stacks"],
+      "dark_mode": ["operators_and_symbols_visible"],
+      "source_output_parity": ["expression_and_variables_checked", "operation_order_preserved"],
+      "proof": ["formula_review", "rendered_screenshot", "source_or_answer_operation_trace"]
+    },
+    "info_box": {
+      "layout": ["compact_note", "secondary_to_source_blocks"],
+      "typography": ["plain_student_language", "no_answer_leak"],
+      "source_label": ["title_only"],
+      "caption": ["not_required_unless_source"],
+      "accessibility": ["accessibilitySummary_when_source_use_changes"],
+      "mobile": ["single_column", "no_text_overlap"],
+      "dark_mode": ["soft_panel_contrast"],
+      "source_output_parity": ["not_source_reconstruction"],
+      "proof": ["review_for_no_hint_or_answer_leak"]
+    }
+  },
+  "proofProfiles": {
+    "future_required_artifacts": [
+      "source_map",
+      "visual_fidelity_notes",
+      "desktop_light_screenshot",
+      "mobile_light_screenshot_390px",
+      "mobile_dark_screenshot_390px",
+      "alt_text_inventory",
+      "checker_output",
+      "lead_review_rendered_output"
+    ],
+    "rendered_states": ["initial_context", "task_references", "feedback_or_completed_when_interactive"],
+    "review_dimensions": [
+      "source_output_parity",
+      "student_legibility",
+      "mobile_layout",
+      "dark_mode_contrast",
+      "accessibility",
+      "no_internal_ids",
+      "no_answer_leakage"
+    ]
+  },
+  "sourceOutputParity": {
+    "source_map_required_for_reconstruction": true,
+    "visual_fidelity_notes_required": true,
+    "raw_copied_images_allowed": false,
+    "human_waiver_required_for_raw_image": true,
+    "official_exam_references_must_remain_external": true,
+    "compare": ["values", "labels", "units", "axes", "legends", "row_order", "node_order", "formula_variables"]
+  },
+  "mobileDarkRequirements": {
+    "mobile_viewport_width_px": 390,
+    "requires_mobile_light_screenshot": true,
+    "requires_mobile_dark_screenshot": true,
+    "requires_desktop_light_screenshot": true,
+    "tables_may_scroll_horizontally": true,
+    "graphs_preserve_aspect_ratio": true,
+    "dark_mode_must_not_hide": ["axes", "legends", "labels", "table_borders", "arrows", "formula_operators", "source_references"]
+  },
+  "currentRuntimeCrosswalk": {
+    "runtime_proof": "reports/json/task-context-runtime1-proof.json",
+    "selectors": {
+      "context_region": ".ts-context",
+      "context_block": ".ts-context-block",
+      "semantic_table": ".ts-context-table",
+      "table_scroll": ".ts-context-table-wrap",
+      "svg_figure": ".ts-context-svg",
+      "graph": ".ts-context-graph",
+      "formula_box": ".ts-context-formula",
+      "flowchart": ".ts-context-flow",
+      "task_references": ".ts-context-refs a",
+      "mobile_rules": "@media (max-width: 640px)",
+      "dark_mode": "[data-theme=\"dark\"]"
+    },
+    "known_followups": [
+      {
+        "id": "runtime-graph-svg-renderer",
+        "owner_sprint": "ENGINE-UNIFY-1",
+        "description": "Future real source graphs may need a richer SVG graph renderer than the current text summary baseline before source-output parity can close."
+      }
+    ]
+  },
+  "dualCodingAbsorption": {
+    "main_visual_source_policy_absorbed": true,
+    "absorbed_scope": [
+      "source_cards",
+      "semantic_tables",
+      "reconstructed_svg_figures",
+      "reconstructed_svg_graphs",
+      "reconstructed_svg_flowcharts",
+      "formula_boxes",
+      "captions",
+      "source_labels",
+      "alt_text",
+      "mobile_dark_proof"
+    ],
+    "residual_follow_up": "Only task-selection policy remains if later work needs a non-generic decision rule for when a task should be plain text, table, graph, flowchart, diagram, formula box, or visual construction."
+  },
+  "productBoundary": {
+    "runtime_css_or_ui_changes_authorized": false,
+    "source_reconstruction_authorized": false,
+    "exam_or_textbook_ingestion_authorized": false,
+    "task_transformation_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_proof_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

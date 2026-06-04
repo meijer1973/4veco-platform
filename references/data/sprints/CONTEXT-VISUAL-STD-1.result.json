@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CONTEXT-VISUAL-STD-1",
+  "generated": "2026-06-04",
+  "status": "completed",
+  "plan": "reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+  "baseline": "reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md",
+  "result": "reports/sprints/CONTEXT-VISUAL-STD-1-result.md",
+  "diff_summary": "reports/sprints/CONTEXT-VISUAL-STD-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl",
+    "markdown": "reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md"
+  },
+  "scope": {
+    "visual_standard": true,
+    "machine_readable_contract": true,
+    "deterministic_checker": true,
+    "all_task_context_block_types_covered": true,
+    "source_output_parity_standard": true,
+    "dual_coding_visual_source_policy_absorbed": true,
+    "runtime_css_or_ui_changes": false,
+    "source_reconstruction": false,
+    "exam_or_textbook_ingestion": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics_or_mastery_authority": false,
+    "scale_gate_1_authority": false
+  },
+  "evidence": {
+    "plan": "reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+    "baseline": "reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md",
+    "planning_review": "reports/sprints/CONTEXT-VISUAL-STD-1-planning-review.md",
+    "visual_standard": "reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md",
+    "contract": "reports/json/context-visual-std1-contract.json",
+    "checker": "build-scripts/sprints/check-context-visual-std1.js",
+    "result": "reports/sprints/CONTEXT-VISUAL-STD-1-result.md",
+    "diff_summary": "reports/sprints/CONTEXT-VISUAL-STD-1-diff-summary.md",
+    "command_log_jsonl": "reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl",
+    "command_log_markdown": "reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CONTEXT-VISUAL-STD-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-context-visual-std1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js CONTEXT-VISUAL-STD-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/CONTEXT-VISUAL-STD-1-result.md",
+      "status": "passed"
+    }
+  ],
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CONTEXT-VISUAL-STD-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CONTEXT-VISUAL-STD-1",
+    "node build-scripts/sprints/check-context-visual-std1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js CONTEXT-VISUAL-STD-1",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CONTEXT-VISUAL-STD-1-result.md"
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CONTEXT-VISUAL-STD-1-lead-review-round2.md",
+    "final_verdict": "PASS"
+  },
+  "blocked_claims": [
+    "source reconstruction",
+    "exam/textbook ingestion",
+    "generated lesson output",
+    "runtime CSS/UI implementation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "SOURCE-RECONSTRUCT-2-ACTUAL-EXAM"
+}
