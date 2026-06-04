@@ -40,11 +40,13 @@ No protected surfaces were intentionally changed:
 - Local platform Jest passed.
 - Local scope-language, report JSON, roadmap version index, URL-index, and
   diff hygiene checks passed.
-- Remote GitHub Actions run `26953558150` passed.
+- Remote GitHub Actions run `26954512486` passed on current hardened workflow
+  commit `9f6e5cbf645143bcf06de3bd2800e7cb226b6877`.
 - Closure-maintenance run `26953928228` exposed a Windows CRLF checkout false
   failure for `reports/url-index.md`; `.gitattributes` and workflow
   normalization now force LF for that byte-checked generated report.
-- Branch protection requires status-check context `validate-platform`.
+- Branch protection requires status-check context `validate-platform` and,
+  after `CI-REMOTE-1A`, enforces admins/owners too.
 
 ## Follow-Up Boundary
 

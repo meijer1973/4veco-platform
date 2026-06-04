@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-REMOTE-1A",
+  "name": "Current-Head CI Proof And Admin Enforcement",
+  "created": "2026-06-04",
+  "plan": "reports/sprints/CI-REMOTE-1A-plan.md",
+  "baseline": "reports/sprints/CI-REMOTE-1A-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Record current-head remote CI proof after workflow hardening.",
+    "Enable branch protection admin enforcement.",
+    "Update prior CI sprint evidence to cite current-head proof.",
+    "Preserve protected-reference, generated-lesson-output, source-data, product-route, target-equivalent, diagnostic, mastery, sequencing, PV, Scale Gate, and student/product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "gh run view 26954512486 --repo meijer1973/4veco-platform --json \"databaseId,workflowName,displayTitle,headSha,status,conclusion,url,jobs\"",
+    "gh api repos/meijer1973/4veco-platform/actions/runs/26954512486/artifacts",
+    "gh api repos/meijer1973/4veco-platform/branches/main/protection --jq \"{strict:.required_status_checks.strict,contexts:.required_status_checks.contexts,enforce_admins:.enforce_admins.enabled,allow_force_pushes:.allow_force_pushes.enabled,allow_deletions:.allow_deletions.enabled}\"",
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-REMOTE-1A-plan.md",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-REMOTE-1A-result.md",
+    "node build-scripts/sprints/check-lead-review-substance.js CI-REMOTE-1A",
+    "node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1A --complete",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm.cmd run check:scope-language",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No generated lesson output writes.",
+    "No target-exercise registry writes.",
+    "No candidate storage writes.",
+    "No PV projection or PV machine-promotion outputs.",
+    "No product-route adoption, target-equivalent proof, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1, or student/product use."
+  ]
+}
