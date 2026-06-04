@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
-  "generated": "2026-06-04T14:13:59.459Z",
+  "generated": "2026-06-04T20:05:14.606Z",
   "status": "playable_repair_proof_complete",
   "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
   "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
@@ -18,7 +18,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 6716
+        "height": 3135
       },
       "proof": {
         "theme": "light",
@@ -27,151 +27,60 @@
           "height": 900
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": false,
             "retry": false,
             "feedback": ""
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": false,
             "retry": false,
             "feedback": ""
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": false,
             "retry": false,
             "feedback": ""
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -183,7 +92,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -195,19 +108,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -216,12 +121,20 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 768,
+        "graphWorkspaceUsableWidth": 1280,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 0,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
         "completedTaskCount": 0,
@@ -252,7 +165,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 6716
+        "height": 3135
       },
       "proof": {
         "theme": "light",
@@ -261,151 +174,60 @@
           "height": 900
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": false,
             "retry": true,
             "feedback": "Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw."
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": false,
             "retry": false,
             "feedback": ""
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": false,
             "retry": false,
             "feedback": ""
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -417,7 +239,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -429,19 +255,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -450,12 +268,20 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 768,
+        "graphWorkspaceUsableWidth": 1280,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 0,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
         "completedTaskCount": 0,
@@ -486,7 +312,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 6716
+        "height": 3576
       },
       "proof": {
         "theme": "light",
@@ -495,151 +321,60 @@
           "height": 900
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": false,
             "retry": false,
             "feedback": ""
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": false,
-            "retry": false,
-            "feedback": ""
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": false,
             "retry": false,
             "feedback": ""
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -651,7 +386,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -663,19 +402,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -684,12 +415,20 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 768,
+        "graphWorkspaceUsableWidth": 1280,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 1,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
         "completedTaskCount": 1,
@@ -720,7 +459,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 7288
+        "height": 3576
       },
       "proof": {
         "theme": "light",
@@ -729,151 +468,60 @@
           "height": 900
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -885,7 +533,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -897,19 +549,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -918,15 +562,23 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 768,
+        "graphWorkspaceUsableWidth": 1280,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 1,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
-        "completedTaskCount": 9,
+        "completedTaskCount": 3,
         "wrongRetryCount": 0,
         "retryFeedbackCount": 0,
         "labCompleted": true,
@@ -954,7 +606,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 9964
+        "height": 4815
       },
       "proof": {
         "theme": "light",
@@ -963,151 +615,60 @@
           "height": 844
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -1119,7 +680,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -1131,19 +696,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -1152,15 +709,23 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 308,
+        "graphWorkspaceUsableWidth": 390,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 1,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
-        "completedTaskCount": 9,
+        "completedTaskCount": 3,
         "wrongRetryCount": 0,
         "retryFeedbackCount": 0,
         "labCompleted": true,
@@ -1188,7 +753,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 9964
+        "height": 4815
       },
       "proof": {
         "theme": "dark",
@@ -1197,151 +762,60 @@
           "height": 844
         },
         "semanticValidationEnabled": true,
-        "contextBlockCount": 6,
-        "promptContextCount": 1,
-        "sourceContextCount": 3,
+        "contextBlockCount": 4,
+        "promptContextCount": 0,
+        "promptInSourcePaneCount": 0,
+        "sourceContextCount": 2,
         "supportBoxCount": 2,
         "closedSupportBoxCount": 2,
         "openSupportBoxCount": 0,
         "supportCollapsedByDefault": true,
         "correctionModelSupportVisibleByDefault": false,
-        "taskCardCount": 9,
+        "taskCardCount": 3,
         "families": [
-          "table_value_selection",
-          "structured_short_response",
-          "step_ordering",
-          "point_placement",
-          "source_value_selection",
+          "graph_construction_substitute",
           "graph_reading",
-          "calculation_work_capture",
-          "source_chain_builder",
-          "structured_short_response"
+          "calculation_work_capture"
         ],
         "taskStates": [
           {
             "index": 0,
-            "family": "table_value_selection",
+            "family": "graph_construction_substitute",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
             "index": 1,
-            "family": "structured_short_response",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 2,
-            "family": "step_ordering",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 3,
-            "family": "point_placement",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 4,
-            "family": "source_value_selection",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 5,
             "family": "graph_reading",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           },
           {
-            "index": 6,
+            "index": 2,
             "family": "calculation_work_capture",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 7,
-            "family": "source_chain_builder",
-            "complete": true,
-            "retry": false,
-            "feedback": "Klopt. Je kunt door naar de volgende kaart."
-          },
-          {
-            "index": 8,
-            "family": "structured_short_response",
             "complete": true,
             "retry": false,
             "feedback": "Klopt. Je kunt door naar de volgende kaart."
           }
         ],
         "familyAffordances": {
-          "table_value_selection": {
+          "graph_construction_substitute": {
             "cards": 1,
-            "controls": 3,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": true,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "structured_short_response": {
-            "cards": 2,
-            "controls": 6,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": true,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "step_ordering": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
-          },
-          "point_placement": {
-            "cards": 1,
-            "controls": 2,
+            "controls": 13,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
             "choiceOptions": false,
             "structuredFields": false,
             "calculationFields": false,
-            "pointFields": true,
-            "numericField": false
-          },
-          "source_value_selection": {
-            "cards": 1,
-            "controls": 8,
-            "valueBank": true,
-            "roleBank": true,
-            "sequenceBuilder": false,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
             "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": true,
+            "graphAxisControls": true,
+            "graphPointInputs": true,
+            "graphLineConfirmation": true
           },
           "graph_reading": {
             "cards": 1,
@@ -1353,7 +827,11 @@
             "structuredFields": false,
             "calculationFields": false,
             "pointFields": false,
-            "numericField": true
+            "numericField": true,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           },
           "calculation_work_capture": {
             "cards": 1,
@@ -1365,19 +843,11 @@
             "structuredFields": false,
             "calculationFields": true,
             "pointFields": false,
-            "numericField": false
-          },
-          "source_chain_builder": {
-            "cards": 1,
-            "controls": 9,
-            "valueBank": false,
-            "roleBank": false,
-            "sequenceBuilder": true,
-            "choiceOptions": false,
-            "structuredFields": false,
-            "calculationFields": false,
-            "pointFields": false,
-            "numericField": false
+            "numericField": false,
+            "graphWorkspace": false,
+            "graphAxisControls": false,
+            "graphPointInputs": false,
+            "graphLineConfirmation": false
           }
         },
         "contextBeforeTasks": true,
@@ -1386,15 +856,23 @@
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 40,
-        "checkButtonCount": 9,
-        "taskInstructionCount": 9,
-        "valueBankCount": 1,
-        "roleBankCount": 1,
-        "sequenceBuilderCount": 2,
+        "graphWorkspaceCount": 1,
+        "graphWorkspaceInTaskPane": true,
+        "graphWorkspaceDesktopWidth": 308,
+        "graphWorkspaceUsableWidth": 390,
+        "graphWorkspaceWidthPass": true,
+        "completedGraphVisibleCount": 1,
+        "completedGraphVisibleBeforeAttempt": false,
+        "sourcePaneCompletedGraphCount": 0,
+        "interactiveControlCount": 17,
+        "checkButtonCount": 3,
+        "taskInstructionCount": 3,
+        "valueBankCount": 0,
+        "roleBankCount": 0,
+        "sequenceBuilderCount": 0,
         "plainSequenceTextareaCount": 0,
         "genericOptionLabelVisible": false,
-        "completedTaskCount": 9,
+        "completedTaskCount": 3,
         "wrongRetryCount": 0,
         "retryFeedbackCount": 0,
         "labCompleted": true,
@@ -1415,28 +893,17 @@
     "paragraph_id": "1.1.3",
     "source_authority_kind": "owned_textbook_source",
     "source_material_id": "textbook-1-1-3-icecream-pq-table-graph",
-    "task_count": 9,
+    "task_count": 3,
     "context_block_count": 6,
     "required_families": [
-      "table_value_selection",
-      "structured_short_response",
-      "step_ordering",
-      "point_placement",
-      "source_value_selection",
+      "graph_construction_substitute",
       "graph_reading",
-      "calculation_work_capture",
-      "source_chain_builder"
+      "calculation_work_capture"
     ],
     "rendered_families": [
-      "table_value_selection",
-      "structured_short_response",
-      "step_ordering",
-      "point_placement",
-      "source_value_selection",
+      "graph_construction_substitute",
       "graph_reading",
-      "calculation_work_capture",
-      "source_chain_builder",
-      "structured_short_response"
+      "calculation_work_capture"
     ],
     "context_before_tasks": true,
     "derived_answer_visible_in_context": false,
@@ -1462,13 +929,14 @@
       ],
       "semantic_validation_enabled": true,
       "real_task_family_controls_rendered": true,
-      "source_value_banks_rendered": true,
-      "sequence_builders_rendered": true,
-      "choice_options_rendered": true,
+      "graph_construction_controls_rendered": true,
       "graph_reading_field_rendered": true,
-      "point_fields_rendered": true,
       "calculation_fields_rendered": true,
-      "structured_fields_rendered": true,
+      "target_task_economy_enforced": true,
+      "prompt_not_in_source_pane": true,
+      "completed_graph_hidden_before_attempt": true,
+      "graph_workspace_in_task_pane": true,
+      "graph_workspace_width_pass": true,
       "plain_sequence_textareas_absent": true,
       "check_buttons_rendered": true,
       "task_instructions_rendered": true,
@@ -1506,7 +974,8 @@
     "ambiguity_id": "icecream-50-percent-drop-intervals",
     "paragraph_taught_interval_recorded": true,
     "also_source_valid_interval_recorded": true,
-    "source_values_plus_calculation_required": true
+    "source_values_plus_calculation_required": true,
+    "primary_graph_construction_first": true
   },
   "boundary_evidence": {
     "protected_reference_status": "",

@@ -32,7 +32,7 @@
     table_value_selection: { label: 'Tabelwaarde kiezen', deterministic: true },
     graph_reading: { label: 'Grafiek aflezen', deterministic: true },
     point_placement: { label: 'Punt plaatsen', deterministic: true },
-    graph_construction_substitute: { label: 'Grafiekstappen', deterministic: false },
+    graph_construction_substitute: { label: 'Grafiek construeren', deterministic: true },
     structured_reasoning: { label: 'Gestructureerde redenering', deterministic: false }
   };
 
@@ -260,6 +260,14 @@
       push(task.interaction.assertionText);
       push(task.interaction.reasonText);
       push(task.interaction.optionLabel);
+      push(task.interaction.workspaceTitle);
+      push(task.interaction.xAxisLabel);
+      push(task.interaction.yAxisLabel);
+      push(task.interaction.pointRowsLabel);
+      push(task.interaction.lineConfirmationLabel);
+      push(task.interaction.lineShapeLabel);
+      push(task.interaction.xInputLabel);
+      push(task.interaction.yInputLabel);
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -1012,6 +1020,34 @@
     return {
       assertionOptionIds: options.ids,
       assertionOptionLabels: options.labels
+    };
+  }
+
+  function validateGraphConstructionInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.workspaceTitle, path + '.workspaceTitle');
+    requireString(interaction.xAxisLabel, path + '.xAxisLabel');
+    requireString(interaction.yAxisLabel, path + '.yAxisLabel');
+    requireString(interaction.pointRowsLabel, path + '.pointRowsLabel');
+    requireString(interaction.lineConfirmationLabel, path + '.lineConfirmationLabel');
+    optionalString(interaction.lineShapeLabel, path + '.lineShapeLabel');
+    optionalString(interaction.xInputLabel, path + '.xInputLabel');
+    optionalString(interaction.yInputLabel, path + '.yInputLabel');
+    optionalString(interaction.emptyGraphAltText, path + '.emptyGraphAltText');
+    assert(isObject(interaction.axes), path + '.axes must be an object');
+    assert(isObject(interaction.axes.x), path + '.axes.x must be an object');
+    assert(isObject(interaction.axes.y), path + '.axes.y must be an object');
+    requireString(interaction.axes.x.label, path + '.axes.x.label');
+    requireString(interaction.axes.y.label, path + '.axes.y.label');
+    assert(isNumber(interaction.axes.x.min), path + '.axes.x.min must be numeric');
+    assert(isNumber(interaction.axes.x.max), path + '.axes.x.max must be numeric');
+    assert(isNumber(interaction.axes.y.min), path + '.axes.y.min must be numeric');
+    assert(isNumber(interaction.axes.y.max), path + '.axes.y.max must be numeric');
+    assert(interaction.axes.x.max > interaction.axes.x.min, path + '.axes.x.max must exceed min');
+    assert(interaction.axes.y.max > interaction.axes.y.min, path + '.axes.y.max must exceed min');
+    assert(Number.isInteger(interaction.pointCount) && interaction.pointCount >= 2, path + '.pointCount must be an integer >= 2');
+    return {
+      pointCount: interaction.pointCount
     };
   }
 
@@ -1785,6 +1821,24 @@
       return;
     }
 
+    if (task.family === 'graph_construction_substitute') {
+      assert(expected.kind === 'graph_construction_substitute', task.id + '.expected.kind must be graph_construction_substitute');
+      assert(isObject(expected.axes), task.id + '.expected.axes must be an object');
+      requireStringArray(expected.axes.xAccepted, task.id + '.expected.axes.xAccepted', 1);
+      requireStringArray(expected.axes.yAccepted, task.id + '.expected.axes.yAccepted', 1);
+      requireArray(expected.points, task.id + '.expected.points', 2);
+      assert(expected.points.length === interactionInfo.pointCount, task.id + '.expected.points must match interaction.pointCount');
+      expected.points.forEach(function (point, idx) {
+        assert(isObject(point), task.id + '.expected.points[' + idx + '] must be an object');
+        assert(isNumber(point.x), task.id + '.expected.points[' + idx + '].x must be numeric');
+        assert(isNumber(point.y), task.id + '.expected.points[' + idx + '].y must be numeric');
+      });
+      if (expected.toleranceX !== undefined) assert(isNumber(expected.toleranceX), task.id + '.expected.toleranceX must be numeric');
+      if (expected.toleranceY !== undefined) assert(isNumber(expected.toleranceY), task.id + '.expected.toleranceY must be numeric');
+      assert(/^(decreasing|increasing|constant)$/.test(expected.lineShape), task.id + '.expected.lineShape must be decreasing, increasing, or constant');
+      return;
+    }
+
     if (isSelfCheckFamily(task.family)) {
       assert(expected.kind === 'self_check', task.id + '.expected.kind must be self_check');
       requireArray(expected.criteria, task.id + '.expected.criteria', 1);
@@ -1828,12 +1882,10 @@
       task.family === 'graph_reading'
     ) {
       requireString(task.interaction.inputLabel, path + '.inputLabel');
-    } else if (
-      task.family === 'short_constructed_response' ||
-      task.family === 'graph_construction_substitute' ||
-      task.family === 'structured_reasoning'
-    ) {
+    } else if (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') {
       requireString(task.interaction.inputLabel, path + '.inputLabel');
+    } else if (task.family === 'graph_construction_substitute') {
+      interactionInfo = validateGraphConstructionInteraction(task, path);
     } else if (task.family === 'structured_short_response') {
       validateStructuredFields(task.interaction.fields, path + '.fields');
       if (task.interaction.options !== undefined) interactionInfo.optionIds = validateOptions(task.interaction.options, path + '.options');
@@ -1938,6 +1990,35 @@
     var tx = isNumber(expected.toleranceX) ? Math.max(0, expected.toleranceX) : tolerance(expected);
     var ty = isNumber(expected.toleranceY) ? Math.max(0, expected.toleranceY) : tolerance(expected);
     return Math.abs(x - expected.x) <= tx && Math.abs(y - expected.y) <= ty;
+  }
+
+  function graphConstructionMatches(response, expected) {
+    if (!response || typeof response !== 'object') return false;
+    var keys = Object.keys(response).sort();
+    if (keys.join('\u0001') !== ['axes', 'lineShape', 'points'].join('\u0001')) return false;
+    if (!isObject(response.axes)) return false;
+    if (!textMatches(response.axes.x, expected.axes.xAccepted)) return false;
+    if (!textMatches(response.axes.y, expected.axes.yAccepted)) return false;
+    if (normalizeText(response.lineShape) !== normalizeText(expected.lineShape)) return false;
+    if (!Array.isArray(response.points) || response.points.length !== expected.points.length) return false;
+    var tx = isNumber(expected.toleranceX) ? Math.max(0, expected.toleranceX) : tolerance(expected);
+    var ty = isNumber(expected.toleranceY) ? Math.max(0, expected.toleranceY) : tolerance(expected);
+    var remaining = expected.points.map(function (point) {
+      return { x: point.x, y: point.y, matched: false };
+    });
+    for (var i = 0; i < response.points.length; i += 1) {
+      var actual = response.points[i];
+      if (!isObject(actual)) return false;
+      var x = cleanNumber(actual.x);
+      var y = cleanNumber(actual.y);
+      if (!isNumber(x) || !isNumber(y)) return false;
+      var match = remaining.find(function (point) {
+        return !point.matched && Math.abs(x - point.x) <= tx && Math.abs(y - point.y) <= ty;
+      });
+      if (!match) return false;
+      match.matched = true;
+    }
+    return remaining.every(function (point) { return point.matched; });
   }
 
   function finalAnswerMatches(value, expected) {
@@ -2758,6 +2839,9 @@
     if (task.family === 'point_placement') {
       return pointMatches(response && response.point ? response.point : response, task.expected);
     }
+    if (task.family === 'graph_construction_substitute' && task.expected.kind === 'graph_construction_substitute') {
+      return graphConstructionMatches(response, task.expected);
+    }
     if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
       if (!response || typeof response !== 'object') return false;
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
@@ -2903,6 +2987,14 @@
     }
     if (task.family === 'point_placement') {
       return ['[data-task-id="' + task.id + '"][data-point-axis="x"]', '[data-task-id="' + task.id + '"][data-point-axis="y"]'];
+    }
+    if (task.family === 'graph_construction_substitute') {
+      return [
+        '[data-task-id="' + task.id + '"][data-graph-axis="x"]',
+        '[data-task-id="' + task.id + '"][data-graph-axis="y"]',
+        '[data-task-id="' + task.id + '"][data-graph-point-index]',
+        '[data-task-id="' + task.id + '"][data-graph-line-confirmation]'
+      ];
     }
     if (task.family === 'calculation_work_capture') {
       var plan = ['[data-task-id="' + task.id + '"][data-input-role="work"]', '[data-task-id="' + task.id + '"][data-input-role="final-answer"]'];

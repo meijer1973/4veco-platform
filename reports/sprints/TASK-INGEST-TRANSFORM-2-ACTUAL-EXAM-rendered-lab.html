@@ -90,6 +90,9 @@
       gap: 16px;
       align-items: start;
     }
+    .lab-shell.has-graph-construction {
+      grid-template-columns: minmax(250px, 0.65fr) minmax(720px, 1.35fr);
+    }
     .source-pane {
       position: sticky;
       top: 72px;
@@ -161,6 +164,73 @@
     .graph-svg circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
     .graph-svg text { fill: var(--muted); font-size: 13px; text-anchor: middle; }
     .graph-svg .axis-label { fill: var(--text); font-weight: 700; }
+    .graph-construction-card {
+      align-content: start;
+    }
+    .graph-construction-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+    .graph-workspace {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .graph-grid-svg {
+      width: 100%;
+      min-height: 360px;
+      display: block;
+    }
+    .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
+    .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
+    .graph-grid-svg .grid-line { stroke: var(--line); stroke-width: 1; opacity: 0.65; }
+    .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
+    .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-construction-controls {
+      display: grid;
+      gap: 10px;
+    }
+    .axis-select-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .point-entry-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .point-entry-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+      align-items: end;
+    }
+    .point-entry-row span {
+      color: var(--muted);
+      font-weight: 700;
+      padding-bottom: 9px;
+    }
+    .line-confirmation {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 700;
+    }
+    .line-confirmation input {
+      width: auto;
+    }
+    .completed-graph-after-success[hidden] {
+      display: none;
+    }
+    .completed-graph-after-success {
+      margin-top: 10px;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
     .flow-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -340,7 +410,11 @@
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .pair-row, .flow-list { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid { grid-template-columns: 1fr; }
+      .lab-shell.has-graph-construction { grid-template-columns: minmax(0, 1fr); }
+      .graph-grid-svg { min-height: 300px; }
+      .point-entry-row { grid-template-columns: 1fr; }
+      .point-entry-row span { padding-bottom: 0; }
       th, td { white-space: normal; font-size: 0.9rem; line-height: 1.35; }
       pre { min-width: 460px; }
       dl div { grid-template-columns: 1fr; gap: 2px; }
@@ -351,17 +425,16 @@
   <header>
     <p class="kicker">Review-only actual-exam playable task transformation proof</p>
     <h1>Zoohee zorgverzekering</h1>
-    <p>Broncontext en vraag blijven naast elkaar zichtbaar; daarna kun je de taakkaarten doorlopen.</p>
+    <p>De bronwaarden, berekening en conclusie vormen samen de examenvraag.</p>
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
       <p class="current-prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
-      <p class="progress">0 / 6</p>
+      <p class="progress">0 / 3</p>
     </div>
   </section>
   <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-markdown" data-block-type="markdown" data-context-role="prompt"><h2>Vraag 3</h2><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section>
-<section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
+    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
 <section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
 <details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Jaarpremie uit maandpremie</summary><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></details></section></aside>
     <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
@@ -375,30 +448,8 @@
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: select source values</p>
   </article>
-<article class="task-card" data-task-family="formula_builder" data-task-index="1" data-context-ref-count="4">
+<article class="task-card" data-task-family="calculation_work_capture" data-task-index="1" data-context-ref-count="4">
     <p class="card-kicker">Taakkaart 2</p>
-    <h2>Jaarpremie bouwen</h2>
-    <p class="task-purpose">Bouw de formule die een maandpremie omzet naar een jaarpremie.</p>
-    <p class="prompt">Bouw de formule waarmee je per variant de jaarpremie berekent.</p>
-    <ul class="task-instructions"><li>Klik formuleblokken in de juiste volgorde.</li><li>Gebruik alleen blokken uit de bank.</li><li>Antwoordvorm: geordende formuleketen.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="formula_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="maandpremie">maandpremie</button><button type="button" class="play-control bank-button" data-item-id="keer">*</button><button type="button" class="play-control bank-button" data-item-id="twaalf">12</button><button type="button" class="play-control bank-button" data-item-id="plus-eigen-risico">+ eigen risico</button><button type="button" class="play-control bank-button" data-item-id="delen-door-twaalf">/ 12</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium</p>
-  </article>
-<article class="task-card" data-task-family="step_ordering" data-task-index="2" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 3</p>
-    <h2>Berekeningsstappen ordenen</h2>
-    <p class="task-purpose">Orden de route van bronwaarden naar grensbedrag.</p>
-    <p class="prompt">Zet de rekenstappen in de volgorde die past bij het correctiemodel.</p>
-    <ul class="task-instructions"><li>Klik stappen in de juiste volgorde.</li><li>Gebruik de bron of procedurehulp alleen als dat nodig is.</li><li>Antwoordvorm: geordende stappenreeks.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="step_ordering"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="read-table">Lees de premies en eigen risico's uit Tabel 1</button><button type="button" class="play-control bank-button" data-item-id="standard-annual-premium">Bereken jaarpremie wettelijk eigen risico</button><button type="button" class="play-control bank-button" data-item-id="add-standard-deductible">Tel het wettelijk eigen risico erbij op</button><button type="button" class="play-control bank-button" data-item-id="increased-annual-premium">Bereken jaarpremie verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="derive-threshold">Neem het verschil tussen beide bedragen</button><button type="button" class="play-control bank-button" data-item-id="state-direction">Formuleer het grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="divide-by-deductible">Deel de premie door het eigen risico</button><button type="button" class="play-control bank-button" data-item-id="choose-lowest-premium">Kies meteen de laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="calculation_work_capture" data-task-index="3" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 4</p>
     <h2>Grensbedrag berekenen</h2>
     <p class="task-purpose">Laat de berekening zien waarmee je het grensbedrag vindt.</p>
     <p class="prompt">Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.</p>
@@ -406,21 +457,10 @@
     <div class="play-area"><label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold</p>
+    <p class="mapped">Bewaakt: calculate threshold with visible work</p>
   </article>
-<article class="task-card" data-task-family="source_chain_builder" data-task-index="4" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 5</p>
-    <h2>Bronketen bouwen</h2>
-    <p class="task-purpose">Bouw de route van bron naar berekening naar conclusie.</p>
-    <p class="prompt">Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.</p>
-    <ul class="task-instructions"><li>Klik bronketen-onderdelen in de juiste volgorde.</li><li>Verbind bronwaarde, bewerking en conclusie.</li><li>Antwoordvorm: volledige redeneringsketen.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="source_chain_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="source-table">Lees Tabel 1 met premie en eigen risico</button><button type="button" class="play-control bank-button" data-item-id="role-values">Koppel premies en eigen risico aan de twee varianten</button><button type="button" class="play-control bank-button" data-item-id="standard-cost">Bereken kosten wettelijke variant</button><button type="button" class="play-control bank-button" data-item-id="increased-premium">Bereken jaarpremie verhoogde variant</button><button type="button" class="play-control bank-button" data-item-id="threshold">Neem het verschil tussen beide varianten</button><button type="button" class="play-control bank-button" data-item-id="direction">Formuleer grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="use-885-only">Afleider: gebruik alleen verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="lowest-premium-only">Afleider: kies alleen laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select source values, annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="structured_short_response" data-task-index="5" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 6</p>
+<article class="task-card" data-task-family="structured_short_response" data-task-index="2" data-context-ref-count="4">
+    <p class="card-kicker">Taakkaart 3</p>
     <h2>Grens met richting formuleren</h2>
     <p class="task-purpose">Formuleer het berekende grensbedrag als antwoordzin.</p>
     <p class="prompt">Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.</p>
@@ -429,11 +469,11 @@
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: state threshold with direction</p>
-  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat bronwaarden, formule, stappen, berekening, bronketen en conclusie samen de examenbewerking dragen.</aside></section>
+  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat de examenvraag is teruggebracht tot bronwaarden, berekening en conclusie, met formulehulp alleen als collapsed support.</aside></section>
   </main>
   <script>
     (function () {
-      const models = [{"family":"source_value_selection","prompt":"Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"formula_builder","prompt":"Bouw de formule waarmee je per variant de jaarpremie berekent.","interaction":{"tokenBankLabel":"Formuleblokken","sequenceLabel":"Opgebouwde formule","placeholder":"Bouw de formule.","separator":" ","tokens":[{"id":"maandpremie","label":"maandpremie","kind":"answer","category":"variable"},{"id":"keer","label":"*","kind":"answer","category":"operator"},{"id":"twaalf","label":"12","kind":"answer","category":"multiplier"},{"id":"plus-eigen-risico","label":"+ eigen risico","kind":"distractor","category":"operator","distractorFor":"keer"},{"id":"delen-door-twaalf","label":"/ 12","kind":"distractor","category":"operator","distractorFor":"twaalf"}]},"expected":{"kind":"formula_builder","tokens":["maandpremie","keer","twaalf"],"acceptedSequences":[["maandpremie","keer","twaalf"]]}},{"family":"step_ordering","prompt":"Zet de rekenstappen in de volgorde die past bij het correctiemodel.","interaction":{"stepBankLabel":"Stappenbank","sequenceLabel":"Gekozen volgorde","placeholder":"Orden de stappen.","separator":" -> ","steps":[{"id":"read-table","label":"Lees de premies en eigen risico's uit Tabel 1","kind":"answer"},{"id":"standard-annual-premium","label":"Bereken jaarpremie wettelijk eigen risico","kind":"answer","description":"108,25 keer 12"},{"id":"add-standard-deductible","label":"Tel het wettelijk eigen risico erbij op","kind":"answer","description":"Dan heb je de kosten bij maximale zorgkosten binnen dat eigen risico."},{"id":"increased-annual-premium","label":"Bereken jaarpremie verhoogd eigen risico","kind":"answer","description":"86,25 keer 12"},{"id":"derive-threshold","label":"Neem het verschil tussen beide bedragen","kind":"answer"},{"id":"state-direction","label":"Formuleer het grensbedrag met richting","kind":"answer"},{"id":"divide-by-deductible","label":"Deel de premie door het eigen risico","kind":"distractor","distractorFor":"derive-threshold"},{"id":"choose-lowest-premium","label":"Kies meteen de laagste maandpremie","kind":"distractor","distractorFor":"read-table"}]},"expected":{"kind":"step_ordering","order":["read-table","standard-annual-premium","add-standard-deductible","increased-annual-premium","derive-threshold","state-direction"],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"source_chain_builder","prompt":"Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.","interaction":{"nodeBankLabel":"Bronketen onderdelen","sequenceLabel":"Opgebouwde bronketen","placeholder":"Bouw de keten.","separator":" -> ","nodes":[{"id":"source-table","label":"Lees Tabel 1 met premie en eigen risico","kind":"answer","nodeRole":"source"},{"id":"role-values","label":"Gebruik 108,25, 385 en 86,25 met hun rol","kind":"answer","nodeRole":"value"},{"id":"standard-cost","label":"12 x 108,25 + 385 = 1.684","kind":"answer","nodeRole":"operation"},{"id":"increased-premium","label":"12 x 86,25 = 1.035","kind":"answer","nodeRole":"operation"},{"id":"threshold","label":"1.684 - 1.035 = 649","kind":"answer","nodeRole":"answer"},{"id":"direction","label":"Tot dat jaarbedrag is verhoogd eigen risico voordeliger","kind":"answer","nodeRole":"conclusion"},{"id":"use-885-only","label":"Gebruik alleen 885 als grens","kind":"distractor","nodeRole":"answer","distractorFor":"threshold"},{"id":"lowest-premium-only","label":"Kies alleen de laagste premie","kind":"distractor","nodeRole":"operation","distractorFor":"role-values"}]},"expected":{"kind":"source_chain_builder","chain":["source-table","role-values","standard-cost","increased-premium","threshold","direction"],"partialFeedback":"practice_only"}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"fields":[{"id":"threshold","label":"Grensbedrag","placeholder":"Bijvoorbeeld 123 euro per jaar"},{"id":"direction","label":"Richting","placeholder":"Wanneer is verhoogd eigen risico voordeliger?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
+      const models = [{"family":"source_value_selection","prompt":"Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"fields":[{"id":"threshold","label":"Grensbedrag","placeholder":"Bijvoorbeeld 123 euro per jaar"},{"id":"direction","label":"Richting","placeholder":"Wanneer is verhoogd eigen risico voordeliger?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
       const cards = Array.from(document.querySelectorAll('.task-card'));
       const currentPrompt = document.querySelector('.current-prompt');
       const progress = document.querySelector('.progress');
@@ -468,6 +508,22 @@
       function workGroupOptions(group) {
         if (Array.isArray(group)) return group;
         return group?.any || group?.accepted || [];
+      }
+
+      function graphPointsMatch(actualPoints, expected) {
+        const expectedPoints = (expected.points || []).map((point) => ({ x: Number(point.x), y: Number(point.y), matched: false }));
+        if (!Array.isArray(actualPoints) || actualPoints.length !== expectedPoints.length) return false;
+        const tx = Number(expected.toleranceX ?? expected.tolerance ?? 0);
+        const ty = Number(expected.toleranceY ?? expected.tolerance ?? 0);
+        for (const actual of actualPoints) {
+          const x = numberValue(actual.x);
+          const y = numberValue(actual.y);
+          if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+          const match = expectedPoints.find((point) => !point.matched && Math.abs(x - point.x) <= tx && Math.abs(y - point.y) <= ty);
+          if (!match) return false;
+          match.matched = true;
+        }
+        return expectedPoints.every((point) => point.matched);
       }
 
       function completedCount() {
@@ -521,6 +577,19 @@
           });
           return { fields };
         }
+        if (model.family === 'graph_construction_substitute') {
+          return {
+            axes: {
+              x: card.querySelector('.graph-axis-x')?.value || '',
+              y: card.querySelector('.graph-axis-y')?.value || ''
+            },
+            points: Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
+              x: row.querySelector('.graph-point-x')?.value || '',
+              y: row.querySelector('.graph-point-y')?.value || ''
+            })),
+            lineShape: card.querySelector('.graph-line-confirm')?.checked ? 'decreasing' : ''
+          };
+        }
         if (model.family === 'point_placement') {
           return {
             x: card.querySelector('.point-x')?.value || '',
@@ -559,6 +628,12 @@
         if (model.family === 'structured_short_response') {
           return (expected.fields || []).every((field) => acceptedText(response.fields[field.id] || '', field.accepted || []));
         }
+        if (model.family === 'graph_construction_substitute') {
+          return acceptedText(response.axes.x, expected.axes?.xAccepted || [])
+            && acceptedText(response.axes.y, expected.axes?.yAccepted || [])
+            && graphPointsMatch(response.points, expected)
+            && normalize(response.lineShape) === normalize(expected.lineShape);
+        }
         if (model.family === 'point_placement') {
           return Math.abs(numberValue(response.x) - Number(expected.x)) <= numericTolerance
             && Math.abs(numberValue(response.y) - Number(expected.y)) <= numericTolerance;
@@ -591,6 +666,11 @@
         const feedback = card.querySelector('.feedback');
         card.classList.toggle('is-complete', ok);
         card.classList.toggle('is-retry', !ok);
+        if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+          card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => {
+            graph.hidden = !ok;
+          });
+        }
         if (feedback) {
           feedback.textContent = ok
             ? 'Klopt. Je kunt door naar de volgende kaart.'
@@ -632,6 +712,22 @@
           });
           return;
         }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+          if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+          const rows = Array.from(card.querySelectorAll('.point-entry-row'));
+          (model.expected.points || []).forEach((point, rowIndex) => {
+            const row = rows[rowIndex];
+            if (!row) return;
+            row.querySelector('.graph-point-x').value = point.x;
+            row.querySelector('.graph-point-y').value = String(point.y).replace('.', ',');
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = true;
+          return;
+        }
         if (model.family === 'point_placement') {
           card.querySelector('.point-x').value = model.expected.x;
           card.querySelector('.point-y').value = model.expected.y;
@@ -670,6 +766,19 @@
         }
         if (model.family === 'structured_short_response') {
           card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
+          return;
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = 'prijs p';
+          if (yAxis) yAxis.value = 'hoeveelheid q';
+          card.querySelectorAll('.point-entry-row').forEach((row, rowIndex) => {
+            row.querySelector('.graph-point-x').value = rowIndex === 0 ? '0' : '';
+            row.querySelector('.graph-point-y').value = rowIndex === 0 ? '0' : '';
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = false;
           return;
         }
         if (model.family === 'point_placement') {
@@ -714,11 +823,12 @@
         cards.forEach((card) => {
           card.classList.remove('is-complete', 'is-retry');
           card.querySelectorAll('input, textarea, select').forEach((control) => {
-            if (control.type === 'radio') control.checked = false;
+            if (control.type === 'radio' || control.type === 'checkbox') control.checked = false;
             else control.value = '';
           });
           const zone = card.querySelector('.sequence-zone');
           if (zone) zone.innerHTML = '';
+          card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => { graph.hidden = true; });
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
         });
@@ -752,7 +862,11 @@
               structuredFields: false,
               calculationFields: false,
               pointFields: false,
-              numericField: false
+              numericField: false,
+              graphWorkspace: false,
+              graphAxisControls: false,
+              graphPointInputs: false,
+              graphLineConfirmation: false
             };
           }
           const item = familyAffordances[family];
@@ -766,15 +880,34 @@
           item.calculationFields = item.calculationFields || Boolean(card.querySelector('.calc-work') && card.querySelector('.calc-final'));
           item.pointFields = item.pointFields || Boolean(card.querySelector('.point-x') && card.querySelector('.point-y'));
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
+          item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
+          item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
+          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 10;
+          item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
+        const visible = (item) => {
+          if (!item || item.hidden) return false;
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          const rect = item.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        };
+        const graphConstructionComplete = cards.some((item) => item.getAttribute('data-task-family') === 'graph_construction_substitute' && item.classList.contains('is-complete'));
+        const completedGraphBlocks = Array.from(document.querySelectorAll('[data-completed-graph="true"]'));
+        const visibleCompletedGraphs = completedGraphBlocks.filter(visible);
+        const graphWorkspaces = Array.from(document.querySelectorAll('[data-graph-workspace="construction"]'));
+        const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
+        const labShell = document.querySelector('.lab-shell');
+        const usableWidth = labShell ? labShell.getBoundingClientRect().width : window.innerWidth;
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
           semanticValidationEnabled: document.body.dataset.semanticValidation === 'required',
           contextBlockCount: document.querySelectorAll('.ctx-block').length,
           promptContextCount: document.querySelectorAll('[data-context-role="prompt"]').length,
+          promptInSourcePaneCount: document.querySelectorAll('.source-pane [data-context-role="prompt"]').length,
           sourceContextCount: document.querySelectorAll('[data-context-role="source"]').length,
           supportBoxCount: supportBoxes.length,
           closedSupportBoxCount: supportBoxes.filter((box) => !box.open).length,
@@ -797,6 +930,14 @@
           sourcePaneScrollable: sourcePane ? sourcePane.scrollHeight > sourcePane.clientHeight : false,
           sourcePaneIndependentScroll: sourcePane ? window.getComputedStyle(sourcePane).overflowY !== 'visible' : false,
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
+          graphWorkspaceCount: graphWorkspaces.length,
+          graphWorkspaceInTaskPane: graphWorkspaces.length === 0 || graphWorkspaces.every((item) => Boolean(item.closest('.task-pane'))),
+          graphWorkspaceDesktopWidth: firstGraphWorkspaceRect ? Math.round(firstGraphWorkspaceRect.width) : 0,
+          graphWorkspaceUsableWidth: Math.round(usableWidth),
+          graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
+          completedGraphVisibleCount: visibleCompletedGraphs.length,
+          completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
+          sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
           interactiveControlCount: document.querySelectorAll('.play-control').length,
           checkButtonCount: document.querySelectorAll('.check-button').length,
           taskInstructionCount: document.querySelectorAll('.task-instructions').length,

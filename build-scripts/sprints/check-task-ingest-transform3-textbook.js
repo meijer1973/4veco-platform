@@ -21,6 +21,8 @@ const paths = {
   manifest: path.join(platformRoot, `reports/sprints/${sprintId}-screenshot-manifest.md`),
   roadmap: path.join(platformRoot, 'references/reference-team-roadmap.md'),
   lessonRoadmap: path.join(lessonRoot, 'lessen-team-roadmap.md'),
+  visualQa: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md'),
+  economy: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md'),
 };
 
 function fail(message) {
@@ -57,10 +59,12 @@ function pngDimensions(file) {
 
 function gitStatus(args, cwd = platformRoot) {
   const result = spawnSync('git', args, { cwd, encoding: 'utf8', shell: false });
-  if (result.status !== 0) {
-    fail(`git ${args.join(' ')} failed: ${result.stderr || result.stdout}`);
-  }
+  if (result.status !== 0) fail(`git ${args.join(' ')} failed: ${result.stderr || result.stdout}`);
   return (result.stdout || '').trim();
+}
+
+function roadmapLine(markdown, sprint) {
+  return markdown.split(/\r?\n/).find((line) => line.includes(`| ${sprint} |`));
 }
 
 function taskById(taskSet, id) {
@@ -79,10 +83,6 @@ function expectReject(task, response, label) {
   assert(result.matched !== true, `${label} should be rejected`);
 }
 
-function roadmapLine(markdown, sprint) {
-  return markdown.split(/\r?\n/).find((line) => line.includes(`| ${sprint} |`));
-}
-
 function main() {
   const transform = readJson(paths.transform);
   const proof = readJson(paths.proof);
@@ -97,214 +97,144 @@ function main() {
   assert(!transform.sourceAuthority.prompt_pdf, 'textbook source must not declare prompt_pdf');
   assert(!transform.sourceAuthority.correction_pdf, 'textbook source must not declare correction_pdf');
   assert(transform.sourceAuthority.paragraph_id === '1.1.3', 'wrong paragraph id');
-  assert(transform.sourceAuthority.target_registry_ref.includes('course-target-exercises.json#paragraph_id=1.1.3'), 'missing target registry ref');
   assert(transform.sourceAuthority.authority_note.includes('not official exam authority'), 'authority note must reject official exam authority');
-  assert(transform.productBoundary.official_exam_claim_authorized === false, 'official exam claim boundary must be false');
-  assert(transform.productBoundary.external_primary_claim_authorized === false, 'external primary boundary must be false');
   assert(!/"kind"\s*:\s*"external_primary"/.test(transformText), 'transform JSON contains external_primary kind claim');
 
   const platformRoadmap = readText(paths.roadmap);
   const lessonRoadmap = readText(paths.lessonRoadmap);
-  assert(roadmapLine(platformRoadmap, sprintId), 'platform roadmap missing current sprint row');
-  assert(roadmapLine(lessonRoadmap, sprintId), 'lesson roadmap missing current sprint row');
-  assert(roadmapLine(platformRoadmap, 'TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM'), 'platform roadmap missing actual-exam predecessor row');
-  assert(roadmapLine(lessonRoadmap, 'TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM'), 'lesson roadmap missing actual-exam predecessor row');
+  assert(roadmapLine(platformRoadmap, 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-2'), 'platform roadmap missing repair2 row');
+  assert(roadmapLine(lessonRoadmap, 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-2'), 'lesson roadmap missing repair2 row');
 
   assert(TaskShellEngine.validateTaskSet(transform.taskSet) === true, 'transform taskSet must validate');
-  assert(transform.taskSet.contextBlocks.length === 6, 'expected six context blocks');
-  assert(transform.taskSet.tasks.length === 9, 'expected nine task cards');
+  assert(transform.taskSet.contextBlocks.length === 6, 'expected six source-contract context blocks');
+  assert(transform.taskSet.tasks.length === 3, 'textbook task set must have at most three required cards');
+  assert(transform.taskSet.tasks[0].family === 'graph_construction_substitute', 'primary textbook task must be graph_construction_substitute');
+  assert(transform.taskSet.tasks[0].prompt.includes('Teken de P-Q-grafiek'), 'primary textbook task must carry the original target prompt');
+
   const contextIds = new Set(transform.taskSet.contextBlocks.map((block) => block.id));
   for (const id of ['ctx-icecream-prompt', 'ctx-icecream-source', 'ctx-icecream-table', 'ctx-icecream-graph', 'ctx-icecream-formula', 'ctx-icecream-procedure']) {
     assert(contextIds.has(id), `missing context block ${id}`);
   }
-  const requiredFamilies = new Set([
-    'table_value_selection',
-    'structured_short_response',
-    'step_ordering',
-    'point_placement',
-    'source_value_selection',
-    'graph_reading',
-    'calculation_work_capture',
-    'source_chain_builder',
-  ]);
-  const actualFamilies = new Set(transform.taskSet.tasks.map((task) => task.family));
-  for (const family of requiredFamilies) assert(actualFamilies.has(family), `missing family ${family}`);
+  const promptBlock = transform.taskSet.contextBlocks.find((block) => block.id === 'ctx-icecream-prompt');
+  const graphBlock = transform.taskSet.contextBlocks.find((block) => block.id === 'ctx-icecream-graph');
+  assert(promptBlock.renderPolicy.sourcePaneVisible === false, 'prompt block must not be source-pane visible');
+  assert(graphBlock.renderPolicy.defaultVisibleBeforeGraphConstruction === false, 'completed graph must be hidden before graph construction');
+
+  const families = transform.taskSet.tasks.map((task) => task.family);
+  assert(JSON.stringify(families) === JSON.stringify(['graph_construction_substitute', 'graph_reading', 'calculation_work_capture']), 'textbook families must be graph construction -> graph reading -> optional calculation follow-up');
+  for (const forbiddenFamily of ['table_value_selection', 'step_ordering', 'point_placement', 'source_value_selection', 'source_chain_builder']) {
+    assert(!families.includes(forbiddenFamily), `${forbiddenFamily} must not be a required textbook support card`);
+  }
   for (const task of transform.taskSet.tasks) {
     assert(Array.isArray(task.contextRefs) && task.contextRefs.length === 6, `${task.id} must reference all context blocks`);
   }
 
-  const tableValue = taskById(transform.taskSet, 'tb113-table-value');
-  const axes = taskById(transform.taskSet, 'tb113-axis-convention');
-  const stepOrder = taskById(transform.taskSet, 'tb113-graph-step-order');
-  const point = taskById(transform.taskSet, 'tb113-point-placement');
-  const sourceValues = taskById(transform.taskSet, 'tb113-interpolation-source-values');
+  const graphConstruction = taskById(transform.taskSet, 'tb113-graph-construction');
   const graphReading = taskById(transform.taskSet, 'tb113-graph-reading');
-  const calculation = taskById(transform.taskSet, 'tb113-claim-calculation');
-  const sourceChain = taskById(transform.taskSet, 'tb113-source-chain');
-  const answerForm = taskById(transform.taskSet, 'tb113-answer-form');
-
-  expectMatch(tableValue, 'q-400', 'table value correct response');
-  expectReject(tableValue, 'q-300', 'table value distractor response');
-
-  expectMatch(axes, { fields: { x_axis: 'hoeveelheid', y_axis: 'prijs' } }, 'axis convention correct response');
-  expectReject(axes, { fields: { x_axis: 'prijs', y_axis: 'hoeveelheid' } }, 'axis convention swapped response');
-
-  expectMatch(stepOrder, { order: stepOrder.expected.order }, 'graph step order correct response');
-  expectReject(stepOrder, { order: stepOrder.expected.order.slice().reverse() }, 'graph step order reversed response');
-
-  expectMatch(point, { point: { x: 300, y: 2 } }, 'point placement correct response');
-  expectReject(point, { point: { x: 2, y: 300 } }, 'point placement axis-swapped response');
-
-  expectMatch(sourceValues, { selections: sourceValues.expected.selections }, 'interpolation source values correct response');
-  expectReject(sourceValues, { selections: sourceValues.expected.selections.slice(0, 2) }, 'interpolation source values incomplete response');
-  expectReject(sourceValues, {
-    selections: [
-      { valueId: 'p150', role: 'higher_price' },
-      { valueId: 'q400', role: 'lower_quantity' },
-      { valueId: 'p200', role: 'lower_price' },
-      { valueId: 'q300', role: 'higher_quantity' },
+  const dropCheck = taskById(transform.taskSet, 'tb113-quantity-drop-check');
+  const graphResponse = {
+    axes: { x: 'hoeveelheid q', y: 'prijs p' },
+    points: [
+      { x: 500, y: 1 },
+      { x: 400, y: 1.5 },
+      { x: 300, y: 2 },
+      { x: 200, y: 2.5 },
+      { x: 100, y: 3 },
     ],
-  }, 'interpolation source values wrong role response');
+    lineShape: 'decreasing',
+  };
+  expectMatch(graphConstruction, graphResponse, 'graph construction correct response');
+  expectReject(graphConstruction, { ...graphResponse, axes: { x: 'prijs p', y: 'hoeveelheid q' } }, 'graph construction swapped axes');
+  expectReject(graphConstruction, { ...graphResponse, points: graphResponse.points.slice(0, 4) }, 'graph construction missing point');
+  expectReject(graphConstruction, { ...graphResponse, lineShape: '' }, 'graph construction missing line confirmation');
 
   expectMatch(graphReading, 350, 'graph reading correct response');
   expectReject(graphReading, 330, 'graph reading far-off response');
 
-  expectMatch(calculation, {
+  expectMatch(dropCheck, {
     work: '400 naar 200; (200 - 400) / 400 x 100 = -50%; dus een daling',
     finalAnswer: 'eur 1.50 tot eur 2.50',
-    unitNotation: 'procentuele daling',
-  }, 'claim calculation paragraph-taught interval');
-  expectMatch(calculation, {
+    unitNotation: '50 procent daling',
+  }, 'quantity drop paragraph interval');
+  expectMatch(dropCheck, {
     work: '200 naar 100; (100 - 200) / 200 x 100 = -50%; dus een daling',
     finalAnswer: 'eur 2.50 tot eur 3.00',
-    unitNotation: 'procentuele daling',
-  }, 'claim calculation alternate source-valid interval');
-  expectReject(calculation, {
+    unitNotation: '50 procent daling',
+  }, 'quantity drop alternate interval');
+  expectReject(dropCheck, {
     work: '',
     finalAnswer: 'eur 1.50 tot eur 2.50',
-    unitNotation: 'procentuele daling',
-  }, 'claim calculation final interval only');
-  expectReject(calculation, {
-    work: '400 naar 200; (200 - 400) / 400 x 100 = -50%; dus een daling',
-    finalAnswer: 'eur 1.50 tot eur 2.50',
-    unitNotation: '',
-  }, 'claim calculation missing unit notation');
+    unitNotation: '50 procent daling',
+  }, 'quantity drop final interval only');
 
-  expectMatch(sourceChain, { chain: sourceChain.expected.chain }, 'source chain correct response');
-  expectReject(sourceChain, { chain: sourceChain.expected.chain.slice().reverse() }, 'source chain reversed response');
-  expectReject(sourceChain, { chain: ['source-table', 'choose-interval', 'state-claim'] }, 'source chain shallow response');
-
-  expectMatch(answerForm, {
-    fields: {
-      interval: 'eur 1.50 tot eur 2.50',
-      source_values: '400 naar 200',
-      calculation: '-50 procent',
-      sentence: 'de uitspraak kan bij die bronwaarden kloppen',
-    },
-  }, 'answer form paragraph-taught interval');
-  expectMatch(answerForm, {
-    fields: {
-      interval: 'eur 2.50 tot eur 3.00',
-      source_values: '200 naar 100',
-      calculation: '50 procent daling',
-      sentence: 'met dit interval klopt de uitspraak',
-    },
-  }, 'answer form alternate source-valid interval');
-  expectReject(answerForm, {
-    fields: {
-      interval: 'eur 1.50 tot eur 2.50',
-      source_values: '400 naar 200',
-      calculation: '',
-      sentence: 'de uitspraak kan bij die bronwaarden kloppen',
-    },
-  }, 'answer form missing calculation');
-
-  assert(transform.textbookSourceAmbiguity.paragraph_taught_interval.percent_change === -50, 'paragraph interval must be -50 percent');
-  assert(transform.textbookSourceAmbiguity.also_source_valid_interval.percent_change === -50, 'alternate interval must be -50 percent');
-  assert(transform.answerFormTrace.accepted_interval_candidates.length === 2, 'answer-form trace must record two interval candidates');
+  assert(transform.textbookSourceAmbiguity.handling.includes('optional follow-up'), 'ambiguity must be optional follow-up after graph task');
+  assert(transform.answerFormTrace.primary_answer_form.family === 'graph_construction_substitute', 'answer trace must make graph construction primary');
+  assert(transform.answerFormTrace.target_task_economy.max_required_cards === 3, 'answer trace must record max card economy');
+  assert(transform.taskFamilyMap.length === 3, 'taskFamilyMap must map the three tasks');
+  assert(transform.taskFamilyMap[0].original_target_task === 'Teken een P-Q-grafiek bij de tabel.', 'task family map must show original target to graph construction');
+  assert(transform.antiReductionChecks.graph_construction_primary_task_required === true, 'graph construction must be primary');
+  assert(transform.antiReductionChecks.completed_graph_hidden_before_construction_success === true, 'completed graph guard missing');
+  assert(transform.antiReductionChecks.prompt_not_rendered_as_source === true, 'prompt/source guard missing');
+  assert(transform.antiReductionChecks.target_task_economy_enforced === true, 'target-task economy guard missing');
 
   const operationIds = new Set(transform.operationChainTrace.map((item) => item.operation_id));
-  for (const op of ['read_table_value', 'select_pq_axes', 'order_graph_procedure', 'plot_table_point', 'select_interpolation_source_values', 'interpolate_graph_value', 'calculate_percent_drop', 'state_claim_with_source_limits']) {
+  for (const op of ['construct_pq_graph_from_table', 'read_quantity_from_constructed_graph', 'check_one_quantity_drop_interval']) {
     assert(operationIds.has(op), `missing operation ${op}`);
   }
   for (const entry of transform.operationChainTrace) {
     assert(Array.isArray(entry.task_ids) && entry.task_ids.length > 0, `${entry.operation_id} missing task ids`);
     for (const taskId of entry.task_ids) taskById(transform.taskSet, taskId);
   }
-  assert(transform.taskFamilyMap.length === transform.taskSet.tasks.length, 'taskFamilyMap must map every task');
-  assert(transform.visualVariantMap.length >= 2, 'visualVariantMap must include graph and procedure visuals');
-  for (const visual of transform.visualVariantMap) {
-    assert(visual.raw_copied_image === false, `${visual.visual_id} must not be raw copied image`);
-    assert(visual.variants.review_lab_light, `${visual.visual_id} missing light variant`);
-    assert(visual.variants.review_lab_dark, `${visual.visual_id} missing dark variant`);
-    assert(visual.variants.thumbnail, `${visual.visual_id} missing thumbnail variant`);
+
+  for (const doc of [paths.sourceMap, paths.visualMap, paths.operationTrace, paths.answerTrace, paths.familyMap, paths.reviewerNotes, paths.visualQa, paths.economy]) {
+    const text = readText(doc);
+    assert(text.includes(sprintId) || text.includes('SHARED-TASK-INGEST-PLAYABLE-REPAIR-2'), `${rel(doc)} missing sprint id`);
   }
-  for (const [key, value] of Object.entries(transform.antiReductionChecks)) {
-    assert(value === true, `antiReductionChecks.${key} must be true`);
-  }
+  assert(readText(paths.sourceMap).includes('not official exam authority'), 'source map must reject official authority');
+  assert(readText(paths.familyMap).includes('Teken een P-Q-grafiek bij de tabel'), 'task-family map must mention original graph target');
+  assert(readText(paths.familyMap).includes('graph_construction_substitute'), 'task-family map must mention graph construction substitute');
+  assert(readText(paths.visualQa).includes('graph workspace'), 'visual QA report must inspect graph workspace');
+  assert(readText(paths.economy).includes('max 3'), 'economy report must name max-card rule');
+
   const boundary = transform.productBoundary;
   assert(boundary.task_transformation_authorized === true, 'task transformation must be authorized');
   for (const [key, value] of Object.entries(boundary)) {
     if (key !== 'task_transformation_authorized') assert(value === false, `boundary ${key} must be false`);
   }
 
-  for (const doc of [paths.sourceMap, paths.visualMap, paths.operationTrace, paths.answerTrace, paths.familyMap, paths.reviewerNotes]) {
-    const text = readText(doc);
-    assert(text.includes(sprintId), `${rel(doc)} missing sprint id`);
+  assert(fs.existsSync(paths.lab), `missing ${rel(paths.lab)}`);
+  assert(fs.existsSync(paths.manifest), `missing ${rel(paths.manifest)}`);
+  const labHtml = readText(paths.lab);
+  for (const forbidden of ['ctx-icecream', 'tb113-', 'Keuze A', 'Keuze B']) {
+    assert(!labHtml.includes(forbidden), `lab HTML source contains forbidden detector value ${forbidden}`);
   }
-  assert(readText(paths.sourceMap).includes('owned_textbook_source'), 'source map must state owned textbook authority');
-  assert(readText(paths.sourceMap).includes('not official exam authority'), 'source map must reject official authority');
-  assert(readText(paths.sourceMap).includes('tb113-claim-calculation'), 'source map must mention claim calculation task');
-  assert(readText(paths.visualMap).includes('mobile-dark.png'), 'visual map must mention dark-mode proof');
-  assert(readText(paths.operationTrace).includes('tb113-source-chain'), 'operation trace must mention source-chain task');
-  assert(readText(paths.answerTrace).includes('EUR 2.50 to EUR 3.00'), 'answer trace must mention alternate interval');
-  assert(readText(paths.familyMap).includes('final interval'), 'task-family map must name final-interval reduction');
-  assert(readText(paths.reviewerNotes).includes('TaskShellEngine'), 'reviewer notes must cite task-shell validation');
+  assert(labHtml.includes('data-semantic-validation="required"'), 'lab HTML must require semantic validation');
+  assert(labHtml.includes('graph_construction_substitute'), 'lab HTML must render graph construction family controls');
+  assert(labHtml.includes('data-graph-workspace="construction"'), 'lab HTML must render graph workspace');
+  assert(labHtml.includes('data-completed-graph="true" hidden'), 'completed graph must be hidden by default');
+  assert(labHtml.includes('support-box'), 'lab HTML must render collapsed support boxes');
 
   assert(proof.schema_version === 1, 'proof schema_version must be 1');
   assert(proof.sprint_id === sprintId, 'wrong proof sprint_id');
   assert(proof.status === 'playable_repair_proof_complete', 'wrong proof status');
-  assert(proof.task_transformation.source_authority_kind === 'owned_textbook_source', 'proof must record textbook source authority');
-  assert(proof.task_transformation.context_before_tasks === true, 'proof aggregate context ordering failed');
-  assert(proof.task_transformation.visible_internal_ids === false, 'proof aggregate exposes internal ids');
-  assert(proof.task_transformation.derived_answer_visible_in_context === false, 'proof aggregate exposes derived answer in context');
-  assert(proof.task_transformation.derived_answer_visible_in_task_cards === false, 'proof aggregate exposes derived answer in task cards');
-  assert(proof.task_transformation.raw_image_count === 0, 'proof aggregate contains raw images');
-  assert(proof.task_transformation.playable_lab.semantic_validation_enabled === true, 'proof aggregate missing semantic validation');
-  assert(proof.task_transformation.playable_lab.real_task_family_controls_rendered === true, 'proof aggregate missing real task-family controls');
-  assert(proof.task_transformation.playable_lab.source_value_banks_rendered === true, 'proof aggregate missing source value banks');
-  assert(proof.task_transformation.playable_lab.sequence_builders_rendered === true, 'proof aggregate missing sequence builders');
-  assert(proof.task_transformation.playable_lab.choice_options_rendered === true, 'proof aggregate missing table/choice controls');
-  assert(proof.task_transformation.playable_lab.graph_reading_field_rendered === true, 'proof aggregate missing graph reading field');
-  assert(proof.task_transformation.playable_lab.point_fields_rendered === true, 'proof aggregate missing point placement fields');
-  assert(proof.task_transformation.playable_lab.calculation_fields_rendered === true, 'proof aggregate missing calculation fields');
-  assert(proof.task_transformation.playable_lab.structured_fields_rendered === true, 'proof aggregate missing structured fields');
-  assert(proof.task_transformation.playable_lab.plain_sequence_textareas_absent === true, 'proof aggregate has plain sequence textareas');
-  assert(proof.task_transformation.playable_lab.check_buttons_rendered === true, 'proof aggregate missing check buttons');
-  assert(proof.task_transformation.playable_lab.task_instructions_rendered === true, 'proof aggregate missing task instructions');
-  assert(proof.task_transformation.playable_lab.support_collapsed_by_default === true, 'proof aggregate support is not collapsed');
-  assert(proof.task_transformation.playable_lab.initial_state_proven === true, 'proof aggregate missing initial state');
-  assert(proof.task_transformation.playable_lab.wrong_retry_state_proven === true, 'proof aggregate missing wrong/retry state');
-  assert(proof.task_transformation.playable_lab.corrected_state_proven === true, 'proof aggregate missing corrected state');
-  assert(proof.task_transformation.playable_lab.completion_path_reaches_done === true, 'proof aggregate demo path did not complete');
-  assert(proof.task_transformation.playable_lab.source_pane_independent_scroll === true, 'proof aggregate source pane is not independently scrollable');
-  assert(proof.task_transformation.playable_lab.question_visible_after_source_scroll === true, 'proof aggregate prompt is not retained while sources scroll');
-  assert(proof.task_transformation.visual_counts.tables === 1, 'proof must render one table');
-  assert(proof.task_transformation.visual_counts.graphs === 1, 'proof must render one graph');
-  assert(proof.task_transformation.visual_counts.flowcharts === 1, 'proof must render one flowchart');
-  assert(proof.ambiguity_evidence.paragraph_taught_interval_recorded === true, 'proof missing paragraph interval ambiguity evidence');
-  assert(proof.ambiguity_evidence.also_source_valid_interval_recorded === true, 'proof missing alternate interval ambiguity evidence');
-  assert(proof.ambiguity_evidence.source_values_plus_calculation_required === true, 'proof must require source values plus calculation');
+  assert(proof.task_transformation.task_count === 3, 'proof must record three task cards');
+  assert(proof.task_transformation.playable_lab.graph_construction_controls_rendered === true, 'proof missing graph construction controls');
+  assert(proof.task_transformation.playable_lab.target_task_economy_enforced === true, 'proof missing target economy');
+  assert(proof.task_transformation.playable_lab.prompt_not_in_source_pane === true, 'proof missing prompt/source guard');
+  assert(proof.task_transformation.playable_lab.completed_graph_hidden_before_attempt === true, 'proof missing completed graph guard');
+  assert(proof.task_transformation.playable_lab.graph_workspace_in_task_pane === true, 'proof missing task-pane graph workspace');
+  assert(proof.task_transformation.playable_lab.graph_workspace_width_pass === true, 'proof missing graph workspace width pass');
+  assert(proof.ambiguity_evidence.primary_graph_construction_first === true, 'proof must record primary graph construction first');
 
-  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 6, 'proof must include six screenshots');
   const expectedCases = new Map([
-    ['desktop-initial', { width: 1280, theme: 'light', action: 'initial' }],
-    ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong' }],
-    ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected' }],
-    ['desktop-completed', { width: 1280, theme: 'light', action: 'complete' }],
-    ['mobile-completed', { width: 390, theme: 'light', action: 'complete' }],
-    ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete' }],
+    ['desktop-initial', { width: 1280, theme: 'light', action: 'initial', renderedContextBlocks: 4 }],
+    ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong', renderedContextBlocks: 4 }],
+    ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected', renderedContextBlocks: 4 }],
+    ['desktop-completed', { width: 1280, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
+    ['mobile-completed', { width: 390, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
+    ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete', renderedContextBlocks: 4 }],
   ]);
+  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 6, 'proof must include six screenshots');
   for (const capture of proof.screenshots) {
     const expected = expectedCases.get(capture.case);
     assert(expected, `unexpected screenshot case ${capture.case}`);
@@ -315,73 +245,44 @@ function main() {
     assert(fs.existsSync(file), `missing screenshot ${capture.file}`);
     const dimensions = pngDimensions(file);
     assert(dimensions.width === expected.width, `${capture.case} screenshot width ${dimensions.width}, expected ${expected.width}`);
-    assert(dimensions.height >= 400, `${capture.case} screenshot height too small`);
-    assert(capture.proof.contextBlockCount === 6, `${capture.case} wrong context block count`);
-    assert(capture.proof.taskCardCount === 9, `${capture.case} wrong task card count`);
-    assert(capture.proof.contextBeforeTasks === true, `${capture.case} does not render context before tasks`);
-    assert(capture.proof.tableCount === 1, `${capture.case} wrong table count`);
-    assert(capture.proof.graphCount === 1, `${capture.case} wrong graph count`);
-    assert(capture.proof.flowchartCount === 1, `${capture.case} wrong flowchart count`);
-    assert(capture.proof.sourceRefsVisible === true, `${capture.case} missing source refs`);
+    assert(capture.proof.contextBlockCount === expected.renderedContextBlocks, `${capture.case} wrong rendered context block count`);
+    assert(capture.proof.taskCardCount === 3, `${capture.case} wrong task card count`);
+    assert(capture.proof.promptInSourcePaneCount === 0, `${capture.case} renders prompt in source pane`);
+    assert(capture.proof.sourcePaneCompletedGraphCount === 0, `${capture.case} renders completed graph in source pane`);
+    assert(capture.proof.completedGraphVisibleBeforeAttempt === false, `${capture.case} shows completed graph before construction attempt`);
+    assert(capture.proof.graphWorkspaceInTaskPane === true, `${capture.case} graph workspace is not in task pane`);
+    assert(capture.proof.graphWorkspaceWidthPass === true, `${capture.case} graph workspace width is too small`);
+    assert(capture.proof.semanticValidationEnabled === true, `${capture.case} missing semantic validation`);
+    assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed`);
+    assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
+    assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphWorkspace === true, `${capture.case} missing graph workspace affordance`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphAxisControls === true, `${capture.case} missing graph axis controls`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphPointInputs === true, `${capture.case} missing graph point inputs`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphLineConfirmation === true, `${capture.case} missing graph line confirmation`);
+    assert(capture.proof.familyAffordances.graph_reading.numericField === true, `${capture.case} missing graph reading field`);
+    assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
+    if (capture.case === 'desktop-initial') {
+      assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
+      assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} completed graph must not be visible initially`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
+    } else if (capture.case === 'desktop-wrong-retry') {
+      assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
+      assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
+    } else if (capture.case === 'desktop-corrected') {
+      assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
+      assert(capture.proof.completedGraphVisibleCount >= 1, `${capture.case} should reveal completed graph after corrected construction`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not complete the whole lab`);
+    } else {
+      assert(capture.proof.completedTaskCount === 3, `${capture.case} demo path did not complete all tasks`);
+      assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
+    }
     assert(capture.proof.visibleInternalIds === false, `${capture.case} exposes internal ids`);
     assert(capture.proof.derivedAnswerVisibleInContext === false, `${capture.case} exposes derived answer signal in context`);
     assert(capture.proof.derivedAnswerVisibleInTaskCards === false, `${capture.case} exposes derived answer signal in task cards`);
     assert(capture.proof.rawImageCount === 0, `${capture.case} contains raw images`);
     assert(capture.proof.overflowingCount === 0, `${capture.case} has non-table/formula overflow`);
-    assert(capture.proof.semanticValidationEnabled === true, `${capture.case} missing semantic validation`);
-    assert(capture.proof.genericOptionLabelVisible === false, `${capture.case} renders generic controls`);
-    assert(capture.proof.supportBoxCount >= 1, `${capture.case} missing support boxes`);
-    assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed by default`);
-    assert(capture.proof.plainSequenceTextareaCount === 0, `${capture.case} renders plain sequence textareas`);
-    assert(capture.proof.taskInstructionCount === transform.taskSet.tasks.length, `${capture.case} missing concrete task instructions`);
-    assert(capture.proof.sourcePanePresent === true, `${capture.case} missing source pane`);
-    assert(capture.proof.taskPanePresent === true, `${capture.case} missing task pane`);
-    assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
-    assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
-    assert(
-      capture.proof.interactiveControlCount >= transform.taskSet.tasks.length,
-      `${capture.case} missing interactive controls`
-    );
-    assert(capture.proof.checkButtonCount === transform.taskSet.tasks.length, `${capture.case} missing check buttons`);
-    if (capture.case === 'desktop-initial') {
-      assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
-    } else if (capture.case === 'desktop-wrong-retry') {
-      assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
-      assert(capture.proof.retryFeedbackCount > 0, `${capture.case} missing retry feedback`);
-      assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not complete after wrong attempt`);
-    } else if (capture.case === 'desktop-corrected') {
-      assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
-      assert(capture.proof.wrongRetryCount === 0, `${capture.case} should clear retry state after correction`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not complete the whole lab`);
-    } else {
-      assert(capture.proof.completedTaskCount === transform.taskSet.tasks.length, `${capture.case} demo path did not complete all tasks`);
-      assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
-    }
-    assert(capture.proof.familyAffordances.table_value_selection.choiceOptions === true, `${capture.case} missing table choice controls`);
-    assert(capture.proof.familyAffordances.source_value_selection.valueBank === true, `${capture.case} missing source value bank`);
-    assert(capture.proof.familyAffordances.source_value_selection.roleBank === true, `${capture.case} missing role bank`);
-    assert(capture.proof.familyAffordances.step_ordering.sequenceBuilder === true, `${capture.case} missing step sequence builder`);
-    assert(capture.proof.familyAffordances.source_chain_builder.sequenceBuilder === true, `${capture.case} missing source-chain sequence builder`);
-    assert(capture.proof.familyAffordances.graph_reading.numericField === true, `${capture.case} missing graph reading field`);
-    assert(capture.proof.familyAffordances.point_placement.pointFields === true, `${capture.case} missing point fields`);
-    assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
-    assert(capture.proof.familyAffordances.structured_short_response.structuredFields === true, `${capture.case} missing structured fields`);
-    for (const family of requiredFamilies) assert(capture.proof.families.includes(family), `${capture.case} missing rendered family ${family}`);
   }
-  assert(fs.existsSync(paths.lab), `missing ${rel(paths.lab)}`);
-  assert(fs.existsSync(paths.manifest), `missing ${rel(paths.manifest)}`);
-  const labHtml = readText(paths.lab);
-  for (const forbidden of ['ctx-icecream', 'tb113-', 'Keuze A', 'Keuze B']) {
-    assert(!labHtml.includes(forbidden), `lab HTML source contains forbidden detector value ${forbidden}`);
-  }
-  assert(labHtml.includes('data-semantic-validation="required"'), 'lab HTML must require semantic validation');
-  assert(labHtml.includes('table_value_selection'), 'lab HTML must render table value family controls');
-  assert(labHtml.includes('graph_reading'), 'lab HTML must render graph reading family controls');
-  assert(labHtml.includes('point_placement'), 'lab HTML must render point placement family controls');
-  assert(labHtml.includes('source_chain_builder'), 'lab HTML must render source chain family controls');
-  assert(labHtml.includes('support-box'), 'lab HTML must render collapsed support boxes');
 
   assert(proof.boundary_evidence.protected_reference_status === '', 'proof recorded protected reference changes');
   assert(proof.boundary_evidence.source_data_status === '', 'proof recorded source-data changes');
@@ -407,7 +308,7 @@ function main() {
     else assert(value === false, `proof product boundary ${key} must be false`);
   }
 
-  console.log(`OK ${sprintId} textbook source task transformation`);
+  console.log(`OK ${sprintId} textbook target-task transformation`);
 }
 
 main();

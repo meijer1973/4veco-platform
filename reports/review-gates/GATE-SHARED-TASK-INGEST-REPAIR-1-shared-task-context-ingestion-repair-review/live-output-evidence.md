@@ -2,7 +2,7 @@
 
 Generated: 2026-06-04
 
-Status: playable repair evidence prepared after first-round
+Status: target-task repair evidence prepared after renewed
 `hold_for_playable_repair` comments; remote evidence snapshot must be current
 before renewed human review starts.
 
@@ -12,6 +12,10 @@ Actual exam:
 
 - Lab: `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html`
 - Proof: `reports/json/task-ingest-transform2-actual-exam-proof.json`
+- Task count: 3 required cards.
+- Required sequence: source values -> calculation -> conclusion.
+- Removed as required cards: `formula_builder`, `step_ordering`,
+  `source_chain_builder`.
 - Screenshots:
   - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png`
@@ -24,6 +28,11 @@ Textbook source:
 
 - Lab: `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html`
 - Proof: `reports/json/task-ingest-transform3-textbook-proof.json`
+- Task count: 3 required cards.
+- Primary task: `graph_construction_substitute` for
+  `Teken een P-Q-grafiek bij de tabel`.
+- Required sequence: graph construction -> graph reading -> optional 50
+  percent quantity-drop check.
 - Screenshots:
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png`
@@ -32,23 +41,26 @@ Textbook source:
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark-completed.png`
 
-## Playability Proof Summary
+## Target-Task Proof Summary
 
 Both proof JSON files record:
 
 - semantic validation is required before completion;
-- visible real task-family controls replace generic placeholders;
 - wrong input is rejected and produces retry feedback;
 - a corrected first task is accepted without completing the whole lab;
 - the full correct path reaches completion;
 - formula/procedure/correction-model support is collapsed by default;
 - source panes are independently scrollable and the question remains visible;
-- visible text does not expose internal IDs or derived answers.
+- visible text does not expose internal IDs or derived answers;
+- prompt blocks do not render inside `.source-pane`.
 
-The actual-exam lab renders 4 context blocks and 6 task cards. The textbook lab
-renders 6 context blocks and 9 task cards, including text, table, graph, and
-flowchart evidence. Both labs are review-only surfaces and do not become
-student-facing routes.
+The actual-exam proof records exactly three task cards and
+`sequence_builders_removed_as_required_cards: true`.
+
+The textbook proof records exactly three task cards, primary
+`graph_construction_substitute`, graph-construction controls, no completed
+graph visible before graph-construction success, graph workspace in the task
+pane, and `graph_workspace_width_pass: true`.
 
 ## Authority And Boundary Evidence
 
@@ -70,8 +82,8 @@ Textbook:
 
 Remote publication is required before renewed review comments start. The
 reviewed remote evidence snapshot is `main` at
-`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8`. Renewed human review comments may
-start only after the final repair metadata update is pushed.
+`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8` until the final repair-2 metadata
+update records the new pushed evidence hash.
 
 ## Recommended Next Action
 

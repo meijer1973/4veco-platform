@@ -2,45 +2,43 @@
 
 Generated: 2026-06-04
 
-Status: direct comments returned with `hold_for_playable_repair`; playable
-repair evidence prepared for renewed direct human review; no gate closure or
-product authority.
+Status: refreshed after renewed `REVISE` and
+`SHARED-TASK-INGEST-PLAYABLE-REPAIR-2`; direct human review may inspect the
+remote snapshot recorded below, but the gate is not closed and no product
+authority exists.
+
+Reviewed remote evidence snapshot: `main` at
+`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8` until this packet metadata is
+updated after the repair-2 push.
 
 ## Review Scope
 
-Review whether the repaired source-context ingestion evidence is now sufficient
-to authorize a later controlled adoption-preparation sprint for shared task
-context handling.
+Review whether the repaired source-context ingestion evidence is now good
+enough to authorize only a later controlled adoption-preparation sprint.
 
-This packet is limited to two review-only transformations:
+This packet is limited to review-only transformations:
 
 - an external-primary actual-exam transformation for Zoohee question 3;
 - an owned textbook-source transformation for `1.1.3 Grafieken en tabellen`.
 
-The review must inspect playable labs, screenshots, proof JSON, source maps,
-operation traces, answer-form traces, task-family maps, lead-review evidence,
-and boundary flags. Contract-only or static-card-only evidence is insufficient.
+The renewed review held the gate because the prior repair was mechanically
+playable but not target-task clean. Repair 2 therefore checks Target-task
+economy:
 
-This packet does not authorize generated lesson output, source-data mutation,
-protected reference mutation, product-route adoption, target-equivalent
+- the actual-exam task is reduced to source values, calculation, and
+  conclusion;
+- the textbook task starts with `graph_construction_substitute` for
+  `Teken een P-Q-grafiek bij de tabel`;
+- prompt blocks must not render as source material;
+- the completed graph must not be visible before graph-construction success;
+- the graph workspace must be in the main task pane and pass visual QA width
+  proof.
+
+This packet does not authorize generated lesson output, protected reference
+mutation, source-data mutation, product-route adoption, target-equivalent
 completion language, diagnostics, adaptive routing, mastery, sequencing,
 student-facing AI, summative use, PV projection, PV machine promotion, Scale
 Gate 1, broad product use, or student use.
-
-Remote evidence prerequisite: this packet, live-output evidence, repaired labs,
-proof JSON, screenshots, sprint plan/baseline, transform maps/traces, lead
-review artifacts, checker, repository maps, URL indexes, and cited evidence
-must be committed and pushed to the normal remote branch before human review
-comments start. The packet metadata records the remote evidence snapshot that a
-reviewer should inspect.
-
-Reviewed remote evidence snapshot: `main` at
-`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8`.
-
-Direct review comments were returned on 2026-06-04 and recorded in
-`direct-review-comments.md/json`. The decision was `hold_for_playable_repair`.
-`SHARED-TASK-INGEST-PLAYABLE-REPAIR-1` has prepared revised playable evidence;
-this packet is ready only for renewed direct review comments, not closure.
 
 ## Evidence Base
 
@@ -48,114 +46,58 @@ this packet is ready only for renewed direct review comments, not closure.
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json`
-- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-plan.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-baseline.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-planning-review.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-planning-review-resolution.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-assignment.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-round1.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-corrections.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-round2.md`
-- `reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-verification-review.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-plan.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-baseline.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review-resolution.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-command-log.jsonl`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-command-log.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-assignment.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-round1.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-corrections.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-lead-review-round2.md`
-- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-verification-review.md`
-- `build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js`
-- `build-scripts/sprints/task-ingest-playable-lab.js`
-- `build-scripts/sprints/capture-task-ingest-transform2-screenshots.js`
-- `build-scripts/sprints/check-task-ingest-transform2-actual-exam.js`
-- `build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js`
-- `build-scripts/sprints/check-task-ingest-transform3-textbook.js`
-
-Actual-exam transformation evidence:
-
-- `reports/json/source-reconstruct2-actual-exam.json`
-- `reports/json/source-reconstruct2-actual-exam-proof.json`
-- `reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-source-map.md`
-- `reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-normalized-source.md`
-- `reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-rendered-lab.html`
-- `reports/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM-screenshot-manifest.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.md`
+- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-plan.md`
+- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-baseline.md`
+- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-planning-review.md`
+- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md`
+- `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md`
 - `reports/json/task-ingest-transform2-actual-exam.json`
 - `reports/json/task-ingest-transform2-actual-exam-proof.json`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/manifest.json`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark-completed.png`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-operation-chain-trace.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-answer-form-trace.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-task-family-map.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-reviewer-notes.md`
-
-Textbook-source transformation evidence:
-
 - `reports/json/task-ingest-transform3-textbook.json`
 - `reports/json/task-ingest-transform3-textbook-proof.json`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/manifest.json`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png`
-- `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark-completed.png`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-visual-variant-map.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-operation-chain-trace.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-answer-form-trace.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-task-family-map.md`
 - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md`
+- `build-scripts/sprints/task-ingest-playable-lab.js`
+- `build-scripts/sprints/check-task-ingest-transform2-actual-exam.js`
+- `build-scripts/sprints/check-task-ingest-transform3-textbook.js`
+- `build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js`
 
 ## Minimum Playable Evidence Inspection
 
 Before writing binding comments, inspect at minimum:
 
-- the actual-exam playable lab
+- the actual-exam playable lab:
   `reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html`;
-- the textbook-source playable lab
+- the textbook playable lab:
   `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html`;
-- both proof JSON files, especially `task_transformation.playable_lab`,
-  `screenshots[].proof.familyAffordances`, `wrongRetryCount`,
-  `semanticValidationEnabled`, and `supportCollapsedByDefault`;
-- all six screenshot states for both labs: `desktop-initial`,
-  `desktop-wrong-retry`, `desktop-corrected`, `desktop-completed`,
-  `mobile-completed`, and `mobile-dark-completed`;
-- the actual-exam reconstruction source map and official prompt/correction
-  references;
-- the textbook source map, visual-variant map, and ambiguity handling notes;
-- operation-chain traces and answer-form traces for both transformations;
-- task-family maps for both transformations;
-- the original pre-gate lead-review round 1, correction log, and round 2
-  recheck;
-- the `SHARED-TASK-INGEST-PLAYABLE-REPAIR-1` verification review, lead-review
-  round 1, correction log, and round 2 recheck.
-
-The repaired labs use a split review surface. On desktop, sources are in an
-independently scrollable source pane while the active question strip and task
-pane remain visible. On mobile, the source pane is constrained and scrollable
-below the sticky question strip so long source text, tables, graphs, and
-questions remain readable without losing orientation.
+- both proof JSON files, especially `task_transformation.playable_lab`;
+- desktop initial, wrong/retry, corrected, completed, mobile completed, and
+  mobile dark completed screenshots for both labs;
+- `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md`;
+- `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md`;
+- task-family maps and operation/answer traces for both transformations;
+- renewed direct-review comments and resolution log.
 
 Checker-readable requirement statement: both labs must preserve question visibility after source scrolling.
 Checker-readable authority statement: the textbook source is not official exam authority.
-Checker-readable playability statement: both labs must reject a wrong attempt,
-accept a corrected attempt, and require semantic validation before completion.
-Checker-readable support statement: formula/procedure/correction-model support
-must be collapsed by default and must not appear as default source authority.
+Checker-readable target-task statement: Target-task economy is required.
+Checker-readable graph statement: `graph_construction_substitute` must be the primary textbook task.
 
 ## Calibration Checks
 
@@ -168,24 +110,28 @@ must be collapsed by default and must not appear as default source authority.
    official prompt and correction model.
 4. Confirm the textbook evidence remains owned-source only and is not treated
    as official exam authority.
-5. Confirm the reviewer opened the playable labs or inspected screenshots and
-   proof JSON that show real task-family controls, independent source
-   scrolling, question visibility after source scrolling, wrong/retry,
-   corrected, and completed states.
-6. Confirm first-round comments and the open comment-resolution log exist,
-   while no closure proposal or gate-closure record exists yet.
+5. Confirm the actual-exam task set has three required cards: source values,
+   calculation, and conclusion.
+6. Confirm the textbook task set has three cards and starts with
+   `graph_construction_substitute`.
+7. Confirm no prompt block is rendered inside the source pane.
+8. Confirm the completed graph is not visible before graph-construction
+   success.
+9. Confirm graph workspace width proof passes on desktop.
+10. Confirm no closure proposal or gate-closure record exists.
 
 ## Planned Review Focus
 
 | Surface | Current state | Review issue |
 |---|---|---|
-| actual-exam source authority | external-primary prompt and correction refs are preserved | decide whether official-source boundary is strong enough for later adoption-prep |
-| actual-exam source/task layout | 4 context blocks and 6 playable task cards | decide whether table/source/question remain readable together |
-| textbook source authority | owned textbook paragraph and target-registry refs only | decide whether authority limits are clear enough |
-| textbook source/task layout | 6 context blocks, table, graph, flowchart, and 9 playable task cards | decide whether many sources/questions remain readable together |
-| task-family mapping | source selection, formula, step order, calculation, graph/table reading, source chain, and short response families are mapped | decide whether the transformations avoid final-answer-only reduction |
-| answer traces | official answer steps for actual exam and ambiguity-aware textbook interval handling are recorded | decide whether answer-form handling is transparent enough |
-| product boundary | all product/adoption authorities are false | decide whether later work must stay in a bounded adoption-preparation lane |
+| actual-exam authority | external-primary source refs preserved | decide whether authority remains strong enough |
+| actual-exam target economy | 3 cards | decide whether source values -> calculation -> conclusion is coherent |
+| textbook authority | owned-source only | decide whether authority boundary remains clear |
+| textbook graph task | primary `graph_construction_substitute` | decide whether the target task is actually converted |
+| graph workspace | right/main task pane with width proof | decide whether visual QA is sufficient |
+| source/task boundary | prompt excluded from source pane | decide whether orientation is repaired |
+| support policy | formula/procedure collapsed | decide whether support is secondary |
+| product boundary | all product/adoption authorities false | decide whether later work must stay bounded |
 
 ## Full Planned Review Comment Prompts
 
@@ -195,33 +141,30 @@ Use these IDs when commenting directly on this packet.
 source table, correction-model steps, and point rules strongly enough for
 source-dependent task transformation review?
 
-`SHAREDINGEST-Q2`: In the actual-exam lab, can you keep the question visible
-while scrolling the source material and table? Name any readability or
-orientation failures.
+`SHAREDINGEST-Q2`: Is the actual-exam task sequence now minimal and coherent
+for the target calculation, or is any required card still unnecessary?
 
-`SHAREDINGEST-Q3`: Are the actual-exam task cards playable enough for review
-without leaking internal IDs or answer amounts in visible text?
+`SHAREDINGEST-Q3`: Are the actual-exam cards playable enough after reducing
+the sequence to source values, calculation, and conclusion?
 
-`SHAREDINGEST-Q4`: Does the actual-exam operation chain avoid reducing the
-task to a final-answer field alone?
+`SHAREDINGEST-Q4`: Does the actual-exam operation chain avoid final-answer-only
+reduction without over-fragmenting the calculation?
 
 `SHAREDINGEST-Q5`: Does the textbook-source evidence keep its authority bounded
 to owned textbook material, without implying official exam authority?
 
-`SHAREDINGEST-Q6`: In the textbook lab, can you inspect text, table, graph,
-flowchart, and multiple questions while keeping the current question visible?
-Name any source/question readability failures.
+`SHAREDINGEST-Q6`: Is `Teken een P-Q-grafiek bij de tabel` actually converted
+into the active textbook task through `graph_construction_substitute`?
 
-`SHAREDINGEST-Q7`: Does the textbook transformation handle the 50 percent
-quantity-drop ambiguity in a reviewable way, rather than hiding the alternate
-valid interval?
+`SHAREDINGEST-Q7`: Is the 50 percent ambiguity now appropriately secondary to
+the primary graph-construction task?
 
-`SHAREDINGEST-Q8`: Do the task-family maps and answer-form traces show enough
-operation, source-reading, graph/table-reading, reasoning, and answer-writing
-structure for later shared task-context planning?
+`SHAREDINGEST-Q8`: Do the task-family maps show original target task ->
+transformed task(s), rather than family-coverage overbuild?
 
-`SHAREDINGEST-Q9`: Are the desktop, mobile, and dark-mode screenshots
-sufficient to judge the repaired review surface?
+`SHAREDINGEST-Q9`: Are the screenshots and visual QA sufficient to judge graph
+workspace size, initial state, wrong state, corrected state, completed graph
+state, mobile, and dark mode?
 
 `SHAREDINGEST-Q10`: Do any proof artifacts, lab text, or packet statements
 overclaim product readiness, student-facing use, target-equivalent completion,
@@ -236,38 +179,34 @@ adoption-preparation sprint may start?
 
 ## Direct Review Comment Protocol
 
-- Default mode is direct packet comments. Do not run a one-question-at-a-time
-  interview unless the human reviewer explicitly asks for that format.
+- Default mode is direct packet comments.
 - The reviewer should comment against the prompt IDs above or return a single
-  response that preserves the IDs.
-- After comments are returned, the agent must record
-  `direct-review-comments.md/json` or an equivalent returned-comment artifact,
-  then write `comment-resolution-log.md/json`.
+  response preserving the IDs.
+- After comments are returned, the agent must record direct-review comments and
+  write a comment-resolution log.
 - The agent should ask targeted follow-up questions only for ambiguous,
   missing, or conflicting review authority.
 - A closure proposal may be drafted only after comment evidence is complete.
-- `gate-closure.md/json` may be written only after explicit human confirmation
-  of the closure decision.
+- `gate-closure.md/json` may be written only after explicit human
+  confirmation of the closure decision.
 
 ## Current Stop Conditions
 
 Stop the review instead of closing the gate if any of these occur:
 
 - the packet or cited evidence is not pushed to the normal remote branch;
-- `review-packet.json` or `live-output-evidence.json` does not record the
-  reviewed remote branch and commit hash;
-- the playable labs cannot be opened or inspected through screenshots/proof;
-- source panes are not independently scrollable or the question disappears
-  during source inspection;
-- visible text leaks internal IDs or derived answers that should remain proof
-  data only;
-- actual-exam official-source authority is weakened or textbook-source evidence
-  is treated as official exam authority;
-- any protected reference, source-data, or generated Book 1 lesson output drift
+- remote hash metadata does not match the reviewed evidence;
+- a prompt block is rendered inside the source pane;
+- the completed graph is visible before graph-construction success;
+- the textbook task does not start with graph construction;
+- either transformed task set exceeds 3 required cards without human waiver;
+- graph workspace visual QA fails;
+- actual-exam official-source authority is weakened or textbook evidence is
+  treated as official exam authority;
+- protected reference, source-data, or generated Book 1 lesson output drift
   appears;
-- a reviewer asks for product adoption, generated output, Scale Gate 1, or
-  gate closure before renewed direct comments, updated resolution evidence, and
-  explicit closure confirmation exist.
+- anyone asks for product adoption, generated output, Scale Gate 1, or gate
+  closure before direct comments and resolution evidence exist.
 
 ## Comment Resolution And Closure Protocol
 
@@ -285,7 +224,7 @@ After review comments are returned:
 
 ## Recommended Next Action
 
-After this packet and all cited repair evidence are pushed, send the revised
-playable labs for renewed direct human review. Do not close the gate until the
-renewed comments, updated comment-resolution log, and explicit human closure
-confirmation exist.
+After this packet and repair-2 evidence are pushed and the reviewed remote hash
+is recorded, send this packet for renewed direct human review comments. Do not
+close the gate until returned comments, a comment-resolution log, and explicit
+human closure confirmation exist.

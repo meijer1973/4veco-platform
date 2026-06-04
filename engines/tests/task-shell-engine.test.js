@@ -394,17 +394,42 @@ function fixtures() {
             id: 'graph-construction',
             family: 'graph_construction_substitute',
             skillLabel: 'Grafiek opbouwen',
-            prompt: 'Beschrijf welke twee punten je zou tekenen.',
-            interaction: { inputLabel: 'Punten en lijn' },
+            prompt: 'Construeer een P-Q-grafiek met twee punten.',
+            interaction: {
+                workspaceTitle: 'Tekenruimte',
+                xAxisLabel: 'Horizontale as',
+                yAxisLabel: 'Verticale as',
+                pointRowsLabel: 'Punten uit de tabel',
+                lineConfirmationLabel: 'Ik heb de punten met een dalende lijn verbonden',
+                lineShapeLabel: 'Lijnvorm',
+                xInputLabel: 'Q',
+                yInputLabel: 'P',
+                emptyGraphAltText: 'Lege P-Q-grafiek voor constructie',
+                axes: {
+                    x: { label: 'Q', min: 0, max: 20 },
+                    y: { label: 'P', min: 0, max: 4 }
+                },
+                pointCount: 2
+            },
             expected: {
-                kind: 'self_check',
-                criteria: ['Noem twee punten.', 'Verbind de punten.', 'Controleer de assen.']
+                kind: 'graph_construction_substitute',
+                axes: {
+                    xAccepted: ['q', 'hoeveelheid'],
+                    yAccepted: ['p', 'prijs']
+                },
+                points: [
+                    { x: 0, y: 4 },
+                    { x: 20, y: 2 }
+                ],
+                toleranceX: 0,
+                toleranceY: 0,
+                lineShape: 'decreasing'
             },
             feedback: {
-                selfCheckTitle: 'Controleer je grafiekstappen',
-                selfCheckText: 'Een vervangende grafiektaak noemt punten, lijn en assen.',
+                matchTitle: 'Grafiek klopt',
+                matchText: 'Assen, punten en lijnvorm passen bij de tabel.',
                 retryTitle: 'Schrijf eerst je stappen',
-                retryText: 'Noem de punten voordat je jezelf controleert.'
+                retryText: 'Controleer asnamen, punten en lijnvorm.'
             }
         }),
         baseTask({

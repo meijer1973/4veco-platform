@@ -168,8 +168,8 @@ function playableLabHtml(transform) {
     windowName: 'TaskIngestTransform3Lab',
     title: 'IJskraam tabel en P-Q-grafiek',
     kicker: 'Review-only textbook-source playable task transformation proof',
-    intro: 'Bronnen, tabel en grafiek blijven leesbaar terwijl je de vragen doorloopt.',
-    reviewCheck: 'controleer dat tabelwaarden, assen, grafiekpunten, interpolatie, berekening en claimzin samen de bronbewerking dragen.'
+    intro: 'De tabel is bronmateriaal; de grafiek wordt eerst in het taakvlak geconstrueerd.',
+    reviewCheck: 'controleer dat de hoofdtaak graph construction is, dat de voltooide grafiek niet vooraf zichtbaar is, en dat de follow-ups minimaal blijven.'
   });
 }
 
@@ -775,14 +775,9 @@ async function main() {
         task_count: transform.taskSet.tasks.length,
         context_block_count: transform.taskSet.contextBlocks.length,
         required_families: [
-          'table_value_selection',
-          'structured_short_response',
-          'step_ordering',
-          'point_placement',
-          'source_value_selection',
+          'graph_construction_substitute',
           'graph_reading',
           'calculation_work_capture',
-          'source_chain_builder',
         ],
         rendered_families: captured[0].proof.families,
         context_before_tasks: captured.every((item) => item.proof.contextBeforeTasks === true),
@@ -795,13 +790,14 @@ async function main() {
           cases_captured: captured.map((item) => item.case),
           semantic_validation_enabled: captured.every((item) => item.proof.semanticValidationEnabled === true),
           real_task_family_controls_rendered: captured.every((item) => item.proof.genericOptionLabelVisible === false && item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
-          source_value_banks_rendered: captured.every((item) => item.proof.familyAffordances.source_value_selection?.valueBank === true && item.proof.familyAffordances.source_value_selection?.roleBank === true),
-          sequence_builders_rendered: captured.every((item) => ['step_ordering', 'source_chain_builder'].every((family) => item.proof.familyAffordances[family]?.sequenceBuilder === true)),
-          choice_options_rendered: captured.every((item) => item.proof.familyAffordances.table_value_selection?.choiceOptions === true),
+          graph_construction_controls_rendered: captured.every((item) => item.proof.familyAffordances.graph_construction_substitute?.graphWorkspace === true && item.proof.familyAffordances.graph_construction_substitute?.graphAxisControls === true && item.proof.familyAffordances.graph_construction_substitute?.graphPointInputs === true && item.proof.familyAffordances.graph_construction_substitute?.graphLineConfirmation === true),
           graph_reading_field_rendered: captured.every((item) => item.proof.familyAffordances.graph_reading?.numericField === true),
-          point_fields_rendered: captured.every((item) => item.proof.familyAffordances.point_placement?.pointFields === true),
           calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
-          structured_fields_rendered: captured.every((item) => item.proof.familyAffordances.structured_short_response?.structuredFields === true),
+          target_task_economy_enforced: transform.taskSet.tasks.length <= 3,
+          prompt_not_in_source_pane: captured.every((item) => item.proof.promptInSourcePaneCount === 0),
+          completed_graph_hidden_before_attempt: captured.every((item) => item.case !== 'desktop-initial' || item.proof.completedGraphVisibleBeforeAttempt === false),
+          graph_workspace_in_task_pane: captured.every((item) => item.proof.graphWorkspaceInTaskPane === true),
+          graph_workspace_width_pass: captured.every((item) => item.proof.graphWorkspaceWidthPass === true),
           plain_sequence_textareas_absent: captured.every((item) => item.proof.plainSequenceTextareaCount === 0),
           check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
           task_instructions_rendered: captured.every((item) => item.proof.taskInstructionCount === transform.taskSet.tasks.length),
@@ -831,6 +827,7 @@ async function main() {
         paragraph_taught_interval_recorded: true,
         also_source_valid_interval_recorded: true,
         source_values_plus_calculation_required: true,
+        primary_graph_construction_first: transform.taskSet.tasks[0]?.family === 'graph_construction_substitute',
       },
       boundary_evidence: boundaryEvidence,
       product_boundaries: {

@@ -168,8 +168,8 @@ function playableLabHtml(transform) {
     windowName: 'TaskIngestTransform2Lab',
     title: 'Zoohee zorgverzekering',
     kicker: 'Review-only actual-exam playable task transformation proof',
-    intro: 'Broncontext en vraag blijven naast elkaar zichtbaar; daarna kun je de taakkaarten doorlopen.',
-    reviewCheck: 'controleer dat bronwaarden, formule, stappen, berekening, bronketen en conclusie samen de examenbewerking dragen.'
+    intro: 'De bronwaarden, berekening en conclusie vormen samen de examenvraag.',
+    reviewCheck: 'controleer dat de examenvraag is teruggebracht tot bronwaarden, berekening en conclusie, met formulehulp alleen als collapsed support.'
   });
 }
 
@@ -665,7 +665,7 @@ async function main() {
         source_material_id: transform.sourceAuthority.source_material_id,
         task_count: transform.taskSet.tasks.length,
         context_block_count: transform.taskSet.contextBlocks.length,
-        required_families: ['source_value_selection', 'source_chain_builder', 'formula_builder', 'step_ordering', 'calculation_work_capture', 'structured_short_response'],
+        required_families: ['source_value_selection', 'calculation_work_capture', 'structured_short_response'],
         rendered_families: captured[0].proof.families,
         context_before_tasks: captured.every((item) => item.proof.contextBeforeTasks === true),
         derived_answer_visible_in_context: captured.some((item) => item.proof.derivedAnswerVisibleInContext),
@@ -678,9 +678,11 @@ async function main() {
           semantic_validation_enabled: captured.every((item) => item.proof.semanticValidationEnabled === true),
           real_task_family_controls_rendered: captured.every((item) => item.proof.genericOptionLabelVisible === false && item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
           source_value_banks_rendered: captured.every((item) => item.proof.familyAffordances.source_value_selection?.valueBank === true && item.proof.familyAffordances.source_value_selection?.roleBank === true),
-          sequence_builders_rendered: captured.every((item) => ['formula_builder', 'step_ordering', 'source_chain_builder'].every((family) => item.proof.familyAffordances[family]?.sequenceBuilder === true)),
+          sequence_builders_removed_as_required_cards: captured.every((item) => !item.proof.families.includes('formula_builder') && !item.proof.families.includes('step_ordering') && !item.proof.families.includes('source_chain_builder')),
           calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
           structured_fields_rendered: captured.every((item) => item.proof.familyAffordances.structured_short_response?.structuredFields === true),
+          target_task_economy_enforced: transform.taskSet.tasks.length <= 3,
+          prompt_not_in_source_pane: captured.every((item) => item.proof.promptInSourcePaneCount === 0),
           plain_sequence_textareas_absent: captured.every((item) => item.proof.plainSequenceTextareaCount === 0),
           check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
           task_instructions_rendered: captured.every((item) => item.proof.taskInstructionCount === transform.taskSet.tasks.length),

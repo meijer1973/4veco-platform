@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "opened": "2026-06-04",
+  "updated": "2026-06-04",
+  "status": "renewed_revise_accepted_repair2_required",
+  "decision": "hold_for_playable_repair",
+  "gate_closure_authorized": false,
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-2",
+  "renewed_human_review_required_after_repair": true,
+  "blocking_items": [
+    "missing_primary_graph_construction_task",
+    "overlong_textbook_task_sequence",
+    "prompt_rendered_inside_source_pane",
+    "completed_graph_visible_before_construction",
+    "graph_workspace_visual_qa_gap",
+    "overlong_actual_exam_task_sequence",
+    "coverage_first_transformation"
+  ],
+  "closure_constraints": {
+    "fresh_human_review_required_after_repair": true,
+    "explicit_human_confirmation_required": true,
+    "gate_closure_files_allowed_now": false
+  }
+}

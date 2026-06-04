@@ -12,14 +12,22 @@
     "source_material_id": "table-1-zoohee-zorgverzekering"
   },
   "sourceReconstructionRef": "reports/json/source-reconstruct2-actual-exam.json",
-  "sourceMaterialRefs": ["table-1-zoohee-zorgverzekering"],
+  "sourceMaterialRefs": [
+    "table-1-zoohee-zorgverzekering"
+  ],
   "answerModelRefs": [
     "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-1",
     "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-2"
   ],
   "officialCorrectionComparison": {
-    "required_step_ids": ["q3-step-1", "q3-step-2"],
-    "required_point_rule_ids": ["q3-pr-1", "q3-pr-2"],
+    "required_step_ids": [
+      "q3-step-1",
+      "q3-step-2"
+    ],
+    "required_point_rule_ids": [
+      "q3-pr-1",
+      "q3-pr-2"
+    ],
     "required_threshold": "EUR 649",
     "total_points": 2
   },
@@ -41,7 +49,9 @@
         "sourceLabel": "Bron 1",
         "caption": "Bron 1: Zoohee! zorgverzekering",
         "bodyMarkdown": "Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.",
-        "sourceRefs": ["references/external/exams/vw-1022-a-25-1-o.pdf#question-3"],
+        "sourceRefs": [
+          "references/external/exams/vw-1022-a-25-1-o.pdf#question-3"
+        ],
         "accessibilitySummary": "Tekstbron met de context voor het vergelijken van eigen risico en premie."
       },
       {
@@ -50,10 +60,22 @@
         "sourceLabel": "Tabel 1",
         "caption": "Tabel 1: Zoohee! zorgverzekering",
         "sourceMaterialId": "table-1-zoohee-zorgverzekering",
-        "columns": ["Variant", "Eigen risico per jaar (euro)", "Premie per maand (euro)"],
+        "columns": [
+          "Variant",
+          "Eigen risico per jaar (euro)",
+          "Premie per maand (euro)"
+        ],
         "rows": [
-          ["wettelijk eigen risico", "385", "108,25"],
-          ["verhoogd eigen risico", "885", "86,25"]
+          [
+            "wettelijk eigen risico",
+            "385",
+            "108,25"
+          ],
+          [
+            "verhoogd eigen risico",
+            "885",
+            "86,25"
+          ]
         ],
         "altText": "Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."
       },
@@ -65,8 +87,14 @@
         "sourceMaterialId": "table-1-zoohee-zorgverzekering",
         "expression": "jaarpremie = maandpremie * 12",
         "variables": [
-          { "symbol": "maandpremie", "meaning": "premie per maand in euro" },
-          { "symbol": "jaarpremie", "meaning": "premie per jaar in euro" }
+          {
+            "symbol": "maandpremie",
+            "meaning": "premie per maand in euro"
+          },
+          {
+            "symbol": "jaarpremie",
+            "meaning": "premie per jaar in euro"
+          }
         ],
         "altText": "Formule: jaarpremie is maandpremie keer twaalf.",
         "sourceRefs": [
@@ -81,33 +109,104 @@
         "family": "source_value_selection",
         "skillLabel": "Bronwaarden kiezen",
         "purpose": "Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.",
-        "prompt": "Welke waarden uit Tabel 1 heb je nodig om de twee varianten te vergelijken?",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
+        "prompt": "Kies de vier waarden uit Tabel 1 die nodig zijn voor de vergelijking.",
+        "contextRefs": [
+          "ctx-zoohee-prompt",
+          "ctx-zoohee-source",
+          "ctx-zoohee-table",
+          "ctx-zoohee-formula"
+        ],
         "interaction": {
           "valueBankLabel": "Bronwaarden",
           "roleLabel": "Rol in de vergelijking",
           "values": [
-            { "id": "std-premium-10825", "label": "108,25", "kind": "answer", "sourceLabel": "wettelijk eigen risico", "unit": "euro per maand", "period": "maandpremie" },
-            { "id": "std-deductible-385", "label": "385", "kind": "answer", "sourceLabel": "wettelijk eigen risico", "unit": "euro per jaar", "period": "eigen risico" },
-            { "id": "inc-premium-8625", "label": "86,25", "kind": "answer", "sourceLabel": "verhoogd eigen risico", "unit": "euro per maand", "period": "maandpremie" },
-            { "id": "inc-deductible-885", "label": "885", "kind": "answer", "sourceLabel": "verhoogd eigen risico", "unit": "euro per jaar", "period": "eigen risico" },
-            { "id": "wrong-unit-10825-year", "label": "108,25 per jaar", "kind": "distractor", "sourceLabel": "wettelijk eigen risico", "unit": "verkeerde eenheid", "distractorFor": "std-premium-10825" },
-            { "id": "wrong-premium-885-month", "label": "885 per maand", "kind": "distractor", "sourceLabel": "verhoogd eigen risico", "unit": "verkeerde rol", "distractorFor": "inc-deductible-885" }
+            {
+              "id": "std-premium-10825",
+              "label": "108,25",
+              "kind": "answer",
+              "sourceLabel": "wettelijk eigen risico",
+              "unit": "euro per maand",
+              "period": "maandpremie"
+            },
+            {
+              "id": "std-deductible-385",
+              "label": "385",
+              "kind": "answer",
+              "sourceLabel": "wettelijk eigen risico",
+              "unit": "euro per jaar",
+              "period": "eigen risico"
+            },
+            {
+              "id": "inc-premium-8625",
+              "label": "86,25",
+              "kind": "answer",
+              "sourceLabel": "verhoogd eigen risico",
+              "unit": "euro per maand",
+              "period": "maandpremie"
+            },
+            {
+              "id": "inc-deductible-885",
+              "label": "885",
+              "kind": "answer",
+              "sourceLabel": "verhoogd eigen risico",
+              "unit": "euro per jaar",
+              "period": "eigen risico"
+            },
+            {
+              "id": "wrong-unit-10825-year",
+              "label": "108,25 per jaar",
+              "kind": "distractor",
+              "sourceLabel": "wettelijk eigen risico",
+              "unit": "verkeerde eenheid",
+              "distractorFor": "std-premium-10825"
+            },
+            {
+              "id": "wrong-premium-885-month",
+              "label": "885 per maand",
+              "kind": "distractor",
+              "sourceLabel": "verhoogd eigen risico",
+              "unit": "verkeerde rol",
+              "distractorFor": "inc-deductible-885"
+            }
           ],
           "roles": [
-            { "id": "standard_monthly_premium", "label": "maandpremie wettelijk" },
-            { "id": "standard_deductible", "label": "eigen risico wettelijk" },
-            { "id": "increased_monthly_premium", "label": "maandpremie verhoogd" },
-            { "id": "increased_deductible", "label": "eigen risico verhoogd" }
+            {
+              "id": "standard_monthly_premium",
+              "label": "maandpremie wettelijk"
+            },
+            {
+              "id": "standard_deductible",
+              "label": "eigen risico wettelijk"
+            },
+            {
+              "id": "increased_monthly_premium",
+              "label": "maandpremie verhoogd"
+            },
+            {
+              "id": "increased_deductible",
+              "label": "eigen risico verhoogd"
+            }
           ]
         },
         "expected": {
           "kind": "source_value_selection",
           "selections": [
-            { "valueId": "std-premium-10825", "role": "standard_monthly_premium" },
-            { "valueId": "std-deductible-385", "role": "standard_deductible" },
-            { "valueId": "inc-premium-8625", "role": "increased_monthly_premium" },
-            { "valueId": "inc-deductible-885", "role": "increased_deductible" }
+            {
+              "valueId": "std-premium-10825",
+              "role": "standard_monthly_premium"
+            },
+            {
+              "valueId": "std-deductible-385",
+              "role": "standard_deductible"
+            },
+            {
+              "valueId": "inc-premium-8625",
+              "role": "increased_monthly_premium"
+            },
+            {
+              "valueId": "inc-deductible-885",
+              "role": "increased_deductible"
+            }
           ],
           "partialFeedback": "practice_only"
         },
@@ -116,81 +215,6 @@
           "matchText": "Je gebruikt premie per maand en eigen risico per jaar voor beide varianten.",
           "retryTitle": "Controleer waarden en rollen",
           "retryText": "Gebruik de bedragen uit de tabel met de juiste eenheid en variant."
-        },
-        "practiceRoute": {
-          "label": "Verder met de bronketen",
-          "href": "#q3-source-chain"
-        }
-      },
-      {
-        "id": "q3-annual-premium-formula",
-        "family": "formula_builder",
-        "skillLabel": "Jaarpremie bouwen",
-        "purpose": "Bouw de formule die een maandpremie omzet naar een jaarpremie.",
-        "prompt": "Welke formule gebruik je om de maandpremie naar een jaarpremie om te zetten?",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
-        "interaction": {
-          "tokenBankLabel": "Formuleblokken",
-          "sequenceLabel": "Opgebouwde formule",
-          "placeholder": "Bouw de formule.",
-          "separator": " ",
-          "tokens": [
-            { "id": "maandpremie", "label": "maandpremie", "kind": "answer", "category": "variable" },
-            { "id": "keer", "label": "*", "kind": "answer", "category": "operator" },
-            { "id": "twaalf", "label": "12", "kind": "answer", "category": "multiplier" },
-            { "id": "plus-eigen-risico", "label": "+ eigen risico", "kind": "distractor", "category": "operator", "distractorFor": "keer" },
-            { "id": "delen-door-twaalf", "label": "/ 12", "kind": "distractor", "category": "operator", "distractorFor": "twaalf" }
-          ]
-        },
-        "expected": {
-          "kind": "formula_builder",
-          "tokens": ["maandpremie", "keer", "twaalf"],
-          "acceptedSequences": [["maandpremie", "keer", "twaalf"]]
-        },
-        "feedback": {
-          "matchTitle": "Formule klopt",
-          "matchText": "Je rekent maandpremie om naar jaarpremie door met twaalf te vermenigvuldigen.",
-          "retryTitle": "Controleer de omzetting",
-          "retryText": "Een jaar heeft twaalf maanden; eigen risico tel je pas in een latere stap op."
-        },
-        "practiceRoute": {
-          "label": "Verder met de stappen",
-          "href": "#q3-operation-order"
-        }
-      },
-      {
-        "id": "q3-operation-order",
-        "family": "step_ordering",
-        "skillLabel": "Berekeningsstappen ordenen",
-        "purpose": "Orden de route van bronwaarden naar grensbedrag.",
-        "prompt": "Zet de stappen in de volgorde die bij deze berekening hoort.",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
-        "interaction": {
-          "stepBankLabel": "Stappenbank",
-          "sequenceLabel": "Gekozen volgorde",
-          "placeholder": "Orden de stappen.",
-          "separator": " -> ",
-          "steps": [
-            { "id": "read-table", "label": "Lees de premies en eigen risico's uit Tabel 1", "kind": "answer" },
-            { "id": "standard-annual-premium", "label": "Bereken jaarpremie wettelijk eigen risico", "kind": "answer", "description": "108,25 keer 12" },
-            { "id": "add-standard-deductible", "label": "Tel het wettelijk eigen risico erbij op", "kind": "answer", "description": "Dan heb je de kosten bij maximale zorgkosten binnen dat eigen risico." },
-            { "id": "increased-annual-premium", "label": "Bereken jaarpremie verhoogd eigen risico", "kind": "answer", "description": "86,25 keer 12" },
-            { "id": "derive-threshold", "label": "Neem het verschil tussen beide bedragen", "kind": "answer" },
-            { "id": "state-direction", "label": "Formuleer het grensbedrag met richting", "kind": "answer" },
-            { "id": "divide-by-deductible", "label": "Deel de premie door het eigen risico", "kind": "distractor", "distractorFor": "derive-threshold" },
-            { "id": "choose-lowest-premium", "label": "Kies meteen de laagste maandpremie", "kind": "distractor", "distractorFor": "read-table" }
-          ]
-        },
-        "expected": {
-          "kind": "step_ordering",
-          "order": ["read-table", "standard-annual-premium", "add-standard-deductible", "increased-annual-premium", "derive-threshold", "state-direction"],
-          "partialFeedback": "practice_only"
-        },
-        "feedback": {
-          "matchTitle": "Stappen staan goed",
-          "matchText": "Je route gaat van bronwaarden naar jaarbedragen en daarna naar het grensbedrag.",
-          "retryTitle": "Controleer de volgorde",
-          "retryText": "Begin bij de bron, reken maand naar jaar, vergelijk daarna de jaarbedragen."
         },
         "practiceRoute": {
           "label": "Verder met de berekening",
@@ -202,8 +226,13 @@
         "family": "calculation_work_capture",
         "skillLabel": "Grensbedrag berekenen",
         "purpose": "Laat de berekening zien waarmee je het grensbedrag vindt.",
-        "prompt": "Bereken het grensbedrag en schrijf je tussenstappen op.",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
+        "prompt": "Bereken het grensbedrag met zichtbare tussenstappen.",
+        "contextRefs": [
+          "ctx-zoohee-prompt",
+          "ctx-zoohee-source",
+          "ctx-zoohee-table",
+          "ctx-zoohee-formula"
+        ],
         "interaction": {
           "workLabel": "Berekening",
           "finalAnswerLabel": "Grensbedrag",
@@ -213,14 +242,61 @@
         },
         "expected": {
           "kind": "calculation",
-          "finalAnswer": { "kind": "text", "accepted": ["649", "€ 649", "649 euro", "tot 649 euro", "tot en met 649 euro"] },
-          "unitNotation": { "kind": "text", "accepted": ["euro per jaar", "€ per jaar", "euro"], "required": true },
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "649",
+              "€ 649",
+              "649 euro",
+              "tot 649 euro",
+              "tot en met 649 euro"
+            ]
+          },
+          "unitNotation": {
+            "kind": "text",
+            "accepted": [
+              "euro per jaar",
+              "€ per jaar",
+              "euro"
+            ],
+            "required": true
+          },
           "workRequired": true,
           "requiredWorkText": [
-            { "label": "standaardpremie per jaar", "any": ["108,25 x 12", "12 x 108,25", "1299"] },
-            { "label": "wettelijk eigen risico optellen", "any": ["+ 385", "385", "1684", "1.684"] },
-            { "label": "verhoogde premie per jaar", "any": ["86,25 x 12", "12 x 86,25", "1035", "1.035"] },
-            { "label": "verschil als grens", "any": ["1684 - 1035", "1.684 - 1.035", "649"] }
+            {
+              "label": "standaardpremie per jaar",
+              "any": [
+                "108,25 x 12",
+                "12 x 108,25",
+                "1299"
+              ]
+            },
+            {
+              "label": "wettelijk eigen risico optellen",
+              "any": [
+                "+ 385",
+                "385",
+                "1684",
+                "1.684"
+              ]
+            },
+            {
+              "label": "verhoogde premie per jaar",
+              "any": [
+                "86,25 x 12",
+                "12 x 86,25",
+                "1035",
+                "1.035"
+              ]
+            },
+            {
+              "label": "verschil als grens",
+              "any": [
+                "1684 - 1035",
+                "1.684 - 1.035",
+                "649"
+              ]
+            }
           ],
           "criteria": [
             "Reken beide maandpremies om naar jaarbedragen.",
@@ -240,55 +316,29 @@
         }
       },
       {
-        "id": "q3-source-chain",
-        "family": "source_chain_builder",
-        "skillLabel": "Bronketen bouwen",
-        "purpose": "Bouw de route van bron naar berekening naar conclusie.",
-        "prompt": "Bouw de bronketen die laat zien hoe de tabelwaarden tot het grensbedrag leiden.",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
-        "interaction": {
-          "nodeBankLabel": "Bronketen onderdelen",
-          "sequenceLabel": "Opgebouwde bronketen",
-          "placeholder": "Bouw de keten.",
-          "separator": " -> ",
-          "nodes": [
-            { "id": "source-table", "label": "Lees Tabel 1 met premie en eigen risico", "kind": "answer", "nodeRole": "source" },
-            { "id": "role-values", "label": "Gebruik 108,25, 385 en 86,25 met hun rol", "kind": "answer", "nodeRole": "value" },
-            { "id": "standard-cost", "label": "12 x 108,25 + 385 = 1.684", "kind": "answer", "nodeRole": "operation" },
-            { "id": "increased-premium", "label": "12 x 86,25 = 1.035", "kind": "answer", "nodeRole": "operation" },
-            { "id": "threshold", "label": "1.684 - 1.035 = 649", "kind": "answer", "nodeRole": "answer" },
-            { "id": "direction", "label": "Tot dat jaarbedrag is verhoogd eigen risico voordeliger", "kind": "answer", "nodeRole": "conclusion" },
-            { "id": "use-885-only", "label": "Gebruik alleen 885 als grens", "kind": "distractor", "nodeRole": "answer", "distractorFor": "threshold" },
-            { "id": "lowest-premium-only", "label": "Kies alleen de laagste premie", "kind": "distractor", "nodeRole": "operation", "distractorFor": "role-values" }
-          ]
-        },
-        "expected": {
-          "kind": "source_chain_builder",
-          "chain": ["source-table", "role-values", "standard-cost", "increased-premium", "threshold", "direction"],
-          "partialFeedback": "practice_only"
-        },
-        "feedback": {
-          "matchTitle": "Bronketen klopt",
-          "matchText": "Je koppelt de bronwaarden aan de bewerking, het grensbedrag en de conclusie.",
-          "retryTitle": "Controleer de keten",
-          "retryText": "Begin met de bronwaarden en eindig met de conclusie over het grensbedrag."
-        },
-        "practiceRoute": {
-          "label": "Controleer de conclusie",
-          "href": "#q3-threshold-direction"
-        }
-      },
-      {
         "id": "q3-threshold-direction",
         "family": "structured_short_response",
         "skillLabel": "Grens met richting formuleren",
         "purpose": "Formuleer het berekende grensbedrag als antwoordzin.",
-        "prompt": "Vul het grensbedrag en de richting in.",
-        "contextRefs": ["ctx-zoohee-prompt", "ctx-zoohee-source", "ctx-zoohee-table", "ctx-zoohee-formula"],
+        "prompt": "Schrijf het grensbedrag en de richting in een korte conclusie.",
+        "contextRefs": [
+          "ctx-zoohee-prompt",
+          "ctx-zoohee-source",
+          "ctx-zoohee-table",
+          "ctx-zoohee-formula"
+        ],
         "interaction": {
           "fields": [
-            { "id": "threshold", "label": "Grensbedrag", "placeholder": "Bijvoorbeeld 123 euro per jaar" },
-            { "id": "direction", "label": "Richting", "placeholder": "Wanneer is verhoogd eigen risico voordeliger?" }
+            {
+              "id": "threshold",
+              "label": "Grensbedrag",
+              "placeholder": "Bijvoorbeeld 123 euro per jaar"
+            },
+            {
+              "id": "direction",
+              "label": "Richting",
+              "placeholder": "Wanneer is verhoogd eigen risico voordeliger?"
+            }
           ]
         },
         "expected": {
@@ -298,8 +348,23 @@
             "Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."
           ],
           "fields": [
-            { "id": "threshold", "accepted": ["649 euro per jaar", "€ 649 per jaar", "tot 649 euro per jaar", "tot en met 649 euro per jaar"] },
-            { "id": "direction", "accepted": ["verhoogd eigen risico is voordeliger tot dat bedrag", "tot dat bedrag is verhoogd eigen risico voordeliger", "bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"] }
+            {
+              "id": "threshold",
+              "accepted": [
+                "649 euro per jaar",
+                "€ 649 per jaar",
+                "tot 649 euro per jaar",
+                "tot en met 649 euro per jaar"
+              ]
+            },
+            {
+              "id": "direction",
+              "accepted": [
+                "verhoogd eigen risico is voordeliger tot dat bedrag",
+                "tot dat bedrag is verhoogd eigen risico voordeliger",
+                "bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"
+              ]
+            }
           ]
         },
         "feedback": {
@@ -309,8 +374,8 @@
           "retryText": "Schrijf niet alleen het bedrag op, maar ook wanneer het verhoogde eigen risico voordeliger is."
         },
         "practiceRoute": {
-          "label": "Bekijk de hele route",
-          "href": "#task-map"
+          "label": "Klaar met de examenoefening",
+          "href": "#review-complete"
         }
       }
     ]
@@ -318,124 +383,110 @@
   "operationChainTrace": [
     {
       "operation_id": "select_source_values",
-      "answer_model_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-1",
-      "source_refs": ["ctx-zoohee-table"],
-      "inputs": ["108.25", "385", "86.25", "885"],
-      "output": "source values role-labelled",
-      "task_ids": ["q3-source-values"],
-      "cognitive_role": "graph/table/source operation"
+      "source_refs": [
+        "ctx-zoohee-table"
+      ],
+      "task_ids": [
+        "q3-source-values"
+      ],
+      "reviewer_note": "Student selects the four table values needed for the calculation; this remains a source-control task, not a separate source-chain card."
     },
     {
-      "operation_id": "annualize_monthly_premium",
-      "answer_model_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-1",
-      "source_refs": ["ctx-zoohee-table", "ctx-zoohee-formula"],
-      "inputs": ["108.25", "86.25", "12"],
-      "outputs": ["1299", "1035"],
-      "task_ids": ["q3-annual-premium-formula", "q3-operation-order", "q3-calculation"],
-      "cognitive_role": "calculation operation"
-    },
-    {
-      "operation_id": "compare_deductible_exposure",
-      "answer_model_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-1",
-      "source_refs": ["ctx-zoohee-table"],
-      "inputs": ["1299", "385"],
-      "outputs": ["1684"],
-      "task_ids": ["q3-operation-order", "q3-calculation", "q3-source-chain"],
-      "cognitive_role": "calculation and source interpretation"
-    },
-    {
-      "operation_id": "derive_equal_cost_threshold",
-      "answer_model_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-2",
-      "source_refs": ["ctx-zoohee-table"],
-      "inputs": ["1684", "1035"],
-      "outputs": ["649"],
-      "task_ids": ["q3-operation-order", "q3-calculation", "q3-source-chain"],
-      "cognitive_role": "calculation operation"
+      "operation_id": "calculate_threshold_with_visible_work",
+      "source_refs": [
+        "ctx-zoohee-table",
+        "ctx-zoohee-formula"
+      ],
+      "task_ids": [
+        "q3-calculation"
+      ],
+      "required_work": [
+        "108,25 x 12 = 1299",
+        "1299 + 385 = 1684",
+        "86,25 x 12 = 1035",
+        "1684 - 1035 = 649"
+      ],
+      "reviewer_note": "Formula conversion and step order are handled inside the calculation card and collapsed support, not as required separate cards."
     },
     {
       "operation_id": "state_threshold_with_direction",
-      "answer_model_ref": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3:q3-step-2",
-      "source_refs": ["ctx-zoohee-prompt"],
-      "inputs": ["649", "voordeliger", "verhoogd eigen risico"],
-      "outputs": ["tot 649 euro per jaar is verhoogd eigen risico voordeliger"],
-      "task_ids": ["q3-source-chain", "q3-threshold-direction"],
-      "cognitive_role": "constructed answer operation"
+      "source_refs": [
+        "ctx-zoohee-prompt",
+        "ctx-zoohee-table"
+      ],
+      "task_ids": [
+        "q3-threshold-direction"
+      ],
+      "reviewer_note": "Student states both the threshold and the direction required by the official correction model."
     }
   ],
   "answerFormTrace": {
-    "source_use_modifier": {
-      "id": "source_use_modifier",
-      "description": "Source/table use supports the calculation answer; it is not the whole answer.",
-      "task_ids": ["q3-source-values", "q3-source-chain"],
-      "blocked_as_standalone_proof": true
-    },
-    "underlying_answer_forms": [
+    "source_authority_kind": "external_primary",
+    "official_correction_steps": [
+      "q3-step-1",
+      "q3-step-2"
+    ],
+    "accepted_answer_forms": [
       {
-        "id": "calculation_work",
-        "task_ids": ["q3-calculation"],
-        "required": true,
-        "reason": "The official item is a calculation question with visible work steps."
+        "lane": "calculation_work",
+        "task_id": "q3-calculation",
+        "requirement": "visible work must show annual premiums, deductible exposure, and threshold difference"
       },
       {
-        "id": "formula_procedure_control",
-        "task_ids": ["q3-annual-premium-formula", "q3-operation-order"],
-        "required": true,
-        "reason": "Monthly-to-year conversion and step order must be controlled before the threshold calculation."
-      },
-      {
-        "id": "constructed_threshold_direction",
-        "task_ids": ["q3-threshold-direction", "q3-source-chain"],
-        "required": true,
-        "reason": "The answer must state up to which amount the increased deductible is cheaper."
+        "lane": "constructed_threshold_direction",
+        "task_id": "q3-threshold-direction",
+        "requirement": "short conclusion must include 649 euro per year and the direction that increased deductible is cheaper up to that amount"
       }
     ],
+    "collapsed_support_policy": {
+      "formula_builder_required_card": false,
+      "step_ordering_required_card": false,
+      "source_chain_builder_required_card": false,
+      "formula_support_collapsed_by_default": true
+    },
+    "source_use_modifier": {
+      "required": true,
+      "task_id": "q3-source-values",
+      "blocked_as_standalone_proof": true
+    },
     "not_target_equivalent": true
   },
   "taskFamilyMap": [
     {
       "task_id": "q3-source-values",
+      "original_target_operation": "use table values for the threshold calculation",
       "family": "source_value_selection",
-      "mapped_operations": ["select_source_values"],
-      "preservation_rationale": "Forces source values, units, variants, and roles before calculation."
-    },
-    {
-      "task_id": "q3-annual-premium-formula",
-      "family": "formula_builder",
-      "mapped_operations": ["annualize_monthly_premium"],
-      "preservation_rationale": "Prevents treating monthly premiums as yearly amounts."
-    },
-    {
-      "task_id": "q3-operation-order",
-      "family": "step_ordering",
-      "mapped_operations": ["annualize_monthly_premium", "compare_deductible_exposure", "derive_equal_cost_threshold", "state_threshold_with_direction"],
-      "preservation_rationale": "Preserves the official step structure before calculation execution."
+      "mapped_operations": [
+        "select_source_values"
+      ],
+      "target_task_role": "required"
     },
     {
       "task_id": "q3-calculation",
+      "original_target_operation": "calculate the annual care-cost threshold",
       "family": "calculation_work_capture",
-      "mapped_operations": ["annualize_monthly_premium", "compare_deductible_exposure", "derive_equal_cost_threshold"],
-      "preservation_rationale": "Requires visible calculation work, not only the final number."
-    },
-    {
-      "task_id": "q3-source-chain",
-      "family": "source_chain_builder",
-      "mapped_operations": ["select_source_values", "annualize_monthly_premium", "compare_deductible_exposure", "derive_equal_cost_threshold", "state_threshold_with_direction"],
-      "preservation_rationale": "Binds source, values, operations, threshold, and conclusion in one ordered chain."
+      "mapped_operations": [
+        "calculate_threshold_with_visible_work"
+      ],
+      "target_task_role": "required"
     },
     {
       "task_id": "q3-threshold-direction",
+      "original_target_operation": "state the threshold with direction",
       "family": "structured_short_response",
-      "mapped_operations": ["state_threshold_with_direction"],
-      "preservation_rationale": "Checks that the threshold is stated with direction rather than as an orphan number."
+      "mapped_operations": [
+        "state_threshold_with_direction"
+      ],
+      "target_task_role": "required"
     }
   ],
   "antiReductionChecks": {
-    "source_selection_only_rejected": true,
-    "choice_only_rejected": true,
-    "final_answer_only_rejected": true,
-    "source_use_standalone_rejected": true,
-    "calculation_work_required": true,
-    "direction_required": true
+    "source_values_required_before_calculation": true,
+    "visible_work_required": true,
+    "threshold_direction_required": true,
+    "final_answer_field_alone_rejected": true,
+    "formula_step_and_source_chain_cards_removed_as_required_tasks": true,
+    "target_task_economy_enforced": true
   },
   "renderedProof": {
     "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
@@ -445,7 +496,16 @@
       "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
       "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png"
     ],
-    "proof_json": "reports/json/task-ingest-transform2-actual-exam-proof.json"
+    "proof_json": "reports/json/task-ingest-transform2-actual-exam-proof.json",
+    "target_task_economy": {
+      "max_required_cards": 3,
+      "human_waiver_present": false,
+      "support_cards_removed": [
+        "q3-annual-premium-formula",
+        "q3-operation-order",
+        "q3-source-chain"
+      ]
+    }
   },
   "productBoundary": {
     "task_transformation_authorized": true,
