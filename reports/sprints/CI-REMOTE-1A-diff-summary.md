@@ -17,6 +17,7 @@ governance from owner-bypass to admin-enforced.
 - `reports/sprints/CI-REMOTE-1-result.md`
 - `reports/sprints/CI-REMOTE-1-diff-summary.md`
 - `references/data/sprints/CI-REMOTE-1.result.json`
+- `.github/workflows/platform-ci.yml`
 - `references/reference-team-roadmap.md`
 - repository maps, URL index, and internal dashboard
 
@@ -37,6 +38,9 @@ No protected surfaces were intentionally changed:
   `9f6e5cbf645143bcf06de3bd2800e7cb226b6877`.
 - Artifact `platform-ci-diagnostics`, id `7412612729`, exists.
 - Branch protection now records `enforce_admins: true`.
+- PR run `26965761592` proved all validators but failed at artifact upload;
+  workflow permissions now include `artifact-metadata: write` while keeping
+  repository contents read-only.
 - Local sprint result, lead-review, bundle, report JSON, roadmap index,
   URL-index, scope-language, and diff checks passed.
 

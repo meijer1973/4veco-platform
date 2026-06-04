@@ -950,3 +950,69 @@ OK sprint command log: CI-REMOTE-1A (40 entries)
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-REMOTE-1A-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T17:55:10.854Z`
+- finished_at: `2026-06-04T17:55:10.993Z`
+- duration_ms: `139`
+- exit_code: `0`
+- stdout_sha256: `484390e2451b83c57e564fd83df7fe27b54f0c9d9b9bf7ec016182672a1cea24`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\CI-REMOTE-1A-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-REMOTE-1A-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T17:55:17.201Z`
+- finished_at: `2026-06-04T17:55:17.257Z`
+- duration_ms: `56`
+- exit_code: `0`
+- stdout_sha256: `3de353c76de8c7a8a365541a69de704d1590bb0470ba0055e410b29ed936dbb0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\CI-REMOTE-1A-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1A --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T17:55:21.979Z`
+- finished_at: `2026-06-04T17:55:22.339Z`
+- duration_ms: `360`
+- exit_code: `0`
+- stdout_sha256: `e5f986f92191e707a6740cb02faf505ecacffef169403280e585aa2eced35cf9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: CI-REMOTE-1A complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

@@ -21,7 +21,8 @@ Implemented:
 - `.gitattributes` policy plus workflow checkout-index normalization for the
   byte-checked generated URL index;
 - sibling checkout of `4veco-platform` and `4veco-lessen`;
-- read-only workflow permissions and non-persisted checkout credentials;
+- read-only repository contents permission, artifact-metadata write for
+  diagnostic artifact upload, and non-persisted checkout credentials;
 - remote Windows validation for `npm ci`, `check:platform`,
   `check:scope-language`, report JSON, roadmap version index, URL-index
   freshness, and platform/lessen diff hygiene;

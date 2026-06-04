@@ -19,6 +19,9 @@ Implemented:
   commit `9f6e5cbf645143bcf06de3bd2800e7cb226b6877`;
 - recorded artifact `platform-ci-diagnostics`, id `7412612729`;
 - enabled branch protection admin enforcement for `main`;
+- corrected workflow permissions to keep repository contents read-only while
+  granting `artifact-metadata: write` for diagnostic artifact upload in PR
+  runs;
 - updated `CI-REMOTE-1` result markdown/JSON so the original CI sprint points
   to current-head proof and no longer carries owner-bypass as an open
   follow-up.
@@ -85,6 +88,7 @@ Sprint evidence and metadata:
 
 Updated prior sprint evidence:
 
+- `.github/workflows/platform-ci.yml`
 - `reports/sprints/CI-REMOTE-1-result.md`
 - `reports/sprints/CI-REMOTE-1-diff-summary.md`
 - `references/data/sprints/CI-REMOTE-1.result.json`

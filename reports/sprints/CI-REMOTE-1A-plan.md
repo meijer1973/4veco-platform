@@ -73,6 +73,7 @@ enforcement is a named follow-up blocker, not an acceptable closure flag.
 - `reports/sprints/CI-REMOTE-1-result.md`
 - `reports/sprints/CI-REMOTE-1-diff-summary.md`
 - `references/data/sprints/CI-REMOTE-1.result.json`
+- `.github/workflows/platform-ci.yml`
 - `references/reference-team-roadmap.md`
 - `reports/url-index.md`
 - `reports/github-agent-index-platform.md`
@@ -119,6 +120,9 @@ Required outputs:
 - branch protection with admin enforcement enabled.
 - batch closure waiver for the intentional `CI-REMOTE-1` plus
   `CI-REMOTE-1A` result JSON update.
+- workflow permission correction from `contents: read` only to
+  `contents: read` plus `artifact-metadata: write`, needed for
+  pull-request artifact upload.
 
 ## Operationalized sprint procedure
 
