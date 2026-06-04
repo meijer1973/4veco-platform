@@ -3,8 +3,7 @@
 Generated: 2026-06-04
 
 Status: playable lab evidence prepared after packet text and bundle corrections;
-remote publication metadata pending until the packet bundle is pushed and
-recorded.
+remote evidence snapshot published and recorded.
 
 ## Repaired Lab Evidence
 
@@ -59,15 +58,13 @@ Textbook:
 
 ## Remote Publication Evidence
 
-Remote publication is required before review comments start. The current JSON
-metadata will be updated after the first packet evidence push with:
-
-- reviewed remote branch;
-- reviewed remote commit hash;
-- review start eligibility.
+Remote publication is required before review comments start. The reviewed
+remote evidence snapshot is `main` at
+`0984b83b366b6759819dde5f8bd5d277b66f7a8d`. Human review comments may start
+against that snapshot after the metadata update is pushed.
 
 ## Recommended Next Action
 
-After maps/indexes are refreshed and this packet bundle is pushed, update the
-remote-publication metadata, rerun the packet checker, push the metadata
-update, and then send the packet for direct human review comments.
+After the metadata update is pushed and the packet checker passes, send the
+packet for direct human review comments. Do not write closure artifacts until
+comments, resolution evidence, and explicit human confirmation exist.

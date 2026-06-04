@@ -2,8 +2,9 @@
 
 Generated: 2026-06-04
 
-Status: direct-comment review packet prepared with playable lab repair; human
-review comments have not started; no gate closure or product authority.
+Status: direct-comment review packet ready after playable lab repair and
+remote evidence publication; human review comments have not started; no gate
+closure or product authority.
 
 ## Review Scope
 
@@ -32,6 +33,9 @@ review artifacts, checker, repository maps, URL indexes, and cited evidence
 must be committed and pushed to the normal remote branch before human review
 comments start. The packet metadata records the remote evidence snapshot that a
 reviewer should inspect.
+
+Reviewed remote evidence snapshot: `main` at
+`0984b83b366b6759819dde5f8bd5d277b66f7a8d`.
 
 ## Evidence Base
 

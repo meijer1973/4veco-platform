@@ -3,12 +3,12 @@
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
   "generated": "2026-06-04",
-  "status": "playable_lab_evidence_ready_pending_remote_publication",
+  "status": "playable_lab_evidence_ready_after_remote_publication",
   "remote_publication": {
     "reviewed_remote_branch": "main",
-    "reviewed_remote_commit_hash": "PENDING_REMOTE_PUBLICATION",
-    "reviewed_remote_status": "pending_first_packet_push_then_metadata_update",
-    "review_may_start": false
+    "reviewed_remote_commit_hash": "0984b83b366b6759819dde5f8bd5d277b66f7a8d",
+    "reviewed_remote_status": "published_evidence_snapshot_recorded_in_metadata_update",
+    "review_may_start": true
   },
   "playable_labs": {
     "actual_exam": {

@@ -3,15 +3,15 @@
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
   "generated": "2026-06-04",
-  "status": "direct_comment_review_packet_ready_pending_remote_publication_no_product_authority",
+  "status": "direct_comment_review_packet_ready_after_remote_publication_no_product_authority",
   "human_review_mode": "direct_packet_comments",
   "human_review_comments_started": false,
   "remote_publication_required_before_review": true,
   "remote_publication": {
     "reviewed_remote_branch": "main",
-    "reviewed_remote_commit_hash": "PENDING_REMOTE_PUBLICATION",
-    "reviewed_remote_status": "pending_first_packet_push_then_metadata_update",
-    "review_may_start": false
+    "reviewed_remote_commit_hash": "0984b83b366b6759819dde5f8bd5d277b66f7a8d",
+    "reviewed_remote_status": "published_evidence_snapshot_recorded_in_metadata_update",
+    "review_may_start": true
   },
   "authority_boundary": {
     "generated_lesson_output_authorized": false,

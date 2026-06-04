@@ -526,3 +526,25 @@ Dashboard data written to reports\internal-dashboard\dashboard-data.json
 ```text
 
 ```
+## node build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:32:32.163Z`
+- finished_at: `2026-06-04T12:32:32.338Z`
+- duration_ms: `175`
+- exit_code: `0`
+- stdout_sha256: `935e393e12b97845d533f5bdc7058f250fe521607b3794d5072c9bf04a8042e7`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK GATE-SHARED-TASK-INGEST-REPAIR-1 shared task ingest repair review packet
+
+```
+
+### stderr excerpt
+
+```text
+
+```
