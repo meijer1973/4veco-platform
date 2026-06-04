@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T12:30:44.594Z",
+  "generatedAt": "2026-06-04T12:52:39.850Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3193,6 +3193,13 @@
               "exitGate": ""
             },
             {
+              "sprint": "CI-REMOTE-1",
+              "name": "GitHub Actions Remote Platform CI",
+              "completed": "no",
+              "currentState": "Platform sprint to add remote GitHub Actions validation for platform checks and cross-repo boundary checks. Must check out both `4veco-platform` and `4veco-lessen`, run platform validators on GitHub-hosted runner, upload diagnostic artifacts, and produce a successful remote status check before closure. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+              "exitGate": ""
+            },
+            {
               "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
               "name": "Shared Task Context And Ingestion Repair Human Review",
               "completed": "no",
@@ -3462,6 +3469,14 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CI-REMOTE-1",
+          "name": "GitHub Actions Remote Platform CI",
+          "completed": "no",
+          "currentState": "Platform sprint to add remote GitHub Actions validation for platform checks and cross-repo boundary checks. Must check out both `4veco-platform` and `4veco-lessen`, run platform validators on GitHub-hosted runner, upload diagnostic artifacts, and produce a successful remote status check before closure. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3987,7 +4002,7 @@
         }
       ],
       "completedCount": 38,
-      "openCount": 37
+      "openCount": 38
     },
     {
       "id": "innovation",

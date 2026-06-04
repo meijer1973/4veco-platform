@@ -1,0 +1,97 @@
+name: platform-ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: platform-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-platform:
+    name: validate-platform
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: 4veco-platform
+
+    steps:
+      - name: Checkout platform repository
+        uses: actions/checkout@v6
+        with:
+          path: 4veco-platform
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Checkout lessen repository
+        uses: actions/checkout@v6
+        with:
+          repository: meijer1973/4veco-lessen
+          path: 4veco-lessen
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: npm
+          cache-dependency-path: 4veco-platform/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Python support dependencies
+        run: python -m pip install --upgrade pip python-docx
+
+      - name: Validate platform Jest suite
+        run: npm run check:platform
+
+      - name: Validate active scope language
+        run: npm run check:scope-language
+
+      - name: Validate report JSON
+        run: node build-scripts/reports/validate-report-json.js
+
+      - name: Validate roadmap version index
+        run: node build-scripts/references/check-roadmap-version-index.js
+
+      - name: Check URL index is current
+        run: node build-scripts/sprints/emit-url-index.js --check
+
+      - name: Check platform diff hygiene
+        run: git diff --check
+
+      - name: Check lessen diff hygiene
+        run: git -C ../4veco-lessen diff --check
+
+      - name: Upload CI diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: platform-ci-diagnostics
+          path: |
+            4veco-platform/reports/sprints/*-command-log.jsonl
+            4veco-platform/reports/sprints/*-command-log.md
+            4veco-platform/reports/json/*.json
+            4veco-platform/reports/url-index.md
+          if-no-files-found: ignore
+          retention-days: 14

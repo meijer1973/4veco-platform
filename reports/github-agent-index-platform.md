@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T12:30:22.182Z
+Generated: 2026-06-04T12:52:16.592Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3270
+Files indexed: 3289
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 402
+Count: 404
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -420,6 +420,7 @@ Count: 402
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
 - build-scripts/review-gates/check-gate-reason-revision1-review-packet.js
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
+- build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/emit-gate-reason-revision1-playable-lab.js
@@ -502,6 +503,7 @@ Count: 402
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
 - build-scripts/sprints/run-sprint-command.js
 - build-scripts/sprints/task-context-runtime1-fixture.js
+- build-scripts/sprints/task-ingest-playable-lab.js
 - build-scripts/templates/template-A_vaardigheden.js
 - build-scripts/templates/template-B_voorkennis.js
 - build-scripts/templates/template-paragraph-plan.md
@@ -578,7 +580,7 @@ Count: 42
 
 ## validators
 
-Count: 217
+Count: 218
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -673,6 +675,7 @@ Count: 217
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
 - build-scripts/review-gates/check-gate-reason-revision1-review-packet.js
 - build-scripts/review-gates/check-gate-reason-std1-review-packet.js
+- build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js
 - build-scripts/review-gates/check-gate-task-family1-review-packet.js
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
@@ -800,7 +803,7 @@ Count: 217
 
 ## references
 
-Count: 465
+Count: 466
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -926,6 +929,7 @@ Count: 465
 - references/data/sprints/GATE-L1.7B-Q2.result.json
 - references/data/sprints/GATE-REASON-REVISION-1.plan.json
 - references/data/sprints/GATE-REASON-STD-1.plan.json
+- references/data/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1.plan.json
 - references/data/sprints/GATE-TASK-FAMILY-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.result.json
@@ -1270,7 +1274,7 @@ Count: 465
 
 ## reports
 
-Count: 1975
+Count: 1991
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1967,6 +1971,11 @@ Count: 1975
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.md
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/closure-proposal.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/comment-resolution-log.json
@@ -2335,6 +2344,17 @@ Count: 1975
 - reports/sprints/GATE-REASON-STD-1-lead-review-round1.md
 - reports/sprints/GATE-REASON-STD-1-lead-review-round2.md
 - reports/sprints/GATE-REASON-STD-1-plan.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-baseline.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-command-log.jsonl
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-command-log.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-assignment.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-corrections.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-round1.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-lead-review-round2.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-plan.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-planning-review-resolution.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-planning-review.md
+- reports/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1-verification-review.md
 - reports/sprints/GATE-TASK-FAMILY-1-baseline.md
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-lead-review-assignment.md
