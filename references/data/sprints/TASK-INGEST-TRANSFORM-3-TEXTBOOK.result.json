@@ -1,0 +1,89 @@
+{
+  "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+  "status": "completed",
+  "completed_on": "2026-06-04",
+  "plan": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-plan.md",
+  "baseline": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-baseline.md",
+  "result": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md",
+  "diff_summary": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-INGEST-TRANSFORM-3-TEXTBOOK --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-ingest-transform3-textbook.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-INGEST-TRANSFORM-3-TEXTBOOK --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    }
+  ],
+  "outputs": [
+    "reports/json/task-ingest-transform3-textbook.json",
+    "reports/json/task-ingest-transform3-textbook-proof.json",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png",
+    "build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js",
+    "build-scripts/sprints/check-task-ingest-transform3-textbook.js"
+  ],
+  "next_action": "Proceed to GATE-SHARED-TASK-INGEST-REPAIR-1 human-review packet preparation after roadmap closure and remote publication."
+}

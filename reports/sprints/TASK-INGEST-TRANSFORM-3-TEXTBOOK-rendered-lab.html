@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASK-INGEST-TRANSFORM-3-TEXTBOOK Rendered Task Transformation Lab</title>
+  <style>
+    :root {
+      --bg: #f6f3ea;
+      --panel: #ffffff;
+      --soft: #e9f2ee;
+      --text: #202420;
+      --muted: #5c675f;
+      --line: #b7c5bd;
+      --primary: #0f6b5f;
+      --accent: #8a4d18;
+      --formula: #f3f6f5;
+      --graph-bg: #ffffff;
+    }
+    [data-theme="dark"] {
+      --bg: #161819;
+      --panel: #222726;
+      --soft: #26342e;
+      --text: #f5f4ef;
+      --muted: #bac5bf;
+      --line: #56645e;
+      --primary: #72d8c8;
+      --accent: #f0b35e;
+      --formula: #141819;
+      --graph-bg: #101313;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 42px;
+    }
+    header {
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 2.4vw, 2.35rem);
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 4px 0 10px;
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 10px; }
+    .kicker, .card-kicker, .source-label, .source-ref, .mapped {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .source-label {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .ctx-grid, .task-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+    }
+    .ctx-block, .task-card, .review-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .ctx-text {
+      background: transparent;
+      border-color: transparent;
+      padding: 0;
+    }
+    .table-scroll, .formula-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      min-width: 460px;
+      border-collapse: collapse;
+      background: var(--panel);
+    }
+    caption {
+      text-align: left;
+      font-weight: 700;
+      padding: 10px 12px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    thead th { background: var(--soft); }
+    tbody th { font-weight: 700; }
+    pre {
+      min-width: 520px;
+      margin: 0;
+      padding: 12px;
+      background: var(--formula);
+      color: var(--text);
+    }
+    dl {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    dl div {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 10px;
+    }
+    dt { font-weight: 700; }
+    dd { margin: 0; color: var(--muted); }
+    .graph-svg {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      display: block;
+      margin-top: 8px;
+    }
+    .graph-svg rect {
+      fill: var(--graph-bg);
+      stroke: var(--line);
+    }
+    .graph-svg line,
+    .graph-svg .grid line {
+      stroke: var(--line);
+      stroke-width: 1;
+    }
+    .graph-svg .axis {
+      stroke: var(--text);
+      stroke-width: 2;
+    }
+    .graph-svg .series {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 3;
+    }
+    .graph-svg circle {
+      fill: var(--accent);
+      stroke: var(--panel);
+      stroke-width: 2;
+    }
+    .graph-svg text {
+      fill: var(--muted);
+      font-size: 13px;
+      text-anchor: middle;
+    }
+    .graph-svg .axis-label {
+      fill: var(--text);
+      font-weight: 700;
+    }
+    .flow-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style-position: inside;
+    }
+    .flow-list li {
+      min-height: 64px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      border-radius: 8px;
+      padding: 11px;
+    }
+    .section-title {
+      margin: 24px 0 12px;
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+    .task-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .task-card {
+      display: grid;
+      align-content: start;
+      min-height: 210px;
+    }
+    .prompt {
+      border-left: 3px solid var(--primary);
+      padding-left: 10px;
+      color: var(--text);
+    }
+    .mapped {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .review-panel {
+      margin-top: 16px;
+      background: var(--soft);
+    }
+    @media (max-width: 900px) {
+      .task-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flow-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      main {
+        width: min(100vw - 20px, 390px);
+        padding-top: 18px;
+      }
+      h1 { font-size: 1.42rem; }
+      .task-grid, .flow-list { grid-template-columns: 1fr; }
+      .ctx-block, .task-card, .review-panel { padding: 13px; }
+      table { min-width: 100%; }
+      th, td {
+        padding: 8px 7px;
+        white-space: normal;
+        font-size: 0.86rem;
+        line-height: 1.35;
+      }
+      pre { min-width: 470px; }
+      dl div { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="kicker">Review-only textbook-source task transformation proof</p>
+      <h1>IJskraam tabel en P-Q-grafiek</h1>
+      <p>Broncontext staat eerst; daarna volgen de getransformeerde taakkaarten.</p>
+    </header>
+    <section class="ctx-grid" aria-label="Broncontext"><section class="ctx-block ctx-text" data-block-type="markdown"><h2>Opdracht</h2><p>Teken een P-Q-grafiek bij de tabel. Lees daarna af hoeveel ijsjes worden verkocht bij een prijs van EUR 1.75. Onderzoek tot slot welke prijzen een daling van 50 procent kunnen ondersteunen.</p></section>
+<section class="ctx-block ctx-card" data-block-type="source_excerpt"><p class="source-label">Bron 1</p><h2>Bron 1: IJskraam op het strand</h2><p>De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee.</p><p class="source-ref">Bronbestand: ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md, references/authored/course-target-exercises.json#paragraph_id=1.1.3</p></section>
+<section class="ctx-block ctx-table" data-block-type="table" aria-label="Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes."><p class="source-label">Tabel 1</p><h2>Tabel 1: Prijs en verkochte ijsjes</h2><div class="table-scroll"><table><caption>Tabel 1: Prijs en verkochte ijsjes</caption><thead><tr><th scope="col">Prijs P (EUR)</th><th scope="col">Aantal verkocht Q</th></tr></thead><tbody><tr><th scope="row">1.00</th><td>500</td></tr><tr><th scope="row">1.50</th><td>400</td></tr><tr><th scope="row">2.00</th><td>300</td></tr><tr><th scope="row">2.50</th><td>200</td></tr><tr><th scope="row">3.00</th><td>100</td></tr></tbody></table></div></section>
+<section class="ctx-block ctx-graph" data-block-type="graph"><p class="source-label">Figuur 1</p><h2>Figuur 1: P-Q-grafiek ijsjes</h2><svg class="graph-svg" viewBox="0 0 560 320" role="img" aria-label="Dalende P-Q-grafiek met hoeveelheid op de horizontale as en prijs op de verticale as.">
+    <rect width="560" height="320" rx="8"></rect>
+    <g class="grid"><g><line x1="70" y1="262" x2="70" y2="267"></line><text x="70" y="284">0</text></g><g><line x1="147" y1="262" x2="147" y2="267"></line><text x="147" y="284">100</text></g><g><line x1="224" y1="262" x2="224" y2="267"></line><text x="224" y="284">200</text></g><g><line x1="301" y1="262" x2="301" y2="267"></line><text x="301" y="284">300</text></g><g><line x1="378" y1="262" x2="378" y2="267"></line><text x="378" y="284">400</text></g><g><line x1="455" y1="262" x2="455" y2="267"></line><text x="455" y="284">500</text></g><g><line x1="532" y1="262" x2="532" y2="267"></line><text x="532" y="284">600</text></g><g><line x1="65" y1="262" x2="70" y2="262"></line><text x="58" y="266" text-anchor="end">0</text></g><g><line x1="65" y1="194" x2="70" y2="194"></line><text x="58" y="198" text-anchor="end">1</text></g><g><line x1="65" y1="126" x2="70" y2="126"></line><text x="58" y="130" text-anchor="end">2</text></g><g><line x1="65" y1="58" x2="70" y2="58"></line><text x="58" y="62" text-anchor="end">3</text></g></g>
+    <line class="axis" x1="70" y1="262" x2="532" y2="262"></line>
+    <line class="axis" x1="70" y1="262" x2="70" y2="24"></line>
+    <polyline class="series" points="455.0,194.0 378.0,160.0 301.0,126.0 224.0,92.0 147.0,58.0"></polyline>
+    <g class="points"><circle cx="455.0" cy="194.0" r="4.8"><title>Q 500, P 1</title></circle><circle cx="378.0" cy="160.0" r="4.8"><title>Q 400, P 1.5</title></circle><circle cx="301.0" cy="126.0" r="4.8"><title>Q 300, P 2</title></circle><circle cx="224.0" cy="92.0" r="4.8"><title>Q 200, P 2.5</title></circle><circle cx="147.0" cy="58.0" r="4.8"><title>Q 100, P 3</title></circle></g>
+    <text class="axis-label" x="301" y="306">Hoeveelheid Q (ijsjes)</text>
+    <text class="axis-label y-label" transform="translate(18 143) rotate(-90)">Prijs P (EUR)</text>
+  </svg></section>
+<section class="ctx-block ctx-formula" data-block-type="formula" aria-label="Formule voor procentuele verandering: nieuwe waarde min oude waarde, gedeeld door oude waarde, keer honderd."><p class="source-label">Formule 1</p><h2>Formule 1: Procentuele verandering</h2><div class="formula-scroll"><pre><code>procentuele verandering = (nieuwe waarde - oude waarde) / oude waarde * 100</code></pre></div><dl><div><dt>oude waarde</dt><dd>de hoeveelheid bij de eerste prijs</dd></div><div><dt>nieuwe waarde</dt><dd>de hoeveelheid bij de tweede prijs</dd></div></dl></section>
+<section class="ctx-block ctx-flow" data-block-type="flowchart" aria-label="Flowchart met zes stappen om tabeldata in een P-Q-grafiek te zetten."><p class="source-label">Figuur 2</p><h2>Figuur 2: Procedure van tabel naar grafiek</h2><ol class="flow-list"><li>Lees de tabel</li><li>Herken het P-Q-diagram</li><li>Prijs verticaal, hoeveelheid horizontaal</li><li>Kies een schaal</li><li>Zet de punten</li><li>Verbind de punten</li></ol></section></section>
+    <h2 class="section-title">Getransformeerde taakkaarten</h2>
+    <section class="task-grid" aria-label="Taakkaarten"><article class="task-card" data-task-family="table_value_selection" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 1</p>
+    <h2>Tabelwaarde aflezen</h2>
+    <p>Lees een hoeveelheid rechtstreeks uit de tabel.</p>
+    <p class="prompt">Welke hoeveelheid hoort bij een prijs van EUR 1.50?</p>
+    <p class="mapped">Bewaakt: tabelwaarde aflezen</p>
+  </article>
+<article class="task-card" data-task-family="structured_short_response" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 2</p>
+    <h2>Assen kiezen</h2>
+    <p>Leg vast welke variabele op welke as staat.</p>
+    <p class="prompt">Vul de assen van het P-Q-diagram in.</p>
+    <p class="mapped">Bewaakt: P-Q-assen kiezen</p>
+  </article>
+<article class="task-card" data-task-family="step_ordering" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 3</p>
+    <h2>Grafiekstappen ordenen</h2>
+    <p>Orden de procedure van tabeldata naar grafiek.</p>
+    <p class="prompt">Zet de stappen in de volgorde die bij deze grafiek hoort.</p>
+    <p class="mapped">Bewaakt: grafiekprocedure ordenen, P-Q-assen kiezen</p>
+  </article>
+<article class="task-card" data-task-family="point_placement" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 4</p>
+    <h2>Punt plaatsen</h2>
+    <p>Zet een tabelrij om naar een grafiekpunt.</p>
+    <p class="prompt">Plaats het punt dat hoort bij prijs EUR 2.00 en hoeveelheid 300.</p>
+    <p class="mapped">Bewaakt: tabelpunt plaatsen, P-Q-assen kiezen</p>
+  </article>
+<article class="task-card" data-task-family="source_value_selection" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 5</p>
+    <h2>Interpolatiewaarden kiezen</h2>
+    <p>Kies de bronwaarden rond prijs EUR 1.75.</p>
+    <p class="prompt">Welke tabelwaarden gebruik je om bij P = EUR 1.75 af te lezen?</p>
+    <p class="mapped">Bewaakt: interpolatiewaarden kiezen</p>
+  </article>
+<article class="task-card" data-task-family="graph_reading" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 6</p>
+    <h2>Grafiek aflezen</h2>
+    <p>Lees een tussenwaarde uit de grafiek.</p>
+    <p class="prompt">Hoeveel ijsjes worden ongeveer verkocht bij P = EUR 1.75?</p>
+    <p class="mapped">Bewaakt: grafiekwaarde aflezen</p>
+  </article>
+<article class="task-card" data-task-family="calculation_work_capture" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 7</p>
+    <h2>Claim narekenen</h2>
+    <p>Laat zien of een bronclaim van 50 procent daling past bij de tabel.</p>
+    <p class="prompt">Kies een prijsinterval dat een daling van 50 procent ondersteunt en toon je berekening.</p>
+    <p class="mapped">Bewaakt: procentuele daling berekenen</p>
+  </article>
+<article class="task-card" data-task-family="source_chain_builder" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 8</p>
+    <h2>Bronketen bouwen</h2>
+    <p>Koppel bron, grafiekbewerking, aflezing en claimcontrole.</p>
+    <p class="prompt">Bouw de keten van tabel naar grafiek naar uitspraak over de daling.</p>
+    <p class="mapped">Bewaakt: P-Q-assen kiezen, tabelpunt plaatsen, grafiekwaarde aflezen, procentuele daling berekenen, claim met bronwaarden formuleren</p>
+  </article>
+<article class="task-card" data-task-family="structured_short_response" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 9</p>
+    <h2>Antwoordvorm controleren</h2>
+    <p>Formuleer de claimcontrole met interval, bronwaarden en berekening.</p>
+    <p class="prompt">Vul de onderdelen in die een volledige antwoordzin nodig heeft.</p>
+    <p class="mapped">Bewaakt: procentuele daling berekenen, claim met bronwaarden formuleren</p>
+  </article></section>
+    <aside class="review-panel" id="task-map">
+      <strong>Reviewer check:</strong> controleer dat tabelwaarden, assen, grafiekpunten, interpolatie, berekening en claimzin samen de bronbewerking dragen.
+    </aside>
+  </main>
+  <script>
+    window.TaskIngestTransform3Lab = {
+      inspect() {
+        const text = document.body.innerText;
+        const contextSection = document.querySelector('.ctx-grid');
+        const taskSection = document.querySelector('.task-grid');
+        const contextText = contextSection ? contextSection.innerText : '';
+        const taskText = taskSection ? taskSection.innerText : '';
+        const overflowing = [...document.querySelectorAll('body *')].filter((item) => {
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          if (item.ownerSVGElement) return false;
+          return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll') && !item.closest('.formula-scroll');
+        });
+        return {
+          theme: document.documentElement.getAttribute('data-theme'),
+          viewport: { width: window.innerWidth, height: window.innerHeight },
+          contextBlockCount: document.querySelectorAll('.ctx-block').length,
+          taskCardCount: document.querySelectorAll('.task-card').length,
+          families: [...document.querySelectorAll('.task-card')].map((item) => item.getAttribute('data-task-family')),
+          contextBeforeTasks: contextSection.getBoundingClientRect().top < taskSection.getBoundingClientRect().top,
+          tableCount: document.querySelectorAll('table').length,
+          graphCount: document.querySelectorAll('.graph-svg').length,
+          flowchartCount: document.querySelectorAll('.flow-list').length,
+          sourceRefsVisible: text.includes('references/authored/course-target-exercises.json#paragraph_id=1.1.3'),
+          bodyTextSnapshot: text,
+          contextTextSnapshot: contextText,
+          taskTextSnapshot: taskText,
+          rawImageCount: document.querySelectorAll('img').length,
+          overflowingCount: overflowing.length,
+          overflowingTags: overflowing.slice(0, 8).map((item) => item.tagName.toLowerCase())
+        };
+      }
+    };
+  </script>
+</body>
+</html>

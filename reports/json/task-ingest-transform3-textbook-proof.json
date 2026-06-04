@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+  "generated": "2026-06-04T10:42:37.115Z",
+  "status": "task_transformation_rendering_proof_complete",
+  "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
+  "screenshots": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2960
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4904
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4904
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    }
+  ],
+  "task_transformation": {
+    "paragraph_id": "1.1.3",
+    "source_authority_kind": "owned_textbook_source",
+    "source_material_id": "textbook-1-1-3-icecream-pq-table-graph",
+    "task_count": 9,
+    "context_block_count": 6,
+    "required_families": [
+      "table_value_selection",
+      "structured_short_response",
+      "step_ordering",
+      "point_placement",
+      "source_value_selection",
+      "graph_reading",
+      "calculation_work_capture",
+      "source_chain_builder"
+    ],
+    "rendered_families": [
+      "table_value_selection",
+      "structured_short_response",
+      "step_ordering",
+      "point_placement",
+      "source_value_selection",
+      "graph_reading",
+      "calculation_work_capture",
+      "source_chain_builder",
+      "structured_short_response"
+    ],
+    "context_before_tasks": true,
+    "answer_signal_visible_in_context": false,
+    "answer_signal_visible_in_task_cards": false,
+    "visible_internal_ids": false,
+    "raw_image_count": 0,
+    "visual_counts": {
+      "tables": 1,
+      "graphs": 1,
+      "flowcharts": 1
+    },
+    "responsive_mobile_viewports": [
+      {
+        "case": "mobile-light",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "light"
+      },
+      {
+        "case": "mobile-dark",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390,
+        "theme": "dark"
+      }
+    ]
+  },
+  "ambiguity_evidence": {
+    "ambiguity_id": "icecream-50-percent-drop-intervals",
+    "paragraph_taught_interval_recorded": true,
+    "also_source_valid_interval_recorded": true,
+    "source_values_plus_calculation_required": true
+  },
+  "boundary_evidence": {
+    "protected_reference_status": "",
+    "source_data_status": "",
+    "book1_generated_output_status": ""
+  },
+  "product_boundaries": {
+    "task_transformation": true,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "official_exam_claim": false,
+    "external_primary_claim": false,
+    "product_route_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

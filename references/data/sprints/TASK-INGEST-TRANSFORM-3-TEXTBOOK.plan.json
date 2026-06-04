@@ -1,0 +1,136 @@
+{
+  "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+  "plan": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-plan.md",
+  "status": "planned",
+  "created": "2026-06-04",
+  "date": "2026-06-04",
+  "owner": "Codex",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "protected_reference_data_changes_allowed": false,
+  "roadmap_row": {
+    "id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+    "title": "Textbook Source Exercise Transformation",
+    "requires_human_review": false
+  },
+  "quality_floor": [
+    "Context/source blocks appear before tasks.",
+    "Authority is labeled owned_textbook_source, not external_primary or official exam.",
+    "Source maps, visual variants, task-family maps, operation traces, answer-form traces, proof JSON, screenshots, and checker evidence exist.",
+    "The rendered lab is review-only and reproducible.",
+    "No protected reference or Book 1 generated output is edited."
+  ],
+  "specification_requirements": [
+    "product end-state context-first task route",
+    "companion core source-dependent task context blocks",
+    "roadmap governed source maps",
+    "roadmap visual variants",
+    "roadmap operation traces",
+    "roadmap task-family maps",
+    "human-gate ready proof artifacts"
+  ],
+  "evidence_needed": [
+    "reports/json/task-ingest-transform3-textbook.json",
+    "reports/json/task-ingest-transform3-textbook-proof.json",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-visual-variant-map.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-operation-chain-trace.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-answer-form-trace.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-task-family-map.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+    "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png",
+    "build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js",
+    "build-scripts/sprints/check-task-ingest-transform3-textbook.js"
+  ],
+  "review_gate": {
+    "type": "lead_review",
+    "required": true,
+    "rounds": 2,
+    "human_review_required": false,
+    "follow_up_human_gate": "GATE-SHARED-TASK-INGEST-REPAIR-1"
+  },
+  "higher_quality_improvements": [
+    "Record the 50 percent interval ambiguity explicitly.",
+    "Reject official/external authority claims in checker.",
+    "Run correct and adversarial evaluation fixtures across table, graph, calculation, and source-chain tasks."
+  ],
+  "omitted_requirements": [
+    "Human-review comments and closure proposal are deferred to GATE-SHARED-TASK-INGEST-REPAIR-1.",
+    "No micro-teaching unit is minted.",
+    "No production route is deployed.",
+    "No Scale Gate or broad adoption claim is made."
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-plan.md",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-INGEST-TRANSFORM-3-TEXTBOOK --active",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-ingest-transform3-textbook.js",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "required": true
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "required": true
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-INGEST-TRANSFORM-3-TEXTBOOK --complete",
+      "required": true
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "required": true
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "required": true
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "required": true
+    }
+  ],
+  "scope_guard": {
+    "forbidden_writes": [
+      "references/machine/**",
+      "references/external/**",
+      "source-data/**",
+      "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/**"
+    ],
+    "allowed_writes": [
+      "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK*",
+      "reports/json/task-ingest-transform3-textbook*.json",
+      "build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js",
+      "build-scripts/sprints/check-task-ingest-transform3-textbook.js",
+      "roadmap/status/index/map files required for closure"
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T08:42:39.838Z",
+  "generatedAt": "2026-06-04T10:48:48.674Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3188,8 +3188,8 @@
             {
               "sprint": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
               "name": "Textbook Source Exercise Transformation",
-              "completed": "no",
-              "currentState": "Prepare the textbook-style source-context transformation only after the actual-exam path has proved the source-authority and context contracts. Must use governed source maps, visual variants, operation traces, and task-family maps without weakening the real-exam evidence standard.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / TEXTBOOK-SOURCE TASK TRANSFORMATION ONLY.** Platform added review-ready owned textbook-source transformation for `1.1.3 Grafieken en tabellen`: governed source map, six context blocks, nine shared task-family cards, visual variant map, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker. Preserves table reading, P-Q axis convention, graph procedure, point placement, interpolation source values, graph reading, visible percent-change calculation work, source-chain reasoning, and claim-answer form. Records the paragraph-taught and also source-valid 50 percent intervals without claiming official exam/external-primary authority. No human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
               "exitGate": ""
             },
             {
@@ -3462,14 +3462,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
-          "name": "Textbook Source Exercise Transformation",
-          "completed": "no",
-          "currentState": "Prepare the textbook-style source-context transformation only after the actual-exam path has proved the source-authority and context contracts. Must use governed source maps, visual variants, operation traces, and task-family maps without weakening the real-exam evidence standard.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "**CLOSED PASS / TASK TRANSFORMATION ONLY.** Platform added review-ready task transformation for `vw-1022-a-25-1-o:opgave-1:question-3`: exact reconstructed context blocks, six shared task-family cards, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker tied to the official source reconstruction. Preserves source selection, formula conversion, step ordering, visible calculation work, source-chain construction, and threshold-direction formulation while rejecting source-only, choice-only, and final-answer-only reductions. No textbook transformation, human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+          "name": "Textbook Source Exercise Transformation",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / TEXTBOOK-SOURCE TASK TRANSFORMATION ONLY.** Platform added review-ready owned textbook-source transformation for `1.1.3 Grafieken en tabellen`: governed source map, six context blocks, nine shared task-family cards, visual variant map, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker. Preserves table reading, P-Q axis convention, graph procedure, point placement, interpolation source values, graph reading, visible percent-change calculation work, source-chain reasoning, and claim-answer form. Records the paragraph-taught and also source-valid 50 percent intervals without claiming official exam/external-primary authority. No human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 37,
-      "openCount": 38
+      "completedCount": 38,
+      "openCount": 37
     },
     {
       "id": "innovation",

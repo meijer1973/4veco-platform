@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+  "cases": [
+    {
+      "case": "desktop-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2960
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-light",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4904
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "mobile-dark",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4904
+      },
+      "proof": {
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "contextBlockCount": 6,
+        "taskCardCount": 9,
+        "families": [
+          "table_value_selection",
+          "structured_short_response",
+          "step_ordering",
+          "point_placement",
+          "source_value_selection",
+          "graph_reading",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "contextBeforeTasks": true,
+        "tableCount": 1,
+        "graphCount": 1,
+        "flowchartCount": 1,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "answerSignalVisibleInContext": false,
+        "answerSignalVisibleInTaskCards": false
+      }
+    }
+  ]
+}

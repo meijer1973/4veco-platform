@@ -1,0 +1,739 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
+  "generated": "2026-06-04",
+  "status": "textbook_source_task_transformation_ready_for_review",
+  "sourceAuthority": {
+    "kind": "owned_textbook_source",
+    "paragraph_id": "1.1.3",
+    "source_material_id": "textbook-1-1-3-icecream-pq-table-graph",
+    "paragraph_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md",
+    "target_registry_ref": "references/authored/course-target-exercises.json#paragraph_id=1.1.3",
+    "asset_refs": [
+      "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_1.svg",
+      "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_3.svg"
+    ],
+    "authority_note": "Owned textbook and target-registry context only; not official exam authority and not external-primary source authority.",
+    "record_status_note": "The target registry record is migrated_from_v4_needs_v5_review, so this artifact is controlled review evidence only."
+  },
+  "sourceMaterialRefs": [
+    "textbook-1-1-3-icecream-pq-table-graph"
+  ],
+  "ownedAnswerModelRefs": [
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md#antwoordmodel-paragraafvoorbeeld",
+    "references/authored/course-target-exercises.json#paragraph_id=1.1.3"
+  ],
+  "textbookSourceAmbiguity": {
+    "id": "icecream-50-percent-drop-intervals",
+    "paragraph_taught_interval": {
+      "from_price": "EUR 1.50",
+      "from_quantity": 400,
+      "to_price": "EUR 2.50",
+      "to_quantity": 200,
+      "percent_change": -50
+    },
+    "also_source_valid_interval": {
+      "from_price": "EUR 2.50",
+      "from_quantity": 200,
+      "to_price": "EUR 3.00",
+      "to_quantity": 100,
+      "percent_change": -50
+    },
+    "handling": "The review-only task set requires source values plus calculation and records both valid intervals instead of silently presenting one answer as exclusive."
+  },
+  "taskSet": {
+    "schema_version": 1,
+    "title": "IJskraam tabel en P-Q-grafiek",
+    "surfaceKind": "review_lab",
+    "contextBlocks": [
+      {
+        "id": "ctx-icecream-prompt",
+        "type": "markdown",
+        "title": "Opdracht",
+        "bodyMarkdown": "Teken een P-Q-grafiek bij de tabel. Lees daarna af hoeveel ijsjes worden verkocht bij een prijs van EUR 1.75. Onderzoek tot slot welke prijzen een daling van 50 procent kunnen ondersteunen.",
+        "accessibilitySummary": "Korte opdrachttekst over tabel, grafiek, interpolatie en een bronclaim zonder uitwerking."
+      },
+      {
+        "id": "ctx-icecream-source",
+        "type": "source_excerpt",
+        "sourceLabel": "Bron 1",
+        "caption": "Bron 1: IJskraam op het strand",
+        "bodyMarkdown": "De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee.",
+        "sourceRefs": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md",
+          "references/authored/course-target-exercises.json#paragraph_id=1.1.3"
+        ],
+        "accessibilitySummary": "Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek."
+      },
+      {
+        "id": "ctx-icecream-table",
+        "type": "table",
+        "sourceLabel": "Tabel 1",
+        "caption": "Tabel 1: Prijs en verkochte ijsjes",
+        "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+        "columns": [
+          "Prijs P (EUR)",
+          "Aantal verkocht Q"
+        ],
+        "rows": [
+          ["1.00", "500"],
+          ["1.50", "400"],
+          ["2.00", "300"],
+          ["2.50", "200"],
+          ["3.00", "100"]
+        ],
+        "altText": "Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes."
+      },
+      {
+        "id": "ctx-icecream-graph",
+        "type": "graph",
+        "sourceLabel": "Figuur 1",
+        "caption": "Figuur 1: P-Q-grafiek ijsjes",
+        "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+        "axes": {
+          "x": {
+            "label": "Hoeveelheid Q (ijsjes)",
+            "min": 0,
+            "max": 600
+          },
+          "y": {
+            "label": "Prijs P (EUR)",
+            "min": 0,
+            "max": 3.5
+          }
+        },
+        "series": [
+          {
+            "label": "Vraaglijn uit tabel",
+            "points": [
+              { "x": 500, "y": 1.00 },
+              { "x": 400, "y": 1.50 },
+              { "x": 300, "y": 2.00 },
+              { "x": 200, "y": 2.50 },
+              { "x": 100, "y": 3.00 }
+            ]
+          }
+        ],
+        "altText": "Dalende P-Q-grafiek met hoeveelheid op de horizontale as en prijs op de verticale as."
+      },
+      {
+        "id": "ctx-icecream-formula",
+        "type": "formula",
+        "sourceLabel": "Formule 1",
+        "caption": "Formule 1: Procentuele verandering",
+        "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+        "expression": "procentuele verandering = (nieuwe waarde - oude waarde) / oude waarde * 100",
+        "variables": [
+          { "symbol": "oude waarde", "meaning": "de hoeveelheid bij de eerste prijs" },
+          { "symbol": "nieuwe waarde", "meaning": "de hoeveelheid bij de tweede prijs" }
+        ],
+        "altText": "Formule voor procentuele verandering: nieuwe waarde min oude waarde, gedeeld door oude waarde, keer honderd."
+      },
+      {
+        "id": "ctx-icecream-procedure",
+        "type": "flowchart",
+        "sourceLabel": "Figuur 2",
+        "caption": "Figuur 2: Procedure van tabel naar grafiek",
+        "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+        "nodes": [
+          { "id": "read-table", "label": "Lees de tabel" },
+          { "id": "choose-pq", "label": "Herken het P-Q-diagram" },
+          { "id": "price-vertical", "label": "Prijs verticaal, hoeveelheid horizontaal" },
+          { "id": "choose-scale", "label": "Kies een schaal" },
+          { "id": "plot-points", "label": "Zet de punten" },
+          { "id": "connect-points", "label": "Verbind de punten" }
+        ],
+        "edges": [
+          { "from": "read-table", "to": "choose-pq" },
+          { "from": "choose-pq", "to": "price-vertical" },
+          { "from": "price-vertical", "to": "choose-scale" },
+          { "from": "choose-scale", "to": "plot-points" },
+          { "from": "plot-points", "to": "connect-points" }
+        ],
+        "altText": "Flowchart met zes stappen om tabeldata in een P-Q-grafiek te zetten."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "tb113-table-value",
+        "family": "table_value_selection",
+        "skillLabel": "Tabelwaarde aflezen",
+        "purpose": "Lees een hoeveelheid rechtstreeks uit de tabel.",
+        "prompt": "Welke hoeveelheid hoort bij een prijs van EUR 1.50?",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "options": [
+            { "id": "q-400", "label": "400 ijsjes" },
+            { "id": "q-300", "label": "300 ijsjes" },
+            { "id": "q-200", "label": "200 ijsjes" }
+          ]
+        },
+        "expected": {
+          "kind": "choice",
+          "value": "q-400"
+        },
+        "feedback": {
+          "matchTitle": "Tabelwaarde klopt",
+          "matchText": "Bij prijs EUR 1.50 hoort hoeveelheid 400.",
+          "retryTitle": "Lees dezelfde rij opnieuw",
+          "retryText": "Zoek de rij met prijs EUR 1.50 en lees de hoeveelheid in de tweede kolom."
+        },
+        "practiceRoute": {
+          "label": "Verder met de assen",
+          "href": "#tb113-axis-convention"
+        }
+      },
+      {
+        "id": "tb113-axis-convention",
+        "family": "structured_short_response",
+        "skillLabel": "Assen kiezen",
+        "purpose": "Leg vast welke variabele op welke as staat.",
+        "prompt": "Vul de assen van het P-Q-diagram in.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "fields": [
+            { "id": "x_axis", "label": "Horizontale as", "placeholder": "Bijvoorbeeld hoeveelheid" },
+            { "id": "y_axis", "label": "Verticale as", "placeholder": "Bijvoorbeeld prijs" }
+          ]
+        },
+        "expected": {
+          "kind": "structured_text_criteria",
+          "criteria": [
+            "Noem hoeveelheid op de horizontale as.",
+            "Noem prijs op de verticale as."
+          ],
+          "fields": [
+            { "id": "x_axis", "accepted": ["hoeveelheid", "hoeveelheid q", "aantal ijsjes"] },
+            { "id": "y_axis", "accepted": ["prijs", "prijs p", "prijs in eur"] }
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Assen staan goed",
+          "matchText": "In een P-Q-diagram staat hoeveelheid horizontaal en prijs verticaal.",
+          "retryTitle": "Controleer de P-Q-afspraak",
+          "retryText": "Bij economie staat P op de verticale as en Q op de horizontale as."
+        },
+        "practiceRoute": {
+          "label": "Verder met de stappen",
+          "href": "#tb113-graph-step-order"
+        }
+      },
+      {
+        "id": "tb113-graph-step-order",
+        "family": "step_ordering",
+        "skillLabel": "Grafiekstappen ordenen",
+        "purpose": "Orden de procedure van tabeldata naar grafiek.",
+        "prompt": "Zet de stappen in de volgorde die bij deze grafiek hoort.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "stepBankLabel": "Stappenbank",
+          "sequenceLabel": "Gekozen volgorde",
+          "placeholder": "Orden de stappen.",
+          "separator": " -> ",
+          "steps": [
+            { "id": "read-table", "label": "Lees prijs en hoeveelheid uit de tabel", "kind": "answer" },
+            { "id": "choose-pq", "label": "Herken dat het om een P-Q-diagram gaat", "kind": "answer" },
+            { "id": "axis-convention", "label": "Zet prijs verticaal en hoeveelheid horizontaal", "kind": "answer" },
+            { "id": "choose-scale", "label": "Kies een schaal die alle waarden past", "kind": "answer" },
+            { "id": "plot-points", "label": "Zet de tabelpunten in de grafiek", "kind": "answer" },
+            { "id": "connect-points", "label": "Verbind de punten tot een lijn", "kind": "answer" },
+            { "id": "percent-first", "label": "Bereken eerst de procentuele daling", "kind": "distractor", "distractorFor": "read-table" },
+            { "id": "price-horizontal", "label": "Zet prijs op de horizontale as", "kind": "distractor", "distractorFor": "axis-convention" }
+          ]
+        },
+        "expected": {
+          "kind": "step_ordering",
+          "order": ["read-table", "choose-pq", "axis-convention", "choose-scale", "plot-points", "connect-points"],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Volgorde klopt",
+          "matchText": "Je gaat van bronwaarden naar assen, schaal, punten en lijn.",
+          "retryTitle": "Begin bij de bron",
+          "retryText": "Lees eerst de tabel en kies daarna de P-Q-assen voordat je punten tekent."
+        },
+        "practiceRoute": {
+          "label": "Verder met punt plaatsen",
+          "href": "#tb113-point-placement"
+        }
+      },
+      {
+        "id": "tb113-point-placement",
+        "family": "point_placement",
+        "skillLabel": "Punt plaatsen",
+        "purpose": "Zet een tabelrij om naar een grafiekpunt.",
+        "prompt": "Plaats het punt dat hoort bij prijs EUR 2.00 en hoeveelheid 300.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "xLabel": "Hoeveelheid Q",
+          "yLabel": "Prijs P"
+        },
+        "expected": {
+          "kind": "point",
+          "x": 300,
+          "y": 2.00,
+          "toleranceX": 5,
+          "toleranceY": 0.05
+        },
+        "feedback": {
+          "matchTitle": "Punt staat goed",
+          "matchText": "Q = 300 staat horizontaal en P = 2.00 staat verticaal.",
+          "retryTitle": "Controleer de assen",
+          "retryText": "Zet hoeveelheid op de horizontale as en prijs op de verticale as."
+        },
+        "practiceRoute": {
+          "label": "Verder met interpoleren",
+          "href": "#tb113-interpolation-source-values"
+        }
+      },
+      {
+        "id": "tb113-interpolation-source-values",
+        "family": "source_value_selection",
+        "skillLabel": "Interpolatiewaarden kiezen",
+        "purpose": "Kies de bronwaarden rond prijs EUR 1.75.",
+        "prompt": "Welke tabelwaarden gebruik je om bij P = EUR 1.75 af te lezen?",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "valueBankLabel": "Bronwaarden",
+          "roleLabel": "Rol bij interpoleren",
+          "values": [
+            { "id": "p150", "label": "P = 1.50", "kind": "answer", "sourceLabel": "ondergrens prijs", "unit": "EUR" },
+            { "id": "q400", "label": "Q = 400", "kind": "answer", "sourceLabel": "hoeveelheid bij P = 1.50", "unit": "ijsjes" },
+            { "id": "p200", "label": "P = 2.00", "kind": "answer", "sourceLabel": "bovengrens prijs", "unit": "EUR" },
+            { "id": "q300", "label": "Q = 300", "kind": "answer", "sourceLabel": "hoeveelheid bij P = 2.00", "unit": "ijsjes" },
+            { "id": "p250", "label": "P = 2.50", "kind": "distractor", "sourceLabel": "andere rij", "unit": "EUR", "distractorFor": "p200" },
+            { "id": "q200", "label": "Q = 200", "kind": "distractor", "sourceLabel": "andere rij", "unit": "ijsjes", "distractorFor": "q300" }
+          ],
+          "roles": [
+            { "id": "lower_price", "label": "lagere prijs rond 1.75" },
+            { "id": "lower_quantity", "label": "hoeveelheid bij lagere prijs" },
+            { "id": "higher_price", "label": "hogere prijs rond 1.75" },
+            { "id": "higher_quantity", "label": "hoeveelheid bij hogere prijs" }
+          ]
+        },
+        "expected": {
+          "kind": "source_value_selection",
+          "selections": [
+            { "valueId": "p150", "role": "lower_price" },
+            { "valueId": "q400", "role": "lower_quantity" },
+            { "valueId": "p200", "role": "higher_price" },
+            { "valueId": "q300", "role": "higher_quantity" }
+          ],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronwaarden passen",
+          "matchText": "P = 1.75 ligt tussen EUR 1.50 en EUR 2.00.",
+          "retryTitle": "Kies de twee omliggende rijen",
+          "retryText": "Gebruik de tabelrijen direct onder en boven prijs EUR 1.75."
+        },
+        "practiceRoute": {
+          "label": "Verder met aflezen",
+          "href": "#tb113-graph-reading"
+        }
+      },
+      {
+        "id": "tb113-graph-reading",
+        "family": "graph_reading",
+        "skillLabel": "Grafiek aflezen",
+        "purpose": "Lees een tussenwaarde uit de grafiek.",
+        "prompt": "Hoeveel ijsjes worden ongeveer verkocht bij P = EUR 1.75?",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "inputLabel": "Aantal ijsjes"
+        },
+        "expected": {
+          "kind": "number",
+          "value": 350,
+          "tolerance": 5,
+          "unit": "ijsjes"
+        },
+        "feedback": {
+          "matchTitle": "Aflezing klopt",
+          "matchText": "EUR 1.75 ligt halverwege tussen EUR 1.50 en EUR 2.00, dus ook halverwege tussen 400 en 300.",
+          "retryTitle": "Gebruik de twee omliggende punten",
+          "retryText": "Lees tussen de punten (400, 1.50) en (300, 2.00)."
+        },
+        "practiceRoute": {
+          "label": "Verder met de claim",
+          "href": "#tb113-claim-calculation"
+        }
+      },
+      {
+        "id": "tb113-claim-calculation",
+        "family": "calculation_work_capture",
+        "skillLabel": "Claim narekenen",
+        "purpose": "Laat zien of een bronclaim van 50 procent daling past bij de tabel.",
+        "prompt": "Kies een prijsinterval dat een daling van 50 procent ondersteunt en toon je berekening.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "workLabel": "Berekening",
+          "finalAnswerLabel": "Prijsinterval",
+          "finalAnswerPlaceholder": "Bijvoorbeeld EUR 1.00 tot EUR 2.00",
+          "unitNotationLabel": "Soort uitkomst",
+          "unitNotationPlaceholder": "Bijvoorbeeld procentuele daling"
+        },
+        "expected": {
+          "kind": "calculation",
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "tussen eur 1.50 en eur 2.50",
+              "eur 1.50 tot eur 2.50",
+              "1.50 tot 2.50",
+              "tussen eur 2.50 en eur 3.00",
+              "eur 2.50 tot eur 3.00",
+              "2.50 tot 3.00"
+            ]
+          },
+          "unitNotation": {
+            "kind": "text",
+            "accepted": [
+              "procentuele daling",
+              "50 procent daling",
+              "procent"
+            ],
+            "required": true
+          },
+          "workRequired": true,
+          "requiredWorkText": [
+            {
+              "label": "oude en nieuwe hoeveelheid",
+              "any": ["400 naar 200", "400 en 200", "200 naar 100", "200 en 100"]
+            },
+            {
+              "label": "procentuele berekening",
+              "any": ["(200 - 400) / 400", "200 - 400", "(100 - 200) / 200", "100 - 200", "-50", "50%"]
+            },
+            {
+              "label": "richting",
+              "any": ["daling", "afname", "daalt"]
+            }
+          ],
+          "criteria": [
+            "Gebruik twee hoeveelheden uit de tabel.",
+            "Reken procentuele verandering ten opzichte van de oude hoeveelheid uit.",
+            "Noem het prijsinterval en de daling."
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Claim is onderbouwd",
+          "matchText": "Je gebruikt bronwaarden en laat de procentuele daling zien.",
+          "retryTitle": "Maak de berekening zichtbaar",
+          "retryText": "Noem de twee hoeveelheden en reken de verandering ten opzichte van de oude hoeveelheid uit."
+        },
+        "practiceRoute": {
+          "label": "Verder met de bronketen",
+          "href": "#tb113-source-chain"
+        }
+      },
+      {
+        "id": "tb113-source-chain",
+        "family": "source_chain_builder",
+        "skillLabel": "Bronketen bouwen",
+        "purpose": "Koppel bron, grafiekbewerking, aflezing en claimcontrole.",
+        "prompt": "Bouw de keten van tabel naar grafiek naar uitspraak over de daling.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "nodeBankLabel": "Ketenonderdelen",
+          "sequenceLabel": "Opgebouwde keten",
+          "placeholder": "Bouw de keten.",
+          "separator": " -> ",
+          "nodes": [
+            { "id": "source-table", "label": "Lees prijs-hoeveelheid uit Tabel 1", "kind": "answer", "nodeRole": "source" },
+            { "id": "axis-convention", "label": "Gebruik hoeveelheid horizontaal en prijs verticaal", "kind": "answer", "nodeRole": "operation" },
+            { "id": "plot-line", "label": "Zet punten en verbind de dalende lijn", "kind": "answer", "nodeRole": "operation" },
+            { "id": "interpolate", "label": "Lees P = 1.75 tussen twee punten af", "kind": "answer", "nodeRole": "operation" },
+            { "id": "choose-interval", "label": "Kies een broninterval met twee hoeveelheden", "kind": "answer", "nodeRole": "value" },
+            { "id": "percent-change", "label": "Bereken de procentuele daling", "kind": "answer", "nodeRole": "answer" },
+            { "id": "state-claim", "label": "Formuleer welk prijsinterval de uitspraak kan dragen", "kind": "answer", "nodeRole": "conclusion" },
+            { "id": "price-horizontal", "label": "Zet prijs op de horizontale as", "kind": "distractor", "nodeRole": "operation", "distractorFor": "axis-convention" },
+            { "id": "single-value-only", "label": "Gebruik alleen de laagste hoeveelheid", "kind": "distractor", "nodeRole": "value", "distractorFor": "choose-interval" }
+          ]
+        },
+        "expected": {
+          "kind": "source_chain_builder",
+          "chain": ["source-table", "axis-convention", "plot-line", "interpolate", "choose-interval", "percent-change", "state-claim"],
+          "partialFeedback": "practice_only"
+        },
+        "feedback": {
+          "matchTitle": "Bronketen klopt",
+          "matchText": "Je route verbindt tabel, assen, grafiek, interpolatie en claimcontrole.",
+          "retryTitle": "Controleer de volgorde",
+          "retryText": "Begin bij de bron en eindig met de uitspraak over het prijsinterval."
+        },
+        "practiceRoute": {
+          "label": "Verder met antwoordvorm",
+          "href": "#tb113-answer-form"
+        }
+      },
+      {
+        "id": "tb113-answer-form",
+        "family": "structured_short_response",
+        "skillLabel": "Antwoordvorm controleren",
+        "purpose": "Formuleer de claimcontrole met interval, bronwaarden en berekening.",
+        "prompt": "Vul de onderdelen in die een volledige antwoordzin nodig heeft.",
+        "contextRefs": ["ctx-icecream-prompt", "ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-formula", "ctx-icecream-procedure"],
+        "interaction": {
+          "fields": [
+            { "id": "interval", "label": "Prijsinterval", "placeholder": "Bijvoorbeeld EUR 1.00 tot EUR 2.00" },
+            { "id": "source_values", "label": "Bronwaarden", "placeholder": "Bijvoorbeeld 500 naar 300" },
+            { "id": "calculation", "label": "Berekening", "placeholder": "Bijvoorbeeld -40 procent" },
+            { "id": "sentence", "label": "Antwoordzin", "placeholder": "Waarom kan de uitspraak kloppen?" }
+          ]
+        },
+        "expected": {
+          "kind": "structured_text_criteria",
+          "criteria": [
+            "Noem een bronvalid prijsinterval.",
+            "Noem de twee hoeveelheden.",
+            "Noem de procentuele daling.",
+            "Schrijf dat de uitspraak met die bronwaarden kan kloppen."
+          ],
+          "fields": [
+            { "id": "interval", "accepted": ["eur 1.50 tot eur 2.50", "1.50 tot 2.50", "eur 2.50 tot eur 3.00", "2.50 tot 3.00"] },
+            { "id": "source_values", "accepted": ["400 naar 200", "200 naar 100"] },
+            { "id": "calculation", "accepted": ["-50 procent", "-50%", "50 procent daling"] },
+            { "id": "sentence", "accepted": ["de uitspraak kan bij die bronwaarden kloppen", "de daling is 50 procent", "met dit interval klopt de uitspraak"] }
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Antwoordvorm is volledig",
+          "matchText": "Je noemt interval, bronwaarden, berekening en conclusie.",
+          "retryTitle": "Maak de antwoordzin compleet",
+          "retryText": "Een losse tabelwaarde is niet genoeg; noem ook de berekening en conclusie."
+        },
+        "practiceRoute": {
+          "label": "Bekijk de hele route",
+          "href": "#task-map"
+        }
+      }
+    ]
+  },
+  "operationChainTrace": [
+    {
+      "operation_id": "read_table_value",
+      "source_refs": ["ctx-icecream-table"],
+      "inputs": ["P = 1.50"],
+      "outputs": ["Q = 400"],
+      "task_ids": ["tb113-table-value"],
+      "cognitive_role": "table-reading operation"
+    },
+    {
+      "operation_id": "select_pq_axes",
+      "source_refs": ["ctx-icecream-table", "ctx-icecream-graph", "ctx-icecream-procedure"],
+      "inputs": ["P-Q diagram", "price", "quantity"],
+      "outputs": ["quantity on x-axis", "price on y-axis"],
+      "task_ids": ["tb113-axis-convention", "tb113-graph-step-order", "tb113-point-placement", "tb113-source-chain"],
+      "cognitive_role": "graph convention operation"
+    },
+    {
+      "operation_id": "order_graph_procedure",
+      "source_refs": ["ctx-icecream-procedure"],
+      "inputs": ["table rows", "P-Q convention", "scale", "points"],
+      "outputs": ["ordered graph-drawing procedure"],
+      "task_ids": ["tb113-graph-step-order"],
+      "cognitive_role": "procedure operation"
+    },
+    {
+      "operation_id": "plot_table_point",
+      "source_refs": ["ctx-icecream-table", "ctx-icecream-graph"],
+      "inputs": ["P = 2.00", "Q = 300"],
+      "outputs": ["point x = 300, y = 2.00"],
+      "task_ids": ["tb113-point-placement", "tb113-source-chain"],
+      "cognitive_role": "graph construction operation"
+    },
+    {
+      "operation_id": "select_interpolation_source_values",
+      "source_refs": ["ctx-icecream-table", "ctx-icecream-graph"],
+      "inputs": ["P = 1.50", "Q = 400", "P = 2.00", "Q = 300"],
+      "outputs": ["values bracketing P = 1.75"],
+      "task_ids": ["tb113-interpolation-source-values"],
+      "cognitive_role": "source-value operation"
+    },
+    {
+      "operation_id": "interpolate_graph_value",
+      "source_refs": ["ctx-icecream-table", "ctx-icecream-graph"],
+      "inputs": ["P = 1.75", "Q values 400 and 300"],
+      "outputs": ["Q approximately 350"],
+      "task_ids": ["tb113-graph-reading", "tb113-source-chain"],
+      "cognitive_role": "graph-reading operation"
+    },
+    {
+      "operation_id": "calculate_percent_drop",
+      "source_refs": ["ctx-icecream-table", "ctx-icecream-formula"],
+      "inputs": ["400 to 200", "200 to 100"],
+      "outputs": ["-50 percent for each recorded candidate"],
+      "task_ids": ["tb113-claim-calculation", "tb113-answer-form", "tb113-source-chain"],
+      "cognitive_role": "calculation operation"
+    },
+    {
+      "operation_id": "state_claim_with_source_limits",
+      "source_refs": ["ctx-icecream-prompt", "ctx-icecream-table"],
+      "inputs": ["price interval", "source quantities", "-50 percent"],
+      "outputs": ["claim can be supported only when the interval and calculation are named"],
+      "task_ids": ["tb113-answer-form", "tb113-source-chain"],
+      "cognitive_role": "constructed answer operation"
+    }
+  ],
+  "answerFormTrace": {
+    "source_use_modifier": {
+      "id": "source_use_modifier",
+      "description": "Table and graph source use supports the answer; a selected value alone is not enough.",
+      "task_ids": ["tb113-table-value", "tb113-interpolation-source-values", "tb113-source-chain"],
+      "blocked_as_standalone_proof": true
+    },
+    "underlying_answer_forms": [
+      {
+        "id": "axis_convention_control",
+        "task_ids": ["tb113-axis-convention", "tb113-graph-step-order", "tb113-point-placement"],
+        "required": true,
+        "reason": "The target exercise requires price vertical and quantity horizontal."
+      },
+      {
+        "id": "graph_reading_and_interpolation",
+        "task_ids": ["tb113-interpolation-source-values", "tb113-graph-reading"],
+        "required": true,
+        "reason": "P = 1.75 must be read between two table/graph points."
+      },
+      {
+        "id": "calculation_work",
+        "task_ids": ["tb113-claim-calculation"],
+        "required": true,
+        "reason": "The 50 percent claim must be shown with source quantities and percent-change work."
+      },
+      {
+        "id": "constructed_claim_explanation",
+        "task_ids": ["tb113-answer-form", "tb113-source-chain"],
+        "required": true,
+        "reason": "The answer must name the interval, values, calculation, and conclusion."
+      }
+    ],
+    "accepted_interval_candidates": [
+      "EUR 1.50 to EUR 2.50 from 400 to 200",
+      "EUR 2.50 to EUR 3.00 from 200 to 100"
+    ],
+    "not_target_equivalent": true
+  },
+  "taskFamilyMap": [
+    {
+      "task_id": "tb113-table-value",
+      "family": "table_value_selection",
+      "mapped_operations": ["read_table_value"],
+      "preservation_rationale": "Checks direct table reading before graph or claim work."
+    },
+    {
+      "task_id": "tb113-axis-convention",
+      "family": "structured_short_response",
+      "mapped_operations": ["select_pq_axes"],
+      "preservation_rationale": "Prevents swapping P and Q axes."
+    },
+    {
+      "task_id": "tb113-graph-step-order",
+      "family": "step_ordering",
+      "mapped_operations": ["order_graph_procedure", "select_pq_axes"],
+      "preservation_rationale": "Preserves the textbook procedure from table to graph."
+    },
+    {
+      "task_id": "tb113-point-placement",
+      "family": "point_placement",
+      "mapped_operations": ["plot_table_point", "select_pq_axes"],
+      "preservation_rationale": "Checks the axis convention through a concrete graph point."
+    },
+    {
+      "task_id": "tb113-interpolation-source-values",
+      "family": "source_value_selection",
+      "mapped_operations": ["select_interpolation_source_values"],
+      "preservation_rationale": "Requires the two surrounding table rows before interpolation."
+    },
+    {
+      "task_id": "tb113-graph-reading",
+      "family": "graph_reading",
+      "mapped_operations": ["interpolate_graph_value"],
+      "preservation_rationale": "Checks the target graph reading at P = EUR 1.75."
+    },
+    {
+      "task_id": "tb113-claim-calculation",
+      "family": "calculation_work_capture",
+      "mapped_operations": ["calculate_percent_drop"],
+      "preservation_rationale": "Requires visible percent-change work instead of a bare interval."
+    },
+    {
+      "task_id": "tb113-source-chain",
+      "family": "source_chain_builder",
+      "mapped_operations": ["select_pq_axes", "plot_table_point", "interpolate_graph_value", "calculate_percent_drop", "state_claim_with_source_limits"],
+      "preservation_rationale": "Binds source, graph work, calculation, and conclusion in order."
+    },
+    {
+      "task_id": "tb113-answer-form",
+      "family": "structured_short_response",
+      "mapped_operations": ["calculate_percent_drop", "state_claim_with_source_limits"],
+      "preservation_rationale": "Checks interval, values, calculation, and conclusion as separate answer parts."
+    }
+  ],
+  "visualVariantMap": [
+    {
+      "visual_id": "icecream-pq-graph",
+      "source_refs": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_fig_1.svg"
+      ],
+      "context_block_id": "ctx-icecream-graph",
+      "variants": {
+        "review_lab_light": "rendered inline SVG graph from context data",
+        "review_lab_dark": "rendered inline SVG graph using theme colors",
+        "thumbnail": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png"
+      },
+      "raw_copied_image": false
+    },
+    {
+      "visual_id": "icecream-procedure",
+      "source_refs": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md#procedure-grafiek-tekenen-van-tabeldata"
+      ],
+      "context_block_id": "ctx-icecream-procedure",
+      "variants": {
+        "review_lab_light": "flowchart cards from procedure steps",
+        "review_lab_dark": "flowchart cards using theme colors",
+        "thumbnail": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png"
+      },
+      "raw_copied_image": false
+    }
+  ],
+  "antiReductionChecks": {
+    "table_value_only_rejected": true,
+    "axis_swap_rejected": true,
+    "graph_answer_without_source_values_rejected": true,
+    "final_interval_only_rejected": true,
+    "source_use_standalone_rejected": true,
+    "calculation_work_required": true,
+    "claim_explanation_required": true
+  },
+  "renderedProof": {
+    "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
+    "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
+    "screenshots": [
+      "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
+      "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
+      "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png"
+    ],
+    "proof_json": "reports/json/task-ingest-transform3-textbook-proof.json"
+  },
+  "productBoundary": {
+    "task_transformation_authorized": true,
+    "source_reconstruction_authorized": false,
+    "task_shell_runtime_change_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "source_data_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_proof_authorized": false,
+    "official_exam_claim_authorized": false,
+    "external_primary_claim_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}
