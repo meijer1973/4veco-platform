@@ -93,6 +93,7 @@ or receives an explicit waiver.
 Allowed implementation paths:
 
 - `.github/workflows/platform-ci.yml`
+- `.github/ci-python-requirements.txt`
 
 Allowed sprint evidence paths:
 
@@ -174,6 +175,8 @@ Required generated output statement:
 Required outputs:
 
 - GitHub Actions workflow at `.github/workflows/platform-ci.yml`;
+- CI Python requirements manifest at `.github/ci-python-requirements.txt`
+  for `setup-python` pip-cache hashing;
 - active sprint plan, baseline, planning review, command log, lead-review
   cycle, result, diff summary, and plan/result JSON;
 - platform and lesson roadmap updates inserting and then closing

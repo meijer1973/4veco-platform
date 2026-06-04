@@ -393,3 +393,94 @@ Dashboard data written to reports\internal-dashboard\dashboard-data.json
 ```text
 
 ```
+## gh run view 26952992061 --repo meijer1973/4veco-platform --json "databaseId,workflowName,displayTitle,headSha,status,conclusion,url,jobs"
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:55:50.597Z`
+- finished_at: `2026-06-04T12:55:51.568Z`
+- duration_ms: `971`
+- exit_code: `0`
+- stdout_sha256: `e8d7a0e0b5e0ae412a258c18a274cbb14c7eba285a2a2a97df496021c33a55bd`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+{"conclusion":"failure","databaseId":26952992061,"displayTitle":"Add remote platform CI workflow","headSha":"c86375a1cd211f34dc7adb7ef5f03f5209b8112b","jobs":[{"completedAt":"2026-06-04T12:55:19Z","conclusion":"failure","databaseId":79522718587,"name":"validate-platform","startedAt":"2026-06-04T12:54:32Z","status":"completed","steps":[{"completedAt":"2026-06-04T12:54:35Z","conclusion":"success","name":"Set up job","number":1,"startedAt":"2026-06-04T12:54:33Z","status":"completed"},{"completedAt":"2026-06-04T12:54:49Z","conclusion":"success","name":"Checkout platform repository","number":2,"startedAt":"2026-06-04T12:54:35Z","status":"completed"},{"completedAt":"2026-06-04T12:54:58Z","conclusion":"success","name":"Checkout lessen repository","number":3,"startedAt":"2026-06-04T12:54:49Z","status":"completed"},{"completedAt":"2026-06-04T12:55:10Z","conclusion":"success","name":"Set up Node.js","number":4,"startedAt":"2026-06-04T12:54:58Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"failure","name":"Set up Python","number":5,"startedAt":"2026-06-04T12:55:10Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Install Node dependencies","number":6,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Install Python support dependencies","number":7,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Validate platform Jest suite","number":8,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Validate active scope language","number":9,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Validate report JSON","number":10,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Validate roadmap version index","number":11,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Check URL index is current","number":12,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Check platform diff hygiene","number":13,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:11Z","conclusion":"skipped","name":"Check lessen diff hygiene","number":14,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:13Z","conclusion":"success","name":"Upload CI diagnostic artifacts","number":15,"startedAt":"2026-06-04T12:55:11Z","status":"completed"},{"completedAt":"2026-06-04T12:55:13Z","conclusion":"skipped","name":"Post Set up Python","number":27,"startedAt":"2026-06-04T12:55:13Z","status":"completed"},{"completedAt":"2026-06-04T12:55:13Z","conclusion":"skipped","name":"Post Set up Node.js","number":28,"startedAt":"2026-06-04T12:55:13Z","status":"completed"},{"completedAt":"2026-06-04T12:55:15Z","conclusion":"success","name":"Post Checkout lessen repository","number":29,"startedAt":"2026-06-04T12:55:13Z","status":"completed"},{"completedAt":"2026-06-04T12:55:17Z","conclusion":"success","name":"Post Checkout platform repository","number":30,"startedAt":"2026-06-04T12:55:15Z","status":"completed"},{"completedAt":"2026-06-04T12:55:17Z","conclusion":"success","name":"Complete job","number":31,"startedAt":"2026-06-04T12:55:17Z","status":"completed"}],"url":"https://github.com/meijer1973/4veco-platform/actions/runs/26952992061/job/79522718587"}],"status":"completed","url":"https://github.com/meijer1973/4veco-platform/actions/runs/26952992061","workflowName":"platform-ci"}
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:56:17.681Z`
+- finished_at: `2026-06-04T12:56:17.762Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `457db319a1aa149115f51c15c237c1a82844cfc335df181972300f31ade87562`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of '.github/workflows/platform-ci.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-plan.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-REMOTE-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:56:17.681Z`
+- finished_at: `2026-06-04T12:56:17.809Z`
+- duration_ms: `128`
+- exit_code: `0`
+- stdout_sha256: `e61b0fdb58c75710b06b65c94eabbf239d2f7d335cc92ddbfe0307943c0161e6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\CI-REMOTE-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T12:56:28.552Z`
+- finished_at: `2026-06-04T12:56:28.731Z`
+- duration_ms: `179`
+- exit_code: `0`
+- stdout_sha256: `e7f583a5b6e43b0d8b169f180ca1c89a266ae00d2a80787cb4db17d23780ddc5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: CI-REMOTE-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
