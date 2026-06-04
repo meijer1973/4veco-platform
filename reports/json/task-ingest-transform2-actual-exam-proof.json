@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
   "sprint_id": "TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM",
-  "generated": "2026-06-04T12:28:54.301Z",
-  "status": "task_transformation_rendering_proof_complete",
+  "generated": "2026-06-04T14:13:59.152Z",
+  "status": "playable_repair_proof_complete",
   "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
   "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
   "screenshots": [
     {
-      "case": "desktop-light",
-      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png",
+      "case": "desktop-initial",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png",
       "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "initial",
       "theme": "light",
       "viewport": {
         "width": 1280,
@@ -17,7 +18,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3631
+        "height": 5063
       },
       "proof": {
         "theme": "light",
@@ -25,7 +26,15 @@
           "width": 1280,
           "height": 900
         },
+        "semanticValidationEnabled": true,
         "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
         "taskCardCount": 6,
         "families": [
           "source_value_selection",
@@ -35,15 +44,699 @@
           "source_chain_builder",
           "structured_short_response"
         ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
         "contextBeforeTasks": true,
         "sourcePanePresent": true,
         "taskPanePresent": true,
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 34,
         "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
+        "completedTaskCount": 0,
+        "wrongRetryCount": 0,
+        "retryFeedbackCount": 0,
+        "labCompleted": false,
+        "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "desktop-wrong-retry",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "wrong",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 5063
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "semanticValidationEnabled": true,
+        "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": false,
+            "retry": true,
+            "feedback": "Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw."
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
+        "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 34,
+        "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
+        "completedTaskCount": 0,
+        "wrongRetryCount": 1,
+        "retryFeedbackCount": 1,
+        "labCompleted": false,
+        "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "desktop-corrected",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "corrected",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 5063
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "semanticValidationEnabled": true,
+        "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": false,
+            "retry": false,
+            "feedback": ""
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
+        "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 34,
+        "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
+        "completedTaskCount": 1,
+        "wrongRetryCount": 0,
+        "retryFeedbackCount": 0,
+        "labCompleted": false,
+        "tableCount": 1,
+        "graphCount": 0,
+        "flowchartCount": 0,
+        "sourceRefsVisible": true,
+        "rawImageCount": 0,
+        "overflowingCount": 0,
+        "overflowingTags": [],
+        "visibleInternalIds": false,
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
+      }
+    },
+    {
+      "case": "desktop-completed",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png",
+      "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 5705
+      },
+      "proof": {
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "semanticValidationEnabled": true,
+        "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
+        "taskCardCount": 6,
+        "families": [
+          "source_value_selection",
+          "formula_builder",
+          "step_ordering",
+          "calculation_work_capture",
+          "source_chain_builder",
+          "structured_short_response"
+        ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
+        "contextBeforeTasks": true,
+        "sourcePanePresent": true,
+        "taskPanePresent": true,
+        "sourcePaneScrollable": true,
+        "sourcePaneIndependentScroll": true,
+        "questionVisibleAfterSourceScroll": true,
+        "interactiveControlCount": 34,
+        "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
         "completedTaskCount": 6,
+        "wrongRetryCount": 0,
+        "retryFeedbackCount": 0,
         "labCompleted": true,
         "tableCount": 1,
         "graphCount": 0,
@@ -53,14 +746,15 @@
         "overflowingCount": 0,
         "overflowingTags": [],
         "visibleInternalIds": false,
-        "answerAmountVisibleInContext": false,
-        "answerAmountVisibleInTaskCards": false
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
       }
     },
     {
-      "case": "mobile-light",
-      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
+      "case": "mobile-completed",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png",
       "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "complete",
       "theme": "light",
       "viewport": {
         "width": 390,
@@ -68,7 +762,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4799
+        "height": 8133
       },
       "proof": {
         "theme": "light",
@@ -76,7 +770,15 @@
           "width": 390,
           "height": 844
         },
+        "semanticValidationEnabled": true,
         "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
         "taskCardCount": 6,
         "families": [
           "source_value_selection",
@@ -86,15 +788,141 @@
           "source_chain_builder",
           "structured_short_response"
         ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
         "contextBeforeTasks": true,
         "sourcePanePresent": true,
         "taskPanePresent": true,
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 34,
         "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
         "completedTaskCount": 6,
+        "wrongRetryCount": 0,
+        "retryFeedbackCount": 0,
         "labCompleted": true,
         "tableCount": 1,
         "graphCount": 0,
@@ -104,14 +932,15 @@
         "overflowingCount": 0,
         "overflowingTags": [],
         "visibleInternalIds": false,
-        "answerAmountVisibleInContext": false,
-        "answerAmountVisibleInTaskCards": false
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
       }
     },
     {
-      "case": "mobile-dark",
-      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png",
+      "case": "mobile-dark-completed",
+      "file": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark-completed.png",
       "lab": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+      "action": "complete",
       "theme": "dark",
       "viewport": {
         "width": 390,
@@ -119,7 +948,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4799
+        "height": 8133
       },
       "proof": {
         "theme": "dark",
@@ -127,7 +956,15 @@
           "width": 390,
           "height": 844
         },
+        "semanticValidationEnabled": true,
         "contextBlockCount": 4,
+        "promptContextCount": 1,
+        "sourceContextCount": 2,
+        "supportBoxCount": 1,
+        "closedSupportBoxCount": 1,
+        "openSupportBoxCount": 0,
+        "supportCollapsedByDefault": true,
+        "correctionModelSupportVisibleByDefault": false,
         "taskCardCount": 6,
         "families": [
           "source_value_selection",
@@ -137,15 +974,141 @@
           "source_chain_builder",
           "structured_short_response"
         ],
+        "taskStates": [
+          {
+            "index": 0,
+            "family": "source_value_selection",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 1,
+            "family": "formula_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 2,
+            "family": "step_ordering",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 3,
+            "family": "calculation_work_capture",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 4,
+            "family": "source_chain_builder",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          },
+          {
+            "index": 5,
+            "family": "structured_short_response",
+            "complete": true,
+            "retry": false,
+            "feedback": "Klopt. Je kunt door naar de volgende kaart."
+          }
+        ],
+        "familyAffordances": {
+          "source_value_selection": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": true,
+            "roleBank": true,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "formula_builder": {
+            "cards": 1,
+            "controls": 5,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "step_ordering": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "calculation_work_capture": {
+            "cards": 1,
+            "controls": 3,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": true,
+            "pointFields": false,
+            "numericField": false
+          },
+          "source_chain_builder": {
+            "cards": 1,
+            "controls": 8,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": true,
+            "choiceOptions": false,
+            "structuredFields": false,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          },
+          "structured_short_response": {
+            "cards": 1,
+            "controls": 2,
+            "valueBank": false,
+            "roleBank": false,
+            "sequenceBuilder": false,
+            "choiceOptions": false,
+            "structuredFields": true,
+            "calculationFields": false,
+            "pointFields": false,
+            "numericField": false
+          }
+        },
         "contextBeforeTasks": true,
         "sourcePanePresent": true,
         "taskPanePresent": true,
         "sourcePaneScrollable": true,
         "sourcePaneIndependentScroll": true,
         "questionVisibleAfterSourceScroll": true,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 34,
         "checkButtonCount": 6,
+        "taskInstructionCount": 6,
+        "valueBankCount": 1,
+        "roleBankCount": 1,
+        "sequenceBuilderCount": 3,
+        "plainSequenceTextareaCount": 0,
+        "genericOptionLabelVisible": false,
         "completedTaskCount": 6,
+        "wrongRetryCount": 0,
+        "retryFeedbackCount": 0,
         "labCompleted": true,
         "tableCount": 1,
         "graphCount": 0,
@@ -155,8 +1118,8 @@
         "overflowingCount": 0,
         "overflowingTags": [],
         "visibleInternalIds": false,
-        "answerAmountVisibleInContext": false,
-        "answerAmountVisibleInTaskCards": false
+        "derivedAnswerVisibleInContext": false,
+        "derivedAnswerVisibleInTaskCards": false
       }
     }
   ],
@@ -182,27 +1145,55 @@
       "structured_short_response"
     ],
     "context_before_tasks": true,
-    "answer_amount_visible_in_context": false,
-    "answer_amount_visible_in_task_cards": false,
+    "derived_answer_visible_in_context": false,
+    "derived_answer_visible_in_task_cards": false,
     "visible_internal_ids": false,
     "raw_image_count": 0,
     "playable_lab": {
-      "interactive_controls_rendered": true,
+      "cases_required": [
+        "desktop-initial",
+        "desktop-wrong-retry",
+        "desktop-corrected",
+        "desktop-completed",
+        "mobile-completed",
+        "mobile-dark-completed"
+      ],
+      "cases_captured": [
+        "desktop-initial",
+        "desktop-wrong-retry",
+        "desktop-corrected",
+        "desktop-completed",
+        "mobile-completed",
+        "mobile-dark-completed"
+      ],
+      "semantic_validation_enabled": true,
+      "real_task_family_controls_rendered": true,
+      "source_value_banks_rendered": true,
+      "sequence_builders_rendered": true,
+      "calculation_fields_rendered": true,
+      "structured_fields_rendered": true,
+      "plain_sequence_textareas_absent": true,
       "check_buttons_rendered": true,
+      "task_instructions_rendered": true,
+      "support_collapsed_by_default": true,
+      "correction_model_support_collapsed_by_default": true,
+      "initial_state_proven": true,
+      "wrong_retry_state_proven": true,
+      "corrected_state_proven": true,
       "completion_path_reaches_done": true,
       "source_pane_independent_scroll": true,
       "question_visible_after_source_scroll": true
     },
     "responsive_mobile_viewports": [
       {
-        "case": "mobile-light",
+        "case": "mobile-completed",
         "requested_width": 390,
         "browser_width": 390,
         "screenshot_width": 390,
         "theme": "light"
       },
       {
-        "case": "mobile-dark",
+        "case": "mobile-dark-completed",
         "requested_width": 390,
         "browser_width": 390,
         "screenshot_width": 390,

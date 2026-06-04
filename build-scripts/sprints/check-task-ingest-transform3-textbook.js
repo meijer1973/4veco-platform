@@ -263,13 +263,29 @@ function main() {
 
   assert(proof.schema_version === 1, 'proof schema_version must be 1');
   assert(proof.sprint_id === sprintId, 'wrong proof sprint_id');
-  assert(proof.status === 'task_transformation_rendering_proof_complete', 'wrong proof status');
+  assert(proof.status === 'playable_repair_proof_complete', 'wrong proof status');
   assert(proof.task_transformation.source_authority_kind === 'owned_textbook_source', 'proof must record textbook source authority');
   assert(proof.task_transformation.context_before_tasks === true, 'proof aggregate context ordering failed');
   assert(proof.task_transformation.visible_internal_ids === false, 'proof aggregate exposes internal ids');
+  assert(proof.task_transformation.derived_answer_visible_in_context === false, 'proof aggregate exposes derived answer in context');
+  assert(proof.task_transformation.derived_answer_visible_in_task_cards === false, 'proof aggregate exposes derived answer in task cards');
   assert(proof.task_transformation.raw_image_count === 0, 'proof aggregate contains raw images');
-  assert(proof.task_transformation.playable_lab.interactive_controls_rendered === true, 'proof aggregate missing interactive controls');
+  assert(proof.task_transformation.playable_lab.semantic_validation_enabled === true, 'proof aggregate missing semantic validation');
+  assert(proof.task_transformation.playable_lab.real_task_family_controls_rendered === true, 'proof aggregate missing real task-family controls');
+  assert(proof.task_transformation.playable_lab.source_value_banks_rendered === true, 'proof aggregate missing source value banks');
+  assert(proof.task_transformation.playable_lab.sequence_builders_rendered === true, 'proof aggregate missing sequence builders');
+  assert(proof.task_transformation.playable_lab.choice_options_rendered === true, 'proof aggregate missing table/choice controls');
+  assert(proof.task_transformation.playable_lab.graph_reading_field_rendered === true, 'proof aggregate missing graph reading field');
+  assert(proof.task_transformation.playable_lab.point_fields_rendered === true, 'proof aggregate missing point placement fields');
+  assert(proof.task_transformation.playable_lab.calculation_fields_rendered === true, 'proof aggregate missing calculation fields');
+  assert(proof.task_transformation.playable_lab.structured_fields_rendered === true, 'proof aggregate missing structured fields');
+  assert(proof.task_transformation.playable_lab.plain_sequence_textareas_absent === true, 'proof aggregate has plain sequence textareas');
   assert(proof.task_transformation.playable_lab.check_buttons_rendered === true, 'proof aggregate missing check buttons');
+  assert(proof.task_transformation.playable_lab.task_instructions_rendered === true, 'proof aggregate missing task instructions');
+  assert(proof.task_transformation.playable_lab.support_collapsed_by_default === true, 'proof aggregate support is not collapsed');
+  assert(proof.task_transformation.playable_lab.initial_state_proven === true, 'proof aggregate missing initial state');
+  assert(proof.task_transformation.playable_lab.wrong_retry_state_proven === true, 'proof aggregate missing wrong/retry state');
+  assert(proof.task_transformation.playable_lab.corrected_state_proven === true, 'proof aggregate missing corrected state');
   assert(proof.task_transformation.playable_lab.completion_path_reaches_done === true, 'proof aggregate demo path did not complete');
   assert(proof.task_transformation.playable_lab.source_pane_independent_scroll === true, 'proof aggregate source pane is not independently scrollable');
   assert(proof.task_transformation.playable_lab.question_visible_after_source_scroll === true, 'proof aggregate prompt is not retained while sources scroll');
@@ -280,16 +296,20 @@ function main() {
   assert(proof.ambiguity_evidence.also_source_valid_interval_recorded === true, 'proof missing alternate interval ambiguity evidence');
   assert(proof.ambiguity_evidence.source_values_plus_calculation_required === true, 'proof must require source values plus calculation');
 
-  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 3, 'proof must include three screenshots');
+  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 6, 'proof must include six screenshots');
   const expectedCases = new Map([
-    ['desktop-light', { width: 1280, theme: 'light' }],
-    ['mobile-light', { width: 390, theme: 'light' }],
-    ['mobile-dark', { width: 390, theme: 'dark' }],
+    ['desktop-initial', { width: 1280, theme: 'light', action: 'initial' }],
+    ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong' }],
+    ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected' }],
+    ['desktop-completed', { width: 1280, theme: 'light', action: 'complete' }],
+    ['mobile-completed', { width: 390, theme: 'light', action: 'complete' }],
+    ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete' }],
   ]);
   for (const capture of proof.screenshots) {
     const expected = expectedCases.get(capture.case);
     assert(expected, `unexpected screenshot case ${capture.case}`);
     assert(capture.theme === expected.theme, `${capture.case} wrong theme`);
+    assert(capture.action === expected.action, `${capture.case} wrong action`);
     assert(capture.viewport.width === expected.width, `${capture.case} wrong requested width`);
     const file = path.join(platformRoot, capture.file);
     assert(fs.existsSync(file), `missing screenshot ${capture.file}`);
@@ -304,10 +324,16 @@ function main() {
     assert(capture.proof.flowchartCount === 1, `${capture.case} wrong flowchart count`);
     assert(capture.proof.sourceRefsVisible === true, `${capture.case} missing source refs`);
     assert(capture.proof.visibleInternalIds === false, `${capture.case} exposes internal ids`);
-    assert(capture.proof.answerSignalVisibleInContext === false, `${capture.case} exposes derived answer signal in context`);
-    assert(capture.proof.answerSignalVisibleInTaskCards === false, `${capture.case} exposes derived answer signal in task cards`);
+    assert(capture.proof.derivedAnswerVisibleInContext === false, `${capture.case} exposes derived answer signal in context`);
+    assert(capture.proof.derivedAnswerVisibleInTaskCards === false, `${capture.case} exposes derived answer signal in task cards`);
     assert(capture.proof.rawImageCount === 0, `${capture.case} contains raw images`);
     assert(capture.proof.overflowingCount === 0, `${capture.case} has non-table/formula overflow`);
+    assert(capture.proof.semanticValidationEnabled === true, `${capture.case} missing semantic validation`);
+    assert(capture.proof.genericOptionLabelVisible === false, `${capture.case} renders generic controls`);
+    assert(capture.proof.supportBoxCount >= 1, `${capture.case} missing support boxes`);
+    assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed by default`);
+    assert(capture.proof.plainSequenceTextareaCount === 0, `${capture.case} renders plain sequence textareas`);
+    assert(capture.proof.taskInstructionCount === transform.taskSet.tasks.length, `${capture.case} missing concrete task instructions`);
     assert(capture.proof.sourcePanePresent === true, `${capture.case} missing source pane`);
     assert(capture.proof.taskPanePresent === true, `${capture.case} missing task pane`);
     assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
@@ -317,16 +343,45 @@ function main() {
       `${capture.case} missing interactive controls`
     );
     assert(capture.proof.checkButtonCount === transform.taskSet.tasks.length, `${capture.case} missing check buttons`);
-    assert(capture.proof.completedTaskCount === transform.taskSet.tasks.length, `${capture.case} demo path did not complete all tasks`);
-    assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
+    if (capture.case === 'desktop-initial') {
+      assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
+    } else if (capture.case === 'desktop-wrong-retry') {
+      assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
+      assert(capture.proof.retryFeedbackCount > 0, `${capture.case} missing retry feedback`);
+      assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not complete after wrong attempt`);
+    } else if (capture.case === 'desktop-corrected') {
+      assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
+      assert(capture.proof.wrongRetryCount === 0, `${capture.case} should clear retry state after correction`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not complete the whole lab`);
+    } else {
+      assert(capture.proof.completedTaskCount === transform.taskSet.tasks.length, `${capture.case} demo path did not complete all tasks`);
+      assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
+    }
+    assert(capture.proof.familyAffordances.table_value_selection.choiceOptions === true, `${capture.case} missing table choice controls`);
+    assert(capture.proof.familyAffordances.source_value_selection.valueBank === true, `${capture.case} missing source value bank`);
+    assert(capture.proof.familyAffordances.source_value_selection.roleBank === true, `${capture.case} missing role bank`);
+    assert(capture.proof.familyAffordances.step_ordering.sequenceBuilder === true, `${capture.case} missing step sequence builder`);
+    assert(capture.proof.familyAffordances.source_chain_builder.sequenceBuilder === true, `${capture.case} missing source-chain sequence builder`);
+    assert(capture.proof.familyAffordances.graph_reading.numericField === true, `${capture.case} missing graph reading field`);
+    assert(capture.proof.familyAffordances.point_placement.pointFields === true, `${capture.case} missing point fields`);
+    assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
+    assert(capture.proof.familyAffordances.structured_short_response.structuredFields === true, `${capture.case} missing structured fields`);
     for (const family of requiredFamilies) assert(capture.proof.families.includes(family), `${capture.case} missing rendered family ${family}`);
   }
   assert(fs.existsSync(paths.lab), `missing ${rel(paths.lab)}`);
   assert(fs.existsSync(paths.manifest), `missing ${rel(paths.manifest)}`);
   const labHtml = readText(paths.lab);
-  for (const forbidden of ['ctx-icecream', 'tb113-', '-50', '350']) {
+  for (const forbidden of ['ctx-icecream', 'tb113-', 'Keuze A', 'Keuze B']) {
     assert(!labHtml.includes(forbidden), `lab HTML source contains forbidden detector value ${forbidden}`);
   }
+  assert(labHtml.includes('data-semantic-validation="required"'), 'lab HTML must require semantic validation');
+  assert(labHtml.includes('table_value_selection'), 'lab HTML must render table value family controls');
+  assert(labHtml.includes('graph_reading'), 'lab HTML must render graph reading family controls');
+  assert(labHtml.includes('point_placement'), 'lab HTML must render point placement family controls');
+  assert(labHtml.includes('source_chain_builder'), 'lab HTML must render source chain family controls');
+  assert(labHtml.includes('support-box'), 'lab HTML must render collapsed support boxes');
 
   assert(proof.boundary_evidence.protected_reference_status === '', 'proof recorded protected reference changes');
   assert(proof.boundary_evidence.source_data_status === '', 'proof recorded source-data changes');

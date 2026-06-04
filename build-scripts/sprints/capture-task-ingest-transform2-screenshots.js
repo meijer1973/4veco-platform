@@ -17,12 +17,15 @@ const manifestPath = path.join(platformRoot, 'reports', 'sprints', `${sprintId}-
 const jsonManifestPath = path.join(outputDir, 'manifest.json');
 const proofPath = path.join(platformRoot, 'reports', 'json', 'task-ingest-transform2-actual-exam-proof.json');
 const chromeExe = process.env.CHROME_EXE || 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const answerAmounts = ['649', '1.684', '1684', '1.035', '1035'];
+const derivedAnswerSignals = ['649'];
 
 const cases = [
-  { name: 'desktop-light', size: { width: 1280, height: 900 }, theme: 'light' },
-  { name: 'mobile-light', size: { width: 390, height: 844 }, theme: 'light' },
-  { name: 'mobile-dark', size: { width: 390, height: 844 }, theme: 'dark' },
+  { name: 'desktop-initial', action: 'initial', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-wrong-retry', action: 'wrong', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-corrected', action: 'corrected', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-completed', action: 'complete', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'mobile-completed', action: 'complete', size: { width: 390, height: 844 }, theme: 'light' },
+  { name: 'mobile-dark-completed', action: 'complete', size: { width: 390, height: 844 }, theme: 'dark' },
 ];
 
 function sleep(ms) {
@@ -513,6 +516,23 @@ async function inspect(cdp, sessionId) {
   return JSON.parse(result.result.value);
 }
 
+async function driveLabState(cdp, sessionId, action) {
+  const expressions = {
+    initial: 'window.TaskIngestTransform2Lab.resetAll()',
+    wrong: 'window.TaskIngestTransform2Lab.applyWrongAttempt(0)',
+    corrected: 'window.TaskIngestTransform2Lab.correctTask(0)',
+    complete: 'window.TaskIngestTransform2Lab.completeDemoPath()',
+  };
+  await cdp.send(
+    'Runtime.evaluate',
+    {
+      expression: expressions[action] || expressions.initial,
+      returnByValue: true,
+    },
+    sessionId
+  );
+}
+
 function markdownManifest(captured) {
   const lines = [
     `# ${sprintId} Screenshot Manifest`,
@@ -528,8 +548,8 @@ function markdownManifest(captured) {
     '## Review Notes',
     '',
     '- The lab is review-only task-transformation proof.',
-    '- Captures cover desktop light, mobile light at 390px, and mobile dark at 390px.',
-    '- The proof JSON records task-card families, source-context placement, source refs, and boundary evidence.',
+    '- Captures cover initial, wrong/retry, corrected, desktop completed, mobile completed, and mobile dark completed states.',
+    '- The proof JSON records semantic validation, task-family controls, support collapse, source scrolling, question visibility, and boundary evidence.',
     ''
   );
   return `${lines.join('\n')}\n`;
@@ -585,21 +605,14 @@ async function main() {
       await waitForLab(cdp, sessionId);
       await applyTheme(cdp, sessionId, item.theme);
       await sleep(250);
-      await cdp.send(
-        'Runtime.evaluate',
-        {
-          expression: 'window.TaskIngestTransform2Lab.completeDemoPath()',
-          returnByValue: true,
-        },
-        sessionId
-      );
+      await driveLabState(cdp, sessionId, item.action);
       const proof = await inspect(cdp, sessionId);
       const bodyTextSnapshot = proof.bodyTextSnapshot || '';
       const contextTextSnapshot = proof.contextTextSnapshot || '';
       const taskTextSnapshot = proof.taskTextSnapshot || '';
       proof.visibleInternalIds = ['ctx-zoohee', 'q3-'].some((value) => bodyTextSnapshot.includes(value));
-      proof.answerAmountVisibleInContext = answerAmounts.some((value) => contextTextSnapshot.includes(value));
-      proof.answerAmountVisibleInTaskCards = answerAmounts.some((value) => taskTextSnapshot.includes(value));
+      proof.derivedAnswerVisibleInContext = derivedAnswerSignals.some((value) => contextTextSnapshot.includes(value));
+      proof.derivedAnswerVisibleInTaskCards = derivedAnswerSignals.some((value) => taskTextSnapshot.includes(value));
       delete proof.bodyTextSnapshot;
       delete proof.contextTextSnapshot;
       delete proof.taskTextSnapshot;
@@ -616,6 +629,7 @@ async function main() {
         case: item.name,
         file: path.relative(platformRoot, file).replace(/\\/g, '/'),
         lab: path.relative(platformRoot, labPath).replace(/\\/g, '/'),
+        action: item.action,
         theme: item.theme,
         viewport: item.size,
         screenshot_dimensions: dimensions,
@@ -642,7 +656,7 @@ async function main() {
       schema_version: 1,
       sprint_id: sprintId,
       generated: new Date().toISOString(),
-      status: 'task_transformation_rendering_proof_complete',
+      status: 'playable_repair_proof_complete',
       lab: path.relative(platformRoot, labPath).replace(/\\/g, '/'),
       screenshot_manifest: path.relative(platformRoot, manifestPath).replace(/\\/g, '/'),
       screenshots: captured,
@@ -654,14 +668,28 @@ async function main() {
         required_families: ['source_value_selection', 'source_chain_builder', 'formula_builder', 'step_ordering', 'calculation_work_capture', 'structured_short_response'],
         rendered_families: captured[0].proof.families,
         context_before_tasks: captured.every((item) => item.proof.contextBeforeTasks === true),
-        answer_amount_visible_in_context: captured.some((item) => item.proof.answerAmountVisibleInContext),
-        answer_amount_visible_in_task_cards: captured.some((item) => item.proof.answerAmountVisibleInTaskCards),
+        derived_answer_visible_in_context: captured.some((item) => item.proof.derivedAnswerVisibleInContext),
+        derived_answer_visible_in_task_cards: captured.some((item) => item.proof.derivedAnswerVisibleInTaskCards),
         visible_internal_ids: captured.some((item) => item.proof.visibleInternalIds),
         raw_image_count: captured.reduce((total, item) => total + item.proof.rawImageCount, 0),
         playable_lab: {
-          interactive_controls_rendered: captured.every((item) => item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
+          cases_required: cases.map((item) => item.name),
+          cases_captured: captured.map((item) => item.case),
+          semantic_validation_enabled: captured.every((item) => item.proof.semanticValidationEnabled === true),
+          real_task_family_controls_rendered: captured.every((item) => item.proof.genericOptionLabelVisible === false && item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
+          source_value_banks_rendered: captured.every((item) => item.proof.familyAffordances.source_value_selection?.valueBank === true && item.proof.familyAffordances.source_value_selection?.roleBank === true),
+          sequence_builders_rendered: captured.every((item) => ['formula_builder', 'step_ordering', 'source_chain_builder'].every((family) => item.proof.familyAffordances[family]?.sequenceBuilder === true)),
+          calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
+          structured_fields_rendered: captured.every((item) => item.proof.familyAffordances.structured_short_response?.structuredFields === true),
+          plain_sequence_textareas_absent: captured.every((item) => item.proof.plainSequenceTextareaCount === 0),
           check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
-          completion_path_reaches_done: captured.every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
+          task_instructions_rendered: captured.every((item) => item.proof.taskInstructionCount === transform.taskSet.tasks.length),
+          support_collapsed_by_default: captured.every((item) => item.proof.supportCollapsedByDefault === true),
+          correction_model_support_collapsed_by_default: captured.every((item) => item.proof.correctionModelSupportVisibleByDefault === false),
+          initial_state_proven: captured.some((item) => item.case === 'desktop-initial' && item.proof.completedTaskCount === 0 && item.proof.labCompleted === false),
+          wrong_retry_state_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.wrongRetryCount > 0 && item.proof.retryFeedbackCount > 0 && item.proof.completedTaskCount === 0),
+          corrected_state_proven: captured.some((item) => item.case === 'desktop-corrected' && item.proof.completedTaskCount === 1 && item.proof.wrongRetryCount === 0 && item.proof.labCompleted === false),
+          completion_path_reaches_done: captured.filter((item) => item.action === 'complete').every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
           source_pane_independent_scroll: captured.every((item) => item.proof.sourcePaneIndependentScroll === true),
           question_visible_after_source_scroll: captured.every((item) => item.proof.questionVisibleAfterSourceScroll === true)
         },

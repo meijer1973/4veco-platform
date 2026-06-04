@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T13:22:30.039Z",
+  "generatedAt": "2026-06-04T14:24:03.784Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3203,7 +3203,14 @@
               "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
               "name": "Shared Task Context And Ingestion Repair Human Review",
               "completed": "no",
-              "currentState": "Human gate for repaired exam/textbook source-context ingestion into shared tasks. Requires playable actual-exam and textbook labs, external-primary source references, reconstruction maps, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only; no Scale Gate 1 or broad product use.",
+              "currentState": "Direct human comments returned 2026-06-04 with decision `hold_for_playable_repair`. `SHARED-TASK-INGEST-PLAYABLE-REPAIR-1` prepared revised playable evidence with semantic validation, real task-family controls, collapsed support, six proof states per lab, PASS WITH FLAGS repair lead review, and passing gate checker. Gate remains open for renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send renewed direct review packet after remote publication.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-1",
+              "name": "Shared Task Ingest Playable Lab Repair",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB REPAIR ONLY.** Platform replaced generic review-shell controls with real task-family affordances, separated prompt/source/support with support collapsed by default, repaired concrete prompts and source-chain labels, added semantic checking, wrong/retry/corrected/completed/mobile/dark proof, stricter task-affordance and support-policy checkers, verification review, lead-review round 1/round 2, refreshed gate packet evidence, and passing gate packet checker. Carried flag: future checker hardening should assert exact visible source-chain labels and rendered prompt/source parity. No gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
               "exitGate": ""
             },
             {
@@ -3476,7 +3483,7 @@
           "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
           "name": "Shared Task Context And Ingestion Repair Human Review",
           "completed": "no",
-          "currentState": "Human gate for repaired exam/textbook source-context ingestion into shared tasks. Requires playable actual-exam and textbook labs, external-primary source references, reconstruction maps, markdown/SVG/table blocks, task-family maps, operation/answer-form traces, proof JSON, screenshots, validators, lead review, direct comments, resolution log, closure proposal, closure JSON, and reviewed remote commit/hash. May authorize later controlled adoption-preparation only; no Scale Gate 1 or broad product use.",
+          "currentState": "Direct human comments returned 2026-06-04 with decision `hold_for_playable_repair`. `SHARED-TASK-INGEST-PLAYABLE-REPAIR-1` prepared revised playable evidence with semantic validation, real task-family controls, collapsed support, six proof states per lab, PASS WITH FLAGS repair lead review, and passing gate checker. Gate remains open for renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send renewed direct review packet after remote publication.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3999,9 +4006,17 @@
           "currentState": "**CLOSED PASS WITH FLAGS / REMOTE CI ONLY.** Platform added GitHub Actions workflow `platform-ci` with job `validate-platform`, sibling checkout for `4veco-platform` and `4veco-lessen`, `npm ci`, platform validators, report/roadmap/URL-index checks, diff hygiene, bounded diagnostic artifact upload, and branch protection requiring context `validate-platform`. Remote run `26953558150` passed on commit `c70cf1cf9320a5de9f8a2f4e490b934ae822246b`; artifact `platform-ci-diagnostics` uploaded. Carried flag: monitor GitHub `windows-latest` runner-label migration notice if CI later fails without code changes. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-1",
+          "name": "Shared Task Ingest Playable Lab Repair",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB REPAIR ONLY.** Platform replaced generic review-shell controls with real task-family affordances, separated prompt/source/support with support collapsed by default, repaired concrete prompts and source-chain labels, added semantic checking, wrong/retry/corrected/completed/mobile/dark proof, stricter task-affordance and support-policy checkers, verification review, lead-review round 1/round 2, refreshed gate packet evidence, and passing gate packet checker. Carried flag: future checker hardening should assert exact visible source-chain labels and rendered prompt/source parity. No gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 39,
+      "completedCount": 40,
       "openCount": 37
     },
     {

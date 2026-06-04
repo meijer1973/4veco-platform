@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "received": "2026-06-04",
+  "source_attachment": "C:\\Users\\meije\\.codex\\attachments\\3e63554c-b97b-4398-b24d-6d5247c09112\\pasted-text.txt",
+  "status": "direct_comments_returned",
+  "decision": "hold_for_playable_repair",
+  "review_verdict": "REVISE",
+  "gate_closure_authorized": false,
+  "product_authority_granted": false,
+  "accepted_basis": [
+    "actual exam source authority uses external-primary prompt and correction evidence",
+    "textbook source remains owned-source only and not official exam authority",
+    "split source/question layout is directionally useful"
+  ],
+  "blocking_findings": [
+    {
+      "id": "playable-semantic-validation",
+      "severity": "blocking",
+      "summary": "Check buttons mark completion without evaluating answers."
+    },
+    {
+      "id": "generic-controls",
+      "severity": "blocking",
+      "summary": "Rendered controls do not preserve real task-family affordances."
+    },
+    {
+      "id": "underspecified-prompts",
+      "severity": "blocking",
+      "summary": "Prompts do not consistently state exact action, allowed input source, answer form, and expected count."
+    },
+    {
+      "id": "support-visible-by-default",
+      "severity": "high",
+      "summary": "Correction-model and procedure support is visible as default source context."
+    },
+    {
+      "id": "checker-overweights-layout",
+      "severity": "high",
+      "summary": "Current checker validates layout/counts more than task clarity and affordance."
+    }
+  ],
+  "prompt_comments": {
+    "SHAREDINGEST-Q1": "Actual-exam source authority is much improved, but correction-model formula support must move out of default source context.",
+    "SHAREDINGEST-Q2": "Layout repair is useful; blocker is unclear controls and missing task-family affordances.",
+    "SHAREDINGEST-Q3": "Actual-exam task cards are not playable enough; generic inputs and blank textareas are insufficient.",
+    "SHAREDINGEST-Q4": "Underlying traces avoid final-answer-only reduction, but rendered lab still collapses too much into open textareas.",
+    "SHAREDINGEST-Q5": "Textbook source authority is correctly bounded as owned-source only.",
+    "SHAREDINGEST-Q6": "Textbook layout is readable as prototype, but questions are too open and support is too visible.",
+    "SHAREDINGEST-Q7": "Ambiguity is recorded, but the prompt must say whether one interval, all intervals, or ambiguity explanation is expected.",
+    "SHAREDINGEST-Q8": "Maps and traces are promising, but rendered controls must preserve task-family interactions.",
+    "SHAREDINGEST-Q9": "Screenshots/proof judge layout only, not clarity, answer affordance, or correctness handling.",
+    "SHAREDINGEST-Q10": "No product-authority overclaim; issue is insufficient playable quality.",
+    "SHAREDINGEST-Q11": "Run a playable repair sprint with real controls, hidden support, concrete prompts, semantic checking, retry evidence, and updated checker.",
+    "SHAREDINGEST-Q12": "hold_for_playable_repair"
+  },
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-1"
+}

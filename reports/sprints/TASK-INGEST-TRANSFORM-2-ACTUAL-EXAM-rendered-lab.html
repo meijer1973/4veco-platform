@@ -6,30 +6,34 @@
   <title>TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Playable Review Lab</title>
   <style>
     :root {
-      --bg: #f5f2e8;
+      --bg: #f6f3ea;
       --panel: #ffffff;
-      --soft: #e9f2ee;
+      --soft: #eaf2ee;
+      --warn: #fff4d9;
       --text: #202420;
-      --muted: #5c675f;
-      --line: #b7c5bd;
-      --primary: #0f6b5f;
-      --accent: #8a4d18;
-      --formula: #f3f6f5;
+      --muted: #5b665f;
+      --line: #b9c7bf;
+      --primary: #0d675d;
+      --accent: #87511a;
+      --danger: #9e2f2f;
+      --formula: #f4f7f6;
       --graph-bg: #ffffff;
-      --ok: #1f7a4f;
+      --ok: #1d774d;
     }
     [data-theme="dark"] {
-      --bg: #151819;
-      --panel: #222726;
-      --soft: #26342e;
-      --text: #f5f4ef;
-      --muted: #bac5bf;
-      --line: #56645e;
-      --primary: #72d8c8;
+      --bg: #151817;
+      --panel: #232827;
+      --soft: #26372f;
+      --warn: #3d3320;
+      --text: #f6f5ef;
+      --muted: #bac4bf;
+      --line: #58665f;
+      --primary: #73dacb;
       --accent: #f0b35e;
-      --formula: #141819;
-      --graph-bg: #101313;
-      --ok: #82d9a1;
+      --danger: #ff9f9f;
+      --formula: #141918;
+      --graph-bg: #101312;
+      --ok: #86dba4;
     }
     * { box-sizing: border-box; }
     body {
@@ -89,13 +93,11 @@
     .source-pane {
       position: sticky;
       top: 72px;
-      max-height: calc(100vh - 96px);
+      max-height: 48vh;
       overflow-y: auto;
       padding-right: 4px;
     }
-    .task-pane {
-      min-width: 0;
-    }
+    .task-pane { min-width: 0; }
     .ctx-grid, .task-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -107,10 +109,18 @@
       border-radius: 8px;
       padding: 15px;
     }
-    .ctx-text {
+    .ctx-markdown {
       background: transparent;
       border-color: transparent;
       padding: 0;
+    }
+    .support-box {
+      background: var(--warn);
+    }
+    .support-box summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--accent);
     }
     .source-label { color: var(--primary); font-weight: 700; }
     .table-scroll, .formula-scroll {
@@ -177,6 +187,11 @@
       color: var(--text);
       font-weight: 700;
     }
+    .task-instructions {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
     .play-area {
       display: grid;
       gap: 10px;
@@ -186,11 +201,11 @@
       padding: 12px;
     }
     label { display: grid; gap: 4px; font-weight: 700; }
-    input, textarea, button {
+    input, textarea, select, button {
       font: inherit;
       color: var(--text);
     }
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       border: 1px solid var(--line);
       border-radius: 7px;
@@ -198,18 +213,43 @@
       padding: 9px 10px;
     }
     textarea { resize: vertical; min-height: 78px; }
-    .control-row, .field-grid {
+    fieldset {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: grid;
+      gap: 8px;
+    }
+    legend {
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .choice-options label {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+    }
+    .choice-options input { width: auto; }
+    .control-row, .field-grid, .pair-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
-    .generic-options { display: grid; gap: 8px; }
-    .generic-options label {
+    .pair-grid { display: grid; gap: 10px; }
+    .value-bank, .role-bank, .sequence-bank {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
-      align-items: center;
     }
-    .generic-options input { width: auto; }
+    .bank-chip, .bank-button, .sequence-chip {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      color: var(--text);
+      padding: 8px 10px;
+      font-weight: 700;
+    }
     button {
       justify-self: start;
       border: 0;
@@ -220,17 +260,63 @@
       font-weight: 700;
       cursor: pointer;
     }
+    .bank-button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+    }
+    .clear-sequence {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .sequence-zone {
+      min-height: 48px;
+      margin: 0;
+      padding: 8px 8px 8px 34px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .sequence-zone:empty::before {
+      content: "Klik blokken hierboven om de volgorde te bouwen.";
+      color: var(--muted);
+      margin-left: -22px;
+    }
+    .sequence-zone li {
+      margin: 4px 0;
+    }
+    .sequence-chip {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .sequence-chip button {
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--text);
+    }
     .feedback {
       min-height: 24px;
-      color: var(--ok);
+      color: var(--muted);
       font-weight: 700;
+    }
+    .task-card.is-complete {
+      border-color: var(--ok);
+    }
+    .task-card.is-complete .feedback {
+      color: var(--ok);
+    }
+    .task-card.is-retry {
+      border-color: var(--danger);
+    }
+    .task-card.is-retry .feedback {
+      color: var(--danger);
     }
     .mapped {
       padding-top: 10px;
       border-top: 1px solid var(--line);
-    }
-    .task-card.is-complete {
-      border-color: var(--ok);
     }
     .review-panel {
       margin-top: 14px;
@@ -254,14 +340,14 @@
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .flow-list { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list { grid-template-columns: 1fr; }
       th, td { white-space: normal; font-size: 0.9rem; line-height: 1.35; }
       pre { min-width: 460px; }
       dl div { grid-template-columns: 1fr; gap: 2px; }
     }
   </style>
 </head>
-<body>
+<body data-semantic-validation="required">
   <header>
     <p class="kicker">Review-only actual-exam playable task transformation proof</p>
     <h1>Zoohee zorgverzekering</h1>
@@ -269,21 +355,22 @@
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
-      <p class="current-prompt">Welke waarden uit Tabel 1 heb je nodig om de twee varianten te vergelijken?</p>
+      <p class="current-prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
       <p class="progress">0 / 6</p>
     </div>
   </section>
   <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen"><section class="ctx-grid"><section class="ctx-block ctx-text" data-block-type="markdown"><h2>Vraag 3</h2><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section>
-<section class="ctx-block ctx-card" data-block-type="source_excerpt"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
-<section class="ctx-block ctx-table" data-block-type="table" aria-label="Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
-<section class="ctx-block ctx-formula" data-block-type="formula" aria-label="Formule: jaarpremie is maandpremie keer twaalf."><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></section></section></aside>
+    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-markdown" data-block-type="markdown" data-context-role="prompt"><h2>Vraag 3</h2><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section>
+<section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
+<section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
+<details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Jaarpremie uit maandpremie</summary><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></details></section></aside>
     <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
     <p class="card-kicker">Taakkaart 1</p>
     <h2>Bronwaarden kiezen</h2>
     <p class="task-purpose">Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.</p>
-    <p class="prompt">Welke waarden uit Tabel 1 heb je nodig om de twee varianten te vergelijken?</p>
-    <div class="play-area"><div class="field-grid"><label>Bronwaarde 1<input class="play-control" type="text"></label><label>Rol 1<input class="play-control" type="text"></label><label>Bronwaarde 2<input class="play-control" type="text"></label><label>Rol 2<input class="play-control" type="text"></label></div></div>
+    <p class="prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
+    <ul class="task-instructions"><li>Kies de gevraagde bronwaarden.</li><li>Koppel elke gekozen waarde aan de juiste rol.</li><li>Aantal antwoorden: alle invoerrijen moeten gevuld zijn.</li></ul>
+    <div class="play-area"><div class="value-bank" aria-label="Beschikbare bronwaarden"><span class="bank-chip" data-value-id="std-premium-10825">108,25</span><span class="bank-chip" data-value-id="std-deductible-385">385</span><span class="bank-chip" data-value-id="inc-premium-8625">86,25</span><span class="bank-chip" data-value-id="inc-deductible-885">885</span><span class="bank-chip" data-value-id="wrong-unit-10825-year">108,25 per jaar</span><span class="bank-chip" data-value-id="wrong-premium-885-month">885 per maand</span></div><div class="role-bank" aria-label="Beschikbare rollen"><span class="bank-chip" data-role-id="standard_monthly_premium">maandpremie wettelijk</span><span class="bank-chip" data-role-id="standard_deductible">eigen risico wettelijk</span><span class="bank-chip" data-role-id="increased_monthly_premium">maandpremie verhoogd</span><span class="bank-chip" data-role-id="increased_deductible">eigen risico verhoogd</span></div><div class="pair-grid"><div class="pair-row"><label>Waarde uit bron 1<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 1<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 2<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 2<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 3<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 3<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 4<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 4<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: select source values</p>
@@ -292,8 +379,9 @@
     <p class="card-kicker">Taakkaart 2</p>
     <h2>Jaarpremie bouwen</h2>
     <p class="task-purpose">Bouw de formule die een maandpremie omzet naar een jaarpremie.</p>
-    <p class="prompt">Welke formule gebruik je om de maandpremie naar een jaarpremie om te zetten?</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
+    <p class="prompt">Bouw de formule waarmee je per variant de jaarpremie berekent.</p>
+    <ul class="task-instructions"><li>Klik formuleblokken in de juiste volgorde.</li><li>Gebruik alleen blokken uit de bank.</li><li>Antwoordvorm: geordende formuleketen.</li></ul>
+    <div class="play-area"><div class="sequence-builder" data-sequence-family="formula_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="maandpremie">maandpremie</button><button type="button" class="play-control bank-button" data-item-id="keer">*</button><button type="button" class="play-control bank-button" data-item-id="twaalf">12</button><button type="button" class="play-control bank-button" data-item-id="plus-eigen-risico">+ eigen risico</button><button type="button" class="play-control bank-button" data-item-id="delen-door-twaalf">/ 12</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: annualize monthly premium</p>
@@ -302,8 +390,9 @@
     <p class="card-kicker">Taakkaart 3</p>
     <h2>Berekeningsstappen ordenen</h2>
     <p class="task-purpose">Orden de route van bronwaarden naar grensbedrag.</p>
-    <p class="prompt">Zet de stappen in de volgorde die bij deze berekening hoort.</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
+    <p class="prompt">Zet de rekenstappen in de volgorde die past bij het correctiemodel.</p>
+    <ul class="task-instructions"><li>Klik stappen in de juiste volgorde.</li><li>Gebruik de bron of procedurehulp alleen als dat nodig is.</li><li>Antwoordvorm: geordende stappenreeks.</li></ul>
+    <div class="play-area"><div class="sequence-builder" data-sequence-family="step_ordering"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="read-table">Lees de premies en eigen risico's uit Tabel 1</button><button type="button" class="play-control bank-button" data-item-id="standard-annual-premium">Bereken jaarpremie wettelijk eigen risico</button><button type="button" class="play-control bank-button" data-item-id="add-standard-deductible">Tel het wettelijk eigen risico erbij op</button><button type="button" class="play-control bank-button" data-item-id="increased-annual-premium">Bereken jaarpremie verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="derive-threshold">Neem het verschil tussen beide bedragen</button><button type="button" class="play-control bank-button" data-item-id="state-direction">Formuleer het grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="divide-by-deductible">Deel de premie door het eigen risico</button><button type="button" class="play-control bank-button" data-item-id="choose-lowest-premium">Kies meteen de laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
@@ -312,8 +401,9 @@
     <p class="card-kicker">Taakkaart 4</p>
     <h2>Grensbedrag berekenen</h2>
     <p class="task-purpose">Laat de berekening zien waarmee je het grensbedrag vindt.</p>
-    <p class="prompt">Bereken het grensbedrag en schrijf je tussenstappen op.</p>
-    <div class="play-area"><label>Uitwerking<textarea class="play-control" rows="3"></textarea></label><div class="control-row"><label>Antwoord<input class="play-control" type="text"></label><label>Eenheid<input class="play-control" type="text"></label></div></div>
+    <p class="prompt">Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.</p>
+    <ul class="task-instructions"><li>Schrijf de berekening uit.</li><li>Noteer het eindantwoord en de eenheid apart.</li><li>Antwoordvorm: uitwerking plus eindantwoord.</li></ul>
+    <div class="play-area"><label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold</p>
@@ -322,8 +412,9 @@
     <p class="card-kicker">Taakkaart 5</p>
     <h2>Bronketen bouwen</h2>
     <p class="task-purpose">Bouw de route van bron naar berekening naar conclusie.</p>
-    <p class="prompt">Bouw de bronketen die laat zien hoe de tabelwaarden tot het grensbedrag leiden.</p>
-    <div class="play-area"><label>Gekozen volgorde<textarea class="play-control" rows="4"></textarea></label></div>
+    <p class="prompt">Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.</p>
+    <ul class="task-instructions"><li>Klik bronketen-onderdelen in de juiste volgorde.</li><li>Verbind bronwaarde, bewerking en conclusie.</li><li>Antwoordvorm: volledige redeneringsketen.</li></ul>
+    <div class="play-area"><div class="sequence-builder" data-sequence-family="source_chain_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="source-table">Lees Tabel 1 met premie en eigen risico</button><button type="button" class="play-control bank-button" data-item-id="role-values">Koppel premies en eigen risico aan de twee varianten</button><button type="button" class="play-control bank-button" data-item-id="standard-cost">Bereken kosten wettelijke variant</button><button type="button" class="play-control bank-button" data-item-id="increased-premium">Bereken jaarpremie verhoogde variant</button><button type="button" class="play-control bank-button" data-item-id="threshold">Neem het verschil tussen beide varianten</button><button type="button" class="play-control bank-button" data-item-id="direction">Formuleer grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="use-885-only">Afleider: gebruik alleen verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="lowest-premium-only">Afleider: kies alleen laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: select source values, annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
@@ -332,8 +423,9 @@
     <p class="card-kicker">Taakkaart 6</p>
     <h2>Grens met richting formuleren</h2>
     <p class="task-purpose">Formuleer het berekende grensbedrag als antwoordzin.</p>
-    <p class="prompt">Vul het grensbedrag en de richting in.</p>
-    <div class="play-area"><div class="field-grid"><label>Grensbedrag<input class="play-control" type="text"></label><label>Richting<input class="play-control" type="text"></label></div></div>
+    <p class="prompt">Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.</p>
+    <ul class="task-instructions"><li>Vul elk antwoordveld in.</li><li>Gebruik bronwoorden of berekening waar gevraagd.</li><li>Antwoordvorm: korte gestructureerde tekst.</li></ul>
+    <div class="play-area"><div class="field-grid"><label>Grensbedrag<input class="play-control structured-field" type="text" data-field-id="threshold"></label><label>Richting<input class="play-control structured-field" type="text" data-field-id="direction"></label></div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: state threshold with direction</p>
@@ -341,36 +433,298 @@
   </main>
   <script>
     (function () {
+      const models = [{"family":"source_value_selection","prompt":"Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"formula_builder","prompt":"Bouw de formule waarmee je per variant de jaarpremie berekent.","interaction":{"tokenBankLabel":"Formuleblokken","sequenceLabel":"Opgebouwde formule","placeholder":"Bouw de formule.","separator":" ","tokens":[{"id":"maandpremie","label":"maandpremie","kind":"answer","category":"variable"},{"id":"keer","label":"*","kind":"answer","category":"operator"},{"id":"twaalf","label":"12","kind":"answer","category":"multiplier"},{"id":"plus-eigen-risico","label":"+ eigen risico","kind":"distractor","category":"operator","distractorFor":"keer"},{"id":"delen-door-twaalf","label":"/ 12","kind":"distractor","category":"operator","distractorFor":"twaalf"}]},"expected":{"kind":"formula_builder","tokens":["maandpremie","keer","twaalf"],"acceptedSequences":[["maandpremie","keer","twaalf"]]}},{"family":"step_ordering","prompt":"Zet de rekenstappen in de volgorde die past bij het correctiemodel.","interaction":{"stepBankLabel":"Stappenbank","sequenceLabel":"Gekozen volgorde","placeholder":"Orden de stappen.","separator":" -> ","steps":[{"id":"read-table","label":"Lees de premies en eigen risico's uit Tabel 1","kind":"answer"},{"id":"standard-annual-premium","label":"Bereken jaarpremie wettelijk eigen risico","kind":"answer","description":"108,25 keer 12"},{"id":"add-standard-deductible","label":"Tel het wettelijk eigen risico erbij op","kind":"answer","description":"Dan heb je de kosten bij maximale zorgkosten binnen dat eigen risico."},{"id":"increased-annual-premium","label":"Bereken jaarpremie verhoogd eigen risico","kind":"answer","description":"86,25 keer 12"},{"id":"derive-threshold","label":"Neem het verschil tussen beide bedragen","kind":"answer"},{"id":"state-direction","label":"Formuleer het grensbedrag met richting","kind":"answer"},{"id":"divide-by-deductible","label":"Deel de premie door het eigen risico","kind":"distractor","distractorFor":"derive-threshold"},{"id":"choose-lowest-premium","label":"Kies meteen de laagste maandpremie","kind":"distractor","distractorFor":"read-table"}]},"expected":{"kind":"step_ordering","order":["read-table","standard-annual-premium","add-standard-deductible","increased-annual-premium","derive-threshold","state-direction"],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"source_chain_builder","prompt":"Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.","interaction":{"nodeBankLabel":"Bronketen onderdelen","sequenceLabel":"Opgebouwde bronketen","placeholder":"Bouw de keten.","separator":" -> ","nodes":[{"id":"source-table","label":"Lees Tabel 1 met premie en eigen risico","kind":"answer","nodeRole":"source"},{"id":"role-values","label":"Gebruik 108,25, 385 en 86,25 met hun rol","kind":"answer","nodeRole":"value"},{"id":"standard-cost","label":"12 x 108,25 + 385 = 1.684","kind":"answer","nodeRole":"operation"},{"id":"increased-premium","label":"12 x 86,25 = 1.035","kind":"answer","nodeRole":"operation"},{"id":"threshold","label":"1.684 - 1.035 = 649","kind":"answer","nodeRole":"answer"},{"id":"direction","label":"Tot dat jaarbedrag is verhoogd eigen risico voordeliger","kind":"answer","nodeRole":"conclusion"},{"id":"use-885-only","label":"Gebruik alleen 885 als grens","kind":"distractor","nodeRole":"answer","distractorFor":"threshold"},{"id":"lowest-premium-only","label":"Kies alleen de laagste premie","kind":"distractor","nodeRole":"operation","distractorFor":"role-values"}]},"expected":{"kind":"source_chain_builder","chain":["source-table","role-values","standard-cost","increased-premium","threshold","direction"],"partialFeedback":"practice_only"}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"fields":[{"id":"threshold","label":"Grensbedrag","placeholder":"Bijvoorbeeld 123 euro per jaar"},{"id":"direction","label":"Richting","placeholder":"Wanneer is verhoogd eigen risico voordeliger?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
       const cards = Array.from(document.querySelectorAll('.task-card'));
       const currentPrompt = document.querySelector('.current-prompt');
       const progress = document.querySelector('.progress');
+      const numericTolerance = 0.011;
+
+      function text(value) {
+        return String(value == null ? '' : value).trim();
+      }
+
+      function normalize(value) {
+        return text(value).toLowerCase().replace(/\s+/g, ' ');
+      }
+
+      function numberValue(value) {
+        const cleaned = text(value).replace(/\./g, '').replace(',', '.').match(/-?\d+(?:\.\d+)?/);
+        return cleaned ? Number(cleaned[0]) : NaN;
+      }
+
+      function sameArray(actual, expected) {
+        if (!Array.isArray(actual) || !Array.isArray(expected) || actual.length !== expected.length) return false;
+        return actual.every((value, index) => value === expected[index]);
+      }
+
+      function acceptedText(value, accepted) {
+        const actual = normalize(value);
+        return (accepted || []).some((candidate) => {
+          const expected = normalize(candidate);
+          return actual === expected || actual.includes(expected) || expected.includes(actual);
+        });
+      }
+
+      function workGroupOptions(group) {
+        if (Array.isArray(group)) return group;
+        return group?.any || group?.accepted || [];
+      }
+
       function completedCount() {
         return cards.filter((card) => card.classList.contains('is-complete')).length;
       }
+
       function updateCurrent(index) {
         const card = cards[Math.min(index, cards.length - 1)];
         const prompt = card ? card.querySelector('.prompt') : null;
         if (prompt && currentPrompt) currentPrompt.textContent = prompt.textContent;
         if (progress) progress.textContent = completedCount() + ' / ' + cards.length;
       }
-      cards.forEach((card, index) => {
-        const button = card.querySelector('.check-button');
-        const feedback = card.querySelector('.feedback');
-        button.addEventListener('click', () => {
-          card.classList.add('is-complete');
-          if (feedback) feedback.textContent = 'Ingevuld en klaar voor de volgende stap.';
-          updateCurrent(Math.min(index + 1, cards.length - 1));
+
+      function installSequenceBuilder(card) {
+        const builder = card.querySelector('.sequence-builder');
+        if (!builder) return;
+        const zone = builder.querySelector('.sequence-zone');
+        builder.querySelectorAll('.bank-button').forEach((button) => {
+          button.addEventListener('click', () => {
+            const li = document.createElement('li');
+            const chip = document.createElement('span');
+            chip.className = 'sequence-chip';
+            chip.dataset.itemId = button.dataset.itemId;
+            chip.textContent = button.textContent;
+            const remove = document.createElement('button');
+            remove.type = 'button';
+            remove.textContent = 'x';
+            remove.setAttribute('aria-label', 'Verwijder blok');
+            remove.addEventListener('click', () => li.remove());
+            chip.appendChild(remove);
+            li.appendChild(chip);
+            zone.appendChild(li);
+          });
         });
-      });
-      function fillCard(card, index) {
-        card.querySelectorAll('.play-control').forEach((control, controlIndex) => {
-          if (control.type === 'radio') {
-            control.checked = controlIndex === 0;
-          } else {
-            control.value = 'review input ' + (index + 1) + '.' + (controlIndex + 1);
-          }
+        const clear = builder.querySelector('.clear-sequence');
+        if (clear) clear.addEventListener('click', () => { zone.innerHTML = ''; });
+      }
+
+      function collect(card, model) {
+        if (model.family === 'calculation_work_capture') {
+          return {
+            work: card.querySelector('.calc-work')?.value || '',
+            finalAnswer: card.querySelector('.calc-final')?.value || '',
+            unit: card.querySelector('.calc-unit')?.value || ''
+          };
+        }
+        if (model.family === 'structured_short_response') {
+          const fields = {};
+          card.querySelectorAll('.structured-field').forEach((field) => {
+            fields[field.dataset.fieldId] = field.value;
+          });
+          return { fields };
+        }
+        if (model.family === 'point_placement') {
+          return {
+            x: card.querySelector('.point-x')?.value || '',
+            y: card.querySelector('.point-y')?.value || ''
+          };
+        }
+        if (model.family === 'graph_reading' || model.family === 'numeric_input') {
+          return { value: card.querySelector('.numeric-answer')?.value || '' };
+        }
+        if (model.family === 'table_value_selection' || model.family === 'choice') {
+          return { value: card.querySelector('.choice-input:checked')?.value || '' };
+        }
+        if (model.family === 'source_value_selection') {
+          const rows = Array.from(card.querySelectorAll('.pair-row')).map((row) => ({
+            valueId: row.querySelector('.value-select')?.value || '',
+            role: row.querySelector('.role-select')?.value || ''
+          })).filter((row) => row.valueId || row.role);
+          return { selections: rows };
+        }
+        if (model.family === 'formula_builder' || model.family === 'step_ordering' || model.family === 'source_chain_builder') {
+          return { sequence: Array.from(card.querySelectorAll('.sequence-chip')).map((chip) => chip.dataset.itemId) };
+        }
+        return { value: card.querySelector('.free-response')?.value || '' };
+      }
+
+      function evaluate(model, response) {
+        const expected = model.expected || {};
+        if (model.family === 'calculation_work_capture') {
+          const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
+          const expectedUnit = expected.unit || expected.unitNotation;
+          const unitOk = !expectedUnit?.accepted || acceptedText(response.unit, expectedUnit.accepted);
+          const requiredGroups = expected.requiredWorkText || [];
+          const workOk = requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle))));
+          return finalOk && unitOk && workOk;
+        }
+        if (model.family === 'structured_short_response') {
+          return (expected.fields || []).every((field) => acceptedText(response.fields[field.id] || '', field.accepted || []));
+        }
+        if (model.family === 'point_placement') {
+          return Math.abs(numberValue(response.x) - Number(expected.x)) <= numericTolerance
+            && Math.abs(numberValue(response.y) - Number(expected.y)) <= numericTolerance;
+        }
+        if (model.family === 'graph_reading' || model.family === 'numeric_input') {
+          return Math.abs(numberValue(response.value) - Number(expected.value)) <= Number(expected.tolerance ?? numericTolerance);
+        }
+        if (model.family === 'table_value_selection' || model.family === 'choice') {
+          return response.value === expected.value;
+        }
+        if (model.family === 'source_value_selection') {
+          const actual = response.selections.map((item) => item.valueId + ':' + item.role).sort();
+          const wanted = (expected.selections || []).map((item) => item.valueId + ':' + item.role).sort();
+          return sameArray(actual, wanted);
+        }
+        if (model.family === 'formula_builder') {
+          const accepted = expected.acceptedSequences || [expected.tokens || []];
+          return accepted.some((sequence) => sameArray(response.sequence, sequence));
+        }
+        if (model.family === 'step_ordering') {
+          return sameArray(response.sequence, expected.order || []);
+        }
+        if (model.family === 'source_chain_builder') {
+          return sameArray(response.sequence, expected.chain || []);
+        }
+        return text(response.value).length > 0;
+      }
+
+      function mark(card, index, ok) {
+        const feedback = card.querySelector('.feedback');
+        card.classList.toggle('is-complete', ok);
+        card.classList.toggle('is-retry', !ok);
+        if (feedback) {
+          feedback.textContent = ok
+            ? 'Klopt. Je kunt door naar de volgende kaart.'
+            : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+        }
+        updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
+      }
+
+      function sequenceExpected(model) {
+        if (model.family === 'formula_builder') return model.expected.acceptedSequences?.[0] || model.expected.tokens || [];
+        if (model.family === 'step_ordering') return model.expected.order || [];
+        if (model.family === 'source_chain_builder') return model.expected.chain || [];
+        return [];
+      }
+
+      function addSequence(card, sequence) {
+        const zone = card.querySelector('.sequence-zone');
+        if (!zone) return;
+        zone.innerHTML = '';
+        sequence.forEach((id) => {
+          const button = card.querySelector('.bank-button[data-item-id="' + CSS.escape(id) + '"]');
+          if (button) button.click();
         });
       }
+
+      function fillCorrect(card, model) {
+        if (model.family === 'calculation_work_capture') {
+          const work = model.expected.requiredWorkText || [];
+          const expectedUnit = model.expected.unit || model.expected.unitNotation;
+          card.querySelector('.calc-work').value = work.map((group) => workGroupOptions(group)[0]).filter(Boolean).join(' ; ');
+          card.querySelector('.calc-final').value = model.expected.finalAnswer.accepted[0];
+          card.querySelector('.calc-unit').value = expectedUnit?.accepted?.[0] || '';
+          return;
+        }
+        if (model.family === 'structured_short_response') {
+          (model.expected.fields || []).forEach((field) => {
+            const input = card.querySelector('.structured-field[data-field-id="' + CSS.escape(field.id) + '"]');
+            if (input) input.value = field.accepted[0];
+          });
+          return;
+        }
+        if (model.family === 'point_placement') {
+          card.querySelector('.point-x').value = model.expected.x;
+          card.querySelector('.point-y').value = model.expected.y;
+          return;
+        }
+        if (model.family === 'graph_reading' || model.family === 'numeric_input') {
+          card.querySelector('.numeric-answer').value = model.expected.value;
+          return;
+        }
+        if (model.family === 'table_value_selection' || model.family === 'choice') {
+          const radio = card.querySelector('.choice-input[value="' + CSS.escape(model.expected.value) + '"]');
+          if (radio) radio.checked = true;
+          return;
+        }
+        if (model.family === 'source_value_selection') {
+          const rows = Array.from(card.querySelectorAll('.pair-row'));
+          (model.expected.selections || []).forEach((selection, rowIndex) => {
+            const row = rows[rowIndex];
+            if (!row) return;
+            row.querySelector('.value-select').value = selection.valueId;
+            row.querySelector('.role-select').value = selection.role;
+          });
+          return;
+        }
+        if (model.family === 'formula_builder' || model.family === 'step_ordering' || model.family === 'source_chain_builder') {
+          addSequence(card, sequenceExpected(model));
+        }
+      }
+
+      function fillWrong(card, model) {
+        if (model.family === 'calculation_work_capture') {
+          card.querySelector('.calc-work').value = 'onvolledig';
+          card.querySelector('.calc-final').value = '0';
+          card.querySelector('.calc-unit').value = '';
+          return;
+        }
+        if (model.family === 'structured_short_response') {
+          card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
+          return;
+        }
+        if (model.family === 'point_placement') {
+          card.querySelector('.point-x').value = '0';
+          card.querySelector('.point-y').value = '0';
+          return;
+        }
+        if (model.family === 'graph_reading' || model.family === 'numeric_input') {
+          card.querySelector('.numeric-answer').value = '0';
+          return;
+        }
+        if (model.family === 'table_value_selection' || model.family === 'choice') {
+          const options = Array.from(card.querySelectorAll('.choice-input'));
+          const wrong = options.find((item) => item.value !== model.expected.value) || options[0];
+          if (wrong) wrong.checked = true;
+          return;
+        }
+        if (model.family === 'source_value_selection') {
+          const rows = Array.from(card.querySelectorAll('.pair-row'));
+          const firstValue = model.interaction.values?.find((item) => item.id !== model.expected.selections?.[0]?.valueId)?.id || '';
+          const firstRole = model.interaction.roles?.find((item) => item.id !== model.expected.selections?.[0]?.role)?.id || '';
+          if (rows[0]) {
+            rows[0].querySelector('.value-select').value = firstValue;
+            rows[0].querySelector('.role-select').value = firstRole;
+          }
+          return;
+        }
+        if (model.family === 'formula_builder' || model.family === 'step_ordering' || model.family === 'source_chain_builder') {
+          addSequence(card, sequenceExpected(model).slice().reverse().slice(0, Math.max(1, sequenceExpected(model).length - 1)));
+        }
+      }
+
+      cards.forEach((card, index) => {
+        installSequenceBuilder(card);
+        const button = card.querySelector('.check-button');
+        button.addEventListener('click', () => {
+          mark(card, index, evaluate(models[index], collect(card, models[index])));
+        });
+      });
+
+      function resetAll() {
+        cards.forEach((card) => {
+          card.classList.remove('is-complete', 'is-retry');
+          card.querySelectorAll('input, textarea, select').forEach((control) => {
+            if (control.type === 'radio') control.checked = false;
+            else control.value = '';
+          });
+          const zone = card.querySelector('.sequence-zone');
+          if (zone) zone.innerHTML = '';
+          const feedback = card.querySelector('.feedback');
+          if (feedback) feedback.textContent = '';
+        });
+        updateCurrent(0);
+      }
+
       function inspect() {
         const sourcePane = document.querySelector('.source-pane');
         const taskPane = document.querySelector('.task-pane');
@@ -381,14 +735,62 @@
           const style = window.getComputedStyle(item);
           if (style.display === 'none' || style.visibility === 'hidden') return false;
           if (item.ownerSVGElement) return false;
+          if (['INPUT', 'TEXTAREA', 'SELECT'].includes(item.tagName)) return false;
           return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll') && !item.closest('.formula-scroll');
         });
+        const familyAffordances = {};
+        cards.forEach((card) => {
+          const family = card.getAttribute('data-task-family');
+          if (!familyAffordances[family]) {
+            familyAffordances[family] = {
+              cards: 0,
+              controls: 0,
+              valueBank: false,
+              roleBank: false,
+              sequenceBuilder: false,
+              choiceOptions: false,
+              structuredFields: false,
+              calculationFields: false,
+              pointFields: false,
+              numericField: false
+            };
+          }
+          const item = familyAffordances[family];
+          item.cards += 1;
+          item.controls += card.querySelectorAll('.play-control').length;
+          item.valueBank = item.valueBank || Boolean(card.querySelector('.value-bank'));
+          item.roleBank = item.roleBank || Boolean(card.querySelector('.role-bank'));
+          item.sequenceBuilder = item.sequenceBuilder || Boolean(card.querySelector('.sequence-builder'));
+          item.choiceOptions = item.choiceOptions || Boolean(card.querySelector('.choice-options'));
+          item.structuredFields = item.structuredFields || Boolean(card.querySelector('.structured-field'));
+          item.calculationFields = item.calculationFields || Boolean(card.querySelector('.calc-work') && card.querySelector('.calc-final'));
+          item.pointFields = item.pointFields || Boolean(card.querySelector('.point-x') && card.querySelector('.point-y'));
+          item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
+        });
+        const bodyText = document.body.innerText;
+        const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
+          semanticValidationEnabled: document.body.dataset.semanticValidation === 'required',
           contextBlockCount: document.querySelectorAll('.ctx-block').length,
+          promptContextCount: document.querySelectorAll('[data-context-role="prompt"]').length,
+          sourceContextCount: document.querySelectorAll('[data-context-role="source"]').length,
+          supportBoxCount: supportBoxes.length,
+          closedSupportBoxCount: supportBoxes.filter((box) => !box.open).length,
+          openSupportBoxCount: supportBoxes.filter((box) => box.open).length,
+          supportCollapsedByDefault: supportBoxes.length > 0 && supportBoxes.every((box) => !box.open),
+          correctionModelSupportVisibleByDefault: false,
           taskCardCount: cards.length,
           families: cards.map((item) => item.getAttribute('data-task-family')),
+          taskStates: cards.map((item, index) => ({
+            index,
+            family: item.getAttribute('data-task-family'),
+            complete: item.classList.contains('is-complete'),
+            retry: item.classList.contains('is-retry'),
+            feedback: item.querySelector('.feedback')?.textContent || ''
+          })),
+          familyAffordances,
           contextBeforeTasks: sourcePane.getBoundingClientRect().top <= taskPane.getBoundingClientRect().top + 2,
           sourcePanePresent: Boolean(sourcePane),
           taskPanePresent: Boolean(taskPane),
@@ -397,13 +799,21 @@
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
           interactiveControlCount: document.querySelectorAll('.play-control').length,
           checkButtonCount: document.querySelectorAll('.check-button').length,
+          taskInstructionCount: document.querySelectorAll('.task-instructions').length,
+          valueBankCount: document.querySelectorAll('.value-bank').length,
+          roleBankCount: document.querySelectorAll('.role-bank').length,
+          sequenceBuilderCount: document.querySelectorAll('.sequence-builder').length,
+          plainSequenceTextareaCount: Array.from(document.querySelectorAll('textarea')).filter((item) => item.closest('[data-task-family="formula_builder"], [data-task-family="step_ordering"], [data-task-family="source_chain_builder"]')).length,
+          genericOptionLabelVisible: new RegExp(['Keuze ' + 'A', 'Keuze ' + 'B', 'Bronwaarde 1\\s+Rol 1', 'Gekozen ' + 'volgorde'].join('|')).test(bodyText),
           completedTaskCount: completedCount(),
+          wrongRetryCount: document.querySelectorAll('.task-card.is-retry').length,
+          retryFeedbackCount: Array.from(document.querySelectorAll('.feedback')).filter((item) => item.textContent.includes('Nog niet')).length,
           labCompleted: completedCount() === cards.length,
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
           flowchartCount: document.querySelectorAll('.flow-list').length,
-          sourceRefsVisible: document.body.innerText.includes('references/'),
-          bodyTextSnapshot: document.body.innerText,
+          sourceRefsVisible: bodyText.includes('references/'),
+          bodyTextSnapshot: bodyText,
           contextTextSnapshot: sourcePane ? sourcePane.innerText : '',
           taskTextSnapshot: taskPane ? taskPane.innerText : '',
           rawImageCount: document.querySelectorAll('img').length,
@@ -411,11 +821,34 @@
           overflowingTags: overflowing.slice(0, 8).map((item) => item.tagName.toLowerCase())
         };
       }
+
       window.TaskIngestTransform2Lab = {
         inspect,
+        resetAll,
+        applyWrongAttempt(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          if (card) {
+            fillWrong(card, models[taskIndex]);
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        correctTask(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          if (card) {
+            fillWrong(card, models[taskIndex]);
+            card.querySelector('.check-button').click();
+            fillCorrect(card, models[taskIndex]);
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
         completeDemoPath() {
+          resetAll();
           cards.forEach((card, index) => {
-            fillCard(card, index);
+            fillCorrect(card, models[index]);
             if (!card.classList.contains('is-complete')) card.querySelector('.check-button').click();
           });
           return inspect();

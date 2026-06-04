@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "opened": "2026-06-04",
+  "updated": "2026-06-04",
+  "status": "repair_evidence_prepared_awaiting_renewed_review",
+  "decision": "hold_for_playable_repair",
+  "gate_closure_authorized": false,
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-1",
+  "renewed_human_review_required": true,
+  "blocking_items": [
+    {
+      "id": "real_task_family_controls",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "build-scripts/sprints/task-ingest-playable-lab.js",
+        "reports/json/task-ingest-transform2-actual-exam-proof.json",
+        "reports/json/task-ingest-transform3-textbook-proof.json"
+      ]
+    },
+    {
+      "id": "semantic_checking",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "reports/json/task-ingest-transform2-actual-exam-proof.json",
+        "reports/json/task-ingest-transform3-textbook-proof.json"
+      ]
+    },
+    {
+      "id": "collapsed_support_policy",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html"
+      ]
+    },
+    {
+      "id": "concrete_prompts",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "build-scripts/sprints/task-ingest-playable-lab.js"
+      ]
+    },
+    {
+      "id": "task_affordance_checker",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "build-scripts/sprints/check-task-ingest-transform2-actual-exam.js",
+        "build-scripts/sprints/check-task-ingest-transform3-textbook.js",
+        "build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js"
+      ]
+    },
+    {
+      "id": "wrong_retry_correct_completed_evidence",
+      "state": "prepared_for_renewed_review",
+      "evidence": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md"
+      ]
+    }
+  ],
+  "closure_constraints": {
+    "fresh_human_review_required": true,
+    "explicit_human_confirmation_required": true,
+    "gate_closure_files_allowed_now": false
+  }
+}

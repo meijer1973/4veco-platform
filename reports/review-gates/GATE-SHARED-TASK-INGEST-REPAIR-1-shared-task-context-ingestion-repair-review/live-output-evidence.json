@@ -3,7 +3,7 @@
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
   "generated": "2026-06-04",
-  "status": "playable_lab_evidence_ready_after_remote_publication",
+  "status": "playable_repair_evidence_ready_after_hold_for_playable_repair",
   "remote_publication": {
     "reviewed_remote_branch": "main",
     "reviewed_remote_commit_hash": "0984b83b366b6759819dde5f8bd5d277b66f7a8d",
@@ -17,16 +17,22 @@
       "proof": "reports/json/task-ingest-transform2-actual-exam-proof.json",
       "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshot-manifest.md",
       "screenshots": [
-        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-light.png",
-        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-light.png",
-        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark.png"
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-dark-completed.png"
       ],
       "task_count": 6,
       "context_block_count": 4,
       "playable_lab": {
-        "interactive_controls_rendered": true,
-        "check_buttons_rendered": true,
+        "semantic_validation_enabled": true,
+        "real_task_family_controls_rendered": true,
+        "wrong_retry_state_proven": true,
+        "corrected_state_proven": true,
         "completion_path_reaches_done": true,
+        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
@@ -37,20 +43,32 @@
       "proof": "reports/json/task-ingest-transform3-textbook-proof.json",
       "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
       "screenshots": [
-        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-light.png",
-        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-light.png",
-        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png"
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark-completed.png"
       ],
       "task_count": 9,
       "context_block_count": 6,
       "playable_lab": {
-        "interactive_controls_rendered": true,
-        "check_buttons_rendered": true,
+        "semantic_validation_enabled": true,
+        "real_task_family_controls_rendered": true,
+        "wrong_retry_state_proven": true,
+        "corrected_state_proven": true,
         "completion_path_reaches_done": true,
+        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
     }
+  },
+  "human_review_state": {
+    "first_round_decision": "hold_for_playable_repair",
+    "renewed_review_required": true,
+    "gate_closure_authorized": false,
+    "explicit_human_confirmation_required_before_closure": true
   },
   "product_boundaries": {
     "generated_lesson_output": false,
