@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T12:52:39.850Z",
+  "generatedAt": "2026-06-04T13:11:02.735Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3195,8 +3195,8 @@
             {
               "sprint": "CI-REMOTE-1",
               "name": "GitHub Actions Remote Platform CI",
-              "completed": "no",
-              "currentState": "Platform sprint to add remote GitHub Actions validation for platform checks and cross-repo boundary checks. Must check out both `4veco-platform` and `4veco-lessen`, run platform validators on GitHub-hosted runner, upload diagnostic artifacts, and produce a successful remote status check before closure. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / REMOTE CI ONLY.** Platform added GitHub Actions workflow `platform-ci` with job `validate-platform`, sibling checkout for `4veco-platform` and `4veco-lessen`, `npm ci`, platform validators, report/roadmap/URL-index checks, diff hygiene, bounded diagnostic artifact upload, and branch protection requiring context `validate-platform`. Remote run `26953558150` passed on commit `c70cf1cf9320a5de9f8a2f4e490b934ae822246b`; artifact `platform-ci-diagnostics` uploaded. Carried flag: monitor GitHub `windows-latest` runner-label migration notice if CI later fails without code changes. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
               "exitGate": ""
             },
             {
@@ -3469,14 +3469,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "CI-REMOTE-1",
-          "name": "GitHub Actions Remote Platform CI",
-          "completed": "no",
-          "currentState": "Platform sprint to add remote GitHub Actions validation for platform checks and cross-repo boundary checks. Must check out both `4veco-platform` and `4veco-lessen`, run platform validators on GitHub-hosted runner, upload diagnostic artifacts, and produce a successful remote status check before closure. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3999,10 +3991,18 @@
           "currentState": "**CLOSED PASS / TEXTBOOK-SOURCE TASK TRANSFORMATION ONLY.** Platform added review-ready owned textbook-source transformation for `1.1.3 Grafieken en tabellen`: governed source map, six context blocks, nine shared task-family cards, visual variant map, operation-chain trace, answer-form trace, task-family map, reviewer notes, rendered review lab, desktop/mobile/dark screenshots, proof JSON, capture harness, and checker. Preserves table reading, P-Q axis convention, graph procedure, point placement, interpolation source values, graph reading, visible percent-change calculation work, source-chain reasoning, and claim-answer form. Records the paragraph-taught and also source-valid 50 percent intervals without claiming official exam/external-primary authority. No human gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CI-REMOTE-1",
+          "name": "GitHub Actions Remote Platform CI",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / REMOTE CI ONLY.** Platform added GitHub Actions workflow `platform-ci` with job `validate-platform`, sibling checkout for `4veco-platform` and `4veco-lessen`, `npm ci`, platform validators, report/roadmap/URL-index checks, diff hygiene, bounded diagnostic artifact upload, and branch protection requiring context `validate-platform`. Remote run `26953558150` passed on commit `c70cf1cf9320a5de9f8a2f4e490b934ae822246b`; artifact `platform-ci-diagnostics` uploaded. Carried flag: monitor GitHub `windows-latest` runner-label migration notice if CI later fails without code changes. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: `GATE-SHARED-TASK-INGEST-REPAIR-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 38,
-      "openCount": 38
+      "completedCount": 39,
+      "openCount": 37
     },
     {
       "id": "innovation",

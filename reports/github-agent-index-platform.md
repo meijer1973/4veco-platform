@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T12:52:16.592Z
+Generated: 2026-06-04T13:10:52.453Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3289
+Files indexed: 3297
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -803,7 +803,7 @@ Count: 218
 
 ## references
 
-Count: 466
+Count: 467
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -866,6 +866,7 @@ Count: 466
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- references/data/sprints/CI-REMOTE-1.plan.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.plan.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
@@ -1274,7 +1275,7 @@ Count: 466
 
 ## reports
 
-Count: 1991
+Count: 1996
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2044,6 +2045,11 @@ Count: 1991
 - reports/sprints/CHECK-SHORT-EXIT-1-plan.md
 - reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
 - reports/sprints/CHECK-SHORT-EXIT-1-result.md
+- reports/sprints/CI-REMOTE-1-baseline.md
+- reports/sprints/CI-REMOTE-1-command-log.jsonl
+- reports/sprints/CI-REMOTE-1-command-log.md
+- reports/sprints/CI-REMOTE-1-plan.md
+- reports/sprints/CI-REMOTE-1-planning-review.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md
@@ -3288,8 +3294,10 @@ _No files indexed in this group._
 
 ## other
 
-Count: 289
+Count: 291
 
+- .github/ci-python-requirements.txt
+- .github/workflows/platform-ci.yml
 - .gitignore
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md

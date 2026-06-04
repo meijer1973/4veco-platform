@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-REMOTE-1",
+  "generated": "2026-06-04",
+  "status": "completed",
+  "plan": "reports/sprints/CI-REMOTE-1-plan.md",
+  "baseline": "reports/sprints/CI-REMOTE-1-baseline.md",
+  "result": "reports/sprints/CI-REMOTE-1-result.md",
+  "diff_summary": "reports/sprints/CI-REMOTE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/CI-REMOTE-1-command-log.jsonl",
+    "markdown": "reports/sprints/CI-REMOTE-1-command-log.md"
+  },
+  "remote_ci": {
+    "workflow_name": "platform-ci",
+    "job_name": "validate-platform",
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/26953558150",
+    "run_id": "26953558150",
+    "job_id": "79524686512",
+    "commit_sha": "c70cf1cf9320a5de9f8a2f4e490b934ae822246b",
+    "conclusion": "success",
+    "artifacts_uploaded": true,
+    "artifact_name": "platform-ci-diagnostics",
+    "artifact_id": "7412205668"
+  },
+  "branch_protection": {
+    "configured": true,
+    "branch": "main",
+    "strict": true,
+    "required_contexts": [
+      "validate-platform"
+    ],
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "enforce_admins": false,
+    "note": "Repository-owner direct pushes can bypass; pull request merges have the required status check available."
+  },
+  "scope": {
+    "remote_ci": true,
+    "source_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics_or_mastery_authority": false,
+    "scale_gate_1_authority": false
+  },
+  "evidence": {
+    "workflow": ".github/workflows/platform-ci.yml",
+    "python_requirements": ".github/ci-python-requirements.txt",
+    "plan": "reports/sprints/CI-REMOTE-1-plan.md",
+    "baseline": "reports/sprints/CI-REMOTE-1-baseline.md",
+    "planning_review": "reports/sprints/CI-REMOTE-1-planning-review.md",
+    "result": "reports/sprints/CI-REMOTE-1-result.md",
+    "diff_summary": "reports/sprints/CI-REMOTE-1-diff-summary.md",
+    "command_log_jsonl": "reports/sprints/CI-REMOTE-1-command-log.jsonl",
+    "command_log_markdown": "reports/sprints/CI-REMOTE-1-command-log.md",
+    "remote_run": "https://github.com/meijer1973/4veco-platform/actions/runs/26953558150"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-REMOTE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js CI-REMOTE-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "gh run list --repo meijer1973/4veco-platform --workflow platform-ci --limit 3",
+      "status": "passed"
+    },
+    {
+      "command": "gh run view 26953558150 --repo meijer1973/4veco-platform --json \"databaseId,workflowName,displayTitle,headSha,status,conclusion,url,jobs\"",
+      "status": "passed"
+    },
+    {
+      "command": "gh api repos/meijer1973/4veco-platform/actions/runs/26953558150/artifacts",
+      "status": "passed"
+    },
+    {
+      "command": "gh api repos/meijer1973/4veco-platform/branches/main/protection",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js CI-REMOTE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-REMOTE-1-result.md",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/CI-REMOTE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CI-REMOTE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CI-REMOTE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CI-REMOTE-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "CI-RUNNER-LABEL-1",
+        "description": "GitHub notes windows-latest runner requests are being redirected to a newer Windows image by June 15, 2026.",
+        "disposition": "accepted_follow_up",
+        "owner": "platform maintenance",
+        "next_action": "Monitor runner-label migration if CI later fails without code changes.",
+        "blocking": false
+      }
+    ]
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1"
+}
