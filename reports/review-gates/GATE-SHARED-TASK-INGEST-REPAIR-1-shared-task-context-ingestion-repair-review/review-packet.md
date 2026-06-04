@@ -7,9 +7,10 @@ Status: refreshed after renewed `REVISE` and
 remote snapshot recorded below, but the gate is not closed and no product
 authority exists.
 
-Reviewed remote evidence snapshot: `main` at
-`2e5973d7f68e2f766dc9f0588d3e0b201cef13f8` until this packet metadata is
-updated after the repair-2 push.
+Reviewed remote evidence snapshot: `codex/shared-task-ingest-repair2` at
+`0016511e4dc8e8d1d0ff6cf32875c967fcaa971d`. Direct push to `main` is blocked
+by required GitHub status checks, so this branch is the published inspection
+surface until the PR/check flow updates `main`.
 
 ## Review Scope
 

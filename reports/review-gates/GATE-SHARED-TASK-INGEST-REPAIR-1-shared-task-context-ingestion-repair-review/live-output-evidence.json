@@ -5,9 +5,9 @@
   "generated": "2026-06-04",
   "status": "target_task_repair_evidence_ready_after_renewed_hold_for_playable_repair",
   "remote_publication": {
-    "reviewed_remote_branch": "main",
-    "reviewed_remote_commit_hash": "2e5973d7f68e2f766dc9f0588d3e0b201cef13f8",
-    "reviewed_remote_status": "published_repair2_evidence_snapshot_pending_metadata_hash_refresh",
+    "reviewed_remote_branch": "codex/shared-task-ingest-repair2",
+    "reviewed_remote_commit_hash": "0016511e4dc8e8d1d0ff6cf32875c967fcaa971d",
+    "reviewed_remote_status": "published_repair2_evidence_snapshot_on_review_branch_main_blocked_by_required_status_check",
     "review_may_start": true
   },
   "playable_labs": {

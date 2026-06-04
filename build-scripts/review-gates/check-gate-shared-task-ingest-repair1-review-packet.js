@@ -52,8 +52,9 @@ function runNode(script) {
 
 function requireRemotePublication(packet, live) {
   const hashPattern = /^[0-9a-f]{40}$/;
+  const branchPattern = /^(main|codex\/[A-Za-z0-9._/-]+)$/;
   assert(packet.remote_publication_required_before_review === true, 'packet must require remote publication before review');
-  assert(packet.remote_publication.reviewed_remote_branch === 'main', 'packet must record reviewed remote branch main');
+  assert(branchPattern.test(packet.remote_publication.reviewed_remote_branch), 'packet must record reviewed remote branch main or codex/*');
   assert(hashPattern.test(packet.remote_publication.reviewed_remote_commit_hash), 'packet must record reviewed remote commit hash');
   assert(packet.remote_publication.review_may_start === true, 'packet must allow review only after remote publication');
   assert(live.remote_publication.reviewed_remote_branch === packet.remote_publication.reviewed_remote_branch, 'live evidence branch mismatch');
