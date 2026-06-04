@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASK-CONTEXT-RUNTIME-1 Reviewlab</title>
+  <link rel="stylesheet" href="../../engines/task-shell.css">
+  <style>
+    body {
+      margin: 0;
+      background: var(--ts-bg);
+      color: var(--ts-text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .lab-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px 0;
+      background: var(--ts-bg);
+    }
+    .lab-toolbar button {
+      min-height: 38px;
+      padding: 8px 11px;
+      border: 1px solid var(--ts-line);
+      border-radius: var(--ts-radius);
+      background: var(--ts-panel);
+      color: var(--ts-text);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .lab-toolbar button:focus-visible {
+      outline: 2px solid var(--ts-focus);
+      outline-offset: 2px;
+    }
+    .lab-state {
+      color: var(--ts-muted);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="lab-toolbar" aria-label="Reviewlab bediening">
+      <button type="button" data-lab-theme>Licht/donker</button>
+      <button type="button" data-lab-complete>Vul correct in</button>
+      <button type="button" data-lab-check>Controleer</button>
+      <span class="lab-state" data-lab-state>Niet gecontroleerd</span>
+    </div>
+    <div id="task-shell-lab"></div>
+    <p id="review-lab-next-action" class="ts-visually-hidden">Reviewlab vervolgstap.</p>
+  </main>
+  <script src="../../engines/task-shell-engine.js"></script>
+  <script src="../../engines/task-shell-ui.js"></script>
+  <script>
+    (function () {
+      var data = {
+      "schema_version": 1,
+      "surfaceKind": "review_lab",
+      "title": "Context boven de taak",
+      "eyebrow": "Reviewlab",
+      "intro": "Gebruik de contextblokken voordat je de bronwaarden kiest.",
+      "sourceAuthority": {
+            "kind": "external_primary",
+            "exam_item_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+            "overlay_path": "references/data/exam-ingestion/exam-item-overlays.json",
+            "prompt_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+            "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+            "source_material_id": "table-1-zoohee-zorgverzekering"
+      },
+      "contextBlocks": [
+            {
+                  "id": "ctx-zoohee-intro",
+                  "type": "markdown",
+                  "title": "Vergelijk twee zorgverzekeringen",
+                  "bodyMarkdown": "Een jongere vergelijkt twee varianten: wettelijk eigen risico en verhoogd eigen risico.",
+                  "accessibilitySummary": "Korte inleiding bij de vergelijking tussen twee zorgverzekeringen."
+            },
+            {
+                  "id": "ctx-zoohee-source",
+                  "type": "source_excerpt",
+                  "sourceLabel": "Bron 1",
+                  "caption": "Bron 1: Zoohee zorgverzekering",
+                  "bodyMarkdown": "Zoohee biedt twee varianten met verschillende maandpremies en verschillende bedragen voor eigen risico.",
+                  "sourceRefs": [
+                        "references/external/exams/vw-1022-a-25-1-o.pdf#question-3"
+                  ],
+                  "accessibilitySummary": "Tekstbron met de context voor premie en eigen risico."
+            },
+            {
+                  "id": "ctx-zoohee-table",
+                  "type": "table",
+                  "sourceLabel": "Tabel 1",
+                  "caption": "Tabel 1: Zoohee zorgverzekering",
+                  "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                  "columns": [
+                        "Variant",
+                        "Eigen risico per jaar",
+                        "Premie per maand"
+                  ],
+                  "rows": [
+                        [
+                              "Wettelijk eigen risico",
+                              "385 euro",
+                              "108,25 euro"
+                        ],
+                        [
+                              "Verhoogd eigen risico",
+                              "885 euro",
+                              "86,25 euro"
+                        ]
+                  ],
+                  "altText": "Tabel met twee varianten: wettelijk eigen risico 385 euro en premie 108,25 euro per maand; verhoogd eigen risico 885 euro en premie 86,25 euro per maand."
+            },
+            {
+                  "id": "ctx-zoohee-svg",
+                  "type": "svg_figure",
+                  "sourceLabel": "Figuur 1",
+                  "caption": "Figuur 1: Premieverschil per maand",
+                  "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                  "svg": "<svg viewBox=\"0 0 320 180\" role=\"img\"><rect x=\"60\" y=\"42\" width=\"80\" height=\"108\"></rect><rect x=\"180\" y=\"70\" width=\"80\" height=\"80\"></rect><line x1=\"40\" y1=\"150\" x2=\"286\" y2=\"150\" stroke=\"currentColor\"></line><line x1=\"40\" y1=\"25\" x2=\"40\" y2=\"150\" stroke=\"currentColor\"></line></svg>",
+                  "viewBox": "0 0 320 180",
+                  "altText": "Staafdiagram dat laat zien dat de maandpremie lager is bij verhoogd eigen risico.",
+                  "reconstruction": {
+                        "status": "reconstructed_from_source",
+                        "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                        "rawCopiedImage": false
+                  }
+            },
+            {
+                  "id": "ctx-zoohee-graph",
+                  "type": "graph",
+                  "sourceLabel": "Figuur 2",
+                  "caption": "Figuur 2: Jaarpremie per variant",
+                  "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                  "axes": {
+                        "x": {
+                              "label": "Variant"
+                        },
+                        "y": {
+                              "label": "Jaarpremie in euro"
+                        }
+                  },
+                  "series": [
+                        {
+                              "label": "Jaarpremie",
+                              "points": [
+                                    {
+                                          "x": "wettelijk",
+                                          "y": 1299
+                                    },
+                                    {
+                                          "x": "verhoogd",
+                                          "y": 1035
+                                    }
+                              ]
+                        }
+                  ],
+                  "altText": "Grafiek met jaarpremies 1299 euro en 1035 euro voor de twee varianten."
+            },
+            {
+                  "id": "ctx-zoohee-flow",
+                  "type": "flowchart",
+                  "sourceLabel": "Figuur 3",
+                  "caption": "Figuur 3: Denkroute premie naar jaarkosten",
+                  "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                  "nodes": [
+                        {
+                              "id": "monthly-premium",
+                              "label": "Premie per maand"
+                        },
+                        {
+                              "id": "annual-premium",
+                              "label": "Premie per jaar"
+                        },
+                        {
+                              "id": "deductible",
+                              "label": "Vergelijk met eigen risico"
+                        }
+                  ],
+                  "edges": [
+                        {
+                              "from": "monthly-premium",
+                              "to": "annual-premium",
+                              "label": "keer 12"
+                        },
+                        {
+                              "from": "annual-premium",
+                              "to": "deductible",
+                              "label": "naast risico"
+                        }
+                  ],
+                  "altText": "Stroomschema van maandpremie naar jaarpremie en vergelijking met eigen risico."
+            },
+            {
+                  "id": "ctx-zoohee-formula",
+                  "type": "formula",
+                  "sourceLabel": "Formule 1",
+                  "caption": "Formule 1: Jaarpremie berekenen",
+                  "sourceMaterialId": "table-1-zoohee-zorgverzekering",
+                  "expression": "jaarpremie = maandpremie x 12",
+                  "variables": [
+                        {
+                              "symbol": "maandpremie",
+                              "meaning": "premie per maand in euro"
+                        },
+                        {
+                              "symbol": "jaarpremie",
+                              "meaning": "premie per jaar in euro"
+                        }
+                  ],
+                  "altText": "Formule: jaarpremie is maandpremie keer twaalf."
+            },
+            {
+                  "id": "ctx-zoohee-info",
+                  "type": "info_box",
+                  "title": "Let op de eenheid",
+                  "bodyMarkdown": "Premie staat per maand in de bron; eigen risico staat per jaar.",
+                  "accessibilitySummary": "Informatiekader over maand- en jaarbedragen."
+            }
+      ],
+      "tasks": [
+            {
+                  "id": "task-zoohee-select-values",
+                  "family": "source_value_selection",
+                  "skillLabel": "Bronwaarden kiezen",
+                  "purpose": "Oefen welke bronwaarden bij de berekening horen.",
+                  "prompt": "Kies de premiewaarden die nodig zijn om jaarpremies te vergelijken.",
+                  "contextRefs": [
+                        "ctx-zoohee-intro",
+                        "ctx-zoohee-source",
+                        "ctx-zoohee-table",
+                        "ctx-zoohee-svg",
+                        "ctx-zoohee-graph",
+                        "ctx-zoohee-flow",
+                        "ctx-zoohee-formula",
+                        "ctx-zoohee-info"
+                  ],
+                  "interaction": {
+                        "valueBankLabel": "Bronwaarden",
+                        "roleLabel": "Rol in berekening",
+                        "values": [
+                              {
+                                    "id": "premium-standard",
+                                    "label": "108,25 euro",
+                                    "kind": "answer",
+                                    "sourceLabel": "wettelijk eigen risico",
+                                    "unit": "premie per maand"
+                              },
+                              {
+                                    "id": "premium-raised",
+                                    "label": "86,25 euro",
+                                    "kind": "answer",
+                                    "sourceLabel": "verhoogd eigen risico",
+                                    "unit": "premie per maand"
+                              },
+                              {
+                                    "id": "deductible-standard",
+                                    "label": "385 euro",
+                                    "kind": "distractor",
+                                    "sourceLabel": "wettelijk eigen risico",
+                                    "unit": "eigen risico per jaar",
+                                    "distractorFor": "premium-standard"
+                              }
+                        ],
+                        "roles": [
+                              {
+                                    "id": "standard-premium",
+                                    "label": "standaard maandpremie"
+                              },
+                              {
+                                    "id": "raised-premium",
+                                    "label": "verhoogde maandpremie"
+                              }
+                        ]
+                  },
+                  "expected": {
+                        "kind": "source_value_selection",
+                        "selections": [
+                              {
+                                    "valueId": "premium-standard",
+                                    "role": "standard-premium"
+                              },
+                              {
+                                    "valueId": "premium-raised",
+                                    "role": "raised-premium"
+                              }
+                        ],
+                        "partialFeedback": "practice_only"
+                  },
+                  "feedback": {
+                        "matchTitle": "Bronwaarden gekozen",
+                        "matchText": "De gekozen premiewaarden passen bij de jaarpremievergelijking.",
+                        "retryTitle": "Controleer de bronwaarden",
+                        "retryText": "Gebruik de premies per maand en laat het eigen risico hier liggen."
+                  },
+                  "practiceRoute": {
+                        "label": "Oefen verder met bronwaarden",
+                        "href": "#review-lab-next-action"
+                  }
+            }
+      ]
+};
+      var root = document.getElementById('task-shell-lab');
+      var state = document.querySelector('[data-lab-state]');
+      function task() { return data.tasks[0]; }
+      function setState(text) { state.textContent = text; document.body.setAttribute('data-lab-state', text); }
+      function render() {
+        root.innerHTML = TaskShellUI.renderStaticHtml(data);
+        setState('Niet gecontroleerd');
+      }
+      function setSelected(valueId, role) {
+        var button = root.querySelector('[data-source-value-id="' + valueId + '"]');
+        var select = root.querySelector('[data-source-role-value-id="' + valueId + '"]');
+        if (button && !button.classList.contains('selected')) button.click();
+        if (select) select.value = role;
+      }
+      function check() {
+        var response = TaskShellUI.collectSourceValueSelectionResponse(root, task());
+        var result = TaskShellEngine.evaluateTask(task(), response);
+        var target = root.querySelector('[data-feedback-for="' + task().id + '"]');
+        if (target) {
+          target.innerHTML = TaskShellUI.renderFeedback(result);
+          target.focus();
+        }
+        setState(result.state === 'matched' ? 'Voltooid' : 'Opnieuw proberen');
+        return result;
+      }
+      root.addEventListener('click', function (event) {
+        TaskShellUI.handleSourceValueSelectionClick(root, event);
+      });
+      document.querySelector('[data-lab-check]').addEventListener('click', check);
+      document.querySelector('[data-lab-complete]').addEventListener('click', function () {
+        setSelected('premium-standard', 'standard-premium');
+        setSelected('premium-raised', 'raised-premium');
+        check();
+      });
+      document.querySelector('[data-lab-theme]').addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+      });
+      window.TaskContextRuntime1Lab = {
+        data: data,
+        render: render,
+        completeCorrect: function () {
+          setSelected('premium-standard', 'standard-premium');
+          setSelected('premium-raised', 'raised-premium');
+          return check();
+        },
+        inspect: function () {
+          var context = document.querySelector('[data-task-context]');
+          var tasks = document.querySelector('.ts-task-list');
+          var visibleText = document.body.innerText.replace(/\s+/g, ' ');
+          var overflowing = Array.from(document.querySelectorAll('body *')).filter(function (el) {
+            var rect = el.getBoundingClientRect();
+            return rect.right > window.innerWidth + 1 || rect.left < -1;
+          }).slice(0, 12).map(function (el) {
+            var rect = el.getBoundingClientRect();
+            return {
+              tag: el.tagName.toLowerCase(),
+              id: el.id || '',
+              className: String(el.className || '').slice(0, 120),
+              left: Math.round(rect.left),
+              right: Math.round(rect.right),
+              width: Math.round(rect.width)
+            };
+          });
+          return {
+            contextBeforeTasks: !!(context && tasks && (context.compareDocumentPosition(tasks) & Node.DOCUMENT_POSITION_FOLLOWING)),
+            contextBlockCount: document.querySelectorAll('[data-context-block]').length,
+            contextTypes: Array.from(document.querySelectorAll('[data-context-type]')).map(function (el) { return el.getAttribute('data-context-type'); }),
+            taskRefCount: document.querySelectorAll('[data-context-ref]').length,
+            visibleInternalContextId: /\bctx-[a-z0-9-]+\b/.test(visibleText),
+            captions: Array.from(document.querySelectorAll('.ts-context-head h2')).map(function (el) { return el.textContent.trim(); }),
+            roleImgCount: document.querySelectorAll('[role="img"][aria-label]').length,
+            tableCount: document.querySelectorAll('.ts-context-table').length,
+            hintCount: document.querySelectorAll('.ts-hints').length,
+            feedbackState: document.querySelector('[data-feedback-state]') ? document.querySelector('[data-feedback-state]').getAttribute('data-feedback-state') : '',
+            labState: document.body.getAttribute('data-lab-state') || '',
+            theme: document.documentElement.getAttribute('data-theme') || '',
+            overflowing: overflowing,
+            viewport: { width: window.innerWidth, height: window.innerHeight },
+            page: { width: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight }
+          };
+        }
+      };
+      render();
+    })();
+  </script>
+</body>
+</html>

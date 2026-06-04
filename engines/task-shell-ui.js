@@ -30,6 +30,180 @@
     return task.family;
   }
 
+  function plainParagraphs(value) {
+    return String(value == null ? '' : value)
+      .split(/\n{2,}/)
+      .map(function (part) { return part.trim(); })
+      .filter(Boolean);
+  }
+
+  function renderMarkdownBody(value) {
+    var paragraphs = plainParagraphs(value);
+    if (!paragraphs.length) return '';
+    return '<div class="ts-context-copy">' +
+      paragraphs.map(function (paragraph) {
+        return '<p>' + escapeHtml(paragraph).replace(/\n/g, '<br>') + '</p>';
+      }).join('') +
+    '</div>';
+  }
+
+  function sanitizeInlineSvg(svg) {
+    var value = String(svg == null ? '' : svg);
+    if (!/^\s*<svg\b/i.test(value)) return '';
+    if (/<script\b/i.test(value) || /\son[a-z]+\s*=/i.test(value) || /javascript\s*:/i.test(value)) return '';
+    return value.replace(/<svg\b/i, '<svg class="ts-context-svg-art" aria-hidden="true" focusable="false"');
+  }
+
+  function contextDisplayLabel(block) {
+    return block.sourceLabel || block.caption || block.title || 'Context';
+  }
+
+  function buildContextIndex(contextBlocks) {
+    var index = {};
+    (contextBlocks || []).forEach(function (block, position) {
+      index[block.id] = {
+        id: block.id,
+        domId: 'ts-context-block-' + (position + 1),
+        label: contextDisplayLabel(block)
+      };
+    });
+    return index;
+  }
+
+  function renderContextSummary(block) {
+    var summary = block.altText || block.accessibilitySummary;
+    return summary ? '<p class="ts-context-summary">' + escapeHtml(summary) + '</p>' : '';
+  }
+
+  function renderContextHeading(block, position) {
+    var label = contextDisplayLabel(block);
+    var title = block.caption || block.title || label;
+    return '<div class="ts-context-head">' +
+      '<p class="ts-context-kicker">' + escapeHtml(label) + '</p>' +
+      '<h2 id="ts-context-title-' + (position + 1) + '">' + escapeHtml(title) + '</h2>' +
+    '</div>';
+  }
+
+  function renderMarkdownContext(block) {
+    return renderMarkdownBody(block.bodyMarkdown) + renderContextSummary(block);
+  }
+
+  function renderTableContext(block) {
+    var head = '<thead><tr>' + block.columns.map(function (column) {
+      return '<th scope="col">' + escapeHtml(column) + '</th>';
+    }).join('') + '</tr></thead>';
+    var body = '<tbody>' + block.rows.map(function (row) {
+      return '<tr>' + row.map(function (cell) {
+        return '<td>' + escapeHtml(cell) + '</td>';
+      }).join('') + '</tr>';
+    }).join('') + '</tbody>';
+    return renderContextSummary(block) +
+      '<div class="ts-context-table-wrap">' +
+        '<table class="ts-context-table">' +
+          '<caption class="ts-visually-hidden">' + escapeHtml(block.caption) + '</caption>' +
+          head +
+          body +
+        '</table>' +
+      '</div>';
+  }
+
+  function renderSvgFigureContext(block) {
+    var svg = sanitizeInlineSvg(block.svg);
+    return renderContextSummary(block) +
+      '<div class="ts-context-svg" role="img" aria-label="' + escapeHtml(block.altText) + '">' +
+        (svg || '<p>' + escapeHtml(block.altText) + '</p>') +
+      '</div>';
+  }
+
+  function renderGraphContext(block) {
+    var axisText = (block.axes && block.axes.x && block.axes.y)
+      ? '<p class="ts-context-axis">x: ' + escapeHtml(block.axes.x.label) + ' | y: ' + escapeHtml(block.axes.y.label) + '</p>'
+      : '';
+    var series = (block.series || []).map(function (item) {
+      var points = (item.points || []).map(function (point) {
+        return escapeHtml(point.x) + ': ' + escapeHtml(point.y);
+      }).join(', ');
+      return '<li><strong>' + escapeHtml(item.label) + '</strong><span>' + points + '</span></li>';
+    }).join('');
+    return renderContextSummary(block) +
+      '<div class="ts-context-graph" role="img" aria-label="' + escapeHtml(block.altText) + '">' +
+        axisText +
+        '<ul>' + series + '</ul>' +
+      '</div>';
+  }
+
+  function renderFlowchartContext(block) {
+    var nodeLabels = {};
+    (block.nodes || []).forEach(function (node) { nodeLabels[node.id] = node.label; });
+    var edges = (block.edges || []).map(function (edge) {
+      var from = nodeLabels[edge.from] || edge.from;
+      var to = nodeLabels[edge.to] || edge.to;
+      return '<li>' +
+        '<span>' + escapeHtml(from) + '</span>' +
+        '<span aria-hidden="true">-></span>' +
+        '<span>' + escapeHtml(to) + '</span>' +
+        (edge.label ? '<em>' + escapeHtml(edge.label) + '</em>' : '') +
+      '</li>';
+    }).join('');
+    return renderContextSummary(block) +
+      '<ol class="ts-context-flow" role="img" aria-label="' + escapeHtml(block.altText) + '">' + edges + '</ol>';
+  }
+
+  function renderFormulaContext(block) {
+    var variables = (block.variables || []).map(function (variable) {
+      return '<li><code>' + escapeHtml(variable.symbol) + '</code><span>' + escapeHtml(variable.meaning) + '</span></li>';
+    }).join('');
+    return renderContextSummary(block) +
+      '<div class="ts-context-formula" role="img" aria-label="' + escapeHtml(block.altText) + '">' +
+        '<code>' + escapeHtml(block.expression) + '</code>' +
+        '<ul>' + variables + '</ul>' +
+      '</div>';
+  }
+
+  function renderContextBlockBody(block) {
+    if (block.type === 'markdown' || block.type === 'info_box' || block.type === 'source_excerpt') return renderMarkdownContext(block);
+    if (block.type === 'table') return renderTableContext(block);
+    if (block.type === 'svg_figure') return renderSvgFigureContext(block);
+    if (block.type === 'graph') return renderGraphContext(block);
+    if (block.type === 'flowchart') return renderFlowchartContext(block);
+    if (block.type === 'formula') return renderFormulaContext(block);
+    return '';
+  }
+
+  function renderContextBlocks(contextBlocks) {
+    if (!Array.isArray(contextBlocks) || !contextBlocks.length) return '';
+    if (TaskShellEngine && TaskShellEngine.validateContextBlocks) TaskShellEngine.validateContextBlocks(contextBlocks);
+    return '<section class="ts-context" data-task-context aria-label="Bronnen en context">' +
+      '<div class="ts-context-region-head">' +
+        '<p class="ts-eyebrow">Context</p>' +
+        '<h2>Bekijk eerst de bron</h2>' +
+      '</div>' +
+      '<div class="ts-context-grid">' +
+        contextBlocks.map(function (block, position) {
+          return '<article class="ts-context-block ts-context-' + escapeHtml(block.type) + '" id="ts-context-block-' + (position + 1) + '" ' +
+            'data-context-block="' + escapeHtml(block.id) + '" data-context-type="' + escapeHtml(block.type) + '" ' +
+            'aria-labelledby="ts-context-title-' + (position + 1) + '">' +
+              renderContextHeading(block, position) +
+              renderContextBlockBody(block) +
+            '</article>';
+        }).join('') +
+      '</div>' +
+    '</section>';
+  }
+
+  function renderContextRefs(task, contextIndex) {
+    if (!contextIndex || !Array.isArray(task.contextRefs) || !task.contextRefs.length) return '';
+    var links = task.contextRefs.map(function (ref) {
+      var context = contextIndex[ref];
+      if (!context) return '';
+      return '<a href="#' + escapeHtml(context.domId) + '" data-context-ref="' + escapeHtml(ref) + '">' + escapeHtml(context.label) + '</a>';
+    }).filter(Boolean);
+    if (!links.length) return '';
+    return '<p class="ts-context-refs" data-context-refs-for="' + escapeHtml(task.id) + '">' +
+      '<span>Gebruik:</span> ' + links.join('<span aria-hidden="true">, </span>') +
+    '</p>';
+  }
+
   function optionButton(task, option) {
     return '<button type="button" class="ts-choice" aria-pressed="false" data-task-id="' + escapeHtml(task.id) + '" data-choice-id="' + escapeHtml(option.id) + '">' +
       '<span class="ts-choice-mark" aria-hidden="true"></span>' +
@@ -545,7 +719,7 @@
     }
   }
 
-  function renderTask(task, index) {
+  function renderTask(task, index, contextIndex) {
     if (TaskShellEngine) TaskShellEngine.validateTask(task);
     return '<article class="ts-task" data-task="' + escapeHtml(task.id) + '" data-task-family="' + escapeHtml(task.family) + '">' +
       '<div class="ts-task-meta">' +
@@ -555,6 +729,7 @@
       '</div>' +
       '<h2>' + escapeHtml(task.prompt) + '</h2>' +
       (task.purpose ? '<p class="ts-purpose">' + escapeHtml(task.purpose) + '</p>' : '') +
+      renderContextRefs(task, contextIndex) +
       renderHints(task) +
       renderControl(task) +
       '<div class="ts-feedback" data-feedback-for="' + escapeHtml(task.id) + '" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>' +
@@ -563,13 +738,15 @@
 
   function renderStaticHtml(data) {
     if (TaskShellEngine) TaskShellEngine.validateTaskSet(data);
+    var contextIndex = buildContextIndex(data.contextBlocks);
     return '<section class="ts-shell" data-task-shell="GAME-UX-3A">' +
       '<header class="ts-shell-head">' +
         '<p class="ts-eyebrow">' + escapeHtml(data.eyebrow || 'Oefentaak') + '</p>' +
         '<h1>' + escapeHtml(data.title) + '</h1>' +
         (data.intro ? '<p>' + escapeHtml(data.intro) + '</p>' : '') +
       '</header>' +
-      '<div class="ts-task-list">' + data.tasks.map(renderTask).join('') + '</div>' +
+      renderContextBlocks(data.contextBlocks) +
+      '<div class="ts-task-list">' + data.tasks.map(function (task, index) { return renderTask(task, index, contextIndex); }).join('') + '</div>' +
     '</section>';
   }
 
@@ -2024,6 +2201,7 @@
     handleSourceChainBuilderClick: handleSourceChainBuilderClick,
     collectLabelPlacementResponse: collectLabelPlacementResponse,
     handleLabelPlacementClick: handleLabelPlacementClick,
+    renderContextBlocks: renderContextBlocks,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

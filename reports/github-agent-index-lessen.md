@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-06-03T20:53:29.329Z
+Generated: 2026-06-04T06:14:56.457Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-lessen`
-Files indexed: 1589
+Files indexed: 1588
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -113,7 +113,7 @@ _No files indexed in this group._
 
 ## book folders
 
-Count: 1091
+Count: 843
 
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.svg
@@ -362,12 +362,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -437,43 +431,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
@@ -497,30 +454,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
@@ -539,29 +472,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
@@ -569,12 +479,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/build_pdf.py
@@ -632,12 +536,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_assets/1.2.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_assets/1.2.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_2.png
@@ -656,15 +554,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_fig_6.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/build_pdf.py
@@ -682,15 +571,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/build_pdf.py
@@ -710,26 +590,11 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/build_pdf.py
@@ -777,12 +642,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
@@ -797,15 +656,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/build_pdf.py
@@ -821,15 +671,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/build_pdf.py
@@ -849,24 +690,9 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/build_pdf.py
@@ -932,12 +758,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.5_ex_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.5_ex_2.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_chapter-plan-1.4.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_1.png
@@ -950,12 +770,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/build_pdf.py
@@ -975,15 +789,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/build_pdf.py
@@ -1003,15 +808,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/build_pdf.py
@@ -1027,12 +823,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/build_pdf.py
@@ -1040,10 +830,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/build_pdf.py
@@ -1073,12 +859,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_assets/1.5.4_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_2.png
@@ -1089,12 +869,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/build_pdf.py
@@ -1104,12 +878,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/build_pdf.py
@@ -1117,10 +885,6 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/build_pdf.py
@@ -1128,22 +892,10 @@ Count: 1091
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/build_chapter.py
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.html
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.md
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/deploy-config.json
 - Boek 1 - Grondslagen, vraag en aanbod/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/shared/adaptive-seam.js
@@ -1211,6 +963,245 @@ Count: 1091
 
 Count: 628
 
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 opgaven.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren \342\200\223 paragraaf.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 opgaven.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten \342\200\223 paragraaf.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 basis \342\200\223 antwoorden.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 basis \342\200\223 vragen.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening \342\200\223 antwoorden.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening \342\200\223 vragen.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 exit-ticket.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 instapquiz.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 antwoorden.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 midden \342\200\223 vragen.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws met visual.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws met visual.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 nieuws-detective.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie-v2-prototype.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 presentatie.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 redeneer-spel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 samenvatting.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 stappenplan.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg vaardigheden.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg vaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg voorkennis.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 uitleg voorkennis.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 verrijking \342\200\223 antwoorden.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 verrijking \342\200\223 vragen.docx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 wiskundevaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken \342\200\223 youtube-videos.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 exit-ticket.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 grafiekenspel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 instapquiz.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 nieuws met visual.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 nieuws-detective.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 presentatie.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 presentatie.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 redeneer-spel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 stappenplan.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 uitleg vaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 uitleg voorkennis.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 wiskundevaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers \342\200\223 youtube-videos.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 begeleide inoefening.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 grafiekenspel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 instapquiz.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 nieuws met visual.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 nieuws-detective.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 presentatie.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 presentatie.pptx"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 redeneer-spel.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 stappenplan.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 uitleg vaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 uitleg voorkennis.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 wiskundevaardigheden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen \342\200\223 youtube-videos.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 paragraaf.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 paragraaf.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie \342\200\223 paragraaf.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 samenvatting.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 samenvatting.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting \342\200\223 samenvatting.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 opgaven.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening \342\200\223 opgaven.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening \342\200\223 opgaven.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toets.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toets.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toets.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets \342\200\223 toetsmatrijs.pdf"
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_2.png
@@ -1223,15 +1214,6 @@ Count: 628
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/build_pdf.py
@@ -1253,26 +1235,11 @@ Count: 628
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/build_pdf.py
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/build_pdf.py
@@ -1345,43 +1312,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
@@ -1405,30 +1335,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
@@ -1447,29 +1353,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
@@ -1477,12 +1360,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/build_pdf.py
@@ -1505,15 +1382,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_fig_6.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/build_pdf.py
@@ -1531,15 +1399,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/build_pdf.py
@@ -1559,26 +1418,11 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/build_pdf.py
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/build_pdf.py
@@ -1596,15 +1440,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/build_pdf.py
@@ -1620,15 +1455,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/build_pdf.py
@@ -1648,24 +1474,9 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/build_pdf.py
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/build_pdf.py
@@ -1681,12 +1492,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/build_pdf.py
@@ -1706,15 +1511,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/build_pdf.py
@@ -1734,15 +1530,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/build_pdf.py
@@ -1758,12 +1545,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/build_pdf.py
@@ -1771,10 +1552,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/build_pdf.py
@@ -1788,12 +1565,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/build_pdf.py
@@ -1803,12 +1574,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/build_pdf.py
@@ -1816,10 +1581,6 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/build_pdf.py
@@ -1827,22 +1588,13 @@ Count: 628
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/build_pdf.py
 
 ## generated artifacts
 
-Count: 1089
+Count: 817
 
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_ex_1.svg
@@ -1856,15 +1608,6 @@ Count: 1089
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_fig_3.svg
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/_assets/1.3.2_we_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – opgaven.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2 Kostenstructuren – paragraaf.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.2 Kostenstructuren/1.3.2-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_ex_1.png
@@ -1885,25 +1628,10 @@ Count: 1089
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_fig_5.svg
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/_assets/1.3.3_we_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – opgaven.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3 Opbrengsten – paragraaf.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.3 Opbrengsten/1.3.3-review.md
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.png
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/_assets/1.3.4_ex_1.svg
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.html
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md
-- archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - archive/sprints/L-CP6A/displaced-book2-material/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/_assets/1.1.1_ex_1.png
@@ -2153,12 +1881,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_assets/1.1.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_doc.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/1.1.1_ex_1_web_dark.png
@@ -2228,43 +1950,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide5-img-db6ea92cebd7.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_assets/presentatie-slide6-img-a0d089c4fdbb.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – basis – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – midden – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie-v2-prototype.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – antwoorden.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – verrijking – vragen.docx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-begeleide-inoefening-lead-review-v1.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-nieuws-met-visual-lead-review-v1.md
@@ -2287,30 +1972,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_assets/1.1.2_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md
@@ -2328,41 +1989,12 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_assets/1.1.3_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – begeleide inoefening.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – instapquiz.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws met visual.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – nieuws-detective.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – presentatie.pptx
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – redeneer-spel.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – stappenplan.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg vaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – uitleg voorkennis.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – wiskundevaardigheden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – youtube-videos.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/_assets/1.1.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/1.1.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html
@@ -2418,12 +2050,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_assets/1.2.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_assets/1.2.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_ex_2.png
@@ -2442,15 +2068,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_fig_6.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/_assets/1.2.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_ex_1.png
@@ -2467,15 +2084,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/_assets/1.2.2_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_ex_1.png
@@ -2494,25 +2102,10 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/_assets/1.2.4_ex_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.1_ex_1.png
@@ -2558,12 +2151,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_assets/1.3.3_we_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_ex_2.png
@@ -2578,15 +2165,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/_assets/1.3.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_ex_1.png
@@ -2601,15 +2179,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/_assets/1.3.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_ex_1.png
@@ -2628,23 +2197,8 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/_assets/1.3.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.1_ex_1.png
@@ -2708,12 +2262,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.5_ex_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_assets/1.4.5_ex_2.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/_chapter-plan-1.4.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_1.png
@@ -2726,12 +2274,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/_assets/1.4.1_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1 Marktevenwicht – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.1 Marktevenwicht/1.4.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_ex_1.png
@@ -2750,15 +2292,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/_assets/1.4.2_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2 Verschuivingen – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.2 Verschuivingen/1.4.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_ex_1.png
@@ -2777,15 +2310,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_fig_5.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/_assets/1.4.3_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3 MK en MO – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.3 MK en MO/1.4.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_ex_1.png
@@ -2800,22 +2324,12 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/_assets/1.4.4_we_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – opgaven.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4 Winstmaximalisatie – paragraaf.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.4 Winstmaximalisatie/1.4.4-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/_assets/1.4.5_ex_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5 Gemengde opgaven – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4.5 Gemengde opgaven/1.4.5-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_assets/1.5.1_fig_1.png
@@ -2843,12 +2357,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_assets/1.5.4_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/_chapter-plan.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding – hoofdstuk.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_2.png
@@ -2859,12 +2367,6 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_4.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/_assets/1.5.1_fig_5.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1 Actieve samenvatting – samenvatting.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.1 Actieve samenvatting/1.5.1-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_ex_1.png
@@ -2873,42 +2375,20 @@ Count: 1089
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/_assets/1.5.2_fig_2.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2 Examenvaardigheden – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.2 Examenvaardigheden/1.5.2-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/_assets/1.5.3_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3 Integratieoefening – opgaven.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.3 Integratieoefening/1.5.3-review.md
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_ex_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_ex_1.svg
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.png
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/_assets/1.5.4_fig_1.svg
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – antwoorden.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toets.pdf
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.html
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.md
-- Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4 Proeftoets – toetsmatrijs.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-quality-ref.yaml
 - Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5.4 Proeftoets/1.5.4-review.md
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.html
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.md
-- Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod – boek.pdf
 - Boek 1 - Grondslagen, vraag en aanbod/index.html
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/.gitkeep
 - Boek 1 - Grondslagen, vraag en aanbod/shared/newsdetective/1.1.1.js
@@ -2936,14 +2416,52 @@ Count: 1089
 
 ## other
 
-Count: 414
+Count: 446
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
-- .claude/settings.local.json
 - .gitattributes
 - .gitignore
 - .nojekyll
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.html"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.md"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 antwoorden.pdf"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.html"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.md"
+- "archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2 Vraag \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3 Aanbod en marktevenwicht \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.4 Hoofdstuk Marktevenwicht en marginale analyse/1.4 Marktevenwicht en marginale analyse \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 antwoorden.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 antwoorden.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 antwoorden.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 hoofdstuk.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 hoofdstuk.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/1.5 Hoofdstuk Toetsvoorbereiding/1.5 Toetsvoorbereiding \342\200\223 hoofdstuk.pdf"
+- "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.html"
+- "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.md"
+- "Boek 1 - Grondslagen, vraag en aanbod/Boek 1 Grondslagen, vraag en aanbod \342\200\223 boek.pdf"
 - archive/planning/plan-1.1.1-part-b-clarity-audit.md
 - archive/README.md
 - archive/sprints/ENGINE-OP-1/ENGINE-OP-1-closure-log.md
@@ -3000,12 +2518,6 @@ Count: 414
 - archive/sprints/L-CP6A/L-CP6A-sprint-plan.md
 - archive/sprints/L-CP6A/L-CP6A-survival-map.md
 - archive/sprints/L-CP6A/L-CP6A-technical-qa-report.md
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – antwoorden.html
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – antwoorden.md
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – antwoorden.pdf
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – hoofdstuk.html
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – hoofdstuk.md
-- archive/sprints/L-CP6A/old-chapter13-assembly/1.3 Aanbod en kosten – hoofdstuk.pdf
 - archive/sprints/L-CP6E/L-CP6E-closure-log.md
 - archive/sprints/L-CP6E/L-CP6E-handoff-to-references.md
 - archive/sprints/L-CP6E/L-CP6E-sprint-plan.md

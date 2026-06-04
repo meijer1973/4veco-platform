@@ -28,7 +28,15 @@
 .ts-shell {
   display: grid;
   gap: 18px;
+  min-width: 0;
+  max-width: 100%;
   color: var(--ts-text);
+}
+
+.ts-shell *,
+.ts-shell *::before,
+.ts-shell *::after {
+  box-sizing: border-box;
 }
 
 .ts-shell-head,
@@ -71,10 +79,245 @@
 .ts-task-list {
   display: grid;
   gap: 16px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .ts-task {
+  min-width: 0;
   padding: clamp(16px, 3vw, 26px);
+}
+
+.ts-context {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ts-context-region-head {
+  min-width: 0;
+  max-width: 100%;
+  padding: 0 2px;
+}
+
+.ts-context-region-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.ts-context-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ts-context-block {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  box-shadow: var(--ts-shadow);
+}
+
+.ts-context-block:target {
+  border-color: var(--ts-focus);
+  outline: 2px solid color-mix(in srgb, var(--ts-focus) 32%, transparent);
+  outline-offset: 2px;
+}
+
+.ts-context-head {
+  display: grid;
+  gap: 4px;
+}
+
+.ts-context-kicker {
+  margin: 0;
+  color: var(--ts-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ts-context-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.ts-context-copy,
+.ts-context-summary,
+.ts-context-axis {
+  color: var(--ts-muted);
+  line-height: 1.55;
+}
+
+.ts-context-copy p,
+.ts-context-summary,
+.ts-context-axis {
+  margin: 0;
+}
+
+.ts-context-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+}
+
+.ts-context-table {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.ts-context-table th,
+.ts-context-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--ts-line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.ts-context-table th {
+  background: var(--ts-soft);
+  color: var(--ts-text);
+  font-weight: 800;
+}
+
+.ts-context-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.ts-context-svg,
+.ts-context-graph,
+.ts-context-formula,
+.ts-context-flow {
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-soft) 58%, var(--ts-panel));
+}
+
+.ts-context-svg {
+  display: grid;
+  place-items: center;
+  min-height: 160px;
+  padding: 10px;
+}
+
+.ts-context-svg-art {
+  width: min(100%, 360px);
+  height: auto;
+  fill: color-mix(in srgb, var(--ts-primary) 72%, var(--ts-accent));
+}
+
+.ts-context-graph {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.ts-context-graph ul,
+.ts-context-formula ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ts-context-graph li,
+.ts-context-formula li {
+  display: grid;
+  gap: 3px;
+}
+
+.ts-context-formula {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+}
+
+.ts-context-formula > code {
+  display: block;
+  padding: 10px;
+  border-radius: calc(var(--ts-radius) - 2px);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font-family: Consolas, "Liberation Mono", monospace;
+  white-space: normal;
+}
+
+.ts-context-formula li code {
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-weight: 800;
+}
+
+.ts-context-flow {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+}
+
+.ts-context-flow li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.ts-context-flow em {
+  grid-column: 1 / -1;
+  color: var(--ts-muted);
+  font-style: normal;
+}
+
+.ts-context-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 10px 0 14px;
+  color: var(--ts-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.ts-context-refs span:first-child {
+  font-weight: 800;
+  color: var(--ts-text);
+}
+
+.ts-context-refs a {
+  color: var(--ts-primary);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ts-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .ts-task-meta {
@@ -173,7 +416,8 @@
 .ts-step-clear:hover,
 .ts-step-clear:focus-visible,
 .ts-input:focus-visible,
-.ts-textarea:focus-visible {
+.ts-textarea:focus-visible,
+.ts-context-refs a:focus-visible {
   border-color: var(--ts-focus);
   outline: 2px solid color-mix(in srgb, var(--ts-focus) 36%, transparent);
   outline-offset: 2px;
@@ -1062,11 +1306,13 @@
 .ts-source-chain {
   display: grid;
   gap: 12px;
+  min-width: 0;
 }
 
 .ts-source-value-bank {
   display: grid;
   gap: 10px;
+  min-width: 0;
 }
 
 .ts-source-value-card {
@@ -1074,6 +1320,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
   gap: 10px;
   align-items: stretch;
+  min-width: 0;
   padding: 8px;
   border: 1px solid var(--ts-line);
   border-radius: var(--ts-radius);
@@ -1086,6 +1333,7 @@
 }
 
 .ts-source-value {
+  min-width: 0;
   min-height: 54px;
   padding: 9px 12px;
   display: grid;
@@ -1127,10 +1375,14 @@
 .ts-source-role {
   display: grid;
   gap: 5px;
+  min-width: 0;
   font-weight: 700;
 }
 
 .ts-source-role select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 40px;
   padding: 7px 9px;
   border: 1px solid var(--ts-line);
@@ -1471,7 +1723,7 @@
 
 @media (max-width: 640px) {
   .ts-source-value-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ts-label-target-region {
@@ -1616,23 +1868,35 @@
 }
 
 @media (max-width: 640px) {
+  .ts-context-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ts-context-flow li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ts-context-flow li span[aria-hidden="true"] {
+    display: none;
+  }
+
   .ts-answer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ts-point-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ts-match-banks {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ts-two-tier-grid,
   .ts-two-tier-feedback-row,
   .ts-assertion-panel,
   .ts-assertion-feedback-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ts-task {

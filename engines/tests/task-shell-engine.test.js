@@ -31,6 +31,156 @@ function baseTask(overrides) {
     };
 }
 
+function clone(value) {
+    return JSON.parse(JSON.stringify(value));
+}
+
+function contextBlocks() {
+    return [
+        {
+            id: 'ctx-zorg-intro',
+            type: 'markdown',
+            title: 'Vergelijk twee verzekeringen',
+            bodyMarkdown: 'Een leerling vergelijkt twee varianten met premie per maand en eigen risico per jaar.',
+            accessibilitySummary: 'Korte inleiding bij de vergelijking.'
+        },
+        {
+            id: 'ctx-zorg-source',
+            type: 'source_excerpt',
+            sourceLabel: 'Bron 1',
+            caption: 'Bron 1: Gegevens verzekeringen',
+            bodyMarkdown: 'De bron toont per variant de maandpremie en het eigen risico.',
+            sourceRefs: ['references/external/exams/example.pdf#question-1'],
+            accessibilitySummary: 'Tekstbron met de benodigde gegevens.'
+        },
+        {
+            id: 'ctx-zorg-table',
+            type: 'table',
+            sourceLabel: 'Tabel 1',
+            caption: 'Tabel 1: Premie en eigen risico',
+            sourceMaterialId: 'zorg-table',
+            columns: ['Variant', 'Eigen risico per jaar', 'Premie per maand'],
+            rows: [
+                ['Standaard', 385, '108,25 euro'],
+                ['Verhoogd', 885, '86,25 euro']
+            ],
+            altText: 'Tabel met twee varianten, het eigen risico per jaar en de premie per maand.'
+        },
+        {
+            id: 'ctx-zorg-svg',
+            type: 'svg_figure',
+            sourceLabel: 'Figuur 1',
+            caption: 'Figuur 1: Premieverschil per maand',
+            sourceMaterialId: 'zorg-table',
+            svg: '<svg viewBox="0 0 320 180" role="img"><rect x="60" y="40" width="80" height="110"></rect><rect x="180" y="70" width="80" height="80"></rect></svg>',
+            viewBox: '0 0 320 180',
+            altText: 'Staafdiagram waarin de maandpremie van de verhoogde variant lager is.',
+            reconstruction: {
+                status: 'reconstructed_from_source',
+                sourceMaterialId: 'zorg-table',
+                rawCopiedImage: false
+            }
+        },
+        {
+            id: 'ctx-zorg-graph',
+            type: 'graph',
+            sourceLabel: 'Figuur 2',
+            caption: 'Figuur 2: Jaarpremie per variant',
+            sourceMaterialId: 'zorg-table',
+            axes: {
+                x: { label: 'Variant' },
+                y: { label: 'Jaarpremie in euro' }
+            },
+            series: [
+                {
+                    label: 'Jaarpremie',
+                    points: [
+                        { x: 'Standaard', y: 1299 },
+                        { x: 'Verhoogd', y: 1035 }
+                    ]
+                }
+            ],
+            altText: 'Grafiek met jaarpremies voor standaard en verhoogd eigen risico.'
+        },
+        {
+            id: 'ctx-zorg-flow',
+            type: 'flowchart',
+            sourceLabel: 'Figuur 3',
+            caption: 'Figuur 3: Denkroute van maand naar jaar',
+            sourceMaterialId: 'zorg-table',
+            nodes: [
+                { id: 'premie-maand', label: 'Premie per maand' },
+                { id: 'premie-jaar', label: 'Premie per jaar' },
+                { id: 'vergelijk', label: 'Vergelijk varianten' }
+            ],
+            edges: [
+                { from: 'premie-maand', to: 'premie-jaar', label: 'keer 12' },
+                { from: 'premie-jaar', to: 'vergelijk', label: 'naast eigen risico' }
+            ],
+            altText: 'Stroomschema van maandpremie naar jaarpremie en vergelijking.'
+        },
+        {
+            id: 'ctx-zorg-formula',
+            type: 'formula',
+            sourceLabel: 'Formule 1',
+            caption: 'Formule 1: Jaarpremie',
+            sourceMaterialId: 'zorg-table',
+            expression: 'jaarpremie = maandpremie x 12',
+            variables: [
+                { symbol: 'maandpremie', meaning: 'premie per maand in euro' },
+                { symbol: 'jaarpremie', meaning: 'premie per jaar in euro' }
+            ],
+            altText: 'Formule waarin jaarpremie gelijk is aan maandpremie keer twaalf.'
+        },
+        {
+            id: 'ctx-zorg-info',
+            type: 'info_box',
+            title: 'Let op de eenheid',
+            bodyMarkdown: 'Premie staat per maand; eigen risico staat per jaar.',
+            accessibilitySummary: 'Informatiekader over maand- en jaarbedragen.'
+        }
+    ];
+}
+
+function contextTaskSet(overrides) {
+    return {
+        schema_version: 1,
+        title: 'Contexttaak',
+        contextBlocks: contextBlocks(),
+        tasks: [
+            baseTask({
+                id: 'context-source-values',
+                family: 'source_value_selection',
+                skillLabel: 'Bronwaarden kiezen',
+                prompt: 'Kies de bronwaarden die nodig zijn om jaarpremies te vergelijken.',
+                contextRefs: contextBlocks().map((block) => block.id),
+                interaction: {
+                    valueBankLabel: 'Bronwaarden',
+                    roleLabel: 'Rol in berekening',
+                    values: [
+                        { id: 'standaard', label: '108,25 euro', kind: 'answer', sourceLabel: 'standaard maandpremie' },
+                        { id: 'verhoogd', label: '86,25 euro', kind: 'answer', sourceLabel: 'verhoogde maandpremie' },
+                        { id: 'eigen-risico', label: '385 euro', kind: 'distractor', distractorFor: 'standaard' }
+                    ],
+                    roles: [
+                        { id: 'standard', label: 'standaard premie' },
+                        { id: 'raised', label: 'verhoogde premie' }
+                    ]
+                },
+                expected: {
+                    kind: 'source_value_selection',
+                    selections: [
+                        { valueId: 'standaard', role: 'standard' },
+                        { valueId: 'verhoogd', role: 'raised' }
+                    ],
+                    partialFeedback: 'practice_only'
+                }
+            })
+        ],
+        ...overrides
+    };
+}
+
 function fixtures() {
     return [
         baseTask(),
@@ -2961,6 +3111,80 @@ describe('TaskShellEngine', () => {
             studentProductUse: false,
             targetEquivalentProof: false
         }));
+    });
+
+    test('validates context blocks and task references for shared source tasks', () => {
+        expect(TaskShellEngine.validateContextBlocks(contextBlocks())).toEqual(expect.objectContaining({
+            'ctx-zorg-intro': expect.objectContaining({ type: 'markdown' }),
+            'ctx-zorg-table': expect.objectContaining({ type: 'table' }),
+            'ctx-zorg-formula': expect.objectContaining({ type: 'formula' })
+        }));
+        expect(TaskShellEngine.validateTaskSet(contextTaskSet())).toBe(true);
+    });
+
+    test('keeps task sets without context blocks backward compatible', () => {
+        expect(TaskShellEngine.validateTaskSet({
+            schema_version: 1,
+            title: 'Task shell fixture',
+            tasks: fixtures()
+        })).toBe(true);
+    });
+
+    test('rejects missing, unknown, duplicate, and unreferenced context refs', () => {
+        const missingRefs = contextTaskSet();
+        delete missingRefs.tasks[0].contextRefs;
+        expect(() => TaskShellEngine.validateTaskSet(missingRefs)).toThrow(/contextRefs is required/);
+
+        const unknownRef = contextTaskSet();
+        unknownRef.tasks[0].contextRefs = ['ctx-zorg-intro', 'ctx-onbekend'];
+        expect(() => TaskShellEngine.validateTaskSet(unknownRef)).toThrow(/unknown block/);
+
+        const duplicateRef = contextTaskSet();
+        duplicateRef.tasks[0].contextRefs = ['ctx-zorg-intro', 'ctx-zorg-intro'];
+        expect(() => TaskShellEngine.validateTaskSet(duplicateRef)).toThrow(/duplicate ref/);
+
+        const unreferenced = contextTaskSet();
+        unreferenced.tasks[0].contextRefs = contextBlocks().filter((block) => block.id !== 'ctx-zorg-info').map((block) => block.id);
+        expect(() => TaskShellEngine.validateTaskSet(unreferenced)).toThrow(/not referenced/);
+
+        const refsWithoutBlocks = {
+            schema_version: 1,
+            title: 'Losse refs',
+            tasks: [baseTask({ contextRefs: ['ctx-zorg-intro'] })]
+        };
+        expect(() => TaskShellEngine.validateTaskSet(refsWithoutBlocks)).toThrow(/require contextBlocks/);
+    });
+
+    test('rejects context blocks with weak accessibility, raw images, unsafe svg, answer leakage, or internal codes', () => {
+        const missingAlt = contextBlocks();
+        delete missingAlt[2].altText;
+        expect(() => TaskShellEngine.validateContextBlocks(missingAlt)).toThrow(/altText/);
+
+        const badCaption = contextBlocks();
+        badCaption[2].caption = 'Gegevens zonder prefix';
+        expect(() => TaskShellEngine.validateContextBlocks(badCaption)).toThrow(/caption must start/);
+
+        const rawImage = contextBlocks();
+        rawImage[3].reconstruction.rawCopiedImage = true;
+        expect(() => TaskShellEngine.validateContextBlocks(rawImage)).toThrow(/rawCopiedImage must be false/);
+
+        const unsafeSvg = contextBlocks();
+        unsafeSvg[3].svg = '<svg viewBox="0 0 10 10"><script>alert(1)</script></svg>';
+        expect(() => TaskShellEngine.validateContextBlocks(unsafeSvg)).toThrow(/script tags/);
+
+        const leaked = contextBlocks();
+        leaked[0].bodyMarkdown = 'Het juiste antwoord is de lage premie kiezen.';
+        expect(() => TaskShellEngine.validateContextBlocks(leaked)).toThrow(/answer hints/);
+
+        const internalCode = contextBlocks();
+        internalCode[0].bodyMarkdown = 'Gebruik MTU bij deze bron.';
+        expect(() => TaskShellEngine.validateContextBlocks(internalCode)).toThrow(/blocked terms or internal codes/);
+    });
+
+    test('rejects hints when the shared task shell is used for an exit ticket', () => {
+        const exitTicket = contextTaskSet({ surfaceKind: 'exit_ticket' });
+        exitTicket.tasks[0].hints = ['Lees eerst de tabel.'];
+        expect(() => TaskShellEngine.validateTaskSet(exitTicket)).toThrow(/exit_ticket tasks must not include hints/);
     });
 
     test('rejects internal codes and restricted product claims in student-facing text', () => {

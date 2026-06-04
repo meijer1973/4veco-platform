@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-CONTEXT-RUNTIME-1",
+  "generated": "2026-06-04",
+  "status": "completed",
+  "plan": "reports/sprints/TASK-CONTEXT-RUNTIME-1-plan.md",
+  "baseline": "reports/sprints/TASK-CONTEXT-RUNTIME-1-baseline.md",
+  "result": "reports/sprints/TASK-CONTEXT-RUNTIME-1-result.md",
+  "diff_summary": "reports/sprints/TASK-CONTEXT-RUNTIME-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "command_log": {
+    "jsonl": "reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.jsonl",
+    "markdown": "reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.md"
+  },
+  "scope": {
+    "context_runtime_rendering": true,
+    "context_before_tasks": true,
+    "stable_context_refs": true,
+    "mobile_dark_proof": true,
+    "playable_review_lab": true,
+    "source_reconstruction": false,
+    "exam_or_textbook_ingestion": false,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_reliance": false,
+    "diagnostics_or_mastery_authority": false,
+    "scale_gate_1_authority": false
+  },
+  "evidence": {
+    "plan": "reports/sprints/TASK-CONTEXT-RUNTIME-1-plan.md",
+    "baseline": "reports/sprints/TASK-CONTEXT-RUNTIME-1-baseline.md",
+    "planning_review": "reports/sprints/TASK-CONTEXT-RUNTIME-1-planning-review.md",
+    "result": "reports/sprints/TASK-CONTEXT-RUNTIME-1-result.md",
+    "diff_summary": "reports/sprints/TASK-CONTEXT-RUNTIME-1-diff-summary.md",
+    "command_log_jsonl": "reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.jsonl",
+    "command_log_markdown": "reports/sprints/TASK-CONTEXT-RUNTIME-1-command-log.md",
+    "checker": "build-scripts/sprints/check-task-context-runtime1.js",
+    "fixture": "build-scripts/sprints/task-context-runtime1-fixture.js",
+    "capture_script": "build-scripts/sprints/capture-task-context-runtime1-screenshots.js",
+    "proof_json": "reports/json/task-context-runtime1-proof.json",
+    "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+    "screenshot_manifest": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshot-manifest.md",
+    "screenshots_dir": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-CONTEXT-RUNTIME-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-RUNTIME-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-task-context-runtime1-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-task-context-runtime1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npx jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TASK-CONTEXT-RUNTIME-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-CONTEXT-RUNTIME-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "validation_passed": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TASK-CONTEXT-RUNTIME-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TASK-CONTEXT-RUNTIME-1",
+    "node build-scripts/sprints/capture-task-context-runtime1-screenshots.js",
+    "node build-scripts/sprints/check-task-context-runtime1.js",
+    "npx jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-lead-review-substance.js TASK-CONTEXT-RUNTIME-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TASK-CONTEXT-RUNTIME-1-result.md",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check"
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TASK-CONTEXT-RUNTIME-1-lead-review-round2.md",
+    "final_verdict": "PASS"
+  },
+  "blocked_claims": [
+    "source reconstruction",
+    "exam/textbook ingestion",
+    "generated lesson output",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "summative use",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "CONTEXT-VISUAL-STD-1"
+}

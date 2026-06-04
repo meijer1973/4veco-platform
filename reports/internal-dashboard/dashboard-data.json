@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T20:53:40.925Z",
+  "generatedAt": "2026-06-04T06:14:56.390Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-03 Roadmap ID: references-team-roadmap Roadmap version: v3.54-shared-task-context-ingest-track Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE eco...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-04 Roadmap ID: references-team-roadmap Roadmap version: v3.55-shared-task-context-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -3160,8 +3160,8 @@
             {
               "sprint": "TASK-CONTEXT-RUNTIME-1",
               "name": "Shared Task Context Runtime",
-              "completed": "no",
-              "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
+              "completed": "yes",
+              "currentState": "Closed 2026-06-04. Platform added context rendering above shared task-shell task lists with stable block IDs, task references, captions/source labels, alt/accessibility text, mobile/dark proof, no exit-ticket hint leakage, playable review lab, screenshots, and checker coverage. This proves context placement/runtime behavior only; no exam/textbook ingestion, source reconstruction, generated lesson output, product-route adoption, target-equivalent proof, PV, Scale Gate, or student/product use authorized. Next: `CONTEXT-VISUAL-STD-1`.",
               "exitGate": ""
             },
             {
@@ -3462,14 +3462,6 @@
           "name": "Shared Task Context And Source Ingestion Roadmap Alignment",
           "completed": "no",
           "currentState": "Superseded by `SYNC-ROADMAP-EXAM-REPAIR-1` as the active roadmap synchronization row after rollback. Its context-first policy remains input for `TASK-CONTEXT-SPEC-1`, but this row is not completed evidence and authorizes no implementation or generated lesson output.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "TASK-CONTEXT-RUNTIME-1",
-          "name": "Shared Task Context Runtime",
-          "completed": "no",
-          "currentState": "Implement context rendering above task lists in the shared task shell with desktop/mobile/dark proof, playable lab, screenshots, and checker coverage. This proves context placement only, not exam/textbook ingestion.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3984,10 +3976,18 @@
           "currentState": "Closed 2026-06-03. Mirrored platform closure for the context-contract-only schema, fixture, and checker in `reports/json/task-context-spec1-contract.json` and `build-scripts/sprints/check-task-context-spec1.js`. Proves `contextBlocks`, task `contextRefs`, source-authority provenance, required block coverage, accessibility/caption rules, and rejection coverage. No runtime rendering, source reconstruction, task transformation, generated lesson output, product adoption, PV, Scale Gate, or student use authorized. Next: `TASK-CONTEXT-RUNTIME-1`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "TASK-CONTEXT-RUNTIME-1",
+          "name": "Shared Task Context Runtime",
+          "completed": "yes",
+          "currentState": "Closed 2026-06-04. Platform added context rendering above shared task-shell task lists with stable block IDs, task references, captions/source labels, alt/accessibility text, mobile/dark proof, no exit-ticket hint leakage, playable review lab, screenshots, and checker coverage. This proves context placement/runtime behavior only; no exam/textbook ingestion, source reconstruction, generated lesson output, product-route adoption, target-equivalent proof, PV, Scale Gate, or student/product use authorized. Next: `CONTEXT-VISUAL-STD-1`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 33,
-      "openCount": 42
+      "completedCount": 34,
+      "openCount": 41
     },
     {
       "id": "innovation",

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-03T20:53:29.275Z
+Generated: 2026-06-04T06:14:56.424Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3129
+Files indexed: 3145
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 391
+Count: 392
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -472,6 +472,7 @@ Count: 391
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+- build-scripts/sprints/check-task-context-spec1.js
 - build-scripts/sprints/check-task-family-assertion1.js
 - build-scripts/sprints/check-task-family-choice1-contract.js
 - build-scripts/sprints/check-task-family-cloze-tile1.js
@@ -567,7 +568,7 @@ Count: 42
 
 ## validators
 
-Count: 211
+Count: 212
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -702,6 +703,7 @@ Count: 211
 - build-scripts/sprints/check-standard-exercises1-coverage.js
 - build-scripts/sprints/check-sync-product1-evidence.js
 - build-scripts/sprints/check-sync-roadmap-exam-repair1.js
+- build-scripts/sprints/check-task-context-spec1.js
 - build-scripts/sprints/check-task-family-assertion1.js
 - build-scripts/sprints/check-task-family-choice1-contract.js
 - build-scripts/sprints/check-task-family-cloze-tile1.js
@@ -783,7 +785,7 @@ Count: 211
 
 ## references
 
-Count: 453
+Count: 455
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1132,6 +1134,8 @@ Count: 453
 - references/data/sprints/SYNC-PRODUCT-1.result.json
 - references/data/sprints/SYNC-ROADMAP-EXAM-REPAIR-1.plan.json
 - references/data/sprints/SYNC-ROADMAP-EXAM-REPAIR-1.result.json
+- references/data/sprints/TASK-CONTEXT-SPEC-1.plan.json
+- references/data/sprints/TASK-CONTEXT-SPEC-1.result.json
 - references/data/sprints/TASK-FAMILY-ASSERTION-1.plan.json
 - references/data/sprints/TASK-FAMILY-ASSERTION-1.result.json
 - references/data/sprints/TASK-FAMILY-CHOICE-1.plan.json
@@ -1241,7 +1245,7 @@ Count: 453
 
 ## reports
 
-Count: 1857
+Count: 1870
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1309,6 +1313,7 @@ Count: 1857
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
 - reports/json/standard-exercise-family-coverage.json
+- reports/json/task-context-spec1-contract.json
 - reports/json/task-family-assertion1-proof.json
 - reports/json/task-family-choice-contract.json
 - reports/json/task-family-cloze-tile1-proof.json
@@ -2936,6 +2941,18 @@ Count: 1857
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-plan.md
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-planning-review.md
 - reports/sprints/SYNC-ROADMAP-EXAM-REPAIR-1-result.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-baseline.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-command-log.jsonl
+- reports/sprints/TASK-CONTEXT-SPEC-1-command-log.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-context-contract.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-diff-summary.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-assignment.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-corrections.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-round1.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-lead-review-round2.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-plan.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-planning-review.md
+- reports/sprints/TASK-CONTEXT-SPEC-1-result.md
 - reports/sprints/TASK-FAMILY-ASSERTION-1-baseline.md
 - reports/sprints/TASK-FAMILY-ASSERTION-1-diff-summary.md
 - reports/sprints/TASK-FAMILY-ASSERTION-1-lead-review-assignment.md

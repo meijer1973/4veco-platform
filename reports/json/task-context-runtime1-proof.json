@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TASK-CONTEXT-RUNTIME-1",
+  "generated": "2026-06-04T06:12:17.814Z",
+  "status": "runtime_context_rendering_proof_complete",
+  "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshot-manifest.md",
+  "screenshots": [
+    {
+      "case": "desktop-light-initial",
+      "file": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/desktop-light-initial.png",
+      "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 860
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2065
+      },
+      "proof": {
+        "contextBeforeTasks": true,
+        "contextBlockCount": 8,
+        "contextTypes": [
+          "markdown",
+          "source_excerpt",
+          "table",
+          "svg_figure",
+          "graph",
+          "flowchart",
+          "formula",
+          "info_box"
+        ],
+        "taskRefCount": 8,
+        "visibleInternalContextId": false,
+        "captions": [
+          "Vergelijk twee zorgverzekeringen",
+          "Bron 1: Zoohee zorgverzekering",
+          "Tabel 1: Zoohee zorgverzekering",
+          "Figuur 1: Premieverschil per maand",
+          "Figuur 2: Jaarpremie per variant",
+          "Figuur 3: Denkroute premie naar jaarkosten",
+          "Formule 1: Jaarpremie berekenen",
+          "Let op de eenheid"
+        ],
+        "roleImgCount": 4,
+        "tableCount": 2,
+        "hintCount": 0,
+        "feedbackState": "",
+        "labState": "Niet gecontroleerd",
+        "theme": "light",
+        "overflowing": [],
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 2065
+        }
+      }
+    },
+    {
+      "case": "desktop-light-feedback",
+      "file": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/desktop-light-feedback.png",
+      "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 860
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2196
+      },
+      "proof": {
+        "contextBeforeTasks": true,
+        "contextBlockCount": 8,
+        "contextTypes": [
+          "markdown",
+          "source_excerpt",
+          "table",
+          "svg_figure",
+          "graph",
+          "flowchart",
+          "formula",
+          "info_box"
+        ],
+        "taskRefCount": 8,
+        "visibleInternalContextId": false,
+        "captions": [
+          "Vergelijk twee zorgverzekeringen",
+          "Bron 1: Zoohee zorgverzekering",
+          "Tabel 1: Zoohee zorgverzekering",
+          "Figuur 1: Premieverschil per maand",
+          "Figuur 2: Jaarpremie per variant",
+          "Figuur 3: Denkroute premie naar jaarkosten",
+          "Formule 1: Jaarpremie berekenen",
+          "Let op de eenheid"
+        ],
+        "roleImgCount": 4,
+        "tableCount": 2,
+        "hintCount": 0,
+        "feedbackState": "matched",
+        "labState": "Voltooid",
+        "theme": "light",
+        "overflowing": [],
+        "viewport": {
+          "width": 1280,
+          "height": 860
+        },
+        "page": {
+          "width": 1280,
+          "height": 2196
+        }
+      }
+    },
+    {
+      "case": "mobile-light-initial",
+      "file": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/mobile-light-initial.png",
+      "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3687
+      },
+      "proof": {
+        "contextBeforeTasks": true,
+        "contextBlockCount": 8,
+        "contextTypes": [
+          "markdown",
+          "source_excerpt",
+          "table",
+          "svg_figure",
+          "graph",
+          "flowchart",
+          "formula",
+          "info_box"
+        ],
+        "taskRefCount": 8,
+        "visibleInternalContextId": false,
+        "captions": [
+          "Vergelijk twee zorgverzekeringen",
+          "Bron 1: Zoohee zorgverzekering",
+          "Tabel 1: Zoohee zorgverzekering",
+          "Figuur 1: Premieverschil per maand",
+          "Figuur 2: Jaarpremie per variant",
+          "Figuur 3: Denkroute premie naar jaarkosten",
+          "Formule 1: Jaarpremie berekenen",
+          "Let op de eenheid"
+        ],
+        "roleImgCount": 4,
+        "tableCount": 2,
+        "hintCount": 0,
+        "feedbackState": "",
+        "labState": "Niet gecontroleerd",
+        "theme": "light",
+        "overflowing": [],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3687
+        }
+      }
+    },
+    {
+      "case": "mobile-dark-initial",
+      "file": "reports/sprints/TASK-CONTEXT-RUNTIME-1-screenshots/mobile-dark-initial.png",
+      "lab": "reports/sprints/TASK-CONTEXT-RUNTIME-1-rendered-lab.html",
+      "action": "initial",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3687
+      },
+      "proof": {
+        "contextBeforeTasks": true,
+        "contextBlockCount": 8,
+        "contextTypes": [
+          "markdown",
+          "source_excerpt",
+          "table",
+          "svg_figure",
+          "graph",
+          "flowchart",
+          "formula",
+          "info_box"
+        ],
+        "taskRefCount": 8,
+        "visibleInternalContextId": false,
+        "captions": [
+          "Vergelijk twee zorgverzekeringen",
+          "Bron 1: Zoohee zorgverzekering",
+          "Tabel 1: Zoohee zorgverzekering",
+          "Figuur 1: Premieverschil per maand",
+          "Figuur 2: Jaarpremie per variant",
+          "Figuur 3: Denkroute premie naar jaarkosten",
+          "Formule 1: Jaarpremie berekenen",
+          "Let op de eenheid"
+        ],
+        "roleImgCount": 4,
+        "tableCount": 2,
+        "hintCount": 0,
+        "feedbackState": "",
+        "labState": "Niet gecontroleerd",
+        "theme": "dark",
+        "overflowing": [],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 3687
+        }
+      }
+    }
+  ],
+  "context_runtime": {
+    "context_before_tasks": true,
+    "context_block_count": 8,
+    "task_ref_count": 8,
+    "visible_internal_context_ids": false,
+    "feedback_completion_captured": true,
+    "hint_count": 0,
+    "responsive_mobile_viewports": [
+      {
+        "case": "mobile-light-initial",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390
+      },
+      {
+        "case": "mobile-dark-initial",
+        "requested_width": 390,
+        "browser_width": 390,
+        "screenshot_width": 390
+      }
+    ]
+  },
+  "boundary_evidence": {
+    "protected_reference_status": "",
+    "source_data_status": "",
+    "book1_generated_output_status": ""
+  },
+  "fixture_metadata_note": "The review fixture carries inherited sourceAuthority and reconstruction metadata from TASK-CONTEXT-SPEC-1. This sprint did not ingest sources or reconstruct official exam assets.",
+  "product_boundaries": {
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "source_reconstruction": false,
+    "exam_or_textbook_ingestion": false,
+    "product_route_adoption": false,
+    "target_equivalent_proof": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-03",
+  "updated_on": "2026-06-04",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -15,12 +15,12 @@
   "roadmaps": [
     {
       "roadmap_id": "references-team-roadmap",
-      "version": "v3.54-shared-task-context-ingest-track",
+      "version": "v3.55-shared-task-context-runtime",
       "title": "References Team Roadmap",
       "status": "active",
       "path": "references/reference-team-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-03",
+      "updated_on": "2026-06-04",
       "supersedes": [
         "docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md",
@@ -67,7 +67,7 @@
         "docs/roadmaps/outdated/reference-team-roadmap-v3.01-mtu-h2j-a20-a94-a95-cli-execution.md",
         "docs/roadmaps/outdated/reference-team-roadmap-v3.00-mtu-h2i-a20-cli-execution-packet.md"
       ],
-      "notes": "Current operating roadmap after inserting the Shared Task Context And Source Ingestion hardening track. The roadmap now requires SYNC-TASK-CONTEXT-INGEST-1, TASK-CONTEXT-SPEC-1, TASK-CONTEXT-RUNTIME-1, CONTEXT-VISUAL-STD-1, SOURCE-RECONSTRUCT-1, TASK-INGEST-TRANSFORM-1, and GATE-SHARED-TASK-INGEST-1 before CHECK-SHORT-EXIT-2 or SCALE-PROOF-3P may rely on source-context task ingestion. DUAL-CODING-STD-1 is narrowed to residual scope if CONTEXT-VISUAL-STD-1 does not fully absorb the visual-source policy. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates."
+      "notes": "Current operating roadmap after closing TASK-CONTEXT-RUNTIME-1. The shared task shell now renders validated contextBlocks before task lists with stable contextRefs, captions, alt/accessibility text, mobile/dark proof, playable lab evidence, and checker coverage. The next required sprint is CONTEXT-VISUAL-STD-1 before governed source reconstruction or task ingestion can rely on the runtime. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, generated lesson output, and product-wide use remain blocked until later rendered-output review and product gates."
     },
     {
       "roadmap_id": "references-team-roadmap",
