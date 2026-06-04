@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T13:10:52.453Z
+Generated: 2026-06-04T13:22:19.470Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3297
+Files indexed: 3305
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -803,7 +803,7 @@ Count: 218
 
 ## references
 
-Count: 467
+Count: 468
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -867,6 +867,7 @@ Count: 467
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
+- references/data/sprints/CI-REMOTE-1.result.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.plan.json
 - references/data/sprints/CONTEXT-VISUAL-STD-1.result.json
 - references/data/sprints/CP.6a-lesson-side-alignment.json
@@ -1275,7 +1276,7 @@ Count: 467
 
 ## reports
 
-Count: 1996
+Count: 2002
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2048,8 +2049,14 @@ Count: 1996
 - reports/sprints/CI-REMOTE-1-baseline.md
 - reports/sprints/CI-REMOTE-1-command-log.jsonl
 - reports/sprints/CI-REMOTE-1-command-log.md
+- reports/sprints/CI-REMOTE-1-diff-summary.md
+- reports/sprints/CI-REMOTE-1-lead-review-assignment.md
+- reports/sprints/CI-REMOTE-1-lead-review-corrections.md
+- reports/sprints/CI-REMOTE-1-lead-review-round1.md
+- reports/sprints/CI-REMOTE-1-lead-review-round2.md
 - reports/sprints/CI-REMOTE-1-plan.md
 - reports/sprints/CI-REMOTE-1-planning-review.md
+- reports/sprints/CI-REMOTE-1-result.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-baseline.md
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.jsonl
 - reports/sprints/CONTEXT-VISUAL-STD-1-command-log.md
@@ -3294,8 +3301,9 @@ _No files indexed in this group._
 
 ## other
 
-Count: 291
+Count: 292
 
+- .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore

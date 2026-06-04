@@ -9,6 +9,7 @@ CI setup sprint evidence.
 
 - `.github/workflows/platform-ci.yml`
 - `.github/ci-python-requirements.txt`
+- `.gitattributes` with LF checkout policy for the generated URL index
 - `reports/sprints/CI-REMOTE-1-*`
 - `references/data/sprints/CI-REMOTE-1.plan.json`
 - `references/data/sprints/CI-REMOTE-1.result.json`
@@ -40,6 +41,9 @@ No protected surfaces were intentionally changed:
 - Local scope-language, report JSON, roadmap version index, URL-index, and
   diff hygiene checks passed.
 - Remote GitHub Actions run `26953558150` passed.
+- Closure-maintenance run `26953928228` exposed a Windows CRLF checkout false
+  failure for `reports/url-index.md`; `.gitattributes` and workflow
+  normalization now force LF for that byte-checked generated report.
 - Branch protection requires status-check context `validate-platform`.
 
 ## Follow-Up Boundary

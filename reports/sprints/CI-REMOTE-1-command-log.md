@@ -1095,3 +1095,535 @@ warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.md', LF
 ```text
 
 ```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:19:03.577Z`
+- finished_at: `2026-06-04T13:19:03.641Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:19:03.570Z`
+- finished_at: `2026-06-04T13:19:03.657Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:15.420Z`
+- finished_at: `2026-06-04T13:21:15.798Z`
+- duration_ms: `378`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:23.408Z`
+- finished_at: `2026-06-04T13:21:23.488Z`
+- duration_ms: `80`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:23.414Z`
+- finished_at: `2026-06-04T13:21:23.769Z`
+- duration_ms: `355`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-REMOTE-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:32.587Z`
+- finished_at: `2026-06-04T13:21:32.661Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `82bc3a3a138154833cf2fd21f7f4bc7df28bfe31cb820a70970b98aab4d990ec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\CI-REMOTE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js CI-REMOTE-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:32.587Z`
+- finished_at: `2026-06-04T13:21:32.665Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `787574de683a61c90078a3269ad07e195a69b10ca46c871102cde284c1e92a7c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: CI-REMOTE-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:32.629Z`
+- finished_at: `2026-06-04T13:21:33.060Z`
+- duration_ms: `431`
+- exit_code: `0`
+- stdout_sha256: `d91f43d198c06c02e76e5ac3b153a668f67b0855bd834a89359baa66dc97900f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: CI-REMOTE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:44.623Z`
+- finished_at: `2026-06-04T13:21:44.709Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:44.641Z`
+- finished_at: `2026-06-04T13:21:44.723Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:44.636Z`
+- finished_at: `2026-06-04T13:21:44.727Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `11e87d4777784e85f7c62e2c8f46d474a7ec29c451dbacdc5b3f363e9ce03246`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 146 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js CI-REMOTE-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:44.662Z`
+- finished_at: `2026-06-04T13:21:44.745Z`
+- duration_ms: `83`
+- exit_code: `0`
+- stdout_sha256: `42d203a99d94fa92b6177258dbc153ab68cbe361059998427eb0fa3998b1ef1c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: CI-REMOTE-1 (55 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:56.905Z`
+- finished_at: `2026-06-04T13:21:56.971Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:56.905Z`
+- finished_at: `2026-06-04T13:21:56.994Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `85545e6c6a8f42042fa851374ca14553a5c529a6de2f4d6e7aeb7311a77da9e1`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of '.github/workflows/platform-ci.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/dashboard-data.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-diff-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-lead-review-corrections.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-result.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:21:56.887Z`
+- finished_at: `2026-06-04T13:21:57.234Z`
+- duration_ms: `347`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:19.152Z`
+- finished_at: `2026-06-04T13:22:19.541Z`
+- duration_ms: `389`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:29.747Z`
+- finished_at: `2026-06-04T13:22:29.814Z`
+- duration_ms: `67`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:29.741Z`
+- finished_at: `2026-06-04T13:22:30.067Z`
+- duration_ms: `326`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js CI-REMOTE-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:40.232Z`
+- finished_at: `2026-06-04T13:22:40.306Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `98ebc307f4b0fa51fe330d717df6ead31d54428e2677fee88d2f061f21021512`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: CI-REMOTE-1 (63 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-REMOTE-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:40.237Z`
+- finished_at: `2026-06-04T13:22:40.338Z`
+- duration_ms: `101`
+- exit_code: `0`
+- stdout_sha256: `82bc3a3a138154833cf2fd21f7f4bc7df28bfe31cb820a70970b98aab4d990ec`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\CI-REMOTE-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:40.246Z`
+- finished_at: `2026-06-04T13:22:40.359Z`
+- duration_ms: `113`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `85545e6c6a8f42042fa851374ca14553a5c529a6de2f4d6e7aeb7311a77da9e1`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of '.github/workflows/platform-ci.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-lessen.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/github-agent-index-platform.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/dashboard-data.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/internal-dashboard/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-diff-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-lead-review-corrections.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/CI-REMOTE-1-result.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js CI-REMOTE-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-04T13:22:40.227Z`
+- finished_at: `2026-06-04T13:22:40.682Z`
+- duration_ms: `455`
+- exit_code: `0`
+- stdout_sha256: `d91f43d198c06c02e76e5ac3b153a668f67b0855bd834a89359baa66dc97900f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: CI-REMOTE-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
