@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T19:49:00.540Z
+Generated: 2026-06-05T20:23:52.586Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3462
+Files indexed: 3484
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 408
+Count: 410
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -431,6 +431,7 @@ Count: 408
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
+- build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
@@ -453,6 +454,7 @@ Count: 408
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -584,7 +586,7 @@ Count: 42
 
 ## validators
 
-Count: 258
+Count: 280
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -686,6 +688,7 @@ Count: 258
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
+- build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -696,6 +699,7 @@ Count: 258
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -759,6 +763,7 @@ Count: 258
 - references/data/sprints/CHECK-SHORT-EXIT-2.result.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
+- reports/json/graph-check-ux1-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -831,6 +836,25 @@ Count: 258
 - reports/sprints/EX-0-validation-log.md
 - reports/sprints/GAME-ARCH-1-short-check-exit-ticket-boundary.md
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
+- reports/sprints/GRAPH-CHECK-UX-1-baseline.md
+- reports/sprints/GRAPH-CHECK-UX-1-command-log.jsonl
+- reports/sprints/GRAPH-CHECK-UX-1-command-log.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-assignment.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-corrections.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-round1.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-round2.md
+- reports/sprints/GRAPH-CHECK-UX-1-plan.md
+- reports/sprints/GRAPH-CHECK-UX-1-planning-review.md
+- reports/sprints/GRAPH-CHECK-UX-1-result.md
+- reports/sprints/GRAPH-CHECK-UX-1-screenshot-manifest.md
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-wrong-retry.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/manifest.json
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-dark-route-advice.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
+- reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
+- reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -1328,7 +1352,7 @@ Count: 476
 
 ## reports
 
-Count: 2141
+Count: 2161
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1362,6 +1386,7 @@ Count: 2141
 - reports/json/exam-question-extraction-gaps.json
 - reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
+- reports/json/graph-check-ux1-proof.json
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
 - reports/json/misconception-registry.json
@@ -2512,6 +2537,25 @@ Count: 2141
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md
+- reports/sprints/GRAPH-CHECK-UX-1-baseline.md
+- reports/sprints/GRAPH-CHECK-UX-1-command-log.jsonl
+- reports/sprints/GRAPH-CHECK-UX-1-command-log.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-assignment.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-corrections.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-round1.md
+- reports/sprints/GRAPH-CHECK-UX-1-lead-review-round2.md
+- reports/sprints/GRAPH-CHECK-UX-1-plan.md
+- reports/sprints/GRAPH-CHECK-UX-1-planning-review.md
+- reports/sprints/GRAPH-CHECK-UX-1-result.md
+- reports/sprints/GRAPH-CHECK-UX-1-screenshot-manifest.md
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-wrong-retry.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/manifest.json
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-dark-route-advice.png
+- reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
+- reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
+- reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
 - reports/sprints/GRAPH-REFINE-1-baseline.md
 - reports/sprints/GRAPH-REFINE-1-diff-summary.md
 - reports/sprints/GRAPH-REFINE-1-gate-handoff.md

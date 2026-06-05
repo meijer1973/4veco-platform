@@ -174,6 +174,7 @@ function checkSourceFiles() {
 
   const graphData = data['1.1.3-exit-ticket'];
   assert(Array.isArray(graphData.contextBlocks) && graphData.contextBlocks.length === 4, '1.1.3 exit ticket must have four context blocks');
+  assert(graphData.layout && graphData.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must opt into source/task workspace layout');
   assert(!graphData.contextBlocks.some((block) => block.id === 'ctx-icecream-prompt'), '1.1.3 source context must not render prompt block as source');
   for (const id of ['ctx-icecream-source', 'ctx-icecream-table', 'ctx-icecream-formula', 'ctx-icecream-procedure']) {
     assert(graphData.contextBlocks.some((block) => block.id === id), `1.1.3 context missing ${id}`);
@@ -230,6 +231,10 @@ function checkSharedRuntime(data) {
     ExitTicketUI.buildSkillView(data['1.1.3-exit-ticket'], new ExitTicketEngine({ data: data['1.1.3-exit-ticket'] }), {})
   );
   requireText(rendered, 'data-task-context', 'context block region', 'rendered 1.1.3');
+  requireText(rendered, 'data-source-task-workspace', 'source/task workspace', 'rendered 1.1.3');
+  requireText(rendered, 'data-source-pane', 'scrollable source pane', 'rendered 1.1.3');
+  requireText(rendered, 'data-task-pane', 'task pane', 'rendered 1.1.3');
+  requireText(rendered, 'data-sticky-question-strip', 'sticky task question strip', 'rendered 1.1.3');
   requireText(rendered, 'data-context-block="ctx-icecream-table"', 'table context block', 'rendered 1.1.3');
   requireText(rendered, 'class="ts-graph-construction"', 'graph construction control', 'rendered 1.1.3');
   requireText(rendered, 'class="ts-graph-grid-line"', 'visible graph grid', 'rendered 1.1.3');

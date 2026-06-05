@@ -136,6 +136,38 @@
     '</article>';
   }
 
+  function renderTasksSection(data, contextIndex) {
+    return '<section class="et-tasks" data-task-pane-list>' + data.tasks.map(function (task, index) {
+      return renderTask(task, index, contextIndex);
+    }).join('') + '</section>';
+  }
+
+  function usesSourceTaskWorkspace(data, contextHtml) {
+    return Boolean(
+      contextHtml &&
+      data &&
+      data.layout &&
+      data.layout.kind === 'source_task_workspace'
+    );
+  }
+
+  function renderSourceTaskWorkspace(data, contextHtml, tasksHtml) {
+    var layout = data.layout || {};
+    return '<section class="et-source-task-workspace" data-source-task-workspace>' +
+      '<aside class="et-source-pane" data-source-pane aria-label="' + escapeHtml(layout.sourcePaneTitle || 'Bronnen') + '">' +
+        contextHtml +
+      '</aside>' +
+      '<section class="et-task-pane" data-task-pane aria-label="' + escapeHtml(layout.taskPaneTitle || 'Werkvragen') + '">' +
+        '<div class="et-task-pane-head" data-sticky-question-strip>' +
+          '<p class="et-eyebrow">Exit ticket</p>' +
+          '<h2>' + escapeHtml(layout.taskPaneTitle || 'Werkvragen') + '</h2>' +
+          '<p>' + escapeHtml(layout.taskPaneIntro || data.intro || '') + '</p>' +
+        '</div>' +
+        tasksHtml +
+      '</section>' +
+    '</section>';
+  }
+
   function renderStaticHtml(data, view) {
     view = view || {};
     var TaskShellUI = resolveTaskShellUI();
@@ -147,7 +179,8 @@
         ? TaskShellUI.buildContextIndex(data.contextBlocks)
         : null;
     }
-    return '<section class="et-hero">' +
+    var workspaceMode = usesSourceTaskWorkspace(data, contextHtml);
+    var heroHtml = '<section class="et-hero' + (workspaceMode ? ' et-hero-compact' : '') + '">' +
       '<div>' +
         '<p class="et-eyebrow">Afronden</p>' +
         '<h1>' + escapeHtml(data.title) + '</h1>' +
@@ -160,16 +193,17 @@
         '</div>' +
         '<div class="et-route-grid">' + renderRouteCards(data) + '</div>' +
       '</aside>' +
-    '</section>' +
-    contextHtml +
-    '<section class="et-tasks">' + data.tasks.map(function (task, index) {
-      return renderTask(task, index, contextIndex);
-    }).join('') + '</section>' +
-    '<section class="et-completion" id="et-completion" hidden>' +
+    '</section>';
+    var tasksHtml = renderTasksSection(data, contextIndex);
+    var bodyHtml = workspaceMode
+      ? renderSourceTaskWorkspace(data, contextHtml, tasksHtml)
+      : contextHtml + tasksHtml;
+    var completionHtml = '<section class="et-completion" id="et-completion" hidden>' +
       '<h2>' + escapeHtml(data.completion && data.completion.title ? data.completion.title : 'Kies je volgende oefenstap') + '</h2>' +
       '<p>' + escapeHtml(data.completion && data.completion.text ? data.completion.text : '') + '</p>' +
       '<div class="et-route-grid">' + renderRouteCards(data) + '</div>' +
     '</section>';
+    return heroHtml + bodyHtml + completionHtml;
   }
 
   function updateCompletion(app, engine) {
