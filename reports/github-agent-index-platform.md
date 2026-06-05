@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T17:42:15.236Z
+Generated: 2026-06-05T18:05:37.046Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3405
+Files indexed: 3437
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 404
+Count: 406
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -429,6 +429,7 @@ Count: 404
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
@@ -445,6 +446,7 @@ Count: 404
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -580,7 +582,7 @@ Count: 42
 
 ## validators
 
-Count: 218
+Count: 246
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -680,10 +682,12 @@ Count: 218
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
+- build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -747,7 +751,10 @@ Count: 218
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
+- references/data/sprints/CHECK-SHORT-EXIT-2.result.json
 - reports/json/check-short-exit-inventory.json
+- reports/json/check-short-exit2-proof.json
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
@@ -780,6 +787,29 @@ Count: 218
 - reports/sprints/CHECK-SHORT-EXIT-1-plan.md
 - reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
 - reports/sprints/CHECK-SHORT-EXIT-1-result.md
+- reports/sprints/CHECK-SHORT-EXIT-2-baseline.md
+- reports/sprints/CHECK-SHORT-EXIT-2-command-log.jsonl
+- reports/sprints/CHECK-SHORT-EXIT-2-command-log.md
+- reports/sprints/CHECK-SHORT-EXIT-2-diff-summary.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-assignment.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-corrections.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round1.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round2.md
+- reports/sprints/CHECK-SHORT-EXIT-2-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-2-planning-review.md
+- reports/sprints/CHECK-SHORT-EXIT-2-result.md
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshot-manifest.md
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
@@ -803,7 +833,7 @@ Count: 218
 
 ## references
 
-Count: 474
+Count: 476
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -866,6 +896,8 @@ Count: 474
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
+- references/data/sprints/CHECK-SHORT-EXIT-2.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
 - references/data/sprints/CI-REMOTE-1.result.json
 - references/data/sprints/CI-REMOTE-1A.plan.json
@@ -1282,7 +1314,7 @@ Count: 474
 
 ## reports
 
-Count: 2094
+Count: 2118
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1305,6 +1337,7 @@ Count: 2094
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-short-exit-inventory.json
+- reports/json/check-short-exit2-proof.json
 - reports/json/context-visual-std1-contract.json
 - reports/json/dag-integrity.json
 - reports/json/dead-units.json
@@ -2076,6 +2109,29 @@ Count: 2094
 - reports/sprints/CHECK-SHORT-EXIT-1-plan.md
 - reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
 - reports/sprints/CHECK-SHORT-EXIT-1-result.md
+- reports/sprints/CHECK-SHORT-EXIT-2-baseline.md
+- reports/sprints/CHECK-SHORT-EXIT-2-command-log.jsonl
+- reports/sprints/CHECK-SHORT-EXIT-2-command-log.md
+- reports/sprints/CHECK-SHORT-EXIT-2-diff-summary.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-assignment.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-corrections.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round1.md
+- reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round2.md
+- reports/sprints/CHECK-SHORT-EXIT-2-plan.md
+- reports/sprints/CHECK-SHORT-EXIT-2-planning-review.md
+- reports/sprints/CHECK-SHORT-EXIT-2-result.md
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshot-manifest.md
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-exit-ticket.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-korte-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json
+- reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png
 - reports/sprints/CI-REMOTE-1-baseline.md
 - reports/sprints/CI-REMOTE-1-command-log.jsonl
 - reports/sprints/CI-REMOTE-1-command-log.md
@@ -3399,7 +3455,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 294
+Count: 298
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -3643,8 +3699,12 @@ Count: 294
 - LICENSE
 - package-lock.json
 - package.json
+- source-data/book-1/exit-ticket/1.1.1-exit-ticket.json
 - source-data/book-1/exit-ticket/1.1.1-korte-check.json
 - source-data/book-1/exit-ticket/1.1.2-exit-ticket.json
+- source-data/book-1/exit-ticket/1.1.2-korte-check.json
+- source-data/book-1/exit-ticket/1.1.3-exit-ticket.json
+- source-data/book-1/exit-ticket/1.1.3-korte-check.json
 - source-data/book-1/reasoning/1.1.1.csv
 - source-data/book-1/reasoning/1.1.2.csv
 - source-data/book-1/reasoning/README.md

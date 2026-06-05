@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review",
+  "sprint_id": "CHECK-SHORT-EXIT-2",
+  "generated": "2026-06-05",
+  "status": "rendered_evidence_ready_for_direct_human_review_not_closed",
+  "remote_publication": {
+    "platform_branch": "codex/check-short-exit-2",
+    "platform_commit": "86773545d4c69b5a38817ea69145913fd6e85774",
+    "lesson_branch": "main",
+    "lesson_commit": "1b2e85c77c83551692b56d19ec55e61a97540f4e",
+    "review_may_start_after_packet_push": true
+  },
+  "proof": {
+    "all_screenshots_exist": true,
+    "screenshot_capture_blocked": false,
+    "screenshot_count": 10,
+    "all_landing_pages_show_two_check_cards": true,
+    "advisory_short_checks_rendered": true,
+    "exit_tickets_rendered": true,
+    "short_checks_advisory_only": true,
+    "new_exit_completion_language_held": true,
+    "reviewed_112_exit_preserved": true,
+    "paragraph_113_context_blocks_rendered": true,
+    "paragraph_113_graph_workspace_contract_present": true,
+    "paragraph_113_interval_halving_present": true,
+    "no_prompt_context_block": true,
+    "no_exit_ticket_content_hints": true,
+    "no_forbidden_authority_copy": true
+  },
+  "screenshots": [
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-landing-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-korte-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-111-exit-ticket.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-landing-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-korte-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-112-exit-ticket.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-korte-check.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-exit-ticket.png",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png"
+  ],
+  "authority": {
+    "new_target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

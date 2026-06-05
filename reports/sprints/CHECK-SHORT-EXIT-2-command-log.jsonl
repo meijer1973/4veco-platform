@@ -27,3 +27,5 @@
 {"sprint_id":"CHECK-SHORT-EXIT-2","timestamp":"2026-06-05T00:00:00Z","command":"npm.cmd run check:scope-language","exit_code":0,"result":"passed"}
 {"sprint_id":"CHECK-SHORT-EXIT-2","timestamp":"2026-06-05T00:00:00Z","command":"git diff --check","exit_code":0,"result":"passed","notes":"Line-ending warnings only."}
 {"sprint_id":"CHECK-SHORT-EXIT-2","timestamp":"2026-06-05T00:00:00Z","command":"git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ..\\4veco-lessen diff --check","exit_code":0,"result":"passed","notes":"Line-ending warnings only."}
+{"sprint_id":"CHECK-SHORT-EXIT-2","timestamp":"2026-06-05T00:00:00Z","command":"node build-scripts/sprints/capture-check-short-exit2-screenshots.js","exit_code":0,"result":"passed","notes":"Regenerated proof after fixing reviewed 1.1.2 nested targetEquivalent metadata read; reviewed_112_exit_preserved is true."}
+{"sprint_id":"CHECK-SHORT-EXIT-2","timestamp":"2026-06-05T00:00:00Z","command":"node build-scripts/review-gates/check-gate-check-short-exit2-review-packet.js","exit_code":0,"result":"passed","notes":"Direct human review packet and proof lab validate."}

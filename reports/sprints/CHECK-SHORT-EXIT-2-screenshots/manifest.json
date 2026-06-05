@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECK-SHORT-EXIT-2",
-  "generated": "2026-06-05T17:38:39.446Z",
+  "generated": "2026-06-05T18:00:29.515Z",
   "cases": [
     {
       "case": "desktop-111-landing-check",
