@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-RESET-1",
+  "generated": "2026-06-05",
+  "status": "product_quality_reset_recorded",
+  "gate_id": "GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review",
+  "gate_decision": "REVISE",
+  "gate_direction": "hold_for_surface_repair",
+  "additional_direction": "replan_before_next_human_gate",
+  "gate_closed": false,
+  "closure_authorized": false,
+  "next_human_gate_allowed_now": false,
+  "authority_boundary": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "required_next_sequence": [
+    "CHECKSURFACE-RESET-1",
+    "GRAPH-CHECK-UX-1",
+    "GRAPH-EXIT-UX-1",
+    "CHECK-ROUTE-COPY-1",
+    "VISUAL-QA-HARDEN-2",
+    "CHECK-SURFACE-PREGATE-1",
+    "GATE-CHECK-SHORT-EXIT-2-RETRY"
+  ],
+  "required_findings_present": true,
+  "findings": [
+    {
+      "id": "CSR1-F1",
+      "title": "1.1.3 Korte check lacks graph/table interaction",
+      "category": "product_didactic_alignment",
+      "severity": "blocking",
+      "evidence": [
+        "source-data/book-1/exit-ticket/1.1.3-korte-check.json has only choice tasks",
+        "reports/json/check-short-exit2-proof.json records graph_workspace_required false for 1.1.3-short"
+      ],
+      "next_action": "GRAPH-CHECK-UX-1"
+    },
+    {
+      "id": "CSR1-F2",
+      "title": "1.1.3 Korte check has no context blocks or task shell",
+      "category": "proof_gap",
+      "severity": "blocking",
+      "evidence": [
+        "reports/json/check-short-exit2-proof.json records 1.1.3-short.context_block_count = 0",
+        "reports/json/check-short-exit2-proof.json records 1.1.3-short.task_shell_count = 0"
+      ],
+      "next_action": "GRAPH-CHECK-UX-1"
+    },
+    {
+      "id": "CSR1-F3",
+      "title": "1.1.3 Exit ticket has graph task data but not a polished source/task graph workspace",
+      "category": "ui_source_task_affordance",
+      "severity": "blocking",
+      "evidence": [
+        "1.1.3-exit task families include graph_construction_substitute and graph_reading",
+        "ExitTicketUI.renderStaticHtml renders contextHtml before et-tasks instead of split source/task layout"
+      ],
+      "next_action": "GRAPH-EXIT-UX-1"
+    },
+    {
+      "id": "CSR1-F4",
+      "title": "Visual QA was insufficient",
+      "category": "evidence_quality",
+      "severity": "high",
+      "evidence": [
+        "Proof JSON validates page existence and screenshots, not whether the graph paragraph uses graph/table interaction",
+        "Review lab is mainly links and screenshot figures"
+      ],
+      "next_action": "VISUAL-QA-HARDEN-2"
+    },
+    {
+      "id": "CSR1-F5",
+      "title": "Lead review passed structural evidence while missing product-experience blockers",
+      "category": "review_integrity",
+      "severity": "high",
+      "evidence": [
+        "CHECK-SHORT-EXIT-2 lead review round 2 recorded PASS WITH FLAGS",
+        "Lead review said no blocking findings remain while 1.1.3 short check had no graph"
+      ],
+      "next_action": "CHECK-SURFACE-PREGATE-1"
+    }
+  ],
+  "quality_log": [
+    {
+      "issue": "1.1.3 short check has no graph/table interaction",
+      "category": "Product / didactic alignment",
+      "severity": "Blocking",
+      "next_action": "GRAPH-CHECK-UX-1",
+      "proof_required": "Short check includes graph/table task family, rendered graph/table workspace, screenshots, and advisory route feedback."
+    },
+    {
+      "issue": "Exit-ticket context/task layout is not the split workspace",
+      "category": "UI / source-task affordance",
+      "severity": "Blocking for 1.1.3",
+      "next_action": "GRAPH-EXIT-UX-1",
+      "proof_required": "Desktop source/task split with table visible while graph workspace is active."
+    },
+    {
+      "issue": "Proof validates existence more than quality",
+      "category": "Evidence quality",
+      "severity": "High",
+      "next_action": "VISUAL-QA-HARDEN-2",
+      "proof_required": "Visual QA rubric checks right interaction, workspace size, source visibility, feedback, and next action."
+    },
+    {
+      "issue": "Lead review missed product defects",
+      "category": "Review integrity",
+      "severity": "High",
+      "next_action": "CHECK-SURFACE-PREGATE-1",
+      "proof_required": "Lead review explicitly answers whether the surface is good for a student, not only whether checks pass."
+    },
+    {
+      "issue": "Target registry / skill alignment remains narrow",
+      "category": "Reference alignment",
+      "severity": "Medium-high",
+      "next_action": "Reference/MTU follow-up after UI repair",
+      "proof_required": "Target registry and MTU evidence align with the actual graph/table operation chain."
+    },
+    {
+      "issue": "Review lab is a screenshot/navigation aid, not strong product proof",
+      "category": "Gate evidence",
+      "severity": "Medium-high",
+      "next_action": "CHECK-SURFACE-PREGATE-1",
+      "proof_required": "Human-readable five-minute walkthrough plus meaningful screenshots and interactive rendered pages."
+    }
+  ]
+}

@@ -2,8 +2,9 @@
 
 Generated: 2026-06-05
 
-Status: direct human review packet prepared after `CHECK-SHORT-EXIT-2`.
-Human review comments have not started; no gate closure exists; no new
+Status: direct human review returned `REVISE` after `CHECK-SHORT-EXIT-2`.
+Gate direction is `hold_for_surface_repair` with additional direction to
+replan before the next human gate. No gate closure exists; no new
 target-equivalent completion language or product authority exists.
 
 Reviewed implementation evidence snapshot: `codex/check-short-exit-2` at
@@ -16,6 +17,42 @@ Remote publication prerequisite: this packet, the review lab, live-output
 evidence, proof JSON, screenshots, sprint plan/result, lead-review evidence,
 checker, repository maps, URL indexes, and cited generated output must be
 pushed before direct human review comments start.
+
+## Direct Review Result
+
+The returned direct human review decision is:
+
+```text
+GATE-CHECK-SHORT-EXIT-2: REVISE
+Gate direction: hold_for_surface_repair
+Additional direction: replan before the next human gate
+```
+
+Do not close this gate. Do not draft `closure-proposal.md/json` or
+`gate-closure.md/json`. Do not proceed to `SCALE-PROOF-3P`,
+`GATE-PRODUCT-3P`, product-route adoption, new target-equivalent completion
+language, diagnostics, mastery/sequencing, PV, Scale Gate 1, or
+student/product use.
+
+The reviewer found that the packet proves generated pages, screenshots, and
+authority flags, but not product end-state quality. The key blocker is
+`1.1.3 Grafieken en tabellen`: the advisory `Korte check` has no graph/table
+interaction, no context blocks, no task shell, and no graph workspace. The
+`1.1.3` exit-ticket source data is stronger, but the generated rendered
+surface does not yet carry the source/task graph workspace quality from the
+shared-task ingestion repair.
+
+The next required sequence before a retry gate is:
+
+```text
+CHECKSURFACE-RESET-1
+GRAPH-CHECK-UX-1
+GRAPH-EXIT-UX-1
+CHECK-ROUTE-COPY-1
+VISUAL-QA-HARDEN-2
+CHECK-SURFACE-PREGATE-1
+GATE-CHECK-SHORT-EXIT-2-RETRY
+```
 
 ## Review Scope
 
@@ -49,6 +86,10 @@ tickets are candidates only.
 - `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.json`
 - `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-lab.html`
 - `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md`
+- `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.md`
+- `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.json`
+- `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md`
+- `reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json`
 - `reports/sprints/CHECK-SHORT-EXIT-2-plan.md`
 - `reports/sprints/CHECK-SHORT-EXIT-2-baseline.md`
 - `reports/sprints/CHECK-SHORT-EXIT-2-planning-review.md`
@@ -60,6 +101,19 @@ tickets are candidates only.
 - `reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round2.md`
 - `reports/sprints/CHECK-SHORT-EXIT-2-result.md`
 - `reports/sprints/CHECK-SHORT-EXIT-2-diff-summary.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-plan.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-baseline.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-planning-review.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-command-log.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-command-log.jsonl`
+- `reports/sprints/CHECKSURFACE-RESET-1-lead-review-assignment.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-lead-review-round1.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-lead-review-corrections.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-lead-review-round2.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-verification-review.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-product-quality-audit.md`
+- `reports/sprints/CHECKSURFACE-RESET-1-result.md`
+- `reports/json/checksurface-reset1-quality-findings.json`
 - `reports/json/check-short-exit2-proof.json`
 - `reports/sprints/CHECK-SHORT-EXIT-2-screenshot-manifest.md`
 - `reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json`
@@ -81,6 +135,7 @@ tickets are candidates only.
 - `source-data/book-1/exit-ticket/1.1.3-exit-ticket.json`
 - `build-scripts/sprints/capture-check-short-exit2-screenshots.js`
 - `build-scripts/sprints/check-check-short-exit2.js`
+- `build-scripts/sprints/check-checksurface-reset1.js`
 - `build-scripts/review-gates/check-gate-check-short-exit2-review-packet.js`
 - `build-scripts/platform/build-exit-ticket-shells.js`
 - `build-scripts/platform/build-landing-page.js`
@@ -116,6 +171,9 @@ Before writing binding comments, inspect at minimum:
 - `CHECK-SHORT-EXIT-2-lead-review-round1.md`, correction log, and
   lead-review round 2;
 - source-data JSON for all six check surfaces.
+- direct review comments and comment-resolution log;
+- `CHECKSURFACE-RESET-1-product-quality-audit.md` and
+  `reports/json/checksurface-reset1-quality-findings.json`.
 
 Checker-readable split-surface statement: every reviewed paragraph must have separate `Korte check` and `Exit ticket` surfaces.
 Checker-readable authority statement: new `1.1.1` and `1.1.3` exit tickets must keep completion language held.
@@ -146,8 +204,11 @@ Checker-readable duplicate-label statement: visible `Bron 1` / `Tabel 1` identif
 8. Confirm screenshot proof captures all required desktop/mobile/dark cases.
 9. Confirm no duplicate visible source/table labels remain in the `1.1.3`
    context blocks.
-10. Confirm no direct-review comments, comment-resolution log, closure
-    proposal, or gate-closure record exists yet for this gate.
+10. Confirm direct-review comments and the comment-resolution log record
+    `REVISE`, `hold_for_surface_repair`, and
+    `replan_before_next_human_gate`.
+11. Confirm no closure proposal or gate-closure record exists for this gate.
+12. Confirm the reset sprint sequence is recorded before any retry gate.
 
 ## Planned Review Focus
 
@@ -223,17 +284,30 @@ diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use?
 - `gate-closure.md/json` may be written only after explicit human
   confirmation of the closure decision.
 
+Direct review comments have now been recorded as `REVISE`. That decision does
+not authorize closure; it requires a reset and product-quality sprint sequence
+before a retry gate.
+
 ## Current Stop Conditions
 
-Stop the review instead of closing the gate if any of these occur:
+Post-review, stop downstream reliance instead of closing or retrying the gate
+if any of these occur:
 
 - the packet or cited evidence is not pushed to the normal remote branch;
 - remote hash metadata does not match the reviewed evidence;
 - generated lesson output is not pushed to the lesson repo remote;
+- closure proposal or gate-closure artifacts are written;
+- the review result is softened from `REVISE` into `pass_with_flags`;
 - any paragraph lacks a separate `Korte check` or `Exit ticket` surface without
   an explicit blocker;
 - landing pages do not show both Check cards where both surfaces exist;
 - advisory short checks claim target readiness;
+- `1.1.3` short check remains multiple-choice-only with no graph/table
+  interaction;
+- `1.1.3-short` keeps `context_block_count = 0` and `task_shell_count = 0`
+  without being treated as a blocking product defect;
+- `1.1.3` exit-ticket rendering remains source context above tasks instead of
+  a source/task graph workspace in the required repair sprint;
 - new `1.1.1` or `1.1.3` exit tickets set completion-language eligibility to
   true;
 - reviewed `1.1.2` exit-ticket authority is weakened;
@@ -244,8 +318,8 @@ Stop the review instead of closing the gate if any of these occur:
 - protected reference, external source, candidate storage, or machine
   reference drift appears;
 - anyone asks for product adoption, Scale Gate 1, diagnostics, mastery,
-  sequencing, or student/product use before direct comments and closure
-  confirmation exist.
+  sequencing, or student/product use before the reset series and retry gate
+  explicitly authorize it.
 
 ## Comment Resolution And Closure Protocol
 
@@ -263,7 +337,7 @@ After review comments are returned:
 
 ## Recommended Next Action
 
-After this packet is pushed and the remote evidence hash is recorded, send this
-packet for direct human review comments. Do not close the gate until returned
-comments, a comment-resolution log, and explicit human closure confirmation
-exist.
+Proceed to `GRAPH-CHECK-UX-1` after `CHECKSURFACE-RESET-1` is committed and
+pushed. Do not ask for `GATE-CHECK-SHORT-EXIT-2-RETRY` until
+`CHECK-SURFACE-PREGATE-1` has produced a green product packet. Keep
+`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, and Scale Gate 1 blocked.

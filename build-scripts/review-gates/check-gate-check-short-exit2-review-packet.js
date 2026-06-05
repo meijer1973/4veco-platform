@@ -81,18 +81,34 @@ function requirePacketText() {
   }
 }
 
-function requireNoClosureArtifacts() {
+function requireReviewArtifactState(packet) {
   for (const name of [
-    'direct-review-comments.md',
-    'direct-review-comments.json',
-    'comment-resolution-log.md',
-    'comment-resolution-log.json',
     'closure-proposal.md',
     'closure-proposal.json',
     'gate-closure.md',
     'gate-closure.json',
   ]) {
-    assert(!fs.existsSync(path.join(gateDir, name)), `${name} must not exist before human review`);
+    assert(!fs.existsSync(path.join(gateDir, name)), `${name} must not exist before gate closure is authorized`);
+  }
+
+  const reviewArtifacts = [
+    'direct-review-comments.md',
+    'direct-review-comments.json',
+    'comment-resolution-log.md',
+    'comment-resolution-log.json',
+  ];
+  if (packet.human_review_comments_started === true) {
+    for (const name of reviewArtifacts) {
+      assert(fs.existsSync(path.join(gateDir, name)), `${name} must exist after human review comments are recorded`);
+    }
+    const comments = readJson(`reports/review-gates/${gateId}/direct-review-comments.json`);
+    assert(comments.decision === 'REVISE', 'recorded human review decision must be REVISE');
+    assert(comments.gate_direction === 'hold_for_surface_repair', 'recorded gate direction must be hold_for_surface_repair');
+    assert(comments.additional_direction === 'replan_before_next_human_gate', 'recorded additional direction must require replanning');
+  } else {
+    for (const name of reviewArtifacts) {
+      assert(!fs.existsSync(path.join(gateDir, name)), `${name} must not exist before human review`);
+    }
   }
 }
 
@@ -200,8 +216,14 @@ function requireRemoteMetadata(packet, live) {
 }
 
 function requireAuthority(packet, live) {
-  assert(packet.human_review_comments_started === false, 'human review must not be pre-recorded');
-  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized before comments');
+  if (packet.human_review_comments_started === true) {
+    assert(packet.human_review_decision === 'REVISE', 'human review decision must be REVISE when comments are recorded');
+    assert(packet.gate_direction === 'hold_for_surface_repair', 'gate direction must be hold_for_surface_repair');
+    assert(packet.additional_direction === 'replan_before_next_human_gate', 'additional direction must require replanning before next human gate');
+  } else {
+    assert(packet.human_review_decision == null, 'human review decision must be null before comments');
+  }
+  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized for this packet state');
   for (const [key, value] of Object.entries(packet.authority_boundary)) {
     if (key === 'generated_lesson_output_already_deployed_as_evidence') {
       assert(value === true, `${key} must be true`);
@@ -231,7 +253,7 @@ function main() {
   assert(live.gate_id === gateId, 'live evidence gate id mismatch');
   requirePacketText();
   requireEvidenceFiles(packet);
-  requireNoClosureArtifacts();
+  requireReviewArtifactState(packet);
   requireProof(packet, live);
   requireSourceData();
   requireGeneratedOutput();
