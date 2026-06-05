@@ -181,8 +181,17 @@ function requireRemoteMetadata(packet, live) {
   assert(live.remote_publication.platform_commit === packet.remote_publication.reviewed_platform_commit_hash, 'live platform hash mismatch');
   assert(live.remote_publication.lesson_commit === packet.remote_publication.generated_lesson_commit_hash, 'live lesson hash mismatch');
 
-  const platformRemote = gitOutput(['ls-remote', 'origin', packet.remote_publication.reviewed_platform_branch]);
-  assert(platformRemote.includes(packet.remote_publication.reviewed_platform_commit_hash), 'platform reviewed hash not found on remote branch');
+  gitOutput(['fetch', '--prune', 'origin']);
+  const remoteRef = `origin/${packet.remote_publication.reviewed_platform_branch}`;
+  try {
+    execFileSync(
+      'git',
+      ['merge-base', '--is-ancestor', packet.remote_publication.reviewed_platform_commit_hash, remoteRef],
+      { cwd: platformRoot, stdio: 'pipe' }
+    );
+  } catch (_error) {
+    fail(`platform reviewed hash is not an ancestor of ${remoteRef}`);
+  }
   const lessonRemote = gitOutput(
     ['ls-remote', 'origin', packet.remote_publication.generated_lesson_branch],
     path.resolve(platformRoot, '..', '4veco-lessen')
