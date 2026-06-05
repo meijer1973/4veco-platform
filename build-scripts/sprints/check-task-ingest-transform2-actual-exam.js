@@ -141,6 +141,11 @@ function main() {
   const sourceValues = taskById(transform.taskSet, 'q3-source-values');
   const calculation = taskById(transform.taskSet, 'q3-calculation');
   const direction = taskById(transform.taskSet, 'q3-threshold-direction');
+  assert(sourceValues.interaction.selectionMode === 'compact_source_cells', 'source values must use compact source-cell selection');
+  assert(sourceValues.interaction.maxRequiredSelections <= 4, 'source values must require no more than four selections');
+  assert(sourceValues.interaction.distractorLimit <= 2, 'source values must render no more than two distractors');
+  assert(direction.interaction.carryForward && direction.interaction.carryForward.fromTaskIndex === 1, 'direction task must carry forward the calculation result');
+  assert(Array.isArray(direction.interaction.directionOptions) && direction.interaction.directionOptions.length >= 3, 'direction task must use constrained direction options');
 
   expectMatch(sourceValues, { selections: sourceValues.expected.selections }, 'source values correct response');
   expectReject(sourceValues, { selections: sourceValues.expected.selections.slice(0, 2) }, 'source values missing rows');
@@ -167,6 +172,12 @@ function main() {
       direction: 'tot dat bedrag is verhoogd eigen risico voordeliger',
     },
   }, 'direction correct response');
+  expectMatch(direction, {
+    fields: {
+      threshold: 'EUR 649 per jaar',
+      direction: 'lager dan',
+    },
+  }, 'direction constrained carry-forward response');
   expectReject(direction, {
     fields: {
       threshold: '649 euro per jaar',
@@ -223,6 +234,12 @@ function main() {
   assert(proof.task_transformation.playable_lab.target_task_economy_enforced === true, 'proof must enforce target-task economy');
   assert(proof.task_transformation.playable_lab.sequence_builders_removed_as_required_cards === true, 'proof must show support builders removed as required cards');
   assert(proof.task_transformation.playable_lab.prompt_not_in_source_pane === true, 'proof must show prompt not in source pane');
+  assert(proof.task_transformation.playable_lab.right_pane_original_question_visible === true, 'proof must show original exam question in right task pane');
+  assert(proof.task_transformation.playable_lab.compact_source_cell_selection_rendered === true, 'proof must show compact source-cell selection');
+  assert(proof.task_transformation.playable_lab.constrained_carry_forward_conclusion_rendered === true, 'proof must show constrained carry-forward conclusion');
+  assert(proof.task_transformation.playable_lab.task3_carries_task2_value_when_complete === true, 'proof must show task 3 carries task 2 value after completion');
+  assert(proof.task_transformation.playable_lab.task3_requires_task2_before_value === true, 'proof must show task 3 blocks carried value before task 2');
+  assert(proof.task_transformation.playable_lab.source_pane_readability_pass === true, 'proof must show source-pane readability pass');
 
   const expectedCases = new Map([
     ['desktop-initial', { width: 1280, theme: 'light', action: 'initial', renderedContextBlocks: 3 }],
@@ -252,12 +269,26 @@ function main() {
     assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed`);
     assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
     assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
-    assert(capture.proof.familyAffordances.source_value_selection.valueBank === true, `${capture.case} missing source value bank`);
+    const sourceAffordance = capture.proof.familyAffordances.source_value_selection;
+    assert(sourceAffordance.sourceCellSelection === true, `${capture.case} missing compact source-cell selection`);
+    assert(sourceAffordance.sourceCellRequiredSelectionCount <= 4, `${capture.case} source-cell selection requires too many cells`);
+    assert(sourceAffordance.sourceCellDistractorCount <= 2, `${capture.case} source-cell selection has too many distractors`);
+    assert(sourceAffordance.repeatedDropdownRows === 0, `${capture.case} still renders repeated value/role dropdown rows`);
+    assert(sourceAffordance.roleDropdownCount === 0, `${capture.case} still renders visible role dropdowns`);
     assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
-    assert(capture.proof.familyAffordances.structured_short_response.structuredFields === true, `${capture.case} missing structured fields`);
+    const conclusionAffordance = capture.proof.familyAffordances.structured_short_response;
+    assert(conclusionAffordance.structuredCarryForward === true, `${capture.case} missing carry-forward conclusion`);
+    assert(conclusionAffordance.constrainedDirectionControl === true, `${capture.case} missing constrained direction control`);
+    assert(conclusionAffordance.freeTextDirectionAbsent === true, `${capture.case} still has free-text direction input`);
+    assert(capture.proof.rightPaneQuestionVisible === true, `${capture.case} missing right-pane original question`);
+    assert(capture.proof.examQuestionTextVisibleInTaskPane === true, `${capture.case} missing actual exam question text in task pane`);
+    assert(capture.proof.sourceRefsVisible === false, `${capture.case} shows long source refs`);
+    assert(capture.proof.sourceTableVisibleAtTop === true, `${capture.case} source table is not visible at source-pane top`);
+    if (capture.viewport.width >= 900) assert(capture.proof.sourcePaneComfortableInitial === true, `${capture.case} desktop source pane is not comfortable at initial layout`);
     if (capture.case === 'desktop-initial') {
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
       assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
+      assert(conclusionAffordance.carryRequiresPreviousTask === true, `${capture.case} should require task 2 before carry-forward value`);
     } else if (capture.case === 'desktop-wrong-retry') {
       assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
@@ -267,10 +298,12 @@ function main() {
     } else {
       assert(capture.proof.completedTaskCount === 3, `${capture.case} demo path did not complete all tasks`);
       assert(capture.proof.labCompleted === true, `${capture.case} demo path did not reach completion`);
+      assert(conclusionAffordance.carriedValueReady === true, `${capture.case} should carry the calculated value`);
     }
     assert(capture.proof.visibleInternalIds === false, `${capture.case} exposes internal ids`);
     assert(capture.proof.derivedAnswerVisibleInContext === false, `${capture.case} exposes derived answer signal in context`);
-    assert(capture.proof.derivedAnswerVisibleInTaskCards === false, `${capture.case} exposes derived answer signal in task cards`);
+    if (capture.action !== 'complete') assert(capture.proof.derivedAnswerVisibleInTaskCards === false, `${capture.case} exposes derived answer before completion`);
+    if (capture.action === 'complete') assert(capture.proof.derivedAnswerVisibleInTaskCards === true, `${capture.case} should show carried answer after completion`);
     assert(capture.proof.rawImageCount === 0, `${capture.case} contains raw images`);
     assert(capture.proof.overflowingCount === 0, `${capture.case} has non-table overflow`);
   }

@@ -1,0 +1,25 @@
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-sprint-plan.js reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-plan.md","exit_code":0,"note":"plan validator passed after wording repair"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-sprint-bundle.js SHARED-TASK-INGEST-PLAYABLE-REPAIR-3 --active","exit_code":0,"note":"active sprint bundle passed after roadmap ledger update"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node --check build-scripts/sprints/task-ingest-playable-lab.js","exit_code":0,"note":"playable lab builder syntax check passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node --check build-scripts/sprints/capture-task-ingest-transform2-screenshots.js","exit_code":0,"note":"actual-exam capture script syntax passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node --check build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js","exit_code":0,"note":"textbook capture script syntax passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node --check build-scripts/sprints/check-task-ingest-transform2-actual-exam.js","exit_code":0,"note":"actual-exam checker syntax passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node --check build-scripts/sprints/check-task-ingest-transform3-textbook.js","exit_code":0,"note":"textbook checker syntax passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/capture-task-ingest-transform2-screenshots.js","exit_code":0,"note":"six actual-exam screenshots and proof JSON regenerated"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js","exit_code":0,"note":"seven textbook screenshots and proof JSON regenerated"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-task-ingest-transform2-actual-exam.js","exit_code":0,"note":"actual-exam repair3 checker passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-task-ingest-transform3-textbook.js","exit_code":0,"note":"textbook repair3 checker passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"in-app browser file:// spot-check","exit_code":1,"note":"blocked by Browser URL policy; no workaround attempted; deterministic CDP screenshots and checkers remain the proof surface"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-sprint-plan.js reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-plan.md","exit_code":0,"note":"final sprint plan validator passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-sprint-bundle.js SHARED-TASK-INGEST-PLAYABLE-REPAIR-3 --active","exit_code":0,"note":"final active sprint bundle validator passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/check-lead-review-substance.js SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","exit_code":0,"note":"lead-review assignment, round1, corrections, and round2 substance passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/review-gates/check-gate-shared-task-ingest-repair1-review-packet.js","exit_code":0,"note":"repair3 review-packet checker passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"npm.cmd run check:scope-language","exit_code":0,"note":"active scope-language check passed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/reports/validate-report-json.js","exit_code":0,"note":"report JSON contract passed for 14 reports"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"git diff --check","exit_code":0,"note":"passed after screenshot-manifest EOF repair"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"npm.cmd run check:platform","exit_code":0,"note":"Jest passed: 42 passed suites, 8 skipped tests; validator fixture warnings printed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"npm.cmd run agent:index","exit_code":0,"note":"GitHub-facing agent indexes refreshed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/emit-gate-bundle-urls.js GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review --branch codex/shared-task-ingest-repair3","exit_code":0,"note":"gate bundle URLs refreshed for repair3 branch with 17 artifacts"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/emit-url-index.js","exit_code":0,"note":"repository URL index refreshed"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"node build-scripts/sprints/emit-url-index.js --check","exit_code":0,"note":"repository URL index is current"}
+{"sprint_id":"SHARED-TASK-INGEST-PLAYABLE-REPAIR-3","command":"npm.cmd run dashboard:internal","exit_code":0,"note":"internal dashboard refreshed"}

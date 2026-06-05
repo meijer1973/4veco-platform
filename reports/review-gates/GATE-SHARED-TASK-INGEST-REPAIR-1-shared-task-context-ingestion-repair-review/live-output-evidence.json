@@ -2,12 +2,12 @@
   "schema_version": 1,
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
-  "generated": "2026-06-04",
-  "status": "target_task_repair_evidence_ready_after_renewed_hold_for_playable_repair",
+  "generated": "2026-06-05",
+  "status": "interaction_quality_evidence_ready_after_third_hold_for_playable_repair",
   "remote_publication": {
-    "reviewed_remote_branch": "codex/shared-task-ingest-repair2",
-    "reviewed_remote_commit_hash": "0016511e4dc8e8d1d0ff6cf32875c967fcaa971d",
-    "reviewed_remote_status": "published_repair2_evidence_snapshot_on_review_branch_main_blocked_by_required_status_check",
+    "reviewed_remote_branch": "codex/shared-task-ingest-repair3",
+    "reviewed_remote_commit_hash": "0000000000000000000000000000000000000000",
+    "reviewed_remote_status": "pending_repair3_evidence_push_on_review_branch_main_blocked_by_required_status_check",
     "review_may_start": true
   },
   "playable_labs": {
@@ -35,21 +35,20 @@
       "playable_lab": {
         "semantic_validation_enabled": true,
         "real_task_family_controls_rendered": true,
-        "source_value_banks_rendered": true,
+        "right_pane_original_question_visible": true,
+        "compact_source_cell_selection_rendered": true,
         "sequence_builders_removed_as_required_cards": true,
         "calculation_fields_rendered": true,
-        "structured_fields_rendered": true,
+        "constrained_carry_forward_conclusion_rendered": true,
+        "task3_carries_task2_value_when_complete": true,
+        "task3_requires_task2_before_value": true,
         "target_task_economy_enforced": true,
         "prompt_not_in_source_pane": true,
-        "plain_sequence_textareas_absent": true,
-        "check_buttons_rendered": true,
-        "task_instructions_rendered": true,
-        "support_collapsed_by_default": true,
-        "correction_model_support_collapsed_by_default": true,
-        "initial_state_proven": true,
+        "source_pane_readability_pass": true,
         "wrong_retry_state_proven": true,
         "corrected_state_proven": true,
         "completion_path_reaches_done": true,
+        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
@@ -61,6 +60,7 @@
       "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
       "screenshots": [
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png",
@@ -79,6 +79,10 @@
         "semantic_validation_enabled": true,
         "real_task_family_controls_rendered": true,
         "graph_construction_controls_rendered": true,
+        "click_to_place_primary": true,
+        "typed_point_entry_fallback_only": true,
+        "graph_labels_hidden_before_axis_selection": true,
+        "graph_labels_reveal_after_axis_selection": true,
         "graph_reading_field_rendered": true,
         "calculation_fields_rendered": true,
         "target_task_economy_enforced": true,
@@ -86,14 +90,11 @@
         "completed_graph_hidden_before_attempt": true,
         "graph_workspace_in_task_pane": true,
         "graph_workspace_width_pass": true,
-        "plain_sequence_textareas_absent": true,
-        "check_buttons_rendered": true,
-        "task_instructions_rendered": true,
-        "support_collapsed_by_default": true,
-        "initial_state_proven": true,
+        "source_pane_readability_pass": true,
         "wrong_retry_state_proven": true,
         "corrected_state_proven": true,
         "completion_path_reaches_done": true,
+        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
@@ -101,9 +102,9 @@
   },
   "target_task_economy": {
     "actual_exam_required_cards": [
-      "source values",
+      "compact source-cell selection",
       "calculation",
-      "conclusion"
+      "carried-value constrained conclusion"
     ],
     "actual_exam_removed_required_cards": [
       "formula_builder",
@@ -111,7 +112,7 @@
       "source_chain_builder"
     ],
     "textbook_required_cards": [
-      "graph construction",
+      "click-to-place graph construction",
       "graph reading",
       "optional 50 percent quantity-drop check"
     ],

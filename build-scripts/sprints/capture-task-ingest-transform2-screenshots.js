@@ -669,7 +669,8 @@ async function main() {
         rendered_families: captured[0].proof.families,
         context_before_tasks: captured.every((item) => item.proof.contextBeforeTasks === true),
         derived_answer_visible_in_context: captured.some((item) => item.proof.derivedAnswerVisibleInContext),
-        derived_answer_visible_in_task_cards: captured.some((item) => item.proof.derivedAnswerVisibleInTaskCards),
+        derived_answer_visible_in_task_cards_before_completion: captured.filter((item) => item.action !== 'complete').some((item) => item.proof.derivedAnswerVisibleInTaskCards),
+        derived_answer_visible_in_task_cards_after_completion: captured.filter((item) => item.action === 'complete').some((item) => item.proof.derivedAnswerVisibleInTaskCards),
         visible_internal_ids: captured.some((item) => item.proof.visibleInternalIds),
         raw_image_count: captured.reduce((total, item) => total + item.proof.rawImageCount, 0),
         playable_lab: {
@@ -677,10 +678,25 @@ async function main() {
           cases_captured: captured.map((item) => item.case),
           semantic_validation_enabled: captured.every((item) => item.proof.semanticValidationEnabled === true),
           real_task_family_controls_rendered: captured.every((item) => item.proof.genericOptionLabelVisible === false && item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
-          source_value_banks_rendered: captured.every((item) => item.proof.familyAffordances.source_value_selection?.valueBank === true && item.proof.familyAffordances.source_value_selection?.roleBank === true),
+          right_pane_original_question_visible: captured.every((item) => item.proof.rightPaneQuestionVisible === true && item.proof.examQuestionTextVisibleInTaskPane === true),
+          compact_source_cell_selection_rendered: captured.every((item) => {
+            const affordance = item.proof.familyAffordances.source_value_selection;
+            return affordance?.sourceCellSelection === true
+              && affordance.sourceCellRequiredSelectionCount <= 4
+              && affordance.sourceCellDistractorCount <= 2
+              && affordance.repeatedDropdownRows === 0
+              && affordance.roleDropdownCount === 0;
+          }),
           sequence_builders_removed_as_required_cards: captured.every((item) => !item.proof.families.includes('formula_builder') && !item.proof.families.includes('step_ordering') && !item.proof.families.includes('source_chain_builder')),
           calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
-          structured_fields_rendered: captured.every((item) => item.proof.familyAffordances.structured_short_response?.structuredFields === true),
+          constrained_carry_forward_conclusion_rendered: captured.every((item) => {
+            const affordance = item.proof.familyAffordances.structured_short_response;
+            return affordance?.structuredCarryForward === true
+              && affordance.constrainedDirectionControl === true
+              && affordance.freeTextDirectionAbsent === true;
+          }),
+          task3_carries_task2_value_when_complete: captured.filter((item) => item.action === 'complete').every((item) => item.proof.familyAffordances.structured_short_response?.carriedValueReady === true),
+          task3_requires_task2_before_value: captured.some((item) => item.case === 'desktop-initial' && item.proof.familyAffordances.structured_short_response?.carryRequiresPreviousTask === true),
           target_task_economy_enforced: transform.taskSet.tasks.length <= 3,
           prompt_not_in_source_pane: captured.every((item) => item.proof.promptInSourcePaneCount === 0),
           plain_sequence_textareas_absent: captured.every((item) => item.proof.plainSequenceTextareaCount === 0),
@@ -688,6 +704,8 @@ async function main() {
           task_instructions_rendered: captured.every((item) => item.proof.taskInstructionCount === transform.taskSet.tasks.length),
           support_collapsed_by_default: captured.every((item) => item.proof.supportCollapsedByDefault === true),
           correction_model_support_collapsed_by_default: captured.every((item) => item.proof.correctionModelSupportVisibleByDefault === false),
+          source_pane_readability_pass: captured.every((item) => item.proof.sourceRefsVisible === false && item.proof.sourceTableVisibleAtTop === true)
+            && captured.filter((item) => item.viewport.width >= 900).every((item) => item.proof.sourcePaneComfortableInitial === true),
           initial_state_proven: captured.some((item) => item.case === 'desktop-initial' && item.proof.completedTaskCount === 0 && item.proof.labCompleted === false),
           wrong_retry_state_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.wrongRetryCount > 0 && item.proof.retryFeedbackCount > 0 && item.proof.completedTaskCount === 0),
           corrected_state_proven: captured.some((item) => item.case === 'desktop-corrected' && item.proof.completedTaskCount === 1 && item.proof.wrongRetryCount === 0 && item.proof.labCompleted === false),

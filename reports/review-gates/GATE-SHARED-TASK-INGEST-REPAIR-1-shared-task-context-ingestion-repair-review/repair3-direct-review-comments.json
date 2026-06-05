@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "received": "2026-06-05",
+  "source_attachment": "C:\\Users\\meije\\.codex\\attachments\\54dced24-d2fb-4a94-9491-69aa29f95462\\pasted-text.txt",
+  "status": "repair3_direct_comments_returned",
+  "decision": "hold_for_playable_repair",
+  "review_verdict": "REVISE",
+  "gate_closure_authorized": false,
+  "product_authority_granted": false,
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-3",
+  "accepted_basis": [
+    "textbook task is now centered on graph_construction_substitute",
+    "textbook task count is reduced to three cards",
+    "actual-exam task count is reduced to three cards",
+    "target-task economy direction is correct",
+    "workspace concept is promising"
+  ],
+  "blocking_findings": [
+    {
+      "id": "exam-question-not-visible",
+      "severity": "blocking",
+      "summary": "The actual exam question is not visible enough in the right-side task flow."
+    },
+    {
+      "id": "exam-task1-selection-overload",
+      "severity": "blocking",
+      "summary": "Actual-exam task 1 uses a value bank, role bank, and repeated value/role rows, causing cognitive overload."
+    },
+    {
+      "id": "exam-task3-no-carryover",
+      "severity": "blocking",
+      "summary": "Task 3 does not consume the calculated answer from task 2 and should be direction-first."
+    },
+    {
+      "id": "textbook-graph-not-clickable",
+      "severity": "blocking",
+      "summary": "Textbook graph construction is still typed point entry rather than a primary click-to-place workspace."
+    },
+    {
+      "id": "graph-labels-reveal-too-much",
+      "severity": "blocking",
+      "summary": "The graph workspace reveals P/Q axis and number labels before axis selection."
+    },
+    {
+      "id": "source-pane-readability-weak",
+      "severity": "blocking",
+      "summary": "Visual QA accepts mechanical scrollability while the source pane remains cropped or awkward."
+    }
+  ],
+  "prompt_comments": {
+    "SHAREDINGEST-Q1": "Actual-exam source authority is adequate; keep the boundary.",
+    "SHAREDINGEST-Q2": "Three-card direction is right, but the visible task flow lacks the original exam question.",
+    "SHAREDINGEST-Q3": "Simplify task 1; do not keep value bank plus role bank plus four repeated dropdown rows.",
+    "SHAREDINGEST-Q4": "Task 3 should carry task 2's calculated 649 and ask direction first.",
+    "SHAREDINGEST-Q5": "Owned-textbook source boundary is acceptable.",
+    "SHAREDINGEST-Q6": "Make graph construction click-to-place; typed five-point entry must not be primary.",
+    "SHAREDINGEST-Q7": "Keep the 50 percent ambiguity secondary.",
+    "SHAREDINGEST-Q8": "Keep three-card target economy; improve interaction design only.",
+    "SHAREDINGEST-Q9": "Visual QA must inspect source-panel readability, not only scrollability.",
+    "SHAREDINGEST-Q10": "No major authority overclaim found.",
+    "SHAREDINGEST-Q11": "Run repair3 for exam orientation, simplified selection, carryover, click graph workspace, delayed labels, and source-pane readability.",
+    "SHAREDINGEST-Q12": "hold_for_playable_repair"
+  }
+}

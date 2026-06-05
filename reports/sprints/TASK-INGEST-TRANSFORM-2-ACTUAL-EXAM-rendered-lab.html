@@ -91,12 +91,12 @@
       align-items: start;
     }
     .lab-shell.has-graph-construction {
-      grid-template-columns: minmax(250px, 0.65fr) minmax(720px, 1.35fr);
+      grid-template-columns: minmax(340px, 0.72fr) minmax(720px, 1.28fr);
     }
     .source-pane {
       position: sticky;
       top: 72px;
-      max-height: 48vh;
+      max-height: calc(100vh - 92px);
       overflow-y: auto;
       padding-right: 4px;
     }
@@ -111,6 +111,23 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 15px;
+    }
+    .task-question-panel {
+      background: var(--panel);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 13px 15px;
+      margin-bottom: 14px;
+    }
+    .task-question-panel p:last-child {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+    .question-source-label {
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
     .ctx-markdown {
       background: transparent;
@@ -146,6 +163,9 @@
     }
     thead th { background: var(--soft); }
     tbody th { font-weight: 700; }
+    .has-graph-construction table {
+      min-width: 100%;
+    }
     pre {
       min-width: 500px;
       margin: 0;
@@ -180,16 +200,60 @@
       border-radius: 8px;
       padding: 10px;
     }
+    .graph-stage-note {
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .graph-workspace.axes-selected .graph-stage-note {
+      color: var(--primary);
+    }
     .graph-grid-svg {
       width: 100%;
       min-height: 360px;
       display: block;
+      touch-action: manipulation;
     }
     .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
     .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
     .graph-grid-svg .grid-line { stroke: var(--line); stroke-width: 1; opacity: 0.65; }
     .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
     .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-workspace:not(.axes-selected) .reveal-after-axes {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .plot-hit-area {
+      fill: transparent;
+      cursor: crosshair;
+    }
+    .placed-points circle {
+      fill: var(--accent);
+      stroke: var(--panel);
+      stroke-width: 3;
+    }
+    .placed-points text {
+      fill: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .graph-click-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .graph-point-status {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .clear-graph-points {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
     .graph-construction-controls {
       display: grid;
       gap: 10px;
@@ -202,6 +266,17 @@
     .point-entry-grid {
       display: grid;
       gap: 8px;
+    }
+    .typed-point-fallback {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 9px 10px;
+    }
+    .typed-point-fallback summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary);
     }
     .point-entry-row {
       display: grid;
@@ -222,6 +297,10 @@
     }
     .line-confirmation input {
       width: auto;
+    }
+    .click-instruction {
+      color: var(--muted);
+      font-weight: 700;
     }
     .completed-graph-after-success[hidden] {
       display: none;
@@ -301,6 +380,56 @@
       font-weight: 600;
     }
     .choice-options input { width: auto; }
+    .source-cell-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .source-cell-option {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px;
+      font-weight: 700;
+    }
+    .source-cell-option input {
+      width: auto;
+      margin-top: 4px;
+    }
+    .source-cell-option small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .carry-forward-response {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .carried-value {
+      min-height: 41px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 9px 10px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .carry-forward-response.is-ready .carried-value {
+      color: var(--text);
+    }
+    .sentence-preview {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
     .control-row, .field-grid, .pair-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -410,7 +539,7 @@
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid, .source-cell-grid, .carry-forward-response { grid-template-columns: 1fr; }
       .lab-shell.has-graph-construction { grid-template-columns: minmax(0, 1fr); }
       .graph-grid-svg { min-height: 300px; }
       .point-entry-row { grid-template-columns: 1fr; }
@@ -429,21 +558,24 @@
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
-      <p class="current-prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
+      <p class="current-prompt">Klik de vier tabelcellen die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
       <p class="progress">0 / 3</p>
     </div>
   </section>
   <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
+    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p></section>
 <section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
 <details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Jaarpremie uit maandpremie</summary><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></details></section></aside>
-    <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
+    <section class="task-pane" aria-label="Vragen"><section class="task-question-panel" data-right-pane-question="true" aria-label="Originele vraag"><p class="question-source-label">Vraag 3</p><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
     <p class="card-kicker">Taakkaart 1</p>
     <h2>Bronwaarden kiezen</h2>
-    <p class="task-purpose">Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.</p>
-    <p class="prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
-    <ul class="task-instructions"><li>Kies de gevraagde bronwaarden.</li><li>Koppel elke gekozen waarde aan de juiste rol.</li><li>Aantal antwoorden: alle invoerrijen moeten gevuld zijn.</li></ul>
-    <div class="play-area"><div class="value-bank" aria-label="Beschikbare bronwaarden"><span class="bank-chip" data-value-id="std-premium-10825">108,25</span><span class="bank-chip" data-value-id="std-deductible-385">385</span><span class="bank-chip" data-value-id="inc-premium-8625">86,25</span><span class="bank-chip" data-value-id="inc-deductible-885">885</span><span class="bank-chip" data-value-id="wrong-unit-10825-year">108,25 per jaar</span><span class="bank-chip" data-value-id="wrong-premium-885-month">885 per maand</span></div><div class="role-bank" aria-label="Beschikbare rollen"><span class="bank-chip" data-role-id="standard_monthly_premium">maandpremie wettelijk</span><span class="bank-chip" data-role-id="standard_deductible">eigen risico wettelijk</span><span class="bank-chip" data-role-id="increased_monthly_premium">maandpremie verhoogd</span><span class="bank-chip" data-role-id="increased_deductible">eigen risico verhoogd</span></div><div class="pair-grid"><div class="pair-row"><label>Waarde uit bron 1<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 1<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 2<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 2<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 3<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 3<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 4<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 4<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div></div></div>
+    <p class="task-purpose">Kies de vier tabelcellen die de berekening nodig heeft.</p>
+    <p class="prompt">Klik de vier tabelcellen die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
+    <ul class="task-instructions"><li>Kies de gevraagde bronwaarden.</li><li>Gebruik maximaal vier noodzakelijke cellen.</li><li>Antwoordvorm: geselecteerde tabelcellen.</li></ul>
+    <div class="play-area"><fieldset class="source-cell-selection" data-source-cell-selection="compact" data-required-selections="4" data-distractor-count="2">
+    <legend>Klik de noodzakelijke tabelcellen</legend>
+    <div class="source-cell-grid"><label class="source-cell-option" data-source-cell-kind="answer"><input class="play-control source-cell-select" type="checkbox" value="std-premium-10825"> <span><strong>108,25</strong><small>wettelijk eigen risico - euro per maand - maandpremie</small></span></label><label class="source-cell-option" data-source-cell-kind="answer"><input class="play-control source-cell-select" type="checkbox" value="std-deductible-385"> <span><strong>385</strong><small>wettelijk eigen risico - euro per jaar - eigen risico</small></span></label><label class="source-cell-option" data-source-cell-kind="answer"><input class="play-control source-cell-select" type="checkbox" value="inc-premium-8625"> <span><strong>86,25</strong><small>verhoogd eigen risico - euro per maand - maandpremie</small></span></label><label class="source-cell-option" data-source-cell-kind="answer"><input class="play-control source-cell-select" type="checkbox" value="inc-deductible-885"> <span><strong>885</strong><small>verhoogd eigen risico - euro per jaar - eigen risico</small></span></label><label class="source-cell-option" data-source-cell-kind="distractor"><input class="play-control source-cell-select" type="checkbox" value="wrong-unit-10825-year"> <span><strong>108,25 per jaar</strong><small>wettelijk eigen risico - verkeerde eenheid</small></span></label><label class="source-cell-option" data-source-cell-kind="distractor"><input class="play-control source-cell-select" type="checkbox" value="wrong-premium-885-month"> <span><strong>885 per maand</strong><small>verhoogd eigen risico - verkeerde rol</small></span></label></div>
+  </fieldset></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: select source values</p>
@@ -465,7 +597,11 @@
     <p class="task-purpose">Formuleer het berekende grensbedrag als antwoordzin.</p>
     <p class="prompt">Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.</p>
     <ul class="task-instructions"><li>Vul elk antwoordveld in.</li><li>Gebruik bronwoorden of berekening waar gevraagd.</li><li>Antwoordvorm: korte gestructureerde tekst.</li></ul>
-    <div class="play-area"><div class="field-grid"><label>Grensbedrag<input class="play-control structured-field" type="text" data-field-id="threshold"></label><label>Richting<input class="play-control structured-field" type="text" data-field-id="direction"></label></div></div>
+    <div class="play-area"><div class="carry-forward-response" data-carry-forward="true" data-carry-from-index="1" data-carried-value="EUR 649 per jaar" data-not-ready-text="Bereken eerst het grensbedrag in taak 2.">
+    <label>Wanneer is verhoogd eigen risico voordeliger?<select class="play-control structured-field direction-select" data-field-id="direction" disabled><option value="">Kies richting...</option><option value="lager dan">lager dan het grensbedrag</option><option value="hoger dan">hoger dan het grensbedrag</option><option value="gelijk aan">gelijk aan het grensbedrag</option></select></label>
+    <label>Grensbedrag uit taak 2<output class="carried-value" data-carried-output="true">Bereken eerst het grensbedrag in taak 2.</output><input class="play-control structured-field carried-threshold-field" type="hidden" data-field-id="threshold" value=""></label>
+    <p class="sentence-preview" data-sentence-preview="true">Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.</p>
+  </div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: state threshold with direction</p>
@@ -473,7 +609,7 @@
   </main>
   <script>
     (function () {
-      const models = [{"family":"source_value_selection","prompt":"Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"fields":[{"id":"threshold","label":"Grensbedrag","placeholder":"Bijvoorbeeld 123 euro per jaar"},{"id":"direction","label":"Richting","placeholder":"Wanneer is verhoogd eigen risico voordeliger?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
+      const models = [{"family":"source_value_selection","prompt":"Klik de vier tabelcellen die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"selectionMode":"compact_source_cells","selectionLabel":"Klik de noodzakelijke tabelcellen","maxRequiredSelections":4,"distractorLimit":2,"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"carryForward":{"fromTaskIndex":1,"label":"Grensbedrag uit taak 2","value":"EUR 649 per jaar","notReadyText":"Bereken eerst het grensbedrag in taak 2."},"directionLabel":"Wanneer is verhoogd eigen risico voordeliger?","directionOptions":[{"id":"lager dan","label":"lager dan het grensbedrag"},{"id":"hoger dan","label":"hoger dan het grensbedrag"},{"id":"gelijk aan","label":"gelijk aan het grensbedrag"}],"sentenceTemplate":"Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.","fields":[{"id":"threshold","label":"Grensbedrag uit taak 2","placeholder":"Wordt overgenomen uit taak 2"},{"id":"direction","label":"Richting","placeholder":"Kies lager dan, hoger dan of gelijk aan"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["EUR 649 per jaar","649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["lager dan","verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
       const cards = Array.from(document.querySelectorAll('.task-card'));
       const currentPrompt = document.querySelector('.current-prompt');
       const progress = document.querySelector('.progress');
@@ -499,6 +635,7 @@
 
       function acceptedText(value, accepted) {
         const actual = normalize(value);
+        if (!actual) return false;
         return (accepted || []).some((candidate) => {
           const expected = normalize(candidate);
           return actual === expected || actual.includes(expected) || expected.includes(actual);
@@ -562,6 +699,151 @@
         if (clear) clear.addEventListener('click', () => { zone.innerHTML = ''; });
       }
 
+      function expectedRoleByValue(model) {
+        const roles = {};
+        (model.expected.selections || []).forEach((selection) => {
+          roles[selection.valueId] = selection.role;
+        });
+        return roles;
+      }
+
+      function graphPointPosition(svg, x, y) {
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const viewBox = svg.viewBox.baseVal;
+        const plotWidth = viewBox.width - padL - padR;
+        const plotHeight = viewBox.height - padT - padB;
+        return {
+          cx: padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * plotWidth,
+          cy: viewBox.height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * plotHeight
+        };
+      }
+
+      function clearGraphPoints(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (group) group.innerHTML = '';
+        updateGraphPointStatus(card);
+      }
+
+      function placeGraphPoint(card, x, y) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const svg = workspace?.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (!svg || !group) return;
+        const required = Number(workspace.dataset.requiredPoints || 2);
+        const points = Array.from(group.querySelectorAll('.placed-graph-point'));
+        if (points.length >= required) return;
+        const position = graphPointPosition(svg, x, y);
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.classList.add('placed-graph-point');
+        g.dataset.x = String(x);
+        g.dataset.y = String(y);
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', position.cx.toFixed(1));
+        circle.setAttribute('cy', position.cy.toFixed(1));
+        circle.setAttribute('r', '8');
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', (position.cx + 12).toFixed(1));
+        label.setAttribute('y', (position.cy - 10).toFixed(1));
+        label.textContent = String(points.length + 1);
+        g.append(circle, label);
+        group.appendChild(g);
+        updateGraphPointStatus(card);
+      }
+
+      function nearestExpectedPoint(model, x, y) {
+        const points = model.expected.points || [];
+        if (points.length === 0) return { x, y };
+        return points
+          .map((point) => ({ point, distance: Math.hypot(Number(point.x) - x, Number(point.y) - y) }))
+          .sort((a, b) => a.distance - b.distance)[0].point;
+      }
+
+      function clickToGraphValue(svg, event, model) {
+        const point = svg.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        const local = point.matrixTransform(svg.getScreenCTM().inverse());
+        const viewBox = svg.viewBox.baseVal;
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const clampedX = Math.max(padL, Math.min(viewBox.width - padR, local.x));
+        const clampedY = Math.max(padT, Math.min(viewBox.height - padB, local.y));
+        const x = xMin + ((clampedX - padL) / (viewBox.width - padL - padR || 1)) * (xMax - xMin);
+        const y = yMin + ((viewBox.height - padB - clampedY) / (viewBox.height - padT - padB || 1)) * (yMax - yMin);
+        return nearestExpectedPoint(model, x, y);
+      }
+
+      function updateGraphPointStatus(card) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const required = Number(workspace?.dataset.requiredPoints || 0);
+        const count = card.querySelectorAll('.placed-graph-point').length;
+        const status = card.querySelector('[data-graph-point-status="true"]');
+        if (status) status.textContent = count + ' / ' + required + ' punten geplaatst';
+      }
+
+      function updateGraphAxisState(card, model) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        if (!workspace) return false;
+        const xValue = card.querySelector('.graph-axis-x')?.value || '';
+        const yValue = card.querySelector('.graph-axis-y')?.value || '';
+        const ok = acceptedText(xValue, model.expected.axes?.xAccepted || []) && acceptedText(yValue, model.expected.axes?.yAccepted || []);
+        workspace.classList.toggle('axes-selected', ok);
+        const note = workspace.querySelector('[data-graph-stage-note="true"]');
+        if (note) {
+          note.textContent = ok
+            ? 'Assen kloppen. Klik nu twee punten uit de tabel in het werkvlak.'
+            : 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.';
+        }
+        return ok;
+      }
+
+      function installGraphConstruction(card, model) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        if (!svg) return;
+        card.querySelectorAll('.graph-axis-x, .graph-axis-y').forEach((select) => {
+          select.addEventListener('change', () => updateGraphAxisState(card, model));
+        });
+        svg.addEventListener('click', (event) => {
+          if (!updateGraphAxisState(card, model)) return;
+          const value = clickToGraphValue(svg, event, model);
+          placeGraphPoint(card, value.x, value.y);
+        });
+        const clear = card.querySelector('.clear-graph-points');
+        if (clear) clear.addEventListener('click', () => clearGraphPoints(card));
+        updateGraphAxisState(card, model);
+        updateGraphPointStatus(card);
+      }
+
+      function updateCarryovers() {
+        document.querySelectorAll('[data-carry-forward="true"]').forEach((box) => {
+          const sourceIndex = Number(box.dataset.carryFromIndex || 1);
+          const sourceComplete = cards[sourceIndex]?.classList.contains('is-complete') === true;
+          const carriedValue = box.dataset.carriedValue || '';
+          const notReady = box.dataset.notReadyText || 'Bereken eerst het grensbedrag in taak 2.';
+          const output = box.querySelector('[data-carried-output="true"]');
+          const hidden = box.querySelector('.carried-threshold-field');
+          const select = box.querySelector('.direction-select');
+          box.classList.toggle('is-ready', sourceComplete);
+          if (output) output.textContent = sourceComplete ? carriedValue : notReady;
+          if (hidden) hidden.value = sourceComplete ? carriedValue : '';
+          if (select) select.disabled = !sourceComplete;
+        });
+      }
+
       function collect(card, model) {
         if (model.family === 'calculation_work_capture') {
           return {
@@ -578,15 +860,20 @@
           return { fields };
         }
         if (model.family === 'graph_construction_substitute') {
+          const clickedPoints = Array.from(card.querySelectorAll('.placed-graph-point')).map((point) => ({
+            x: point.dataset.x || '',
+            y: point.dataset.y || ''
+          }));
+          const typedPoints = Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
+            x: row.querySelector('.graph-point-x')?.value || '',
+            y: row.querySelector('.graph-point-y')?.value || ''
+          }));
           return {
             axes: {
               x: card.querySelector('.graph-axis-x')?.value || '',
               y: card.querySelector('.graph-axis-y')?.value || ''
             },
-            points: Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
-              x: row.querySelector('.graph-point-x')?.value || '',
-              y: row.querySelector('.graph-point-y')?.value || ''
-            })),
+            points: clickedPoints.length > 0 ? clickedPoints : typedPoints,
             lineShape: card.querySelector('.graph-line-confirm')?.checked ? 'decreasing' : ''
           };
         }
@@ -603,6 +890,16 @@
           return { value: card.querySelector('.choice-input:checked')?.value || '' };
         }
         if (model.family === 'source_value_selection') {
+          const compactValues = Array.from(card.querySelectorAll('.source-cell-select:checked')).map((input) => input.value);
+          if (compactValues.length > 0) {
+            const roles = expectedRoleByValue(model);
+            return {
+              selections: compactValues.map((valueId) => ({
+                valueId,
+                role: roles[valueId] || ''
+              }))
+            };
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row')).map((row) => ({
             valueId: row.querySelector('.value-select')?.value || '',
             role: row.querySelector('.role-select')?.value || ''
@@ -676,6 +973,7 @@
             ? 'Klopt. Je kunt door naar de volgende kaart.'
             : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
         }
+        updateCarryovers();
         updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
       }
 
@@ -706,6 +1004,14 @@
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const direction = (model.expected.fields || []).find((field) => field.id === 'direction');
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = direction?.accepted?.[0] || '';
+            return;
+          }
           (model.expected.fields || []).forEach((field) => {
             const input = card.querySelector('.structured-field[data-field-id="' + CSS.escape(field.id) + '"]');
             if (input) input.value = field.accepted[0];
@@ -717,6 +1023,9 @@
           const yAxis = card.querySelector('.graph-axis-y');
           if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
           if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
           const rows = Array.from(card.querySelectorAll('.point-entry-row'));
           (model.expected.points || []).forEach((point, rowIndex) => {
             const row = rows[rowIndex];
@@ -743,6 +1052,12 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const expectedIds = new Set((model.expected.selections || []).map((selection) => selection.valueId));
+            compactInputs.forEach((input) => { input.checked = expectedIds.has(input.value); });
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           (model.expected.selections || []).forEach((selection, rowIndex) => {
             const row = rows[rowIndex];
@@ -765,6 +1080,13 @@
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = 'hoger dan';
+            return;
+          }
           card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
           return;
         }
@@ -773,6 +1095,8 @@
           const yAxis = card.querySelector('.graph-axis-y');
           if (xAxis) xAxis.value = 'prijs p';
           if (yAxis) yAxis.value = 'hoeveelheid q';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
           card.querySelectorAll('.point-entry-row').forEach((row, rowIndex) => {
             row.querySelector('.graph-point-x').value = rowIndex === 0 ? '0' : '';
             row.querySelector('.graph-point-y').value = rowIndex === 0 ? '0' : '';
@@ -797,6 +1121,15 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const firstWrong = compactInputs.find((input) => {
+              const value = model.interaction.values?.find((item) => item.id === input.value);
+              return value?.kind === 'distractor';
+            }) || compactInputs[0];
+            if (firstWrong) firstWrong.checked = true;
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           const firstValue = model.interaction.values?.find((item) => item.id !== model.expected.selections?.[0]?.valueId)?.id || '';
           const firstRole = model.interaction.roles?.find((item) => item.id !== model.expected.selections?.[0]?.role)?.id || '';
@@ -813,6 +1146,7 @@
 
       cards.forEach((card, index) => {
         installSequenceBuilder(card);
+        if (models[index].family === 'graph_construction_substitute') installGraphConstruction(card, models[index]);
         const button = card.querySelector('.check-button');
         button.addEventListener('click', () => {
           mark(card, index, evaluate(models[index], collect(card, models[index])));
@@ -829,9 +1163,14 @@
           const zone = card.querySelector('.sequence-zone');
           if (zone) zone.innerHTML = '';
           card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => { graph.hidden = true; });
+          clearGraphPoints(card);
+          if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+            updateGraphAxisState(card, models[cards.indexOf(card)]);
+          }
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
         });
+        updateCarryovers();
         updateCurrent(0);
       }
 
@@ -839,7 +1178,20 @@
         const sourcePane = document.querySelector('.source-pane');
         const taskPane = document.querySelector('.task-pane');
         const strip = document.querySelector('.question-strip');
-        if (sourcePane) sourcePane.scrollTop = sourcePane.scrollHeight;
+        const originalScrollTop = sourcePane ? sourcePane.scrollTop : 0;
+        let sourceTableFullyVisibleAtTop = true;
+        let sourceTableVisibleAtTop = true;
+        let sourcePaneNeedsImmediateVerticalScroll = false;
+        if (sourcePane) {
+          sourcePane.scrollTop = 0;
+          const paneRect = sourcePane.getBoundingClientRect();
+          const firstTable = sourcePane.querySelector('table');
+          const firstTableRect = firstTable ? firstTable.getBoundingClientRect() : null;
+          sourceTableVisibleAtTop = !firstTableRect || (firstTableRect.bottom > paneRect.top && firstTableRect.top < paneRect.bottom);
+          sourceTableFullyVisibleAtTop = !firstTableRect || (firstTableRect.top >= paneRect.top && firstTableRect.bottom <= paneRect.bottom + 2);
+          sourcePaneNeedsImmediateVerticalScroll = sourcePane.scrollHeight > sourcePane.clientHeight + 6;
+          sourcePane.scrollTop = sourcePane.scrollHeight;
+        }
         const stripRect = strip ? strip.getBoundingClientRect() : null;
         const overflowing = Array.from(document.querySelectorAll('body *')).filter((item) => {
           const style = window.getComputedStyle(item);
@@ -866,7 +1218,23 @@
               graphWorkspace: false,
               graphAxisControls: false,
               graphPointInputs: false,
-              graphLineConfirmation: false
+              graphLineConfirmation: false,
+              graphClickToPlace: false,
+              graphClickedPointCount: 0,
+              typedPointFallbackCollapsed: false,
+              typedPointFallbackOpen: false,
+              sourceCellSelection: false,
+              sourceCellOptionCount: 0,
+              sourceCellCheckedCount: 0,
+              sourceCellRequiredSelectionCount: 0,
+              sourceCellDistractorCount: 0,
+              repeatedDropdownRows: 0,
+              roleDropdownCount: 0,
+              structuredCarryForward: false,
+              constrainedDirectionControl: false,
+              freeTextDirectionAbsent: true,
+              carriedValueReady: false,
+              carryRequiresPreviousTask: false
             };
           }
           const item = familyAffordances[family];
@@ -882,8 +1250,27 @@
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
           item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
           item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
-          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 10;
+          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 4;
           item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
+          item.graphClickToPlace = item.graphClickToPlace || Boolean(card.querySelector('[data-graph-click-surface="true"]'));
+          item.graphClickedPointCount += card.querySelectorAll('.placed-graph-point').length;
+          item.typedPointFallbackCollapsed = item.typedPointFallbackCollapsed || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"]:not([open])'));
+          item.typedPointFallbackOpen = item.typedPointFallbackOpen || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"][open]'));
+          item.sourceCellSelection = item.sourceCellSelection || Boolean(card.querySelector('[data-source-cell-selection="compact"]'));
+          item.sourceCellOptionCount += card.querySelectorAll('.source-cell-select').length;
+          item.sourceCellCheckedCount += card.querySelectorAll('.source-cell-select:checked').length;
+          const sourceSelection = card.querySelector('[data-source-cell-selection="compact"]');
+          if (sourceSelection) {
+            item.sourceCellRequiredSelectionCount = Number(sourceSelection.dataset.requiredSelections || 0);
+            item.sourceCellDistractorCount = Number(sourceSelection.dataset.distractorCount || 0);
+          }
+          item.repeatedDropdownRows += card.querySelectorAll('.pair-row').length;
+          item.roleDropdownCount += card.querySelectorAll('.role-select').length;
+          item.structuredCarryForward = item.structuredCarryForward || Boolean(card.querySelector('[data-carry-forward="true"]'));
+          item.constrainedDirectionControl = item.constrainedDirectionControl || Boolean(card.querySelector('.direction-select'));
+          item.freeTextDirectionAbsent = item.freeTextDirectionAbsent && !Boolean(card.querySelector('input.structured-field:not([type="hidden"]), textarea.structured-field'));
+          item.carriedValueReady = item.carriedValueReady || Boolean(card.querySelector('[data-carry-forward="true"].is-ready'));
+          item.carryRequiresPreviousTask = item.carryRequiresPreviousTask || Boolean(card.querySelector('[data-carry-forward="true"] .direction-select:disabled, [data-carry-forward="true"]:not(.is-ready)'));
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
@@ -901,6 +1288,13 @@
         const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
         const labShell = document.querySelector('.lab-shell');
         const usableWidth = labShell ? labShell.getBoundingClientRect().width : window.innerWidth;
+        const graphAxisLabels = Array.from(document.querySelectorAll('.graph-grid-svg .axis-label.reveal-after-axes'));
+        const graphScaleLabels = Array.from(document.querySelectorAll('.graph-grid-svg .scale-label.reveal-after-axes'));
+        const graphAxisLabelsVisibleCount = graphAxisLabels.filter(visible).length;
+        const graphScaleLabelsVisibleCount = graphScaleLabels.filter(visible).length;
+        const graphLabelsVisibleBeforeAxisSelection = graphWorkspaces.some((workspace) => !workspace.classList.contains('axes-selected') && Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible));
+        const sourceRefsVisibleNow = bodyText.includes('references/') || bodyText.includes('..\\') || bodyText.includes('../');
+        if (sourcePane) sourcePane.scrollTop = originalScrollTop;
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
@@ -930,11 +1324,23 @@
           sourcePaneScrollable: sourcePane ? sourcePane.scrollHeight > sourcePane.clientHeight : false,
           sourcePaneIndependentScroll: sourcePane ? window.getComputedStyle(sourcePane).overflowY !== 'visible' : false,
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
+          rightPaneQuestionVisible: Boolean(document.querySelector('.task-pane [data-right-pane-question="true"]')),
+          examQuestionTextVisibleInTaskPane: taskPane ? taskPane.innerText.includes('Bereken tot welk bedrag aan zorgkosten per jaar') : false,
+          sourceTableVisibleAtTop,
+          sourceTableFullyVisibleAtTop,
+          sourcePaneNeedsImmediateVerticalScroll,
+          sourcePaneComfortableInitial: sourceTableVisibleAtTop && sourceTableFullyVisibleAtTop && !sourceRefsVisibleNow,
           graphWorkspaceCount: graphWorkspaces.length,
           graphWorkspaceInTaskPane: graphWorkspaces.length === 0 || graphWorkspaces.every((item) => Boolean(item.closest('.task-pane'))),
           graphWorkspaceDesktopWidth: firstGraphWorkspaceRect ? Math.round(firstGraphWorkspaceRect.width) : 0,
           graphWorkspaceUsableWidth: Math.round(usableWidth),
           graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
+          graphClickToPlaceSupported: document.querySelectorAll('[data-graph-click-surface="true"]').length > 0,
+          graphClickedPointCount: document.querySelectorAll('.placed-graph-point').length,
+          graphAxisLabelsVisibleCount,
+          graphScaleLabelsVisibleCount,
+          graphLabelsVisibleBeforeAxisSelection,
+          graphLabelsRevealAfterAxisSelection: graphWorkspaces.length === 0 || graphWorkspaces.every((workspace) => !workspace.classList.contains('axes-selected') || Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible)),
           completedGraphVisibleCount: visibleCompletedGraphs.length,
           completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
           sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
@@ -953,7 +1359,7 @@
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
           flowchartCount: document.querySelectorAll('.flow-list').length,
-          sourceRefsVisible: bodyText.includes('references/'),
+          sourceRefsVisible: sourceRefsVisibleNow,
           bodyTextSnapshot: bodyText,
           contextTextSnapshot: sourcePane ? sourcePane.innerText : '',
           taskTextSnapshot: taskPane ? taskPane.innerText : '',
@@ -986,6 +1392,19 @@
           }
           return inspect();
         },
+        selectCorrectAxes(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+          }
+          return inspect();
+        },
         completeDemoPath() {
           resetAll();
           cards.forEach((card, index) => {
@@ -995,6 +1414,7 @@
           return inspect();
         }
       };
+      updateCarryovers();
       updateCurrent(0);
     })();
   </script>

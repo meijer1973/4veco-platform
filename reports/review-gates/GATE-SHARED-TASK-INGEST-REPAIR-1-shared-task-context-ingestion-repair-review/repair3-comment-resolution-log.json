@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "created": "2026-06-05",
+  "status": "repair3_evidence_prepared_awaiting_renewed_review",
+  "decision": "hold_for_playable_repair",
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-3",
+  "gate_closure_authorized": false,
+  "product_authority_granted": false,
+  "blocking_items": [
+    "exam-question-not-visible",
+    "exam-task1-selection-overload",
+    "exam-task3-no-carryover",
+    "textbook-graph-not-clickable",
+    "graph-labels-reveal-too-much",
+    "source-pane-readability-weak"
+  ],
+  "resolved_items": [
+    "right-pane-question-visible",
+    "compact-source-cell-selection",
+    "task3-carry-forward-constrained-direction",
+    "click-to-place-graph-workspace",
+    "hidden-labels-before-axis-selection",
+    "source-pane-readability-proof"
+  ],
+  "evidence": [
+    "reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-visual-qa-report.md",
+    "reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-transformation-economy-report.md",
+    "reports/json/task-ingest-transform2-actual-exam-proof.json",
+    "reports/json/task-ingest-transform3-textbook-proof.json"
+  ]
+}

@@ -1,8 +1,8 @@
 # TASK-INGEST-TRANSFORM-3-TEXTBOOK Answer Form Trace
 
-Generated: 2026-06-04
+Generated: 2026-06-05
 
-Status: revised for graph-construction target-task economy.
+Status: revised for repair-3 click-to-place graph construction.
 
 ## Primary Answer Form
 
@@ -18,8 +18,9 @@ Primary transformed answer:
 - task: `tb113-graph-construction`;
 - x-axis: quantity `Q`;
 - y-axis: price `P`;
-- points: `(500, 1.00)`, `(400, 1.50)`, `(300, 2.00)`,
-  `(200, 2.50)`, `(100, 3.00)`;
+- primary path: click two table points in the graph workspace;
+- required points: `(500, 1.00)` and `(100, 3.00)`;
+- fallback: typed coordinate entry remains collapsed and secondary;
 - line: decreasing.
 
 ## Follow-Up Answer Forms

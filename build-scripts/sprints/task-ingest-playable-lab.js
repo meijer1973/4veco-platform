@@ -50,7 +50,7 @@ function graphSvg(block) {
   </svg>`;
 }
 
-function emptyGraphSvg(interaction) {
+function graphMetrics(interaction) {
   const axes = interaction.axes || { x: { label: 'Q', min: 0, max: 1 }, y: { label: 'P', min: 0, max: 1 } };
   const width = 720;
   const height = 420;
@@ -64,19 +64,27 @@ function emptyGraphSvg(interaction) {
   const yMax = Number(axes.y.max ?? 1);
   const sx = (x) => padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * (width - padL - padR);
   const sy = (y) => height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * (height - padT - padB);
+  return { axes, width, height, padL, padR, padT, padB, xMin, xMax, yMin, yMax, sx, sy };
+}
+
+function emptyGraphSvg(interaction) {
+  const metrics = graphMetrics(interaction);
+  const { axes, width, height, padL, padR, padT, padB, xMin, xMax, yMin, yMax, sx, sy } = metrics;
   const xTicks = [xMin, (xMin + xMax) / 4, (xMin + xMax) / 2, (xMin + xMax) * 3 / 4, xMax]
-    .map((value) => `<g><line class="grid-line" x1="${sx(value).toFixed(1)}" y1="${padT}" x2="${sx(value).toFixed(1)}" y2="${height - padB}"></line><text x="${sx(value).toFixed(1)}" y="${height - padB + 24}">${escapeHtml(Number(value).toFixed(value % 1 ? 1 : 0))}</text></g>`)
+    .map((value) => `<g><line class="grid-line" x1="${sx(value).toFixed(1)}" y1="${padT}" x2="${sx(value).toFixed(1)}" y2="${height - padB}"></line><text class="scale-label reveal-after-axes" x="${sx(value).toFixed(1)}" y="${height - padB + 24}">${escapeHtml(Number(value).toFixed(value % 1 ? 1 : 0))}</text></g>`)
     .join('');
   const yTicks = [yMin, (yMin + yMax) / 4, (yMin + yMax) / 2, (yMin + yMax) * 3 / 4, yMax]
-    .map((value) => `<g><line class="grid-line" x1="${padL}" y1="${sy(value).toFixed(1)}" x2="${width - padR}" y2="${sy(value).toFixed(1)}"></line><text x="${padL - 14}" y="${sy(value).toFixed(1)}" text-anchor="end">${escapeHtml(Number(value).toFixed(value % 1 ? 2 : 0))}</text></g>`)
+    .map((value) => `<g><line class="grid-line" x1="${padL}" y1="${sy(value).toFixed(1)}" x2="${width - padR}" y2="${sy(value).toFixed(1)}"></line><text class="scale-label reveal-after-axes" x="${padL - 14}" y="${sy(value).toFixed(1)}" text-anchor="end">${escapeHtml(Number(value).toFixed(value % 1 ? 2 : 0))}</text></g>`)
     .join('');
-  return `<svg class="graph-grid-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeAttr(interaction.emptyGraphAltText || 'Leeg grafiekwerkvlak')}">
+  return `<svg class="graph-grid-svg graph-click-surface" viewBox="0 0 ${width} ${height}" role="img" tabindex="0" aria-label="${escapeAttr(interaction.emptyGraphAltText || 'Leeg grafiekwerkvlak')}" data-graph-click-surface="true" data-x-min="${xMin}" data-x-max="${xMax}" data-y-min="${yMin}" data-y-max="${yMax}" data-pad-l="${padL}" data-pad-r="${padR}" data-pad-t="${padT}" data-pad-b="${padB}">
     <rect width="${width}" height="${height}" rx="8"></rect>
     <g class="grid">${xTicks}${yTicks}</g>
     <line class="axis" x1="${padL}" y1="${height - padB}" x2="${width - padR}" y2="${height - padB}"></line>
     <line class="axis" x1="${padL}" y1="${height - padB}" x2="${padL}" y2="${padT}"></line>
-    <text class="axis-label" x="${(width + padL - padR) / 2}" y="${height - 16}">${escapeHtml(axes.x.label)}</text>
-    <text class="axis-label y-label" transform="translate(22 ${(height - padB + padT) / 2}) rotate(-90)">${escapeHtml(axes.y.label)}</text>
+    <rect class="plot-hit-area" x="${padL}" y="${padT}" width="${width - padL - padR}" height="${height - padT - padB}" data-plot-hit-area="true"></rect>
+    <g class="placed-points" data-placed-points="true"></g>
+    <text class="axis-label reveal-after-axes" x="${(width + padL - padR) / 2}" y="${height - 16}">${escapeHtml(axes.x.label)}</text>
+    <text class="axis-label y-label reveal-after-axes" transform="translate(22 ${(height - padB + padT) / 2}) rotate(-90)">${escapeHtml(axes.y.label)}</text>
   </svg>`;
 }
 
@@ -109,7 +117,7 @@ function blockInnerHtml(block) {
     return `<h2>${escapeHtml(block.title)}</h2>${paragraphs(block.bodyMarkdown)}`;
   }
   if (block.type === 'source_excerpt') {
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${paragraphs(block.bodyMarkdown)}<p class="source-ref">Bronbestand: ${escapeHtml((block.sourceRefs || []).join(', '))}</p>`;
+    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${paragraphs(block.bodyMarkdown)}`;
   }
   if (block.type === 'table') {
     const headers = block.columns.map((column) => `<th scope="col">${escapeHtml(column)}</th>`).join('');
@@ -159,14 +167,14 @@ function operationLabel(operationId) {
 
 function displayPrompt(task) {
   const prompts = {
-    'q3-source-values': 'Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.',
+    'q3-source-values': 'Klik de vier tabelcellen die nodig zijn om de meerkosten van Zoohee te berekenen.',
     'q3-annual-premium-formula': 'Bouw de formule waarmee je per variant de jaarpremie berekent.',
     'q3-operation-order': 'Zet de rekenstappen in de volgorde die past bij het correctiemodel.',
     'q3-calculation': 'Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.',
     'q3-source-chain': 'Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.',
     'q3-threshold-direction': 'Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.',
     'tb113-table-value': 'Kies uit de tabel hoeveel wordt gevraagd bij een prijs van EUR 1.50.',
-    'tb113-graph-construction': 'Teken de P-Q-grafiek bij Tabel 1: kies assen, plaats alle punten en bevestig de dalende lijn.',
+    'tb113-graph-construction': 'Teken de P-Q-grafiek bij Tabel 1: kies assen, klik twee punten in het werkvlak en bevestig de dalende lijn.',
     'tb113-axis-convention': 'Benoem welke grootheid op elke as hoort voordat je de grafiek leest.',
     'tb113-graph-step-order': 'Zet de stappen voor het tekenen van de vraaglijn in de juiste volgorde.',
     'tb113-point-placement': 'Plaats een punt uit de tabel als coordinatenpaar in de grafiek.',
@@ -182,14 +190,14 @@ function displayPrompt(task) {
 
 function instructionRows(task) {
   const byFamily = {
-    source_value_selection: ['Kies de gevraagde bronwaarden.', 'Koppel elke gekozen waarde aan de juiste rol.', 'Aantal antwoorden: alle invoerrijen moeten gevuld zijn.'],
+    source_value_selection: ['Kies de gevraagde bronwaarden.', 'Gebruik maximaal vier noodzakelijke cellen.', 'Antwoordvorm: geselecteerde tabelcellen.'],
     formula_builder: ['Klik formuleblokken in de juiste volgorde.', 'Gebruik alleen blokken uit de bank.', 'Antwoordvorm: geordende formuleketen.'],
     step_ordering: ['Klik stappen in de juiste volgorde.', 'Gebruik de bron of procedurehulp alleen als dat nodig is.', 'Antwoordvorm: geordende stappenreeks.'],
     source_chain_builder: ['Klik bronketen-onderdelen in de juiste volgorde.', 'Verbind bronwaarde, bewerking en conclusie.', 'Antwoordvorm: volledige redeneringsketen.'],
     table_value_selection: ['Lees de tabel gericht af.', 'Kies precies een waarde.', 'Antwoordvorm: geselecteerde tabelwaarde.'],
     choice: ['Lees de bron gericht af.', 'Kies precies een optie.', 'Antwoordvorm: geselecteerde optie.'],
     graph_reading: ['Lees de grafiek bij de genoemde aswaarde.', 'Controleer of je de juiste as gebruikt.', 'Antwoordvorm: getal met eventuele eenheid.'],
-    graph_construction_substitute: ['Kies de P-Q-assen.', 'Plaats alle vijf tabelpunten in het werkvlak.', 'Bevestig dat je de punten tot een dalende lijn verbindt.'],
+    graph_construction_substitute: ['Kies de P-Q-assen.', 'Klik twee tabelpunten in het werkvlak.', 'Bevestig dat je de punten tot een dalende lijn verbindt.'],
     numeric_input: ['Bepaal het gevraagde getal.', 'Gebruik bronwaarden waar nodig.', 'Antwoordvorm: getal met eventuele eenheid.'],
     point_placement: ['Gebruik de tabelwaarde als coordinatenpaar.', 'Vul beide assen in.', 'Antwoordvorm: x- en y-waarde.'],
     calculation_work_capture: ['Schrijf de berekening uit.', 'Noteer het eindantwoord en de eenheid apart.', 'Antwoordvorm: uitwerking plus eindantwoord.'],
@@ -248,15 +256,21 @@ function graphAxisOptions() {
 
 function graphConstructionControlHtml(task) {
   const interaction = task.interaction || {};
-  const rows = Array.from({ length: Number(interaction.pointCount || 0) }, (_, index) => `<div class="point-entry-row">
+  const pointCount = Number(interaction.pointCount || 0);
+  const rows = Array.from({ length: pointCount }, (_, index) => `<div class="point-entry-row">
     <span>Punt ${index + 1}</span>
     <label>${escapeHtml(interaction.xInputLabel || 'x')}<input class="play-control graph-point-x" type="text" inputmode="decimal" data-graph-point-index="${index}" data-graph-axis="x"></label>
     <label>${escapeHtml(interaction.yInputLabel || 'y')}<input class="play-control graph-point-y" type="text" inputmode="decimal" data-graph-point-index="${index}" data-graph-axis="y"></label>
   </div>`).join('');
   return `<div class="graph-construction-layout">
-    <section class="graph-workspace" data-graph-workspace="construction">
+    <section class="graph-workspace" data-graph-workspace="construction" data-required-points="${pointCount}">
       <h3>${escapeHtml(interaction.workspaceTitle || 'Grafiekworkspace')}</h3>
+      <p class="graph-stage-note" data-graph-stage-note="true">${escapeHtml(interaction.preAxisNote || 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.')}</p>
       ${emptyGraphSvg(interaction)}
+      <div class="graph-click-toolbar">
+        <p class="graph-point-status" data-graph-point-status="true">0 / ${pointCount} punten geplaatst</p>
+        <button type="button" class="clear-graph-points">Wis punten</button>
+      </div>
       <div class="completed-graph-after-success" data-completed-graph="true" hidden>
         <h3>Gemaakte grafiek</h3>
         ${completedGraphSvgFromTask(task)}
@@ -267,12 +281,45 @@ function graphConstructionControlHtml(task) {
         <label>${escapeHtml(interaction.xAxisLabel || 'Horizontale as')}<select class="play-control graph-axis-x" data-graph-axis="x">${graphAxisOptions()}</select></label>
         <label>${escapeHtml(interaction.yAxisLabel || 'Verticale as')}<select class="play-control graph-axis-y" data-graph-axis="y">${graphAxisOptions()}</select></label>
       </div>
-      <fieldset class="point-entry-grid">
-        <legend>${escapeHtml(interaction.pointRowsLabel || 'Plaats punten')}</legend>
-        ${rows}
-      </fieldset>
+      <p class="click-instruction">${escapeHtml(interaction.clickInstruction || 'Klik twee punten op de lijn in het grafiekwerkvlak.')}</p>
+      <details class="typed-point-fallback" data-typed-point-fallback="collapsed">
+        <summary>Coordinaten typen als fallback</summary>
+        <fieldset class="point-entry-grid">
+          <legend>${escapeHtml(interaction.pointRowsLabel || 'Plaats punten')}</legend>
+          ${rows}
+        </fieldset>
+      </details>
       <label class="line-confirmation"><input class="play-control graph-line-confirm" type="checkbox" data-graph-line-confirmation="true"> ${escapeHtml(interaction.lineConfirmationLabel || 'Ik verbind de punten.')}</label>
     </section>
+  </div>`;
+}
+
+function sourceCellSelectionControlHtml(task) {
+  const interaction = task.interaction || {};
+  const values = interaction.values || [];
+  const requiredCount = (task.expected?.selections || []).length;
+  const distractorLimit = Number(interaction.distractorLimit || 2);
+  const answerValues = values.filter((item) => item.kind === 'answer').slice(0, requiredCount);
+  const distractors = values.filter((item) => item.kind === 'distractor').slice(0, distractorLimit);
+  const options = answerValues.concat(distractors);
+  return `<fieldset class="source-cell-selection" data-source-cell-selection="compact" data-required-selections="${requiredCount}" data-distractor-count="${distractors.length}">
+    <legend>${escapeHtml(interaction.selectionLabel || 'Klik de tabelcellen die je nodig hebt')}</legend>
+    <div class="source-cell-grid">${options.map((item) => `<label class="source-cell-option" data-source-cell-kind="${escapeAttr(item.kind || '')}"><input class="play-control source-cell-select" type="checkbox" value="${escapeAttr(item.id)}"> <span><strong>${escapeHtml(item.label || item.value || item.id)}</strong><small>${escapeHtml([item.sourceLabel, item.unit, item.period].filter(Boolean).join(' - '))}</small></span></label>`).join('')}</div>
+  </fieldset>`;
+}
+
+function carryForwardResponseHtml(task) {
+  const interaction = task.interaction || {};
+  const carried = interaction.carryForward || {};
+  const directionOptions = interaction.directionOptions || [
+    { id: 'lager dan', label: 'lager dan' },
+    { id: 'hoger dan', label: 'hoger dan' },
+    { id: 'gelijk aan', label: 'gelijk aan' }
+  ];
+  return `<div class="carry-forward-response" data-carry-forward="true" data-carry-from-index="${Number(carried.fromTaskIndex ?? 1)}" data-carried-value="${escapeAttr(carried.value || '')}" data-not-ready-text="${escapeAttr(carried.notReadyText || 'Bereken eerst het grensbedrag in taak 2.')}">
+    <label>${escapeHtml(interaction.directionLabel || 'Richting')}<select class="play-control structured-field direction-select" data-field-id="direction" disabled><option value="">Kies richting...</option>${directionOptions.map((option) => `<option value="${escapeAttr(option.id)}">${escapeHtml(option.label)}</option>`).join('')}</select></label>
+    <label>${escapeHtml(carried.label || 'Berekend grensbedrag')}<output class="carried-value" data-carried-output="true">${escapeHtml(carried.notReadyText || 'Bereken eerst het grensbedrag in taak 2.')}</output><input class="play-control structured-field carried-threshold-field" type="hidden" data-field-id="threshold" value=""></label>
+    <p class="sentence-preview" data-sentence-preview="true">${escapeHtml(interaction.sentenceTemplate || 'Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.')}</p>
   </div>`;
 }
 
@@ -282,6 +329,9 @@ function controlHtml(task, index) {
   }
   if (task.family === 'calculation_work_capture') {
     return `<label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div>`;
+  }
+  if (task.family === 'structured_short_response' && task.interaction?.carryForward) {
+    return carryForwardResponseHtml(task);
   }
   if (task.family === 'structured_short_response' && task.interaction && Array.isArray(task.interaction.fields)) {
     return `<div class="field-grid">${task.interaction.fields.map((field) => `<label>${escapeHtml(field.label)}<input class="play-control structured-field" type="text" data-field-id="${escapeAttr(field.id)}"></label>`).join('')}</div>`;
@@ -298,6 +348,9 @@ function controlHtml(task, index) {
     return `<fieldset class="choice-options"><legend>Kies een antwoord</legend>${options.map((option) => `<label><input class="play-control choice-input" type="radio" name="${escapeAttr(name)}" value="${escapeAttr(option.id)}"> ${escapeHtml(option.label || option.value || option.id)}</label>`).join('')}</fieldset>`;
   }
   if (task.family === 'source_value_selection') {
+    if (task.interaction?.selectionMode === 'compact_source_cells') {
+      return sourceCellSelectionControlHtml(task);
+    }
     const values = task.interaction.values || [];
     const roles = task.interaction.roles || [];
     const selections = task.expected.selections || [];
@@ -338,11 +391,18 @@ function taskHtml(task, index, transform) {
   </article>`;
 }
 
+function taskQuestionHtml(transform) {
+  const prompts = (transform.taskSet.contextBlocks || []).filter((block) => contextRole(block) === 'prompt');
+  if (prompts.length === 0) return '';
+  return `<section class="task-question-panel" data-right-pane-question="true" aria-label="Originele vraag">${prompts.map((block) => `<p class="question-source-label">${escapeHtml(block.title || 'Vraag')}</p>${paragraphs(block.bodyMarkdown)}`).join('')}</section>`;
+}
+
 function buildPlayableLabHtml(options) {
   const { sprintId, transform, windowName, title, kicker, intro, reviewCheck } = options;
   const hasGraphConstruction = (transform.taskSet.tasks || []).some((task) => task.family === 'graph_construction_substitute');
   const blocks = transform.taskSet.contextBlocks.map((block) => sourceBlockHtml(block, transform)).filter(Boolean).join('\n');
   const tasks = transform.taskSet.tasks.map((task, index) => taskHtml(task, index, transform)).join('\n');
+  const questionPanel = taskQuestionHtml(transform);
   const models = transform.taskSet.tasks.map(taskModel);
   const firstPrompt = models[0] ? models[0].prompt : '';
   return `<!doctype html>
@@ -438,12 +498,12 @@ function buildPlayableLabHtml(options) {
       align-items: start;
     }
     .lab-shell.has-graph-construction {
-      grid-template-columns: minmax(250px, 0.65fr) minmax(720px, 1.35fr);
+      grid-template-columns: minmax(340px, 0.72fr) minmax(720px, 1.28fr);
     }
     .source-pane {
       position: sticky;
       top: 72px;
-      max-height: 48vh;
+      max-height: calc(100vh - 92px);
       overflow-y: auto;
       padding-right: 4px;
     }
@@ -458,6 +518,23 @@ function buildPlayableLabHtml(options) {
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 15px;
+    }
+    .task-question-panel {
+      background: var(--panel);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 13px 15px;
+      margin-bottom: 14px;
+    }
+    .task-question-panel p:last-child {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+    .question-source-label {
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
     .ctx-markdown {
       background: transparent;
@@ -493,6 +570,9 @@ function buildPlayableLabHtml(options) {
     }
     thead th { background: var(--soft); }
     tbody th { font-weight: 700; }
+    .has-graph-construction table {
+      min-width: 100%;
+    }
     pre {
       min-width: 500px;
       margin: 0;
@@ -527,16 +607,60 @@ function buildPlayableLabHtml(options) {
       border-radius: 8px;
       padding: 10px;
     }
+    .graph-stage-note {
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .graph-workspace.axes-selected .graph-stage-note {
+      color: var(--primary);
+    }
     .graph-grid-svg {
       width: 100%;
       min-height: 360px;
       display: block;
+      touch-action: manipulation;
     }
     .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
     .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
     .graph-grid-svg .grid-line { stroke: var(--line); stroke-width: 1; opacity: 0.65; }
     .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
     .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-workspace:not(.axes-selected) .reveal-after-axes {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .plot-hit-area {
+      fill: transparent;
+      cursor: crosshair;
+    }
+    .placed-points circle {
+      fill: var(--accent);
+      stroke: var(--panel);
+      stroke-width: 3;
+    }
+    .placed-points text {
+      fill: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .graph-click-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .graph-point-status {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .clear-graph-points {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
     .graph-construction-controls {
       display: grid;
       gap: 10px;
@@ -549,6 +673,17 @@ function buildPlayableLabHtml(options) {
     .point-entry-grid {
       display: grid;
       gap: 8px;
+    }
+    .typed-point-fallback {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 9px 10px;
+    }
+    .typed-point-fallback summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary);
     }
     .point-entry-row {
       display: grid;
@@ -569,6 +704,10 @@ function buildPlayableLabHtml(options) {
     }
     .line-confirmation input {
       width: auto;
+    }
+    .click-instruction {
+      color: var(--muted);
+      font-weight: 700;
     }
     .completed-graph-after-success[hidden] {
       display: none;
@@ -648,6 +787,56 @@ function buildPlayableLabHtml(options) {
       font-weight: 600;
     }
     .choice-options input { width: auto; }
+    .source-cell-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .source-cell-option {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px;
+      font-weight: 700;
+    }
+    .source-cell-option input {
+      width: auto;
+      margin-top: 4px;
+    }
+    .source-cell-option small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .carry-forward-response {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .carried-value {
+      min-height: 41px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 9px 10px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .carry-forward-response.is-ready .carried-value {
+      color: var(--text);
+    }
+    .sentence-preview {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
     .control-row, .field-grid, .pair-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -757,7 +946,7 @@ function buildPlayableLabHtml(options) {
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid, .source-cell-grid, .carry-forward-response { grid-template-columns: 1fr; }
       .lab-shell.has-graph-construction { grid-template-columns: minmax(0, 1fr); }
       .graph-grid-svg { min-height: 300px; }
       .point-entry-row { grid-template-columns: 1fr; }
@@ -782,7 +971,7 @@ function buildPlayableLabHtml(options) {
   </section>
   <main class="lab-shell${hasGraphConstruction ? ' has-graph-construction' : ''}">
     <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid">${blocks}</section></aside>
-    <section class="task-pane" aria-label="Vragen"><section class="task-grid">${tasks}</section><aside class="review-panel"><strong>Reviewer check:</strong> ${escapeHtml(reviewCheck)}</aside></section>
+    <section class="task-pane" aria-label="Vragen">${questionPanel}<section class="task-grid">${tasks}</section><aside class="review-panel"><strong>Reviewer check:</strong> ${escapeHtml(reviewCheck)}</aside></section>
   </main>
   <script>
     (function () {
@@ -812,6 +1001,7 @@ function buildPlayableLabHtml(options) {
 
       function acceptedText(value, accepted) {
         const actual = normalize(value);
+        if (!actual) return false;
         return (accepted || []).some((candidate) => {
           const expected = normalize(candidate);
           return actual === expected || actual.includes(expected) || expected.includes(actual);
@@ -875,6 +1065,151 @@ function buildPlayableLabHtml(options) {
         if (clear) clear.addEventListener('click', () => { zone.innerHTML = ''; });
       }
 
+      function expectedRoleByValue(model) {
+        const roles = {};
+        (model.expected.selections || []).forEach((selection) => {
+          roles[selection.valueId] = selection.role;
+        });
+        return roles;
+      }
+
+      function graphPointPosition(svg, x, y) {
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const viewBox = svg.viewBox.baseVal;
+        const plotWidth = viewBox.width - padL - padR;
+        const plotHeight = viewBox.height - padT - padB;
+        return {
+          cx: padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * plotWidth,
+          cy: viewBox.height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * plotHeight
+        };
+      }
+
+      function clearGraphPoints(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (group) group.innerHTML = '';
+        updateGraphPointStatus(card);
+      }
+
+      function placeGraphPoint(card, x, y) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const svg = workspace?.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (!svg || !group) return;
+        const required = Number(workspace.dataset.requiredPoints || 2);
+        const points = Array.from(group.querySelectorAll('.placed-graph-point'));
+        if (points.length >= required) return;
+        const position = graphPointPosition(svg, x, y);
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.classList.add('placed-graph-point');
+        g.dataset.x = String(x);
+        g.dataset.y = String(y);
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', position.cx.toFixed(1));
+        circle.setAttribute('cy', position.cy.toFixed(1));
+        circle.setAttribute('r', '8');
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', (position.cx + 12).toFixed(1));
+        label.setAttribute('y', (position.cy - 10).toFixed(1));
+        label.textContent = String(points.length + 1);
+        g.append(circle, label);
+        group.appendChild(g);
+        updateGraphPointStatus(card);
+      }
+
+      function nearestExpectedPoint(model, x, y) {
+        const points = model.expected.points || [];
+        if (points.length === 0) return { x, y };
+        return points
+          .map((point) => ({ point, distance: Math.hypot(Number(point.x) - x, Number(point.y) - y) }))
+          .sort((a, b) => a.distance - b.distance)[0].point;
+      }
+
+      function clickToGraphValue(svg, event, model) {
+        const point = svg.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        const local = point.matrixTransform(svg.getScreenCTM().inverse());
+        const viewBox = svg.viewBox.baseVal;
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const clampedX = Math.max(padL, Math.min(viewBox.width - padR, local.x));
+        const clampedY = Math.max(padT, Math.min(viewBox.height - padB, local.y));
+        const x = xMin + ((clampedX - padL) / (viewBox.width - padL - padR || 1)) * (xMax - xMin);
+        const y = yMin + ((viewBox.height - padB - clampedY) / (viewBox.height - padT - padB || 1)) * (yMax - yMin);
+        return nearestExpectedPoint(model, x, y);
+      }
+
+      function updateGraphPointStatus(card) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const required = Number(workspace?.dataset.requiredPoints || 0);
+        const count = card.querySelectorAll('.placed-graph-point').length;
+        const status = card.querySelector('[data-graph-point-status="true"]');
+        if (status) status.textContent = count + ' / ' + required + ' punten geplaatst';
+      }
+
+      function updateGraphAxisState(card, model) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        if (!workspace) return false;
+        const xValue = card.querySelector('.graph-axis-x')?.value || '';
+        const yValue = card.querySelector('.graph-axis-y')?.value || '';
+        const ok = acceptedText(xValue, model.expected.axes?.xAccepted || []) && acceptedText(yValue, model.expected.axes?.yAccepted || []);
+        workspace.classList.toggle('axes-selected', ok);
+        const note = workspace.querySelector('[data-graph-stage-note="true"]');
+        if (note) {
+          note.textContent = ok
+            ? 'Assen kloppen. Klik nu twee punten uit de tabel in het werkvlak.'
+            : 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.';
+        }
+        return ok;
+      }
+
+      function installGraphConstruction(card, model) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        if (!svg) return;
+        card.querySelectorAll('.graph-axis-x, .graph-axis-y').forEach((select) => {
+          select.addEventListener('change', () => updateGraphAxisState(card, model));
+        });
+        svg.addEventListener('click', (event) => {
+          if (!updateGraphAxisState(card, model)) return;
+          const value = clickToGraphValue(svg, event, model);
+          placeGraphPoint(card, value.x, value.y);
+        });
+        const clear = card.querySelector('.clear-graph-points');
+        if (clear) clear.addEventListener('click', () => clearGraphPoints(card));
+        updateGraphAxisState(card, model);
+        updateGraphPointStatus(card);
+      }
+
+      function updateCarryovers() {
+        document.querySelectorAll('[data-carry-forward="true"]').forEach((box) => {
+          const sourceIndex = Number(box.dataset.carryFromIndex || 1);
+          const sourceComplete = cards[sourceIndex]?.classList.contains('is-complete') === true;
+          const carriedValue = box.dataset.carriedValue || '';
+          const notReady = box.dataset.notReadyText || 'Bereken eerst het grensbedrag in taak 2.';
+          const output = box.querySelector('[data-carried-output="true"]');
+          const hidden = box.querySelector('.carried-threshold-field');
+          const select = box.querySelector('.direction-select');
+          box.classList.toggle('is-ready', sourceComplete);
+          if (output) output.textContent = sourceComplete ? carriedValue : notReady;
+          if (hidden) hidden.value = sourceComplete ? carriedValue : '';
+          if (select) select.disabled = !sourceComplete;
+        });
+      }
+
       function collect(card, model) {
         if (model.family === 'calculation_work_capture') {
           return {
@@ -891,15 +1226,20 @@ function buildPlayableLabHtml(options) {
           return { fields };
         }
         if (model.family === 'graph_construction_substitute') {
+          const clickedPoints = Array.from(card.querySelectorAll('.placed-graph-point')).map((point) => ({
+            x: point.dataset.x || '',
+            y: point.dataset.y || ''
+          }));
+          const typedPoints = Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
+            x: row.querySelector('.graph-point-x')?.value || '',
+            y: row.querySelector('.graph-point-y')?.value || ''
+          }));
           return {
             axes: {
               x: card.querySelector('.graph-axis-x')?.value || '',
               y: card.querySelector('.graph-axis-y')?.value || ''
             },
-            points: Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
-              x: row.querySelector('.graph-point-x')?.value || '',
-              y: row.querySelector('.graph-point-y')?.value || ''
-            })),
+            points: clickedPoints.length > 0 ? clickedPoints : typedPoints,
             lineShape: card.querySelector('.graph-line-confirm')?.checked ? 'decreasing' : ''
           };
         }
@@ -916,6 +1256,16 @@ function buildPlayableLabHtml(options) {
           return { value: card.querySelector('.choice-input:checked')?.value || '' };
         }
         if (model.family === 'source_value_selection') {
+          const compactValues = Array.from(card.querySelectorAll('.source-cell-select:checked')).map((input) => input.value);
+          if (compactValues.length > 0) {
+            const roles = expectedRoleByValue(model);
+            return {
+              selections: compactValues.map((valueId) => ({
+                valueId,
+                role: roles[valueId] || ''
+              }))
+            };
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row')).map((row) => ({
             valueId: row.querySelector('.value-select')?.value || '',
             role: row.querySelector('.role-select')?.value || ''
@@ -989,6 +1339,7 @@ function buildPlayableLabHtml(options) {
             ? 'Klopt. Je kunt door naar de volgende kaart.'
             : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
         }
+        updateCarryovers();
         updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
       }
 
@@ -1019,6 +1370,14 @@ function buildPlayableLabHtml(options) {
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const direction = (model.expected.fields || []).find((field) => field.id === 'direction');
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = direction?.accepted?.[0] || '';
+            return;
+          }
           (model.expected.fields || []).forEach((field) => {
             const input = card.querySelector('.structured-field[data-field-id="' + CSS.escape(field.id) + '"]');
             if (input) input.value = field.accepted[0];
@@ -1030,6 +1389,9 @@ function buildPlayableLabHtml(options) {
           const yAxis = card.querySelector('.graph-axis-y');
           if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
           if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
           const rows = Array.from(card.querySelectorAll('.point-entry-row'));
           (model.expected.points || []).forEach((point, rowIndex) => {
             const row = rows[rowIndex];
@@ -1056,6 +1418,12 @@ function buildPlayableLabHtml(options) {
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const expectedIds = new Set((model.expected.selections || []).map((selection) => selection.valueId));
+            compactInputs.forEach((input) => { input.checked = expectedIds.has(input.value); });
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           (model.expected.selections || []).forEach((selection, rowIndex) => {
             const row = rows[rowIndex];
@@ -1078,6 +1446,13 @@ function buildPlayableLabHtml(options) {
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = 'hoger dan';
+            return;
+          }
           card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
           return;
         }
@@ -1086,6 +1461,8 @@ function buildPlayableLabHtml(options) {
           const yAxis = card.querySelector('.graph-axis-y');
           if (xAxis) xAxis.value = 'prijs p';
           if (yAxis) yAxis.value = 'hoeveelheid q';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
           card.querySelectorAll('.point-entry-row').forEach((row, rowIndex) => {
             row.querySelector('.graph-point-x').value = rowIndex === 0 ? '0' : '';
             row.querySelector('.graph-point-y').value = rowIndex === 0 ? '0' : '';
@@ -1110,6 +1487,15 @@ function buildPlayableLabHtml(options) {
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const firstWrong = compactInputs.find((input) => {
+              const value = model.interaction.values?.find((item) => item.id === input.value);
+              return value?.kind === 'distractor';
+            }) || compactInputs[0];
+            if (firstWrong) firstWrong.checked = true;
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           const firstValue = model.interaction.values?.find((item) => item.id !== model.expected.selections?.[0]?.valueId)?.id || '';
           const firstRole = model.interaction.roles?.find((item) => item.id !== model.expected.selections?.[0]?.role)?.id || '';
@@ -1126,6 +1512,7 @@ function buildPlayableLabHtml(options) {
 
       cards.forEach((card, index) => {
         installSequenceBuilder(card);
+        if (models[index].family === 'graph_construction_substitute') installGraphConstruction(card, models[index]);
         const button = card.querySelector('.check-button');
         button.addEventListener('click', () => {
           mark(card, index, evaluate(models[index], collect(card, models[index])));
@@ -1142,9 +1529,14 @@ function buildPlayableLabHtml(options) {
           const zone = card.querySelector('.sequence-zone');
           if (zone) zone.innerHTML = '';
           card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => { graph.hidden = true; });
+          clearGraphPoints(card);
+          if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+            updateGraphAxisState(card, models[cards.indexOf(card)]);
+          }
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
         });
+        updateCarryovers();
         updateCurrent(0);
       }
 
@@ -1152,7 +1544,20 @@ function buildPlayableLabHtml(options) {
         const sourcePane = document.querySelector('.source-pane');
         const taskPane = document.querySelector('.task-pane');
         const strip = document.querySelector('.question-strip');
-        if (sourcePane) sourcePane.scrollTop = sourcePane.scrollHeight;
+        const originalScrollTop = sourcePane ? sourcePane.scrollTop : 0;
+        let sourceTableFullyVisibleAtTop = true;
+        let sourceTableVisibleAtTop = true;
+        let sourcePaneNeedsImmediateVerticalScroll = false;
+        if (sourcePane) {
+          sourcePane.scrollTop = 0;
+          const paneRect = sourcePane.getBoundingClientRect();
+          const firstTable = sourcePane.querySelector('table');
+          const firstTableRect = firstTable ? firstTable.getBoundingClientRect() : null;
+          sourceTableVisibleAtTop = !firstTableRect || (firstTableRect.bottom > paneRect.top && firstTableRect.top < paneRect.bottom);
+          sourceTableFullyVisibleAtTop = !firstTableRect || (firstTableRect.top >= paneRect.top && firstTableRect.bottom <= paneRect.bottom + 2);
+          sourcePaneNeedsImmediateVerticalScroll = sourcePane.scrollHeight > sourcePane.clientHeight + 6;
+          sourcePane.scrollTop = sourcePane.scrollHeight;
+        }
         const stripRect = strip ? strip.getBoundingClientRect() : null;
         const overflowing = Array.from(document.querySelectorAll('body *')).filter((item) => {
           const style = window.getComputedStyle(item);
@@ -1179,7 +1584,23 @@ function buildPlayableLabHtml(options) {
               graphWorkspace: false,
               graphAxisControls: false,
               graphPointInputs: false,
-              graphLineConfirmation: false
+              graphLineConfirmation: false,
+              graphClickToPlace: false,
+              graphClickedPointCount: 0,
+              typedPointFallbackCollapsed: false,
+              typedPointFallbackOpen: false,
+              sourceCellSelection: false,
+              sourceCellOptionCount: 0,
+              sourceCellCheckedCount: 0,
+              sourceCellRequiredSelectionCount: 0,
+              sourceCellDistractorCount: 0,
+              repeatedDropdownRows: 0,
+              roleDropdownCount: 0,
+              structuredCarryForward: false,
+              constrainedDirectionControl: false,
+              freeTextDirectionAbsent: true,
+              carriedValueReady: false,
+              carryRequiresPreviousTask: false
             };
           }
           const item = familyAffordances[family];
@@ -1195,8 +1616,27 @@ function buildPlayableLabHtml(options) {
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
           item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
           item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
-          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 10;
+          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 4;
           item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
+          item.graphClickToPlace = item.graphClickToPlace || Boolean(card.querySelector('[data-graph-click-surface="true"]'));
+          item.graphClickedPointCount += card.querySelectorAll('.placed-graph-point').length;
+          item.typedPointFallbackCollapsed = item.typedPointFallbackCollapsed || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"]:not([open])'));
+          item.typedPointFallbackOpen = item.typedPointFallbackOpen || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"][open]'));
+          item.sourceCellSelection = item.sourceCellSelection || Boolean(card.querySelector('[data-source-cell-selection="compact"]'));
+          item.sourceCellOptionCount += card.querySelectorAll('.source-cell-select').length;
+          item.sourceCellCheckedCount += card.querySelectorAll('.source-cell-select:checked').length;
+          const sourceSelection = card.querySelector('[data-source-cell-selection="compact"]');
+          if (sourceSelection) {
+            item.sourceCellRequiredSelectionCount = Number(sourceSelection.dataset.requiredSelections || 0);
+            item.sourceCellDistractorCount = Number(sourceSelection.dataset.distractorCount || 0);
+          }
+          item.repeatedDropdownRows += card.querySelectorAll('.pair-row').length;
+          item.roleDropdownCount += card.querySelectorAll('.role-select').length;
+          item.structuredCarryForward = item.structuredCarryForward || Boolean(card.querySelector('[data-carry-forward="true"]'));
+          item.constrainedDirectionControl = item.constrainedDirectionControl || Boolean(card.querySelector('.direction-select'));
+          item.freeTextDirectionAbsent = item.freeTextDirectionAbsent && !Boolean(card.querySelector('input.structured-field:not([type="hidden"]), textarea.structured-field'));
+          item.carriedValueReady = item.carriedValueReady || Boolean(card.querySelector('[data-carry-forward="true"].is-ready'));
+          item.carryRequiresPreviousTask = item.carryRequiresPreviousTask || Boolean(card.querySelector('[data-carry-forward="true"] .direction-select:disabled, [data-carry-forward="true"]:not(.is-ready)'));
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
@@ -1214,6 +1654,13 @@ function buildPlayableLabHtml(options) {
         const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
         const labShell = document.querySelector('.lab-shell');
         const usableWidth = labShell ? labShell.getBoundingClientRect().width : window.innerWidth;
+        const graphAxisLabels = Array.from(document.querySelectorAll('.graph-grid-svg .axis-label.reveal-after-axes'));
+        const graphScaleLabels = Array.from(document.querySelectorAll('.graph-grid-svg .scale-label.reveal-after-axes'));
+        const graphAxisLabelsVisibleCount = graphAxisLabels.filter(visible).length;
+        const graphScaleLabelsVisibleCount = graphScaleLabels.filter(visible).length;
+        const graphLabelsVisibleBeforeAxisSelection = graphWorkspaces.some((workspace) => !workspace.classList.contains('axes-selected') && Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible));
+        const sourceRefsVisibleNow = bodyText.includes('references/') || bodyText.includes('..\\\\') || bodyText.includes('../');
+        if (sourcePane) sourcePane.scrollTop = originalScrollTop;
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
@@ -1243,11 +1690,23 @@ function buildPlayableLabHtml(options) {
           sourcePaneScrollable: sourcePane ? sourcePane.scrollHeight > sourcePane.clientHeight : false,
           sourcePaneIndependentScroll: sourcePane ? window.getComputedStyle(sourcePane).overflowY !== 'visible' : false,
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
+          rightPaneQuestionVisible: Boolean(document.querySelector('.task-pane [data-right-pane-question="true"]')),
+          examQuestionTextVisibleInTaskPane: taskPane ? taskPane.innerText.includes('Bereken tot welk bedrag aan zorgkosten per jaar') : false,
+          sourceTableVisibleAtTop,
+          sourceTableFullyVisibleAtTop,
+          sourcePaneNeedsImmediateVerticalScroll,
+          sourcePaneComfortableInitial: sourceTableVisibleAtTop && sourceTableFullyVisibleAtTop && !sourceRefsVisibleNow,
           graphWorkspaceCount: graphWorkspaces.length,
           graphWorkspaceInTaskPane: graphWorkspaces.length === 0 || graphWorkspaces.every((item) => Boolean(item.closest('.task-pane'))),
           graphWorkspaceDesktopWidth: firstGraphWorkspaceRect ? Math.round(firstGraphWorkspaceRect.width) : 0,
           graphWorkspaceUsableWidth: Math.round(usableWidth),
           graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
+          graphClickToPlaceSupported: document.querySelectorAll('[data-graph-click-surface="true"]').length > 0,
+          graphClickedPointCount: document.querySelectorAll('.placed-graph-point').length,
+          graphAxisLabelsVisibleCount,
+          graphScaleLabelsVisibleCount,
+          graphLabelsVisibleBeforeAxisSelection,
+          graphLabelsRevealAfterAxisSelection: graphWorkspaces.length === 0 || graphWorkspaces.every((workspace) => !workspace.classList.contains('axes-selected') || Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible)),
           completedGraphVisibleCount: visibleCompletedGraphs.length,
           completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
           sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
@@ -1266,7 +1725,7 @@ function buildPlayableLabHtml(options) {
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
           flowchartCount: document.querySelectorAll('.flow-list').length,
-          sourceRefsVisible: bodyText.includes('references/'),
+          sourceRefsVisible: sourceRefsVisibleNow,
           bodyTextSnapshot: bodyText,
           contextTextSnapshot: sourcePane ? sourcePane.innerText : '',
           taskTextSnapshot: taskPane ? taskPane.innerText : '',
@@ -1299,6 +1758,19 @@ function buildPlayableLabHtml(options) {
           }
           return inspect();
         },
+        selectCorrectAxes(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+          }
+          return inspect();
+        },
         completeDemoPath() {
           resetAll();
           cards.forEach((card, index) => {
@@ -1308,6 +1780,7 @@ function buildPlayableLabHtml(options) {
           return inspect();
         }
       };
+      updateCarryovers();
       updateCurrent(0);
     })();
   </script>

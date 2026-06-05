@@ -1,8 +1,8 @@
 # GATE-SHARED-TASK-INGEST-REPAIR-1 Live Output Evidence
 
-Generated: 2026-06-04
+Generated: 2026-06-05
 
-Status: target-task repair evidence prepared after renewed
+Status: repair-3 interaction-quality evidence prepared after third
 `hold_for_playable_repair` comments; remote evidence snapshot must be current
 before renewed human review starts.
 
@@ -14,6 +14,11 @@ Actual exam:
 - Proof: `reports/json/task-ingest-transform2-actual-exam-proof.json`
 - Task count: 3 required cards.
 - Required sequence: source values -> calculation -> conclusion.
+- Right task pane shows the original actual-exam question.
+- Task 1 uses compact source-cell selection with four required cells and two
+  distractors, not repeated value/role dropdown rows.
+- Task 3 carries `EUR 649 per jaar` from task 2 and uses constrained direction
+  selection.
 - Removed as required cards: `formula_builder`, `step_ordering`,
   `source_chain_builder`.
 - Screenshots:
@@ -33,8 +38,13 @@ Textbook source:
   `Teken een P-Q-grafiek bij de tabel`.
 - Required sequence: graph construction -> graph reading -> optional 50
   percent quantity-drop check.
+- Graph construction is click-to-place after correct axis selection.
+- Typed coordinate entry is collapsed fallback only.
+- Axis labels and numeric scale are hidden before correct axis selection.
+- The completed graph remains hidden before graph-construction success.
 - Screenshots:
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png`
+  - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png`
   - `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png`
@@ -51,16 +61,22 @@ Both proof JSON files record:
 - the full correct path reaches completion;
 - formula/procedure/correction-model support is collapsed by default;
 - source panes are independently scrollable and the question remains visible;
-- visible text does not expose internal IDs or derived answers;
+- source panes hide long file paths and pass desktop source/table readability;
+- visible text does not expose internal IDs or premature derived answers;
 - prompt blocks do not render inside `.source-pane`.
 
 The actual-exam proof records exactly three task cards and
-`sequence_builders_removed_as_required_cards: true`.
+`sequence_builders_removed_as_required_cards: true`,
+`right_pane_original_question_visible: true`,
+`compact_source_cell_selection_rendered: true`, and
+`task3_carries_task2_value_when_complete: true`.
 
 The textbook proof records exactly three task cards, primary
-`graph_construction_substitute`, graph-construction controls, no completed
-graph visible before graph-construction success, graph workspace in the task
-pane, and `graph_workspace_width_pass: true`.
+`graph_construction_substitute`, `click_to_place_primary: true`,
+`graph_labels_hidden_before_axis_selection: true`,
+`graph_labels_reveal_after_axis_selection: true`, no completed graph visible
+before graph-construction success, graph workspace in the task pane, and
+`graph_workspace_width_pass: true`.
 
 ## Authority And Boundary Evidence
 
@@ -81,8 +97,8 @@ Textbook:
 ## Remote Publication Evidence
 
 Remote publication is required before renewed review comments start. The
-reviewed remote evidence snapshot is `codex/shared-task-ingest-repair2` at
-`0016511e4dc8e8d1d0ff6cf32875c967fcaa971d`. Direct push to `main` is blocked
+reviewed remote evidence snapshot is `codex/shared-task-ingest-repair3` at
+`PENDING_REMOTE_COMMIT`. Direct push to `main` is blocked
 by required GitHub status checks, so this branch is the published inspection
 surface until the PR/check flow updates `main`.
 

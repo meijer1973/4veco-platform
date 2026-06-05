@@ -132,20 +132,19 @@ function main() {
   const graphConstruction = taskById(transform.taskSet, 'tb113-graph-construction');
   const graphReading = taskById(transform.taskSet, 'tb113-graph-reading');
   const dropCheck = taskById(transform.taskSet, 'tb113-quantity-drop-check');
+  assert(graphConstruction.interaction.pointCount === 2, 'graph construction must require two plotted points');
+  assert(graphConstruction.interaction.clickInstruction && graphConstruction.interaction.clickInstruction.includes('Klik twee'), 'graph construction must declare click-to-place instruction');
   const graphResponse = {
     axes: { x: 'hoeveelheid q', y: 'prijs p' },
     points: [
       { x: 500, y: 1 },
-      { x: 400, y: 1.5 },
-      { x: 300, y: 2 },
-      { x: 200, y: 2.5 },
       { x: 100, y: 3 },
     ],
     lineShape: 'decreasing',
   };
   expectMatch(graphConstruction, graphResponse, 'graph construction correct response');
   expectReject(graphConstruction, { ...graphResponse, axes: { x: 'prijs p', y: 'hoeveelheid q' } }, 'graph construction swapped axes');
-  expectReject(graphConstruction, { ...graphResponse, points: graphResponse.points.slice(0, 4) }, 'graph construction missing point');
+  expectReject(graphConstruction, { ...graphResponse, points: graphResponse.points.slice(0, 1) }, 'graph construction missing point');
   expectReject(graphConstruction, { ...graphResponse, lineShape: '' }, 'graph construction missing line confirmation');
 
   expectMatch(graphReading, 350, 'graph reading correct response');
@@ -173,6 +172,9 @@ function main() {
   assert(transform.taskFamilyMap.length === 3, 'taskFamilyMap must map the three tasks');
   assert(transform.taskFamilyMap[0].original_target_task === 'Teken een P-Q-grafiek bij de tabel.', 'task family map must show original target to graph construction');
   assert(transform.antiReductionChecks.graph_construction_primary_task_required === true, 'graph construction must be primary');
+  assert(transform.antiReductionChecks.two_point_click_graph_construction_required === true, 'two-point click graph construction guard missing');
+  assert(transform.antiReductionChecks.typed_point_entry_fallback_only === true, 'typed fallback guard missing');
+  assert(transform.antiReductionChecks.axis_labels_hidden_until_axis_selection === true, 'axis label reveal guard missing');
   assert(transform.antiReductionChecks.completed_graph_hidden_before_construction_success === true, 'completed graph guard missing');
   assert(transform.antiReductionChecks.prompt_not_rendered_as_source === true, 'prompt/source guard missing');
   assert(transform.antiReductionChecks.target_task_economy_enforced === true, 'target-task economy guard missing');
@@ -219,22 +221,28 @@ function main() {
   assert(proof.status === 'playable_repair_proof_complete', 'wrong proof status');
   assert(proof.task_transformation.task_count === 3, 'proof must record three task cards');
   assert(proof.task_transformation.playable_lab.graph_construction_controls_rendered === true, 'proof missing graph construction controls');
+  assert(proof.task_transformation.playable_lab.click_to_place_primary === true, 'proof missing click-to-place graph construction');
+  assert(proof.task_transformation.playable_lab.typed_point_entry_fallback_only === true, 'proof missing collapsed typed fallback');
+  assert(proof.task_transformation.playable_lab.graph_labels_hidden_before_axis_selection === true, 'proof missing hidden initial graph labels');
+  assert(proof.task_transformation.playable_lab.graph_labels_reveal_after_axis_selection === true, 'proof missing graph label reveal after axis selection');
   assert(proof.task_transformation.playable_lab.target_task_economy_enforced === true, 'proof missing target economy');
   assert(proof.task_transformation.playable_lab.prompt_not_in_source_pane === true, 'proof missing prompt/source guard');
   assert(proof.task_transformation.playable_lab.completed_graph_hidden_before_attempt === true, 'proof missing completed graph guard');
   assert(proof.task_transformation.playable_lab.graph_workspace_in_task_pane === true, 'proof missing task-pane graph workspace');
   assert(proof.task_transformation.playable_lab.graph_workspace_width_pass === true, 'proof missing graph workspace width pass');
+  assert(proof.task_transformation.playable_lab.source_pane_readability_pass === true, 'proof missing source-pane readability pass');
   assert(proof.ambiguity_evidence.primary_graph_construction_first === true, 'proof must record primary graph construction first');
 
   const expectedCases = new Map([
     ['desktop-initial', { width: 1280, theme: 'light', action: 'initial', renderedContextBlocks: 4 }],
+    ['desktop-axis-selected', { width: 1280, theme: 'light', action: 'axis-selected', renderedContextBlocks: 4 }],
     ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong', renderedContextBlocks: 4 }],
     ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected', renderedContextBlocks: 4 }],
     ['desktop-completed', { width: 1280, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
     ['mobile-completed', { width: 390, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
     ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete', renderedContextBlocks: 4 }],
   ]);
-  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 6, 'proof must include six screenshots');
+  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 7, 'proof must include seven screenshots');
   for (const capture of proof.screenshots) {
     const expected = expectedCases.get(capture.case);
     assert(expected, `unexpected screenshot case ${capture.case}`);
@@ -252,23 +260,39 @@ function main() {
     assert(capture.proof.completedGraphVisibleBeforeAttempt === false, `${capture.case} shows completed graph before construction attempt`);
     assert(capture.proof.graphWorkspaceInTaskPane === true, `${capture.case} graph workspace is not in task pane`);
     assert(capture.proof.graphWorkspaceWidthPass === true, `${capture.case} graph workspace width is too small`);
+    assert(capture.proof.graphClickToPlaceSupported === true, `${capture.case} missing click-to-place surface`);
     assert(capture.proof.semanticValidationEnabled === true, `${capture.case} missing semantic validation`);
     assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed`);
     assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
     assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
+    assert(capture.proof.sourceRefsVisible === false, `${capture.case} shows long source refs`);
+    assert(capture.proof.sourceTableVisibleAtTop === true, `${capture.case} source table is not visible at source-pane top`);
+    if (capture.viewport.width >= 900) assert(capture.proof.sourcePaneComfortableInitial === true, `${capture.case} desktop source pane is not readable at initial layout`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphWorkspace === true, `${capture.case} missing graph workspace affordance`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphAxisControls === true, `${capture.case} missing graph axis controls`);
-    assert(capture.proof.familyAffordances.graph_construction_substitute.graphPointInputs === true, `${capture.case} missing graph point inputs`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphClickToPlace === true, `${capture.case} missing click-to-place affordance`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.typedPointFallbackCollapsed === true, `${capture.case} typed point fallback is not collapsed`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.typedPointFallbackOpen === false, `${capture.case} typed point fallback is open`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphLineConfirmation === true, `${capture.case} missing graph line confirmation`);
     assert(capture.proof.familyAffordances.graph_reading.numericField === true, `${capture.case} missing graph reading field`);
     assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
     if (capture.case === 'desktop-initial') {
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
       assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} completed graph must not be visible initially`);
+      assert(capture.proof.graphAxisLabelsVisibleCount === 0, `${capture.case} reveals axis labels before axis selection`);
+      assert(capture.proof.graphScaleLabelsVisibleCount === 0, `${capture.case} reveals numeric scale before axis selection`);
+      assert(capture.proof.graphLabelsVisibleBeforeAxisSelection === false, `${capture.case} shows labels before axis selection`);
+      assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
+    } else if (capture.case === 'desktop-axis-selected') {
+      assert(capture.proof.completedTaskCount === 0, `${capture.case} should not complete on axis selection only`);
+      assert(capture.proof.graphAxisLabelsVisibleCount > 0, `${capture.case} should reveal axis labels after correct axis selection`);
+      assert(capture.proof.graphScaleLabelsVisibleCount > 0, `${capture.case} should reveal numeric labels after correct axis selection`);
+      assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} should not reveal completed graph after axis selection only`);
       assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
     } else if (capture.case === 'desktop-wrong-retry') {
       assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
+      assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} must not reveal completed graph after wrong axes`);
     } else if (capture.case === 'desktop-corrected') {
       assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
       assert(capture.proof.completedGraphVisibleCount >= 1, `${capture.case} should reveal completed graph after corrected construction`);

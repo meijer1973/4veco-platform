@@ -1,8 +1,8 @@
 # TASK-INGEST-TRANSFORM-3-TEXTBOOK Operation Chain Trace
 
-Generated: 2026-06-04
+Generated: 2026-06-05
 
-Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2`.
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`.
 
 ## Original Target
 
@@ -17,7 +17,7 @@ a source/context prompt or a long support checklist.
 
 | Operation | Required task | Evidence |
 |---|---|---|
-| construct P-Q graph from table | `tb113-graph-construction` | axis convention, all five points, decreasing line |
+| construct P-Q graph from table | `tb113-graph-construction` | correct axis convention, two clicked table points in the graph workspace, decreasing line confirmation |
 | read quantity from constructed graph | `tb113-graph-reading` | Q at `P = EUR 1.75` |
 | check one quantity-drop interval | `tb113-quantity-drop-check` | optional follow-up using table values and percent calculation |
 
@@ -34,3 +34,5 @@ The following previous cards are no longer required:
 - answer-form checker.
 
 These were supporting micro-skills around the target, not the target itself.
+Typed coordinate rows remain collapsed fallback evidence only; they are not the
+primary graph-construction path.

@@ -236,7 +236,7 @@
         "id": "tb113-graph-construction",
         "family": "graph_construction_substitute",
         "skillLabel": "P-Q-grafiek tekenen",
-        "purpose": "Maak de grafiek die de tabel vraagt: assen kiezen, alle punten plaatsen en de dalende lijn bevestigen.",
+        "purpose": "Maak de grafiek die de tabel vraagt: assen kiezen, twee punten plaatsen en de dalende lijn bevestigen.",
         "prompt": "Teken de P-Q-grafiek bij Tabel 1.",
         "contextRefs": [
           "ctx-icecream-prompt",
@@ -250,13 +250,15 @@
           "workspaceTitle": "Grafiekworkspace",
           "xAxisLabel": "Horizontale as",
           "yAxisLabel": "Verticale as",
-          "pointRowsLabel": "Plaats alle tabelpunten",
+          "pointRowsLabel": "Fallback: typ twee punten",
+          "clickInstruction": "Klik twee tabelpunten in het grafiekwerkvlak. Twee punten zijn genoeg om de rechte lijn te tekenen.",
+          "preAxisNote": "Kies eerst de juiste assen. Daarna verschijnen labels en schaal.",
           "lineConfirmationLabel": "Ik verbind de punten tot een dalende lijn.",
           "lineShapeLabel": "Lijnvorm",
           "xInputLabel": "Q-waarde",
           "yInputLabel": "P-waarde",
           "emptyGraphAltText": "Leeg P-Q-diagram met hoeveelheid Q horizontaal en prijs P verticaal.",
-          "pointCount": 5,
+          "pointCount": 2,
           "axes": {
             "x": {
               "label": "Hoeveelheid Q (ijsjes)",
@@ -292,18 +294,6 @@
               "y": 1
             },
             {
-              "x": 400,
-              "y": 1.5
-            },
-            {
-              "x": 300,
-              "y": 2
-            },
-            {
-              "x": 200,
-              "y": 2.5
-            },
-            {
               "x": 100,
               "y": 3
             }
@@ -314,9 +304,9 @@
         },
         "feedback": {
           "matchTitle": "Grafiekconstructie klopt",
-          "matchText": "Je gebruikt P verticaal, Q horizontaal, alle vijf tabelpunten en een dalende lijn.",
+          "matchText": "Je gebruikt P verticaal, Q horizontaal, twee tabelpunten en een dalende lijn.",
           "retryTitle": "Controleer assen, punten en lijn",
-          "retryText": "Zet Q op de horizontale as, P op de verticale as, plaats alle vijf tabelpunten en bevestig de dalende lijn."
+          "retryText": "Zet Q op de horizontale as, P op de verticale as, klik twee tabelpunten en bevestig de dalende lijn."
         },
         "practiceRoute": {
           "label": "Verder met aflezen",
@@ -450,7 +440,7 @@
       ],
       "required_actions": [
         "confirm P vertical and Q horizontal",
-        "place all five table points",
+        "click two table points in the graph workspace",
         "connect points into a decreasing line"
       ]
     },
@@ -493,18 +483,6 @@
         {
           "x": 500,
           "y": 1
-        },
-        {
-          "x": 400,
-          "y": 1.5
-        },
-        {
-          "x": 300,
-          "y": 2
-        },
-        {
-          "x": 200,
-          "y": 2.5
         },
         {
           "x": 100,
@@ -614,7 +592,9 @@
   ],
   "antiReductionChecks": {
     "graph_construction_primary_task_required": true,
-    "all_five_table_points_required": true,
+    "two_point_click_graph_construction_required": true,
+    "typed_point_entry_fallback_only": true,
+    "axis_labels_hidden_until_axis_selection": true,
     "axis_convention_checked_inside_graph_task": true,
     "decreasing_line_confirmation_required": true,
     "completed_graph_hidden_before_construction_success": true,

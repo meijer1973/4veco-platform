@@ -13,7 +13,9 @@ Sprint: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`
 
 - The lab reconstructs visuals from source data and procedure steps instead of embedding raw textbook images.
 - The graph uses theme-aware CSS colors in the rendered lab.
+- The completed graph is hidden until graph-construction success.
+- The blank graph workspace hides axis labels and numeric scale until correct
+  axis selection, then uses click-to-place points as the primary interaction.
 - The table remains readable on mobile through horizontal scrolling only where needed.
 - Dark-mode proof is captured in `reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark.png`.
 - Visual variants stay review-only and are not deployed to Book 1 output.
-

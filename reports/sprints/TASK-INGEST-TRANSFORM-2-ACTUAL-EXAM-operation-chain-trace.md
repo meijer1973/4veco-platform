@@ -1,9 +1,9 @@
 # TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Operation Chain Trace
 
-Generated: 2026-06-04
+Generated: 2026-06-05
 
-Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2`; target-task
-economy repair only; no product authority.
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`; interaction
+quality repair only; no product authority.
 
 ## Original Target
 
@@ -20,9 +20,9 @@ interactions.
 
 | Operation | Required task | Evidence |
 |---|---|---|
-| select source values | `q3-source-values` | four table values selected with roles |
+| select source values | `q3-source-values` | four compactly selected source cells; roles remain validation data |
 | calculate threshold with visible work | `q3-calculation` | yearly premiums, deductible exposure, and difference |
-| state threshold with direction | `q3-threshold-direction` | `649 euro per jaar` plus direction |
+| state threshold with direction | `q3-threshold-direction` | carried `EUR 649 per jaar` plus constrained direction |
 
 ## Collapsed Support Policy
 

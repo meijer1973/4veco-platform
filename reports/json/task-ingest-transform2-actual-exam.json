@@ -108,8 +108,8 @@
         "id": "q3-source-values",
         "family": "source_value_selection",
         "skillLabel": "Bronwaarden kiezen",
-        "purpose": "Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.",
-        "prompt": "Kies de vier waarden uit Tabel 1 die nodig zijn voor de vergelijking.",
+        "purpose": "Kies de vier tabelcellen die de berekening nodig heeft.",
+        "prompt": "Klik de vier waarden uit Tabel 1 die nodig zijn voor de vergelijking.",
         "contextRefs": [
           "ctx-zoohee-prompt",
           "ctx-zoohee-source",
@@ -117,6 +117,10 @@
           "ctx-zoohee-formula"
         ],
         "interaction": {
+          "selectionMode": "compact_source_cells",
+          "selectionLabel": "Klik de noodzakelijke tabelcellen",
+          "maxRequiredSelections": 4,
+          "distractorLimit": 2,
           "valueBankLabel": "Bronwaarden",
           "roleLabel": "Rol in de vergelijking",
           "values": [
@@ -328,16 +332,38 @@
           "ctx-zoohee-formula"
         ],
         "interaction": {
+          "carryForward": {
+            "fromTaskIndex": 1,
+            "label": "Grensbedrag uit taak 2",
+            "value": "EUR 649 per jaar",
+            "notReadyText": "Bereken eerst het grensbedrag in taak 2."
+          },
+          "directionLabel": "Wanneer is verhoogd eigen risico voordeliger?",
+          "directionOptions": [
+            {
+              "id": "lager dan",
+              "label": "lager dan het grensbedrag"
+            },
+            {
+              "id": "hoger dan",
+              "label": "hoger dan het grensbedrag"
+            },
+            {
+              "id": "gelijk aan",
+              "label": "gelijk aan het grensbedrag"
+            }
+          ],
+          "sentenceTemplate": "Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.",
           "fields": [
             {
               "id": "threshold",
-              "label": "Grensbedrag",
-              "placeholder": "Bijvoorbeeld 123 euro per jaar"
+              "label": "Grensbedrag uit taak 2",
+              "placeholder": "Wordt overgenomen uit taak 2"
             },
             {
               "id": "direction",
               "label": "Richting",
-              "placeholder": "Wanneer is verhoogd eigen risico voordeliger?"
+              "placeholder": "Kies lager dan, hoger dan of gelijk aan"
             }
           ]
         },
@@ -351,6 +377,7 @@
             {
               "id": "threshold",
               "accepted": [
+                "EUR 649 per jaar",
                 "649 euro per jaar",
                 "€ 649 per jaar",
                 "tot 649 euro per jaar",
@@ -360,6 +387,7 @@
             {
               "id": "direction",
               "accepted": [
+                "lager dan",
                 "verhoogd eigen risico is voordeliger tot dat bedrag",
                 "tot dat bedrag is verhoogd eigen risico voordeliger",
                 "bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"
