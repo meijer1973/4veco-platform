@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T21:20:37.285Z
+Generated: 2026-06-05T21:59:10.798Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3530
+Files indexed: 3546
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 414
+Count: 416
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -507,8 +507,10 @@ Count: 414
 - build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
+- build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
+- build-scripts/sprints/emit-visual-qa-harden2-proof.js
 - build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
 - build-scripts/sprints/run-sprint-command.js
@@ -590,7 +592,7 @@ Count: 42
 
 ## validators
 
-Count: 303
+Count: 304
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -755,6 +757,7 @@ Count: 303
 - build-scripts/sprints/check-task-ingest-transform2-actual-exam.js
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
+- build-scripts/sprints/check-visual-qa-harden2.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
@@ -1379,7 +1382,7 @@ Count: 476
 
 ## reports
 
-Count: 2203
+Count: 2217
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1480,6 +1483,7 @@ Count: 2203
 - reports/json/unit-design-status.json
 - reports/json/unit-term-slug-migration.json
 - reports/json/unresolved-refs.json
+- reports/json/visual-qa-harden2-proof.json
 - reports/markdown/aspects-coverage.md
 - reports/markdown/begrippen-coverage.md
 - reports/markdown/dag-integrity.md
@@ -3579,6 +3583,19 @@ Count: 2203
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-dark-112-exit-ticket-task-shell.png
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-light-112-exit-ticket-unit-fields.png
 - reports/sprints/TASK-SHELL-UX-2-ui-contract.md
+- reports/sprints/VISUAL-QA-HARDEN-2-baseline.md
+- reports/sprints/VISUAL-QA-HARDEN-2-command-log.jsonl
+- reports/sprints/VISUAL-QA-HARDEN-2-command-log.md
+- reports/sprints/VISUAL-QA-HARDEN-2-lead-review-assignment.md
+- reports/sprints/VISUAL-QA-HARDEN-2-lead-review-corrections.md
+- reports/sprints/VISUAL-QA-HARDEN-2-lead-review-round1.md
+- reports/sprints/VISUAL-QA-HARDEN-2-lead-review-round2.md
+- reports/sprints/VISUAL-QA-HARDEN-2-plan.md
+- reports/sprints/VISUAL-QA-HARDEN-2-planning-review.md
+- reports/sprints/VISUAL-QA-HARDEN-2-product-qa-report.md
+- reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
+- reports/sprints/VISUAL-QA-HARDEN-2-result.md
+- reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
