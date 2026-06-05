@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "generated": "2026-06-05",
+  "review_mode": "direct_packet_comments",
+  "decision": "pass_with_flags",
+  "decision_text": "GATE-SHARED-TASK-INGEST-REPAIR-1: PASS WITH FLAGS",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_branch": "codex/shared-task-ingest-repair4",
+  "reviewed_remote_commit_hash": "95f0eda5f51eb7868cb947dc3e8f081957b2afb4",
+  "remote_branch_head_at_recording": "845d974161f0fc8f375cb2d3d66baf1b169b46a3",
+  "github_status": {
+    "status_contexts_on_branch_head": 0,
+    "check_runs_on_branch_head": 0,
+    "status_contexts_on_reviewed_commit": 0,
+    "check_runs_on_reviewed_commit": 0,
+    "ci_state_recorded": "no_github_status_contexts_or_check_runs_present_for_branch_commits"
+  },
+  "authority": {
+    "controlled_adoption_preparation_authorized": true,
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "comments": [
+    {
+      "id": "SHAREDINGEST-Q1",
+      "classification": "pass",
+      "comment": "Source authority is resolved enough for this gate; no additional source-authority repair is needed."
+    },
+    {
+      "id": "SHAREDINGEST-Q2",
+      "classification": "pass_with_flag",
+      "comment": "Original actual-exam question remains visible in the right task pane; carry this as a general shared-task rule."
+    },
+    {
+      "id": "SHAREDINGEST-Q3",
+      "classification": "pass_with_flag",
+      "comment": "Exam task 1 is now conceptual setup; source selection must check a real source-use decision."
+    },
+    {
+      "id": "SHAREDINGEST-Q4",
+      "classification": "pass_with_flag",
+      "comment": "Calculation task accepts 649 with reasonable yearly unit variants, targeted feedback, progressive support, and the premium-difference shortcut; generalize this feedback pattern."
+    },
+    {
+      "id": "SHAREDINGEST-Q5",
+      "classification": "pass_with_flag",
+      "comment": "Task 3 carries the calculated value and constrains direction; carried-forward values should become a shared task-shell pattern."
+    },
+    {
+      "id": "SHAREDINGEST-Q6",
+      "classification": "pass",
+      "comment": "Textbook source remains bounded as owned-source only."
+    },
+    {
+      "id": "SHAREDINGEST-Q7",
+      "classification": "pass_with_flag",
+      "comment": "Graph construction substitute is adequate for this review-only gate, but not yet a final graphing engine."
+    },
+    {
+      "id": "SHAREDINGEST-Q8",
+      "classification": "pass_with_flag",
+      "comment": "Grid visibility, delayed labels/scale, and same-workspace line reveal are acceptable; codify reveal timing."
+    },
+    {
+      "id": "SHAREDINGEST-Q9",
+      "classification": "pass_with_flag",
+      "comment": "The 50 percent follow-up is acceptable as secondary to graph construction."
+    },
+    {
+      "id": "SHAREDINGEST-Q10",
+      "classification": "pass",
+      "comment": "No product-authority overclaim blocker remains."
+    },
+    {
+      "id": "SHAREDINGEST-Q11",
+      "classification": "flags_carried",
+      "comment": "Carry remote evidence, limited authority, hardening-series roadmap row, reusable shared-task patterns, and future guided/multiple-choice/explanation-detour ingestion trials."
+    },
+    {
+      "id": "SHAREDINGEST-Q12",
+      "classification": "decision",
+      "comment": "pass_with_flags"
+    }
+  ],
+  "flags": [
+    "original_prompt_visible_in_task_pane_for_transformed_source_tasks",
+    "source_selection_only_when_it_checks_genuine_source_use",
+    "targeted_calculation_feedback_for_unit_work_and_number_errors",
+    "carried_forward_values_as_shared_task_shell_pattern",
+    "graph_construction_substitute_needs_later_hardening",
+    "delayed_reveal_policy_for_answer_bearing_labels_and_solution_structure",
+    "fifty_percent_followup_secondary_to_graph_construction",
+    "shared_task_hardening_series_planning_row_required_later"
+  ]
+}

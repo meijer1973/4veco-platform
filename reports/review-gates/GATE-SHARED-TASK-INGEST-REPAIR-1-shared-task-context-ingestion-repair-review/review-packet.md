@@ -2,15 +2,23 @@
 
 Generated: 2026-06-05
 
-Status: refreshed after fourth direct-review `REVISE`,
-`SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`, and reviewer correction pass; direct
-human review may inspect the remote snapshot recorded below after publication,
-but the gate is not closed and no product authority exists.
+Status: closed `PASS WITH FLAGS` after fourth direct-review `REVISE`,
+`SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`, reviewer correction pass, and final
+direct human review. The gate authorizes controlled downstream
+adoption-preparation only; no product-route adoption, generated lesson output,
+target-equivalent proof, diagnostics, mastery, sequencing, PV, Scale Gate 1,
+or student/product use is authorized.
 
 Reviewed remote evidence snapshot: `codex/shared-task-ingest-repair4` at
 `95f0eda5f51eb7868cb947dc3e8f081957b2afb4`. Direct push to `main` is blocked
 by required GitHub status checks, so this branch is the published inspection
 surface until the PR/check flow updates `main`.
+
+Remote branch head at closure preparation:
+`845d974161f0fc8f375cb2d3d66baf1b169b46a3`. GitHub reported no status
+contexts or check runs for the branch head or reviewed evidence commit when
+queried, so closure records local validators as the check evidence and does
+not claim a GitHub CI pass.
 
 ## Review Scope
 
@@ -71,10 +79,18 @@ Gate 1, broad product use, or student use.
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-direct-review-comments.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.json`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-comment-resolution-log.md`
 - `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-comment-resolution-log.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.json`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.json`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md`
+- `reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.json`
 - `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-plan.md`
 - `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-baseline.md`
 - `reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-planning-review.md`
@@ -155,7 +171,9 @@ Before writing binding comments, inspect at minimum:
 - `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md`;
 - `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md`;
 - task-family maps and operation/answer traces for both transformations;
-- repair-4 direct-review comments and resolution log.
+- repair-4 direct-review comments and resolution log;
+- final direct-review comments, final resolution log, closure proposal, and
+  gate-closure record.
 
 Checker-readable requirement statement: both labs must preserve question visibility after source scrolling.
 Checker-readable authority statement: the textbook source is not official exam authority.
@@ -174,6 +192,8 @@ Checker-readable conclusion statement: 50 percent follow-up must accept the conc
 Checker-readable shared-task statement: interval_halving_check shared task focus plan evidence must exist.
 Checker-readable source-pane statement: source panes must hide long file paths and pass desktop source/table readability.
 Checker-readable duplicate-label statement: visible source/table identifiers must not repeat inside one block.
+Checker-readable closure statement: gate closes PASS WITH FLAGS for review-only shared task context/source-ingestion readiness.
+Checker-readable authority statement: controlled adoption-preparation is authorized, but product-route adoption, generated lesson output, target-equivalent proof, diagnostics, mastery, sequencing, PV, Scale Gate 1, and student/product use remain unauthorized.
 
 ## Calibration Checks
 
@@ -206,7 +226,8 @@ Checker-readable duplicate-label statement: visible source/table identifiers mus
     focus plan.
 12. Confirm no prompt block is rendered inside the source pane, no duplicate
     visible source/table labels remain, desktop source/table readability
-    passes, and no closure proposal or gate-closure record exists.
+    passes, and the gate-closure record carries only PASS WITH FLAGS for
+    controlled adoption-preparation.
 
 ## Planned Review Focus
 
@@ -288,9 +309,13 @@ diagnostics, mastery, sequencing, or Scale Gate 1 authority?
 - `gate-closure.md/json` may be written only after explicit human
   confirmation of the closure decision.
 
+Final direct-review comments and explicit human closure confirmation have now
+been recorded in `final-direct-review-comments.md/json`; closure was written
+after the real remote evidence hash condition was satisfied.
+
 ## Current Stop Conditions
 
-Stop the review instead of closing the gate if any of these occur:
+Post-closure, reopen or pause downstream reliance if any of these occur:
 
 - the packet or cited evidence is not pushed to the normal remote branch;
 - remote hash metadata does not match the reviewed evidence;
@@ -321,8 +346,9 @@ Stop the review instead of closing the gate if any of these occur:
   treated as official exam authority;
 - protected reference, source-data, or generated Book 1 lesson output drift
   appears;
-- anyone asks for product adoption, generated output, Scale Gate 1, or gate
-  closure before direct comments and resolution evidence exist.
+- any closure or downstream packet broadens this gate into product adoption,
+  generated output, target-equivalent proof, Scale Gate 1, or student/product
+  use.
 
 ## Comment Resolution And Closure Protocol
 
@@ -340,7 +366,7 @@ After review comments are returned:
 
 ## Recommended Next Action
 
-After this packet and Repair 4 evidence are pushed and the reviewed remote hash
-is recorded, send this packet for renewed direct human review comments. Do not
-close the gate until returned comments, a comment-resolution log, and explicit
-human closure confirmation exist.
+Proceed to the next roadmap-controlled adoption-preparation step
+(`CHECK-SHORT-EXIT-2`) or explicitly pause for a roadmap-owner reorder. Do not
+start Scale Gate 1 or the later shared-task hardening series from this gate
+alone.

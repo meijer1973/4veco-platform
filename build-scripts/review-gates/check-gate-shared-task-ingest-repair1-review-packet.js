@@ -64,23 +64,33 @@ function requireRemotePublication(packet, live) {
   assert(live.remote_publication.review_may_start === true, 'live evidence must allow review only after remote publication');
 }
 
-function requireNoPrematureClosure() {
-  const forbidden = [
+function requireClosureArtifacts() {
+  const required = [
     'gate-closure.md',
     'gate-closure.json',
     'closure-proposal.md',
     'closure-proposal.json',
-    'human-interview.md',
-    'human-interview.json',
+    'final-direct-review-comments.md',
+    'final-direct-review-comments.json',
+    'final-comment-resolution-log.md',
+    'final-comment-resolution-log.json',
   ];
-  for (const name of forbidden) {
+  for (const name of required) {
     const file = path.join(gateDir, name);
-    assert(!fs.existsSync(file), `${rel(file)} must not exist before renewed comments and explicit closure confirmation`);
+    assert(fs.existsSync(file), `${rel(file)} must exist after final pass-with-flags review`);
   }
 }
 
 function requireAllFalse(object, label) {
   for (const [key, value] of Object.entries(object)) {
+    assert(value === false, `${label}.${key} must be false`);
+  }
+}
+
+function requireGateAuthorityBoundary(object, label) {
+  assert(object.controlled_adoption_preparation_authorized === true, `${label}.controlled_adoption_preparation_authorized must be true`);
+  for (const [key, value] of Object.entries(object)) {
+    if (key === 'controlled_adoption_preparation_authorized') continue;
     assert(value === false, `${label}.${key} must be false`);
   }
 }
@@ -115,6 +125,8 @@ function requirePacketText() {
     'interval_halving_check shared task focus plan',
     'review-lab support must appear after repeated failed calculation attempts',
     'visible source/table identifiers must not repeat',
+    'gate closes PASS WITH FLAGS',
+    'controlled adoption-preparation is authorized',
     'actual-exam task 3 must carry task-2 value',
     'source panes must hide long file paths',
     'prompt block is rendered inside the source pane',
@@ -137,9 +149,9 @@ function requireEvidenceFiles(packet) {
 
 function requireReviewArtifacts(packet) {
   assert(packet.human_review_comments_started === true, 'human review comments must be recorded as started/returned');
-  assert(packet.human_review_decision === 'hold_for_playable_repair', 'human review decision must be hold_for_playable_repair');
-  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
-  assert(packet.required_next_sprint === repair4Id, 'packet must name repair4 as the required repair sprint from fourth review');
+  assert(packet.human_review_decision === 'pass_with_flags', 'human review decision must be pass_with_flags');
+  assert(packet.gate_closure_authorized === true, 'gate closure must be authorized after final human confirmation');
+  assert(packet.required_next_sprint === 'CHECK-SHORT-EXIT-2', 'packet must name CHECK-SHORT-EXIT-2 as the next roadmap-controlled adoption-preparation step');
 
   const firstComments = readJson(`reports/review-gates/${gateId}/direct-review-comments.json`);
   const firstResolution = readJson(`reports/review-gates/${gateId}/comment-resolution-log.json`);
@@ -149,6 +161,10 @@ function requireReviewArtifacts(packet) {
   const repair3Resolution = readJson(`reports/review-gates/${gateId}/repair3-comment-resolution-log.json`);
   const repair4Comments = readJson(`reports/review-gates/${gateId}/repair4-direct-review-comments.json`);
   const repair4Resolution = readJson(`reports/review-gates/${gateId}/repair4-comment-resolution-log.json`);
+  const finalComments = readJson(`reports/review-gates/${gateId}/final-direct-review-comments.json`);
+  const finalResolution = readJson(`reports/review-gates/${gateId}/final-comment-resolution-log.json`);
+  const closureProposal = readJson(`reports/review-gates/${gateId}/closure-proposal.json`);
+  const closure = readJson(`reports/review-gates/${gateId}/gate-closure.json`);
   assert(firstComments.decision === 'hold_for_playable_repair', 'first comments decision must be hold_for_playable_repair');
   assert(firstResolution.gate_closure_authorized === false, 'first resolution must not authorize closure');
   assert(renewedComments.decision === 'hold_for_playable_repair', 'renewed comments decision must be hold_for_playable_repair');
@@ -176,6 +192,21 @@ function requireReviewArtifacts(packet) {
     assert(repair4Resolution.reviewer_correction_pass.interval_halving_shared_task_contract === true, 'repair4 correction pass must record shared task contract');
     assert(repair4Resolution.reviewer_correction_pass.exam_shortcut_work_path_accepted === true, 'repair4 correction pass must record exam shortcut acceptance');
   }
+  assert(finalComments.decision === 'pass_with_flags', 'final comments must record pass_with_flags');
+  assert(finalComments.closure_confirmed_by_human === true, 'final comments must confirm closure');
+  assert(finalComments.reviewed_remote_commit_hash === packet.remote_publication.reviewed_remote_commit_hash, 'final comments reviewed hash must match packet');
+  assert(finalResolution.final_decision === 'pass_with_flags', 'final resolution must record pass_with_flags');
+  assert(finalResolution.gate_closure_authorized === true, 'final resolution must authorize closure');
+  assert(finalResolution.remaining_blockers.length === 0, 'final resolution must have no remaining blockers');
+  assert(closureProposal.proposed_status === 'pass_with_flags', 'closure proposal must propose pass_with_flags');
+  assert(closureProposal.closure_confirmed_by_human === true, 'closure proposal must record human confirmation');
+  assert(closure.status === 'pass_with_flags', 'gate closure must be pass_with_flags');
+  assert(closure.closure_confirmed_by_human === true, 'gate closure must record human confirmation');
+  assert(closure.reviewed_remote_commit === packet.remote_publication.reviewed_remote_commit_hash, 'gate closure reviewed commit must match packet');
+  assert(closure.authorized_next.suggested_next_sprint === 'CHECK-SHORT-EXIT-2', 'gate closure must suggest CHECK-SHORT-EXIT-2 next');
+  assert(closure.authority_boundary.controlled_adoption_preparation_authorized === true, 'gate closure must authorize controlled adoption-preparation');
+  assert(closure.authority_boundary.product_route_adoption_authorized === false, 'gate closure must not authorize product route adoption');
+  assert(closure.authority_boundary.scale_gate_1_authorized === false, 'gate closure must not authorize Scale Gate 1');
 }
 
 function requireRepair2Review(packet) {
@@ -210,7 +241,11 @@ function requireRepair4Review(packet) {
   const repair = packet.playable_repair_review4;
   assert(repair && repair.required === true, 'repair4 review metadata must be present and required');
   assert(repair.sprint_id === repair4Id, 'repair4 metadata must name repair4 sprint');
-  assert(repair.status === 'evidence_prepared_after_final_interaction_clarity_repair_before_new_human_review', 'repair4 metadata must record evidence prepared before renewed human review');
+  assert(
+    repair.status === 'evidence_prepared_after_final_interaction_clarity_repair_before_new_human_review' ||
+      repair.status === 'passed_final_human_review_with_flags_after_reviewer_correction_pass',
+    'repair4 metadata must record evidence prepared or final pass-with-flags review'
+  );
   for (const key of ['plan', 'baseline', 'planning_review', 'visual_qa_report', 'transformation_economy_report', 'command_log', 'lead_assignment', 'lead_round1', 'lead_corrections', 'lead_round2', 'verification']) {
     assert(repair[key], `repair4 metadata missing ${key}`);
     const text = readText(repair[key]);
@@ -227,7 +262,11 @@ function requireRepair4Review(packet) {
 }
 
 function requireLiveEvidence(live) {
-  assert(live.status.includes('final_interaction_clarity_evidence_ready'), 'live-output evidence wrong status');
+  assert(
+    live.status.includes('final_interaction_clarity_evidence_ready') ||
+      live.status.includes('gate_closed_pass_with_flags'),
+    'live-output evidence wrong status'
+  );
   assert(live.playable_labs.actual_exam.task_count === 3, 'live evidence actual exam task count must be 3');
   assert(live.playable_labs.textbook.task_count === 3, 'live evidence textbook task count must be 3');
   assert(live.playable_labs.actual_exam.playable_lab.right_pane_original_question_visible === true, 'live evidence missing right-pane exam question');
@@ -280,7 +319,7 @@ function requireBoundaryClean() {
 
 function main() {
   assert(fs.existsSync(gateDir), `missing gate directory ${rel(gateDir)}`);
-  requireNoPrematureClosure();
+  requireClosureArtifacts();
   requirePacketText();
 
   const packet = readJson(`reports/review-gates/${gateId}/review-packet.json`);
@@ -291,7 +330,7 @@ function main() {
   assert(packet.human_review_mode === 'direct_packet_comments', 'review-packet must use direct comments');
   requireReviewArtifacts(packet);
   requireRemotePublication(packet, live);
-  requireAllFalse(packet.authority_boundary, 'authority_boundary');
+  requireGateAuthorityBoundary(packet.authority_boundary, 'authority_boundary');
   requireAllFalse(live.product_boundaries, 'product_boundaries');
   requireEvidenceFiles(packet);
   requireRepair4Review(packet);
@@ -305,8 +344,10 @@ function main() {
   assert(bundle.includes(`reports/review-gates/${gateId}/review-packet.md`), 'bundle URLs missing review packet');
   assert(bundle.includes(`reports/review-gates/${gateId}/live-output-evidence.json`), 'bundle URLs missing live evidence JSON');
   assert(bundle.includes(`reports/review-gates/${gateId}/repair4-direct-review-comments.md`), 'bundle URLs missing repair4 comments');
+  assert(bundle.includes(`reports/review-gates/${gateId}/final-direct-review-comments.md`), 'bundle URLs missing final comments');
+  assert(bundle.includes(`reports/review-gates/${gateId}/gate-closure.json`), 'bundle URLs missing gate closure JSON');
 
-  console.log(`OK ${sprintId} shared task ingest repair review packet after repair4`);
+  console.log(`OK ${sprintId} shared task ingest repair gate closed pass_with_flags`);
 }
 
 main();

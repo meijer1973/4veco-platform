@@ -1,6 +1,6 @@
 ﻿# Roadmap Version Index
 
-Updated: 2026-06-02
+Updated: 2026-06-05
 
 The JSON file is canonical for tooling:
 
@@ -12,12 +12,13 @@ docs/roadmaps/roadmap-version-index.json
 
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
-| References Team Roadmap | `v3.52-reason-std1-migration` | `references/reference-team-roadmap.md` | Current operating roadmap after REASON-STD-1 closed PASS WITH FLAGS as the reasoning standard-family runtime migration. Reasoning modes 0, 1, 3, and 5 now emit shared task-shell proof objects, while mode 2 and mode 4 remain deferred/refactor-scoped. The next reasoning sequence is REASON-ADOPT-1, REASON-PLAY-1, REASON-ANSWERFORM-2, and GATE-REASON-STD-1 before reasoning can be treated as unified route evidence. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, and product-wide use remain blocked until later rendered-output review and product gates. |
+| References Team Roadmap | `v3.56-shared-task-ingest-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-SHARED-TASK-INGEST-REPAIR-1 closed PASS WITH FLAGS. Shared task context/source-ingestion readiness is accepted for controlled downstream adoption-preparation only. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, generated lesson output, and product-wide use remain blocked until later rendered-output review and product gates. The next roadmap-controlled step is CHECK-SHORT-EXIT-2 unless the roadmap owner explicitly reorders. |
 
 ## Outdated Archive
 
 | Roadmap | Version | Path | Superseded By |
 |---|---|---|---|
+| References Team Roadmap before GATE-SHARED-TASK-INGEST-REPAIR-1 closure | `v3.55-shared-task-context-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before step-ordering runtime implementation | `v3.49-multi-select-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before multi-select runtime implementation | `v3.48-cloze-text-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.48-cloze-text-runtime.md` | `references/reference-team-roadmap.md` |
 | References Team Roadmap before cloze text runtime implementation | `v3.47-formula-builder-runtime` | `docs/roadmaps/outdated/reference-team-roadmap-v3.47-formula-builder-runtime.md` | `references/reference-team-roadmap.md` |

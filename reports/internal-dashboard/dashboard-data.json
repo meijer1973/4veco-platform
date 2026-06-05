@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T14:42:53.299Z",
+  "generatedAt": "2026-06-05T15:12:10.378Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-05 Roadmap ID: references-team-roadmap Roadmap version: v3.55-shared-task-context-runtime Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE economic...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-05 Roadmap ID: references-team-roadmap Roadmap version: v3.56-shared-task-ingest-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econo...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",

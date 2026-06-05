@@ -2,9 +2,12 @@
 
 Generated: 2026-06-05
 
-Status: Repair 4 final interaction-clarity evidence prepared after fourth
-`hold_for_playable_repair` comments and reviewer correction pass; remote
-evidence snapshot must be current before renewed human review starts.
+Status: Repair 4 final interaction-clarity evidence accepted by final direct
+human review; gate closed PASS WITH FLAGS for review-only shared task
+context/source-ingestion readiness. Controlled downstream adoption-preparation
+is authorized; product-route adoption, generated lesson output,
+target-equivalent proof, diagnostics, mastery, sequencing, PV, Scale Gate 1,
+and student/product use remain unauthorized.
 
 ## Repaired Lab Evidence
 
@@ -124,15 +127,20 @@ Textbook:
 
 ## Remote Publication Evidence
 
-Remote publication is required before renewed review comments start. The
-reviewed remote evidence snapshot is `codex/shared-task-ingest-repair4` at
+The reviewed remote evidence snapshot is `codex/shared-task-ingest-repair4` at
 `95f0eda5f51eb7868cb947dc3e8f081957b2afb4`. Direct push to `main` is blocked
 by required GitHub status checks, so this branch is the published inspection
 surface until the PR/check flow updates `main`.
 
+Remote branch head at closure preparation:
+`845d974161f0fc8f375cb2d3d66baf1b169b46a3`. GitHub reported no status
+contexts or check runs for the branch head or reviewed evidence commit when
+queried, so closure records local validators as the check evidence and does
+not claim a GitHub CI pass.
+
 ## Recommended Next Action
 
-After the Repair 4 metadata update is pushed and the packet checker passes,
-send the packet for renewed direct human review comments. Do not write closure
-artifacts until renewed comments, updated resolution evidence, and explicit
-human confirmation exist.
+Proceed to the next roadmap-controlled adoption-preparation step
+(`CHECK-SHORT-EXIT-2`) or pause for explicit roadmap-owner reorder. Do not
+start Scale Gate 1 or the later shared-task hardening series from this gate
+alone.

@@ -3,11 +3,19 @@
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
   "generated": "2026-06-05",
-  "status": "final_interaction_clarity_evidence_ready_after_fourth_hold_for_playable_repair_and_reviewer_correction_pass",
+  "status": "gate_closed_pass_with_flags_after_final_direct_review_and_repair4_evidence",
   "remote_publication": {
     "reviewed_remote_branch": "codex/shared-task-ingest-repair4",
     "reviewed_remote_commit_hash": "95f0eda5f51eb7868cb947dc3e8f081957b2afb4",
-    "reviewed_remote_status": "repair4_evidence_pushed_metadata_refresh_commit_follows",
+    "reviewed_remote_status": "repair4_evidence_pushed_final_review_closed_pass_with_flags",
+    "remote_branch_head_at_closure_preparation": "845d974161f0fc8f375cb2d3d66baf1b169b46a3",
+    "github_status": {
+      "status_contexts_on_branch_head": 0,
+      "check_runs_on_branch_head": 0,
+      "status_contexts_on_reviewed_commit": 0,
+      "check_runs_on_reviewed_commit": 0,
+      "ci_success_claimed": false
+    },
     "review_may_start": true
   },
   "playable_labs": {
@@ -190,9 +198,12 @@
     "first_round_decision": "hold_for_playable_repair",
     "renewed_review_decision": "hold_for_playable_repair",
     "fourth_review_decision": "hold_for_playable_repair",
-    "renewed_review_required": true,
-    "gate_closure_authorized": false,
-    "explicit_human_confirmation_required_before_closure": true
+    "final_review_decision": "pass_with_flags",
+    "renewed_review_required": false,
+    "gate_closure_authorized": true,
+    "explicit_human_confirmation_required_before_closure": true,
+    "explicit_human_confirmation_recorded": true,
+    "closure": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.json"
   },
   "product_boundaries": {
     "generated_lesson_output": false,
