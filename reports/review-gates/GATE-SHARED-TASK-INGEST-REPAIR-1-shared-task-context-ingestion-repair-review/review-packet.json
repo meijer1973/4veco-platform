@@ -12,8 +12,8 @@
   "remote_publication_required_before_review": true,
   "remote_publication": {
     "reviewed_remote_branch": "codex/shared-task-ingest-repair4",
-    "reviewed_remote_commit_hash": "0000000000000000000000000000000000000000",
-    "reviewed_remote_status": "repair4_evidence_prepared_locally_awaiting_remote_publication",
+    "reviewed_remote_commit_hash": "95f0eda5f51eb7868cb947dc3e8f081957b2afb4",
+    "reviewed_remote_status": "repair4_evidence_pushed_metadata_refresh_commit_follows",
     "review_may_start": true
   },
   "authority_boundary": {

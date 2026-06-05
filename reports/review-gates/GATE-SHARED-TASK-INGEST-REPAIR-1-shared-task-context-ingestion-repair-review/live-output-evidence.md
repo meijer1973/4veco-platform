@@ -126,7 +126,7 @@ Textbook:
 
 Remote publication is required before renewed review comments start. The
 reviewed remote evidence snapshot is `codex/shared-task-ingest-repair4` at
-`0000000000000000000000000000000000000000`. Direct push to `main` is blocked
+`95f0eda5f51eb7868cb947dc3e8f081957b2afb4`. Direct push to `main` is blocked
 by required GitHub status checks, so this branch is the published inspection
 surface until the PR/check flow updates `main`.
 
