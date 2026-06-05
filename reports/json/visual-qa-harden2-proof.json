@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "sprint_id": "VISUAL-QA-HARDEN-2",
+  "generated": "2026-06-05T21:16:50.172Z",
+  "status": "complete",
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "source_sprints": [
+    "CHECKSURFACE-RESET-1",
+    "GRAPH-CHECK-UX-1",
+    "GRAPH-EXIT-UX-1",
+    "CHECK-ROUTE-COPY-1"
+  ],
+  "checks": [
+    {
+      "id": "short_graph_table_interaction",
+      "label": "1.1.3 advisory short check uses graph/table task-shell interaction",
+      "status": "pass",
+      "evidence": [
+        "source-data/book-1/exit-ticket/1.1.3-korte-check.json: 3 task-shell tasks",
+        "reports/json/graph-check-ux1-proof.json: graph_workspace_present=true",
+        "reports/json/graph-check-ux1-proof.json: choice_only=false"
+      ],
+      "hard_fail_if": "Short check is ordinary choice-only or lacks graph/table families"
+    },
+    {
+      "id": "short_context_and_workspace",
+      "label": "1.1.3 advisory short check has source/table context and rendered graph workspace facts",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-check-ux1-proof.json: context=2, taskShell=3",
+        "reports/sprints/GRAPH-CHECK-UX-1-screenshots/manifest.json: desktop inspection includes contextBlocks, gridLines, ordinaryChoiceButtons"
+      ],
+      "hard_fail_if": "Context block count, task-shell count, graph grid, or choice-only guard is missing"
+    },
+    {
+      "id": "short_feedback_and_next_action",
+      "label": "1.1.3 advisory short check has targeted feedback and route advice",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-check-ux1-proof.json: wrong_feedback_targeted=true",
+        "reports/json/graph-check-ux1-proof.json: correct_path_reaches_route_advice=true"
+      ],
+      "hard_fail_if": "Feedback is generic or the short check gives no actionable next route"
+    },
+    {
+      "id": "exit_split_workspace",
+      "label": "1.1.3 exit ticket uses split source/task graph workspace",
+      "status": "pass",
+      "evidence": [
+        "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json: layout.kind=source_task_workspace",
+        "reports/json/graph-exit-ux1-proof.json: source_task_workspace_present=true",
+        "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json: sourcePaneMetrics.scrollable=true"
+      ],
+      "hard_fail_if": "Source context is rendered only above tasks or source pane is not constrained/scrollable"
+    },
+    {
+      "id": "exit_graph_workspace_and_line",
+      "label": "1.1.3 exit ticket graph remains in the active workspace",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-exit-ux1-proof.json: graph_workspace_present=true",
+        "reports/json/graph-exit-ux1-proof.json: correct_path_draws_line=true",
+        "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json: desktop-line-confirmed inspection.graphLine=true"
+      ],
+      "hard_fail_if": "Graph line is missing, drawn outside the active workspace, or grid/workspace proof is absent"
+    },
+    {
+      "id": "exit_source_scroll_preserves_task",
+      "label": "Source scrolling keeps task orientation visible for 1.1.3 exit ticket",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-exit-ux1-proof.json: task_visible_after_source_scroll=true",
+        "reports/json/graph-exit-ux1-proof.json: desktop-source-scrolled.scroll.taskPaneVisible=true"
+      ],
+      "hard_fail_if": "Source pane scrolling hides the task pane or loses the question strip"
+    },
+    {
+      "id": "exit_completion_language_held",
+      "label": "1.1.3 exit ticket keeps completion language held after task success",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-exit-ux1-proof.json: all_tasks_correct=true",
+        "reports/json/graph-exit-ux1-proof.json: completion_language_held=true"
+      ],
+      "hard_fail_if": "1.1.3 gains completion language or target-equivalent proof before human review"
+    },
+    {
+      "id": "landing_route_distinction",
+      "label": "First-three landing pages distinguish advisory and exit routes",
+      "status": "pass",
+      "evidence": [
+        "reports/json/check-route-copy1-proof.json: advisory_and_exit_cards_distinct=true",
+        "reports/json/check-route-copy1-proof.json: old_generic_copy_absent=true"
+      ],
+      "hard_fail_if": "Landing pages use generic Check copy or blur advisory versus exit-ticket purpose"
+    },
+    {
+      "id": "screenshot_dom_facts",
+      "label": "Screenshot proof contains DOM/product inspection facts, not only file paths",
+      "status": "pass",
+      "evidence": [
+        "reports/sprints/GRAPH-CHECK-UX-1-screenshots/manifest.json: inspection objects on all entries",
+        "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json: inspection objects on all entries",
+        "reports/json/check-route-copy1-proof.json: inspection objects on all entries"
+      ],
+      "hard_fail_if": "Proof only lists screenshot files or pages without DOM/state facts"
+    },
+    {
+      "id": "mobile_dark_product_states",
+      "label": "Mobile and dark-mode product states are present for graph check, graph exit, and route copy",
+      "status": "pass",
+      "evidence": [
+        "reports/json/graph-check-ux1-proof.json: mobile/dark proof true",
+        "reports/json/graph-exit-ux1-proof.json: mobile/dark proof true",
+        "reports/json/check-route-copy1-proof.json: mobile/dark proof true"
+      ],
+      "hard_fail_if": "Mobile or dark proof is missing for one of the repaired surfaces"
+    },
+    {
+      "id": "reports_go_beyond_label_hygiene",
+      "label": "Visual QA reports judge interaction/product quality beyond labels and files",
+      "status": "pass",
+      "evidence": [
+        "reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md",
+        "reports/sprints/GRAPH-EXIT-UX-1-visual-qa-report.md",
+        "reports/sprints/CHECK-ROUTE-COPY-1-visual-qa-report.md"
+      ],
+      "hard_fail_if": "Visual QA report only verifies labels, screenshots, or file existence"
+    },
+    {
+      "id": "student_experience_judgement_required",
+      "label": "Pre-gate lead review must include student-experience judgement",
+      "status": "pass",
+      "evidence": [
+        "reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md: student experience row",
+        "reports/json/checksurface-reset1-quality-findings.json: review lab/five-minute walkthrough finding"
+      ],
+      "hard_fail_if": "Future lead review can pass from validators/screenshots without product-end-state judgement"
+    },
+    {
+      "id": "authority_boundary_preserved",
+      "label": "Authority boundary remains false across source proofs",
+      "status": "pass",
+      "evidence": [
+        "graph-check, graph-exit, and route-copy authority blocks remain false"
+      ],
+      "hard_fail_if": "Any proof broadens product adoption, completion language, diagnostics, mastery, PV, Scale Gate, or student use"
+    }
+  ],
+  "reset_findings_addressed": [
+    {
+      "id": "CSR1-F1",
+      "title": "1.1.3 Korte check lacks graph/table interaction",
+      "status": "guarded",
+      "guard_checks": [
+        "short_graph_table_interaction"
+      ]
+    },
+    {
+      "id": "CSR1-F2",
+      "title": "1.1.3 Korte check has no context blocks or task shell",
+      "status": "guarded",
+      "guard_checks": [
+        "short_context_and_workspace"
+      ]
+    },
+    {
+      "id": "CSR1-F3",
+      "title": "1.1.3 Exit ticket has graph task data but not a polished source/task graph workspace",
+      "status": "guarded",
+      "guard_checks": [
+        "exit_split_workspace",
+        "exit_graph_workspace_and_line",
+        "exit_source_scroll_preserves_task"
+      ]
+    },
+    {
+      "id": "CSR1-F4",
+      "title": "Visual QA was insufficient",
+      "status": "guarded",
+      "guard_checks": [
+        "screenshot_dom_facts",
+        "reports_go_beyond_label_hygiene"
+      ]
+    },
+    {
+      "id": "CSR1-F5",
+      "title": "Lead review passed structural evidence while missing product-experience blockers",
+      "status": "guarded",
+      "guard_checks": [
+        "student_experience_judgement_required"
+      ]
+    }
+  ],
+  "student_experience_judgement": {
+    "status": "prepared_for_CHECK-SURFACE-PREGATE-1",
+    "required": true,
+    "judgement": "A typical 4 vwo student must be able to orient, perform the graph/table action, read targeted feedback, and know the next action before the retry gate can be requested."
+  },
+  "next_action": "CHECK-SURFACE-PREGATE-1"
+}

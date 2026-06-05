@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T20:36:38.510Z
+Generated: 2026-06-05T21:20:37.285Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3508
+Files indexed: 3530
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 412
+Count: 414
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -430,6 +430,7 @@ Count: 412
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
@@ -448,6 +449,7 @@ Count: 412
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
+- build-scripts/sprints/check-check-route-copy1.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-checksurface-reset1.js
@@ -588,7 +590,7 @@ Count: 42
 
 ## validators
 
-Count: 281
+Count: 303
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -689,11 +691,13 @@ Count: 281
 - build-scripts/review-gates/check-r2-4-packet.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
+- build-scripts/sprints/check-check-route-copy1.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-checksurface-reset1.js
@@ -764,6 +768,7 @@ Count: 281
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.result.json
+- reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
 - reports/json/graph-check-ux1-proof.json
@@ -799,6 +804,25 @@ Count: 281
 - reports/sprints/CHECK-Q2-PLAN-result.md
 - reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
 - reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
+- reports/sprints/CHECK-ROUTE-COPY-1-baseline.md
+- reports/sprints/CHECK-ROUTE-COPY-1-command-log.jsonl
+- reports/sprints/CHECK-ROUTE-COPY-1-command-log.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-assignment.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-corrections.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-round1.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-round2.md
+- reports/sprints/CHECK-ROUTE-COPY-1-plan.md
+- reports/sprints/CHECK-ROUTE-COPY-1-planning-review.md
+- reports/sprints/CHECK-ROUTE-COPY-1-result.md
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshot-manifest.md
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-111-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-112-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/manifest.json
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-dark-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-verification-review.md
+- reports/sprints/CHECK-ROUTE-COPY-1-visual-qa-report.md
 - reports/sprints/CHECK-SHORT-EXIT-1-baseline.md
 - reports/sprints/CHECK-SHORT-EXIT-1-diff-summary.md
 - reports/sprints/CHECK-SHORT-EXIT-1-inventory.md
@@ -1355,7 +1379,7 @@ Count: 476
 
 ## reports
 
-Count: 2183
+Count: 2203
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1377,6 +1401,7 @@ Count: 2183
 - reports/json/aspects-coverage.json
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
+- reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
 - reports/json/checksurface-reset1-quality-findings.json
@@ -2153,6 +2178,25 @@ Count: 2183
 - reports/sprints/CHECK-Q2-PLAN-result.md
 - reports/sprints/CHECK-Q2-PLAN-short-check-boundary.md
 - reports/sprints/CHECK-Q2-PLAN-target-equivalent-design-plan.md
+- reports/sprints/CHECK-ROUTE-COPY-1-baseline.md
+- reports/sprints/CHECK-ROUTE-COPY-1-command-log.jsonl
+- reports/sprints/CHECK-ROUTE-COPY-1-command-log.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-assignment.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-corrections.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-round1.md
+- reports/sprints/CHECK-ROUTE-COPY-1-lead-review-round2.md
+- reports/sprints/CHECK-ROUTE-COPY-1-plan.md
+- reports/sprints/CHECK-ROUTE-COPY-1-planning-review.md
+- reports/sprints/CHECK-ROUTE-COPY-1-result.md
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshot-manifest.md
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-111-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-112-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/manifest.json
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-dark-113-check.png
+- reports/sprints/CHECK-ROUTE-COPY-1-verification-review.md
+- reports/sprints/CHECK-ROUTE-COPY-1-visual-qa-report.md
 - reports/sprints/CHECK-SHORT-EXIT-1-baseline.md
 - reports/sprints/CHECK-SHORT-EXIT-1-diff-summary.md
 - reports/sprints/CHECK-SHORT-EXIT-1-inventory.md
