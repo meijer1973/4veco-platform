@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T15:11:50.538Z
+Generated: 2026-06-05T17:42:15.236Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3396
+Files indexed: 3405
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1282,7 +1282,7 @@ Count: 474
 
 ## reports
 
-Count: 2086
+Count: 2094
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1980,10 +1980,18 @@ Count: 2086
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.json
@@ -3391,7 +3399,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 293
+Count: 294
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -3540,6 +3548,7 @@ Count: 293
 - docs/roadmaps/outdated/reference-team-roadmap-v3.48-cloze-text-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
@@ -3634,8 +3643,8 @@ Count: 293
 - LICENSE
 - package-lock.json
 - package.json
-- source-data/book-1/exit-ticket/1.1.1.json
-- source-data/book-1/exit-ticket/1.1.2.json
+- source-data/book-1/exit-ticket/1.1.1-korte-check.json
+- source-data/book-1/exit-ticket/1.1.2-exit-ticket.json
 - source-data/book-1/reasoning/1.1.1.csv
 - source-data/book-1/reasoning/1.1.2.csv
 - source-data/book-1/reasoning/README.md

@@ -554,12 +554,12 @@ describe('TaskShellUI', () => {
         for (const type of ['markdown', 'source_excerpt', 'table', 'svg_figure', 'graph', 'flowchart', 'formula', 'info_box']) {
             expect(html).toContain(`data-context-type="${type}"`);
         }
-        expect(html).toContain('Bron 1: Gegevens verzekeringen');
-        expect(html).toContain('Tabel 1: Premie en eigen risico');
-        expect(html).toContain('Figuur 1: Premieverschil per maand');
-        expect(html).toContain('Figuur 2: Jaarpremie per variant');
-        expect(html).toContain('Figuur 3: Denkroute van maand naar jaar');
-        expect(html).toContain('Formule 1: Jaarpremie');
+        expect(html).toContain('Bron 1 - Gegevens verzekeringen');
+        expect(html).toContain('Tabel 1 - Premie en eigen risico');
+        expect(html).toContain('Figuur 1 - Premieverschil per maand');
+        expect(html).toContain('Figuur 2 - Jaarpremie per variant');
+        expect(html).toContain('Figuur 3 - Denkroute van maand naar jaar');
+        expect(html).toContain('Formule 1 - Jaarpremie');
         expect(html).toContain('Tabel met twee varianten');
         expect(html).toContain('role="img" aria-label="Staafdiagram');
         expect(html).toContain('class="ts-context-refs"');
@@ -569,6 +569,18 @@ describe('TaskShellUI', () => {
         const visibleText = html.replace(/<[^>]+>/g, ' ');
         expect(visibleText).not.toContain('ctx-zorg-intro');
         expect(html).toContain('data-context-block="ctx-zorg-intro"');
+    });
+
+    test('renders one visible source identifier per context block', () => {
+        const html = TaskShellUI.renderContextBlocks(contextBlocks());
+        const visibleHtml = html.replace(/<caption class="ts-visually-hidden">[\s\S]*?<\/caption>/g, '');
+        const sourceBlock = visibleHtml.match(/data-context-block="ctx-zorg-source"[\s\S]*?<\/section>/)[0];
+        const tableBlock = visibleHtml.match(/data-context-block="ctx-zorg-table"[\s\S]*?<\/section>/)[0];
+
+        expect((sourceBlock.match(/Bron 1/g) || []).length).toBe(1);
+        expect((tableBlock.match(/Tabel 1/g) || []).length).toBe(1);
+        expect(sourceBlock).toContain('Bron 1 - Gegevens verzekeringen');
+        expect(tableBlock).toContain('Tabel 1 - Premie en eigen risico');
     });
 
     test('exports and escapes context rendering helpers', () => {
@@ -651,6 +663,13 @@ describe('TaskShellUI', () => {
         expect(html).toContain('class="ts-label-visual-axis ts-label-visual-axis-x"');
         expect(html).toContain('aria-label="Prijs: De prijs hoort op de verticale as."');
         expect(html).toContain('aria-label="Verticale as: Plaats hier het prijslabel."');
+        expect(html).toContain('data-task-family="graph_construction_substitute"');
+        expect(html).toContain('class="ts-graph-construction"');
+        expect(html).toContain('data-graph-workspace');
+        expect(html).toContain('class="ts-graph-grid-line"');
+        expect(html).toContain('data-graph-axis="x"');
+        expect(html).toContain('data-graph-point-index="0"');
+        expect(html).toContain('data-graph-line-confirmation');
         expect(html).toContain('data-task-family="matching_pairs"');
         expect(html).toContain('class="ts-matching-pairs"');
         expect(html).toContain('data-match-left-id="schaarste"');
@@ -847,9 +866,22 @@ describe('TaskShellUI', () => {
     test('exports cloze tile helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectClozeTileResponse).toBe('function');
         expect(typeof TaskShellUI.handleClozeTileClick).toBe('function');
+        expect(typeof TaskShellUI.collectCalculationResponse).toBe('function');
         expect(TaskShellEngine.focusPlan(data().tasks[6])).toEqual([
             '[data-task-id="cloze-tiles"][data-cloze-tile-id]',
             '[data-task-id="cloze-tiles"][data-cloze-blank-id]'
+        ]);
+    });
+
+    test('exports graph-construction helpers for consuming wrappers', () => {
+        expect(typeof TaskShellUI.collectGraphConstructionResponse).toBe('function');
+        expect(typeof TaskShellUI.handleGraphConstructionClick).toBe('function');
+        const graphTask = data().tasks.find((task) => task.id === 'construct');
+        expect(TaskShellEngine.focusPlan(graphTask)).toEqual([
+            '[data-task-id="construct"][data-graph-axis="x"]',
+            '[data-task-id="construct"][data-graph-axis="y"]',
+            '[data-task-id="construct"][data-graph-point-index]',
+            '[data-task-id="construct"][data-graph-line-confirmation]'
         ]);
     });
 

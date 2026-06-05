@@ -464,7 +464,13 @@
         y: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-point-axis="y"]')
       };
     }
+    if (task.family === "graph_construction_substitute" && window.TaskShellUI && window.TaskShellUI.collectGraphConstructionResponse) {
+      return window.TaskShellUI.collectGraphConstructionResponse(rootEl, task);
+    }
     if (task.family === "calculation_work_capture") {
+      if (window.TaskShellUI && window.TaskShellUI.collectCalculationResponse) {
+        return window.TaskShellUI.collectCalculationResponse(rootEl, task);
+      }
       return {
         work: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="work"]'),
         finalAnswer: getValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="final-answer"]'),
@@ -576,6 +582,11 @@
     rootEl.querySelectorAll(".ts-label-placement").forEach(function (labelPlacement) {
       labelPlacement.addEventListener("click", function (event) {
         window.TaskShellUI.handleLabelPlacementClick(rootEl, event);
+      });
+    });
+    rootEl.querySelectorAll(".ts-graph-construction").forEach(function (graphConstruction) {
+      graphConstruction.addEventListener("click", function (event) {
+        window.TaskShellUI.handleGraphConstructionClick(rootEl, event);
       });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {

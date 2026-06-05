@@ -150,6 +150,18 @@
       push(data.completion.title);
       push(data.completion.text);
     }
+    (data.contextBlocks || []).forEach(function (block) {
+      push(block.label);
+      push(block.title);
+      push(block.bodyMarkdown);
+      push(block.caption);
+      push(block.altText);
+      if (block.table) {
+        push(block.table.caption);
+        (block.table.headers || []).forEach(push);
+        (block.table.rows || []).forEach(function (row) { (row || []).forEach(push); });
+      }
+    });
     return out;
   }
 
@@ -211,9 +223,28 @@
       assert(task.practiceRoute && task.practiceRoute.label && task.practiceRoute.href, 'Task needs practice route');
     });
 
+    validateContextTaskSet(data);
+
     var violations = findStudentTextViolations(data);
     assert(violations.length === 0, 'Student-facing checkpoint text has blocked terms or internal codes');
     return true;
+  }
+
+  function validateContextTaskSet(data) {
+    if (data.contextBlocks === undefined) return true;
+    var TaskShellEngine = resolveTaskShellEngine();
+    assert(TaskShellEngine && typeof TaskShellEngine.validateTaskSet === 'function', 'TaskShellEngine.validateTaskSet is required for contextBlocks');
+    var tasks = data.tasks.map(function (task) {
+      assert(task.type === 'task_shell', 'contextBlocks require task_shell tasks');
+      return task.taskShell;
+    });
+    return TaskShellEngine.validateTaskSet({
+      schema_version: 1,
+      title: data.title,
+      surfaceKind: isTargetEquivalentData(data) ? 'exit_ticket' : 'practice_check',
+      contextBlocks: data.contextBlocks,
+      tasks: tasks
+    });
   }
 
   function validateMetadataAlignment(data) {

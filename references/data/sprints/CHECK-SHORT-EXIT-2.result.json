@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECK-SHORT-EXIT-2",
+  "name": "Implement Both Check Types For First Three Paragraphs",
+  "status": "ready_for_human_review",
+  "blocked_reason": null,
+  "completed": null,
+  "verdict": "READY FOR HUMAN REVIEW PACKET",
+  "result_status": "ready_for_human_review_packet",
+  "plan": "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+  "baseline": "reports/sprints/CHECK-SHORT-EXIT-2-baseline.md",
+  "result": "reports/sprints/CHECK-SHORT-EXIT-2-result.md",
+  "diff_summary": "reports/sprints/CHECK-SHORT-EXIT-2-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": true,
+  "implementation_changed": true,
+  "exit_ticket_source_data_changed": true,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "human_review_required": true,
+  "human_review_ready": true,
+  "lead_review": {
+    "assignment": "reports/sprints/CHECK-SHORT-EXIT-2-lead-review-assignment.md",
+    "round1": "reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round1.md",
+    "corrections": "reports/sprints/CHECK-SHORT-EXIT-2-lead-review-corrections.md",
+    "round2": "reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "blockers": [],
+    "flags": [
+      {
+        "id": "CSE2-F1",
+        "description": "New 1.1.1 and 1.1.3 exit-ticket candidates remain candidates only; target-equivalent completion language stays disabled until human review.",
+        "next_action": "Prepare direct human-review packet before any completion-language or product-route reliance."
+      },
+      {
+        "id": "CSE2-F2",
+        "description": "Screenshot capture now works through Chrome-first headless capture with file-stability polling; keep this proof path monitored in future visual-evidence sprints."
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECK-SHORT-EXIT-2",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/exit-ticket-metadata-alignment.test.js engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/graphical-ui.test.js engines/tests/skilltree-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-check-short-exit2-screenshots.js",
+      "status": "passed",
+      "notes": "10 screenshots captured; 0 blocked"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-check-short-exit2.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    }
+  ],
+  "generated_lesson_output": {
+    "book_root": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod",
+    "deployed_by": "node scripts/deploy.js",
+    "hand_edited": false
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

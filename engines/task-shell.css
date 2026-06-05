@@ -1721,6 +1721,196 @@
   background: color-mix(in srgb, var(--ts-panel) 90%, var(--ts-bg));
 }
 
+.ts-graph-construction {
+  display: grid;
+  gap: 14px;
+}
+
+.ts-graph-axis-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.ts-graph-workspace {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "ylabel plot"
+    ". xlabel";
+  grid-template-columns: 34px minmax(0, 1fr);
+  grid-template-rows: auto minmax(260px, 1fr) auto;
+  gap: 8px;
+  min-height: 340px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 86%, var(--ts-bg));
+  cursor: crosshair;
+}
+
+.ts-graph-workspace:focus-visible {
+  outline: 2px solid var(--ts-focus);
+  outline-offset: 3px;
+}
+
+.ts-graph-title {
+  grid-area: title;
+  color: var(--ts-muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.ts-graph-plot {
+  position: relative;
+  grid-area: plot;
+  min-height: 260px;
+  border: 1px solid var(--ts-line);
+  border-radius: 6px;
+  background: var(--ts-panel);
+  overflow: hidden;
+}
+
+.ts-graph-svg,
+.ts-graph-live-layer,
+.ts-graph-tick-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.ts-graph-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ts-graph-grid-line {
+  stroke: color-mix(in srgb, var(--ts-line) 75%, transparent);
+  stroke-width: 0.45;
+}
+
+.ts-graph-axis-line {
+  stroke: color-mix(in srgb, var(--ts-text) 70%, transparent);
+  stroke-width: 0.85;
+}
+
+.ts-graph-tick {
+  position: absolute;
+  color: var(--ts-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.ts-graph-tick-x {
+  bottom: 4px;
+  transform: translateX(-50%);
+}
+
+.ts-graph-tick-y {
+  left: 6px;
+  transform: translateY(50%);
+}
+
+.ts-graph-axis-label {
+  color: var(--ts-muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ts-graph-axis-label-x {
+  grid-area: xlabel;
+}
+
+.ts-graph-axis-label-y {
+  grid-area: ylabel;
+  align-self: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.ts-graph-point {
+  position: absolute;
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--ts-panel);
+  border-radius: 999px;
+  background: var(--ts-primary);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+  z-index: 2;
+}
+
+.ts-graph-line {
+  position: absolute;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--ts-primary);
+  transform-origin: 0 50%;
+  z-index: 1;
+}
+
+.ts-graph-point-fallback {
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 94%, var(--ts-bg));
+}
+
+.ts-graph-point-fallback summary {
+  padding: 10px 12px;
+  color: var(--ts-muted);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ts-graph-point-grid {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.ts-graph-point-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.ts-graph-point-row > span {
+  color: var(--ts-muted);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ts-graph-line-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ts-graph-line-option {
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ts-graph-line-option.selected {
+  border-color: var(--ts-primary);
+  background: color-mix(in srgb, var(--ts-primary) 14%, var(--ts-panel));
+}
+
 @media (max-width: 640px) {
   .ts-source-value-card {
     grid-template-columns: minmax(0, 1fr);
@@ -1735,6 +1925,21 @@
     min-width: 74px;
     max-width: 112px;
     font-size: 0.86rem;
+  }
+
+  .ts-graph-axis-controls,
+  .ts-graph-point-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ts-graph-workspace {
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-rows: auto minmax(220px, 1fr) auto;
+    min-height: 300px;
+  }
+
+  .ts-graph-plot {
+    min-height: 220px;
   }
 }
 

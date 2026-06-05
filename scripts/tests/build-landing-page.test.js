@@ -249,9 +249,25 @@ describe('paragraph landing page student-web links', () => {
         expect(result.status).toBe(0);
         html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
         expect(html).toContain('data-route-layer="check"');
+        expect(html).toContain('Exit ticket');
+        expect(html).toContain('Maak de volledige paragraaf-check');
+        expect(html).toContain('Rond af met de paragraaf-check');
+        expect(html).not.toContain('Korte check');
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} korte-check.html`));
+        result = spawnSync(process.execPath, [BUILDER], {
+            cwd: PLATFORM_ROOT,
+            env: { ...process.env, MODULE_ROOT: tmpDir },
+            encoding: 'utf8',
+        });
+        expect(result.status).toBe(0);
+        html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect(html).toContain('data-route-layer="check"');
         expect(html).toContain('Korte check');
         expect(html).toContain('Kies wat je nog wilt oefenen');
-        expect(html).toContain('Rond af met gerichte oefentips');
+        expect(html).toContain('Exit ticket');
+        expect(html).toContain('Maak de volledige paragraaf-check');
+        expect(html).toContain('Kies eerst oefentips, rond daarna af');
         expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
     });
 });

@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "surface": "target_equivalent_exit_ticket",
+  "parNr": "1.1.3",
+  "parName": "Grafieken en tabellen",
+  "title": "Exit ticket",
+  "intro": "Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling.",
+  "targetSkillIds": ["A38", "A61", "A63"],
+  "skillScopeIds": ["A38", "A61", "A63"],
+  "targetEquivalent": {
+    "candidate": true,
+    "gateApproved": false,
+    "completionLanguageEligible": false
+  },
+  "metadataAlignment": {
+    "status": "target_equivalent_candidate_pending_review",
+    "paragraphSkillIds": ["A38", "A61", "A63"],
+    "targetExerciseSkillIds": ["A38"],
+    "targetReadinessEvidence": false,
+    "sourceRefs": {
+      "taskIngestTransform": "reports/json/task-ingest-transform3-textbook.json",
+      "gateClosure": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md",
+      "targetExerciseRegistry": "references/authored/course-target-exercises.json#paragraph_id=1.1.3",
+      "unitRegistry": "references/machine/micro-teaching-units.json"
+    },
+    "notes": [
+      "This source uses the repaired shared task-context ingestion evidence as a held route candidate.",
+      "Completion language remains disabled until the CHECK-SHORT-EXIT-2 human gate reviews the rendered route.",
+      "The target registry currently lists A38 only; graph construction/readout unit mutation is outside this sprint."
+    ]
+  },
+  "skillMap": {
+    "title": "Oefenroute",
+    "routes": [
+      {
+        "label": "Grafiek tekenen",
+        "surface": "Grafieken",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+      },
+      {
+        "label": "Tabel naar P-Q-grafiek",
+        "surface": "Vaardigheden",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+      },
+      {
+        "label": "Procentuele verandering",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      }
+    ]
+  },
+  "contextBlocks": [
+    {
+      "id": "ctx-icecream-source",
+      "type": "source_excerpt",
+      "sourceLabel": "Bron 1",
+      "caption": "Bron 1: IJskraam op het strand",
+      "bodyMarkdown": "De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee.",
+      "sourceRefs": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md",
+        "references/authored/course-target-exercises.json#paragraph_id=1.1.3"
+      ],
+      "accessibilitySummary": "Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek."
+    },
+    {
+      "id": "ctx-icecream-table",
+      "type": "table",
+      "sourceLabel": "Tabel 1",
+      "caption": "Tabel 1: Prijs en verkochte ijsjes",
+      "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+      "columns": ["Prijs P (EUR)", "Aantal verkocht Q"],
+      "rows": [
+        ["1.00", "500"],
+        ["1.50", "400"],
+        ["2.00", "300"],
+        ["2.50", "200"],
+        ["3.00", "100"]
+      ],
+      "altText": "Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes."
+    },
+    {
+      "id": "ctx-icecream-formula",
+      "type": "formula",
+      "sourceLabel": "Formule 1",
+      "caption": "Formule 1: Procentuele verandering",
+      "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+      "expression": "procentuele verandering = (nieuwe waarde - oude waarde) / oude waarde * 100",
+      "variables": [
+        {
+          "symbol": "oude waarde",
+          "meaning": "de hoeveelheid bij de eerste prijs"
+        },
+        {
+          "symbol": "nieuwe waarde",
+          "meaning": "de hoeveelheid bij de tweede prijs"
+        }
+      ],
+      "altText": "Formule voor procentuele verandering: nieuwe waarde min oude waarde, gedeeld door oude waarde, keer honderd."
+    },
+    {
+      "id": "ctx-icecream-procedure",
+      "type": "flowchart",
+      "sourceLabel": "Figuur 1",
+      "caption": "Figuur 1: Procedure van tabel naar grafiek",
+      "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-graph",
+      "nodes": [
+        { "id": "read-table", "label": "Lees de tabel" },
+        { "id": "choose-pq", "label": "Herken het P-Q-diagram" },
+        { "id": "price-vertical", "label": "Prijs verticaal, hoeveelheid horizontaal" },
+        { "id": "choose-scale", "label": "Kies een schaal" },
+        { "id": "plot-points", "label": "Zet de punten" },
+        { "id": "connect-points", "label": "Verbind de punten" }
+      ],
+      "edges": [
+        { "from": "read-table", "to": "choose-pq" },
+        { "from": "choose-pq", "to": "price-vertical" },
+        { "from": "price-vertical", "to": "choose-scale" },
+        { "from": "choose-scale", "to": "plot-points" },
+        { "from": "plot-points", "to": "connect-points" }
+      ],
+      "altText": "Flowchart met zes stappen om tabeldata in een P-Q-grafiek te zetten."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "grafiek-tekenen",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "grafiek-tekenen",
+        "family": "graph_construction_substitute",
+        "skillLabel": "P-Q-grafiek tekenen",
+        "purpose": "Kies assen, plaats twee tabelpunten en trek de vraaglijn.",
+        "prompt": "Teken de P-Q-grafiek bij Tabel 1.",
+        "contextRefs": ["ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-procedure"],
+        "interaction": {
+          "workspaceTitle": "Grafiekwerkvlak",
+          "xAxisLabel": "Horizontale as",
+          "yAxisLabel": "Verticale as",
+          "pointRowsLabel": "Punten uit de tabel",
+          "lineConfirmationLabel": "Trek lijn door punten",
+          "lineShapeLabel": "Lijnvorm",
+          "xInputLabel": "Q-waarde",
+          "yInputLabel": "P-waarde",
+          "emptyGraphAltText": "Leeg P-Q-diagram met raster.",
+          "pointCount": 2,
+          "axes": {
+            "x": {
+              "label": "Hoeveelheid Q (ijsjes)",
+              "min": 0,
+              "max": 500,
+              "ticks": [0, 100, 200, 300, 400, 500],
+              "tickDecimals": 0
+            },
+            "y": {
+              "label": "Prijs P (EUR)",
+              "min": 0,
+              "max": 3,
+              "ticks": [0, 1, 1.5, 2, 2.5, 3],
+              "tickDecimals": 2,
+              "tickFormat": "decimal_comma"
+            }
+          },
+          "axisOptions": [
+            { "id": "prijs", "label": "Prijs P", "value": "P" },
+            { "id": "hoeveelheid", "label": "Hoeveelheid Q", "value": "Q" },
+            { "id": "omzet", "label": "Omzet", "value": "omzet" },
+            { "id": "tijd", "label": "Tijd", "value": "tijd" }
+          ]
+        },
+        "expected": {
+          "kind": "graph_construction_substitute",
+          "axes": {
+            "xAccepted": ["hoeveelheid q", "hoeveelheid", "q"],
+            "yAccepted": ["prijs p", "prijs", "p"]
+          },
+          "points": [
+            { "x": 500, "y": 1 },
+            { "x": 100, "y": 3 }
+          ],
+          "toleranceX": 0.01,
+          "toleranceY": 0.01,
+          "lineShape": "decreasing"
+        },
+        "feedback": {
+          "matchTitle": "Grafiekopzet klopt",
+          "matchText": "Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn.",
+          "retryTitle": "Controleer assen en punten",
+          "retryText": "Kies Q op de horizontale as, P op de verticale as en klik twee punten uit de tabel."
+        },
+        "practiceRoute": {
+          "label": "Oefen verder met grafieken",
+          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+        }
+      }
+    },
+    {
+      "id": "grafiek-aflezen",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "grafiek-aflezen",
+        "family": "graph_reading",
+        "skillLabel": "Grafiek aflezen",
+        "purpose": "Lees de hoeveelheid af tussen twee tabelpunten.",
+        "prompt": "Lees uit je P-Q-grafiek af hoeveel ijsjes worden verkocht bij een prijs van EUR 1,75.",
+        "contextRefs": ["ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-procedure"],
+        "interaction": {
+          "inputLabel": "Afgelezen hoeveelheid Q"
+        },
+        "expected": {
+          "kind": "number",
+          "value": 350,
+          "tolerance": 5,
+          "unit": "ijsjes"
+        },
+        "feedback": {
+          "matchTitle": "Aflezing past",
+          "matchText": "EUR 1,75 ligt halverwege 1,50 en 2,00. De hoeveelheid ligt daarom rond 350 ijsjes.",
+          "retryTitle": "Lees tussen twee punten af",
+          "retryText": "Zoek 1,75 tussen 1,50 en 2,00 en lees de bijbehorende hoeveelheid af."
+        },
+        "practiceRoute": {
+          "label": "Oefen grafiek aflezen",
+          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+        }
+      }
+    },
+    {
+      "id": "halvering-controleren",
+      "type": "task_shell",
+      "taskShell": {
+        "id": "halvering-controleren",
+        "family": "calculation_work_capture",
+        "skillLabel": "Bronclaim controleren",
+        "purpose": "Controleer een daling van 50 procent met tabelwaarden.",
+        "prompt": "Controleer een interval waarin Q met 50 procent daalt.",
+        "contextRefs": ["ctx-icecream-source", "ctx-icecream-table", "ctx-icecream-formula"],
+        "interaction": {
+          "selectionMode": "interval_halving_check",
+          "intervalLabel": "Kies een interval",
+          "intervalOptions": [
+            {
+              "id": "interval-150-250",
+              "label": "EUR 1,50 -> EUR 2,50",
+              "finalAnswer": "EUR 1,50 tot EUR 2,50",
+              "oldQuantity": "400 ijsjes",
+              "newQuantity": "200 ijsjes",
+              "work": "400 naar 200; nieuwe Q is de helft van oude Q",
+              "correct": true
+            },
+            {
+              "id": "interval-250-300",
+              "label": "EUR 2,50 -> EUR 3,00",
+              "finalAnswer": "EUR 2,50 tot EUR 3,00",
+              "oldQuantity": "200 ijsjes",
+              "newQuantity": "100 ijsjes",
+              "work": "200 naar 100; nieuwe Q is de helft van oude Q",
+              "correct": true
+            }
+          ],
+          "relationLabel": "De nieuwe hoeveelheid is...",
+          "relationOptions": [
+            { "id": "helft", "label": "de helft van de oude hoeveelheid" },
+            { "id": "dubbel", "label": "het dubbele van de oude hoeveelheid" },
+            { "id": "gelijk", "label": "gelijk aan de oude hoeveelheid" }
+          ],
+          "conclusionLabel": "Conclusie",
+          "conclusionOptions": [
+            { "id": "q-daalt-50", "label": "Q daalt met 50 procent", "finalAnswer": "Q daalt met 50 procent", "correct": true },
+            { "id": "q-daalt-25", "label": "Q daalt met 25 procent", "finalAnswer": "Q daalt met 25 procent" },
+            { "id": "q-stijgt-50", "label": "Q stijgt met 50 procent", "finalAnswer": "Q stijgt met 50 procent" }
+          ],
+          "workLabel": "Bronwaarden",
+          "finalAnswerLabel": "Conclusie",
+          "unitNotationLabel": "Conclusie"
+        },
+        "expected": {
+          "kind": "calculation",
+          "finalAnswer": {
+            "kind": "text",
+            "accepted": [
+              "Q daalt met 50 procent",
+              "Q daalt met 50%",
+              "de nieuwe hoeveelheid is de helft van de oude hoeveelheid",
+              "nieuwe Q is de helft van oude Q",
+              "EUR 1,50 tot EUR 2,50",
+              "EUR 2,50 tot EUR 3,00"
+            ]
+          },
+          "unitNotation": {
+            "kind": "text",
+            "accepted": ["50 procent daling", "Q daalt met 50 procent", "Q daalt met 50%"],
+            "required": true
+          },
+          "workRequired": true,
+          "acceptedWorkPaths": [
+            {
+              "id": "interval-150-250-halving",
+              "label": "EUR 1,50 tot EUR 2,50",
+              "requiredWorkText": [
+                { "label": "bronwaarden", "any": ["400 naar 200", "400 ijsjes naar 200 ijsjes"] },
+                { "label": "halvering", "any": ["helft"] }
+              ]
+            },
+            {
+              "id": "interval-250-300-halving",
+              "label": "EUR 2,50 tot EUR 3,00",
+              "requiredWorkText": [
+                { "label": "bronwaarden", "any": ["200 naar 100", "200 ijsjes naar 100 ijsjes"] },
+                { "label": "halvering", "any": ["helft"] }
+              ]
+            }
+          ],
+          "criteria": [
+            "Kies een geldig broninterval.",
+            "Gebruik de automatisch getoonde oude en nieuwe hoeveelheid.",
+            "Benoem dat de nieuwe hoeveelheid de helft is van de oude hoeveelheid."
+          ]
+        },
+        "feedback": {
+          "matchTitle": "Daling klopt",
+          "matchText": "Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid.",
+          "retryTitle": "Controleer oude en nieuwe hoeveelheid",
+          "retryText": "Kies een interval en controleer of de nieuwe hoeveelheid precies de helft is."
+        },
+        "practiceRoute": {
+          "label": "Oefen procentuele verandering",
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        }
+      }
+    }
+  ],
+  "completion": {
+    "title": "Exit ticket afgerond",
+    "text": "Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken."
+  }
+}

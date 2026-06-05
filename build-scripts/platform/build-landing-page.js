@@ -169,7 +169,7 @@ function sectionAvailability(files, item = null) {
   if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
   if (files.leren && files.leren.vaardigheden) labels.push("Leer");
   if (hasPractice) labels.push(isConsolidation ? "Oefen gemengd" : "Oefen");
-  if (files.check && files.check.exitTicket) labels.push("Check");
+  if (files.check && (files.check.shortCheck || files.check.exitTicket)) labels.push("Check");
   if (hasDeepen) labels.push("Verdiep");
   return labels;
 }
@@ -193,7 +193,7 @@ function scanFiles(paragraafPath) {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
     leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
     oefenen:      { redeneerSpel: null, stappenplan: null, wiskundevaardigheden: null, grafiekenspel: null, begeleide: null, basis: null, midden: null, verrijking: null },
-    check:        { exitTicket: null },
+    check:        { shortCheck: null, exitTicket: null },
     lesboek:      { paragraaf: null, opgaven: null, antwoorden: null },
   };
   if (!fs.existsSync(paragraafPath)) return result;
@@ -249,7 +249,7 @@ function scanFiles(paragraafPath) {
   result.oefenen.wiskundevaardigheden  = find(/wiskundevaardigheden\.html$/i);
   result.oefenen.grafiekenspel         = find(/grafiekenspel\.html$/i);
 
-  // Future L1.7B exit-ticket MVP. Hidden unless a real generated surface exists.
+  result.check.shortCheck = find(/(?:korte[- ]?check)\.html$/i);
   result.check.exitTicket = find(/(?:exit[- ]?ticket|afsluit(?:ing)?[- ]?check)\.html$/i);
 
   const findPair = (label) => {
@@ -298,36 +298,12 @@ function scanFiles(paragraafPath) {
   return result;
 }
 
-function readExitTicketSource(parNr) {
-  const sourcePath = path.join(__dirname, '..', '..', 'source-data', `book-${CONFIG.nr}`, 'exit-ticket', `${parNr}.json`);
-  if (!fs.existsSync(sourcePath)) return null;
-  try {
-    return JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
-  } catch (error) {
-    console.warn(`  WARN: cannot read exit-ticket source for ${parNr}: ${error.message}`);
-    return null;
-  }
-}
-
-function exitTicketPresentationMeta(parNr) {
-  const data = readExitTicketSource(parNr);
-  const targetEquivalent = Boolean(
-    data &&
-    (data.surface === 'target_equivalent_exit_ticket' ||
-      (data.targetEquivalent && data.targetEquivalent.candidate === true))
-  );
-  if (targetEquivalent) {
-    return {
-      cardTitle: 'Exit ticket',
-      cardDescription: 'Maak de volledige paragraaf-check',
-      sectionHint: 'Rond af met de paragraaf-check'
-    };
-  }
-  return {
-    cardTitle: 'Korte check',
-    cardDescription: 'Kies wat je nog wilt oefenen',
-    sectionHint: 'Rond af met gerichte oefentips'
-  };
+function checkSectionHint(files) {
+  const hasShort = Boolean(files && files.check && files.check.shortCheck);
+  const hasExit = Boolean(files && files.check && files.check.exitTicket);
+  if (hasShort && hasExit) return 'Kies eerst oefentips, rond daarna af';
+  if (hasExit) return 'Rond af met de paragraaf-check';
+  return 'Rond af met gerichte oefentips';
 }
 
 function encPath(segments) { return segments.map(s => encodeURIComponent(s)).join("/"); }
@@ -1311,10 +1287,14 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </div>` : "";
   const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
 
-  const checkMeta = exitTicketPresentationMeta(paragraaf.id);
-  const checkCards = files.check && files.check.exitTicket
-    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, checkMeta.cardTitle, checkMeta.cardDescription, "html")
-    : "";
+  const checkCards = [
+    files.check && files.check.shortCheck
+      ? resourceCard(encPath([files.check.shortCheck]), ICONS.check, "Korte check", "Kies wat je nog wilt oefenen", "html")
+      : "",
+    files.check && files.check.exitTicket
+      ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Exit ticket", "Maak de volledige paragraaf-check", "html")
+      : ""
+  ].filter(Boolean).join("\n");
 
   const deepenCards = [
     files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting, ICONS.check, "Samenvatting", "Overzicht van deze paragraaf") : "",
@@ -1366,7 +1346,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     layout: "custom",
     routeLayer: "practice"
   });
-  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkMeta.sectionHint, body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
+  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkSectionHint(files), body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
   if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
   const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">

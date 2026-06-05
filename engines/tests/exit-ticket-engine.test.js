@@ -1,6 +1,6 @@
 const ExitTicketEngine = require('../exit-ticket-engine');
-const data = require('../../source-data/book-1/exit-ticket/1.1.1.json');
-const targetData = require('../../source-data/book-1/exit-ticket/1.1.2.json');
+const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
+const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "surface": "advisory_short_check",
+  "parNr": "1.1.3",
+  "parName": "Grafieken en tabellen",
+  "title": "Korte check",
+  "intro": "Controleer de belangrijkste keuzes voordat je een P-Q-grafiek tekent.",
+  "targetSkillIds": ["A38", "A61", "A63"],
+  "skillScopeIds": ["A38", "A61", "A63"],
+  "metadataAlignment": {
+    "status": "paragraph_skill_aligned_not_target_readiness",
+    "paragraphSkillIds": ["A38", "A61", "A63"],
+    "targetExerciseSkillIds": ["A38"],
+    "targetReadinessEvidence": false,
+    "sourceRefs": {
+      "paragraphPlan": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/_paragraph-plan.md",
+      "targetExerciseRegistry": "references/authored/course-target-exercises.json",
+      "unitRegistry": "references/machine/micro-teaching-units.json"
+    },
+    "notes": [
+      "This advisory check covers the graph/table operations required by the target task but does not claim target readiness.",
+      "The target registry currently lists A38 only for 1.1.3; graph-construction units remain a protected-reference follow-up."
+    ]
+  },
+  "skillMap": {
+    "title": "Oefenroute",
+    "routes": [
+      {
+        "label": "Grafieken aflezen",
+        "surface": "Grafieken",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+      },
+      {
+        "label": "Tabel naar grafiek",
+        "surface": "Vaardigheden",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+      },
+      {
+        "label": "Procentuele verandering",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "pq-assen",
+      "type": "choice",
+      "skillLabel": "P-Q-grafiek opzetten",
+      "prompt": "Bij een P-Q-grafiek voor vraag en aanbod hoort meestal welke asindeling?",
+      "options": [
+        { "id": "a", "label": "Prijs P op de verticale as en hoeveelheid Q op de horizontale as." },
+        { "id": "b", "label": "Prijs P op de horizontale as en hoeveelheid Q op de verticale as." },
+        { "id": "c", "label": "Tijd op de horizontale as en omzet op de verticale as." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Assen kloppen",
+        "matchText": "In een P-Q-grafiek staat hoeveelheid Q horizontaal en prijs P verticaal.",
+        "retryTitle": "Controleer de economische conventie",
+        "retryText": "Denk aan P als prijs op de verticale as en Q als hoeveelheid op de horizontale as."
+      },
+      "practiceRoute": {
+        "label": "Bekijk de vaardigheid nog eens",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+      }
+    },
+    {
+      "id": "tabelrij-lezen",
+      "type": "choice",
+      "skillLabel": "Tabelwaarde lezen",
+      "prompt": "In de tabel staat bij P = EUR 2,00 dat Q = 300. Welk punt hoort daarbij in de P-Q-grafiek?",
+      "options": [
+        { "id": "a", "label": "(Q = 300, P = 2,00)" },
+        { "id": "b", "label": "(Q = 2,00, P = 300)" },
+        { "id": "c", "label": "(Q = 300, P = 1,75)" }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Tabelrij goed omgezet",
+        "matchText": "Je neemt de hoeveelheid als horizontale waarde en de prijs als verticale waarde.",
+        "retryTitle": "Lees de rij opnieuw",
+        "retryText": "Gebruik de waarde uit dezelfde tabelrij en zet Q op de horizontale as."
+      },
+      "practiceRoute": {
+        "label": "Oefen verder met grafieken",
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+      }
+    },
+    {
+      "id": "halvering-herkennen",
+      "type": "choice",
+      "skillLabel": "Bronclaim controleren",
+      "prompt": "In de tabel daalt Q van 400 naar 200. Welke conclusie past daarbij?",
+      "options": [
+        { "id": "a", "label": "Q daalt met 50 procent, want 200 is de helft van 400." },
+        { "id": "b", "label": "Q daalt met 200 procent, want 400 min 200 is 200." },
+        { "id": "c", "label": "Q stijgt met 50 procent, want de prijs stijgt." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Halvering herkend",
+        "matchText": "Een daling van 400 naar 200 is een halvering: 50 procent minder.",
+        "retryTitle": "Vergelijk oud en nieuw",
+        "retryText": "Gebruik de oude hoeveelheid als basis en kijk of de nieuwe hoeveelheid de helft is."
+      },
+      "practiceRoute": {
+        "label": "Oefen procentuele verandering",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      }
+    }
+  ],
+  "completion": {
+    "title": "Kies je volgende oefenstap",
+    "text": "Gebruik de feedback om te kiezen of je vooral assen, tabelpunten of procentuele verandering wilt oefenen."
+  }
+}

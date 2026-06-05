@@ -157,24 +157,61 @@ const data = {
       task_shell: {
         family: 'graph_construction_substitute',
         skillLabel: 'Asafspraak gebruiken',
-        purpose: 'Beschrijf de asafspraak voordat je een punt of grafiek gebruikt.',
+        purpose: 'Kies de assen, plaats twee bronpunten en trek de vraaglijn.',
+        prompt: 'Maak een eenvoudige P-Q-grafiek bij de tabel met bioscoopkaartjes.',
         interaction: {
-          inputLabel: 'Asafspraak',
-          placeholder: 'Prijs op ..., hoeveelheid op ...'
-        },
-        expected: {
-          kind: 'self_check',
-          criteria: [
-            'Prijs staat op de horizontale as.',
-            'Hoeveelheid of aantal staat op de verticale as.',
-            'Eenheid of label blijft zichtbaar in je antwoord.'
+          workspaceTitle: 'Grafiekwerkvlak',
+          xAxisLabel: 'Horizontale as',
+          yAxisLabel: 'Verticale as',
+          pointRowsLabel: 'Punten uit de tabel',
+          lineConfirmationLabel: 'Trek lijn door punten',
+          lineShapeLabel: 'Lijnvorm',
+          xInputLabel: 'Prijs',
+          yInputLabel: 'Aantal kaartjes',
+          emptyGraphAltText: 'Leeg P-Q-diagram met raster voor bioscoopkaartjes.',
+          pointCount: 2,
+          axes: {
+            x: {
+              label: 'Prijs (EUR)',
+              min: 0,
+              max: 12,
+              ticks: [0, 6, 8, 10, 12],
+              tickDecimals: 0
+            },
+            y: {
+              label: 'Aantal kaartjes',
+              min: 0,
+              max: 200,
+              ticks: [0, 60, 100, 140, 180, 200],
+              tickDecimals: 0
+            }
+          },
+          axisOptions: [
+            { id: 'prijs', label: 'Prijs P', value: 'prijs' },
+            { id: 'hoeveelheid', label: 'Hoeveelheid Q', value: 'hoeveelheid' },
+            { id: 'omzet', label: 'Omzet', value: 'omzet' },
+            { id: 'tijd', label: 'Tijd', value: 'tijd' }
           ]
         },
+        expected: {
+          kind: 'graph_construction_substitute',
+          axes: {
+            xAccepted: ['prijs p', 'prijs', 'p'],
+            yAccepted: ['hoeveelheid q', 'hoeveelheid', 'q', 'aantal kaartjes', 'aantal']
+          },
+          points: [
+            { x: 6, y: 180 },
+            { x: 12, y: 60 }
+          ],
+          toleranceX: 0.01,
+          toleranceY: 0.01,
+          lineShape: 'decreasing'
+        },
         feedback: {
-          selfCheckTitle: 'Vergelijk je asafspraak',
-          selfCheckText: 'Controleer of je horizontale en verticale as niet hebt omgedraaid.',
-          retryTitle: 'Schrijf eerst je asafspraak',
-          retryText: 'Noteer welke grootheid op welke as staat voordat je verder gaat.'
+          matchTitle: 'Grafiekopzet klopt',
+          matchText: 'Je gebruikt prijs horizontaal, hoeveelheid verticaal, twee tabelpunten en een dalende lijn.',
+          retryTitle: 'Controleer assen en punten',
+          retryText: 'Prijs hoort op de horizontale as. Plaats twee punten uit de tabel en kies een dalende lijn.'
         },
         practiceRoute: { label: 'Oefen verder in grafiekenspel', href: '#g-app' }
       },
