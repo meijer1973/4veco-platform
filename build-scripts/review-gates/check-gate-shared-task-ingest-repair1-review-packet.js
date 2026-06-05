@@ -6,6 +6,9 @@ const { execFileSync } = require('child_process');
 const platformRoot = path.resolve(__dirname, '..', '..');
 const gateId = 'GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review';
 const sprintId = 'GATE-SHARED-TASK-INGEST-REPAIR-1';
+const repair2Id = 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-2';
+const repair3Id = 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-3';
+const repair4Id = 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-4';
 const gateDir = path.join(platformRoot, 'reports', 'review-gates', gateId);
 
 function fail(message) {
@@ -39,10 +42,21 @@ function gitStatus(args) {
   return execFileSync('git', args, { cwd: platformRoot, encoding: 'utf8' }).trim();
 }
 
+function runNode(script) {
+  try {
+    execFileSync(process.execPath, [script], { cwd: platformRoot, encoding: 'utf8', stdio: 'pipe' });
+  } catch (error) {
+    process.stdout.write(error.stdout || '');
+    process.stderr.write(error.stderr || '');
+    fail(`validator failed: node ${script}`);
+  }
+}
+
 function requireRemotePublication(packet, live) {
   const hashPattern = /^[0-9a-f]{40}$/;
+  const branchPattern = /^(main|codex\/[A-Za-z0-9._/-]+)$/;
   assert(packet.remote_publication_required_before_review === true, 'packet must require remote publication before review');
-  assert(packet.remote_publication.reviewed_remote_branch === 'main', 'packet must record reviewed remote branch main');
+  assert(branchPattern.test(packet.remote_publication.reviewed_remote_branch), 'packet must record reviewed remote branch main or codex/*');
   assert(hashPattern.test(packet.remote_publication.reviewed_remote_commit_hash), 'packet must record reviewed remote commit hash');
   assert(packet.remote_publication.review_may_start === true, 'packet must allow review only after remote publication');
   assert(live.remote_publication.reviewed_remote_branch === packet.remote_publication.reviewed_remote_branch, 'live evidence branch mismatch');
@@ -50,39 +64,33 @@ function requireRemotePublication(packet, live) {
   assert(live.remote_publication.review_may_start === true, 'live evidence must allow review only after remote publication');
 }
 
-function requireNoPrematureClosure() {
-  const forbidden = [
+function requireClosureArtifacts() {
+  const required = [
     'gate-closure.md',
     'gate-closure.json',
     'closure-proposal.md',
     'closure-proposal.json',
-    'human-interview.md',
-    'human-interview.json',
+    'final-direct-review-comments.md',
+    'final-direct-review-comments.json',
+    'final-comment-resolution-log.md',
+    'final-comment-resolution-log.json',
   ];
-  for (const name of forbidden) {
+  for (const name of required) {
     const file = path.join(gateDir, name);
-    assert(!fs.existsSync(file), `${rel(file)} must not exist before human review comments and closure`);
+    assert(fs.existsSync(file), `${rel(file)} must exist after final pass-with-flags review`);
   }
-}
-
-function requireReturnedReviewArtifacts(packet) {
-  assert(packet.human_review_comments_started === true, 'human review comments must be recorded as started/returned');
-  assert(packet.human_review_decision === 'hold_for_playable_repair', 'human review decision must be hold_for_playable_repair');
-  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
-  assert(packet.required_next_sprint === 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-1', 'packet must name required playable repair sprint');
-  const comments = readJson(`reports/review-gates/${gateId}/direct-review-comments.json`);
-  const resolution = readJson(`reports/review-gates/${gateId}/comment-resolution-log.json`);
-  assert(comments.decision === 'hold_for_playable_repair', 'direct-review-comments decision must be hold_for_playable_repair');
-  assert(comments.review_verdict === 'REVISE', 'direct-review-comments must record REVISE');
-  assert(resolution.status === 'repair_evidence_prepared_awaiting_renewed_review', 'comment-resolution-log status must keep renewed review open');
-  assert(resolution.gate_closure_authorized === false, 'comment-resolution-log must not authorize closure');
-  assert(resolution.renewed_human_review_required === true, 'comment-resolution-log must require renewed review');
-  assert(fs.existsSync(path.join(gateDir, 'direct-review-comments.md')), 'missing direct-review-comments.md');
-  assert(fs.existsSync(path.join(gateDir, 'comment-resolution-log.md')), 'missing comment-resolution-log.md');
 }
 
 function requireAllFalse(object, label) {
   for (const [key, value] of Object.entries(object)) {
+    assert(value === false, `${label}.${key} must be false`);
+  }
+}
+
+function requireGateAuthorityBoundary(object, label) {
+  assert(object.controlled_adoption_preparation_authorized === true, `${label}.controlled_adoption_preparation_authorized must be true`);
+  for (const [key, value] of Object.entries(object)) {
+    if (key === 'controlled_adoption_preparation_authorized') continue;
     assert(value === false, `${label}.${key} must be false`);
   }
 }
@@ -104,8 +112,25 @@ function requirePacketText() {
   for (const section of requiredSections) assert(text.includes(section), `review packet missing section ${section}`);
   for (let i = 1; i <= 12; i += 1) assert(text.includes(`SHAREDINGEST-Q${i}`), `review packet missing prompt SHAREDINGEST-Q${i}`);
   for (const phrase of [
-    'independently scrollable source pane',
-    'question visibility after source scrolling',
+    'Target-task economy',
+    'graph_construction_substitute',
+    'click-to-place',
+    'graph labels and numeric scale must be hidden',
+    'graph grid must be visible before axis selection',
+    'table-derived graph tick labels',
+    'textbook graph line must be drawn in the active graph workspace',
+    'actual-exam task 2 must accept 649',
+    'premium-difference shortcut',
+    '50 percent follow-up must accept the conclusion',
+    'interval_halving_check shared task focus plan',
+    'review-lab support must appear after repeated failed calculation attempts',
+    'visible source/table identifiers must not repeat',
+    'gate closes PASS WITH FLAGS',
+    'controlled adoption-preparation is authorized',
+    'actual-exam task 3 must carry task-2 value',
+    'source panes must hide long file paths',
+    'prompt block is rendered inside the source pane',
+    'separate completed graph block appears outside the active graph workspace',
     'direct packet comments',
     'explicit human confirmation',
     'does not authorize generated lesson output',
@@ -122,162 +147,156 @@ function requireEvidenceFiles(packet) {
   }
 }
 
-function requirePlayableProof({
-  transformPath,
-  proofPath,
-  expectedKind,
-  expectedTaskCount,
-  expectedContextBlockCount,
-  expectedControlsMin,
-  expectedVisuals,
-}) {
-  const transform = readJson(transformPath);
-  const proof = readJson(proofPath);
-  assert(transform.sourceAuthority.kind === expectedKind, `${transformPath} wrong source authority`);
-  assert(proof.status === 'playable_repair_proof_complete', `${proofPath} wrong proof status`);
-  assert(proof.task_transformation.context_before_tasks === true, `${proofPath} aggregate context ordering failed`);
-  assert(proof.task_transformation.visible_internal_ids === false, `${proofPath} exposes internal ids`);
-  assert(proof.task_transformation.raw_image_count === 0, `${proofPath} contains raw images`);
-  const playable = proof.task_transformation.playable_lab;
-  for (const key of [
-    'semantic_validation_enabled',
-    'real_task_family_controls_rendered',
-    'source_value_banks_rendered',
-    'sequence_builders_rendered',
-    'plain_sequence_textareas_absent',
-    'check_buttons_rendered',
-    'task_instructions_rendered',
-    'support_collapsed_by_default',
-    'initial_state_proven',
-    'wrong_retry_state_proven',
-    'corrected_state_proven',
-    'completion_path_reaches_done',
-    'source_pane_independent_scroll',
-    'question_visible_after_source_scroll',
-  ]) {
-    assert(playable[key] === true, `${proofPath} playable_lab.${key} must be true`);
+function requireReviewArtifacts(packet) {
+  assert(packet.human_review_comments_started === true, 'human review comments must be recorded as started/returned');
+  assert(packet.human_review_decision === 'pass_with_flags', 'human review decision must be pass_with_flags');
+  assert(packet.gate_closure_authorized === true, 'gate closure must be authorized after final human confirmation');
+  assert(packet.required_next_sprint === 'CHECK-SHORT-EXIT-2', 'packet must name CHECK-SHORT-EXIT-2 as the next roadmap-controlled adoption-preparation step');
+
+  const firstComments = readJson(`reports/review-gates/${gateId}/direct-review-comments.json`);
+  const firstResolution = readJson(`reports/review-gates/${gateId}/comment-resolution-log.json`);
+  const renewedComments = readJson(`reports/review-gates/${gateId}/renewed-direct-review-comments.json`);
+  const renewedResolution = readJson(`reports/review-gates/${gateId}/renewed-comment-resolution-log.json`);
+  const repair3Comments = readJson(`reports/review-gates/${gateId}/repair3-direct-review-comments.json`);
+  const repair3Resolution = readJson(`reports/review-gates/${gateId}/repair3-comment-resolution-log.json`);
+  const repair4Comments = readJson(`reports/review-gates/${gateId}/repair4-direct-review-comments.json`);
+  const repair4Resolution = readJson(`reports/review-gates/${gateId}/repair4-comment-resolution-log.json`);
+  const finalComments = readJson(`reports/review-gates/${gateId}/final-direct-review-comments.json`);
+  const finalResolution = readJson(`reports/review-gates/${gateId}/final-comment-resolution-log.json`);
+  const closureProposal = readJson(`reports/review-gates/${gateId}/closure-proposal.json`);
+  const closure = readJson(`reports/review-gates/${gateId}/gate-closure.json`);
+  assert(firstComments.decision === 'hold_for_playable_repair', 'first comments decision must be hold_for_playable_repair');
+  assert(firstResolution.gate_closure_authorized === false, 'first resolution must not authorize closure');
+  assert(renewedComments.decision === 'hold_for_playable_repair', 'renewed comments decision must be hold_for_playable_repair');
+  assert(renewedComments.review_verdict === 'REVISE', 'renewed comments must record REVISE');
+  assert(renewedComments.required_next_sprint === repair2Id, 'renewed comments must require repair2');
+  assert(renewedResolution.status === 'renewed_revise_accepted_repair2_required' || renewedResolution.status === 'repair2_evidence_prepared_awaiting_renewed_review', 'renewed resolution status must keep gate open');
+  assert(renewedResolution.gate_closure_authorized === false, 'renewed resolution must not authorize closure');
+  assert(repair3Comments.decision === 'hold_for_playable_repair', 'repair3 comments decision must be hold_for_playable_repair');
+  assert(repair3Comments.review_verdict === 'REVISE', 'repair3 comments must record REVISE');
+  assert(repair3Comments.required_next_sprint === repair3Id, 'repair3 comments must require repair3');
+  assert(repair3Resolution.status === 'repair3_evidence_prepared_awaiting_renewed_review', 'repair3 resolution must record evidence prepared and gate open');
+  assert(repair3Resolution.gate_closure_authorized === false, 'repair3 resolution must not authorize closure');
+  assert(repair4Comments.decision === 'REVISE', 'repair4 comments must record REVISE');
+  assert(repair4Comments.gate_direction === 'hold_for_playable_repair', 'repair4 comments decision must be hold_for_playable_repair');
+  assert(repair4Comments.required_next_sprint === repair4Id, 'repair4 comments must require repair4');
+  assert(
+    repair4Resolution.status === 'repair4_evidence_prepared_awaiting_renewed_review' ||
+      repair4Resolution.status === 'repair4_evidence_prepared_after_reviewer_correction_pass_awaiting_renewed_review',
+    'repair4 resolution must record evidence prepared and gate open'
+  );
+  assert(repair4Resolution.gate_closure_authorized === false, 'repair4 resolution must not authorize closure');
+  if (repair4Resolution.reviewer_correction_pass) {
+    assert(repair4Resolution.reviewer_correction_pass.graph_table_ticks === true, 'repair4 correction pass must record graph table ticks');
+    assert(repair4Resolution.reviewer_correction_pass.quantity_drop_conclusion_not_interval_only === true, 'repair4 correction pass must record conclusion acceptance');
+    assert(repair4Resolution.reviewer_correction_pass.interval_halving_shared_task_contract === true, 'repair4 correction pass must record shared task contract');
+    assert(repair4Resolution.reviewer_correction_pass.exam_shortcut_work_path_accepted === true, 'repair4 correction pass must record exam shortcut acceptance');
   }
-  const requiredCases = new Map([
-    ['desktop-initial', { width: 1280, theme: 'light', action: 'initial' }],
-    ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong' }],
-    ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected' }],
-    ['desktop-completed', { width: 1280, theme: 'light', action: 'complete' }],
-    ['mobile-completed', { width: 390, theme: 'light', action: 'complete' }],
-    ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete' }],
-  ]);
-  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === requiredCases.size, `${proofPath} must include six screenshots`);
-  for (const capture of proof.screenshots) {
-    const expected = requiredCases.get(capture.case);
-    assert(expected, `${proofPath} unexpected screenshot case ${capture.case}`);
-    assert(capture.theme === expected.theme, `${capture.case} wrong theme`);
-    assert(capture.action === expected.action, `${capture.case} wrong action`);
-    assert(capture.viewport.width === expected.width, `${capture.case} wrong viewport width`);
-    assert(fs.existsSync(abs(capture.file)), `missing screenshot ${capture.file}`);
-    assert(capture.proof.contextBlockCount === expectedContextBlockCount, `${capture.case} wrong context block count`);
-    assert(capture.proof.taskCardCount === expectedTaskCount, `${capture.case} wrong task count`);
-    assert(capture.proof.semanticValidationEnabled === true, `${capture.case} missing semantic validation`);
-    assert(capture.proof.genericOptionLabelVisible === false, `${capture.case} renders generic controls`);
-    assert(capture.proof.supportBoxCount >= 1, `${capture.case} missing support boxes`);
-    assert(capture.proof.supportCollapsedByDefault === true, `${capture.case} support is not collapsed`);
-    assert(capture.proof.plainSequenceTextareaCount === 0, `${capture.case} renders plain sequence textareas`);
-    assert(capture.proof.taskInstructionCount === expectedTaskCount, `${capture.case} missing concrete instructions`);
-    assert(capture.proof.sourcePanePresent === true, `${capture.case} missing source pane`);
-    assert(capture.proof.taskPanePresent === true, `${capture.case} missing task pane`);
-    assert(capture.proof.sourcePaneScrollable === true, `${capture.case} source pane is not scrollable`);
-    assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane is not independent`);
-    assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt lost during source scroll`);
-    assert(capture.proof.interactiveControlCount >= expectedControlsMin, `${capture.case} missing controls`);
-    assert(capture.proof.checkButtonCount === expectedTaskCount, `${capture.case} missing check buttons`);
-    if (capture.case === 'desktop-initial') {
-      assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
-    } else if (capture.case === 'desktop-wrong-retry') {
-      assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
-      assert(capture.proof.retryFeedbackCount > 0, `${capture.case} missing retry feedback`);
-      assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not complete after wrong attempt`);
-    } else if (capture.case === 'desktop-corrected') {
-      assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
-      assert(capture.proof.wrongRetryCount === 0, `${capture.case} should clear retry state after correction`);
-      assert(capture.proof.labCompleted === false, `${capture.case} should not complete the whole lab`);
-    } else {
-      assert(capture.proof.completedTaskCount === expectedTaskCount, `${capture.case} completion path incomplete`);
-      assert(capture.proof.labCompleted === true, `${capture.case} lab did not complete`);
-    }
-    assert(capture.proof.rawImageCount === 0, `${capture.case} has raw images`);
-    assert(capture.proof.overflowingCount === 0, `${capture.case} has non-table/formula overflow`);
-    assert(capture.proof.sourceRefsVisible === true, `${capture.case} source refs not visible`);
-    assert(capture.proof.visibleInternalIds === false, `${capture.case} exposes internal ids`);
-    if (expectedVisuals.tableCount !== undefined) assert(capture.proof.tableCount === expectedVisuals.tableCount, `${capture.case} wrong table count`);
-    if (expectedVisuals.graphCount !== undefined) assert(capture.proof.graphCount === expectedVisuals.graphCount, `${capture.case} wrong graph count`);
-    if (expectedVisuals.flowchartCount !== undefined) assert(capture.proof.flowchartCount === expectedVisuals.flowchartCount, `${capture.case} wrong flowchart count`);
-  }
-  assert(fs.existsSync(abs(proof.lab)), `${proofPath} referenced lab missing`);
-  assert(fs.existsSync(abs(proof.screenshot_manifest)), `${proofPath} referenced screenshot manifest missing`);
+  assert(finalComments.decision === 'pass_with_flags', 'final comments must record pass_with_flags');
+  assert(finalComments.closure_confirmed_by_human === true, 'final comments must confirm closure');
+  assert(finalComments.reviewed_remote_commit_hash === packet.remote_publication.reviewed_remote_commit_hash, 'final comments reviewed hash must match packet');
+  assert(finalResolution.final_decision === 'pass_with_flags', 'final resolution must record pass_with_flags');
+  assert(finalResolution.gate_closure_authorized === true, 'final resolution must authorize closure');
+  assert(finalResolution.remaining_blockers.length === 0, 'final resolution must have no remaining blockers');
+  assert(closureProposal.proposed_status === 'pass_with_flags', 'closure proposal must propose pass_with_flags');
+  assert(closureProposal.closure_confirmed_by_human === true, 'closure proposal must record human confirmation');
+  assert(closure.status === 'pass_with_flags', 'gate closure must be pass_with_flags');
+  assert(closure.closure_confirmed_by_human === true, 'gate closure must record human confirmation');
+  assert(closure.reviewed_remote_commit === packet.remote_publication.reviewed_remote_commit_hash, 'gate closure reviewed commit must match packet');
+  assert(closure.authorized_next.suggested_next_sprint === 'CHECK-SHORT-EXIT-2', 'gate closure must suggest CHECK-SHORT-EXIT-2 next');
+  assert(closure.authority_boundary.controlled_adoption_preparation_authorized === true, 'gate closure must authorize controlled adoption-preparation');
+  assert(closure.authority_boundary.product_route_adoption_authorized === false, 'gate closure must not authorize product route adoption');
+  assert(closure.authority_boundary.scale_gate_1_authorized === false, 'gate closure must not authorize Scale Gate 1');
 }
 
-function requireAuthorityAndTraceEvidence() {
-  const actual = readJson('reports/json/task-ingest-transform2-actual-exam.json');
-  assert(actual.sourceAuthority.kind === 'external_primary', 'actual exam transform must be external_primary');
-  assert(actual.sourceAuthority.prompt_pdf.includes('vw-1022-a-25-1-o.pdf#question-3'), 'actual exam prompt PDF ref missing');
-  assert(actual.sourceAuthority.correction_pdf.includes('vw-1022-a-25-1-c.pdf#question-3'), 'actual exam correction PDF ref missing');
-  assert(actual.answerModelRefs.some((ref) => ref.includes('vw-1022-a-25-1-c.pdf#question-3')), 'actual answer model refs missing');
-  assert(readText('reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-task-family-map.md').includes('final-answer field alone'), 'actual task-family map must reject final-answer reduction');
-  assert(readText('reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-reviewer-notes.md').includes('TaskShellEngine'), 'actual reviewer notes must cite TaskShellEngine');
-
-  const textbook = readJson('reports/json/task-ingest-transform3-textbook.json');
-  assert(textbook.sourceAuthority.kind === 'owned_textbook_source', 'textbook transform must be owned_textbook_source');
-  assert(textbook.sourceAuthority.authority_note.includes('not official exam authority'), 'textbook authority note must reject official authority');
-  assert(textbook.textbookSourceAmbiguity.handling.includes('both valid intervals'), 'textbook ambiguity handling must record both intervals');
-  assert(readText('reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md').includes('owned_textbook_source'), 'textbook source map must cite owned source authority');
-  assert(readText('reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-task-family-map.md').includes('final interval'), 'textbook task-family map must reject final-interval reduction');
-  assert(readText('reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md').includes('TaskShellEngine'), 'textbook reviewer notes must cite TaskShellEngine');
-}
-
-function requireLabNoLeakage() {
-  const actualLab = readText('reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-rendered-lab.html');
-  for (const forbidden of ['ctx-zoohee', 'q3-', 'Keuze A', 'Keuze B']) {
-    assert(!actualLab.includes(forbidden), `actual lab leaks forbidden detector ${forbidden}`);
-  }
-  assert(actualLab.includes('data-semantic-validation="required"'), 'actual lab must require semantic validation');
-  assert(actualLab.includes('support-box'), 'actual lab must include collapsed support boxes');
-  const textbookLab = readText('reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html');
-  for (const forbidden of ['ctx-icecream', 'tb113-', 'Keuze A', 'Keuze B']) {
-    assert(!textbookLab.includes(forbidden), `textbook lab leaks forbidden detector ${forbidden}`);
-  }
-  assert(textbookLab.includes('data-semantic-validation="required"'), 'textbook lab must require semantic validation');
-  assert(textbookLab.includes('support-box'), 'textbook lab must include collapsed support boxes');
-}
-
-function requireLeadAndVerification(packet) {
-  assert(packet.pre_gate_lead_review.required === true, 'lead review must be required');
-  assert(packet.pre_gate_lead_review.status === 'passed_before_direct_review_comments', 'lead review must pass before direct comments');
-  assert(packet.pre_gate_lead_review.final_verdict === 'PASS WITH FLAGS' || packet.pre_gate_lead_review.final_verdict === 'PASS', 'lead review final verdict must pass');
-  for (const key of ['assignment', 'round1', 'corrections', 'round2']) {
-    const text = readText(packet.pre_gate_lead_review[key]);
-    assert(text.includes(sprintId), `${packet.pre_gate_lead_review[key]} missing sprint id`);
-  }
-  const round2 = readText(packet.pre_gate_lead_review.round2);
-  assert(round2.includes('Verdict: PASS WITH FLAGS') || round2.includes('Verdict: PASS'), 'lead review round2 must record a pass verdict');
-  assert(packet.verification_review.status === 'passed_before_human_review', 'verification review must pass before human review');
-  const verification = readText(packet.verification_review.artifact);
-  assert(verification.includes('Verdict: PASS'), 'verification review must record PASS');
-}
-
-function requirePlayableRepairReview(packet) {
-  const repair = packet.playable_repair_review;
-  assert(repair && repair.required === true, 'playable repair review metadata must be present and required');
-  assert(repair.sprint_id === 'SHARED-TASK-INGEST-PLAYABLE-REPAIR-1', 'playable repair review must name repair sprint');
-  assert(repair.status === 'passed_after_playable_repair_before_new_human_review', 'playable repair review must pass before renewed human review');
-  for (const key of ['lead_assignment', 'lead_round1', 'lead_corrections', 'lead_round2', 'verification']) {
-    assert(repair[key], `playable repair review missing ${key}`);
+function requireRepair2Review(packet) {
+  const repair = packet.playable_repair_review2;
+  assert(repair && repair.required === true, 'repair2 review metadata must be present and required');
+  assert(repair.sprint_id === repair2Id, 'repair2 metadata must name repair2 sprint');
+  assert(repair.status === 'passed_after_target_task_repair_before_new_human_review', 'repair2 must pass before renewed human review');
+  for (const key of ['planning_review', 'lead_assignment', 'lead_round1', 'lead_corrections', 'lead_round2', 'verification', 'visual_qa_report', 'transformation_economy_report']) {
+    assert(repair[key], `repair2 metadata missing ${key}`);
     const text = readText(repair[key]);
-    assert(text.includes('SHARED-TASK-INGEST-PLAYABLE-REPAIR-1'), `${repair[key]} missing repair sprint id`);
+    assert(text.includes(repair2Id) || text.includes('TASK-INGEST-TRANSFORM'), `${repair[key]} missing repair/task sprint id`);
   }
   const round2 = readText(repair.lead_round2);
-  assert(round2.includes('Verdict: PASS') || round2.includes('Verdict: PASS WITH FLAGS'), 'repair lead round2 must pass');
+  assert(round2.includes('Verdict: PASS') || round2.includes('Verdict: PASS WITH FLAGS'), 'repair2 lead round2 must pass');
   const verification = readText(repair.verification);
-  assert(verification.includes('Verdict: PASS'), 'repair verification must pass');
+  assert(verification.includes('Verdict: PASS'), 'repair2 verification must pass');
+}
+
+function requireRepair3Review(packet) {
+  const repair = packet.playable_repair_review3;
+  assert(repair && repair.required === true, 'repair3 review metadata must be present and required');
+  assert(repair.sprint_id === repair3Id, 'repair3 metadata must name repair3 sprint');
+  assert(repair.status === 'evidence_prepared_after_interaction_repair_before_new_human_review', 'repair3 metadata must record evidence prepared before renewed human review');
+  for (const key of ['planning_review', 'visual_qa_report', 'transformation_economy_report', 'command_log']) {
+    assert(repair[key], `repair3 metadata missing ${key}`);
+    const text = readText(repair[key]);
+    assert(text.includes(repair3Id) || text.includes('TASK-INGEST-TRANSFORM'), `${repair[key]} missing repair/task sprint id`);
+  }
+}
+
+function requireRepair4Review(packet) {
+  const repair = packet.playable_repair_review4;
+  assert(repair && repair.required === true, 'repair4 review metadata must be present and required');
+  assert(repair.sprint_id === repair4Id, 'repair4 metadata must name repair4 sprint');
+  assert(
+    repair.status === 'evidence_prepared_after_final_interaction_clarity_repair_before_new_human_review' ||
+      repair.status === 'passed_final_human_review_with_flags_after_reviewer_correction_pass',
+    'repair4 metadata must record evidence prepared or final pass-with-flags review'
+  );
+  for (const key of ['plan', 'baseline', 'planning_review', 'visual_qa_report', 'transformation_economy_report', 'command_log', 'lead_assignment', 'lead_round1', 'lead_corrections', 'lead_round2', 'verification']) {
+    assert(repair[key], `repair4 metadata missing ${key}`);
+    const text = readText(repair[key]);
+    assert(text.includes(repair4Id) || text.includes('TASK-INGEST-TRANSFORM'), `${repair[key]} missing repair/task sprint id`);
+  }
+  const round2 = readText(repair.lead_round2);
+  assert(round2.includes('Verdict: PASS') || round2.includes('Verdict: PASS WITH FLAGS'), 'repair4 lead round2 must pass');
+  const verification = readText(repair.verification);
+  assert(verification.includes('Verdict: PASS'), 'repair4 verification must pass');
+  const visualQa = readText(repair.visual_qa_report);
+  assert(visualQa.includes('duplicate visible') && visualQa.includes('graph workspace'), 'repair4 visual QA must cover duplicate labels and graph workspace');
+  const economy = readText(repair.transformation_economy_report);
+  assert(economy.includes('max 3') && economy.includes('choice -> calculation_work_capture'), 'repair4 economy report must name max 3 and exam sequence');
+}
+
+function requireLiveEvidence(live) {
+  assert(
+    live.status.includes('final_interaction_clarity_evidence_ready') ||
+      live.status.includes('gate_closed_pass_with_flags'),
+    'live-output evidence wrong status'
+  );
+  assert(live.playable_labs.actual_exam.task_count === 3, 'live evidence actual exam task count must be 3');
+  assert(live.playable_labs.textbook.task_count === 3, 'live evidence textbook task count must be 3');
+  assert(live.playable_labs.actual_exam.playable_lab.right_pane_original_question_visible === true, 'live evidence missing right-pane exam question');
+  assert(live.playable_labs.actual_exam.playable_lab.conceptual_setup_choice_rendered === true, 'live evidence missing conceptual setup choice');
+  assert(live.playable_labs.actual_exam.playable_lab.select_all_numbers_task_removed === true, 'live evidence missing select-all removal');
+  assert(live.playable_labs.actual_exam.playable_lab.targeted_unit_feedback_proven === true, 'live evidence missing unit-only feedback proof');
+  assert(live.playable_labs.actual_exam.playable_lab.premium_difference_shortcut_accepted === true, 'live evidence missing premium-difference shortcut proof');
+  assert(live.playable_labs.actual_exam.playable_lab.targeted_number_feedback_proven === true, 'live evidence missing number feedback proof');
+  assert(live.playable_labs.actual_exam.playable_lab.progressive_support_proven === true, 'live evidence missing progressive support proof');
+  assert(live.playable_labs.actual_exam.playable_lab.task3_carries_task2_value_when_complete === true, 'live evidence missing task3 carry-forward');
+  assert(live.playable_labs.textbook.playable_lab.graph_construction_controls_rendered === true, 'live evidence missing graph construction controls');
+  assert(live.playable_labs.textbook.playable_lab.click_to_place_primary === true, 'live evidence missing click-to-place graph construction');
+  assert(live.playable_labs.textbook.playable_lab.grid_visible_before_axis_selection === true, 'live evidence missing initial grid visibility');
+  assert(live.playable_labs.textbook.playable_lab.table_derived_axis_ticks_proven === true, 'live evidence missing table-derived axis ticks proof');
+  assert(live.playable_labs.textbook.playable_lab.graph_labels_hidden_before_axis_selection === true, 'live evidence missing hidden initial labels');
+  assert(live.playable_labs.textbook.playable_lab.graph_labels_reveal_after_axis_selection === true, 'live evidence missing axis-selected reveal');
+  assert(live.playable_labs.textbook.playable_lab.two_points_state_proven === true, 'live evidence missing two-points proof');
+  assert(live.playable_labs.textbook.playable_lab.line_drawn_in_same_workspace === true, 'live evidence missing same-workspace line proof');
+  assert(live.playable_labs.textbook.playable_lab.no_separate_completed_graph_block === true, 'live evidence missing separate completed graph rejection');
+  assert(live.playable_labs.textbook.playable_lab.simplified_50_percent_task_rendered === true, 'live evidence missing simplified 50 percent task');
+  assert(live.playable_labs.textbook.playable_lab.quantity_drop_conclusion_control_rendered === true, 'live evidence missing quantity-drop conclusion control');
+  assert(live.playable_labs.textbook.playable_lab.interval_halving_shared_task_focus_plan === true, 'live evidence missing interval-halving shared task focus plan');
+  assert(live.playable_labs.textbook.playable_lab.prompt_not_in_source_pane === true, 'live evidence missing prompt/source guard');
+  assert(live.playable_labs.textbook.playable_lab.completed_graph_hidden_before_attempt === true, 'live evidence missing completed graph guard');
+  assert(live.playable_labs.textbook.playable_lab.graph_workspace_width_pass === true, 'live evidence missing graph workspace visual QA pass');
+  assert(live.playable_labs.actual_exam.playable_lab.source_pane_readability_pass === true, 'live evidence missing actual-exam source-pane readability');
+  assert(live.playable_labs.textbook.playable_lab.source_pane_readability_pass === true, 'live evidence missing textbook source-pane readability');
+  assert(live.playable_labs.actual_exam.playable_lab.duplicate_visible_labels_removed === true, 'live evidence missing actual-exam duplicate label removal');
+  assert(live.playable_labs.textbook.playable_lab.duplicate_visible_labels_removed === true, 'live evidence missing textbook duplicate label removal');
+  assert(live.playable_labs.actual_exam.playable_lab.sequence_builders_removed_as_required_cards === true, 'live evidence must show exam support builders removed');
 }
 
 function requireBoundaryClean() {
@@ -300,7 +319,7 @@ function requireBoundaryClean() {
 
 function main() {
   assert(fs.existsSync(gateDir), `missing gate directory ${rel(gateDir)}`);
-  requireNoPrematureClosure();
+  requireClosureArtifacts();
   requirePacketText();
 
   const packet = readJson(`reports/review-gates/${gateId}/review-packet.json`);
@@ -309,42 +328,26 @@ function main() {
   assert(packet.gate_id === gateId, 'review-packet wrong gate_id');
   assert(packet.sprint_id === sprintId, 'review-packet wrong sprint_id');
   assert(packet.human_review_mode === 'direct_packet_comments', 'review-packet must use direct comments');
-  requireReturnedReviewArtifacts(packet);
-  assert(live.status.includes('playable_repair_evidence_ready'), 'live-output evidence wrong status');
+  requireReviewArtifacts(packet);
   requireRemotePublication(packet, live);
-  requireAllFalse(packet.authority_boundary, 'authority_boundary');
+  requireGateAuthorityBoundary(packet.authority_boundary, 'authority_boundary');
   requireAllFalse(live.product_boundaries, 'product_boundaries');
   requireEvidenceFiles(packet);
+  requireRepair4Review(packet);
+  requireLiveEvidence(live);
 
-  requirePlayableProof({
-    transformPath: 'reports/json/task-ingest-transform2-actual-exam.json',
-    proofPath: 'reports/json/task-ingest-transform2-actual-exam-proof.json',
-    expectedKind: 'external_primary',
-    expectedTaskCount: 6,
-    expectedContextBlockCount: 4,
-    expectedControlsMin: 6,
-    expectedVisuals: { tableCount: 1, graphCount: 0, flowchartCount: 0 },
-  });
-  requirePlayableProof({
-    transformPath: 'reports/json/task-ingest-transform3-textbook.json',
-    proofPath: 'reports/json/task-ingest-transform3-textbook-proof.json',
-    expectedKind: 'owned_textbook_source',
-    expectedTaskCount: 9,
-    expectedContextBlockCount: 6,
-    expectedControlsMin: 9,
-    expectedVisuals: { tableCount: 1, graphCount: 1, flowchartCount: 1 },
-  });
-  requireAuthorityAndTraceEvidence();
-  requireLabNoLeakage();
-  requireLeadAndVerification(packet);
-  requirePlayableRepairReview(packet);
+  runNode('build-scripts/sprints/check-task-ingest-transform2-actual-exam.js');
+  runNode('build-scripts/sprints/check-task-ingest-transform3-textbook.js');
   requireBoundaryClean();
 
   const bundle = readText(`reports/review-gates/${gateId}/bundle-urls.md`);
   assert(bundle.includes(`reports/review-gates/${gateId}/review-packet.md`), 'bundle URLs missing review packet');
   assert(bundle.includes(`reports/review-gates/${gateId}/live-output-evidence.json`), 'bundle URLs missing live evidence JSON');
+  assert(bundle.includes(`reports/review-gates/${gateId}/repair4-direct-review-comments.md`), 'bundle URLs missing repair4 comments');
+  assert(bundle.includes(`reports/review-gates/${gateId}/final-direct-review-comments.md`), 'bundle URLs missing final comments');
+  assert(bundle.includes(`reports/review-gates/${gateId}/gate-closure.json`), 'bundle URLs missing gate closure JSON');
 
-  console.log(`OK ${sprintId} shared task ingest repair review packet`);
+  console.log(`OK ${sprintId} shared task ingest repair gate closed pass_with_flags`);
 }
 
 main();

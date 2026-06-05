@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
+  "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "date": "2026-06-05",
+  "closed_on": "2026-06-05",
+  "status": "pass_with_flags",
+  "status_detail": "review_only_shared_task_context_source_ingestion_readiness_authorizes_controlled_adoption_preparation_only",
+  "decision": "PASS WITH FLAGS for review-only shared task context/source-ingestion readiness",
+  "closure_confirmed_by_human": true,
+  "reviewed_remote_branch": "codex/shared-task-ingest-repair4",
+  "reviewed_remote_commit": "95f0eda5f51eb7868cb947dc3e8f081957b2afb4",
+  "remote_branch_head_at_closure_preparation": "845d974161f0fc8f375cb2d3d66baf1b169b46a3",
+  "remote_evidence_pushed_before_review": true,
+  "github_status": {
+    "status_contexts_on_branch_head": 0,
+    "check_runs_on_branch_head": 0,
+    "status_contexts_on_reviewed_commit": 0,
+    "check_runs_on_reviewed_commit": 0,
+    "ci_state_recorded": "no_github_status_contexts_or_check_runs_present_for_branch_commits",
+    "ci_success_claimed": false
+  },
+  "review_packet": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md",
+  "live_output_evidence": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md",
+  "final_direct_review_comments": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.md",
+  "final_comment_resolution_log": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.md",
+  "closure_proposal": "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.md",
+  "summary": "GATE-SHARED-TASK-INGEST-REPAIR-1 accepted the repaired review-only source-context ingestion evidence as PASS WITH FLAGS. It authorizes only controlled downstream adoption-preparation and carries shared-task maturity flags for later hardening. It does not authorize product-route adoption, generated lesson output, target-equivalent proof, diagnostics, mastery, sequencing, PV, Scale Gate 1, broad product use, or student use.",
+  "accepted": {
+    "actual_exam_source_authority": true,
+    "textbook_owned_source_boundary": true,
+    "actual_exam_original_question_visible": true,
+    "actual_exam_conceptual_task1": true,
+    "actual_exam_649_unit_variants_and_shortcut": true,
+    "actual_exam_targeted_feedback_and_support": true,
+    "actual_exam_carried_value_conclusion": true,
+    "textbook_primary_graph_construction_substitute": true,
+    "textbook_visible_grid_delayed_labels_table_ticks": true,
+    "textbook_same_workspace_line": true,
+    "textbook_simplified_50_percent_followup": true,
+    "source_pane_label_and_path_cleanup": true
+  },
+  "flags": [
+    {
+      "id": "SHAREDINGEST-F1",
+      "severity": "medium_high_if_ignored",
+      "issue": "Shared task hardening series is required later.",
+      "next_action": "Queue SHARED-TASK-HARDENING-SERIES-PLAN-1 after current product-proof bottlenecks; do not start it immediately."
+    },
+    {
+      "id": "SHAREDINGEST-F2",
+      "severity": "medium",
+      "issue": "Graph construction substitute is not final graph-engine quality.",
+      "next_action": "Later hardening must decide point count, line drawing, snap behavior, accessibility, and feedback."
+    },
+    {
+      "id": "SHAREDINGEST-F3",
+      "severity": "medium",
+      "issue": "Carried-value task chaining must become a reusable standard.",
+      "next_action": "Generalize visible and validated carried-forward dependencies."
+    },
+    {
+      "id": "SHAREDINGEST-F4",
+      "severity": "medium",
+      "issue": "Progressive calculation feedback must become a reusable standard.",
+      "next_action": "Generalize feedback for correct number/wrong unit, correct final answer/missing work, wrong number, and repeated failed attempts."
+    },
+    {
+      "id": "SHAREDINGEST-F5",
+      "severity": "medium",
+      "issue": "Source/support/prompt separation must become a reusable standard.",
+      "next_action": "Keep source material in source pane, active prompt in task pane, long paths out of default view, duplicate labels forbidden, and support collapsed unless explicitly allowed."
+    },
+    {
+      "id": "SHAREDINGEST-F6",
+      "severity": "medium",
+      "issue": "Reveal timing must become a reusable source/task rule.",
+      "next_action": "Do not reveal answer-bearing labels, completed graph, or solution structure before the relevant student action."
+    },
+    {
+      "id": "SHAREDINGEST-F7",
+      "severity": "low_medium",
+      "issue": "The 50 percent follow-up is secondary to graph construction.",
+      "next_action": "Keep optional or clearly secondary unless later product work proves stronger affordance."
+    }
+  ],
+  "authorized_next": {
+    "authority": "controlled_downstream_adoption_preparation_planning_only",
+    "implementation_authorized_by_this_gate": false,
+    "student_product_use_authorized": false,
+    "suggested_next_sprint": "CHECK-SHORT-EXIT-2",
+    "queued_later_sprint": "SHARED-TASK-HARDENING-SERIES-PLAN-1"
+  },
+  "authority_boundary": {
+    "controlled_adoption_preparation_authorized": true,
+    "generated_lesson_output_authorized": false,
+    "source_data_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "product_route_adoption_authorized": false,
+    "target_equivalent_completion_claims_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

@@ -1,34 +1,48 @@
-# TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Operation-Chain Trace
+# TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Operation Chain Trace
 
-## Authority
+Generated: 2026-06-05
 
-- Exam item: `vw-1022-a-25-1-o:opgave-1:question-3`
-- Source reconstruction: `reports/json/source-reconstruct2-actual-exam.json`
-- Transformation JSON: `reports/json/task-ingest-transform2-actual-exam.json`
-- Prompt PDF: `references/external/exams/vw-1022-a-25-1-o.pdf#question-3`
-- Correction PDF: `references/external/exams/vw-1022-a-25-1-c.pdf#question-3`
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`; final
+interaction-clarity repair plus reviewer calculation-shortcut correction only;
+no product authority.
 
-## Operation Chain
+## Original Target
 
-| Order | Operation | Inputs | Output | Task-family coverage |
-|---:|---|---|---|---|
-| 1 | Select and role-label source values | 108,25; 385; 86,25; 885 | Source values with variant, unit, and role | `q3-source-values`, `q3-source-chain` |
-| 2 | Annualize monthly premium | 108,25 and 86,25 times 12 | 1299 and 1035 | `q3-annual-premium-formula`, `q3-operation-order`, `q3-calculation` |
-| 3 | Compare deductible exposure | 1299 plus 385 | 1684 | `q3-operation-order`, `q3-calculation`, `q3-source-chain` |
-| 4 | Derive equal-cost threshold | 1684 minus 1035 | 649 | `q3-calculation`, `q3-source-chain` |
-| 5 | State threshold with direction | 649 and the prompt direction | Increased deductible is cheaper up to that yearly care-cost amount | `q3-source-chain`, `q3-threshold-direction` |
+`vw-1022-a-25-1-o:opgave-1:question-3`
 
-## Cognitive-Level Guard
+> Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere
+> voordeliger is om een verhoogd eigen risico te nemen.
 
-The transformed bundle is not a source-selection exercise by itself. It
-requires source use, formula/procedure control, visible calculation work, and a
-constructed threshold direction. The checker must reject final-answer-only work
-and must reject any transformed bundle that lacks the calculation or direction
-tasks.
+The operation is a focused source-based calculation. It should not require a
+formula-builder, step-ordering, or source-chain card as separate mandatory
+interactions.
 
-## Answer-Model Tie
+## Revised Operation Chain
 
-The first point-rule path is preserved through annualizing the standard
-premium and adding the standard deductible. The second point-rule path is
-preserved through annualizing the increased-premium variant, deriving the
-threshold, and stating the direction.
+| Operation | Required task | Evidence |
+|---|---|---|
+| identify comparison basis | `q3-source-values` | choose annual premium plus deductible exposure, not lowest monthly premium or all table values |
+| calculate threshold with visible work | `q3-calculation` | full annual-cost route or premium-difference shortcut (`22x12 = 264; 264 + 385 = 649`), exact yearly unit validation, targeted feedback, and progressive support |
+| state threshold with direction | `q3-threshold-direction` | carried `EUR 649 per jaar` plus constrained direction |
+
+## Collapsed Support Policy
+
+Formula conversion and optional source-value marking remain available only as
+support around the calculation because the target is a focused threshold
+calculation. They are not required cards.
+
+Removed required support cards:
+
+- `q3-source-values` as a source-value selection/select-all-numbers task
+- `q3-annual-premium-formula`
+- `q3-operation-order`
+- `q3-source-chain`
+
+Review-lab support after failed calculation attempts is allowed because this is
+guided review evidence, not an exit-ticket or summative gate.
+
+## Boundary
+
+This trace proves review-only task transformation. It authorizes no generated
+lesson output, product-route adoption, target-equivalent proof, diagnostics,
+mastery/sequencing, Scale Gate 1, or student/product use.

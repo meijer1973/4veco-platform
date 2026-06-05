@@ -90,10 +90,13 @@
       gap: 16px;
       align-items: start;
     }
+    .lab-shell.has-graph-construction {
+      grid-template-columns: minmax(340px, 0.72fr) minmax(720px, 1.28fr);
+    }
     .source-pane {
       position: sticky;
       top: 72px;
-      max-height: 48vh;
+      max-height: calc(100vh - 92px);
       overflow-y: auto;
       padding-right: 4px;
     }
@@ -109,10 +112,38 @@
       border-radius: 8px;
       padding: 15px;
     }
+    .task-question-panel {
+      background: var(--panel);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 13px 15px;
+      margin-bottom: 14px;
+    }
+    .task-question-panel p:last-child {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+    .question-source-label {
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
     .ctx-markdown {
       background: transparent;
       border-color: transparent;
       padding: 0;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
     .support-box {
       background: var(--warn);
@@ -123,6 +154,12 @@
       color: var(--accent);
     }
     .source-label { color: var(--primary); font-weight: 700; }
+    .source-heading {
+      color: var(--primary);
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin: 0 0 9px;
+    }
     .table-scroll, .formula-scroll {
       overflow-x: auto;
       border: 1px solid var(--line);
@@ -143,6 +180,9 @@
     }
     thead th { background: var(--soft); }
     tbody th { font-weight: 700; }
+    .has-graph-construction table {
+      min-width: 100%;
+    }
     pre {
       min-width: 500px;
       margin: 0;
@@ -161,6 +201,139 @@
     .graph-svg circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
     .graph-svg text { fill: var(--muted); font-size: 13px; text-anchor: middle; }
     .graph-svg .axis-label { fill: var(--text); font-weight: 700; }
+    .graph-construction-card {
+      align-content: start;
+    }
+    .graph-construction-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+    .graph-workspace {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .graph-stage-note {
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .graph-workspace.axes-selected .graph-stage-note {
+      color: var(--primary);
+    }
+    .graph-grid-svg {
+      width: 100%;
+      min-height: 360px;
+      display: block;
+      touch-action: manipulation;
+    }
+    .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
+    .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
+    .graph-grid-svg .grid-line { stroke: var(--muted); stroke-width: 1.1; opacity: 0.55; }
+    .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
+    .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-grid-svg .constructed-line line {
+      stroke: var(--primary);
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+    .graph-grid-svg .constructed-line[hidden] {
+      display: none;
+    }
+    .graph-workspace:not(.axes-selected) .reveal-after-axes {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .plot-hit-area {
+      fill: transparent;
+      cursor: crosshair;
+    }
+    .placed-points circle {
+      fill: var(--accent);
+      stroke: var(--panel);
+      stroke-width: 3;
+    }
+    .placed-points text {
+      fill: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .graph-click-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .graph-point-status {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .clear-graph-points {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .graph-construction-controls {
+      display: grid;
+      gap: 10px;
+    }
+    .axis-select-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .graph-axis-controls {
+      margin-bottom: 8px;
+      padding: 10px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .point-entry-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .typed-point-fallback {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 9px 10px;
+    }
+    .typed-point-fallback summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .point-entry-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+      align-items: end;
+    }
+    .point-entry-row span {
+      color: var(--muted);
+      font-weight: 700;
+      padding-bottom: 9px;
+    }
+    .line-confirmation {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 700;
+    }
+    .line-confirmation input {
+      width: auto;
+    }
+    .click-instruction {
+      color: var(--muted);
+      font-weight: 700;
+    }
     .flow-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -231,6 +404,56 @@
       font-weight: 600;
     }
     .choice-options input { width: auto; }
+    .source-cell-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .source-cell-option {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px;
+      font-weight: 700;
+    }
+    .source-cell-option input {
+      width: auto;
+      margin-top: 4px;
+    }
+    .source-cell-option small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .carry-forward-response {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .carried-value {
+      min-height: 41px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 9px 10px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .carry-forward-response.is-ready .carried-value {
+      color: var(--text);
+    }
+    .sentence-preview {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
     .control-row, .field-grid, .pair-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -340,7 +563,11 @@
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .pair-row, .flow-list { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid, .source-cell-grid, .carry-forward-response { grid-template-columns: 1fr; }
+      .lab-shell.has-graph-construction { grid-template-columns: minmax(0, 1fr); }
+      .graph-grid-svg { min-height: 300px; }
+      .point-entry-row { grid-template-columns: 1fr; }
+      .point-entry-row span { padding-bottom: 0; }
       th, td { white-space: normal; font-size: 0.9rem; line-height: 1.35; }
       pre { min-width: 460px; }
       dl div { grid-template-columns: 1fr; gap: 2px; }
@@ -351,89 +578,67 @@
   <header>
     <p class="kicker">Review-only actual-exam playable task transformation proof</p>
     <h1>Zoohee zorgverzekering</h1>
-    <p>Broncontext en vraag blijven naast elkaar zichtbaar; daarna kun je de taakkaarten doorlopen.</p>
+    <p>De bronwaarden, berekening en conclusie vormen samen de examenvraag.</p>
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
-      <p class="current-prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
-      <p class="progress">0 / 6</p>
+      <p class="current-prompt">Wat moet je vergelijken om te bepalen wanneer het verhoogde eigen risico voordeliger is?</p>
+      <p class="progress">0 / 3</p>
     </div>
   </section>
   <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-markdown" data-block-type="markdown" data-context-role="prompt"><h2>Vraag 3</h2><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section>
-<section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p><p class="source-ref">Bronbestand: references/external/exams/vw-1022-a-25-1-o.pdf#question-3</p></section>
-<section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><p class="source-label">Tabel 1</p><h2>Tabel 1: Zoohee! zorgverzekering</h2><div class="table-scroll"><table><caption>Tabel 1: Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
-<details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Jaarpremie uit maandpremie</summary><p class="source-label">Formule 1</p><h2>Formule 1: Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></details></section></aside>
-    <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="source_value_selection" data-task-index="0" data-context-ref-count="4">
+    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><h2 class="source-heading">Bron 1 — Zoohee! zorgverzekering</h2><p>Zoohee biedt een variant met wettelijk eigen risico en een variant met verhoogd eigen risico. De bron vergelijkt per variant het jaarbedrag van het eigen risico met de maandpremie.</p></section>
+<section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><h2 class="source-heading">Tabel 1 — Zoohee! zorgverzekering</h2><div class="table-scroll"><table aria-label="Tabel 1 — Zoohee! zorgverzekering"><caption class="visually-hidden">Tabel 1 — Zoohee! zorgverzekering</caption><thead><tr><th scope="col">Variant</th><th scope="col">Eigen risico per jaar (euro)</th><th scope="col">Premie per maand (euro)</th></tr></thead><tbody><tr><th scope="row">wettelijk eigen risico</th><td>385</td><td>108,25</td></tr><tr><th scope="row">verhoogd eigen risico</th><td>885</td><td>86,25</td></tr></tbody></table></div></section>
+<details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Jaarpremie uit maandpremie</summary><h2 class="source-heading">Formule 1 — Jaarpremie uit maandpremie</h2><div class="formula-scroll"><pre><code>jaarpremie = maandpremie * 12</code></pre></div><dl><div><dt>maandpremie</dt><dd>premie per maand in euro</dd></div><div><dt>jaarpremie</dt><dd>premie per jaar in euro</dd></div></dl></details></section></aside>
+    <section class="task-pane" aria-label="Vragen"><section class="task-question-panel" data-right-pane-question="true" aria-label="Originele vraag"><p class="question-source-label">Vraag 3</p><p>Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.</p></section><section class="task-grid"><article class="task-card" data-task-family="choice" data-task-index="0" data-context-ref-count="4">
     <p class="card-kicker">Taakkaart 1</p>
-    <h2>Bronwaarden kiezen</h2>
-    <p class="task-purpose">Kies alle bronwaarden die de berekening nodig heeft en wijs hun rol toe.</p>
-    <p class="prompt">Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.</p>
-    <ul class="task-instructions"><li>Kies de gevraagde bronwaarden.</li><li>Koppel elke gekozen waarde aan de juiste rol.</li><li>Aantal antwoorden: alle invoerrijen moeten gevuld zijn.</li></ul>
-    <div class="play-area"><div class="value-bank" aria-label="Beschikbare bronwaarden"><span class="bank-chip" data-value-id="std-premium-10825">108,25</span><span class="bank-chip" data-value-id="std-deductible-385">385</span><span class="bank-chip" data-value-id="inc-premium-8625">86,25</span><span class="bank-chip" data-value-id="inc-deductible-885">885</span><span class="bank-chip" data-value-id="wrong-unit-10825-year">108,25 per jaar</span><span class="bank-chip" data-value-id="wrong-premium-885-month">885 per maand</span></div><div class="role-bank" aria-label="Beschikbare rollen"><span class="bank-chip" data-role-id="standard_monthly_premium">maandpremie wettelijk</span><span class="bank-chip" data-role-id="standard_deductible">eigen risico wettelijk</span><span class="bank-chip" data-role-id="increased_monthly_premium">maandpremie verhoogd</span><span class="bank-chip" data-role-id="increased_deductible">eigen risico verhoogd</span></div><div class="pair-grid"><div class="pair-row"><label>Waarde uit bron 1<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 1<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 2<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 2<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 3<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 3<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div><div class="pair-row"><label>Waarde uit bron 4<select class="play-control value-select"><option value="">Kies...</option><option value="std-premium-10825">108,25</option><option value="std-deductible-385">385</option><option value="inc-premium-8625">86,25</option><option value="inc-deductible-885">885</option><option value="wrong-unit-10825-year">108,25 per jaar</option><option value="wrong-premium-885-month">885 per maand</option></select></label><label>Functie in berekening 4<select class="play-control role-select"><option value="">Kies...</option><option value="standard_monthly_premium">maandpremie wettelijk</option><option value="standard_deductible">eigen risico wettelijk</option><option value="increased_monthly_premium">maandpremie verhoogd</option><option value="increased_deductible">eigen risico verhoogd</option></select></label></div></div></div>
+    <h2>Vergelijking kiezen</h2>
+    <p class="task-purpose">Bepaal eerst welke kosten je moet vergelijken voordat je rekent.</p>
+    <p class="prompt">Wat moet je vergelijken om te bepalen wanneer het verhoogde eigen risico voordeliger is?</p>
+    <ul class="task-instructions"><li>Lees de bron gericht af.</li><li>Kies precies een optie.</li><li>Antwoordvorm: geselecteerde optie.</li></ul>
+    <div class="play-area"><fieldset class="choice-options"><legend>Kies een antwoord</legend><label><input class="play-control choice-input" type="radio" name="choice-0" value="monthly_premiums_only"> Alleen de laagste maandpremie</label><label><input class="play-control choice-input" type="radio" name="choice-0" value="deductibles_only"> Alleen het hoogste eigen risico</label><label><input class="play-control choice-input" type="radio" name="choice-0" value="annual_premium_plus_exposure"> Jaarpremie + eigen-risico exposure</label><label><input class="play-control choice-input" type="radio" name="choice-0" value="lowest_monthly_premium"> Gewoon de laagste maandpremie kiezen</label></fieldset></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select source values</p>
+    <p class="mapped">Bewaakt: identify comparison basis</p>
   </article>
-<article class="task-card" data-task-family="formula_builder" data-task-index="1" data-context-ref-count="4">
+<article class="task-card" data-task-family="calculation_work_capture" data-task-index="1" data-context-ref-count="4">
     <p class="card-kicker">Taakkaart 2</p>
-    <h2>Jaarpremie bouwen</h2>
-    <p class="task-purpose">Bouw de formule die een maandpremie omzet naar een jaarpremie.</p>
-    <p class="prompt">Bouw de formule waarmee je per variant de jaarpremie berekent.</p>
-    <ul class="task-instructions"><li>Klik formuleblokken in de juiste volgorde.</li><li>Gebruik alleen blokken uit de bank.</li><li>Antwoordvorm: geordende formuleketen.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="formula_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="maandpremie">maandpremie</button><button type="button" class="play-control bank-button" data-item-id="keer">*</button><button type="button" class="play-control bank-button" data-item-id="twaalf">12</button><button type="button" class="play-control bank-button" data-item-id="plus-eigen-risico">+ eigen risico</button><button type="button" class="play-control bank-button" data-item-id="delen-door-twaalf">/ 12</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium</p>
-  </article>
-<article class="task-card" data-task-family="step_ordering" data-task-index="2" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 3</p>
-    <h2>Berekeningsstappen ordenen</h2>
-    <p class="task-purpose">Orden de route van bronwaarden naar grensbedrag.</p>
-    <p class="prompt">Zet de rekenstappen in de volgorde die past bij het correctiemodel.</p>
-    <ul class="task-instructions"><li>Klik stappen in de juiste volgorde.</li><li>Gebruik de bron of procedurehulp alleen als dat nodig is.</li><li>Antwoordvorm: geordende stappenreeks.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="step_ordering"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="read-table">Lees de premies en eigen risico's uit Tabel 1</button><button type="button" class="play-control bank-button" data-item-id="standard-annual-premium">Bereken jaarpremie wettelijk eigen risico</button><button type="button" class="play-control bank-button" data-item-id="add-standard-deductible">Tel het wettelijk eigen risico erbij op</button><button type="button" class="play-control bank-button" data-item-id="increased-annual-premium">Bereken jaarpremie verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="derive-threshold">Neem het verschil tussen beide bedragen</button><button type="button" class="play-control bank-button" data-item-id="state-direction">Formuleer het grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="divide-by-deductible">Deel de premie door het eigen risico</button><button type="button" class="play-control bank-button" data-item-id="choose-lowest-premium">Kies meteen de laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="calculation_work_capture" data-task-index="3" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 4</p>
     <h2>Grensbedrag berekenen</h2>
     <p class="task-purpose">Laat de berekening zien waarmee je het grensbedrag vindt.</p>
     <p class="prompt">Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.</p>
     <ul class="task-instructions"><li>Schrijf de berekening uit.</li><li>Noteer het eindantwoord en de eenheid apart.</li><li>Antwoordvorm: uitwerking plus eindantwoord.</li></ul>
-    <div class="play-area"><label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div></div>
+    <div class="play-area"><label>Berekening<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Grensbedrag<input class="play-control calc-final" type="text" data-response-key="finalAnswer" placeholder="Bijvoorbeeld 123"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit" placeholder="Bijvoorbeeld euro per jaar"></label></div><div class="progressive-support" data-progressive-support="true" data-support-complete="false">
+    <p class="support-note">Review-only hulp verschijnt na mislukte pogingen.</p>
+    <button type="button" class="support-button support-hint-button" data-support-level="1" hidden>Hulp: maandpremie naar jaarpremie</button>
+    <div class="support-content support-hint" data-support-content="1" hidden><p>Zet elke maandpremie eerst om naar een jaarpremie: maandpremie x 12.</p></div>
+    <div class="support-content support-setup" data-support-content="2" hidden><p>12 x 108,25 + 385 = ...
+12 x 86,25 = ...</p></div>
+    <button type="button" class="support-button support-solution-button" data-support-level="3" hidden>Toon uitwerking</button>
+    <div class="support-content support-solution" data-support-content="3" hidden><p>12 x 108,25 = 1299. 1299 + 385 = 1684. 12 x 86,25 = 1035. 1684 - 1035 = 649 euro per jaar.</p></div>
+  </div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: annualize monthly premium, compare deductible exposure, derive equal cost threshold</p>
+    <p class="mapped">Bewaakt: calculate threshold with visible work</p>
   </article>
-<article class="task-card" data-task-family="source_chain_builder" data-task-index="4" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 5</p>
-    <h2>Bronketen bouwen</h2>
-    <p class="task-purpose">Bouw de route van bron naar berekening naar conclusie.</p>
-    <p class="prompt">Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.</p>
-    <ul class="task-instructions"><li>Klik bronketen-onderdelen in de juiste volgorde.</li><li>Verbind bronwaarde, bewerking en conclusie.</li><li>Antwoordvorm: volledige redeneringsketen.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="source_chain_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="source-table">Lees Tabel 1 met premie en eigen risico</button><button type="button" class="play-control bank-button" data-item-id="role-values">Koppel premies en eigen risico aan de twee varianten</button><button type="button" class="play-control bank-button" data-item-id="standard-cost">Bereken kosten wettelijke variant</button><button type="button" class="play-control bank-button" data-item-id="increased-premium">Bereken jaarpremie verhoogde variant</button><button type="button" class="play-control bank-button" data-item-id="threshold">Neem het verschil tussen beide varianten</button><button type="button" class="play-control bank-button" data-item-id="direction">Formuleer grensbedrag met richting</button><button type="button" class="play-control bank-button" data-item-id="use-885-only">Afleider: gebruik alleen verhoogd eigen risico</button><button type="button" class="play-control bank-button" data-item-id="lowest-premium-only">Afleider: kies alleen laagste maandpremie</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select source values, annualize monthly premium, compare deductible exposure, derive equal cost threshold, state threshold with direction</p>
-  </article>
-<article class="task-card" data-task-family="structured_short_response" data-task-index="5" data-context-ref-count="4">
-    <p class="card-kicker">Taakkaart 6</p>
+<article class="task-card" data-task-family="structured_short_response" data-task-index="2" data-context-ref-count="4">
+    <p class="card-kicker">Taakkaart 3</p>
     <h2>Grens met richting formuleren</h2>
     <p class="task-purpose">Formuleer het berekende grensbedrag als antwoordzin.</p>
     <p class="prompt">Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.</p>
     <ul class="task-instructions"><li>Vul elk antwoordveld in.</li><li>Gebruik bronwoorden of berekening waar gevraagd.</li><li>Antwoordvorm: korte gestructureerde tekst.</li></ul>
-    <div class="play-area"><div class="field-grid"><label>Grensbedrag<input class="play-control structured-field" type="text" data-field-id="threshold"></label><label>Richting<input class="play-control structured-field" type="text" data-field-id="direction"></label></div></div>
+    <div class="play-area"><div class="carry-forward-response" data-carry-forward="true" data-carry-from-index="1" data-carried-value="EUR 649 per jaar" data-not-ready-text="Bereken taak 2 of gebruik de review-hulp bij taak 2.">
+    <label>Wanneer is verhoogd eigen risico voordeliger?<select class="play-control structured-field direction-select" data-field-id="direction" disabled><option value="">Kies richting...</option><option value="lager dan">lager dan het grensbedrag</option><option value="hoger dan">hoger dan het grensbedrag</option><option value="gelijk aan">gelijk aan het grensbedrag</option></select></label>
+    <label>Grensbedrag uit taak 2<output class="carried-value" data-carried-output="true">Bereken taak 2 of gebruik de review-hulp bij taak 2.</output><input class="play-control structured-field carried-threshold-field" type="hidden" data-field-id="threshold" value=""></label>
+    <p class="sentence-preview" data-sentence-preview="true">Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.</p>
+  </div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
     <p class="mapped">Bewaakt: state threshold with direction</p>
-  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat bronwaarden, formule, stappen, berekening, bronketen en conclusie samen de examenbewerking dragen.</aside></section>
+  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat de examenvraag is teruggebracht tot bronwaarden, berekening en conclusie, met formulehulp alleen als collapsed support.</aside></section>
   </main>
   <script>
     (function () {
-      const models = [{"family":"source_value_selection","prompt":"Kies de vier waarden uit Tabel 1 die nodig zijn om de meerkosten van Zoohee te berekenen.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol in de vergelijking","values":[{"id":"std-premium-10825","label":"108,25","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"std-deductible-385","label":"385","kind":"answer","sourceLabel":"wettelijk eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"inc-premium-8625","label":"86,25","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per maand","period":"maandpremie"},{"id":"inc-deductible-885","label":"885","kind":"answer","sourceLabel":"verhoogd eigen risico","unit":"euro per jaar","period":"eigen risico"},{"id":"wrong-unit-10825-year","label":"108,25 per jaar","kind":"distractor","sourceLabel":"wettelijk eigen risico","unit":"verkeerde eenheid","distractorFor":"std-premium-10825"},{"id":"wrong-premium-885-month","label":"885 per maand","kind":"distractor","sourceLabel":"verhoogd eigen risico","unit":"verkeerde rol","distractorFor":"inc-deductible-885"}],"roles":[{"id":"standard_monthly_premium","label":"maandpremie wettelijk"},{"id":"standard_deductible","label":"eigen risico wettelijk"},{"id":"increased_monthly_premium","label":"maandpremie verhoogd"},{"id":"increased_deductible","label":"eigen risico verhoogd"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"std-premium-10825","role":"standard_monthly_premium"},{"valueId":"std-deductible-385","role":"standard_deductible"},{"valueId":"inc-premium-8625","role":"increased_monthly_premium"},{"valueId":"inc-deductible-885","role":"increased_deductible"}],"partialFeedback":"practice_only"}},{"family":"formula_builder","prompt":"Bouw de formule waarmee je per variant de jaarpremie berekent.","interaction":{"tokenBankLabel":"Formuleblokken","sequenceLabel":"Opgebouwde formule","placeholder":"Bouw de formule.","separator":" ","tokens":[{"id":"maandpremie","label":"maandpremie","kind":"answer","category":"variable"},{"id":"keer","label":"*","kind":"answer","category":"operator"},{"id":"twaalf","label":"12","kind":"answer","category":"multiplier"},{"id":"plus-eigen-risico","label":"+ eigen risico","kind":"distractor","category":"operator","distractorFor":"keer"},{"id":"delen-door-twaalf","label":"/ 12","kind":"distractor","category":"operator","distractorFor":"twaalf"}]},"expected":{"kind":"formula_builder","tokens":["maandpremie","keer","twaalf"],"acceptedSequences":[["maandpremie","keer","twaalf"]]}},{"family":"step_ordering","prompt":"Zet de rekenstappen in de volgorde die past bij het correctiemodel.","interaction":{"stepBankLabel":"Stappenbank","sequenceLabel":"Gekozen volgorde","placeholder":"Orden de stappen.","separator":" -> ","steps":[{"id":"read-table","label":"Lees de premies en eigen risico's uit Tabel 1","kind":"answer"},{"id":"standard-annual-premium","label":"Bereken jaarpremie wettelijk eigen risico","kind":"answer","description":"108,25 keer 12"},{"id":"add-standard-deductible","label":"Tel het wettelijk eigen risico erbij op","kind":"answer","description":"Dan heb je de kosten bij maximale zorgkosten binnen dat eigen risico."},{"id":"increased-annual-premium","label":"Bereken jaarpremie verhoogd eigen risico","kind":"answer","description":"86,25 keer 12"},{"id":"derive-threshold","label":"Neem het verschil tussen beide bedragen","kind":"answer"},{"id":"state-direction","label":"Formuleer het grensbedrag met richting","kind":"answer"},{"id":"divide-by-deductible","label":"Deel de premie door het eigen risico","kind":"distractor","distractorFor":"derive-threshold"},{"id":"choose-lowest-premium","label":"Kies meteen de laagste maandpremie","kind":"distractor","distractorFor":"read-table"}]},"expected":{"kind":"step_ordering","order":["read-table","standard-annual-premium","add-standard-deductible","increased-annual-premium","derive-threshold","state-direction"],"partialFeedback":"practice_only"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","€ 649","649 euro","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro per jaar","€ per jaar","euro"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"source_chain_builder","prompt":"Bouw de bronketen van tabelwaarden naar conclusie, zonder stappen over te slaan.","interaction":{"nodeBankLabel":"Bronketen onderdelen","sequenceLabel":"Opgebouwde bronketen","placeholder":"Bouw de keten.","separator":" -> ","nodes":[{"id":"source-table","label":"Lees Tabel 1 met premie en eigen risico","kind":"answer","nodeRole":"source"},{"id":"role-values","label":"Gebruik 108,25, 385 en 86,25 met hun rol","kind":"answer","nodeRole":"value"},{"id":"standard-cost","label":"12 x 108,25 + 385 = 1.684","kind":"answer","nodeRole":"operation"},{"id":"increased-premium","label":"12 x 86,25 = 1.035","kind":"answer","nodeRole":"operation"},{"id":"threshold","label":"1.684 - 1.035 = 649","kind":"answer","nodeRole":"answer"},{"id":"direction","label":"Tot dat jaarbedrag is verhoogd eigen risico voordeliger","kind":"answer","nodeRole":"conclusion"},{"id":"use-885-only","label":"Gebruik alleen 885 als grens","kind":"distractor","nodeRole":"answer","distractorFor":"threshold"},{"id":"lowest-premium-only","label":"Kies alleen de laagste premie","kind":"distractor","nodeRole":"operation","distractorFor":"role-values"}]},"expected":{"kind":"source_chain_builder","chain":["source-table","role-values","standard-cost","increased-premium","threshold","direction"],"partialFeedback":"practice_only"}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"fields":[{"id":"threshold","label":"Grensbedrag","placeholder":"Bijvoorbeeld 123 euro per jaar"},{"id":"direction","label":"Richting","placeholder":"Wanneer is verhoogd eigen risico voordeliger?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
+      const models = [{"family":"choice","prompt":"Wat moet je vergelijken om te bepalen wanneer het verhoogde eigen risico voordeliger is?","interaction":{"options":[{"id":"monthly_premiums_only","label":"Alleen de laagste maandpremie"},{"id":"deductibles_only","label":"Alleen het hoogste eigen risico"},{"id":"annual_premium_plus_exposure","label":"Jaarpremie + eigen-risico exposure"},{"id":"lowest_monthly_premium","label":"Gewoon de laagste maandpremie kiezen"}]},"expected":{"kind":"choice","value":"annual_premium_plus_exposure"}},{"family":"calculation_work_capture","prompt":"Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Grensbedrag","finalAnswerPlaceholder":"Bijvoorbeeld 123","unitNotationLabel":"Eenheid","unitNotationPlaceholder":"Bijvoorbeeld euro per jaar","targetedFeedback":{"unitOnly":"Het bedrag klopt. Controleer alleen de eenheid.","workMissing":"Het eindantwoord klopt. Laat nog zien hoe je eraan komt.","numberWrong":"Controleer eerst de jaarpremies en het verschil."},"progressiveSupport":{"label":"Review-only hulp verschijnt na mislukte pogingen.","hintButton":"Hulp: maandpremie naar jaarpremie","hintText":"Zet elke maandpremie eerst om naar een jaarpremie: maandpremie x 12.","partialSetup":"12 x 108,25 + 385 = ...\n12 x 86,25 = ...","solutionButton":"Toon uitwerking","solutionText":"12 x 108,25 = 1299. 1299 + 385 = 1684. 12 x 86,25 = 1035. 1684 - 1035 = 649 euro per jaar."}},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["649","EUR 649","? 649","649 euro","649 euros","tot 649 euro","tot en met 649 euro"]},"unitNotation":{"kind":"text","accepted":["euro","euros","?","EUR","euro per jaar","euros per year","? per jaar","EUR per jaar","per jaar"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}],"acceptedWorkPaths":[{"id":"full-annual-cost-route","label":"Reken beide jaarlasten uit en neem het verschil.","requiredWorkText":[{"label":"standaardpremie per jaar","any":["108,25 x 12","12 x 108,25","1299"]},{"label":"wettelijk eigen risico optellen","any":["+ 385","385","1684","1.684"]},{"label":"verhoogde premie per jaar","any":["86,25 x 12","12 x 86,25","1035","1.035"]},{"label":"verschil als grens","any":["1684 - 1035","1.684 - 1.035","649"]}]},{"id":"premium-difference-shortcut","label":"Gebruik het maandpremieverschil en tel het extra eigen risico op.","requiredWorkText":[{"label":"maandpremieverschil","any":["108,25 - 86,25","22","22,00"]},{"label":"jaarverschil","any":["22 x 12","22x12","12 x 22","264"]},{"label":"extra eigen risico optellen","any":["264 + 385","264+385","+ 385","649"]}]}],"criteria":["Reken beide maandpremies om naar jaarbedragen.","Tel het wettelijk eigen risico op bij de jaarpremie van de wettelijke variant.","Gebruik het verschil als grensbedrag en noem de richting."]}},{"family":"structured_short_response","prompt":"Leg uit of Zoohee boven de wettelijke variant uitkomt en onderbouw dat met het berekende verschil.","interaction":{"carryForward":{"fromTaskIndex":1,"label":"Grensbedrag uit taak 2","value":"EUR 649 per jaar","notReadyText":"Bereken taak 2 of gebruik de review-hulp bij taak 2."},"directionLabel":"Wanneer is verhoogd eigen risico voordeliger?","directionOptions":[{"id":"lager dan","label":"lager dan het grensbedrag"},{"id":"hoger dan","label":"hoger dan het grensbedrag"},{"id":"gelijk aan","label":"gelijk aan het grensbedrag"}],"sentenceTemplate":"Bij zorgkosten lager dan het grensbedrag is het verhoogde eigen risico voordeliger.","fields":[{"id":"threshold","label":"Grensbedrag uit taak 2","placeholder":"Wordt overgenomen uit taak 2"},{"id":"direction","label":"Richting","placeholder":"Kies lager dan, hoger dan of gelijk aan"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem het grensbedrag.","Gebruik de richting: tot dat bedrag is verhoogd eigen risico voordeliger."],"fields":[{"id":"threshold","accepted":["EUR 649 per jaar","649 euro per jaar","€ 649 per jaar","tot 649 euro per jaar","tot en met 649 euro per jaar"]},{"id":"direction","accepted":["lager dan","verhoogd eigen risico is voordeliger tot dat bedrag","tot dat bedrag is verhoogd eigen risico voordeliger","bij zorgkosten tot 649 euro is verhoogd eigen risico voordeliger"]}]}}];
       const cards = Array.from(document.querySelectorAll('.task-card'));
       const currentPrompt = document.querySelector('.current-prompt');
       const progress = document.querySelector('.progress');
@@ -459,15 +664,38 @@
 
       function acceptedText(value, accepted) {
         const actual = normalize(value);
+        if (!actual) return false;
         return (accepted || []).some((candidate) => {
           const expected = normalize(candidate);
           return actual === expected || actual.includes(expected) || expected.includes(actual);
         });
       }
 
+      function acceptedTextExact(value, accepted) {
+        const actual = normalize(value);
+        if (!actual) return false;
+        return (accepted || []).some((candidate) => actual === normalize(candidate));
+      }
+
       function workGroupOptions(group) {
         if (Array.isArray(group)) return group;
         return group?.any || group?.accepted || [];
+      }
+
+      function graphPointsMatch(actualPoints, expected) {
+        const expectedPoints = (expected.points || []).map((point) => ({ x: Number(point.x), y: Number(point.y), matched: false }));
+        if (!Array.isArray(actualPoints) || actualPoints.length !== expectedPoints.length) return false;
+        const tx = Number(expected.toleranceX ?? expected.tolerance ?? 0);
+        const ty = Number(expected.toleranceY ?? expected.tolerance ?? 0);
+        for (const actual of actualPoints) {
+          const x = numberValue(actual.x);
+          const y = numberValue(actual.y);
+          if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+          const match = expectedPoints.find((point) => !point.matched && Math.abs(x - point.x) <= tx && Math.abs(y - point.y) <= ty);
+          if (!match) return false;
+          match.matched = true;
+        }
+        return expectedPoints.every((point) => point.matched);
       }
 
       function completedCount() {
@@ -506,8 +734,242 @@
         if (clear) clear.addEventListener('click', () => { zone.innerHTML = ''; });
       }
 
+      function expectedRoleByValue(model) {
+        const roles = {};
+        (model.expected.selections || []).forEach((selection) => {
+          roles[selection.valueId] = selection.role;
+        });
+        return roles;
+      }
+
+      function graphPointPosition(svg, x, y) {
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const viewBox = svg.viewBox.baseVal;
+        const plotWidth = viewBox.width - padL - padR;
+        const plotHeight = viewBox.height - padT - padB;
+        return {
+          cx: padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * plotWidth,
+          cy: viewBox.height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * plotHeight
+        };
+      }
+
+      function clearGraphPoints(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (group) group.innerHTML = '';
+        hideConstructedLine(card);
+        updateGraphPointStatus(card);
+      }
+
+      function hideConstructedLine(card) {
+        const lineGroup = card.querySelector('[data-graph-line="constructed"]');
+        if (lineGroup) lineGroup.setAttribute('hidden', '');
+      }
+
+      function drawConstructedLine(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const lineGroup = svg?.querySelector('[data-graph-line="constructed"]');
+        const line = lineGroup?.querySelector('line');
+        const points = Array.from(card.querySelectorAll('.placed-graph-point'));
+        if (!svg || !lineGroup || !line || points.length < 2) return false;
+        const first = points[0];
+        const last = points[points.length - 1];
+        const firstPos = graphPointPosition(svg, first.dataset.x, first.dataset.y);
+        const lastPos = graphPointPosition(svg, last.dataset.x, last.dataset.y);
+        line.setAttribute('x1', firstPos.cx.toFixed(1));
+        line.setAttribute('y1', firstPos.cy.toFixed(1));
+        line.setAttribute('x2', lastPos.cx.toFixed(1));
+        line.setAttribute('y2', lastPos.cy.toFixed(1));
+        lineGroup.removeAttribute('hidden');
+        return true;
+      }
+
+      function placeGraphPoint(card, x, y) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const svg = workspace?.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (!svg || !group) return;
+        const required = Number(workspace.dataset.requiredPoints || 2);
+        const points = Array.from(group.querySelectorAll('.placed-graph-point'));
+        if (points.length >= required) return;
+        const position = graphPointPosition(svg, x, y);
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.classList.add('placed-graph-point');
+        g.dataset.x = String(x);
+        g.dataset.y = String(y);
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', position.cx.toFixed(1));
+        circle.setAttribute('cy', position.cy.toFixed(1));
+        circle.setAttribute('r', '8');
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', (position.cx + 12).toFixed(1));
+        label.setAttribute('y', (position.cy - 10).toFixed(1));
+        label.textContent = String(points.length + 1);
+        g.append(circle, label);
+        group.appendChild(g);
+        hideConstructedLine(card);
+        updateGraphPointStatus(card);
+      }
+
+      function nearestExpectedPoint(model, x, y) {
+        const points = model.expected.points || [];
+        if (points.length === 0) return { x, y };
+        return points
+          .map((point) => ({ point, distance: Math.hypot(Number(point.x) - x, Number(point.y) - y) }))
+          .sort((a, b) => a.distance - b.distance)[0].point;
+      }
+
+      function clickToGraphValue(svg, event, model) {
+        const point = svg.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        const local = point.matrixTransform(svg.getScreenCTM().inverse());
+        const viewBox = svg.viewBox.baseVal;
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const clampedX = Math.max(padL, Math.min(viewBox.width - padR, local.x));
+        const clampedY = Math.max(padT, Math.min(viewBox.height - padB, local.y));
+        const x = xMin + ((clampedX - padL) / (viewBox.width - padL - padR || 1)) * (xMax - xMin);
+        const y = yMin + ((viewBox.height - padB - clampedY) / (viewBox.height - padT - padB || 1)) * (yMax - yMin);
+        return nearestExpectedPoint(model, x, y);
+      }
+
+      function updateGraphPointStatus(card) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const required = Number(workspace?.dataset.requiredPoints || 0);
+        const count = card.querySelectorAll('.placed-graph-point').length;
+        const status = card.querySelector('[data-graph-point-status="true"]');
+        if (status) status.textContent = count + ' / ' + required + ' punten geplaatst';
+      }
+
+      function updateGraphAxisState(card, model) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        if (!workspace) return false;
+        const xValue = card.querySelector('.graph-axis-x')?.value || '';
+        const yValue = card.querySelector('.graph-axis-y')?.value || '';
+        const ok = acceptedText(xValue, model.expected.axes?.xAccepted || []) && acceptedText(yValue, model.expected.axes?.yAccepted || []);
+        workspace.classList.toggle('axes-selected', ok);
+        const note = workspace.querySelector('[data-graph-stage-note="true"]');
+        if (note) {
+          note.textContent = ok
+            ? 'Assen kloppen. Klik nu twee punten uit de tabel in het werkvlak.'
+            : 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.';
+        }
+        return ok;
+      }
+
+      function installGraphConstruction(card, model) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        if (!svg) return;
+        card.querySelectorAll('.graph-axis-x, .graph-axis-y').forEach((select) => {
+          select.addEventListener('change', () => updateGraphAxisState(card, model));
+        });
+        svg.addEventListener('click', (event) => {
+          if (!updateGraphAxisState(card, model)) return;
+          const value = clickToGraphValue(svg, event, model);
+          placeGraphPoint(card, value.x, value.y);
+        });
+        const clear = card.querySelector('.clear-graph-points');
+        if (clear) clear.addEventListener('click', () => clearGraphPoints(card));
+        updateGraphAxisState(card, model);
+        updateGraphPointStatus(card);
+      }
+
+      function installIntervalHalving(card) {
+        const box = card.querySelector('[data-interval-halving-check="true"]');
+        if (!box) return;
+        const update = () => {
+          const selected = box.querySelector('.interval-choice:checked');
+          const oldTarget = box.querySelector('[data-old-quantity="true"]');
+          const newTarget = box.querySelector('[data-new-quantity="true"]');
+          const work = box.querySelector('.calc-work');
+          const final = box.querySelector('.calc-final');
+          const unit = box.querySelector('.calc-unit');
+          const conclusion = box.querySelector('.halving-conclusion');
+          const selectedConclusion = conclusion?.selectedOptions?.[0];
+          if (oldTarget) oldTarget.textContent = selected ? selected.dataset.oldQ : 'Kies eerst een interval';
+          if (newTarget) newTarget.textContent = selected ? selected.dataset.newQ : 'Kies eerst een interval';
+          if (work) work.value = selected ? selected.dataset.work : '';
+          if (final) final.value = selectedConclusion?.dataset.finalAnswer || selected?.dataset.finalAnswer || '';
+          if (unit) unit.value = box.querySelector('.halving-relation')?.value === 'helft' ? '50 procent daling' : '';
+        };
+        box.querySelectorAll('.interval-choice, .halving-relation, .halving-conclusion').forEach((control) => {
+          control.addEventListener('change', update);
+        });
+        update();
+      }
+
+      function installProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        support.querySelectorAll('.support-button').forEach((button) => {
+          button.addEventListener('click', () => {
+            const level = button.dataset.supportLevel;
+            const content = support.querySelector('[data-support-content="' + CSS.escape(level) + '"]');
+            if (content) content.hidden = false;
+            if (level === '3') {
+              support.dataset.supportComplete = 'true';
+              card.classList.add('support-complete');
+              updateCarryovers();
+            }
+          });
+        });
+      }
+
+      function updateProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        const attempts = Number(card.dataset.failedAttempts || 0);
+        const hintButton = support.querySelector('[data-support-level="1"]');
+        const setup = support.querySelector('[data-support-content="2"]');
+        const solutionButton = support.querySelector('[data-support-level="3"]');
+        if (hintButton && attempts >= 1) hintButton.hidden = false;
+        if (setup && attempts >= 2) setup.hidden = false;
+        if (solutionButton && attempts >= 3) solutionButton.hidden = false;
+      }
+
+      function updateCarryovers() {
+        document.querySelectorAll('[data-carry-forward="true"]').forEach((box) => {
+          const sourceIndex = Number(box.dataset.carryFromIndex || 1);
+          const sourceComplete = cards[sourceIndex]?.classList.contains('is-complete') === true;
+          const supportComplete = cards[sourceIndex]?.classList.contains('support-complete') === true;
+          const ready = sourceComplete || supportComplete;
+          const carriedValue = box.dataset.carriedValue || '';
+          const notReady = box.dataset.notReadyText || 'Bereken eerst het grensbedrag in taak 2.';
+          const output = box.querySelector('[data-carried-output="true"]');
+          const hidden = box.querySelector('.carried-threshold-field');
+          const select = box.querySelector('.direction-select');
+          box.classList.toggle('is-ready', ready);
+          if (output) output.textContent = ready ? carriedValue : notReady;
+          if (hidden) hidden.value = ready ? carriedValue : '';
+          if (select) select.disabled = !ready;
+        });
+      }
+
       function collect(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const relation = intervalBox.querySelector('.halving-relation')?.value || '';
+            return {
+              work: intervalBox.querySelector('.calc-work')?.value || '',
+              finalAnswer: intervalBox.querySelector('.calc-final')?.value || '',
+              unit: relation === 'helft' ? '50 procent daling' : relation
+            };
+          }
           return {
             work: card.querySelector('.calc-work')?.value || '',
             finalAnswer: card.querySelector('.calc-final')?.value || '',
@@ -520,6 +982,24 @@
             fields[field.dataset.fieldId] = field.value;
           });
           return { fields };
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const clickedPoints = Array.from(card.querySelectorAll('.placed-graph-point')).map((point) => ({
+            x: point.dataset.x || '',
+            y: point.dataset.y || ''
+          }));
+          const typedPoints = Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
+            x: row.querySelector('.graph-point-x')?.value || '',
+            y: row.querySelector('.graph-point-y')?.value || ''
+          }));
+          return {
+            axes: {
+              x: card.querySelector('.graph-axis-x')?.value || '',
+              y: card.querySelector('.graph-axis-y')?.value || ''
+            },
+            points: clickedPoints.length > 0 ? clickedPoints : typedPoints,
+            lineShape: card.querySelector('.graph-line-confirm')?.checked ? 'decreasing' : ''
+          };
         }
         if (model.family === 'point_placement') {
           return {
@@ -534,6 +1014,16 @@
           return { value: card.querySelector('.choice-input:checked')?.value || '' };
         }
         if (model.family === 'source_value_selection') {
+          const compactValues = Array.from(card.querySelectorAll('.source-cell-select:checked')).map((input) => input.value);
+          if (compactValues.length > 0) {
+            const roles = expectedRoleByValue(model);
+            return {
+              selections: compactValues.map((valueId) => ({
+                valueId,
+                role: roles[valueId] || ''
+              }))
+            };
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row')).map((row) => ({
             valueId: row.querySelector('.value-select')?.value || '',
             role: row.querySelector('.role-select')?.value || ''
@@ -549,15 +1039,17 @@
       function evaluate(model, response) {
         const expected = model.expected || {};
         if (model.family === 'calculation_work_capture') {
-          const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
-          const expectedUnit = expected.unit || expected.unitNotation;
-          const unitOk = !expectedUnit?.accepted || acceptedText(response.unit, expectedUnit.accepted);
-          const requiredGroups = expected.requiredWorkText || [];
-          const workOk = requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle))));
-          return finalOk && unitOk && workOk;
+          const parts = calculationParts(model, response);
+          return parts.finalOk && parts.unitOk && parts.workOk;
         }
         if (model.family === 'structured_short_response') {
           return (expected.fields || []).every((field) => acceptedText(response.fields[field.id] || '', field.accepted || []));
+        }
+        if (model.family === 'graph_construction_substitute') {
+          return acceptedText(response.axes.x, expected.axes?.xAccepted || [])
+            && acceptedText(response.axes.y, expected.axes?.yAccepted || [])
+            && graphPointsMatch(response.points, expected)
+            && normalize(response.lineShape) === normalize(expected.lineShape);
         }
         if (model.family === 'point_placement') {
           return Math.abs(numberValue(response.x) - Number(expected.x)) <= numericTolerance
@@ -587,15 +1079,43 @@
         return text(response.value).length > 0;
       }
 
+      function calculationParts(model, response) {
+        const expected = model.expected || {};
+        const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
+        const expectedUnit = expected.unit || expected.unitNotation;
+        const unitOk = !expectedUnit?.accepted || acceptedTextExact(response.unit, expectedUnit.accepted);
+        const paths = Array.isArray(expected.acceptedWorkPaths) && expected.acceptedWorkPaths.length > 0
+          ? expected.acceptedWorkPaths.map((path) => path.requiredWorkText || [])
+          : [expected.requiredWorkText || []];
+        const workOk = paths.some((requiredGroups) => requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle)))));
+        return { finalOk, unitOk, workOk };
+      }
+
+      function feedbackText(model, response, ok) {
+        if (ok) return 'Klopt. Je kunt door naar de volgende kaart.';
+        if (model.family === 'calculation_work_capture' && model.interaction?.targetedFeedback) {
+          const parts = calculationParts(model, response);
+          const feedback = model.interaction.targetedFeedback;
+          if (parts.finalOk && !parts.unitOk) return feedback.unitOnly || 'Het bedrag klopt. Controleer alleen de eenheid.';
+          if (parts.finalOk && parts.unitOk && !parts.workOk) return feedback.workMissing || 'Het eindantwoord klopt. Laat nog zien hoe je eraan komt.';
+          return feedback.numberWrong || 'Controleer eerst de jaarpremies en het verschil.';
+        }
+        return 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+      }
+
       function mark(card, index, ok) {
         const feedback = card.querySelector('.feedback');
         card.classList.toggle('is-complete', ok);
         card.classList.toggle('is-retry', !ok);
-        if (feedback) {
-          feedback.textContent = ok
-            ? 'Klopt. Je kunt door naar de volgende kaart.'
-            : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+        if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+          if (ok) drawConstructedLine(card);
+          else hideConstructedLine(card);
         }
+        if (!ok) card.dataset.failedAttempts = String(Number(card.dataset.failedAttempts || 0) + 1);
+        if (ok) card.dataset.failedAttempts = '0';
+        updateProgressiveSupport(card);
+        if (feedback) feedback.textContent = feedbackText(models[index], collect(card, models[index]), ok);
+        updateCarryovers();
         updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
       }
 
@@ -616,9 +1136,37 @@
         });
       }
 
+      function calculationWorkGroups(model) {
+        const paths = model.expected.acceptedWorkPaths || [];
+        if (paths.length > 0) return paths[0].requiredWorkText || [];
+        return model.expected.requiredWorkText || [];
+      }
+
       function fillCorrect(card, model) {
         if (model.family === 'calculation_work_capture') {
-          const work = model.expected.requiredWorkText || [];
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice[data-correct="true"]') || intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) {
+              relation.value = 'helft';
+              relation.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) {
+              const expected = model.expected.finalAnswer?.accepted?.[0] || '';
+              const target = Array.from(conclusion.options).find((item) => normalize(item.dataset.finalAnswer || item.value) === normalize(expected))
+                || Array.from(conclusion.options).find((item) => item.dataset.correct === 'true');
+              conclusion.value = target?.value || '';
+              conclusion.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            return;
+          }
+          const work = calculationWorkGroups(model);
           const expectedUnit = model.expected.unit || model.expected.unitNotation;
           card.querySelector('.calc-work').value = work.map((group) => workGroupOptions(group)[0]).filter(Boolean).join(' ; ');
           card.querySelector('.calc-final').value = model.expected.finalAnswer.accepted[0];
@@ -626,10 +1174,37 @@
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const direction = (model.expected.fields || []).find((field) => field.id === 'direction');
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = direction?.accepted?.[0] || '';
+            return;
+          }
           (model.expected.fields || []).forEach((field) => {
             const input = card.querySelector('.structured-field[data-field-id="' + CSS.escape(field.id) + '"]');
             if (input) input.value = field.accepted[0];
           });
+          return;
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+          if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
+          const rows = Array.from(card.querySelectorAll('.point-entry-row'));
+          (model.expected.points || []).forEach((point, rowIndex) => {
+            const row = rows[rowIndex];
+            if (!row) return;
+            row.querySelector('.graph-point-x').value = point.x;
+            row.querySelector('.graph-point-y').value = String(point.y).replace('.', ',');
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = true;
           return;
         }
         if (model.family === 'point_placement') {
@@ -647,6 +1222,12 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const expectedIds = new Set((model.expected.selections || []).map((selection) => selection.valueId));
+            compactInputs.forEach((input) => { input.checked = expectedIds.has(input.value); });
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           (model.expected.selections || []).forEach((selection, rowIndex) => {
             const row = rows[rowIndex];
@@ -663,13 +1244,48 @@
 
       function fillWrong(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) relation.value = 'dubbel';
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) conclusion.value = Array.from(conclusion.options).find((item) => item.dataset.correct !== 'true' && item.value)?.value || '';
+            return;
+          }
           card.querySelector('.calc-work').value = 'onvolledig';
           card.querySelector('.calc-final').value = '0';
           card.querySelector('.calc-unit').value = '';
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = 'hoger dan';
+            return;
+          }
           card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
+          return;
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = 'prijs p';
+          if (yAxis) yAxis.value = 'hoeveelheid q';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          card.querySelectorAll('.point-entry-row').forEach((row, rowIndex) => {
+            row.querySelector('.graph-point-x').value = rowIndex === 0 ? '0' : '';
+            row.querySelector('.graph-point-y').value = rowIndex === 0 ? '0' : '';
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = false;
           return;
         }
         if (model.family === 'point_placement') {
@@ -688,6 +1304,15 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const firstWrong = compactInputs.find((input) => {
+              const value = model.interaction.values?.find((item) => item.id === input.value);
+              return value?.kind === 'distractor';
+            }) || compactInputs[0];
+            if (firstWrong) firstWrong.checked = true;
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           const firstValue = model.interaction.values?.find((item) => item.id !== model.expected.selections?.[0]?.valueId)?.id || '';
           const firstRole = model.interaction.roles?.find((item) => item.id !== model.expected.selections?.[0]?.role)?.id || '';
@@ -704,6 +1329,9 @@
 
       cards.forEach((card, index) => {
         installSequenceBuilder(card);
+        if (models[index].family === 'graph_construction_substitute') installGraphConstruction(card, models[index]);
+        installIntervalHalving(card);
+        installProgressiveSupport(card);
         const button = card.querySelector('.check-button');
         button.addEventListener('click', () => {
           mark(card, index, evaluate(models[index], collect(card, models[index])));
@@ -713,15 +1341,34 @@
       function resetAll() {
         cards.forEach((card) => {
           card.classList.remove('is-complete', 'is-retry');
+          card.classList.remove('support-complete');
+          card.dataset.failedAttempts = '0';
           card.querySelectorAll('input, textarea, select').forEach((control) => {
-            if (control.type === 'radio') control.checked = false;
+            if (control.type === 'radio' || control.type === 'checkbox') control.checked = false;
             else control.value = '';
           });
           const zone = card.querySelector('.sequence-zone');
           if (zone) zone.innerHTML = '';
+          card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => { graph.hidden = true; });
+          clearGraphPoints(card);
+          if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+            updateGraphAxisState(card, models[cards.indexOf(card)]);
+          }
+          card.querySelectorAll('[data-progressive-support="true"]').forEach((support) => {
+            support.dataset.supportComplete = 'false';
+            support.querySelectorAll('.support-button, .support-content').forEach((item) => { item.hidden = true; });
+          });
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const oldTarget = intervalBox.querySelector('[data-old-quantity="true"]');
+            const newTarget = intervalBox.querySelector('[data-new-quantity="true"]');
+            if (oldTarget) oldTarget.textContent = 'Kies eerst een interval';
+            if (newTarget) newTarget.textContent = 'Kies eerst een interval';
+          }
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
         });
+        updateCarryovers();
         updateCurrent(0);
       }
 
@@ -729,7 +1376,20 @@
         const sourcePane = document.querySelector('.source-pane');
         const taskPane = document.querySelector('.task-pane');
         const strip = document.querySelector('.question-strip');
-        if (sourcePane) sourcePane.scrollTop = sourcePane.scrollHeight;
+        const originalScrollTop = sourcePane ? sourcePane.scrollTop : 0;
+        let sourceTableFullyVisibleAtTop = true;
+        let sourceTableVisibleAtTop = true;
+        let sourcePaneNeedsImmediateVerticalScroll = false;
+        if (sourcePane) {
+          sourcePane.scrollTop = 0;
+          const paneRect = sourcePane.getBoundingClientRect();
+          const firstTable = sourcePane.querySelector('table');
+          const firstTableRect = firstTable ? firstTable.getBoundingClientRect() : null;
+          sourceTableVisibleAtTop = !firstTableRect || (firstTableRect.bottom > paneRect.top && firstTableRect.top < paneRect.bottom);
+          sourceTableFullyVisibleAtTop = !firstTableRect || (firstTableRect.top >= paneRect.top && firstTableRect.bottom <= paneRect.bottom + 2);
+          sourcePaneNeedsImmediateVerticalScroll = sourcePane.scrollHeight > sourcePane.clientHeight + 6;
+          sourcePane.scrollTop = sourcePane.scrollHeight;
+        }
         const stripRect = strip ? strip.getBoundingClientRect() : null;
         const overflowing = Array.from(document.querySelectorAll('body *')).filter((item) => {
           const style = window.getComputedStyle(item);
@@ -739,6 +1399,28 @@
           return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll') && !item.closest('.formula-scroll');
         });
         const familyAffordances = {};
+        const visible = (item) => {
+          if (!item) return false;
+          if (item.ownerSVGElement) {
+            if (item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+            const style = window.getComputedStyle(item);
+            if (style.display === 'none' || style.visibility === 'hidden') return false;
+            if (typeof item.getBBox === 'function') {
+              try {
+                const box = item.getBBox();
+                return box.width > 0 || box.height > 0;
+              } catch (error) {
+                return true;
+              }
+            }
+            return true;
+          }
+          if (item.hidden || item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          const rect = item.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        };
         cards.forEach((card) => {
           const family = card.getAttribute('data-task-family');
           if (!familyAffordances[family]) {
@@ -752,7 +1434,40 @@
               structuredFields: false,
               calculationFields: false,
               pointFields: false,
-              numericField: false
+              numericField: false,
+              graphWorkspace: false,
+              graphAxisControls: false,
+              graphPointInputs: false,
+              graphLineConfirmation: false,
+              graphClickToPlace: false,
+              graphAxisControlsAttached: false,
+              graphClickedPointCount: 0,
+              graphConstructedLineVisible: false,
+              graphLineInSameWorkspace: false,
+              graphGridLineVisibleCount: 0,
+              typedPointFallbackCollapsed: false,
+              typedPointFallbackOpen: false,
+              sourceCellSelection: false,
+              sourceCellOptionCount: 0,
+              sourceCellCheckedCount: 0,
+              sourceCellRequiredSelectionCount: 0,
+              sourceCellDistractorCount: 0,
+              repeatedDropdownRows: 0,
+              roleDropdownCount: 0,
+              structuredCarryForward: false,
+              constrainedDirectionControl: false,
+              freeTextDirectionAbsent: true,
+              carriedValueReady: false,
+              carryRequiresPreviousTask: false,
+              intervalHalvingCheck: false,
+              intervalChoiceCount: 0,
+              halvingConclusionControl: false,
+              autoFilledQuantitiesVisible: false,
+              progressiveSupport: false,
+              supportHintVisible: false,
+              supportSetupVisible: false,
+              supportSolutionVisible: false,
+              supportComplete: false
             };
           }
           const item = familyAffordances[family];
@@ -766,15 +1481,85 @@
           item.calculationFields = item.calculationFields || Boolean(card.querySelector('.calc-work') && card.querySelector('.calc-final'));
           item.pointFields = item.pointFields || Boolean(card.querySelector('.point-x') && card.querySelector('.point-y'));
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
+          item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
+          item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
+          item.graphAxisControlsAttached = item.graphAxisControlsAttached || Boolean(card.querySelector('[data-axis-controls-attached="true"]'));
+          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 4;
+          item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
+          item.graphClickToPlace = item.graphClickToPlace || Boolean(card.querySelector('[data-graph-click-surface="true"]'));
+          item.graphClickedPointCount += card.querySelectorAll('.placed-graph-point').length;
+          item.graphConstructedLineVisible = item.graphConstructedLineVisible || Boolean(Array.from(card.querySelectorAll('[data-graph-line="constructed"]')).some((line) => visible(line)));
+          item.graphLineInSameWorkspace = item.graphLineInSameWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"] [data-graph-line="constructed"]'));
+          item.graphGridLineVisibleCount += Array.from(card.querySelectorAll('.graph-grid-svg .grid-line')).filter((line) => visible(line)).length;
+          item.typedPointFallbackCollapsed = item.typedPointFallbackCollapsed || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"]:not([open])'));
+          item.typedPointFallbackOpen = item.typedPointFallbackOpen || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"][open]'));
+          item.sourceCellSelection = item.sourceCellSelection || Boolean(card.querySelector('[data-source-cell-selection="compact"]'));
+          item.sourceCellOptionCount += card.querySelectorAll('.source-cell-select').length;
+          item.sourceCellCheckedCount += card.querySelectorAll('.source-cell-select:checked').length;
+          const sourceSelection = card.querySelector('[data-source-cell-selection="compact"]');
+          if (sourceSelection) {
+            item.sourceCellRequiredSelectionCount = Number(sourceSelection.dataset.requiredSelections || 0);
+            item.sourceCellDistractorCount = Number(sourceSelection.dataset.distractorCount || 0);
+          }
+          item.repeatedDropdownRows += card.querySelectorAll('.pair-row').length;
+          item.roleDropdownCount += card.querySelectorAll('.role-select').length;
+          item.structuredCarryForward = item.structuredCarryForward || Boolean(card.querySelector('[data-carry-forward="true"]'));
+          item.constrainedDirectionControl = item.constrainedDirectionControl || Boolean(card.querySelector('.direction-select'));
+          item.freeTextDirectionAbsent = item.freeTextDirectionAbsent && !Boolean(card.querySelector('input.structured-field:not([type="hidden"]), textarea.structured-field'));
+          item.carriedValueReady = item.carriedValueReady || Boolean(card.querySelector('[data-carry-forward="true"].is-ready'));
+          item.carryRequiresPreviousTask = item.carryRequiresPreviousTask || Boolean(card.querySelector('[data-carry-forward="true"] .direction-select:disabled, [data-carry-forward="true"]:not(.is-ready)'));
+          item.intervalHalvingCheck = item.intervalHalvingCheck || Boolean(card.querySelector('[data-interval-halving-check="true"]'));
+          item.intervalChoiceCount += card.querySelectorAll('.interval-choice').length;
+          item.halvingConclusionControl = item.halvingConclusionControl || Boolean(card.querySelector('.halving-conclusion'));
+          item.autoFilledQuantitiesVisible = item.autoFilledQuantitiesVisible || Boolean(card.querySelector('[data-auto-fill-values="true"]'));
+          item.progressiveSupport = item.progressiveSupport || Boolean(card.querySelector('[data-progressive-support="true"]'));
+          item.supportHintVisible = item.supportHintVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="1"], [data-support-content="1"]')).some((item) => visible(item)));
+          item.supportSetupVisible = item.supportSetupVisible || Boolean(Array.from(card.querySelectorAll('[data-support-content="2"]')).some((item) => visible(item)));
+          item.supportSolutionVisible = item.supportSolutionVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="3"], [data-support-content="3"]')).some((item) => visible(item)));
+          item.supportComplete = item.supportComplete || card.classList.contains('support-complete');
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
+        const visibleText = (root) => Array.from(root.querySelectorAll('*'))
+          .filter((item) => visible(item) && !item.closest('.visually-hidden'))
+          .map((item) => {
+            if (item.children.length > 0 && !['TD', 'TH', 'CAPTION', 'H1', 'H2', 'H3', 'P', 'LABEL', 'BUTTON', 'OPTION', 'SUMMARY', 'DT', 'DD'].includes(item.tagName)) return '';
+            return item.innerText || item.textContent || '';
+          })
+          .join('\n');
+        const duplicateLabelBlocks = Array.from(document.querySelectorAll('.ctx-block')).map((block) => {
+          const text = visibleText(block);
+          return {
+            bron1: (text.match(/Bron 1/g) || []).length,
+            tabel1: (text.match(/Tabel 1/g) || []).length
+          };
+        });
+        const duplicateVisibleSourceLabels = duplicateLabelBlocks.some((item) => item.bron1 > 1 || item.tabel1 > 1);
+        const graphConstructionComplete = cards.some((item) => item.getAttribute('data-task-family') === 'graph_construction_substitute' && item.classList.contains('is-complete'));
+        const completedGraphBlocks = Array.from(document.querySelectorAll('[data-completed-graph="true"]'));
+        const visibleCompletedGraphs = completedGraphBlocks.filter(visible);
+        const completedGraphOutsideWorkspaceCount = completedGraphBlocks.filter((item) => !item.closest('[data-graph-workspace="construction"]')).length;
+        const constructedLineVisibleInWorkspace = Array.from(document.querySelectorAll('[data-graph-workspace="construction"] [data-graph-line="constructed"]')).some((item) => visible(item));
+        const graphWorkspaces = Array.from(document.querySelectorAll('[data-graph-workspace="construction"]'));
+        const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
+        const labShell = document.querySelector('.lab-shell');
+        const usableWidth = labShell ? labShell.getBoundingClientRect().width : window.innerWidth;
+        const graphAxisLabels = Array.from(document.querySelectorAll('.graph-grid-svg .axis-label.reveal-after-axes'));
+        const graphScaleLabels = Array.from(document.querySelectorAll('.graph-grid-svg .scale-label.reveal-after-axes'));
+        const graphAxisLabelsVisibleCount = graphAxisLabels.filter(visible).length;
+        const graphScaleLabelsVisibleCount = graphScaleLabels.filter(visible).length;
+        const graphScaleLabelTexts = graphScaleLabels.filter(visible).map((label) => (label.textContent || '').trim()).filter(Boolean);
+        const graphGridLineVisibleCount = Array.from(document.querySelectorAll('.graph-grid-svg .grid-line')).filter(visible).length;
+        const graphLabelsVisibleBeforeAxisSelection = graphWorkspaces.some((workspace) => !workspace.classList.contains('axes-selected') && Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible));
+        const sourceRefsVisibleNow = bodyText.includes('references/') || bodyText.includes('..\\') || bodyText.includes('../');
+        if (sourcePane) sourcePane.scrollTop = originalScrollTop;
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
           semanticValidationEnabled: document.body.dataset.semanticValidation === 'required',
           contextBlockCount: document.querySelectorAll('.ctx-block').length,
           promptContextCount: document.querySelectorAll('[data-context-role="prompt"]').length,
+          promptInSourcePaneCount: document.querySelectorAll('.source-pane [data-context-role="prompt"]').length,
           sourceContextCount: document.querySelectorAll('[data-context-role="source"]').length,
           supportBoxCount: supportBoxes.length,
           closedSupportBoxCount: supportBoxes.filter((box) => !box.open).length,
@@ -797,6 +1582,32 @@
           sourcePaneScrollable: sourcePane ? sourcePane.scrollHeight > sourcePane.clientHeight : false,
           sourcePaneIndependentScroll: sourcePane ? window.getComputedStyle(sourcePane).overflowY !== 'visible' : false,
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
+          rightPaneQuestionVisible: Boolean(document.querySelector('.task-pane [data-right-pane-question="true"]')),
+          examQuestionTextVisibleInTaskPane: taskPane ? taskPane.innerText.includes('Bereken tot welk bedrag aan zorgkosten per jaar') : false,
+          sourceTableVisibleAtTop,
+          sourceTableFullyVisibleAtTop,
+          sourcePaneNeedsImmediateVerticalScroll,
+          sourcePaneComfortableInitial: sourceTableVisibleAtTop && sourceTableFullyVisibleAtTop && !sourceRefsVisibleNow,
+          graphWorkspaceCount: graphWorkspaces.length,
+          graphWorkspaceInTaskPane: graphWorkspaces.length === 0 || graphWorkspaces.every((item) => Boolean(item.closest('.task-pane'))),
+          graphWorkspaceDesktopWidth: firstGraphWorkspaceRect ? Math.round(firstGraphWorkspaceRect.width) : 0,
+          graphWorkspaceUsableWidth: Math.round(usableWidth),
+          graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
+          graphClickToPlaceSupported: document.querySelectorAll('[data-graph-click-surface="true"]').length > 0,
+          graphClickedPointCount: document.querySelectorAll('.placed-graph-point').length,
+          graphGridLineVisibleCount,
+          graphAxisLabelsVisibleCount,
+          graphScaleLabelsVisibleCount,
+          graphScaleLabelTexts,
+          graphLabelsVisibleBeforeAxisSelection,
+          graphLabelsRevealAfterAxisSelection: graphWorkspaces.length === 0 || graphWorkspaces.every((workspace) => !workspace.classList.contains('axes-selected') || Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible)),
+          completedGraphVisibleCount: visibleCompletedGraphs.length,
+          completedGraphOutsideWorkspaceCount,
+          constructedLineVisibleInWorkspace,
+          completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
+          sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
+          duplicateVisibleSourceLabels,
+          duplicateLabelBlocks,
           interactiveControlCount: document.querySelectorAll('.play-control').length,
           checkButtonCount: document.querySelectorAll('.check-button').length,
           taskInstructionCount: document.querySelectorAll('.task-instructions').length,
@@ -808,11 +1619,16 @@
           completedTaskCount: completedCount(),
           wrongRetryCount: document.querySelectorAll('.task-card.is-retry').length,
           retryFeedbackCount: Array.from(document.querySelectorAll('.feedback')).filter((item) => item.textContent.includes('Nog niet')).length,
+          targetedUnitFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het bedrag klopt. Controleer alleen de eenheid.')),
+          targetedWorkFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het eindantwoord klopt. Laat nog zien hoe je eraan komt.')),
+          targetedNumberFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Controleer eerst de jaarpremies en het verschil.')),
+          progressiveSupportVisible: Array.from(document.querySelectorAll('[data-progressive-support="true"]')).some((item) => Array.from(item.querySelectorAll('.support-button, .support-content')).some(visible)),
+          supportComplete: cards.some((card) => card.classList.contains('support-complete')),
           labCompleted: completedCount() === cards.length,
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
           flowchartCount: document.querySelectorAll('.flow-list').length,
-          sourceRefsVisible: bodyText.includes('references/'),
+          sourceRefsVisible: sourceRefsVisibleNow,
           bodyTextSnapshot: bodyText,
           contextTextSnapshot: sourcePane ? sourcePane.innerText : '',
           taskTextSnapshot: taskPane ? taskPane.innerText : '',
@@ -834,6 +1650,46 @@
           }
           return inspect();
         },
+        applyUnitOnlyMistake(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const unit = card.querySelector('.calc-unit');
+            if (unit) unit.value = 'euro per maand';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyAcceptedEuros(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const final = card.querySelector('.calc-final');
+            const unit = card.querySelector('.calc-unit');
+            if (final) final.value = '649';
+            if (unit) unit.value = 'euros';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyStuckSupport(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            for (let attempt = 0; attempt < 3; attempt += 1) {
+              fillWrong(card, model);
+              card.querySelector('.check-button').click();
+            }
+            const solution = card.querySelector('[data-support-level="3"]');
+            if (solution) solution.click();
+          }
+          return inspect();
+        },
         correctTask(taskIndex = 0) {
           resetAll();
           const card = cards[taskIndex];
@@ -842,6 +1698,34 @@
             card.querySelector('.check-button').click();
             fillCorrect(card, models[taskIndex]);
             card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        selectCorrectAxes(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+          }
+          return inspect();
+        },
+        placeGraphPointsOnly(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+            clearGraphPoints(card);
+            (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
           }
           return inspect();
         },
@@ -854,6 +1738,7 @@
           return inspect();
         }
       };
+      updateCarryovers();
       updateCurrent(0);
     })();
   </script>

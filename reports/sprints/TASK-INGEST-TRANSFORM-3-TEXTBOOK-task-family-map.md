@@ -1,20 +1,55 @@
-# TASK-INGEST-TRANSFORM-3-TEXTBOOK Task Family Map
+# TASK-INGEST-TRANSFORM-3-TEXTBOOK Task-Family Map
 
-Sprint: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`
+Generated: 2026-06-05
 
-| Task | Family | Operations | Preservation rationale |
-|---|---|---|---|
-| `tb113-table-value` | `table_value_selection` | `read_table_value` | Checks direct table reading before graph or claim work. |
-| `tb113-axis-convention` | `structured_short_response` | `select_pq_axes` | Prevents swapping P and Q axes. |
-| `tb113-graph-step-order` | `step_ordering` | `order_graph_procedure`, `select_pq_axes` | Preserves the textbook procedure from table to graph. |
-| `tb113-point-placement` | `point_placement` | `plot_table_point`, `select_pq_axes` | Checks the axis convention through a concrete graph point. |
-| `tb113-interpolation-source-values` | `source_value_selection` | `select_interpolation_source_values` | Requires two surrounding table rows before interpolation. |
-| `tb113-graph-reading` | `graph_reading` | `interpolate_graph_value` | Checks graph reading at P = EUR 1.75. |
-| `tb113-claim-calculation` | `calculation_work_capture` | `calculate_percent_drop` | Requires visible calculation work, not only a final interval. |
-| `tb113-source-chain` | `source_chain_builder` | `select_pq_axes`, `plot_table_point`, `interpolate_graph_value`, `calculate_percent_drop`, `state_claim_with_source_limits` | Binds source, graph work, calculation, and conclusion in order. |
-| `tb113-answer-form` | `structured_short_response` | `calculate_percent_drop`, `state_claim_with_source_limits` | Checks interval, values, calculation, and conclusion as separate answer parts. |
+Status: target-first map after repair-4 interaction-clarity revision and
+reviewer correction pass.
 
-## Supported Families
+## Original Target To Transformed Task
 
-All families are supported by `engines/task-shell-engine.js`; no new runtime family is introduced in this sprint.
+Original:
 
+```text
+Teken een P-Q-grafiek bij de tabel.
+```
+
+Transformation:
+
+```text
+graph_construction_substitute -> graph_reading -> calculation_work_capture
+```
+
+| Task | Family | Target role |
+|---|---|---|
+| `tb113-graph-construction` | `graph_construction_substitute` | primary click-to-place graph construction with graph-attached axes, visible grid, table-derived tick labels, delayed labels/scale, and same-workspace line |
+| `tb113-graph-reading` | `graph_reading` | immediate graph-reading follow-up |
+| `tb113-quantity-drop-check` | `calculation_work_capture` | shared `interval_halving_check` variant with interval choice, auto-filled quantities, relation selection, and conclusion choice |
+
+## Target-Task Economy
+
+The revised task set has max 3 cards. It removes support-family coverage as a
+goal. A card is included only if it is part of the original target sequence or
+an explicit follow-up.
+
+Rejected overbuild:
+
+- table-reading card before graph construction;
+- axis-only card outside graph construction;
+- step-ordering card;
+- one-point placement card outside the graph workspace;
+- typed coordinate rows as the primary graph-construction path;
+- separate completed-graph output below the workspace;
+- hidden initial grid;
+- free-form interval plus unit fields for the 50 percent follow-up;
+- generic quarter-scale ticks instead of table-derived axis numbers;
+- interval-only acceptance for the 50 percent follow-up;
+- source-chain card;
+- separate answer-form card;
+- final interval answer alone.
+
+## Shared Task Note
+
+The 50 percent follow-up remains in the shared `calculation_work_capture`
+family through `selectionMode: interval_halving_check`. The shared task shell
+validates this interaction shape and exposes interval, relation, and
+conclusion controls in its focus plan.

@@ -1,24 +1,50 @@
-# TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Answer-Form Trace
+# TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Answer Form Trace
 
-## Answer-Form Principle
+Generated: 2026-06-05
 
-The source/table operation is a modifier. It supports the answer, but it is not
-the whole answer. The underlying answer still requires calculation work and a
-short constructed threshold statement.
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` and reviewer
+calculation-shortcut correction.
 
-## Trace
+## Required Answer Form
 
-| Answer-form lane | Required? | Task IDs | Why |
-|---|---:|---|---|
-| Source/table use modifier | yes | `q3-source-values`, `q3-source-chain` | The student must choose the correct values, units, and roles from Tabel 1. |
-| Formula/procedure control | yes | `q3-annual-premium-formula`, `q3-operation-order` | The source gives monthly premiums, so yearly cost requires a conversion route. |
-| Calculation work | yes | `q3-calculation` | The official correction model awards calculation steps, not only a recognized answer. |
-| Constructed threshold direction | yes | `q3-source-chain`, `q3-threshold-direction` | The final response must state up to which care-cost amount the increased deductible is cheaper. |
+The official correction-model answer needs visible calculation work and a
+threshold conclusion. The revised review lab uses three required cards at most:
 
-## Boundaries
+1. conceptual comparison setup;
+2. calculation with visible work;
+3. conclusion with direction.
 
-- This answer-form trace is review evidence only.
-- It does not mint or expose answer-form units.
-- It does not authorize target-equivalent proof or completion language.
-- It does not authorize diagnostics, adaptive routing, mastery/sequencing, PV,
-  Scale Gate, or student/product use.
+## Accepted Evidence Shape
+
+| Lane | Task | Required form |
+|---|---|---|
+| source use | `q3-source-values` | choice that annual premium plus deductible exposure must be compared |
+| calculation work | `q3-calculation` | accepts either full annual-cost work (`108,25 x 12`, `+ 385`, `86,25 x 12`, `1684 - 1035 = 649`) or the premium-difference shortcut (`22x12 = 264`, `264 + 385 = 649`); accepts yearly unit variants such as `euro`, `euros`, `EUR per jaar`, `euros per year`, and `per jaar` |
+| constructed conclusion | `q3-threshold-direction` | task-2 value carried forward as `EUR 649 per jaar`; constrained direction `lager dan`; answer sentence follows from those controls |
+
+Targeted feedback:
+
+- number correct, unit wrong: `Het bedrag klopt. Controleer alleen de eenheid.`
+- final answer correct, work missing: `Het eindantwoord klopt. Laat nog zien hoe je eraan komt.`
+- number wrong: `Controleer eerst de jaarpremies en het verschil.`
+
+Progressive review-lab support appears after repeated failed attempts: first a
+hint, then partial setup, then `Toon uitwerking`.
+
+The checker explicitly accepts reviewer-style work
+`22x12 = 264, 264 + 385 = 649` with a yearly unit. It still rejects an empty
+work field with final answer `649`.
+
+## Rejected Reductions
+
+- final answer field alone;
+- lowest-premium-only reasoning;
+- formula-builder card as required evidence;
+- step-ordering card as required evidence;
+- source-chain card with answer-bearing nodes as required evidence.
+- repeated value dropdown plus role dropdown rows as the visible source task;
+- select-all-numbers table-cell task as required evidence;
+- free-text direction entry that does not consume the calculated value.
+
+The source-use task is a modifier, not standalone proof. This artifact remains
+not target-equivalent and not product-authorized.

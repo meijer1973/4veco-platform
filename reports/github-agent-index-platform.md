@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-04T16:11:54.128Z
+Generated: 2026-06-05T15:11:50.538Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3340
+Files indexed: 3396
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -803,7 +803,7 @@ Count: 218
 
 ## references
 
-Count: 471
+Count: 474
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1144,6 +1144,9 @@ Count: 471
 - references/data/sprints/S9a.plan.json
 - references/data/sprints/S9a.result.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1.plan.json
+- references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2.plan.json
+- references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3.plan.json
+- references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4.plan.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -1279,7 +1282,7 @@ Count: 471
 
 ## reports
 
-Count: 2033
+Count: 2086
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1983,6 +1986,18 @@ Count: 2033
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair4-direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
@@ -2959,6 +2974,42 @@ Count: 2033
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review-resolution.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-planning-review.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1-verification-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-baseline.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-command-log.jsonl
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-command-log.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-lead-review-assignment.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-lead-review-corrections.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-lead-review-round1.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-lead-review-round2.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-plan.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-planning-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-verification-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-baseline.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-command-log.jsonl
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-command-log.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-assignment.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-corrections.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-round1.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-round2.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-plan.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-planning-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-transformation-economy-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-verification-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-visual-qa-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-baseline.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-command-log.jsonl
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-command-log.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-lead-review-assignment.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-lead-review-corrections.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-lead-review-round1.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-lead-review-round2.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-plan.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-planning-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-verification-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -3258,6 +3309,8 @@ Count: 2033
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-support.png
+- reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-unit-feedback.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/manifest.json
 - reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png
@@ -3280,9 +3333,12 @@ Count: 2033
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-line-confirmed.png
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-two-points.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/manifest.json
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png

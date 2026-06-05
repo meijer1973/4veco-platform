@@ -90,10 +90,13 @@
       gap: 16px;
       align-items: start;
     }
+    .lab-shell.has-graph-construction {
+      grid-template-columns: minmax(340px, 0.72fr) minmax(720px, 1.28fr);
+    }
     .source-pane {
       position: sticky;
       top: 72px;
-      max-height: 48vh;
+      max-height: calc(100vh - 92px);
       overflow-y: auto;
       padding-right: 4px;
     }
@@ -109,10 +112,38 @@
       border-radius: 8px;
       padding: 15px;
     }
+    .task-question-panel {
+      background: var(--panel);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 13px 15px;
+      margin-bottom: 14px;
+    }
+    .task-question-panel p:last-child {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+    .question-source-label {
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
     .ctx-markdown {
       background: transparent;
       border-color: transparent;
       padding: 0;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
     .support-box {
       background: var(--warn);
@@ -123,6 +154,12 @@
       color: var(--accent);
     }
     .source-label { color: var(--primary); font-weight: 700; }
+    .source-heading {
+      color: var(--primary);
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin: 0 0 9px;
+    }
     .table-scroll, .formula-scroll {
       overflow-x: auto;
       border: 1px solid var(--line);
@@ -143,6 +180,9 @@
     }
     thead th { background: var(--soft); }
     tbody th { font-weight: 700; }
+    .has-graph-construction table {
+      min-width: 100%;
+    }
     pre {
       min-width: 500px;
       margin: 0;
@@ -161,6 +201,139 @@
     .graph-svg circle { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
     .graph-svg text { fill: var(--muted); font-size: 13px; text-anchor: middle; }
     .graph-svg .axis-label { fill: var(--text); font-weight: 700; }
+    .graph-construction-card {
+      align-content: start;
+    }
+    .graph-construction-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+    .graph-workspace {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .graph-stage-note {
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .graph-workspace.axes-selected .graph-stage-note {
+      color: var(--primary);
+    }
+    .graph-grid-svg {
+      width: 100%;
+      min-height: 360px;
+      display: block;
+      touch-action: manipulation;
+    }
+    .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
+    .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
+    .graph-grid-svg .grid-line { stroke: var(--muted); stroke-width: 1.1; opacity: 0.55; }
+    .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
+    .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-grid-svg .constructed-line line {
+      stroke: var(--primary);
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+    .graph-grid-svg .constructed-line[hidden] {
+      display: none;
+    }
+    .graph-workspace:not(.axes-selected) .reveal-after-axes {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .plot-hit-area {
+      fill: transparent;
+      cursor: crosshair;
+    }
+    .placed-points circle {
+      fill: var(--accent);
+      stroke: var(--panel);
+      stroke-width: 3;
+    }
+    .placed-points text {
+      fill: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .graph-click-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .graph-point-status {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .clear-graph-points {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .graph-construction-controls {
+      display: grid;
+      gap: 10px;
+    }
+    .axis-select-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .graph-axis-controls {
+      margin-bottom: 8px;
+      padding: 10px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .point-entry-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .typed-point-fallback {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 9px 10px;
+    }
+    .typed-point-fallback summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .point-entry-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+      align-items: end;
+    }
+    .point-entry-row span {
+      color: var(--muted);
+      font-weight: 700;
+      padding-bottom: 9px;
+    }
+    .line-confirmation {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 700;
+    }
+    .line-confirmation input {
+      width: auto;
+    }
+    .click-instruction {
+      color: var(--muted);
+      font-weight: 700;
+    }
     .flow-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -231,6 +404,56 @@
       font-weight: 600;
     }
     .choice-options input { width: auto; }
+    .source-cell-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .source-cell-option {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px;
+      font-weight: 700;
+    }
+    .source-cell-option input {
+      width: auto;
+      margin-top: 4px;
+    }
+    .source-cell-option small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .carry-forward-response {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .carried-value {
+      min-height: 41px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 9px 10px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .carry-forward-response.is-ready .carried-value {
+      color: var(--text);
+    }
+    .sentence-preview {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
     .control-row, .field-grid, .pair-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -340,7 +563,11 @@
         border-bottom: 2px solid var(--line);
         padding-bottom: 12px;
       }
-      .control-row, .field-grid, .pair-row, .flow-list { grid-template-columns: 1fr; }
+      .control-row, .field-grid, .pair-row, .flow-list, .graph-construction-layout, .axis-select-grid, .source-cell-grid, .carry-forward-response { grid-template-columns: 1fr; }
+      .lab-shell.has-graph-construction { grid-template-columns: minmax(0, 1fr); }
+      .graph-grid-svg { min-height: 300px; }
+      .point-entry-row { grid-template-columns: 1fr; }
+      .point-entry-row span { padding-bottom: 0; }
       th, td { white-space: normal; font-size: 0.9rem; line-height: 1.35; }
       pre { min-width: 460px; }
       dl div { grid-template-columns: 1fr; gap: 2px; }
@@ -351,132 +578,115 @@
   <header>
     <p class="kicker">Review-only textbook-source playable task transformation proof</p>
     <h1>IJskraam tabel en P-Q-grafiek</h1>
-    <p>Bronnen, tabel en grafiek blijven leesbaar terwijl je de vragen doorloopt.</p>
+    <p>De tabel is bronmateriaal; de grafiek wordt eerst in het taakvlak geconstrueerd.</p>
   </header>
   <section class="question-strip" aria-label="Huidige vraag">
     <div class="question-inner">
-      <p class="current-prompt">Kies uit de tabel hoeveel wordt gevraagd bij een prijs van EUR 1.50.</p>
-      <p class="progress">0 / 9</p>
+      <p class="current-prompt">Teken de P-Q-grafiek bij Tabel 1: kies assen, klik twee punten in het werkvlak en bevestig de dalende lijn.</p>
+      <p class="progress">0 / 3</p>
     </div>
   </section>
-  <main class="lab-shell">
-    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-markdown" data-block-type="markdown" data-context-role="prompt"><h2>Opdracht</h2><p>Teken een P-Q-grafiek bij de tabel. Lees daarna af hoeveel ijsjes worden verkocht bij een prijs van EUR 1.75. Onderzoek tot slot welke prijzen een daling van 50 procent kunnen ondersteunen.</p></section>
-<section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><p class="source-label">Bron 1</p><h2>Bron 1: IJskraam op het strand</h2><p>De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee.</p><p class="source-ref">Bronbestand: ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md, references/authored/course-target-exercises.json#paragraph_id=1.1.3</p></section>
-<section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><p class="source-label">Tabel 1</p><h2>Tabel 1: Prijs en verkochte ijsjes</h2><div class="table-scroll"><table><caption>Tabel 1: Prijs en verkochte ijsjes</caption><thead><tr><th scope="col">Prijs P (EUR)</th><th scope="col">Aantal verkocht Q</th></tr></thead><tbody><tr><th scope="row">1.00</th><td>500</td></tr><tr><th scope="row">1.50</th><td>400</td></tr><tr><th scope="row">2.00</th><td>300</td></tr><tr><th scope="row">2.50</th><td>200</td></tr><tr><th scope="row">3.00</th><td>100</td></tr></tbody></table></div></section>
-<section class="ctx-block ctx-graph" data-block-type="graph" data-context-role="source"><p class="source-label">Figuur 1</p><h2>Figuur 1: P-Q-grafiek ijsjes</h2><svg class="graph-svg" viewBox="0 0 560 320" role="img" aria-label="Dalende P-Q-grafiek met hoeveelheid op de horizontale as en prijs op de verticale as.">
-    <rect width="560" height="320" rx="8"></rect>
-    <line class="axis" x1="70" y1="262" x2="532" y2="262"></line>
-    <line class="axis" x1="70" y1="262" x2="70" y2="24"></line>
-    <polyline class="series" points="455.0,194.0 378.0,160.0 301.0,126.0 224.0,92.0 147.0,58.0"></polyline>
-    <g class="points"><circle cx="455.0" cy="194.0" r="4.8"></circle><circle cx="378.0" cy="160.0" r="4.8"></circle><circle cx="301.0" cy="126.0" r="4.8"></circle><circle cx="224.0" cy="92.0" r="4.8"></circle><circle cx="147.0" cy="58.0" r="4.8"></circle></g>
-    <text class="axis-label" x="301" y="306">Hoeveelheid Q (ijsjes)</text>
-    <text class="axis-label y-label" transform="translate(18 143) rotate(-90)">Prijs P (EUR)</text>
-  </svg></section>
-<details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Procentuele verandering</summary><p class="source-label">Formule 1</p><h2>Formule 1: Procentuele verandering</h2><div class="formula-scroll"><pre><code>procentuele verandering = (nieuwe waarde - oude waarde) / oude waarde * 100</code></pre></div><dl><div><dt>oude waarde</dt><dd>de hoeveelheid bij de eerste prijs</dd></div><div><dt>nieuwe waarde</dt><dd>de hoeveelheid bij de tweede prijs</dd></div></dl></details>
-<details class="ctx-block support-box ctx-flowchart" data-block-type="flowchart" data-context-role="procedure_support" data-support-visible-by-default="false"><summary>Procedurehulp: Figuur 2: Procedure van tabel naar grafiek</summary><p class="source-label">Figuur 2</p><h2>Figuur 2: Procedure van tabel naar grafiek</h2><ol class="flow-list"><li>Lees de tabel</li><li>Herken het P-Q-diagram</li><li>Prijs verticaal, hoeveelheid horizontaal</li><li>Kies een schaal</li><li>Zet de punten</li><li>Verbind de punten</li></ol></details></section></aside>
-    <section class="task-pane" aria-label="Vragen"><section class="task-grid"><article class="task-card" data-task-family="table_value_selection" data-task-index="0" data-context-ref-count="6">
+  <main class="lab-shell has-graph-construction">
+    <aside class="source-pane" aria-label="Bronnen en hulp"><section class="ctx-grid"><section class="ctx-block ctx-source_excerpt" data-block-type="source_excerpt" data-context-role="source"><h2 class="source-heading">Bron 1 — IJskraam op het strand</h2><p>De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee.</p></section>
+<section class="ctx-block ctx-table" data-block-type="table" data-context-role="source"><h2 class="source-heading">Tabel 1 — Prijs en verkochte ijsjes</h2><div class="table-scroll"><table aria-label="Tabel 1 — Prijs en verkochte ijsjes"><caption class="visually-hidden">Tabel 1 — Prijs en verkochte ijsjes</caption><thead><tr><th scope="col">Prijs P (EUR)</th><th scope="col">Aantal verkocht Q</th></tr></thead><tbody><tr><th scope="row">1.00</th><td>500</td></tr><tr><th scope="row">1.50</th><td>400</td></tr><tr><th scope="row">2.00</th><td>300</td></tr><tr><th scope="row">2.50</th><td>200</td></tr><tr><th scope="row">3.00</th><td>100</td></tr></tbody></table></div></section>
+<details class="ctx-block support-box ctx-formula" data-block-type="formula" data-context-role="formula_support" data-support-visible-by-default="false"><summary>Formulehulp: Formule 1: Procentuele verandering</summary><h2 class="source-heading">Formule 1 — Procentuele verandering</h2><div class="formula-scroll"><pre><code>procentuele verandering = (nieuwe waarde - oude waarde) / oude waarde * 100</code></pre></div><dl><div><dt>oude waarde</dt><dd>de hoeveelheid bij de eerste prijs</dd></div><div><dt>nieuwe waarde</dt><dd>de hoeveelheid bij de tweede prijs</dd></div></dl></details>
+<details class="ctx-block support-box ctx-flowchart" data-block-type="flowchart" data-context-role="procedure_support" data-support-visible-by-default="false"><summary>Procedurehulp: Figuur 2: Procedure van tabel naar grafiek</summary><h2 class="source-heading">Figuur 2 — Procedure van tabel naar grafiek</h2><ol class="flow-list"><li>Lees de tabel</li><li>Herken het P-Q-diagram</li><li>Prijs verticaal, hoeveelheid horizontaal</li><li>Kies een schaal</li><li>Zet de punten</li><li>Verbind de punten</li></ol></details></section></aside>
+    <section class="task-pane" aria-label="Vragen"><section class="task-question-panel" data-right-pane-question="true" aria-label="Originele vraag"><p class="question-source-label">Opdracht</p><p>Teken een P-Q-grafiek bij de tabel. Lees daarna af hoeveel ijsjes worden verkocht bij een prijs van EUR 1.75. Onderzoek tot slot welke prijzen een daling van 50 procent kunnen ondersteunen.</p></section><section class="task-grid"><article class="task-card graph-construction-card" data-task-family="graph_construction_substitute" data-task-index="0" data-context-ref-count="6">
     <p class="card-kicker">Taakkaart 1</p>
-    <h2>Tabelwaarde aflezen</h2>
-    <p class="task-purpose">Lees een hoeveelheid rechtstreeks uit de tabel.</p>
-    <p class="prompt">Kies uit de tabel hoeveel wordt gevraagd bij een prijs van EUR 1.50.</p>
-    <ul class="task-instructions"><li>Lees de tabel gericht af.</li><li>Kies precies een waarde.</li><li>Antwoordvorm: geselecteerde tabelwaarde.</li></ul>
-    <div class="play-area"><fieldset class="choice-options"><legend>Kies een antwoord</legend><label><input class="play-control choice-input" type="radio" name="choice-0" value="q-400"> 400 ijsjes</label><label><input class="play-control choice-input" type="radio" name="choice-0" value="q-300"> 300 ijsjes</label><label><input class="play-control choice-input" type="radio" name="choice-0" value="q-200"> 200 ijsjes</label></fieldset></div>
+    <h2>P-Q-grafiek tekenen</h2>
+    <p class="task-purpose">Maak de grafiek die de tabel vraagt: assen kiezen, twee punten plaatsen en de dalende lijn bevestigen.</p>
+    <p class="prompt">Teken de P-Q-grafiek bij Tabel 1: kies assen, klik twee punten in het werkvlak en bevestig de dalende lijn.</p>
+    <ul class="task-instructions"><li>Kies de P-Q-assen.</li><li>Klik twee tabelpunten in het werkvlak.</li><li>Bevestig dat je de punten tot een dalende lijn verbindt.</li></ul>
+    <div class="play-area"><div class="graph-construction-layout">
+    <section class="graph-workspace" data-graph-workspace="construction" data-required-points="2">
+      <h3>Grafiekwerkvlak</h3>
+      <p class="graph-stage-note" data-graph-stage-note="true">Kies de assen in het werkvlak. Het raster is al zichtbaar; labels en schaal verschijnen na de juiste askeuze.</p>
+      <div class="axis-select-grid graph-axis-controls" data-axis-controls-attached="true">
+        <label>Horizontale as<select class="play-control graph-axis-x" data-graph-axis="x"><option value="">Kies as...</option><option value="hoeveelheid q">Hoeveelheid Q</option><option value="prijs p">Prijs P</option><option value="omzet">Omzet</option><option value="tijd">Tijd</option></select></label>
+        <label>Verticale as<select class="play-control graph-axis-y" data-graph-axis="y"><option value="">Kies as...</option><option value="hoeveelheid q">Hoeveelheid Q</option><option value="prijs p">Prijs P</option><option value="omzet">Omzet</option><option value="tijd">Tijd</option></select></label>
+      </div>
+      <svg class="graph-grid-svg graph-click-surface" viewBox="0 0 720 420" role="img" tabindex="0" aria-label="Leeg P-Q-diagram met hoeveelheid Q horizontaal en prijs P verticaal." data-graph-click-surface="true" data-x-min="0" data-x-max="500" data-y-min="0" data-y-max="3" data-pad-l="82" data-pad-r="34" data-pad-t="28" data-pad-b="68">
+    <rect width="720" height="420" rx="8"></rect>
+    <g class="grid"><g><line class="grid-line" x1="82.0" y1="28" x2="82.0" y2="352"></line><text class="scale-label reveal-after-axes" x="82.0" y="376">0</text></g><g><line class="grid-line" x1="202.8" y1="28" x2="202.8" y2="352"></line><text class="scale-label reveal-after-axes" x="202.8" y="376">100</text></g><g><line class="grid-line" x1="323.6" y1="28" x2="323.6" y2="352"></line><text class="scale-label reveal-after-axes" x="323.6" y="376">200</text></g><g><line class="grid-line" x1="444.4" y1="28" x2="444.4" y2="352"></line><text class="scale-label reveal-after-axes" x="444.4" y="376">300</text></g><g><line class="grid-line" x1="565.2" y1="28" x2="565.2" y2="352"></line><text class="scale-label reveal-after-axes" x="565.2" y="376">400</text></g><g><line class="grid-line" x1="686.0" y1="28" x2="686.0" y2="352"></line><text class="scale-label reveal-after-axes" x="686.0" y="376">500</text></g><g><line class="grid-line" x1="82" y1="352.0" x2="686" y2="352.0"></line><text class="scale-label reveal-after-axes" x="68" y="352.0" text-anchor="end">0,00</text></g><g><line class="grid-line" x1="82" y1="244.0" x2="686" y2="244.0"></line><text class="scale-label reveal-after-axes" x="68" y="244.0" text-anchor="end">1,00</text></g><g><line class="grid-line" x1="82" y1="190.0" x2="686" y2="190.0"></line><text class="scale-label reveal-after-axes" x="68" y="190.0" text-anchor="end">1,50</text></g><g><line class="grid-line" x1="82" y1="136.0" x2="686" y2="136.0"></line><text class="scale-label reveal-after-axes" x="68" y="136.0" text-anchor="end">2,00</text></g><g><line class="grid-line" x1="82" y1="82.0" x2="686" y2="82.0"></line><text class="scale-label reveal-after-axes" x="68" y="82.0" text-anchor="end">2,50</text></g><g><line class="grid-line" x1="82" y1="28.0" x2="686" y2="28.0"></line><text class="scale-label reveal-after-axes" x="68" y="28.0" text-anchor="end">3,00</text></g></g>
+    <line class="axis" x1="82" y1="352" x2="686" y2="352"></line>
+    <line class="axis" x1="82" y1="352" x2="82" y2="28"></line>
+    <rect class="plot-hit-area" x="82" y="28" width="604" height="324" data-plot-hit-area="true"></rect>
+    <g class="constructed-line" data-completed-graph="true" data-graph-line="constructed" hidden>
+      <line x1="0" y1="0" x2="0" y2="0"></line>
+    </g>
+    <g class="placed-points" data-placed-points="true"></g>
+    <text class="axis-label reveal-after-axes" x="384" y="404">Hoeveelheid Q (ijsjes)</text>
+    <text class="axis-label y-label reveal-after-axes" transform="translate(22 190) rotate(-90)">Prijs P (EUR)</text>
+  </svg>
+      <div class="graph-click-toolbar">
+        <p class="graph-point-status" data-graph-point-status="true">0 / 2 punten geplaatst</p>
+        <button type="button" class="clear-graph-points">Wis punten</button>
+      </div>
+    </section>
+    <section class="graph-construction-controls" aria-label="Grafiekconstructie controles">
+      <p class="click-instruction">Klik twee tabelpunten in het grafiekwerkvlak en klik daarna dat je de lijn door de punten trekt.</p>
+      <details class="typed-point-fallback" data-typed-point-fallback="collapsed">
+        <summary>Coordinaten typen als fallback</summary>
+        <fieldset class="point-entry-grid">
+          <legend>Fallback: typ twee punten</legend>
+          <div class="point-entry-row">
+    <span>Punt 1</span>
+    <label>Q-waarde<input class="play-control graph-point-x" type="text" inputmode="decimal" data-graph-point-index="0" data-graph-axis="x"></label>
+    <label>P-waarde<input class="play-control graph-point-y" type="text" inputmode="decimal" data-graph-point-index="0" data-graph-axis="y"></label>
+  </div><div class="point-entry-row">
+    <span>Punt 2</span>
+    <label>Q-waarde<input class="play-control graph-point-x" type="text" inputmode="decimal" data-graph-point-index="1" data-graph-axis="x"></label>
+    <label>P-waarde<input class="play-control graph-point-y" type="text" inputmode="decimal" data-graph-point-index="1" data-graph-axis="y"></label>
+  </div>
+        </fieldset>
+      </details>
+      <label class="line-confirmation"><input class="play-control graph-line-confirm" type="checkbox" data-graph-line-confirmation="true"> Trek lijn door punten</label>
+    </section>
+  </div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: read table value</p>
+    <p class="mapped">Bewaakt: construct pq graph from table</p>
   </article>
-<article class="task-card" data-task-family="structured_short_response" data-task-index="1" data-context-ref-count="6">
+<article class="task-card" data-task-family="graph_reading" data-task-index="1" data-context-ref-count="6">
     <p class="card-kicker">Taakkaart 2</p>
-    <h2>Assen kiezen</h2>
-    <p class="task-purpose">Leg vast welke variabele op welke as staat.</p>
-    <p class="prompt">Benoem welke grootheid op elke as hoort voordat je de grafiek leest.</p>
-    <ul class="task-instructions"><li>Vul elk antwoordveld in.</li><li>Gebruik bronwoorden of berekening waar gevraagd.</li><li>Antwoordvorm: korte gestructureerde tekst.</li></ul>
-    <div class="play-area"><div class="field-grid"><label>Horizontale as<input class="play-control structured-field" type="text" data-field-id="x_axis"></label><label>Verticale as<input class="play-control structured-field" type="text" data-field-id="y_axis"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select pq axes</p>
-  </article>
-<article class="task-card" data-task-family="step_ordering" data-task-index="2" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 3</p>
-    <h2>Grafiekstappen ordenen</h2>
-    <p class="task-purpose">Orden de procedure van tabeldata naar grafiek.</p>
-    <p class="prompt">Zet de stappen voor het tekenen van de vraaglijn in de juiste volgorde.</p>
-    <ul class="task-instructions"><li>Klik stappen in de juiste volgorde.</li><li>Gebruik de bron of procedurehulp alleen als dat nodig is.</li><li>Antwoordvorm: geordende stappenreeks.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="step_ordering"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="read-table">Lees prijs en hoeveelheid uit de tabel</button><button type="button" class="play-control bank-button" data-item-id="choose-pq">Herken dat het om een P-Q-diagram gaat</button><button type="button" class="play-control bank-button" data-item-id="axis-convention">Zet prijs verticaal en hoeveelheid horizontaal</button><button type="button" class="play-control bank-button" data-item-id="choose-scale">Kies een schaal die alle waarden past</button><button type="button" class="play-control bank-button" data-item-id="plot-points">Zet de tabelpunten in de grafiek</button><button type="button" class="play-control bank-button" data-item-id="connect-points">Verbind de punten tot een lijn</button><button type="button" class="play-control bank-button" data-item-id="percent-first">Bereken eerst de procentuele daling</button><button type="button" class="play-control bank-button" data-item-id="price-horizontal">Zet prijs op de horizontale as</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: order graph procedure, select pq axes</p>
-  </article>
-<article class="task-card" data-task-family="point_placement" data-task-index="3" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 4</p>
-    <h2>Punt plaatsen</h2>
-    <p class="task-purpose">Zet een tabelrij om naar een grafiekpunt.</p>
-    <p class="prompt">Plaats een punt uit de tabel als coordinatenpaar in de grafiek.</p>
-    <ul class="task-instructions"><li>Gebruik de tabelwaarde als coordinatenpaar.</li><li>Vul beide assen in.</li><li>Antwoordvorm: x- en y-waarde.</li></ul>
-    <div class="play-area"><div class="control-row"><label>Hoeveelheid Q<input class="play-control point-x" type="text"></label><label>Prijs P<input class="play-control point-y" type="text"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: plot table point, select pq axes</p>
-  </article>
-<article class="task-card" data-task-family="source_value_selection" data-task-index="4" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 5</p>
-    <h2>Interpolatiewaarden kiezen</h2>
-    <p class="task-purpose">Kies de bronwaarden rond prijs EUR 1.75.</p>
-    <p class="prompt">Kies de twee bronwaarden waartussen je de gevraagde prijs-hoeveelheid-combinatie afleest.</p>
-    <ul class="task-instructions"><li>Kies de gevraagde bronwaarden.</li><li>Koppel elke gekozen waarde aan de juiste rol.</li><li>Aantal antwoorden: alle invoerrijen moeten gevuld zijn.</li></ul>
-    <div class="play-area"><div class="value-bank" aria-label="Beschikbare bronwaarden"><span class="bank-chip" data-value-id="p150">P = 1.50</span><span class="bank-chip" data-value-id="q400">Q = 400</span><span class="bank-chip" data-value-id="p200">P = 2.00</span><span class="bank-chip" data-value-id="q300">Q = 300</span><span class="bank-chip" data-value-id="p250">P = 2.50</span><span class="bank-chip" data-value-id="q200">Q = 200</span></div><div class="role-bank" aria-label="Beschikbare rollen"><span class="bank-chip" data-role-id="lower_price">lagere prijs rond 1.75</span><span class="bank-chip" data-role-id="lower_quantity">hoeveelheid bij lagere prijs</span><span class="bank-chip" data-role-id="higher_price">hogere prijs rond 1.75</span><span class="bank-chip" data-role-id="higher_quantity">hoeveelheid bij hogere prijs</span></div><div class="pair-grid"><div class="pair-row"><label>Waarde uit bron 1<select class="play-control value-select"><option value="">Kies...</option><option value="p150">P = 1.50</option><option value="q400">Q = 400</option><option value="p200">P = 2.00</option><option value="q300">Q = 300</option><option value="p250">P = 2.50</option><option value="q200">Q = 200</option></select></label><label>Functie in berekening 1<select class="play-control role-select"><option value="">Kies...</option><option value="lower_price">lagere prijs rond 1.75</option><option value="lower_quantity">hoeveelheid bij lagere prijs</option><option value="higher_price">hogere prijs rond 1.75</option><option value="higher_quantity">hoeveelheid bij hogere prijs</option></select></label></div><div class="pair-row"><label>Waarde uit bron 2<select class="play-control value-select"><option value="">Kies...</option><option value="p150">P = 1.50</option><option value="q400">Q = 400</option><option value="p200">P = 2.00</option><option value="q300">Q = 300</option><option value="p250">P = 2.50</option><option value="q200">Q = 200</option></select></label><label>Functie in berekening 2<select class="play-control role-select"><option value="">Kies...</option><option value="lower_price">lagere prijs rond 1.75</option><option value="lower_quantity">hoeveelheid bij lagere prijs</option><option value="higher_price">hogere prijs rond 1.75</option><option value="higher_quantity">hoeveelheid bij hogere prijs</option></select></label></div><div class="pair-row"><label>Waarde uit bron 3<select class="play-control value-select"><option value="">Kies...</option><option value="p150">P = 1.50</option><option value="q400">Q = 400</option><option value="p200">P = 2.00</option><option value="q300">Q = 300</option><option value="p250">P = 2.50</option><option value="q200">Q = 200</option></select></label><label>Functie in berekening 3<select class="play-control role-select"><option value="">Kies...</option><option value="lower_price">lagere prijs rond 1.75</option><option value="lower_quantity">hoeveelheid bij lagere prijs</option><option value="higher_price">hogere prijs rond 1.75</option><option value="higher_quantity">hoeveelheid bij hogere prijs</option></select></label></div><div class="pair-row"><label>Waarde uit bron 4<select class="play-control value-select"><option value="">Kies...</option><option value="p150">P = 1.50</option><option value="q400">Q = 400</option><option value="p200">P = 2.00</option><option value="q300">Q = 300</option><option value="p250">P = 2.50</option><option value="q200">Q = 200</option></select></label><label>Functie in berekening 4<select class="play-control role-select"><option value="">Kies...</option><option value="lower_price">lagere prijs rond 1.75</option><option value="lower_quantity">hoeveelheid bij lagere prijs</option><option value="higher_price">hogere prijs rond 1.75</option><option value="higher_quantity">hoeveelheid bij hogere prijs</option></select></label></div></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select interpolation source values</p>
-  </article>
-<article class="task-card" data-task-family="graph_reading" data-task-index="5" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 6</p>
     <h2>Grafiek aflezen</h2>
-    <p class="task-purpose">Lees een tussenwaarde uit de grafiek.</p>
-    <p class="prompt">Lees uit de grafiek af welke hoeveelheid hoort bij de opgegeven prijs.</p>
+    <p class="task-purpose">Lees uit de geconstrueerde grafiek de hoeveelheid af bij een tussenliggende prijs.</p>
+    <p class="prompt">Lees uit je P-Q-grafiek af welke hoeveelheid hoort bij P = EUR 1.75.</p>
     <ul class="task-instructions"><li>Lees de grafiek bij de genoemde aswaarde.</li><li>Controleer of je de juiste as gebruikt.</li><li>Antwoordvorm: getal met eventuele eenheid.</li></ul>
-    <div class="play-area"><label>Aantal ijsjes<input class="play-control numeric-answer" type="text"></label></div>
+    <div class="play-area"><label>Afgelezen hoeveelheid Q<input class="play-control numeric-answer" type="text"></label></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: interpolate graph value</p>
+    <p class="mapped">Bewaakt: read quantity from constructed graph</p>
   </article>
-<article class="task-card" data-task-family="calculation_work_capture" data-task-index="6" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 7</p>
-    <h2>Claim narekenen</h2>
-    <p class="task-purpose">Laat zien of een bronclaim van 50 procent daling past bij de tabel.</p>
-    <p class="prompt">Bereken het prijsinterval bij een daling van 50 procent en noteer ook een geldig alternatief als de bron dit toelaat.</p>
-    <ul class="task-instructions"><li>Schrijf de berekening uit.</li><li>Noteer het eindantwoord en de eenheid apart.</li><li>Antwoordvorm: uitwerking plus eindantwoord.</li></ul>
-    <div class="play-area"><label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div></div>
+<article class="task-card" data-task-family="calculation_work_capture" data-task-index="2" data-context-ref-count="6">
+    <p class="card-kicker">Taakkaart 3</p>
+    <h2>50 procent daling controleren</h2>
+    <p class="task-purpose">Kies een interval; de bronhoeveelheden verschijnen vanzelf zodat je alleen de halvering hoeft te controleren.</p>
+    <p class="prompt">Controleer één halvering: kies een interval en benoem dat de nieuwe Q de helft is van de oude Q.</p>
+    <ul class="task-instructions"><li>Kies één interval.</li><li>Lees de oude en nieuwe hoeveelheid die verschijnen.</li><li>Kies dat de nieuwe hoeveelheid de helft is van de oude hoeveelheid.</li></ul>
+    <div class="play-area"><div class="interval-halving-check" data-interval-halving-check="true">
+      <fieldset class="choice-options interval-options">
+        <legend>Kies ??n interval</legend>
+        <label><input class="play-control interval-choice" type="radio" name="interval-tb113-quantity-drop-check" value="interval-150-250" data-final-answer="EUR 1.50 tot EUR 2.50" data-work="400 naar 200; nieuwe Q is de helft van oude Q" data-old-q="400 ijsjes" data-new-q="200 ijsjes" data-correct="true"> EUR 1,50 -&gt; EUR 2,50</label><label><input class="play-control interval-choice" type="radio" name="interval-tb113-quantity-drop-check" value="interval-250-300" data-final-answer="EUR 2.50 tot EUR 3.00" data-work="200 naar 100; nieuwe Q is de helft van oude Q" data-old-q="200 ijsjes" data-new-q="100 ijsjes" data-correct="true"> EUR 2,50 -&gt; EUR 3,00</label>
+      </fieldset>
+      <dl class="auto-fill-values" data-auto-fill-values="true">
+        <div><dt>Oude Q</dt><dd data-old-quantity="true">Kies eerst een interval</dd></div>
+        <div><dt>Nieuwe Q</dt><dd data-new-quantity="true">Kies eerst een interval</dd></div>
+      </dl>
+      <label>De nieuwe hoeveelheid is...<select class="play-control halving-relation"><option value="">Kies...</option><option value="helft">de helft van de oude hoeveelheid</option><option value="dubbel">het dubbele van de oude hoeveelheid</option><option value="gelijk">gelijk aan de oude hoeveelheid</option></select></label>
+      <label>Conclusie<select class="play-control halving-conclusion"><option value="">Kies conclusie...</option><option value="q-daalt-50" data-final-answer="Q daalt met 50 procent" data-correct="true">Q daalt met 50 procent</option><option value="q-daalt-25" data-final-answer="Q daalt met 25 procent" data-correct="false">Q daalt met 25 procent</option><option value="q-stijgt-50" data-final-answer="Q stijgt met 50 procent" data-correct="false">Q stijgt met 50 procent</option></select></label>
+      <input class="calc-work" type="hidden" value="">
+      <input class="calc-final" type="hidden" value="">
+      <input class="calc-unit" type="hidden" value="">
+    </div></div>
     <button type="button" class="check-button">Controleer</button>
     <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: calculate percent drop</p>
-  </article>
-<article class="task-card" data-task-family="source_chain_builder" data-task-index="7" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 8</p>
-    <h2>Bronketen bouwen</h2>
-    <p class="task-purpose">Koppel bron, grafiekbewerking, aflezing en claimcontrole.</p>
-    <p class="prompt">Bouw de redeneringsketen van tekst, tabel en grafiek naar de conclusie.</p>
-    <ul class="task-instructions"><li>Klik bronketen-onderdelen in de juiste volgorde.</li><li>Verbind bronwaarde, bewerking en conclusie.</li><li>Antwoordvorm: volledige redeneringsketen.</li></ul>
-    <div class="play-area"><div class="sequence-builder" data-sequence-family="source_chain_builder"><div class="sequence-bank"><button type="button" class="play-control bank-button" data-item-id="source-table">Lees prijs-hoeveelheid uit Tabel 1</button><button type="button" class="play-control bank-button" data-item-id="axis-convention">Gebruik hoeveelheid horizontaal en prijs verticaal</button><button type="button" class="play-control bank-button" data-item-id="plot-line">Zet punten en verbind de dalende lijn</button><button type="button" class="play-control bank-button" data-item-id="interpolate">Lees P = 1.75 tussen twee punten af</button><button type="button" class="play-control bank-button" data-item-id="choose-interval">Kies een broninterval met twee hoeveelheden</button><button type="button" class="play-control bank-button" data-item-id="percent-change">Bereken de procentuele daling</button><button type="button" class="play-control bank-button" data-item-id="state-claim">Formuleer welk prijsinterval de uitspraak kan dragen</button><button type="button" class="play-control bank-button" data-item-id="price-horizontal">Zet prijs op de horizontale as</button><button type="button" class="play-control bank-button" data-item-id="single-value-only">Gebruik alleen de laagste hoeveelheid</button></div><ol class="sequence-zone" aria-label="Gekozen reeks"></ol><button type="button" class="clear-sequence">Wis volgorde</button></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: select pq axes, plot table point, interpolate graph value, calculate percent drop, state claim with source limits</p>
-  </article>
-<article class="task-card" data-task-family="structured_short_response" data-task-index="8" data-context-ref-count="6">
-    <p class="card-kicker">Taakkaart 9</p>
-    <h2>Antwoordvorm controleren</h2>
-    <p class="task-purpose">Formuleer de claimcontrole met interval, bronwaarden en berekening.</p>
-    <p class="prompt">Schrijf het antwoord in de gevraagde vorm: asafspraak, brongebruik en conclusie.</p>
-    <ul class="task-instructions"><li>Vul elk antwoordveld in.</li><li>Gebruik bronwoorden of berekening waar gevraagd.</li><li>Antwoordvorm: korte gestructureerde tekst.</li></ul>
-    <div class="play-area"><div class="field-grid"><label>Prijsinterval<input class="play-control structured-field" type="text" data-field-id="interval"></label><label>Bronwaarden<input class="play-control structured-field" type="text" data-field-id="source_values"></label><label>Berekening<input class="play-control structured-field" type="text" data-field-id="calculation"></label><label>Antwoordzin<input class="play-control structured-field" type="text" data-field-id="sentence"></label></div></div>
-    <button type="button" class="check-button">Controleer</button>
-    <p class="feedback" aria-live="polite"></p>
-    <p class="mapped">Bewaakt: calculate percent drop, state claim with source limits</p>
-  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat tabelwaarden, assen, grafiekpunten, interpolatie, berekening en claimzin samen de bronbewerking dragen.</aside></section>
+    <p class="mapped">Bewaakt: check one quantity drop interval</p>
+  </article></section><aside class="review-panel"><strong>Reviewer check:</strong> controleer dat de hoofdtaak graph construction is, dat de voltooide grafiek niet vooraf zichtbaar is, en dat de follow-ups minimaal blijven.</aside></section>
   </main>
   <script>
     (function () {
-      const models = [{"family":"table_value_selection","prompt":"Kies uit de tabel hoeveel wordt gevraagd bij een prijs van EUR 1.50.","interaction":{"options":[{"id":"q-400","label":"400 ijsjes"},{"id":"q-300","label":"300 ijsjes"},{"id":"q-200","label":"200 ijsjes"}]},"expected":{"kind":"choice","value":"q-400"}},{"family":"structured_short_response","prompt":"Benoem welke grootheid op elke as hoort voordat je de grafiek leest.","interaction":{"fields":[{"id":"x_axis","label":"Horizontale as","placeholder":"Bijvoorbeeld hoeveelheid"},{"id":"y_axis","label":"Verticale as","placeholder":"Bijvoorbeeld prijs"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem hoeveelheid op de horizontale as.","Noem prijs op de verticale as."],"fields":[{"id":"x_axis","accepted":["hoeveelheid","hoeveelheid q","aantal ijsjes"]},{"id":"y_axis","accepted":["prijs","prijs p","prijs in eur"]}]}},{"family":"step_ordering","prompt":"Zet de stappen voor het tekenen van de vraaglijn in de juiste volgorde.","interaction":{"stepBankLabel":"Stappenbank","sequenceLabel":"Gekozen volgorde","placeholder":"Orden de stappen.","separator":" -> ","steps":[{"id":"read-table","label":"Lees prijs en hoeveelheid uit de tabel","kind":"answer"},{"id":"choose-pq","label":"Herken dat het om een P-Q-diagram gaat","kind":"answer"},{"id":"axis-convention","label":"Zet prijs verticaal en hoeveelheid horizontaal","kind":"answer"},{"id":"choose-scale","label":"Kies een schaal die alle waarden past","kind":"answer"},{"id":"plot-points","label":"Zet de tabelpunten in de grafiek","kind":"answer"},{"id":"connect-points","label":"Verbind de punten tot een lijn","kind":"answer"},{"id":"percent-first","label":"Bereken eerst de procentuele daling","kind":"distractor","distractorFor":"read-table"},{"id":"price-horizontal","label":"Zet prijs op de horizontale as","kind":"distractor","distractorFor":"axis-convention"}]},"expected":{"kind":"step_ordering","order":["read-table","choose-pq","axis-convention","choose-scale","plot-points","connect-points"],"partialFeedback":"practice_only"}},{"family":"point_placement","prompt":"Plaats een punt uit de tabel als coordinatenpaar in de grafiek.","interaction":{"xLabel":"Hoeveelheid Q","yLabel":"Prijs P"},"expected":{"kind":"point","x":300,"y":2,"toleranceX":5,"toleranceY":0.05}},{"family":"source_value_selection","prompt":"Kies de twee bronwaarden waartussen je de gevraagde prijs-hoeveelheid-combinatie afleest.","interaction":{"valueBankLabel":"Bronwaarden","roleLabel":"Rol bij interpoleren","values":[{"id":"p150","label":"P = 1.50","kind":"answer","sourceLabel":"ondergrens prijs","unit":"EUR"},{"id":"q400","label":"Q = 400","kind":"answer","sourceLabel":"hoeveelheid bij P = 1.50","unit":"ijsjes"},{"id":"p200","label":"P = 2.00","kind":"answer","sourceLabel":"bovengrens prijs","unit":"EUR"},{"id":"q300","label":"Q = 300","kind":"answer","sourceLabel":"hoeveelheid bij P = 2.00","unit":"ijsjes"},{"id":"p250","label":"P = 2.50","kind":"distractor","sourceLabel":"andere rij","unit":"EUR","distractorFor":"p200"},{"id":"q200","label":"Q = 200","kind":"distractor","sourceLabel":"andere rij","unit":"ijsjes","distractorFor":"q300"}],"roles":[{"id":"lower_price","label":"lagere prijs rond 1.75"},{"id":"lower_quantity","label":"hoeveelheid bij lagere prijs"},{"id":"higher_price","label":"hogere prijs rond 1.75"},{"id":"higher_quantity","label":"hoeveelheid bij hogere prijs"}]},"expected":{"kind":"source_value_selection","selections":[{"valueId":"p150","role":"lower_price"},{"valueId":"q400","role":"lower_quantity"},{"valueId":"p200","role":"higher_price"},{"valueId":"q300","role":"higher_quantity"}],"partialFeedback":"practice_only"}},{"family":"graph_reading","prompt":"Lees uit de grafiek af welke hoeveelheid hoort bij de opgegeven prijs.","interaction":{"inputLabel":"Aantal ijsjes"},"expected":{"kind":"number","value":350,"tolerance":5,"unit":"ijsjes"}},{"family":"calculation_work_capture","prompt":"Bereken het prijsinterval bij een daling van 50 procent en noteer ook een geldig alternatief als de bron dit toelaat.","interaction":{"workLabel":"Berekening","finalAnswerLabel":"Prijsinterval","finalAnswerPlaceholder":"Bijvoorbeeld EUR 1.00 tot EUR 2.00","unitNotationLabel":"Soort uitkomst","unitNotationPlaceholder":"Bijvoorbeeld procentuele daling"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["tussen eur 1.50 en eur 2.50","eur 1.50 tot eur 2.50","1.50 tot 2.50","tussen eur 2.50 en eur 3.00","eur 2.50 tot eur 3.00","2.50 tot 3.00"]},"unitNotation":{"kind":"text","accepted":["procentuele daling","50 procent daling","procent"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"oude en nieuwe hoeveelheid","any":["400 naar 200","400 en 200","200 naar 100","200 en 100"]},{"label":"procentuele berekening","any":["(200 - 400) / 400","200 - 400","(100 - 200) / 200","100 - 200","-50","50%"]},{"label":"richting","any":["daling","afname","daalt"]}],"criteria":["Gebruik twee hoeveelheden uit de tabel.","Reken procentuele verandering ten opzichte van de oude hoeveelheid uit.","Noem het prijsinterval en de daling."]}},{"family":"source_chain_builder","prompt":"Bouw de redeneringsketen van tekst, tabel en grafiek naar de conclusie.","interaction":{"nodeBankLabel":"Ketenonderdelen","sequenceLabel":"Opgebouwde keten","placeholder":"Bouw de keten.","separator":" -> ","nodes":[{"id":"source-table","label":"Lees prijs-hoeveelheid uit Tabel 1","kind":"answer","nodeRole":"source"},{"id":"axis-convention","label":"Gebruik hoeveelheid horizontaal en prijs verticaal","kind":"answer","nodeRole":"operation"},{"id":"plot-line","label":"Zet punten en verbind de dalende lijn","kind":"answer","nodeRole":"operation"},{"id":"interpolate","label":"Lees P = 1.75 tussen twee punten af","kind":"answer","nodeRole":"operation"},{"id":"choose-interval","label":"Kies een broninterval met twee hoeveelheden","kind":"answer","nodeRole":"value"},{"id":"percent-change","label":"Bereken de procentuele daling","kind":"answer","nodeRole":"answer"},{"id":"state-claim","label":"Formuleer welk prijsinterval de uitspraak kan dragen","kind":"answer","nodeRole":"conclusion"},{"id":"price-horizontal","label":"Zet prijs op de horizontale as","kind":"distractor","nodeRole":"operation","distractorFor":"axis-convention"},{"id":"single-value-only","label":"Gebruik alleen de laagste hoeveelheid","kind":"distractor","nodeRole":"value","distractorFor":"choose-interval"}]},"expected":{"kind":"source_chain_builder","chain":["source-table","axis-convention","plot-line","interpolate","choose-interval","percent-change","state-claim"],"partialFeedback":"practice_only"}},{"family":"structured_short_response","prompt":"Schrijf het antwoord in de gevraagde vorm: asafspraak, brongebruik en conclusie.","interaction":{"fields":[{"id":"interval","label":"Prijsinterval","placeholder":"Bijvoorbeeld EUR 1.00 tot EUR 2.00"},{"id":"source_values","label":"Bronwaarden","placeholder":"Bijvoorbeeld 500 naar 300"},{"id":"calculation","label":"Berekening","placeholder":"Bijvoorbeeld -40 procent"},{"id":"sentence","label":"Antwoordzin","placeholder":"Waarom kan de uitspraak kloppen?"}]},"expected":{"kind":"structured_text_criteria","criteria":["Noem een bronvalid prijsinterval.","Noem de twee hoeveelheden.","Noem de procentuele daling.","Schrijf dat de uitspraak met die bronwaarden kan kloppen."],"fields":[{"id":"interval","accepted":["eur 1.50 tot eur 2.50","1.50 tot 2.50","eur 2.50 tot eur 3.00","2.50 tot 3.00"]},{"id":"source_values","accepted":["400 naar 200","200 naar 100"]},{"id":"calculation","accepted":["-50 procent","-50%","50 procent daling"]},{"id":"sentence","accepted":["de uitspraak kan bij die bronwaarden kloppen","de daling is 50 procent","met dit interval klopt de uitspraak"]}]}}];
+      const models = [{"family":"graph_construction_substitute","prompt":"Teken de P-Q-grafiek bij Tabel 1: kies assen, klik twee punten in het werkvlak en bevestig de dalende lijn.","interaction":{"workspaceTitle":"Grafiekwerkvlak","xAxisLabel":"Horizontale as","yAxisLabel":"Verticale as","pointRowsLabel":"Fallback: typ twee punten","clickInstruction":"Klik twee tabelpunten in het grafiekwerkvlak en klik daarna dat je de lijn door de punten trekt.","preAxisNote":"Kies de assen in het werkvlak. Het raster is al zichtbaar; labels en schaal verschijnen na de juiste askeuze.","lineConfirmationLabel":"Trek lijn door punten","lineShapeLabel":"Lijnvorm","xInputLabel":"Q-waarde","yInputLabel":"P-waarde","emptyGraphAltText":"Leeg P-Q-diagram met hoeveelheid Q horizontaal en prijs P verticaal.","pointCount":2,"axes":{"x":{"label":"Hoeveelheid Q (ijsjes)","min":0,"max":500,"ticks":[0,100,200,300,400,500],"tickDecimals":0},"y":{"label":"Prijs P (EUR)","min":0,"max":3,"ticks":[0,1,1.5,2,2.5,3],"tickDecimals":2,"tickFormat":"decimal_comma"}},"axisControlsPlacement":"attached_to_graph_workspace","gridVisibleBeforeAxisSelection":true,"lineDrawnInSameWorkspace":true},"expected":{"kind":"graph_construction_substitute","axes":{"xAccepted":["hoeveelheid q","hoeveelheid","aantal ijsjes","q"],"yAccepted":["prijs p","prijs","prijs in eur","p"]},"points":[{"x":500,"y":1},{"x":100,"y":3}],"toleranceX":0.01,"toleranceY":0.01,"lineShape":"decreasing"}},{"family":"graph_reading","prompt":"Lees uit je P-Q-grafiek af welke hoeveelheid hoort bij P = EUR 1.75.","interaction":{"inputLabel":"Afgelezen hoeveelheid Q","inputPlaceholder":"Bijvoorbeeld 350"},"expected":{"kind":"number","value":350,"tolerance":5,"unit":"ijsjes"}},{"family":"calculation_work_capture","prompt":"Controleer één halvering: kies een interval en benoem dat de nieuwe Q de helft is van de oude Q.","interaction":{"selectionMode":"interval_halving_check","intervalLabel":"Kies ??n interval","intervalOptions":[{"id":"interval-150-250","label":"EUR 1,50 -> EUR 2,50","finalAnswer":"EUR 1.50 tot EUR 2.50","oldQuantity":"400 ijsjes","newQuantity":"200 ijsjes","work":"400 naar 200; nieuwe Q is de helft van oude Q","correct":true},{"id":"interval-250-300","label":"EUR 2,50 -> EUR 3,00","finalAnswer":"EUR 2.50 tot EUR 3.00","oldQuantity":"200 ijsjes","newQuantity":"100 ijsjes","work":"200 naar 100; nieuwe Q is de helft van oude Q","correct":true}],"relationLabel":"De nieuwe hoeveelheid is...","relationOptions":[{"id":"helft","label":"de helft van de oude hoeveelheid"},{"id":"dubbel","label":"het dubbele van de oude hoeveelheid"},{"id":"gelijk","label":"gelijk aan de oude hoeveelheid"}],"conclusionLabel":"Conclusie","conclusionOptions":[{"id":"q-daalt-50","label":"Q daalt met 50 procent","finalAnswer":"Q daalt met 50 procent","correct":true},{"id":"q-daalt-25","label":"Q daalt met 25 procent","finalAnswer":"Q daalt met 25 procent"},{"id":"q-stijgt-50","label":"Q stijgt met 50 procent","finalAnswer":"Q stijgt met 50 procent"}],"workLabel":"Bronwaarden","finalAnswerLabel":"Conclusie","unitNotationLabel":"Conclusie"},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["Q daalt met 50 procent","Q daalt met 50%","de nieuwe hoeveelheid is de helft van de oude hoeveelheid","nieuwe Q is de helft van oude Q","EUR 1.50 tot EUR 2.50","eur 1.50 tot eur 2.50","1.50 tot 2.50","EUR 2.50 tot EUR 3.00","eur 2.50 tot eur 3.00","2.50 tot 3.00"]},"unitNotation":{"kind":"text","accepted":["50 procent daling"],"required":true},"workRequired":true,"requiredWorkText":[{"label":"bronwaarden","any":["400 naar 200","200 naar 100"]},{"label":"halvering","any":["helft"]}],"criteria":["Kies ??n geldig broninterval.","Gebruik de automatisch getoonde oude en nieuwe hoeveelheid.","Benoem dat de nieuwe hoeveelheid de helft is van de oude hoeveelheid."]}}];
       const cards = Array.from(document.querySelectorAll('.task-card'));
       const currentPrompt = document.querySelector('.current-prompt');
       const progress = document.querySelector('.progress');
@@ -502,15 +712,38 @@
 
       function acceptedText(value, accepted) {
         const actual = normalize(value);
+        if (!actual) return false;
         return (accepted || []).some((candidate) => {
           const expected = normalize(candidate);
           return actual === expected || actual.includes(expected) || expected.includes(actual);
         });
       }
 
+      function acceptedTextExact(value, accepted) {
+        const actual = normalize(value);
+        if (!actual) return false;
+        return (accepted || []).some((candidate) => actual === normalize(candidate));
+      }
+
       function workGroupOptions(group) {
         if (Array.isArray(group)) return group;
         return group?.any || group?.accepted || [];
+      }
+
+      function graphPointsMatch(actualPoints, expected) {
+        const expectedPoints = (expected.points || []).map((point) => ({ x: Number(point.x), y: Number(point.y), matched: false }));
+        if (!Array.isArray(actualPoints) || actualPoints.length !== expectedPoints.length) return false;
+        const tx = Number(expected.toleranceX ?? expected.tolerance ?? 0);
+        const ty = Number(expected.toleranceY ?? expected.tolerance ?? 0);
+        for (const actual of actualPoints) {
+          const x = numberValue(actual.x);
+          const y = numberValue(actual.y);
+          if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+          const match = expectedPoints.find((point) => !point.matched && Math.abs(x - point.x) <= tx && Math.abs(y - point.y) <= ty);
+          if (!match) return false;
+          match.matched = true;
+        }
+        return expectedPoints.every((point) => point.matched);
       }
 
       function completedCount() {
@@ -549,8 +782,242 @@
         if (clear) clear.addEventListener('click', () => { zone.innerHTML = ''; });
       }
 
+      function expectedRoleByValue(model) {
+        const roles = {};
+        (model.expected.selections || []).forEach((selection) => {
+          roles[selection.valueId] = selection.role;
+        });
+        return roles;
+      }
+
+      function graphPointPosition(svg, x, y) {
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const viewBox = svg.viewBox.baseVal;
+        const plotWidth = viewBox.width - padL - padR;
+        const plotHeight = viewBox.height - padT - padB;
+        return {
+          cx: padL + ((Number(x) - xMin) / (xMax - xMin || 1)) * plotWidth,
+          cy: viewBox.height - padB - ((Number(y) - yMin) / (yMax - yMin || 1)) * plotHeight
+        };
+      }
+
+      function clearGraphPoints(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (group) group.innerHTML = '';
+        hideConstructedLine(card);
+        updateGraphPointStatus(card);
+      }
+
+      function hideConstructedLine(card) {
+        const lineGroup = card.querySelector('[data-graph-line="constructed"]');
+        if (lineGroup) lineGroup.setAttribute('hidden', '');
+      }
+
+      function drawConstructedLine(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const lineGroup = svg?.querySelector('[data-graph-line="constructed"]');
+        const line = lineGroup?.querySelector('line');
+        const points = Array.from(card.querySelectorAll('.placed-graph-point'));
+        if (!svg || !lineGroup || !line || points.length < 2) return false;
+        const first = points[0];
+        const last = points[points.length - 1];
+        const firstPos = graphPointPosition(svg, first.dataset.x, first.dataset.y);
+        const lastPos = graphPointPosition(svg, last.dataset.x, last.dataset.y);
+        line.setAttribute('x1', firstPos.cx.toFixed(1));
+        line.setAttribute('y1', firstPos.cy.toFixed(1));
+        line.setAttribute('x2', lastPos.cx.toFixed(1));
+        line.setAttribute('y2', lastPos.cy.toFixed(1));
+        lineGroup.removeAttribute('hidden');
+        return true;
+      }
+
+      function placeGraphPoint(card, x, y) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const svg = workspace?.querySelector('[data-graph-click-surface="true"]');
+        const group = svg?.querySelector('[data-placed-points="true"]');
+        if (!svg || !group) return;
+        const required = Number(workspace.dataset.requiredPoints || 2);
+        const points = Array.from(group.querySelectorAll('.placed-graph-point'));
+        if (points.length >= required) return;
+        const position = graphPointPosition(svg, x, y);
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.classList.add('placed-graph-point');
+        g.dataset.x = String(x);
+        g.dataset.y = String(y);
+        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', position.cx.toFixed(1));
+        circle.setAttribute('cy', position.cy.toFixed(1));
+        circle.setAttribute('r', '8');
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', (position.cx + 12).toFixed(1));
+        label.setAttribute('y', (position.cy - 10).toFixed(1));
+        label.textContent = String(points.length + 1);
+        g.append(circle, label);
+        group.appendChild(g);
+        hideConstructedLine(card);
+        updateGraphPointStatus(card);
+      }
+
+      function nearestExpectedPoint(model, x, y) {
+        const points = model.expected.points || [];
+        if (points.length === 0) return { x, y };
+        return points
+          .map((point) => ({ point, distance: Math.hypot(Number(point.x) - x, Number(point.y) - y) }))
+          .sort((a, b) => a.distance - b.distance)[0].point;
+      }
+
+      function clickToGraphValue(svg, event, model) {
+        const point = svg.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        const local = point.matrixTransform(svg.getScreenCTM().inverse());
+        const viewBox = svg.viewBox.baseVal;
+        const padL = Number(svg.dataset.padL || 0);
+        const padR = Number(svg.dataset.padR || 0);
+        const padT = Number(svg.dataset.padT || 0);
+        const padB = Number(svg.dataset.padB || 0);
+        const xMin = Number(svg.dataset.xMin || 0);
+        const xMax = Number(svg.dataset.xMax || 1);
+        const yMin = Number(svg.dataset.yMin || 0);
+        const yMax = Number(svg.dataset.yMax || 1);
+        const clampedX = Math.max(padL, Math.min(viewBox.width - padR, local.x));
+        const clampedY = Math.max(padT, Math.min(viewBox.height - padB, local.y));
+        const x = xMin + ((clampedX - padL) / (viewBox.width - padL - padR || 1)) * (xMax - xMin);
+        const y = yMin + ((viewBox.height - padB - clampedY) / (viewBox.height - padT - padB || 1)) * (yMax - yMin);
+        return nearestExpectedPoint(model, x, y);
+      }
+
+      function updateGraphPointStatus(card) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        const required = Number(workspace?.dataset.requiredPoints || 0);
+        const count = card.querySelectorAll('.placed-graph-point').length;
+        const status = card.querySelector('[data-graph-point-status="true"]');
+        if (status) status.textContent = count + ' / ' + required + ' punten geplaatst';
+      }
+
+      function updateGraphAxisState(card, model) {
+        const workspace = card.querySelector('[data-graph-workspace="construction"]');
+        if (!workspace) return false;
+        const xValue = card.querySelector('.graph-axis-x')?.value || '';
+        const yValue = card.querySelector('.graph-axis-y')?.value || '';
+        const ok = acceptedText(xValue, model.expected.axes?.xAccepted || []) && acceptedText(yValue, model.expected.axes?.yAccepted || []);
+        workspace.classList.toggle('axes-selected', ok);
+        const note = workspace.querySelector('[data-graph-stage-note="true"]');
+        if (note) {
+          note.textContent = ok
+            ? 'Assen kloppen. Klik nu twee punten uit de tabel in het werkvlak.'
+            : 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.';
+        }
+        return ok;
+      }
+
+      function installGraphConstruction(card, model) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        if (!svg) return;
+        card.querySelectorAll('.graph-axis-x, .graph-axis-y').forEach((select) => {
+          select.addEventListener('change', () => updateGraphAxisState(card, model));
+        });
+        svg.addEventListener('click', (event) => {
+          if (!updateGraphAxisState(card, model)) return;
+          const value = clickToGraphValue(svg, event, model);
+          placeGraphPoint(card, value.x, value.y);
+        });
+        const clear = card.querySelector('.clear-graph-points');
+        if (clear) clear.addEventListener('click', () => clearGraphPoints(card));
+        updateGraphAxisState(card, model);
+        updateGraphPointStatus(card);
+      }
+
+      function installIntervalHalving(card) {
+        const box = card.querySelector('[data-interval-halving-check="true"]');
+        if (!box) return;
+        const update = () => {
+          const selected = box.querySelector('.interval-choice:checked');
+          const oldTarget = box.querySelector('[data-old-quantity="true"]');
+          const newTarget = box.querySelector('[data-new-quantity="true"]');
+          const work = box.querySelector('.calc-work');
+          const final = box.querySelector('.calc-final');
+          const unit = box.querySelector('.calc-unit');
+          const conclusion = box.querySelector('.halving-conclusion');
+          const selectedConclusion = conclusion?.selectedOptions?.[0];
+          if (oldTarget) oldTarget.textContent = selected ? selected.dataset.oldQ : 'Kies eerst een interval';
+          if (newTarget) newTarget.textContent = selected ? selected.dataset.newQ : 'Kies eerst een interval';
+          if (work) work.value = selected ? selected.dataset.work : '';
+          if (final) final.value = selectedConclusion?.dataset.finalAnswer || selected?.dataset.finalAnswer || '';
+          if (unit) unit.value = box.querySelector('.halving-relation')?.value === 'helft' ? '50 procent daling' : '';
+        };
+        box.querySelectorAll('.interval-choice, .halving-relation, .halving-conclusion').forEach((control) => {
+          control.addEventListener('change', update);
+        });
+        update();
+      }
+
+      function installProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        support.querySelectorAll('.support-button').forEach((button) => {
+          button.addEventListener('click', () => {
+            const level = button.dataset.supportLevel;
+            const content = support.querySelector('[data-support-content="' + CSS.escape(level) + '"]');
+            if (content) content.hidden = false;
+            if (level === '3') {
+              support.dataset.supportComplete = 'true';
+              card.classList.add('support-complete');
+              updateCarryovers();
+            }
+          });
+        });
+      }
+
+      function updateProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        const attempts = Number(card.dataset.failedAttempts || 0);
+        const hintButton = support.querySelector('[data-support-level="1"]');
+        const setup = support.querySelector('[data-support-content="2"]');
+        const solutionButton = support.querySelector('[data-support-level="3"]');
+        if (hintButton && attempts >= 1) hintButton.hidden = false;
+        if (setup && attempts >= 2) setup.hidden = false;
+        if (solutionButton && attempts >= 3) solutionButton.hidden = false;
+      }
+
+      function updateCarryovers() {
+        document.querySelectorAll('[data-carry-forward="true"]').forEach((box) => {
+          const sourceIndex = Number(box.dataset.carryFromIndex || 1);
+          const sourceComplete = cards[sourceIndex]?.classList.contains('is-complete') === true;
+          const supportComplete = cards[sourceIndex]?.classList.contains('support-complete') === true;
+          const ready = sourceComplete || supportComplete;
+          const carriedValue = box.dataset.carriedValue || '';
+          const notReady = box.dataset.notReadyText || 'Bereken eerst het grensbedrag in taak 2.';
+          const output = box.querySelector('[data-carried-output="true"]');
+          const hidden = box.querySelector('.carried-threshold-field');
+          const select = box.querySelector('.direction-select');
+          box.classList.toggle('is-ready', ready);
+          if (output) output.textContent = ready ? carriedValue : notReady;
+          if (hidden) hidden.value = ready ? carriedValue : '';
+          if (select) select.disabled = !ready;
+        });
+      }
+
       function collect(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const relation = intervalBox.querySelector('.halving-relation')?.value || '';
+            return {
+              work: intervalBox.querySelector('.calc-work')?.value || '',
+              finalAnswer: intervalBox.querySelector('.calc-final')?.value || '',
+              unit: relation === 'helft' ? '50 procent daling' : relation
+            };
+          }
           return {
             work: card.querySelector('.calc-work')?.value || '',
             finalAnswer: card.querySelector('.calc-final')?.value || '',
@@ -563,6 +1030,24 @@
             fields[field.dataset.fieldId] = field.value;
           });
           return { fields };
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const clickedPoints = Array.from(card.querySelectorAll('.placed-graph-point')).map((point) => ({
+            x: point.dataset.x || '',
+            y: point.dataset.y || ''
+          }));
+          const typedPoints = Array.from(card.querySelectorAll('.point-entry-row')).map((row) => ({
+            x: row.querySelector('.graph-point-x')?.value || '',
+            y: row.querySelector('.graph-point-y')?.value || ''
+          }));
+          return {
+            axes: {
+              x: card.querySelector('.graph-axis-x')?.value || '',
+              y: card.querySelector('.graph-axis-y')?.value || ''
+            },
+            points: clickedPoints.length > 0 ? clickedPoints : typedPoints,
+            lineShape: card.querySelector('.graph-line-confirm')?.checked ? 'decreasing' : ''
+          };
         }
         if (model.family === 'point_placement') {
           return {
@@ -577,6 +1062,16 @@
           return { value: card.querySelector('.choice-input:checked')?.value || '' };
         }
         if (model.family === 'source_value_selection') {
+          const compactValues = Array.from(card.querySelectorAll('.source-cell-select:checked')).map((input) => input.value);
+          if (compactValues.length > 0) {
+            const roles = expectedRoleByValue(model);
+            return {
+              selections: compactValues.map((valueId) => ({
+                valueId,
+                role: roles[valueId] || ''
+              }))
+            };
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row')).map((row) => ({
             valueId: row.querySelector('.value-select')?.value || '',
             role: row.querySelector('.role-select')?.value || ''
@@ -592,15 +1087,17 @@
       function evaluate(model, response) {
         const expected = model.expected || {};
         if (model.family === 'calculation_work_capture') {
-          const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
-          const expectedUnit = expected.unit || expected.unitNotation;
-          const unitOk = !expectedUnit?.accepted || acceptedText(response.unit, expectedUnit.accepted);
-          const requiredGroups = expected.requiredWorkText || [];
-          const workOk = requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle))));
-          return finalOk && unitOk && workOk;
+          const parts = calculationParts(model, response);
+          return parts.finalOk && parts.unitOk && parts.workOk;
         }
         if (model.family === 'structured_short_response') {
           return (expected.fields || []).every((field) => acceptedText(response.fields[field.id] || '', field.accepted || []));
+        }
+        if (model.family === 'graph_construction_substitute') {
+          return acceptedText(response.axes.x, expected.axes?.xAccepted || [])
+            && acceptedText(response.axes.y, expected.axes?.yAccepted || [])
+            && graphPointsMatch(response.points, expected)
+            && normalize(response.lineShape) === normalize(expected.lineShape);
         }
         if (model.family === 'point_placement') {
           return Math.abs(numberValue(response.x) - Number(expected.x)) <= numericTolerance
@@ -630,15 +1127,43 @@
         return text(response.value).length > 0;
       }
 
+      function calculationParts(model, response) {
+        const expected = model.expected || {};
+        const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
+        const expectedUnit = expected.unit || expected.unitNotation;
+        const unitOk = !expectedUnit?.accepted || acceptedTextExact(response.unit, expectedUnit.accepted);
+        const paths = Array.isArray(expected.acceptedWorkPaths) && expected.acceptedWorkPaths.length > 0
+          ? expected.acceptedWorkPaths.map((path) => path.requiredWorkText || [])
+          : [expected.requiredWorkText || []];
+        const workOk = paths.some((requiredGroups) => requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle)))));
+        return { finalOk, unitOk, workOk };
+      }
+
+      function feedbackText(model, response, ok) {
+        if (ok) return 'Klopt. Je kunt door naar de volgende kaart.';
+        if (model.family === 'calculation_work_capture' && model.interaction?.targetedFeedback) {
+          const parts = calculationParts(model, response);
+          const feedback = model.interaction.targetedFeedback;
+          if (parts.finalOk && !parts.unitOk) return feedback.unitOnly || 'Het bedrag klopt. Controleer alleen de eenheid.';
+          if (parts.finalOk && parts.unitOk && !parts.workOk) return feedback.workMissing || 'Het eindantwoord klopt. Laat nog zien hoe je eraan komt.';
+          return feedback.numberWrong || 'Controleer eerst de jaarpremies en het verschil.';
+        }
+        return 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+      }
+
       function mark(card, index, ok) {
         const feedback = card.querySelector('.feedback');
         card.classList.toggle('is-complete', ok);
         card.classList.toggle('is-retry', !ok);
-        if (feedback) {
-          feedback.textContent = ok
-            ? 'Klopt. Je kunt door naar de volgende kaart.'
-            : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+        if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+          if (ok) drawConstructedLine(card);
+          else hideConstructedLine(card);
         }
+        if (!ok) card.dataset.failedAttempts = String(Number(card.dataset.failedAttempts || 0) + 1);
+        if (ok) card.dataset.failedAttempts = '0';
+        updateProgressiveSupport(card);
+        if (feedback) feedback.textContent = feedbackText(models[index], collect(card, models[index]), ok);
+        updateCarryovers();
         updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
       }
 
@@ -659,9 +1184,37 @@
         });
       }
 
+      function calculationWorkGroups(model) {
+        const paths = model.expected.acceptedWorkPaths || [];
+        if (paths.length > 0) return paths[0].requiredWorkText || [];
+        return model.expected.requiredWorkText || [];
+      }
+
       function fillCorrect(card, model) {
         if (model.family === 'calculation_work_capture') {
-          const work = model.expected.requiredWorkText || [];
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice[data-correct="true"]') || intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) {
+              relation.value = 'helft';
+              relation.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) {
+              const expected = model.expected.finalAnswer?.accepted?.[0] || '';
+              const target = Array.from(conclusion.options).find((item) => normalize(item.dataset.finalAnswer || item.value) === normalize(expected))
+                || Array.from(conclusion.options).find((item) => item.dataset.correct === 'true');
+              conclusion.value = target?.value || '';
+              conclusion.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            return;
+          }
+          const work = calculationWorkGroups(model);
           const expectedUnit = model.expected.unit || model.expected.unitNotation;
           card.querySelector('.calc-work').value = work.map((group) => workGroupOptions(group)[0]).filter(Boolean).join(' ; ');
           card.querySelector('.calc-final').value = model.expected.finalAnswer.accepted[0];
@@ -669,10 +1222,37 @@
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const direction = (model.expected.fields || []).find((field) => field.id === 'direction');
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = direction?.accepted?.[0] || '';
+            return;
+          }
           (model.expected.fields || []).forEach((field) => {
             const input = card.querySelector('.structured-field[data-field-id="' + CSS.escape(field.id) + '"]');
             if (input) input.value = field.accepted[0];
           });
+          return;
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+          if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
+          const rows = Array.from(card.querySelectorAll('.point-entry-row'));
+          (model.expected.points || []).forEach((point, rowIndex) => {
+            const row = rows[rowIndex];
+            if (!row) return;
+            row.querySelector('.graph-point-x').value = point.x;
+            row.querySelector('.graph-point-y').value = String(point.y).replace('.', ',');
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = true;
           return;
         }
         if (model.family === 'point_placement') {
@@ -690,6 +1270,12 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const expectedIds = new Set((model.expected.selections || []).map((selection) => selection.valueId));
+            compactInputs.forEach((input) => { input.checked = expectedIds.has(input.value); });
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           (model.expected.selections || []).forEach((selection, rowIndex) => {
             const row = rows[rowIndex];
@@ -706,13 +1292,48 @@
 
       function fillWrong(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) relation.value = 'dubbel';
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) conclusion.value = Array.from(conclusion.options).find((item) => item.dataset.correct !== 'true' && item.value)?.value || '';
+            return;
+          }
           card.querySelector('.calc-work').value = 'onvolledig';
           card.querySelector('.calc-final').value = '0';
           card.querySelector('.calc-unit').value = '';
           return;
         }
         if (model.family === 'structured_short_response') {
+          const carry = card.querySelector('[data-carry-forward="true"]');
+          if (carry) {
+            updateCarryovers();
+            const select = card.querySelector('.direction-select');
+            if (select) select.value = 'hoger dan';
+            return;
+          }
           card.querySelectorAll('.structured-field').forEach((input) => { input.value = 'nog niet'; });
+          return;
+        }
+        if (model.family === 'graph_construction_substitute') {
+          const xAxis = card.querySelector('.graph-axis-x');
+          const yAxis = card.querySelector('.graph-axis-y');
+          if (xAxis) xAxis.value = 'prijs p';
+          if (yAxis) yAxis.value = 'hoeveelheid q';
+          updateGraphAxisState(card, model);
+          clearGraphPoints(card);
+          card.querySelectorAll('.point-entry-row').forEach((row, rowIndex) => {
+            row.querySelector('.graph-point-x').value = rowIndex === 0 ? '0' : '';
+            row.querySelector('.graph-point-y').value = rowIndex === 0 ? '0' : '';
+          });
+          const line = card.querySelector('.graph-line-confirm');
+          if (line) line.checked = false;
           return;
         }
         if (model.family === 'point_placement') {
@@ -731,6 +1352,15 @@
           return;
         }
         if (model.family === 'source_value_selection') {
+          const compactInputs = Array.from(card.querySelectorAll('.source-cell-select'));
+          if (compactInputs.length > 0) {
+            const firstWrong = compactInputs.find((input) => {
+              const value = model.interaction.values?.find((item) => item.id === input.value);
+              return value?.kind === 'distractor';
+            }) || compactInputs[0];
+            if (firstWrong) firstWrong.checked = true;
+            return;
+          }
           const rows = Array.from(card.querySelectorAll('.pair-row'));
           const firstValue = model.interaction.values?.find((item) => item.id !== model.expected.selections?.[0]?.valueId)?.id || '';
           const firstRole = model.interaction.roles?.find((item) => item.id !== model.expected.selections?.[0]?.role)?.id || '';
@@ -747,6 +1377,9 @@
 
       cards.forEach((card, index) => {
         installSequenceBuilder(card);
+        if (models[index].family === 'graph_construction_substitute') installGraphConstruction(card, models[index]);
+        installIntervalHalving(card);
+        installProgressiveSupport(card);
         const button = card.querySelector('.check-button');
         button.addEventListener('click', () => {
           mark(card, index, evaluate(models[index], collect(card, models[index])));
@@ -756,15 +1389,34 @@
       function resetAll() {
         cards.forEach((card) => {
           card.classList.remove('is-complete', 'is-retry');
+          card.classList.remove('support-complete');
+          card.dataset.failedAttempts = '0';
           card.querySelectorAll('input, textarea, select').forEach((control) => {
-            if (control.type === 'radio') control.checked = false;
+            if (control.type === 'radio' || control.type === 'checkbox') control.checked = false;
             else control.value = '';
           });
           const zone = card.querySelector('.sequence-zone');
           if (zone) zone.innerHTML = '';
+          card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => { graph.hidden = true; });
+          clearGraphPoints(card);
+          if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
+            updateGraphAxisState(card, models[cards.indexOf(card)]);
+          }
+          card.querySelectorAll('[data-progressive-support="true"]').forEach((support) => {
+            support.dataset.supportComplete = 'false';
+            support.querySelectorAll('.support-button, .support-content').forEach((item) => { item.hidden = true; });
+          });
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const oldTarget = intervalBox.querySelector('[data-old-quantity="true"]');
+            const newTarget = intervalBox.querySelector('[data-new-quantity="true"]');
+            if (oldTarget) oldTarget.textContent = 'Kies eerst een interval';
+            if (newTarget) newTarget.textContent = 'Kies eerst een interval';
+          }
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
         });
+        updateCarryovers();
         updateCurrent(0);
       }
 
@@ -772,7 +1424,20 @@
         const sourcePane = document.querySelector('.source-pane');
         const taskPane = document.querySelector('.task-pane');
         const strip = document.querySelector('.question-strip');
-        if (sourcePane) sourcePane.scrollTop = sourcePane.scrollHeight;
+        const originalScrollTop = sourcePane ? sourcePane.scrollTop : 0;
+        let sourceTableFullyVisibleAtTop = true;
+        let sourceTableVisibleAtTop = true;
+        let sourcePaneNeedsImmediateVerticalScroll = false;
+        if (sourcePane) {
+          sourcePane.scrollTop = 0;
+          const paneRect = sourcePane.getBoundingClientRect();
+          const firstTable = sourcePane.querySelector('table');
+          const firstTableRect = firstTable ? firstTable.getBoundingClientRect() : null;
+          sourceTableVisibleAtTop = !firstTableRect || (firstTableRect.bottom > paneRect.top && firstTableRect.top < paneRect.bottom);
+          sourceTableFullyVisibleAtTop = !firstTableRect || (firstTableRect.top >= paneRect.top && firstTableRect.bottom <= paneRect.bottom + 2);
+          sourcePaneNeedsImmediateVerticalScroll = sourcePane.scrollHeight > sourcePane.clientHeight + 6;
+          sourcePane.scrollTop = sourcePane.scrollHeight;
+        }
         const stripRect = strip ? strip.getBoundingClientRect() : null;
         const overflowing = Array.from(document.querySelectorAll('body *')).filter((item) => {
           const style = window.getComputedStyle(item);
@@ -782,6 +1447,28 @@
           return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll') && !item.closest('.formula-scroll');
         });
         const familyAffordances = {};
+        const visible = (item) => {
+          if (!item) return false;
+          if (item.ownerSVGElement) {
+            if (item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+            const style = window.getComputedStyle(item);
+            if (style.display === 'none' || style.visibility === 'hidden') return false;
+            if (typeof item.getBBox === 'function') {
+              try {
+                const box = item.getBBox();
+                return box.width > 0 || box.height > 0;
+              } catch (error) {
+                return true;
+              }
+            }
+            return true;
+          }
+          if (item.hidden || item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          const rect = item.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        };
         cards.forEach((card) => {
           const family = card.getAttribute('data-task-family');
           if (!familyAffordances[family]) {
@@ -795,7 +1482,40 @@
               structuredFields: false,
               calculationFields: false,
               pointFields: false,
-              numericField: false
+              numericField: false,
+              graphWorkspace: false,
+              graphAxisControls: false,
+              graphPointInputs: false,
+              graphLineConfirmation: false,
+              graphClickToPlace: false,
+              graphAxisControlsAttached: false,
+              graphClickedPointCount: 0,
+              graphConstructedLineVisible: false,
+              graphLineInSameWorkspace: false,
+              graphGridLineVisibleCount: 0,
+              typedPointFallbackCollapsed: false,
+              typedPointFallbackOpen: false,
+              sourceCellSelection: false,
+              sourceCellOptionCount: 0,
+              sourceCellCheckedCount: 0,
+              sourceCellRequiredSelectionCount: 0,
+              sourceCellDistractorCount: 0,
+              repeatedDropdownRows: 0,
+              roleDropdownCount: 0,
+              structuredCarryForward: false,
+              constrainedDirectionControl: false,
+              freeTextDirectionAbsent: true,
+              carriedValueReady: false,
+              carryRequiresPreviousTask: false,
+              intervalHalvingCheck: false,
+              intervalChoiceCount: 0,
+              halvingConclusionControl: false,
+              autoFilledQuantitiesVisible: false,
+              progressiveSupport: false,
+              supportHintVisible: false,
+              supportSetupVisible: false,
+              supportSolutionVisible: false,
+              supportComplete: false
             };
           }
           const item = familyAffordances[family];
@@ -809,15 +1529,85 @@
           item.calculationFields = item.calculationFields || Boolean(card.querySelector('.calc-work') && card.querySelector('.calc-final'));
           item.pointFields = item.pointFields || Boolean(card.querySelector('.point-x') && card.querySelector('.point-y'));
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
+          item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
+          item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
+          item.graphAxisControlsAttached = item.graphAxisControlsAttached || Boolean(card.querySelector('[data-axis-controls-attached="true"]'));
+          item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 4;
+          item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
+          item.graphClickToPlace = item.graphClickToPlace || Boolean(card.querySelector('[data-graph-click-surface="true"]'));
+          item.graphClickedPointCount += card.querySelectorAll('.placed-graph-point').length;
+          item.graphConstructedLineVisible = item.graphConstructedLineVisible || Boolean(Array.from(card.querySelectorAll('[data-graph-line="constructed"]')).some((line) => visible(line)));
+          item.graphLineInSameWorkspace = item.graphLineInSameWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"] [data-graph-line="constructed"]'));
+          item.graphGridLineVisibleCount += Array.from(card.querySelectorAll('.graph-grid-svg .grid-line')).filter((line) => visible(line)).length;
+          item.typedPointFallbackCollapsed = item.typedPointFallbackCollapsed || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"]:not([open])'));
+          item.typedPointFallbackOpen = item.typedPointFallbackOpen || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"][open]'));
+          item.sourceCellSelection = item.sourceCellSelection || Boolean(card.querySelector('[data-source-cell-selection="compact"]'));
+          item.sourceCellOptionCount += card.querySelectorAll('.source-cell-select').length;
+          item.sourceCellCheckedCount += card.querySelectorAll('.source-cell-select:checked').length;
+          const sourceSelection = card.querySelector('[data-source-cell-selection="compact"]');
+          if (sourceSelection) {
+            item.sourceCellRequiredSelectionCount = Number(sourceSelection.dataset.requiredSelections || 0);
+            item.sourceCellDistractorCount = Number(sourceSelection.dataset.distractorCount || 0);
+          }
+          item.repeatedDropdownRows += card.querySelectorAll('.pair-row').length;
+          item.roleDropdownCount += card.querySelectorAll('.role-select').length;
+          item.structuredCarryForward = item.structuredCarryForward || Boolean(card.querySelector('[data-carry-forward="true"]'));
+          item.constrainedDirectionControl = item.constrainedDirectionControl || Boolean(card.querySelector('.direction-select'));
+          item.freeTextDirectionAbsent = item.freeTextDirectionAbsent && !Boolean(card.querySelector('input.structured-field:not([type="hidden"]), textarea.structured-field'));
+          item.carriedValueReady = item.carriedValueReady || Boolean(card.querySelector('[data-carry-forward="true"].is-ready'));
+          item.carryRequiresPreviousTask = item.carryRequiresPreviousTask || Boolean(card.querySelector('[data-carry-forward="true"] .direction-select:disabled, [data-carry-forward="true"]:not(.is-ready)'));
+          item.intervalHalvingCheck = item.intervalHalvingCheck || Boolean(card.querySelector('[data-interval-halving-check="true"]'));
+          item.intervalChoiceCount += card.querySelectorAll('.interval-choice').length;
+          item.halvingConclusionControl = item.halvingConclusionControl || Boolean(card.querySelector('.halving-conclusion'));
+          item.autoFilledQuantitiesVisible = item.autoFilledQuantitiesVisible || Boolean(card.querySelector('[data-auto-fill-values="true"]'));
+          item.progressiveSupport = item.progressiveSupport || Boolean(card.querySelector('[data-progressive-support="true"]'));
+          item.supportHintVisible = item.supportHintVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="1"], [data-support-content="1"]')).some((item) => visible(item)));
+          item.supportSetupVisible = item.supportSetupVisible || Boolean(Array.from(card.querySelectorAll('[data-support-content="2"]')).some((item) => visible(item)));
+          item.supportSolutionVisible = item.supportSolutionVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="3"], [data-support-content="3"]')).some((item) => visible(item)));
+          item.supportComplete = item.supportComplete || card.classList.contains('support-complete');
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
+        const visibleText = (root) => Array.from(root.querySelectorAll('*'))
+          .filter((item) => visible(item) && !item.closest('.visually-hidden'))
+          .map((item) => {
+            if (item.children.length > 0 && !['TD', 'TH', 'CAPTION', 'H1', 'H2', 'H3', 'P', 'LABEL', 'BUTTON', 'OPTION', 'SUMMARY', 'DT', 'DD'].includes(item.tagName)) return '';
+            return item.innerText || item.textContent || '';
+          })
+          .join('\n');
+        const duplicateLabelBlocks = Array.from(document.querySelectorAll('.ctx-block')).map((block) => {
+          const text = visibleText(block);
+          return {
+            bron1: (text.match(/Bron 1/g) || []).length,
+            tabel1: (text.match(/Tabel 1/g) || []).length
+          };
+        });
+        const duplicateVisibleSourceLabels = duplicateLabelBlocks.some((item) => item.bron1 > 1 || item.tabel1 > 1);
+        const graphConstructionComplete = cards.some((item) => item.getAttribute('data-task-family') === 'graph_construction_substitute' && item.classList.contains('is-complete'));
+        const completedGraphBlocks = Array.from(document.querySelectorAll('[data-completed-graph="true"]'));
+        const visibleCompletedGraphs = completedGraphBlocks.filter(visible);
+        const completedGraphOutsideWorkspaceCount = completedGraphBlocks.filter((item) => !item.closest('[data-graph-workspace="construction"]')).length;
+        const constructedLineVisibleInWorkspace = Array.from(document.querySelectorAll('[data-graph-workspace="construction"] [data-graph-line="constructed"]')).some((item) => visible(item));
+        const graphWorkspaces = Array.from(document.querySelectorAll('[data-graph-workspace="construction"]'));
+        const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
+        const labShell = document.querySelector('.lab-shell');
+        const usableWidth = labShell ? labShell.getBoundingClientRect().width : window.innerWidth;
+        const graphAxisLabels = Array.from(document.querySelectorAll('.graph-grid-svg .axis-label.reveal-after-axes'));
+        const graphScaleLabels = Array.from(document.querySelectorAll('.graph-grid-svg .scale-label.reveal-after-axes'));
+        const graphAxisLabelsVisibleCount = graphAxisLabels.filter(visible).length;
+        const graphScaleLabelsVisibleCount = graphScaleLabels.filter(visible).length;
+        const graphScaleLabelTexts = graphScaleLabels.filter(visible).map((label) => (label.textContent || '').trim()).filter(Boolean);
+        const graphGridLineVisibleCount = Array.from(document.querySelectorAll('.graph-grid-svg .grid-line')).filter(visible).length;
+        const graphLabelsVisibleBeforeAxisSelection = graphWorkspaces.some((workspace) => !workspace.classList.contains('axes-selected') && Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible));
+        const sourceRefsVisibleNow = bodyText.includes('references/') || bodyText.includes('..\\') || bodyText.includes('../');
+        if (sourcePane) sourcePane.scrollTop = originalScrollTop;
         return {
           theme: document.documentElement.getAttribute('data-theme'),
           viewport: { width: window.innerWidth, height: window.innerHeight },
           semanticValidationEnabled: document.body.dataset.semanticValidation === 'required',
           contextBlockCount: document.querySelectorAll('.ctx-block').length,
           promptContextCount: document.querySelectorAll('[data-context-role="prompt"]').length,
+          promptInSourcePaneCount: document.querySelectorAll('.source-pane [data-context-role="prompt"]').length,
           sourceContextCount: document.querySelectorAll('[data-context-role="source"]').length,
           supportBoxCount: supportBoxes.length,
           closedSupportBoxCount: supportBoxes.filter((box) => !box.open).length,
@@ -840,6 +1630,32 @@
           sourcePaneScrollable: sourcePane ? sourcePane.scrollHeight > sourcePane.clientHeight : false,
           sourcePaneIndependentScroll: sourcePane ? window.getComputedStyle(sourcePane).overflowY !== 'visible' : false,
           questionVisibleAfterSourceScroll: Boolean(stripRect && stripRect.top >= 0 && stripRect.bottom <= window.innerHeight),
+          rightPaneQuestionVisible: Boolean(document.querySelector('.task-pane [data-right-pane-question="true"]')),
+          examQuestionTextVisibleInTaskPane: taskPane ? taskPane.innerText.includes('Bereken tot welk bedrag aan zorgkosten per jaar') : false,
+          sourceTableVisibleAtTop,
+          sourceTableFullyVisibleAtTop,
+          sourcePaneNeedsImmediateVerticalScroll,
+          sourcePaneComfortableInitial: sourceTableVisibleAtTop && sourceTableFullyVisibleAtTop && !sourceRefsVisibleNow,
+          graphWorkspaceCount: graphWorkspaces.length,
+          graphWorkspaceInTaskPane: graphWorkspaces.length === 0 || graphWorkspaces.every((item) => Boolean(item.closest('.task-pane'))),
+          graphWorkspaceDesktopWidth: firstGraphWorkspaceRect ? Math.round(firstGraphWorkspaceRect.width) : 0,
+          graphWorkspaceUsableWidth: Math.round(usableWidth),
+          graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
+          graphClickToPlaceSupported: document.querySelectorAll('[data-graph-click-surface="true"]').length > 0,
+          graphClickedPointCount: document.querySelectorAll('.placed-graph-point').length,
+          graphGridLineVisibleCount,
+          graphAxisLabelsVisibleCount,
+          graphScaleLabelsVisibleCount,
+          graphScaleLabelTexts,
+          graphLabelsVisibleBeforeAxisSelection,
+          graphLabelsRevealAfterAxisSelection: graphWorkspaces.length === 0 || graphWorkspaces.every((workspace) => !workspace.classList.contains('axes-selected') || Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible)),
+          completedGraphVisibleCount: visibleCompletedGraphs.length,
+          completedGraphOutsideWorkspaceCount,
+          constructedLineVisibleInWorkspace,
+          completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
+          sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
+          duplicateVisibleSourceLabels,
+          duplicateLabelBlocks,
           interactiveControlCount: document.querySelectorAll('.play-control').length,
           checkButtonCount: document.querySelectorAll('.check-button').length,
           taskInstructionCount: document.querySelectorAll('.task-instructions').length,
@@ -851,11 +1667,16 @@
           completedTaskCount: completedCount(),
           wrongRetryCount: document.querySelectorAll('.task-card.is-retry').length,
           retryFeedbackCount: Array.from(document.querySelectorAll('.feedback')).filter((item) => item.textContent.includes('Nog niet')).length,
+          targetedUnitFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het bedrag klopt. Controleer alleen de eenheid.')),
+          targetedWorkFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het eindantwoord klopt. Laat nog zien hoe je eraan komt.')),
+          targetedNumberFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Controleer eerst de jaarpremies en het verschil.')),
+          progressiveSupportVisible: Array.from(document.querySelectorAll('[data-progressive-support="true"]')).some((item) => Array.from(item.querySelectorAll('.support-button, .support-content')).some(visible)),
+          supportComplete: cards.some((card) => card.classList.contains('support-complete')),
           labCompleted: completedCount() === cards.length,
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
           flowchartCount: document.querySelectorAll('.flow-list').length,
-          sourceRefsVisible: bodyText.includes('references/'),
+          sourceRefsVisible: sourceRefsVisibleNow,
           bodyTextSnapshot: bodyText,
           contextTextSnapshot: sourcePane ? sourcePane.innerText : '',
           taskTextSnapshot: taskPane ? taskPane.innerText : '',
@@ -877,6 +1698,46 @@
           }
           return inspect();
         },
+        applyUnitOnlyMistake(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const unit = card.querySelector('.calc-unit');
+            if (unit) unit.value = 'euro per maand';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyAcceptedEuros(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const final = card.querySelector('.calc-final');
+            const unit = card.querySelector('.calc-unit');
+            if (final) final.value = '649';
+            if (unit) unit.value = 'euros';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyStuckSupport(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            for (let attempt = 0; attempt < 3; attempt += 1) {
+              fillWrong(card, model);
+              card.querySelector('.check-button').click();
+            }
+            const solution = card.querySelector('[data-support-level="3"]');
+            if (solution) solution.click();
+          }
+          return inspect();
+        },
         correctTask(taskIndex = 0) {
           resetAll();
           const card = cards[taskIndex];
@@ -885,6 +1746,34 @@
             card.querySelector('.check-button').click();
             fillCorrect(card, models[taskIndex]);
             card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        selectCorrectAxes(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+          }
+          return inspect();
+        },
+        placeGraphPointsOnly(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+            clearGraphPoints(card);
+            (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
           }
           return inspect();
         },
@@ -897,6 +1786,7 @@
           return inspect();
         }
       };
+      updateCarryovers();
       updateCurrent(0);
     })();
   </script>

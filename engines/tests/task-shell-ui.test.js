@@ -302,7 +302,35 @@ function data() {
             task('table', 'table_value_selection', { inputLabel: 'Tabelwaarde', options: [{ id: 'a', label: '8' }, { id: 'b', label: '10' }] }, { kind: 'choice', value: 'b' }),
             task('graph', 'graph_reading', { inputLabel: 'Afgelezen waarde' }, { kind: 'number', value: 10, tolerance: 1 }),
             task('point', 'point_placement', { xLabel: 'Hoeveelheid', yLabel: 'Prijs' }, { kind: 'point', x: 4, y: 10 }),
-            task('construct', 'graph_construction_substitute', { inputLabel: 'Grafiekstappen' }, { kind: 'self_check', criteria: ['Punten genoemd', 'Lijn beschreven'] }),
+            task('construct', 'graph_construction_substitute', {
+                workspaceTitle: 'Tekenruimte',
+                xAxisLabel: 'Horizontale as',
+                yAxisLabel: 'Verticale as',
+                pointRowsLabel: 'Punten uit de tabel',
+                lineConfirmationLabel: 'Ik heb de punten met een dalende lijn verbonden',
+                lineShapeLabel: 'Lijnvorm',
+                xInputLabel: 'Q',
+                yInputLabel: 'P',
+                emptyGraphAltText: 'Lege P-Q-grafiek voor constructie',
+                axes: {
+                    x: { label: 'Q', min: 0, max: 20 },
+                    y: { label: 'P', min: 0, max: 4 }
+                },
+                pointCount: 2
+            }, {
+                kind: 'graph_construction_substitute',
+                axes: {
+                    xAccepted: ['q', 'hoeveelheid'],
+                    yAccepted: ['p', 'prijs']
+                },
+                points: [
+                    { x: 0, y: 4 },
+                    { x: 20, y: 2 }
+                ],
+                toleranceX: 0,
+                toleranceY: 0,
+                lineShape: 'decreasing'
+            }),
             task('reasoning', 'structured_reasoning', { inputLabel: 'Redenering' }, { kind: 'self_check', criteria: ['Oorzaak genoemd', 'Conclusie gekoppeld'] }),
             task('assertion-reason', 'assertion_reason', {
                 assertionLabel: 'Stelling',
@@ -794,7 +822,7 @@ describe('TaskShellUI', () => {
         expect(html).toContain('Bronwaarden kiezen');
         expect(html).toContain('Bronketen bouwen');
         expect(html).toContain('Labels plaatsen');
-        expect(html).toContain('Grafiekstappen');
+        expect(html).toContain('Grafiek construeren');
         expect(html).not.toContain('Numeric input');
         expect(html).not.toContain('Graph-construction substitute');
     });

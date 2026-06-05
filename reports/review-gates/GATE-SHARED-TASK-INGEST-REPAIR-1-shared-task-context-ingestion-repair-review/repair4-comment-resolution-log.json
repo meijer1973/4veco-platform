@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "generated": "2026-06-05",
+  "status": "repair4_evidence_prepared_after_reviewer_correction_pass_awaiting_renewed_review",
+  "prior_decision": "REVISE",
+  "prior_gate_direction": "hold_for_playable_repair",
+  "required_next_sprint_completed_for_review": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-4",
+  "gate_closure_authorized": false,
+  "renewed_human_review_required": true,
+  "resolutions": [
+    {
+      "id": "SHAREDINGEST-Q1",
+      "classification": "accepted",
+      "status": "no_repair_required",
+      "evidence": [
+        "reports/json/task-ingest-transform2-actual-exam.json",
+        "reports/json/task-ingest-transform3-textbook.json"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q2",
+      "classification": "accepted",
+      "status": "retained",
+      "evidence": [
+        "reports/json/task-ingest-transform2-actual-exam-proof.json"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q3",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "required select-all-numbers card replaced by conceptual comparison-basis choice",
+      "evidence": [
+        "reports/json/task-ingest-transform2-actual-exam.json",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-task-family-map.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q4",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "649 plus accepted unit variants pass; targeted feedback and progressive support added; reviewer shortcut 22x12 = 264, 264 + 385 = 649 accepted as an alternate work path",
+      "evidence": [
+        "reports/json/task-ingest-transform2-actual-exam-proof.json",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-unit-feedback.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-support.png"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q5",
+      "classification": "accepted",
+      "status": "no_repair_required",
+      "evidence": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-source-map.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q6",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "constructed line appears inside the active graph workspace",
+      "evidence": [
+        "reports/json/task-ingest-transform3-textbook-proof.json",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-line-confirmed.png"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q7",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "readable grid visible before axis selection; labels and scale delayed until correct axes; table-derived tick labels used after axis selection",
+      "evidence": [
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q8",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "50 percent follow-up simplified to interval choice, auto-filled quantities, relation selection, and conclusion choice; answer is not interval-only",
+      "evidence": [
+        "reports/json/task-ingest-transform3-textbook-proof.json",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-answer-form-trace.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q9",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "duplicate visible source/table label checks added to proof and QA report",
+      "evidence": [
+        "reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q10",
+      "classification": "accepted",
+      "status": "no_overclaim_added",
+      "evidence": [
+        "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q11",
+      "classification": "blocking",
+      "status": "resolved_for_renewed_review",
+      "repair": "all ten required repair items covered by proof and checker",
+      "evidence": [
+        "reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md",
+        "reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md"
+      ]
+    },
+    {
+      "id": "SHAREDINGEST-Q12",
+      "classification": "decision",
+      "status": "recorded",
+      "decision": "hold_for_playable_repair"
+    }
+  ],
+  "reviewer_correction_pass": {
+    "status": "resolved_for_renewed_review",
+    "graph_table_ticks": true,
+    "quantity_drop_conclusion_not_interval_only": true,
+    "interval_halving_shared_task_contract": true,
+    "exam_shortcut_work_path_accepted": true,
+    "evidence": [
+      "reports/json/task-ingest-transform2-actual-exam.json",
+      "reports/json/task-ingest-transform3-textbook.json",
+      "build-scripts/sprints/check-task-ingest-transform2-actual-exam.js",
+      "build-scripts/sprints/check-task-ingest-transform3-textbook.js",
+      "engines/task-shell-engine.js",
+      "engines/task-shell-ui.js"
+    ]
+  },
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "protected_reference_mutation": false,
+    "product_route_adoption": false,
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

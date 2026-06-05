@@ -1,30 +1,47 @@
 # TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM Task-Family Map
 
-## Task Family Coverage
+Generated: 2026-06-05
 
-| Task ID | Family | Operation coverage | Cognitive-preservation rationale |
-|---|---|---|---|
-| `q3-source-values` | `source_value_selection` | Source value selection and role assignment | Preserves table reading, variant, unit, and role selection before calculation. |
-| `q3-annual-premium-formula` | `formula_builder` | Monthly-to-year premium conversion | Prevents using monthly premiums as yearly costs. |
-| `q3-operation-order` | `step_ordering` | Procedure sequence | Preserves answer-model step order before execution. |
-| `q3-calculation` | `calculation_work_capture` | Yearly premium, deductible exposure, threshold derivation | Requires visible work; final number alone is rejected. |
-| `q3-source-chain` | `source_chain_builder` | Source-to-value-to-operation-to-answer route | Connects table values to operations and conclusion. |
-| `q3-threshold-direction` | `structured_short_response` | Threshold direction | Requires the answer to be a directed statement, not an orphan amount. |
+Status: target-task economy plus repair-4 interaction-clarity map and
+reviewer calculation-shortcut correction.
 
-## Anti-Reduction Notes
+## Original Target To Transformed Tasks
 
-The transformed bundle intentionally combines source, formula, procedure,
-calculation, chain, and short-response families. A source-selection-only card,
-a choice-only card, or a final-answer field alone would reduce the official
-exam operation level and must be rejected by the checker and lead review.
+Original:
 
-## Context Binding
+`Bereken tot welk bedrag aan zorgkosten per jaar het voordeliger is om verhoogd eigen risico te nemen.`
 
-Every task carries context references to:
+Transformation:
 
-- `ctx-zoohee-prompt`
-- `ctx-zoohee-source`
-- `ctx-zoohee-table`
-- `ctx-zoohee-formula`
+```text
+choice -> calculation_work_capture -> structured_short_response
+```
 
-The checker must validate the full task set with `TaskShellEngine.validateTaskSet`.
+| Task | Family | Target role |
+|---|---|---|
+| `q3-source-values` | `choice` | choose the meaningful comparison basis before calculating |
+| `q3-calculation` | `calculation_work_capture` | calculate the threshold with visible work, including the full annual-cost route or premium-difference shortcut, exact unit validation, targeted feedback, and progressive support |
+| `q3-threshold-direction` | `structured_short_response` | carry task-2 threshold and choose direction |
+
+## Support Families Removed As Required Cards
+
+`source_value_selection`, `formula_builder`, `step_ordering`, and
+`source_chain_builder` are no longer required cards for this item. Compact
+source marking can exist only as support inside the calculation card. The
+required first card now checks whether the student knows that the relevant
+comparison is annual premium plus deductible exposure.
+
+## Anti-Reduction
+
+The revised flow still rejects final-answer field alone because the calculation
+card requires visible work and the conclusion card requires direction.
+It also rejects a conclusion card that asks for a fresh free-text threshold
+instead of consuming the calculated value.
+
+Repair 4 also rejects the earlier "select all numbers" task, accepts `649`
+with reasonable yearly unit variants such as `euros`, gives targeted feedback
+for number/unit/work failures, and offers a review-lab support path after
+repeated failed calculation attempts.
+
+The reviewer correction pass adds an explicit accepted work path for
+`22x12 = 264, 264 + 385 = 649` while still rejecting final-answer-only work.

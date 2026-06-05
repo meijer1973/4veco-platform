@@ -1,26 +1,52 @@
 # TASK-INGEST-TRANSFORM-3-TEXTBOOK Answer Form Trace
 
-Sprint: `TASK-INGEST-TRANSFORM-3-TEXTBOOK`
+Generated: 2026-06-05
 
-## Required Answer Forms
+Status: revised for repair-4 click-to-place graph construction and reviewer
+correction pass.
 
-| Answer form | Task cards | Required | Why |
-|---|---|---|---|
-| `axis_convention_control` | `tb113-axis-convention`, `tb113-graph-step-order`, `tb113-point-placement` | yes | The textbook target requires price vertical and quantity horizontal. |
-| `graph_reading_and_interpolation` | `tb113-interpolation-source-values`, `tb113-graph-reading` | yes | P = EUR 1.75 must be read between source points. |
-| `calculation_work` | `tb113-claim-calculation` | yes | The 50 percent claim needs visible percent-change work. |
-| `constructed_claim_explanation` | `tb113-answer-form`, `tb113-source-chain` | yes | The answer must name interval, values, calculation, and conclusion. |
+## Primary Answer Form
 
-## Accepted Claim Candidates
+Original target:
 
-- EUR 1.50 to EUR 2.50: 400 to 200 gives -50 percent.
-- EUR 2.50 to EUR 3.00: 200 to 100 gives -50 percent.
+```text
+Teken een P-Q-grafiek bij de tabel.
+```
 
-## Anti-Reduction Rules
+Primary transformed answer:
 
-- `tb113-table-value` cannot stand in for the full answer.
-- `tb113-claim-calculation` rejects a final interval without work text.
-- `tb113-answer-form` rejects a missing calculation field.
-- `tb113-source-chain` rejects a reversed or shallow source chain.
-- The transformation remains review-only and does not claim target equivalence.
+- family: `graph_construction_substitute`;
+- task: `tb113-graph-construction`;
+- x-axis: quantity `Q`;
+- y-axis: price `P`;
+- primary path: click two table points in the graph workspace;
+- required points: `(500, 1.00)` and `(100, 3.00)`;
+- fallback: typed coordinate entry remains collapsed and secondary;
+- line: decreasing, drawn in the same graph workspace after confirmation;
+- grid: visible from the start;
+- tick labels: table-derived values, with Q `0, 100, 200, 300, 400, 500`
+  and P `0,00, 1,00, 1,50, 2,00, 2,50, 3,00`;
+- axis names and numeric scale: hidden until the correct axes are selected.
 
+## Follow-Up Answer Forms
+
+| Task | Answer form |
+|---|---|
+| `tb113-graph-reading` | numeric `Q` value around `350` ijsjes |
+| `tb113-quantity-drop-check` | choose one valid interval, auto-fill old/new quantities, select that the new quantity is half of the old quantity, then choose the conclusion `Q daalt met 50 procent` |
+
+Accepted 50 percent intervals remain:
+
+- `EUR 1.50` to `EUR 2.50`: `400` to `200`;
+- `EUR 2.50` to `EUR 3.00`: `200` to `100`.
+
+The ambiguity is preserved as a simplified follow-up, not as the primary task
+and not as a free-form interval/unit/calculation puzzle. The accepted answer is
+not interval-only: the shared task variant also accepts the conclusion
+`Q daalt met 50 procent` when the interval and halving relation are shown.
+
+## Shared Task Contract
+
+`tb113-quantity-drop-check` is a shared `calculation_work_capture` task with
+`selectionMode: interval_halving_check`. `TaskShellEngine` validates the
+interval options, relation options, conclusion options, and focus plan.
