@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T20:23:52.586Z
+Generated: 2026-06-05T20:36:38.510Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3484
+Files indexed: 3508
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 410
+Count: 412
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -432,6 +432,7 @@ Count: 410
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
+- build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
@@ -455,6 +456,7 @@ Count: 410
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-check-ux1.js
+- build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -586,7 +588,7 @@ Count: 42
 
 ## validators
 
-Count: 280
+Count: 281
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -700,6 +702,7 @@ Count: 280
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-graph-check-ux1.js
+- build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -1352,7 +1355,7 @@ Count: 476
 
 ## reports
 
-Count: 2161
+Count: 2183
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1387,6 +1390,7 @@ Count: 2161
 - reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
 - reports/json/graph-check-ux1-proof.json
+- reports/json/graph-exit-ux1-proof.json
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
 - reports/json/misconception-registry.json
@@ -2556,6 +2560,27 @@ Count: 2161
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/GRAPH-EXIT-UX-1-baseline.md
+- reports/sprints/GRAPH-EXIT-UX-1-command-log.jsonl
+- reports/sprints/GRAPH-EXIT-UX-1-command-log.md
+- reports/sprints/GRAPH-EXIT-UX-1-lead-review-assignment.md
+- reports/sprints/GRAPH-EXIT-UX-1-lead-review-corrections.md
+- reports/sprints/GRAPH-EXIT-UX-1-lead-review-round1.md
+- reports/sprints/GRAPH-EXIT-UX-1-lead-review-round2.md
+- reports/sprints/GRAPH-EXIT-UX-1-plan.md
+- reports/sprints/GRAPH-EXIT-UX-1-planning-review.md
+- reports/sprints/GRAPH-EXIT-UX-1-result.md
+- reports/sprints/GRAPH-EXIT-UX-1-screenshot-manifest.md
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-completed-held.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-initial.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-source-scrolled.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-wrong-retry.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-dark-completed-held.png
+- reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-initial.png
+- reports/sprints/GRAPH-EXIT-UX-1-verification-review.md
+- reports/sprints/GRAPH-EXIT-UX-1-visual-qa-report.md
 - reports/sprints/GRAPH-REFINE-1-baseline.md
 - reports/sprints/GRAPH-REFINE-1-diff-summary.md
 - reports/sprints/GRAPH-REFINE-1-gate-handoff.md

@@ -250,9 +250,13 @@ describe('paragraph landing page student-web links', () => {
         html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
         expect(html).toContain('data-route-layer="check"');
         expect(html).toContain('Exit ticket');
-        expect(html).toContain('Maak de volledige paragraaf-check');
-        expect(html).toContain('Rond af met de paragraaf-check');
+        expect(html).toContain('data-check-route="exit-ticket"');
+        expect(html).toContain('data-check-purpose="end-check"');
+        expect(html).toContain('Maak de eindcheck met dezelfde soort denkstappen als de eindopgave');
+        expect(html).toContain('Maak eindcheck');
         expect(html).not.toContain('Korte check');
+        expect(html).not.toContain('Maak de volledige paragraaf-check');
+        expect(html).not.toContain('Rond af met de paragraaf-check');
 
         writeFile(path.join(paragraph, `${prefix} ${DASH} korte-check.html`));
         result = spawnSync(process.execPath, [BUILDER], {
@@ -264,10 +268,17 @@ describe('paragraph landing page student-web links', () => {
         html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
         expect(html).toContain('data-route-layer="check"');
         expect(html).toContain('Korte check');
-        expect(html).toContain('Kies wat je nog wilt oefenen');
+        expect(html).toContain('data-check-route="advisory"');
+        expect(html).toContain('data-check-purpose="local-practice-advice"');
+        expect(html).toContain('Krijg lokaal oefenadvies');
+        expect(html).toContain('dit is geen eindcheck');
         expect(html).toContain('Exit ticket');
-        expect(html).toContain('Maak de volledige paragraaf-check');
-        expect(html).toContain('Kies eerst oefentips, rond daarna af');
+        expect(html).toContain('data-check-route="exit-ticket"');
+        expect(html).toContain('data-check-purpose="end-check"');
+        expect(html).toContain('Maak de eindcheck met dezelfde soort denkstappen als de eindopgave');
+        expect(html).toContain('Eerst oefenadvies, daarna eindcheck');
+        expect(html).not.toContain('Maak de volledige paragraaf-check');
+        expect(html).not.toContain('Kies wat je nog wilt oefenen');
         expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
     });
 });

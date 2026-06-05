@@ -301,9 +301,9 @@ function scanFiles(paragraafPath) {
 function checkSectionHint(files) {
   const hasShort = Boolean(files && files.check && files.check.shortCheck);
   const hasExit = Boolean(files && files.check && files.check.exitTicket);
-  if (hasShort && hasExit) return 'Kies eerst oefentips, rond daarna af';
-  if (hasExit) return 'Rond af met de paragraaf-check';
-  return 'Rond af met gerichte oefentips';
+  if (hasShort && hasExit) return 'Eerst oefenadvies, daarna eindcheck';
+  if (hasExit) return 'Maak de eindcheck';
+  return 'Krijg lokaal oefenadvies';
 }
 
 function encPath(segments) { return segments.map(s => encodeURIComponent(s)).join("/"); }
@@ -1021,6 +1021,39 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </a>`;
   }
 
+  function checkRouteCard(href, kind) {
+    if (!href) return "";
+    const copy = kind === "short"
+      ? {
+          route: "advisory",
+          purpose: "local-practice-advice",
+          className: "resource-card-check-short",
+          badge: "advies",
+          title: "Korte check",
+          desc: "Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck.",
+          action: "Krijg oefenadvies",
+        }
+      : {
+          route: "exit-ticket",
+          purpose: "end-check",
+          className: "resource-card-check-exit",
+          badge: "eindcheck",
+          title: "Exit ticket",
+          desc: "Maak de eindcheck met dezelfde soort denkstappen als de eindopgave.",
+          action: "Maak eindcheck",
+        };
+    return `
+        <a class="resource-card resource-card-check ${copy.className}" data-check-route="${copy.route}" data-check-purpose="${copy.purpose}" href="${href}">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.check}</svg></div>
+          <div class="resource-card-body">
+            <span class="resource-aspect-label check-card-kind">${copy.badge}</span>
+            <h3>${copy.title}</h3>
+            <p class="resource-card-purpose">${copy.desc}</p>
+            <span class="resource-card-action">${copy.action} &rarr;</span>
+          </div>
+        </a>`;
+  }
+
   function begeleidCard(data) {
     if (!data) return "";
     const links = [];
@@ -1289,10 +1322,10 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
 
   const checkCards = [
     files.check && files.check.shortCheck
-      ? resourceCard(encPath([files.check.shortCheck]), ICONS.check, "Korte check", "Kies wat je nog wilt oefenen", "html")
+      ? checkRouteCard(encPath([files.check.shortCheck]), "short")
       : "",
     files.check && files.check.exitTicket
-      ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, "Exit ticket", "Maak de volledige paragraaf-check", "html")
+      ? checkRouteCard(encPath([files.check.exitTicket]), "exit")
       : ""
   ].filter(Boolean).join("\n");
 
@@ -1491,6 +1524,29 @@ ${bodyHTML}
     display: inline-block;
     font-size: 0.78rem; font-weight: 600;
     color: var(--accent);
+  }
+  .resource-card-check {
+    border-left-width: 5px;
+  }
+  .resource-card-check-short {
+    border-left-color: var(--wiskundig);
+  }
+  .resource-card-check-exit {
+    border-left-color: var(--grafisch);
+  }
+  .resource-card-check-short .resource-card-icon {
+    color: var(--wiskundig);
+    background: var(--wiskundig-tint);
+  }
+  .resource-card-check-exit .resource-card-icon {
+    color: var(--grafisch);
+    background: var(--grafisch-tint);
+  }
+  .resource-card-check .check-card-kind {
+    margin-bottom: 0.25rem;
+  }
+  .resource-card-check .resource-card-purpose {
+    min-height: 3.45em;
   }
   .resource-sub-links {
     display: flex; gap: 0.45rem; flex-wrap: wrap;

@@ -284,6 +284,14 @@ function checkGeneratedOutput() {
     const exitPage = findFile(dir, /\u2013 exit-ticket\.html$/i, `${paragraphId} exit-ticket page`);
     requireText(landing, /data-section="check"[\s\S]*Korte check/i, `${paragraphId} landing Korte check card`, `${paragraphId}/index.html`);
     requireText(landing, /data-section="check"[\s\S]*Exit ticket/i, `${paragraphId} landing Exit ticket card`, `${paragraphId}/index.html`);
+    requireText(landing, /Eerst oefenadvies, daarna eindcheck/i, `${paragraphId} landing check distinction hint`, `${paragraphId}/index.html`);
+    requireText(landing, /data-check-route="advisory"/i, `${paragraphId} landing advisory check route`, `${paragraphId}/index.html`);
+    requireText(landing, /data-check-purpose="local-practice-advice"/i, `${paragraphId} landing advisory purpose`, `${paragraphId}/index.html`);
+    requireText(landing, /Krijg lokaal oefenadvies[\s\S]*dit is geen eindcheck/i, `${paragraphId} landing advisory copy`, `${paragraphId}/index.html`);
+    requireText(landing, /data-check-route="exit-ticket"/i, `${paragraphId} landing exit-ticket route`, `${paragraphId}/index.html`);
+    requireText(landing, /data-check-purpose="end-check"/i, `${paragraphId} landing end-check purpose`, `${paragraphId}/index.html`);
+    requireText(landing, /Maak de eindcheck met dezelfde soort denkstappen als de eindopgave/i, `${paragraphId} landing exit-ticket copy`, `${paragraphId}/index.html`);
+    rejectText(landing, /Kies wat je nog wilt oefenen|Maak de volledige paragraaf-check/i, `${paragraphId} old generic check route copy`, `${paragraphId}/index.html`);
     requireText(read(shortPage), new RegExp(`shared/exit-ticket/${paragraphId.replace(/\./g, '\\.')}-korte-check\\.js`), `${paragraphId} short-check data script`, shortPage);
     requireText(read(exitPage), new RegExp(`shared/exit-ticket/${paragraphId.replace(/\./g, '\\.')}-exit-ticket\\.js`), `${paragraphId} exit-ticket data script`, exitPage);
     assert(!fs.readdirSync(dir).some((file) => /\u2013 afsluitcheck\.html$/i.test(file)), `${paragraphId} stale afsluitcheck page must be absent`);

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECK-ROUTE-COPY-1",
+  "generated": "2026-06-05T20:32:24.836Z",
+  "status": "complete",
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "proof": {
+    "first_three_landing_pages_checked": true,
+    "advisory_and_exit_cards_distinct": true,
+    "old_generic_copy_absent": true,
+    "forbidden_authority_absent": true,
+    "mobile_rendered": true,
+    "dark_mode_rendered": true
+  },
+  "cases": [
+    {
+      "id": "desktop-111-check",
+      "paragraph": "1.1.1",
+      "status": "PASS",
+      "inspection": {
+        "title": "1.1.1 Schaarste en economisch denken – Lesmateriaal",
+        "sectionVisible": true,
+        "checkText": "4 Check EERST OEFENADVIES, DAARNA EINDCHECK ADVIES Korte check Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck. Krijg oefenadvies → EINDCHECK Exit ticket Maak de eindcheck met dezelfde soort denkstappen als de eindopgave. Maak eindcheck →",
+        "shortCard": true,
+        "exitCard": true,
+        "shortPurpose": "local-practice-advice",
+        "exitPurpose": "end-check",
+        "oldGenericCopy": false,
+        "forbiddenAuthority": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "screenshot": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-111-check.png"
+    },
+    {
+      "id": "desktop-112-check",
+      "paragraph": "1.1.2",
+      "status": "PASS",
+      "inspection": {
+        "title": "1.1.2 Percentages en indexcijfers – Lesmateriaal",
+        "sectionVisible": true,
+        "checkText": "4 Check EERST OEFENADVIES, DAARNA EINDCHECK ADVIES Korte check Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck. Krijg oefenadvies → EINDCHECK Exit ticket Maak de eindcheck met dezelfde soort denkstappen als de eindopgave. Maak eindcheck →",
+        "shortCard": true,
+        "exitCard": true,
+        "shortPurpose": "local-practice-advice",
+        "exitPurpose": "end-check",
+        "oldGenericCopy": false,
+        "forbiddenAuthority": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "screenshot": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-112-check.png"
+    },
+    {
+      "id": "desktop-113-check",
+      "paragraph": "1.1.3",
+      "status": "PASS",
+      "inspection": {
+        "title": "1.1.3 Grafieken en tabellen – Lesmateriaal",
+        "sectionVisible": true,
+        "checkText": "4 Check EERST OEFENADVIES, DAARNA EINDCHECK ADVIES Korte check Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck. Krijg oefenadvies → EINDCHECK Exit ticket Maak de eindcheck met dezelfde soort denkstappen als de eindopgave. Maak eindcheck →",
+        "shortCard": true,
+        "exitCard": true,
+        "shortPurpose": "local-practice-advice",
+        "exitPurpose": "end-check",
+        "oldGenericCopy": false,
+        "forbiddenAuthority": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "theme": "light"
+      },
+      "screenshot": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png"
+    },
+    {
+      "id": "mobile-113-check",
+      "paragraph": "1.1.3",
+      "status": "PASS",
+      "inspection": {
+        "title": "1.1.3 Grafieken en tabellen – Lesmateriaal",
+        "sectionVisible": true,
+        "checkText": "4 Check EERST OEFENADVIES, DAARNA EINDCHECK ADVIES Korte check Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck. Krijg oefenadvies → EINDCHECK Exit ticket Maak de eindcheck met dezelfde soort denkstappen als de eindopgave. Maak eindcheck →",
+        "shortCard": true,
+        "exitCard": true,
+        "shortPurpose": "local-practice-advice",
+        "exitPurpose": "end-check",
+        "oldGenericCopy": false,
+        "forbiddenAuthority": false,
+        "viewport": {
+          "width": 390,
+          "height": 760
+        },
+        "theme": "light"
+      },
+      "screenshot": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-113-check.png"
+    },
+    {
+      "id": "mobile-dark-113-check",
+      "paragraph": "1.1.3",
+      "status": "PASS",
+      "inspection": {
+        "title": "1.1.3 Grafieken en tabellen – Lesmateriaal",
+        "sectionVisible": true,
+        "checkText": "4 Check EERST OEFENADVIES, DAARNA EINDCHECK ADVIES Korte check Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck. Krijg oefenadvies → EINDCHECK Exit ticket Maak de eindcheck met dezelfde soort denkstappen als de eindopgave. Maak eindcheck →",
+        "shortCard": true,
+        "exitCard": true,
+        "shortPurpose": "local-practice-advice",
+        "exitPurpose": "end-check",
+        "oldGenericCopy": false,
+        "forbiddenAuthority": false,
+        "viewport": {
+          "width": 390,
+          "height": 760
+        },
+        "theme": "dark"
+      },
+      "screenshot": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-dark-113-check.png"
+    }
+  ]
+}

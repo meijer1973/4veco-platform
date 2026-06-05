@@ -1,0 +1,31 @@
+{
+  "sprint_id": "CHECK-ROUTE-COPY-1",
+  "generated": "2026-06-05T20:32:24.836Z",
+  "screenshots": [
+    {
+      "id": "desktop-111-check",
+      "status": "PASS",
+      "path": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-111-check.png"
+    },
+    {
+      "id": "desktop-112-check",
+      "status": "PASS",
+      "path": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-112-check.png"
+    },
+    {
+      "id": "desktop-113-check",
+      "status": "PASS",
+      "path": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png"
+    },
+    {
+      "id": "mobile-113-check",
+      "status": "PASS",
+      "path": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-113-check.png"
+    },
+    {
+      "id": "mobile-dark-113-check",
+      "status": "PASS",
+      "path": "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-dark-113-check.png"
+    }
+  ]
+}
