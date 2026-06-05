@@ -8,7 +8,7 @@ remote snapshot recorded below after publication, but the gate is not closed
 and no product authority exists.
 
 Reviewed remote evidence snapshot: `codex/shared-task-ingest-repair3` at
-`PENDING_REMOTE_COMMIT`. Direct push to `main` is blocked
+`9c82c115927f1f1dcad30ec7c3325493b4791dd3`. Direct push to `main` is blocked
 by required GitHub status checks, so this branch is the published inspection
 surface until the PR/check flow updates `main`.
 

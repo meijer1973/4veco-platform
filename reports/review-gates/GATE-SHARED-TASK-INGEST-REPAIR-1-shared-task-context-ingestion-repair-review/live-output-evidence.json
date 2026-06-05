@@ -6,8 +6,8 @@
   "status": "interaction_quality_evidence_ready_after_third_hold_for_playable_repair",
   "remote_publication": {
     "reviewed_remote_branch": "codex/shared-task-ingest-repair3",
-    "reviewed_remote_commit_hash": "0000000000000000000000000000000000000000",
-    "reviewed_remote_status": "pending_repair3_evidence_push_on_review_branch_main_blocked_by_required_status_check",
+    "reviewed_remote_commit_hash": "9c82c115927f1f1dcad30ec7c3325493b4791dd3",
+    "reviewed_remote_status": "published_repair3_evidence_on_review_branch_main_blocked_by_required_status_check",
     "review_may_start": true
   },
   "playable_labs": {
