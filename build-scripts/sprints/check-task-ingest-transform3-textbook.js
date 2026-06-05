@@ -21,8 +21,8 @@ const paths = {
   manifest: path.join(platformRoot, `reports/sprints/${sprintId}-screenshot-manifest.md`),
   roadmap: path.join(platformRoot, 'references/reference-team-roadmap.md'),
   lessonRoadmap: path.join(lessonRoot, 'lessen-team-roadmap.md'),
-  visualQa: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md'),
-  economy: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md'),
+  visualQa: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md'),
+  economy: path.join(platformRoot, 'reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md'),
 };
 
 function fail(message) {
@@ -134,6 +134,18 @@ function main() {
   const dropCheck = taskById(transform.taskSet, 'tb113-quantity-drop-check');
   assert(graphConstruction.interaction.pointCount === 2, 'graph construction must require two plotted points');
   assert(graphConstruction.interaction.clickInstruction && graphConstruction.interaction.clickInstruction.includes('Klik twee'), 'graph construction must declare click-to-place instruction');
+  assert(graphConstruction.interaction.axisControlsPlacement === 'attached_to_graph_workspace', 'axis controls must be attached to graph workspace');
+  assert(graphConstruction.interaction.gridVisibleBeforeAxisSelection === true, 'grid must be visible before axis selection');
+  assert(graphConstruction.interaction.lineDrawnInSameWorkspace === true, 'line must be drawn in same graph workspace');
+  assert(
+    JSON.stringify(graphConstruction.interaction.axes.x.ticks) === JSON.stringify([0, 100, 200, 300, 400, 500]),
+    'graph x-axis ticks must follow table quantity values'
+  );
+  assert(
+    JSON.stringify(graphConstruction.interaction.axes.y.ticks) === JSON.stringify([0, 1, 1.5, 2, 2.5, 3]),
+    'graph y-axis ticks must follow table price values'
+  );
+  assert(graphConstruction.interaction.axes.y.tickFormat === 'decimal_comma', 'graph y-axis ticks must use decimal-comma labels');
   const graphResponse = {
     axes: { x: 'hoeveelheid q', y: 'prijs p' },
     points: [
@@ -150,13 +162,26 @@ function main() {
   expectMatch(graphReading, 350, 'graph reading correct response');
   expectReject(graphReading, 330, 'graph reading far-off response');
 
+  assert(dropCheck.interaction.selectionMode === 'interval_halving_check', 'quantity drop must use simplified interval choice');
+  assert(dropCheck.interaction.intervalOptions.length === 2, 'quantity drop must offer two interval choices');
+  assert(Array.isArray(dropCheck.interaction.conclusionOptions) && dropCheck.interaction.conclusionOptions.length >= 3, 'quantity drop must offer conclusion choices, not only interval strings');
+  assert(dropCheck.interaction.conclusionOptions.some((item) => item.id === 'q-daalt-50' && item.correct === true), 'quantity drop must mark Q daalt met 50 procent as the correct conclusion');
+  const dropFocusPlan = TaskShellEngine.focusPlan(dropCheck);
+  assert(dropFocusPlan.some((item) => item.includes('data-interval-option-id')), 'shared task focus plan must include interval option controls');
+  assert(dropFocusPlan.some((item) => item.includes('data-relation-option-id')), 'shared task focus plan must include relation controls');
+  assert(dropFocusPlan.some((item) => item.includes('data-conclusion-option-id')), 'shared task focus plan must include conclusion controls');
   expectMatch(dropCheck, {
-    work: '400 naar 200; (200 - 400) / 400 x 100 = -50%; dus een daling',
+    work: '400 naar 200; nieuwe Q is de helft van oude Q',
+    finalAnswer: 'Q daalt met 50 procent',
+    unitNotation: '50 procent daling',
+  }, 'quantity drop conclusion answer');
+  expectMatch(dropCheck, {
+    work: '400 naar 200; nieuwe Q is de helft van oude Q',
     finalAnswer: 'eur 1.50 tot eur 2.50',
     unitNotation: '50 procent daling',
   }, 'quantity drop paragraph interval');
   expectMatch(dropCheck, {
-    work: '200 naar 100; (100 - 200) / 200 x 100 = -50%; dus een daling',
+    work: '200 naar 100; nieuwe Q is de helft van oude Q',
     finalAnswer: 'eur 2.50 tot eur 3.00',
     unitNotation: '50 procent daling',
   }, 'quantity drop alternate interval');
@@ -175,6 +200,13 @@ function main() {
   assert(transform.antiReductionChecks.two_point_click_graph_construction_required === true, 'two-point click graph construction guard missing');
   assert(transform.antiReductionChecks.typed_point_entry_fallback_only === true, 'typed fallback guard missing');
   assert(transform.antiReductionChecks.axis_labels_hidden_until_axis_selection === true, 'axis label reveal guard missing');
+  assert(transform.antiReductionChecks.line_drawn_in_same_graph_workspace === true, 'same-workspace line guard missing');
+  assert(transform.antiReductionChecks.separate_completed_graph_block_rejected === true, 'separate completed graph guard missing');
+  assert(transform.antiReductionChecks.grid_visible_before_axis_selection === true, 'grid visibility guard missing');
+  assert(transform.antiReductionChecks.table_derived_axis_ticks_required === true, 'table-derived axis tick guard missing');
+  assert(transform.antiReductionChecks.interval_halving_task_simplified === true, 'simplified 50 percent task guard missing');
+  assert(transform.antiReductionChecks.interval_halving_conclusion_required === true, 'interval-halving conclusion guard missing');
+  assert(transform.antiReductionChecks.interval_halving_shared_task_contract_required === true, 'shared interval-halving task contract guard missing');
   assert(transform.antiReductionChecks.completed_graph_hidden_before_construction_success === true, 'completed graph guard missing');
   assert(transform.antiReductionChecks.prompt_not_rendered_as_source === true, 'prompt/source guard missing');
   assert(transform.antiReductionChecks.target_task_economy_enforced === true, 'target-task economy guard missing');
@@ -207,13 +239,15 @@ function main() {
   assert(fs.existsSync(paths.lab), `missing ${rel(paths.lab)}`);
   assert(fs.existsSync(paths.manifest), `missing ${rel(paths.manifest)}`);
   const labHtml = readText(paths.lab);
-  for (const forbidden of ['ctx-icecream', 'tb113-', 'Keuze A', 'Keuze B']) {
+  for (const forbidden of ['ctx-icecream', 'Keuze A', 'Keuze B']) {
     assert(!labHtml.includes(forbidden), `lab HTML source contains forbidden detector value ${forbidden}`);
   }
   assert(labHtml.includes('data-semantic-validation="required"'), 'lab HTML must require semantic validation');
   assert(labHtml.includes('graph_construction_substitute'), 'lab HTML must render graph construction family controls');
   assert(labHtml.includes('data-graph-workspace="construction"'), 'lab HTML must render graph workspace');
-  assert(labHtml.includes('data-completed-graph="true" hidden'), 'completed graph must be hidden by default');
+  assert(!labHtml.includes('Gemaakte grafiek'), 'lab HTML must not render separate completed graph section');
+  assert(!/data-completed-graph="true"[^>]*><h3>Gemaakte grafiek/.test(labHtml), 'completed graph must not be a separate block');
+  assert(labHtml.includes('data-graph-line="constructed"'), 'lab HTML must include same-workspace constructed line layer');
   assert(labHtml.includes('support-box'), 'lab HTML must render collapsed support boxes');
 
   assert(proof.schema_version === 1, 'proof schema_version must be 1');
@@ -223,26 +257,33 @@ function main() {
   assert(proof.task_transformation.playable_lab.graph_construction_controls_rendered === true, 'proof missing graph construction controls');
   assert(proof.task_transformation.playable_lab.click_to_place_primary === true, 'proof missing click-to-place graph construction');
   assert(proof.task_transformation.playable_lab.typed_point_entry_fallback_only === true, 'proof missing collapsed typed fallback');
+  assert(proof.task_transformation.playable_lab.grid_visible_before_axis_selection === true, 'proof missing initial grid visibility');
   assert(proof.task_transformation.playable_lab.graph_labels_hidden_before_axis_selection === true, 'proof missing hidden initial graph labels');
   assert(proof.task_transformation.playable_lab.graph_labels_reveal_after_axis_selection === true, 'proof missing graph label reveal after axis selection');
+  assert(proof.task_transformation.playable_lab.two_points_state_proven === true, 'proof missing two clicked points state');
+  assert(proof.task_transformation.playable_lab.line_drawn_in_same_workspace === true, 'proof missing same-workspace line state');
+  assert(proof.task_transformation.playable_lab.no_separate_completed_graph_block === true, 'proof missing separate completed graph rejection');
+  assert(proof.task_transformation.playable_lab.simplified_50_percent_task_rendered === true, 'proof missing simplified 50 percent task');
   assert(proof.task_transformation.playable_lab.target_task_economy_enforced === true, 'proof missing target economy');
   assert(proof.task_transformation.playable_lab.prompt_not_in_source_pane === true, 'proof missing prompt/source guard');
   assert(proof.task_transformation.playable_lab.completed_graph_hidden_before_attempt === true, 'proof missing completed graph guard');
   assert(proof.task_transformation.playable_lab.graph_workspace_in_task_pane === true, 'proof missing task-pane graph workspace');
   assert(proof.task_transformation.playable_lab.graph_workspace_width_pass === true, 'proof missing graph workspace width pass');
   assert(proof.task_transformation.playable_lab.source_pane_readability_pass === true, 'proof missing source-pane readability pass');
+  assert(proof.task_transformation.playable_lab.duplicate_visible_labels_removed === true, 'proof missing duplicate-label removal');
   assert(proof.ambiguity_evidence.primary_graph_construction_first === true, 'proof must record primary graph construction first');
 
   const expectedCases = new Map([
     ['desktop-initial', { width: 1280, theme: 'light', action: 'initial', renderedContextBlocks: 4 }],
     ['desktop-axis-selected', { width: 1280, theme: 'light', action: 'axis-selected', renderedContextBlocks: 4 }],
+    ['desktop-two-points', { width: 1280, theme: 'light', action: 'two-points', renderedContextBlocks: 4 }],
     ['desktop-wrong-retry', { width: 1280, theme: 'light', action: 'wrong', renderedContextBlocks: 4 }],
-    ['desktop-corrected', { width: 1280, theme: 'light', action: 'corrected', renderedContextBlocks: 4 }],
+    ['desktop-line-confirmed', { width: 1280, theme: 'light', action: 'corrected', renderedContextBlocks: 4 }],
     ['desktop-completed', { width: 1280, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
     ['mobile-completed', { width: 390, theme: 'light', action: 'complete', renderedContextBlocks: 4 }],
     ['mobile-dark-completed', { width: 390, theme: 'dark', action: 'complete', renderedContextBlocks: 4 }],
   ]);
-  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 7, 'proof must include seven screenshots');
+  assert(Array.isArray(proof.screenshots) && proof.screenshots.length === 8, 'proof must include eight screenshots');
   for (const capture of proof.screenshots) {
     const expected = expectedCases.get(capture.case);
     assert(expected, `unexpected screenshot case ${capture.case}`);
@@ -266,19 +307,27 @@ function main() {
     assert(capture.proof.sourcePaneIndependentScroll === true, `${capture.case} source pane does not scroll independently`);
     assert(capture.proof.questionVisibleAfterSourceScroll === true, `${capture.case} prompt is not visible after source scroll`);
     assert(capture.proof.sourceRefsVisible === false, `${capture.case} shows long source refs`);
+    assert(capture.proof.duplicateVisibleSourceLabels === false, `${capture.case} has duplicate visible Bron/Tabel labels`);
     assert(capture.proof.sourceTableVisibleAtTop === true, `${capture.case} source table is not visible at source-pane top`);
     if (capture.viewport.width >= 900) assert(capture.proof.sourcePaneComfortableInitial === true, `${capture.case} desktop source pane is not readable at initial layout`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphWorkspace === true, `${capture.case} missing graph workspace affordance`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphAxisControls === true, `${capture.case} missing graph axis controls`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphAxisControlsAttached === true, `${capture.case} graph axis controls are not attached`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphClickToPlace === true, `${capture.case} missing click-to-place affordance`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphLineInSameWorkspace === true, `${capture.case} constructed line layer is not in graph workspace`);
+    assert(capture.proof.familyAffordances.graph_construction_substitute.graphGridLineVisibleCount > 0, `${capture.case} grid is not visible`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.typedPointFallbackCollapsed === true, `${capture.case} typed point fallback is not collapsed`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.typedPointFallbackOpen === false, `${capture.case} typed point fallback is open`);
     assert(capture.proof.familyAffordances.graph_construction_substitute.graphLineConfirmation === true, `${capture.case} missing graph line confirmation`);
     assert(capture.proof.familyAffordances.graph_reading.numericField === true, `${capture.case} missing graph reading field`);
-    assert(capture.proof.familyAffordances.calculation_work_capture.calculationFields === true, `${capture.case} missing calculation fields`);
+    assert(capture.proof.familyAffordances.calculation_work_capture.intervalHalvingCheck === true, `${capture.case} missing simplified interval halving task`);
+    assert(capture.proof.familyAffordances.calculation_work_capture.autoFilledQuantitiesVisible === true, `${capture.case} missing auto-filled quantity display`);
+    assert(capture.proof.familyAffordances.calculation_work_capture.halvingConclusionControl === true, `${capture.case} missing quantity-drop conclusion control`);
     if (capture.case === 'desktop-initial') {
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should start incomplete`);
       assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} completed graph must not be visible initially`);
+      assert(capture.proof.completedGraphOutsideWorkspaceCount === 0, `${capture.case} should not contain separate completed graph block`);
+      assert(capture.proof.graphGridLineVisibleCount > 0, `${capture.case} grid should be visible initially`);
       assert(capture.proof.graphAxisLabelsVisibleCount === 0, `${capture.case} reveals axis labels before axis selection`);
       assert(capture.proof.graphScaleLabelsVisibleCount === 0, `${capture.case} reveals numeric scale before axis selection`);
       assert(capture.proof.graphLabelsVisibleBeforeAxisSelection === false, `${capture.case} shows labels before axis selection`);
@@ -287,15 +336,24 @@ function main() {
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should not complete on axis selection only`);
       assert(capture.proof.graphAxisLabelsVisibleCount > 0, `${capture.case} should reveal axis labels after correct axis selection`);
       assert(capture.proof.graphScaleLabelsVisibleCount > 0, `${capture.case} should reveal numeric labels after correct axis selection`);
+      for (const expectedTick of ['100', '200', '300', '400', '500', '1,00', '1,50', '2,00', '2,50', '3,00']) {
+        assert(capture.proof.graphScaleLabelTexts.includes(expectedTick), `${capture.case} missing table-derived graph tick ${expectedTick}`);
+      }
       assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} should not reveal completed graph after axis selection only`);
       assert(capture.proof.labCompleted === false, `${capture.case} should not be complete`);
+    } else if (capture.case === 'desktop-two-points') {
+      assert(capture.proof.graphClickedPointCount === 2, `${capture.case} should show two clicked graph points`);
+      assert(capture.proof.constructedLineVisibleInWorkspace === false, `${capture.case} should not draw line before confirmation`);
+      assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} should not reveal completed graph after points only`);
     } else if (capture.case === 'desktop-wrong-retry') {
       assert(capture.proof.wrongRetryCount > 0, `${capture.case} missing retry state`);
       assert(capture.proof.completedTaskCount === 0, `${capture.case} should reject wrong attempt`);
       assert(capture.proof.completedGraphVisibleCount === 0, `${capture.case} must not reveal completed graph after wrong axes`);
-    } else if (capture.case === 'desktop-corrected') {
+    } else if (capture.case === 'desktop-line-confirmed') {
       assert(capture.proof.completedTaskCount === 1, `${capture.case} should complete exactly one corrected card`);
       assert(capture.proof.completedGraphVisibleCount >= 1, `${capture.case} should reveal completed graph after corrected construction`);
+      assert(capture.proof.constructedLineVisibleInWorkspace === true, `${capture.case} should draw line in same graph workspace`);
+      assert(capture.proof.completedGraphOutsideWorkspaceCount === 0, `${capture.case} should not reveal separate completed graph`);
       assert(capture.proof.labCompleted === false, `${capture.case} should not complete the whole lab`);
     } else {
       assert(capture.proof.completedTaskCount === 3, `${capture.case} demo path did not complete all tasks`);

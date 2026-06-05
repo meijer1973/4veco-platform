@@ -2,7 +2,8 @@
 
 Generated: 2026-06-05
 
-Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`.
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` and reviewer
+correction pass.
 
 ## Original Target
 
@@ -17,9 +18,9 @@ a source/context prompt or a long support checklist.
 
 | Operation | Required task | Evidence |
 |---|---|---|
-| construct P-Q graph from table | `tb113-graph-construction` | correct axis convention, two clicked table points in the graph workspace, decreasing line confirmation |
+| construct P-Q graph from table | `tb113-graph-construction` | graph-attached axis controls, visible grid, table-derived tick labels after axis selection, two clicked table points, and line drawn in the same graph workspace |
 | read quantity from constructed graph | `tb113-graph-reading` | Q at `P = EUR 1.75` |
-| check one quantity-drop interval | `tb113-quantity-drop-check` | optional follow-up using table values and percent calculation |
+| check one quantity-drop interval | `tb113-quantity-drop-check` | shared interval-halving task with auto-filled old/new quantities, relation selection, and conclusion choice |
 
 ## Removed Required Support Tasks
 
@@ -36,3 +37,11 @@ The following previous cards are no longer required:
 These were supporting micro-skills around the target, not the target itself.
 Typed coordinate rows remain collapsed fallback evidence only; they are not the
 primary graph-construction path.
+
+Repair 4 removes the separate `Gemaakte grafiek` completed-graph block. The
+constructed line appears inside the same active SVG workspace after the student
+confirms `Trek lijn door punten`.
+
+The reviewer correction pass also replaces generic quarter-scale numbers with
+table-derived ticks and ensures the 50 percent task does not depend on an
+interval-only final answer.

@@ -114,12 +114,31 @@
           "x": {
             "label": "Hoeveelheid Q (ijsjes)",
             "min": 0,
-            "max": 600
+            "max": 500,
+            "ticks": [
+              0,
+              100,
+              200,
+              300,
+              400,
+              500
+            ],
+            "tickDecimals": 0
           },
           "y": {
             "label": "Prijs P (EUR)",
             "min": 0,
-            "max": 3.5
+            "max": 3,
+            "ticks": [
+              0,
+              1,
+              1.5,
+              2,
+              2.5,
+              3
+            ],
+            "tickDecimals": 2,
+            "tickFormat": "decimal_comma"
           }
         },
         "series": [
@@ -247,13 +266,13 @@
           "ctx-icecream-procedure"
         ],
         "interaction": {
-          "workspaceTitle": "Grafiekworkspace",
+          "workspaceTitle": "Grafiekwerkvlak",
           "xAxisLabel": "Horizontale as",
           "yAxisLabel": "Verticale as",
           "pointRowsLabel": "Fallback: typ twee punten",
-          "clickInstruction": "Klik twee tabelpunten in het grafiekwerkvlak. Twee punten zijn genoeg om de rechte lijn te tekenen.",
-          "preAxisNote": "Kies eerst de juiste assen. Daarna verschijnen labels en schaal.",
-          "lineConfirmationLabel": "Ik verbind de punten tot een dalende lijn.",
+          "clickInstruction": "Klik twee tabelpunten in het grafiekwerkvlak en klik daarna dat je de lijn door de punten trekt.",
+          "preAxisNote": "Kies de assen in het werkvlak. Het raster is al zichtbaar; labels en schaal verschijnen na de juiste askeuze.",
+          "lineConfirmationLabel": "Trek lijn door punten",
           "lineShapeLabel": "Lijnvorm",
           "xInputLabel": "Q-waarde",
           "yInputLabel": "P-waarde",
@@ -263,14 +282,36 @@
             "x": {
               "label": "Hoeveelheid Q (ijsjes)",
               "min": 0,
-              "max": 600
+              "max": 500,
+              "ticks": [
+                0,
+                100,
+                200,
+                300,
+                400,
+                500
+              ],
+              "tickDecimals": 0
             },
             "y": {
               "label": "Prijs P (EUR)",
               "min": 0,
-              "max": 3.5
+              "max": 3,
+              "ticks": [
+                0,
+                1,
+                1.5,
+                2,
+                2.5,
+                3
+              ],
+              "tickDecimals": 2,
+              "tickFormat": "decimal_comma"
             }
-          }
+          },
+          "axisControlsPlacement": "attached_to_graph_workspace",
+          "gridVisibleBeforeAxisSelection": true,
+          "lineDrawnInSameWorkspace": true
         },
         "expected": {
           "kind": "graph_construction_substitute",
@@ -352,8 +393,8 @@
         "id": "tb113-quantity-drop-check",
         "family": "calculation_work_capture",
         "skillLabel": "50 procent daling controleren",
-        "purpose": "Controleer een geldig 50 procent prijsinterval met bronwaarden uit de tabel.",
-        "prompt": "Controleer een prijsinterval waarin de verkochte hoeveelheid met 50 procent daalt.",
+        "purpose": "Kies een interval; de bronhoeveelheden verschijnen vanzelf zodat je alleen de halvering hoeft te controleren.",
+        "prompt": "Controleer ??n interval waarin Q met 50 procent daalt.",
         "contextRefs": [
           "ctx-icecream-prompt",
           "ctx-icecream-source",
@@ -363,32 +404,87 @@
           "ctx-icecream-procedure"
         ],
         "interaction": {
-          "workLabel": "Bronwaarden en berekening",
-          "finalAnswerLabel": "Prijsinterval",
-          "finalAnswerPlaceholder": "Bijvoorbeeld EUR 1.50 tot EUR 2.50",
-          "unitNotationLabel": "Antwoordvorm",
-          "unitNotationPlaceholder": "Bijvoorbeeld 50 procent daling"
+          "selectionMode": "interval_halving_check",
+          "intervalLabel": "Kies ??n interval",
+          "intervalOptions": [
+            {
+              "id": "interval-150-250",
+              "label": "EUR 1,50 -> EUR 2,50",
+              "finalAnswer": "EUR 1.50 tot EUR 2.50",
+              "oldQuantity": "400 ijsjes",
+              "newQuantity": "200 ijsjes",
+              "work": "400 naar 200; nieuwe Q is de helft van oude Q",
+              "correct": true
+            },
+            {
+              "id": "interval-250-300",
+              "label": "EUR 2,50 -> EUR 3,00",
+              "finalAnswer": "EUR 2.50 tot EUR 3.00",
+              "oldQuantity": "200 ijsjes",
+              "newQuantity": "100 ijsjes",
+              "work": "200 naar 100; nieuwe Q is de helft van oude Q",
+              "correct": true
+            }
+          ],
+          "relationLabel": "De nieuwe hoeveelheid is...",
+          "relationOptions": [
+            {
+              "id": "helft",
+              "label": "de helft van de oude hoeveelheid"
+            },
+            {
+              "id": "dubbel",
+              "label": "het dubbele van de oude hoeveelheid"
+            },
+            {
+              "id": "gelijk",
+              "label": "gelijk aan de oude hoeveelheid"
+            }
+          ],
+          "conclusionLabel": "Conclusie",
+          "conclusionOptions": [
+            {
+              "id": "q-daalt-50",
+              "label": "Q daalt met 50 procent",
+              "finalAnswer": "Q daalt met 50 procent",
+              "correct": true
+            },
+            {
+              "id": "q-daalt-25",
+              "label": "Q daalt met 25 procent",
+              "finalAnswer": "Q daalt met 25 procent"
+            },
+            {
+              "id": "q-stijgt-50",
+              "label": "Q stijgt met 50 procent",
+              "finalAnswer": "Q stijgt met 50 procent"
+            }
+          ],
+          "workLabel": "Bronwaarden",
+          "finalAnswerLabel": "Conclusie",
+          "unitNotationLabel": "Conclusie"
         },
         "expected": {
           "kind": "calculation",
           "finalAnswer": {
             "kind": "text",
             "accepted": [
+              "Q daalt met 50 procent",
+              "Q daalt met 50%",
+              "de nieuwe hoeveelheid is de helft van de oude hoeveelheid",
+              "nieuwe Q is de helft van oude Q",
+              "EUR 1.50 tot EUR 2.50",
               "eur 1.50 tot eur 2.50",
               "1.50 tot 2.50",
-              "euro 1.50 tot euro 2.50",
+              "EUR 2.50 tot EUR 3.00",
               "eur 2.50 tot eur 3.00",
-              "2.50 tot 3.00",
-              "euro 2.50 tot euro 3.00"
+              "2.50 tot 3.00"
             ]
           },
           "unitNotation": {
             "kind": "text",
             "accepted": [
-              "50 procent daling",
-              "procentuele daling",
-              "-50 procent",
-              "50% daling"
+              "50 procent daling"
             ],
             "required": true
           },
@@ -402,25 +498,23 @@
               ]
             },
             {
-              "label": "percentage",
+              "label": "halvering",
               "any": [
-                "-50",
-                "50 procent",
-                "50%"
+                "helft"
               ]
             }
           ],
           "criteria": [
-            "Noem twee tabelhoeveelheden waarvan de tweede de helft is van de eerste.",
-            "Bereken of benoem de 50 procent daling.",
-            "Noem het bijbehorende prijsinterval."
+            "Kies ??n geldig broninterval.",
+            "Gebruik de automatisch getoonde oude en nieuwe hoeveelheid.",
+            "Benoem dat de nieuwe hoeveelheid de helft is van de oude hoeveelheid."
           ]
         },
         "feedback": {
           "matchTitle": "50 procent daling klopt",
           "matchText": "Je gebruikt bronwaarden uit de tabel en laat zien dat de hoeveelheid halveert.",
           "retryTitle": "Controleer de twee hoeveelheden",
-          "retryText": "Gebruik een interval waarin de tweede hoeveelheid precies de helft is van de eerste."
+          "retryText": "Kies een interval waarin de nieuwe hoeveelheid precies de helft is van de oude hoeveelheid."
         },
         "practiceRoute": {
           "label": "Klaar met de textbook-reviewtaak",
@@ -439,9 +533,9 @@
         "tb113-graph-construction"
       ],
       "required_actions": [
-        "confirm P vertical and Q horizontal",
+        "choose P vertical and Q horizontal using controls attached to the graph workspace",
         "click two table points in the graph workspace",
-        "connect points into a decreasing line"
+        "draw the decreasing line in the same workspace"
       ]
     },
     {
@@ -468,7 +562,8 @@
       ],
       "required_actions": [
         "choose one valid interval",
-        "show a 50 percent quantity drop with source values"
+        "use auto-filled old and new quantities",
+        "select that the new quantity is half of the old quantity"
       ]
     }
   ],
@@ -489,7 +584,9 @@
           "y": 3
         }
       ],
-      "required_line_shape": "decreasing"
+      "required_line_shape": "decreasing",
+      "line_drawn_in_same_workspace": true,
+      "grid_visible_before_axis_selection": true
     },
     "follow_up_answer_forms": [
       {
@@ -516,7 +613,8 @@
             "to_quantity": 100,
             "percent_change": -50
           }
-        ]
+        ],
+        "interaction": "interval_choice_with_auto_filled_quantities"
       }
     ],
     "target_task_economy": {
@@ -559,7 +657,7 @@
       "mapped_operations": [
         "check_one_quantity_drop_interval"
       ],
-      "target_task_role": "optional_follow_up_in_review_lab"
+      "target_task_role": "simplified_required_follow_up"
     }
   ],
   "visualVariantMap": [
@@ -600,7 +698,14 @@
     "completed_graph_hidden_before_construction_success": true,
     "prompt_not_rendered_as_source": true,
     "target_task_economy_enforced": true,
-    "final_interval_only_rejected": true
+    "final_interval_only_rejected": true,
+    "line_drawn_in_same_graph_workspace": true,
+    "separate_completed_graph_block_rejected": true,
+    "grid_visible_before_axis_selection": true,
+    "table_derived_axis_ticks_required": true,
+    "interval_halving_task_simplified": true,
+    "interval_halving_conclusion_required": true,
+    "interval_halving_shared_task_contract_required": true
   },
   "renderedProof": {
     "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",

@@ -3,11 +3,11 @@
   "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review",
   "sprint_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
   "generated": "2026-06-05",
-  "status": "interaction_quality_evidence_ready_after_third_hold_for_playable_repair",
+  "status": "final_interaction_clarity_evidence_ready_after_fourth_hold_for_playable_repair_and_reviewer_correction_pass",
   "remote_publication": {
-    "reviewed_remote_branch": "codex/shared-task-ingest-repair3",
-    "reviewed_remote_commit_hash": "9c82c115927f1f1dcad30ec7c3325493b4791dd3",
-    "reviewed_remote_status": "published_repair3_evidence_on_review_branch_main_blocked_by_required_status_check",
+    "reviewed_remote_branch": "codex/shared-task-ingest-repair4",
+    "reviewed_remote_commit_hash": "0000000000000000000000000000000000000000",
+    "reviewed_remote_status": "repair4_evidence_prepared_locally_awaiting_remote_publication",
     "review_may_start": true
   },
   "playable_labs": {
@@ -19,6 +19,8 @@
       "screenshots": [
         "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-initial.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-wrong-retry.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-unit-feedback.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-support.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-corrected.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/desktop-completed.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-2-ACTUAL-EXAM-screenshots/mobile-completed.png",
@@ -28,27 +30,58 @@
       "rendered_context_block_count": 3,
       "source_context_contract_count": 4,
       "required_families": [
-        "source_value_selection",
+        "choice",
         "calculation_work_capture",
         "structured_short_response"
       ],
       "playable_lab": {
+        "cases_required": [
+          "desktop-initial",
+          "desktop-wrong-retry",
+          "desktop-unit-feedback",
+          "desktop-support",
+          "desktop-corrected",
+          "desktop-completed",
+          "mobile-completed",
+          "mobile-dark-completed"
+        ],
+        "cases_captured": [
+          "desktop-initial",
+          "desktop-wrong-retry",
+          "desktop-unit-feedback",
+          "desktop-support",
+          "desktop-corrected",
+          "desktop-completed",
+          "mobile-completed",
+          "mobile-dark-completed"
+        ],
         "semantic_validation_enabled": true,
         "real_task_family_controls_rendered": true,
         "right_pane_original_question_visible": true,
-        "compact_source_cell_selection_rendered": true,
+        "conceptual_setup_choice_rendered": true,
+        "select_all_numbers_task_removed": true,
         "sequence_builders_removed_as_required_cards": true,
         "calculation_fields_rendered": true,
+        "premium_difference_shortcut_accepted": true,
+        "targeted_unit_feedback_proven": true,
+        "targeted_number_feedback_proven": true,
+        "progressive_support_proven": true,
         "constrained_carry_forward_conclusion_rendered": true,
         "task3_carries_task2_value_when_complete": true,
         "task3_requires_task2_before_value": true,
         "target_task_economy_enforced": true,
         "prompt_not_in_source_pane": true,
+        "plain_sequence_textareas_absent": true,
+        "check_buttons_rendered": true,
+        "task_instructions_rendered": true,
+        "support_collapsed_by_default": true,
+        "correction_model_support_collapsed_by_default": true,
         "source_pane_readability_pass": true,
+        "duplicate_visible_labels_removed": true,
+        "initial_state_proven": true,
         "wrong_retry_state_proven": true,
         "corrected_state_proven": true,
         "completion_path_reaches_done": true,
-        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
@@ -61,8 +94,9 @@
       "screenshots": [
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-two-points.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-wrong-retry.png",
-        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png",
+        "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-line-confirmed.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-completed.png",
         "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/mobile-dark-completed.png"
@@ -76,25 +110,57 @@
         "calculation_work_capture"
       ],
       "playable_lab": {
+        "cases_required": [
+          "desktop-initial",
+          "desktop-axis-selected",
+          "desktop-two-points",
+          "desktop-wrong-retry",
+          "desktop-line-confirmed",
+          "desktop-completed",
+          "mobile-completed",
+          "mobile-dark-completed"
+        ],
+        "cases_captured": [
+          "desktop-initial",
+          "desktop-axis-selected",
+          "desktop-two-points",
+          "desktop-wrong-retry",
+          "desktop-line-confirmed",
+          "desktop-completed",
+          "mobile-completed",
+          "mobile-dark-completed"
+        ],
         "semantic_validation_enabled": true,
         "real_task_family_controls_rendered": true,
         "graph_construction_controls_rendered": true,
         "click_to_place_primary": true,
         "typed_point_entry_fallback_only": true,
+        "grid_visible_before_axis_selection": true,
+        "table_derived_axis_ticks_proven": true,
         "graph_labels_hidden_before_axis_selection": true,
         "graph_labels_reveal_after_axis_selection": true,
+        "two_points_state_proven": true,
+        "line_drawn_in_same_workspace": true,
+        "no_separate_completed_graph_block": true,
         "graph_reading_field_rendered": true,
-        "calculation_fields_rendered": true,
+        "simplified_50_percent_task_rendered": true,
+        "quantity_drop_conclusion_control_rendered": true,
+        "interval_halving_shared_task_focus_plan": true,
         "target_task_economy_enforced": true,
         "prompt_not_in_source_pane": true,
         "completed_graph_hidden_before_attempt": true,
         "graph_workspace_in_task_pane": true,
         "graph_workspace_width_pass": true,
         "source_pane_readability_pass": true,
+        "duplicate_visible_labels_removed": true,
+        "plain_sequence_textareas_absent": true,
+        "check_buttons_rendered": true,
+        "task_instructions_rendered": true,
+        "support_collapsed_by_default": true,
+        "initial_state_proven": true,
         "wrong_retry_state_proven": true,
         "corrected_state_proven": true,
         "completion_path_reaches_done": true,
-        "support_collapsed_by_default": true,
         "source_pane_independent_scroll": true,
         "question_visible_after_source_scroll": true
       }
@@ -102,11 +168,12 @@
   },
   "target_task_economy": {
     "actual_exam_required_cards": [
-      "compact source-cell selection",
-      "calculation",
+      "conceptual comparison choice",
+      "calculation with targeted feedback/support",
       "carried-value constrained conclusion"
     ],
     "actual_exam_removed_required_cards": [
+      "source_value_selection select-all task",
       "formula_builder",
       "step_ordering",
       "source_chain_builder"
@@ -114,7 +181,7 @@
     "textbook_required_cards": [
       "click-to-place graph construction",
       "graph reading",
-      "optional 50 percent quantity-drop check"
+      "simplified 50 percent quantity-drop check"
     ],
     "textbook_primary_family": "graph_construction_substitute",
     "max_three_card_rule": true
@@ -122,6 +189,7 @@
   "human_review_state": {
     "first_round_decision": "hold_for_playable_repair",
     "renewed_review_decision": "hold_for_playable_repair",
+    "fourth_review_decision": "hold_for_playable_repair",
     "renewed_review_required": true,
     "gate_closure_authorized": false,
     "explicit_human_confirmation_required_before_closure": true

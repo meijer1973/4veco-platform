@@ -336,6 +336,9 @@
   }
 
   function renderCalculation(task) {
+    if (task.interaction.selectionMode === 'interval_halving_check') {
+      return renderIntervalHalvingCalculation(task);
+    }
     var unitNotation = '';
     if (task.interaction.unitNotationLabel || (task.expected && task.expected.unitNotation)) {
       unitNotation = renderTextInput({
@@ -358,6 +361,39 @@
         }, 'final-answer', 'decimal') +
         unitNotation +
       '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
+  function renderIntervalHalvingCalculation(task) {
+    var interaction = task.interaction;
+    var intervals = (interaction.intervalOptions || []).map(function (option) {
+      return '<label class="ts-choice-option">' +
+        '<input type="radio" name="interval-' + escapeHtml(task.id) + '" data-task-id="' + escapeHtml(task.id) + '" data-interval-option-id="' + escapeHtml(option.id) + '" value="' + escapeHtml(option.id) + '">' +
+        '<span>' + escapeHtml(option.label) + '</span>' +
+      '</label>';
+    }).join('');
+    var relations = (interaction.relationOptions || []).map(function (option) {
+      return '<option value="' + escapeHtml(option.id) + '">' + escapeHtml(option.label) + '</option>';
+    }).join('');
+    var conclusions = (interaction.conclusionOptions || []).map(function (option) {
+      return '<option value="' + escapeHtml(option.id) + '">' + escapeHtml(option.label) + '</option>';
+    }).join('');
+    return '<div class="ts-calculation ts-interval-halving" data-interval-halving-check>' +
+      '<fieldset class="ts-choice-group">' +
+        '<legend>' + escapeHtml(interaction.intervalLabel) + '</legend>' +
+        intervals +
+      '</fieldset>' +
+      '<label class="ts-field"><span>' + escapeHtml(interaction.relationLabel) + '</span>' +
+        '<select class="ts-input" data-task-id="' + escapeHtml(task.id) + '" data-relation-option-id>' +
+          '<option value="">Kies...</option>' + relations +
+        '</select>' +
+      '</label>' +
+      '<label class="ts-field"><span>' + escapeHtml(interaction.conclusionLabel || interaction.finalAnswerLabel) + '</span>' +
+        '<select class="ts-input" data-task-id="' + escapeHtml(task.id) + '" data-conclusion-option-id>' +
+          '<option value="">Kies...</option>' + conclusions +
+        '</select>' +
+      '</label>' +
       renderCriteria(task) +
     '</div>';
   }

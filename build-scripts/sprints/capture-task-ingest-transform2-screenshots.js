@@ -21,7 +21,9 @@ const derivedAnswerSignals = ['649'];
 
 const cases = [
   { name: 'desktop-initial', action: 'initial', size: { width: 1280, height: 900 }, theme: 'light' },
-  { name: 'desktop-wrong-retry', action: 'wrong', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-wrong-retry', action: 'wrong-calculation', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-unit-feedback', action: 'unit-feedback', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-support', action: 'support', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'desktop-corrected', action: 'corrected', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'desktop-completed', action: 'complete', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'mobile-completed', action: 'complete', size: { width: 390, height: 844 }, theme: 'light' },
@@ -519,7 +521,9 @@ async function inspect(cdp, sessionId) {
 async function driveLabState(cdp, sessionId, action) {
   const expressions = {
     initial: 'window.TaskIngestTransform2Lab.resetAll()',
-    wrong: 'window.TaskIngestTransform2Lab.applyWrongAttempt(0)',
+    'wrong-calculation': 'window.TaskIngestTransform2Lab.applyWrongAttempt(1)',
+    'unit-feedback': 'window.TaskIngestTransform2Lab.applyUnitOnlyMistake(1)',
+    support: 'window.TaskIngestTransform2Lab.applyStuckSupport(1)',
     corrected: 'window.TaskIngestTransform2Lab.correctTask(0)',
     complete: 'window.TaskIngestTransform2Lab.completeDemoPath()',
   };
@@ -548,8 +552,8 @@ function markdownManifest(captured) {
     '## Review Notes',
     '',
     '- The lab is review-only task-transformation proof.',
-    '- Captures cover initial, wrong/retry, corrected, desktop completed, mobile completed, and mobile dark completed states.',
-    '- The proof JSON records semantic validation, task-family controls, support collapse, source scrolling, question visibility, and boundary evidence.',
+    '- Captures cover initial, calculation wrong/retry, unit-only feedback, stuck-support, corrected, desktop completed, mobile completed, and mobile dark completed states.',
+    '- The proof JSON records semantic validation, conceptual setup controls, targeted feedback, progressive support, source scrolling, question visibility, and boundary evidence.',
     ''
   );
   return `${lines.join('\n')}\n`;
@@ -665,7 +669,7 @@ async function main() {
         source_material_id: transform.sourceAuthority.source_material_id,
         task_count: transform.taskSet.tasks.length,
         context_block_count: transform.taskSet.contextBlocks.length,
-        required_families: ['source_value_selection', 'calculation_work_capture', 'structured_short_response'],
+          required_families: ['choice', 'calculation_work_capture', 'structured_short_response'],
         rendered_families: captured[0].proof.families,
         context_before_tasks: captured.every((item) => item.proof.contextBeforeTasks === true),
         derived_answer_visible_in_context: captured.some((item) => item.proof.derivedAnswerVisibleInContext),
@@ -679,16 +683,13 @@ async function main() {
           semantic_validation_enabled: captured.every((item) => item.proof.semanticValidationEnabled === true),
           real_task_family_controls_rendered: captured.every((item) => item.proof.genericOptionLabelVisible === false && item.proof.interactiveControlCount >= transform.taskSet.tasks.length),
           right_pane_original_question_visible: captured.every((item) => item.proof.rightPaneQuestionVisible === true && item.proof.examQuestionTextVisibleInTaskPane === true),
-          compact_source_cell_selection_rendered: captured.every((item) => {
-            const affordance = item.proof.familyAffordances.source_value_selection;
-            return affordance?.sourceCellSelection === true
-              && affordance.sourceCellRequiredSelectionCount <= 4
-              && affordance.sourceCellDistractorCount <= 2
-              && affordance.repeatedDropdownRows === 0
-              && affordance.roleDropdownCount === 0;
-          }),
+          conceptual_setup_choice_rendered: captured.every((item) => item.proof.familyAffordances.choice?.choiceOptions === true),
+          select_all_numbers_task_removed: captured.every((item) => !item.proof.families.includes('source_value_selection')),
           sequence_builders_removed_as_required_cards: captured.every((item) => !item.proof.families.includes('formula_builder') && !item.proof.families.includes('step_ordering') && !item.proof.families.includes('source_chain_builder')),
           calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
+          targeted_unit_feedback_proven: captured.some((item) => item.case === 'desktop-unit-feedback' && item.proof.targetedUnitFeedbackVisible === true),
+          targeted_number_feedback_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.targetedNumberFeedbackVisible === true),
+          progressive_support_proven: captured.some((item) => item.case === 'desktop-support' && item.proof.progressiveSupportVisible === true && item.proof.supportComplete === true),
           constrained_carry_forward_conclusion_rendered: captured.every((item) => {
             const affordance = item.proof.familyAffordances.structured_short_response;
             return affordance?.structuredCarryForward === true
@@ -706,8 +707,9 @@ async function main() {
           correction_model_support_collapsed_by_default: captured.every((item) => item.proof.correctionModelSupportVisibleByDefault === false),
           source_pane_readability_pass: captured.every((item) => item.proof.sourceRefsVisible === false && item.proof.sourceTableVisibleAtTop === true)
             && captured.filter((item) => item.viewport.width >= 900).every((item) => item.proof.sourcePaneComfortableInitial === true),
+          duplicate_visible_labels_removed: captured.every((item) => item.proof.duplicateVisibleSourceLabels === false),
           initial_state_proven: captured.some((item) => item.case === 'desktop-initial' && item.proof.completedTaskCount === 0 && item.proof.labCompleted === false),
-          wrong_retry_state_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.wrongRetryCount > 0 && item.proof.retryFeedbackCount > 0 && item.proof.completedTaskCount === 0),
+          wrong_retry_state_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.wrongRetryCount > 0 && item.proof.targetedNumberFeedbackVisible === true && item.proof.completedTaskCount === 0),
           corrected_state_proven: captured.some((item) => item.case === 'desktop-corrected' && item.proof.completedTaskCount === 1 && item.proof.wrongRetryCount === 0 && item.proof.labCompleted === false),
           completion_path_reaches_done: captured.filter((item) => item.action === 'complete').every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
           source_pane_independent_scroll: captured.every((item) => item.proof.sourcePaneIndependentScroll === true),

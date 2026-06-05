@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+  "generated": "2026-06-05",
+  "decision": "REVISE",
+  "gate_direction": "hold_for_playable_repair",
+  "not_failure": true,
+  "gate_closure_authorized": false,
+  "product_authority_authorized": false,
+  "required_next_sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-4",
+  "comments": [
+    {
+      "id": "SHAREDINGEST-Q1",
+      "classification": "accepted",
+      "comment": "No source-authority blocker; review is about task usability and interaction quality."
+    },
+    {
+      "id": "SHAREDINGEST-Q2",
+      "classification": "accepted",
+      "comment": "Original exam question is visible in the right-side task flow and must be retained."
+    },
+    {
+      "id": "SHAREDINGEST-Q3",
+      "classification": "blocking",
+      "comment": "Exam task 1 is artificial select-all-numbers work; remove or replace with useful conceptual setup."
+    },
+    {
+      "id": "SHAREDINGEST-Q4",
+      "classification": "blocking",
+      "comment": "Task 2 rejected 649 + euros; accept unit variants and add targeted feedback/support. Task 3 carry-forward model remains correct."
+    },
+    {
+      "id": "SHAREDINGEST-Q5",
+      "classification": "accepted",
+      "comment": "No textbook-source authority blocker; keep owned-source boundary."
+    },
+    {
+      "id": "SHAREDINGEST-Q6",
+      "classification": "blocking",
+      "comment": "Graph line must be drawn in the same active graph workspace, not as a separate completed graph."
+    },
+    {
+      "id": "SHAREDINGEST-Q7",
+      "classification": "blocking",
+      "comment": "Keep grid visible from start; hide labels/scale until correct axes."
+    },
+    {
+      "id": "SHAREDINGEST-Q8",
+      "classification": "blocking",
+      "comment": "50 percent task is unclear; simplify to interval choice with auto-filled quantities or remove from required proof."
+    },
+    {
+      "id": "SHAREDINGEST-Q9",
+      "classification": "blocking",
+      "comment": "Visual QA missed duplicate Bron/Tabel labels and must hard-fail duplicate visible labels."
+    },
+    {
+      "id": "SHAREDINGEST-Q10",
+      "classification": "accepted",
+      "comment": "No product-authority overclaim blocker."
+    },
+    {
+      "id": "SHAREDINGEST-Q11",
+      "classification": "blocking",
+      "comment": "Ten required repairs recorded for Repair 4 before adoption-preparation may start."
+    },
+    {
+      "id": "SHAREDINGEST-Q12",
+      "classification": "decision",
+      "comment": "hold_for_playable_repair"
+    }
+  ],
+  "product_boundaries": {
+    "generated_lesson_output": false,
+    "source_data_mutation": false,
+    "protected_reference_mutation": false,
+    "product_route_adoption": false,
+    "target_equivalent_completion_claims": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

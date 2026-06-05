@@ -1045,10 +1045,60 @@
     assert(isNumber(interaction.axes.y.max), path + '.axes.y.max must be numeric');
     assert(interaction.axes.x.max > interaction.axes.x.min, path + '.axes.x.max must exceed min');
     assert(interaction.axes.y.max > interaction.axes.y.min, path + '.axes.y.max must exceed min');
+    if (interaction.axes.x.ticks !== undefined) validateAxisTicks(interaction.axes.x.ticks, interaction.axes.x, path + '.axes.x.ticks');
+    if (interaction.axes.y.ticks !== undefined) validateAxisTicks(interaction.axes.y.ticks, interaction.axes.y, path + '.axes.y.ticks');
     assert(Number.isInteger(interaction.pointCount) && interaction.pointCount >= 2, path + '.pointCount must be an integer >= 2');
     return {
       pointCount: interaction.pointCount
     };
+  }
+
+  function validateAxisTicks(ticks, axis, path) {
+    requireArray(ticks, path, 2);
+    ticks.forEach(function (tick, idx) {
+      assert(isNumber(tick), path + '[' + idx + '] must be numeric');
+      assert(tick >= axis.min && tick <= axis.max, path + '[' + idx + '] must stay within axis min/max');
+    });
+    if (axis.tickDecimals !== undefined) {
+      assert(Number.isInteger(axis.tickDecimals) && axis.tickDecimals >= 0, path.replace(/\.ticks$/, '.tickDecimals') + ' must be a non-negative integer');
+    }
+    if (axis.tickFormat !== undefined) {
+      assert(axis.tickFormat === 'decimal_comma' || axis.tickFormat === 'plain', path.replace(/\.ticks$/, '.tickFormat') + ' must be decimal_comma or plain');
+    }
+  }
+
+  function validateIntervalHalvingInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.intervalLabel, path + '.intervalLabel');
+    requireArray(interaction.intervalOptions, path + '.intervalOptions', 2);
+    interaction.intervalOptions.forEach(function (option, idx) {
+      assert(isObject(option), path + '.intervalOptions[' + idx + '] must be an object');
+      requireString(option.id, path + '.intervalOptions[' + idx + '].id');
+      requireString(option.label, path + '.intervalOptions[' + idx + '].label');
+      requireString(option.finalAnswer, path + '.intervalOptions[' + idx + '].finalAnswer');
+      requireString(option.oldQuantity, path + '.intervalOptions[' + idx + '].oldQuantity');
+      requireString(option.newQuantity, path + '.intervalOptions[' + idx + '].newQuantity');
+      requireString(option.work, path + '.intervalOptions[' + idx + '].work');
+      if (option.correct !== undefined) assert(typeof option.correct === 'boolean', path + '.intervalOptions[' + idx + '].correct must be boolean');
+    });
+    requireString(interaction.relationLabel, path + '.relationLabel');
+    requireArray(interaction.relationOptions, path + '.relationOptions', 2);
+    interaction.relationOptions.forEach(function (option, idx) {
+      assert(isObject(option), path + '.relationOptions[' + idx + '] must be an object');
+      requireString(option.id, path + '.relationOptions[' + idx + '].id');
+      requireString(option.label, path + '.relationOptions[' + idx + '].label');
+    });
+    if (interaction.conclusionOptions !== undefined) {
+      requireString(interaction.conclusionLabel, path + '.conclusionLabel');
+      requireArray(interaction.conclusionOptions, path + '.conclusionOptions', 2);
+      interaction.conclusionOptions.forEach(function (option, idx) {
+        assert(isObject(option), path + '.conclusionOptions[' + idx + '] must be an object');
+        requireString(option.id, path + '.conclusionOptions[' + idx + '].id');
+        requireString(option.label, path + '.conclusionOptions[' + idx + '].label');
+        requireString(option.finalAnswer, path + '.conclusionOptions[' + idx + '].finalAnswer');
+        if (option.correct !== undefined) assert(typeof option.correct === 'boolean', path + '.conclusionOptions[' + idx + '].correct must be boolean');
+      });
+    }
   }
 
   function sourceValueLabelMap(values) {
@@ -1519,6 +1569,7 @@
       }
       if (expected.criteria !== undefined) requireArray(expected.criteria, task.id + '.expected.criteria', 1);
       if (expected.requiredWorkText !== undefined) validateTextGroups(expected.requiredWorkText, task.id + '.expected.requiredWorkText');
+      if (expected.acceptedWorkPaths !== undefined) validateAcceptedWorkPaths(expected.acceptedWorkPaths, task.id + '.expected.acceptedWorkPaths');
       if (expected.unitNotation !== undefined) {
         validateUnitNotation(expected.unitNotation, task.id + '.expected.unitNotation');
         requireString(task.interaction.unitNotationLabel, task.id + '.interaction.unitNotationLabel');
@@ -1857,6 +1908,16 @@
     });
   }
 
+  function validateAcceptedWorkPaths(paths, path) {
+    requireArray(paths, path, 1);
+    paths.forEach(function (workPath, idx) {
+      assert(isObject(workPath), path + '[' + idx + '] must be an object');
+      requireString(workPath.id, path + '[' + idx + '].id');
+      optionalString(workPath.label, path + '[' + idx + '].label');
+      validateTextGroups(workPath.requiredWorkText, path + '[' + idx + '].requiredWorkText');
+    });
+  }
+
   function validateInteraction(task) {
     var path = task.id + '.interaction';
     assert(isObject(task.interaction), path + ' is required');
@@ -1875,6 +1936,10 @@
       optionalString(task.interaction.finalAnswerPlaceholder, path + '.finalAnswerPlaceholder');
       optionalString(task.interaction.unitNotationLabel, path + '.unitNotationLabel');
       optionalString(task.interaction.unitNotationPlaceholder, path + '.unitNotationPlaceholder');
+      if (task.interaction.selectionMode !== undefined) {
+        assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
+        validateIntervalHalvingInteraction(task, path);
+      }
     } else if (
       task.family === 'numeric_input' ||
       task.family === 'final_answer_entry' ||
@@ -2041,6 +2106,12 @@
       return (group.any || []).some(function (accepted) {
         return normalized.indexOf(normalizeText(accepted)) !== -1;
       });
+    });
+  }
+
+  function acceptedWorkPathMatches(value, paths) {
+    return (paths || []).some(function (workPath) {
+      return textGroupsMatch(value, workPath.requiredWorkText || []);
     });
   }
 
@@ -2845,7 +2916,8 @@
     if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
       if (!response || typeof response !== 'object') return false;
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
-      if (task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
+      if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
+      if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
       return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer) &&
         unitNotationMatches(response.unitNotation, task.expected.unitNotation);
     }
@@ -2997,6 +3069,13 @@
       ];
     }
     if (task.family === 'calculation_work_capture') {
+      if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
+        return [
+          '[data-task-id="' + task.id + '"][data-interval-option-id]',
+          '[data-task-id="' + task.id + '"][data-relation-option-id]',
+          '[data-task-id="' + task.id + '"][data-conclusion-option-id]'
+        ];
+      }
       var plan = ['[data-task-id="' + task.id + '"][data-input-role="work"]', '[data-task-id="' + task.id + '"][data-input-role="final-answer"]'];
       if (task.interaction && task.interaction.unitNotationLabel) {
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');

@@ -22,8 +22,9 @@ const derivedAnswerSignals = ['350', '-50', '400 naar 200', '200 naar 100'];
 const cases = [
   { name: 'desktop-initial', action: 'initial', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'desktop-axis-selected', action: 'axis-selected', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-two-points', action: 'two-points', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'desktop-wrong-retry', action: 'wrong', size: { width: 1280, height: 900 }, theme: 'light' },
-  { name: 'desktop-corrected', action: 'corrected', size: { width: 1280, height: 900 }, theme: 'light' },
+  { name: 'desktop-line-confirmed', action: 'corrected', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'desktop-completed', action: 'complete', size: { width: 1280, height: 900 }, theme: 'light' },
   { name: 'mobile-completed', action: 'complete', size: { width: 390, height: 844 }, theme: 'light' },
   { name: 'mobile-dark-completed', action: 'complete', size: { width: 390, height: 844 }, theme: 'dark' },
@@ -629,6 +630,7 @@ async function driveLabState(cdp, sessionId, action) {
   const expressions = {
     initial: 'window.TaskIngestTransform3Lab.resetAll()',
     'axis-selected': 'window.TaskIngestTransform3Lab.selectCorrectAxes(0)',
+    'two-points': 'window.TaskIngestTransform3Lab.placeGraphPointsOnly(0)',
     wrong: 'window.TaskIngestTransform3Lab.applyWrongAttempt(0)',
     corrected: 'window.TaskIngestTransform3Lab.correctTask(0)',
     complete: 'window.TaskIngestTransform3Lab.completeDemoPath()',
@@ -658,7 +660,7 @@ function markdownManifest(captured) {
     '## Review Notes',
     '',
     '- The lab is review-only textbook-source task-transformation proof.',
-    '- Captures cover initial, axis-selected, wrong/retry, corrected, desktop completed, mobile completed, and mobile dark completed states.',
+    '- Captures cover initial, axis-selected, two clicked points, line-confirmed, wrong/retry, desktop completed, mobile completed, and mobile dark completed states.',
     '- The proof JSON records semantic validation, task-family controls, support collapse, source scrolling, question visibility, visual counts, and boundary evidence.',
     ''
   );
@@ -796,16 +798,21 @@ async function main() {
             const affordance = item.proof.familyAffordances.graph_construction_substitute;
             return affordance?.graphWorkspace === true
               && affordance.graphAxisControls === true
+              && affordance.graphAxisControlsAttached === true
               && affordance.graphClickToPlace === true
               && affordance.typedPointFallbackCollapsed === true
               && affordance.graphLineConfirmation === true;
           }),
           click_to_place_primary: captured.every((item) => item.proof.graphClickToPlaceSupported === true),
           typed_point_entry_fallback_only: captured.every((item) => item.proof.familyAffordances.graph_construction_substitute?.typedPointFallbackCollapsed === true && item.proof.familyAffordances.graph_construction_substitute?.typedPointFallbackOpen === false),
+          grid_visible_before_axis_selection: captured.some((item) => item.case === 'desktop-initial' && item.proof.graphGridLineVisibleCount > 0),
           graph_labels_hidden_before_axis_selection: captured.some((item) => item.case === 'desktop-initial' && item.proof.graphAxisLabelsVisibleCount === 0 && item.proof.graphScaleLabelsVisibleCount === 0 && item.proof.graphLabelsVisibleBeforeAxisSelection === false),
           graph_labels_reveal_after_axis_selection: captured.some((item) => item.case === 'desktop-axis-selected' && item.proof.graphLabelsRevealAfterAxisSelection === true && item.proof.graphAxisLabelsVisibleCount > 0 && item.proof.graphScaleLabelsVisibleCount > 0),
+          two_points_state_proven: captured.some((item) => item.case === 'desktop-two-points' && item.proof.graphClickedPointCount === 2 && item.proof.constructedLineVisibleInWorkspace === false),
+          line_drawn_in_same_workspace: captured.some((item) => item.case === 'desktop-line-confirmed' && item.proof.constructedLineVisibleInWorkspace === true && item.proof.completedGraphOutsideWorkspaceCount === 0),
+          no_separate_completed_graph_block: captured.every((item) => item.proof.completedGraphOutsideWorkspaceCount === 0),
           graph_reading_field_rendered: captured.every((item) => item.proof.familyAffordances.graph_reading?.numericField === true),
-          calculation_fields_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.calculationFields === true),
+          simplified_50_percent_task_rendered: captured.every((item) => item.proof.familyAffordances.calculation_work_capture?.intervalHalvingCheck === true && item.proof.familyAffordances.calculation_work_capture?.autoFilledQuantitiesVisible === true),
           target_task_economy_enforced: transform.taskSet.tasks.length <= 3,
           prompt_not_in_source_pane: captured.every((item) => item.proof.promptInSourcePaneCount === 0),
           completed_graph_hidden_before_attempt: captured.every((item) => item.case !== 'desktop-initial' || item.proof.completedGraphVisibleBeforeAttempt === false),
@@ -813,13 +820,14 @@ async function main() {
           graph_workspace_width_pass: captured.every((item) => item.proof.graphWorkspaceWidthPass === true),
           source_pane_readability_pass: captured.every((item) => item.proof.sourceRefsVisible === false && item.proof.sourceTableVisibleAtTop === true)
             && captured.filter((item) => item.viewport.width >= 900).every((item) => item.proof.sourcePaneComfortableInitial === true),
+          duplicate_visible_labels_removed: captured.every((item) => item.proof.duplicateVisibleSourceLabels === false),
           plain_sequence_textareas_absent: captured.every((item) => item.proof.plainSequenceTextareaCount === 0),
           check_buttons_rendered: captured.every((item) => item.proof.checkButtonCount === transform.taskSet.tasks.length),
           task_instructions_rendered: captured.every((item) => item.proof.taskInstructionCount === transform.taskSet.tasks.length),
           support_collapsed_by_default: captured.every((item) => item.proof.supportCollapsedByDefault === true),
           initial_state_proven: captured.some((item) => item.case === 'desktop-initial' && item.proof.completedTaskCount === 0 && item.proof.labCompleted === false),
           wrong_retry_state_proven: captured.some((item) => item.case === 'desktop-wrong-retry' && item.proof.wrongRetryCount > 0 && item.proof.retryFeedbackCount > 0 && item.proof.completedTaskCount === 0),
-          corrected_state_proven: captured.some((item) => item.case === 'desktop-corrected' && item.proof.completedTaskCount === 1 && item.proof.wrongRetryCount === 0 && item.proof.labCompleted === false),
+          corrected_state_proven: captured.some((item) => item.case === 'desktop-line-confirmed' && item.proof.completedTaskCount === 1 && item.proof.wrongRetryCount === 0 && item.proof.labCompleted === false),
           completion_path_reaches_done: captured.filter((item) => item.action === 'complete').every((item) => item.proof.labCompleted === true && item.proof.completedTaskCount === transform.taskSet.tasks.length),
           source_pane_independent_scroll: captured.every((item) => item.proof.sourcePaneIndependentScroll === true),
           question_visible_after_source_scroll: captured.every((item) => item.proof.questionVisibleAfterSourceScroll === true)

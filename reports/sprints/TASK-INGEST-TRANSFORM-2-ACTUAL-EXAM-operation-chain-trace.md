@@ -2,8 +2,9 @@
 
 Generated: 2026-06-05
 
-Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`; interaction
-quality repair only; no product authority.
+Status: revised for `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`; final
+interaction-clarity repair plus reviewer calculation-shortcut correction only;
+no product authority.
 
 ## Original Target
 
@@ -20,21 +21,25 @@ interactions.
 
 | Operation | Required task | Evidence |
 |---|---|---|
-| select source values | `q3-source-values` | four compactly selected source cells; roles remain validation data |
-| calculate threshold with visible work | `q3-calculation` | yearly premiums, deductible exposure, and difference |
+| identify comparison basis | `q3-source-values` | choose annual premium plus deductible exposure, not lowest monthly premium or all table values |
+| calculate threshold with visible work | `q3-calculation` | full annual-cost route or premium-difference shortcut (`22x12 = 264; 264 + 385 = 649`), exact yearly unit validation, targeted feedback, and progressive support |
 | state threshold with direction | `q3-threshold-direction` | carried `EUR 649 per jaar` plus constrained direction |
 
 ## Collapsed Support Policy
 
-Formula conversion remains available as collapsed support because the
-calculation needs `jaarpremie = maandpremie * 12`. It is not a required
-`formula_builder` card.
+Formula conversion and optional source-value marking remain available only as
+support around the calculation because the target is a focused threshold
+calculation. They are not required cards.
 
 Removed required support cards:
 
+- `q3-source-values` as a source-value selection/select-all-numbers task
 - `q3-annual-premium-formula`
 - `q3-operation-order`
 - `q3-source-chain`
+
+Review-lab support after failed calculation attempts is allowed because this is
+guided review evidence, not an exit-ticket or summative gate.
 
 ## Boundary
 

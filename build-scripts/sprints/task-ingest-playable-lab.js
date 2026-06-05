@@ -67,14 +67,25 @@ function graphMetrics(interaction) {
   return { axes, width, height, padL, padR, padT, padB, xMin, xMax, yMin, yMax, sx, sy };
 }
 
+function axisTickValues(axis, fallback) {
+  const explicit = Array.isArray(axis.ticks) ? axis.ticks.map(Number).filter(Number.isFinite) : [];
+  return explicit.length > 0 ? explicit : fallback;
+}
+
+function formatTick(value, axis) {
+  const decimals = Number.isInteger(axis.tickDecimals) ? axis.tickDecimals : (value % 1 ? 2 : 0);
+  const formatted = Number(value).toFixed(Math.max(0, decimals));
+  return axis.tickFormat === 'decimal_comma' ? formatted.replace('.', ',') : formatted;
+}
+
 function emptyGraphSvg(interaction) {
   const metrics = graphMetrics(interaction);
   const { axes, width, height, padL, padR, padT, padB, xMin, xMax, yMin, yMax, sx, sy } = metrics;
-  const xTicks = [xMin, (xMin + xMax) / 4, (xMin + xMax) / 2, (xMin + xMax) * 3 / 4, xMax]
-    .map((value) => `<g><line class="grid-line" x1="${sx(value).toFixed(1)}" y1="${padT}" x2="${sx(value).toFixed(1)}" y2="${height - padB}"></line><text class="scale-label reveal-after-axes" x="${sx(value).toFixed(1)}" y="${height - padB + 24}">${escapeHtml(Number(value).toFixed(value % 1 ? 1 : 0))}</text></g>`)
+  const xTicks = axisTickValues(axes.x, [xMin, (xMin + xMax) / 4, (xMin + xMax) / 2, (xMin + xMax) * 3 / 4, xMax])
+    .map((value) => `<g><line class="grid-line" x1="${sx(value).toFixed(1)}" y1="${padT}" x2="${sx(value).toFixed(1)}" y2="${height - padB}"></line><text class="scale-label reveal-after-axes" x="${sx(value).toFixed(1)}" y="${height - padB + 24}">${escapeHtml(formatTick(value, axes.x))}</text></g>`)
     .join('');
-  const yTicks = [yMin, (yMin + yMax) / 4, (yMin + yMax) / 2, (yMin + yMax) * 3 / 4, yMax]
-    .map((value) => `<g><line class="grid-line" x1="${padL}" y1="${sy(value).toFixed(1)}" x2="${width - padR}" y2="${sy(value).toFixed(1)}"></line><text class="scale-label reveal-after-axes" x="${padL - 14}" y="${sy(value).toFixed(1)}" text-anchor="end">${escapeHtml(Number(value).toFixed(value % 1 ? 2 : 0))}</text></g>`)
+  const yTicks = axisTickValues(axes.y, [yMin, (yMin + yMax) / 4, (yMin + yMax) / 2, (yMin + yMax) * 3 / 4, yMax])
+    .map((value) => `<g><line class="grid-line" x1="${padL}" y1="${sy(value).toFixed(1)}" x2="${width - padR}" y2="${sy(value).toFixed(1)}"></line><text class="scale-label reveal-after-axes" x="${padL - 14}" y="${sy(value).toFixed(1)}" text-anchor="end">${escapeHtml(formatTick(value, axes.y))}</text></g>`)
     .join('');
   return `<svg class="graph-grid-svg graph-click-surface" viewBox="0 0 ${width} ${height}" role="img" tabindex="0" aria-label="${escapeAttr(interaction.emptyGraphAltText || 'Leeg grafiekwerkvlak')}" data-graph-click-surface="true" data-x-min="${xMin}" data-x-max="${xMax}" data-y-min="${yMin}" data-y-max="${yMax}" data-pad-l="${padL}" data-pad-r="${padR}" data-pad-t="${padT}" data-pad-b="${padB}">
     <rect width="${width}" height="${height}" rx="8"></rect>
@@ -82,6 +93,9 @@ function emptyGraphSvg(interaction) {
     <line class="axis" x1="${padL}" y1="${height - padB}" x2="${width - padR}" y2="${height - padB}"></line>
     <line class="axis" x1="${padL}" y1="${height - padB}" x2="${padL}" y2="${padT}"></line>
     <rect class="plot-hit-area" x="${padL}" y="${padT}" width="${width - padL - padR}" height="${height - padT - padB}" data-plot-hit-area="true"></rect>
+    <g class="constructed-line" data-completed-graph="true" data-graph-line="constructed" hidden>
+      <line x1="0" y1="0" x2="0" y2="0"></line>
+    </g>
     <g class="placed-points" data-placed-points="true"></g>
     <text class="axis-label reveal-after-axes" x="${(width + padL - padR) / 2}" y="${height - 16}">${escapeHtml(axes.x.label)}</text>
     <text class="axis-label y-label reveal-after-axes" transform="translate(22 ${(height - padB + padT) / 2}) rotate(-90)">${escapeHtml(axes.y.label)}</text>
@@ -96,6 +110,15 @@ function completedGraphSvgFromTask(task) {
     series: [{ label: 'Gemaakte P-Q-grafiek', points: expected.points || [] }],
     altText: 'Voltooide P-Q-grafiek na correcte constructie.'
   });
+}
+
+function visibleBlockTitle(block) {
+  const source = String(block.sourceLabel || '').trim();
+  const caption = String(block.caption || block.title || '').trim();
+  if (!source) return caption;
+  if (!caption) return source;
+  const normalizedCaption = caption.replace(new RegExp(`^${source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*[:\\-–—]?\\s*`, 'i'), '').trim();
+  return normalizedCaption ? `${source} — ${normalizedCaption}` : source;
 }
 
 function contextRole(block) {
@@ -117,25 +140,26 @@ function blockInnerHtml(block) {
     return `<h2>${escapeHtml(block.title)}</h2>${paragraphs(block.bodyMarkdown)}`;
   }
   if (block.type === 'source_excerpt') {
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${paragraphs(block.bodyMarkdown)}`;
+    return `<h2 class="source-heading">${escapeHtml(visibleBlockTitle(block))}</h2>${paragraphs(block.bodyMarkdown)}`;
   }
   if (block.type === 'table') {
     const headers = block.columns.map((column) => `<th scope="col">${escapeHtml(column)}</th>`).join('');
     const rows = block.rows
       .map((row) => `<tr>${row.map((cell, index) => `<${index === 0 ? 'th scope="row"' : 'td'}>${escapeHtml(cell)}</${index === 0 ? 'th' : 'td'}>`).join('')}</tr>`)
       .join('');
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><div class="table-scroll"><table><caption>${escapeHtml(block.caption)}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
+    const title = visibleBlockTitle(block);
+    return `<h2 class="source-heading">${escapeHtml(title)}</h2><div class="table-scroll"><table aria-label="${escapeAttr(title)}"><caption class="visually-hidden">${escapeHtml(title)}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
   }
   if (block.type === 'graph') {
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2>${graphSvg(block)}`;
+    return `<h2 class="source-heading">${escapeHtml(visibleBlockTitle(block))}</h2>${graphSvg(block)}`;
   }
   if (block.type === 'formula') {
     const vars = (block.variables || []).map((item) => `<div><dt>${escapeHtml(item.symbol)}</dt><dd>${escapeHtml(item.meaning)}</dd></div>`).join('');
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><div class="formula-scroll"><pre><code>${escapeHtml(block.expression)}</code></pre></div><dl>${vars}</dl>`;
+    return `<h2 class="source-heading">${escapeHtml(visibleBlockTitle(block))}</h2><div class="formula-scroll"><pre><code>${escapeHtml(block.expression)}</code></pre></div><dl>${vars}</dl>`;
   }
   if (block.type === 'flowchart') {
     const nodes = (block.nodes || []).map((node) => `<li>${escapeHtml(node.label)}</li>`).join('');
-    return `<p class="source-label">${escapeHtml(block.sourceLabel)}</p><h2>${escapeHtml(block.caption)}</h2><ol class="flow-list">${nodes}</ol>`;
+    return `<h2 class="source-heading">${escapeHtml(visibleBlockTitle(block))}</h2><ol class="flow-list">${nodes}</ol>`;
   }
   return '';
 }
@@ -167,7 +191,7 @@ function operationLabel(operationId) {
 
 function displayPrompt(task) {
   const prompts = {
-    'q3-source-values': 'Klik de vier tabelcellen die nodig zijn om de meerkosten van Zoohee te berekenen.',
+    'q3-source-values': 'Wat moet je vergelijken om te bepalen wanneer het verhoogde eigen risico voordeliger is?',
     'q3-annual-premium-formula': 'Bouw de formule waarmee je per variant de jaarpremie berekent.',
     'q3-operation-order': 'Zet de rekenstappen in de volgorde die past bij het correctiemodel.',
     'q3-calculation': 'Bereken de meerkosten per jaar en noteer uitwerking, antwoord en eenheid.',
@@ -180,7 +204,7 @@ function displayPrompt(task) {
     'tb113-point-placement': 'Plaats een punt uit de tabel als coordinatenpaar in de grafiek.',
     'tb113-interpolation-source-values': 'Kies de twee bronwaarden waartussen je de gevraagde prijs-hoeveelheid-combinatie afleest.',
     'tb113-graph-reading': 'Lees uit je P-Q-grafiek af welke hoeveelheid hoort bij P = EUR 1.75.',
-    'tb113-quantity-drop-check': 'Controleer met bronwaarden een prijsinterval waarin Q met 50 procent daalt.',
+    'tb113-quantity-drop-check': 'Controleer één halvering: kies een interval en benoem dat de nieuwe Q de helft is van de oude Q.',
     'tb113-claim-calculation': 'Bereken het prijsinterval bij een daling van 50 procent en noteer ook een geldig alternatief als de bron dit toelaat.',
     'tb113-source-chain': 'Bouw de redeneringsketen van tekst, tabel en grafiek naar de conclusie.',
     'tb113-answer-form': 'Schrijf het antwoord in de gevraagde vorm: asafspraak, brongebruik en conclusie.'
@@ -200,7 +224,9 @@ function instructionRows(task) {
     graph_construction_substitute: ['Kies de P-Q-assen.', 'Klik twee tabelpunten in het werkvlak.', 'Bevestig dat je de punten tot een dalende lijn verbindt.'],
     numeric_input: ['Bepaal het gevraagde getal.', 'Gebruik bronwaarden waar nodig.', 'Antwoordvorm: getal met eventuele eenheid.'],
     point_placement: ['Gebruik de tabelwaarde als coordinatenpaar.', 'Vul beide assen in.', 'Antwoordvorm: x- en y-waarde.'],
-    calculation_work_capture: ['Schrijf de berekening uit.', 'Noteer het eindantwoord en de eenheid apart.', 'Antwoordvorm: uitwerking plus eindantwoord.'],
+    calculation_work_capture: task.interaction?.selectionMode === 'interval_halving_check'
+      ? ['Kies één interval.', 'Lees de oude en nieuwe hoeveelheid die verschijnen.', 'Kies dat de nieuwe hoeveelheid de helft is van de oude hoeveelheid.']
+      : ['Schrijf de berekening uit.', 'Noteer het eindantwoord en de eenheid apart.', 'Antwoordvorm: uitwerking plus eindantwoord.'],
     structured_short_response: ['Vul elk antwoordveld in.', 'Gebruik bronwoorden of berekening waar gevraagd.', 'Antwoordvorm: korte gestructureerde tekst.']
   };
   return byFamily[task.family] || ['Vul de gevraagde reactie in.', 'Gebruik de zichtbare broninformatie.', 'Antwoordvorm: korte reactie.'];
@@ -266,21 +292,17 @@ function graphConstructionControlHtml(task) {
     <section class="graph-workspace" data-graph-workspace="construction" data-required-points="${pointCount}">
       <h3>${escapeHtml(interaction.workspaceTitle || 'Grafiekworkspace')}</h3>
       <p class="graph-stage-note" data-graph-stage-note="true">${escapeHtml(interaction.preAxisNote || 'Kies eerst de juiste assen. Daarna verschijnen labels en schaal.')}</p>
+      <div class="axis-select-grid graph-axis-controls" data-axis-controls-attached="true">
+        <label>${escapeHtml(interaction.xAxisLabel || 'Horizontale as')}<select class="play-control graph-axis-x" data-graph-axis="x">${graphAxisOptions()}</select></label>
+        <label>${escapeHtml(interaction.yAxisLabel || 'Verticale as')}<select class="play-control graph-axis-y" data-graph-axis="y">${graphAxisOptions()}</select></label>
+      </div>
       ${emptyGraphSvg(interaction)}
       <div class="graph-click-toolbar">
         <p class="graph-point-status" data-graph-point-status="true">0 / ${pointCount} punten geplaatst</p>
         <button type="button" class="clear-graph-points">Wis punten</button>
       </div>
-      <div class="completed-graph-after-success" data-completed-graph="true" hidden>
-        <h3>Gemaakte grafiek</h3>
-        ${completedGraphSvgFromTask(task)}
-      </div>
     </section>
     <section class="graph-construction-controls" aria-label="Grafiekconstructie controles">
-      <div class="axis-select-grid">
-        <label>${escapeHtml(interaction.xAxisLabel || 'Horizontale as')}<select class="play-control graph-axis-x" data-graph-axis="x">${graphAxisOptions()}</select></label>
-        <label>${escapeHtml(interaction.yAxisLabel || 'Verticale as')}<select class="play-control graph-axis-y" data-graph-axis="y">${graphAxisOptions()}</select></label>
-      </div>
       <p class="click-instruction">${escapeHtml(interaction.clickInstruction || 'Klik twee punten op de lijn in het grafiekwerkvlak.')}</p>
       <details class="typed-point-fallback" data-typed-point-fallback="collapsed">
         <summary>Coordinaten typen als fallback</summary>
@@ -323,12 +345,45 @@ function carryForwardResponseHtml(task) {
   </div>`;
 }
 
+function calculationWorkCaptureHtml(task) {
+  const interaction = task.interaction || {};
+  if (interaction.selectionMode === 'interval_halving_check') {
+    const options = interaction.intervalOptions || [];
+    const conclusionOptions = interaction.conclusionOptions || [];
+    return `<div class="interval-halving-check" data-interval-halving-check="true">
+      <fieldset class="choice-options interval-options">
+        <legend>${escapeHtml(interaction.intervalLabel || 'Kies een interval')}</legend>
+        ${options.map((option) => `<label><input class="play-control interval-choice" type="radio" name="interval-${escapeAttr(task.id)}" value="${escapeAttr(option.id)}" data-final-answer="${escapeAttr(option.finalAnswer || option.label || option.id)}" data-work="${escapeAttr(option.work || '')}" data-old-q="${escapeAttr(option.oldQuantity || '')}" data-new-q="${escapeAttr(option.newQuantity || '')}" data-correct="${option.correct === true ? 'true' : 'false'}"> ${escapeHtml(option.label || option.id)}</label>`).join('')}
+      </fieldset>
+      <dl class="auto-fill-values" data-auto-fill-values="true">
+        <div><dt>Oude Q</dt><dd data-old-quantity="true">Kies eerst een interval</dd></div>
+        <div><dt>Nieuwe Q</dt><dd data-new-quantity="true">Kies eerst een interval</dd></div>
+      </dl>
+      <label>${escapeHtml(interaction.relationLabel || 'Relatie')}<select class="play-control halving-relation"><option value="">Kies...</option>${(interaction.relationOptions || []).map((option) => `<option value="${escapeAttr(option.id)}">${escapeHtml(option.label)}</option>`).join('')}</select></label>
+      <label>${escapeHtml(interaction.conclusionLabel || 'Conclusie')}<select class="play-control halving-conclusion"><option value="">Kies conclusie...</option>${conclusionOptions.map((option) => `<option value="${escapeAttr(option.id)}" data-final-answer="${escapeAttr(option.finalAnswer || option.label || option.id)}" data-correct="${option.correct === true ? 'true' : 'false'}">${escapeHtml(option.label || option.id)}</option>`).join('')}</select></label>
+      <input class="calc-work" type="hidden" value="">
+      <input class="calc-final" type="hidden" value="">
+      <input class="calc-unit" type="hidden" value="">
+    </div>`;
+  }
+  const support = interaction.progressiveSupport;
+  const supportHtml = support ? `<div class="progressive-support" data-progressive-support="true" data-support-complete="false">
+    <p class="support-note">${escapeHtml(support.label || 'Hulp verschijnt na mislukte pogingen.')}</p>
+    <button type="button" class="support-button support-hint-button" data-support-level="1" hidden>${escapeHtml(support.hintButton || 'Hulp')}</button>
+    <div class="support-content support-hint" data-support-content="1" hidden>${paragraphs(support.hintText || '')}</div>
+    <div class="support-content support-setup" data-support-content="2" hidden>${paragraphs(support.partialSetup || '')}</div>
+    <button type="button" class="support-button support-solution-button" data-support-level="3" hidden>${escapeHtml(support.solutionButton || 'Toon uitwerking')}</button>
+    <div class="support-content support-solution" data-support-content="3" hidden>${paragraphs(support.solutionText || '')}</div>
+  </div>` : '';
+  return `<label>${escapeHtml(interaction.workLabel || 'Uitwerking')}<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>${escapeHtml(interaction.finalAnswerLabel || 'Eindantwoord')}<input class="play-control calc-final" type="text" data-response-key="finalAnswer" placeholder="${escapeAttr(interaction.finalAnswerPlaceholder || '')}"></label><label>${escapeHtml(interaction.unitNotationLabel || 'Eenheid')}<input class="play-control calc-unit" type="text" data-response-key="unit" placeholder="${escapeAttr(interaction.unitNotationPlaceholder || '')}"></label></div>${supportHtml}`;
+}
+
 function controlHtml(task, index) {
   if (task.family === 'graph_construction_substitute') {
     return graphConstructionControlHtml(task);
   }
   if (task.family === 'calculation_work_capture') {
-    return `<label>Uitwerking<textarea class="play-control calc-work" rows="4" data-response-key="work"></textarea></label><div class="control-row"><label>Eindantwoord<input class="play-control calc-final" type="text" data-response-key="finalAnswer"></label><label>Eenheid<input class="play-control calc-unit" type="text" data-response-key="unit"></label></div>`;
+    return calculationWorkCaptureHtml(task);
   }
   if (task.family === 'structured_short_response' && task.interaction?.carryForward) {
     return carryForwardResponseHtml(task);
@@ -541,6 +596,17 @@ function buildPlayableLabHtml(options) {
       border-color: transparent;
       padding: 0;
     }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
     .support-box {
       background: var(--warn);
     }
@@ -550,6 +616,12 @@ function buildPlayableLabHtml(options) {
       color: var(--accent);
     }
     .source-label { color: var(--primary); font-weight: 700; }
+    .source-heading {
+      color: var(--primary);
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin: 0 0 9px;
+    }
     .table-scroll, .formula-scroll {
       overflow-x: auto;
       border: 1px solid var(--line);
@@ -622,9 +694,17 @@ function buildPlayableLabHtml(options) {
     }
     .graph-grid-svg rect { fill: var(--graph-bg); stroke: var(--line); }
     .graph-grid-svg .axis { stroke: var(--text); stroke-width: 2; }
-    .graph-grid-svg .grid-line { stroke: var(--line); stroke-width: 1; opacity: 0.65; }
+    .graph-grid-svg .grid-line { stroke: var(--muted); stroke-width: 1.1; opacity: 0.55; }
     .graph-grid-svg text { fill: var(--muted); font-size: 13px; dominant-baseline: middle; }
     .graph-grid-svg .axis-label { fill: var(--text); font-weight: 700; text-anchor: middle; dominant-baseline: auto; }
+    .graph-grid-svg .constructed-line line {
+      stroke: var(--primary);
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+    .graph-grid-svg .constructed-line[hidden] {
+      display: none;
+    }
     .graph-workspace:not(.axes-selected) .reveal-after-axes {
       opacity: 0;
       visibility: hidden;
@@ -670,6 +750,13 @@ function buildPlayableLabHtml(options) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
+    .graph-axis-controls {
+      margin-bottom: 8px;
+      padding: 10px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
     .point-entry-grid {
       display: grid;
       gap: 8px;
@@ -708,14 +795,6 @@ function buildPlayableLabHtml(options) {
     .click-instruction {
       color: var(--muted);
       font-weight: 700;
-    }
-    .completed-graph-after-success[hidden] {
-      display: none;
-    }
-    .completed-graph-after-success {
-      margin-top: 10px;
-      border-top: 1px solid var(--line);
-      padding-top: 10px;
     }
     .flow-list {
       display: grid;
@@ -1008,6 +1087,12 @@ function buildPlayableLabHtml(options) {
         });
       }
 
+      function acceptedTextExact(value, accepted) {
+        const actual = normalize(value);
+        if (!actual) return false;
+        return (accepted || []).some((candidate) => actual === normalize(candidate));
+      }
+
       function workGroupOptions(group) {
         if (Array.isArray(group)) return group;
         return group?.any || group?.accepted || [];
@@ -1095,7 +1180,31 @@ function buildPlayableLabHtml(options) {
         const svg = card.querySelector('[data-graph-click-surface="true"]');
         const group = svg?.querySelector('[data-placed-points="true"]');
         if (group) group.innerHTML = '';
+        hideConstructedLine(card);
         updateGraphPointStatus(card);
+      }
+
+      function hideConstructedLine(card) {
+        const lineGroup = card.querySelector('[data-graph-line="constructed"]');
+        if (lineGroup) lineGroup.setAttribute('hidden', '');
+      }
+
+      function drawConstructedLine(card) {
+        const svg = card.querySelector('[data-graph-click-surface="true"]');
+        const lineGroup = svg?.querySelector('[data-graph-line="constructed"]');
+        const line = lineGroup?.querySelector('line');
+        const points = Array.from(card.querySelectorAll('.placed-graph-point'));
+        if (!svg || !lineGroup || !line || points.length < 2) return false;
+        const first = points[0];
+        const last = points[points.length - 1];
+        const firstPos = graphPointPosition(svg, first.dataset.x, first.dataset.y);
+        const lastPos = graphPointPosition(svg, last.dataset.x, last.dataset.y);
+        line.setAttribute('x1', firstPos.cx.toFixed(1));
+        line.setAttribute('y1', firstPos.cy.toFixed(1));
+        line.setAttribute('x2', lastPos.cx.toFixed(1));
+        line.setAttribute('y2', lastPos.cy.toFixed(1));
+        lineGroup.removeAttribute('hidden');
+        return true;
       }
 
       function placeGraphPoint(card, x, y) {
@@ -1121,6 +1230,7 @@ function buildPlayableLabHtml(options) {
         label.textContent = String(points.length + 1);
         g.append(circle, label);
         group.appendChild(g);
+        hideConstructedLine(card);
         updateGraphPointStatus(card);
       }
 
@@ -1194,24 +1304,88 @@ function buildPlayableLabHtml(options) {
         updateGraphPointStatus(card);
       }
 
+      function installIntervalHalving(card) {
+        const box = card.querySelector('[data-interval-halving-check="true"]');
+        if (!box) return;
+        const update = () => {
+          const selected = box.querySelector('.interval-choice:checked');
+          const oldTarget = box.querySelector('[data-old-quantity="true"]');
+          const newTarget = box.querySelector('[data-new-quantity="true"]');
+          const work = box.querySelector('.calc-work');
+          const final = box.querySelector('.calc-final');
+          const unit = box.querySelector('.calc-unit');
+          const conclusion = box.querySelector('.halving-conclusion');
+          const selectedConclusion = conclusion?.selectedOptions?.[0];
+          if (oldTarget) oldTarget.textContent = selected ? selected.dataset.oldQ : 'Kies eerst een interval';
+          if (newTarget) newTarget.textContent = selected ? selected.dataset.newQ : 'Kies eerst een interval';
+          if (work) work.value = selected ? selected.dataset.work : '';
+          if (final) final.value = selectedConclusion?.dataset.finalAnswer || selected?.dataset.finalAnswer || '';
+          if (unit) unit.value = box.querySelector('.halving-relation')?.value === 'helft' ? '50 procent daling' : '';
+        };
+        box.querySelectorAll('.interval-choice, .halving-relation, .halving-conclusion').forEach((control) => {
+          control.addEventListener('change', update);
+        });
+        update();
+      }
+
+      function installProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        support.querySelectorAll('.support-button').forEach((button) => {
+          button.addEventListener('click', () => {
+            const level = button.dataset.supportLevel;
+            const content = support.querySelector('[data-support-content="' + CSS.escape(level) + '"]');
+            if (content) content.hidden = false;
+            if (level === '3') {
+              support.dataset.supportComplete = 'true';
+              card.classList.add('support-complete');
+              updateCarryovers();
+            }
+          });
+        });
+      }
+
+      function updateProgressiveSupport(card) {
+        const support = card.querySelector('[data-progressive-support="true"]');
+        if (!support) return;
+        const attempts = Number(card.dataset.failedAttempts || 0);
+        const hintButton = support.querySelector('[data-support-level="1"]');
+        const setup = support.querySelector('[data-support-content="2"]');
+        const solutionButton = support.querySelector('[data-support-level="3"]');
+        if (hintButton && attempts >= 1) hintButton.hidden = false;
+        if (setup && attempts >= 2) setup.hidden = false;
+        if (solutionButton && attempts >= 3) solutionButton.hidden = false;
+      }
+
       function updateCarryovers() {
         document.querySelectorAll('[data-carry-forward="true"]').forEach((box) => {
           const sourceIndex = Number(box.dataset.carryFromIndex || 1);
           const sourceComplete = cards[sourceIndex]?.classList.contains('is-complete') === true;
+          const supportComplete = cards[sourceIndex]?.classList.contains('support-complete') === true;
+          const ready = sourceComplete || supportComplete;
           const carriedValue = box.dataset.carriedValue || '';
           const notReady = box.dataset.notReadyText || 'Bereken eerst het grensbedrag in taak 2.';
           const output = box.querySelector('[data-carried-output="true"]');
           const hidden = box.querySelector('.carried-threshold-field');
           const select = box.querySelector('.direction-select');
-          box.classList.toggle('is-ready', sourceComplete);
-          if (output) output.textContent = sourceComplete ? carriedValue : notReady;
-          if (hidden) hidden.value = sourceComplete ? carriedValue : '';
-          if (select) select.disabled = !sourceComplete;
+          box.classList.toggle('is-ready', ready);
+          if (output) output.textContent = ready ? carriedValue : notReady;
+          if (hidden) hidden.value = ready ? carriedValue : '';
+          if (select) select.disabled = !ready;
         });
       }
 
       function collect(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const relation = intervalBox.querySelector('.halving-relation')?.value || '';
+            return {
+              work: intervalBox.querySelector('.calc-work')?.value || '',
+              finalAnswer: intervalBox.querySelector('.calc-final')?.value || '',
+              unit: relation === 'helft' ? '50 procent daling' : relation
+            };
+          }
           return {
             work: card.querySelector('.calc-work')?.value || '',
             finalAnswer: card.querySelector('.calc-final')?.value || '',
@@ -1281,12 +1455,8 @@ function buildPlayableLabHtml(options) {
       function evaluate(model, response) {
         const expected = model.expected || {};
         if (model.family === 'calculation_work_capture') {
-          const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
-          const expectedUnit = expected.unit || expected.unitNotation;
-          const unitOk = !expectedUnit?.accepted || acceptedText(response.unit, expectedUnit.accepted);
-          const requiredGroups = expected.requiredWorkText || [];
-          const workOk = requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle))));
-          return finalOk && unitOk && workOk;
+          const parts = calculationParts(model, response);
+          return parts.finalOk && parts.unitOk && parts.workOk;
         }
         if (model.family === 'structured_short_response') {
           return (expected.fields || []).every((field) => acceptedText(response.fields[field.id] || '', field.accepted || []));
@@ -1325,20 +1495,42 @@ function buildPlayableLabHtml(options) {
         return text(response.value).length > 0;
       }
 
+      function calculationParts(model, response) {
+        const expected = model.expected || {};
+        const finalOk = acceptedText(response.finalAnswer, expected.finalAnswer?.accepted || []);
+        const expectedUnit = expected.unit || expected.unitNotation;
+        const unitOk = !expectedUnit?.accepted || acceptedTextExact(response.unit, expectedUnit.accepted);
+        const paths = Array.isArray(expected.acceptedWorkPaths) && expected.acceptedWorkPaths.length > 0
+          ? expected.acceptedWorkPaths.map((path) => path.requiredWorkText || [])
+          : [expected.requiredWorkText || []];
+        const workOk = paths.some((requiredGroups) => requiredGroups.every((group) => workGroupOptions(group).some((needle) => normalize(response.work).includes(normalize(needle)))));
+        return { finalOk, unitOk, workOk };
+      }
+
+      function feedbackText(model, response, ok) {
+        if (ok) return 'Klopt. Je kunt door naar de volgende kaart.';
+        if (model.family === 'calculation_work_capture' && model.interaction?.targetedFeedback) {
+          const parts = calculationParts(model, response);
+          const feedback = model.interaction.targetedFeedback;
+          if (parts.finalOk && !parts.unitOk) return feedback.unitOnly || 'Het bedrag klopt. Controleer alleen de eenheid.';
+          if (parts.finalOk && parts.unitOk && !parts.workOk) return feedback.workMissing || 'Het eindantwoord klopt. Laat nog zien hoe je eraan komt.';
+          return feedback.numberWrong || 'Controleer eerst de jaarpremies en het verschil.';
+        }
+        return 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
+      }
+
       function mark(card, index, ok) {
         const feedback = card.querySelector('.feedback');
         card.classList.toggle('is-complete', ok);
         card.classList.toggle('is-retry', !ok);
         if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
-          card.querySelectorAll('[data-completed-graph="true"]').forEach((graph) => {
-            graph.hidden = !ok;
-          });
+          if (ok) drawConstructedLine(card);
+          else hideConstructedLine(card);
         }
-        if (feedback) {
-          feedback.textContent = ok
-            ? 'Klopt. Je kunt door naar de volgende kaart.'
-            : 'Nog niet. Controleer bron, antwoordvorm en volgorde, en probeer opnieuw.';
-        }
+        if (!ok) card.dataset.failedAttempts = String(Number(card.dataset.failedAttempts || 0) + 1);
+        if (ok) card.dataset.failedAttempts = '0';
+        updateProgressiveSupport(card);
+        if (feedback) feedback.textContent = feedbackText(models[index], collect(card, models[index]), ok);
         updateCarryovers();
         updateCurrent(ok ? Math.min(index + 1, cards.length - 1) : index);
       }
@@ -1360,9 +1552,37 @@ function buildPlayableLabHtml(options) {
         });
       }
 
+      function calculationWorkGroups(model) {
+        const paths = model.expected.acceptedWorkPaths || [];
+        if (paths.length > 0) return paths[0].requiredWorkText || [];
+        return model.expected.requiredWorkText || [];
+      }
+
       function fillCorrect(card, model) {
         if (model.family === 'calculation_work_capture') {
-          const work = model.expected.requiredWorkText || [];
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice[data-correct="true"]') || intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) {
+              relation.value = 'helft';
+              relation.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) {
+              const expected = model.expected.finalAnswer?.accepted?.[0] || '';
+              const target = Array.from(conclusion.options).find((item) => normalize(item.dataset.finalAnswer || item.value) === normalize(expected))
+                || Array.from(conclusion.options).find((item) => item.dataset.correct === 'true');
+              conclusion.value = target?.value || '';
+              conclusion.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            return;
+          }
+          const work = calculationWorkGroups(model);
           const expectedUnit = model.expected.unit || model.expected.unitNotation;
           card.querySelector('.calc-work').value = work.map((group) => workGroupOptions(group)[0]).filter(Boolean).join(' ; ');
           card.querySelector('.calc-final').value = model.expected.finalAnswer.accepted[0];
@@ -1440,6 +1660,19 @@ function buildPlayableLabHtml(options) {
 
       function fillWrong(card, model) {
         if (model.family === 'calculation_work_capture') {
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const option = intervalBox.querySelector('.interval-choice');
+            if (option) {
+              option.checked = true;
+              option.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            const relation = intervalBox.querySelector('.halving-relation');
+            if (relation) relation.value = 'dubbel';
+            const conclusion = intervalBox.querySelector('.halving-conclusion');
+            if (conclusion) conclusion.value = Array.from(conclusion.options).find((item) => item.dataset.correct !== 'true' && item.value)?.value || '';
+            return;
+          }
           card.querySelector('.calc-work').value = 'onvolledig';
           card.querySelector('.calc-final').value = '0';
           card.querySelector('.calc-unit').value = '';
@@ -1513,6 +1746,8 @@ function buildPlayableLabHtml(options) {
       cards.forEach((card, index) => {
         installSequenceBuilder(card);
         if (models[index].family === 'graph_construction_substitute') installGraphConstruction(card, models[index]);
+        installIntervalHalving(card);
+        installProgressiveSupport(card);
         const button = card.querySelector('.check-button');
         button.addEventListener('click', () => {
           mark(card, index, evaluate(models[index], collect(card, models[index])));
@@ -1522,6 +1757,8 @@ function buildPlayableLabHtml(options) {
       function resetAll() {
         cards.forEach((card) => {
           card.classList.remove('is-complete', 'is-retry');
+          card.classList.remove('support-complete');
+          card.dataset.failedAttempts = '0';
           card.querySelectorAll('input, textarea, select').forEach((control) => {
             if (control.type === 'radio' || control.type === 'checkbox') control.checked = false;
             else control.value = '';
@@ -1532,6 +1769,17 @@ function buildPlayableLabHtml(options) {
           clearGraphPoints(card);
           if (card.getAttribute('data-task-family') === 'graph_construction_substitute') {
             updateGraphAxisState(card, models[cards.indexOf(card)]);
+          }
+          card.querySelectorAll('[data-progressive-support="true"]').forEach((support) => {
+            support.dataset.supportComplete = 'false';
+            support.querySelectorAll('.support-button, .support-content').forEach((item) => { item.hidden = true; });
+          });
+          const intervalBox = card.querySelector('[data-interval-halving-check="true"]');
+          if (intervalBox) {
+            const oldTarget = intervalBox.querySelector('[data-old-quantity="true"]');
+            const newTarget = intervalBox.querySelector('[data-new-quantity="true"]');
+            if (oldTarget) oldTarget.textContent = 'Kies eerst een interval';
+            if (newTarget) newTarget.textContent = 'Kies eerst een interval';
           }
           const feedback = card.querySelector('.feedback');
           if (feedback) feedback.textContent = '';
@@ -1567,6 +1815,28 @@ function buildPlayableLabHtml(options) {
           return item.scrollWidth > item.clientWidth + 2 && !item.closest('.table-scroll') && !item.closest('.formula-scroll');
         });
         const familyAffordances = {};
+        const visible = (item) => {
+          if (!item) return false;
+          if (item.ownerSVGElement) {
+            if (item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+            const style = window.getComputedStyle(item);
+            if (style.display === 'none' || style.visibility === 'hidden') return false;
+            if (typeof item.getBBox === 'function') {
+              try {
+                const box = item.getBBox();
+                return box.width > 0 || box.height > 0;
+              } catch (error) {
+                return true;
+              }
+            }
+            return true;
+          }
+          if (item.hidden || item.hasAttribute?.('hidden') || item.closest?.('[hidden]')) return false;
+          const style = window.getComputedStyle(item);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          const rect = item.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        };
         cards.forEach((card) => {
           const family = card.getAttribute('data-task-family');
           if (!familyAffordances[family]) {
@@ -1586,7 +1856,11 @@ function buildPlayableLabHtml(options) {
               graphPointInputs: false,
               graphLineConfirmation: false,
               graphClickToPlace: false,
+              graphAxisControlsAttached: false,
               graphClickedPointCount: 0,
+              graphConstructedLineVisible: false,
+              graphLineInSameWorkspace: false,
+              graphGridLineVisibleCount: 0,
               typedPointFallbackCollapsed: false,
               typedPointFallbackOpen: false,
               sourceCellSelection: false,
@@ -1600,7 +1874,16 @@ function buildPlayableLabHtml(options) {
               constrainedDirectionControl: false,
               freeTextDirectionAbsent: true,
               carriedValueReady: false,
-              carryRequiresPreviousTask: false
+              carryRequiresPreviousTask: false,
+              intervalHalvingCheck: false,
+              intervalChoiceCount: 0,
+              halvingConclusionControl: false,
+              autoFilledQuantitiesVisible: false,
+              progressiveSupport: false,
+              supportHintVisible: false,
+              supportSetupVisible: false,
+              supportSolutionVisible: false,
+              supportComplete: false
             };
           }
           const item = familyAffordances[family];
@@ -1616,10 +1899,14 @@ function buildPlayableLabHtml(options) {
           item.numericField = item.numericField || Boolean(card.querySelector('.numeric-answer'));
           item.graphWorkspace = item.graphWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"]'));
           item.graphAxisControls = item.graphAxisControls || Boolean(card.querySelector('.graph-axis-x') && card.querySelector('.graph-axis-y'));
+          item.graphAxisControlsAttached = item.graphAxisControlsAttached || Boolean(card.querySelector('[data-axis-controls-attached="true"]'));
           item.graphPointInputs = item.graphPointInputs || card.querySelectorAll('.graph-point-x, .graph-point-y').length >= 4;
           item.graphLineConfirmation = item.graphLineConfirmation || Boolean(card.querySelector('[data-graph-line-confirmation="true"]'));
           item.graphClickToPlace = item.graphClickToPlace || Boolean(card.querySelector('[data-graph-click-surface="true"]'));
           item.graphClickedPointCount += card.querySelectorAll('.placed-graph-point').length;
+          item.graphConstructedLineVisible = item.graphConstructedLineVisible || Boolean(Array.from(card.querySelectorAll('[data-graph-line="constructed"]')).some((line) => visible(line)));
+          item.graphLineInSameWorkspace = item.graphLineInSameWorkspace || Boolean(card.querySelector('[data-graph-workspace="construction"] [data-graph-line="constructed"]'));
+          item.graphGridLineVisibleCount += Array.from(card.querySelectorAll('.graph-grid-svg .grid-line')).filter((line) => visible(line)).length;
           item.typedPointFallbackCollapsed = item.typedPointFallbackCollapsed || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"]:not([open])'));
           item.typedPointFallbackOpen = item.typedPointFallbackOpen || Boolean(card.querySelector('[data-typed-point-fallback="collapsed"][open]'));
           item.sourceCellSelection = item.sourceCellSelection || Boolean(card.querySelector('[data-source-cell-selection="compact"]'));
@@ -1637,19 +1924,38 @@ function buildPlayableLabHtml(options) {
           item.freeTextDirectionAbsent = item.freeTextDirectionAbsent && !Boolean(card.querySelector('input.structured-field:not([type="hidden"]), textarea.structured-field'));
           item.carriedValueReady = item.carriedValueReady || Boolean(card.querySelector('[data-carry-forward="true"].is-ready'));
           item.carryRequiresPreviousTask = item.carryRequiresPreviousTask || Boolean(card.querySelector('[data-carry-forward="true"] .direction-select:disabled, [data-carry-forward="true"]:not(.is-ready)'));
+          item.intervalHalvingCheck = item.intervalHalvingCheck || Boolean(card.querySelector('[data-interval-halving-check="true"]'));
+          item.intervalChoiceCount += card.querySelectorAll('.interval-choice').length;
+          item.halvingConclusionControl = item.halvingConclusionControl || Boolean(card.querySelector('.halving-conclusion'));
+          item.autoFilledQuantitiesVisible = item.autoFilledQuantitiesVisible || Boolean(card.querySelector('[data-auto-fill-values="true"]'));
+          item.progressiveSupport = item.progressiveSupport || Boolean(card.querySelector('[data-progressive-support="true"]'));
+          item.supportHintVisible = item.supportHintVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="1"], [data-support-content="1"]')).some((item) => visible(item)));
+          item.supportSetupVisible = item.supportSetupVisible || Boolean(Array.from(card.querySelectorAll('[data-support-content="2"]')).some((item) => visible(item)));
+          item.supportSolutionVisible = item.supportSolutionVisible || Boolean(Array.from(card.querySelectorAll('[data-support-level="3"], [data-support-content="3"]')).some((item) => visible(item)));
+          item.supportComplete = item.supportComplete || card.classList.contains('support-complete');
         });
         const bodyText = document.body.innerText;
         const supportBoxes = Array.from(document.querySelectorAll('.support-box'));
-        const visible = (item) => {
-          if (!item || item.hidden) return false;
-          const style = window.getComputedStyle(item);
-          if (style.display === 'none' || style.visibility === 'hidden') return false;
-          const rect = item.getBoundingClientRect();
-          return rect.width > 0 && rect.height > 0;
-        };
+        const visibleText = (root) => Array.from(root.querySelectorAll('*'))
+          .filter((item) => visible(item) && !item.closest('.visually-hidden'))
+          .map((item) => {
+            if (item.children.length > 0 && !['TD', 'TH', 'CAPTION', 'H1', 'H2', 'H3', 'P', 'LABEL', 'BUTTON', 'OPTION', 'SUMMARY', 'DT', 'DD'].includes(item.tagName)) return '';
+            return item.innerText || item.textContent || '';
+          })
+          .join('\\n');
+        const duplicateLabelBlocks = Array.from(document.querySelectorAll('.ctx-block')).map((block) => {
+          const text = visibleText(block);
+          return {
+            bron1: (text.match(/Bron 1/g) || []).length,
+            tabel1: (text.match(/Tabel 1/g) || []).length
+          };
+        });
+        const duplicateVisibleSourceLabels = duplicateLabelBlocks.some((item) => item.bron1 > 1 || item.tabel1 > 1);
         const graphConstructionComplete = cards.some((item) => item.getAttribute('data-task-family') === 'graph_construction_substitute' && item.classList.contains('is-complete'));
         const completedGraphBlocks = Array.from(document.querySelectorAll('[data-completed-graph="true"]'));
         const visibleCompletedGraphs = completedGraphBlocks.filter(visible);
+        const completedGraphOutsideWorkspaceCount = completedGraphBlocks.filter((item) => !item.closest('[data-graph-workspace="construction"]')).length;
+        const constructedLineVisibleInWorkspace = Array.from(document.querySelectorAll('[data-graph-workspace="construction"] [data-graph-line="constructed"]')).some((item) => visible(item));
         const graphWorkspaces = Array.from(document.querySelectorAll('[data-graph-workspace="construction"]'));
         const firstGraphWorkspaceRect = graphWorkspaces[0] ? graphWorkspaces[0].getBoundingClientRect() : null;
         const labShell = document.querySelector('.lab-shell');
@@ -1658,6 +1964,8 @@ function buildPlayableLabHtml(options) {
         const graphScaleLabels = Array.from(document.querySelectorAll('.graph-grid-svg .scale-label.reveal-after-axes'));
         const graphAxisLabelsVisibleCount = graphAxisLabels.filter(visible).length;
         const graphScaleLabelsVisibleCount = graphScaleLabels.filter(visible).length;
+        const graphScaleLabelTexts = graphScaleLabels.filter(visible).map((label) => (label.textContent || '').trim()).filter(Boolean);
+        const graphGridLineVisibleCount = Array.from(document.querySelectorAll('.graph-grid-svg .grid-line')).filter(visible).length;
         const graphLabelsVisibleBeforeAxisSelection = graphWorkspaces.some((workspace) => !workspace.classList.contains('axes-selected') && Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible));
         const sourceRefsVisibleNow = bodyText.includes('references/') || bodyText.includes('..\\\\') || bodyText.includes('../');
         if (sourcePane) sourcePane.scrollTop = originalScrollTop;
@@ -1703,13 +2011,19 @@ function buildPlayableLabHtml(options) {
           graphWorkspaceWidthPass: graphWorkspaces.length === 0 || window.innerWidth < 900 || Boolean(firstGraphWorkspaceRect && (firstGraphWorkspaceRect.width >= 720 || firstGraphWorkspaceRect.width / usableWidth >= 0.6)),
           graphClickToPlaceSupported: document.querySelectorAll('[data-graph-click-surface="true"]').length > 0,
           graphClickedPointCount: document.querySelectorAll('.placed-graph-point').length,
+          graphGridLineVisibleCount,
           graphAxisLabelsVisibleCount,
           graphScaleLabelsVisibleCount,
+          graphScaleLabelTexts,
           graphLabelsVisibleBeforeAxisSelection,
           graphLabelsRevealAfterAxisSelection: graphWorkspaces.length === 0 || graphWorkspaces.every((workspace) => !workspace.classList.contains('axes-selected') || Array.from(workspace.querySelectorAll('.reveal-after-axes')).some(visible)),
           completedGraphVisibleCount: visibleCompletedGraphs.length,
+          completedGraphOutsideWorkspaceCount,
+          constructedLineVisibleInWorkspace,
           completedGraphVisibleBeforeAttempt: visibleCompletedGraphs.length > 0 && !graphConstructionComplete,
           sourcePaneCompletedGraphCount: document.querySelectorAll('.source-pane [data-completed-graph="true"]').length,
+          duplicateVisibleSourceLabels,
+          duplicateLabelBlocks,
           interactiveControlCount: document.querySelectorAll('.play-control').length,
           checkButtonCount: document.querySelectorAll('.check-button').length,
           taskInstructionCount: document.querySelectorAll('.task-instructions').length,
@@ -1721,6 +2035,11 @@ function buildPlayableLabHtml(options) {
           completedTaskCount: completedCount(),
           wrongRetryCount: document.querySelectorAll('.task-card.is-retry').length,
           retryFeedbackCount: Array.from(document.querySelectorAll('.feedback')).filter((item) => item.textContent.includes('Nog niet')).length,
+          targetedUnitFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het bedrag klopt. Controleer alleen de eenheid.')),
+          targetedWorkFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Het eindantwoord klopt. Laat nog zien hoe je eraan komt.')),
+          targetedNumberFeedbackVisible: Array.from(document.querySelectorAll('.feedback')).some((item) => item.textContent.includes('Controleer eerst de jaarpremies en het verschil.')),
+          progressiveSupportVisible: Array.from(document.querySelectorAll('[data-progressive-support="true"]')).some((item) => Array.from(item.querySelectorAll('.support-button, .support-content')).some(visible)),
+          supportComplete: cards.some((card) => card.classList.contains('support-complete')),
           labCompleted: completedCount() === cards.length,
           tableCount: document.querySelectorAll('table').length,
           graphCount: document.querySelectorAll('.graph-svg').length,
@@ -1747,6 +2066,46 @@ function buildPlayableLabHtml(options) {
           }
           return inspect();
         },
+        applyUnitOnlyMistake(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const unit = card.querySelector('.calc-unit');
+            if (unit) unit.value = 'euro per maand';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyAcceptedEuros(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            fillCorrect(card, model);
+            const final = card.querySelector('.calc-final');
+            const unit = card.querySelector('.calc-unit');
+            if (final) final.value = '649';
+            if (unit) unit.value = 'euros';
+            card.querySelector('.check-button').click();
+          }
+          return inspect();
+        },
+        applyStuckSupport(taskIndex = 1) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'calculation_work_capture') {
+            for (let attempt = 0; attempt < 3; attempt += 1) {
+              fillWrong(card, model);
+              card.querySelector('.check-button').click();
+            }
+            const solution = card.querySelector('[data-support-level="3"]');
+            if (solution) solution.click();
+          }
+          return inspect();
+        },
         correctTask(taskIndex = 0) {
           resetAll();
           const card = cards[taskIndex];
@@ -1768,6 +2127,21 @@ function buildPlayableLabHtml(options) {
             if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
             if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
             updateGraphAxisState(card, model);
+          }
+          return inspect();
+        },
+        placeGraphPointsOnly(taskIndex = 0) {
+          resetAll();
+          const card = cards[taskIndex];
+          const model = models[taskIndex];
+          if (card && model?.family === 'graph_construction_substitute') {
+            const xAxis = card.querySelector('.graph-axis-x');
+            const yAxis = card.querySelector('.graph-axis-y');
+            if (xAxis) xAxis.value = model.expected.axes?.xAccepted?.[0] || '';
+            if (yAxis) yAxis.value = model.expected.axes?.yAccepted?.[0] || '';
+            updateGraphAxisState(card, model);
+            clearGraphPoints(card);
+            (model.expected.points || []).forEach((point) => placeGraphPoint(card, point.x, point.y));
           }
           return inspect();
         },

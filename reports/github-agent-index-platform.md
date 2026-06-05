@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T12:27:54.313Z
+Generated: 2026-06-05T14:42:53.334Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3357
+Files indexed: 3375
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -803,7 +803,7 @@ Count: 218
 
 ## references
 
-Count: 472
+Count: 473
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1145,6 +1145,7 @@ Count: 472
 - references/data/sprints/S9a.result.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-1.plan.json
 - references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2.plan.json
+- references/data/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3.plan.json
 - references/data/sprints/SKILLMAP-OP-1.plan.json
 - references/data/sprints/SKILLMAP-OP-1.result.json
 - references/data/sprints/SOURCE-RECONSTRUCT-2-ACTUAL-EXAM.plan.json
@@ -1280,7 +1281,7 @@ Count: 472
 
 ## reports
 
-Count: 2049
+Count: 2066
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1988,6 +1989,10 @@ Count: 2049
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/repair3-direct-review-comments.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/review-packet.md
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/bundle-urls.md
@@ -2976,6 +2981,18 @@ Count: 2049
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-transformation-economy-report.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-verification-review.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-2-visual-qa-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-baseline.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-command-log.jsonl
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-command-log.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-assignment.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-corrections.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-round1.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-lead-review-round2.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-plan.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-planning-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-transformation-economy-report.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-verification-review.md
+- reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-3-visual-qa-report.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -3297,6 +3314,7 @@ Count: 2049
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-result.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-reviewer-notes.md
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md
+- reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-axis-selected.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-completed.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-corrected.png
 - reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshots/desktop-initial.png

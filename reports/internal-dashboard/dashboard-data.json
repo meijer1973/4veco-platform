@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T12:27:54.361Z",
+  "generatedAt": "2026-06-05T14:42:53.299Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3203,7 +3203,7 @@
               "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
               "name": "Shared Task Context And Ingestion Repair Human Review",
               "completed": "no",
-              "currentState": "Third direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`. `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2` solved the target-economy blockers by reducing both labs to three required cards, making textbook graph construction primary, removing prompt blocks from source panes, hiding the completed graph before success, and adding graph-workspace proof. The renewed review still found interaction-quality blockers: the actual exam question is not visible enough in the task flow, actual-exam source-value selection is overcontrolled, task 3 does not carry the calculated value forward, textbook graph construction is still too typed-form-like, graph labels/scales reveal too early, and source-pane readability proof is too weak. Gate remains open; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`.",
+              "currentState": "Fourth direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`; platform `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` has now prepared renewed review evidence for the narrowed interaction-clarity blockers and reviewer correction pass. The Repair 4 packet records conceptual actual-exam task 1, `649` plus reasonable yearly unit validation, accepted `22x12 = 264, 264 + 385 = 649` shortcut work, targeted feedback, progressive support, same-workspace textbook graph line, grid visible before axis labels/scale, table-derived graph ticks, simplified 50 percent follow-up with conclusion acceptance/shared `interval_halving_check` focus-plan proof, duplicate-label removal, visual QA/checker hardening, lead-review, verification, and refreshed playable screenshots/proof. Gate remains open pending renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send Repair 4 packet for renewed direct human review.",
               "exitGate": ""
             },
             {
@@ -3223,8 +3223,15 @@
             {
               "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-3",
               "name": "Interaction Quality And Source Pane Repair",
-              "completed": "no",
-              "currentState": "Active platform repair after third direct human `REVISE`. Must keep both transformed task sets at three required cards while adding the original actual exam question visibly to the right-side task flow, replacing actual-exam task 1 with compact source-cell selection, carrying the task 2 EUR 649 result into task 3 with constrained direction selection, making textbook graph construction click-to-place with typed entry collapsed as fallback only, hiding final graph labels/scales until correct axis selection, improving left/source-pane readability, adding screenshot proof for these states, upgrading checkers to hard-fail the interaction blockers, refreshing the review packet, and keeping `GATE-SHARED-TASK-INGEST-REPAIR-1` open. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+              "completed": "yes",
+              "currentState": "**CLOSED REVIEW-LAB REPAIR ONLY / FOURTH REVIEW STILL REVISE.** Platform added visible original actual-exam question in the right task pane, compact source-cell selection, task-3 carry-forward with constrained direction, click-to-place textbook graph construction, delayed graph labels/scales, source-pane readability proof, screenshots, checkers, lead-review artifacts, refreshed packet evidence, and remote publication on `codex/shared-task-ingest-repair3`. Carried blockers into `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`: line still appears as a separate completed graph, grid visibility needs tuning, 50 percent follow-up affordance is unclear, exam task 1 is not useful enough, task-2 unit validation and targeted feedback are weak, support after repeated failed attempts is missing, duplicate visible Bron/Tabel labels remain, and visual QA must hard-fail those issues. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-4",
+              "name": "Final Interaction Clarity Repair",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB REPAIR EVIDENCE ONLY.** Platform preserved three-card economy and review-only boundaries while replacing exam select-all-numbers task 1 with conceptual setup, accepting `649` plus reasonable yearly unit variants and `22x12 = 264, 264 + 385 = 649` shortcut work, adding targeted feedback and progressive support, drawing the textbook graph line inside the same workspace, attaching axis selectors to the graph, keeping grid visible from the start while hiding labels/scale until correct axes, using table-derived graph ticks, simplifying the 50 percent follow-up with conclusion acceptance and shared `interval_halving_check` focus-plan evidence, removing duplicate visible Bron/Tabel labels, strengthening visual QA/checkers/screenshots, adding lead-review/verification artifacts, refreshing the review packet, and keeping `GATE-SHARED-TASK-INGEST-REPAIR-1` open. No gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
               "exitGate": ""
             },
             {
@@ -3497,15 +3504,7 @@
           "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
           "name": "Shared Task Context And Ingestion Repair Human Review",
           "completed": "no",
-          "currentState": "Third direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`. `SHARED-TASK-INGEST-PLAYABLE-REPAIR-2` solved the target-economy blockers by reducing both labs to three required cards, making textbook graph construction primary, removing prompt blocks from source panes, hiding the completed graph before success, and adding graph-workspace proof. The renewed review still found interaction-quality blockers: the actual exam question is not visible enough in the task flow, actual-exam source-value selection is overcontrolled, task 3 does not carry the calculated value forward, textbook graph construction is still too typed-form-like, graph labels/scales reveal too early, and source-pane readability proof is too weak. Gate remains open; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
-          "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-3",
-          "name": "Interaction Quality And Source Pane Repair",
-          "completed": "no",
-          "currentState": "Active platform repair after third direct human `REVISE`. Must keep both transformed task sets at three required cards while adding the original actual exam question visibly to the right-side task flow, replacing actual-exam task 1 with compact source-cell selection, carrying the task 2 EUR 649 result into task 3 with constrained direction selection, making textbook graph construction click-to-place with typed entry collapsed as fallback only, hiding final graph labels/scales until correct axis selection, improving left/source-pane readability, adding screenshot proof for these states, upgrading checkers to hard-fail the interaction blockers, refreshing the review packet, and keeping `GATE-SHARED-TASK-INGEST-REPAIR-1` open. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+          "currentState": "Fourth direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`; platform `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` has now prepared renewed review evidence for the narrowed interaction-clarity blockers and reviewer correction pass. The Repair 4 packet records conceptual actual-exam task 1, `649` plus reasonable yearly unit validation, accepted `22x12 = 264, 264 + 385 = 649` shortcut work, targeted feedback, progressive support, same-workspace textbook graph line, grid visible before axis labels/scale, table-derived graph ticks, simplified 50 percent follow-up with conclusion acceptance/shared `interval_halving_check` focus-plan proof, duplicate-label removal, visual QA/checker hardening, lead-review, verification, and refreshed playable screenshots/proof. Gate remains open pending renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send Repair 4 packet for renewed direct human review.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -4044,10 +4043,26 @@
           "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB TARGET-ECONOMY REPAIR ONLY.** Platform reduced the actual-exam lab to source values, calculation, and conclusion; reduced the textbook lab to primary `graph_construction_substitute` plus two follow-ups; moved prompts out of source panes; hid completed graph output before graph-construction success; added graph-workspace visual QA proof; added target-task economy reports/checkers; refreshed the human-review packet; and kept `GATE-SHARED-TASK-INGEST-REPAIR-1` open. Renewed human review carried interaction-quality blockers into `SHARED-TASK-INGEST-PLAYABLE-REPAIR-3`: actual exam question visibility, compact source-value selection, carry-forward conclusion, click-to-place graph construction, delayed graph labels/scales, and source-pane readability proof. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-3",
+          "name": "Interaction Quality And Source Pane Repair",
+          "completed": "yes",
+          "currentState": "**CLOSED REVIEW-LAB REPAIR ONLY / FOURTH REVIEW STILL REVISE.** Platform added visible original actual-exam question in the right task pane, compact source-cell selection, task-3 carry-forward with constrained direction, click-to-place textbook graph construction, delayed graph labels/scales, source-pane readability proof, screenshots, checkers, lead-review artifacts, refreshed packet evidence, and remote publication on `codex/shared-task-ingest-repair3`. Carried blockers into `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4`: line still appears as a separate completed graph, grid visibility needs tuning, 50 percent follow-up affordance is unclear, exam task 1 is not useful enough, task-2 unit validation and targeted feedback are weak, support after repeated failed attempts is missing, duplicate visible Bron/Tabel labels remain, and visual QA must hard-fail those issues. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-4",
+          "name": "Final Interaction Clarity Repair",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB REPAIR EVIDENCE ONLY.** Platform preserved three-card economy and review-only boundaries while replacing exam select-all-numbers task 1 with conceptual setup, accepting `649` plus reasonable yearly unit variants and `22x12 = 264, 264 + 385 = 649` shortcut work, adding targeted feedback and progressive support, drawing the textbook graph line inside the same workspace, attaching axis selectors to the graph, keeping grid visible from the start while hiding labels/scale until correct axes, using table-derived graph ticks, simplifying the 50 percent follow-up with conclusion acceptance and shared `interval_halving_check` focus-plan evidence, removing duplicate visible Bron/Tabel labels, strengthening visual QA/checkers/screenshots, adding lead-review/verification artifacts, refreshing the review packet, and keeping `GATE-SHARED-TASK-INGEST-REPAIR-1` open. No gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 41,
-      "openCount": 38
+      "completedCount": 43,
+      "openCount": 37
     },
     {
       "id": "innovation",
