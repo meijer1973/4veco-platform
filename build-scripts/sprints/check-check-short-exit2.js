@@ -123,6 +123,43 @@ function checkSourceFiles() {
     assert(data[key].metadataAlignment.targetReadinessEvidence === false, `${key} must not claim target readiness`);
     assert(!data[key].targetEquivalent, `${key} must not have targetEquivalent metadata`);
   }
+
+  const graphShort = data['1.1.3-korte-check'];
+  const graphShortShells = taskShells(graphShort);
+  assert(Array.isArray(graphShort.contextBlocks) && graphShort.contextBlocks.length >= 2, '1.1.3 short check must have source/table context blocks');
+  assert(graphShort.tasks.every((task) => task.type === 'task_shell'), '1.1.3 graph short check must not be ordinary choice-only');
+  assert(graphShortShells.length === graphShort.tasks.length, '1.1.3 graph short check must use task-shell tasks');
+  assert(
+    graphShortShells.some((task) => task.family === 'graph_construction_substitute'),
+    '1.1.3 graph short check must include graph_construction_substitute'
+  );
+  assert(
+    graphShortShells.some((task) => task.family === 'graph_reading'),
+    '1.1.3 graph short check must include graph_reading'
+  );
+  assert(
+    graphShortShells.some((task) => task.family === 'table_value_selection'),
+    '1.1.3 graph short check must include table_value_selection route advice'
+  );
+  assert(!hasHints(graphShort), '1.1.3 graph short check must not rely on visible content hints for this proof');
+  const shortGraphTask = findTask(graphShort, 'grafiekroute-starten');
+  assert(shortGraphTask.family === 'graph_construction_substitute', '1.1.3 short task 1 must be graph construction');
+  assert(shortGraphTask.practiceRoute.label === 'Oefen tabel naar grafiek', '1.1.3 short graph task must route to table-to-graph practice');
+  assert(shortGraphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', '1.1.3 short graph x ticks must be table-derived');
+  assert(shortGraphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', '1.1.3 short graph y ticks must be table-derived');
+  const shortGraphResult = TaskShellEngine.evaluateTask(shortGraphTask, {
+    axes: { x: 'Q', y: 'P' },
+    points: [{ x: 400, y: 1.5 }, { x: 200, y: 2.5 }],
+    lineShape: 'decreasing',
+  });
+  assert(shortGraphResult.matched === true, '1.1.3 short graph construction must accept correct axes, points, and line');
+  const shortReadingTask = findTask(graphShort, 'grafiekroute-aflezen');
+  const shortReadingResult = TaskShellEngine.evaluateTask(shortReadingTask, '350');
+  assert(shortReadingResult.matched === true, '1.1.3 short graph reading must accept 350');
+  const shortRouteTask = findTask(graphShort, 'grafiekroute-kiezen');
+  const shortRouteResult = TaskShellEngine.evaluateTask(shortRouteTask, 'tabel-naar-grafiek');
+  assert(shortRouteResult.matched === true, '1.1.3 short route-advice task must accept tabel-naar-grafiek');
+
   assert(data['1.1.2-exit-ticket'].targetEquivalent.gateApproved === true, 'reviewed 1.1.2 exit ticket must remain gate approved');
   assert(data['1.1.2-exit-ticket'].targetEquivalent.completionLanguageEligible === true, 'reviewed 1.1.2 exit ticket must retain approved completion language');
   for (const key of ['1.1.1-exit-ticket', '1.1.3-exit-ticket']) {
@@ -204,6 +241,20 @@ function checkSharedRuntime(data) {
   rejectText(rendered, /Gemaakte grafiek|data-completed-graph/i, 'separate completed graph block', 'rendered 1.1.3');
   rejectText(rendered, /class="ts-hints"/i, 'exit-ticket hints', 'rendered 1.1.3');
   rejectText(rendered, /\b(?:PV|MTU)\b/, 'internal code leak', 'rendered 1.1.3');
+
+  const renderedShort = ExitTicketUI.renderStaticHtml(
+    data['1.1.3-korte-check'],
+    ExitTicketUI.buildSkillView(data['1.1.3-korte-check'], new ExitTicketEngine({ data: data['1.1.3-korte-check'] }), {})
+  );
+  requireText(renderedShort, 'data-task-context', 'short-check context block region', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'data-context-block="ctx-icecream-short-table"', 'short-check table context block', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'class="ts-graph-construction"', 'short-check graph construction control', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'class="ts-graph-grid-line"', 'short-check visible graph grid', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'data-task-family="graph_reading"', 'short-check graph-reading task', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'data-task-family="table_value_selection"', 'short-check route-advice task', 'rendered 1.1.3 short');
+  assertSingleVisibleContextLabel(renderedShort, 'ctx-icecream-short-source', 'Bron 1', 'rendered 1.1.3 short');
+  assertSingleVisibleContextLabel(renderedShort, 'ctx-icecream-short-table', 'Tabel 1', 'rendered 1.1.3 short');
+  rejectText(renderedShort, /class="et-option"/i, 'ordinary choice-only controls', 'rendered 1.1.3 short');
 }
 
 function checkGeneratedOutput() {

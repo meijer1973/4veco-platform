@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T19:12:10.580Z
+Generated: 2026-06-05T19:49:00.540Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3444
+Files indexed: 3462
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 407
+Count: 408
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -448,6 +448,7 @@ Count: 407
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
+- build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -583,7 +584,7 @@ Count: 42
 
 ## validators
 
-Count: 253
+Count: 258
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -690,6 +691,7 @@ Count: 253
 - build-scripts/sprints/check-check-q2-plan-evidence.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
+- build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
@@ -758,6 +760,10 @@ Count: 253
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-lab.html
@@ -1322,7 +1328,7 @@ Count: 476
 
 ## reports
 
-Count: 2124
+Count: 2141
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1346,6 +1352,7 @@ Count: 2124
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
+- reports/json/checksurface-reset1-quality-findings.json
 - reports/json/context-visual-std1-contract.json
 - reports/json/dag-integrity.json
 - reports/json/dead-units.json
@@ -1551,6 +1558,10 @@ Count: 2124
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-lab.html
@@ -2146,6 +2157,18 @@ Count: 2124
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png
+- reports/sprints/CHECKSURFACE-RESET-1-baseline.md
+- reports/sprints/CHECKSURFACE-RESET-1-command-log.jsonl
+- reports/sprints/CHECKSURFACE-RESET-1-command-log.md
+- reports/sprints/CHECKSURFACE-RESET-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-RESET-1-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-RESET-1-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-RESET-1-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-RESET-1-plan.md
+- reports/sprints/CHECKSURFACE-RESET-1-planning-review.md
+- reports/sprints/CHECKSURFACE-RESET-1-product-quality-audit.md
+- reports/sprints/CHECKSURFACE-RESET-1-result.md
+- reports/sprints/CHECKSURFACE-RESET-1-verification-review.md
 - reports/sprints/CI-REMOTE-1-baseline.md
 - reports/sprints/CI-REMOTE-1-command-log.jsonl
 - reports/sprints/CI-REMOTE-1-command-log.md

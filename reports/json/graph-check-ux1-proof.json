@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GRAPH-CHECK-UX-1",
+  "generated": "2026-06-05T19:42:53.073Z",
+  "status": "complete",
+  "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – korte-check.html",
+  "local_url": "http://127.0.0.1:57209/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20korte-check.html",
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "proof": {
+    "short_check_task_shell_count": 3,
+    "short_check_context_block_count": 2,
+    "graph_workspace_present": true,
+    "grid_visible": true,
+    "rendered_table_present": true,
+    "choice_only": false,
+    "wrong_feedback_targeted": true,
+    "correct_path_draws_line": true,
+    "correct_path_reaches_route_advice": true,
+    "mobile_rendered": true,
+    "dark_mode_rendered": true
+  },
+  "cases": [
+    {
+      "id": "desktop-initial",
+      "status": "PASS",
+      "inspection": {
+        "title": "Grafieken en tabellen - Korte check",
+        "contextBlocks": 2,
+        "tableCount": 2,
+        "taskCount": 3,
+        "taskShellCount": 3,
+        "graphWorkspace": true,
+        "gridLines": 12,
+        "graphPoints": 0,
+        "graphLine": false,
+        "ordinaryChoiceButtons": 0,
+        "retryFeedback": [],
+        "matchFeedback": [],
+        "completionVisible": false,
+        "routeCardCount": 6,
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      },
+      "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png"
+    },
+    {
+      "id": "desktop-wrong-retry",
+      "status": "PASS",
+      "retry": {
+        "feedback": "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 1,50 en EUR 2,50. Oefen tabel naar grafiek",
+        "state": "et-feedback is-retry"
+      },
+      "inspection": {
+        "title": "Grafieken en tabellen - Korte check",
+        "contextBlocks": 2,
+        "tableCount": 2,
+        "taskCount": 3,
+        "taskShellCount": 3,
+        "graphWorkspace": true,
+        "gridLines": 12,
+        "graphPoints": 0,
+        "graphLine": false,
+        "ordinaryChoiceButtons": 0,
+        "retryFeedback": [
+          "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 1,50 en EUR 2,50. Oefen tabel naar grafiek"
+        ],
+        "matchFeedback": [],
+        "completionVisible": false,
+        "routeCardCount": 6,
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      },
+      "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-wrong-retry.png"
+    },
+    {
+      "id": "desktop-route-advice",
+      "status": "PASS",
+      "correct": {
+        "graphFeedback": "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
+        "readingFeedback": "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+        "routeFeedback": "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek",
+        "completionVisible": true,
+        "graphLine": true,
+        "graphPoints": 2
+      },
+      "inspection": {
+        "title": "Grafieken en tabellen - Korte check",
+        "contextBlocks": 2,
+        "tableCount": 2,
+        "taskCount": 3,
+        "taskShellCount": 3,
+        "graphWorkspace": true,
+        "gridLines": 12,
+        "graphPoints": 2,
+        "graphLine": true,
+        "ordinaryChoiceButtons": 0,
+        "retryFeedback": [],
+        "matchFeedback": [
+          "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
+          "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+          "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek"
+        ],
+        "completionVisible": true,
+        "routeCardCount": 6,
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      },
+      "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png"
+    },
+    {
+      "id": "mobile-initial",
+      "status": "PASS",
+      "inspection": {
+        "title": "Grafieken en tabellen - Korte check",
+        "contextBlocks": 2,
+        "tableCount": 2,
+        "taskCount": 3,
+        "taskShellCount": 3,
+        "graphWorkspace": true,
+        "gridLines": 12,
+        "graphPoints": 0,
+        "graphLine": false,
+        "ordinaryChoiceButtons": 0,
+        "retryFeedback": [],
+        "matchFeedback": [],
+        "completionVisible": false,
+        "routeCardCount": 6,
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      },
+      "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png"
+    },
+    {
+      "id": "mobile-dark-route-advice",
+      "status": "PASS",
+      "correct": {
+        "graphFeedback": "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
+        "readingFeedback": "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+        "routeFeedback": "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek",
+        "completionVisible": true,
+        "graphLine": true,
+        "graphPoints": 2
+      },
+      "inspection": {
+        "title": "Grafieken en tabellen - Korte check",
+        "contextBlocks": 2,
+        "tableCount": 2,
+        "taskCount": 3,
+        "taskShellCount": 3,
+        "graphWorkspace": true,
+        "gridLines": 12,
+        "graphPoints": 2,
+        "graphLine": true,
+        "ordinaryChoiceButtons": 0,
+        "retryFeedback": [],
+        "matchFeedback": [
+          "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
+          "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+          "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek"
+        ],
+        "completionVisible": true,
+        "routeCardCount": 6,
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      },
+      "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-dark-route-advice.png"
+    }
+  ]
+}
