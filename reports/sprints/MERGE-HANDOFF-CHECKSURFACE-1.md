@@ -5,7 +5,7 @@ This branch is being merged to preserve work and give the next team a clean star
 
 ## Branch state
 - Source branch: `codex/check-short-exit-2`
-- Final branch commit: pending final preservation commit and remote CI
+- Final branch commit: reported in the final merge report after the last CI-record commit passes remote CI
 - Main base after merge/rebase: `cd909bd209295bf7149251a19558ea0f7d9c316e`
 - Merge type: preservation/handoff merge
 
@@ -71,7 +71,12 @@ This merge does not authorize:
 ## Remote CI
 - Workflow: platform-ci
 - Job: validate-platform
-- Run URL: pending final branch push
-- Run ID: pending final branch push
-- Commit: pending final preservation commit
-- Conclusion: pending final branch push
+- Run URL: https://github.com/meijer1973/4veco-platform/actions/runs/27068935280
+- Run ID: 27068935280
+- Commit: `20c37c10144837b232b8b0227c2de82e6f4b3510`
+- Conclusion: success
+
+Note: the final branch commit cannot include its own post-push CI run ID in this
+same file because that run ID exists only after the commit is pushed. The final
+merge report must state the exact final branch commit and final remote CI run
+used for merge.
