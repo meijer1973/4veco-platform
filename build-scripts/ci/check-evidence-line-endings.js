@@ -28,6 +28,7 @@ const TRACKED_PATTERNS = [
   ':(glob)references/data/sprints/CI-LF-HARDEN-1*.json',
   ':(glob)references/data/sprints/CI-EVIDENCE-1*.json',
   ':(glob)references/data/sprints/CI-GATE-PROOF-1*.json',
+  ':(glob)references/data/sprints/CI-GOVERNANCE-1*.json',
   'reports/url-index.md',
   ':(glob)reports/github-agent-index-*.md',
   ':(glob)reports/github-agent-index-*.json',
@@ -36,6 +37,7 @@ const TRACKED_PATTERNS = [
   ':(glob)reports/sprints/CI-LF-HARDEN-1-*',
   ':(glob)reports/sprints/CI-EVIDENCE-1-*',
   ':(glob)reports/sprints/CI-GATE-PROOF-1-*',
+  ':(glob)reports/sprints/CI-GOVERNANCE-1-*',
   ':(glob)reports/fixtures/gate-ci-proof1/*.md',
   ':(glob)reports/fixtures/gate-ci-proof1/*.json',
 ];

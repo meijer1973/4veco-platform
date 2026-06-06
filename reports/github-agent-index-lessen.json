@@ -2,7 +2,7 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-06-06T15:03:09.966Z",
+  "generated_at": "2026-06-06T15:32:44.909Z",
   "file_count": 1596,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [

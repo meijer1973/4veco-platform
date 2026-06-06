@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-GOVERNANCE-1",
+  "generated": "2026-06-06",
+  "status": "completed",
+  "plan": "reports/sprints/CI-GOVERNANCE-1-plan.md",
+  "baseline": "reports/sprints/CI-GOVERNANCE-1-baseline.md",
+  "result": "reports/sprints/CI-GOVERNANCE-1-result.md",
+  "diff_summary": "reports/sprints/CI-GOVERNANCE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "remote_ci": {
+    "workflow_name": "platform-ci",
+    "job_name": "validate-platform",
+    "status": "pending_after_push"
+  },
+  "branch_protection": {
+    "repo": "meijer1973/4veco-platform",
+    "branch": "main",
+    "strict": true,
+    "required_contexts": [
+      "validate-platform"
+    ],
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "enforced_in_default_ci": false,
+    "checker_mode": "local_manual"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-GOVERNANCE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CI-GOVERNANCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-branch-protection.js --repo meijer1973/4veco-platform --branch main",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:branch-protection -- --repo meijer1973/4veco-platform --branch main",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand build-scripts/ci/check-branch-protection.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js CI-GOVERNANCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js CI-GOVERNANCE-1",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/CI-GOVERNANCE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CI-GOVERNANCE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CI-GOVERNANCE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CI-GOVERNANCE-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "CI-PR-PROOF-1"
+}
