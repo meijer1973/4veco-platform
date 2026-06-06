@@ -296,7 +296,7 @@ async function completeCorrectPath(cdp, sessionId) {
       document.querySelector('.et-task-shell-check[data-task-id="' + graphId + '"]').click();
 
       const readingId = 'grafiekroute-aflezen';
-      document.querySelector('[data-task-id="' + readingId + '"][data-input-role="answer"]').value = '350';
+      document.querySelector('[data-task-id="' + readingId + '"][data-input-role="answer"]').value = '225';
       document.querySelector('.et-task-shell-check[data-task-id="' + readingId + '"]').click();
 
       const routeId = 'grafiekroute-kiezen';

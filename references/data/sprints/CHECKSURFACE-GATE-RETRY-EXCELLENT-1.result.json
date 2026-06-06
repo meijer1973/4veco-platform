@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
+  "status": "ready_for_direct_human_review",
+  "verdict": "PACKET_READY_NOT_REVIEWED_NOT_CLOSED",
+  "completed": "2026-06-06",
+  "result": "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-result.md",
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "review_packet": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md",
+  "generated_output_changed": false,
+  "protected_reference_data_changed": false,
+  "human_review_required": true,
+  "human_review_comments_started": false,
+  "gate_closure_authorized": false,
+  "lead_review_required": true,
+  "authority": {
+    "new_target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

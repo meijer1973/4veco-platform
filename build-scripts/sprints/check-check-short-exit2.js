@@ -145,17 +145,18 @@ function checkSourceFiles() {
   const shortGraphTask = findTask(graphShort, 'grafiekroute-starten');
   assert(shortGraphTask.family === 'graph_construction_substitute', '1.1.3 short task 1 must be graph construction');
   assert(shortGraphTask.practiceRoute.label === 'Oefen tabel naar grafiek', '1.1.3 short graph task must route to table-to-graph practice');
-  assert(shortGraphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', '1.1.3 short graph x ticks must be table-derived');
-  assert(shortGraphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', '1.1.3 short graph y ticks must be table-derived');
+  assert(shortGraphTask.interaction.hideAxisLabelsUntilAxisSelection === true, '1.1.3 short graph task must not reveal axis labels before selection');
+  assert(shortGraphTask.interaction.axes.x.ticks.join(',') === '0,100,150,200,250,300', '1.1.3 short graph x ticks must be table-derived');
+  assert(shortGraphTask.interaction.axes.y.ticks.join(',') === '0,2,2.5,3,3.5,4', '1.1.3 short graph y ticks must be table-derived');
   const shortGraphResult = TaskShellEngine.evaluateTask(shortGraphTask, {
     axes: { x: 'Q', y: 'P' },
-    points: [{ x: 400, y: 1.5 }, { x: 200, y: 2.5 }],
+    points: [{ x: 250, y: 2.5 }, { x: 150, y: 3.5 }],
     lineShape: 'decreasing',
   });
   assert(shortGraphResult.matched === true, '1.1.3 short graph construction must accept correct axes, points, and line');
   const shortReadingTask = findTask(graphShort, 'grafiekroute-aflezen');
-  const shortReadingResult = TaskShellEngine.evaluateTask(shortReadingTask, '350');
-  assert(shortReadingResult.matched === true, '1.1.3 short graph reading must accept 350');
+  const shortReadingResult = TaskShellEngine.evaluateTask(shortReadingTask, '225');
+  assert(shortReadingResult.matched === true, '1.1.3 short graph reading must accept 225');
   const shortRouteTask = findTask(graphShort, 'grafiekroute-kiezen');
   const shortRouteResult = TaskShellEngine.evaluateTask(shortRouteTask, 'tabel-naar-grafiek');
   assert(shortRouteResult.matched === true, '1.1.3 short route-advice task must accept tabel-naar-grafiek');
@@ -173,20 +174,25 @@ function checkSourceFiles() {
   for (const key of expected) assert(!hasHints(data[key]), `${key} must not expose content hints`);
 
   const graphData = data['1.1.3-exit-ticket'];
-  assert(Array.isArray(graphData.contextBlocks) && graphData.contextBlocks.length === 4, '1.1.3 exit ticket must have four context blocks');
+  assert(Array.isArray(graphData.contextBlocks) && graphData.contextBlocks.length === 3, '1.1.3 exit ticket must have source, table, and formula context blocks');
   assert(graphData.layout && graphData.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must opt into source/task workspace layout');
   assert(!graphData.contextBlocks.some((block) => block.id === 'ctx-icecream-prompt'), '1.1.3 source context must not render prompt block as source');
-  for (const id of ['ctx-icecream-source', 'ctx-icecream-table', 'ctx-icecream-formula', 'ctx-icecream-procedure']) {
+  assert(!graphData.contextBlocks.some((block) => /procedure|flowchart/i.test(`${block.id} ${block.type} ${block.caption || ''}`)), '1.1.3 exit ticket must not explain the procedure before the attempt');
+  for (const id of ['ctx-icecream-source', 'ctx-icecream-table', 'ctx-icecream-formula']) {
     assert(graphData.contextBlocks.some((block) => block.id === id), `1.1.3 context missing ${id}`);
   }
   const graphTask = findTask(graphData, 'grafiek-tekenen');
   assert(graphTask.family === 'graph_construction_substitute', '1.1.3 first task must be graph construction');
+  assert(graphTask.interaction.hideAxisLabelsUntilAxisSelection === true, '1.1.3 graph task must not reveal axis labels before selection');
   assert(graphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', '1.1.3 graph x ticks must be table-derived');
   assert(graphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', '1.1.3 graph y ticks must be table-derived');
   assert((graphTask.interaction.axisOptions || []).some((option) => option.label === 'Prijs P'), '1.1.3 graph axis choices must include Prijs P');
   assert((graphTask.interaction.axisOptions || []).some((option) => option.label === 'Hoeveelheid Q'), '1.1.3 graph axis choices must include Hoeveelheid Q');
   const halvingTask = findTask(graphData, 'halvering-controleren');
   assert(halvingTask.interaction.selectionMode === 'interval_halving_check', '1.1.3 task 3 must use interval_halving_check');
+  assert(halvingTask.interaction.intervalOptions.some((option) => option.correct === true), '1.1.3 interval task must include correct interval options');
+  assert(halvingTask.interaction.intervalOptions.some((option) => option.correct === false), '1.1.3 interval task must include plausible incorrect interval options');
+  assert(halvingTask.interaction.conclusionOptions.some((option) => option.correct === false), '1.1.3 interval task must include incorrect conclusion options');
 
   const graphResult = TaskShellEngine.evaluateTask(graphTask, {
     axes: { x: 'Q', y: 'P' },
@@ -194,12 +200,21 @@ function checkSourceFiles() {
     lineShape: 'decreasing',
   });
   assert(graphResult.matched === true, '1.1.3 graph construction must accept correct axes, points, and line');
+  const readingTask = findTask(graphData, 'grafiek-aflezen');
+  const readingResult = TaskShellEngine.evaluateTask(readingTask, '250');
+  assert(readingResult.matched === true, '1.1.3 graph reading must accept 250');
   const intervalResult = TaskShellEngine.evaluateTask(halvingTask, {
     work: '400 ijsjes naar 200 ijsjes; de helft van de oude hoeveelheid',
     finalAnswer: 'Q daalt met 50 procent',
     unitNotation: 'Q daalt met 50 procent',
   });
   assert(intervalResult.matched === true, '1.1.3 interval task must accept conclusion, not only interval text');
+  const incorrectInterval = TaskShellEngine.evaluateTask(halvingTask, {
+    work: '500 ijsjes naar 400 ijsjes; de helft van de oude hoeveelheid',
+    finalAnswer: 'Q daalt met 50 procent',
+    unitNotation: 'Q daalt met 50 procent',
+  });
+  assert(incorrectInterval.matched === false, '1.1.3 interval task must reject distractor intervals');
   const wrongInterval = TaskShellEngine.evaluateTask(halvingTask, {
     work: '400 ijsjes naar 200 ijsjes; het dubbele van de oude hoeveelheid',
     finalAnswer: 'Q daalt met 50 procent',
@@ -236,7 +251,7 @@ function checkSharedRuntime(data) {
   requireText(rendered, 'data-task-pane', 'task pane', 'rendered 1.1.3');
   requireText(rendered, 'data-sticky-question-strip', 'sticky task question strip', 'rendered 1.1.3');
   requireText(rendered, 'data-context-block="ctx-icecream-table"', 'table context block', 'rendered 1.1.3');
-  requireText(rendered, 'class="ts-graph-construction"', 'graph construction control', 'rendered 1.1.3');
+  requireText(rendered, /class="ts-graph-construction\b/, 'graph construction control', 'rendered 1.1.3');
   requireText(rendered, 'class="ts-graph-grid-line"', 'visible graph grid', 'rendered 1.1.3');
   requireText(rendered, 'data-graph-line-confirmation', 'line confirmation control', 'rendered 1.1.3');
   requireText(rendered, 'data-interval-halving-check', 'interval-halving control', 'rendered 1.1.3');
@@ -252,13 +267,13 @@ function checkSharedRuntime(data) {
     ExitTicketUI.buildSkillView(data['1.1.3-korte-check'], new ExitTicketEngine({ data: data['1.1.3-korte-check'] }), {})
   );
   requireText(renderedShort, 'data-task-context', 'short-check context block region', 'rendered 1.1.3 short');
-  requireText(renderedShort, 'data-context-block="ctx-icecream-short-table"', 'short-check table context block', 'rendered 1.1.3 short');
-  requireText(renderedShort, 'class="ts-graph-construction"', 'short-check graph construction control', 'rendered 1.1.3 short');
+  requireText(renderedShort, 'data-context-block="ctx-smoothie-short-table"', 'short-check table context block', 'rendered 1.1.3 short');
+  requireText(renderedShort, /class="ts-graph-construction\b/, 'short-check graph construction control', 'rendered 1.1.3 short');
   requireText(renderedShort, 'class="ts-graph-grid-line"', 'short-check visible graph grid', 'rendered 1.1.3 short');
   requireText(renderedShort, 'data-task-family="graph_reading"', 'short-check graph-reading task', 'rendered 1.1.3 short');
   requireText(renderedShort, 'data-task-family="table_value_selection"', 'short-check route-advice task', 'rendered 1.1.3 short');
-  assertSingleVisibleContextLabel(renderedShort, 'ctx-icecream-short-source', 'Bron 1', 'rendered 1.1.3 short');
-  assertSingleVisibleContextLabel(renderedShort, 'ctx-icecream-short-table', 'Tabel 1', 'rendered 1.1.3 short');
+  assertSingleVisibleContextLabel(renderedShort, 'ctx-smoothie-short-source', 'Bron 1', 'rendered 1.1.3 short');
+  assertSingleVisibleContextLabel(renderedShort, 'ctx-smoothie-short-table', 'Tabel 1', 'rendered 1.1.3 short');
   rejectText(renderedShort, /class="et-option"/i, 'ordinary choice-only controls', 'rendered 1.1.3 short');
 }
 

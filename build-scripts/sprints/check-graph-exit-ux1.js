@@ -84,7 +84,8 @@ function checkSource() {
   assert(data.targetEquivalent.completionLanguageEligible === false, '1.1.3 completion language must remain held');
   assert(data.metadataAlignment.targetReadinessEvidence === false, '1.1.3 must not claim target readiness');
   assert(data.layout && data.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must opt into source/task workspace');
-  assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 4, '1.1.3 exit ticket must retain four context blocks');
+  assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 3, '1.1.3 exit ticket must retain source/table/formula context blocks');
+  assert(!data.contextBlocks.some((block) => /procedure|flowchart/i.test(`${block.id} ${block.type} ${block.caption || ''}`)), '1.1.3 exit ticket must not expose procedure context before attempt');
   assert(data.contextBlocks.some((block) => block.type === 'table'), '1.1.3 exit ticket must include table context');
   assert(data.tasks.every((task) => task.type === 'task_shell'), '1.1.3 exit ticket must use task-shell tasks');
 
@@ -94,6 +95,7 @@ function checkSource() {
   assert(families.includes('calculation_work_capture'), '1.1.3 exit ticket must include calculation/halving task');
 
   const graphTask = findTask(data, 'grafiek-tekenen');
+  assert(graphTask.interaction.hideAxisLabelsUntilAxisSelection === true, 'graph task must hide axis labels before student axis selection');
   assert(graphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', 'graph x ticks must be table-derived');
   assert(graphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', 'graph y ticks must be table-derived');
   const graphResult = TaskShellEngine.evaluateTask(graphTask, {
@@ -102,9 +104,11 @@ function checkSource() {
     lineShape: 'decreasing',
   });
   assert(graphResult.matched === true, 'graph task must accept correct axes, points, and line');
-  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiek-aflezen'), '350');
-  assert(readingResult.matched === true, 'graph reading must accept 350');
-  const halvingResult = TaskShellEngine.evaluateTask(findTask(data, 'halvering-controleren'), {
+  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiek-aflezen'), '250');
+  assert(readingResult.matched === true, 'graph reading must accept 250');
+  const halvingTask = findTask(data, 'halvering-controleren');
+  assert(halvingTask.interaction.intervalOptions.some((option) => option.correct === false), 'halving task must include distractor intervals');
+  const halvingResult = TaskShellEngine.evaluateTask(halvingTask, {
     work: '400 ijsjes naar 200 ijsjes; de helft van de oude hoeveelheid',
     finalAnswer: 'Q daalt met 50 procent',
     unitNotation: 'Q daalt met 50 procent',
@@ -190,7 +194,7 @@ function checkProof() {
 function checkRoadmap() {
   const roadmap = read(path.join(ROOT, 'references', 'reference-team-roadmap.md'));
   requireText(roadmap, 'GRAPH-EXIT-UX-1', 'roadmap GRAPH-EXIT-UX-1 mention');
-  requireText(roadmap, '1.1.3` target-equivalent `Exit ticket` now uses split source/task graph workspace', 'roadmap graph-exit result');
+  requireText(roadmap, /GRAPH-EXIT-UX-1[\s\S]{0,400}baseline repair evidence|1\.1\.3` target-equivalent `Exit ticket` now uses split source\/task graph workspace/, 'roadmap graph-exit result');
   rejectText(roadmap, /GRAPH-EXIT-UX-1[\s\S]{0,700}Scale Gate 1 authorized/i, 'Scale Gate authorization');
 }
 

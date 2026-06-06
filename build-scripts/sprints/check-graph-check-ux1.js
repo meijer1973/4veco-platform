@@ -109,26 +109,27 @@ function checkSource() {
 
   const graphTask = findTask(data, 'grafiekroute-starten');
   assert(graphTask.practiceRoute.label === 'Oefen tabel naar grafiek', 'graph task must route to table-to-graph practice');
-  assert(graphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', 'short-check x ticks must be table-derived');
-  assert(graphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', 'short-check y ticks must be table-derived');
+  assert(graphTask.interaction.hideAxisLabelsUntilAxisSelection === true, 'short-check graph task must delay axis labels until selection');
+  assert(graphTask.interaction.axes.x.ticks.join(',') === '0,100,150,200,250,300', 'short-check x ticks must be table-derived');
+  assert(graphTask.interaction.axes.y.ticks.join(',') === '0,2,2.5,3,3.5,4', 'short-check y ticks must be table-derived');
   assert((graphTask.interaction.axisOptions || []).some((option) => option.label === 'Prijs P'), 'axis options must include Prijs P');
   assert((graphTask.interaction.axisOptions || []).some((option) => option.label === 'Hoeveelheid Q'), 'axis options must include Hoeveelheid Q');
 
   const graphResult = TaskShellEngine.evaluateTask(graphTask, {
     axes: { x: 'Q', y: 'P' },
-    points: [{ x: 400, y: 1.5 }, { x: 200, y: 2.5 }],
+    points: [{ x: 250, y: 2.5 }, { x: 150, y: 3.5 }],
     lineShape: 'decreasing',
   });
   assert(graphResult.matched === true, 'short-check graph task must accept correct axes, points, and line');
   const wrongGraph = TaskShellEngine.evaluateTask(graphTask, {
     axes: { x: 'P', y: 'Q' },
-    points: [{ x: 400, y: 1.5 }, { x: 200, y: 2.5 }],
+    points: [{ x: 250, y: 2.5 }, { x: 150, y: 3.5 }],
     lineShape: 'decreasing',
   });
   assert(wrongGraph.matched === false, 'short-check graph task must reject swapped axes');
 
-  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiekroute-aflezen'), '350');
-  assert(readingResult.matched === true, 'short-check graph reading must accept 350');
+  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiekroute-aflezen'), '225');
+  assert(readingResult.matched === true, 'short-check graph reading must accept 225');
   const routeResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiekroute-kiezen'), 'tabel-naar-grafiek');
   assert(routeResult.matched === true, 'short-check route task must accept table-to-graph route');
 
@@ -141,15 +142,16 @@ function checkRendered(data) {
     ExitTicketUI.buildSkillView(data, new ExitTicketEngine({ data }), {})
   );
   requireText(html, 'data-task-context', 'context region');
-  requireText(html, 'data-context-block="ctx-icecream-short-table"', 'table context block');
+  requireText(html, 'data-context-block="ctx-smoothie-short-table"', 'table context block');
   requireText(html, 'class="ts-context-table"', 'rendered table');
-  requireText(html, 'class="ts-graph-construction"', 'graph construction workspace');
+  requireText(html, /class="ts-graph-construction\b/, 'graph construction workspace');
+  requireText(html, 'data-hide-axis-guides-until-selection="true"', 'delayed graph axis guides');
   requireText(html, 'class="ts-graph-grid-line"', 'graph grid lines');
   requireText(html, 'data-graph-line-confirmation', 'line confirmation button');
   requireText(html, 'data-task-family="graph_reading"', 'graph reading task');
   requireText(html, 'data-task-family="table_value_selection"', 'table-value route task');
-  assertSingleVisibleContextLabel(html, 'ctx-icecream-short-source', 'Bron 1');
-  assertSingleVisibleContextLabel(html, 'ctx-icecream-short-table', 'Tabel 1');
+  assertSingleVisibleContextLabel(html, 'ctx-smoothie-short-source', 'Bron 1');
+  assertSingleVisibleContextLabel(html, 'ctx-smoothie-short-table', 'Tabel 1');
   rejectText(html, /class="et-option"/i, 'ordinary choice-only controls');
   rejectText(html, /\b(?:diagnostisch|mastery|sequencing|Scale Gate|PV)\b/i, 'forbidden authority copy');
 }
@@ -160,7 +162,7 @@ function checkGeneratedOutput() {
   const taskShellCss = read(path.join(BOOK_ROOT, 'shared', 'task-shell.css'));
   requireText(shortPage, 'shared/exit-ticket/1.1.3-korte-check.js', 'short-check data loader');
   requireText(dataFile, 'graph_construction_substitute', 'deployed graph task family');
-  requireText(dataFile, 'ctx-icecream-short-table', 'deployed short-check table context');
+  requireText(dataFile, 'ctx-smoothie-short-table', 'deployed short-check table context');
   requireText(taskShellCss, '.ts-graph-grid-line', 'deployed graph grid CSS');
 }
 
@@ -195,7 +197,7 @@ function checkProof() {
 function checkRoadmapAndBoundary() {
   const roadmap = read(path.join(ROOT, 'references', 'reference-team-roadmap.md'));
   requireText(roadmap, 'GRAPH-CHECK-UX-1', 'roadmap GRAPH-CHECK-UX-1 mention');
-  requireText(roadmap, '1.1.3` advisory `Korte check` now uses graph/table task-shell interaction', 'roadmap graph-check result');
+  requireText(roadmap, /GRAPH-CHECK-UX-1[\s\S]{0,400}baseline repair evidence|1\.1\.3` advisory `Korte check` now uses graph\/table task-shell interaction/, 'roadmap graph-check result');
   rejectText(roadmap, /GRAPH-CHECK-UX-1[\s\S]{0,700}Scale Gate 1 authorized/i, 'Scale Gate authorization');
 }
 

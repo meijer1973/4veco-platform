@@ -382,7 +382,7 @@ async function completeAllTasks(cdp, sessionId) {
       }
 
       const readingId = 'grafiek-aflezen';
-      document.querySelector('[data-task-id="' + readingId + '"][data-input-role="answer"]').value = '350';
+      document.querySelector('[data-task-id="' + readingId + '"][data-input-role="answer"]').value = '250';
       document.querySelector('.et-task-shell-check[data-task-id="' + readingId + '"]').click();
 
       const intervalId = 'halvering-controleren';
@@ -409,7 +409,7 @@ function assertInspection(result, label, options = {}) {
   if (!result.sourceTaskWorkspace) throw new Error(`${label}: expected source/task workspace\n${detail}`);
   if (!result.sourcePane || !result.taskPane) throw new Error(`${label}: expected source and task panes\n${detail}`);
   if (!result.stickyQuestionStrip) throw new Error(`${label}: expected sticky question strip\n${detail}`);
-  if (result.contextBlocks < 4) throw new Error(`${label}: expected four context blocks\n${detail}`);
+  if (result.contextBlocks < 3) throw new Error(`${label}: expected source/table/formula context blocks\n${detail}`);
   if (result.tableCount < 1) throw new Error(`${label}: expected rendered table\n${detail}`);
   if (result.taskShellCount < 3) throw new Error(`${label}: expected three task-shell cards\n${detail}`);
   if (!result.graphWorkspace) throw new Error(`${label}: expected graph workspace\n${detail}`);

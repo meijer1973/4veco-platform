@@ -1000,6 +1000,99 @@ describe('TaskShellEngine', () => {
         ]);
     });
 
+    test('requires interval-halving selectors to include distractor intervals and conclusions', () => {
+        const intervalTask = baseTask({
+            id: 'halvering-controleren',
+            family: 'calculation_work_capture',
+            skillLabel: 'Halvering controleren',
+            prompt: 'Kies een interval en controleer of Q daar met 50 procent daalt.',
+            interaction: {
+                workLabel: 'Controle',
+                finalAnswerLabel: 'Conclusie',
+                unitNotationLabel: 'Relatie',
+                selectionMode: 'interval_halving_check',
+                intervalLabel: 'Interval',
+                intervalOptions: [
+                    {
+                        id: 'interval-150-250',
+                        label: 'P stijgt van 1,50 naar 2,50: Q gaat van 400 naar 200.',
+                        finalAnswer: 'Q daalt met 50 procent',
+                        oldQuantity: '400',
+                        newQuantity: '200',
+                        work: '400 naar 200',
+                        correct: true
+                    },
+                    {
+                        id: 'interval-100-150',
+                        label: 'P stijgt van 1,00 naar 1,50: Q gaat van 500 naar 400.',
+                        finalAnswer: 'Q daalt met 20 procent',
+                        oldQuantity: '500',
+                        newQuantity: '400',
+                        work: '500 naar 400',
+                        correct: false
+                    }
+                ],
+                relationLabel: 'Relatie',
+                relationOptions: [
+                    { id: 'halveert', label: 'Q halveert.' },
+                    { id: 'niet-halveert', label: 'Q halveert niet.' }
+                ],
+                conclusionLabel: 'Conclusie',
+                conclusionOptions: [
+                    { id: 'vijftig', label: 'Q daalt met 50 procent.', finalAnswer: 'Q daalt met 50 procent', correct: true },
+                    { id: 'twintig', label: 'Q daalt met 20 procent.', finalAnswer: 'Q daalt met 20 procent', correct: false }
+                ]
+            },
+            expected: {
+                kind: 'calculation',
+                finalAnswer: { kind: 'text', accepted: ['Q daalt met 50 procent'] },
+                unitNotation: { kind: 'text', accepted: ['Q daalt met 50 procent'], required: false },
+                workRequired: true,
+                requiredWorkText: [
+                    { label: 'old quantity', any: ['400'] },
+                    { label: 'new quantity', any: ['200'] }
+                ]
+            }
+        });
+
+        expect(TaskShellEngine.validateTask(intervalTask)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(intervalTask, {
+            work: '400 naar 200',
+            finalAnswer: 'Q daalt met 50 procent',
+            unitNotation: 'Q daalt met 50 procent'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        expect(() => TaskShellEngine.validateTask({
+            ...intervalTask,
+            interaction: {
+                ...intervalTask.interaction,
+                intervalOptions: intervalTask.interaction.intervalOptions.map((option) => ({ ...option, correct: true }))
+            }
+        })).toThrow(/intervalOptions must include at least one distractor interval/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...intervalTask,
+            interaction: {
+                ...intervalTask.interaction,
+                conclusionOptions: intervalTask.interaction.conclusionOptions.map((option) => ({ ...option, correct: true }))
+            }
+        })).toThrow(/conclusionOptions must include at least one distractor conclusion/);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...intervalTask,
+            interaction: {
+                ...intervalTask.interaction,
+                intervalOptions: [
+                    { ...intervalTask.interaction.intervalOptions[0] },
+                    { ...intervalTask.interaction.intervalOptions[1], correct: undefined }
+                ]
+            }
+        })).toThrow(/intervalOptions\[1\]\.correct must be boolean/);
+    });
+
     test('supports deterministic short responses with required text groups', () => {
         const explanation = baseTask({
             id: 'indexpunten-uitleg',

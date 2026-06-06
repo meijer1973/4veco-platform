@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-EXCELLENCE-AUDIT-3P",
+  "generated": "2026-06-06",
+  "status": "passed_for_renewed_packet_preparation",
+  "matrix": "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md",
+  "surfaces": [
+    {
+      "paragraph": "1.1.1",
+      "short_check": {
+        "purpose": "local_advisory_concept_check",
+        "student_action": "choice_concept_recognition",
+        "target_equivalent_evidence": false,
+        "feedback_next_action": true
+      },
+      "exit_ticket": {
+        "purpose": "held_target_equivalent_candidate",
+        "student_action": "calculation_work_capture_and_structured_short_response",
+        "completion_language_eligible": false,
+        "feedback_next_action": true
+      },
+      "pair_independent": true
+    },
+    {
+      "paragraph": "1.1.2",
+      "short_check": {
+        "purpose": "local_advisory_basis_and_notation_check",
+        "student_action": "choice_sampling",
+        "target_equivalent_evidence": false,
+        "feedback_next_action": true
+      },
+      "exit_ticket": {
+        "purpose": "reviewed_local_target_equivalent_proof",
+        "student_action": "calculation_work_capture_and_d31_explanation",
+        "completion_language_eligible": true,
+        "feedback_next_action": true
+      },
+      "pair_independent": true
+    },
+    {
+      "paragraph": "1.1.3",
+      "short_check": {
+        "purpose": "local_graph_table_route_advice",
+        "student_action": "graph_construction_graph_reading_table_route_choice",
+        "target_equivalent_evidence": false,
+        "feedback_next_action": true,
+        "context": "smoothie_table",
+        "axis_labels_delayed": true
+      },
+      "exit_ticket": {
+        "purpose": "held_graph_table_target_equivalent_candidate",
+        "student_action": "source_table_formula_graph_construction_graph_reading_interval_halving",
+        "completion_language_eligible": false,
+        "feedback_next_action": true,
+        "context": "ice_cream_source_table_formula",
+        "procedure_context_removed": true,
+        "axis_labels_delayed": true,
+        "interval_distractors_present": true
+      },
+      "pair_independent": true
+    }
+  ],
+  "proof_dependencies": {
+    "policy_regression": "reports/json/checksurface-policy-regression1-proof.json",
+    "check_short_exit2": "reports/json/check-short-exit2-proof.json",
+    "route_copy": "reports/json/check-route-copy1-proof.json",
+    "graph_check": "reports/json/graph-check-ux1-proof.json",
+    "graph_exit": "reports/json/graph-exit-ux1-proof.json",
+    "visual_qa": "reports/json/visual-qa-harden2-proof.json"
+  },
+  "quality": {
+    "all_six_surfaces_named": true,
+    "student_action_named_for_each_surface": true,
+    "short_exit_independence_checked": true,
+    "answer_giveaway_guarded": true,
+    "feedback_next_action_checked": true,
+    "authority_checked": true
+  },
+  "authority": {
+    "new_target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

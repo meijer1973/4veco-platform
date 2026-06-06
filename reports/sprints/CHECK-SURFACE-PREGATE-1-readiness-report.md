@@ -6,8 +6,11 @@ Generated: 2026-06-05
 
 PASS WITH FLAGS for retry-packet preparation.
 
-This report prepares the next direct human retry packet. It does not start or
-close `GATE-CHECK-SHORT-EXIT-2-RETRY`.
+This historical report prepared the next direct human retry packet at the time.
+That old retry packet is now superseded by
+`GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review`. This
+report remains baseline pregate evidence; it does not start or close any
+human gate.
 
 ## Pregate Checks
 
@@ -39,12 +42,12 @@ Verdict: `PASS WITH FLAGS`.
 
 ## Carried Flags
 
-- Direct human review is still required for `GATE-CHECK-SHORT-EXIT-2-RETRY`.
+- Direct human review is still required for the renewed excellent packet.
 - `1.1.1` and `1.1.3` completion language remains held.
 - Product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1,
   and student/product use remain unauthorized.
 
 ## Required Next Action
 
-Prepare and publish `GATE-CHECK-SHORT-EXIT-2-RETRY` as a direct human review
-packet after this sprint is validated, committed, and pushed.
+Use the renewed `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review`
+packet for direct human review comments after validation, commit, and push.

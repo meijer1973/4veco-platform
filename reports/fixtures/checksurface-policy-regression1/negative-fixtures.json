@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "fixture_set": "CHECKSURFACE-POLICY-REGRESSION-1",
+  "created": "2026-06-06",
+  "fixtures": [
+    {
+      "id": "duplicate_short_exit_surface",
+      "expected_violation": "duplicate_surface",
+      "description": "Short check and exit ticket use the same context and same graph tasks.",
+      "payload": {
+        "short": {
+          "surface": "advisory_short_check",
+          "parNr": "1.1.3",
+          "intro": "Gebruik de ijstabel en teken de grafiek.",
+          "contextBlocks": [
+            { "id": "ctx-table", "type": "table", "caption": "Prijzentabel ijsjes", "rows": [["1", "500"], ["3", "100"]] }
+          ],
+          "tasks": [
+            { "type": "task_shell", "taskShell": { "id": "graph", "family": "graph_construction_substitute", "prompt": "Teken de prijsvraaglijn voor ijsjes." } }
+          ]
+        },
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "intro": "Gebruik de ijstabel en teken de grafiek.",
+          "contextBlocks": [
+            { "id": "ctx-table", "type": "table", "caption": "Prijzentabel ijsjes", "rows": [["1", "500"], ["3", "100"]] }
+          ],
+          "tasks": [
+            { "type": "task_shell", "taskShell": { "id": "graph", "family": "graph_construction_substitute", "prompt": "Teken de prijsvraaglijn voor ijsjes." } }
+          ]
+        }
+      }
+    },
+    {
+      "id": "exit_ticket_teaches_procedure",
+      "expected_violation": "procedure_giveaway",
+      "description": "Exit ticket explains the graph procedure before the student attempts it.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "intro": "Teken eerst de assen, zet P op de verticale as, zet Q op de horizontale as en verbind daarna de punten.",
+          "contextBlocks": [
+            { "id": "ctx-procedure", "type": "flowchart", "caption": "Procedure: stap 1 kies assen, stap 2 verbind punten." }
+          ],
+          "tasks": []
+        }
+      }
+    },
+    {
+      "id": "graph_axis_answer_visible",
+      "expected_violation": "answer_giveaway",
+      "description": "Graph construction reveals axis labels and scale before the axis choice.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "graph",
+                "family": "graph_construction_substitute",
+                "prompt": "Teken de grafiek.",
+                "interaction": {
+                  "hideAxisLabelsUntilAxisSelection": false,
+                  "axes": {
+                    "x": { "label": "Hoeveelheid Q", "ticks": [0, 100, 200] },
+                    "y": { "label": "Prijs P", "ticks": [0, 1, 2] }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "choice_only_graph_substitute",
+      "expected_violation": "choice_only_substitution",
+      "description": "A graph/table target is reduced to a generic choice question.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "tasks": [
+            {
+              "id": "graph-choice",
+              "type": "choice",
+              "skillLabel": "Grafiek tekenen",
+              "prompt": "Welke grafiek hoort bij de tabel?",
+              "options": [
+                { "id": "a", "label": "Dalende lijn" },
+                { "id": "b", "label": "Stijgende lijn" }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "interval_selector_correct_only",
+      "expected_violation": "correct_only_interval",
+      "description": "The interval selector contains only correct intervals.",
+      "payload": {
+        "task": {
+          "id": "interval",
+          "family": "calculation_work_capture",
+          "prompt": "Kies een interval.",
+          "interaction": {
+            "selectionMode": "interval_halving_check",
+            "intervalOptions": [
+              { "id": "a", "label": "400 naar 200", "workText": "400 naar 200", "relationText": "daalt met 50 procent", "correct": true },
+              { "id": "b", "label": "200 naar 100", "workText": "200 naar 100", "relationText": "daalt met 50 procent", "correct": true }
+            ],
+            "conclusionOptions": [
+              { "id": "c", "label": "Q daalt met 50 procent", "finalAnswer": "Q daalt met 50 procent", "correct": true },
+              { "id": "d", "label": "Q daalt met de helft", "finalAnswer": "Q daalt met de helft", "correct": true }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "selector_without_distractor_bank",
+      "expected_violation": "correct_only_selector",
+      "description": "A construction bank contains only answer items.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "formula",
+                "family": "formula_builder",
+                "prompt": "Bouw de formule.",
+                "interaction": {
+                  "tokens": [
+                    { "id": "nieuw-min-oud", "label": "nieuw - oud", "kind": "answer", "category": "numerator" },
+                    { "id": "delen-door-oud", "label": "/ oud", "kind": "answer", "category": "denominator" }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "graph_line_outside_workspace",
+      "expected_violation": "graph_workspace",
+      "description": "Graph proof records that the line is drawn outside the active graph workspace.",
+      "payload": {
+        "proof": {
+          "graphLineInsideWorkspace": false,
+          "activeWorkspaceVisible": true
+        }
+      }
+    },
+    {
+      "id": "missing_feedback_next_action",
+      "expected_violation": "missing_feedback_or_next_action",
+      "description": "Task has no feedback and no practice route.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "tasks": [
+            {
+              "id": "bare-choice",
+              "type": "choice",
+              "skillLabel": "Grafiek lezen",
+              "prompt": "Wat lees je af?",
+              "options": [
+                { "id": "a", "label": "100" },
+                { "id": "b", "label": "200" }
+              ],
+              "answer": "a"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "completion_language_overclaim",
+      "expected_violation": "authority_overclaim",
+      "description": "Held 1.1.3 candidate claims target-equivalent completion.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "targetEquivalent": {
+            "candidate": true,
+            "gateApproved": false,
+            "completionLanguageEligible": true
+          },
+          "metadataAlignment": {
+            "targetReadinessEvidence": true
+          },
+          "completion": {
+            "title": "Paragraaf bewezen",
+            "text": "Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt."
+          },
+          "tasks": []
+        }
+      }
+    },
+    {
+      "id": "reviewed_112_authority_broadened",
+      "expected_violation": "authority_overclaim",
+      "description": "Approved 1.1.2 completion authority is broadened beyond the reviewed local copy.",
+      "payload": {
+        "exit": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.2",
+          "targetEquivalent": {
+            "candidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": true
+          },
+          "metadataAlignment": {
+            "targetReadinessEvidence": true
+          },
+          "completion": {
+            "title": "Je beheerst deze paragraaf",
+            "text": "Je mag automatisch door naar de volgende paragraaf."
+          },
+          "tasks": []
+        }
+      }
+    }
+  ]
+}

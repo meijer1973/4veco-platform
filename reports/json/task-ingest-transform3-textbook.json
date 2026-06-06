@@ -408,6 +408,15 @@
           "intervalLabel": "Kies ??n interval",
           "intervalOptions": [
             {
+              "id": "interval-100-150",
+              "label": "EUR 1,00 -> EUR 1,50",
+              "finalAnswer": "EUR 1.00 tot EUR 1.50",
+              "oldQuantity": "500 ijsjes",
+              "newQuantity": "400 ijsjes",
+              "work": "500 naar 400; nieuwe Q is niet de helft van oude Q",
+              "correct": false
+            },
+            {
               "id": "interval-150-250",
               "label": "EUR 1,50 -> EUR 2,50",
               "finalAnswer": "EUR 1.50 tot EUR 2.50",
@@ -417,6 +426,15 @@
               "correct": true
             },
             {
+              "id": "interval-200-250",
+              "label": "EUR 2,00 -> EUR 2,50",
+              "finalAnswer": "EUR 2.00 tot EUR 2.50",
+              "oldQuantity": "300 ijsjes",
+              "newQuantity": "200 ijsjes",
+              "work": "300 naar 200; nieuwe Q is niet de helft van oude Q",
+              "correct": false
+            },
+            {
               "id": "interval-250-300",
               "label": "EUR 2,50 -> EUR 3,00",
               "finalAnswer": "EUR 2.50 tot EUR 3.00",
@@ -424,6 +442,15 @@
               "newQuantity": "100 ijsjes",
               "work": "200 naar 100; nieuwe Q is de helft van oude Q",
               "correct": true
+            },
+            {
+              "id": "interval-100-300",
+              "label": "EUR 1,00 -> EUR 3,00",
+              "finalAnswer": "EUR 1.00 tot EUR 3.00",
+              "oldQuantity": "500 ijsjes",
+              "newQuantity": "100 ijsjes",
+              "work": "500 naar 100; nieuwe Q is minder dan de helft van oude Q",
+              "correct": false
             }
           ],
           "relationLabel": "De nieuwe hoeveelheid is...",
@@ -452,12 +479,14 @@
             {
               "id": "q-daalt-25",
               "label": "Q daalt met 25 procent",
-              "finalAnswer": "Q daalt met 25 procent"
+              "finalAnswer": "Q daalt met 25 procent",
+              "correct": false
             },
             {
               "id": "q-stijgt-50",
               "label": "Q stijgt met 50 procent",
-              "finalAnswer": "Q stijgt met 50 procent"
+              "finalAnswer": "Q stijgt met 50 procent",
+              "correct": false
             }
           ],
           "workLabel": "Bronwaarden",

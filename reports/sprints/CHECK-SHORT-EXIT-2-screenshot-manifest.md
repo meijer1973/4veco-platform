@@ -1,6 +1,6 @@
 # CHECK-SHORT-EXIT-2 Screenshot Manifest
 
-Generated: 2026-06-05
+Generated: 2026-06-06
 
 Rendered Book 1 check-surface proof. Screenshots are captured from the generated lesson target through a local static server.
 

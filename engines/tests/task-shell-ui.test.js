@@ -876,6 +876,7 @@ describe('TaskShellUI', () => {
     test('exports graph-construction helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectGraphConstructionResponse).toBe('function');
         expect(typeof TaskShellUI.handleGraphConstructionClick).toBe('function');
+        expect(typeof TaskShellUI.handleGraphConstructionChange).toBe('function');
         const graphTask = data().tasks.find((task) => task.id === 'construct');
         expect(TaskShellEngine.focusPlan(graphTask)).toEqual([
             '[data-task-id="construct"][data-graph-axis="x"]',
@@ -883,6 +884,33 @@ describe('TaskShellUI', () => {
             '[data-task-id="construct"][data-graph-point-index]',
             '[data-task-id="construct"][data-graph-line-confirmation]'
         ]);
+    });
+
+    test('renders delayed graph axis guides as neutral until the student chooses axes', () => {
+        const graphTask = {
+            ...data().tasks.find((task) => task.id === 'construct'),
+            interaction: {
+                ...data().tasks.find((task) => task.id === 'construct').interaction,
+                hideAxisLabelsUntilAxisSelection: true,
+                axes: {
+                    x: { label: 'Hoeveelheid Q', min: 0, max: 20, ticks: [0, 10, 20] },
+                    y: { label: 'Prijs P', min: 0, max: 4, ticks: [0, 2, 4] }
+                }
+            }
+        };
+        const html = TaskShellUI.renderStaticHtml({
+            schema_version: 1,
+            title: 'Graph delayed guides',
+            tasks: [graphTask]
+        });
+
+        expect(html).toContain('ts-graph-hide-axis-guides');
+        expect(html).toContain('data-hide-axis-guides-until-selection="true"');
+        expect(html).toContain('data-graph-tick-layer');
+        expect(html).toContain('data-graph-axis-label="x">Kies horizontale as</div>');
+        expect(html).toContain('data-graph-axis-label="y">Kies verticale as</div>');
+        expect(html).not.toContain('data-graph-axis-label="x">Hoeveelheid Q</div>');
+        expect(html).not.toContain('data-graph-axis-label="y">Prijs P</div>');
     });
 
     test('exports cloze text helpers for consuming wrappers', () => {

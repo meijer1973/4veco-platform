@@ -251,7 +251,9 @@ function main() {
       ready_to_prepare_retry_packet: true,
       human_gate_started: false,
       closure_authorized: false,
-      next_action: 'GATE-CHECK-SHORT-EXIT-2-RETRY packet preparation',
+      next_action: 'superseded by CHECKSURFACE-GATE-RETRY-EXCELLENT-1 renewed packet preparation',
+      superseded_old_retry_packet: 'GATE-CHECK-SHORT-EXIT-2-RETRY',
+      renewed_packet: 'GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review',
     },
     screenshots: requiredScreenshots.map((relPath) => ({
       path: relPath,
@@ -269,8 +271,11 @@ Generated: 2026-06-05
 
 ${proof.status === 'complete' ? 'PASS WITH FLAGS for retry-packet preparation.' : 'BLOCKED.'}
 
-This report prepares the next direct human retry packet. It does not start or
-close \`GATE-CHECK-SHORT-EXIT-2-RETRY\`.
+This historical report prepared the next direct human retry packet at the time.
+That old retry packet is now superseded by
+\`GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review\`. This
+report remains baseline pregate evidence; it does not start or close any
+human gate.
 
 ## Pregate Checks
 
@@ -292,15 +297,15 @@ Verdict: \`PASS WITH FLAGS\`.
 
 ## Carried Flags
 
-- Direct human review is still required for \`GATE-CHECK-SHORT-EXIT-2-RETRY\`.
+- Direct human review is still required for the renewed excellent packet.
 - \`1.1.1\` and \`1.1.3\` completion language remains held.
 - Product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1,
   and student/product use remain unauthorized.
 
 ## Required Next Action
 
-Prepare and publish \`GATE-CHECK-SHORT-EXIT-2-RETRY\` as a direct human review
-packet after this sprint is validated, committed, and pushed.
+Use the renewed \`GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review\`
+packet for direct human review comments after validation, commit, and push.
 `;
 
   writeText(files.report, report);

@@ -148,7 +148,8 @@ function checkSourceStillMatchesRubric() {
   assert(shortFamilies.has('table_value_selection'), '1.1.3 short check must keep table value/route selection');
 
   assert(exitSource.layout && exitSource.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must keep source/task workspace layout');
-  assert(Array.isArray(exitSource.contextBlocks) && exitSource.contextBlocks.length === 4, '1.1.3 exit ticket must keep four context blocks');
+  assert(Array.isArray(exitSource.contextBlocks) && exitSource.contextBlocks.length === 3, '1.1.3 exit ticket must keep source/table/formula context blocks');
+  assert(!exitSource.contextBlocks.some((block) => /procedure|flowchart/i.test(`${block.id} ${block.type} ${block.caption || ''}`)), '1.1.3 exit ticket must not expose a procedure context block');
   assert(exitFamilies.has('graph_construction_substitute'), '1.1.3 exit ticket must keep graph construction substitute');
   assert(exitFamilies.has('graph_reading'), '1.1.3 exit ticket must keep graph reading');
   assert(exitFamilies.has('calculation_work_capture'), '1.1.3 exit ticket must keep calculation/halving task');

@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "sprint_id": "GRAPH-EXIT-UX-1",
-  "generated": "2026-06-05T20:22:17.394Z",
+  "generated": "2026-06-06T08:15:02.080Z",
   "status": "complete",
   "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
-  "local_url": "http://127.0.0.1:57540/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+  "local_url": "http://127.0.0.1:55689/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
   "authority": {
     "product_route_adoption_authorized": false,
     "new_target_equivalent_completion_language_authorized": false,
@@ -20,7 +20,7 @@
     "source_pane_scrollable": true,
     "first_graph_task_visible_initial": true,
     "task_visible_after_source_scroll": true,
-    "context_block_count": 4,
+    "context_block_count": 3,
     "task_shell_count": 3,
     "graph_workspace_present": true,
     "grid_visible": true,
@@ -41,7 +41,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -55,7 +55,7 @@
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 796,
-          "scrollHeight": 1443,
+          "scrollHeight": 1043,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
@@ -69,8 +69,8 @@
         },
         "taskPaneRect": {
           "top": 390,
-          "bottom": 2407,
-          "height": 2017,
+          "bottom": 2427,
+          "height": 2037,
           "visible": true
         },
         "graphRect": {
@@ -86,7 +86,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-initial.png"
     },
@@ -94,7 +94,7 @@
       "id": "desktop-source-scrolled",
       "status": "PASS",
       "scroll": {
-        "scrollTop": 647,
+        "scrollTop": 247,
         "taskPaneVisible": true
       },
       "inspection": {
@@ -103,7 +103,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -117,8 +117,8 @@
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 796,
-          "scrollHeight": 1443,
-          "scrollTop": 647,
+          "scrollHeight": 1043,
+          "scrollTop": 247,
           "overflowY": "auto",
           "constrained": true,
           "scrollable": true
@@ -131,8 +131,8 @@
         },
         "taskPaneRect": {
           "top": 390,
-          "bottom": 2407,
-          "height": 2017,
+          "bottom": 2427,
+          "height": 2037,
           "visible": true
         },
         "graphRect": {
@@ -148,7 +148,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-source-scrolled.png"
     },
@@ -165,7 +165,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -181,7 +181,7 @@
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 796,
-          "scrollHeight": 1443,
+          "scrollHeight": 1043,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
@@ -195,8 +195,8 @@
         },
         "taskPaneRect": {
           "top": 390,
-          "bottom": 2590,
-          "height": 2200,
+          "bottom": 2610,
+          "height": 2220,
           "visible": true
         },
         "graphRect": {
@@ -212,7 +212,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-wrong-retry.png"
     },
@@ -230,7 +230,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -246,7 +246,7 @@
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 796,
-          "scrollHeight": 1443,
+          "scrollHeight": 1043,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
@@ -260,8 +260,8 @@
         },
         "taskPaneRect": {
           "top": -134,
-          "bottom": 2041,
-          "height": 2175,
+          "bottom": 2061,
+          "height": 2195,
           "visible": true
         },
         "graphRect": {
@@ -277,7 +277,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png"
     },
@@ -286,7 +286,7 @@
       "status": "PASS",
       "correct": {
         "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-        "readingFeedback": "Aflezing past EUR 1,75 ligt halverwege 1,50 en 2,00. De hoeveelheid ligt daarom rond 350 ijsjes. Oefen grafiek aflezen",
+        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
         "intervalFeedback": "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering",
         "matchFeedbackCount": 3,
         "completionVisible": false,
@@ -305,7 +305,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -317,33 +317,33 @@
         "retryFeedback": [],
         "matchFeedback": [
           "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-          "Aflezing past EUR 1,75 ligt halverwege 1,50 en 2,00. De hoeveelheid ligt daarom rond 350 ijsjes. Oefen grafiek aflezen",
+          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
           "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering"
         ],
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 796,
-          "scrollHeight": 1443,
+          "scrollHeight": 1043,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
           "scrollable": true
         },
         "firstTaskRect": {
-          "top": -1565,
-          "bottom": -547,
+          "top": -1585,
+          "bottom": -567,
           "height": 1018,
           "visible": false
         },
         "taskPaneRect": {
-          "top": -1691,
+          "top": -1711,
           "bottom": 852,
-          "height": 2543,
+          "height": 2563,
           "visible": true
         },
         "graphRect": {
-          "top": -1277,
-          "bottom": -937,
+          "top": -1297,
+          "bottom": -957,
           "height": 340,
           "visible": false
         },
@@ -354,7 +354,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-completed-held.png"
     },
@@ -367,7 +367,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -381,7 +381,7 @@
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 388,
-          "scrollHeight": 1548,
+          "scrollHeight": 1087,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
@@ -395,8 +395,8 @@
         },
         "taskPaneRect": {
           "top": 1088,
-          "bottom": 3218,
-          "height": 2131,
+          "bottom": 3258,
+          "height": 2171,
           "visible": false
         },
         "graphRect": {
@@ -412,7 +412,7 @@
           "width": 390,
           "height": 844
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-initial.png"
     },
@@ -421,7 +421,7 @@
       "status": "PASS",
       "correct": {
         "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-        "readingFeedback": "Aflezing past EUR 1,75 ligt halverwege 1,50 en 2,00. De hoeveelheid ligt daarom rond 350 ijsjes. Oefen grafiek aflezen",
+        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
         "intervalFeedback": "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering",
         "matchFeedbackCount": 3,
         "completionVisible": false,
@@ -440,7 +440,7 @@
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 4,
+        "contextBlocks": 3,
         "tableCount": 2,
         "taskCount": 3,
         "taskShellCount": 3,
@@ -452,33 +452,33 @@
         "retryFeedback": [],
         "matchFeedback": [
           "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-          "Aflezing past EUR 1,75 ligt halverwege 1,50 en 2,00. De hoeveelheid ligt daarom rond 350 ijsjes. Oefen grafiek aflezen",
+          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
           "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering"
         ],
         "completionVisible": false,
         "sourcePaneMetrics": {
           "clientHeight": 388,
-          "scrollHeight": 1548,
+          "scrollHeight": 1087,
           "scrollTop": 0,
           "overflowY": "auto",
           "constrained": true,
           "scrollable": true
         },
         "firstTaskRect": {
-          "top": -1810,
-          "bottom": -684,
+          "top": -1850,
+          "bottom": -724,
           "height": 1126,
           "visible": false
         },
         "taskPaneRect": {
-          "top": -1959,
+          "top": -1999,
           "bottom": 796,
-          "height": 2756,
+          "height": 2796,
           "visible": true
         },
         "graphRect": {
-          "top": -1408,
-          "bottom": -1108,
+          "top": -1448,
+          "bottom": -1148,
           "height": 300,
           "visible": false
         },
@@ -489,7 +489,7 @@
           "width": 390,
           "height": 844
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel en het grafiekwerkvlak. Teken eerst de P-Q-grafiek, lees daarna af en controleer de daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Formule 1 - Procentuele verandering"
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-dark-completed-held.png"
     }

@@ -44,31 +44,31 @@
   },
   "contextBlocks": [
     {
-      "id": "ctx-icecream-short-source",
+      "id": "ctx-smoothie-short-source",
       "type": "source_excerpt",
       "sourceLabel": "Bron 1",
-      "caption": "Bron 1: IJskraam op het strand",
-      "bodyMarkdown": "Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten.",
+      "caption": "Bron 1: Smoothiekraam na school",
+      "bodyMarkdown": "Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt.",
       "sourceRefs": [
         "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - paragraaf.md"
       ],
-      "accessibilitySummary": "Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek."
+      "accessibilitySummary": "Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek."
     },
     {
-      "id": "ctx-icecream-short-table",
+      "id": "ctx-smoothie-short-table",
       "type": "table",
       "sourceLabel": "Tabel 1",
-      "caption": "Tabel 1: Prijs en verkochte ijsjes",
-      "sourceMaterialId": "textbook-1-1-3-icecream-pq-table-short-check",
+      "caption": "Tabel 1: Prijs en verkochte smoothies",
+      "sourceMaterialId": "short-check-1-1-3-smoothie-pq-table",
       "columns": ["Prijs P (EUR)", "Aantal verkocht Q"],
       "rows": [
-        ["1.00", "500"],
-        ["1.50", "400"],
         ["2.00", "300"],
-        ["2.50", "200"],
-        ["3.00", "100"]
+        ["2.50", "250"],
+        ["3.00", "200"],
+        ["3.50", "150"],
+        ["4.00", "100"]
       ],
-      "altText": "Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes."
+      "altText": "Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies."
     }
   ],
   "tasks": [
@@ -80,8 +80,8 @@
         "family": "graph_construction_substitute",
         "skillLabel": "P-Q-grafiek starten",
         "purpose": "Kies de assen en zet twee tabelpunten in het grafiekwerkvlak.",
-        "prompt": "Gebruik Tabel 1. Kies de P-Q-assen, klik de punten bij EUR 1,50 en EUR 2,50 en trek de lijn.",
-        "contextRefs": ["ctx-icecream-short-source", "ctx-icecream-short-table"],
+        "prompt": "Gebruik Tabel 1. Bepaal zelf welke variabele op welke as komt, klik de punten bij EUR 2,50 en EUR 3,50 en trek de lijn.",
+        "contextRefs": ["ctx-smoothie-short-source", "ctx-smoothie-short-table"],
         "interaction": {
           "workspaceTitle": "Grafiekwerkvlak",
           "xAxisLabel": "Horizontale as",
@@ -92,20 +92,21 @@
           "xInputLabel": "Q-waarde",
           "yInputLabel": "P-waarde",
           "emptyGraphAltText": "P-Q-diagram met raster voor de korte check.",
+          "hideAxisLabelsUntilAxisSelection": true,
           "pointCount": 2,
           "axes": {
             "x": {
-              "label": "Hoeveelheid Q (ijsjes)",
+              "label": "Hoeveelheid Q (smoothies)",
               "min": 0,
-              "max": 500,
-              "ticks": [0, 100, 200, 300, 400, 500],
+              "max": 300,
+              "ticks": [0, 100, 150, 200, 250, 300],
               "tickDecimals": 0
             },
             "y": {
               "label": "Prijs P (EUR)",
               "min": 0,
-              "max": 3,
-              "ticks": [0, 1, 1.5, 2, 2.5, 3],
+              "max": 4,
+              "ticks": [0, 2, 2.5, 3, 3.5, 4],
               "tickDecimals": 2,
               "tickFormat": "decimal_comma"
             }
@@ -124,8 +125,8 @@
             "yAccepted": ["prijs p", "prijs", "p"]
           },
           "points": [
-            { "x": 400, "y": 1.5 },
-            { "x": 200, "y": 2.5 }
+            { "x": 250, "y": 2.5 },
+            { "x": 150, "y": 3.5 }
           ],
           "toleranceX": 0.01,
           "toleranceY": 0.01,
@@ -135,7 +136,7 @@
           "matchTitle": "Grafiekroute gestart",
           "matchText": "Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak.",
           "retryTitle": "Controleer assen en tabelpunten",
-          "retryText": "Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 1,50 en EUR 2,50."
+          "retryText": "Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50."
         },
         "practiceRoute": {
           "label": "Oefen tabel naar grafiek",
@@ -151,22 +152,22 @@
         "family": "graph_reading",
         "skillLabel": "Grafiek aflezen",
         "purpose": "Lees tussen twee tabelpunten een hoeveelheid af.",
-        "prompt": "Lees af hoeveel ijsjes ongeveer worden verkocht bij een prijs van EUR 1,75.",
-        "contextRefs": ["ctx-icecream-short-source", "ctx-icecream-short-table"],
+        "prompt": "Lees af hoeveel smoothies ongeveer worden verkocht bij een prijs van EUR 2,75.",
+        "contextRefs": ["ctx-smoothie-short-source", "ctx-smoothie-short-table"],
         "interaction": {
           "inputLabel": "Afgelezen hoeveelheid Q"
         },
         "expected": {
           "kind": "number",
-          "value": 350,
+          "value": 225,
           "tolerance": 5,
-          "unit": "ijsjes"
+          "unit": "smoothies"
         },
         "feedback": {
           "matchTitle": "Aflezing past",
-          "matchText": "EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes.",
+          "matchText": "EUR 2,75 ligt tussen EUR 2,50 en EUR 3,00. Q ligt daarom rond 225 smoothies.",
           "retryTitle": "Lees tussen twee rijen af",
-          "retryText": "Gebruik de tabel en je lijn: 1,75 ligt halverwege 1,50 en 2,00."
+          "retryText": "Gebruik de tabel en je lijn: 2,75 ligt halverwege 2,50 en 3,00."
         },
         "practiceRoute": {
           "label": "Oefen grafieken aflezen",
@@ -183,7 +184,7 @@
         "skillLabel": "Volgende oefenstap kiezen",
         "purpose": "Kies welke oefenroute past bij wat je net controleerde.",
         "prompt": "Welke volgende stap past het best als assen kiezen of punten plaatsen nog onzeker voelt?",
-        "contextRefs": ["ctx-icecream-short-source", "ctx-icecream-short-table"],
+        "contextRefs": ["ctx-smoothie-short-source", "ctx-smoothie-short-table"],
         "interaction": {
           "inputLabel": "Oefenstap",
           "options": [

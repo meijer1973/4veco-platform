@@ -1002,6 +1002,11 @@
                 t = t.parentNode;
             }
         });
+        if (els.exStepSlot) els.exStepSlot.addEventListener('change', function (e) {
+            if (window.TaskShellUI && window.TaskShellUI.handleGraphConstructionChange && window.TaskShellUI.handleGraphConstructionChange(els.exStepSlot, e)) {
+                return;
+            }
+        });
         if (els.exStepSlot) els.exStepSlot.addEventListener('keydown', function (e) {
             if (!e.target) return;
             if (e.target.id === 'st-numeric-input' && (e.key === 'Enter' || e.keyCode === 13)) {

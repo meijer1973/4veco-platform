@@ -497,7 +497,13 @@
     var axes = task.interaction.axes;
     var xTicks = graphTickLabels(axes.x, 'x');
     var yTicks = graphTickLabels(axes.y, 'y');
-    return '<div class="ts-graph-construction" data-graph-construction-task="' + escapeHtml(task.id) + '" ' +
+    var hideGuides = task.interaction.hideAxisLabelsUntilAxisSelection === true;
+    var guideClass = hideGuides ? ' ts-graph-hide-axis-guides' : '';
+    var guideData = hideGuides ? ' data-hide-axis-guides-until-selection="true"' : '';
+    var xLabel = hideGuides ? 'Kies horizontale as' : axes.x.label;
+    var yLabel = hideGuides ? 'Kies verticale as' : axes.y.label;
+    return '<div class="ts-graph-construction' + guideClass + '" data-graph-construction-task="' + escapeHtml(task.id) + '" ' +
+      guideData +
       'data-x-min="' + escapeHtml(axes.x.min) + '" data-x-max="' + escapeHtml(axes.x.max) + '" ' +
       'data-y-min="' + escapeHtml(axes.y.min) + '" data-y-max="' + escapeHtml(axes.y.max) + '" ' +
       'data-x-ticks="' + escapeHtml((axes.x.ticks || []).join('|')) + '" data-y-ticks="' + escapeHtml((axes.y.ticks || []).join('|')) + '">' +
@@ -515,10 +521,10 @@
             '<line class="ts-graph-axis-line ts-graph-axis-y" x1="0" y1="0" x2="0" y2="100"></line>' +
           '</svg>' +
           '<div class="ts-graph-live-layer" data-graph-live-layer aria-hidden="true"></div>' +
-          '<div class="ts-graph-tick-layer" aria-hidden="true">' + xTicks + yTicks + '</div>' +
+          '<div class="ts-graph-tick-layer" data-graph-tick-layer aria-hidden="true">' + xTicks + yTicks + '</div>' +
         '</div>' +
-        '<div class="ts-graph-axis-label ts-graph-axis-label-x">' + escapeHtml(axes.x.label) + '</div>' +
-        '<div class="ts-graph-axis-label ts-graph-axis-label-y">' + escapeHtml(axes.y.label) + '</div>' +
+        '<div class="ts-graph-axis-label ts-graph-axis-label-x" data-graph-axis-label="x">' + escapeHtml(xLabel) + '</div>' +
+        '<div class="ts-graph-axis-label ts-graph-axis-label-y" data-graph-axis-label="y">' + escapeHtml(yLabel) + '</div>' +
       '</div>' +
       '<details class="ts-graph-point-fallback">' +
         '<summary>' + escapeHtml(task.interaction.pointRowsLabel) + '</summary>' +
@@ -1398,6 +1404,28 @@
     };
   }
 
+  function selectedAxisLabel(control) {
+    if (!control) return '';
+    var selected = control.options && control.selectedIndex >= 0 ? control.options[control.selectedIndex] : null;
+    return selected && selected.value ? selected.textContent : '';
+  }
+
+  function updateGraphAxisGuideState(construction) {
+    if (!construction || construction.getAttribute('data-hide-axis-guides-until-selection') !== 'true') return;
+    var xControl = construction.querySelector('[data-graph-axis="x"]');
+    var yControl = construction.querySelector('[data-graph-axis="y"]');
+    var xLabel = construction.querySelector('[data-graph-axis-label="x"]');
+    var yLabel = construction.querySelector('[data-graph-axis-label="y"]');
+    var tickLayer = construction.querySelector('[data-graph-tick-layer]');
+    var xText = selectedAxisLabel(xControl);
+    var yText = selectedAxisLabel(yControl);
+    if (xLabel) xLabel.textContent = xText || 'Kies horizontale as';
+    if (yLabel) yLabel.textContent = yText || 'Kies verticale as';
+    var ready = Boolean(xText && yText);
+    construction.classList.toggle('ts-graph-guides-selected', ready);
+    if (tickLayer) tickLayer.setAttribute('aria-hidden', ready ? 'false' : 'true');
+  }
+
   function handleSourceValueSelectionClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var sourceValues = event.target.closest('.ts-source-values');
@@ -1451,6 +1479,16 @@
     setGraphPointValue(construction, pointIndex, 'y', graphDisplayValue(yValue));
     construction.setAttribute('data-next-graph-point', String(pointIndex + 1));
     updateGraphConstructionVisual(construction);
+    return true;
+  }
+
+  function handleGraphConstructionChange(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var axisControl = event.target.closest('[data-graph-axis]');
+    if (!axisControl || !rootEl.contains(axisControl)) return false;
+    var construction = axisControl.closest('.ts-graph-construction');
+    if (!construction) return false;
+    updateGraphAxisGuideState(construction);
     return true;
   }
 
@@ -2562,6 +2600,7 @@
     handleLabelPlacementClick: handleLabelPlacementClick,
     collectGraphConstructionResponse: collectGraphConstructionResponse,
     handleGraphConstructionClick: handleGraphConstructionClick,
+    handleGraphConstructionChange: handleGraphConstructionChange,
     buildContextIndex: buildContextIndex,
     renderContextBlocks: renderContextBlocks,
     renderTask: renderTask,

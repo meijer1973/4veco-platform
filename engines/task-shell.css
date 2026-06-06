@@ -1819,6 +1819,15 @@
   text-align: center;
 }
 
+.ts-graph-hide-axis-guides:not(.ts-graph-guides-selected) .ts-graph-tick-layer {
+  visibility: hidden;
+}
+
+.ts-graph-hide-axis-guides:not(.ts-graph-guides-selected) .ts-graph-axis-label {
+  color: color-mix(in srgb, var(--ts-muted) 70%, transparent);
+  font-weight: 700;
+}
+
 .ts-graph-axis-label-x {
   grid-area: xlabel;
 }

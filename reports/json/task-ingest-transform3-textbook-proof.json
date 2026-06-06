@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "TASK-INGEST-TRANSFORM-3-TEXTBOOK",
-  "generated": "2026-06-05T14:25:23.363Z",
+  "generated": "2026-06-06T08:30:06.058Z",
   "status": "playable_repair_proof_complete",
   "lab": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-rendered-lab.html",
   "screenshot_manifest": "reports/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK-screenshot-manifest.md",
@@ -18,7 +18,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -158,7 +158,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -192,7 +192,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -251,7 +251,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -292,7 +292,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -432,7 +432,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -466,7 +466,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -538,7 +538,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -579,7 +579,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -719,7 +719,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -753,7 +753,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -825,7 +825,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -866,7 +866,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -1006,7 +1006,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -1040,7 +1040,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -1099,7 +1099,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -1140,7 +1140,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -1280,7 +1280,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -1314,7 +1314,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -1386,7 +1386,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -1427,7 +1427,7 @@
       },
       "screenshot_dimensions": {
         "width": 1280,
-        "height": 3108
+        "height": 3204
       },
       "proof": {
         "theme": "light",
@@ -1567,7 +1567,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -1601,7 +1601,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -1673,7 +1673,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -1714,7 +1714,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4127
+        "height": 4223
       },
       "proof": {
         "theme": "light",
@@ -1854,7 +1854,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -1888,7 +1888,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -1960,7 +1960,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,
@@ -2001,7 +2001,7 @@
       },
       "screenshot_dimensions": {
         "width": 390,
-        "height": 4127
+        "height": 4223
       },
       "proof": {
         "theme": "dark",
@@ -2141,7 +2141,7 @@
           },
           "calculation_work_capture": {
             "cards": 1,
-            "controls": 4,
+            "controls": 7,
             "valueBank": false,
             "roleBank": false,
             "sequenceBuilder": false,
@@ -2175,7 +2175,7 @@
             "carriedValueReady": false,
             "carryRequiresPreviousTask": false,
             "intervalHalvingCheck": true,
-            "intervalChoiceCount": 2,
+            "intervalChoiceCount": 5,
             "halvingConclusionControl": true,
             "autoFilledQuantitiesVisible": true,
             "progressiveSupport": false,
@@ -2247,7 +2247,7 @@
             "tabel1": 0
           }
         ],
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 15,
         "checkButtonCount": 3,
         "taskInstructionCount": 3,
         "valueBankCount": 0,

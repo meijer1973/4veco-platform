@@ -200,12 +200,14 @@ function checkReportAndRoadmap() {
   const report = read(files.report);
   requireText(report, 'PASS WITH FLAGS for retry-packet preparation', 'readiness verdict', files.report);
   requireText(report, 'Student-Experience Judgement', 'student section', files.report);
-  requireText(report, 'GATE-CHECK-SHORT-EXIT-2-RETRY', 'retry gate next action', files.report);
+  requireText(report, 'GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review', 'renewed retry gate next action', files.report);
   rejectText(report, /gate closes|Scale Gate 1 authorized|product-route adoption authorized/i, 'closure or authority overclaim', files.report);
 
   const roadmap = read(files.roadmap);
-  requireText(roadmap, 'CHECK-SURFACE-PREGATE-1` is complete', 'roadmap completion marker', files.roadmap);
-  requireText(roadmap, 'GATE-CHECK-SHORT-EXIT-2-RETRY` is next', 'roadmap next action marker', files.roadmap);
+  requireText(roadmap, 'CHECK-SURFACE-PREGATE-1', 'roadmap pregate mention', files.roadmap);
+  requireText(roadmap, /CHECK-SURFACE-PREGATE-1[\s\S]{0,500}baseline repair evidence/, 'roadmap superseded-baseline marker', files.roadmap);
+  requireText(roadmap, 'CHECKSURFACE-POLICY-REGRESSION-1', 'roadmap inserted policy-regression next action', files.roadmap);
+  rejectText(roadmap, /Direct human\s+review comments are next/i, 'stale direct-review next action', files.roadmap);
 }
 
 function main() {

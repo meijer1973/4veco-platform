@@ -22,7 +22,7 @@
         "width": 1280,
         "height": 900
       },
-      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek"
     },
     "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png"
   },
@@ -30,7 +30,7 @@
     "id": "desktop-wrong-retry",
     "status": "PASS",
     "retry": {
-      "feedback": "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 1,50 en EUR 2,50. Oefen tabel naar grafiek",
+      "feedback": "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek",
       "state": "et-feedback is-retry"
     },
     "inspection": {
@@ -45,7 +45,7 @@
       "graphLine": false,
       "ordinaryChoiceButtons": 0,
       "retryFeedback": [
-        "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 1,50 en EUR 2,50. Oefen tabel naar grafiek"
+        "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek"
       ],
       "matchFeedback": [],
       "completionVisible": false,
@@ -55,7 +55,7 @@
         "width": 1280,
         "height": 900
       },
-      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek"
     },
     "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-wrong-retry.png"
   },
@@ -63,8 +63,8 @@
     "id": "desktop-route-advice",
     "status": "PASS",
     "correct": {
-      "graphFeedback": "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
-      "readingFeedback": "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+      "graphFeedback": "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek",
+      "readingFeedback": "Aflezing past EUR 2,75 ligt tussen EUR 2,50 en EUR 3,00. Q ligt daarom rond 225 smoothies. Oefen grafieken aflezen",
       "routeFeedback": "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek",
       "completionVisible": true,
       "graphLine": true,
@@ -81,10 +81,11 @@
       "graphPoints": 2,
       "graphLine": true,
       "ordinaryChoiceButtons": 0,
-      "retryFeedback": [],
+      "retryFeedback": [
+        "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek"
+      ],
       "matchFeedback": [
-        "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
-        "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+        "Aflezing past EUR 2,75 ligt tussen EUR 2,50 en EUR 3,00. Q ligt daarom rond 225 smoothies. Oefen grafieken aflezen",
         "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek"
       ],
       "completionVisible": true,
@@ -94,7 +95,7 @@
         "width": 1280,
         "height": 900
       },
-      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek"
     },
     "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png"
   },
@@ -121,7 +122,7 @@
         "width": 390,
         "height": 844
       },
-      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek"
     },
     "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png"
   },
@@ -129,8 +130,8 @@
     "id": "mobile-dark-route-advice",
     "status": "PASS",
     "correct": {
-      "graphFeedback": "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
-      "readingFeedback": "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+      "graphFeedback": "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek",
+      "readingFeedback": "Aflezing past EUR 2,75 ligt tussen EUR 2,50 en EUR 3,00. Q ligt daarom rond 225 smoothies. Oefen grafieken aflezen",
       "routeFeedback": "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek",
       "completionVisible": true,
       "graphLine": true,
@@ -147,10 +148,11 @@
       "graphPoints": 2,
       "graphLine": true,
       "ordinaryChoiceButtons": 0,
-      "retryFeedback": [],
+      "retryFeedback": [
+        "Controleer assen en tabelpunten Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50. Oefen tabel naar grafiek"
+      ],
       "matchFeedback": [
-        "Grafiekroute gestart Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak. Oefen tabel naar grafiek",
-        "Aflezing past EUR 1,75 ligt tussen EUR 1,50 en EUR 2,00. Q ligt daarom rond 350 ijsjes. Oefen grafieken aflezen",
+        "Aflezing past EUR 2,75 ligt tussen EUR 2,50 en EUR 3,00. Q ligt daarom rond 225 smoothies. Oefen grafieken aflezen",
         "Goede reparatieroute Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek. Ga naar tabel naar grafiek"
       ],
       "completionVisible": true,
@@ -160,7 +162,7 @@
         "width": 390,
         "height": 844
       },
-      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand Een ijskraam ziet dat de verkochte hoeveelheid ijsjes verandert als de prijs verandert. Gebruik de tabel om snel te controleren of je de P-Q-grafiek kunt starten. Korte tekstbron met een ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 100 Taak 1 P-Q-grafiek starten Grafiek con"
+      "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek"
     },
     "screenshot": "reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-dark-route-advice.png"
   }

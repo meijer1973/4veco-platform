@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
+  "name": "Renewed Excellent Check-Surface Gate Packet",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md",
+  "human_review_required": true,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_human_gate",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "source_exit_ticket_writes_allowed": false,
+  "product_route_adoption_authorized": false,
+  "scale_gate_1_authorized": false,
+  "scope": [
+    "Create renewed direct human-review packet and review lab.",
+    "Supersede the old GATE-CHECK-SHORT-EXIT-2-RETRY packet.",
+    "Cite policy/regression proof, redesigned output, audit matrix, screenshots, and proof JSON.",
+    "Publish the packet and evidence to the remote branch before review."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+    "node build-scripts/sprints/check-bundle-urls.js GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review --branch codex/check-short-exit-2",
+    "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+    "node build-scripts/sprints/check-check-short-exit2.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal"
+  ],
+  "forbidden": [
+    "No gate closure without returned human comments and resolution log.",
+    "No new target-equivalent completion language.",
+    "No diagnostics, adaptive routing, mastery, sequencing, PV, Scale Gate 1, or student/product use.",
+    "No local-only review packet unless explicitly ordered by the user."
+  ]
+}

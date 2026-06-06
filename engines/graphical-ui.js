@@ -588,6 +588,11 @@
       graphConstruction.addEventListener("click", function (event) {
         window.TaskShellUI.handleGraphConstructionClick(rootEl, event);
       });
+      graphConstruction.addEventListener("change", function (event) {
+        if (window.TaskShellUI.handleGraphConstructionChange) {
+          window.TaskShellUI.handleGraphConstructionChange(rootEl, event);
+        }
+      });
     });
     rootEl.querySelectorAll(".ts-choice").forEach(function (button) {
       button.addEventListener("click", function () {
