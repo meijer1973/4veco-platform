@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-06T15:03:09.933Z
+Generated: 2026-06-06T15:37:04.623Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3458
+Files indexed: 3473
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 410
+Count: 412
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -138,6 +138,8 @@ Count: 410
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
 - build-scripts/books/README.md
+- build-scripts/ci/check-branch-protection.js
+- build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/ci/platform-ci-evidence.js
@@ -586,8 +588,10 @@ Count: 42
 
 ## validators
 
-Count: 222
+Count: 224
 
+- build-scripts/ci/check-branch-protection.js
+- build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/rag/validate-chunks.js
@@ -813,7 +817,7 @@ Count: 222
 
 ## references
 
-Count: 480
+Count: 482
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -880,6 +884,8 @@ Count: 480
 - references/data/sprints/CI-EVIDENCE-1.result.json
 - references/data/sprints/CI-GATE-PROOF-1.plan.json
 - references/data/sprints/CI-GATE-PROOF-1.result.json
+- references/data/sprints/CI-GOVERNANCE-1.plan.json
+- references/data/sprints/CI-GOVERNANCE-1.result.json
 - references/data/sprints/CI-LF-HARDEN-1.plan.json
 - references/data/sprints/CI-LF-HARDEN-1.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
@@ -1298,7 +1304,7 @@ Count: 480
 
 ## reports
 
-Count: 2135
+Count: 2146
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2122,6 +2128,17 @@ Count: 2135
 - reports/sprints/CI-GATE-PROOF-1-plan.md
 - reports/sprints/CI-GATE-PROOF-1-planning-review.md
 - reports/sprints/CI-GATE-PROOF-1-result.md
+- reports/sprints/CI-GOVERNANCE-1-baseline.md
+- reports/sprints/CI-GOVERNANCE-1-command-log.jsonl
+- reports/sprints/CI-GOVERNANCE-1-command-log.md
+- reports/sprints/CI-GOVERNANCE-1-diff-summary.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-assignment.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-corrections.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-round1.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-round2.md
+- reports/sprints/CI-GOVERNANCE-1-plan.md
+- reports/sprints/CI-GOVERNANCE-1-planning-review.md
+- reports/sprints/CI-GOVERNANCE-1-result.md
 - reports/sprints/CI-LF-HARDEN-1-baseline.md
 - reports/sprints/CI-LF-HARDEN-1-command-log.jsonl
 - reports/sprints/CI-LF-HARDEN-1-command-log.md
