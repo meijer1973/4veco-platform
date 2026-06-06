@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T15:11:50.538Z
+Generated: 2026-06-06T14:54:51.672Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3396
+Files indexed: 3458
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 404
+Count: 410
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -138,6 +138,10 @@ Count: 404
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
 - build-scripts/books/README.md
+- build-scripts/ci/check-evidence-line-endings.js
+- build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/ci/platform-ci-evidence.js
+- build-scripts/ci/platform-ci-evidence.test.js
 - build-scripts/content/book-1/b1-111-alt-text.js
 - build-scripts/content/book-1/b1-111-inoefening.js
 - build-scripts/content/book-1/b1-111-nieuws.js
@@ -449,6 +453,8 @@ Count: 404
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-gate-ci-proof.js
+- build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -580,8 +586,10 @@ Count: 42
 
 ## validators
 
-Count: 218
+Count: 222
 
+- build-scripts/ci/check-evidence-line-endings.js
+- build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
@@ -688,6 +696,8 @@ Count: 218
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-gate-ci-proof.js
+- build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
 - build-scripts/sprints/check-graph-ux2-route-output.js
 - build-scripts/sprints/check-l1-7b-q2-copy.js
@@ -803,7 +813,7 @@ Count: 218
 
 ## references
 
-Count: 474
+Count: 480
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -866,6 +876,12 @@ Count: 474
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
+- references/data/sprints/CI-EVIDENCE-1.plan.json
+- references/data/sprints/CI-EVIDENCE-1.result.json
+- references/data/sprints/CI-GATE-PROOF-1.plan.json
+- references/data/sprints/CI-GATE-PROOF-1.result.json
+- references/data/sprints/CI-LF-HARDEN-1.plan.json
+- references/data/sprints/CI-LF-HARDEN-1.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
 - references/data/sprints/CI-REMOTE-1.result.json
 - references/data/sprints/CI-REMOTE-1A.plan.json
@@ -1282,7 +1298,7 @@ Count: 474
 
 ## reports
 
-Count: 2086
+Count: 2135
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1292,6 +1308,14 @@ Count: 2086
 - reports/dead-units.md
 - reports/evidence-anchor-status.md
 - reports/exam-question-extraction-gaps.md
+- reports/fixtures/gate-ci-proof1/negative-conclusion-failure.md
+- reports/fixtures/gate-ci-proof1/negative-local-command-log.md
+- reports/fixtures/gate-ci-proof1/negative-missing-commit.md
+- reports/fixtures/gate-ci-proof1/negative-missing-run-id.md
+- reports/fixtures/gate-ci-proof1/negative-run-no-reviewed-commit.md
+- reports/fixtures/gate-ci-proof1/negative-vague-waiver.md
+- reports/fixtures/gate-ci-proof1/positive-json.json
+- reports/fixtures/gate-ci-proof1/positive-markdown.md
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
@@ -1980,10 +2004,18 @@ Count: 2086
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.json
 - reports/review-gates/GATE-RX6-skilltree-generator-integration/technical-closure.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/bundle-urls.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/closure-proposal.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/comment-resolution-log.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-comment-resolution-log.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/final-direct-review-comments.md
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.json
+- reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.json
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/live-output-evidence.md
 - reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/renewed-comment-resolution-log.json
@@ -2068,6 +2100,39 @@ Count: 2086
 - reports/sprints/CHECK-SHORT-EXIT-1-plan.md
 - reports/sprints/CHECK-SHORT-EXIT-1-planning-review.md
 - reports/sprints/CHECK-SHORT-EXIT-1-result.md
+- reports/sprints/CI-EVIDENCE-1-baseline.md
+- reports/sprints/CI-EVIDENCE-1-command-log.jsonl
+- reports/sprints/CI-EVIDENCE-1-command-log.md
+- reports/sprints/CI-EVIDENCE-1-diff-summary.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-assignment.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-corrections.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-round1.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-round2.md
+- reports/sprints/CI-EVIDENCE-1-plan.md
+- reports/sprints/CI-EVIDENCE-1-planning-review.md
+- reports/sprints/CI-EVIDENCE-1-result.md
+- reports/sprints/CI-GATE-PROOF-1-baseline.md
+- reports/sprints/CI-GATE-PROOF-1-command-log.jsonl
+- reports/sprints/CI-GATE-PROOF-1-command-log.md
+- reports/sprints/CI-GATE-PROOF-1-diff-summary.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-assignment.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-corrections.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-round1.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-round2.md
+- reports/sprints/CI-GATE-PROOF-1-plan.md
+- reports/sprints/CI-GATE-PROOF-1-planning-review.md
+- reports/sprints/CI-GATE-PROOF-1-result.md
+- reports/sprints/CI-LF-HARDEN-1-baseline.md
+- reports/sprints/CI-LF-HARDEN-1-command-log.jsonl
+- reports/sprints/CI-LF-HARDEN-1-command-log.md
+- reports/sprints/CI-LF-HARDEN-1-diff-summary.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-assignment.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-corrections.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-round1.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-round2.md
+- reports/sprints/CI-LF-HARDEN-1-plan.md
+- reports/sprints/CI-LF-HARDEN-1-planning-review.md
+- reports/sprints/CI-LF-HARDEN-1-result.md
 - reports/sprints/CI-REMOTE-1-baseline.md
 - reports/sprints/CI-REMOTE-1-command-log.jsonl
 - reports/sprints/CI-REMOTE-1-command-log.md
@@ -3391,7 +3456,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 293
+Count: 294
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -3540,6 +3605,7 @@ Count: 293
 - docs/roadmaps/outdated/reference-team-roadmap-v3.48-cloze-text-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
+- docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md

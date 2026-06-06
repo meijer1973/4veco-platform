@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T15:12:10.378Z",
+  "generatedAt": "2026-06-06T14:54:51.634Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3252,7 +3252,35 @@
               "sprint": "CHECK-SHORT-EXIT-2",
               "name": "Implement Both Check Types For First Three Paragraphs",
               "completed": "no",
-              "currentState": "Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch.",
+              "currentState": "Post-review repair sequence remains open until renewed direct human comments and closure evidence exist. The earlier platform retry packet is superseded. The inserted platform sequence `CHECKSURFACE-POLICY-REGRESSION-1` -> `CHECKSURFACE-EXCELLENCE-REDESIGN-1` -> `CHECKSURFACE-EXCELLENCE-AUDIT-3P` -> `CHECKSURFACE-GATE-RETRY-EXCELLENT-1` is complete as packet preparation: policy/checker added, `1.1.3` short/exit redesigned, Book 1 output regenerated through platform deploy, proof/screenshots refreshed, audit matrix recorded, and renewed packet prepared. Next action after push: direct human review comments on `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review`. Keep generated lesson output deploy-only; no new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CHECKSURFACE-POLICY-REGRESSION-1",
+              "name": "Check-Surface Policy And Regression Memory",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / POLICY AND REGRESSION ONLY.** Platform added durable shared-task/check-surface policy plus negative fixtures/checker. No generated lesson output or product authority.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CHECKSURFACE-EXCELLENCE-REDESIGN-1",
+              "name": "Check-Surface Excellence Redesign",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform repaired `1.1.3` short-check and exit-ticket source/runtime behavior and regenerated Book 1 output through deploy. `1.1.3` remains a held candidate; no new completion language or product authority.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CHECKSURFACE-EXCELLENCE-AUDIT-3P",
+              "name": "First-Three Check-Surface Excellence Audit",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / AUDIT ONLY.** Platform recorded six-surface audit proof for `1.1.1`-`1.1.3`. No gate closure or product authority.",
+              "exitGate": ""
+            },
+            {
+              "sprint": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
+              "name": "Renewed Excellent Check-Surface Gate Packet",
+              "completed": "yes",
+              "currentState": "**PACKET PREPARATION COMPLETE / HUMAN COMMENTS NOT STARTED.** Platform prepared a new direct human-review packet that supersedes the old retry packet and cites refreshed proof. No gate closure before returned comments and resolution log.",
               "exitGate": ""
             },
             {
@@ -3528,7 +3556,7 @@
           "sprint": "CHECK-SHORT-EXIT-2",
           "name": "Implement Both Check Types For First Three Paragraphs",
           "completed": "no",
-          "currentState": "Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or a human waiver explicitly records consequences. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or explicit blockers. `1.1.3` graph/table proof must use source context and reconstructed visuals rather than another narrow patch.",
+          "currentState": "Post-review repair sequence remains open until renewed direct human comments and closure evidence exist. The earlier platform retry packet is superseded. The inserted platform sequence `CHECKSURFACE-POLICY-REGRESSION-1` -> `CHECKSURFACE-EXCELLENCE-REDESIGN-1` -> `CHECKSURFACE-EXCELLENCE-AUDIT-3P` -> `CHECKSURFACE-GATE-RETRY-EXCELLENT-1` is complete as packet preparation: policy/checker added, `1.1.3` short/exit redesigned, Book 1 output regenerated through platform deploy, proof/screenshots refreshed, audit matrix recorded, and renewed packet prepared. Next action after push: direct human review comments on `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review`. Keep generated lesson output deploy-only; no new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -4059,9 +4087,41 @@
           "currentState": "**CLOSED PASS WITH FLAGS / REVIEW-LAB REPAIR EVIDENCE ONLY.** Platform preserved three-card economy and review-only boundaries while replacing exam select-all-numbers task 1 with conceptual setup, accepting `649` plus reasonable yearly unit variants and `22x12 = 264, 264 + 385 = 649` shortcut work, adding targeted feedback and progressive support, drawing the textbook graph line inside the same workspace, attaching axis selectors to the graph, keeping grid visible from the start while hiding labels/scale until correct axes, using table-derived graph ticks, simplifying the 50 percent follow-up with conclusion acceptance and shared `interval_halving_check` focus-plan evidence, removing duplicate visible Bron/Tabel labels, strengthening visual QA/checkers/screenshots, adding lead-review/verification artifacts, refreshing the review packet, and keeping `GATE-SHARED-TASK-INGEST-REPAIR-1` open. No gate closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CHECKSURFACE-POLICY-REGRESSION-1",
+          "name": "Check-Surface Policy And Regression Memory",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / POLICY AND REGRESSION ONLY.** Platform added durable shared-task/check-surface policy plus negative fixtures/checker. No generated lesson output or product authority.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CHECKSURFACE-EXCELLENCE-REDESIGN-1",
+          "name": "Check-Surface Excellence Redesign",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / GENERATED OUTPUT THROUGH PLATFORM DEPLOY ONLY.** Platform repaired `1.1.3` short-check and exit-ticket source/runtime behavior and regenerated Book 1 output through deploy. `1.1.3` remains a held candidate; no new completion language or product authority.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CHECKSURFACE-EXCELLENCE-AUDIT-3P",
+          "name": "First-Three Check-Surface Excellence Audit",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / AUDIT ONLY.** Platform recorded six-surface audit proof for `1.1.1`-`1.1.3`. No gate closure or product authority.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
+          "sprint": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
+          "name": "Renewed Excellent Check-Surface Gate Packet",
+          "completed": "yes",
+          "currentState": "**PACKET PREPARATION COMPLETE / HUMAN COMMENTS NOT STARTED.** Platform prepared a new direct human-review packet that supersedes the old retry packet and cites refreshed proof. No gate closure before returned comments and resolution log.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 43,
+      "completedCount": 47,
       "openCount": 37
     },
     {
