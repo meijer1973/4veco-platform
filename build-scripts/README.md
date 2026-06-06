@@ -4,11 +4,12 @@ This folder contains all production scripts used to turn source material into th
 
 If you want to build a complete paragraph from scratch, start with [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md).
 
-The product north star lives in
-`../4veco-lessen/specifications/product-end-state.md`: every generated
-paragraph route should move students from current readiness to target-exercise
-readiness. Generator, engine, and deploy changes should preserve that end
-state or name the follow-up sprint that restores it.
+The strategic product direction lives in
+`../4veco-lessen/specifications/product-vision.md`; the operational product
+north star lives in `../4veco-lessen/specifications/product-end-state.md`.
+Every generated paragraph route should move students from current readiness to
+target-exercise readiness. Generator, engine, and deploy changes should
+preserve that end state or name the follow-up sprint that restores it.
 
 Sprint plans and active roadmaps must also pass scope-language discipline:
 

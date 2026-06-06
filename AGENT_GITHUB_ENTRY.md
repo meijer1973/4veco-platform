@@ -42,6 +42,8 @@ Useful entry points:
 
 - `RESEARCH_AGENT_MAP.md`
 - `AGENTS.md`
+- `4veco-lessen/specifications/product-vision.md`
+- `4veco-lessen/specifications/product-vision.json`
 - `4veco-lessen/specifications/product-end-state.md`
 - `4veco-lessen/specifications/companion-core-specifications.md`
 - `BUILD-PARAGRAPH.md`
@@ -56,3 +58,11 @@ Useful entry points:
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
 - `reports/github-agent-index-platform.md` after running `npm.cmd run agent:index`
+
+Task-routing guidance:
+
+- Use `4veco-lessen/specifications/product-vision.md` for strategic direction,
+  moat/parity trade-offs, lean diffusion constraints, and agent-reliability
+  decisions.
+- Use `4veco-lessen/specifications/product-end-state.md` for the operational
+  student route and completeness definition.

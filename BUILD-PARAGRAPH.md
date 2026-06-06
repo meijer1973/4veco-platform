@@ -27,9 +27,12 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 | `office` | Student-web plus Office exports when editable/downloadable teacher files are explicitly requested. | No |
 | `publisher-print` | Textbook PDF packet for publisher/print handoff. This is a separate careful pipeline, not the fast student-web build. | `check-book.js` uses this for Part A book health |
 
-> **Before you start:** Read the product end-state specification at
-> `../4veco-lessen/specifications/product-end-state.md` and the **Design
-> Principles** section in [AGENTS.md](AGENTS.md#design-principles). The product
+> **Before you start:** Read the strategic product vision at
+> `../4veco-lessen/specifications/product-vision.md`, the operational
+> product end-state specification at
+> `../4veco-lessen/specifications/product-end-state.md`, and the **Design
+> Principles** section in [AGENTS.md](AGENTS.md#design-principles). Paragraph
+> work should identify which product-vision pillar it supports. The product
 > north star is a visible route from current readiness to target-exercise
 > readiness. Two design principles govern every surface: **Dual Coding** (every
 > concept pairs text with a visual) and **Unified Student Experience** (same
@@ -85,6 +88,9 @@ current specification.
 These four references frame every paragraph build, regardless of mode. Read them before touching either Part A or Part B.
 
 - **`AGENTS.md`** — architecture, deploy rules, design principles. Hoist of hard rules.
+- **`../4veco-lessen/specifications/product-vision.md`** — canonical
+  strategic direction and trade-off logic. Paragraph plans should identify
+  which vision pillar they strengthen.
 - **`../4veco-lessen/specifications/product-end-state.md`** — canonical
   end-state definition: every paragraph route moves from current readiness to
   target-exercise readiness.

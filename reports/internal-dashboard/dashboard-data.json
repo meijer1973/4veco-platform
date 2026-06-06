@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T17:21:00.086Z",
+  "generatedAt": "2026-06-06T18:05:41.924Z",
   "internalOnly": true,
   "teams": [
     {
@@ -160,7 +160,7 @@
           "generated": "2026-04-23",
           "updated": "",
           "scope": "`references/`, `build-scripts/references/`, `build-scripts/reports/`, reference dashboards, and generated reference reports under `reports/`",
-          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-05 Roadmap ID: references-team-roadmap Roadmap version: v3.56-shared-task-ingest-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econo...",
+          "summary": "References Team Roadmap Generated: 2026-04-23 Adopted main roadmap: 2026-04-25 Last strategic update: 2026-06-06 Roadmap ID: references-team-roadmap Roadmap version: v3.56-shared-task-ingest-gate-closed Roadmap status: active Version index: docs/roadmaps/roadmap-version-index.json Scope: references/, build-scripts/references/, build-scripts/reports/, reference dashboards, and generated reference reports under reports/ Exam Ingestion North Star The long-term reference-platform goal is that a new official CvTE econo...",
           "sprints": [
             {
               "sprint": "TASK-FAMILY-CHOICE-1",
@@ -2857,6 +2857,13 @@
           "summary": "Sprint 0.5 is signed off for Part A textbook/book production.",
           "sprints": [
             {
+              "sprint": "VISION-1",
+              "name": "Strategic Product Vision Canonicalization",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
+              "exitGate": ""
+            },
+            {
               "sprint": "BOOK1-FIX-1",
               "name": "Book 1 TOC, Exercise Label, And Figure-Text Concordance Fix",
               "completed": "yes",
@@ -3745,6 +3752,14 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "VISION-1",
+          "name": "Strategic Product Vision Canonicalization",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "BOOK1-FIX-1",
           "name": "Book 1 TOC, Exercise Label, And Figure-Text Concordance Fix",
           "completed": "yes",
@@ -4121,7 +4136,7 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 47,
+      "completedCount": 48,
       "openCount": 37
     },
     {
