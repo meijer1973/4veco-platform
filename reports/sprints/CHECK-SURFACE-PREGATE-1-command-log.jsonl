@@ -1,0 +1,28 @@
+{"step":1,"command":"git status --short --branch","repo":"platform","result":"clean on codex/check-short-exit-2"}
+{"step":2,"command":"git status --short --branch","repo":"lessons","result":"clean on main"}
+{"step":3,"command":"Get-ChildItem reports/sprints -Filter CHECK-SURFACE-PREGATE-1*","result":"no prior pregate artifacts"}
+{"step":4,"command":"Get-Content reports/sprints/VISUAL-QA-HARDEN-2-product-qa-report.md","result":"pregate must perform student-experience judgement"}
+{"step":5,"command":"Get-Content reports/json/visual-qa-harden2-proof.json","result":"hard-fail checks pass and reset findings are guarded"}
+{"step":6,"command":"Get-Content reports/json/graph-check-ux1-proof.json","result":"short-check graph/table proof exists"}
+{"step":7,"command":"Get-Content reports/json/graph-exit-ux1-proof.json","result":"exit-ticket source/task proof exists"}
+{"step":8,"command":"Get-Content reports/json/check-route-copy1-proof.json","result":"route-copy proof exists"}
+{"step":9,"inspection":"reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png","result":"route cards are distinct and readable"}
+{"step":10,"inspection":"reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png; reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png","result":"short check uses graph/table action and route advice"}
+{"step":11,"inspection":"reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-initial.png; reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-source-scrolled.png; reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png","result":"exit ticket uses readable source/task graph workspace"}
+{"step":12,"inspection":"mobile dark short-check and exit-ticket screenshots","result":"mobile/dark states are reviewable"}
+{"step":13,"command":"node build-scripts\\sprints\\emit-check-surface-pregate1-proof.js","result":"passed; proof and readiness report emitted"}
+{"step":14,"command":"node build-scripts\\sprints\\check-check-surface-pregate1.js","result":"passed"}
+{"step":15,"command":"node build-scripts\\sprints\\check-visual-qa-harden2.js","result":"passed"}
+{"step":16,"command":"node build-scripts\\sprints\\check-graph-check-ux1.js","result":"passed"}
+{"step":17,"command":"node build-scripts\\sprints\\check-graph-exit-ux1.js","result":"passed"}
+{"step":18,"command":"node build-scripts\\sprints\\check-check-route-copy1.js","result":"passed"}
+{"step":19,"command":"node build-scripts\\sprints\\check-check-short-exit2.js","result":"passed"}
+{"step":20,"command":"node build-scripts\\reports\\validate-report-json.js","result":"passed"}
+{"step":21,"command":"node build-scripts\\references\\check-roadmap-version-index.js","result":"passed"}
+{"step":22,"command":"npm.cmd run check:scope-language","result":"passed"}
+{"step":23,"command":"npm.cmd run check:platform","result":"passed with known fixture warnings printed"}
+{"step":24,"command":"npm.cmd run check:book -- \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"","result":"passed 26/26"}
+{"step":25,"command":"npm.cmd run agent:index","result":"refreshed GitHub-facing maps"}
+{"step":26,"command":"node build-scripts\\sprints\\emit-url-index.js","result":"refreshed URL index"}
+{"step":27,"command":"npm.cmd run dashboard:internal","result":"refreshed internal dashboard"}
+{"step":28,"command":"post-refresh lightweight validators","result":"passed"}

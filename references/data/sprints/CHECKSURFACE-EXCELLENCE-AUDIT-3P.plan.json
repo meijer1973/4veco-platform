@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-EXCELLENCE-AUDIT-3P",
+  "name": "First-Three Check-Surface Excellence Audit",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-plan.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "source_exit_ticket_writes_allowed": false,
+  "product_route_adoption_authorized": false,
+  "scale_gate_1_authorized": false,
+  "scope": [
+    "Create a six-surface audit matrix for 1.1.1 through 1.1.3.",
+    "Compare short check and exit ticket independence per paragraph.",
+    "Cite refreshed proof for student action, feedback, next action, no answer giveaway, and authority.",
+    "Prepare evidence for renewed gate-packet work."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+    "node build-scripts/sprints/check-check-short-exit2.js",
+    "node build-scripts/sprints/check-check-route-copy1.js",
+    "node build-scripts/sprints/check-graph-check-ux1.js",
+    "node build-scripts/sprints/check-graph-exit-ux1.js",
+    "node build-scripts/sprints/check-visual-qa-harden2.js",
+    "node build-scripts/reports/validate-report-json.js"
+  ],
+  "forbidden": [
+    "No new source or generated-output changes unless the plan is updated.",
+    "No retry human-review request.",
+    "No new target-equivalent completion language.",
+    "No diagnostics, adaptive routing, mastery, sequencing, PV, Scale Gate 1, or student/product use."
+  ]
+}

@@ -1071,6 +1071,9 @@
     var interaction = task.interaction;
     requireString(interaction.intervalLabel, path + '.intervalLabel');
     requireArray(interaction.intervalOptions, path + '.intervalOptions', 2);
+    var intervalIds = {};
+    var intervalCorrectCount = 0;
+    var intervalDistractorCount = 0;
     interaction.intervalOptions.forEach(function (option, idx) {
       assert(isObject(option), path + '.intervalOptions[' + idx + '] must be an object');
       requireString(option.id, path + '.intervalOptions[' + idx + '].id');
@@ -1079,25 +1082,43 @@
       requireString(option.oldQuantity, path + '.intervalOptions[' + idx + '].oldQuantity');
       requireString(option.newQuantity, path + '.intervalOptions[' + idx + '].newQuantity');
       requireString(option.work, path + '.intervalOptions[' + idx + '].work');
-      if (option.correct !== undefined) assert(typeof option.correct === 'boolean', path + '.intervalOptions[' + idx + '].correct must be boolean');
+      assert(typeof option.correct === 'boolean', path + '.intervalOptions[' + idx + '].correct must be boolean');
+      assert(!intervalIds[option.id], 'duplicate interval option id: ' + option.id);
+      intervalIds[option.id] = true;
+      if (option.correct) intervalCorrectCount += 1;
+      else intervalDistractorCount += 1;
     });
+    assert(intervalCorrectCount >= 1, path + '.intervalOptions must include at least one correct interval');
+    assert(intervalDistractorCount >= 1, path + '.intervalOptions must include at least one distractor interval');
     requireString(interaction.relationLabel, path + '.relationLabel');
     requireArray(interaction.relationOptions, path + '.relationOptions', 2);
+    var relationIds = {};
     interaction.relationOptions.forEach(function (option, idx) {
       assert(isObject(option), path + '.relationOptions[' + idx + '] must be an object');
       requireString(option.id, path + '.relationOptions[' + idx + '].id');
       requireString(option.label, path + '.relationOptions[' + idx + '].label');
+      assert(!relationIds[option.id], 'duplicate relation option id: ' + option.id);
+      relationIds[option.id] = true;
     });
     if (interaction.conclusionOptions !== undefined) {
       requireString(interaction.conclusionLabel, path + '.conclusionLabel');
       requireArray(interaction.conclusionOptions, path + '.conclusionOptions', 2);
+      var conclusionIds = {};
+      var conclusionCorrectCount = 0;
+      var conclusionDistractorCount = 0;
       interaction.conclusionOptions.forEach(function (option, idx) {
         assert(isObject(option), path + '.conclusionOptions[' + idx + '] must be an object');
         requireString(option.id, path + '.conclusionOptions[' + idx + '].id');
         requireString(option.label, path + '.conclusionOptions[' + idx + '].label');
         requireString(option.finalAnswer, path + '.conclusionOptions[' + idx + '].finalAnswer');
-        if (option.correct !== undefined) assert(typeof option.correct === 'boolean', path + '.conclusionOptions[' + idx + '].correct must be boolean');
+        assert(typeof option.correct === 'boolean', path + '.conclusionOptions[' + idx + '].correct must be boolean');
+        assert(!conclusionIds[option.id], 'duplicate conclusion option id: ' + option.id);
+        conclusionIds[option.id] = true;
+        if (option.correct) conclusionCorrectCount += 1;
+        else conclusionDistractorCount += 1;
       });
+      assert(conclusionCorrectCount >= 1, path + '.conclusionOptions must include at least one correct conclusion');
+      assert(conclusionDistractorCount >= 1, path + '.conclusionOptions must include at least one distractor conclusion');
     }
   }
 

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review",
+  "sprint_id": "CHECK-SHORT-EXIT-2",
+  "recorded": "2026-06-05",
+  "decision": "REVISE",
+  "gate_direction": "hold_for_surface_repair",
+  "additional_direction": "replan_before_next_human_gate",
+  "gate_closed": false,
+  "closure_artifacts_authorized": false,
+  "resolution": "comments_recorded_and_carried_into_product_quality_reset",
+  "required_next_sequence": [
+    "CHECKSURFACE-RESET-1",
+    "GRAPH-CHECK-UX-1",
+    "GRAPH-EXIT-UX-1",
+    "CHECK-ROUTE-COPY-1",
+    "VISUAL-QA-HARDEN-2",
+    "CHECK-SURFACE-PREGATE-1",
+    "GATE-CHECK-SHORT-EXIT-2-RETRY"
+  ],
+  "prompt_resolutions": [
+    { "id": "CHECKSURFACE-Q1", "classification": "blocking_product_quality_revise", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q2", "classification": "hold_for_broader_product_audit", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q3", "classification": "hold_for_broader_product_audit", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q4", "classification": "hold_with_preservation_condition", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q5", "classification": "preserve", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q6", "classification": "blocking_revise", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q7", "classification": "blocking_product_quality_revise", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q8", "classification": "partially_repaired_insufficient_as_quality_evidence", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q9", "classification": "insufficient_evidence", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q10", "classification": "accepted_boundary", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q11", "classification": "sprint_series_required", "status": "accepted" },
+    { "id": "CHECKSURFACE-Q12", "classification": "gate_direction", "status": "accepted" }
+  ]
+}

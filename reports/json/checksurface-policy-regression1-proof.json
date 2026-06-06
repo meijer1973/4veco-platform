@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-POLICY-REGRESSION-1",
+  "generated": "2026-06-06T17:18:46.854Z",
+  "status": "passed",
+  "policy": {
+    "stable_specs_updated": true,
+    "old_retry_packet_superseded": true,
+    "durable_policy": "Shared Task And Check-Surface Integrity Policy"
+  },
+  "current_sources": {
+    "surface_similarity": {
+      "1.1.1": 0.18,
+      "1.1.2": 0.255,
+      "1.1.3": 0.336
+    },
+    "sources_checked": [
+      "1.1.1-korte-check",
+      "1.1.1-exit-ticket",
+      "1.1.2-korte-check",
+      "1.1.2-exit-ticket",
+      "1.1.3-korte-check",
+      "1.1.3-exit-ticket"
+    ]
+  },
+  "negative_fixtures": [
+    {
+      "id": "duplicate_short_exit_surface",
+      "expected_violation": "duplicate_surface",
+      "detected_violations": [
+        "answer_giveaway",
+        "duplicate_surface",
+        "missing_feedback_or_next_action"
+      ],
+      "caught": true
+    },
+    {
+      "id": "exit_ticket_teaches_procedure",
+      "expected_violation": "procedure_giveaway",
+      "detected_violations": [
+        "procedure_giveaway"
+      ],
+      "caught": true
+    },
+    {
+      "id": "graph_axis_answer_visible",
+      "expected_violation": "answer_giveaway",
+      "detected_violations": [
+        "answer_giveaway",
+        "missing_feedback_or_next_action"
+      ],
+      "caught": true
+    },
+    {
+      "id": "choice_only_graph_substitute",
+      "expected_violation": "choice_only_substitution",
+      "detected_violations": [
+        "choice_only_substitution",
+        "missing_feedback_or_next_action"
+      ],
+      "caught": true
+    },
+    {
+      "id": "interval_selector_correct_only",
+      "expected_violation": "correct_only_interval",
+      "detected_violations": [
+        "correct_only_interval"
+      ],
+      "caught": true
+    },
+    {
+      "id": "selector_without_distractor_bank",
+      "expected_violation": "correct_only_selector",
+      "detected_violations": [
+        "correct_only_selector",
+        "missing_feedback_or_next_action"
+      ],
+      "caught": true
+    },
+    {
+      "id": "graph_line_outside_workspace",
+      "expected_violation": "graph_workspace",
+      "detected_violations": [
+        "graph_workspace"
+      ],
+      "caught": true
+    },
+    {
+      "id": "missing_feedback_next_action",
+      "expected_violation": "missing_feedback_or_next_action",
+      "detected_violations": [
+        "choice_only_substitution",
+        "missing_feedback_or_next_action"
+      ],
+      "caught": true
+    },
+    {
+      "id": "completion_language_overclaim",
+      "expected_violation": "authority_overclaim",
+      "detected_violations": [
+        "authority_overclaim"
+      ],
+      "caught": true
+    },
+    {
+      "id": "reviewed_112_authority_broadened",
+      "expected_violation": "authority_overclaim",
+      "detected_violations": [
+        "authority_overclaim"
+      ],
+      "caught": true
+    }
+  ],
+  "authority": {
+    "reviewed_112_completion_authority_preserved": true,
+    "new_111_or_113_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

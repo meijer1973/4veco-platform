@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review",
+  "sprint_id": "CHECK-SHORT-EXIT-2",
+  "generated": "2026-06-05",
+  "status": "direct_human_review_returned_revise_not_closed",
+  "human_review_mode": "direct_packet_comments",
+  "human_review_comments_started": true,
+  "human_review_decision": "REVISE",
+  "gate_direction": "hold_for_surface_repair",
+  "additional_direction": "replan_before_next_human_gate",
+  "gate_closure_authorized": false,
+  "remote_publication_required_before_review": true,
+  "remote_publication": {
+    "reviewed_platform_branch": "codex/check-short-exit-2",
+    "reviewed_platform_commit_hash": "86773545d4c69b5a38817ea69145913fd6e85774",
+    "generated_lesson_branch": "main",
+    "generated_lesson_commit_hash": "1b2e85c77c83551692b56d19ec55e61a97540f4e",
+    "review_may_start_after_packet_push": true
+  },
+  "authority_boundary": {
+    "generated_lesson_output_already_deployed_as_evidence": true,
+    "new_target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "evidence_base": [
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-packet.md",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-packet.json",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.md",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/live-output-evidence.json",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/review-lab.html",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/direct-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md",
+    "reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json",
+    "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+    "reports/sprints/CHECK-SHORT-EXIT-2-result.md",
+    "reports/sprints/CHECK-SHORT-EXIT-2-lead-review-round2.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-plan.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-baseline.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-planning-review.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-command-log.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-command-log.jsonl",
+    "reports/sprints/CHECKSURFACE-RESET-1-lead-review-assignment.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-lead-review-round1.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-lead-review-corrections.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-lead-review-round2.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-verification-review.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-product-quality-audit.md",
+    "reports/sprints/CHECKSURFACE-RESET-1-result.md",
+    "reports/json/check-short-exit2-proof.json",
+    "reports/json/checksurface-reset1-quality-findings.json",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshot-manifest.md",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json",
+    "build-scripts/review-gates/check-gate-check-short-exit2-review-packet.js",
+    "build-scripts/sprints/check-checksurface-reset1.js",
+    "build-scripts/sprints/check-check-short-exit2.js"
+  ],
+  "review_result_summary": {
+    "not_failure": true,
+    "small_patch_revise": false,
+    "core_problem": "Generated pages and screenshots exist, but product end-state quality is not proven.",
+    "blocking_findings": [
+      "1.1.3-short lacks graph/table interaction",
+      "1.1.3-short has context_block_count 0 and task_shell_count 0",
+      "1.1.3-exit data contains graph tasks but rendered product lacks polished source/task graph workspace",
+      "visual QA and lead review overfocused on structural evidence"
+    ],
+    "required_next_sequence": [
+      "CHECKSURFACE-RESET-1",
+      "GRAPH-CHECK-UX-1",
+      "GRAPH-EXIT-UX-1",
+      "CHECK-ROUTE-COPY-1",
+      "VISUAL-QA-HARDEN-2",
+      "CHECK-SURFACE-PREGATE-1",
+      "GATE-CHECK-SHORT-EXIT-2-RETRY"
+    ]
+  },
+  "required_review_prompts": [
+    "CHECKSURFACE-Q1",
+    "CHECKSURFACE-Q2",
+    "CHECKSURFACE-Q3",
+    "CHECKSURFACE-Q4",
+    "CHECKSURFACE-Q5",
+    "CHECKSURFACE-Q6",
+    "CHECKSURFACE-Q7",
+    "CHECKSURFACE-Q8",
+    "CHECKSURFACE-Q9",
+    "CHECKSURFACE-Q10",
+    "CHECKSURFACE-Q11",
+    "CHECKSURFACE-Q12"
+  ],
+  "required_decisions": [
+    "pass_with_flags",
+    "pass_with_conditions",
+    "hold_for_surface_repair",
+    "hold_for_authority_repair",
+    "pause_for_roadmap_correction",
+    "fail"
+  ],
+  "proof_summary": {
+    "all_screenshots_exist": true,
+    "screenshot_capture_blocked": false,
+    "screenshot_count": 10,
+    "all_landing_pages_show_two_check_cards": true,
+    "advisory_short_checks_rendered": true,
+    "exit_tickets_rendered": true,
+    "short_checks_advisory_only": true,
+    "new_exit_completion_language_held": true,
+    "reviewed_112_exit_preserved": true,
+    "paragraph_113_context_blocks_rendered": true,
+    "paragraph_113_graph_workspace_contract_present": true,
+    "paragraph_113_interval_halving_present": true,
+    "no_prompt_context_block": true,
+    "no_exit_ticket_content_hints": true,
+    "no_forbidden_authority_copy": true
+  },
+  "generated_pages": [
+    {
+      "paragraph": "1.1.1",
+      "landing": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "short_check": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken - korte-check.html",
+      "exit_ticket": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken - exit-ticket.html"
+    },
+    {
+      "paragraph": "1.1.2",
+      "landing": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "short_check": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers - korte-check.html",
+      "exit_ticket": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers - exit-ticket.html"
+    },
+    {
+      "paragraph": "1.1.3",
+      "landing": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "short_check": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - korte-check.html",
+      "exit_ticket": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen - exit-ticket.html"
+    }
+  ],
+  "closure_artifacts_expected_now": false,
+  "retry_gate_allowed_now": false
+}

@@ -163,9 +163,12 @@ function main() {
   expectReject(graphReading, 330, 'graph reading far-off response');
 
   assert(dropCheck.interaction.selectionMode === 'interval_halving_check', 'quantity drop must use simplified interval choice');
-  assert(dropCheck.interaction.intervalOptions.length === 2, 'quantity drop must offer two interval choices');
+  assert(dropCheck.interaction.intervalOptions.length >= 4, 'quantity drop must offer correct and distractor interval choices');
+  assert(dropCheck.interaction.intervalOptions.some((item) => item.correct === true), 'quantity drop must mark at least one correct interval');
+  assert(dropCheck.interaction.intervalOptions.some((item) => item.correct === false), 'quantity drop must include at least one distractor interval');
   assert(Array.isArray(dropCheck.interaction.conclusionOptions) && dropCheck.interaction.conclusionOptions.length >= 3, 'quantity drop must offer conclusion choices, not only interval strings');
   assert(dropCheck.interaction.conclusionOptions.some((item) => item.id === 'q-daalt-50' && item.correct === true), 'quantity drop must mark Q daalt met 50 procent as the correct conclusion');
+  assert(dropCheck.interaction.conclusionOptions.some((item) => item.correct === false), 'quantity drop must include distractor conclusions');
   const dropFocusPlan = TaskShellEngine.focusPlan(dropCheck);
   assert(dropFocusPlan.some((item) => item.includes('data-interval-option-id')), 'shared task focus plan must include interval option controls');
   assert(dropFocusPlan.some((item) => item.includes('data-relation-option-id')), 'shared task focus plan must include relation controls');

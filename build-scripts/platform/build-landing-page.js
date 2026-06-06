@@ -169,7 +169,7 @@ function sectionAvailability(files, item = null) {
   if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
   if (files.leren && files.leren.vaardigheden) labels.push("Leer");
   if (hasPractice) labels.push(isConsolidation ? "Oefen gemengd" : "Oefen");
-  if (files.check && files.check.exitTicket) labels.push("Check");
+  if (files.check && (files.check.shortCheck || files.check.exitTicket)) labels.push("Check");
   if (hasDeepen) labels.push("Verdiep");
   return labels;
 }
@@ -193,7 +193,7 @@ function scanFiles(paragraafPath) {
     voorbereiden: { instapquiz: null, voorkennis: null, leesdit: null, nieuwsdetective: null },
     leren:        { presentatie: null, vaardigheden: null, stappenplan: null, youtube: null, nieuws: null, samenvatting: null },
     oefenen:      { redeneerSpel: null, stappenplan: null, wiskundevaardigheden: null, grafiekenspel: null, begeleide: null, basis: null, midden: null, verrijking: null },
-    check:        { exitTicket: null },
+    check:        { shortCheck: null, exitTicket: null },
     lesboek:      { paragraaf: null, opgaven: null, antwoorden: null },
   };
   if (!fs.existsSync(paragraafPath)) return result;
@@ -249,7 +249,7 @@ function scanFiles(paragraafPath) {
   result.oefenen.wiskundevaardigheden  = find(/wiskundevaardigheden\.html$/i);
   result.oefenen.grafiekenspel         = find(/grafiekenspel\.html$/i);
 
-  // Future L1.7B exit-ticket MVP. Hidden unless a real generated surface exists.
+  result.check.shortCheck = find(/(?:korte[- ]?check)\.html$/i);
   result.check.exitTicket = find(/(?:exit[- ]?ticket|afsluit(?:ing)?[- ]?check)\.html$/i);
 
   const findPair = (label) => {
@@ -298,36 +298,12 @@ function scanFiles(paragraafPath) {
   return result;
 }
 
-function readExitTicketSource(parNr) {
-  const sourcePath = path.join(__dirname, '..', '..', 'source-data', `book-${CONFIG.nr}`, 'exit-ticket', `${parNr}.json`);
-  if (!fs.existsSync(sourcePath)) return null;
-  try {
-    return JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
-  } catch (error) {
-    console.warn(`  WARN: cannot read exit-ticket source for ${parNr}: ${error.message}`);
-    return null;
-  }
-}
-
-function exitTicketPresentationMeta(parNr) {
-  const data = readExitTicketSource(parNr);
-  const targetEquivalent = Boolean(
-    data &&
-    (data.surface === 'target_equivalent_exit_ticket' ||
-      (data.targetEquivalent && data.targetEquivalent.candidate === true))
-  );
-  if (targetEquivalent) {
-    return {
-      cardTitle: 'Exit ticket',
-      cardDescription: 'Maak de volledige paragraaf-check',
-      sectionHint: 'Rond af met de paragraaf-check'
-    };
-  }
-  return {
-    cardTitle: 'Korte check',
-    cardDescription: 'Kies wat je nog wilt oefenen',
-    sectionHint: 'Rond af met gerichte oefentips'
-  };
+function checkSectionHint(files) {
+  const hasShort = Boolean(files && files.check && files.check.shortCheck);
+  const hasExit = Boolean(files && files.check && files.check.exitTicket);
+  if (hasShort && hasExit) return 'Eerst oefenadvies, daarna eindcheck';
+  if (hasExit) return 'Maak de eindcheck';
+  return 'Krijg lokaal oefenadvies';
 }
 
 function encPath(segments) { return segments.map(s => encodeURIComponent(s)).join("/"); }
@@ -1045,6 +1021,39 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </a>`;
   }
 
+  function checkRouteCard(href, kind) {
+    if (!href) return "";
+    const copy = kind === "short"
+      ? {
+          route: "advisory",
+          purpose: "local-practice-advice",
+          className: "resource-card-check-short",
+          badge: "advies",
+          title: "Korte check",
+          desc: "Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck.",
+          action: "Krijg oefenadvies",
+        }
+      : {
+          route: "exit-ticket",
+          purpose: "end-check",
+          className: "resource-card-check-exit",
+          badge: "eindcheck",
+          title: "Exit ticket",
+          desc: "Maak de eindcheck met dezelfde soort denkstappen als de eindopgave.",
+          action: "Maak eindcheck",
+        };
+    return `
+        <a class="resource-card resource-card-check ${copy.className}" data-check-route="${copy.route}" data-check-purpose="${copy.purpose}" href="${href}">
+          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.check}</svg></div>
+          <div class="resource-card-body">
+            <span class="resource-aspect-label check-card-kind">${copy.badge}</span>
+            <h3>${copy.title}</h3>
+            <p class="resource-card-purpose">${copy.desc}</p>
+            <span class="resource-card-action">${copy.action} &rarr;</span>
+          </div>
+        </a>`;
+  }
+
   function begeleidCard(data) {
     if (!data) return "";
     const links = [];
@@ -1311,10 +1320,14 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
         </div>` : "";
   const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
 
-  const checkMeta = exitTicketPresentationMeta(paragraaf.id);
-  const checkCards = files.check && files.check.exitTicket
-    ? resourceCard(encPath([files.check.exitTicket]), ICONS.check, checkMeta.cardTitle, checkMeta.cardDescription, "html")
-    : "";
+  const checkCards = [
+    files.check && files.check.shortCheck
+      ? checkRouteCard(encPath([files.check.shortCheck]), "short")
+      : "",
+    files.check && files.check.exitTicket
+      ? checkRouteCard(encPath([files.check.exitTicket]), "exit")
+      : ""
+  ].filter(Boolean).join("\n");
 
   const deepenCards = [
     files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting, ICONS.check, "Samenvatting", "Overzicht van deze paragraaf") : "",
@@ -1366,7 +1379,7 @@ function renderParagraafPage(paragraaf, files, _resolvedMap) {
     layout: "custom",
     routeLayer: "practice"
   });
-  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkMeta.sectionHint, body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
+  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkSectionHint(files), body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
   if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
 
   const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">
@@ -1511,6 +1524,29 @@ ${bodyHTML}
     display: inline-block;
     font-size: 0.78rem; font-weight: 600;
     color: var(--accent);
+  }
+  .resource-card-check {
+    border-left-width: 5px;
+  }
+  .resource-card-check-short {
+    border-left-color: var(--wiskundig);
+  }
+  .resource-card-check-exit {
+    border-left-color: var(--grafisch);
+  }
+  .resource-card-check-short .resource-card-icon {
+    color: var(--wiskundig);
+    background: var(--wiskundig-tint);
+  }
+  .resource-card-check-exit .resource-card-icon {
+    color: var(--grafisch);
+    background: var(--grafisch-tint);
+  }
+  .resource-card-check .check-card-kind {
+    margin-bottom: 0.25rem;
+  }
+  .resource-card-check .resource-card-purpose {
+    min-height: 3.45em;
   }
   .resource-sub-links {
     display: flex; gap: 0.45rem; flex-wrap: wrap;

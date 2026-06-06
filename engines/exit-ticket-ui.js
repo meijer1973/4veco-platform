@@ -77,7 +77,7 @@
     }).join('');
   }
 
-  function renderTaskShellTask(task, index) {
+  function renderTaskShellTask(task, index, contextIndex) {
     var TaskShellUI = resolveTaskShellUI();
     if (!TaskShellUI) {
       return '<article class="et-task et-task-shell" data-task="' + escapeHtml(task.id) + '">' +
@@ -85,7 +85,7 @@
       '</article>';
     }
     var taskMarkup = removeTaskShellFeedbackRegion(
-      TaskShellUI.renderTask(displayTaskShellForExitTicket(task.taskShell), index),
+      TaskShellUI.renderTask(displayTaskShellForExitTicket(task.taskShell), index, contextIndex),
       task.taskShell.id
     );
     return '<article class="et-task et-task-shell" data-task="' + escapeHtml(task.id) + '">' +
@@ -117,8 +117,8 @@
     return displayTask;
   }
 
-  function renderTask(task, index) {
-    if (task.type === 'task_shell') return renderTaskShellTask(task, index);
+  function renderTask(task, index, contextIndex) {
+    if (task.type === 'task_shell') return renderTaskShellTask(task, index, contextIndex);
     var options = task.options.map(function (option) {
       return '<button type="button" class="et-option" data-task-id="' + escapeHtml(task.id) + '" data-answer-id="' + escapeHtml(option.id) + '">' +
         '<span class="et-option-letter">' + escapeHtml(option.id.toUpperCase()) + '</span>' +
@@ -136,9 +136,51 @@
     '</article>';
   }
 
+  function renderTasksSection(data, contextIndex) {
+    return '<section class="et-tasks" data-task-pane-list>' + data.tasks.map(function (task, index) {
+      return renderTask(task, index, contextIndex);
+    }).join('') + '</section>';
+  }
+
+  function usesSourceTaskWorkspace(data, contextHtml) {
+    return Boolean(
+      contextHtml &&
+      data &&
+      data.layout &&
+      data.layout.kind === 'source_task_workspace'
+    );
+  }
+
+  function renderSourceTaskWorkspace(data, contextHtml, tasksHtml) {
+    var layout = data.layout || {};
+    return '<section class="et-source-task-workspace" data-source-task-workspace>' +
+      '<aside class="et-source-pane" data-source-pane aria-label="' + escapeHtml(layout.sourcePaneTitle || 'Bronnen') + '">' +
+        contextHtml +
+      '</aside>' +
+      '<section class="et-task-pane" data-task-pane aria-label="' + escapeHtml(layout.taskPaneTitle || 'Werkvragen') + '">' +
+        '<div class="et-task-pane-head" data-sticky-question-strip>' +
+          '<p class="et-eyebrow">Exit ticket</p>' +
+          '<h2>' + escapeHtml(layout.taskPaneTitle || 'Werkvragen') + '</h2>' +
+          '<p>' + escapeHtml(layout.taskPaneIntro || data.intro || '') + '</p>' +
+        '</div>' +
+        tasksHtml +
+      '</section>' +
+    '</section>';
+  }
+
   function renderStaticHtml(data, view) {
     view = view || {};
-    return '<section class="et-hero">' +
+    var TaskShellUI = resolveTaskShellUI();
+    var contextHtml = '';
+    var contextIndex = null;
+    if (Array.isArray(data.contextBlocks) && data.contextBlocks.length && TaskShellUI) {
+      contextHtml = TaskShellUI.renderContextBlocks(data.contextBlocks);
+      contextIndex = TaskShellUI.buildContextIndex
+        ? TaskShellUI.buildContextIndex(data.contextBlocks)
+        : null;
+    }
+    var workspaceMode = usesSourceTaskWorkspace(data, contextHtml);
+    var heroHtml = '<section class="et-hero' + (workspaceMode ? ' et-hero-compact' : '') + '">' +
       '<div>' +
         '<p class="et-eyebrow">Afronden</p>' +
         '<h1>' + escapeHtml(data.title) + '</h1>' +
@@ -151,13 +193,17 @@
         '</div>' +
         '<div class="et-route-grid">' + renderRouteCards(data) + '</div>' +
       '</aside>' +
-    '</section>' +
-    '<section class="et-tasks">' + data.tasks.map(renderTask).join('') + '</section>' +
-    '<section class="et-completion" id="et-completion" hidden>' +
+    '</section>';
+    var tasksHtml = renderTasksSection(data, contextIndex);
+    var bodyHtml = workspaceMode
+      ? renderSourceTaskWorkspace(data, contextHtml, tasksHtml)
+      : contextHtml + tasksHtml;
+    var completionHtml = '<section class="et-completion" id="et-completion" hidden>' +
       '<h2>' + escapeHtml(data.completion && data.completion.title ? data.completion.title : 'Kies je volgende oefenstap') + '</h2>' +
       '<p>' + escapeHtml(data.completion && data.completion.text ? data.completion.text : '') + '</p>' +
       '<div class="et-route-grid">' + renderRouteCards(data) + '</div>' +
     '</section>';
+    return heroHtml + bodyHtml + completionHtml;
   }
 
   function updateCompletion(app, engine) {
@@ -165,7 +211,7 @@
     if (!completion) return;
     var progress = engine.getProgress();
     if (progress.targetEquivalentAttempt) {
-      completion.hidden = progress.proofCandidate !== true;
+      completion.hidden = progress.completionLanguageEligible !== true;
       return;
     }
     completion.hidden = progress.pending !== 0;
@@ -205,6 +251,9 @@
         return;
       }
       if (sharedTaskShellUI && sharedTaskShellUI.handleLabelPlacementClick && sharedTaskShellUI.handleLabelPlacementClick(app, event)) {
+        return;
+      }
+      if (sharedTaskShellUI && sharedTaskShellUI.handleGraphConstructionClick && sharedTaskShellUI.handleGraphConstructionClick(app, event)) {
         return;
       }
 
@@ -269,6 +318,16 @@
       }
       updateCompletion(app, engine);
     });
+    app.addEventListener('change', function (event) {
+      var sharedTaskShellUI = resolveTaskShellUI();
+      if (
+        sharedTaskShellUI &&
+        sharedTaskShellUI.handleGraphConstructionChange &&
+        sharedTaskShellUI.handleGraphConstructionChange(app, event)
+      ) {
+        return;
+      }
+    });
   }
 
   function cssEscape(value) {
@@ -294,12 +353,21 @@
         y: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-point-axis="y"]')
       };
     }
+    if (task.family === 'graph_construction_substitute') {
+      var GraphTaskShellUI = resolveTaskShellUI();
+      return GraphTaskShellUI && GraphTaskShellUI.collectGraphConstructionResponse
+        ? GraphTaskShellUI.collectGraphConstructionResponse(wrapper, task)
+        : { axes: { x: '', y: '' }, points: [], lineShape: '' };
+    }
     if (task.family === 'calculation_work_capture') {
-      return {
-        work: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]'),
-        finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]'),
-        unitNotation: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]')
-      };
+      var CalculationTaskShellUI = resolveTaskShellUI();
+      return CalculationTaskShellUI && CalculationTaskShellUI.collectCalculationResponse
+        ? CalculationTaskShellUI.collectCalculationResponse(wrapper, task)
+        : {
+          work: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]'),
+          finalAnswer: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]'),
+          unitNotation: getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]')
+        };
     }
     if (task.family === 'structured_short_response') {
       var fields = {};

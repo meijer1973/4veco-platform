@@ -31,24 +31,33 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-function writeDataFile(config, parNr, data) {
+function surfaceSlug(data) {
+  if (data && data.surface === 'target_equivalent_exit_ticket') return 'exit-ticket';
+  return 'korte-check';
+}
+
+function surfaceTitle(data) {
+  if (data && data.title) return data.title;
+  return surfaceSlug(data) === 'exit-ticket' ? 'Exit ticket' : 'Korte check';
+}
+
+function writeDataFile(config, sourceKey, data) {
   const targetDataDir = path.join(config.moduleRoot, 'shared', 'exit-ticket');
   fs.mkdirSync(targetDataDir, { recursive: true });
   const body = [
-    '// AUTO-GENERATED FROM 4veco-platform/source-data/book-' + config.nr + '/exit-ticket/' + parNr + '.json -- DO NOT EDIT HERE',
+    '// AUTO-GENERATED FROM 4veco-platform/source-data/book-' + config.nr + '/exit-ticket/' + sourceKey + '.json -- DO NOT EDIT HERE',
     '(function (root) {',
     '  root.EXIT_TICKET_DATA = ' + JSON.stringify(data, null, 2).replace(/\n/g, '\n  ') + ';',
     "  if (typeof module !== 'undefined' && module.exports) module.exports = root.EXIT_TICKET_DATA;",
     "})(typeof self !== 'undefined' ? self : this);",
     ''
   ].join('\n');
-  fs.writeFileSync(path.join(targetDataDir, `${parNr}.js`), body, 'utf8');
+  fs.writeFileSync(path.join(targetDataDir, `${sourceKey}.js`), body, 'utf8');
 }
 
-function generateShell(parNr, parName, data = null) {
+function generateShell(parNr, parName, data = null, sourceKey = parNr) {
   const sharedPath = '../../shared';
-  const surfaceTitle = data && data.title ? data.title : 'Korte check';
-  const title = `${parName} - ${surfaceTitle}`;
+  const title = `${parName} - ${surfaceTitle(data)}`;
 
   return `<!DOCTYPE html>
 <html lang="nl" data-theme="light">
@@ -78,11 +87,32 @@ function generateShell(parNr, parName, data = null) {
     <script src="${sharedPath}/skill-map-route-ui.js"></script>
     <script src="${sharedPath}/task-shell-engine.js"></script>
     <script src="${sharedPath}/task-shell-ui.js"></script>
-    <script src="${sharedPath}/exit-ticket/${parNr}.js"></script>
+    <script src="${sharedPath}/exit-ticket/${escapeHtml(sourceKey)}.js"></script>
     <script src="${sharedPath}/exit-ticket-engine.js"></script>
     <script src="${sharedPath}/exit-ticket-ui.js"></script>
 </body>
 </html>`;
+}
+
+function cleanGeneratedCheckPages(folderPath) {
+  const files = fs.readdirSync(folderPath);
+  for (const file of files) {
+    if (/\u2013 (?:exit-ticket|korte-check|afsluitcheck)\.html$/i.test(file)) {
+      fs.unlinkSync(path.join(folderPath, file));
+      console.log(`  [clean] ${file}`);
+    }
+  }
+}
+
+function cleanGeneratedDataFiles(config) {
+  const targetDataDir = path.join(config.moduleRoot, 'shared', 'exit-ticket');
+  if (!fs.existsSync(targetDataDir)) return;
+  for (const file of fs.readdirSync(targetDataDir)) {
+    if (/\.js$/i.test(file)) {
+      fs.unlinkSync(path.join(targetDataDir, file));
+      console.log(`  [clean] shared/exit-ticket/${file}`);
+    }
+  }
 }
 
 function main() {
@@ -99,11 +129,23 @@ function main() {
   let generated = 0;
   let errors = 0;
 
+  const cleaned = {};
+  const seenSurface = {};
+  cleanGeneratedDataFiles(config);
+
   for (const file of sourceFiles) {
-    const parNr = file.replace(/\.json$/, '');
+    const sourceKey = file.replace(/\.json$/, '');
+    const sourcePath = path.join(sourceDir, file);
+    const data = readJson(sourcePath);
+    const parNr = data.parNr;
+    if (!parNr) {
+      console.error(`  [error] ${sourceKey}: source data needs parNr`);
+      errors++;
+      continue;
+    }
     const p = config.paragraphIndex[parNr];
     if (!p) {
-      console.warn(`  [skip] ${parNr}: not declared in manifest`);
+      console.warn(`  [skip] ${sourceKey}: ${parNr} not declared in manifest`);
       continue;
     }
     const found = config.findParagraphFolder(parNr);
@@ -113,21 +155,32 @@ function main() {
       continue;
     }
 
-    const sourcePath = path.join(sourceDir, file);
-    const data = readJson(sourcePath);
     try {
       ExitTicketEngine.validateData(data);
     } catch (error) {
-      console.error(`  [error] ${parNr}: ${error.message}`);
+      console.error(`  [error] ${sourceKey}: ${error.message}`);
       errors++;
       continue;
     }
 
-    writeDataFile(config, parNr, data);
-    const fileName = `${parNr} ${p.name} ${DASH} exit-ticket.html`;
+    const slug = surfaceSlug(data);
+    const surfaceKey = `${parNr}:${slug}`;
+    if (seenSurface[surfaceKey]) {
+      console.error(`  [error] duplicate ${slug} source for ${parNr}: ${seenSurface[surfaceKey]} and ${sourceKey}`);
+      errors++;
+      continue;
+    }
+    seenSurface[surfaceKey] = sourceKey;
+    if (!cleaned[parNr]) {
+      cleanGeneratedCheckPages(found.fullPath);
+      cleaned[parNr] = true;
+    }
+
+    writeDataFile(config, sourceKey, data);
+    const fileName = `${parNr} ${p.name} ${DASH} ${slug}.html`;
     const filePath = path.join(found.fullPath, fileName);
-    fs.writeFileSync(filePath, generateShell(parNr, p.name, data), 'utf8');
-    console.log(`  [write] shared/exit-ticket/${parNr}.js`);
+    fs.writeFileSync(filePath, generateShell(parNr, p.name, data, sourceKey), 'utf8');
+    console.log(`  [write] shared/exit-ticket/${sourceKey}.js`);
     console.log(`  [write] ${fileName}`);
     generated++;
   }
@@ -142,5 +195,6 @@ if (require.main === module) {
 
 module.exports = {
   generateShell,
+  surfaceSlug,
   main
 };

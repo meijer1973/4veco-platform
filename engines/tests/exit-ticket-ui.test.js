@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const ExitTicketUI = require('../exit-ticket-ui');
 const ExitTicketEngine = require('../exit-ticket-engine');
-const data = require('../../source-data/book-1/exit-ticket/1.1.1.json');
-const targetData = require('../../source-data/book-1/exit-ticket/1.1.2.json');
+const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
+const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const exitTicketShells = require('../../build-scripts/platform/build-exit-ticket-shells');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
@@ -95,6 +95,60 @@ function graphTaskShellData() {
                         matchText: 'Het punt is (10, 100).',
                         retryTitle: 'Controleer de asvolgorde',
                         retryText: 'Prijs is x en aantal is y.'
+                    },
+                    practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
+                }
+            },
+            {
+                id: 'construct-task',
+                type: 'task_shell',
+                taskShell: {
+                    id: 'construct-task',
+                    family: 'graph_construction_substitute',
+                    skillLabel: 'Grafiek tekenen',
+                    purpose: 'Kies assen, plaats twee punten en trek de lijn.',
+                    prompt: 'Teken een P-Q-grafiek bij de tabel.',
+                    interaction: {
+                        workspaceTitle: 'Tekenruimte',
+                        xAxisLabel: 'Horizontale as',
+                        yAxisLabel: 'Verticale as',
+                        pointRowsLabel: 'Punten uit de tabel',
+                        lineConfirmationLabel: 'Trek lijn door punten',
+                        lineShapeLabel: 'Lijnvorm',
+                        xInputLabel: 'Q',
+                        yInputLabel: 'P',
+                        emptyGraphAltText: 'Lege P-Q-grafiek met raster',
+                        axes: {
+                            x: { label: 'Q', min: 0, max: 600, ticks: [0, 100, 200, 300, 400, 500, 600] },
+                            y: { label: 'P', min: 0, max: 3, ticks: [0, 1, 1.5, 2, 2.5, 3], tickDecimals: 2, tickFormat: 'decimal_comma' }
+                        },
+                        axisOptions: [
+                            { id: 'prijs', label: 'Prijs P', value: 'P' },
+                            { id: 'hoeveelheid', label: 'Hoeveelheid Q', value: 'Q' },
+                            { id: 'omzet', label: 'Omzet', value: 'omzet' },
+                            { id: 'tijd', label: 'Tijd', value: 'tijd' }
+                        ],
+                        pointCount: 2
+                    },
+                    expected: {
+                        kind: 'graph_construction_substitute',
+                        axes: {
+                            xAccepted: ['q', 'hoeveelheid q'],
+                            yAccepted: ['p', 'prijs p']
+                        },
+                        points: [
+                            { x: 500, y: 1.5 },
+                            { x: 300, y: 2 }
+                        ],
+                        toleranceX: 0,
+                        toleranceY: 0,
+                        lineShape: 'decreasing'
+                    },
+                    feedback: {
+                        matchTitle: 'Grafiek klopt',
+                        matchText: 'De assen, punten en dalende lijn passen bij de tabel.',
+                        retryTitle: 'Controleer assen en punten',
+                        retryText: 'Kies Q horizontaal, P verticaal en plaats twee tabelpunten.'
                     },
                     practiceRoute: { label: 'Oefen verder met grafieken', href: 'grafiekenspel.html' }
                 }
@@ -637,7 +691,7 @@ describe('ExitTicketUI', () => {
     });
 
     test('generator shell loads shared skill-map and exit-ticket runtime files', () => {
-        const shell = exitTicketShells.generateShell('1.1.1', 'Schaarste en economisch denken');
+        const shell = exitTicketShells.generateShell('1.1.1', 'Schaarste en economisch denken', data, '1.1.1-korte-check');
         expect(shell).toContain('shared/skill-map-engine.js');
         expect(shell).toContain('shared/skilltree/base-elements.js');
         expect(shell).toContain('shared/skilltree/1.1.1.js');
@@ -645,16 +699,16 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('shared/task-shell.css');
         expect(shell).toContain('shared/task-shell-engine.js');
         expect(shell).toContain('shared/task-shell-ui.js');
-        expect(shell).toContain('shared/exit-ticket/1.1.1.js');
+        expect(shell).toContain('shared/exit-ticket/1.1.1-korte-check.js');
         expect(shell).toContain('shared/exit-ticket-engine.js');
         expect(shell).toContain('shared/exit-ticket-ui.js');
         expect(shell).toContain('shared/exit-ticket.css');
     });
 
     test('generator shell uses the source title for the 1.1.2 exit ticket', () => {
-        const shell = exitTicketShells.generateShell('1.1.2', 'Percentages en indexcijfers', targetData);
+        const shell = exitTicketShells.generateShell('1.1.2', 'Percentages en indexcijfers', targetData, '1.1.2-exit-ticket');
         expect(shell).toContain('<title>Percentages en indexcijfers - Exit ticket</title>');
-        expect(shell).toContain('shared/exit-ticket/1.1.2.js');
+        expect(shell).toContain('shared/exit-ticket/1.1.2-exit-ticket.js');
     });
 
     test('deploy copies checkpoint runtime and runs the shell generator before landing pages', () => {
@@ -689,6 +743,12 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('data-task-family="matching_pairs"');
         expect(html).toContain('data-task-family="two_tier_choice"');
         expect(html).toContain('data-task-family="assertion_reason"');
+        expect(html).toContain('data-task-family="graph_construction_substitute"');
+        expect(html).toContain('class="ts-graph-construction"');
+        expect(html).toContain('data-graph-workspace');
+        expect(html).toContain('data-graph-axis="x"');
+        expect(html).toContain('data-graph-point-index="0"');
+        expect(html).toContain('data-graph-line-confirmation');
         expect(html).toContain('data-cloze-blank-id="waarde"');
         expect(html).toContain('data-cloze-tile-id="vierhonderd"');
         expect(html).toContain('data-cloze-text-blank-id="richting"');
@@ -718,12 +778,15 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('handleMultiSelectClick(app, event)');
         expect(source).toContain('collectMultiSelectResponse(wrapper, task)');
         expect(source).toContain("task.family === 'multi_select'");
+        expect(source).toContain('collectCalculationResponse(wrapper, task)');
         expect(source).toContain('collectClozeTileResponse(wrapper, task)');
         expect(source).toContain("task.family === 'cloze_tile_select'");
         expect(source).toContain("task.family === 'cloze_text'");
         expect(source).toContain('collectClozeTextResponse(wrapper, task)');
         expect(source).toContain('handleSentenceBuilderClick(app, event)');
         expect(source).toContain('collectSentenceBuilderResponse(wrapper, task)');
+        expect(source).toContain('handleGraphConstructionClick(app, event)');
+        expect(source).toContain('collectGraphConstructionResponse(wrapper, task)');
         expect(source).toContain("task.family === 'sentence_builder'");
         expect(source).toContain('handleFormulaBuilderClick(app, event)');
         expect(source).toContain('collectFormulaBuilderResponse(wrapper, task)');

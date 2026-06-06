@@ -1,0 +1,32 @@
+{"timestamp":"2026-06-05T20:21:00+02:00","command":"Get-Content ..\\CLAUDE.md -TotalCount 220","status":"pass","purpose":"Read repo-level working agreement before sprint work."}
+{"timestamp":"2026-06-05T20:22:00+02:00","command":"Get-Content CLAUDE.md -TotalCount 220","status":"pass","purpose":"Read platform-local operating notes."}
+{"timestamp":"2026-06-05T20:23:00+02:00","command":"Get-Content ..\\4veco-lessen\\specifications\\product-end-state.md -TotalCount 260","status":"pass","purpose":"Confirm product-end-state check and source/context expectations."}
+{"timestamp":"2026-06-05T20:25:00+02:00","command":"Get-Content reports\\review-gates\\GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review\\direct-review-comments.md","status":"pass","purpose":"Read returned human review blockers."}
+{"timestamp":"2026-06-05T20:26:00+02:00","command":"Get-Content reports\\sprints\\CHECKSURFACE-RESET-1-product-quality-audit.md","status":"pass","purpose":"Read reset audit and GRAPH-EXIT-UX-1 blocker."}
+{"timestamp":"2026-06-05T20:27:00+02:00","command":"Get-Content source-data\\book-1\\exit-ticket\\1.1.3-exit-ticket.json","status":"pass","purpose":"Inspect current exit-ticket candidate source."}
+{"timestamp":"2026-06-05T20:29:00+02:00","command":"rg -n \"task-context|contextBlocks|contextHtml|et-tasks|source-task|split|layout|context-block\" engines build-scripts","status":"pass","purpose":"Locate current renderer and context layout behavior."}
+{"timestamp":"2026-06-05T20:40:00+02:00","command":"node scripts\\deploy.js \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"","status":"pass","purpose":"Regenerate Book 1 automated output after source/task workspace repair."}
+{"timestamp":"2026-06-05T20:44:00+02:00","command":"node build-scripts\\sprints\\capture-graph-exit-ux1-screenshots.js","status":"pass","purpose":"Capture first source/task split proof; later refined for stronger completed screenshots."}
+{"timestamp":"2026-06-05T20:48:00+02:00","command":"node scripts\\deploy.js \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"","status":"pass","purpose":"Redeploy after compact-workspace visual tuning."}
+{"timestamp":"2026-06-05T20:52:00+02:00","command":"node build-scripts\\sprints\\capture-graph-exit-ux1-screenshots.js","status":"pass","purpose":"Capture final proof screenshots and graph-exit proof JSON."}
+{"timestamp":"2026-06-05T20:54:00+02:00","command":"node build-scripts\\sprints\\check-graph-exit-ux1.js","status":"pass","purpose":"Validate focused GRAPH-EXIT-UX-1 evidence after roadmap update."}
+{"timestamp":"2026-06-05T20:54:00+02:00","command":"node build-scripts\\sprints\\check-check-short-exit2.js","status":"pass","purpose":"Validate broader check-surface repair invariants."}
+{"timestamp":"2026-06-05T20:54:00+02:00","command":"node build-scripts\\sprints\\check-graph-check-ux1.js","status":"pass","purpose":"Confirm prior graph short-check repair remains green."}
+{"timestamp":"2026-06-05T22:18:00+02:00","command":"in-app browser localhost verification attempt","status":"blocked","purpose":"Attempt Codex in-app browser verification; browser connector was present but no controllable browser route was available for the session."}
+{"timestamp":"2026-06-05T22:19:00+02:00","command":"node build-scripts\\sprints\\capture-graph-exit-ux1-screenshots.js","status":"pass","purpose":"Refresh final localhost Playwright screenshot/proof capture after browser-route limitation."}
+{"timestamp":"2026-06-05T22:20:00+02:00","command":"node build-scripts\\sprints\\check-graph-exit-ux1.js","status":"pass","purpose":"Validate focused GRAPH-EXIT-UX-1 evidence."}
+{"timestamp":"2026-06-05T22:20:00+02:00","command":"node build-scripts\\sprints\\check-check-short-exit2.js","status":"pass","purpose":"Validate broader check-surface repair invariants."}
+{"timestamp":"2026-06-05T22:20:00+02:00","command":"node build-scripts\\sprints\\check-graph-check-ux1.js","status":"pass","purpose":"Confirm prior graph short-check repair remains green."}
+{"timestamp":"2026-06-05T22:21:00+02:00","command":"npm.cmd run check:book -- \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"","status":"pass","purpose":"Validate generated Book 1 output health."}
+{"timestamp":"2026-06-05T22:21:00+02:00","command":"node build-scripts\\reports\\validate-report-json.js","status":"pass","purpose":"Validate report JSON contract."}
+{"timestamp":"2026-06-05T22:21:00+02:00","command":"node build-scripts\\references\\check-roadmap-version-index.js","status":"pass","purpose":"Validate roadmap version index integrity."}
+{"timestamp":"2026-06-05T22:21:00+02:00","command":"npm.cmd run check:scope-language","status":"pass","purpose":"Validate active surface scope-language boundaries."}
+{"timestamp":"2026-06-05T22:21:00+02:00","command":"npm.cmd run check:platform","status":"pass","purpose":"Run platform Jest validation; known intentionally-bad fixture warnings printed while the command returned exit code 0."}
+{"timestamp":"2026-06-05T22:24:00+02:00","command":"git fetch --prune origin","status":"pass","purpose":"Refresh platform and lesson remotes before final commit/push; no behind/diverged state found."}
+{"timestamp":"2026-06-05T22:25:00+02:00","command":"npm.cmd run agent:index","status":"pass","purpose":"Refresh GitHub-facing repository maps."}
+{"timestamp":"2026-06-05T22:25:00+02:00","command":"node build-scripts\\sprints\\emit-url-index.js","status":"pass","purpose":"Refresh URL index for reviewer navigation."}
+{"timestamp":"2026-06-05T22:26:00+02:00","command":"npm.cmd run dashboard:internal","status":"pass","purpose":"Refresh internal dashboard after roadmap/sprint state change."}
+{"timestamp":"2026-06-05T22:27:00+02:00","command":"node build-scripts\\reports\\validate-report-json.js","status":"pass","purpose":"Post-refresh report JSON validation."}
+{"timestamp":"2026-06-05T22:27:00+02:00","command":"node build-scripts\\references\\check-roadmap-version-index.js","status":"pass","purpose":"Post-refresh roadmap version validation."}
+{"timestamp":"2026-06-05T22:27:00+02:00","command":"node build-scripts\\sprints\\check-graph-exit-ux1.js","status":"pass","purpose":"Post-refresh focused sprint validation."}
+{"timestamp":"2026-06-05T22:27:00+02:00","command":"node build-scripts\\sprints\\check-check-short-exit2.js","status":"pass","purpose":"Post-refresh broader check-surface validation."}

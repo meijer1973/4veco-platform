@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review",
+  "sprint_id": "GATE-CHECK-SHORT-EXIT-2-RETRY",
+  "generated": "2026-06-06",
+  "status": "ready_for_direct_human_review_not_closed",
+  "remote_publication": {
+    "platform_branch": "codex/check-short-exit-2",
+    "platform_reviewed_evidence_commit": "691f5ea52e3b85be201ef28ab8497fcef0f07427",
+    "lesson_branch": "main",
+    "lesson_commit": "53a9117ca39205573db2e7bacd373734960ef6b9",
+    "review_may_start_after_packet_push": true
+  },
+  "proof": {
+    "pregate_complete": true,
+    "student_experience_verdict": "PASS_WITH_FLAGS",
+    "route_distinction_student_clear": true,
+    "short_graph_table_action": true,
+    "short_feedback_next_action": true,
+    "exit_source_task_workspace": true,
+    "exit_same_workspace_graph_line": true,
+    "mobile_dark_reviewable": true,
+    "reset_findings_guarded": true,
+    "new_exit_completion_language_held": true,
+    "reviewed_112_exit_preserved": true
+  },
+  "screenshots": [
+    "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/desktop-113-check.png",
+    "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-113-check.png",
+    "reports/sprints/CHECK-ROUTE-COPY-1-screenshots/mobile-dark-113-check.png",
+    "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png",
+    "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-wrong-retry.png",
+    "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-route-advice.png",
+    "reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-dark-route-advice.png",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-initial.png",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-source-scrolled.png",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-wrong-retry.png",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-dark-completed-held.png"
+  ],
+  "authority": {
+    "new_target_equivalent_completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

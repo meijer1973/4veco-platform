@@ -149,7 +149,12 @@ Core standard:
 | SHARED-TASK-INGEST-PLAYABLE-REPAIR-4 | Final Interaction Clarity Repair | yes | Closed 2026-06-05 as PASS WITH FLAGS / review-lab repair evidence only after fourth direct human `REVISE` plus reviewer correction pass. Preserved three-card economy and review-only boundaries while replacing exam select-all-numbers task 1 with conceptual setup, accepting `649` plus reasonable yearly unit variants and `22x12 = 264, 264 + 385 = 649` shortcut work, adding targeted feedback and progressive support, drawing the textbook graph line inside the same workspace, attaching axis selectors to the graph, keeping grid visible from the start while hiding labels/scale until correct axes, using table-derived graph ticks, simplifying the 50 percent follow-up with conclusion acceptance and shared `interval_halving_check` focus-plan evidence, removing duplicate visible Bron/Tabel labels, strengthening visual QA/checkers/screenshots, adding lead-review/verification artifacts, and refreshing the review packet. Final human review then closed `GATE-SHARED-TASK-INGEST-REPAIR-1` PASS WITH FLAGS on this evidence. Repair 4 itself authorized no generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use. |
 | DUAL-CODING-STD-1 | Dual-Coding Exercise Standard | no | Residual task-selection policy only. `CONTEXT-VISUAL-STD-1` absorbed the visual-source policy for source context blocks, so any remaining scope must decide when a task needs plain text, table, graph, flowchart, diagram, formula box, or visual construction based on target-exercise operations. Must not remain a generic decoration sprint. |
 | ENGINE-UNIFY-1 | Unified Engine Experience Refactor Plan | no | Decide keep/wrap/refactor/rebuild/deprecate for graph, math, reasoning, check, route, hint, feedback, accessibility, context block rendering, source reconstruction output, table/graph/SVG rendering, task-family controls, and mobile/dark behavior around the shared route and task shell. |
-| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Unlocked for planning after `GATE-SHARED-TASK-INGEST-REPAIR-1` closed PASS WITH FLAGS, but must carry the gate flags and its own plan/review boundary. Ensure `1.1.1`-`1.1.3` each have an advisory short check and target-equivalent exit ticket, or an explicit blocker. Hints must be hidden in short checks and absent from exit tickets except interface help. `1.1.3` graph/table proof must use source context and reconstructed visuals and must not claim product-route adoption or target-equivalent proof until its own rendered-output review authorizes that claim. |
+| CHECK-SHORT-EXIT-2 | Implement Both Check Types For First Three Paragraphs | no | Direct human review returned `REVISE` with gate direction `hold_for_surface_repair` and additional direction `replan before the next human gate`; the gate is not closed and no product authority exists. The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded after renewed human/lead feedback found that accepted shared-task decisions were not preserved. The inserted sequence `CHECKSURFACE-POLICY-REGRESSION-1` -> `CHECKSURFACE-EXCELLENCE-REDESIGN-1` -> `CHECKSURFACE-EXCELLENCE-AUDIT-3P` -> `CHECKSURFACE-GATE-RETRY-EXCELLENT-1` is now complete as renewed packet preparation: stable policy added, regression fixtures/checker pass, `1.1.3` short/exit redesigned and regenerated through deploy, fresh screenshot/proof evidence captured, six-surface audit recorded, and `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` packet/checker/bundle are ready for direct human review comments after push. Preserve reviewed `1.1.2` completion-language authority; keep new `1.1.1`/`1.1.3` completion language held. Do not proceed to `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption, diagnostics, mastery/sequencing, PV, or student/product use before the renewed human gate authorizes it. |
+| CHECKSURFACE-POLICY-REGRESSION-1 | Check-Surface Policy And Regression Memory | yes | Closed PASS. Added durable shared-task/check-surface integrity policy to stable specs, paused stale retry-packet roadmap text, added negative fixtures and `check-checksurface-policy-regression1.js`, and wrote `checksurface-policy-regression1-proof.json` proving duplicate surfaces, procedure-giving exits, answer leakage, correct-only selectors, choice-only substitutions, missing feedback/next action, and authority overclaim are caught. No generated lesson output, retry comments, gate closure, new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. |
+| CHECKSURFACE-EXCELLENCE-REDESIGN-1 | Check-Surface Excellence Redesign | yes | Closed PASS WITH FLAGS. Hardened interval/conclusion validation, added delayed graph-axis guide behavior, redesigned `1.1.3` short check around a distinct smoothie context, removed procedure-giving context from `1.1.3` exit ticket, added interval/conclusion distractors, regenerated Book 1 output through deploy, and refreshed graph/check proof. Flags: `1.1.3` remains a held candidate; graph substitute remains reviewable task-shell proof, not final graph-engine maturity. |
+| CHECKSURFACE-EXCELLENCE-AUDIT-3P | First-Three Check-Surface Excellence Audit | yes | Closed PASS WITH FLAGS. Added six-surface audit matrix and proof for `1.1.1`-`1.1.3` short checks and exit tickets: purpose, target skill, student action, answer-giveaway guard, independence, feedback/next action, and authority. No retry comments, gate closure, new completion language, product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. |
+| CHECKSURFACE-GATE-RETRY-EXCELLENT-1 | Renewed Excellent Check-Surface Gate Packet | yes | Packet preparation complete. Created `GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` with review packet, JSON, live-output evidence, review lab, bundle URLs, and checker. The old retry packet is superseded. Next action after push: send this renewed packet for direct human review comments. No gate closure before returned comments and resolution log. |
+| MERGE-HANDOFF-CHECKSURFACE-1 | Check Surface Branch Preservation Merge | yes | Preserves the `codex/check-short-exit-2` branch work on `main` so a new team can continue from a clean baseline. This is not a human gate closure and does not approve `GATE-CHECK-SURFACE-EXCELLENT-1`. No product-route adoption, new completion language for `1.1.1`/`1.1.3`, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student use authorized. Next team must start a new branch and continue product-quality work from the merged evidence. |
 | SCALE-PROOF-3P | Three-Paragraph Product Proof | no | Still blocked until `CHECK-SHORT-EXIT-2`, `GATE-PRODUCT-3P`, and `REV-STD-1` supply rendered student-path proof or a human waiver explicitly records consequences. Produce student-path proof for the first three paragraphs: landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action. |
 | GATE-PRODUCT-3P | Human Product Readiness Review | no | Human review of the three-paragraph product before Scale Gate 1. PASS WITH FLAGS may not carry missing core product requirements. |
 | SHARED-TASK-HARDENING-SERIES-PLAN-1 | Shared Task Maturity Series Planning | no | Queued later planning row only; do not start immediately and do not let it block the next necessary adoption-preparation work unless the roadmap owner explicitly reorders. Plan a later sprint series to mature shared tasks after the current context/ingestion proof. Scope includes standard multiple choice with high-quality answer-specific feedback, guided-exercise ingestion, support/hint-rich guided practice variants, explanation detours with return-to-question flow, more bounded textbook and exam ingestion trials, graph-construction hardening, carried-value task chaining, progressive feedback, stability checks across source/task types, and proof that these are general shared-task standards rather than ad hoc patches. This is planning only and does not authorize product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, Scale Gate 1, or student/product use. |
@@ -2665,11 +2670,14 @@ Update 2026-06-02: `GATE-TASK-FAMILY-1 Structured Choice And Construction Task-F
 
 ## Immediate Next Sprint
 
-Next action after `GATE-SHARED-TASK-INGEST-REPAIR-1` closes PASS WITH FLAGS:
-proceed to `CHECK-SHORT-EXIT-2` planning unless the roadmap owner explicitly
-reorders. Do not start `SHARED-TASK-HARDENING-SERIES-PLAN-1` immediately; it
-is queued later and may not block the next necessary adoption-preparation work
-unless explicitly reordered.
+Next action after `CHECKSURFACE-GATE-RETRY-EXCELLENT-1`: push the renewed
+`GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` packet and
+send that packet for direct human review comments. The previous
+`GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded and must not be sent as
+current evidence. Do not start
+`SHARED-TASK-HARDENING-SERIES-PLAN-1`, `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`,
+or Scale Gate 1 before the check-surface reset sequence and retry gate have
+closed with authority.
 
 The repaired shared task context/ingestion lane must run in this order unless
 a later human waiver explicitly records consequences:
@@ -2695,6 +2703,19 @@ EXAM-SOURCE-AUTH-1
 -> SHARED-TASK-INGEST-PLAYABLE-REPAIR-4
 -> GATE-SHARED-TASK-INGEST-REPAIR-1 closure PASS WITH FLAGS
 -> CHECK-SHORT-EXIT-2
+-> CHECKSURFACE-RESET-1
+-> GRAPH-CHECK-UX-1
+-> GRAPH-EXIT-UX-1
+-> CHECK-ROUTE-COPY-1
+-> VISUAL-QA-HARDEN-2
+-> CHECK-SURFACE-PREGATE-1
+-> GATE-CHECK-SHORT-EXIT-2-RETRY packet prepared
+-> GATE-CHECK-SHORT-EXIT-2-RETRY superseded by renewed feedback
+-> CHECKSURFACE-POLICY-REGRESSION-1
+-> CHECKSURFACE-EXCELLENCE-REDESIGN-1
+-> CHECKSURFACE-EXCELLENCE-AUDIT-3P
+-> CHECKSURFACE-GATE-RETRY-EXCELLENT-1
+-> renewed direct human review comments
 ```
 
 `SYNC-TASK-CONTEXT-INGEST-1` is superseded by
@@ -2711,11 +2732,21 @@ runtimes may not be adopted in generated lesson routes before a later adoption
 sprint supplies product-route rendered proof.
 
 `GATE-SHARED-TASK-INGEST-REPAIR-1` is now closed PASS WITH FLAGS for
-review-only source-context ingestion readiness. `CHECK-SHORT-EXIT-2` may now
-plan controlled adoption-preparation while carrying the gate flags.
-`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, and Scale Gate 1 still require their own
-rendered student-path proof and review. `REV-STD-1` remains required before
-Scale Gate 1. The approved
+review-only source-context ingestion readiness. `CHECK-SHORT-EXIT-2` is in a
+post-review repair sequence after `REVISE / hold_for_surface_repair`;
+`CHECKSURFACE-RESET-1`, `GRAPH-CHECK-UX-1`, `GRAPH-EXIT-UX-1`,
+`CHECK-ROUTE-COPY-1`, `VISUAL-QA-HARDEN-2`, and
+`CHECK-SURFACE-PREGATE-1` are complete baseline repair evidence. The old
+`GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded by renewed human/lead
+feedback. `CHECKSURFACE-POLICY-REGRESSION-1`,
+`CHECKSURFACE-EXCELLENCE-REDESIGN-1`,
+`CHECKSURFACE-EXCELLENCE-AUDIT-3P`, and
+`CHECKSURFACE-GATE-RETRY-EXCELLENT-1` are complete as renewed packet
+preparation; the renewed packet is the next direct human review surface.
+`SCALE-PROOF-3P`,
+`GATE-PRODUCT-3P`, and Scale Gate 1 still require their own rendered
+student-path proof and review.
+`REV-STD-1` remains required before Scale Gate 1. The approved
 `1.1.2` completion copy is local and
 non-summative only; no diagnostics, adaptive routing, mastery/sequencing,
 student-facing AI, summative use, PV, Scale Gate 1, CP-6/Year-1 reliance, or

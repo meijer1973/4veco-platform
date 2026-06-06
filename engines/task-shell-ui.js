@@ -58,6 +58,19 @@
     return block.sourceLabel || block.caption || block.title || 'Context';
   }
 
+  function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function contextVisibleHeading(block) {
+    var label = block.sourceLabel || '';
+    var title = block.caption || block.title || label || 'Context';
+    if (!label) return title;
+    var repeatedLabel = new RegExp('^\\s*' + escapeRegExp(label).replace(/\s+/g, '\\s+') + '\\s*[:\\-\\u2013\\u2014]?\\s*', 'i');
+    var titleWithoutRepeatedLabel = String(title).replace(repeatedLabel, '').trim();
+    return titleWithoutRepeatedLabel ? label + ' - ' + titleWithoutRepeatedLabel : label;
+  }
+
   function buildContextIndex(contextBlocks) {
     var index = {};
     (contextBlocks || []).forEach(function (block, position) {
@@ -76,11 +89,8 @@
   }
 
   function renderContextHeading(block, position) {
-    var label = contextDisplayLabel(block);
-    var title = block.caption || block.title || label;
     return '<div class="ts-context-head">' +
-      '<p class="ts-context-kicker">' + escapeHtml(label) + '</p>' +
-      '<h2 id="ts-context-title-' + (position + 1) + '">' + escapeHtml(title) + '</h2>' +
+      '<h2 id="ts-context-title-' + (position + 1) + '">' + escapeHtml(contextVisibleHeading(block)) + '</h2>' +
     '</div>';
   }
 
@@ -419,6 +429,115 @@
     '</div>';
   }
 
+  function formatAxisTick(value, axis) {
+    var decimals = axis && Number.isInteger(axis.tickDecimals) ? axis.tickDecimals : null;
+    var formatted = decimals == null ? String(value) : Number(value).toFixed(decimals);
+    if (axis && axis.tickFormat === 'decimal_comma') formatted = formatted.replace('.', ',');
+    return formatted;
+  }
+
+  function renderAxisOptions(task, axisKey) {
+    var options = task.interaction.axisOptions || [
+      { id: 'q', label: task.interaction.xInputLabel || task.interaction.axes.x.label },
+      { id: 'p', label: task.interaction.yInputLabel || task.interaction.axes.y.label },
+      { id: 'omzet', label: 'Omzet' },
+      { id: 'tijd', label: 'Tijd' }
+    ];
+    return '<select class="ts-input" data-task-id="' + escapeHtml(task.id) + '" data-graph-axis="' + escapeHtml(axisKey) + '">' +
+      '<option value="">Kies...</option>' +
+      options.map(function (option) {
+        return '<option value="' + escapeHtml(option.value || option.id || option.label) + '">' + escapeHtml(option.label) + '</option>';
+      }).join('') +
+    '</select>';
+  }
+
+  function graphTickLines(axis, axisKey) {
+    var ticks = Array.isArray(axis.ticks) ? axis.ticks : [axis.min, axis.max];
+    return ticks.map(function (tick) {
+      var position = axis.max === axis.min ? 0 : ((tick - axis.min) / (axis.max - axis.min)) * 100;
+      if (axisKey === 'x') {
+        return '<line class="ts-graph-grid-line" x1="' + position.toFixed(3) + '%" x2="' + position.toFixed(3) + '%" y1="0" y2="100%"></line>';
+      }
+      var y = 100 - position;
+      return '<line class="ts-graph-grid-line" x1="0" x2="100%" y1="' + y.toFixed(3) + '%" y2="' + y.toFixed(3) + '%"></line>';
+    }).join('');
+  }
+
+  function graphTickLabels(axis, axisKey) {
+    var ticks = Array.isArray(axis.ticks) ? axis.ticks : [axis.min, axis.max];
+    return ticks.map(function (tick) {
+      var position = axis.max === axis.min ? 0 : ((tick - axis.min) / (axis.max - axis.min)) * 100;
+      if (axisKey === 'x') {
+        return '<span class="ts-graph-tick ts-graph-tick-x" style="left:' + position.toFixed(3) + '%">' + escapeHtml(formatAxisTick(tick, axis)) + '</span>';
+      }
+      return '<span class="ts-graph-tick ts-graph-tick-y" style="bottom:' + position.toFixed(3) + '%">' + escapeHtml(formatAxisTick(tick, axis)) + '</span>';
+    }).join('');
+  }
+
+  function renderGraphPointInputs(task) {
+    var count = task.interaction.pointCount || 2;
+    var rows = [];
+    for (var i = 0; i < count; i += 1) {
+      rows.push(
+        '<div class="ts-graph-point-row">' +
+          '<span>Punt ' + (i + 1) + '</span>' +
+          '<label class="ts-field"><span>' + escapeHtml(task.interaction.xInputLabel || task.interaction.axes.x.label) + '</span>' +
+            '<input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-graph-point-index="' + i + '" data-graph-point-axis="x" placeholder="x">' +
+          '</label>' +
+          '<label class="ts-field"><span>' + escapeHtml(task.interaction.yInputLabel || task.interaction.axes.y.label) + '</span>' +
+            '<input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-graph-point-index="' + i + '" data-graph-point-axis="y" placeholder="y">' +
+          '</label>' +
+        '</div>'
+      );
+    }
+    return rows.join('');
+  }
+
+  function renderGraphConstruction(task) {
+    var axes = task.interaction.axes;
+    var xTicks = graphTickLabels(axes.x, 'x');
+    var yTicks = graphTickLabels(axes.y, 'y');
+    var hideGuides = task.interaction.hideAxisLabelsUntilAxisSelection === true;
+    var guideClass = hideGuides ? ' ts-graph-hide-axis-guides' : '';
+    var guideData = hideGuides ? ' data-hide-axis-guides-until-selection="true"' : '';
+    var xLabel = hideGuides ? 'Kies horizontale as' : axes.x.label;
+    var yLabel = hideGuides ? 'Kies verticale as' : axes.y.label;
+    return '<div class="ts-graph-construction' + guideClass + '" data-graph-construction-task="' + escapeHtml(task.id) + '" ' +
+      guideData +
+      'data-x-min="' + escapeHtml(axes.x.min) + '" data-x-max="' + escapeHtml(axes.x.max) + '" ' +
+      'data-y-min="' + escapeHtml(axes.y.min) + '" data-y-max="' + escapeHtml(axes.y.max) + '" ' +
+      'data-x-ticks="' + escapeHtml((axes.x.ticks || []).join('|')) + '" data-y-ticks="' + escapeHtml((axes.y.ticks || []).join('|')) + '">' +
+      '<div class="ts-graph-axis-controls">' +
+        '<label class="ts-field"><span>' + escapeHtml(task.interaction.xAxisLabel) + '</span>' + renderAxisOptions(task, 'x') + '</label>' +
+        '<label class="ts-field"><span>' + escapeHtml(task.interaction.yAxisLabel) + '</span>' + renderAxisOptions(task, 'y') + '</label>' +
+      '</div>' +
+      '<div class="ts-graph-workspace" data-task-id="' + escapeHtml(task.id) + '" data-graph-workspace tabindex="0" role="button" aria-label="' + escapeHtml(task.interaction.emptyGraphAltText || task.interaction.workspaceTitle) + '">' +
+        '<div class="ts-graph-title">' + escapeHtml(task.interaction.workspaceTitle) + '</div>' +
+        '<div class="ts-graph-plot" data-graph-plot>' +
+          '<svg class="ts-graph-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">' +
+            graphTickLines(axes.x, 'x') +
+            graphTickLines(axes.y, 'y') +
+            '<line class="ts-graph-axis-line ts-graph-axis-x" x1="0" y1="100" x2="100" y2="100"></line>' +
+            '<line class="ts-graph-axis-line ts-graph-axis-y" x1="0" y1="0" x2="0" y2="100"></line>' +
+          '</svg>' +
+          '<div class="ts-graph-live-layer" data-graph-live-layer aria-hidden="true"></div>' +
+          '<div class="ts-graph-tick-layer" data-graph-tick-layer aria-hidden="true">' + xTicks + yTicks + '</div>' +
+        '</div>' +
+        '<div class="ts-graph-axis-label ts-graph-axis-label-x" data-graph-axis-label="x">' + escapeHtml(xLabel) + '</div>' +
+        '<div class="ts-graph-axis-label ts-graph-axis-label-y" data-graph-axis-label="y">' + escapeHtml(yLabel) + '</div>' +
+      '</div>' +
+      '<details class="ts-graph-point-fallback">' +
+        '<summary>' + escapeHtml(task.interaction.pointRowsLabel) + '</summary>' +
+        '<div class="ts-graph-point-grid">' + renderGraphPointInputs(task) + '</div>' +
+      '</details>' +
+      '<div class="ts-graph-line-controls" role="group" aria-label="' + escapeHtml(task.interaction.lineShapeLabel || 'Lijnvorm') + '">' +
+        '<input type="hidden" data-task-id="' + escapeHtml(task.id) + '" data-graph-line-shape value="">' +
+        '<button type="button" class="ts-graph-line-option" data-task-id="' + escapeHtml(task.id) + '" data-graph-line-confirmation data-line-shape="decreasing">' + escapeHtml(task.interaction.lineConfirmationLabel) + '</button>' +
+      '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
   function renderStructuredShortResponse(task) {
     var fields = task.interaction.fields || [];
     var fieldHtml = fields.map(function (field) {
@@ -722,8 +841,9 @@
         return renderCalculation(task);
       case 'point_placement':
         return renderPointPlacement(task);
-      case 'short_constructed_response':
       case 'graph_construction_substitute':
+        return renderGraphConstruction(task);
+      case 'short_constructed_response':
       case 'structured_reasoning':
         return renderTextArea(task, 'answer') + renderCriteria(task);
       case 'structured_short_response':
@@ -1039,6 +1159,46 @@
     return { values: values };
   }
 
+  function collectCalculationResponse(rootEl, task) {
+    if (!rootEl || !task) return { work: '', finalAnswer: '', unitNotation: '' };
+    if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
+      return collectIntervalHalvingResponse(rootEl, task);
+    }
+    return {
+      work: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]')),
+      finalAnswer: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')),
+      unitNotation: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]'))
+    };
+  }
+
+  function collectIntervalHalvingResponse(rootEl, task) {
+    var selectedInterval = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-interval-option-id]:checked');
+    var relationControl = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-relation-option-id]');
+    var conclusionControl = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-conclusion-option-id]');
+    var intervalId = selectedInterval ? selectedInterval.getAttribute('data-interval-option-id') : '';
+    var relationId = relationControl ? relationControl.value : '';
+    var conclusionId = conclusionControl ? conclusionControl.value : '';
+    var interval = findById(task.interaction.intervalOptions || [], intervalId);
+    var relation = findById(task.interaction.relationOptions || [], relationId);
+    var conclusion = findById(task.interaction.conclusionOptions || [], conclusionId);
+    var oldQuantity = interval ? interval.oldQuantity : '';
+    var newQuantity = interval ? interval.newQuantity : '';
+    var relationText = relation ? relation.label : '';
+    var conclusionText = conclusion ? (conclusion.finalAnswer || conclusion.label) : '';
+    return {
+      work: [oldQuantity && newQuantity ? oldQuantity + ' naar ' + newQuantity : '', relationText].filter(Boolean).join('; '),
+      finalAnswer: conclusionText,
+      unitNotation: conclusionText
+    };
+  }
+
+  function findById(items, id) {
+    for (var i = 0; i < items.length; i += 1) {
+      if (items[i] && items[i].id === id) return items[i];
+    }
+    return null;
+  }
+
   function handleMultiSelectClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var option = event.target.closest('.ts-multi-option');
@@ -1222,6 +1382,50 @@
     return { placements: placements };
   }
 
+  function collectGraphConstructionResponse(rootEl, task) {
+    if (!rootEl || !task) return { axes: { x: '', y: '' }, points: [], lineShape: '' };
+    var construction = rootEl.querySelector('[data-graph-construction-task="' + cssEscape(task.id) + '"]');
+    if (!construction) return { axes: { x: '', y: '' }, points: [], lineShape: '' };
+    var points = [];
+    var count = task.interaction && task.interaction.pointCount ? task.interaction.pointCount : 2;
+    for (var i = 0; i < count; i += 1) {
+      points.push({
+        x: graphInputValue(construction, i, 'x'),
+        y: graphInputValue(construction, i, 'y')
+      });
+    }
+    return {
+      axes: {
+        x: graphValue(construction.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-graph-axis="x"]')),
+        y: graphValue(construction.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-graph-axis="y"]'))
+      },
+      points: points,
+      lineShape: graphValue(construction.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-graph-line-shape]'))
+    };
+  }
+
+  function selectedAxisLabel(control) {
+    if (!control) return '';
+    var selected = control.options && control.selectedIndex >= 0 ? control.options[control.selectedIndex] : null;
+    return selected && selected.value ? selected.textContent : '';
+  }
+
+  function updateGraphAxisGuideState(construction) {
+    if (!construction || construction.getAttribute('data-hide-axis-guides-until-selection') !== 'true') return;
+    var xControl = construction.querySelector('[data-graph-axis="x"]');
+    var yControl = construction.querySelector('[data-graph-axis="y"]');
+    var xLabel = construction.querySelector('[data-graph-axis-label="x"]');
+    var yLabel = construction.querySelector('[data-graph-axis-label="y"]');
+    var tickLayer = construction.querySelector('[data-graph-tick-layer]');
+    var xText = selectedAxisLabel(xControl);
+    var yText = selectedAxisLabel(yControl);
+    if (xLabel) xLabel.textContent = xText || 'Kies horizontale as';
+    if (yLabel) yLabel.textContent = yText || 'Kies verticale as';
+    var ready = Boolean(xText && yText);
+    construction.classList.toggle('ts-graph-guides-selected', ready);
+    if (tickLayer) tickLayer.setAttribute('aria-hidden', ready ? 'false' : 'true');
+  }
+
   function handleSourceValueSelectionClick(rootEl, event) {
     if (!rootEl || !event || !event.target || !event.target.closest) return false;
     var sourceValues = event.target.closest('.ts-source-values');
@@ -1233,6 +1437,58 @@
     value.setAttribute('aria-pressed', selected ? 'true' : 'false');
     var card = value.closest('.ts-source-value-card');
     if (card) card.classList.toggle('is-selected', selected);
+    return true;
+  }
+
+  function handleGraphConstructionClick(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var construction = event.target.closest('.ts-graph-construction');
+    if (!construction || !rootEl.contains(construction)) return false;
+
+    var lineOption = event.target.closest('.ts-graph-line-option');
+    if (lineOption) {
+      var lineShape = lineOption.getAttribute('data-line-shape') || '';
+      var buttons = construction.querySelectorAll('.ts-graph-line-option');
+      for (var b = 0; b < buttons.length; b += 1) {
+        buttons[b].classList.remove('selected');
+        buttons[b].setAttribute('aria-pressed', 'false');
+      }
+      lineOption.classList.add('selected');
+      lineOption.setAttribute('aria-pressed', 'true');
+      var lineInput = construction.querySelector('[data-graph-line-shape]');
+      if (lineInput) lineInput.value = lineShape;
+      updateGraphConstructionVisual(construction);
+      return true;
+    }
+
+    var workspace = event.target.closest('[data-graph-workspace]');
+    if (!workspace) return false;
+    var plot = workspace.querySelector('[data-graph-plot]');
+    if (!plot || typeof plot.getBoundingClientRect !== 'function') return true;
+    var rect = plot.getBoundingClientRect();
+    if (!rect.width || !rect.height) return true;
+
+    var xMeta = graphAxisMeta(construction, 'x');
+    var yMeta = graphAxisMeta(construction, 'y');
+    var xRatio = clamp((event.clientX - rect.left) / rect.width, 0, 1);
+    var yRatio = clamp((event.clientY - rect.top) / rect.height, 0, 1);
+    var xValue = nearestGraphTick(xMeta.ticks, xMeta.min + xRatio * (xMeta.max - xMeta.min));
+    var yValue = nearestGraphTick(yMeta.ticks, yMeta.max - yRatio * (yMeta.max - yMeta.min));
+    var pointIndex = nextGraphPointIndex(construction);
+    setGraphPointValue(construction, pointIndex, 'x', graphDisplayValue(xValue));
+    setGraphPointValue(construction, pointIndex, 'y', graphDisplayValue(yValue));
+    construction.setAttribute('data-next-graph-point', String(pointIndex + 1));
+    updateGraphConstructionVisual(construction);
+    return true;
+  }
+
+  function handleGraphConstructionChange(rootEl, event) {
+    if (!rootEl || !event || !event.target || !event.target.closest) return false;
+    var axisControl = event.target.closest('[data-graph-axis]');
+    if (!axisControl || !rootEl.contains(axisControl)) return false;
+    var construction = axisControl.closest('.ts-graph-construction');
+    if (!construction) return false;
+    updateGraphAxisGuideState(construction);
     return true;
   }
 
@@ -2050,6 +2306,110 @@
     return el ? el.textContent : option.textContent;
   }
 
+  function graphValue(el) {
+    return el && el.value != null ? el.value : '';
+  }
+
+  function graphInputValue(rootEl, index, axis) {
+    var input = rootEl.querySelector('[data-graph-point-index="' + index + '"][data-graph-point-axis="' + axis + '"]');
+    return graphValue(input);
+  }
+
+  function graphNumber(value) {
+    var normalized = String(value == null ? '' : value).replace(/\s/g, '').replace(',', '.');
+    if (!normalized) return NaN;
+    return Number(normalized);
+  }
+
+  function graphAxisMeta(rootEl, axis) {
+    var min = graphNumber(rootEl.getAttribute('data-' + axis + '-min'));
+    var max = graphNumber(rootEl.getAttribute('data-' + axis + '-max'));
+    var ticks = String(rootEl.getAttribute('data-' + axis + '-ticks') || '')
+      .split('|')
+      .map(graphNumber)
+      .filter(function (value) { return typeof value === 'number' && isFinite(value); });
+    return {
+      min: typeof min === 'number' && isFinite(min) ? min : 0,
+      max: typeof max === 'number' && isFinite(max) ? max : 1,
+      ticks: ticks
+    };
+  }
+
+  function nearestGraphTick(ticks, value) {
+    if (!Array.isArray(ticks) || !ticks.length) return value;
+    return ticks.reduce(function (best, tick) {
+      return Math.abs(tick - value) < Math.abs(best - value) ? tick : best;
+    }, ticks[0]);
+  }
+
+  function graphDisplayValue(value) {
+    if (Math.abs(value - Math.round(value)) < 0.0001) return String(Math.round(value));
+    return String(Math.round(value * 100) / 100).replace('.', ',');
+  }
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+  function setGraphPointValue(rootEl, index, axis, value) {
+    var input = rootEl.querySelector('[data-graph-point-index="' + index + '"][data-graph-point-axis="' + axis + '"]');
+    if (input) input.value = value;
+  }
+
+  function nextGraphPointIndex(rootEl) {
+    var controls = rootEl.querySelectorAll('[data-graph-point-index][data-graph-point-axis="x"]');
+    for (var i = 0; i < controls.length; i += 1) {
+      var index = controls[i].getAttribute('data-graph-point-index');
+      var x = graphInputValue(rootEl, index, 'x');
+      var y = graphInputValue(rootEl, index, 'y');
+      if (!x && !y) return Number(index);
+    }
+    var fallback = Number(rootEl.getAttribute('data-next-graph-point') || 0);
+    if (!controls.length) return 0;
+    return clamp(fallback, 0, controls.length - 1);
+  }
+
+  function graphPosition(value, meta, invert) {
+    if (!meta || meta.max === meta.min) return 0;
+    var position = ((value - meta.min) / (meta.max - meta.min)) * 100;
+    return invert ? 100 - position : position;
+  }
+
+  function updateGraphConstructionVisual(rootEl) {
+    var layer = rootEl.querySelector('[data-graph-live-layer]');
+    if (!layer) return;
+    var xMeta = graphAxisMeta(rootEl, 'x');
+    var yMeta = graphAxisMeta(rootEl, 'y');
+    var pointInputs = rootEl.querySelectorAll('[data-graph-point-index][data-graph-point-axis="x"]');
+    var points = [];
+    for (var i = 0; i < pointInputs.length; i += 1) {
+      var index = pointInputs[i].getAttribute('data-graph-point-index');
+      var x = graphNumber(graphInputValue(rootEl, index, 'x'));
+      var y = graphNumber(graphInputValue(rootEl, index, 'y'));
+      if (typeof x === 'number' && isFinite(x) && typeof y === 'number' && isFinite(y)) {
+        points.push({
+          x: graphPosition(x, xMeta, false),
+          y: graphPosition(y, yMeta, true),
+          label: String(Number(index) + 1)
+        });
+      }
+    }
+    var html = points.map(function (point) {
+      return '<span class="ts-graph-point" style="left:' + point.x.toFixed(3) + '%;top:' + point.y.toFixed(3) + '%">' + escapeHtml(point.label) + '</span>';
+    }).join('');
+    var lineShape = graphValue(rootEl.querySelector('[data-graph-line-shape]'));
+    if (lineShape && points.length >= 2) {
+      var first = points[0];
+      var second = points[1];
+      var dx = second.x - first.x;
+      var dy = second.y - first.y;
+      var length = Math.sqrt(dx * dx + dy * dy);
+      var angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      html += '<span class="ts-graph-line" data-graph-line-confirmed="true" style="left:' + first.x.toFixed(3) + '%;top:' + first.y.toFixed(3) + '%;width:' + length.toFixed(3) + '%;transform:rotate(' + angle.toFixed(3) + 'deg)"></span>';
+    }
+    layer.innerHTML = html;
+  }
+
   function setSelectedTwoTierOption(twoTier, option) {
     var tier = option.getAttribute('data-two-tier-tier');
     if (!tier) return;
@@ -2216,6 +2576,7 @@
     escapeHtml: escapeHtml,
     collectMultiSelectResponse: collectMultiSelectResponse,
     handleMultiSelectClick: handleMultiSelectClick,
+    collectCalculationResponse: collectCalculationResponse,
     collectClozeTextResponse: collectClozeTextResponse,
     collectClozeTileResponse: collectClozeTileResponse,
     handleClozeTileClick: handleClozeTileClick,
@@ -2237,6 +2598,10 @@
     handleSourceChainBuilderClick: handleSourceChainBuilderClick,
     collectLabelPlacementResponse: collectLabelPlacementResponse,
     handleLabelPlacementClick: handleLabelPlacementClick,
+    collectGraphConstructionResponse: collectGraphConstructionResponse,
+    handleGraphConstructionClick: handleGraphConstructionClick,
+    handleGraphConstructionChange: handleGraphConstructionChange,
+    buildContextIndex: buildContextIndex,
     renderContextBlocks: renderContextBlocks,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,

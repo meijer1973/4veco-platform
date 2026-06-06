@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-POLICY-REGRESSION-1",
+  "name": "Check-Surface Policy And Regression Memory",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-plan.md",
+  "baseline": "reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-baseline.md",
+  "planning_review": "reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-planning-review.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "protected_reference_data_changes_allowed": false,
+  "stable_spec_changes_allowed": true,
+  "generated_lesson_output_allowed": false,
+  "source_exit_ticket_writes_allowed": false,
+  "product_route_adoption_authorized": false,
+  "scale_gate_1_authorized": false,
+  "scope": [
+    "Add durable check-surface policy to stable specifications.",
+    "Pause old retry-packet next-action text in both roadmaps.",
+    "Add negative fixtures for duplicate surfaces, answer-giveaway controls, correct-only selectors, procedure-giving exits, choice-only substitutions, missing feedback, and authority overclaim.",
+    "Add a deterministic checker and proof JSON for current first-three check-surface sources."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+    "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-ui.test.js",
+    "node build-scripts/sprints/check-check-short-exit2.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:scope-language"
+  ],
+  "forbidden": [
+    "No generated lesson-output hand edits.",
+    "No new target-equivalent completion language.",
+    "No broadening of reviewed 1.1.2 authority.",
+    "No diagnostics, adaptive routing, mastery, sequencing, PV, Scale Gate 1, or student/product use.",
+    "No retry human-review request before policy, redesign, audit, lead review, commit, and push."
+  ]
+}

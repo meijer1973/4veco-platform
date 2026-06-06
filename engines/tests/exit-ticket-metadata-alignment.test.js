@@ -1,5 +1,5 @@
-const data = require('../../source-data/book-1/exit-ticket/1.1.1.json');
-const targetData = require('../../source-data/book-1/exit-ticket/1.1.2.json');
+const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
+const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const units = require('../../references/machine/micro-teaching-units.json');
 const targetRegistry = require('../../references/authored/course-target-exercises.json');
 

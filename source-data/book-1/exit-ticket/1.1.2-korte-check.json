@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "surface": "advisory_short_check",
+  "parNr": "1.1.2",
+  "parName": "Percentages en indexcijfers",
+  "title": "Korte check",
+  "intro": "Check snel of je de basisstappen nog scherp hebt. Gebruik de oefentip als een keuze niet klopt.",
+  "targetSkillIds": ["A38", "A39", "D31"],
+  "skillScopeIds": ["A38", "A39", "D31"],
+  "metadataAlignment": {
+    "status": "paragraph_skill_aligned_not_target_readiness",
+    "paragraphSkillIds": ["A38", "A39", "D31"],
+    "targetExerciseSkillIds": ["A38", "A39", "D31"],
+    "targetReadinessEvidence": false,
+    "sourceRefs": {
+      "paragraphPlan": "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/_paragraph-plan.md",
+      "targetExerciseRegistry": "references/authored/course-target-exercises.json",
+      "unitRegistry": "references/machine/micro-teaching-units.json"
+    },
+    "notes": [
+      "This advisory short check samples denominator choice, index notation, and indexpoint reasoning.",
+      "The reviewed target-equivalent exit ticket remains in 1.1.2-exit-ticket.json."
+    ]
+  },
+  "skillMap": {
+    "title": "Oefenroute",
+    "routes": [
+      {
+        "label": "Procentuele verandering",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      },
+      {
+        "label": "Indexcijfers gebruiken",
+        "surface": "Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      },
+      {
+        "label": "Indexpunten uitleggen",
+        "surface": "Redeneren",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "oude-waarde-als-basis",
+      "type": "choice",
+      "skillLabel": "Procentuele verandering",
+      "prompt": "Een prijs stijgt van 80 naar 100. Welke basis gebruik je voor de procentuele verandering?",
+      "options": [
+        { "id": "a", "label": "80, want dat is de oude waarde." },
+        { "id": "b", "label": "100, want dat is de nieuwe waarde." },
+        { "id": "c", "label": "20, want dat is het verschil." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Basis klopt",
+        "matchText": "Bij een procentuele verandering deel je door de oude waarde.",
+        "retryTitle": "Controleer de noemer",
+        "retryText": "De vraag is: hoeveel procent verandert iets ten opzichte van het begin?"
+      },
+      "practiceRoute": {
+        "label": "Oefen dit nog met Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      }
+    },
+    {
+      "id": "index-zonder-procent",
+      "type": "choice",
+      "skillLabel": "Indexcijfer berekenen",
+      "prompt": "Een mand kost eerst EUR 150 en later EUR 162. Het indexcijfer is 108. Hoe noteer je dat netjes?",
+      "options": [
+        { "id": "a", "label": "108%, want elk indexcijfer is een percentage." },
+        { "id": "b", "label": "Index 108, zonder procentteken." },
+        { "id": "c", "label": "8%, want 108 min 100 is 8." }
+      ],
+      "answer": "b",
+      "feedback": {
+        "matchTitle": "Notatie klopt",
+        "matchText": "Een indexcijfer noteer je als indexwaarde. Het is geen procentteken.",
+        "retryTitle": "Houd index en procent uit elkaar",
+        "retryText": "Index 108 betekent dat de waarde 8 procent boven de basis ligt, maar het indexcijfer zelf schrijf je als 108."
+      },
+      "practiceRoute": {
+        "label": "Oefen indexcijfers nog met Rekenen",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      }
+    },
+    {
+      "id": "indexpunten-niet-procent",
+      "type": "choice",
+      "skillLabel": "Indexpunten uitleggen",
+      "prompt": "Een index stijgt van 108 naar 112. Waarom is de uitspraak 'dat is 4 procent' niet precies?",
+      "options": [
+        { "id": "a", "label": "Omdat 4 het verschil in indexpunten is; de procentuele stijging bereken je ten opzichte van 108." },
+        { "id": "b", "label": "Omdat je altijd deelt door 100." },
+        { "id": "c", "label": "Omdat je dit zonder prijzen nooit kunt berekenen." }
+      ],
+      "answer": "a",
+      "feedback": {
+        "matchTitle": "Goed onderscheid",
+        "matchText": "112 min 108 is 4 indexpunten. De procentuele stijging is 4 gedeeld door 108.",
+        "retryTitle": "Vergelijk punten met procenten",
+        "retryText": "Aftrekken geeft indexpunten. Procenten vragen om delen door de oude index."
+      },
+      "practiceRoute": {
+        "label": "Oefen de uitleg nog met Redeneren",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+      }
+    }
+  ],
+  "completion": {
+    "title": "Kies je volgende oefenstap",
+    "text": "Gebruik de feedback om te bepalen welke rekenstap je nog wilt oefenen."
+  }
+}

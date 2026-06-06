@@ -34,8 +34,19 @@ follow-up CSS commit (D1-2b) will polish the news-specific surfaces.
 """
 import sys, io, os, glob, html as html_mod, re
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-from docx import Document
-from docx.oxml.ns import qn
+try:
+    from docx import Document
+    from docx.oxml.ns import qn
+    DOCX_IMPORT_ERROR = None
+except ModuleNotFoundError as e:
+    Document = None
+    qn = None
+    DOCX_IMPORT_ERROR = e
+
+
+def require_python_docx():
+    if Document is None:
+        raise RuntimeError(f'python-docx unavailable: {DOCX_IMPORT_ERROR}')
 
 # Domain -> color mapping (copied from convert_samenvatting.py).
 DOMAIN_MAP = {
@@ -547,6 +558,7 @@ def process_paragraph(para_folder):
     assets_dir = os.path.join(para_folder, '_assets')
 
     try:
+        require_python_docx()
         data = build_data_from_doc(docx_path, para_number, para_name, assets_dir)
     except Exception as e:
         print(f'  ERROR {para_number}: {e}')
