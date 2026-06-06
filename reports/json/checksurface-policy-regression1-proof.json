@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-POLICY-REGRESSION-1",
-  "generated": "2026-06-06T08:26:52.817Z",
+  "generated": "2026-06-06T17:18:46.854Z",
   "status": "passed",
   "policy": {
     "stable_specs_updated": true,

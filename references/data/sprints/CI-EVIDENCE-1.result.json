@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-EVIDENCE-1",
+  "generated": "2026-06-06",
+  "status": "completed",
+  "plan": "reports/sprints/CI-EVIDENCE-1-plan.md",
+  "baseline": "reports/sprints/CI-EVIDENCE-1-baseline.md",
+  "result": "reports/sprints/CI-EVIDENCE-1-result.md",
+  "diff_summary": "reports/sprints/CI-EVIDENCE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "local_evidence": {
+    "artifact_path": "../ci-artifacts-local/platform-ci-evidence.json",
+    "platform_sha": "ed12764ad39eb1290c899a9bee08edf6a77c126d",
+    "lessen_sha": "15f823028522663ca62c8d6369af9c6ae0264efb"
+  },
+  "remote_ci": {
+    "workflow_name": "platform-ci",
+    "job_name": "validate-platform",
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/27065594154",
+    "run_id": "27065594154",
+    "job_id": "79885793668",
+    "branch_head_sha": "4ddd5e0fc4527607938146c8838ca4ded77733b8",
+    "ci_checkout_sha": "187a9922bd78a12ed4f71eb0b35bad24929b6405",
+    "conclusion": "success",
+    "artifacts_uploaded": true,
+    "artifact_name": "platform-ci-diagnostics",
+    "artifact_id": "7455396312",
+    "evidence_file": "platform-ci-evidence.json",
+    "evidence_platform_sha": "187a9922bd78a12ed4f71eb0b35bad24929b6405",
+    "evidence_lessen_sha": "15f823028522663ca62c8d6369af9c6ae0264efb"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-EVIDENCE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CI-EVIDENCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/platform-ci-evidence.js write --output ../ci-artifacts-local/platform-ci-evidence.json --platform-path . --lessen-path ../4veco-lessen",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/platform-ci-evidence.js check ../ci-artifacts-local/platform-ci-evidence.json --platform-path . --lessen-path ../4veco-lessen",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand build-scripts/ci/platform-ci-evidence.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js CI-EVIDENCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js CI-EVIDENCE-1",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/CI-EVIDENCE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CI-EVIDENCE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CI-EVIDENCE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CI-EVIDENCE-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_sprint": "CI-GATE-PROOF-1"
+}

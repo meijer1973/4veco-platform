@@ -1,0 +1,10 @@
+{
+  "reviewed_remote_commit_sha": "9f6e5cbf645143bcf06de3bd2800e7cb226b6877",
+  "ci": {
+    "workflow": "platform-ci",
+    "context": "validate-platform",
+    "github_actions_run_id": "26954512486",
+    "conclusion": "success",
+    "ci_run_corresponds_to_reviewed_commit": true
+  }
+}

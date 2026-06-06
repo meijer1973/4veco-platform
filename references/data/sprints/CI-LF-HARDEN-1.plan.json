@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-LF-HARDEN-1",
+  "name": "Line Ending And Generated Report Stability",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/CI-LF-HARDEN-1-plan.md",
+  "baseline": "reports/sprints/CI-LF-HARDEN-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add narrow LF policy for CI evidence/report surfaces.",
+    "Add deterministic checker for matched evidence/report text files.",
+    "Add checker to platform-ci only after local determinism is proven.",
+    "Preserve generated lesson output, protected references, source-data, product routes, target-equivalent proof, diagnostics, adaptive routing, mastery/sequencing, PV, Scale Gate 1, and student/product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-LF-HARDEN-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CI-LF-HARDEN-1",
+    "node build-scripts/ci/check-evidence-line-endings.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-command-log.js CI-LF-HARDEN-1",
+    "node build-scripts/sprints/check-lead-review-substance.js CI-LF-HARDEN-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-LF-HARDEN-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CI-LF-HARDEN-1 --complete"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No generated lesson output writes.",
+    "No target-exercise registry writes.",
+    "No candidate storage writes.",
+    "No PV projection or PV machine-promotion outputs.",
+    "No product-route adoption, target-equivalent proof, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1, or student/product use."
+  ]
+}

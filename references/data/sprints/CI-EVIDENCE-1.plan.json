@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CI-EVIDENCE-1",
+  "name": "Cross-Repo Checkout Evidence Artifact",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/CI-EVIDENCE-1-plan.md",
+  "baseline": "reports/sprints/CI-EVIDENCE-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Write cross-repo CI evidence outside tracked repositories.",
+    "Upload platform-ci-evidence.json with the existing CI artifact.",
+    "Validate required evidence keys, SHA shape, paths, runtime versions, and package-lock hash.",
+    "Preserve generated lesson output, protected references, source-data, product routes, target-equivalent proof, diagnostics, adaptive routing, mastery/sequencing, PV, Scale Gate 1, and student/product-use boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CI-EVIDENCE-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CI-EVIDENCE-1",
+    "node build-scripts/ci/platform-ci-evidence.js write --output ..\\ci-artifacts-local\\platform-ci-evidence.json --platform-path . --lessen-path ..\\4veco-lessen",
+    "node build-scripts/ci/platform-ci-evidence.js check ..\\ci-artifacts-local\\platform-ci-evidence.json --platform-path . --lessen-path ..\\4veco-lessen",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-command-log.js CI-EVIDENCE-1",
+    "node build-scripts/sprints/check-lead-review-substance.js CI-EVIDENCE-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CI-EVIDENCE-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CI-EVIDENCE-1 --complete"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No source-data writes.",
+    "No generated lesson output writes.",
+    "No target-exercise registry writes.",
+    "No candidate storage writes.",
+    "No PV projection or PV machine-promotion outputs.",
+    "No product-route adoption, target-equivalent proof, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1, or student/product use."
+  ]
+}

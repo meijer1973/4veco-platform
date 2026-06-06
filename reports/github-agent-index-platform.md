@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-06T08:27:40.228Z
+Generated: 2026-06-06T17:20:59.619Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3581
+Files indexed: 3712
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 419
+Count: 430
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -138,6 +138,12 @@ Count: 419
 - build-scripts/books/build-book.py
 - build-scripts/books/lib_book.py
 - build-scripts/books/README.md
+- build-scripts/ci/check-branch-protection.js
+- build-scripts/ci/check-branch-protection.test.js
+- build-scripts/ci/check-evidence-line-endings.js
+- build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/ci/platform-ci-evidence.js
+- build-scripts/ci/platform-ci-evidence.test.js
 - build-scripts/content/book-1/b1-111-alt-text.js
 - build-scripts/content/book-1/b1-111-inoefening.js
 - build-scripts/content/book-1/b1-111-nieuws.js
@@ -417,6 +423,7 @@ Count: 419
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-check-short-exit2-retry-review-packet.js
 - build-scripts/review-gates/check-gate-check-short-exit2-review-packet.js
+- build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
@@ -454,11 +461,14 @@ Count: 419
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-check-surface-pregate1.js
+- build-scripts/sprints/check-checksurface-policy-regression1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-gate-ci-proof.js
+- build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -471,6 +481,7 @@ Count: 419
 - build-scripts/sprints/check-lead-review-substance.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
@@ -595,8 +606,12 @@ Count: 42
 
 ## validators
 
-Count: 339
+Count: 354
 
+- build-scripts/ci/check-branch-protection.js
+- build-scripts/ci/check-branch-protection.test.js
+- build-scripts/ci/check-evidence-line-endings.js
+- build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
@@ -687,6 +702,7 @@ Count: 339
 - build-scripts/review-gates/check-cp6f-113-part-a-recheck.js
 - build-scripts/review-gates/check-gate-check-short-exit2-retry-review-packet.js
 - build-scripts/review-gates/check-gate-check-short-exit2-review-packet.js
+- build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js
 - build-scripts/review-gates/check-gate-cp6-routing-decision.js
 - build-scripts/review-gates/check-gate-engine1-review-packet.js
 - build-scripts/review-gates/check-gate-l1-7b-q2-review-packet.js
@@ -707,11 +723,14 @@ Count: 339
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-check-surface-pregate1.js
+- build-scripts/sprints/check-checksurface-policy-regression1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
+- build-scripts/sprints/check-gate-ci-proof.js
+- build-scripts/sprints/check-gate-ci-proof.test.js
 - build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -724,6 +743,7 @@ Count: 339
 - build-scripts/sprints/check-lead-review-substance.js
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
+- build-scripts/sprints/check-merge-handoff-checksurface1.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
@@ -798,6 +818,12 @@ Count: 339
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-advisory-check-feedback.png
 - reports/review-gates/GATE-ENGINE-1-four-engine-operational-integration/live-output-screenshots/111-landing-check-route.png
 - reports/review-gates/GATE-EX6-validator-cli-planning/bundle-urls.md
@@ -939,7 +965,7 @@ Count: 339
 
 ## references
 
-Count: 476
+Count: 492
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1004,6 +1030,22 @@ Count: 476
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.result.json
+- references/data/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P.plan.json
+- references/data/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P.result.json
+- references/data/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1.plan.json
+- references/data/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1.result.json
+- references/data/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1.plan.json
+- references/data/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1.result.json
+- references/data/sprints/CHECKSURFACE-POLICY-REGRESSION-1.plan.json
+- references/data/sprints/CHECKSURFACE-POLICY-REGRESSION-1.result.json
+- references/data/sprints/CI-EVIDENCE-1.plan.json
+- references/data/sprints/CI-EVIDENCE-1.result.json
+- references/data/sprints/CI-GATE-PROOF-1.plan.json
+- references/data/sprints/CI-GATE-PROOF-1.result.json
+- references/data/sprints/CI-GOVERNANCE-1.plan.json
+- references/data/sprints/CI-GOVERNANCE-1.result.json
+- references/data/sprints/CI-LF-HARDEN-1.plan.json
+- references/data/sprints/CI-LF-HARDEN-1.result.json
 - references/data/sprints/CI-REMOTE-1.plan.json
 - references/data/sprints/CI-REMOTE-1.result.json
 - references/data/sprints/CI-REMOTE-1A.plan.json
@@ -1420,7 +1462,7 @@ Count: 476
 
 ## reports
 
-Count: 2249
+Count: 2353
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1430,6 +1472,15 @@ Count: 2249
 - reports/dead-units.md
 - reports/evidence-anchor-status.md
 - reports/exam-question-extraction-gaps.md
+- reports/fixtures/checksurface-policy-regression1/negative-fixtures.json
+- reports/fixtures/gate-ci-proof1/negative-conclusion-failure.md
+- reports/fixtures/gate-ci-proof1/negative-local-command-log.md
+- reports/fixtures/gate-ci-proof1/negative-missing-commit.md
+- reports/fixtures/gate-ci-proof1/negative-missing-run-id.md
+- reports/fixtures/gate-ci-proof1/negative-run-no-reviewed-commit.md
+- reports/fixtures/gate-ci-proof1/negative-vague-waiver.md
+- reports/fixtures/gate-ci-proof1/positive-json.json
+- reports/fixtures/gate-ci-proof1/positive-markdown.md
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
@@ -1446,6 +1497,8 @@ Count: 2249
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
 - reports/json/check-surface-pregate1-proof.json
+- reports/json/checksurface-excellence-audit-3p-proof.json
+- reports/json/checksurface-policy-regression1-proof.json
 - reports/json/checksurface-reset1-quality-findings.json
 - reports/json/context-visual-std1-contract.json
 - reports/json/dag-integrity.json
@@ -1670,6 +1723,12 @@ Count: 2249
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CP1-schema-audit/bundle-urls.md
 - reports/review-gates/GATE-CP1-schema-audit/gate-closure.json
 - reports/review-gates/GATE-CP1-schema-audit/gate-closure.md
@@ -2293,6 +2352,45 @@ Count: 2249
 - reports/sprints/CHECK-SURFACE-PREGATE-1-result.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-student-experience-review.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-verification-review.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-command-log.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-plan.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-result.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-verification-review.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-command-log.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-plan.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-result.md
+- reports/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1-verification-review.md
+- reports/sprints/CHECKSURFACE-EXCELLENT-SEQUENCE-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-EXCELLENT-SEQUENCE-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-EXCELLENT-SEQUENCE-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-EXCELLENT-SEQUENCE-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-command-log.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-result.md
+- reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-verification-review.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-baseline.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-command-log.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-plan.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-planning-review.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-result.md
+- reports/sprints/CHECKSURFACE-POLICY-REGRESSION-1-verification-review.md
 - reports/sprints/CHECKSURFACE-RESET-1-baseline.md
 - reports/sprints/CHECKSURFACE-RESET-1-command-log.jsonl
 - reports/sprints/CHECKSURFACE-RESET-1-command-log.md
@@ -2305,6 +2403,50 @@ Count: 2249
 - reports/sprints/CHECKSURFACE-RESET-1-product-quality-audit.md
 - reports/sprints/CHECKSURFACE-RESET-1-result.md
 - reports/sprints/CHECKSURFACE-RESET-1-verification-review.md
+- reports/sprints/CI-EVIDENCE-1-baseline.md
+- reports/sprints/CI-EVIDENCE-1-command-log.jsonl
+- reports/sprints/CI-EVIDENCE-1-command-log.md
+- reports/sprints/CI-EVIDENCE-1-diff-summary.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-assignment.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-corrections.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-round1.md
+- reports/sprints/CI-EVIDENCE-1-lead-review-round2.md
+- reports/sprints/CI-EVIDENCE-1-plan.md
+- reports/sprints/CI-EVIDENCE-1-planning-review.md
+- reports/sprints/CI-EVIDENCE-1-result.md
+- reports/sprints/CI-GATE-PROOF-1-baseline.md
+- reports/sprints/CI-GATE-PROOF-1-command-log.jsonl
+- reports/sprints/CI-GATE-PROOF-1-command-log.md
+- reports/sprints/CI-GATE-PROOF-1-diff-summary.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-assignment.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-corrections.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-round1.md
+- reports/sprints/CI-GATE-PROOF-1-lead-review-round2.md
+- reports/sprints/CI-GATE-PROOF-1-plan.md
+- reports/sprints/CI-GATE-PROOF-1-planning-review.md
+- reports/sprints/CI-GATE-PROOF-1-result.md
+- reports/sprints/CI-GOVERNANCE-1-baseline.md
+- reports/sprints/CI-GOVERNANCE-1-command-log.jsonl
+- reports/sprints/CI-GOVERNANCE-1-command-log.md
+- reports/sprints/CI-GOVERNANCE-1-diff-summary.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-assignment.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-corrections.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-round1.md
+- reports/sprints/CI-GOVERNANCE-1-lead-review-round2.md
+- reports/sprints/CI-GOVERNANCE-1-plan.md
+- reports/sprints/CI-GOVERNANCE-1-planning-review.md
+- reports/sprints/CI-GOVERNANCE-1-result.md
+- reports/sprints/CI-LF-HARDEN-1-baseline.md
+- reports/sprints/CI-LF-HARDEN-1-command-log.jsonl
+- reports/sprints/CI-LF-HARDEN-1-command-log.md
+- reports/sprints/CI-LF-HARDEN-1-diff-summary.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-assignment.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-corrections.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-round1.md
+- reports/sprints/CI-LF-HARDEN-1-lead-review-round2.md
+- reports/sprints/CI-LF-HARDEN-1-plan.md
+- reports/sprints/CI-LF-HARDEN-1-planning-review.md
+- reports/sprints/CI-LF-HARDEN-1-result.md
 - reports/sprints/CI-REMOTE-1-baseline.md
 - reports/sprints/CI-REMOTE-1-command-log.jsonl
 - reports/sprints/CI-REMOTE-1-command-log.md
@@ -2818,6 +2960,10 @@ Count: 2249
 - reports/sprints/MATH-UX-2-screenshots/mobile-light-112-math-route-first.png
 - reports/sprints/MATH-UX-2-student-experience-review.md
 - reports/sprints/MATH-UX-2-student-route-proof.md
+- reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.jsonl
+- reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.md
+- reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-plan.md
+- reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md

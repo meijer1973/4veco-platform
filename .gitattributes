@@ -1,2 +1,26 @@
-# Keep generated CI-checked text byte-stable on Windows runners.
+# CI/evidence surfaces should be byte-stable across Windows and Linux runners.
+.gitattributes text eol=lf
+BATCH-CLOSURE-WAIVER.md text eol=lf
+package.json text eol=lf
+.github/workflows/*.yml text eol=lf
+.github/*.txt text eol=lf
+build-scripts/ci/*.js text eol=lf
+build-scripts/sprints/check-gate-ci-proof*.js text eol=lf
+docs/roadmaps/roadmap-version-index.json text eol=lf
+docs/roadmaps/roadmap-version-index.md text eol=lf
+references/reference-team-roadmap.md text eol=lf
+references/data/sprints/CI-LF-HARDEN-1*.json text eol=lf
+references/data/sprints/CI-EVIDENCE-1*.json text eol=lf
+references/data/sprints/CI-GATE-PROOF-1*.json text eol=lf
+references/data/sprints/CI-GOVERNANCE-1*.json text eol=lf
 reports/url-index.md text eol=lf
+reports/github-agent-index-*.md text eol=lf
+reports/github-agent-index-*.json text eol=lf
+reports/internal-dashboard/index.html text eol=lf
+reports/internal-dashboard/dashboard-data.json text eol=lf
+reports/sprints/CI-LF-HARDEN-1-* text eol=lf
+reports/sprints/CI-EVIDENCE-1-* text eol=lf
+reports/sprints/CI-GATE-PROOF-1-* text eol=lf
+reports/sprints/CI-GOVERNANCE-1-* text eol=lf
+reports/fixtures/gate-ci-proof1/*.md text eol=lf
+reports/fixtures/gate-ci-proof1/*.json text eol=lf

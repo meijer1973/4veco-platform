@@ -16,3 +16,23 @@ This waiver authorizes no generated lesson output, protected reference
 mutation, source-data mutation, product-route adoption, target-equivalent
 proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product
 use.
+
+---
+
+Date: 2026-06-06
+
+Human authorization: the user supplied the coding-agent packet for CI
+integration hardening and explicitly prioritized the first three sprints:
+`CI-LF-HARDEN-1`, `CI-EVIDENCE-1`, and `CI-GATE-PROOF-1`.
+
+Authorized batch scope:
+
+- close `CI-LF-HARDEN-1` as scoped line-ending and generated-report stability
+  hardening;
+- close `CI-EVIDENCE-1` as cross-repo checkout evidence hardening;
+- close `CI-GATE-PROOF-1` as future human-gate CI proof discipline.
+
+This waiver authorizes no generated lesson output, protected reference
+mutation, source-data mutation, product-route adoption, target-equivalent
+proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product
+use.
