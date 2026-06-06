@@ -1,0 +1,10 @@
+# Gate Packet Sample Failed CI
+
+## CI Proof
+
+- Reviewed remote commit SHA: 9f6e5cbf645143bcf06de3bd2800e7cb226b6877
+- CI workflow: platform-ci
+- CI context: validate-platform
+- GitHub Actions run ID: 26954512486
+- CI conclusion: failure
+- CI run corresponds to the reviewed commit: yes

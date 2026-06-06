@@ -1,4 +1,4 @@
-﻿# Roadmap Version Index
+# Roadmap Version Index
 
 Updated: 2026-06-05
 

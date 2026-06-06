@@ -65,6 +65,12 @@ jobs:
           cache: pip
           cache-dependency-path: 4veco-platform/.github/ci-python-requirements.txt
 
+      - name: Write checkout evidence
+        run: |
+          New-Item -ItemType Directory -Force -Path ..\ci-artifacts | Out-Null
+          node build-scripts/ci/platform-ci-evidence.js write --output ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen
+          node build-scripts/ci/platform-ci-evidence.js check ..\ci-artifacts\platform-ci-evidence.json --platform-path . --lessen-path ..\4veco-lessen
+
       - name: Install Node dependencies
         run: npm ci
 
@@ -88,6 +94,9 @@ jobs:
       - name: Check URL index is current
         run: node build-scripts/sprints/emit-url-index.js --check
 
+      - name: Check CI evidence line endings
+        run: node build-scripts/ci/check-evidence-line-endings.js
+
       - name: Check platform diff hygiene
         run: git diff --check
 
@@ -104,5 +113,6 @@ jobs:
             4veco-platform/reports/sprints/*-command-log.md
             4veco-platform/reports/json/*.json
             4veco-platform/reports/url-index.md
+            ci-artifacts/platform-ci-evidence.json
           if-no-files-found: ignore
           retention-days: 14
