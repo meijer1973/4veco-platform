@@ -16,7 +16,17 @@
   "remote_ci": {
     "workflow_name": "platform-ci",
     "job_name": "validate-platform",
-    "status": "pending_after_push"
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/27065594154",
+    "run_id": "27065594154",
+    "job_id": "79885793668",
+    "branch_head_sha": "4ddd5e0fc4527607938146c8838ca4ded77733b8",
+    "ci_checkout_sha": "187a9922bd78a12ed4f71eb0b35bad24929b6405",
+    "conclusion": "success",
+    "artifacts_uploaded": true,
+    "artifact_name": "platform-ci-diagnostics",
+    "artifact_id": "7455396312"
   },
   "acceptance_tests": [
     {

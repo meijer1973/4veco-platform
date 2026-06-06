@@ -27,9 +27,19 @@ The first broad checker attempt found 265 historical CRLF matches. The sprint
 therefore followed the stop condition and narrowed scope rather than
 renormalizing the historical report archive.
 
-Remote `platform-ci / validate-platform` proof is pending until the branch is
-pushed. This result will be updated or supplemented with the remote run proof
-after GitHub Actions completes.
+Remote proof:
+
+- workflow name: `platform-ci`
+- job name: `validate-platform`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/27065594154`
+- run ID: `27065594154`
+- job ID: `79885793668`
+- branch head SHA: `4ddd5e0fc4527607938146c8838ca4ded77733b8`
+- CI checkout SHA from evidence artifact:
+  `187a9922bd78a12ed4f71eb0b35bad24929b6405`
+- conclusion: `success`
+- artifact: `platform-ci-diagnostics`
+- artifact ID: `7455396312`
 
 ## Acceptance test results
 
@@ -85,8 +95,6 @@ protected reference data.
 
 - Historical report archive CRLF cleanup remains deferred because the first
   broad scan exposed large unrelated churn.
-- Remote CI proof and command-log warning comparison must be recorded after
-  the pushed branch run completes.
 
 ## Rollback instructions
 

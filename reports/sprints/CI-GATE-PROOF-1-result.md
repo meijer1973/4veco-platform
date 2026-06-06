@@ -26,8 +26,17 @@ This hardens gate discipline only. It does not authorize product readiness,
 lesson readiness, target-equivalent proof, diagnostics, adaptive routing,
 mastery/sequencing, Scale Gate 1, student-facing AI, or student/product use.
 
-Remote CI proof for this implementation branch is pending until the branch is
-pushed.
+Remote proof:
+
+- workflow name: `platform-ci`
+- job name: `validate-platform`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/27065594154`
+- run ID: `27065594154`
+- job ID: `79885793668`
+- branch head SHA: `4ddd5e0fc4527607938146c8838ca4ded77733b8`
+- conclusion: `success`
+- artifact: `platform-ci-diagnostics`
+- artifact ID: `7455396312`
 
 ## Acceptance test results
 

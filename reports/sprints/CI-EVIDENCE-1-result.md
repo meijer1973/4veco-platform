@@ -28,8 +28,23 @@ Local evidence JSON recorded:
 - lessen SHA:
   `15f823028522663ca62c8d6369af9c6ae0264efb`
 
-Remote artifact proof is pending until the branch is pushed and the GitHub
-Actions artifact can be inspected.
+Remote artifact proof:
+
+- workflow name: `platform-ci`
+- job name: `validate-platform`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/27065594154`
+- run ID: `27065594154`
+- job ID: `79885793668`
+- branch head SHA: `4ddd5e0fc4527607938146c8838ca4ded77733b8`
+- artifact: `platform-ci-diagnostics`
+- artifact ID: `7455396312`
+- evidence file: `ci-artifacts/platform-ci-evidence.json`
+- evidence `platform.head_sha`:
+  `187a9922bd78a12ed4f71eb0b35bad24929b6405`
+- evidence `lessen.head_sha`:
+  `15f823028522663ca62c8d6369af9c6ae0264efb`
+- evidence `github_ref`: `refs/pull/7/merge`
+- conclusion: `success`
 
 ## Acceptance test results
 
@@ -83,8 +98,8 @@ checked-out repositories.
 
 ## Open follow-ups
 
-- After push, inspect the remote diagnostic artifact and record run ID,
-  platform SHA, lessen SHA, and artifact id/name.
+- Remote proof recorded from PR run `27065594154`. The current branch must
+  still keep passing `validate-platform` after this metadata update.
 
 ## Rollback instructions
 
