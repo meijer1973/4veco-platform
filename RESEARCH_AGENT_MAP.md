@@ -28,11 +28,12 @@ Repository boundary:
 
 The platform repository does not contain final student-facing book output. Student-facing markdown/PDF output is built in sibling targets such as `../4veco-lessen/`; legacy deploy output lives outside this repo.
 
-Product end-state note: for paragraph-build, companion, exit-ticket,
-game-row, exam-ingestion, review-standard, or Scale Gate work, load
-`4veco-lessen/specifications/product-end-state.md`. It is the canonical
-definition of the generated route from current readiness to target-exercise
-readiness.
+Product vision note: for roadmap, architecture, paragraph-build, companion,
+exit-ticket, game-row, exam-ingestion, review-standard, or Scale Gate work,
+load `4veco-lessen/specifications/product-vision.md` first for strategic
+direction and trade-off logic, then
+`4veco-lessen/specifications/product-end-state.md` for the canonical
+operational route from current readiness to target-exercise readiness.
 
 Exam-ingestion north star: a new official CvTE economics exam question should
 eventually be ingestible as an external exercise record with prompt, source
@@ -134,6 +135,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_MAP_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/AGENTS.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/CLAUDE.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-PARAGRAPH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/BUILD-CHAPTER.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/build-scripts/README.md
@@ -163,6 +166,8 @@ Cross-repo entry point (4veco-lessen):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_MAP.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/RESEARCH_AGENT_PROMPT.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.md
+- https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-vision.json
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/product-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/specifications/companion-core-specifications.md
 
@@ -178,6 +183,8 @@ Use these anchors before free-form browsing.
 {
   "repo_operating_rules": "AGENTS.md",
   "local_claude_rules": "CLAUDE.md",
+  "product_vision_spec": "../4veco-lessen/specifications/product-vision.md",
+  "product_vision_json": "../4veco-lessen/specifications/product-vision.json",
   "paragraph_build_guide": "BUILD-PARAGRAPH.md",
   "chapter_build_guide": "BUILD-CHAPTER.md",
   "build_script_guide": "build-scripts/README.md",
@@ -447,8 +454,10 @@ Agents MUST follow this sequence:
 
 1. Load this map.
 2. Load `AGENTS.md`, `CLAUDE.md`, and for product/paragraph/companion/review
-   questions load the cross-repo product baseline:
-   `../4veco-lessen/specifications/product-end-state.md`.
+   questions load the cross-repo product baselines:
+   `../4veco-lessen/specifications/product-vision.md` for strategic
+   direction and `../4veco-lessen/specifications/product-end-state.md` for the
+   operational student route.
 3. Classify the task:
    - repository orientation or architecture
    - platform generator/deploy behavior

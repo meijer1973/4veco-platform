@@ -2,7 +2,7 @@
 
 Generated: 2026-04-23
 Adopted main roadmap: 2026-04-25
-Last strategic update: 2026-06-05
+Last strategic update: 2026-06-06
 Roadmap ID: `references-team-roadmap`
 Roadmap version: `v3.56-shared-task-ingest-gate-closed`
 Roadmap status: `active`
@@ -49,8 +49,14 @@ student-visible product, not merely as improved engines or isolated checks.
 The track below is the required sequence unless a later human review explicitly
 waives a requirement with stated consequences.
 
+Strategic baseline: `../4veco-lessen/specifications/product-vision.md`.
 Acceptance baseline: `../4veco-lessen/specifications/product-end-state.md`
 and `../4veco-lessen/specifications/companion-core-specifications.md`.
+
+MTU, exam-ingestion, visual/procedure registry, and task-shell work should
+cite the product vision when claiming strategic product progress. The
+operational route and companion requirements still gate student-facing
+completion claims through the end-state and companion specifications.
 
 Core standard:
 
@@ -88,6 +94,7 @@ Core standard:
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| VISION-1 | Strategic Product Vision Canonicalization | yes | Closed 2026-06-06 as PASS WITH FLAGS specification/governance sprint. Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight link/schema checker. No generated lesson output, protected reference mutation, source-data mutation, product-use authority, diagnostics, adaptive routing, mastery/sequencing, summative use, student-facing AI, PV, Scale Gate 1, or broad scaling is authorized. Future MTU, exam-ingestion, visual/procedure registry, and task-shell work should cite the product vision when claiming strategic product progress. |
 | BOOK1-FIX-1 | Book 1 TOC, Exercise Label, And Figure-Text Concordance Fix | yes | Closed 2026-06-02 as PASS WITH FLAGS. Added Book 1 TOC page-number structure, standardized the post-start exercise label as `Zelfstandige oefening`, repaired the `1.1.3` Figure 2/Figure 3 aggregate-asset mismatch, strengthened chapter/book figure concordance checks, improved the `1.1.3` math-versus-economics graph-axis explanation, and updated review/testing guidance so rendered figure-caption mismatch blocks closure. Generated Book 1 output was refreshed through platform workflow only. No protected reference mutation, target-exercise promotion, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use is authorized. |
 | SYNC-PRODUCT-1 | Product Proof Roadmap Alignment | yes | Closed roadmap/specification alignment sprint. Added this Product Proof Track to both roadmaps, tightened product specs around both check types, hint policy, route affordance, skill-map product surface, dual-coding task decisions, and first-three-paragraph proof before Scale Gate 1. No implementation, generated output, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |
 | CHECK-SHORT-EXIT-1 | Paragraph Check Surface Inventory And Contract | yes | Closed audit/contract sprint. Inventory records `1.1.1` as advisory `Korte check` only with missing target-equivalent exit ticket, `1.1.2` as reviewed local target-equivalent exit ticket with missing advisory short check, and `1.1.3` as missing both short check and target-equivalent graph/table exit ticket. No generated output, source exit-ticket writes, engine implementation, protected reference mutation, target-exercise writes, diagnostics, mastery/sequencing, student-facing AI, summative use, PV, Scale Gate 1, or product-wide use was authorized. |

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "sprint_id": "VISION-1",
+  "name": "Strategic Product Vision Canonicalization",
+  "status": "completed",
+  "completed": "2026-06-06",
+  "completed_on": "2026-06-06",
+  "verdict": "PASS WITH FLAGS",
+  "result_status": "pass_with_flags",
+  "plan": "reports/sprints/VISION-1-plan.md",
+  "baseline": "reports/sprints/VISION-1-baseline.md",
+  "result": "reports/sprints/VISION-1-result.md",
+  "diff_summary": "reports/sprints/VISION-1-diff-summary.md",
+  "final_verdict": "PASS WITH FLAGS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": false,
+  "source_data_mutation_executed": false,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/VISION-1-lead-review-assignment.md",
+    "round1": "reports/sprints/VISION-1-lead-review-round1.md",
+    "corrections": "reports/sprints/VISION-1-lead-review-corrections.md",
+    "round2": "reports/sprints/VISION-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS WITH FLAGS",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "VISION1-F1",
+        "description": "Post-save self-check commands depended on the round-2 lead-review report existing and had to be run after the report was saved.",
+        "disposition": "accepted_follow_up",
+        "owner": "main closure agent",
+        "next_action": "Run and log check-lead-review-substance, check-sprint-result, complete bundle, URL-index check, and final diff checks before commit/push.",
+        "blocking": false
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/VISION-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js VISION-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-product-vision-links.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js VISION-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false,
+    "broad_scaling": false
+  },
+  "vision_outputs": {
+    "canonical_markdown": "../4veco-lessen/specifications/product-vision.md",
+    "machine_readable_companion": "../4veco-lessen/specifications/product-vision.json",
+    "checker": "build-scripts/sprints/check-product-vision-links.js"
+  },
+  "carried_flags": [
+    {
+      "id": "VISION1-F1",
+      "description": "Round-2 post-save self-check evidence had to be appended after the review report existed.",
+      "disposition": "accepted_follow_up",
+      "owner": "main closure agent",
+      "next_action": "Complete and log the post-save validator sequence before remote publication.",
+      "blocking": false
+    }
+  ],
+  "authorized_next": [
+    "Use product-vision.md as the strategic decision instrument for future non-trivial sprint planning.",
+    "Continue only roadmap-authorized Product Proof Track or governance work.",
+    "Do not infer diagnostics, mastery, adaptive routing, summative use, student-facing AI, PV, Scale Gate 1, product-wide use, or broad scaling authority from this sprint."
+  ]
+}

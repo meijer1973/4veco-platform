@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "sprint_id": "VISION-1",
+  "name": "Strategic Product Vision Canonicalization",
+  "created": "2026-06-06",
+  "plan": "reports/sprints/VISION-1-plan.md",
+  "baseline": "reports/sprints/VISION-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add a canonical strategic product vision above the operational product end-state.",
+    "Add a compact machine-readable product vision JSON companion.",
+    "Link the product vision from key platform and lesson entry points.",
+    "Add a lightweight checker for vision file presence, JSON keys, and key-doc links."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/VISION-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js VISION-1",
+    "node build-scripts/sprints/check-product-vision-links.js",
+    "npm.cmd run check:scope-language",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-sprint-command-log.js VISION-1",
+    "node build-scripts/sprints/check-lead-review-substance.js VISION-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/VISION-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js VISION-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No generated Book 1 lesson output.",
+    "No engine implementation.",
+    "No source-data writes.",
+    "No references/machine or references/external edits.",
+    "No target-exercise registry writes.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, Scale Gate 1, product-wide use, or broad scaling authority."
+  ]
+}
