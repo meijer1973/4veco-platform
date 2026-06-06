@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-05T21:59:10.798Z
+Generated: 2026-06-06T06:55:56.006Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3546
+Files indexed: 3563
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 416
+Count: 418
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -452,6 +452,7 @@ Count: 416
 - build-scripts/sprints/check-check-route-copy1.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
+- build-scripts/sprints/check-check-surface-pregate1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
@@ -508,6 +509,7 @@ Count: 416
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
 - build-scripts/sprints/emit-visual-qa-harden2-proof.js
@@ -592,7 +594,7 @@ Count: 42
 
 ## validators
 
-Count: 304
+Count: 321
 
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -702,6 +704,7 @@ Count: 304
 - build-scripts/sprints/check-check-route-copy1.js
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
+- build-scripts/sprints/check-check-surface-pregate1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
@@ -758,6 +761,7 @@ Count: 304
 - build-scripts/sprints/check-task-ingest-transform3-textbook.js
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
+- build-scripts/sprints/emit-check-surface-pregate1-proof.js
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
@@ -774,6 +778,7 @@ Count: 304
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
+- reports/json/check-surface-pregate1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
@@ -859,6 +864,20 @@ Count: 304
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png
+- reports/sprints/CHECK-SURFACE-PREGATE-1-baseline.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-command-log.jsonl
+- reports/sprints/CHECK-SURFACE-PREGATE-1-command-log.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-assignment.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-corrections.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-round1.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-round2.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-plan.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-planning-review.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-product-walkthrough.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-readiness-report.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-result.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-student-experience-review.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-verification-review.md
 - reports/sprints/CP.6e-validation-log.md
 - reports/sprints/CP.6f-validation-log.md
 - reports/sprints/ENGINE-OP-1-screenshots/check-1-1-1-desktop.png
@@ -1382,7 +1401,7 @@ Count: 476
 
 ## reports
 
-Count: 2217
+Count: 2232
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1407,6 +1426,7 @@ Count: 2217
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
+- reports/json/check-surface-pregate1-proof.json
 - reports/json/checksurface-reset1-quality-findings.json
 - reports/json/context-visual-std1-contract.json
 - reports/json/dag-integrity.json
@@ -2234,6 +2254,20 @@ Count: 2217
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/desktop-113-landing-check.png
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json
 - reports/sprints/CHECK-SHORT-EXIT-2-screenshots/mobile-113-exit-ticket-dark.png
+- reports/sprints/CHECK-SURFACE-PREGATE-1-baseline.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-command-log.jsonl
+- reports/sprints/CHECK-SURFACE-PREGATE-1-command-log.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-assignment.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-corrections.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-round1.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-lead-review-round2.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-plan.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-planning-review.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-product-walkthrough.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-readiness-report.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-result.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-student-experience-review.md
+- reports/sprints/CHECK-SURFACE-PREGATE-1-verification-review.md
 - reports/sprints/CHECKSURFACE-RESET-1-baseline.md
 - reports/sprints/CHECKSURFACE-RESET-1-command-log.jsonl
 - reports/sprints/CHECKSURFACE-RESET-1-command-log.md

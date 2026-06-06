@@ -61,6 +61,7 @@ Single-fetch entry point for external research agents (notably planning Claude i
 
 ## Review-Gate Bundles
 
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP1-schema-audit/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-CP2-owned-source-scope/bundle-urls.md

@@ -1,0 +1,25 @@
+{"step":1,"command":"git status --short --branch","repo":"platform","result":"clean on codex/check-short-exit-2"}
+{"step":2,"command":"git status --short --branch","repo":"lessons","result":"clean on main"}
+{"step":3,"command":"Get-Content ..\\CLAUDE.md","result":"working agreement read"}
+{"step":4,"command":"Get-Content ..\\4veco-lessen\\specifications\\product-end-state.md","result":"product north star read"}
+{"step":5,"command":"Get-Content CLAUDE.md","result":"platform working context read"}
+{"step":6,"command":"Get-Content CHECK-SURFACE-PREGATE-1 result/readiness/proof","result":"pregate complete and green for retry-packet preparation"}
+{"step":7,"command":"Get-Content build-scripts\\review-gates\\check-gate-check-short-exit2-review-packet.js","result":"old gate checker pattern inspected"}
+{"step":8,"command":"Get-Content old review-packet/live-output/review-lab","result":"prior REVISE gate packet inspected"}
+{"step":9,"command":"git rev-parse HEAD","repo":"platform","result":"691f5ea52e3b85be201ef28ab8497fcef0f07427"}
+{"step":10,"command":"git rev-parse HEAD","repo":"lessons","result":"53a9117ca39205573db2e7bacd373734960ef6b9"}
+{"step":11,"command":"node build-scripts\\sprints\\emit-gate-bundle-urls.js GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review --branch codex/check-short-exit-2","result":"passed; 6 artifacts indexed"}
+{"step":12,"command":"node build-scripts\\review-gates\\check-gate-check-short-exit2-retry-review-packet.js","result":"passed"}
+{"step":13,"command":"node build-scripts\\sprints\\check-bundle-urls.js GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review --branch codex/check-short-exit-2","result":"passed"}
+{"step":14,"command":"node build-scripts\\sprints\\check-check-surface-pregate1.js","result":"passed after roadmap compatibility wording"}
+{"step":15,"command":"node build-scripts\\sprints\\check-visual-qa-harden2.js","result":"passed"}
+{"step":16,"command":"node build-scripts\\sprints\\check-check-short-exit2.js","result":"passed"}
+{"step":17,"command":"node build-scripts\\reports\\validate-report-json.js","result":"passed"}
+{"step":18,"command":"node build-scripts\\references\\check-roadmap-version-index.js","result":"passed"}
+{"step":19,"command":"npm.cmd run check:scope-language","result":"passed"}
+{"step":20,"command":"npm.cmd run check:platform","result":"passed with known fixture warnings printed"}
+{"step":21,"command":"npm.cmd run check:book -- \"..\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod\"","result":"passed 26/26"}
+{"step":22,"command":"npm.cmd run agent:index","result":"refreshed GitHub-facing maps"}
+{"step":23,"command":"node build-scripts\\sprints\\emit-url-index.js","result":"refreshed URL index"}
+{"step":24,"command":"npm.cmd run dashboard:internal","result":"refreshed internal dashboard"}
+{"step":25,"command":"post-refresh retry checker, bundle checker, JSON, roadmap, and scope checks","result":"passed"}
