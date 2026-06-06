@@ -34,8 +34,21 @@ Enforcement state:
 - reason: default CI does not need high-privilege branch-protection read
   permissions for this sprint; local authenticated `gh` proof is sufficient.
 
-Remote `platform-ci / validate-platform` proof is pending until the branch is
-pushed.
+Remote proof:
+
+- workflow name: `platform-ci`
+- job name: `validate-platform`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/27066406846`
+- run ID: `27066406846`
+- job ID: `79887950170`
+- branch head SHA: `aa4e22c0e8e4f61d43e92792bb83e2762b44600b`
+- CI checkout SHA from evidence artifact:
+  `06d8668246a335d227fd6a982fc6c01ce4f6b4a0`
+- lessen SHA from evidence artifact:
+  `15f823028522663ca62c8d6369af9c6ae0264efb`
+- conclusion: `success`
+- artifact: `platform-ci-diagnostics`
+- artifact ID: `7455638356`
 
 ## Acceptance test results
 
