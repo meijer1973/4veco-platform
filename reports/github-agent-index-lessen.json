@@ -1,8 +1,8 @@
 {
   "repo": "4veco-lessen",
-  "root": "C:\\Projects\\4veco\\4veco-lessen",
+  "root": "C:\\wt\\AGENT-WORKTREE-SAFETY-1\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-06-07T17:04:05.671Z",
+  "generated_at": "2026-06-07T19:24:34.074Z",
   "file_count": 1598,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [

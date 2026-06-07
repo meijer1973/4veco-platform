@@ -14,6 +14,7 @@
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",
     "check:branch-protection": "node build-scripts/ci/check-branch-protection.js",
     "check:agent-branch-safety": "node build-scripts/ci/check-agent-branch-safety.js",
+    "check:agent-worktree-safety": "node build-scripts/ci/check-agent-worktree-safety.js",
     "dashboard:internal": "node build-scripts/reports/internal-dashboard.js",
     "agent:index": "node build-scripts/reports/github-agent-index.js",
     "deploy:legacy": "node scripts/deploy.js ../\"3. Module 3 - Markt en overheid\"",

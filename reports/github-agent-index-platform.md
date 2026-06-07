@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T17:04:05.645Z
+Generated: 2026-06-07T19:24:34.046Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
-Root: `C:\Projects\4veco\4veco-platform-mtu-hardening`
-Files indexed: 3851
+Root: `C:\wt\AGENT-WORKTREE-SAFETY-1\4veco-platform`
+Files indexed: 3837
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -993,7 +993,7 @@ Count: 374
 
 ## references
 
-Count: 521
+Count: 519
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1485,8 +1485,6 @@ Count: 521
 - references/qc-prompts/README.md
 - references/qc-prompts/tree-integrity-audit.md
 - references/reference-team-roadmap.md
-- references/reference-team-roadmap.md
-- references/reference-team-roadmap.md
 - references/schemas/alignment-edge.schema.json
 - references/schemas/answer-skill-candidates.schema.json
 - references/schemas/claim.schema.json
@@ -1519,7 +1517,7 @@ Count: 521
 
 ## reports
 
-Count: 2454
+Count: 2442
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1540,23 +1538,11 @@ Count: 2454
 - reports/fixtures/gate-ci-proof1/positive-markdown.md
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
