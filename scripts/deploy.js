@@ -125,13 +125,18 @@ function copyEngines() {
 // browser with a single <script src="shared/skilltree/base-elements.js">.
 function buildSkilltreeBundleData(units, generatorMap) {
     const activeUnits = units.filter(u => u.id.charAt(0) === 'A' && !u.deprecated);
-    const routeUnits = units.filter(u => !u.deprecated && Array.isArray(u.aspects) && u.aspects.length);
-    const routeSkillIds = new Set(routeUnits.map(u => u.id));
     const interactiveSkillIds = new Set(
         activeUnits
             .filter(u => generatorMap[u.id])
             .map(u => u.id)
     );
+    const routeUnits = units.filter(u =>
+        !u.deprecated
+        && Array.isArray(u.aspects)
+        && u.aspects.length
+        && !(u.id.charAt(0) === 'A' && !interactiveSkillIds.has(u.id))
+    );
+    const routeSkillIds = new Set(routeUnits.map(u => u.id));
     const routeSkills = routeUnits
         .map(u => ({
             id: u.id,

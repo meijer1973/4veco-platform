@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-GENBLOCK-HARDEN-1",
+  "name": "Generator-Blocked MTU Exposure Hardening",
+  "created": "2026-06-07",
+  "plan": "reports/sprints/MTU-GENBLOCK-HARDEN-1-plan.md",
+  "baseline": "reports/sprints/MTU-GENBLOCK-HARDEN-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "source_data_writes_allowed": false,
+  "generator_implementation_allowed": false,
+  "student_product_use_authorized": false,
+  "pv_projection_authorized": false,
+  "scope": [
+    "Harden source and deploy skill-tree route exports against generator-blocked A-domain units.",
+    "Extend readiness builder/checker proof for route leak prevention and policy boundary flags.",
+    "Add deterministic negative-fixture rejection for blocked interactive leakage.",
+    "Record which blocked units matter for the next product route and which can remain blocked."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-GENBLOCK-HARDEN-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-GENBLOCK-HARDEN-1",
+    "node build-scripts/references/build-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "npx.cmd jest engines/tests/skilltree-data.test.js engines/tests/skill-map-engine.test.js --runInBand",
+    "npm.cmd run check:platform",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "node build-scripts/sprints/check-sprint-command-log.js MTU-GENBLOCK-HARDEN-1",
+    "node build-scripts/sprints/check-lead-review-substance.js MTU-GENBLOCK-HARDEN-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-GENBLOCK-HARDEN-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-GENBLOCK-HARDEN-1 --complete",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No hand edits to references/machine or references/external.",
+    "No source-data writes.",
+    "No lesson-target writes or generated Book 1 lesson output.",
+    "No target-exercise registry mutation.",
+    "No unit minting, unit deprecation, unit dependency mutation, or protected reference data mutation.",
+    "No missing-generator implementation or fake placeholder generators.",
+    "No PV projection publication or PV machine promotion.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1, product-route adoption, product-wide use, or student/product authority."
+  ]
+}

@@ -75,6 +75,25 @@ describe('SkillMapEngine aspect routes', () => {
         expect(view.visibleSkills.find(skill => skill.id === 'B02').routeRole).toBe('target');
     });
 
+    test('route display catalog does not expose generator-blocked A-domain units', () => {
+        const view = makeRouteSkillMap().buildView({
+            surface: 'calculation-game',
+            mode: 'route',
+            aspectFilter: 'calculation',
+            skillScope: ['A20'],
+            targetSkills: ['A20'],
+            paragraphTarget: 'Geblokkeerde generator mag niet zichtbaar worden'
+        });
+
+        expect(elements.GENERATOR_BLOCKED_SKILLS.map(skill => skill.id)).toContain('A20');
+        expect(elements.ROUTE_SKILLS.map(skill => skill.id)).not.toContain('A20');
+        expect(skillIds(view)).not.toContain('A20');
+        expect(view.visibleSkills).toHaveLength(0);
+        expect(view.boundaryFlags.diagnostics).toBe(false);
+        expect(view.boundaryFlags.masteryDecisions).toBe(false);
+        expect(view.boundaryFlags.pvProjection).toBe(false);
+    });
+
     test('filters calculation route by MTU rekenen aspect and keeps mixed support visible', () => {
         const view = makeSkillMap().buildView({
             surface: 'calculation-game',

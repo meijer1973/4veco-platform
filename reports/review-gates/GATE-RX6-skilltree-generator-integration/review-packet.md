@@ -15,11 +15,13 @@ RX.6 makes skill-tree generator readiness explicit. It does not implement new ge
 
 - Does the skill-tree expose only generator-backed units as interactive?
 - Are all missing-generator units explicitly marked non-interactive?
+- Are generator-blocked A-domain units absent from student-visible route exports?
 - Does the deploy browser bundle preserve the same split as source base-elements?
 - Are student-facing skill-tree/PV/diagnostic/adaptive uses still blocked for missing-generator units?
 
 ## Stop Conditions
 
 - No missing-generator A-domain unit may appear as an interactive skill.
+- No generator-blocked A-domain unit may appear as an ordinary student route row.
 - The deploy browser bundle must preserve the same split as source `base-elements.js`.
 - No student-facing skill-tree/PV/diagnostic/adaptive/mastery/summative use is authorized for blocked units.

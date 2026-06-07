@@ -18,10 +18,12 @@ RX.6 completed skill-tree generator integration by separating generator-backed i
 - Generator-blocked units: 51
 - Untracked missing generators: 0
 - Deployed blocked rows: 51
+- Blocked route leaks: 0
 
 ## Conditions
 
 - Keep generator-blocked A-domain units non-interactive until their generators exist and validate.
 - Do not expose generator-blocked units in student-facing skill-tree or PV projection.
+- Do not expose generator-blocked A-domain units as ordinary student route rows.
 - Do not authorize diagnostics, adaptive routing, AI, sequencing, mastery, or summative use.
 - Remove a unit from the generator-block list only through a later validated generator sprint.

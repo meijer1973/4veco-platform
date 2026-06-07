@@ -4,13 +4,19 @@
   "sprint_id": "RX.6",
   "gate_id": "GATE-RX6-skilltree-generator-integration",
   "generated_by": "build-scripts/references/build-skilltree-generator-readiness.js",
-  "generated_on": "2026-06-07T07:32:16.409Z",
+  "generated_on": "2026-06-07T10:01:36.723Z",
   "status": "passed",
   "policy": {
     "diagnostic_only": true,
     "student_facing_skilltree_use_authorized": false,
     "generator_exposure_for_blocked_units_authorized": false,
+    "route_exposure_for_blocked_units_authorized": false,
     "pv_projection_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_decisions_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_authority_authorized": false,
     "lesson_target_write_authorized": false,
     "machine_registry_created": false
   },
@@ -29,7 +35,11 @@
     "untracked_missing_generator_count": 0,
     "deploy_interactive_skill_count": 47,
     "deploy_generator_blocked_count": 51,
-    "blocked_interactive_leak_count": 0
+    "source_route_skill_count": 202,
+    "deploy_route_skill_count": 202,
+    "blocked_interactive_leak_count": 0,
+    "blocked_route_leak_count": 0,
+    "negative_fixture_rejection_required": true
   },
   "rows": [
     {
@@ -44,8 +54,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -62,8 +75,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -79,8 +95,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -97,8 +116,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -115,8 +137,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -133,8 +158,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A01",
         "A02"
@@ -155,8 +183,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A01",
         "A03"
@@ -176,8 +207,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A01"
       ],
@@ -195,8 +229,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A03"
       ],
@@ -215,8 +252,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A04"
       ],
@@ -234,8 +274,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A01"
       ],
@@ -254,8 +297,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A11",
         "A07"
@@ -274,8 +320,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A11",
         "A08"
@@ -295,8 +344,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A08"
       ],
@@ -315,8 +367,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A04",
         "A38"
@@ -336,8 +391,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A15"
       ],
@@ -355,8 +413,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A15"
       ],
@@ -375,8 +436,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -394,8 +458,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A06",
         "A10"
@@ -417,8 +484,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A20 implemented in the skill-tree generator layer",
@@ -439,8 +509,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A07",
         "A08",
@@ -461,8 +534,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A07",
         "A08",
@@ -482,8 +558,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A06",
         "A01",
@@ -503,8 +582,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A09",
         "A03"
@@ -525,8 +607,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A06"
       ],
@@ -546,8 +631,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A06"
       ],
@@ -567,8 +655,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A06",
         "A01"
@@ -588,8 +679,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A13",
         "A14"
@@ -608,8 +702,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A22"
       ],
@@ -627,8 +724,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A19"
       ],
@@ -646,8 +746,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A24"
       ],
@@ -666,8 +769,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A19",
         "A23"
@@ -686,8 +792,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A13",
         "A14",
@@ -708,8 +817,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A19",
         "A23",
@@ -729,8 +841,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A21",
         "A04"
@@ -749,8 +864,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A21"
       ],
@@ -768,8 +886,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A28"
       ],
@@ -787,8 +908,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -804,8 +928,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A38"
       ],
@@ -823,8 +950,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A10"
       ],
@@ -842,8 +972,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A03"
       ],
@@ -861,8 +994,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -878,8 +1014,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -895,8 +1034,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -914,8 +1056,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A45 implemented in the skill-tree generator layer",
@@ -938,8 +1083,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A46 implemented in the skill-tree generator layer",
@@ -962,8 +1110,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A47 implemented in the skill-tree generator layer",
@@ -986,8 +1137,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A48 implemented in the skill-tree generator layer",
@@ -1009,8 +1163,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A49 implemented in the skill-tree generator layer",
@@ -1032,8 +1189,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A50 implemented in the skill-tree generator layer",
@@ -1056,8 +1216,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A51 implemented in the skill-tree generator layer",
@@ -1079,8 +1242,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A52 implemented in the skill-tree generator layer",
@@ -1102,8 +1268,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A53 implemented in the skill-tree generator layer",
@@ -1125,8 +1294,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A54 implemented in the skill-tree generator layer",
@@ -1148,8 +1320,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A55 implemented in the skill-tree generator layer",
@@ -1172,8 +1347,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A56 implemented in the skill-tree generator layer",
@@ -1195,8 +1373,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A57 implemented in the skill-tree generator layer",
@@ -1218,8 +1399,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A58 implemented in the skill-tree generator layer",
@@ -1242,8 +1426,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A59 implemented in the skill-tree generator layer",
@@ -1266,8 +1453,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A60 implemented in the skill-tree generator layer",
@@ -1290,8 +1480,11 @@
       ],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -1309,8 +1502,11 @@
       ],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -1328,8 +1524,11 @@
       ],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": []
     },
@@ -1349,8 +1548,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A64 implemented in the skill-tree generator layer",
@@ -1374,8 +1576,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A65 implemented in the skill-tree generator layer",
@@ -1399,8 +1604,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A66 implemented in the skill-tree generator layer",
@@ -1424,8 +1632,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A67 implemented in the skill-tree generator layer",
@@ -1449,8 +1660,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A68 implemented in the skill-tree generator layer",
@@ -1474,8 +1688,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A69 implemented in the skill-tree generator layer",
@@ -1499,8 +1716,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A70 implemented in the skill-tree generator layer",
@@ -1524,8 +1744,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A72 implemented in the skill-tree generator layer",
@@ -1549,8 +1772,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A73 implemented in the skill-tree generator layer",
@@ -1574,8 +1800,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A74 implemented in the skill-tree generator layer",
@@ -1599,8 +1828,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A75 implemented in the skill-tree generator layer",
@@ -1624,8 +1856,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A76 implemented in the skill-tree generator layer",
@@ -1649,8 +1884,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A77 implemented in the skill-tree generator layer",
@@ -1674,8 +1912,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A78 implemented in the skill-tree generator layer",
@@ -1699,8 +1940,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A79 implemented in the skill-tree generator layer",
@@ -1722,8 +1966,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A80 implemented in the skill-tree generator layer",
@@ -1746,8 +1993,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A81 implemented in the skill-tree generator layer",
@@ -1771,8 +2021,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A82 implemented in the skill-tree generator layer",
@@ -1796,8 +2049,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A83 implemented in the skill-tree generator layer",
@@ -1821,8 +2077,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A84 implemented in the skill-tree generator layer",
@@ -1845,8 +2104,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A85 implemented in the skill-tree generator layer",
@@ -1869,8 +2131,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A86 implemented in the skill-tree generator layer",
@@ -1893,8 +2158,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A87 implemented in the skill-tree generator layer",
@@ -1918,8 +2186,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A88 implemented in the skill-tree generator layer",
@@ -1942,8 +2213,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A89 implemented in the skill-tree generator layer",
@@ -1966,8 +2240,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A90 implemented in the skill-tree generator layer",
@@ -1990,8 +2267,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A91 implemented in the skill-tree generator layer",
@@ -2014,8 +2294,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A92 implemented in the skill-tree generator layer",
@@ -2038,8 +2321,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A93 implemented in the skill-tree generator layer",
@@ -2062,8 +2348,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A94 implemented in the skill-tree generator layer",
@@ -2084,8 +2373,11 @@
       "generator_block_sources": [],
       "interactive_skilltree_use_allowed": true,
       "student_facing_skilltree_use_allowed": true,
+      "student_facing_route_use_allowed": true,
       "base_elements_export": "interactive",
       "deploy_bundle_export": "interactive",
+      "base_route_export": "route",
+      "deploy_route_export": "route",
       "needs_filtered_for_interactive_tree": [
         "A02"
       ],
@@ -2106,8 +2398,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A96 implemented in the skill-tree generator layer",
@@ -2129,8 +2424,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A97 implemented in the skill-tree generator layer",
@@ -2152,8 +2450,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A98 implemented in the skill-tree generator layer",
@@ -2175,8 +2476,11 @@
       ],
       "interactive_skilltree_use_allowed": false,
       "student_facing_skilltree_use_allowed": false,
+      "student_facing_route_use_allowed": false,
       "base_elements_export": "generator_blocked",
       "deploy_bundle_export": "generator_blocked",
+      "base_route_export": "not_exported",
+      "deploy_route_export": "not_exported",
       "needs_filtered_for_interactive_tree": [],
       "proof_required_to_unblock": [
         "GEN_A99 implemented in the skill-tree generator layer",
@@ -2197,6 +2501,11 @@
       "detail": "47 interactive and 51 blocked rows in deploy bundle data."
     },
     {
+      "id": "deploy_route_export_matches_source",
+      "status": "passed",
+      "detail": "202 source route rows and 202 deploy route rows."
+    },
+    {
       "id": "blocked_units_have_explicit_noninteractive_status",
       "status": "passed",
       "detail": "51/51 missing-generator units have explicit generator-block records."
@@ -2207,24 +2516,37 @@
       "detail": "0 blocked unit(s) leaked into interactive exports."
     },
     {
+      "id": "no_missing_generator_unit_is_route_visible",
+      "status": "passed",
+      "detail": "0 blocked A-domain unit(s) leaked into route exports."
+    },
+    {
       "id": "student_facing_controls_preserved",
       "status": "passed",
-      "detail": "Missing-generator rows are marked student_facing_skilltree_use_allowed=false."
+      "detail": "Missing-generator rows are marked student-facing skilltree and route use false."
     },
     {
       "id": "rx6_generator_block_file_written",
       "status": "passed",
       "detail": "references/data/sprints/RX.6-generator-blocked-units.json records 51 blocked unit(s)."
+    },
+    {
+      "id": "downstream_product_authority_blocked",
+      "status": "passed",
+      "detail": "Blocked units carry false authority flags for skilltree, route, PV, diagnostics, adaptive routing, mastery, and product authority."
     }
   ],
   "blocked_scope": [
     "student-facing skill-tree exposure for generator-blocked units",
+    "student-facing route display for generator-blocked units",
+    "lesson route exposure for generator-blocked units",
     "student diagnostics",
     "adaptive routing",
     "student-facing AI",
     "automatic sequencing",
     "mastery decisions",
     "summative decisions",
+    "product-route adoption for generator-blocked units",
     "student-facing PV projection for generator-blocked units"
   ]
 }
