@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T12:58:34.784Z
+Generated: 2026-06-07T17:04:05.645Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform-mtu-hardening`
-Files indexed: 3788
+Files indexed: 3851
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 435
+Count: 438
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -444,6 +444,7 @@ Count: 435
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
+- build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
@@ -465,6 +466,8 @@ Count: 435
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-check-surface-pregate1.js
+- build-scripts/sprints/check-checksurface-113-exemplar-exit1.js
+- build-scripts/sprints/check-checksurface-113-exemplar-review1.js
 - build-scripts/sprints/check-checksurface-policy-regression1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
@@ -611,7 +614,7 @@ Count: 42
 
 ## validators
 
-Count: 359
+Count: 374
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -732,6 +735,8 @@ Count: 359
 - build-scripts/sprints/check-check-short-exit1-inventory.js
 - build-scripts/sprints/check-check-short-exit2.js
 - build-scripts/sprints/check-check-surface-pregate1.js
+- build-scripts/sprints/check-checksurface-113-exemplar-exit1.js
+- build-scripts/sprints/check-checksurface-113-exemplar-review1.js
 - build-scripts/sprints/check-checksurface-policy-regression1.js
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
@@ -807,6 +812,19 @@ Count: 359
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.result.json
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/policy-extract.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/prototype.html
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/quality-brief.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/README.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/accessibility-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/lead-synthesis.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/student-experience-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
 - reports/json/check-route-copy1-proof.json
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
@@ -975,7 +993,7 @@ Count: 359
 
 ## references
 
-Count: 502
+Count: 521
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1042,6 +1060,10 @@ Count: 502
 - references/data/sprints/CHECK-SHORT-EXIT-1.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.plan.json
 - references/data/sprints/CHECK-SHORT-EXIT-2.result.json
+- references/data/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1.plan.json
+- references/data/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1.result.json
+- references/data/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1.plan.json
+- references/data/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1.result.json
 - references/data/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P.plan.json
 - references/data/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P.result.json
 - references/data/sprints/CHECKSURFACE-EXCELLENCE-REDESIGN-1.plan.json
@@ -1402,6 +1424,19 @@ Count: 502
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/policy-extract.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/prototype.html
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/quality-brief.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/README.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/accessibility-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/lead-synthesis.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/student-experience-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
+- references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
 - references/external/exams/ha-1022-a-23-1-c.pdf
@@ -1450,6 +1485,8 @@ Count: 502
 - references/qc-prompts/README.md
 - references/qc-prompts/tree-integrity-audit.md
 - references/reference-team-roadmap.md
+- references/reference-team-roadmap.md
+- references/reference-team-roadmap.md
 - references/schemas/alignment-edge.schema.json
 - references/schemas/answer-skill-candidates.schema.json
 - references/schemas/claim.schema.json
@@ -1482,7 +1519,7 @@ Count: 502
 
 ## reports
 
-Count: 2414
+Count: 2454
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1503,11 +1540,23 @@ Count: 2414
 - reports/fixtures/gate-ci-proof1/positive-markdown.md
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1517,6 +1566,10 @@ Count: 2414
 - reports/json/check-short-exit-inventory.json
 - reports/json/check-short-exit2-proof.json
 - reports/json/check-surface-pregate1-proof.json
+- reports/json/checksurface-113-exemplar-exit1-browser-proof.json
+- reports/json/checksurface-113-exemplar-exit1-proof.json
+- reports/json/checksurface-113-exemplar-review1-browser-proof.json
+- reports/json/checksurface-113-exemplar-review1-proof.json
 - reports/json/checksurface-excellence-audit-3p-proof.json
 - reports/json/checksurface-policy-regression1-proof.json
 - reports/json/checksurface-reset1-quality-findings.json
@@ -2383,6 +2436,30 @@ Count: 2414
 - reports/sprints/CHECK-SURFACE-PREGATE-1-result.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-student-experience-review.md
 - reports/sprints/CHECK-SURFACE-PREGATE-1-verification-review.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-baseline.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-command-log.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-correction-log.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-diff-summary.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-lead-review-round-1.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-lead-review-round-2.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-plan.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-planning-review.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-result.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-verification-review.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-baseline.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-command-log.jsonl
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-diff-summary.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-assignment.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-corrections.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-round1.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-round2.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-plan.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-planning-review.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-result.md
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/manifest.json
+- reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-command-log.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-assignment.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-corrections.md
@@ -3919,7 +3996,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 298
+Count: 299
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4130,6 +4207,7 @@ Count: 298
 - docs/sprints/S8-plan.md
 - docs/sprints/S9-plan.md
 - docs/sprints/S9a-plan.md
+- knowledge/113-excellent-exit-ticket-v3-package.zip
 - knowledge/course_blueprint_v4.md
 - knowledge/Exercise schema and quality/ChatGPT Image Apr 28, 2026, 10_35_18 PM.png
 - knowledge/Exercise schema and quality/feedback-to-engineering-HCS.md

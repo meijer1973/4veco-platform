@@ -467,6 +467,9 @@
     if (task.family === "graph_construction_substitute" && window.TaskShellUI && window.TaskShellUI.collectGraphConstructionResponse) {
       return window.TaskShellUI.collectGraphConstructionResponse(rootEl, task);
     }
+    if (task.family === "graph_reading" && window.TaskShellUI && window.TaskShellUI.collectGraphReadingResponse) {
+      return window.TaskShellUI.collectGraphReadingResponse(rootEl, task);
+    }
     if (task.family === "calculation_work_capture") {
       if (window.TaskShellUI && window.TaskShellUI.collectCalculationResponse) {
         return window.TaskShellUI.collectCalculationResponse(rootEl, task);
