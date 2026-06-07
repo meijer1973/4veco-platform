@@ -65,6 +65,22 @@ describe('base-elements', () => {
             .toEqual(elements.GENERATOR_BLOCKED_SKILLS.map(s => s.id).sort());
     });
 
+    test('generator-blocked A-domain units are not exposed in route catalogs', () => {
+        const bundleData = buildSkilltreeBundleData(catalog, elements.GEN);
+        const sourceRouteIds = new Set(elements.ROUTE_SKILLS.map(s => s.id));
+        const deployRouteIds = new Set(bundleData.routeSkills.map(s => s.id));
+
+        for (const blocked of elements.GENERATOR_BLOCKED_SKILLS) {
+            expect(sourceRouteIds.has(blocked.id)).toBe(false);
+            expect(deployRouteIds.has(blocked.id)).toBe(false);
+        }
+    });
+
+    test('route catalog still preserves non-A concept units for display-only routes', () => {
+        const routeIds = elements.ROUTE_SKILLS.map(s => s.id);
+        expect(routeIds).toEqual(expect.arrayContaining(['B01', 'B02']));
+    });
+
     test('exports LAYER_NAMES with 6 entries', () => {
         expect(elements.LAYER_NAMES).toHaveLength(6);
     });
@@ -159,6 +175,12 @@ describe('base-elements', () => {
         for (const skill of elements.SKILLS) {
             expect(bundleById.get(skill.id).aspects).toEqual(skill.aspects);
         }
+    });
+
+    test('deployed browser bundle route catalog matches source route catalog', () => {
+        const bundleData = buildSkilltreeBundleData(catalog, elements.GEN);
+        expect(bundleData.routeSkills.map(s => s.id).sort())
+            .toEqual(elements.ROUTE_SKILLS.map(s => s.id).sort());
     });
 });
 

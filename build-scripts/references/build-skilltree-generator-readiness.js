@@ -34,12 +34,15 @@ const TECHNICAL_CLOSURE_MD_PATH = `${GATE_DIR}/technical-closure.md`;
 
 const BLOCKED_DOWNSTREAM_USES = [
   'student-facing skill-tree exposure for generator-blocked units',
+  'student-facing route display for generator-blocked units',
+  'lesson route exposure for generator-blocked units',
   'student diagnostics',
   'adaptive routing',
   'student-facing AI',
   'automatic sequencing',
   'mastery decisions',
   'summative decisions',
+  'product-route adoption for generator-blocked units',
   'student-facing PV projection for generator-blocked units',
 ];
 
@@ -123,7 +126,12 @@ function writeGeneratorBlockFile(missingUnits) {
     source_gate: `${GATE_DIR}/technical-closure.json`,
     blocked_reason: 'active A-domain catalog units without generator implementations must be non-interactive until a later generator sprint implements and validates them',
     student_facing_skilltree_use_allowed: false,
+    student_facing_route_use_allowed: false,
     pv_projection_allowed: false,
+    diagnostics_authorized: false,
+    adaptive_routing_authorized: false,
+    mastery_decisions_authorized: false,
+    product_authority_authorized: false,
     unit_count: missingUnits.length,
     generator_blocked_units: missingUnits.map((unit) => unit.id),
     units: missingUnits.map((unit) => ({
@@ -133,7 +141,12 @@ function writeGeneratorBlockFile(missingUnits) {
       generator_implemented: false,
       generator_status: 'missing_generator_implementation',
       student_facing_skilltree_use_allowed: false,
+      student_facing_route_use_allowed: false,
       pv_projection_allowed: false,
+      diagnostics_authorized: false,
+      adaptive_routing_authorized: false,
+      mastery_decisions_authorized: false,
+      product_authority_authorized: false,
       non_interactive_until_generator_validates: true,
       proof_required_to_unblock: [
         `${generatorName(unit)} implemented in the skill-tree generator layer`,
@@ -175,10 +188,14 @@ function buildReadiness() {
 
   const elementInteractive = elements.SKILLS.map((skill) => ({ id: skill.id }));
   const elementBlocked = elements.GENERATOR_BLOCKED_SKILLS.map((skill) => ({ id: skill.id }));
+  const elementRoute = elements.ROUTE_SKILLS.map((skill) => ({ id: skill.id }));
   const deployInteractive = deployBundleData.skills.map((skill) => ({ id: skill.id }));
   const deployBlocked = deployBundleData.generatorBlockedSkills.map((skill) => ({ id: skill.id }));
+  const deployRoute = deployBundleData.routeSkills.map((skill) => ({ id: skill.id }));
   const interactiveIdSet = byId(interactiveUnits);
   const missingIdSet = byId(missingUnits);
+  const elementRouteIdSet = byId(elementRoute);
+  const deployRouteIdSet = byId(deployRoute);
 
   const rows = activeUnits.map((unit) => {
     const implemented = generatorImplemented(unit, generators);
@@ -195,10 +212,13 @@ function buildReadiness() {
       generator_block_sources: blockSources,
       interactive_skilltree_use_allowed: implemented,
       student_facing_skilltree_use_allowed: implemented,
+      student_facing_route_use_allowed: implemented && elementRouteIdSet.has(unit.id),
       base_elements_export: inInteractive ? 'interactive' : (inMissing ? 'generator_blocked' : 'not_exported'),
       deploy_bundle_export: deployBundleData.skills.some((skill) => skill.id === unit.id)
         ? 'interactive'
         : (deployBundleData.generatorBlockedSkills.some((skill) => skill.id === unit.id) ? 'generator_blocked' : 'not_exported'),
+      base_route_export: elementRouteIdSet.has(unit.id) ? 'route' : 'not_exported',
+      deploy_route_export: deployRouteIdSet.has(unit.id) ? 'route' : 'not_exported',
       needs_filtered_for_interactive_tree: implemented
         ? (unit.needs || []).filter((need) => interactiveIdSet.has(need))
         : [],
@@ -217,6 +237,10 @@ function buildReadiness() {
     row.generator_blocked &&
     (row.base_elements_export === 'interactive' || row.deploy_bundle_export === 'interactive')
   );
+  const blockedRouteLeaks = rows.filter((row) =>
+    row.generator_blocked &&
+    (row.base_route_export === 'route' || row.deploy_route_export === 'route')
+  );
 
   const checks = [
     {
@@ -230,6 +254,11 @@ function buildReadiness() {
       detail: `${deployBundleData.skills.length} interactive and ${deployBundleData.generatorBlockedSkills.length} blocked rows in deploy bundle data.`,
     },
     {
+      id: 'deploy_route_export_matches_source',
+      status: sameIds(elementRoute, deployRoute) ? 'passed' : 'failed',
+      detail: `${elements.ROUTE_SKILLS.length} source route rows and ${deployBundleData.routeSkills.length} deploy route rows.`,
+    },
+    {
       id: 'blocked_units_have_explicit_noninteractive_status',
       status: untrackedMissing.length === 0 ? 'passed' : 'failed',
       detail: `${missingUnits.length - untrackedMissing.length}/${missingUnits.length} missing-generator units have explicit generator-block records.`,
@@ -240,14 +269,35 @@ function buildReadiness() {
       detail: `${blockedInteractiveLeaks.length} blocked unit(s) leaked into interactive exports.`,
     },
     {
+      id: 'no_missing_generator_unit_is_route_visible',
+      status: blockedRouteLeaks.length === 0 ? 'passed' : 'failed',
+      detail: `${blockedRouteLeaks.length} blocked A-domain unit(s) leaked into route exports.`,
+    },
+    {
       id: 'student_facing_controls_preserved',
-      status: rows.every((row) => row.generator_implemented || row.student_facing_skilltree_use_allowed === false) ? 'passed' : 'failed',
-      detail: 'Missing-generator rows are marked student_facing_skilltree_use_allowed=false.',
+      status: rows.every((row) =>
+        row.generator_implemented ||
+        (row.student_facing_skilltree_use_allowed === false && row.student_facing_route_use_allowed === false)
+      ) ? 'passed' : 'failed',
+      detail: 'Missing-generator rows are marked student-facing skilltree and route use false.',
     },
     {
       id: 'rx6_generator_block_file_written',
       status: blockFile.unit_count === missingUnits.length ? 'passed' : 'failed',
       detail: `${BLOCK_PATH} records ${blockFile.unit_count} blocked unit(s).`,
+    },
+    {
+      id: 'downstream_product_authority_blocked',
+      status: blockFile.student_facing_skilltree_use_allowed === false
+        && blockFile.student_facing_route_use_allowed === false
+        && blockFile.pv_projection_allowed === false
+        && blockFile.diagnostics_authorized === false
+        && blockFile.adaptive_routing_authorized === false
+        && blockFile.mastery_decisions_authorized === false
+        && blockFile.product_authority_authorized === false
+        ? 'passed'
+        : 'failed',
+      detail: 'Blocked units carry false authority flags for skilltree, route, PV, diagnostics, adaptive routing, mastery, and product authority.',
     },
   ];
 
@@ -264,7 +314,13 @@ function buildReadiness() {
       diagnostic_only: true,
       student_facing_skilltree_use_authorized: false,
       generator_exposure_for_blocked_units_authorized: false,
+      route_exposure_for_blocked_units_authorized: false,
       pv_projection_authorized: false,
+      diagnostics_authorized: false,
+      adaptive_routing_authorized: false,
+      mastery_decisions_authorized: false,
+      product_route_adoption_authorized: false,
+      product_authority_authorized: false,
       lesson_target_write_authorized: false,
       machine_registry_created: false,
     },
@@ -283,7 +339,11 @@ function buildReadiness() {
       untracked_missing_generator_count: untrackedMissing.length,
       deploy_interactive_skill_count: deployBundleData.skills.length,
       deploy_generator_blocked_count: deployBundleData.generatorBlockedSkills.length,
+      source_route_skill_count: elements.ROUTE_SKILLS.length,
+      deploy_route_skill_count: deployBundleData.routeSkills.length,
       blocked_interactive_leak_count: blockedInteractiveLeaks.length,
+      blocked_route_leak_count: blockedRouteLeaks.length,
+      negative_fixture_rejection_required: true,
     },
     rows,
     checks,
@@ -312,7 +372,10 @@ function renderMarkdown(report) {
     row.generator_blocked ? 'yes' : 'no',
     row.base_elements_export,
     row.deploy_bundle_export,
+    row.base_route_export,
+    row.deploy_route_export,
     row.student_facing_skilltree_use_allowed ? 'yes' : 'no',
+    row.student_facing_route_use_allowed ? 'yes' : 'no',
     row.generator_block_sources.join(', '),
   ]);
   const checkRows = report.checks.map((check) => [check.id, check.status, check.detail]);
@@ -331,6 +394,11 @@ Status: \`${report.status}\`
 - Untracked missing generators: ${report.summary.untracked_missing_generator_count}
 - Deployed interactive units: ${report.summary.deploy_interactive_skill_count}
 - Deployed blocked rows: ${report.summary.deploy_generator_blocked_count}
+- Source route rows: ${report.summary.source_route_skill_count}
+- Deployed route rows: ${report.summary.deploy_route_skill_count}
+- Blocked interactive leaks: ${report.summary.blocked_interactive_leak_count}
+- Blocked route leaks: ${report.summary.blocked_route_leak_count}
+- Negative-fixture rejection required: ${report.summary.negative_fixture_rejection_required ? 'yes' : 'no'}
 
 ## Policy
 
@@ -339,7 +407,7 @@ This report is diagnostic/release-readiness proof only. It does not implement ge
 ## Unit Readiness
 
 ${markdownTable(
-    ['Unit', 'Name', 'Generator', 'Blocked', 'Source Export', 'Deploy Export', 'Student Use', 'Block Sources'],
+    ['Unit', 'Name', 'Generator', 'Blocked', 'Source Export', 'Deploy Export', 'Source Route', 'Deploy Route', 'Student Skilltree Use', 'Student Route Use', 'Block Sources'],
     rows
   )}
 
@@ -369,6 +437,7 @@ function writeGateArtifacts(report) {
     human_review_required: false,
     machine_registry_created: false,
     student_facing_skilltree_use_authorized: false,
+    route_exposure_for_blocked_units_authorized: false,
     evidence: {
       readiness_report: REPORT_JSON_PATH,
       generator_block_file: BLOCK_PATH,
@@ -377,6 +446,7 @@ function writeGateArtifacts(report) {
     review_questions: [
       'Does the skill-tree expose only generator-backed units as interactive?',
       'Are all missing-generator units explicitly marked non-interactive?',
+      'Are generator-blocked A-domain units absent from student-visible route exports?',
       'Does the deploy browser bundle preserve the same split as source base-elements?',
       'Are student-facing skill-tree/PV/diagnostic/adaptive uses still blocked for missing-generator units?',
     ],
@@ -389,6 +459,7 @@ function writeGateArtifacts(report) {
     closed_on: TODAY,
     student_facing_skilltree_use_authorized: false,
     generator_exposure_for_blocked_units_authorized: false,
+    route_exposure_for_blocked_units_authorized: false,
     pv_projection_authorized: false,
     report_outputs: [
       REPORT_JSON_PATH,
@@ -399,6 +470,7 @@ function writeGateArtifacts(report) {
     conditions: [
       'Keep generator-blocked A-domain units non-interactive until their generators exist and validate.',
       'Do not expose generator-blocked units in student-facing skill-tree or PV projection.',
+      'Do not expose generator-blocked A-domain units as ordinary student route rows.',
       'Do not authorize diagnostics, adaptive routing, AI, sequencing, mastery, or summative use.',
       'Remove a unit from the generator-block list only through a later validated generator sprint.',
     ],
@@ -424,6 +496,7 @@ ${packet.review_questions.map((question) => `- ${question}`).join('\n')}
 ## Stop Conditions
 
 - No missing-generator A-domain unit may appear as an interactive skill.
+- No generator-blocked A-domain unit may appear as an ordinary student route row.
 - The deploy browser bundle must preserve the same split as source \`base-elements.js\`.
 - No student-facing skill-tree/PV/diagnostic/adaptive/mastery/summative use is authorized for blocked units.
 `);
@@ -446,6 +519,7 @@ ${closure.report_outputs.map((output) => `- \`${output}\``).join('\n')}
 - Generator-blocked units: ${report.summary.generator_blocked_count}
 - Untracked missing generators: ${report.summary.untracked_missing_generator_count}
 - Deployed blocked rows: ${report.summary.deploy_generator_blocked_count}
+- Blocked route leaks: ${report.summary.blocked_route_leak_count}
 
 ## Conditions
 
