@@ -857,3 +857,420 @@ OK sprint result: reports\sprints\MTU-ANS-GEN-DESIGN-1-result.md
 ```text
 
 ```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T12:58:34.398Z`
+- finished_at: `2026-06-07T12:58:34.893Z`
+- duration_ms: `495`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T12:58:42.557Z`
+- finished_at: `2026-06-07T12:58:42.685Z`
+- duration_ms: `128`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T12:58:48.523Z`
+- finished_at: `2026-06-07T12:58:48.864Z`
+- duration_ms: `341`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T12:59:58.939Z`
+- finished_at: `2026-06-07T12:59:59.020Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:00:06.027Z`
+- finished_at: `2026-06-07T13:00:06.354Z`
+- duration_ms: `327`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node -e "const fs=require('fs');const files=['reports/github-agent-index-platform.md','reports/github-agent-index-platform.json'];const needles=['MTU-ANS-GEN-DESIGN-1','check-mtu-answerform-generator-design.js'];for (const file of files){const text=fs.readFileSync(file,'utf8');for (const needle of needles){if(!text.includes(needle)){throw new Error(file+' missing '+needle);}}}console.log('OK platform agent index includes MTU answer-form sprint files');"
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:00:14.821Z`
+- finished_at: `2026-06-07T13:00:14.900Z`
+- duration_ms: `79`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a39bc801b5bd8cbc1dc5a3caf71dae4cabec0a92d59e02903e788624b69403c0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+[eval]:1
+const
+
+Unexpected token `<eof>`. Expected yield, an identifier, [ or {
+
+SyntaxError: Unexpected end of input
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.13.1
+
+```
+## node -e "const fs=require(fs); const files=[reports/github-agent-index-platform.md,reports/github-agent-index-platform.json]; const needles=[MTU-ANS-GEN-DESIGN-1,check-mtu-answerform-generator-design.js]; for (const file of files) { const text=fs.readFileSync(file,utf8); for (const needle of needles) { if (!text.includes(needle)) throw new Error(file+" missing "+needle); } } console.log(OK" platform agent index includes MTU answer-form sprint "files);"
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:00:25.962Z`
+- finished_at: `2026-06-07T13:00:26.043Z`
+- duration_ms: `81`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a39bc801b5bd8cbc1dc5a3caf71dae4cabec0a92d59e02903e788624b69403c0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+[eval]:1
+const
+
+Unexpected token `<eof>`. Expected yield, an identifier, [ or {
+
+SyntaxError: Unexpected end of input
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.13.1
+
+```
+## findstr /C:MTU-ANS-GEN-DESIGN-1 "reports\\github-agent-index-platform.md" "reports\\github-agent-index-platform.json"
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:00:44.504Z`
+- finished_at: `2026-06-07T13:00:44.549Z`
+- duration_ms: `45`
+- exit_code: `0`
+- stdout_sha256: `0681d8020d78960a828ac84868ca57f081e9335c10e1a72492d07244bf46e3bf`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+reports\github-agent-index-platform.md:- references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
+reports\github-agent-index-platform.md:- references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-diff-summary.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-generator-proof-design.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-implementation-handoff.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-assignment.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-corrections.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-round1.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-round2.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-plan.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-planning-review.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md
+reports\github-agent-index-platform.md:- reports/sprints/MTU-ANS-GEN-DESIGN-1-verification-review.md
+reports\github-agent-index-platform.json:      "references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json",
+reports\github-agent-index-platform.json:      "references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-diff-summary.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-generator-proof-design.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-implementation-handoff.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-assignment.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-corrections.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-round1.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-lead-review-round2.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-plan.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-planning-review.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md",
+reports\github-agent-index-platform.json:      "reports/sprints/MTU-ANS-GEN-DESIGN-1-verification-review.md",
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## findstr /C:check-mtu-answerform-generator-design.js "reports\\github-agent-index-platform.md" "reports\\github-agent-index-platform.json"
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:00:53.897Z`
+- finished_at: `2026-06-07T13:00:53.938Z`
+- duration_ms: `41`
+- exit_code: `0`
+- stdout_sha256: `702452ae986b63bef585324c91098559b77bd05fec8667d192beecde7fa610f6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+reports\github-agent-index-platform.md:- build-scripts/references/check-mtu-answerform-generator-design.js
+reports\github-agent-index-platform.md:- build-scripts/references/check-mtu-answerform-generator-design.js
+reports\github-agent-index-platform.json:      "build-scripts/references/check-mtu-answerform-generator-design.js",
+reports\github-agent-index-platform.json:      "build-scripts/references/check-mtu-answerform-generator-design.js",
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:02:13.138Z`
+- finished_at: `2026-06-07T13:02:13.224Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `52dd785bfd8e88855fe3f222c9ac7b1ecc82c3ca88c5c93543e4226a7798c7f3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\MTU-ANS-GEN-DESIGN-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js MTU-ANS-GEN-DESIGN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:02:20.432Z`
+- finished_at: `2026-06-07T13:02:20.558Z`
+- duration_ms: `126`
+- exit_code: `0`
+- stdout_sha256: `dd8b376dda08de1d99e66ea3fcd615fcf537227acd39d18cf52277c9f8d54238`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: MTU-ANS-GEN-DESIGN-1 (45 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-GEN-DESIGN-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:02:28.385Z`
+- finished_at: `2026-06-07T13:02:28.896Z`
+- duration_ms: `511`
+- exit_code: `0`
+- stdout_sha256: `bdfdba36587dfa91c8546fdbab4f232730c6795513c9ff49fb3d827c915a8f79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-ANS-GEN-DESIGN-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:02:37.155Z`
+- finished_at: `2026-06-07T13:02:37.236Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:02:45.134Z`
+- finished_at: `2026-06-07T13:02:45.228Z`
+- duration_ms: `94`
+- exit_code: `2`
+- stdout_sha256: `f799708a7d312e7767724b071f00c6b12b6a095ec57875adea98b9de0b7d9467`
+- stderr_sha256: `d50f4705c2a203d3f63d4358f44a13a21878121ec6aa01a1103e7691afe3a83e`
+
+### stdout excerpt
+
+```text
+reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md:1008: trailing whitespace.
++
+reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md:1041: trailing whitespace.
++
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+- started_at: `2026-06-07T13:03:14.731Z`
+- finished_at: `2026-06-07T13:03:14.812Z`
+- duration_ms: `81`
+- exit_code: `2`
+- stdout_sha256: `feea32bb067dc6d22e15d524ce5536e4c2288eda4f47f57fbb5334fba1164304`
+- stderr_sha256: `d50f4705c2a203d3f63d4358f44a13a21878121ec6aa01a1103e7691afe3a83e`
+
+### stdout excerpt
+
+```text
+reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md:1233: trailing whitespace.
+++
+reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md:1235: trailing whitespace.
+++
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md', LF will be replaced by CRLF the next time Git touches it
+
+```

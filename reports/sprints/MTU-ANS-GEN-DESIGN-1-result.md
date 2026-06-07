@@ -41,6 +41,24 @@ had no `node_modules`; after `npm.cmd ci`, the logged rerun passed.
 One initial complete-bundle run also failed on strict lead-review round labels;
 those labels were corrected and the logged reruns passed.
 
+Remote proof:
+
+- platform PR: `https://github.com/meijer1973/4veco-platform/pull/14`
+- platform branch: `codex/mtu-answerform-generator-plan-20260607`
+- initial pushed head SHA: `6b0acacf556568dc4dedddb63f4937f7bda1ddce`
+- `platform-ci / validate-platform`: success, run `27092809863`, job
+  `79959395549`
+- PR status at result publication: open and unmerged
+
+PR lead-review correction:
+
+- regenerated `reports/github-agent-index-platform.*` after the sprint files
+  were tracked;
+- verified the platform index contains `MTU-ANS-GEN-DESIGN-1` and
+  `check-mtu-answerform-generator-design.js`;
+- reconciled result metadata from pending publication to pushed PR review
+  evidence.
+
 ## Acceptance test results
 
 Passed through `run-sprint-command.js`:

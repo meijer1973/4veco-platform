@@ -16,7 +16,21 @@
   "lead_review_schema_version": 2,
   "platform_branch": "codex/mtu-answerform-generator-plan-20260607",
   "remote_publication": {
-    "status": "pending_commit_and_push"
+    "status": "pushed_for_pr_review",
+    "platform_pr_url": "https://github.com/meijer1973/4veco-platform/pull/14",
+    "platform_branch": "codex/mtu-answerform-generator-plan-20260607",
+    "base_branch": "main",
+    "review_state": "open_unmerged",
+    "initial_pushed_head_sha": "6b0acacf556568dc4dedddb63f4937f7bda1ddce",
+    "ci": {
+      "workflow_name": "platform-ci",
+      "job_name": "validate-platform",
+      "required_status_check_display": "platform-ci / validate-platform",
+      "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/27092809863",
+      "run_id": "27092809863",
+      "job_id": "79959395549",
+      "conclusion": "success"
+    }
   },
   "acceptance_tests": [
     {
