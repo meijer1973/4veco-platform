@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-ANS-GEN-DESIGN-1",
+  "name": "Answer-Form Generator And Proof Design",
+  "created": "2026-06-07",
+  "plan": "reports/sprints/MTU-ANS-GEN-DESIGN-1-plan.md",
+  "baseline": "reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md",
+  "planning_review": "reports/sprints/MTU-ANS-GEN-DESIGN-1-planning-review.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "source_data_writes_allowed": false,
+  "generator_implementation_allowed": false,
+  "student_product_use_authorized": false,
+  "pv_projection_authorized": false,
+  "scope": [
+    "Design generator/proof routes for A80, A81, and A96-A99.",
+    "Preserve generator-blocked and route-hidden status during design.",
+    "Produce a later implementation handoff with rendered proof requirements.",
+    "Prevent standalone A81 proof and shallow answer-form drill overclaims."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-GEN-DESIGN-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-GEN-DESIGN-1",
+    "node build-scripts/references/check-mtu-answerform-generator-design.js",
+    "node build-scripts/references/check-skilltree-generator-readiness.js",
+    "node build-scripts/references/check-mtu-evidence-layer.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/check-sprint-command-log.js MTU-ANS-GEN-DESIGN-1",
+    "node build-scripts/sprints/check-lead-review-substance.js MTU-ANS-GEN-DESIGN-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-GEN-DESIGN-1 --complete",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No hand edits to references/machine or references/external.",
+    "No unit mutation or authored target-exercise mutation.",
+    "No source-data writes.",
+    "No generated lesson output.",
+    "No generator implementation or route exposure changes.",
+    "No fake placeholder generators.",
+    "No PV projection, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, Scale Gate 1, product-route adoption, product-wide use, or student/product authority."
+  ]
+}

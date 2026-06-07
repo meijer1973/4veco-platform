@@ -17,16 +17,16 @@ This is not another minimal retry. The goal is a student-facing exit ticket that
 
 ## Files in this package
 
-- `113-excellent-exit-ticket-v3-prototype.html`  
+- `113-excellent-exit-ticket-v3-prototype.html`
   Playable standalone prototype. Open locally in a browser.
 
-- `113-excellent-exit-ticket-v3-candidate-data.json`  
+- `113-excellent-exit-ticket-v3-candidate-data.json`
   Candidate source-data shape for platform implementation. It intentionally removes the pre-attempt formula context block and adds formula construction as a task.
 
-- `113-excellent-exit-ticket-v3-implementation-handoff.md`  
+- `113-excellent-exit-ticket-v3-implementation-handoff.md`
   This handoff.
 
-- `113-excellent-exit-ticket-v3-quality-brief.md`  
+- `113-excellent-exit-ticket-v3-quality-brief.md`
   Short explanation of why this is materially better than the current retry surface.
 
 
