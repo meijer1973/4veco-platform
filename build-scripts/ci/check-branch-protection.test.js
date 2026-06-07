@@ -1,4 +1,8 @@
-const { contextsFromProtection, summarizeProtection } = require('./check-branch-protection');
+const {
+  contextsFromProtection,
+  summarizeProtection,
+  summarizePullRequestReviews,
+} = require('./check-branch-protection');
 
 function validProtection(overrides = {}) {
   return {
@@ -39,6 +43,31 @@ describe('check-branch-protection', () => {
     });
 
     expect(contexts).toEqual(['validate-platform', 'lint']);
+  });
+
+  test('reports pull-request review settings without making them required failures', () => {
+    const summary = summarizeProtection(validProtection(), {
+      pullRequestReviews: {
+        dismiss_stale_reviews: false,
+        require_code_owner_reviews: false,
+        require_last_push_approval: false,
+        required_approving_review_count: 1,
+      },
+    });
+
+    expect(summary.ok).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.required).toBe(true);
+    expect(summary.observed.required_pull_request_reviews.required_approving_review_count).toBe(1);
+    expect(summary.observed.required_pull_request_reviews.bypass_disabled).toBeNull();
+  });
+
+  test('reports pull-request review limitation when settings are absent', () => {
+    const summary = summarizePullRequestReviews(null, {
+      limitation: 'endpoint unavailable',
+    });
+
+    expect(summary.required).toBe(false);
+    expect(summary.limitation).toBe('endpoint unavailable');
   });
 
   test.each([
