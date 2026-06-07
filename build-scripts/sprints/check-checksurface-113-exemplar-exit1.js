@@ -113,9 +113,18 @@ function requireExemplarFiles() {
     assert(fs.existsSync(path.join(EXEMPLAR_DIR, relPath)), `missing exemplar file: ${relPath}`);
   }
   const lead = read(path.join(EXEMPLAR_DIR, 'reviews', 'lead-synthesis.md'));
-  assert(/PENDING_REVIEW/.test(lead), 'lead synthesis must remain pending review');
-  assert(/hold_for_exemplar_review/.test(lead), 'lead synthesis must name hold_for_exemplar_review');
-  return required;
+  const pending = /PENDING_REVIEW/.test(lead) && /hold_for_exemplar_review/.test(lead);
+  const reviewed = /Status:\s*`COMPLETE`/.test(lead) && /Verdict:\s*PASS WITH FLAGS/.test(lead) && /reviewed_with_flags/.test(lead);
+  assert(pending || reviewed, 'lead synthesis must be pending hold or reviewed with flags');
+  if (reviewed) {
+    assert(/target-readiness evidence/i.test(lead), 'reviewed lead synthesis must preserve target-readiness boundary');
+    assert(/completion language/i.test(lead), 'reviewed lead synthesis must preserve completion-language boundary');
+  }
+  return {
+    required,
+    review_state: reviewed ? 'COMPLETE_PASS_WITH_FLAGS' : 'PENDING_REVIEW',
+    next_state: reviewed ? 'reviewed_with_flags' : 'hold_for_exemplar_review',
+  };
 }
 
 function checkSource() {
@@ -195,9 +204,9 @@ function main() {
     generated_output: generated,
     exemplar: {
       directory: path.relative(ROOT, EXEMPLAR_DIR).replace(/\\/g, '/'),
-      required_files: exemplarFiles.map((file) => file.replace(/\\/g, '/')),
-      review_state: 'PENDING_REVIEW',
-      next_state: 'hold_for_exemplar_review',
+      required_files: exemplarFiles.required.map((file) => file.replace(/\\/g, '/')),
+      review_state: exemplarFiles.review_state,
+      next_state: exemplarFiles.next_state,
     },
     authority: {
       target_readiness_evidence_authorized: false,

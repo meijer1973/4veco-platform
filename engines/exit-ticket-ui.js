@@ -336,6 +336,32 @@
     });
   }
 
+  function updateThemeToggle(documentObj) {
+    var button = documentObj.getElementById('theme-toggle');
+    if (!button) return;
+    var mode = documentObj.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    button.textContent = mode === 'dark' ? 'Lichte modus' : 'Donkere modus';
+    button.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+  }
+
+  function bindThemeToggle(documentObj, rootObj) {
+    var button = documentObj.getElementById('theme-toggle');
+    if (!button) return;
+    updateThemeToggle(documentObj);
+    button.addEventListener('click', function () {
+      var current = documentObj.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      documentObj.documentElement.setAttribute('data-theme', next);
+      try {
+        var storage = rootObj.localStorage || (typeof localStorage !== 'undefined' ? localStorage : null);
+        if (storage) storage.setItem('quizMode', next);
+      } catch (e) {
+        // Theme persistence is a convenience; the visible toggle should still work.
+      }
+      updateThemeToggle(documentObj);
+    });
+  }
+
   function cssEscape(value) {
     if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(value);
     return String(value).replace(/"/g, '\\"');
@@ -485,6 +511,7 @@
     });
     var view = buildSkillView(data, engine, rootObj);
     app.innerHTML = renderStaticHtml(data, view);
+    bindThemeToggle(documentObj, rootObj);
     bindInteractions(app, engine);
     return { engine: engine, view: view };
   }

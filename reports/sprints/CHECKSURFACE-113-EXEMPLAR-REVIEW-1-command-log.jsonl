@@ -1,0 +1,21 @@
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-plan.md","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-REVIEW-1","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/exit-ticket-metadata-alignment.test.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-checksurface-policy-regression1.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-checksurface-113-exemplar-review1.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npm.cmd run check:platform","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npm.cmd run check:scope-language","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/reports/validate-report-json.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/references/check-roadmap-version-index.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npm.cmd run agent:index","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/emit-url-index.js","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"npm.cmd run dashboard:internal","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-sprint-result.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-result.md","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-REVIEW-1 --complete","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"node build-scripts/sprints/emit-url-index.js --check","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"git diff --check","exit_code":0,"recorded_on":"2026-06-07"}
+{"sprint_id":"CHECKSURFACE-113-EXEMPLAR-REVIEW-1","command":"git -C ../4veco-lessen diff --check","exit_code":0,"recorded_on":"2026-06-07"}

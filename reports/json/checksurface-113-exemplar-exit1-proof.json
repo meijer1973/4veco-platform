@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
-  "generated": "2026-06-07T12:18:38.294Z",
+  "generated": "2026-06-07T13:01:27.382Z",
   "status": "passed",
   "source": {
     "task_families": [
@@ -36,8 +36,8 @@
       "reviews/testing-regression-review.md",
       "reviews/lead-synthesis.md"
     ],
-    "review_state": "PENDING_REVIEW",
-    "next_state": "hold_for_exemplar_review"
+    "review_state": "COMPLETE_PASS_WITH_FLAGS",
+    "next_state": "reviewed_with_flags"
   },
   "authority": {
     "target_readiness_evidence_authorized": false,

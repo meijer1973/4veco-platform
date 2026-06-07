@@ -728,6 +728,15 @@ describe('ExitTicketUI', () => {
         expect(exitTicketIndex).toBeLessThan(landingIndex);
     });
 
+    test('runtime binds the visible exit-ticket theme toggle', () => {
+        const source = fs.readFileSync(path.join(PLATFORM_ROOT, 'engines', 'exit-ticket-ui.js'), 'utf8');
+        expect(source).toContain('function bindThemeToggle');
+        expect(source).toContain("documentObj.getElementById('theme-toggle')");
+        expect(source).toContain("storage.setItem('quizMode', next)");
+        expect(source).toContain('bindThemeToggle(documentObj, rootObj)');
+        expect(source).toContain("button.setAttribute('aria-pressed'");
+    });
+
     test('renders checkpoint-compatible graph tasks through the shared task shell', () => {
         const html = ExitTicketUI.renderStaticHtml(graphTaskShellData(), {});
         expect(html).toContain('data-task-family="table_value_selection"');
