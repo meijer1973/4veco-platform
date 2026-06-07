@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-06T18:05:41.442Z
+Generated: 2026-06-07T07:53:07.787Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3712
+Files indexed: 3727
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 430
+Count: 431
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -482,6 +482,7 @@ Count: 430
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
@@ -606,7 +607,7 @@ Count: 42
 
 ## validators
 
-Count: 354
+Count: 355
 
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
@@ -744,6 +745,7 @@ Count: 354
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
 - build-scripts/sprints/check-reason-play1-usability.js
@@ -965,7 +967,7 @@ Count: 354
 
 ## references
 
-Count: 492
+Count: 494
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1381,6 +1383,8 @@ Count: 492
 - references/data/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
+- references/data/sprints/VISION-1.plan.json
+- references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
@@ -1462,7 +1466,7 @@ Count: 492
 
 ## reports
 
-Count: 2353
+Count: 2365
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3799,6 +3803,18 @@ Count: 2353
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-dark-112-exit-ticket-task-shell.png
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-light-112-exit-ticket-unit-fields.png
 - reports/sprints/TASK-SHELL-UX-2-ui-contract.md
+- reports/sprints/VISION-1-baseline.md
+- reports/sprints/VISION-1-command-log.jsonl
+- reports/sprints/VISION-1-command-log.md
+- reports/sprints/VISION-1-diff-summary.md
+- reports/sprints/VISION-1-lead-review-assignment.md
+- reports/sprints/VISION-1-lead-review-corrections.md
+- reports/sprints/VISION-1-lead-review-round1.md
+- reports/sprints/VISION-1-lead-review-round2.md
+- reports/sprints/VISION-1-plan.md
+- reports/sprints/VISION-1-planning-review.md
+- reports/sprints/VISION-1-result.md
+- reports/sprints/VISION-1-verification-review.md
 - reports/sprints/VISUAL-QA-HARDEN-2-baseline.md
 - reports/sprints/VISUAL-QA-HARDEN-2-command-log.jsonl
 - reports/sprints/VISUAL-QA-HARDEN-2-command-log.md

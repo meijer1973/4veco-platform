@@ -1,11 +1,11 @@
 # Reference Health
 
-Generated: 2026-05-28T07:10:44.019Z
+Generated: 2026-06-07T07:32:38.574Z
 
 ## Unit Counts
 
-- Total: 238
-- Live: 235
+- Total: 256
+- Live: 253
 - Deprecated: 3
 
 ## Graph Authority
@@ -19,8 +19,8 @@ Generated: 2026-05-28T07:10:44.019Z
 ## QC Findings
 
 - Reports: 18
-- Total issues: 813
-- High/critical issues: 16
+- Total issues: 980
+- High/critical issues: 9
 
 ## Quality Issue Model
 
@@ -72,9 +72,9 @@ Generated: 2026-05-28T07:10:44.019Z
 - Status: passed
 - Diagnostic only: true
 - Student-facing skilltree use authorized: false
-- Active A-domain units: 81
-- Interactive units: 44
-- Generator-blocked units: 37
+- Active A-domain units: 98
+- Interactive units: 47
+- Generator-blocked units: 51
 - Untracked missing generators: 0
 
 ## Exam Ingestion Coverage

@@ -1,7 +1,7 @@
 {
   "report_id": "begrippen-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-05-28T07:10:40.631Z",
+  "generated_on": "2026-06-07T07:32:07.238Z",
   "source_files": [
     "references/machine/begrippen.json",
     "references/machine/micro-teaching-units.json"

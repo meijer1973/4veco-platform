@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "C:\\Projects\\4veco\\4veco-lessen",
   "available": true,
-  "generated_at": "2026-06-06T18:05:41.472Z",
-  "file_count": 1596,
+  "generated_at": "2026-06-07T07:53:07.834Z",
+  "file_count": 1598,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
   "skipped_directories": [
     ".cache",
@@ -2835,6 +2835,8 @@
       "pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json",
       "specifications/companion-core-specifications.md",
       "specifications/product-end-state.md",
+      "specifications/product-vision.json",
+      "specifications/product-vision.md",
       "vw-1022-a-25-1-o.pdf"
     ]
   }

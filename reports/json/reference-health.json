@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-05-28T07:10:44.019Z",
+  "generated_on": "2026-06-07T07:32:38.574Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -20,25 +20,25 @@
     "reports/json/*.json"
   ],
   "unit_counts": {
-    "total": 238,
-    "live": 235,
+    "total": 256,
+    "live": 253,
     "deprecated": 3,
     "by_category": {
       "arbeidsmarkt": 21,
       "goede en slechte tijden": 20,
-      "markt": 38,
+      "markt": 43,
       "risico en informatie": 12,
       "ruilen over tijd": 7,
       "samenwerken en onderhandelen": 20,
       "schaarste": 2,
-      "vaardigheden": 85,
+      "vaardigheden": 98,
       "welvaart en groei": 30
     },
     "by_layer": {
-      "0": 12,
-      "1": 57,
-      "2": 68,
-      "3": 40,
+      "0": 21,
+      "1": 61,
+      "2": 71,
+      "3": 42,
       "4": 20,
       "5": 23,
       "6": 10,
@@ -46,17 +46,17 @@
     }
   },
   "empty_needs_status_distribution": {
-    "true_zero": 1,
+    "true_zero": 10,
     "unclassified": 31,
     "underbouw_assumed": 11
   },
   "prior_knowledge_review_status": {
-    "not_reviewed": 223,
-    "reviewed": 12
+    "not_reviewed": 232,
+    "reviewed": 21
   },
   "term_link_coverage": {
     "terms": 227,
-    "units_without_terms": 87,
+    "units_without_terms": 98,
     "status": "warn"
   },
   "exam_question_coverage": {
@@ -72,12 +72,12 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 424
+    "issues": 581
   },
   "qc_findings": {
     "report_count": 18,
-    "total_issues": 813,
-    "high_or_critical_issues": 16,
+    "total_issues": 980,
+    "high_or_critical_issues": 9,
     "by_report_status": {
       "info": 1,
       "pass": 7,
@@ -189,13 +189,13 @@
     "linked_units_with_surface_variants": 6,
     "linked_units_with_game_mapping": 1,
     "linked_units_with_answer_model_projection": 6,
-    "linked_units_with_generator_support": 1,
+    "linked_units_with_generator_support": 2,
     "linked_units_generator_blocked": 4,
     "linked_units_publication_allowed": 0,
     "blocker_reason_counts": {
       "answer_model_projection_pending": 1,
       "generator_blocked_non_interactive": 4,
-      "generator_missing": 4,
+      "generator_missing": 3,
       "generator_support_pending": 4,
       "human_publication_gate_pending": 6,
       "operation_ids_provisional_until_registry_gate": 4,
@@ -212,10 +212,10 @@
     "generator_exposure_for_blocked_units_authorized": false,
     "pv_projection_authorized": false,
     "machine_registry_created": false,
-    "active_a_domain_count": 81,
-    "interactive_skill_count": 44,
-    "generator_blocked_count": 37,
-    "explicit_generator_block_count": 37,
+    "active_a_domain_count": 98,
+    "interactive_skill_count": 47,
+    "generator_blocked_count": 51,
+    "explicit_generator_block_count": 51,
     "untracked_missing_generator_count": 0,
     "blocked_interactive_leak_count": 0
   },

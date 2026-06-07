@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-EVIDENCE-HARDEN-1",
+  "name": "MTU Evidence Layer Freshness",
+  "status": "completed",
+  "completed": "2026-06-07",
+  "completed_on": "2026-06-07",
+  "verdict": "PASS",
+  "result_status": "pass",
+  "plan": "reports/sprints/MTU-EVIDENCE-HARDEN-1-plan.md",
+  "baseline": "reports/sprints/MTU-EVIDENCE-HARDEN-1-baseline.md",
+  "result": "reports/sprints/MTU-EVIDENCE-HARDEN-1-result.md",
+  "diff_summary": "reports/sprints/MTU-EVIDENCE-HARDEN-1-diff-summary.md",
+  "final_verdict": "PASS",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "generated_report_outputs_changed": true,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-assignment.md",
+    "round1": "reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-round1.md",
+    "corrections": "reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-corrections.md",
+    "round2": "reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-EVIDENCE-HARDEN-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-EVIDENCE-HARDEN-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-unit-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/validate-core-schemas.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/audit-empty-needs.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-all.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/generate-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-evidence-layer.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-procedure-visual-coverage.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/check-reference-health.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js MTU-EVIDENCE-HARDEN-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js MTU-EVIDENCE-HARDEN-1",
+      "status": "passed"
+    }
+  ],
+  "mtu_evidence_layer": {
+    "total_units": 256,
+    "live_units": 253,
+    "deprecated_units": 3,
+    "projection_matches_stored_json": true,
+    "remaining_stale_or_missing_reports": []
+  },
+  "generated_side_effects": [
+    "reports/review-gates/GATE-PV6-coverage-dashboard/review-packet.json",
+    "reports/review-gates/GATE-PV6-coverage-dashboard/technical-closure.json",
+    "reports/review-gates/GATE-RX6-skilltree-generator-integration/review-packet.json"
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false,
+    "broad_scaling": false
+  },
+  "authorized_next": [
+    "Inspect GitHub Actions platform-ci / validate-platform after push.",
+    "Use check-mtu-evidence-layer.js as the CI-visible guard against MTU count drift.",
+    "Defer per-report semantic --check mode expansion to a future reference-governance hardening sprint."
+  ]
+}

@@ -1,0 +1,1426 @@
+# Sprint MTU-EVIDENCE-HARDEN-1: Command Log
+
+## node build-scripts/references/build-unit-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:31:48.112Z`
+- finished_at: `2026-06-07T07:31:48.236Z`
+- duration_ms: `124`
+- exit_code: `0`
+- stdout_sha256: `cd2b74add63e1cb17d3c5dfed49aa43f88f707ca08baa19aa05e642552c93a18`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK  256 unit(s) validated; wrote references\machine\micro-teaching-units.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/audit-empty-needs.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:31:58.570Z`
+- finished_at: `2026-06-07T07:31:58.638Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `1aaab49666317fd9aba2d06d0e147c18c259df3fe4b1144c3c0a7a084f85fba3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK empty-needs audit: 52 units
+JSON: references/data/audits/empty-needs-audit.json
+Markdown: reports/reference-audits/empty-needs-audit.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/generate-all.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:32:06.624Z`
+- finished_at: `2026-06-07T07:32:07.271Z`
+- duration_ms: `647`
+- exit_code: `0`
+- stdout_sha256: `7c71ba7a61be1b5ea4249e1746410fa5fbc23e49e1d73ddc3523ccb092784c21`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK generated 14 JSON-first report(s). Manifest: reports/json/report-manifest.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/build-skilltree-generator-readiness.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:32:16.328Z`
+- finished_at: `2026-06-07T07:32:16.437Z`
+- duration_ms: `109`
+- exit_code: `0`
+- stdout_sha256: `bdbfb6ad4236b8cd82474a42473fe0f4ef9cbf43437f7d6a98dc0cb02a61711c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/json/skilltree-generator-readiness.json
+wrote reports/markdown/skilltree-generator-readiness.md
+wrote references/data/sprints/RX.6-generator-blocked-units.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/build-procedure-visual-coverage.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:32:27.859Z`
+- finished_at: `2026-06-07T07:32:27.976Z`
+- duration_ms: `117`
+- exit_code: `0`
+- stdout_sha256: `f42bb4f41abac2bb81c907d8de62244dfcb7163f74794b3f832f1a6fd055ff37`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/json/procedure-visual-coverage.json
+wrote reports/markdown/procedure-visual-coverage.md
+wrote reports/review-gates/GATE-PV6-coverage-dashboard/technical-closure.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/generate-reference-health.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:32:38.469Z`
+- finished_at: `2026-06-07T07:32:38.606Z`
+- duration_ms: `137`
+- exit_code: `0`
+- stdout_sha256: `650ec4ee0c4ac6ca90b2c1f6a4783be6300737fcbbfc404217c55f8815d01f75`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK reference health: reports/json/reference-health.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-evidence-layer.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:32:48.332Z`
+- finished_at: `2026-06-07T07:32:48.459Z`
+- duration_ms: `127`
+- exit_code: `0`
+- stdout_sha256: `674ec4df869615b83a4548ddb2a2a3598b6f6731a24dd4799211d5946086d0ce`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU evidence layer: 256 total, 253 live, 3 deprecated
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-procedure-visual-coverage.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:33:40.262Z`
+- finished_at: `2026-06-07T07:33:40.372Z`
+- duration_ms: `110`
+- exit_code: `0`
+- stdout_sha256: `58710d940c114cb98e5b6e493af8e81c688c08d0e87addfb21d37f24aaccda60`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK Procedure-Visual coverage
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-EVIDENCE-HARDEN-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:33:40.197Z`
+- finished_at: `2026-06-07T07:33:40.389Z`
+- duration_ms: `192`
+- exit_code: `0`
+- stdout_sha256: `90582cbcef99b29e7bd5796b7a4ae7c9115c3ae945cbf8846c755e8a77fbfd1f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\MTU-EVIDENCE-HARDEN-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-skilltree-generator-readiness.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:33:40.292Z`
+- finished_at: `2026-06-07T07:33:40.471Z`
+- duration_ms: `179`
+- exit_code: `0`
+- stdout_sha256: `25bd8dd4039e82a22466babc52f6f991f540f897fb8ba1a0eeb551afce756b55`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK skilltree generator readiness
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/validate-core-schemas.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:33:40.323Z`
+- finished_at: `2026-06-07T07:33:40.470Z`
+- duration_ms: `147`
+- exit_code: `0`
+- stdout_sha256: `aac951ea167c4243d739e7081753af4b825f3d6fe7115220401450b957decd4d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK core schemas: 17 files
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-EVIDENCE-HARDEN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:33:40.236Z`
+- finished_at: `2026-06-07T07:33:40.574Z`
+- duration_ms: `338`
+- exit_code: `0`
+- stdout_sha256: `04df3747ab12623fffa9b028066c8e3b787673f93230d7b6141961b385670b09`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-EVIDENCE-HARDEN-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:09.972Z`
+- finished_at: `2026-06-07T07:34:10.062Z`
+- duration_ms: `90`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:09.990Z`
+- finished_at: `2026-06-07T07:34:10.575Z`
+- duration_ms: `585`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:09.970Z`
+- finished_at: `2026-06-07T07:34:10.762Z`
+- duration_ms: `792`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-evidence-layer.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.678Z`
+- finished_at: `2026-06-07T07:34:45.875Z`
+- duration_ms: `197`
+- exit_code: `0`
+- stdout_sha256: `674ec4df869615b83a4548ddb2a2a3598b6f6731a24dd4799211d5946086d0ce`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU evidence layer: 256 total, 253 live, 3 deprecated
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/check-reference-health.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.754Z`
+- finished_at: `2026-06-07T07:34:45.883Z`
+- duration_ms: `129`
+- exit_code: `0`
+- stdout_sha256: `d3bce6ee618262fab5ede9a33ec1e283206fa8f922f915c5f46e7948157a1bde`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK reference health contract
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.822Z`
+- finished_at: `2026-06-07T07:34:45.977Z`
+- duration_ms: `155`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.785Z`
+- finished_at: `2026-06-07T07:34:45.989Z`
+- duration_ms: `204`
+- exit_code: `0`
+- stdout_sha256: `7891f5b32abb5c84ee2c44a575345b2c73331bde9726c963e39ff37c5196585f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 147 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.914Z`
+- finished_at: `2026-06-07T07:34:46.056Z`
+- duration_ms: `142`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:34:45.754Z`
+- finished_at: `2026-06-07T07:34:46.372Z`
+- duration_ms: `618`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:35:00.683Z`
+- finished_at: `2026-06-07T07:35:00.819Z`
+- duration_ms: `136`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `fc9cbb2a8b5ddb11d84da33368cf75c256e3e41774a94fac19b36ae682928a23`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/audits/empty-needs-audit.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/RX.6-generator-blocked-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/aspects-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/begrippen-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dag-integrity.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dead-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/empty-needs-audit-summary.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/exam-ingestion-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/misconception-registry.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/needs-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-visual-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-health.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-quality-issues.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/report-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/skilltree-generator-readiness.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terminology-drift.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terms-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unit-design-status.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unresolved-refs.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/aspects-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/begrippen-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dag-integrity.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dead-units.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/empty-needs-audit-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/exam-ingestion-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/misconception-registry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/needs-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-visual-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/reference-health.m
+...[truncated 1491 chars]
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:35:00.692Z`
+- finished_at: `2026-06-07T07:35:00.847Z`
+- duration_ms: `155`
+- exit_code: `0`
+- stdout_sha256: `dd5e13c7944145e76e3ed01c2bf6f5163971e8ba80277b12edfffd8583e69069`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 83 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:35:00.677Z`
+- finished_at: `2026-06-07T07:35:25.626Z`
+- duration_ms: `24949`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `5518b99631fde2e85e0eb8ffd9b970d5cd7b49440d6cebf52d1353a5ab92af91`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 46 passed, 46 of 52 total
+Tests:       8 skipped, 709 passed, 717 total
+Snapshots:   0 total
+Time:        23.901 s
+Ran all test suites.
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:36:06.767Z`
+- finished_at: `2026-06-07T07:36:06.858Z`
+- duration_ms: `91`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-evidence-layer.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:36:06.769Z`
+- finished_at: `2026-06-07T07:36:06.879Z`
+- duration_ms: `110`
+- exit_code: `0`
+- stdout_sha256: `674ec4df869615b83a4548ddb2a2a3598b6f6731a24dd4799211d5946086d0ce`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU evidence layer: 256 total, 253 live, 3 deprecated
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:36:06.759Z`
+- finished_at: `2026-06-07T07:36:06.898Z`
+- duration_ms: `139`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `fc9cbb2a8b5ddb11d84da33368cf75c256e3e41774a94fac19b36ae682928a23`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/audits/empty-needs-audit.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/RX.6-generator-blocked-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/aspects-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/begrippen-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dag-integrity.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dead-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/empty-needs-audit-summary.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/exam-ingestion-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/misconception-registry.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/needs-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-visual-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-health.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-quality-issues.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/report-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/skilltree-generator-readiness.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terminology-drift.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terms-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unit-design-status.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unresolved-refs.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/aspects-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/begrippen-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dag-integrity.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dead-units.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/empty-needs-audit-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/exam-ingestion-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/misconception-registry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/needs-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-visual-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/reference-health.m
+...[truncated 1491 chars]
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-EVIDENCE-HARDEN-1-plan.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:52:46.182Z`
+- finished_at: `2026-06-07T07:52:46.322Z`
+- duration_ms: `140`
+- exit_code: `0`
+- stdout_sha256: `90582cbcef99b29e7bd5796b7a4ae7c9115c3ae945cbf8846c755e8a77fbfd1f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\MTU-EVIDENCE-HARDEN-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-EVIDENCE-HARDEN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:52:56.980Z`
+- finished_at: `2026-06-07T07:52:57.166Z`
+- duration_ms: `186`
+- exit_code: `0`
+- stdout_sha256: `04df3747ab12623fffa9b028066c8e3b787673f93230d7b6141961b385670b09`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-EVIDENCE-HARDEN-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:53:06.530Z`
+- finished_at: `2026-06-07T07:53:07.901Z`
+- duration_ms: `1371`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `8864091ba06424b523e98e8e26f15db5e30121eab95d5db313af4f944b1805d7`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+npm notice
+npm notice New minor version of npm available! 11.8.0 -> 11.16.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.16.0
+npm notice To update run: npm install -g npm@11.16.0
+npm notice
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:53:16.832Z`
+- finished_at: `2026-06-07T07:53:16.905Z`
+- duration_ms: `73`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:53:26.638Z`
+- finished_at: `2026-06-07T07:53:27.056Z`
+- duration_ms: `418`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-evidence-layer.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:53:36.610Z`
+- finished_at: `2026-06-07T07:53:36.721Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `674ec4df869615b83a4548ddb2a2a3598b6f6731a24dd4799211d5946086d0ce`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU evidence layer: 256 total, 253 live, 3 deprecated
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/validate-core-schemas.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:53:50.874Z`
+- finished_at: `2026-06-07T07:53:50.986Z`
+- duration_ms: `112`
+- exit_code: `0`
+- stdout_sha256: `aac951ea167c4243d739e7081753af4b825f3d6fe7115220401450b957decd4d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK core schemas: 17 files
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-skilltree-generator-readiness.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:01.071Z`
+- finished_at: `2026-06-07T07:54:01.149Z`
+- duration_ms: `78`
+- exit_code: `0`
+- stdout_sha256: `25bd8dd4039e82a22466babc52f6f991f540f897fb8ba1a0eeb551afce756b55`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK skilltree generator readiness
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-procedure-visual-coverage.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:10.245Z`
+- finished_at: `2026-06-07T07:54:10.309Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `58710d940c114cb98e5b6e493af8e81c688c08d0e87addfb21d37f24aaccda60`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK Procedure-Visual coverage
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:20.104Z`
+- finished_at: `2026-06-07T07:54:20.185Z`
+- duration_ms: `81`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/check-reference-health.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:30.706Z`
+- finished_at: `2026-06-07T07:54:30.776Z`
+- duration_ms: `70`
+- exit_code: `0`
+- stdout_sha256: `d3bce6ee618262fab5ede9a33ec1e283206fa8f922f915c5f46e7948157a1bde`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK reference health contract
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:40.481Z`
+- finished_at: `2026-06-07T07:54:40.571Z`
+- duration_ms: `90`
+- exit_code: `0`
+- stdout_sha256: `7891f5b32abb5c84ee2c44a575345b2c73331bde9726c963e39ff37c5196585f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 147 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:54:50.443Z`
+- finished_at: `2026-06-07T07:54:50.525Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:55:12.695Z`
+- finished_at: `2026-06-07T07:55:13.081Z`
+- duration_ms: `386`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/ci/check-evidence-line-endings.js
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:55:26.803Z`
+- finished_at: `2026-06-07T07:55:26.913Z`
+- duration_ms: `110`
+- exit_code: `0`
+- stdout_sha256: `dd5e13c7944145e76e3ed01c2bf6f5163971e8ba80277b12edfffd8583e69069`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK evidence line endings: scanned 83 text file(s), skipped 0, CRLF 0
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:55:38.868Z`
+- finished_at: `2026-06-07T07:55:57.797Z`
+- duration_ms: `18929`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `4f4ab18e85b7e8242eccb7ea019faccf1b8004891541785b2b270f105b0138cc`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 46 passed, 46 of 52 total
+Tests:       8 skipped, 709 passed, 717 total
+Snapshots:   0 total
+Time:        17.905 s, estimated 23 s
+Ran all test suites.
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:56:11.931Z`
+- finished_at: `2026-06-07T07:56:12.115Z`
+- duration_ms: `184`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `fc9cbb2a8b5ddb11d84da33368cf75c256e3e41774a94fac19b36ae682928a23`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/audits/empty-needs-audit.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/RX.6-generator-blocked-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/aspects-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/begrippen-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dag-integrity.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dead-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/empty-needs-audit-summary.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/exam-ingestion-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/misconception-registry.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/needs-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-visual-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-health.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-quality-issues.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/report-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/skilltree-generator-readiness.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terminology-drift.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terms-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unit-design-status.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unresolved-refs.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/aspects-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/begrippen-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dag-integrity.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dead-units.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/empty-needs-audit-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/exam-ingestion-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/misconception-registry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/needs-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-visual-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/reference-health.m
+...[truncated 1491 chars]
+```
+## node build-scripts/sprints/check-sprint-command-log.js MTU-EVIDENCE-HARDEN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:56:23.841Z`
+- finished_at: `2026-06-07T07:56:23.923Z`
+- duration_ms: `82`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `9217d1c0be1d652bef051ab9c006c76cc5d3ba4b843f2f24b2bf5bfc1e481ad6`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint command-log check failed: references\data\sprints\MTU-EVIDENCE-HARDEN-1.result.json passed command lacks command-log exit_code 0 evidence: node build-scripts/sprints/check-lead-review-substance.js MTU-EVIDENCE-HARDEN-1
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js MTU-EVIDENCE-HARDEN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:56:49.126Z`
+- finished_at: `2026-06-07T07:56:49.212Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `3a079b586443920ac279492ec4c89d7c05591408d5153d14f40459a931e1697c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: MTU-EVIDENCE-HARDEN-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js MTU-EVIDENCE-HARDEN-1
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:57:00.777Z`
+- finished_at: `2026-06-07T07:57:00.908Z`
+- duration_ms: `131`
+- exit_code: `0`
+- stdout_sha256: `e6a21f7f9b190cbcbf6bc407935c7324b90d5016f2d44f0c4a7d97f29951dc7e`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: MTU-EVIDENCE-HARDEN-1 (46 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-EVIDENCE-HARDEN-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:57:15.868Z`
+- finished_at: `2026-06-07T07:57:16.007Z`
+- duration_ms: `139`
+- exit_code: `0`
+- stdout_sha256: `1e5726078d6fee489eb475029dd09ffcbb8982cfa8cb9c5f0b13c14d53f8e347`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\MTU-EVIDENCE-HARDEN-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-EVIDENCE-HARDEN-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:57:28.275Z`
+- finished_at: `2026-06-07T07:57:29.506Z`
+- duration_ms: `1231`
+- exit_code: `0`
+- stdout_sha256: `4c3f5e17e167762ffb1296faebf80599bf2d70bea6a9d6412ddc9ed569425f9f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-EVIDENCE-HARDEN-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-EVIDENCE-HARDEN-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:58:01.290Z`
+- finished_at: `2026-06-07T07:58:01.405Z`
+- duration_ms: `115`
+- exit_code: `0`
+- stdout_sha256: `1e5726078d6fee489eb475029dd09ffcbb8982cfa8cb9c5f0b13c14d53f8e347`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\MTU-EVIDENCE-HARDEN-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-EVIDENCE-HARDEN-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:58:13.156Z`
+- finished_at: `2026-06-07T07:58:14.418Z`
+- duration_ms: `1262`
+- exit_code: `0`
+- stdout_sha256: `4c3f5e17e167762ffb1296faebf80599bf2d70bea6a9d6412ddc9ed569425f9f`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-EVIDENCE-HARDEN-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:58:28.104Z`
+- finished_at: `2026-06-07T07:58:28.253Z`
+- duration_ms: `149`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `fc9cbb2a8b5ddb11d84da33368cf75c256e3e41774a94fac19b36ae682928a23`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'references/data/audits/empty-needs-audit.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/RX.6-generator-blocked-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/aspects-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/begrippen-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dag-integrity.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/dead-units.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/empty-needs-audit-summary.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/exam-ingestion-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/misconception-registry.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/needs-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/procedure-visual-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-health.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/reference-quality-issues.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/report-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/skilltree-generator-readiness.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terminology-drift.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/terms-coverage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unit-design-status.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/unresolved-refs.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/aspects-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/begrippen-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dag-integrity.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/dead-units.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/empty-needs-audit-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/exam-ingestion-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/misconception-registry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/needs-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/procedure-visual-coverage.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/markdown/reference-health.m
+...[truncated 1491 chars]
+```
+## git diff --name-status -- references/machine references/external source-data
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T07:58:38.107Z`
+- finished_at: `2026-06-07T07:58:38.221Z`
+- duration_ms: `114`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
