@@ -6,6 +6,7 @@
   "closed_on": "2026-05-03",
   "student_facing_skilltree_use_authorized": false,
   "generator_exposure_for_blocked_units_authorized": false,
+  "route_exposure_for_blocked_units_authorized": false,
   "pv_projection_authorized": false,
   "report_outputs": [
     "reports/json/skilltree-generator-readiness.json",
@@ -20,11 +21,16 @@
     "untracked_missing_generator_count": 0,
     "deploy_interactive_skill_count": 47,
     "deploy_generator_blocked_count": 51,
-    "blocked_interactive_leak_count": 0
+    "source_route_skill_count": 202,
+    "deploy_route_skill_count": 202,
+    "blocked_interactive_leak_count": 0,
+    "blocked_route_leak_count": 0,
+    "negative_fixture_rejection_required": true
   },
   "conditions": [
     "Keep generator-blocked A-domain units non-interactive until their generators exist and validate.",
     "Do not expose generator-blocked units in student-facing skill-tree or PV projection.",
+    "Do not expose generator-blocked A-domain units as ordinary student route rows.",
     "Do not authorize diagnostics, adaptive routing, AI, sequencing, mastery, or summative use.",
     "Remove a unit from the generator-block list only through a later validated generator sprint."
   ]

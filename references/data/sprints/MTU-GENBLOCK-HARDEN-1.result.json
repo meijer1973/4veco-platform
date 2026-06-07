@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-GENBLOCK-HARDEN-1",
+  "generated": "2026-06-07",
+  "status": "completed",
+  "plan": "reports/sprints/MTU-GENBLOCK-HARDEN-1-plan.md",
+  "baseline": "reports/sprints/MTU-GENBLOCK-HARDEN-1-baseline.md",
+  "result": "reports/sprints/MTU-GENBLOCK-HARDEN-1-result.md",
+  "diff_summary": "reports/sprints/MTU-GENBLOCK-HARDEN-1-diff-summary.md",
+  "verification_review": "reports/sprints/MTU-GENBLOCK-HARDEN-1-verification-review.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "platform_branch": "codex/mtu-hardening-20260607",
+  "summary_counts": {
+    "active_a_domain_count": 98,
+    "interactive_skill_count": 47,
+    "generator_blocked_count": 51,
+    "explicit_generator_block_count": 51,
+    "source_route_skill_count": 202,
+    "deploy_route_skill_count": 202,
+    "blocked_interactive_leak_count": 0,
+    "blocked_route_leak_count": 0,
+    "negative_fixture_rejection_required": true
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-GENBLOCK-HARDEN-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-GENBLOCK-HARDEN-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/build-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest engines/tests/skilltree-data.test.js engines/tests/skill-map-engine.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js MTU-GENBLOCK-HARDEN-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js MTU-GENBLOCK-HARDEN-1",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-GENBLOCK-HARDEN-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-GENBLOCK-HARDEN-1 --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-assignment.md",
+    "round1": "reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-round1.md",
+    "corrections": "reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-corrections.md",
+    "round2": "reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "missing-generator implementation",
+    "PV projection",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "summative use",
+    "Scale Gate 1",
+    "product-route adoption",
+    "student/product authority"
+  ],
+  "next_authorized_work": "Use a separate reviewed generator implementation or non-interactive proof-design sprint before A80/A81/A96-A99 or any other generator-blocked A-domain unit is exposed in product routes."
+}

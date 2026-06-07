@@ -42,11 +42,16 @@
         if (generatorIds[unit.id]) interactiveSkillIds[unit.id] = true;
     }
 
+    function isBlockedADomainRouteUnit(unit) {
+        return unit.id.charAt(0) === 'A' && !interactiveSkillIds[unit.id];
+    }
+
     var routeSkillIds = {};
     for (var r = 0; r < units.length; r++) {
         var ru = units[r];
         if (ru.deprecated) continue;
         if (!Array.isArray(ru.aspects) || !ru.aspects.length) continue;
+        if (isBlockedADomainRouteUnit(ru)) continue;
         routeSkillIds[ru.id] = true;
     }
 
