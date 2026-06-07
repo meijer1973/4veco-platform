@@ -774,3 +774,47 @@ OK sprint bundle: AGENT-BRANCH-SAFETY-1 complete
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T09:16:20.838Z`
+- finished_at: `2026-06-07T09:16:20.906Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `e01ba4e75aa577e11bf995591733d4196c5790a06ade2ad506e8004445722a7b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\AGENT-BRANCH-SAFETY-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js AGENT-BRANCH-SAFETY-1 --complete
+
+- cwd: `C:\Projects\4veco\4veco-platform`
+- started_at: `2026-06-07T09:16:33.486Z`
+- finished_at: `2026-06-07T09:16:33.898Z`
+- duration_ms: `412`
+- exit_code: `0`
+- stdout_sha256: `7190251799875d8f2b3d53191dd58a90ca85cb2ac9346223094a2da65c9d6807`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: AGENT-BRANCH-SAFETY-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

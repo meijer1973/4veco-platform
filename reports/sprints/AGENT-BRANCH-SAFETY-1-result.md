@@ -42,8 +42,17 @@ Remote proof:
 
 - platform branch: `codex/agent-branch-safety-20260607`
 - lessen branch: `codex/agent-branch-safety-20260607`
-- PR URL and latest `platform-ci / validate-platform` run: recorded in final
-  response after remote PR validation completes
+- platform PR: `https://github.com/meijer1973/4veco-platform/pull/12`
+- lessen PR: `https://github.com/meijer1973/4veco-lessen/pull/1`
+- workflow name: `platform-ci`
+- job name: `validate-platform`
+- run URL: `https://github.com/meijer1973/4veco-platform/actions/runs/27088256297`
+- run ID: `27088256297`
+- job ID: `79946854708`
+- branch head SHA: `b55087783af6ff989a851f9269fa60cf10da9505`
+- conclusion: `success`
+- artifact: `platform-ci-diagnostics`
+- artifact ID: `7462682610`
 
 ## Acceptance test results
 
