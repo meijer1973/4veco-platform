@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T10:13:33.323Z
+Generated: 2026-06-07T12:35:07.208Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
-Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3757
+Root: `C:\Projects\4veco\4veco-platform-mtu-hardening`
+Files indexed: 3771
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -973,7 +973,7 @@ Count: 358
 
 ## references
 
-Count: 498
+Count: 500
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1146,6 +1146,8 @@ Count: 498
 - references/data/sprints/MATH-UX-2.result.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.plan.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.result.json
+- references/data/sprints/MTU-GENBLOCK-HARDEN-1.plan.json
+- references/data/sprints/MTU-GENBLOCK-HARDEN-1.result.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
 - references/data/sprints/MTU-H2.plan.json
@@ -1476,7 +1478,7 @@ Count: 498
 
 ## reports
 
-Count: 2388
+Count: 2400
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3001,6 +3003,18 @@ Count: 2388
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-planning-review.md
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-result.md
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-verification-review.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-baseline.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-command-log.jsonl
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-command-log.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-diff-summary.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-assignment.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-corrections.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-round1.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-lead-review-round2.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-plan.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-planning-review.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-result.md
+- reports/sprints/MTU-GENBLOCK-HARDEN-1-verification-review.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md
