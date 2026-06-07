@@ -483,6 +483,9 @@
                 unitNotation: getTaskShellValue('[data-task-id="' + escapeCss(task.id) + '"][data-input-role="unit-notation"]')
             };
         }
+        if (task.family === 'graph_reading' && window.TaskShellUI && window.TaskShellUI.collectGraphReadingResponse) {
+            return window.TaskShellUI.collectGraphReadingResponse(root, task);
+        }
         if (task.family === 'cloze_tile_select' && window.TaskShellUI && window.TaskShellUI.collectClozeTileResponse) {
             return window.TaskShellUI.collectClozeTileResponse(root, task);
         }

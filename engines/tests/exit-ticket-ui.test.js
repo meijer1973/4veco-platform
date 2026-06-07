@@ -4,6 +4,7 @@ const ExitTicketUI = require('../exit-ticket-ui');
 const ExitTicketEngine = require('../exit-ticket-engine');
 const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
 const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
+const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 const exitTicketShells = require('../../build-scripts/platform/build-exit-ticket-shells');
 
 const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
@@ -681,7 +682,8 @@ describe('ExitTicketUI', () => {
         expect(html).not.toContain('Bijvoorbeeld 3,7');
         expect(html).not.toContain('Bijvoorbeeld 4 indexpunten');
         expect(html).toContain('Vul je eindantwoord in');
-        expect(html).toContain('Vul de notatie in');
+        expect(html).toContain('placeholder="Bijvoorbeeld %"');
+        expect(html).toContain('placeholder="Bijvoorbeeld indexcijfer"');
         expect((html.match(/class="et-feedback/g) || []).length).toBe(targetData.tasks.length);
         expect((html.match(/class="ts-feedback"/g) || []).length).toBe(0);
         expect(html).not.toMatch(/\b(?:A\d{2}|D\d{2}|PV|MTU)\b/);
@@ -772,6 +774,25 @@ describe('ExitTicketUI', () => {
         expect(html).not.toMatch(/\b(?:PV|MTU)\b/);
     });
 
+    test('renders the excellent 1.1.3 exit-ticket candidate without formula context leakage', () => {
+        const engine = new ExitTicketEngine({ data: exit113Data });
+        const view = ExitTicketUI.buildSkillView(exit113Data, engine, {});
+        const html = ExitTicketUI.renderStaticHtml(exit113Data, view);
+        expect(html).toContain('data-task-family="graph_construction_substitute"');
+        expect(html).toContain('data-task-family="graph_reading"');
+        expect(html).toContain('data-task-family="formula_builder"');
+        expect(html).toContain('data-task-family="calculation_work_capture"');
+        expect(html).toContain('data-point-snap-mode="magnetic_table_point"');
+        expect(html.indexOf('data-graph-reading-interval-option-id="200-250"')).toBeLessThan(html.indexOf('data-input-role="answer"'));
+        expect(html).toContain('placeholder="vul hoeveelheid in"');
+        expect(html).toContain('placeholder="vul percentage in, bijvoorbeeld met %"');
+        expect(html).not.toContain('ts-context-formula');
+        expect(html).not.toContain('ctx-stationbroodjes-formula');
+        expect(html).not.toContain('placeholder="225"');
+        expect(html).not.toContain('placeholder="-50"');
+        expect(html).not.toMatch(/score|diagnostic|mastery/i);
+    });
+
     test('exit-ticket wrapper delegates cloze tile collection to the shared task shell', () => {
         const source = fs.readFileSync(path.join(PLATFORM_ROOT, 'engines', 'exit-ticket-ui.js'), 'utf8');
         expect(source).toContain('handleClozeTileClick(app, event)');
@@ -787,6 +808,8 @@ describe('ExitTicketUI', () => {
         expect(source).toContain('collectSentenceBuilderResponse(wrapper, task)');
         expect(source).toContain('handleGraphConstructionClick(app, event)');
         expect(source).toContain('collectGraphConstructionResponse(wrapper, task)');
+        expect(source).toContain('collectGraphReadingResponse(wrapper, task)');
+        expect(source).toContain("task.family === 'graph_reading'");
         expect(source).toContain("task.family === 'sentence_builder'");
         expect(source).toContain('handleFormulaBuilderClick(app, event)');
         expect(source).toContain('collectFormulaBuilderResponse(wrapper, task)');

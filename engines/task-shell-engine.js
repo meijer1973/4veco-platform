@@ -176,9 +176,18 @@
   function cleanNumber(value) {
     if (typeof value === 'number') return value;
     if (typeof value === 'string') {
-      var normalized = value.replace(/\s/g, '').replace(',', '.').replace(/\u2212/g, '-');
+      var normalized = value.trim().toLowerCase().replace(/\u2212/g, '-').replace(',', '.');
       if (!normalized) return NaN;
-      return Number(normalized);
+      var negativeByPhrase = !/^\s*-/.test(normalized) &&
+        /\b(daling|daalt|afname|afneemt|lager|minder)\b/.test(normalized);
+      var cleaned = normalized
+        .replace(/[€%]/g, ' ')
+        .replace(/\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|afname|afneemt|lager|minder|stijging|stijgt|toename|toeneemt|meer)\b/g, ' ')
+        .replace(/\s+/g, '');
+      if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
+      var parsed = Number(cleaned);
+      if (!isNumber(parsed)) return NaN;
+      return negativeByPhrase ? -Math.abs(parsed) : parsed;
     }
     return NaN;
   }
@@ -1048,8 +1057,61 @@
     if (interaction.axes.x.ticks !== undefined) validateAxisTicks(interaction.axes.x.ticks, interaction.axes.x, path + '.axes.x.ticks');
     if (interaction.axes.y.ticks !== undefined) validateAxisTicks(interaction.axes.y.ticks, interaction.axes.y, path + '.axes.y.ticks');
     assert(Number.isInteger(interaction.pointCount) && interaction.pointCount >= 2, path + '.pointCount must be an integer >= 2');
+    if (interaction.pointSnapMode !== undefined) {
+      assert(interaction.pointSnapMode === 'magnetic_table_point', path + '.pointSnapMode must be magnetic_table_point when present');
+    }
+    if (interaction.pointSnapTolerancePx !== undefined) {
+      assert(isNumber(interaction.pointSnapTolerancePx) && interaction.pointSnapTolerancePx >= 0, path + '.pointSnapTolerancePx must be a non-negative number');
+    }
     return {
       pointCount: interaction.pointCount
+    };
+  }
+
+  function validateGraphReadingInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.inputLabel, path + '.inputLabel');
+    optionalString(interaction.placeholder, path + '.placeholder');
+    optionalString(interaction.inputPlaceholder, path + '.inputPlaceholder');
+    optionalString(interaction.intervalLabel, path + '.intervalLabel');
+
+    var intervalOptionIds = {};
+    if (interaction.intervalOptions !== undefined) {
+      requireString(interaction.intervalLabel, path + '.intervalLabel');
+      requireArray(interaction.intervalOptions, path + '.intervalOptions', 2);
+      var correctCount = 0;
+      var distractorCount = 0;
+      interaction.intervalOptions.forEach(function (option, idx) {
+        assert(isObject(option), path + '.intervalOptions[' + idx + '] must be an object');
+        requireString(option.id, path + '.intervalOptions[' + idx + '].id');
+        requireString(option.label, path + '.intervalOptions[' + idx + '].label');
+        assert(typeof option.correct === 'boolean', path + '.intervalOptions[' + idx + '].correct must be boolean');
+        assert(!intervalOptionIds[option.id], 'duplicate graph reading interval option id: ' + option.id);
+        intervalOptionIds[option.id] = true;
+        if (option.correct) correctCount += 1;
+        else distractorCount += 1;
+      });
+      assert(correctCount >= 1, path + '.intervalOptions must include at least one correct interval');
+      assert(distractorCount >= 1, path + '.intervalOptions must include at least one distractor interval');
+    }
+
+    if (interaction.stepOrder !== undefined) {
+      requireArray(interaction.stepOrder, path + '.stepOrder', 1);
+      var seenSteps = {};
+      interaction.stepOrder.forEach(function (step, idx) {
+        requireString(step, path + '.stepOrder[' + idx + ']');
+        assert(step === 'interval_selection' || step === 'read_q_value', path + '.stepOrder[' + idx + '] must be interval_selection or read_q_value');
+        assert(!seenSteps[step], path + '.stepOrder contains duplicate step: ' + step);
+        seenSteps[step] = true;
+      });
+      if (seenSteps.interval_selection) {
+        assert(interaction.intervalOptions !== undefined, path + '.stepOrder interval_selection requires intervalOptions');
+        assert(interaction.stepOrder.indexOf('interval_selection') < interaction.stepOrder.indexOf('read_q_value'), path + '.stepOrder must select interval before reading the value');
+      }
+    }
+
+    return {
+      intervalOptionIds: intervalOptionIds
     };
   }
 
@@ -1542,6 +1604,12 @@
       assert(isNumber(expected.value), task.id + '.expected.value must be numeric');
       if (expected.tolerance !== undefined) assert(isNumber(expected.tolerance), task.id + '.expected.tolerance must be numeric');
       optionalString(expected.unit, task.id + '.expected.unit');
+      if (task.family === 'graph_reading' && expected.interval !== undefined) {
+        assert(isObject(expected.interval), task.id + '.expected.interval must be an object');
+        assert(expected.interval.kind === 'choice', task.id + '.expected.interval.kind must be choice');
+        requireString(expected.interval.value, task.id + '.expected.interval.value');
+        assert((interactionInfo.intervalOptionIds || {})[expected.interval.value], task.id + '.expected.interval.value must match an interval option id');
+      }
       return;
     }
 
@@ -1581,6 +1649,9 @@
         assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
         if (expected.finalAnswer.tolerance !== undefined) {
           assert(isNumber(expected.finalAnswer.tolerance), task.id + '.expected.finalAnswer.tolerance must be numeric');
+        }
+        if (expected.finalAnswer.acceptedNotations !== undefined) {
+          requireStringArray(expected.finalAnswer.acceptedNotations, task.id + '.expected.finalAnswer.acceptedNotations', 1);
         }
       } else {
         requireArray(expected.finalAnswer.accepted, task.id + '.expected.finalAnswer.accepted', 1);
@@ -1899,12 +1970,22 @@
       requireStringArray(expected.axes.xAccepted, task.id + '.expected.axes.xAccepted', 1);
       requireStringArray(expected.axes.yAccepted, task.id + '.expected.axes.yAccepted', 1);
       requireArray(expected.points, task.id + '.expected.points', 2);
-      assert(expected.points.length === interactionInfo.pointCount, task.id + '.expected.points must match interaction.pointCount');
-      expected.points.forEach(function (point, idx) {
-        assert(isObject(point), task.id + '.expected.points[' + idx + '] must be an object');
-        assert(isNumber(point.x), task.id + '.expected.points[' + idx + '].x must be numeric');
-        assert(isNumber(point.y), task.id + '.expected.points[' + idx + '].y must be numeric');
-      });
+      validateGraphExpectedPoints(expected.points, task.id + '.expected.points');
+      if (expected.acceptedTablePoints !== undefined) {
+        requireArray(expected.acceptedTablePoints, task.id + '.expected.acceptedTablePoints', 2);
+        validateGraphExpectedPoints(expected.acceptedTablePoints, task.id + '.expected.acceptedTablePoints');
+      }
+      if (expected.pointPolicy !== undefined) {
+        assert(expected.pointPolicy === 'straight_line_two_distinct_table_points', task.id + '.expected.pointPolicy must be straight_line_two_distinct_table_points when present');
+      }
+      if (expected.minimumPointCount !== undefined) {
+        assert(Number.isInteger(expected.minimumPointCount) && expected.minimumPointCount >= 2, task.id + '.expected.minimumPointCount must be an integer >= 2');
+      }
+      var requiredPointCount = expected.minimumPointCount || expected.points.length;
+      assert(requiredPointCount === interactionInfo.pointCount, task.id + '.expected minimum point count must match interaction.pointCount');
+      if (expected.acceptedTablePoints !== undefined) {
+        assert(expected.acceptedTablePoints.length >= requiredPointCount, task.id + '.expected.acceptedTablePoints must include enough accepted points');
+      }
       if (expected.toleranceX !== undefined) assert(isNumber(expected.toleranceX), task.id + '.expected.toleranceX must be numeric');
       if (expected.toleranceY !== undefined) assert(isNumber(expected.toleranceY), task.id + '.expected.toleranceY must be numeric');
       assert(/^(decreasing|increasing|constant)$/.test(expected.lineShape), task.id + '.expected.lineShape must be decreasing, increasing, or constant');
@@ -1926,6 +2007,14 @@
       assert(isObject(group), path + '[' + idx + '] must be an object');
       requireString(group.label, path + '[' + idx + '].label');
       requireArray(group.any, path + '[' + idx + '].any', 1);
+    });
+  }
+
+  function validateGraphExpectedPoints(points, path) {
+    points.forEach(function (point, idx) {
+      assert(isObject(point), path + '[' + idx + '] must be an object');
+      assert(isNumber(point.x), path + '[' + idx + '].x must be numeric');
+      assert(isNumber(point.y), path + '[' + idx + '].y must be numeric');
     });
   }
 
@@ -1964,10 +2053,11 @@
     } else if (
       task.family === 'numeric_input' ||
       task.family === 'final_answer_entry' ||
-      task.family === 'unit_notation_field' ||
-      task.family === 'graph_reading'
+      task.family === 'unit_notation_field'
     ) {
       requireString(task.interaction.inputLabel, path + '.inputLabel');
+    } else if (task.family === 'graph_reading') {
+      interactionInfo = validateGraphReadingInteraction(task, path);
     } else if (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') {
       requireString(task.interaction.inputLabel, path + '.inputLabel');
     } else if (task.family === 'graph_construction_substitute') {
@@ -2086,12 +2176,15 @@
     if (!textMatches(response.axes.x, expected.axes.xAccepted)) return false;
     if (!textMatches(response.axes.y, expected.axes.yAccepted)) return false;
     if (normalizeText(response.lineShape) !== normalizeText(expected.lineShape)) return false;
-    if (!Array.isArray(response.points) || response.points.length !== expected.points.length) return false;
+    var expectedPoints = Array.isArray(expected.acceptedTablePoints) ? expected.acceptedTablePoints : expected.points;
+    var requiredPointCount = expected.minimumPointCount || expected.points.length;
+    if (!Array.isArray(response.points) || response.points.length !== requiredPointCount) return false;
     var tx = isNumber(expected.toleranceX) ? Math.max(0, expected.toleranceX) : tolerance(expected);
     var ty = isNumber(expected.toleranceY) ? Math.max(0, expected.toleranceY) : tolerance(expected);
-    var remaining = expected.points.map(function (point) {
+    var remaining = expectedPoints.map(function (point) {
       return { x: point.x, y: point.y, matched: false };
     });
+    var matchedCount = 0;
     for (var i = 0; i < response.points.length; i += 1) {
       var actual = response.points[i];
       if (!isObject(actual)) return false;
@@ -2103,13 +2196,27 @@
       });
       if (!match) return false;
       match.matched = true;
+      matchedCount += 1;
     }
+    if (Array.isArray(expected.acceptedTablePoints)) return matchedCount === requiredPointCount;
     return remaining.every(function (point) { return point.matched; });
+  }
+
+  function graphReadingMatches(response, task) {
+    if (task.expected.interval !== undefined) {
+      if (!response || typeof response !== 'object') return false;
+      if (normalizeText(response.interval) !== normalizeText(task.expected.interval.value)) return false;
+      return numberMatches(response.value, task.expected);
+    }
+    return numberMatches(response && response.value != null ? response.value : response, task.expected);
   }
 
   function finalAnswerMatches(value, expected) {
     if (!expected || !expected.kind) return false;
-    if (expected.kind === 'number') return numberMatches(value, expected);
+    if (expected.kind === 'number') {
+      if (expected.acceptedNotations && textMatches(value, expected.acceptedNotations)) return true;
+      return numberMatches(value, expected);
+    }
     if (expected.kind === 'text') return textMatches(value, expected.accepted);
     return false;
   }
@@ -2918,9 +3025,10 @@
       var optionIds = validateOptions(task.interaction.options, task.id + '.interaction.options');
       return multiSelectMatches(response, task.expected, optionIds);
     }
-    if (task.family === 'numeric_input' || task.family === 'graph_reading') {
+    if (task.family === 'numeric_input') {
       return numberMatches(response && response.value != null ? response.value : response, task.expected);
     }
+    if (task.family === 'graph_reading') return graphReadingMatches(response, task);
     if (task.family === 'final_answer_entry') {
       var value = response && response.value != null ? response.value : response;
       return task.expected.kind === 'number' ? numberMatches(value, task.expected) : textMatches(value, task.expected.accepted);
@@ -3102,6 +3210,12 @@
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');
       }
       return plan;
+    }
+    if (task.family === 'graph_reading' && task.interaction && Array.isArray(task.interaction.intervalOptions)) {
+      return [
+        '[data-task-id="' + task.id + '"][data-graph-reading-interval-option-id]',
+        '[data-task-id="' + task.id + '"][data-input-role="answer"]'
+      ];
     }
     if (task.family === 'cloze_text') {
       return [

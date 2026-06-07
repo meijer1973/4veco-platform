@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
+  "generated": "2026-06-07",
+  "route": "http://127.0.0.1:8173/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+  "status": "passed",
+  "observed": {
+    "task_families": [
+      "graph_construction_substitute",
+      "graph_reading",
+      "formula_builder",
+      "calculation_work_capture"
+    ],
+    "interval_options": 4,
+    "graph_workspace": true,
+    "snap_mode": "magnetic_table_point",
+    "formula_context": false,
+    "completion_or_diagnostic_text": false,
+    "placeholders": [
+      "x",
+      "y",
+      "x",
+      "y",
+      "vul hoeveelheid in",
+      "Schrijf hier je uitwerking.",
+      "vul percentage in, bijvoorbeeld met %",
+      "Vul de notatie in"
+    ]
+  },
+  "notes": [
+    "Direct file URL navigation was blocked by browser policy, so the generated Book 1 folder was served locally on 127.0.0.1 and the temporary server was stopped after verification.",
+    "The route was checked after the final redeploy."
+  ]
+}

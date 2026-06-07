@@ -328,6 +328,35 @@
     '</label>';
   }
 
+  function renderGraphReading(task) {
+    var interaction = task.interaction || {};
+    var intervalHtml = '';
+    if (Array.isArray(interaction.intervalOptions) && interaction.intervalOptions.length) {
+      var name = 'ts-graph-reading-' + task.id;
+      var optionsHtml = interaction.intervalOptions.map(function (option) {
+        return '<label class="ts-graph-reading-option">' +
+          '<input type="radio" name="' + escapeHtml(name) + '" value="' + escapeHtml(option.id) + '" ' +
+            'data-task-id="' + escapeHtml(task.id) + '" data-graph-reading-interval-option-id="' + escapeHtml(option.id) + '">' +
+          '<span>' + escapeHtml(option.label) + '</span>' +
+        '</label>';
+      }).join('');
+      intervalHtml = '<fieldset class="ts-graph-reading-interval">' +
+        '<legend>' + escapeHtml(interaction.intervalLabel || 'Kies interval') + '</legend>' +
+        '<div class="ts-graph-reading-options">' + optionsHtml + '</div>' +
+      '</fieldset>';
+    }
+    return '<div class="ts-graph-reading" data-graph-reading-task="' + escapeHtml(task.id) + '">' +
+      intervalHtml +
+      renderTextInput({
+        id: task.id,
+        interaction: {
+          inputLabel: interaction.inputLabel,
+          placeholder: interaction.inputPlaceholder || interaction.placeholder || 'Antwoord'
+        }
+      }, 'answer', 'decimal') +
+    '</div>';
+  }
+
   function renderTextArea(task, role, label) {
     return '<label class="ts-field">' +
       '<span>' + escapeHtml(label || task.interaction.inputLabel || 'Antwoord') + '</span>' +
@@ -502,11 +531,17 @@
     var guideData = hideGuides ? ' data-hide-axis-guides-until-selection="true"' : '';
     var xLabel = hideGuides ? 'Kies horizontale as' : axes.x.label;
     var yLabel = hideGuides ? 'Kies verticale as' : axes.y.label;
+    var acceptedTablePoints = task.expected && Array.isArray(task.expected.acceptedTablePoints)
+      ? task.expected.acceptedTablePoints
+      : [];
     return '<div class="ts-graph-construction' + guideClass + '" data-graph-construction-task="' + escapeHtml(task.id) + '" ' +
       guideData +
       'data-x-min="' + escapeHtml(axes.x.min) + '" data-x-max="' + escapeHtml(axes.x.max) + '" ' +
       'data-y-min="' + escapeHtml(axes.y.min) + '" data-y-max="' + escapeHtml(axes.y.max) + '" ' +
-      'data-x-ticks="' + escapeHtml((axes.x.ticks || []).join('|')) + '" data-y-ticks="' + escapeHtml((axes.y.ticks || []).join('|')) + '">' +
+      'data-x-ticks="' + escapeHtml((axes.x.ticks || []).join('|')) + '" data-y-ticks="' + escapeHtml((axes.y.ticks || []).join('|')) + '" ' +
+      'data-point-snap-mode="' + escapeHtml(task.interaction.pointSnapMode || '') + '" ' +
+      'data-point-snap-tolerance-px="' + escapeHtml(task.interaction.pointSnapTolerancePx || '') + '" ' +
+      'data-accepted-table-points="' + escapeHtml(JSON.stringify(acceptedTablePoints)) + '">' +
       '<div class="ts-graph-axis-controls">' +
         '<label class="ts-field"><span>' + escapeHtml(task.interaction.xAxisLabel) + '</span>' + renderAxisOptions(task, 'x') + '</label>' +
         '<label class="ts-field"><span>' + escapeHtml(task.interaction.yAxisLabel) + '</span>' + renderAxisOptions(task, 'y') + '</label>' +
@@ -832,8 +867,9 @@
       case 'multi_select':
         return renderMultiSelect(task);
       case 'numeric_input':
-      case 'graph_reading':
         return renderTextInput(task, 'answer', 'decimal');
+      case 'graph_reading':
+        return renderGraphReading(task);
       case 'final_answer_entry':
       case 'unit_notation_field':
         return renderTextInput(task, 'answer', 'text');
@@ -1159,6 +1195,19 @@
     return { values: values };
   }
 
+  function collectGraphReadingResponse(rootEl, task) {
+    if (!rootEl || !task) return '';
+    var answer = graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]'));
+    if (task.interaction && Array.isArray(task.interaction.intervalOptions)) {
+      var selectedInterval = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-graph-reading-interval-option-id]:checked');
+      return {
+        interval: selectedInterval ? selectedInterval.getAttribute('data-graph-reading-interval-option-id') : '',
+        value: answer
+      };
+    }
+    return answer;
+  }
+
   function collectCalculationResponse(rootEl, task) {
     if (!rootEl || !task) return { work: '', finalAnswer: '', unitNotation: '' };
     if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
@@ -1472,12 +1521,16 @@
     var yMeta = graphAxisMeta(construction, 'y');
     var xRatio = clamp((event.clientX - rect.left) / rect.width, 0, 1);
     var yRatio = clamp((event.clientY - rect.top) / rect.height, 0, 1);
-    var xValue = nearestGraphTick(xMeta.ticks, xMeta.min + xRatio * (xMeta.max - xMeta.min));
-    var yValue = nearestGraphTick(yMeta.ticks, yMeta.max - yRatio * (yMeta.max - yMeta.min));
+    var rawXValue = xMeta.min + xRatio * (xMeta.max - xMeta.min);
+    var rawYValue = yMeta.max - yRatio * (yMeta.max - yMeta.min);
+    var magneticPoint = nearestMagneticGraphPoint(construction, rect, xMeta, yMeta, event.clientX - rect.left, event.clientY - rect.top);
+    var xValue = magneticPoint ? magneticPoint.x : nearestGraphTick(xMeta.ticks, rawXValue);
+    var yValue = magneticPoint ? magneticPoint.y : nearestGraphTick(yMeta.ticks, rawYValue);
     var pointIndex = nextGraphPointIndex(construction);
     setGraphPointValue(construction, pointIndex, 'x', graphDisplayValue(xValue));
     setGraphPointValue(construction, pointIndex, 'y', graphDisplayValue(yValue));
-    construction.setAttribute('data-next-graph-point', String(pointIndex + 1));
+    var controls = construction.querySelectorAll('[data-graph-point-index][data-graph-point-axis="x"]');
+    construction.setAttribute('data-next-graph-point', String(controls.length ? (pointIndex + 1) % controls.length : pointIndex + 1));
     updateGraphConstructionVisual(construction);
     return true;
   }
@@ -2342,6 +2395,47 @@
     }, ticks[0]);
   }
 
+  function acceptedTablePoints(rootEl) {
+    var raw = rootEl.getAttribute('data-accepted-table-points') || '[]';
+    var parsed;
+    try {
+      parsed = JSON.parse(raw);
+    } catch (err) {
+      parsed = [];
+    }
+    if (!Array.isArray(parsed)) return [];
+    return parsed.map(function (point) {
+      return {
+        x: graphNumber(point && point.x),
+        y: graphNumber(point && point.y)
+      };
+    }).filter(function (point) {
+      return typeof point.x === 'number' && isFinite(point.x) &&
+        typeof point.y === 'number' && isFinite(point.y);
+    });
+  }
+
+  function nearestMagneticGraphPoint(rootEl, rect, xMeta, yMeta, clickX, clickY) {
+    if (rootEl.getAttribute('data-point-snap-mode') !== 'magnetic_table_point') return null;
+    var tolerancePx = graphNumber(rootEl.getAttribute('data-point-snap-tolerance-px'));
+    if (typeof tolerancePx !== 'number' || !isFinite(tolerancePx) || tolerancePx < 0) return null;
+    var points = acceptedTablePoints(rootEl);
+    var best = null;
+    points.forEach(function (point) {
+      var xPx = graphPosition(point.x, xMeta, false) / 100 * rect.width;
+      var yPx = graphPosition(point.y, yMeta, true) / 100 * rect.height;
+      var distance = Math.sqrt(Math.pow(xPx - clickX, 2) + Math.pow(yPx - clickY, 2));
+      if (distance <= tolerancePx && (!best || distance < best.distance)) {
+        best = {
+          x: point.x,
+          y: point.y,
+          distance: distance
+        };
+      }
+    });
+    return best;
+  }
+
   function graphDisplayValue(value) {
     if (Math.abs(value - Math.round(value)) < 0.0001) return String(Math.round(value));
     return String(Math.round(value * 100) / 100).replace('.', ',');
@@ -2576,6 +2670,7 @@
     escapeHtml: escapeHtml,
     collectMultiSelectResponse: collectMultiSelectResponse,
     handleMultiSelectClick: handleMultiSelectClick,
+    collectGraphReadingResponse: collectGraphReadingResponse,
     collectCalculationResponse: collectCalculationResponse,
     collectClozeTextResponse: collectClozeTextResponse,
     collectClozeTileResponse: collectClozeTileResponse,

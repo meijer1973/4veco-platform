@@ -104,17 +104,23 @@
     var displayTask = JSON.parse(JSON.stringify(taskShell));
     displayTask.interaction = displayTask.interaction || {};
     displayTask.interaction.showCriteriaBeforeCheck = false;
-    displayTask.interaction.placeholder = 'Schrijf hier je uitwerking.';
-    displayTask.interaction.finalAnswerPlaceholder = 'Vul je eindantwoord in';
-    displayTask.interaction.unitNotationPlaceholder = 'Vul de notatie in';
+    displayTask.interaction.placeholder = safeExitTicketPlaceholder(displayTask.interaction.placeholder, 'Schrijf hier je uitwerking.');
+    displayTask.interaction.finalAnswerPlaceholder = safeExitTicketPlaceholder(displayTask.interaction.finalAnswerPlaceholder, 'Vul je eindantwoord in');
+    displayTask.interaction.unitNotationPlaceholder = safeExitTicketPlaceholder(displayTask.interaction.unitNotationPlaceholder, 'Vul de notatie in');
     if (Array.isArray(displayTask.interaction.fields)) {
       displayTask.interaction.fields = displayTask.interaction.fields.map(function (field) {
         var copy = JSON.parse(JSON.stringify(field));
-        copy.placeholder = 'Vul je antwoord in';
+        copy.placeholder = safeExitTicketPlaceholder(copy.placeholder, 'Vul je antwoord in');
         return copy;
       });
     }
     return displayTask;
+  }
+
+  function safeExitTicketPlaceholder(value, fallback) {
+    if (typeof value !== 'string' || !value.trim()) return fallback;
+    if (/[0-9]/.test(value)) return fallback;
+    return value;
   }
 
   function renderTask(task, index, contextIndex) {
@@ -358,6 +364,12 @@
       return GraphTaskShellUI && GraphTaskShellUI.collectGraphConstructionResponse
         ? GraphTaskShellUI.collectGraphConstructionResponse(wrapper, task)
         : { axes: { x: '', y: '' }, points: [], lineShape: '' };
+    }
+    if (task.family === 'graph_reading') {
+      var GraphReadingTaskShellUI = resolveTaskShellUI();
+      return GraphReadingTaskShellUI && GraphReadingTaskShellUI.collectGraphReadingResponse
+        ? GraphReadingTaskShellUI.collectGraphReadingResponse(wrapper, task)
+        : getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
     }
     if (task.family === 'calculation_work_capture') {
       var CalculationTaskShellUI = resolveTaskShellUI();

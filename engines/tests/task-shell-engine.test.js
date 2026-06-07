@@ -3310,6 +3310,151 @@ describe('TaskShellEngine', () => {
         expect(() => TaskShellEngine.validateTask(baseTask({ prompt: 'Je score bepaalt de route.' }))).toThrow(/blocked terms or internal codes/);
     });
 
+    test('requires interval selection before graph read-off when configured', () => {
+        const graphReading = baseTask({
+            id: 'interpolatie-225',
+            family: 'graph_reading',
+            skillLabel: 'Interpoleren',
+            prompt: 'Lees uit je grafiek af hoeveel broodjes worden verkocht bij een prijs van EUR 2,25.',
+            interaction: {
+                inputLabel: '2. Afgelezen hoeveelheid Q',
+                inputPlaceholder: 'vul hoeveelheid in',
+                stepOrder: ['interval_selection', 'read_q_value'],
+                intervalLabel: '1. Gebruikt interval',
+                intervalOptions: [
+                    { id: '150-200', label: 'EUR 1,50 naar EUR 2,00', correct: false },
+                    { id: '200-250', label: 'EUR 2,00 naar EUR 2,50', correct: true },
+                    { id: '250-300', label: 'EUR 2,50 naar EUR 3,00', correct: false }
+                ]
+            },
+            expected: {
+                kind: 'number',
+                value: 225,
+                tolerance: 10,
+                unit: 'broodjes',
+                interval: { kind: 'choice', value: '200-250' }
+            }
+        });
+
+        expect(TaskShellEngine.validateTask(graphReading)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(graphReading, { interval: '200-250', value: '225' }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(graphReading, { interval: '150-200', value: '225' }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(graphReading, { value: '225' }).matched).toBe(false);
+        expect(TaskShellEngine.focusPlan(graphReading)).toEqual([
+            '[data-task-id="interpolatie-225"][data-graph-reading-interval-option-id]',
+            '[data-task-id="interpolatie-225"][data-input-role="answer"]'
+        ]);
+
+        expect(() => TaskShellEngine.validateTask({
+            ...graphReading,
+            interaction: {
+                ...graphReading.interaction,
+                stepOrder: ['read_q_value', 'interval_selection']
+            }
+        })).toThrow(/select interval before reading/);
+    });
+
+    test('accepts two distinct table points for graph construction substitutes', () => {
+        const graph = baseTask({
+            id: 'pq-grafiek',
+            family: 'graph_construction_substitute',
+            skillLabel: 'P-Q-grafiek construeren',
+            prompt: 'Maak een P-Q-diagram met twee verschillende tabelpunten.',
+            interaction: {
+                workspaceTitle: 'Grafiekwerkvlak',
+                xAxisLabel: 'Horizontale as',
+                yAxisLabel: 'Verticale as',
+                pointRowsLabel: 'Twee punten uit de tabel',
+                lineConfirmationLabel: 'Verbind de punten',
+                lineShapeLabel: 'Lijnvorm',
+                xInputLabel: 'Q',
+                yInputLabel: 'P',
+                emptyGraphAltText: 'Leeg P-Q-diagram met raster',
+                pointCount: 2,
+                pointSnapMode: 'magnetic_table_point',
+                pointSnapTolerancePx: 72,
+                axes: {
+                    x: { label: 'Hoeveelheid Q', min: 0, max: 400 },
+                    y: { label: 'Prijs P', min: 0, max: 3.5 }
+                }
+            },
+            expected: {
+                kind: 'graph_construction_substitute',
+                axes: {
+                    xAccepted: ['hoeveelheid q', 'q'],
+                    yAccepted: ['prijs p', 'p']
+                },
+                points: [
+                    { x: 350, y: 1.0 },
+                    { x: 150, y: 3.0 }
+                ],
+                acceptedTablePoints: [
+                    { x: 350, y: 1.0 },
+                    { x: 300, y: 1.5 },
+                    { x: 250, y: 2.0 },
+                    { x: 200, y: 2.5 },
+                    { x: 150, y: 3.0 }
+                ],
+                minimumPointCount: 2,
+                pointPolicy: 'straight_line_two_distinct_table_points',
+                toleranceX: 35,
+                toleranceY: 0.2,
+                lineShape: 'decreasing'
+            }
+        });
+
+        expect(TaskShellEngine.validateTask(graph)).toBe(true);
+        expect(TaskShellEngine.evaluateTask(graph, {
+            axes: { x: 'Q', y: 'P' },
+            points: [{ x: '300', y: '1,5' }, { x: '200', y: '2,5' }],
+            lineShape: 'decreasing'
+        }).matched).toBe(true);
+        expect(TaskShellEngine.evaluateTask(graph, {
+            axes: { x: 'Q', y: 'P' },
+            points: [{ x: '300', y: '1,5' }, { x: '300', y: '1,5' }],
+            lineShape: 'decreasing'
+        }).matched).toBe(false);
+    });
+
+    test('accepts signed and decrease-phrase percentage notation for numeric final answers', () => {
+        const calculation = baseTask({
+            id: 'claim-50-procent',
+            family: 'calculation_work_capture',
+            skillLabel: 'Procentuele verandering controleren',
+            prompt: 'Controleer de procentuele verandering van Q.',
+            interaction: {
+                workLabel: 'Berekening',
+                finalAnswerLabel: 'Procentuele verandering',
+                finalAnswerPlaceholder: 'vul percentage in, bijvoorbeeld met %'
+            },
+            expected: {
+                kind: 'calculation',
+                finalAnswer: {
+                    kind: 'number',
+                    value: -50,
+                    tolerance: 0.1,
+                    acceptedNotations: ['-50%', '-50 procent', '50% daling']
+                },
+                workRequired: true,
+                requiredWorkText: [
+                    { label: 'oude hoeveelheid', any: ['300'] },
+                    { label: 'nieuwe hoeveelheid', any: ['150'] }
+                ]
+            }
+        });
+
+        ['-50%', '-50 procent', '50% daling', 'Q daalt met 50 procent'].forEach((finalAnswer) => {
+            expect(TaskShellEngine.evaluateTask(calculation, {
+                work: '(150 - 300) / 300 x 100',
+                finalAnswer
+            }).matched).toBe(true);
+        });
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: '(150 - 300) / 300 x 100',
+            finalAnswer: '50% stijging'
+        }).matched).toBe(false);
+    });
+
     test('validates a task set without target-equivalent proof authority', () => {
         expect(TaskShellEngine.validateTaskSet({
             schema_version: 1,

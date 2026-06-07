@@ -873,6 +873,47 @@ describe('TaskShellUI', () => {
         ]);
     });
 
+    test('renders and collects interval-first graph reading controls', () => {
+        const graphReading = task('interpolatie-225', 'graph_reading', {
+            inputLabel: '2. Afgelezen hoeveelheid Q',
+            inputPlaceholder: 'vul hoeveelheid in',
+            stepOrder: ['interval_selection', 'read_q_value'],
+            intervalLabel: '1. Gebruikt interval',
+            intervalOptions: [
+                { id: '150-200', label: 'EUR 1,50 naar EUR 2,00', correct: false },
+                { id: '200-250', label: 'EUR 2,00 naar EUR 2,50', correct: true },
+                { id: '250-300', label: 'EUR 2,50 naar EUR 3,00', correct: false }
+            ]
+        }, {
+            kind: 'number',
+            value: 225,
+            tolerance: 10,
+            interval: { kind: 'choice', value: '200-250' }
+        });
+        const html = TaskShellUI.renderTask(graphReading, 0, {});
+        expect(html.indexOf('data-graph-reading-interval-option-id="200-250"')).toBeLessThan(html.indexOf('data-input-role="answer"'));
+        expect(html).toContain('placeholder="vul hoeveelheid in"');
+        expect(typeof TaskShellUI.collectGraphReadingResponse).toBe('function');
+        expect(TaskShellEngine.focusPlan(graphReading)).toEqual([
+            '[data-task-id="interpolatie-225"][data-graph-reading-interval-option-id]',
+            '[data-task-id="interpolatie-225"][data-input-role="answer"]'
+        ]);
+
+        const root = {
+            querySelector: (selector) => {
+                if (selector.includes('data-input-role="answer"')) return { value: '225' };
+                if (selector.includes('data-graph-reading-interval-option-id') && selector.includes(':checked')) {
+                    return { getAttribute: () => '200-250' };
+                }
+                return null;
+            }
+        };
+        expect(TaskShellUI.collectGraphReadingResponse(root, graphReading)).toEqual({
+            interval: '200-250',
+            value: '225'
+        });
+    });
+
     test('exports graph-construction helpers for consuming wrappers', () => {
         expect(typeof TaskShellUI.collectGraphConstructionResponse).toBe('function');
         expect(typeof TaskShellUI.handleGraphConstructionClick).toBe('function');
@@ -884,6 +925,27 @@ describe('TaskShellUI', () => {
             '[data-task-id="construct"][data-graph-point-index]',
             '[data-task-id="construct"][data-graph-line-confirmation]'
         ]);
+        const snapHtml = TaskShellUI.renderTask({
+            ...graphTask,
+            interaction: {
+                ...graphTask.interaction,
+                pointSnapMode: 'magnetic_table_point',
+                pointSnapTolerancePx: 72
+            },
+            expected: {
+                ...graphTask.expected,
+                acceptedTablePoints: [
+                    { x: 0, y: 4 },
+                    { x: 10, y: 3 },
+                    { x: 20, y: 2 }
+                ],
+                minimumPointCount: 2,
+                pointPolicy: 'straight_line_two_distinct_table_points'
+            }
+        }, 0, {});
+        expect(snapHtml).toContain('data-point-snap-mode="magnetic_table_point"');
+        expect(snapHtml).toContain('data-point-snap-tolerance-px="72"');
+        expect(snapHtml).toContain('data-accepted-table-points=');
     });
 
     test('renders delayed graph axis guides as neutral until the student chooses axes', () => {

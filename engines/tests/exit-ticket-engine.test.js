@@ -1,6 +1,7 @@
 const ExitTicketEngine = require('../exit-ticket-engine');
 const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
 const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
+const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -382,5 +383,45 @@ describe('ExitTicketEngine', () => {
             family: 'point_placement'
         }));
         expect(pointResult.boundaryFlags.targetEquivalentProof).toBe(false);
+    });
+
+    test('validates the excellent 1.1.3 exit-ticket candidate without proof authority', () => {
+        expect(ExitTicketEngine.validateData(exit113Data)).toBe(true);
+        expect(exit113Data.targetEquivalent).toEqual(expect.objectContaining({
+            gateApproved: false,
+            completionLanguageEligible: false
+        }));
+        expect(exit113Data.metadataAlignment.targetReadinessEvidence).toBe(false);
+
+        const engine = new ExitTicketEngine({ data: exit113Data });
+        expect(engine.checkTask('pq-grafiek-construeren', {
+            axes: { x: 'Q', y: 'P' },
+            points: [{ x: '300', y: '1,5' }, { x: '200', y: '2,5' }],
+            lineShape: 'decreasing'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(engine.checkTask('interpolatie-225', {
+            interval: '200-250',
+            value: '225'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(engine.checkTask('procentformule-bouwen', {
+            tokens: ['open', 'newQ', 'minus', 'oldQnum', 'close', 'divide', 'oldQden', 'times100']
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+        expect(engine.checkTask('claim-50-procent-controleren', {
+            work: 'interval 1,50 tot 3,00: Q gaat van 300 naar 150',
+            finalAnswer: '50% daling',
+            unitNotation: 'Q daalt met 50 procent'
+        })).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
     });
 });
