@@ -88,6 +88,9 @@ jobs:
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
 
+      - name: Validate MTU evidence layer freshness
+        run: node build-scripts/references/check-mtu-evidence-layer.js
+
       - name: Validate roadmap version index
         run: node build-scripts/references/check-roadmap-version-index.js
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T18:05:41.924Z",
+  "generatedAt": "2026-06-07T07:53:27.019Z",
   "internalOnly": true,
   "teams": [
     {
@@ -2860,7 +2860,7 @@
               "sprint": "VISION-1",
               "name": "Strategic Product Vision Canonicalization",
               "completed": "yes",
-              "currentState": "**CLOSED PASS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
+              "currentState": "**CLOSED PASS WITH FLAGS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
               "exitGate": ""
             },
             {
@@ -3755,7 +3755,7 @@
           "sprint": "VISION-1",
           "name": "Strategic Product Vision Canonicalization",
           "completed": "yes",
-          "currentState": "**CLOSED PASS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
+          "currentState": "**CLOSED PASS WITH FLAGS / SPECIFICATION-GOVERNANCE / NO GENERATED OUTPUT.** Added a canonical strategic product vision and machine-readable companion above the operational product end-state, linked it from key platform and lesson entry points, and added a lightweight platform checker. No generated lesson output, product-use authority, diagnostics, mastery/sequencing, adaptive routing, summative use, student-facing AI, PV, Scale Gate, or broad scaling is authorized.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
