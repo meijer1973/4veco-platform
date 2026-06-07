@@ -104,17 +104,23 @@
     var displayTask = JSON.parse(JSON.stringify(taskShell));
     displayTask.interaction = displayTask.interaction || {};
     displayTask.interaction.showCriteriaBeforeCheck = false;
-    displayTask.interaction.placeholder = 'Schrijf hier je uitwerking.';
-    displayTask.interaction.finalAnswerPlaceholder = 'Vul je eindantwoord in';
-    displayTask.interaction.unitNotationPlaceholder = 'Vul de notatie in';
+    displayTask.interaction.placeholder = safeExitTicketPlaceholder(displayTask.interaction.placeholder, 'Schrijf hier je uitwerking.');
+    displayTask.interaction.finalAnswerPlaceholder = safeExitTicketPlaceholder(displayTask.interaction.finalAnswerPlaceholder, 'Vul je eindantwoord in');
+    displayTask.interaction.unitNotationPlaceholder = safeExitTicketPlaceholder(displayTask.interaction.unitNotationPlaceholder, 'Vul de notatie in');
     if (Array.isArray(displayTask.interaction.fields)) {
       displayTask.interaction.fields = displayTask.interaction.fields.map(function (field) {
         var copy = JSON.parse(JSON.stringify(field));
-        copy.placeholder = 'Vul je antwoord in';
+        copy.placeholder = safeExitTicketPlaceholder(copy.placeholder, 'Vul je antwoord in');
         return copy;
       });
     }
     return displayTask;
+  }
+
+  function safeExitTicketPlaceholder(value, fallback) {
+    if (typeof value !== 'string' || !value.trim()) return fallback;
+    if (/[0-9]/.test(value)) return fallback;
+    return value;
   }
 
   function renderTask(task, index, contextIndex) {
@@ -330,6 +336,32 @@
     });
   }
 
+  function updateThemeToggle(documentObj) {
+    var button = documentObj.getElementById('theme-toggle');
+    if (!button) return;
+    var mode = documentObj.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    button.textContent = mode === 'dark' ? 'Lichte modus' : 'Donkere modus';
+    button.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+  }
+
+  function bindThemeToggle(documentObj, rootObj) {
+    var button = documentObj.getElementById('theme-toggle');
+    if (!button) return;
+    updateThemeToggle(documentObj);
+    button.addEventListener('click', function () {
+      var current = documentObj.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      documentObj.documentElement.setAttribute('data-theme', next);
+      try {
+        var storage = rootObj.localStorage || (typeof localStorage !== 'undefined' ? localStorage : null);
+        if (storage) storage.setItem('quizMode', next);
+      } catch (e) {
+        // Theme persistence is a convenience; the visible toggle should still work.
+      }
+      updateThemeToggle(documentObj);
+    });
+  }
+
   function cssEscape(value) {
     if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(value);
     return String(value).replace(/"/g, '\\"');
@@ -358,6 +390,12 @@
       return GraphTaskShellUI && GraphTaskShellUI.collectGraphConstructionResponse
         ? GraphTaskShellUI.collectGraphConstructionResponse(wrapper, task)
         : { axes: { x: '', y: '' }, points: [], lineShape: '' };
+    }
+    if (task.family === 'graph_reading') {
+      var GraphReadingTaskShellUI = resolveTaskShellUI();
+      return GraphReadingTaskShellUI && GraphReadingTaskShellUI.collectGraphReadingResponse
+        ? GraphReadingTaskShellUI.collectGraphReadingResponse(wrapper, task)
+        : getValue(wrapper, '[data-task-id="' + cssEscape(task.id) + '"][data-input-role="answer"]');
     }
     if (task.family === 'calculation_work_capture') {
       var CalculationTaskShellUI = resolveTaskShellUI();
@@ -473,6 +511,7 @@
     });
     var view = buildSkillView(data, engine, rootObj);
     app.innerHTML = renderStaticHtml(data, view);
+    bindThemeToggle(documentObj, rootObj);
     bindInteractions(app, engine);
     return { engine: engine, view: view };
   }

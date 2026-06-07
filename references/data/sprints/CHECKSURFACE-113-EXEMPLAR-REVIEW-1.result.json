@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1",
+  "status": "completed",
+  "completed_on": "2026-06-07",
+  "plan": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-plan.md",
+  "baseline": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-baseline.md",
+  "result": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-result.md",
+  "diff_summary": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": true,
+  "lesson_output_mutated": true,
+  "engine_source_changed": true,
+  "student_product_use_allowed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-assignment.md",
+    "round1": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-round1.md",
+    "corrections": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-corrections.md",
+    "round2": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F1",
+        "description": "Classroom readiness is not proven by this agent review.",
+        "disposition": "accepted_follow_up",
+        "owner": "references/product proof lead",
+        "next_action": "Require later human-facing preparation or classroom-review evidence before broad exemplar adoption.",
+        "blocking": false
+      },
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F2",
+        "description": "The exit ticket is approved here only as an end-of-route proof candidate after prior practice, not as initial teaching.",
+        "disposition": "accepted_follow_up",
+        "owner": "lesson route owner",
+        "next_action": "Keep routing through explanation and practice surfaces before this exit ticket.",
+        "blocking": false
+      },
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F3",
+        "description": "Mobile task and feedback-state screenshots are still needed for later route-adoption proof.",
+        "disposition": "accepted_follow_up",
+        "owner": "future route-adoption sprint",
+        "next_action": "Capture mobile task, retry, feedback, and held-completion states before product-route adoption.",
+        "blocking": false
+      },
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F4",
+        "description": "Student readiness remains an agent judgement rather than empirical classroom evidence.",
+        "disposition": "accepted_follow_up",
+        "owner": "human review coordinator",
+        "next_action": "Collect human/student-facing comments before broad production-pattern promotion.",
+        "blocking": false
+      },
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F5",
+        "description": "Later adoption proof should capture graph point-placement, interval selection, formula-builder, retry feedback, and completion-held states.",
+        "disposition": "accepted_follow_up",
+        "owner": "visual proof owner",
+        "next_action": "Add state-by-state screenshots in a later route-adoption proof sprint.",
+        "blocking": false
+      },
+      {
+        "id": "CHECKSURFACE-113-REVIEW-F6",
+        "description": "Full correct/retry click-through automation for all four tasks remains follow-up route-adoption proof.",
+        "disposition": "accepted_follow_up",
+        "owner": "testing owner",
+        "next_action": "Add deterministic correct/retry click-through coverage before adoption or Scale Gate use.",
+        "blocking": false
+      }
+    ]
+  },
+  "authority": {
+    "human_review_completed": false,
+    "target_readiness_evidence_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostic_or_mastery_authorized": false,
+    "pv_or_scale_gate_authorized": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-REVIEW-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/exit-ticket-metadata-alignment.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-checksurface-113-exemplar-review1.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-REVIEW-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "generated": "2026-06-07",
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1",
+  "url": "http://127.0.0.1:8174/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+  "in_app_browser_dom": {
+    "capture_surface": "Codex in-app Browser DOM and coordinate-click proof; screenshots timed out in this runtime and are supplied by local headless Chromium CDP fallback",
+    "desktop_light": {
+      "completionDiagnosticTextPresent": false,
+      "formulaContextPresent": false,
+      "graphWorkspace": true,
+      "intervalOptionCount": 4,
+      "placeholders": [
+        "x",
+        "y",
+        "x",
+        "y",
+        "vul hoeveelheid in",
+        "Schrijf hier je uitwerking.",
+        "vul percentage in, bijvoorbeeld met %",
+        "Vul de notatie in"
+      ],
+      "snapMode": "magnetic_table_point",
+      "tableCount": 2,
+      "taskCount": 4,
+      "taskFamilies": [
+        "graph_construction_substitute",
+        "graph_reading",
+        "formula_builder",
+        "calculation_work_capture"
+      ],
+      "theme": "light",
+      "title": "Grafieken en tabellen - Exit ticket",
+      "toggleText": "Donkere modus",
+      "url": "http://127.0.0.1:8174/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    "toggle_click_result": {
+      "ariaPressed": "true",
+      "theme": "dark",
+      "toggleText": "Lichte modus"
+    },
+    "mobile_dark_after_toggle_reload": {
+      "ariaPressed": "true",
+      "completionDiagnosticTextPresent": false,
+      "formulaContextPresent": false,
+      "graphWorkspace": true,
+      "taskCount": 4,
+      "taskFamilies": [
+        "graph_construction_substitute",
+        "graph_reading",
+        "formula_builder",
+        "calculation_work_capture"
+      ],
+      "theme": "dark",
+      "title": "Grafieken en tabellen - Exit ticket",
+      "toggleText": "Lichte modus",
+      "url": "http://127.0.0.1:8174/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  "screenshot_manifest": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/manifest.json",
+  "screenshots": {
+    "desktop-light-initial": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png",
+    "mobile-dark-initial": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png"
+  },
+  "screenshot_capture_surface": "headless Chromium CDP screenshot fallback after in-app browser screenshot capture timed out",
+  "authority": {
+    "human_review_completed": false,
+    "target_readiness_evidence_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostic_or_mastery_authorized": false,
+    "pv_or_scale_gate_authorized": false
+  }
+}

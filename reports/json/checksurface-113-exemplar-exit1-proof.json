@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
+  "generated": "2026-06-07T13:01:27.382Z",
+  "status": "passed",
+  "source": {
+    "task_families": [
+      "graph_construction_substitute",
+      "graph_reading",
+      "formula_builder",
+      "calculation_work_capture"
+    ],
+    "context_blocks": [
+      "ctx-stationbroodjes-source:source_excerpt",
+      "ctx-stationbroodjes-table:table"
+    ],
+    "placeholder_count": 3
+  },
+  "generated_output": {
+    "shared_data": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js",
+    "exit_page": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html"
+  },
+  "exemplar": {
+    "directory": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket",
+    "required_files": [
+      "README.md",
+      "candidate-data.json",
+      "implementation-handoff.md",
+      "package-readme.md",
+      "policy-extract.md",
+      "prototype.html",
+      "quality-brief.md",
+      "reviews/teacher-learning-quality-review.md",
+      "reviews/student-experience-review.md",
+      "reviews/visual-interaction-review.md",
+      "reviews/testing-regression-review.md",
+      "reviews/lead-synthesis.md"
+    ],
+    "review_state": "COMPLETE_PASS_WITH_FLAGS",
+    "next_state": "reviewed_with_flags"
+  },
+  "authority": {
+    "target_readiness_evidence_authorized": false,
+    "completion_language_authorized": false,
+    "human_review_completed": false
+  }
+}

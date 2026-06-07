@@ -1,0 +1,103 @@
+{
+  "captured_on": "2026-06-07",
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1",
+  "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+  "capture_surface": "headless Chromium CDP screenshot fallback after in-app browser screenshot capture timed out",
+  "cases": [
+    {
+      "name": "desktop-light-initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 760
+      },
+      "url": "http://127.0.0.1:60138/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+      "screenshot": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png",
+      "proof": {
+        "title": "Grafieken en tabellen - Exit ticket",
+        "url": "http://127.0.0.1:60138/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+        "theme": "light",
+        "toggleText": "Donkere modus",
+        "taskFamilies": [
+          "graph_construction_substitute",
+          "graph_reading",
+          "formula_builder",
+          "calculation_work_capture"
+        ],
+        "taskFamilyCount": 4,
+        "graphWorkspace": true,
+        "snapMode": "magnetic_table_point",
+        "intervalOptionCount": 4,
+        "formulaContextPresent": false,
+        "completionDiagnosticTextPresent": false,
+        "placeholders": [
+          "x",
+          "y",
+          "x",
+          "y",
+          "vul hoeveelheid in",
+          "Schrijf hier je uitwerking.",
+          "vul percentage in, bijvoorbeeld met %",
+          "Vul de notatie in"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 760
+        },
+        "page": {
+          "width": 1280,
+          "height": 3403
+        },
+        "firstViewportText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron en het werkvlak. Werk zelfstandig: maak het P-Q-diagram, lees een tussenwaarde af en controleer een procentuele claim. Oefenroute compact Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschill"
+      }
+    },
+    {
+      "name": "mobile-dark-initial",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:60138/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+      "screenshot": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png",
+      "proof": {
+        "title": "Grafieken en tabellen - Exit ticket",
+        "url": "http://127.0.0.1:60138/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+        "theme": "dark",
+        "toggleText": "Lichte modus",
+        "taskFamilies": [
+          "graph_construction_substitute",
+          "graph_reading",
+          "formula_builder",
+          "calculation_work_capture"
+        ],
+        "taskFamilyCount": 4,
+        "graphWorkspace": true,
+        "snapMode": "magnetic_table_point",
+        "intervalOptionCount": 4,
+        "formulaContextPresent": false,
+        "completionDiagnosticTextPresent": false,
+        "placeholders": [
+          "x",
+          "y",
+          "x",
+          "y",
+          "vul hoeveelheid in",
+          "Schrijf hier je uitwerking.",
+          "vul percentage in, bijvoorbeeld met %",
+          "Vul de notatie in"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "page": {
+          "width": 390,
+          "height": 4567
+        },
+        "firstViewportText": "← Overzicht §1.1.3 Grafieken en tabellen Lichte modus AFRONDEN Exit ticket Gebruik de bron en het werkvlak. Werk zelfstandig: maak het P-Q-diagram, lees een tussenwaarde af en controleer een procentuele claim. Oefenroute compact Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschille"
+      }
+    }
+  ]
+}

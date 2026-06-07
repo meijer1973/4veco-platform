@@ -177,14 +177,16 @@ function containsCorrectOnlySelector(data) {
 }
 
 function containsCorrectOnlyIntervalFromInteraction(interaction) {
-  if (!interaction || interaction.selectionMode !== 'interval_halving_check') return false;
+  if (!interaction || !Array.isArray(interaction.intervalOptions)) return false;
   const intervals = interaction.intervalOptions || [];
-  const conclusions = interaction.conclusionOptions || [];
   const hasCorrectInterval = intervals.some((option) => option.correct === true);
   const hasDistractorInterval = intervals.some((option) => option.correct === false);
+  if (!hasCorrectInterval || !hasDistractorInterval) return true;
+  if (interaction.selectionMode !== 'interval_halving_check') return false;
+  const conclusions = interaction.conclusionOptions || [];
   const hasCorrectConclusion = conclusions.some((option) => option.correct === true);
   const hasDistractorConclusion = conclusions.some((option) => option.correct === false);
-  return !hasCorrectInterval || !hasDistractorInterval || !hasCorrectConclusion || !hasDistractorConclusion;
+  return !hasCorrectConclusion || !hasDistractorConclusion;
 }
 
 function containsCorrectOnlyInterval(dataOrTask) {
@@ -318,8 +320,27 @@ function checkCurrentSources() {
   assert(!containsAnswerGiveaway(short113), '1.1.3 short graph task reveals the graph convention');
   assert(!containsAnswerGiveaway(exit113), '1.1.3 exit graph task reveals the graph convention');
   assert(!containsCorrectOnlyInterval(exit113), '1.1.3 interval task must include correct and distractor choices');
-  assert((exit113.contextBlocks || []).length === 3, '1.1.3 exit ticket must have source, table, and formula context only');
-  assert(!(exit113.contextBlocks || []).some((block) => /procedure|flowchart/i.test(asText(block))), '1.1.3 exit ticket must not include procedure context block');
+  assert((exit113.contextBlocks || []).length === 2, '1.1.3 exit ticket must have source and table context only');
+  assert((exit113.contextBlocks || []).some((block) => block.type === 'source_excerpt'), '1.1.3 exit ticket must include source context');
+  assert((exit113.contextBlocks || []).some((block) => block.type === 'table'), '1.1.3 exit ticket must include table context');
+  assert(!(exit113.contextBlocks || []).some((block) => block.type === 'formula' || /procedure|flowchart|formula/i.test(asText(block))), '1.1.3 exit ticket must not include formula/procedure context block');
+  const exit113Families = taskShells(exit113).map((shell) => shell.family);
+  for (const family of ['graph_construction_substitute', 'graph_reading', 'formula_builder', 'calculation_work_capture']) {
+    assert(exit113Families.includes(family), `1.1.3 exit ticket missing task family ${family}`);
+  }
+  const graph113 = taskShells(exit113).find((shell) => shell.family === 'graph_construction_substitute');
+  assert(graph113.interaction.hideAxisLabelsUntilAxisSelection === true, '1.1.3 graph must delay axis labels until axis selection');
+  assert(graph113.interaction.pointCount === 2, '1.1.3 graph must require exactly two points');
+  assert(graph113.interaction.pointSnapMode === 'magnetic_table_point', '1.1.3 graph must use magnetic table-point snapping');
+  assert(graph113.expected.pointPolicy === 'straight_line_two_distinct_table_points', '1.1.3 graph must accept two distinct table points');
+  assert(Array.isArray(graph113.expected.acceptedTablePoints) && graph113.expected.acceptedTablePoints.length >= 5, '1.1.3 graph must expose accepted table points');
+  const read113 = taskShells(exit113).find((shell) => shell.family === 'graph_reading');
+  assert(Array.isArray(read113.interaction.stepOrder) && read113.interaction.stepOrder[0] === 'interval_selection', '1.1.3 graph reading must choose interval first');
+  assert(read113.expected.interval && read113.expected.interval.value, '1.1.3 graph reading must require selected interval');
+  const calc113 = taskShells(exit113).find((shell) => shell.family === 'calculation_work_capture');
+  assert(!calc113.interaction.selectionMode, '1.1.3 calculation must not use interval-halving dropdown substitute');
+  assert(calc113.expected.finalAnswer.acceptedNotations.includes('-50%'), '1.1.3 calculation must accept signed percent notation');
+  assert(calc113.expected.finalAnswer.acceptedNotations.includes('50% daling'), '1.1.3 calculation must accept decrease phrase notation');
 
   for (const key of keys) {
     for (const shell of taskShells(sources[key])) {

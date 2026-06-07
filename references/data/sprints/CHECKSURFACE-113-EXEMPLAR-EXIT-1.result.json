@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
+  "generated": "2026-06-07",
+  "status": "implementation_complete_hold_for_exemplar_review",
+  "next_state": "hold_for_exemplar_review",
+  "implementation_evidence": {
+    "focused_jest": {
+      "status": "passed",
+      "suites": 5,
+      "tests": 97
+    },
+    "deploy": {
+      "status": "passed",
+      "link_checker": "passed",
+      "data_tests": "passed"
+    },
+    "custom_checker": {
+      "status": "passed",
+      "proof": "reports/json/checksurface-113-exemplar-exit1-proof.json"
+    },
+    "policy_checker": {
+      "status": "passed",
+      "proof": "reports/json/checksurface-policy-regression1-proof.json"
+    },
+    "sprint_bundle": {
+      "status": "passed"
+    },
+    "browser_verification": {
+      "status": "passed",
+      "proof": "reports/json/checksurface-113-exemplar-exit1-browser-proof.json"
+    },
+    "platform_check": {
+      "status": "passed",
+      "note": "exit code 0; known fixture warnings printed"
+    },
+    "book_check": {
+      "status": "passed",
+      "checks": "26/26"
+    }
+  },
+  "authority": {
+    "human_review_completed": false,
+    "target_readiness_evidence_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostic_or_mastery_authorized": false,
+    "pv_or_scale_gate_authorized": false
+  },
+  "pending_reviews": [
+    "teacher-learning-quality",
+    "student-experience",
+    "visual-interaction",
+    "testing-regression",
+    "lead-synthesis"
+  ]
+}

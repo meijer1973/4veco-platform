@@ -379,6 +379,7 @@
 .ts-assertion-option:hover,
 .ts-assertion-option:focus-visible,
 .ts-assertion-summary:focus-visible,
+.ts-graph-reading-option:focus-within,
 .ts-cloze-blank:hover,
 .ts-cloze-blank:focus-visible,
 .ts-cloze-clear:hover,
@@ -1721,6 +1722,53 @@
   background: color-mix(in srgb, var(--ts-panel) 90%, var(--ts-bg));
 }
 
+.ts-graph-reading {
+  display: grid;
+  gap: 14px;
+}
+
+.ts-graph-reading-interval {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-panel) 92%, var(--ts-bg));
+}
+
+.ts-graph-reading-interval legend {
+  padding: 0 4px;
+  color: var(--ts-primary);
+  font-weight: 800;
+}
+
+.ts-graph-reading-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ts-graph-reading-option {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  min-height: 48px;
+  padding: 10px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: var(--ts-panel);
+  color: var(--ts-text);
+  cursor: pointer;
+}
+
+.ts-graph-reading-option input {
+  margin: 3px 0 0;
+  accent-color: var(--ts-primary);
+}
+
 .ts-graph-construction {
   display: grid;
   gap: 14px;
@@ -1937,7 +1985,8 @@
   }
 
   .ts-graph-axis-controls,
-  .ts-graph-point-row {
+  .ts-graph-point-row,
+  .ts-graph-reading-options {
     grid-template-columns: minmax(0, 1fr);
   }
 

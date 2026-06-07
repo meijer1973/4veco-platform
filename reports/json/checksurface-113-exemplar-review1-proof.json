@@ -1,0 +1,51 @@
+{
+  "generated": "2026-06-07",
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1",
+  "status": "passed",
+  "lesson_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+  "reviews": {
+    "teacher-learning-quality-review.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md",
+      "verdict": "PASS WITH FLAGS"
+    },
+    "student-experience-review.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/student-experience-review.md",
+      "verdict": "PASS WITH FLAGS"
+    },
+    "visual-interaction-review.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md",
+      "verdict": "PASS WITH FLAGS"
+    },
+    "accessibility-review.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/accessibility-review.md",
+      "verdict": "PASS WITH FLAGS"
+    },
+    "testing-regression-review.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md",
+      "verdict": "PASS WITH FLAGS"
+    },
+    "lead-synthesis.md": {
+      "path": "references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/lead-synthesis.md",
+      "verdict": "PASS WITH FLAGS"
+    }
+  },
+  "browser_proof": "reports/json/checksurface-113-exemplar-review1-browser-proof.json",
+  "screenshot_manifest": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/manifest.json",
+  "screenshots": [
+    "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png",
+    "reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png"
+  ],
+  "theme_toggle_repair": {
+    "platform_runtime": "engines/exit-ticket-ui.js",
+    "generated_runtime": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket-ui.js",
+    "rendered_click_reaches_dark": true,
+    "mobile_reload_stays_dark": true
+  },
+  "authority": {
+    "human_review_completed": false,
+    "target_readiness_evidence_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostic_or_mastery_authorized": false,
+    "pv_or_scale_gate_authorized": false
+  }
+}

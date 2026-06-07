@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
+  "name": "Excellent 1.1.3 Exit Ticket Implementation",
+  "created": "2026-06-07",
+  "plan": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-plan.md",
+  "baseline": "reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "scope": [
+    "Implement the packaged 1.1.3 excellent exit-ticket source through the platform source-data and shared task shell.",
+    "Extend graph construction, graph reading, formula building, and calculation parsing where the handoff exceeds current runtime support.",
+    "Create a durable product-excellence exemplar entry with pending review placeholders.",
+    "Regenerate Book 1 output through deploy only.",
+    "Keep hold_for_exemplar_review and all authority boundaries intact."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-EXIT-1",
+    "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js engines/tests/task-shell-ui.test.js engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/exit-ticket-metadata-alignment.test.js",
+    "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js",
+    "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+    "npm.cmd run check:platform",
+    "npm.cmd run check:book -- \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/CHECKSURFACE-113-EXEMPLAR-EXIT-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js CHECKSURFACE-113-EXEMPLAR-EXIT-1 --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No target-exercise registry writes.",
+    "No hand edits to generated lesson output.",
+    "No legacy Module 3 deploy.",
+    "No protected reference mutation, unit minting, unit update, unit split, or unit deprecation.",
+    "No changes that make 1.1.1 or 1.1.3 approved target-equivalent proof.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV, CP-6/Year-1 promotion, Scale Gate 1, broad product use, or student/product use."
+  ]
+}
