@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T07:53:07.787Z
+Generated: 2026-06-07T09:05:01.448Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `C:\Projects\4veco\4veco-platform`
-Files indexed: 3727
+Files indexed: 3742
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 431
+Count: 432
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -291,6 +291,7 @@ Count: 431
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-mtu-evidence-layer.js
 - build-scripts/references/check-mtu-h2-solo-cases.js
 - build-scripts/references/check-mtu-h2a-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js
@@ -607,7 +608,7 @@ Count: 42
 
 ## validators
 
-Count: 355
+Count: 356
 
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
@@ -632,6 +633,7 @@ Count: 355
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
 - build-scripts/references/check-misconceptions.js
+- build-scripts/references/check-mtu-evidence-layer.js
 - build-scripts/references/check-mtu-h2-solo-cases.js
 - build-scripts/references/check-mtu-h2a-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h2b-cli-execution-gate-packet.js
@@ -967,7 +969,7 @@ Count: 355
 
 ## references
 
-Count: 494
+Count: 496
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1136,6 +1138,8 @@ Count: 494
 - references/data/sprints/MATH-REFINE-1.result.json
 - references/data/sprints/MATH-UX-2.plan.json
 - references/data/sprints/MATH-UX-2.result.json
+- references/data/sprints/MTU-EVIDENCE-HARDEN-1.plan.json
+- references/data/sprints/MTU-EVIDENCE-HARDEN-1.result.json
 - references/data/sprints/MTU-H1.plan.json
 - references/data/sprints/MTU-H1.result.json
 - references/data/sprints/MTU-H2.plan.json
@@ -1466,7 +1470,7 @@ Count: 494
 
 ## reports
 
-Count: 2365
+Count: 2377
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2968,6 +2972,18 @@ Count: 2365
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-plan.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-baseline.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.jsonl
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-diff-summary.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-assignment.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-corrections.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-round1.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-lead-review-round2.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-plan.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-planning-review.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-result.md
+- reports/sprints/MTU-EVIDENCE-HARDEN-1-verification-review.md
 - reports/sprints/MTU-H1-baseline.md
 - reports/sprints/MTU-H1-diff-summary.md
 - reports/sprints/MTU-H1-plan.md

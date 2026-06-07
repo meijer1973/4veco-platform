@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "sprint_id": "AGENT-BRANCH-SAFETY-1",
+  "generated": "2026-06-07",
+  "status": "completed",
+  "plan": "reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md",
+  "baseline": "reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md",
+  "result": "reports/sprints/AGENT-BRANCH-SAFETY-1-result.md",
+  "diff_summary": "reports/sprints/AGENT-BRANCH-SAFETY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "platform_branch": "codex/agent-branch-safety-20260607",
+  "lessen_branch": "codex/agent-branch-safety-20260607",
+  "remote_publication": {
+    "status": "pushed",
+    "platform_pr_url": "https://github.com/meijer1973/4veco-platform/pull/12",
+    "lessen_pr_url": "https://github.com/meijer1973/4veco-lessen/pull/1",
+    "platform_commit_sha": "b55087783af6ff989a851f9269fa60cf10da9505",
+    "lessen_commit_sha": "ed5b72c9bcd1a15640efbed7e7d15a7fad9f8475"
+  },
+  "remote_ci": {
+    "workflow_name": "platform-ci",
+    "job_name": "validate-platform",
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform",
+    "run_url": "https://github.com/meijer1973/4veco-platform/actions/runs/27088256297",
+    "run_id": "27088256297",
+    "job_id": "79946854708",
+    "branch_head_sha": "b55087783af6ff989a851f9269fa60cf10da9505",
+    "conclusion": "success",
+    "artifacts_uploaded": true,
+    "artifact_name": "platform-ci-diagnostics",
+    "artifact_id": "7462682610"
+  },
+  "branch_protection": {
+    "repo": "meijer1973/4veco-platform",
+    "branch": "main",
+    "strict": true,
+    "required_contexts": [
+      "validate-platform"
+    ],
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "required_pull_request_reviews_observed": true,
+    "required_approving_review_count": 1,
+    "bypass_allowances_observable": false,
+    "pr_only_no_direct_push_verified": false,
+    "pr_only_no_direct_push_status": "deferred"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js AGENT-BRANCH-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand build-scripts/ci/check-agent-branch-safety.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -c safe.directory=C:/Projects/4veco/4veco-lessen -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-branch-safety -- --require-prefix \"codex/,agent/\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:branch-protection -- --repo meijer1973/4veco-platform --branch main",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js AGENT-BRANCH-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js AGENT-BRANCH-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/AGENT-BRANCH-SAFETY-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js AGENT-BRANCH-SAFETY-1 --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/AGENT-BRANCH-SAFETY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/AGENT-BRANCH-SAFETY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/AGENT-BRANCH-SAFETY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/AGENT-BRANCH-SAFETY-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": []
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_work": "Use the local branch-safety preflight in future mutating agent tasks; require separate owner authorization before making PR-only protection a hard failing checker requirement or default CI gate."
+}
