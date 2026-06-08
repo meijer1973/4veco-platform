@@ -2,7 +2,7 @@
 
 ## Status
 
-Policy proposal and implementation guidance for `CHECKSURFACE-113-EXEMPLAR-EXIT-1`. This document should be imported into the repository as a durable reference before the next gate retry. It does not by itself authorize product-route adoption, completion language, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use.
+Policy extract and implementation guidance for `CHECKSURFACE-113-EXEMPLAR-EXIT-1`. The core rules from this extract were promoted into `../4veco-lessen/specifications/product-end-state.md` on 2026-06-08 as durable check-surface policy. This document remains the exemplar-specific source trail; it does not by itself authorize product-route adoption, completion language, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use.
 
 ## Why this policy exists
 

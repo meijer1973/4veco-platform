@@ -3425,7 +3425,11 @@ describe('TaskShellEngine', () => {
             interaction: {
                 workLabel: 'Berekening',
                 finalAnswerLabel: 'Procentuele verandering',
-                finalAnswerPlaceholder: 'vul percentage in, bijvoorbeeld met %'
+                finalAnswerPlaceholder: 'vul percentage in, bijvoorbeeld met %',
+                answerParsers: [
+                    'number_with_optional_percent',
+                    'decrease_phrase_to_negative_percent'
+                ]
             },
             expected: {
                 kind: 'calculation',
@@ -3437,22 +3441,43 @@ describe('TaskShellEngine', () => {
                 },
                 workRequired: true,
                 requiredWorkText: [
+                    { label: 'startprijs', any: ['1,50', '1.50'] },
+                    { label: 'eindprijs', any: ['3,00', '3.00'] },
                     { label: 'oude hoeveelheid', any: ['300'] },
                     { label: 'nieuwe hoeveelheid', any: ['150'] }
                 ]
             }
         });
 
-        ['-50%', '-50 procent', '50% daling', 'Q daalt met 50 procent'].forEach((finalAnswer) => {
+        [
+            '-50%',
+            '-50 %',
+            '\u221250%',
+            '-50 procent',
+            '50% daling',
+            '50 procent gedaald',
+            'Q daalt met 50 procent'
+        ].forEach((finalAnswer) => {
             expect(TaskShellEngine.evaluateTask(calculation, {
-                work: '(150 - 300) / 300 x 100',
+                work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
                 finalAnswer
             }).matched).toBe(true);
         });
         expect(TaskShellEngine.evaluateTask(calculation, {
-            work: '(150 - 300) / 300 x 100',
+            work: 'van EUR 1,50: (150 - 300) / 300 x 100',
+            finalAnswer: '-50%'
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
             finalAnswer: '50% stijging'
         }).matched).toBe(false);
+        expect(() => TaskShellEngine.validateTask({
+            ...calculation,
+            interaction: {
+                ...calculation.interaction,
+                answerParsers: ['unknown_parser']
+            }
+        })).toThrow(/known answer parser/);
     });
 
     test('validates a task set without target-equivalent proof authority', () => {

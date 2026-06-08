@@ -110,6 +110,15 @@ function taskShells(data) {
     .map((task) => task.taskShell);
 }
 
+function assertWorkGroup(shell, label, expectedValues) {
+  const groups = shell.expected.requiredWorkText || [];
+  const group = groups.find((entry) => entry && entry.label === label);
+  assert(group, `requiredWorkText missing group: ${label}`);
+  for (const value of expectedValues) {
+    assert((group.any || []).includes(value), `requiredWorkText.${label} missing ${value}`);
+  }
+}
+
 function allTasks(data) {
   return data && Array.isArray(data.tasks) ? data.tasks : [];
 }
@@ -339,8 +348,15 @@ function checkCurrentSources() {
   assert(read113.expected.interval && read113.expected.interval.value, '1.1.3 graph reading must require selected interval');
   const calc113 = taskShells(exit113).find((shell) => shell.family === 'calculation_work_capture');
   assert(!calc113.interaction.selectionMode, '1.1.3 calculation must not use interval-halving dropdown substitute');
+  assert((calc113.interaction.answerParsers || []).includes('number_with_optional_percent'), '1.1.3 calculation must declare number parser');
+  assert((calc113.interaction.answerParsers || []).includes('decrease_phrase_to_negative_percent'), '1.1.3 calculation must declare decrease phrase parser');
   assert(calc113.expected.finalAnswer.acceptedNotations.includes('-50%'), '1.1.3 calculation must accept signed percent notation');
   assert(calc113.expected.finalAnswer.acceptedNotations.includes('50% daling'), '1.1.3 calculation must accept decrease phrase notation');
+  assert((calc113.expected.requiredWorkText || []).length === 4, '1.1.3 calculation must require both interval endpoints and both Q-values');
+  assertWorkGroup(calc113, 'startprijs', ['1,50', '1.50']);
+  assertWorkGroup(calc113, 'eindprijs', ['3,00', '3.00']);
+  assertWorkGroup(calc113, 'oude hoeveelheid', ['300']);
+  assertWorkGroup(calc113, 'nieuwe hoeveelheid', ['150']);
 
   for (const key of keys) {
     for (const shell of taskShells(sources[key])) {

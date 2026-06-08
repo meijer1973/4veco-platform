@@ -96,6 +96,20 @@
 
   var INTERNAL_CODE_RE = /\b(?:[A-Z]\d{2}|PV|MTU)\b/;
 
+  var ANSWER_PARSERS = {
+    number_with_optional_percent: parseNumberWithOptionalPercent,
+    decrease_phrase_to_negative_percent: parseDecreasePhraseToNegativePercent
+  };
+
+  var DEFAULT_ANSWER_PARSER_IDS = [
+    'decrease_phrase_to_negative_percent',
+    'number_with_optional_percent'
+  ];
+
+  var NUMERIC_FILLER_WORDS_RE = /\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde|stijging|stijgt|stijgen|steeg|gestegen|toename|toeneemt|toenam|toegenomen|meer|hoger)\b/g;
+
+  var DECREASE_WORD_RE = /\b(daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde)\b/;
+
   var FORMULA_TOKEN_CATEGORIES = {
     numerator: true,
     denominator: true,
@@ -176,18 +190,50 @@
   function cleanNumber(value) {
     if (typeof value === 'number') return value;
     if (typeof value === 'string') {
-      var normalized = value.trim().toLowerCase().replace(/\u2212/g, '-').replace(',', '.');
-      if (!normalized) return NaN;
-      var negativeByPhrase = !/^\s*-/.test(normalized) &&
-        /\b(daling|daalt|afname|afneemt|lager|minder)\b/.test(normalized);
-      var cleaned = normalized
-        .replace(/[€%]/g, ' ')
-        .replace(/\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|afname|afneemt|lager|minder|stijging|stijgt|toename|toeneemt|meer)\b/g, ' ')
-        .replace(/\s+/g, '');
-      if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
-      var parsed = Number(cleaned);
-      if (!isNumber(parsed)) return NaN;
-      return negativeByPhrase ? -Math.abs(parsed) : parsed;
+      return parseNumberWithAnswerParsers(value);
+    }
+    return NaN;
+  }
+
+  function normalizeNumberInput(value) {
+    return String(value == null ? '' : value)
+      .trim()
+      .toLowerCase()
+      .replace(/[\u2212\u2012\u2013\u2014]/g, '-')
+      .replace(',', '.');
+  }
+
+  function parseNormalizedNumber(value, negativeByPhrase) {
+    if (!value) return NaN;
+    var cleaned = value
+      .replace(/[\u20ac%]/g, ' ')
+      .replace(NUMERIC_FILLER_WORDS_RE, ' ')
+      .replace(/\s+/g, '');
+    if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
+    var parsed = Number(cleaned);
+    if (!isNumber(parsed)) return NaN;
+    return negativeByPhrase ? -Math.abs(parsed) : parsed;
+  }
+
+  function parseNumberWithOptionalPercent(value) {
+    return parseNormalizedNumber(normalizeNumberInput(value), false);
+  }
+
+  function parseDecreasePhraseToNegativePercent(value) {
+    var normalized = normalizeNumberInput(value);
+    var negativeByPhrase = !/^\s*-/.test(normalized) && DECREASE_WORD_RE.test(normalized);
+    return parseNormalizedNumber(normalized, negativeByPhrase);
+  }
+
+  function parseNumberWithAnswerParsers(value, parserIds) {
+    if (typeof value === 'number') return value;
+    if (typeof value !== 'string') return NaN;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var parsed = parser(value);
+      if (isNumber(parsed)) return parsed;
     }
     return NaN;
   }
@@ -217,6 +263,13 @@
     requireArray(value, path, minLength || 1);
     value.forEach(function (item, idx) {
       requireString(item, path + '[' + idx + ']');
+    });
+  }
+
+  function validateAnswerParsers(value, path) {
+    requireStringArray(value, path, 1);
+    value.forEach(function (item, idx) {
+      assert(ANSWER_PARSERS[item], path + '[' + idx + '] must be a known answer parser');
     });
   }
 
@@ -2046,6 +2099,7 @@
       optionalString(task.interaction.finalAnswerPlaceholder, path + '.finalAnswerPlaceholder');
       optionalString(task.interaction.unitNotationLabel, path + '.unitNotationLabel');
       optionalString(task.interaction.unitNotationPlaceholder, path + '.unitNotationPlaceholder');
+      if (task.interaction.answerParsers !== undefined) validateAnswerParsers(task.interaction.answerParsers, path + '.answerParsers');
       if (task.interaction.selectionMode !== undefined) {
         assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
         validateIntervalHalvingInteraction(task, path);
@@ -2152,10 +2206,19 @@
     });
   }
 
-  function numberMatches(value, expected) {
-    var actual = cleanNumber(value);
-    if (!isNumber(actual)) return false;
-    return Math.abs(actual - expected.value) <= tolerance(expected);
+  function numberMatches(value, expected, parserIds) {
+    if (typeof value === 'number') {
+      return Math.abs(value - expected.value) <= tolerance(expected);
+    }
+    if (typeof value !== 'string') return false;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var actual = parser(value);
+      if (isNumber(actual) && Math.abs(actual - expected.value) <= tolerance(expected)) return true;
+    }
+    return false;
   }
 
   function pointMatches(value, expected) {
@@ -2211,11 +2274,11 @@
     return numberMatches(response && response.value != null ? response.value : response, task.expected);
   }
 
-  function finalAnswerMatches(value, expected) {
+  function finalAnswerMatches(value, expected, parserIds) {
     if (!expected || !expected.kind) return false;
     if (expected.kind === 'number') {
       if (expected.acceptedNotations && textMatches(value, expected.acceptedNotations)) return true;
-      return numberMatches(value, expected);
+      return numberMatches(value, expected, parserIds);
     }
     if (expected.kind === 'text') return textMatches(value, expected.accepted);
     return false;
@@ -3047,7 +3110,7 @@
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
       if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
       if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
-      return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer) &&
+      return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer, task.interaction && task.interaction.answerParsers) &&
         unitNotationMatches(response.unitNotation, task.expected.unitNotation);
     }
     if (
@@ -3290,6 +3353,7 @@
 
   return {
     FAMILIES: clone(FAMILIES),
+    ANSWER_PARSER_IDS: Object.keys(ANSWER_PARSERS),
     BOUNDARY_FLAGS: clone(BOUNDARY_FLAGS),
     BLOCKED_STUDENT_TERMS: BLOCKED_STUDENT_TERMS.slice(),
     CONTEXT_BLOCK_TYPES: clone(CONTEXT_BLOCK_TYPES),

@@ -524,18 +524,28 @@
           "workRequired": true,
           "requiredWorkText": [
             {
-              "label": "gekozen interval",
+              "label": "startprijs",
               "any": [
                 "1,50",
-                "1.50",
+                "1.50"
+              ]
+            },
+            {
+              "label": "eindprijs",
+              "any": [
                 "3,00",
                 "3.00"
               ]
             },
             {
-              "label": "oude en nieuwe hoeveelheid",
+              "label": "oude hoeveelheid",
               "any": [
-                "300",
+                "300"
+              ]
+            },
+            {
+              "label": "nieuwe hoeveelheid",
+              "any": [
                 "150"
               ]
             }

@@ -523,16 +523,32 @@
           },
           "workRequired": true,
           "requiredWorkText": [
-            [
-              "1,50",
-              "1.50",
-              "3,00",
-              "3.00"
-            ],
-            [
-              "300",
-              "150"
-            ]
+            {
+              "label": "startprijs",
+              "any": [
+                "1,50",
+                "1.50"
+              ]
+            },
+            {
+              "label": "eindprijs",
+              "any": [
+                "3,00",
+                "3.00"
+              ]
+            },
+            {
+              "label": "oude hoeveelheid",
+              "any": [
+                "300"
+              ]
+            },
+            {
+              "label": "nieuwe hoeveelheid",
+              "any": [
+                "150"
+              ]
+            }
           ],
           "criteria": [
             "Kies interval EUR 1,50 tot EUR 3,00.",

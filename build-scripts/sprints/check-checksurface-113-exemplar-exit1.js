@@ -10,6 +10,7 @@ const PROOF_PATH = path.join(ROOT, 'reports', 'json', 'checksurface-113-exemplar
 const CHAPTER_ROOT = path.join(BOOK_ROOT, '1.1 Hoofdstuk Economisch denken en rekenen');
 
 const ExitTicketEngine = require('../../engines/exit-ticket-engine');
+const TaskShellEngine = require('../../engines/task-shell-engine');
 
 function fail(message) {
   console.error(`CHECKSURFACE-113-EXEMPLAR-EXIT-1 failed: ${message}`);
@@ -76,6 +77,15 @@ function assertNoAnswerGivingPlaceholders(data) {
     }
   }
   return placeholders;
+}
+
+function assertWorkGroup(shell, label, expectedValues) {
+  const groups = shell.expected.requiredWorkText || [];
+  const group = groups.find((entry) => entry && entry.label === label);
+  assert(group, `calculation requiredWorkText missing group: ${label}`);
+  for (const value of expectedValues) {
+    assert((group.any || []).includes(value), `calculation requiredWorkText.${label} missing ${value}`);
+  }
 }
 
 function findParagraphDir() {
@@ -162,9 +172,26 @@ function checkSource() {
 
   const calculation = findShell(data, 'calculation_work_capture');
   assert(!calculation.interaction.selectionMode, 'calculation must not use interval-halving dropdown substitute');
+  assert((calculation.interaction.answerParsers || []).includes('number_with_optional_percent'), 'calculation must declare number_with_optional_percent parser');
+  assert((calculation.interaction.answerParsers || []).includes('decrease_phrase_to_negative_percent'), 'calculation must declare decrease_phrase_to_negative_percent parser');
   assert(calculation.expected.finalAnswer.kind === 'number', 'calculation final answer must be numeric');
   assert(calculation.expected.finalAnswer.acceptedNotations.includes('-50%'), 'calculation must accept -50%');
   assert(calculation.expected.finalAnswer.acceptedNotations.includes('50% daling'), 'calculation must accept 50% daling');
+  assert((calculation.expected.requiredWorkText || []).length === 4, 'calculation must require both interval endpoints and both Q-values');
+  assertWorkGroup(calculation, 'startprijs', ['1,50', '1.50']);
+  assertWorkGroup(calculation, 'eindprijs', ['3,00', '3.00']);
+  assertWorkGroup(calculation, 'oude hoeveelheid', ['300']);
+  assertWorkGroup(calculation, 'nieuwe hoeveelheid', ['150']);
+  assert(TaskShellEngine.evaluateTask(calculation, {
+    work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
+    finalAnswer: '50 procent gedaald',
+    unitNotation: 'Q daalt met 50 procent',
+  }).matched, 'calculation parser must accept natural decrease phrase notation');
+  assert(!TaskShellEngine.evaluateTask(calculation, {
+    work: 'van EUR 1,50: (150 - 300) / 300 x 100',
+    finalAnswer: '-50%',
+    unitNotation: 'Q daalt met 50 procent',
+  }).matched, 'calculation work checker must reject missing end price');
 
   return {
     task_families: taskShells(data).map((shell) => shell.family),
