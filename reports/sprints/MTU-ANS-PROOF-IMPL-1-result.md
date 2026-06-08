@@ -107,6 +107,10 @@ implementation exists.
 
 ## Open follow-ups
 
+- Owner note after v3 review: A96 is improved enough to merge as bounded proof
+  and handoff evidence for another team, but it is not yet sufficient for
+  generated exercises, product-route adoption, target-equivalent reliance, or
+  student/product use.
 - A future human-reviewed route-adoption sprint is still required before this
   A96 proof can support generated lesson output, product-route adoption, or
   target-equivalent reliance.

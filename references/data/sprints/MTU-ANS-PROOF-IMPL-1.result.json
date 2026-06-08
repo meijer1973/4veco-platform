@@ -165,6 +165,7 @@
   },
   "authorized_next": [
     "Use this only as bounded A96 proof evidence.",
+    "Owner note: A96 is improved enough to merge as handoff proof, but it is not yet sufficient for generated exercises, product-route adoption, target-equivalent reliance, or student/product use.",
     "Require a later human-reviewed route-adoption sprint before generated lesson output, product-route adoption, or target-equivalent reliance.",
     "Keep A81 modifier-only and A99 blocked."
   ]
