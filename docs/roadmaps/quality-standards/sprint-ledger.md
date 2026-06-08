@@ -47,6 +47,11 @@ Required default flow:
 9. A completed non-trivial sprint should not be left in a dirty local worktree:
    commit, push the task branch, and record local commit hash, remote push
    status, files changed, validators run, known flags, and the next action.
+10. End every non-trivial response with explicit advice on the operational next
+    step. Do not leave the user to infer the next step from a status summary.
+    The final paragraph should say whether to proceed to the next sprint, send
+    a human-review packet, run a validation/build step, commit/push, insert a
+    new sprint, or deliberately stop/pause.
 
 ## Ledger
 
@@ -57,6 +62,7 @@ Required default flow:
 | `QS-ROADMAP-HOME-1` | closed | Move the roadmap into a dedicated quality-standards roadmap folder and add governance companions. | `docs/roadmaps/quality-standards/README.md`; `docs/roadmaps/quality-standards/sprint-ledger.md`; `docs/roadmaps/quality-standards/quality-standards-end-state.md`; moved roadmap path. | this commit | Structural documentation only. No source-profile semantics or production behaviour changed. |
 | `QS-ROADMAP-HOME-2` | closed | Remove mistaken content-production framing from the quality-standards folder and connected inspection evidence docs. | `docs/roadmaps/quality-standards/README.md`; `docs/roadmaps/quality-standards/sprint-ledger.md`; `docs/roadmaps/quality-standards/quality-standards-end-state.md`; `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`; connected inspection evidence docs. | this commit | Quality-standards documentation only. The folder is explicitly not about writing student-facing content. |
 | `QS-ROADMAP-HOME-3` | closed | Add sprint-protocol reminder and summary to the quality-standards sprint ledger. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documentation-only reminder based on `AGENTS.md`, `agents/lead-reviewer-agent.md`, and `agents/testing-agent.md`. |
+| `QS-ROADMAP-HOME-4` | closed | Add the final-answer next-step requirement to the sprint-protocol reminder. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documents the `AGENTS.md` rule that non-trivial responses must end with explicit operational next-step advice. |
 
 ## Candidate Future Sprints
 
