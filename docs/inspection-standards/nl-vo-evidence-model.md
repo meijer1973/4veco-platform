@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; not final, compliant, or inspection-ready
-Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design
+Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; INSPECT-3 report-only schema design authorised; not final, compliant, or inspection-ready
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -84,6 +84,31 @@ Every future pilot or report must also include a title/source reconciliation
 note. The live blueprint title is the source of truth. If human review text,
 the target registry, chapter plan, or lesson folder disagree, the mismatch is a
 traceability issue and must be recorded explicitly.
+
+## INSPECT-3 Report-Only Schema Design
+
+Head of Strategy accepted INSPECT-2A as `pass` and authorised
+`INSPECT-3 Report-Only Schema Design`.
+
+INSPECT-3 may create:
+
+- `references/schemas/inspection-evidence.schema.json`
+- `docs/inspection-standards/report-only-schema-design.md`
+- `references/data/inspection-standards/schema-notes.md`
+- `archive/sprints/INSPECT-3/`
+
+Required wording:
+
+```text
+This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.
+```
+
+INSPECT-3 may design schema fields and pilot evidence-object examples. It must
+not create build-failing validators, generated evidence packs, teacher
+inspection packs, dashboard gates, quality-ref integration, Scale Gate
+integration, country overlays, generated lesson-output changes, legal
+compliance claims, inspectorate approval claims, or complete OP0/basic-skills
+claims.
 
 ## Evidence Categories
 
@@ -392,8 +417,7 @@ Screenshot QA proves full accessibility compliance.
 
 ## Recommended Next Step
 
-Review the INSPECT-2A correction packet. If the human review accepts the
-profile adjustment, the next likely sprint is `INSPECT-3 Report-Only Schema
-Design`. Do not start schema design, validators, country overlays, generated
-lesson changes, quality-ref integration, dashboard gates, Scale Gate work, or
-compliance claims from this draft alone.
+Review the INSPECT-3 report-only schema design packet. Do not create validators,
+generated evidence packs, teacher inspection packs, dashboard gates,
+quality-ref integration, Scale Gate integration, country overlays, generated
+lesson changes, or compliance claims from this draft alone.

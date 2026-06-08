@@ -30,17 +30,27 @@ validators, generated evidence packs, lesson-output writes, quality-ref
 integration, dashboard gates, Scale Gate work, country overlays, or compliance
 claims.
 
+INSPECT-2A passed Head of Strategy review. INSPECT-3 is authorised as
+report-only schema design. It may add
+`references/schemas/inspection-evidence.schema.json`,
+`docs/inspection-standards/report-only-schema-design.md`,
+`references/data/inspection-standards/schema-notes.md`, and the INSPECT-3
+sprint packet. The schema must remain diagnostic and report-only; it must not
+become a build-failing validator, dashboard gate, quality-ref integration,
+Scale Gate integration, generated evidence pack, teacher inspection pack,
+country overlay, generated lesson-output mutation path, or compliance claim.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
 
 - `source-register.json`
 - `nl-vo-evidence-profile.v0.json`
+- `schema-notes.md`
 
 Future authorised phases may add:
 
 - `international-common-quality.v0.json`
-- `schema-notes.md`
 - `overlays/*.json`
 
 ## Guardrails

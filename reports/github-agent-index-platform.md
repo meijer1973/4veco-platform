@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T12:22:31.774Z
+Generated: 2026-06-08T13:24:44.633Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3891
+Files indexed: 3901
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -616,12 +616,13 @@ Count: 42
 
 ## validators
 
-Count: 380
+Count: 381
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -4006,7 +4007,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 331
+Count: 340
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4039,6 +4040,15 @@ Count: 331
 - archive/sprints/INSPECT-2/INSPECT-2-lead-review-round2.md
 - archive/sprints/INSPECT-2/INSPECT-2-planning-review.md
 - archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-correction-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-human-authorization.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-assignment.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round1.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round2.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-planning-review.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md

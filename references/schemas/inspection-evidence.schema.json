@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://4veco.local/references/schemas/inspection-evidence.schema.json",
+  "title": "InspectionEvidence",
+  "description": "Report-only and diagnostic inspection-evidence object. This schema does not create a quality gate, compliance claim, or generated-output mutation path.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema_usage",
+    "diagnostic_policy",
+    "profile_id",
+    "profile_version",
+    "record_status",
+    "jurisdiction",
+    "sector",
+    "subject_focus",
+    "generated_for_scope",
+    "title_source_reconciliation",
+    "category_records",
+    "report_claim_boundaries",
+    "next_action"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "schema_usage": { "const": "report_only" },
+    "diagnostic_policy": { "$ref": "#/$defs/diagnostic_policy" },
+    "profile_id": { "const": "nl-vo-evidence-profile" },
+    "profile_version": { "const": "v0" },
+    "record_status": {
+      "type": "string",
+      "enum": ["draft", "report_only", "diagnostic", "pilot", "present_but_weak", "accepted_for_schema_design"]
+    },
+    "jurisdiction": { "const": "Netherlands" },
+    "sector": { "const": "voortgezet onderwijs" },
+    "subject_focus": { "const": "vwo economie" },
+    "generated_for_scope": { "$ref": "#/$defs/scope" },
+    "title_source_reconciliation": { "$ref": "#/$defs/title_source_reconciliation" },
+    "category_records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/category_record" },
+      "minItems": 1
+    },
+    "report_claim_boundaries": { "$ref": "#/$defs/report_claim_boundaries" },
+    "known_limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "next_action": { "type": "string", "minLength": 1 }
+  },
+  "$defs": {
+    "diagnostic_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_only",
+        "diagnostic_only",
+        "fail_builds",
+        "block_paragraph_production",
+        "quality_gate",
+        "mutate_generated_output",
+        "compliance_claim",
+        "required_wording"
+      ],
+      "properties": {
+        "report_only": { "const": true },
+        "diagnostic_only": { "const": true },
+        "fail_builds": { "const": false },
+        "block_paragraph_production": { "const": false },
+        "quality_gate": { "const": false },
+        "mutate_generated_output": { "const": false },
+        "compliance_claim": { "const": false },
+        "required_wording": {
+          "const": "This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path."
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["book", "chapter", "paragraph_ids", "live_blueprint_titles"],
+      "properties": {
+        "book": { "type": "string", "minLength": 1 },
+        "chapter": { "type": "string", "minLength": 1 },
+        "paragraph_ids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+          "minItems": 1
+        },
+        "live_blueprint_titles": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/paragraph_title" },
+          "minItems": 1
+        }
+      }
+    },
+    "paragraph_title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paragraph_id", "title", "source_path"],
+      "properties": {
+        "paragraph_id": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "title": { "type": "string", "minLength": 1 },
+        "source_path": { "type": "string", "minLength": 1 }
+      }
+    },
+    "title_source_reconciliation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "live_blueprint_source",
+        "mismatch_detected",
+        "checked_sources",
+        "reconciliation_note"
+      ],
+      "properties": {
+        "live_blueprint_source": { "type": "string", "minLength": 1 },
+        "mismatch_detected": { "type": "boolean" },
+        "checked_sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/title_check_source" },
+          "minItems": 1
+        },
+        "reconciliation_note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "title_check_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_type", "source_path_or_note", "observed_title"],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["human_review_text", "live_blueprint", "target_registry", "chapter_plan", "lesson_folder", "other"]
+        },
+        "source_path_or_note": { "type": "string", "minLength": 1 },
+        "observed_title": { "type": "string", "minLength": 1 }
+      }
+    },
+    "category_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category_id",
+        "category_outcome",
+        "evidence_state",
+        "evidence_finality",
+        "source_pointers",
+        "product_school_boundary",
+        "report_claim",
+        "known_flags"
+      ],
+      "properties": {
+        "category_id": { "$ref": "#/$defs/category_id" },
+        "category_outcome": { "$ref": "#/$defs/category_outcome" },
+        "evidence_state": { "$ref": "#/$defs/evidence_state" },
+        "evidence_finality": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_finality" },
+          "minItems": 1
+        },
+        "source_pointers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_pointer" }
+        },
+        "product_school_boundary": { "$ref": "#/$defs/product_school_boundary" },
+        "target_equivalent_proof_status": { "$ref": "#/$defs/target_equivalent_proof_status" },
+        "subject_material_basic_skills_label": { "const": "subject_material_basic_skills_evidence" },
+        "op0_boundary": { "$ref": "#/$defs/op0_boundary" },
+        "report_claim": { "type": "string", "minLength": 1 },
+        "known_flags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "category_id": { "const": "assessment_and_closure" } },
+            "required": ["category_id"]
+          },
+          "then": { "required": ["target_equivalent_proof_status"] }
+        },
+        {
+          "if": {
+            "properties": { "category_id": { "const": "basic_skills" } },
+            "required": ["category_id"]
+          },
+          "then": { "required": ["subject_material_basic_skills_label", "op0_boundary"] }
+        }
+      ]
+    },
+    "category_id": {
+      "type": "string",
+      "enum": [
+        "curriculum_offer",
+        "basic_skills",
+        "didactic_quality",
+        "student_development_and_support",
+        "assessment_and_closure",
+        "accessibility_and_inclusion",
+        "quality_assurance",
+        "improvement_cycle"
+      ]
+    },
+    "category_outcome": {
+      "type": "string",
+      "enum": [
+        "accepted_as_present",
+        "accepted_as_present_but_weak",
+        "accepted_as_present_when_bounded"
+      ]
+    },
+    "evidence_state": {
+      "type": "string",
+      "enum": ["not_applicable", "missing", "implicit", "present", "present_but_weak"]
+    },
+    "evidence_finality": {
+      "type": "string",
+      "enum": [
+        "artifact_present",
+        "reviewed_artifact_quality",
+        "pass_with_flags",
+        "target_exercise_migrated",
+        "target_exercise_reviewed",
+        "target_equivalent_reviewed",
+        "diagnostic_report_only",
+        "school_owned_implementation"
+      ]
+    },
+    "target_equivalent_proof_status": {
+      "type": "string",
+      "enum": [
+        "target_exercise_present",
+        "target_exercise_migrated_needs_review",
+        "target_exercise_v5_reviewed",
+        "answer_model_present",
+        "target_equivalent_not_started",
+        "target_equivalent_advisory_only",
+        "target_equivalent_candidate",
+        "target_equivalent_reviewed_local",
+        "target_equivalent_reviewed_generalised"
+      ]
+    },
+    "source_pointer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_type", "path_or_url", "cited_claim"],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "primary_source_artifact",
+            "review_record",
+            "quality_ref",
+            "diagnostic_report",
+            "generated_dashboard_projection",
+            "external_authority_source"
+          ]
+        },
+        "path_or_url": { "type": "string", "minLength": 1 },
+        "source_id": { "type": "string" },
+        "locator": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "evidence_finality": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_finality" }
+        },
+        "cited_claim": { "type": "string", "minLength": 1 }
+      }
+    },
+    "product_school_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["4veco_evidence", "school_owned_evidence", "forbidden_inference"],
+      "properties": {
+        "4veco_evidence": { "type": "string", "minLength": 1 },
+        "school_owned_evidence": { "type": "string", "minLength": 1 },
+        "forbidden_inference": { "type": "string", "minLength": 1 }
+      }
+    },
+    "op0_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "not_complete_op0_evidence",
+        "not_school_wide_basic_skills_evidence",
+        "not_citizenship_curriculum_proof",
+        "boundary_note"
+      ],
+      "properties": {
+        "not_complete_op0_evidence": { "const": true },
+        "not_school_wide_basic_skills_evidence": { "const": true },
+        "not_citizenship_curriculum_proof": { "const": true },
+        "boundary_note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "report_claim_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["safe_claim", "forbidden_claims", "school_boundary_note", "op0_boundary_note"],
+      "properties": {
+        "safe_claim": { "type": "string", "minLength": 1 },
+        "forbidden_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "not": {
+              "enum": ["compliant", "approved", "inspection_ready", "certified", "final_school_evidence", "complete_OP0"]
+            }
+          },
+          "minItems": 1
+        },
+        "school_boundary_note": { "type": "string", "minLength": 1 },
+        "op0_boundary_note": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

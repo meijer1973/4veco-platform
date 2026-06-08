@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.2-inspect-2a-profile-adjustment`
-Sprint status: `INSPECT-2A Profile Adjustment Before Schema Design` completed as corrections-only profile-language work; `INSPECT-3 Report-Only Schema Design` remains unauthorised until human review accepts INSPECT-2A
+Roadmap version: `v0.3-report-only-schema-design`
+Sprint status: `INSPECT-3 Report-Only Schema Design` authorised and completed as diagnostic schema design only; validators, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -628,19 +628,26 @@ Acceptance criteria:
 Goal: create a schema for paragraph/artifact evidence without yet making it a hard
 quality gate.
 
-Prerequisite: INSPECT-2A must pass human review. The schema must not start from
-the earlier Dutch v0 profile alone, because INSPECT-2 proved that finality
-language is required before schema design.
+Prerequisite: INSPECT-2A must pass human review. This prerequisite is satisfied:
+Head of Strategy accepted INSPECT-2A as `pass` on 2026-06-08 and authorised
+`INSPECT-3 Report-Only Schema Design`.
+
+INSPECT-3 is report-only and diagnostic:
+
+```text
+This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.
+```
 
 Possible target paths:
 
 ```text
 references/schemas/inspection-evidence.schema.json
 references/data/inspection-standards/schema-notes.md
-build-scripts/inspection/validate-inspection-evidence.js
+docs/inspection-standards/report-only-schema-design.md
 ```
 
 Start report-only. Do not fail existing builds yet.
+Do not create a validator script in INSPECT-3.
 
 Candidate evidence object:
 
@@ -702,6 +709,11 @@ Acceptance criteria:
 - validation report distinguishes "not applicable", "missing", "implicit",
   "present", and "present but weak";
 - schema does not force every country's evidence into Dutch labels.
+- schema preserves evidence finality, target-equivalent proof, diagnostic-report
+  boundaries, and product/school evidence boundaries;
+- schema remains diagnostic and does not integrate into build failures,
+  dashboard gates, quality-ref, Scale Gate, generated output, or inspection-pack
+  generation.
 
 ### Phase 4 - Pilot evidence audit on stabilised paragraphs
 
@@ -1057,7 +1069,13 @@ Proceed to review/pilot work before schema design if the Dutch profile still nee
 Current decision after INSPECT-2 and INSPECT-2A:
 
 ```text
-Send INSPECT-2A for human review. Do not start INSPECT-3 Report-Only Schema Design unless the human review explicitly accepts the profile adjustment and authorises schema design.
+INSPECT-2A passed human review. INSPECT-3 Report-Only Schema Design is authorised and may create a diagnostic schema, schema notes, and pilot evidence-object examples.
+```
+
+Current decision after INSPECT-3:
+
+```text
+Send INSPECT-3 for human review. Do not create validators, generated evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, country overlays, generated lesson-output changes, or compliance claims unless a later human review explicitly authorises them.
 ```
 
 ## 11. Setup recommendation

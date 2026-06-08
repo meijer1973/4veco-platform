@@ -38,7 +38,10 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/quality-standards/quality-standards-end-state.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/schemas/inspection-evidence.schema.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/report-only-schema-design.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/schema-notes.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md
@@ -54,6 +57,10 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-3/INSPECT-3-schema-design-packet.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-3/INSPECT-3-validation-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-3/INSPECT-3-closure-log.md
 
 ## Owned Course Design
 

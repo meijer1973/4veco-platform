@@ -3,7 +3,7 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "Human review of the INSPECT-2A correction packet. If accepted, consider INSPECT-3 Report-Only Schema Design. Do not start schemas, validators, generated evidence packs, quality-ref integration, dashboard gates, Scale Gate integration, country overlays, lesson-output changes, or compliance claims from this draft alone.",
+  "next_recommended_step": "Human review of the INSPECT-3 report-only schema design packet. Do not create validators, generated evidence packs, teacher inspection packs, dashboard gates, quality-ref integration, Scale Gate integration, country overlays, lesson-output changes, or compliance claims until a later human review explicitly authorises them.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
@@ -485,5 +485,26 @@
     ],
     "diagnostic_reports": "Generated reports and dashboards are diagnostic evidence unless they cite primary source artifacts or review records.",
     "pass_with_flags": "PASS WITH FLAGS remains a distinct review outcome and must not be flattened into an unconditional PASS or Boolean true."
+  },
+  "schema_design_authorization": {
+    "decision": "pass",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-2A Profile Adjustment Before Schema Design",
+    "approved_next_action": "INSPECT-3 Report-Only Schema Design",
+    "required_wording": "This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.",
+    "not_approved": [
+      "validators that fail builds",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
   }
 }
