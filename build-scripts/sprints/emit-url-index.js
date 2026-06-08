@@ -95,6 +95,9 @@ function buildBody(branch) {
   lines.push(`- ${platform('references/data/inspection-standards/source-register.json')}`);
   lines.push(`- ${platform('references/data/inspection-standards/nl-vo-evidence-profile.v0.json')}`);
   lines.push(`- ${platform('docs/inspection-standards/nl-vo-evidence-model.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md')}`);
   lines.push('');
 
   lines.push('## Owned Course Design');

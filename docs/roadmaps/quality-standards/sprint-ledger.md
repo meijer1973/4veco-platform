@@ -63,6 +63,7 @@ Required default flow:
 | `QS-ROADMAP-HOME-2` | closed | Remove mistaken content-production framing from the quality-standards folder and connected inspection evidence docs. | `docs/roadmaps/quality-standards/README.md`; `docs/roadmaps/quality-standards/sprint-ledger.md`; `docs/roadmaps/quality-standards/quality-standards-end-state.md`; `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`; connected inspection evidence docs. | this commit | Quality-standards documentation only. The folder is explicitly not about writing student-facing content. |
 | `QS-ROADMAP-HOME-3` | closed | Add sprint-protocol reminder and summary to the quality-standards sprint ledger. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documentation-only reminder based on `AGENTS.md`, `agents/lead-reviewer-agent.md`, and `agents/testing-agent.md`. |
 | `QS-ROADMAP-HOME-4` | closed | Add the final-answer next-step requirement to the sprint-protocol reminder. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documents the `AGENTS.md` rule that non-trivial responses must end with explicit operational next-step advice. |
+| `INSPECT-1` | planned | Human review of source register and Dutch VO evidence profile; corrections only after a recorded human decision. | `archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md`; `archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md`; `archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md` | pending | Review packet prepared; human review not yet executed. No schema, validator, overlay, generated-output, dashboard-gate, quality-ref, Scale Gate, or compliance-claim authority. |
 
 ## Candidate Future Sprints
 
@@ -71,7 +72,6 @@ approves the packet.
 
 | Candidate sprint | Intended scope | Authorisation status |
 | --- | --- | --- |
-| `INSPECT-1` | Human review of source register and Dutch VO evidence profile; corrections only. | not authorised |
 | `INSPECT-2` | Evidence schema and validator design for inspection/quality evidence records. | not authorised |
 | `INSPECT-3` | Dutch scoped evidence-pack prototype for one bounded generated output slice. | not authorised |
 | `INSPECT-4` | International common-quality profile design after Dutch profile review. | not authorised |
