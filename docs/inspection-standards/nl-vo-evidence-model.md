@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0, accepted for bounded pilot audit
-Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit
+Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; not final, compliant, or inspection-ready
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -56,6 +56,35 @@ school-level evidence.
 | Accessibility | Alt text, readable layout, keyboard/focus proof, contrast/mobile proof where available | Individual accommodations and access arrangements |
 | Quality assurance | Review logs, validators, generated reports, proof artifacts, correction logs | School self-evaluation and inspection conversation |
 
+## INSPECT-2A Profile Adjustment
+
+Head of Strategy accepted INSPECT-2 as
+`pass_with_required_profile_adjustment`. The pilot proved that the Dutch v0
+categories can locate real Book 1 Chapter 1.1 evidence, but it also showed that
+the profile needed sharper evidence-finality language before any schema design.
+
+INSPECT-2A therefore adjusts the profile language only. It does not create
+schemas, validators, generated evidence packs, dashboard gates, quality-ref
+integration, Scale Gate integration, country overlays, generated lesson-output
+changes, legal compliance claims, inspectorate approval claims, or complete
+OP0/basic-skills claims.
+
+Required distinctions added by INSPECT-2A:
+
+- `artifact_present`
+- `reviewed_artifact_quality`
+- `pass_with_flags`
+- `target_exercise_migrated`
+- `target_exercise_reviewed`
+- `target_equivalent_reviewed`
+- `diagnostic_report_only`
+- `school_owned_implementation`
+
+Every future pilot or report must also include a title/source reconciliation
+note. The live blueprint title is the source of truth. If human review text,
+the target registry, chapter plan, or lesson folder disagree, the mismatch is a
+traceability issue and must be recorded explicitly.
+
 ## Evidence Categories
 
 ### Curriculum Offer
@@ -78,6 +107,16 @@ Current source paths:
 - `../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/`
 
 Initial state: `implicit`.
+
+INSPECT-2A adjustment:
+
+- distinguish curriculum artifact presence from target-exercise presence;
+- distinguish migrated target exercises from v5-reviewed target exercises;
+- distinguish exam-code linked evidence from unlinked evidence;
+- distinguish generated lesson artifact presence from reviewed lesson artifact
+  quality;
+- do not infer final-reviewed curriculum evidence from a migrated target
+  exercise.
 
 ### Basic Skills
 
@@ -103,6 +142,22 @@ in the material and, later, whether those choices are visible in classroom
 practice. 4veco can support that evidence; the school owns the final
 implementation evidence.
 
+INSPECT-2A adjustment: use the label
+`subject_material_basic_skills_evidence`. Safe wording is:
+
+```text
+4veco exposes subject-material evidence relevant to OP0 basic-skills preparation.
+```
+
+Do not use:
+
+```text
+4veco provides OP0 evidence.
+```
+
+This evidence is not complete OP0 evidence, not school-wide basic-skills
+evidence, and not citizenship curriculum proof.
+
 ### Didactic Quality
 
 Evidence target:
@@ -125,6 +180,11 @@ Current source paths:
 
 Initial state: `implicit`.
 
+INSPECT-2A adjustment: preserve review-outcome semantics. A `PASS WITH FLAGS`
+is useful evidence, but it is not an unconditional final pass. Future report or
+schema design must not flatten `PASS`, `PASS WITH FLAGS`, `REVISE`, and `FAIL`
+into a simple true/false field.
+
 ### Student Development And Support
 
 Evidence target:
@@ -140,6 +200,10 @@ Initial state: `implicit`.
 Boundary: 4veco may provide local, non-binding next-step advice. It must not
 claim diagnostics, mastery, summative status, automatic sequencing, or student
 classification unless a later explicit gate authorises that claim.
+
+INSPECT-2A adjustment: separate advisory support evidence, practice/remediation
+route evidence, target-equivalent closure evidence, and school-owned
+monitoring/support evidence. Do not count every check as closure proof.
 
 ### Assessment And Closure
 
@@ -157,6 +221,24 @@ Boundary: target-equivalent proof remains local and non-summative. Official
 school assessment, grading, and examination policy are outside this product
 evidence model.
 
+INSPECT-2A adjustment: add target-equivalent proof status before schema design.
+
+```text
+target_exercise_present
+target_exercise_migrated_needs_review
+target_exercise_v5_reviewed
+answer_model_present
+target_equivalent_not_started
+target_equivalent_advisory_only
+target_equivalent_candidate
+target_equivalent_reviewed_local
+target_equivalent_reviewed_generalised
+```
+
+Target exercise presence is not the same as target-equivalent closure proof.
+Answer-model presence is not the same as reviewed exit-ticket proof. Local
+reviewed proof is not the same as generalised semantic scoring proof.
+
 ### Accessibility And Inclusion
 
 Evidence target:
@@ -172,6 +254,21 @@ Initial state: `implicit`.
 
 Boundary: product accessibility evidence supports access, but individual
 accommodations remain school-owned.
+
+INSPECT-2A adjustment: split accessibility evidence into sub-evidence labels.
+
+```text
+alt_text
+contrast_theme
+mobile_layout
+keyboard_focus
+semantic_structure
+inclusive_student_language
+internal_code_exposure_absent
+```
+
+Screenshot QA may support route-local evidence, but it is not full
+accessibility proof.
 
 ### Quality Assurance
 
@@ -189,6 +286,16 @@ Initial state: `present_but_weak`.
 
 Boundary: generated reports are diagnostic projections, not primary evidence.
 
+INSPECT-2A adjustment: generated reports remain diagnostic unless they cite
+source or review artifacts. Future records should distinguish:
+
+```text
+primary_source_artifact
+review_record
+diagnostic_report
+generated_dashboard_projection
+```
+
 ### Improvement Cycle
 
 Evidence target:
@@ -205,6 +312,10 @@ Initial state: `present_but_weak`.
 Boundary: a 4veco issue/review cycle can support but cannot replace the
 school's own quality cycle.
 
+INSPECT-2A adjustment: product improvement evidence may support school
+preparation, but it does not replace school self-evaluation, school quality
+assurance, or inspection dialogue.
+
 ## Evidence State Vocabulary
 
 Future report-only tooling should distinguish:
@@ -215,7 +326,32 @@ Future report-only tooling should distinguish:
 - `present`
 - `present_but_weak`
 
+INSPECT-2A adds evidence-finality vocabulary that future report-only schema
+work must preserve:
+
+- `artifact_present`
+- `reviewed_artifact_quality`
+- `pass_with_flags`
+- `target_exercise_migrated`
+- `target_exercise_reviewed`
+- `target_equivalent_reviewed`
+- `diagnostic_report_only`
+- `school_owned_implementation`
+
 This sprint does not create that tooling.
+
+## Required Product/School Boundary Per Category
+
+Every category must state:
+
+```text
+4veco evidence:
+school-owned evidence:
+forbidden inference:
+```
+
+The profile now carries this boundary per category. Future reporting must keep
+these fields visible rather than burying them in prose.
 
 ## Safe And Forbidden Claims
 
@@ -225,6 +361,7 @@ Safe:
 4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.
 4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.
 4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.
+4veco exposes subject_material_basic_skills_evidence relevant to OP0 basic-skills preparation without claiming complete OP0, school-wide basic-skills, or citizenship-curriculum proof.
 ```
 
 Forbidden:
@@ -234,6 +371,12 @@ Forbidden:
 4veco is approved by the Dutch Inspectorate of Education.
 4veco materials by themselves satisfy a school's inspection obligations.
 4veco provides complete OP0/basic-skills evidence for a school or department.
+4veco provides OP0 evidence.
+4veco provides school-wide basic-skills evidence.
+4veco proves citizenship curriculum implementation.
+A migrated target exercise is final-reviewed curriculum evidence.
+Target-exercise presence proves target-equivalent closure.
+Screenshot QA proves full accessibility compliance.
 ```
 
 ## Open Questions For Human Review
@@ -249,6 +392,8 @@ Forbidden:
 
 ## Recommended Next Step
 
-Review the INSPECT-2 bounded pilot evidence audit. Do not start schema design,
-validators, country overlays, generated lesson changes, quality-ref
-integration, dashboard gates, or compliance claims from this draft alone.
+Review the INSPECT-2A correction packet. If the human review accepts the
+profile adjustment, the next likely sprint is `INSPECT-3 Report-Only Schema
+Design`. Do not start schema design, validators, country overlays, generated
+lesson changes, quality-ref integration, dashboard gates, Scale Gate work, or
+compliance claims from this draft alone.

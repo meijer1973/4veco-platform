@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T11:45:31.233Z
+Generated: 2026-06-08T12:22:31.774Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3881
+Files indexed: 3891
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -616,11 +616,12 @@ Count: 42
 
 ## validators
 
-Count: 379
+Count: 380
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -4005,7 +4006,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 322
+Count: 331
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4023,12 +4024,21 @@ Count: 322
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-human-correction-review.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-human-review-response.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-assignment.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round1.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round2.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-planning-review.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-sprint-plan.md
+- archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md
+- archive/sprints/INSPECT-2/INSPECT-2-closure-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-correction-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-assignment.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-round1.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-round2.md
+- archive/sprints/INSPECT-2/INSPECT-2-planning-review.md
+- archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md

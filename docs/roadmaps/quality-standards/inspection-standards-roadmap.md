@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.1-setup-roadmap`
-Sprint status: `INSPECT-0 Source Register + Dutch Profile Design` authorised as research/data-only; no tooling or production sprints authorised
+Roadmap version: `v0.2-inspect-2a-profile-adjustment`
+Sprint status: `INSPECT-2A Profile Adjustment Before Schema Design` completed as corrections-only profile-language work; `INSPECT-3 Report-Only Schema Design` remains unauthorised until human review accepts INSPECT-2A
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -562,10 +562,75 @@ Acceptance criteria:
 - official-exam evidence remains stronger than inspection prose for MTU
   creation.
 
+### Phase 2A - Profile adjustment before schema design
+
+Goal: adjust the Dutch v0 profile after the bounded pilot audit so schema design
+does not encode weak evidence assumptions.
+
+Authorisation:
+
+```text
+INSPECT-2 closed as pass_with_required_profile_adjustment.
+INSPECT-2A is authorised as corrections-only profile-language work.
+```
+
+Required additions:
+
+```text
+artifact_present
+reviewed_artifact_quality
+pass_with_flags
+target_exercise_migrated
+target_exercise_reviewed
+target_equivalent_reviewed
+diagnostic_report_only
+school_owned_implementation
+```
+
+Target-equivalent proof must distinguish:
+
+```text
+target_exercise_present
+target_exercise_migrated_needs_review
+target_exercise_v5_reviewed
+answer_model_present
+target_equivalent_not_started
+target_equivalent_advisory_only
+target_equivalent_candidate
+target_equivalent_reviewed_local
+target_equivalent_reviewed_generalised
+```
+
+Every future pilot or report must cite the live blueprint title and flag title
+mismatches between human review text, target registry, chapter plan, and lesson
+folder.
+
+Every category must preserve:
+
+```text
+4veco evidence:
+school-owned evidence:
+forbidden inference:
+```
+
+Acceptance criteria:
+
+- the Dutch profile remains draft, not final or compliant;
+- no schema, validator, generated evidence pack, country overlay, dashboard
+  gate, quality-ref integration, Scale Gate work, lesson-output change, or
+  compliance claim is introduced;
+- evidence-finality, target-equivalent proof, subject-material OP0 wording,
+  title/source reconciliation, diagnostic-report status, and product/school
+  boundary language are visible in the profile and model document.
+
 ### Phase 3 - Inspection evidence schema
 
 Goal: create a schema for paragraph/artifact evidence without yet making it a hard
 quality gate.
+
+Prerequisite: INSPECT-2A must pass human review. The schema must not start from
+the earlier Dutch v0 profile alone, because INSPECT-2 proved that finality
+language is required before schema design.
 
 Possible target paths:
 
@@ -647,9 +712,14 @@ Pilot scope:
 ```text
 Book 1, Chapter 1.1
 1.1.1 Schaarste en economisch denken
-1.1.2 Ruilen en rekenen
+1.1.2 Percentages en indexcijfers
 1.1.3 Grafieken en tabellen
 ```
+
+Note: earlier human review text used `1.1.2 Ruilen en rekenen`. The live course
+blueprint, target-exercise registry, chapter plan, and lesson folder use
+`1.1.2 Percentages en indexcijfers`; audit packets must reconcile this title
+mismatch explicitly.
 
 Do not rewrite paragraph content during this phase unless the sprint explicitly
 authorises one bounded correction.
@@ -978,10 +1048,16 @@ archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 ```
 
-Decision after INSPECT-0:
+Historical decision after INSPECT-0:
 
 ```text
-Proceed to schema design, or pause if the Dutch profile cannot be made evidence-based without first improving existing target-exercise / quality-ref / report structures.
+Proceed to review/pilot work before schema design if the Dutch profile still needs evidence-based adjustment.
+```
+
+Current decision after INSPECT-2 and INSPECT-2A:
+
+```text
+Send INSPECT-2A for human review. Do not start INSPECT-3 Report-Only Schema Design unless the human review explicitly accepts the profile adjustment and authorises schema design.
 ```
 
 ## 11. Setup recommendation

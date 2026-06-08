@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T11:45:31.729Z",
+  "generatedAt": "2026-06-08T12:22:31.790Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.1-setup-roadmap Sprint status: INSPECT-0 Source Register + Dutch Profile Design authorised as research/data-only; no tooling or production sprints authorised Human owner: HCS / Marcel Team mode: isolated worktree, roadmap and evidence d...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.2-inspect-2a-profile-adjustment Sprint status: INSPECT-2A Profile Adjustment Before Schema Design completed as corrections-only profile-language work; INSPECT-3 Report-Only Schema Design remains unauthorised until human review accepts I...",
           "sprints": []
         },
         {

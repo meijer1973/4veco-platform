@@ -50,6 +50,10 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2/INSPECT-2-closure-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md
 
 ## Owned Course Design
 

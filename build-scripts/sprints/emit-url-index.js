@@ -106,6 +106,10 @@ function buildBody(branch) {
   lines.push(`- ${platform('archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-2/INSPECT-2-closure-log.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md')}`);
   lines.push('');
 
   lines.push('## Owned Course Design');
