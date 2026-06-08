@@ -80,7 +80,7 @@
       "owner": "references_team",
       "updated_on": "2026-06-08",
       "supersedes": [],
-      "notes": "Proposed governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. No implementation sprints, schemas, validators, generated lesson-output changes, country overlays, or compliance claims are authorised yet; the next recommended sprint is INSPECT-0 Source Register + Dutch Profile Design."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-0 Source Register + Dutch Profile Design is authorised as bounded research/data work only. Schemas, validators, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, and compliance claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",

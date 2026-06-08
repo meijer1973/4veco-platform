@@ -48,6 +48,11 @@ status before edits: clean
 role: read-only evidence target for this setup phase
 ```
 
+The lessen worktree already existed as the coordinated sibling checkout for
+this task. It was not created for generated-output mutation, and it remains
+read-only evidence unless a later sprint plan explicitly authorises platform-led
+lesson-output changes.
+
 ## Conflict Check
 
 No existing target path was present before setup:

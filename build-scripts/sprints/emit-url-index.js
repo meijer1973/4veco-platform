@@ -87,6 +87,14 @@ function buildBody(branch) {
   lines.push(`- ${lessen('lessen-team-roadmap.md')}`);
   lines.push('');
 
+  lines.push('## Inspection Standards');
+  lines.push('');
+  lines.push(`- ${platform('docs/roadmaps/inspection-standards-roadmap.md')}`);
+  lines.push(`- ${platform('references/data/inspection-standards/source-register.json')}`);
+  lines.push(`- ${platform('references/data/inspection-standards/nl-vo-evidence-profile.v0.json')}`);
+  lines.push(`- ${platform('docs/inspection-standards/nl-vo-evidence-model.md')}`);
+  lines.push('');
+
   lines.push('## Owned Course Design');
   lines.push('');
   lines.push(`- ${platform('references/owned/course-blueprint-v5.md')}`);

@@ -106,6 +106,7 @@ Human-readable:
 - `agents/visual-qa-agent.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/inspection-standards-roadmap.md`
+- `docs/inspection-standards/nl-vo-evidence-model.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `references/SOURCE_OF_TRUTH.md`
 - `knowledge/old/platform-team-roadmap.md`
@@ -122,6 +123,8 @@ Machine-readable:
     "references/external/exam-questions.json",
     "references/owned/course-blueprint-v5.meta.json",
     "references/authored/course-target-exercises.json",
+    "references/data/inspection-standards/source-register.json",
+    "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
     "docs/roadmaps/roadmap-version-index.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
@@ -151,6 +154,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
@@ -161,6 +165,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
@@ -201,6 +207,9 @@ Use these anchors before free-form browsing.
   "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
   "inspection_standards_roadmap": "docs/roadmaps/inspection-standards-roadmap.md",
+  "inspection_source_register": "references/data/inspection-standards/source-register.json",
+  "nl_vo_evidence_profile": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+  "nl_vo_evidence_model": "docs/inspection-standards/nl-vo-evidence-model.md",
   "roadmap_version_index": "docs/roadmaps/roadmap-version-index.json",
   "platform_roadmap": "knowledge/old/platform-team-roadmap.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
@@ -264,6 +273,13 @@ index_anchors (full URLs):
     "docs/roadmaps/roadmap-version-index.json",
     "knowledge/old/platform-team-roadmap.md",
     "knowledge/old/three-month-roadmap.md"
+  ],
+  "inspection_standards_paths": [
+    "docs/roadmaps/inspection-standards-roadmap.md",
+    "references/data/inspection-standards/README.md",
+    "references/data/inspection-standards/source-register.json",
+    "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+    "docs/inspection-standards/nl-vo-evidence-model.md"
   ],
   "engine_paths": [
     "engines/quiz-engine.js",
@@ -526,6 +542,13 @@ Rules:
     "docs/roadmaps/inspection-standards-roadmap.md",
     "references/SOURCE_OF_TRUTH.md",
     "references"
+  ],
+  "inspection_standards_research": [
+    "docs/roadmaps/inspection-standards-roadmap.md",
+    "references/data/inspection-standards/source-register.json",
+    "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+    "docs/inspection-standards/nl-vo-evidence-model.md",
+    "references/SOURCE_OF_TRUTH.md"
   ],
   "exam_ingestion_research": [
     "AGENTS.md",

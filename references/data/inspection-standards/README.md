@@ -1,21 +1,24 @@
 # Inspection Standards Data Overlay
 
-Status: placeholder overlay for future authorised inspection-standards work.
+Status: governed overlay for authorised inspection-standards research/data work.
 Roadmap: `docs/roadmaps/inspection-standards-roadmap.md`
 
 This directory is the governed data surface for future inspection-standards
 source registers, evidence profiles, and country/region overlays.
 
-It is intentionally empty apart from this README during the setup phase. The
-setup phase does not authorise schemas, validators, country overlays, generated
-reports, lesson-output writes, or compliance claims.
+INSPECT-0 is authorised as research/data-only. It adds a source register and
+Dutch evidence-profile draft. It does not authorise schemas, validators, country
+overlays, generated reports, lesson-output writes, or compliance claims.
 
 ## Intended future contents
 
-Future authorised phases may add:
+Current authorised INSPECT-0 contents:
 
 - `source-register.json`
 - `nl-vo-evidence-profile.v0.json`
+
+Future authorised phases may add:
+
 - `international-common-quality.v0.json`
 - `schema-notes.md`
 - `overlays/*.json`

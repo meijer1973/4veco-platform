@@ -31,6 +31,13 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/three-month-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-lessen/main/lessen-team-roadmap.md
 
+## Inspection Standards
+
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
+
 ## Owned Course Design
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.md

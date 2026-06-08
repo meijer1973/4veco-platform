@@ -72,6 +72,7 @@ Human-readable:
 - `RESEARCH_AGENT_PROMPT_REFERENCES.md`
 - `references/reference-team-roadmap.md`
 - `docs/roadmaps/inspection-standards-roadmap.md`
+- `docs/inspection-standards/nl-vo-evidence-model.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `references/authored/README.md`
 - `references/owned/README.md`
@@ -92,6 +93,8 @@ Machine-readable:
     "references/external/exam-questions.json",
     "references/owned/course-blueprint-v5.meta.json",
     "references/authored/course-target-exercises.json",
+    "references/data/inspection-standards/source-register.json",
+    "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
     "docs/roadmaps/roadmap-version-index.json",
     "reports/internal-dashboard/dashboard-data.json"
   ]
@@ -103,6 +106,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/RESEARCH_AGENT_PROMPT_REFERENCES.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/README.md
@@ -117,6 +121,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
@@ -132,6 +138,9 @@ URL index (single fetch unlocks the rest of the surface):
 {
   "reference_team_plan": "references/reference-team-roadmap.md",
   "inspection_standards_roadmap": "docs/roadmaps/inspection-standards-roadmap.md",
+  "inspection_source_register": "references/data/inspection-standards/source-register.json",
+  "nl_vo_evidence_profile": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+  "nl_vo_evidence_model": "docs/inspection-standards/nl-vo-evidence-model.md",
   "roadmap_version_index": "docs/roadmaps/roadmap-version-index.json",
   "machine_unit_index": "references/machine/micro-teaching-units.json",
   "machine_term_index": "references/machine/begrippen.json",
@@ -148,6 +157,9 @@ index_anchors (full URLs):
 
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/source-register.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/nl-vo-evidence-model.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/micro-teaching-units.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/machine/begrippen.json
@@ -173,6 +185,8 @@ Use these index anchors before free-form browsing. They reduce inference and con
     "references/external/exams",
     "references/machine",
     "references/qc-prompts",
+    "references/data/inspection-standards",
+    "docs/inspection-standards",
     "build-scripts/references",
     "build-scripts/reports",
     "reports",
@@ -184,6 +198,13 @@ Use these index anchors before free-form browsing. They reduce inference and con
     "docs/roadmaps/roadmap-version-index.json",
     "knowledge/old/platform-team-roadmap.md",
     "knowledge/old/three-month-roadmap.md"
+  ],
+  "inspection_standards_paths": [
+    "docs/roadmaps/inspection-standards-roadmap.md",
+    "references/data/inspection-standards/README.md",
+    "references/data/inspection-standards/source-register.json",
+    "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+    "docs/inspection-standards/nl-vo-evidence-model.md"
   ],
   "readme_paths": [
     "references/authored/README.md",

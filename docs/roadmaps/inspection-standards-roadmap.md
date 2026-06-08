@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v0.1-setup-roadmap`
-Sprint status: no implementation sprints authorised yet
+Sprint status: `INSPECT-0 Source Register + Dutch Profile Design` authorised as research/data-only; no tooling or production sprints authorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -58,11 +58,16 @@ This project must start in its own worktree. Do not reuse another active
 agent's worktree. Do not switch branches inside a worktree used by another
 agent.
 
-Recommended branch:
+Recommended branch pattern/example:
 
 ```bash
 codex/inspection-standards-roadmap
 ```
+
+The setup packet for this roadmap was implemented on the existing isolated task
+branch `codex/quality-standards-20260608`. Future INSPECT work may continue on a
+reviewed task branch or use a more specific `codex/inspection-standards-*`
+branch, but the branch name must be recorded in the sprint audit.
 
 Recommended platform worktree:
 
@@ -126,6 +131,10 @@ git worktree add -b codex/inspection-standards-evidence ../4veco-lessen-inspecti
 ```
 
 Do not create this second worktree unless a sprint plan explicitly needs it.
+
+If a coordinated `4veco-lessen` worktree already exists for the task, record it
+as read-only evidence and do not use it for mutation unless a later sprint plan
+explicitly authorises generated lesson-output work.
 
 ## 2. Required reading before implementation
 
@@ -408,7 +417,9 @@ school/provider and competent authority.
 
 ## 6. Roadmap phases
 
-No implementation sprints are authorised yet. These are phases only.
+Only `INSPECT-0 Source Register + Dutch Profile Design` is authorised as a
+research/data-only sprint. Later phases remain planning phases until a later
+human review explicitly authorises them.
 
 ### Phase 0 - Project setup and current-state audit
 
@@ -904,12 +915,12 @@ npm.cmd run dashboard:internal
 git status --short
 git add ...
 git commit -m "Add inspection standards compatibility roadmap"
-git push -u origin codex/inspection-standards-roadmap
+git push -u origin <task-branch>
 ```
 
 Only run dashboard refresh if dashboard or roadmap state is affected.
 
-## 9. Initial definition of done for this setup project
+## 9. Initial definition of done for the setup project
 
 This setup project is done when:
 
@@ -925,12 +936,18 @@ This setup project is done when:
 - the team recommends the first real sprint as `INSPECT-0 Source Register +
   Dutch Profile Design`, not broad implementation.
 
-## 10. Recommended first real sprint after this roadmap
+## 10. First authorised research/data sprint after setup
 
 Name:
 
 ```text
 INSPECT-0 Source Register + Dutch Profile Design
+```
+
+Authorisation status:
+
+```text
+authorised after setup review as bounded research/data work
 ```
 
 Scope:

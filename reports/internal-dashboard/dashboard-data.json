@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T07:39:39.998Z",
+  "generatedAt": "2026-06-08T08:20:44.096Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.1-setup-roadmap Sprint status: no implementation sprints authorised yet Human owner: HCS / Marcel Team mode: isolated worktree, roadmap and evidence design first, no broad production 0. Purpose This roadmap defines how 4veco will become inspection-legibl...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.1-setup-roadmap Sprint status: INSPECT-0 Source Register + Dutch Profile Design authorised as research/data-only; no tooling or production sprints authorised Human owner: HCS / Marcel Team mode: isolated worktree, roadmap and evidence design first, no br...",
           "sprints": []
         }
       ],

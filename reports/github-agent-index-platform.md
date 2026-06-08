@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T07:39:40.016Z
+Generated: 2026-06-08T08:20:44.154Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3855
+Files indexed: 3861
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -616,8 +616,9 @@ Count: 42
 
 ## validators
 
-Count: 376
+Count: 377
 
+- archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -997,7 +998,7 @@ Count: 376
 
 ## references
 
-Count: 522
+Count: 524
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1031,7 +1032,9 @@ Count: 522
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/README.md
+- references/data/inspection-standards/source-register.json
 - references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
@@ -4000,17 +4003,20 @@ _No files indexed in this group._
 
 ## other
 
-Count: 301
+Count: 304
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 - archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
+- archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/inspection-standards/nl-vo-evidence-model.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
