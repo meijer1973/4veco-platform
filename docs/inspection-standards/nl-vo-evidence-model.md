@@ -36,7 +36,7 @@ not be used to create MTUs, target exercises, procedures, or learning goals.
 
 | Evidence type | 4veco can expose | School owns |
 |---|---|---|
-| Curriculum coherence | Target-exercise sequence, MTU dependencies, book/chapter/paragraph progression | Whole-school curriculum planning and implementation |
+| Curriculum coherence | Target-exercise sequence, MTU dependencies, module/chapter/paragraph progression | Whole-school curriculum planning and implementation |
 | Basic skills | Economics language reasoning, calculation, graph/table/source reading, relevant citizenship contexts | Deliberate curriculum choices across Dutch language, mathematics/arithmetic, and citizenship |
 | Didactic quality | Explanation, worked examples, practice route, dual-coded visuals, checks | Actual classroom teaching, adaptation, lesson execution |
 | Student support | Prerequisite checks, advisory short checks, remediation and enrichment routes | Student monitoring, care/support decisions, intervention records |
@@ -52,7 +52,7 @@ Evidence target:
 
 - official exam/curriculum coverage;
 - paragraph target exercises;
-- chapter and book progression;
+- chapter and module progression;
 - MTU and operation dependencies;
 - source-output trace for generated materials.
 
@@ -219,13 +219,13 @@ Forbidden:
 ```text
 4veco is compliant with Dutch inspection standards.
 4veco is approved by the Dutch Inspectorate of Education.
-A 4veco book by itself satisfies a school's inspection obligations.
+4veco materials by themselves satisfy a school's inspection obligations.
 ```
 
 ## Open Questions For Human Review
 
-1. Should OP0 evidence be reported at paragraph level, chapter level, book level,
-   or all three?
+1. Should OP0 evidence be reported at paragraph level, chapter level, module
+   level, or all three?
 2. Should citizenship/economic participation contexts be explicit in every
    paragraph or only where genuinely relevant?
 3. Should future schema work keep inspection evidence separate from

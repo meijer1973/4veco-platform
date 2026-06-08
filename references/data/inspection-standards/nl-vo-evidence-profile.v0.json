@@ -40,7 +40,7 @@
   "forbidden_claims": [
     "4veco is compliant with Dutch inspection standards.",
     "4veco is approved by the Dutch Inspectorate of Education.",
-    "A 4veco book by itself satisfies a school's inspection obligations.",
+    "4veco materials by themselves satisfy a school's inspection obligations.",
     "Inspection prose authorises new economics lesson units or target exercises."
   ],
   "categories": [
@@ -54,7 +54,7 @@
       "4veco_evidence_targets": [
         "official exam/curriculum coverage",
         "paragraph target exercises",
-        "chapter and book progression",
+        "chapter and module progression",
         "MTU and operation dependencies",
         "source-output trace for generated materials"
       ],
@@ -154,7 +154,7 @@
         "4veco must avoid diagnostic, mastery, automatic sequencing, or summative claims.",
         "Short-check and exit-ticket surfaces are not complete across all paragraphs."
       ],
-      "school_implementation_boundary": "Student monitoring, care plans, support decisions, and intervention records are school-owned evidence, not textbook evidence.",
+      "school_implementation_boundary": "Student monitoring, care plans, support decisions, and intervention records are school-owned evidence, not product-owned evidence.",
       "initial_evidence_state": "implicit"
     },
     {

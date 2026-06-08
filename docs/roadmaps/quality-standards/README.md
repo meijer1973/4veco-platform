@@ -15,8 +15,8 @@ The track answers a narrow question:
 > agents can see how the product supports curriculum quality, didactic quality,
 > assessment alignment, accessibility, support, and internal quality assurance?
 
-It does not claim that 4veco is approved by an inspectorate or that a textbook
-alone satisfies a school's obligations.
+It does not claim that 4veco is approved by an inspectorate or that generated
+materials alone satisfy a school's obligations.
 
 ## Files
 

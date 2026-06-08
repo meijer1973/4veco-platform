@@ -9,17 +9,15 @@ Repository: `4veco-platform`
 This document describes the intended mature state of the quality-standards
 layer after it has been implemented.
 
-It is not a description of the final textbooks themselves. The textbooks and
-student route remain governed by the 4veco product vision, product end-state,
-course blueprint, target exercises, generated lesson artifacts, and review
-gates. This document describes the standards layer that should sit beside that
-product and make its quality evidence visible.
+This folder is not about writing student-facing content. It is about the
+governed standards layer that sits beside generated product artifacts and makes
+quality evidence visible, traceable, reviewable, and safe to interpret.
 
 ## End-State Sentence
 
 At full maturity, 4veco has a governed quality-standards layer that can show,
-for every completed course segment, which official sources and internal review
-evidence support curriculum coherence, didactic quality, assessment alignment,
+for every authorised evidence scope, which official sources and internal review
+records support curriculum coherence, didactic quality, assessment alignment,
 basic-skills support, accessibility, differentiation, and quality assurance,
 while clearly separating evidence support from compliance or approval claims.
 
@@ -67,8 +65,8 @@ Evidence may include:
 
 - official CvTE questions and correction models;
 - reviewed target exercises;
-- paragraph plans and course blueprint records;
-- generated lesson artifacts in `4veco-lessen`;
+- paragraph plans, source traces, and blueprint records;
+- generated artifacts in `4veco-lessen`;
 - MTU and operation dependencies;
 - accessibility and student-experience reviews;
 - teacher-learning-quality review records;
@@ -81,13 +79,13 @@ artifacts. Reports are projections, not sources of truth by themselves.
 ### 4. Generated Evidence Packs
 
 When implementation is mature, the platform can generate evidence packs at
-multiple levels:
+multiple scopes:
 
 - paragraph evidence pack;
-- chapter evidence pack;
-- book evidence pack;
-- year-level evidence pack;
-- full three-year course evidence pack.
+- chapter or module evidence pack;
+- generated artifact-set evidence pack;
+- release-scope evidence pack;
+- scope-wide standards evidence pack.
 
 Each pack should expose:
 
@@ -114,7 +112,7 @@ The implemented layer has validators and reports that can detect:
 - profile categories without evidence;
 - generated artifacts that lack required evidence anchors;
 - unsafe claims;
-- broken links to lesson output;
+- broken links to generated evidence paths;
 - gap records without owner or next action;
 - evidence packs generated from unreviewed sources.
 
@@ -127,20 +125,20 @@ Quality-standards implementation uses explicit gates:
 
 - source-profile review before evidence profiles become authoritative;
 - schema review before validators are enforced;
-- pilot evidence-pack review before book-level reporting scales;
+- pilot evidence-pack review before artifact-set reporting scales;
 - human review before any public-facing claims change;
 - separate approval before integration with Scale Gate or production release
   decisions.
 
-## Full Course View
+## Scope-Wide View
 
-When the full three-year economics course exists, the standards layer should be
-able to answer these questions without manual reconstruction:
+When the standards layer reaches mature implementation, it should be able to
+answer these questions without manual reconstruction:
 
 - Which official curriculum, exam, and inspection-relevant sources support the
-  course design?
-- Which books, chapters, and paragraphs are generated, reviewed, and still
-  flagged?
+  quality evidence?
+- Which generated artifacts and reviewed records are present, reviewed, and
+  still flagged?
 - Where do target exercises prove the intended operation chain?
 - Where do explanations, practice, visuals, checks, and answer models support
   the target exercise?
@@ -158,8 +156,8 @@ The mature standards layer may support claims such as:
 - 4veco exposes Dutch inspection-relevant evidence for curriculum coherence,
   didactic quality, assessment alignment, accessibility, support, and internal
   quality assurance.
-- 4veco maps generated course materials to reviewed evidence categories and
-  records known gaps.
+- 4veco maps generated artifacts to reviewed evidence categories and records
+  known gaps.
 - 4veco can generate school-facing evidence packs that support preparation and
   review.
 
@@ -170,7 +168,7 @@ The standards layer must not claim:
 - 4veco is compliant with Dutch inspection standards.
 - 4veco is approved by the Dutch Inspectorate of Education or any other
   authority.
-- A 4veco book or course by itself satisfies a school's inspection obligations.
+- 4veco materials by themselves satisfy a school's inspection obligations.
 - Inspection prose authorises new economics lesson units, target exercises, or
   MTUs.
 - Dashboard readiness is the same as school quality, legal compliance,
@@ -183,9 +181,9 @@ The standards layer must not claim:
 | `L0` | Setup | Roadmap, folder, ledger, and initial evidence boundaries exist. |
 | `L1` | Source/profile design | Source register and Dutch VO draft profile exist and pass human review. |
 | `L2` | Evidence schema | Evidence records, validators, and report contracts are reviewed. |
-| `L3` | Pilot pack | One bounded book or chapter evidence pack is generated and reviewed. |
-| `L4` | Multi-book scale | Evidence packs work across multiple books with known gaps visible. |
-| `L5` | Three-year course layer | The full three-year course can produce governed standards evidence without unsafe claims. |
+| `L3` | Pilot pack | One bounded generated artifact set is mapped and reviewed. |
+| `L4` | Multi-scope scale | Evidence packs work across multiple authorised scopes with known gaps visible. |
+| `L5` | Standards layer | Governed standards evidence can be generated across the authorised product scope without unsafe claims. |
 
 ## Open Questions
 
@@ -194,5 +192,5 @@ The standards layer must not claim:
 - Which evidence categories must be mandatory before a school-facing pack can
   be generated?
 - Should standards evidence live only in platform reports, or should selected
-  summaries also be generated into `4veco-lessen` as teacher-facing artifacts?
+  summaries also be generated into teacher-facing artifacts?
 - What human review role owns approval of safe public claims?

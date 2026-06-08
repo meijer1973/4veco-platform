@@ -49,5 +49,5 @@ Forbidden claims include:
 ```text
 4veco is compliant with Dutch inspection standards.
 4veco is compliant with European inspection standards.
-This book is approved for country X.
+This material set is approved for country X.
 ```

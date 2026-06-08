@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T08:50:55.318Z",
+  "generatedAt": "2026-06-08T08:59:19.984Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1454,7 +1454,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards End State Status: first attempt Date: 2026-06-08 Repository: 4veco-platform Purpose This document describes the intended mature state of the quality-standards layer after it has been implemented. It is not a description of the final textbooks themselves. The textbooks and student route remain governed by the 4veco product vision, product end-state, course blueprint, target exercises, generated lesson artifacts, and review gates. This document describes the standards layer that should sit beside t...",
+          "summary": "Quality Standards End State Status: first attempt Date: 2026-06-08 Repository: 4veco-platform Purpose This document describes the intended mature state of the quality-standards layer after it has been implemented. This folder is not about writing student-facing content. It is about the governed standards layer that sits beside generated product artifacts and makes quality evidence visible, traceable, reviewable, and safe to interpret. End-State Sentence At full maturity, 4veco has a governed quality-standards laye...",
           "sprints": []
         }
       ],

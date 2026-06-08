@@ -36,8 +36,8 @@ especially:
 - United States, where inspection is usually replaced by state/local standards,
   accountability, and accreditation mechanisms
 
-The intended endpoint is not a legal claim that one book is compliant in every
-country. The intended endpoint is:
+The intended endpoint is not a legal claim that one generated material set is
+compliant in every country. The intended endpoint is:
 
 > 4veco demonstrably supports Dutch inspection-relevant evidence first, and then
 > exposes a reusable inspection-evidence architecture that can be mapped to the
@@ -212,7 +212,7 @@ Do not write:
 4veco is compliant with Dutch inspection standards.
 4veco is compliant with European inspection standards.
 4veco meets US standards.
-This book is approved for country X.
+This material set is approved for country X.
 ```
 
 Allowed wording:
@@ -255,13 +255,14 @@ inspection-evidence architecture.
 
 ### 4.2 Differences across systems
 
-Differences are too large for one static book to be fully compliant everywhere.
+Differences are too large for one static product package to be fully compliant
+everywhere.
 
 | Difference | Consequence for 4veco |
 |---|---|
 | National vs federal/regional governance | Use country/region overlays, not one global standard file |
 | Curriculum and exam specifications | Dutch vwo remains canonical; foreign mappings require local crosswalks |
-| Inspection object | Inspectors inspect schools/providers, not a textbook alone |
+| Inspection object | Inspectors inspect schools/providers, not generated materials alone |
 | Subject structure | Economics may be separate, integrated, exam-board-specific, state-specific, or school-plan-specific |
 | Accountability model | Some systems inspect directly, others use standards/testing/accreditation |
 | Language and legal terminology | Translation is not enough; terminology must be locally mapped |
@@ -270,8 +271,8 @@ Differences are too large for one static book to be fully compliant everywhere.
 Implementation consequence:
 
 > Build one Dutch canonical evidence model, one international common-quality
-> model, and local overlays. Do not fork the whole book per country unless a
-> later product decision requires it.
+> model, and local overlays. Do not fork generated materials per country unless
+> a later product decision requires it.
 
 ## 5. Endpoint definition
 
@@ -290,7 +291,7 @@ dutch_inspection_profile:
     evidence:
       - official exam/curriculum coverage
       - paragraph target exercises
-      - chapter/book progression
+      - chapter/module progression
   basic_skills:
     evidence:
       - language/economic reasoning
@@ -400,12 +401,12 @@ overlay:
 
 ### 5.4 Teacher / school inspection pack generator
 
-The desired mature product can generate a book-level inspection evidence pack.
+The desired mature product can generate a scoped inspection evidence pack.
 
 Minimum generated pack:
 
 ```text
-Book inspection evidence pack
+Standards evidence pack
 |-- curriculum coverage map
 |-- progression map
 |-- basic-skills map
@@ -530,11 +531,11 @@ docs/inspection-standards/nl-vo-evidence-model.md
 
 The Dutch profile must answer:
 
-1. What evidence should a 4veco book expose for Dutch inspection-relevant
+1. What evidence should 4veco expose for Dutch inspection-relevant
    curriculum coherence?
 2. Where does 4veco already store or generate that evidence?
 3. Which evidence is missing, weak, or only implicit?
-4. Which parts belong to the school's implementation rather than the book?
+4. Which parts belong to the school's implementation rather than the platform?
 5. Which claims are safe and which are forbidden?
 
 Required mapping categories:
@@ -562,7 +563,7 @@ Acceptance criteria:
 
 ### Phase 3 - Inspection evidence schema
 
-Goal: create a schema for paragraph/book evidence without yet making it a hard
+Goal: create a schema for paragraph/artifact evidence without yet making it a hard
 quality gate.
 
 Possible target paths:
@@ -665,7 +666,7 @@ Audit questions:
 1. Can the model find evidence in paragraph markdown?
 2. Can it find evidence in companion artifacts?
 3. Can it find evidence in quality-ref/review records?
-4. Does it distinguish textbook completeness from companion-pilot status?
+4. Does it distinguish generated-output completeness from companion-pilot status?
 5. Does it avoid false defects caused by generated-output staleness?
 6. Does it produce a usable teacher-facing evidence summary?
 
@@ -791,14 +792,14 @@ Acceptance criteria:
 
 ### Phase 8 - Teacher inspection pack generator
 
-Goal: generate usable book-level evidence packs.
+Goal: generate usable scoped evidence packs.
 
 Target outputs:
 
 ```text
 build-scripts/inspection/build-inspection-pack.js
-reports/inspection-standards/book-1-inspection-pack.md
-reports/inspection-standards/book-1-inspection-pack.json
+reports/inspection-standards/pilot-scope-inspection-pack.md
+reports/inspection-standards/pilot-scope-inspection-pack.json
 ```
 
 Pack sections:
@@ -820,7 +821,7 @@ Acceptance criteria:
 
 - pack is generated from structured evidence;
 - every major claim points to evidence paths;
-- pack says what belongs to the school's implementation rather than the book;
+- pack says what belongs to the school's implementation rather than the platform;
 - pack is useful to a teacher/school leader without overclaiming inspection
   approval.
 
