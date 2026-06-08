@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "sprint_id": "AGENT-WORKTREE-SAFETY-1",
+  "generated": "2026-06-07",
+  "status": "completed",
+  "plan": "reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md",
+  "baseline": "reports/sprints/AGENT-WORKTREE-SAFETY-1-baseline.md",
+  "result": "reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md",
+  "diff_summary": "reports/sprints/AGENT-WORKTREE-SAFETY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "platform_branch": "codex/agent-worktree-safety-20260607",
+  "lessen_branch": "codex/agent-worktree-safety-20260607",
+  "worktree_safety": {
+    "platform_worktree_path": "C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-platform",
+    "lessen_worktree_path": "C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-lessen",
+    "lock_owner_agent_id": "codex-AGENT-WORKTREE-SAFETY-1-20260607",
+    "platform_lock_path": "C:/Projects/4veco/4veco-platform/.git/worktrees/4veco-platform/4veco-agent-worktree-lock.json",
+    "lessen_lock_path": "C:/Projects/4veco/4veco-lessen/.git/worktrees/4veco-lessen/4veco-agent-worktree-lock.json",
+    "shared_worktree_contamination_found": false
+  },
+  "remote_publication": {
+    "status": "reported_in_final_response_after_push",
+    "closure_tag": "checkpoint/AGENT-WORKTREE-SAFETY-1"
+  },
+  "remote_ci": {
+    "status": "reported_in_final_response_after_push",
+    "required_status_check_display": "platform-ci / validate-platform",
+    "required_status_check_context": "validate-platform"
+  },
+  "post_review_corrections": {
+    "date": "2026-06-08",
+    "correction_branch": "codex/agent-worktree-review-fixes-20260608",
+    "claim_clean_default": true,
+    "current_claim_command": "npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean",
+    "dirty_ongoing_mode": "--check without --require-clean",
+    "owner_override_requires": [
+      "--reason",
+      "--repo-owner-approved",
+      "4VECO_OWNER_OVERRIDE=1"
+    ],
+    "published_path_policy": "GitHub-facing indexes and dashboard data publish logical repository paths, not transient local worktree paths.",
+    "historical_command_log_note": "Earlier command-log entries are preserved as execution history; clean claim is now enforced by checker logic and documented policy."
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js AGENT-WORKTREE-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand build-scripts/ci/check-agent-worktree-safety.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand build-scripts/ci/check-agent-branch-safety.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-worktree-safety -- --claim --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix \"codex/,agent/\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-worktree-safety -- --check --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix \"codex/,agent/\"",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:agent-worktree-safety -- --check --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix \"codex/,agent/\" --worktree C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-lessen",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js AGENT-WORKTREE-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js AGENT-WORKTREE-SAFETY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "AGENT-WORKTREE-SAFETY-1-F1",
+        "description": "A small worktree-creation helper remains deferred; agents must create worktrees manually or through later authorized tooling.",
+        "disposition": "accepted_follow_up",
+        "owner": "platform",
+        "next_action": "Add create-agent-worktree.js only in a later path-length-aware helper sprint.",
+        "blocking": false
+      },
+      {
+        "id": "AGENT-WORKTREE-SAFETY-1-F2",
+        "description": "Default PR CI is not changed because local worktree locks are not durable CI artifacts.",
+        "disposition": "carry_forward",
+        "owner": "platform",
+        "next_action": "Keep worktree safety as a local agent preflight unless a later CI-safe mode is specified.",
+        "blocking": false
+      }
+    ]
+  },
+  "blocked_claims": [
+    "generated lesson output",
+    "protected reference mutation",
+    "source-data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_work": "Require the local worktree-safety preflight in future mutating agent tasks; add a path-length-aware worktree creation helper only through a later authorized sprint."
+}

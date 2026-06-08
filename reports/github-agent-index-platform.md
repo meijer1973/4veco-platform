@@ -1,12 +1,12 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T17:04:05.645Z
+Generated: 2026-06-08T06:23:16.044Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
-Root: `C:\Projects\4veco\4veco-platform-mtu-hardening`
-Files indexed: 3851
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
+Root: `4veco-platform`
+Files indexed: 3852
+Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 438
+Count: 440
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -140,6 +140,8 @@ Count: 438
 - build-scripts/books/README.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
+- build-scripts/ci/check-agent-worktree-safety.js
+- build-scripts/ci/check-agent-worktree-safety.test.js
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
@@ -614,10 +616,12 @@ Count: 42
 
 ## validators
 
-Count: 374
+Count: 376
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
+- build-scripts/ci/check-agent-worktree-safety.js
+- build-scripts/ci/check-agent-worktree-safety.test.js
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
@@ -1052,6 +1056,8 @@ Count: 521
 - references/data/source-document-registry.json
 - references/data/sprints/AGENT-BRANCH-SAFETY-1.plan.json
 - references/data/sprints/AGENT-BRANCH-SAFETY-1.result.json
+- references/data/sprints/AGENT-WORKTREE-SAFETY-1.plan.json
+- references/data/sprints/AGENT-WORKTREE-SAFETY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -1485,8 +1491,6 @@ Count: 521
 - references/qc-prompts/README.md
 - references/qc-prompts/tree-integrity-audit.md
 - references/reference-team-roadmap.md
-- references/reference-team-roadmap.md
-- references/reference-team-roadmap.md
 - references/schemas/alignment-edge.schema.json
 - references/schemas/answer-skill-candidates.schema.json
 - references/schemas/claim.schema.json
@@ -1519,7 +1523,7 @@ Count: 521
 
 ## reports
 
-Count: 2454
+Count: 2453
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1540,23 +1544,11 @@ Count: 2454
 - reports/fixtures/gate-ci-proof1/positive-markdown.md
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2348,6 +2340,17 @@ Count: 2454
 - reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-baseline.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.jsonl
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-diff-summary.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-assignment.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-corrections.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round1.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round2.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md

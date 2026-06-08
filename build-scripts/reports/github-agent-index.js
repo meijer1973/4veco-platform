@@ -3,7 +3,8 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 
 const platformRoot = path.resolve(__dirname, "..", "..");
-const lessenRoot = path.resolve(platformRoot, "..", "4veco-lessen");
+const anchorProjectRoot = process.env.FOURVECO_PROJECT_ROOT || "C:/Projects/4veco";
+const lessenRoot = findRepoRoot("4veco-lessen", path.resolve(platformRoot, "..", "4veco-lessen"));
 const reportsDir = path.join(platformRoot, "reports");
 
 const skipDirs = new Set([
@@ -38,6 +39,13 @@ const GROUPS = [
 
 function toPosix(value) {
   return value.split(path.sep).join("/");
+}
+
+function findRepoRoot(repoName, preferredRoot) {
+  if (fs.existsSync(preferredRoot)) return preferredRoot;
+  const anchorRoot = path.resolve(anchorProjectRoot, repoName);
+  if (fs.existsSync(anchorRoot)) return anchorRoot;
+  return preferredRoot;
 }
 
 function isParagraphPath(relativePath) {
@@ -132,14 +140,18 @@ function emptyGroups() {
   return Object.fromEntries(GROUPS.map((group) => [group, []]));
 }
 
+function publishedRoot(repoName) {
+  return repoName;
+}
+
 function buildIndex(repoName, root) {
   if (!fs.existsSync(root)) {
     return {
       repo: repoName,
-      root,
+      root: publishedRoot(repoName),
       available: false,
       generated_at: new Date().toISOString(),
-      note: `${root} is unavailable; no file inventory was generated for this repository.`,
+      note: `${repoName} is unavailable from the current local checkout; no file inventory was generated for this repository.`,
       groups: emptyGroups(),
     };
   }
@@ -155,11 +167,11 @@ function buildIndex(repoName, root) {
 
   return {
     repo: repoName,
-    root,
+    root: publishedRoot(repoName),
     available: true,
     generated_at: new Date().toISOString(),
     file_count: files.length,
-    inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees",
+    inventory_scope: "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
     skipped_directories: Array.from(skipDirs).sort(),
     groups,
   };
