@@ -448,3 +448,508 @@ body {
     top: 0;
   }
 }
+
+.ge-topbar {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px clamp(18px, 4vw, 42px);
+  border-bottom: 1px solid var(--et-line);
+  background: color-mix(in srgb, var(--et-panel) 94%, var(--et-bg));
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.ge-back,
+.ge-theme-toggle {
+  border: 1px solid var(--et-line);
+  background: var(--et-panel);
+  color: var(--et-text);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ge-page {
+  width: min(1220px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 24px 0 54px;
+}
+
+.ge-hero {
+  background: var(--et-panel);
+  border: 1px solid var(--et-line);
+  border-radius: 18px;
+  box-shadow: var(--et-shadow);
+  padding: clamp(22px, 4vw, 34px);
+  margin-bottom: 18px;
+}
+
+.ge-kicker,
+.ge-card-kicker,
+.ge-step-kicker {
+  margin: 0 0 8px;
+  color: var(--et-primary);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ge-hero h1 {
+  max-width: 880px;
+  margin: 0 0 10px;
+  color: var(--et-text);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.ge-intro {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--et-muted);
+  font-size: clamp(1rem, 1.35vw, 1.08rem);
+  line-height: 1.62;
+  overflow-wrap: anywhere;
+}
+
+.ge-route-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ge-route-pill {
+  display: grid;
+  gap: 2px;
+  min-width: 190px;
+  padding: 11px 13px;
+  border: 1px solid var(--et-line);
+  border-radius: 14px;
+  background: var(--et-panel-soft);
+  color: var(--et-text);
+  text-decoration: none;
+}
+
+.ge-route-pill span {
+  color: var(--et-muted);
+  font-size: 0.8rem;
+}
+
+.ge-workbench {
+  display: grid;
+  grid-template-columns: minmax(310px, 0.78fr) minmax(0, 1.52fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.ge-source-card,
+.ge-task-card {
+  background: var(--et-panel);
+  border: 1px solid var(--et-line);
+  border-radius: 18px;
+  box-shadow: var(--et-shadow);
+}
+
+.ge-source-card {
+  position: sticky;
+  top: 82px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  padding: 20px;
+}
+
+.ge-source-card h2,
+.ge-task-header h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.32rem, 2vw, 1.7rem);
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+.ge-source-section {
+  display: grid;
+  gap: 10px;
+  padding: 16px 0;
+  border-top: 1px solid var(--et-line);
+}
+
+.ge-source-section:first-of-type {
+  border-top: 0;
+  padding-top: 2px;
+}
+
+.ge-source-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.ge-source-section p {
+  margin: 0;
+  color: var(--et-muted);
+  line-height: 1.58;
+}
+
+.ge-source-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--et-line);
+  border-radius: 12px;
+  font-size: 0.94rem;
+}
+
+.ge-source-table th,
+.ge-source-table td {
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--et-line);
+  text-align: right;
+}
+
+.ge-source-table th:first-child,
+.ge-source-table td:first-child {
+  text-align: left;
+}
+
+.ge-source-table th {
+  background: var(--et-panel-soft);
+  color: var(--et-text);
+  font-weight: 800;
+}
+
+.ge-source-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.ge-task-card {
+  min-width: 0;
+  padding: clamp(18px, 2.6vw, 26px);
+}
+
+.ge-task-header {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.ge-task-header p:not(.ge-card-kicker) {
+  margin: 0;
+  color: var(--et-muted);
+  line-height: 1.5;
+}
+
+.ge-step-list {
+  list-style: none;
+  counter-reset: ge-step;
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.ge-step-card {
+  min-width: 0;
+  padding: clamp(16px, 2.4vw, 22px);
+  border: 1px solid var(--et-line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--et-panel) 90%, var(--et-panel-soft));
+}
+
+.ge-step-head {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 14px;
+}
+
+.ge-step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--et-panel-soft);
+  color: var(--et-primary-strong);
+  font-weight: 850;
+}
+
+.ge-step-head h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.ge-step-purpose {
+  margin: 6px 0 0;
+  color: var(--et-muted);
+  line-height: 1.5;
+}
+
+.ge-step-body {
+  min-width: 0;
+}
+
+.ge-step-body .ts-context-refs,
+.ge-step-body .ts-hints,
+.ge-step-body .ts-criteria {
+  display: none;
+}
+
+.ge-step-card .ts-graph-construction,
+.ge-step-card .ts-graph-reading,
+.ge-claim-setup,
+.ge-claim-final {
+  display: grid;
+  gap: 14px;
+}
+
+.ge-step-graph .ts-graph-construction {
+  grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.ge-step-graph .ts-graph-axis-controls {
+  grid-column: 1;
+}
+
+.ge-step-graph .ts-graph-workspace {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 330px;
+}
+
+.ge-step-graph .ts-graph-point-fallback,
+.ge-step-graph .ts-graph-line-controls {
+  grid-column: 1 / -1;
+}
+
+.ge-step-card .ts-graph-axis-controls,
+.ge-value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ge-step-card .ts-field,
+.ge-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: var(--et-text);
+  font-weight: 750;
+}
+
+.ge-step-card .ts-input,
+.ge-field input,
+.ge-step-card select,
+.ge-step-card textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--et-line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--et-panel);
+  color: var(--et-text);
+  font: inherit;
+}
+
+.ge-step-card .ts-input:focus,
+.ge-field input:focus,
+.ge-step-card select:focus,
+.ge-step-card textarea:focus {
+  border-color: var(--et-focus);
+  outline: 2px solid color-mix(in srgb, var(--et-focus) 32%, transparent);
+  outline-offset: 1px;
+}
+
+.ge-step-card .ts-graph-workspace,
+.ge-step-card .ts-graph-point-fallback,
+.ge-step-card .ts-graph-line-controls,
+.ge-claim-part {
+  border: 1px solid var(--et-line);
+  border-radius: 14px;
+  background: var(--et-panel);
+  padding: 12px;
+}
+
+.ge-step-card .ts-graph-line-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.ge-step-card .ts-graph-line-option,
+.ge-step-card .ts-formula-token,
+.ge-step-card .ts-formula-clear,
+.ge-choice-option,
+.ge-primary-action {
+  border: 1px solid var(--et-line);
+  border-radius: 10px;
+  min-height: 42px;
+  padding: 9px 12px;
+  background: var(--et-panel);
+  color: var(--et-text);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ge-step-card .ts-graph-line-option[aria-pressed="true"],
+.ge-step-card .ts-formula-token[aria-pressed="true"] {
+  border-color: var(--et-primary);
+  background: color-mix(in srgb, var(--et-primary) 12%, var(--et-panel));
+  color: var(--et-primary-strong);
+}
+
+.ge-claim-part {
+  display: grid;
+  gap: 10px;
+}
+
+.ge-claim-part h4 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.ge-claim-part p {
+  margin: 0;
+  color: var(--et-muted);
+  line-height: 1.45;
+}
+
+.ge-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ge-choice-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.ge-choice-option input {
+  flex: none;
+}
+
+.ge-step-card .ts-formula {
+  display: grid;
+  gap: 10px;
+}
+
+.ge-step-card .ts-formula-sequence,
+.ge-step-card .ts-formula-bank {
+  border: 1px dashed var(--et-line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--et-panel) 92%, var(--et-panel-soft));
+  padding: 10px;
+}
+
+.ge-step-card .ts-formula-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ge-field-wide {
+  max-width: 420px;
+}
+
+.ge-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.ge-primary-action {
+  min-width: 160px;
+  border-color: var(--et-primary);
+  background: var(--et-primary);
+  color: var(--et-panel);
+}
+
+.ge-primary-action:hover,
+.ge-primary-action:focus-visible {
+  border-color: var(--et-primary-strong);
+  background: var(--et-primary-strong);
+  outline: 2px solid color-mix(in srgb, var(--et-focus) 38%, transparent);
+  outline-offset: 2px;
+}
+
+.ge-feedback.is-match,
+.ge-feedback.is-retry {
+  margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+  .ge-page {
+    width: min(100% - 24px, 1220px);
+  }
+
+  .ge-workbench,
+  .ge-step-graph .ts-graph-construction {
+    grid-template-columns: 1fr;
+  }
+
+  .ge-source-card {
+    position: relative;
+    top: auto;
+    max-height: none;
+  }
+
+  .ge-step-graph .ts-graph-axis-controls,
+  .ge-step-graph .ts-graph-workspace,
+  .ge-step-graph .ts-graph-point-fallback,
+  .ge-step-graph .ts-graph-line-controls {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .ge-topbar {
+    position: static;
+    flex-wrap: wrap;
+  }
+
+  .ge-page {
+    width: min(100% - 16px, 1220px);
+    padding-top: 16px;
+  }
+
+  .ge-hero,
+  .ge-task-card,
+  .ge-source-card,
+  .ge-step-card {
+    border-radius: 14px;
+  }
+
+  .ge-step-head,
+  .ge-step-card .ts-graph-axis-controls,
+  .ge-value-grid,
+  .ge-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ge-route-pill {
+    min-width: 100%;
+  }
+}

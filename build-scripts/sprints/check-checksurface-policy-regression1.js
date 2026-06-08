@@ -323,6 +323,7 @@ function checkCurrentSources() {
 
   const short113 = sources['1.1.3-korte-check'];
   const exit113 = sources['1.1.3-exit-ticket'];
+  assert(exit113.layout && exit113.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must keep golden exercise workbench framework');
   assert(!containsProcedureGiveaway(exit113), '1.1.3 exit ticket must not teach the graph procedure');
   assert(!containsChoiceOnlySubstitution(short113), '1.1.3 short check must not be choice-only graph substitute');
   assert(!containsChoiceOnlySubstitution(exit113), '1.1.3 exit ticket must not be choice-only graph substitute');

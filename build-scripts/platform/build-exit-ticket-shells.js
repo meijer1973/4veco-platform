@@ -74,12 +74,12 @@ function generateShell(parNr, parName, data = null, sourceKey = parNr) {
     <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
 </head>
 <body>
-    <header class="et-topbar">
-        <a class="et-back" href="index.html">&larr; Overzicht</a>
+    <header class="ge-topbar et-topbar">
+        <a class="ge-back et-back" href="index.html">&larr; Overzicht</a>
         <strong>&sect;${escapeHtml(parNr)} ${escapeHtml(parName)}</strong>
-        <button type="button" class="et-theme-toggle" id="theme-toggle" aria-label="Licht/donker wisselen">Donkere modus</button>
+        <button type="button" class="ge-theme-toggle et-theme-toggle" id="theme-toggle" aria-label="Licht/donker wisselen">Donkere modus</button>
     </header>
-    <main class="et-page" id="exit-ticket-app"></main>
+    <main class="ge-page et-page" id="exit-ticket-app"></main>
     <script src="${sharedPath}/theme.js"></script>
     <script src="${sharedPath}/skill-map-engine.js"></script>
     <script src="${sharedPath}/skilltree/base-elements.js"></script>

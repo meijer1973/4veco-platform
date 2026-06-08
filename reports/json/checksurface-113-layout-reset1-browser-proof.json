@@ -1,0 +1,368 @@
+{
+  "generatedAt": "2026-06-08T10:19:22.104Z",
+  "capture": "local Chrome CDP viewport proof; in-app browser DOM was also checked but screenshot capture timed out",
+  "serverBase": "http://127.0.0.1:8790/",
+  "goldenDesktop": {
+    "url": "http://127.0.0.1:8790/4veco-platform/references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/prototype.html",
+    "title": "1.1.3 Exit ticket — excellent exemplar",
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 2482
+    },
+    "counts": {
+      "topbar": 0,
+      "page": 1,
+      "hero": 1,
+      "workbench": 1,
+      "sourceCard": 1,
+      "taskCard": 1,
+      "stepList": 1,
+      "stepCard": 3,
+      "checkAll": 0,
+      "oldSourceTaskWorkspace": 0,
+      "oldTaskShellCards": 0
+    },
+    "rects": {
+      "hero": {
+        "x": 134,
+        "y": 24,
+        "width": 1172,
+        "height": 308,
+        "top": 24,
+        "right": 1306,
+        "bottom": 332,
+        "left": 134,
+        "scrollWidth": 1172,
+        "clientWidth": 1172
+      },
+      "workbench": {
+        "x": 134,
+        "y": 350,
+        "width": 1172,
+        "height": 2108,
+        "top": 350,
+        "right": 1306,
+        "bottom": 2458,
+        "left": 134,
+        "scrollWidth": 1172,
+        "clientWidth": 1172
+      },
+      "source": {
+        "x": 134,
+        "y": 350,
+        "width": 370,
+        "height": 568,
+        "top": 350,
+        "right": 504,
+        "bottom": 918,
+        "left": 134,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "task": {
+        "x": 522,
+        "y": 350,
+        "width": 784,
+        "height": 2108,
+        "top": 350,
+        "right": 1306,
+        "bottom": 2458,
+        "left": 522,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      }
+    },
+    "alignment": {
+      "heroAboveWorkbench": true,
+      "sourceLeftOfTask": true,
+      "sourceAndTaskSameRow": true,
+      "noHorizontalOverflow": true
+    },
+    "steps": [
+      {
+        "index": 1,
+        "taskFamily": "taskGraph",
+        "x": 522,
+        "y": 350,
+        "width": 784,
+        "height": 587
+      },
+      {
+        "index": 2,
+        "taskFamily": "taskRead",
+        "x": 522,
+        "y": 956,
+        "width": 784,
+        "height": 474
+      },
+      {
+        "index": 3,
+        "taskFamily": "taskClaim",
+        "x": 522,
+        "y": 1447,
+        "width": 784,
+        "height": 927
+      }
+    ],
+    "stepTitles": [
+      "Maak een economisch P-Q-diagram",
+      "Lees een tussenwaarde af",
+      "Controleer een claim over 50% daling"
+    ],
+    "screenshotPath": "C:/wt/MTU-20260608/4veco-platform/reports/sprints/CHECKSURFACE-113-LAYOUT-RESET-1-screenshots/golden-desktop.png"
+  },
+  "generatedDesktop": {
+    "url": "http://127.0.0.1:8790/4veco-lessen/Boek%201%20-%20Grondslagen,%20vraag%20en%20aanbod/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+    "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 3184
+    },
+    "counts": {
+      "topbar": 1,
+      "page": 1,
+      "hero": 1,
+      "workbench": 1,
+      "sourceCard": 1,
+      "taskCard": 1,
+      "stepList": 1,
+      "stepCard": 4,
+      "checkAll": 1,
+      "oldSourceTaskWorkspace": 0,
+      "oldTaskShellCards": 0
+    },
+    "rects": {
+      "hero": {
+        "x": 110,
+        "y": 90,
+        "width": 1220,
+        "height": 333,
+        "top": 90,
+        "right": 1330,
+        "bottom": 423,
+        "left": 110,
+        "scrollWidth": 1218,
+        "clientWidth": 1218
+      },
+      "workbench": {
+        "x": 110,
+        "y": 441,
+        "width": 1220,
+        "height": 2689,
+        "top": 441,
+        "right": 1330,
+        "bottom": 3130,
+        "left": 110,
+        "scrollWidth": 1220,
+        "clientWidth": 1220
+      },
+      "source": {
+        "x": 110,
+        "y": 441,
+        "width": 408,
+        "height": 577,
+        "top": 441,
+        "right": 518,
+        "bottom": 1018,
+        "left": 110,
+        "scrollWidth": 406,
+        "clientWidth": 406
+      },
+      "task": {
+        "x": 536,
+        "y": 441,
+        "width": 794,
+        "height": 2689,
+        "top": 441,
+        "right": 1330,
+        "bottom": 3130,
+        "left": 536,
+        "scrollWidth": 792,
+        "clientWidth": 792
+      }
+    },
+    "alignment": {
+      "heroAboveWorkbench": true,
+      "sourceLeftOfTask": true,
+      "sourceAndTaskSameRow": true,
+      "noHorizontalOverflow": true
+    },
+    "steps": [
+      {
+        "index": 1,
+        "taskFamily": "graph_construction_substitute",
+        "x": 563,
+        "y": 583,
+        "width": 740,
+        "height": 677
+      },
+      {
+        "index": 2,
+        "taskFamily": "graph_reading",
+        "x": 563,
+        "y": 1275,
+        "width": 740,
+        "height": 414
+      },
+      {
+        "index": 3,
+        "taskFamily": "calculation_work_capture",
+        "x": 563,
+        "y": 1705,
+        "width": 740,
+        "height": 823
+      },
+      {
+        "index": 4,
+        "taskFamily": "calculation_work_capture",
+        "x": 563,
+        "y": 2544,
+        "width": 740,
+        "height": 499
+      }
+    ],
+    "stepTitles": [
+      "Maak een economisch P-Q-diagram",
+      "Lees een tussenwaarde af",
+      "Controleer de bronwaarden en formule",
+      "Geef het percentage en de conclusie"
+    ],
+    "screenshotPath": "C:/wt/MTU-20260608/4veco-platform/reports/sprints/CHECKSURFACE-113-LAYOUT-RESET-1-screenshots/generated-desktop.png"
+  },
+  "generatedMobile": {
+    "url": "http://127.0.0.1:8790/4veco-lessen/Boek%201%20-%20Grondslagen,%20vraag%20en%20aanbod/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+    "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 900,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 5285
+    },
+    "counts": {
+      "topbar": 1,
+      "page": 1,
+      "hero": 1,
+      "workbench": 1,
+      "sourceCard": 1,
+      "taskCard": 1,
+      "stepList": 1,
+      "stepCard": 4,
+      "checkAll": 1,
+      "oldSourceTaskWorkspace": 0,
+      "oldTaskShellCards": 0
+    },
+    "rects": {
+      "hero": {
+        "x": 8,
+        "y": 174,
+        "width": 374,
+        "height": 507,
+        "top": 174,
+        "right": 382,
+        "bottom": 681,
+        "left": 8,
+        "scrollWidth": 372,
+        "clientWidth": 372
+      },
+      "workbench": {
+        "x": 8,
+        "y": 699,
+        "width": 374,
+        "height": 4531,
+        "top": 699,
+        "right": 382,
+        "bottom": 5231,
+        "left": 8,
+        "scrollWidth": 374,
+        "clientWidth": 374
+      },
+      "source": {
+        "x": 8,
+        "y": 699,
+        "width": 374,
+        "height": 570,
+        "top": 699,
+        "right": 382,
+        "bottom": 1269,
+        "left": 8,
+        "scrollWidth": 372,
+        "clientWidth": 372
+      },
+      "task": {
+        "x": 8,
+        "y": 1287,
+        "width": 374,
+        "height": 3944,
+        "top": 1287,
+        "right": 382,
+        "bottom": 5231,
+        "left": 8,
+        "scrollWidth": 372,
+        "clientWidth": 372
+      }
+    },
+    "alignment": {
+      "heroAboveWorkbench": true,
+      "sourceLeftOfTask": false,
+      "sourceAndTaskSameRow": false,
+      "noHorizontalOverflow": true
+    },
+    "steps": [
+      {
+        "index": 1,
+        "taskFamily": "graph_construction_substitute",
+        "x": 27,
+        "y": 1438,
+        "width": 336,
+        "height": 1023
+      },
+      {
+        "index": 2,
+        "taskFamily": "graph_reading",
+        "x": 27,
+        "y": 2477,
+        "width": 336,
+        "height": 582
+      },
+      {
+        "index": 3,
+        "taskFamily": "calculation_work_capture",
+        "x": 27,
+        "y": 3075,
+        "width": 336,
+        "height": 1284
+      },
+      {
+        "index": 4,
+        "taskFamily": "calculation_work_capture",
+        "x": 27,
+        "y": 4374,
+        "width": 336,
+        "height": 777
+      }
+    ],
+    "stepTitles": [
+      "Maak een economisch P-Q-diagram",
+      "Lees een tussenwaarde af",
+      "Controleer de bronwaarden en formule",
+      "Geef het percentage en de conclusie"
+    ],
+    "screenshotPath": "C:/wt/MTU-20260608/4veco-platform/reports/sprints/CHECKSURFACE-113-LAYOUT-RESET-1-screenshots/generated-mobile.png"
+  },
+  "acceptance": {
+    "generatedUsesGoldenWorkbench": true,
+    "generatedHasFourSteps": true,
+    "generatedOmitsOldSourceTaskWorkspace": true,
+    "generatedOmitsOldTaskShellCards": true,
+    "desktopSourceLeftOfTask": true,
+    "desktopHeroAboveWorkbench": true,
+    "mobileHasNoHorizontalOverflow": true
+  }
+}

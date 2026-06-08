@@ -157,6 +157,14 @@
     );
   }
 
+  function usesGoldenExerciseWorkbench(data) {
+    return Boolean(
+      data &&
+      data.layout &&
+      data.layout.framework === 'golden_exercise_workbench'
+    );
+  }
+
   function renderSourceTaskWorkspace(data, contextHtml, tasksHtml) {
     var layout = data.layout || {};
     return '<section class="et-source-task-workspace" data-source-task-workspace>' +
@@ -174,6 +182,230 @@
     '</section>';
   }
 
+  function markdownParagraphs(value) {
+    var lines = String(value || '').split(/\n{2,}/).map(function (part) { return part.trim(); }).filter(Boolean);
+    return lines.map(function (line) {
+      return '<p>' + escapeHtml(line) + '</p>';
+    }).join('');
+  }
+
+  function renderGoldenSourceBlock(block) {
+    if (!block || typeof block !== 'object') return '';
+    var title = block.caption || block.title || block.sourceLabel || 'Bron';
+    if (block.type === 'table') {
+      var columns = Array.isArray(block.columns) ? block.columns : [];
+      var rows = Array.isArray(block.rows) ? block.rows : [];
+      return '<section class="ge-source-section" data-context-block="' + escapeHtml(block.id || '') + '">' +
+        '<h3>' + escapeHtml(title.replace(':', ' -')) + '</h3>' +
+        (block.bodyMarkdown ? markdownParagraphs(block.bodyMarkdown) : '') +
+        '<table class="ge-source-table">' +
+          '<thead><tr>' + columns.map(function (column) { return '<th>' + escapeHtml(column) + '</th>'; }).join('') + '</tr></thead>' +
+          '<tbody>' + rows.map(function (row) {
+            return '<tr>' + (row || []).map(function (cell) { return '<td>' + escapeHtml(cell) + '</td>'; }).join('') + '</tr>';
+          }).join('') + '</tbody>' +
+        '</table>' +
+      '</section>';
+    }
+    return '<section class="ge-source-section" data-context-block="' + escapeHtml(block.id || '') + '">' +
+      '<h3>' + escapeHtml(title.replace(':', ' -')) + '</h3>' +
+      markdownParagraphs(block.bodyMarkdown || block.text || block.altText || '') +
+    '</section>';
+  }
+
+  function renderGoldenSourceCard(data) {
+    var blocks = Array.isArray(data.contextBlocks) ? data.contextBlocks : [];
+    return '<aside class="ge-source-card" aria-label="Context">' +
+      '<p class="ge-card-kicker">Context</p>' +
+      '<h2>' + escapeHtml(data.layout && data.layout.sourcePaneTitle ? data.layout.sourcePaneTitle : 'Bekijk eerst de bron') + '</h2>' +
+      blocks.map(renderGoldenSourceBlock).join('') +
+    '</aside>';
+  }
+
+  function renderGoldenRouteHint(data) {
+    var routes = data.skillMap && Array.isArray(data.skillMap.routes) ? data.skillMap.routes : [];
+    if (!routes.length) return '';
+    return '<div class="ge-route-strip" aria-label="' + escapeHtml(data.skillMap.title || 'Oefenroute') + '">' +
+      routes.map(function (route) {
+        return '<a class="ge-route-pill" href="' + escapeHtml(route.href) + '">' +
+          '<span>' + escapeHtml(route.surface) + '</span>' +
+          '<strong>' + escapeHtml(route.label) + '</strong>' +
+        '</a>';
+      }).join('') +
+    '</div>';
+  }
+
+  function taskShellAt(data, index) {
+    var task = data.tasks && data.tasks[index];
+    return task && task.type === 'task_shell' ? task : null;
+  }
+
+  function renderGoldenControl(taskShell, index, contextIndex) {
+    var TaskShellUI = resolveTaskShellUI();
+    if (!TaskShellUI || !TaskShellUI.renderControl) {
+      return '<p class="et-error">Deze taakvorm kan nu niet worden getoond.</p>';
+    }
+    return TaskShellUI.renderControl(displayTaskShellForExitTicket(taskShell), index, contextIndex);
+  }
+
+  function renderGoldenFeedback(taskId) {
+    return '<div class="et-feedback ge-feedback" id="feedback-' + escapeHtml(taskId) + '" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div>';
+  }
+
+  function renderGoldenStep(step) {
+    return '<li class="ge-step-card ' + escapeHtml(step.className || '') + '" data-task="' + escapeHtml(step.taskId || '') + '" data-task-family="' + escapeHtml(step.family || '') + '">' +
+      '<header class="ge-step-head">' +
+        '<span class="ge-step-number">' + escapeHtml(step.number) + '</span>' +
+        '<div>' +
+          '<p class="ge-step-kicker">' + escapeHtml(step.kicker || '') + '</p>' +
+          '<h3>' + escapeHtml(step.title || '') + '</h3>' +
+          (step.purpose ? '<p class="ge-step-purpose">' + escapeHtml(step.purpose) + '</p>' : '') +
+        '</div>' +
+      '</header>' +
+      '<div class="ge-step-body">' + (step.body || '') + '</div>' +
+      (step.feedback ? renderGoldenFeedback(step.feedback) : '') +
+    '</li>';
+  }
+
+  function goldenStepTitle(taskShell, fallback) {
+    return taskShell && taskShell.workbenchTitle ? taskShell.workbenchTitle : fallback;
+  }
+
+  function renderGoldenChoiceOptions(taskId, name, attrName, options, className) {
+    return '<div class="' + escapeHtml(className || 'ge-choice-grid') + '">' + (options || []).map(function (option) {
+      return '<label class="ge-choice-option">' +
+        '<input type="radio" name="' + escapeHtml(name) + '" value="' + escapeHtml(option.id) + '" data-task-id="' + escapeHtml(taskId) + '" ' + attrName + '="' + escapeHtml(option.id) + '">' +
+        '<span>' + escapeHtml(option.label) + '</span>' +
+      '</label>';
+    }).join('') + '</div>';
+  }
+
+  function renderGoldenPercentageClaimSetup(taskShell) {
+    var interaction = taskShell.interaction || {};
+    var TaskShellUI = resolveTaskShellUI();
+    var formula = TaskShellUI && TaskShellUI.renderFormulaBuilderControl
+      ? TaskShellUI.renderFormulaBuilderControl(taskShell.id, interaction.formula || {}, '')
+      : '';
+    return '<div class="ge-claim-setup" data-percentage-claim-control>' +
+      '<section class="ge-claim-part">' +
+        '<h4>' + escapeHtml(interaction.intervalLabel || '3a. Kies het interval') + '</h4>' +
+        '<p>' + escapeHtml(interaction.intervalLegend || '') + '</p>' +
+        renderGoldenChoiceOptions(taskShell.id, 'claim-interval-' + taskShell.id, 'data-claim-interval-option-id', interaction.intervalOptions, 'ge-choice-grid ge-interval-grid') +
+      '</section>' +
+      '<section class="ge-claim-part">' +
+        '<h4>' + escapeHtml(interaction.valueSectionLabel || '3b. Haal de bronwaarden uit de tabel') + '</h4>' +
+        '<div class="ge-value-grid">' +
+          '<label class="ge-field"><span>' + escapeHtml(interaction.oldValueLabel || 'Oude waarde') + '</span>' +
+            '<input type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(taskShell.id) + '" data-input-role="old-value" placeholder="' + escapeHtml(interaction.oldValuePlaceholder || 'oude waarde') + '">' +
+          '</label>' +
+          '<label class="ge-field"><span>' + escapeHtml(interaction.newValueLabel || 'Nieuwe waarde') + '</span>' +
+            '<input type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(taskShell.id) + '" data-input-role="new-value" placeholder="' + escapeHtml(interaction.newValuePlaceholder || 'nieuwe waarde') + '">' +
+          '</label>' +
+        '</div>' +
+      '</section>' +
+      '<section class="ge-claim-part">' +
+        '<h4>' + escapeHtml(interaction.formulaSectionLabel || '3c. Bouw de berekening') + '</h4>' +
+        formula +
+      '</section>' +
+    '</div>';
+  }
+
+  function renderGoldenPercentageClaimFinal(taskShell) {
+    var interaction = taskShell.interaction || {};
+    return '<div class="ge-claim-final">' +
+      '<section class="ge-claim-part">' +
+        '<h4>' + escapeHtml(interaction.finalAnswerSectionLabel || interaction.finalAnswerLabel || 'Procentuele verandering') + '</h4>' +
+        '<label class="ge-field ge-field-wide"><span>' + escapeHtml(interaction.finalAnswerLabel || 'Eindantwoord') + '</span>' +
+          '<input type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(taskShell.id) + '" data-input-role="final-answer" placeholder="' + escapeHtml(interaction.finalAnswerPlaceholder || 'Vul je percentage in') + '">' +
+        '</label>' +
+      '</section>' +
+      '<section class="ge-claim-part">' +
+        '<h4>' + escapeHtml(interaction.conclusionLabel || 'Conclusie') + '</h4>' +
+        '<p>' + escapeHtml(interaction.conclusionLegend || '') + '</p>' +
+        renderGoldenChoiceOptions(taskShell.id, 'claim-conclusion-' + taskShell.id, 'data-claim-conclusion-option-id', interaction.conclusionOptions, 'ge-choice-grid ge-conclusion-grid') +
+      '</section>' +
+    '</div>';
+  }
+
+  function renderGoldenExerciseWorkbench(data, view, contextIndex) {
+    var graphTask = taskShellAt(data, 0);
+    var readingTask = taskShellAt(data, 1);
+    var claimTask = taskShellAt(data, 2);
+    var graphShell = graphTask && graphTask.taskShell;
+    var readingShell = readingTask && readingTask.taskShell;
+    var claimShell = claimTask && claimTask.taskShell;
+    var steps = [];
+    if (graphShell) {
+      steps.push({
+        number: '1',
+        taskId: graphTask.id,
+        family: graphShell.family,
+        kicker: graphShell.skillLabel,
+        title: goldenStepTitle(graphShell, 'Maak een economisch P-Q-diagram'),
+        purpose: graphShell.purpose,
+        body: renderGoldenControl(graphShell, 0, contextIndex),
+        feedback: graphTask.id,
+        className: 'ge-step-graph'
+      });
+    }
+    if (readingShell) {
+      steps.push({
+        number: '2',
+        taskId: readingTask.id,
+        family: readingShell.family,
+        kicker: readingShell.skillLabel,
+        title: goldenStepTitle(readingShell, 'Lees een tussenwaarde af'),
+        purpose: readingShell.purpose,
+        body: renderGoldenControl(readingShell, 1, contextIndex),
+        feedback: readingTask.id,
+        className: 'ge-step-reading'
+      });
+    }
+    if (claimShell) {
+      steps.push({
+        number: '3',
+        taskId: claimTask.id,
+        family: claimShell.family,
+        kicker: claimShell.skillLabel,
+        title: 'Controleer de bronwaarden en formule',
+        purpose: 'Kies het interval, haal oude en nieuwe Q uit de tabel en bouw de berekening.',
+        body: renderGoldenPercentageClaimSetup(claimShell),
+        className: 'ge-step-claim-setup'
+      });
+      steps.push({
+        number: '4',
+        taskId: claimTask.id,
+        family: claimShell.family,
+        kicker: 'Afronden',
+        title: 'Geef het percentage en de conclusie',
+        purpose: 'Maak de claim controleerbaar met een percentage en een conclusie.',
+        body: renderGoldenPercentageClaimFinal(claimShell),
+        feedback: claimTask.id,
+        className: 'ge-step-claim-final'
+      });
+    }
+    var kicker = data.layout && data.layout.kicker ? data.layout.kicker : 'Exit ticket · §' + data.parNr;
+    return '<section class="ge-hero">' +
+        '<div class="ge-kicker">' + escapeHtml(kicker) + '</div>' +
+        '<h1>' + escapeHtml(data.title) + '</h1>' +
+        '<p class="ge-intro">' + escapeHtml(data.intro || '') + '</p>' +
+        renderGoldenRouteHint(data) +
+      '</section>' +
+      '<section class="ge-workbench">' +
+        renderGoldenSourceCard(data) +
+        '<section class="ge-task-card" data-ge-task-card>' +
+          '<header class="ge-task-header">' +
+            '<p class="ge-card-kicker">Werkbank</p>' +
+            '<h2>' + escapeHtml(data.layout && data.layout.taskPaneTitle ? data.layout.taskPaneTitle : 'Werkvragen') + '</h2>' +
+            '<p>' + escapeHtml(data.layout && data.layout.taskPaneIntro ? data.layout.taskPaneIntro : '') + '</p>' +
+          '</header>' +
+          '<ol class="ge-step-list">' + steps.map(renderGoldenStep).join('') + '</ol>' +
+          '<footer class="ge-actions">' +
+            '<button type="button" class="ge-primary-action" data-ge-check-all>Controleer werk</button>' +
+          '</footer>' +
+        '</section>' +
+      '</section>';
+  }
+
   function renderStaticHtml(data, view) {
     view = view || {};
     var TaskShellUI = resolveTaskShellUI();
@@ -184,6 +416,9 @@
       contextIndex = TaskShellUI.buildContextIndex
         ? TaskShellUI.buildContextIndex(data.contextBlocks)
         : null;
+    }
+    if (usesGoldenExerciseWorkbench(data)) {
+      return renderGoldenExerciseWorkbench(data, view, contextIndex);
     }
     var workspaceMode = usesSourceTaskWorkspace(data, contextHtml);
     var heroHtml = '<section class="et-hero' + (workspaceMode ? ' et-hero-compact' : '') + '">' +
@@ -278,19 +513,26 @@
         return;
       }
 
+      var goldenCheckAll = event.target.closest ? event.target.closest('[data-ge-check-all]') : null;
+      if (goldenCheckAll) {
+        var goldenWrapper = app.querySelector('[data-ge-task-card]') || app;
+        var TaskShellUIForAll = resolveTaskShellUI();
+        (engine.data.tasks || []).forEach(function (sourceTask) {
+          if (!sourceTask || sourceTask.type !== 'task_shell' || !sourceTask.taskShell) return;
+          var resultForTask = engine.checkTask(sourceTask.id, collectTaskShellResponse(goldenWrapper, sourceTask.taskShell));
+          renderTaskShellResult(app, sourceTask.id, resultForTask, TaskShellUIForAll);
+        });
+        updateCompletion(app, engine);
+        return;
+      }
+
       var taskShellCheck = event.target.closest ? event.target.closest('.et-task-shell-check') : null;
       if (taskShellCheck) {
         var shellTaskId = taskShellCheck.getAttribute('data-task-id');
         var shellWrapper = app.querySelector('[data-task="' + cssEscape(shellTaskId) + '"]');
         var sourceTask = engine.data.tasks.find(function (item) { return item.id === shellTaskId; });
         var shellResult = engine.checkTask(shellTaskId, collectTaskShellResponse(shellWrapper, sourceTask.taskShell));
-        var shellFeedback = app.querySelector('#feedback-' + shellTaskId);
-        var TaskShellUI = resolveTaskShellUI();
-        if (shellFeedback && TaskShellUI) {
-          shellFeedback.className = 'et-feedback ' + (shellResult.matched ? 'is-match' : 'is-retry');
-          shellFeedback.innerHTML = TaskShellUI.renderFeedback(shellResult);
-          if (typeof shellFeedback.focus === 'function') shellFeedback.focus({ preventScroll: true });
-        }
+        renderTaskShellResult(app, shellTaskId, shellResult, resolveTaskShellUI());
         updateCompletion(app, engine);
         return;
       }
@@ -334,6 +576,15 @@
         return;
       }
     });
+  }
+
+  function renderTaskShellResult(app, taskId, result, TaskShellUI) {
+    var shellFeedback = app.querySelector('#feedback-' + taskId);
+    if (shellFeedback && TaskShellUI) {
+      shellFeedback.className = 'et-feedback ge-feedback ' + (result.matched ? 'is-match' : 'is-retry');
+      shellFeedback.innerHTML = TaskShellUI.renderFeedback(result);
+      if (typeof shellFeedback.focus === 'function') shellFeedback.focus({ preventScroll: true });
+    }
   }
 
   function updateThemeToggle(documentObj) {
@@ -510,6 +761,9 @@
       SkillMapEngine: options.SkillMapEngine || rootObj.SkillMapEngine
     });
     var view = buildSkillView(data, engine, rootObj);
+    if (usesGoldenExerciseWorkbench(data)) {
+      app.className = 'ge-page';
+    }
     app.innerHTML = renderStaticHtml(data, view);
     bindThemeToggle(documentObj, rootObj);
     bindInteractions(app, engine);

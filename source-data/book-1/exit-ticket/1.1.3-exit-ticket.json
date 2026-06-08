@@ -3,11 +3,13 @@
   "surface": "target_equivalent_exit_ticket",
   "parNr": "1.1.3",
   "parName": "Grafieken en tabellen",
-  "title": "Exit ticket",
+  "title": "Exit ticket: van tabel naar grafiek naar kritische controle",
   "intro": "Gebruik de bron en het werkvlak. Werk zelfstandig: maak het P-Q-diagram, lees een tussenwaarde af en controleer een procentuele claim.",
   "layout": {
     "kind": "source_task_workspace",
-    "sourcePaneTitle": "Bronnen",
+    "framework": "golden_exercise_workbench",
+    "kicker": "Exit ticket · §1.1.3",
+    "sourcePaneTitle": "Bekijk eerst de bron",
     "taskPaneTitle": "Werkvragen",
     "taskPaneIntro": "Gebruik de bron links en werk je antwoorden rechts uit."
   },

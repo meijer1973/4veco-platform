@@ -2807,6 +2807,8 @@
     handleGraphConstructionChange: handleGraphConstructionChange,
     buildContextIndex: buildContextIndex,
     renderContextBlocks: renderContextBlocks,
+    renderControl: renderControl,
+    renderFormulaBuilderControl: renderFormulaBuilderControl,
     renderTask: renderTask,
     renderStaticHtml: renderStaticHtml,
     renderFeedback: renderFeedback

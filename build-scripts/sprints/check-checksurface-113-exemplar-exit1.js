@@ -141,6 +141,7 @@ function checkSource() {
   const data = readJson(SOURCE_PATH);
   assert(ExitTicketEngine.validateData(data), '1.1.3 exit-ticket source must validate');
   assert(data.surface === 'target_equivalent_exit_ticket', 'surface must be target_equivalent_exit_ticket');
+  assert(data.layout && data.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must opt into the golden exercise workbench framework');
   assert(data.targetEquivalent && data.targetEquivalent.gateApproved === false, 'targetEquivalent gateApproved must remain false');
   assert(data.targetEquivalent.completionLanguageEligible === false, 'completion language must remain held');
   assert(data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === false, 'target readiness evidence must remain false');
@@ -265,6 +266,7 @@ function checkGeneratedOutput() {
   assert(shared.includes('graph_construction_substitute'), 'generated shared data missing graph construction task');
   assert(shared.includes('graph_reading'), 'generated shared data missing graph reading task');
   assert(shared.includes('calculation_work_capture'), 'generated shared data missing calculation task');
+  assert(shared.includes('golden_exercise_workbench'), 'generated shared data missing golden exercise framework metadata');
   assert(shared.includes('percentage_claim_control'), 'generated shared data missing structured percentage claim mode');
   assert(shared.includes('lineShapeOptions'), 'generated shared data missing graph line-shape choices');
   assert(shared.includes('newQden'), 'generated shared data missing embedded formula distractor');
@@ -272,6 +274,8 @@ function checkGeneratedOutput() {
   assert(shared.includes('magnetic_table_point'), 'generated shared data missing magnetic snapping metadata');
   assert(!shared.includes('ctx-stationbroodjes-formula'), 'generated shared data must not include formula context');
   assert(page.includes('shared/exit-ticket/1.1.3-exit-ticket.js'), 'generated page must load 1.1.3 exit-ticket data');
+  assert(page.includes('class="ge-topbar et-topbar"'), 'generated page shell must expose ge-topbar');
+  assert(page.includes('class="ge-page et-page" id="exit-ticket-app"'), 'generated page shell must expose ge-page mount');
   return {
     shared_data: path.relative(ROOT, sharedPath).replace(/\\/g, '/'),
     exit_page: path.relative(ROOT, pagePath).replace(/\\/g, '/'),
@@ -282,6 +286,14 @@ function main() {
   const source = checkSource();
   const exemplarFiles = requireExemplarFiles();
   const generated = checkGeneratedOutput();
+  const ExitTicketUI = require('../../engines/exit-ticket-ui');
+  const engine = new ExitTicketEngine({ data: readJson(SOURCE_PATH) });
+  const rendered = ExitTicketUI.renderStaticHtml(readJson(SOURCE_PATH), ExitTicketUI.buildSkillView(readJson(SOURCE_PATH), engine, {}));
+  assert(rendered.includes('class="ge-workbench"'), 'rendered 1.1.3 output must use ge-workbench');
+  assert(rendered.includes('class="ge-source-card"'), 'rendered 1.1.3 output must use ge-source-card');
+  assert(rendered.includes('class="ge-task-card"'), 'rendered 1.1.3 output must use ge-task-card');
+  assert((rendered.match(/class="ge-step-card/g) || []).length === 4, 'rendered 1.1.3 output must contain four ge-step-card steps');
+  assert(!rendered.includes('et-source-task-workspace'), 'rendered 1.1.3 output must not use the old source/task workspace framework');
   const proof = {
     schema_version: 1,
     sprint_id: 'CHECKSURFACE-113-EXEMPLAR-EXIT-1',

@@ -705,6 +705,8 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('shared/exit-ticket-engine.js');
         expect(shell).toContain('shared/exit-ticket-ui.js');
         expect(shell).toContain('shared/exit-ticket.css');
+        expect(shell).toContain('class="ge-topbar et-topbar"');
+        expect(shell).toContain('class="ge-page et-page" id="exit-ticket-app"');
     });
 
     test('generator shell uses the source title for the 1.1.2 exit ticket', () => {
@@ -787,6 +789,16 @@ describe('ExitTicketUI', () => {
         const engine = new ExitTicketEngine({ data: exit113Data });
         const view = ExitTicketUI.buildSkillView(exit113Data, engine, {});
         const html = ExitTicketUI.renderStaticHtml(exit113Data, view);
+        expect(html).toContain('class="ge-hero"');
+        expect(html).toContain('class="ge-workbench"');
+        expect(html).toContain('class="ge-source-card"');
+        expect(html).toContain('class="ge-task-card"');
+        expect(html).toContain('class="ge-step-list"');
+        expect((html.match(/class="ge-step-card/g) || []).length).toBe(4);
+        expect(html).toContain('data-ge-check-all');
+        expect(html).not.toContain('et-source-task-workspace');
+        expect(html).not.toContain('class="et-task et-task-shell"');
+        expect(html).toContain('Exit ticket: van tabel naar grafiek naar kritische controle');
         expect(html).toContain('data-task-family="graph_construction_substitute"');
         expect(html).toContain('data-task-family="graph_reading"');
         expect(html).toContain('data-task-family="calculation_work_capture"');
@@ -798,6 +810,9 @@ describe('ExitTicketUI', () => {
         expect(html).toContain('placeholder="vul hoeveelheid in"');
         expect(html).toContain('data-percentage-claim-control');
         expect(html).toContain('3a. Kies het interval');
+        expect(html).toContain('3c. Bouw de berekening');
+        expect(html).toContain('3d. Vul de procentuele verandering in');
+        expect(html).toContain('3e. Conclusie');
         expect(html).toContain('data-input-role="old-value"');
         expect(html).toContain('data-input-role="new-value"');
         expect(html).toContain('data-formula-token-id="newQden"');
