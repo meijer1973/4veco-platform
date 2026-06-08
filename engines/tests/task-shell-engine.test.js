@@ -1,4 +1,5 @@
 const TaskShellEngine = require('../task-shell-engine');
+const A96ProofData = require('../../build-scripts/sprints/mtu-ans-proof-impl1-a96-data');
 
 function baseTask(overrides) {
     return {
@@ -949,6 +950,38 @@ describe('TaskShellEngine', () => {
             state: 'retry',
             matched: false
         }));
+    });
+
+    test('requires the full route-specific A96 calculation answer form', () => {
+        const task = A96ProofData.strictA96Task;
+
+        expect(TaskShellEngine.validateTaskSet(A96ProofData.taskSet)).toBe(true);
+        expect(task.expected.answerFormProof).toEqual(expect.objectContaining({
+            unit_id: 'A96',
+            route_specific: true,
+            modifier_units: []
+        }));
+        expect(task.expected.answerFormProof.required_action_parts).toEqual([
+            'formula_or_calculation_method',
+            'labelled_substitution',
+            'intermediate_work',
+            'final_answer',
+            'unit_or_notation',
+            'short_contextual_conclusion'
+        ]);
+
+        expect(TaskShellEngine.evaluateTask(task, A96ProofData.passingResponse)).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true
+        }));
+
+        for (const [caseName, response] of Object.entries(A96ProofData.negativeResponses)) {
+            expect(TaskShellEngine.evaluateTask(task, response)).toEqual(expect.objectContaining({
+                state: 'retry',
+                matched: false
+            }));
+            expect(caseName).toBeTruthy();
+        }
     });
 
     test('supports optional unit or notation fields without blocking compact answers', () => {

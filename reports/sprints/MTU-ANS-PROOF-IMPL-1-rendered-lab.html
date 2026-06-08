@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTU-ANS-PROOF-IMPL-1 A96 proof lab</title>
+  <link rel="stylesheet" href="../../engines/task-shell.css">
+  <style>
+    :root { color-scheme: light; --proof-bg: #f7f9fb; --proof-panel: #ffffff; --proof-text: #16202a; --proof-line: #c8d2dc; --proof-accent: #166a5b; }
+    [data-theme="dark"] { color-scheme: dark; --proof-bg: #101418; --proof-panel: #171d23; --proof-text: #eef4f8; --proof-line: #3a4652; --proof-accent: #5bc2a8; }
+    body { margin: 0; background: var(--proof-bg); color: var(--proof-text); font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .proof-layout { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    .proof-meta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; margin-bottom: 20px; }
+    .proof-meta h1 { margin: 0 0 8px; font-size: 1.8rem; letter-spacing: 0; }
+    .proof-meta p { margin: 0; max-width: 70ch; }
+    .proof-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .proof-badge { border: 1px solid var(--proof-line); padding: 4px 8px; border-radius: 6px; font-size: .86rem; background: var(--proof-panel); }
+    .proof-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+    .proof-controls button, .proof-next button { border: 1px solid var(--proof-line); background: var(--proof-panel); color: var(--proof-text); border-radius: 6px; padding: 10px 12px; font: inherit; cursor: pointer; }
+    .proof-controls button.primary, .proof-next button.primary { background: var(--proof-accent); border-color: var(--proof-accent); color: #fff; }
+    .proof-next { margin-top: 18px; padding: 16px; border: 1px solid var(--proof-line); background: var(--proof-panel); border-radius: 8px; }
+    .proof-next[hidden] { display: none; }
+    .proof-shell { background: var(--proof-panel); border: 1px solid var(--proof-line); border-radius: 8px; padding: 18px; }
+    .proof-completed { margin-top: 18px; padding: 16px; border: 1px solid var(--proof-line); border-radius: 8px; background: var(--proof-panel); }
+    .proof-completed[hidden] { display: none; }
+    .ts-shell { background: transparent; }
+    .ts-context { margin-bottom: 16px; }
+    @media (max-width: 640px) {
+      .proof-layout { padding: 14px; }
+      .proof-meta { grid-template-columns: 1fr; }
+      .proof-meta h1 { font-size: 1.35rem; }
+      .proof-shell { padding: 12px; }
+    }
+  </style>
+</head>
+<body data-a96-proof-lab="MTU-ANS-PROOF-IMPL-1" data-proof-state="initial">
+  <main class="proof-layout">
+    <header class="proof-meta">
+      <div>
+        <h1>A96 route-specific answer-form proof</h1>
+        <p>Review-only lab tied to reviewed 1.1.2 calculation work. It requires method, labelled substitution, intermediate work, final answer, notation, and a short contextual conclusion.</p>
+        <div class="proof-badges" aria-label="Proof boundaries">
+          <span class="proof-badge">route-specific</span>
+          <span class="proof-badge">no GEN_A96</span>
+          <span class="proof-badge">no generic route row</span>
+          <span class="proof-badge">no product adoption</span>
+        </div>
+      </div>
+      <button type="button" data-action="toggle-theme">Dark</button>
+    </header>
+    <section class="proof-shell" aria-label="Rendered shared task-shell proof">
+      <section class="ts-shell" data-task-shell="GAME-UX-3A"><header class="ts-shell-head"><p class="ts-eyebrow">Review-only bewijs</p><h1>A96 bereken-vraag proof lab</h1><p>Deze labkaart gebruikt de reviewed 1.1.2 fietsprijs-vraag en controleert de volledige bereken-antwoordvorm.</p></header><section class="ts-context" data-task-context aria-label="Bronnen en context"><div class="ts-context-region-head"><p class="ts-eyebrow">Context</p><h2>Bekijk eerst de bron</h2></div><div class="ts-context-grid"><article class="ts-context-block ts-context-source_excerpt" id="ts-context-block-1" data-context-block="ctx-112-fietsprijs" data-context-type="source_excerpt" aria-labelledby="ts-context-title-1"><div class="ts-context-head"><h2 id="ts-context-title-1">Reviewed 1.1.2 calculation surface - Bron 1 Fietsprijs</h2></div><div class="ts-context-copy"><p>Een fiets kost eerst 800 euro en daarna 920 euro.</p></div><p class="ts-context-summary">Tekstbron met de oude fietsprijs 800 euro en de nieuwe fietsprijs 920 euro.</p></article></div></section><div class="ts-task-list"><article class="ts-task" data-task="a96-112-prijsstijging-procent" data-task-family="calculation_work_capture"><div class="ts-task-meta"><span>Taak 1</span><span>Bereken-vraag beantwoorden</span><span>Berekening tonen</span></div><h2>Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.</h2><p class="ts-purpose">Laat de volledige berekening zien bij de 1.1.2 fietsprijs-vraag.</p><p class="ts-context-refs" data-context-refs-for="a96-112-prijsstijging-procent"><span>Gebruik:</span> <a href="#ts-context-block-1" data-context-ref="ctx-112-fietsprijs">Reviewed 1.1.2 calculation surface</a></p><div class="ts-calculation"><label class="ts-field"><span>Uitwerking met korte conclusie</span><textarea class="ts-textarea" rows="4" data-task-id="a96-112-prijsstijging-procent" data-input-role="work" placeholder="Schrijf formule, labels, tussenstappen en conclusie."></textarea></label><div class="ts-answer-grid"><label class="ts-field"><span>Eindantwoord</span><input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="a96-112-prijsstijging-procent" data-input-role="final-answer" placeholder="Vul het getal in"></label><label class="ts-field"><span>Eenheid of notatie</span><input class="ts-input" type="text" inputmode="text" autocomplete="off" data-task-id="a96-112-prijsstijging-procent" data-input-role="unit-notation" placeholder="Vul de notatie in"></label></div></div><div class="ts-feedback" data-feedback-for="a96-112-prijsstijging-procent" aria-live="polite" role="status" aria-label="Feedback op je antwoord" tabindex="-1"></div></article></div></section>
+      <div class="proof-controls" aria-label="Proof controls">
+        <button type="button" data-action="check-task">Check current answer</button>
+        <button type="button" data-action="run-final-answer-only">Fill final-answer-only</button>
+        <button type="button" class="primary" data-action="run-correct">Fill complete A96 answer</button>
+        <button type="button" data-action="reset-task">Reset</button>
+      </div>
+      <aside class="proof-next" data-proof-next-action hidden>
+        <strong>Next action</strong>
+        <p>Feedback has accepted the full calculation answer form. The route link stays a review-lab next action, not product adoption.</p>
+        <a class="ts-feedback-action" href="1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html">Open reviewed 1.1.2 rekenroute reference</a>
+        <button type="button" class="primary" data-action="complete-proof">Mark proof complete</button>
+      </aside>
+      <section class="proof-completed" data-proof-completed hidden>
+        <strong>Completed state</strong>
+        <p>The proof path reached completion after the full A96 answer action matched.</p>
+      </section>
+    </section>
+  </main>
+  <script src="../../engines/task-shell-engine.js"></script>
+  <script src="../../engines/task-shell-ui.js"></script>
+  <script>
+    window.__A96_TASK__ = {"id":"a96-112-prijsstijging-procent","family":"calculation_work_capture","skillLabel":"Bereken-vraag beantwoorden","purpose":"Laat de volledige berekening zien bij de 1.1.2 fietsprijs-vraag.","prompt":"Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.","contextRefs":["ctx-112-fietsprijs"],"interaction":{"workLabel":"Uitwerking met korte conclusie","finalAnswerLabel":"Eindantwoord","finalAnswerPlaceholder":"Vul het getal in","placeholder":"Schrijf formule, labels, tussenstappen en conclusie.","unitNotationLabel":"Eenheid of notatie","unitNotationPlaceholder":"Vul de notatie in","showCriteriaBeforeCheck":false},"expected":{"kind":"calculation","finalAnswer":{"kind":"text","accepted":["15","15%","15 procent","15,0","15,0%","15.0","15.0%"]},"unitNotation":{"kind":"text","accepted":["%","procent","procentteken"],"required":true},"workRequired":true,"criteria":["Gebruik een formule of rekenregel voor procentuele verandering.","Vul nieuwe en oude prijs met labels in.","Laat verschil, deling en procentstap zien.","Geef eindantwoord, notatie en conclusie in context."],"requiredWorkText":[{"label":"formula or method","any":["procentuele verandering","nieuw - oud","nieuw min oud","nieuwe prijs - oude prijs","(nieuw - oud) / oud"]},{"label":"labelled new price","any":["nieuwe prijs = 920","nieuw = 920","nieuwe prijs 920","nieuw 920"]},{"label":"labelled old price","any":["oude prijs = 800","oud = 800","oude prijs 800","oud 800"]},{"label":"difference intermediate","any":["920 - 800 = 120","920-800=120","verschil = 120","verschil 120"]},{"label":"division intermediate","any":["120 / 800","120/800","120 : 800","120:800","gedeeld door 800"]},{"label":"percent intermediate","any":["0,15 x 100","0.15 x 100","0,15 * 100","0.15 * 100","15%"]},{"label":"contextual conclusion with direction","any":["prijs stijgt","stijgt met 15","fiets wordt 15","de stijging is 15"]}],"answerFormProof":{"unit_id":"A96","route_specific":true,"required_action_parts":["formula_or_calculation_method","labelled_substitution","intermediate_work","final_answer","unit_or_notation","short_contextual_conclusion"],"modifier_units":[],"standalone_modifier_pass_allowed":false}},"feedback":{"matchTitle":"Berekening compleet","matchText":"Je laat methode, invulling, tussenstappen, notatie en conclusie zien.","retryTitle":"Maak je berekening controleerbaar","retryText":"Laat niet alleen de uitkomst zien: noteer formule, labels, tussenstap, notatie en korte conclusie."},"practiceRoute":{"label":"Volgende actie: oefen percentages in de 1.1.2 rekenroute","href":"1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"}};
+    window.__A96_PASSING_RESPONSE__ = {"work":"Formule: procentuele verandering = (nieuw - oud) / oud x 100.\nNieuwe prijs = 920, oude prijs = 800.\nVerschil = 920 - 800 = 120.\n120 / 800 = 0,15 en 0,15 x 100 = 15%.\nDe prijs stijgt met 15 procent.","finalAnswer":"15","unitNotation":"%"};
+    window.__A96_NEGATIVE_RESPONSES__ = {"finalAnswerOnly":{"work":"","finalAnswer":"15","unitNotation":"%"},"sourceOnly":{"work":"Bron: de fiets kost eerst 800 euro en daarna 920 euro. Nieuwe prijs 920, oude prijs 800.","finalAnswer":"15","unitNotation":"%"},"directionFree":{"work":"Formule: procentuele verandering = (nieuw - oud) / oud x 100.\nNieuwe prijs = 920, oude prijs = 800.\nVerschil = 920 - 800 = 120.\n120 / 800 = 0,15 en 0,15 x 100 = 15%.","finalAnswer":"15","unitNotation":"%"},"exampleOnly":{"work":"Bijvoorbeeld: bij 800 en 920 kom je op 15%.","finalAnswer":"15","unitNotation":"%"},"notationOmitted":{"work":"Formule: procentuele verandering = (nieuw - oud) / oud x 100.\nNieuwe prijs = 920, oude prijs = 800.\nVerschil = 920 - 800 = 120.\n120 / 800 = 0,15 en 0,15 x 100 = 15%.\nDe prijs stijgt met 15 procent.","finalAnswer":"15","unitNotation":""},"standaloneA81":{"work":"Ik gebruik de bron: eerst 800 euro en daarna 920 euro.","finalAnswer":"","unitNotation":""}};
+    window.__A96_REQUIRED_PARTS__ = ["formula_or_calculation_method","labelled_substitution","intermediate_work","final_answer","unit_or_notation","short_contextual_conclusion"];
+    (function () {
+      var task = window.__A96_TASK__;
+      function input(role) {
+        return document.querySelector('[data-task-id="' + task.id + '"][data-input-role="' + role + '"]');
+      }
+      function feedback() {
+        return document.querySelector('[data-feedback-for="' + task.id + '"]');
+      }
+      function resizeWorkField() {
+        var work = input('work');
+        if (!work) return;
+        work.style.height = 'auto';
+        if (work.value) work.style.height = Math.max(work.scrollHeight, 180) + 'px';
+      }
+      function setValues(response) {
+        input('work').value = response.work || '';
+        input('final-answer').value = response.finalAnswer || '';
+        input('unit-notation').value = response.unitNotation || '';
+        resizeWorkField();
+      }
+      function setPanels(result) {
+        var next = document.querySelector('[data-proof-next-action]');
+        var completed = document.querySelector('[data-proof-completed]');
+        next.hidden = !(result && result.matched === true);
+        completed.hidden = true;
+        document.body.setAttribute('data-proof-state', result && result.matched === true ? 'next-action' : 'retry-feedback');
+      }
+      function checkCurrent() {
+        var response = window.TaskShellUI.collectCalculationResponse(document, task);
+        var result = window.TaskShellEngine.evaluateTask(task, response);
+        feedback().innerHTML = window.TaskShellUI.renderFeedback(result);
+        window.__A96_LAST_RESULT__ = result;
+        setPanels(result);
+        return result;
+      }
+      function reset() {
+        setValues({ work: '', finalAnswer: '', unitNotation: '' });
+        feedback().innerHTML = '';
+        document.querySelector('[data-proof-next-action]').hidden = true;
+        document.querySelector('[data-proof-completed]').hidden = true;
+        document.body.setAttribute('data-proof-state', 'initial');
+      }
+      window.__A96Proof = {
+        runCase: function (name) {
+          reset();
+          if (name === 'correct') setValues(window.__A96_PASSING_RESPONSE__);
+          else setValues(window.__A96_NEGATIVE_RESPONSES__[name] || {});
+          return checkCurrent();
+        },
+        complete: function () {
+          var result = window.__A96Proof.runCase('correct');
+          if (result.matched === true) {
+            document.querySelector('[data-proof-completed]').hidden = false;
+            document.body.setAttribute('data-proof-state', 'completed');
+          }
+          return result;
+        },
+        reset: reset,
+        checkCurrent: checkCurrent
+      };
+      document.addEventListener('click', function (event) {
+        var action = event.target && event.target.getAttribute('data-action');
+        if (!action) return;
+        if (action === 'check-task') checkCurrent();
+        if (action === 'run-final-answer-only') window.__A96Proof.runCase('finalAnswerOnly');
+        if (action === 'run-correct') window.__A96Proof.runCase('correct');
+        if (action === 'reset-task') reset();
+        if (action === 'complete-proof') window.__A96Proof.complete();
+        if (action === 'toggle-theme') {
+          var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          event.target.textContent = nextTheme === 'dark' ? 'Light' : 'Dark';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

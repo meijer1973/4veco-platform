@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-ANS-PROOF-IMPL-1",
+  "name": "A96 Answer-Form Proof Implementation",
+  "status": "completed",
+  "completed": "2026-06-08",
+  "completed_on": "2026-06-08",
+  "verdict": "PASS",
+  "result_status": "pass",
+  "plan": "reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md",
+  "baseline": "reports/sprints/MTU-ANS-PROOF-IMPL-1-baseline.md",
+  "result": "reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md",
+  "diff_summary": "reports/sprints/MTU-ANS-PROOF-IMPL-1-diff-summary.md",
+  "final_verdict": "PASS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review": {
+    "assignment": "reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-assignment.md",
+    "round1": "reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round1.md",
+    "corrections": "reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-corrections.md",
+    "round2": "reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS",
+    "final_verdict": "PASS"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1",
+      "status": "passed"
+    },
+    {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-answerform-generator-design.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-skilltree-generator-readiness.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-evidence-layer.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js MTU-ANS-PROOF-IMPL-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "proof_artifacts": {
+    "rendered_lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+    "screenshot_manifest": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md",
+    "screenshot_manifest_json": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json",
+    "proof_json": "reports/json/mtu-ans-proof-impl1-a96-proof.json"
+  },
+  "answer_form_proof": {
+    "unit_id": "A96",
+    "route_specific": true,
+    "reviewed_route": "1.1.2",
+    "source_task_id": "prijsstijging-procent",
+    "requires_method": true,
+    "requires_labelled_substitution": true,
+    "requires_intermediate_work": true,
+    "requires_final_answer": true,
+    "requires_unit_notation": true,
+    "requires_contextual_conclusion": true,
+    "final_answer_only_passes": false,
+    "notation_omission_passes": false,
+    "standalone_a81_passes": false
+  },
+  "product_boundaries": {
+    "generic_route_exposure_for_answer_form_mtus": false,
+    "gen_a96_implemented": false,
+    "product_route_adoption": false,
+    "target_equivalent_claim": false,
+    "generated_lesson_output": false,
+    "diagnostics": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  },
+  "authorized_next": [
+    "Use this only as bounded A96 proof evidence.",
+    "Require a later human-reviewed route-adoption sprint before generated lesson output, product-route adoption, or target-equivalent reliance.",
+    "Keep A81 modifier-only and A99 blocked."
+  ]
+}

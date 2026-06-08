@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-ANS-PROOF-IMPL-1",
+  "generated": "2026-06-08T08:05:39.869Z",
+  "status": "route_specific_a96_proof_captured",
+  "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json",
+  "reviewed_route": {
+    "paragraph": "1.1.2",
+    "title": "Percentages en indexcijfers",
+    "source_file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+    "source_task_id": "prijsstijging-procent",
+    "reviewed_surface": "target_equivalent_exit_ticket",
+    "route_href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+    "adoption_authorized": false,
+    "target_equivalent_claim": false,
+    "product_route_adoption": false
+  },
+  "answer_form_unit": "A96",
+  "required_action_parts": [
+    "formula_or_calculation_method",
+    "labelled_substitution",
+    "intermediate_work",
+    "final_answer",
+    "unit_or_notation",
+    "short_contextual_conclusion"
+  ],
+  "source_task": {
+    "source_file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+    "source_task_id": "prijsstijging-procent",
+    "prompt_matches_reviewed_source": true
+  },
+  "checker_cases": {
+    "passing": true,
+    "finalAnswerOnly": false,
+    "sourceOnly": false,
+    "directionFree": false,
+    "exampleOnly": false,
+    "notationOmitted": false,
+    "standaloneA81": false
+  },
+  "screenshots": [
+    {
+      "case": "desktop-initial",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-initial.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1295
+      },
+      "proof": {
+        "state": "initial",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "",
+        "feedbackText": "",
+        "nextActionVisible": false,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": null,
+        "routeLinkCount": 1,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0
+      }
+    },
+    {
+      "case": "desktop-retry-feedback",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-retry-feedback.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "final-answer-only",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1434
+      },
+      "proof": {
+        "state": "retry-feedback",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "retry",
+        "feedbackText": "Maak je berekening controleerbaar\n\nLaat niet alleen de uitkomst zien: noteer formule, labels, tussenstap, notatie en korte conclusie.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "nextActionVisible": false,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": false,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0
+      }
+    },
+    {
+      "case": "desktop-next-action",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-next-action.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "correct-next-action",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1660
+      },
+      "proof": {
+        "state": "next-action",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "nextActionVisible": true,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0
+      }
+    },
+    {
+      "case": "desktop-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1794
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0
+      }
+    },
+    {
+      "case": "mobile-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2560
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0
+      }
+    },
+    {
+      "case": "mobile-dark-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-dark-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2560
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "taskFamily": "calculation_work_capture",
+        "workFieldCount": 1,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0
+      }
+    }
+  ],
+  "non_regression": {
+    "a96_generic_route_exposure": false,
+    "gen_a96_implemented": false,
+    "a81_standalone_pass_allowed": false,
+    "a99_unblocked": false
+  },
+  "product_boundaries": {
+    "route_specific_lab_proof": true,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_claim": false,
+    "diagnostics": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv_projection": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}
