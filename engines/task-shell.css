@@ -329,6 +329,23 @@
   font-weight: 700;
 }
 
+.ts-task-meta span:first-child {
+  display: inline-grid;
+  place-items: center;
+  min-width: 38px;
+  min-height: 38px;
+  border-radius: 999px;
+  padding: 0 10px;
+  background: color-mix(in srgb, var(--ts-primary) 14%, var(--ts-panel));
+  color: var(--ts-primary);
+  border: 1px solid color-mix(in srgb, var(--ts-primary) 28%, var(--ts-line));
+  font-weight: 900;
+}
+
+.ts-task-meta span:not(:first-child) {
+  align-self: center;
+}
+
 .ts-task h2 {
   font-size: clamp(1.12rem, 2vw, 1.42rem);
   line-height: 1.35;
@@ -347,6 +364,49 @@
   grid-template-columns: minmax(0, 1fr) minmax(150px, 0.42fr);
   gap: 10px;
   align-items: end;
+}
+
+.ts-percentage-claim {
+  gap: 16px;
+}
+
+.ts-claim-section {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--ts-line);
+  border-radius: var(--ts-radius);
+  background: color-mix(in srgb, var(--ts-primary) 4%, var(--ts-panel));
+}
+
+.ts-claim-section h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.ts-claim-choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-claim-choice-group legend {
+  width: 100%;
+  margin-bottom: 2px;
+  color: var(--ts-muted);
+  font-weight: 800;
+}
+
+.ts-claim-option {
+  border-radius: 999px;
+}
+
+.ts-claim-value-grid {
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
 }
 
 .ts-point-grid {
@@ -1949,6 +2009,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
+}
+
+.ts-graph-line-label {
+  color: var(--ts-muted);
+  font-weight: 900;
 }
 
 .ts-graph-line-option {
@@ -1969,6 +2035,10 @@
 }
 
 @media (max-width: 640px) {
+  .ts-claim-value-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .ts-source-value-card {
     grid-template-columns: minmax(0, 1fr);
   }

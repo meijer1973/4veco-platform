@@ -375,6 +375,9 @@
   }
 
   function renderCalculation(task) {
+    if (task.interaction.selectionMode === 'percentage_claim_control') {
+      return renderPercentageClaimCalculation(task);
+    }
     if (task.interaction.selectionMode === 'interval_halving_check') {
       return renderIntervalHalvingCalculation(task);
     }
@@ -400,6 +403,64 @@
         }, 'final-answer', 'decimal') +
         unitNotation +
       '</div>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
+  function renderPercentageClaimCalculation(task) {
+    var interaction = task.interaction;
+    var intervals = (interaction.intervalOptions || []).map(function (option) {
+      return '<label class="ts-choice-option ts-claim-option">' +
+        '<input type="radio" name="claim-interval-' + escapeHtml(task.id) + '" data-task-id="' + escapeHtml(task.id) + '" data-claim-interval-option-id="' + escapeHtml(option.id) + '" value="' + escapeHtml(option.id) + '">' +
+        '<span>' + escapeHtml(option.label) + '</span>' +
+      '</label>';
+    }).join('');
+    var conclusions = (interaction.conclusionOptions || []).map(function (option) {
+      return '<label class="ts-choice-option ts-claim-option">' +
+        '<input type="radio" name="claim-conclusion-' + escapeHtml(task.id) + '" data-task-id="' + escapeHtml(task.id) + '" data-claim-conclusion-option-id="' + escapeHtml(option.id) + '" value="' + escapeHtml(option.id) + '">' +
+        '<span>' + escapeHtml(option.label) + '</span>' +
+      '</label>';
+    }).join('');
+    return '<div class="ts-calculation ts-percentage-claim" data-percentage-claim-control>' +
+      '<section class="ts-claim-section">' +
+        '<h3>' + escapeHtml(interaction.intervalLabel || 'Kies het interval') + '</h3>' +
+        '<fieldset class="ts-choice-group ts-claim-choice-group">' +
+          '<legend>' + escapeHtml(interaction.intervalLegend || 'Welk broninterval gebruik je?') + '</legend>' +
+          intervals +
+        '</fieldset>' +
+      '</section>' +
+      '<section class="ts-claim-section">' +
+        '<h3>' + escapeHtml(interaction.valueSectionLabel || 'Haal de bronwaarden uit de tabel') + '</h3>' +
+        '<div class="ts-answer-grid ts-claim-value-grid">' +
+          '<label class="ts-field"><span>' + escapeHtml(interaction.oldValueLabel || 'Oude waarde') + '</span>' +
+            '<input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-input-role="old-value" placeholder="' + escapeHtml(interaction.oldValuePlaceholder || 'oude waarde') + '">' +
+          '</label>' +
+          '<label class="ts-field"><span>' + escapeHtml(interaction.newValueLabel || 'Nieuwe waarde') + '</span>' +
+            '<input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-input-role="new-value" placeholder="' + escapeHtml(interaction.newValuePlaceholder || 'nieuwe waarde') + '">' +
+          '</label>' +
+        '</div>' +
+      '</section>' +
+      '<section class="ts-claim-section">' +
+        '<h3>' + escapeHtml(interaction.formulaSectionLabel || 'Bouw de berekening') + '</h3>' +
+        renderFormulaBuilderControl(task.id, interaction.formula || {}, '') +
+      '</section>' +
+      '<section class="ts-claim-section">' +
+        '<h3>' + escapeHtml(interaction.finalAnswerSectionLabel || interaction.finalAnswerLabel || 'Procentuele verandering') + '</h3>' +
+        renderTextInput({
+          id: task.id,
+          interaction: {
+            inputLabel: interaction.finalAnswerLabel,
+            placeholder: interaction.finalAnswerPlaceholder || 'Vul je percentage in'
+          }
+        }, 'final-answer', 'decimal') +
+      '</section>' +
+      '<section class="ts-claim-section">' +
+        '<h3>' + escapeHtml(interaction.conclusionLabel || interaction.unitNotationLabel || 'Conclusie') + '</h3>' +
+        '<fieldset class="ts-choice-group ts-claim-choice-group">' +
+          '<legend>' + escapeHtml(interaction.conclusionLegend || 'Welke conclusie past bij je berekening?') + '</legend>' +
+          conclusions +
+        '</fieldset>' +
+      '</section>' +
       renderCriteria(task) +
     '</div>';
   }
@@ -534,6 +595,16 @@
     var acceptedTablePoints = task.expected && Array.isArray(task.expected.acceptedTablePoints)
       ? task.expected.acceptedTablePoints
       : [];
+    var lineShapeOptions = task.interaction.lineShapeOptions || [
+      { id: 'decreasing', label: 'Dalend', value: 'decreasing' },
+      { id: 'increasing', label: 'Stijgend', value: 'increasing' },
+      { id: 'constant', label: 'Horizontaal', value: 'constant' },
+      { id: 'no_relation', label: 'Geen duidelijk verband', value: 'no_relation' }
+    ];
+    var lineShapeButtons = lineShapeOptions.map(function (option) {
+      return '<button type="button" class="ts-graph-line-option" data-task-id="' + escapeHtml(task.id) + '" data-graph-line-confirmation ' +
+        'data-line-shape="' + escapeHtml(option.value) + '" aria-pressed="false">' + escapeHtml(option.label) + '</button>';
+    }).join('');
     return '<div class="ts-graph-construction' + guideClass + '" data-graph-construction-task="' + escapeHtml(task.id) + '" ' +
       guideData +
       'data-x-min="' + escapeHtml(axes.x.min) + '" data-x-max="' + escapeHtml(axes.x.max) + '" ' +
@@ -567,7 +638,8 @@
       '</details>' +
       '<div class="ts-graph-line-controls" role="group" aria-label="' + escapeHtml(task.interaction.lineShapeLabel || 'Lijnvorm') + '">' +
         '<input type="hidden" data-task-id="' + escapeHtml(task.id) + '" data-graph-line-shape value="">' +
-        '<button type="button" class="ts-graph-line-option" data-task-id="' + escapeHtml(task.id) + '" data-graph-line-confirmation data-line-shape="decreasing">' + escapeHtml(task.interaction.lineConfirmationLabel) + '</button>' +
+        '<span class="ts-graph-line-label">' + escapeHtml(task.interaction.lineShapeLabel || task.interaction.lineConfirmationLabel || 'Lijnvorm') + '</span>' +
+        lineShapeButtons +
       '</div>' +
       renderCriteria(task) +
     '</div>';
@@ -678,24 +750,29 @@
     '</div>';
   }
 
-  function renderFormulaBuilder(task) {
-    var tokens = task.interaction.tokens || [];
+  function renderFormulaBuilderControl(taskId, interaction, criteriaHtml) {
+    interaction = interaction || {};
+    var tokens = interaction.tokens || [];
     var tokenHtml = tokens.map(function (token) {
-      return '<button type="button" class="ts-formula-token" data-task-id="' + escapeHtml(task.id) + '" ' +
+      return '<button type="button" class="ts-formula-token" data-task-id="' + escapeHtml(taskId) + '" ' +
         'data-formula-token-id="' + escapeHtml(token.id) + '" data-formula-token-category="' + escapeHtml(token.category || '') + '" aria-pressed="false">' +
         '<span class="ts-formula-token-label">' + escapeHtml(token.label) + '</span>' +
         (token.description ? '<span class="ts-formula-token-description">' + escapeHtml(token.description) + '</span>' : '') +
       '</button>';
     }).join('');
-    var placeholder = task.interaction.placeholder || 'Bouw de formule met de blokken.';
-    return '<div class="ts-formula" data-formula-task="' + escapeHtml(task.id) + '" data-allow-reuse="' + (task.interaction.allowReuse === true ? 'true' : 'false') + '" data-separator="' + escapeHtml(task.interaction.separator || ' ') + '">' +
-      '<div class="ts-formula-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(task.id) + '" data-formula-sequence aria-label="' + escapeHtml(task.interaction.sequenceLabel || 'Opgebouwde formule') + '">' +
+    var placeholder = interaction.placeholder || 'Bouw de formule met de blokken.';
+    return '<div class="ts-formula" data-formula-task="' + escapeHtml(taskId) + '" data-allow-reuse="' + (interaction.allowReuse === true ? 'true' : 'false') + '" data-separator="' + escapeHtml(interaction.separator || ' ') + '">' +
+      '<div class="ts-formula-sequence" role="list" tabindex="0" data-task-id="' + escapeHtml(taskId) + '" data-formula-sequence aria-label="' + escapeHtml(interaction.sequenceLabel || 'Opgebouwde formule') + '">' +
         '<span class="ts-formula-placeholder">' + escapeHtml(placeholder) + '</span>' +
       '</div>' +
-      '<div class="ts-formula-bank" role="group" aria-label="' + escapeHtml(task.interaction.tokenBankLabel || 'Formuleblokken') + '">' + tokenHtml + '</div>' +
-      '<button type="button" class="ts-formula-clear" data-task-id="' + escapeHtml(task.id) + '" data-formula-clear aria-label="Opgebouwde formule leegmaken">Leegmaken</button>' +
-      renderCriteria(task) +
+      '<div class="ts-formula-bank" role="group" aria-label="' + escapeHtml(interaction.tokenBankLabel || 'Formuleblokken') + '">' + tokenHtml + '</div>' +
+      '<button type="button" class="ts-formula-clear" data-task-id="' + escapeHtml(taskId) + '" data-formula-clear aria-label="Opgebouwde formule leegmaken">Leegmaken</button>' +
+      (criteriaHtml || '') +
     '</div>';
+  }
+
+  function renderFormulaBuilder(task) {
+    return renderFormulaBuilderControl(task.id, task.interaction, renderCriteria(task));
   }
 
   function renderStepOrdering(task) {
@@ -1210,6 +1287,9 @@
 
   function collectCalculationResponse(rootEl, task) {
     if (!rootEl || !task) return { work: '', finalAnswer: '', unitNotation: '' };
+    if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+      return collectPercentageClaimResponse(rootEl, task);
+    }
     if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
       return collectIntervalHalvingResponse(rootEl, task);
     }
@@ -1217,6 +1297,35 @@
       work: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="work"]')),
       finalAnswer: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')),
       unitNotation: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]'))
+    };
+  }
+
+  function collectPercentageClaimResponse(rootEl, task) {
+    var selectedInterval = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-claim-interval-option-id]:checked');
+    var selectedConclusion = rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-claim-conclusion-option-id]:checked');
+    var intervalId = selectedInterval ? selectedInterval.getAttribute('data-claim-interval-option-id') : '';
+    var conclusionId = selectedConclusion ? selectedConclusion.getAttribute('data-claim-conclusion-option-id') : '';
+    var interval = findById(task.interaction.intervalOptions || [], intervalId);
+    var conclusion = findById(task.interaction.conclusionOptions || [], conclusionId);
+    var oldValue = graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="old-value"]'));
+    var newValue = graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="new-value"]'));
+    var finalAnswer = graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]'));
+    var formula = collectFormulaBuilderResponse(rootEl, task);
+    var work = [
+      interval ? interval.label : '',
+      oldValue ? 'oude Q ' + oldValue : '',
+      newValue ? 'nieuwe Q ' + newValue : '',
+      formula.tokens && formula.tokens.length ? 'formule ' + formula.tokens.join(' ') : ''
+    ].filter(Boolean).join('; ');
+    return {
+      interval: intervalId,
+      oldValue: oldValue,
+      newValue: newValue,
+      formula: formula,
+      finalAnswer: finalAnswer,
+      conclusion: conclusionId,
+      unitNotation: conclusion ? (conclusion.finalAnswer || conclusion.label) : '',
+      work: work
     };
   }
 

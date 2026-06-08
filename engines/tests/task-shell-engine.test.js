@@ -3373,6 +3373,12 @@ describe('TaskShellEngine', () => {
                 pointCount: 2,
                 pointSnapMode: 'magnetic_table_point',
                 pointSnapTolerancePx: 72,
+                lineShapeOptions: [
+                    { id: 'dalend', label: 'Dalend', value: 'decreasing', kind: 'answer' },
+                    { id: 'stijgend', label: 'Stijgend', value: 'increasing', kind: 'distractor' },
+                    { id: 'horizontaal', label: 'Horizontaal', value: 'constant', kind: 'distractor' },
+                    { id: 'geen-verband', label: 'Geen duidelijk verband', value: 'no_relation', kind: 'distractor' }
+                ],
                 axes: {
                     x: { label: 'Hoeveelheid Q', min: 0, max: 400 },
                     y: { label: 'Prijs P', min: 0, max: 3.5 }
@@ -3414,18 +3420,53 @@ describe('TaskShellEngine', () => {
             points: [{ x: '300', y: '1,5' }, { x: '300', y: '1,5' }],
             lineShape: 'decreasing'
         }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(graph, {
+            axes: { x: 'Q', y: 'P' },
+            points: [{ x: '300', y: '1,5' }, { x: '200', y: '2,5' }],
+            lineShape: 'increasing'
+        }).matched).toBe(false);
     });
 
-    test('accepts signed and decrease-phrase percentage notation for numeric final answers', () => {
+    test('accepts the structured percentage claim answer chain', () => {
         const calculation = baseTask({
             id: 'claim-50-procent',
             family: 'calculation_work_capture',
             skillLabel: 'Procentuele verandering controleren',
             prompt: 'Controleer de procentuele verandering van Q.',
             interaction: {
+                selectionMode: 'percentage_claim_control',
                 workLabel: 'Berekening',
                 finalAnswerLabel: 'Procentuele verandering',
                 finalAnswerPlaceholder: 'vul percentage in, bijvoorbeeld met %',
+                finalAnswerSectionLabel: '3d. Noteer het percentage',
+                unitNotationLabel: 'Conclusie',
+                intervalLabel: '3a. Kies het interval',
+                valueSectionLabel: '3b. Haal de Q-waarden uit de tabel',
+                oldValueLabel: 'Oude Q',
+                newValueLabel: 'Nieuwe Q',
+                formulaSectionLabel: '3c. Bouw de formule',
+                conclusionLabel: '3e. Trek de conclusie',
+                intervalOptions: [
+                    { id: '150-300', label: 'Van EUR 1,50 naar EUR 3,00', correct: true },
+                    { id: '200-250', label: 'Van EUR 2,00 naar EUR 2,50', correct: false },
+                    { id: '250-350', label: 'Van EUR 2,00 naar EUR 1,00', correct: false }
+                ],
+                formula: {
+                    tokens: [
+                        { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                        { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                        { id: 'keer-100-procent', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                        { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                    ],
+                    separator: ' ',
+                    tokenBankLabel: 'Formuleblokken',
+                    sequenceLabel: 'Opgebouwde formule'
+                },
+                conclusionOptions: [
+                    { id: 'drop50', label: 'Q daalt met 50 procent', finalAnswer: 'Q daalt met 50 procent', correct: true },
+                    { id: 'rise50', label: 'Q stijgt met 50 procent', finalAnswer: 'Q stijgt met 50 procent', correct: false },
+                    { id: 'drop100', label: 'Q halveert dus de daling is 100 procent', finalAnswer: 'Q daalt met 100 procent', correct: false }
+                ],
                 answerParsers: [
                     'number_with_optional_percent',
                     'decrease_phrase_to_negative_percent'
@@ -3439,15 +3480,52 @@ describe('TaskShellEngine', () => {
                     tolerance: 0.1,
                     acceptedNotations: ['-50%', '-50 procent', '50% daling']
                 },
+                unitNotation: {
+                    kind: 'text',
+                    accepted: ['Q daalt met 50 procent', 'Q daalt met 50%'],
+                    required: true
+                },
                 workRequired: true,
                 requiredWorkText: [
                     { label: 'startprijs', any: ['1,50', '1.50'] },
                     { label: 'eindprijs', any: ['3,00', '3.00'] },
                     { label: 'oude hoeveelheid', any: ['300'] },
                     { label: 'nieuwe hoeveelheid', any: ['150'] }
-                ]
+                ],
+                interval: { kind: 'choice', value: '150-300' },
+                oldValue: { kind: 'number', value: 300, tolerance: 0 },
+                newValue: { kind: 'number', value: 150, tolerance: 0 },
+                formula: {
+                    kind: 'formula_builder',
+                    tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                    acceptedSequences: [
+                        ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']
+                    ]
+                },
+                conclusion: { kind: 'choice', value: 'drop50' }
             }
         });
+
+        const correct = {
+            interval: '150-300',
+            oldValue: '300',
+            newValue: '150',
+            formula: { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] },
+            work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
+            finalAnswer: '-50%',
+            conclusion: 'drop50',
+            unitNotation: 'Q daalt met 50 procent'
+        };
+
+        expect(TaskShellEngine.validateTask(calculation)).toBe(true);
+        expect(TaskShellEngine.focusPlan(calculation)).toEqual([
+            '[data-task-id="claim-50-procent"][data-claim-interval-option-id]',
+            '[data-task-id="claim-50-procent"][data-input-role="old-value"]',
+            '[data-task-id="claim-50-procent"][data-input-role="new-value"]',
+            '[data-task-id="claim-50-procent"][data-formula-token-id]',
+            '[data-task-id="claim-50-procent"][data-input-role="final-answer"]',
+            '[data-task-id="claim-50-procent"][data-claim-conclusion-option-id]'
+        ]);
 
         [
             '-50%',
@@ -3459,16 +3537,32 @@ describe('TaskShellEngine', () => {
             'Q daalt met 50 procent'
         ].forEach((finalAnswer) => {
             expect(TaskShellEngine.evaluateTask(calculation, {
-                work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
+                ...correct,
                 finalAnswer
             }).matched).toBe(true);
         });
         expect(TaskShellEngine.evaluateTask(calculation, {
-            work: 'van EUR 1,50: (150 - 300) / 300 x 100',
-            finalAnswer: '-50%'
+            ...correct,
+            interval: ''
         }).matched).toBe(false);
         expect(TaskShellEngine.evaluateTask(calculation, {
-            work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
+            ...correct,
+            oldValue: ''
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            ...correct,
+            newValue: '300'
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            ...correct,
+            formula: { tokens: ['nieuw-min-oud', 'delen-door-nieuw', 'keer-100-procent'] }
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            ...correct,
+            conclusion: ''
+        }).matched).toBe(false);
+        expect(TaskShellEngine.evaluateTask(calculation, {
+            ...correct,
             finalAnswer: '50% stijging'
         }).matched).toBe(false);
         expect(() => TaskShellEngine.validateTask({

@@ -1,0 +1,112 @@
+{
+  "sprint_id": "CHECKSURFACE-113-FIDELITY-REPAIR-1",
+  "generated": "2026-06-08",
+  "cases": [
+    {
+      "name": "desktop-golden-exemplar",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-golden-exemplar.png",
+      "proof": {
+        "source_left_task_right": true,
+        "line_shape_choices_visible": true,
+        "task3_structured_sections_visible": true
+      }
+    },
+    {
+      "name": "desktop-generated-initial",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-initial.png",
+      "proof": {
+        "source_left_task_right": true,
+        "task_families": [
+          "graph_construction_substitute",
+          "graph_reading",
+          "calculation_work_capture"
+        ],
+        "separate_formula_builder_card_count": 0
+      }
+    },
+    {
+      "name": "desktop-golden-task3",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-golden-task3.png",
+      "proof": {
+        "task3_interval": true,
+        "task3_q_fields": true,
+        "task3_formula_builder": true,
+        "task3_conclusion": true
+      }
+    },
+    {
+      "name": "desktop-generated-task3-lower",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-task3-lower.png",
+      "proof": {
+        "task3_sections": [
+          "3a. Kies het interval",
+          "3b. Haal de bronwaarden zelf uit de tabel",
+          "3c. Bouw de berekening",
+          "3d. Vul de procentuele verandering in",
+          "3e. Conclusie"
+        ],
+        "formula_token_count": 12,
+        "conclusion_choice_count": 4
+      }
+    },
+    {
+      "name": "desktop-generated-task3-upper",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-task3.png",
+      "proof": {
+        "task3_interval_visible": true,
+        "task3_q_fields_visible": true
+      }
+    },
+    {
+      "name": "desktop-generated-line-shape-selected",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-line-shape-selected.png",
+      "proof": {
+        "selected_line_shape": "increasing",
+        "selected_button_aria_pressed": "true",
+        "available_line_shapes": [
+          "decreasing",
+          "increasing",
+          "constant",
+          "no_relation"
+        ]
+      }
+    },
+    {
+      "name": "mobile-generated-initial",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/mobile-generated-initial.png",
+      "proof": {
+        "horizontal_overflow": false,
+        "task3_sections_present": true,
+        "formula_token_count": 12
+      }
+    }
+  ]
+}

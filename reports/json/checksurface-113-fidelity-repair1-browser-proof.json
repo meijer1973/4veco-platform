@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "sprint_id": "CHECKSURFACE-113-FIDELITY-REPAIR-1",
+  "generated": "2026-06-08",
+  "status": "passed",
+  "browser": "in-app Browser",
+  "viewports": {
+    "desktop": {
+      "width": 1366,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "golden_exemplar": {
+    "url": "http://127.0.0.1:8790/4veco-platform/references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/prototype.html",
+    "layout": {
+      "source_left_task_right": true,
+      "line_shape_choices": [
+        "Dalend",
+        "Stijgend",
+        "Horizontaal",
+        "Geen verband"
+      ],
+      "task3_sections": [
+        "3a. Kies het interval",
+        "3b. Haal de bronwaarden zelf uit de tabel",
+        "3c. Bouw de berekening",
+        "3d. Conclusie"
+      ]
+    }
+  },
+  "generated_page": {
+    "url": "http://127.0.0.1:8790/4veco-lessen/Boek%201%20-%20Grondslagen,%20vraag%20en%20aanbod/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+    "layout": {
+      "source_left_task_right": true,
+      "task_families": [
+        "graph_construction_substitute",
+        "graph_reading",
+        "calculation_work_capture"
+      ],
+      "separate_formula_builder_card_count": 0,
+      "line_shape_values": [
+        "decreasing",
+        "increasing",
+        "constant",
+        "no_relation"
+      ],
+      "task3_sections": [
+        "3a. Kies het interval",
+        "3b. Haal de bronwaarden zelf uit de tabel",
+        "3c. Bouw de berekening",
+        "3d. Vul de procentuele verandering in",
+        "3e. Conclusie"
+      ],
+      "task3_controls": {
+        "interval_options": 6,
+        "old_q_inputs": 1,
+        "new_q_inputs": 1,
+        "formula_tokens": 12,
+        "conclusion_options": 4
+      },
+      "mobile_horizontal_overflow": false
+    },
+    "line_shape_interaction": {
+      "clicked": "increasing",
+      "hidden_value_after_click": "increasing",
+      "clicked_button_aria_pressed": "true"
+    }
+  },
+  "screenshots": {
+    "manifest": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/manifest.json",
+    "desktop_golden": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-golden-exemplar.png",
+    "desktop_generated": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-initial.png",
+    "desktop_golden_task3": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-golden-task3.png",
+    "desktop_generated_task3_upper": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-task3.png",
+    "desktop_generated_task3": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-task3-lower.png",
+    "desktop_generated_line_shape": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/desktop-generated-line-shape-selected.png",
+    "mobile_generated": "reports/sprints/CHECKSURFACE-113-FIDELITY-REPAIR-1-screenshots/mobile-generated-initial.png"
+  }
+}

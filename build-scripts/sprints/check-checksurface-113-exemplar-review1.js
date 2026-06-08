@@ -88,13 +88,20 @@ assert(
     browserProof.in_app_browser_dom.mobile_dark_after_toggle_reload.theme === 'dark',
   'browser proof must show mobile reload staying dark'
 );
+const reviewTaskFamilies = browserProof.in_app_browser_dom.desktop_light.taskFamilies || [];
+const hasHistoricalFourCardProof =
+  reviewTaskFamilies.includes('graph_construction_substitute') &&
+  reviewTaskFamilies.includes('graph_reading') &&
+  reviewTaskFamilies.includes('formula_builder') &&
+  reviewTaskFamilies.includes('calculation_work_capture');
+const hasRepairedThreeCardProof =
+  reviewTaskFamilies.includes('graph_construction_substitute') &&
+  reviewTaskFamilies.includes('graph_reading') &&
+  reviewTaskFamilies.includes('calculation_work_capture') &&
+  !reviewTaskFamilies.includes('formula_builder');
 assert(
-  Array.isArray(browserProof.in_app_browser_dom.desktop_light.taskFamilies) &&
-    browserProof.in_app_browser_dom.desktop_light.taskFamilies.includes('graph_construction_substitute') &&
-    browserProof.in_app_browser_dom.desktop_light.taskFamilies.includes('graph_reading') &&
-    browserProof.in_app_browser_dom.desktop_light.taskFamilies.includes('formula_builder') &&
-    browserProof.in_app_browser_dom.desktop_light.taskFamilies.includes('calculation_work_capture'),
-  'browser proof must include all four exit-ticket task families'
+  Array.isArray(reviewTaskFamilies) && (hasHistoricalFourCardProof || hasRepairedThreeCardProof),
+  'browser proof must include the historical reviewed task families or the repaired embedded-formula task families'
 );
 assert(browserProof.in_app_browser_dom.desktop_light.formulaContextPresent === false, 'browser proof must reject formula context');
 assert(

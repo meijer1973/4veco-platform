@@ -670,6 +670,10 @@ describe('TaskShellUI', () => {
         expect(html).toContain('data-graph-axis="x"');
         expect(html).toContain('data-graph-point-index="0"');
         expect(html).toContain('data-graph-line-confirmation');
+        expect(html).toContain('data-line-shape="decreasing"');
+        expect(html).toContain('data-line-shape="increasing"');
+        expect(html).toContain('data-line-shape="constant"');
+        expect(html).toContain('data-line-shape="no_relation"');
         expect(html).toContain('data-task-family="matching_pairs"');
         expect(html).toContain('class="ts-matching-pairs"');
         expect(html).toContain('data-match-left-id="schaarste"');
@@ -946,6 +950,110 @@ describe('TaskShellUI', () => {
         expect(snapHtml).toContain('data-point-snap-mode="magnetic_table_point"');
         expect(snapHtml).toContain('data-point-snap-tolerance-px="72"');
         expect(snapHtml).toContain('data-accepted-table-points=');
+        expect(snapHtml).toContain('data-line-shape="increasing"');
+    });
+
+    test('renders and collects the structured percentage claim calculation', () => {
+        const claimTask = task('claim-50-procent', 'calculation_work_capture', {
+            selectionMode: 'percentage_claim_control',
+            workLabel: 'Berekening',
+            finalAnswerLabel: 'Procentuele verandering',
+            finalAnswerSectionLabel: '3d. Noteer het percentage',
+            unitNotationLabel: 'Conclusie',
+            intervalLabel: '3a. Kies het interval',
+            intervalLegend: 'Welk broninterval gebruik je?',
+            valueSectionLabel: '3b. Haal de Q-waarden uit de tabel',
+            oldValueLabel: 'Oude Q',
+            newValueLabel: 'Nieuwe Q',
+            formulaSectionLabel: '3c. Bouw de formule',
+            conclusionLabel: '3e. Trek de conclusie',
+            conclusionLegend: 'Welke conclusie past bij je berekening?',
+            intervalOptions: [
+                { id: '150-300', label: 'Van EUR 1,50 naar EUR 3,00', correct: true },
+                { id: '200-250', label: 'Van EUR 2,00 naar EUR 2,50', correct: false }
+            ],
+            formula: {
+                tokens: [
+                    { id: 'nieuw-min-oud', label: 'nieuw - oud', kind: 'answer', category: 'numerator' },
+                    { id: 'delen-door-oud', label: '/ oud', kind: 'answer', category: 'denominator' },
+                    { id: 'keer-100-procent', label: 'x 100%', kind: 'answer', category: 'multiplier' },
+                    { id: 'delen-door-nieuw', label: '/ nieuw', kind: 'distractor', category: 'denominator', distractorFor: 'delen-door-oud' }
+                ],
+                separator: ' ',
+                tokenBankLabel: 'Formuleblokken',
+                sequenceLabel: 'Opgebouwde formule'
+            },
+            finalAnswerPlaceholder: 'vul percentage in, bijvoorbeeld met %',
+            conclusionOptions: [
+                { id: 'drop50', label: 'Q daalt met 50 procent', finalAnswer: 'Q daalt met 50 procent', correct: true },
+                { id: 'rise50', label: 'Q stijgt met 50 procent', finalAnswer: 'Q stijgt met 50 procent', correct: false }
+            ],
+            answerParsers: ['number_with_optional_percent']
+        }, {
+            kind: 'calculation',
+            finalAnswer: { kind: 'number', value: -50, tolerance: 0.1 },
+            unitNotation: { kind: 'text', accepted: ['Q daalt met 50 procent'] },
+            workRequired: true,
+            requiredWorkText: [
+                { label: 'startprijs', any: ['1,50'] },
+                { label: 'eindprijs', any: ['3,00'] },
+                { label: 'oude hoeveelheid', any: ['300'] },
+                { label: 'nieuwe hoeveelheid', any: ['150'] }
+            ],
+            interval: { kind: 'choice', value: '150-300' },
+            oldValue: { kind: 'number', value: 300, tolerance: 0 },
+            newValue: { kind: 'number', value: 150, tolerance: 0 },
+            formula: {
+                kind: 'formula_builder',
+                tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'],
+                acceptedSequences: [['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent']]
+            },
+            conclusion: { kind: 'choice', value: 'drop50' }
+        });
+        const html = TaskShellUI.renderTask(claimTask, 2, {});
+        expect(html).toContain('data-percentage-claim-control');
+        expect(html).toContain('3a. Kies het interval');
+        expect(html).toContain('3b. Haal de Q-waarden uit de tabel');
+        expect(html).toContain('3c. Bouw de formule');
+        expect(html).toContain('3d. Noteer het percentage');
+        expect(html).toContain('3e. Trek de conclusie');
+        expect(html).toContain('data-input-role="old-value"');
+        expect(html).toContain('data-input-role="new-value"');
+        expect(html).toContain('data-formula-token-id="delen-door-nieuw"');
+        expect(html).toContain('data-claim-conclusion-option-id="drop50"');
+
+        const root = {
+            querySelector: (selector) => {
+                if (selector.includes('data-claim-interval-option-id') && selector.includes(':checked')) {
+                    return { getAttribute: () => '150-300' };
+                }
+                if (selector.includes('data-claim-conclusion-option-id') && selector.includes(':checked')) {
+                    return { getAttribute: () => 'drop50' };
+                }
+                if (selector.includes('data-input-role="old-value"')) return { value: '300' };
+                if (selector.includes('data-input-role="new-value"')) return { value: '150' };
+                if (selector.includes('data-input-role="final-answer"')) return { value: '-50%' };
+                return null;
+            },
+            querySelectorAll: (selector) => {
+                if (!selector.includes('data-formula-selected-token-id')) return [];
+                return [
+                    { getAttribute: () => 'nieuw-min-oud' },
+                    { getAttribute: () => 'delen-door-oud' },
+                    { getAttribute: () => 'keer-100-procent' }
+                ];
+            }
+        };
+        expect(TaskShellUI.collectCalculationResponse(root, claimTask)).toEqual({
+            interval: '150-300',
+            oldValue: '300',
+            newValue: '150',
+            formula: { tokens: ['nieuw-min-oud', 'delen-door-oud', 'keer-100-procent'] },
+            finalAnswer: '-50%',
+            conclusion: 'drop50',
+            unitNotation: 'Q daalt met 50 procent',
+            work: 'Van EUR 1,50 naar EUR 3,00; oude Q 300; nieuwe Q 150; formule nieuw-min-oud delen-door-oud keer-100-procent'
+        });
     });
 
     test('renders delayed graph axis guides as neutral until the student chooses axes', () => {

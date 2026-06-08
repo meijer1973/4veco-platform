@@ -110,6 +110,13 @@
 
   var DECREASE_WORD_RE = /\b(daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde)\b/;
 
+  var GRAPH_LINE_SHAPES = {
+    decreasing: true,
+    increasing: true,
+    constant: true,
+    no_relation: true
+  };
+
   var FORMULA_TOKEN_CATEGORIES = {
     numerator: true,
     denominator: true,
@@ -1116,8 +1123,28 @@
     if (interaction.pointSnapTolerancePx !== undefined) {
       assert(isNumber(interaction.pointSnapTolerancePx) && interaction.pointSnapTolerancePx >= 0, path + '.pointSnapTolerancePx must be a non-negative number');
     }
+    var lineShapeValues = {};
+    if (interaction.lineShapeOptions !== undefined) {
+      requireArray(interaction.lineShapeOptions, path + '.lineShapeOptions', 2);
+      var lineShapeAnswerCount = 0;
+      var lineShapeDistractorCount = 0;
+      interaction.lineShapeOptions.forEach(function (option, idx) {
+        assert(isObject(option), path + '.lineShapeOptions[' + idx + '] must be an object');
+        requireString(option.id, path + '.lineShapeOptions[' + idx + '].id');
+        requireString(option.label, path + '.lineShapeOptions[' + idx + '].label');
+        requireString(option.value, path + '.lineShapeOptions[' + idx + '].value');
+        assert(GRAPH_LINE_SHAPES[option.value], path + '.lineShapeOptions[' + idx + '].value must be a graph line shape');
+        assert(!lineShapeValues[option.value], 'duplicate graph line shape option value: ' + option.value);
+        lineShapeValues[option.value] = true;
+        if (option.kind === 'answer') lineShapeAnswerCount += 1;
+        else lineShapeDistractorCount += 1;
+      });
+      assert(lineShapeAnswerCount >= 1, path + '.lineShapeOptions must include at least one answer option');
+      assert(lineShapeDistractorCount >= 1, path + '.lineShapeOptions must include at least one distractor option');
+    }
     return {
-      pointCount: interaction.pointCount
+      pointCount: interaction.pointCount,
+      lineShapeValues: lineShapeValues
     };
   }
 
@@ -1235,6 +1262,48 @@
       assert(conclusionCorrectCount >= 1, path + '.conclusionOptions must include at least one correct conclusion');
       assert(conclusionDistractorCount >= 1, path + '.conclusionOptions must include at least one distractor conclusion');
     }
+  }
+
+  function validateSimpleChoiceOptions(options, path, minimum) {
+    requireArray(options, path, minimum || 2);
+    var ids = {};
+    var correctCount = 0;
+    var distractorCount = 0;
+    options.forEach(function (option, idx) {
+      assert(isObject(option), path + '[' + idx + '] must be an object');
+      requireString(option.id, path + '[' + idx + '].id');
+      requireString(option.label, path + '[' + idx + '].label');
+      assert(typeof option.correct === 'boolean', path + '[' + idx + '].correct must be boolean');
+      optionalString(option.finalAnswer, path + '[' + idx + '].finalAnswer');
+      assert(!ids[option.id], 'duplicate option id: ' + option.id);
+      ids[option.id] = true;
+      if (option.correct) correctCount += 1;
+      else distractorCount += 1;
+    });
+    assert(correctCount >= 1, path + ' must include at least one correct option');
+    assert(distractorCount >= 1, path + ' must include at least one distractor option');
+    return ids;
+  }
+
+  function validatePercentageClaimInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.intervalLabel, path + '.intervalLabel');
+    requireString(interaction.valueSectionLabel, path + '.valueSectionLabel');
+    requireString(interaction.oldValueLabel, path + '.oldValueLabel');
+    requireString(interaction.newValueLabel, path + '.newValueLabel');
+    requireString(interaction.formulaSectionLabel, path + '.formulaSectionLabel');
+    requireString(interaction.conclusionLabel, path + '.conclusionLabel');
+    optionalString(interaction.oldValuePlaceholder, path + '.oldValuePlaceholder');
+    optionalString(interaction.newValuePlaceholder, path + '.newValuePlaceholder');
+    var intervalIds = validateSimpleChoiceOptions(interaction.intervalOptions, path + '.intervalOptions', 2);
+    var conclusionIds = validateSimpleChoiceOptions(interaction.conclusionOptions, path + '.conclusionOptions', 2);
+    assert(isObject(interaction.formula), path + '.formula must be an object');
+    var formulaInfo = validateFormulaInteraction({ interaction: interaction.formula }, path + '.formula');
+    return {
+      intervalOptionIds: intervalIds,
+      conclusionOptionIds: conclusionIds,
+      formulaTokenIds: formulaInfo.tokenIds
+    };
   }
 
   function sourceValueLabelMap(values) {
@@ -1572,6 +1641,60 @@
     }
   }
 
+  function validateFormulaExpected(expected, tokenIds, allowReuse, path) {
+    assert(expected.kind === 'formula_builder', path + '.kind must be formula_builder');
+    requireArray(expected.tokens, path + '.tokens', 1);
+    requireArray(expected.acceptedSequences, path + '.acceptedSequences', 1);
+
+    function validateFormulaSequence(sequence, sequencePath) {
+      requireArray(sequence, sequencePath, 1);
+      var seen = {};
+      sequence.forEach(function (tokenId, idx) {
+        requireString(tokenId, sequencePath + '[' + idx + ']');
+        assert(tokenIds[tokenId], sequencePath + '[' + idx + '] must match an interaction token');
+        if (!allowReuse) {
+          assert(!seen[tokenId], sequencePath + ' uses token more than once without allowReuse');
+          seen[tokenId] = true;
+        }
+      });
+    }
+
+    validateFormulaSequence(expected.tokens, path + '.tokens');
+    var canonical = expected.tokens.join('\u0001');
+    var includesCanonical = false;
+    expected.acceptedSequences.forEach(function (sequence, idx) {
+      validateFormulaSequence(sequence, path + '.acceptedSequences[' + idx + ']');
+      if (sequence.join('\u0001') === canonical) includesCanonical = true;
+    });
+    assert(includesCanonical, path + '.acceptedSequences must include expected.tokens');
+  }
+
+  function validatePercentageClaimExpected(task, interactionInfo) {
+    var expected = task.expected;
+    assert(isObject(expected.interval), task.id + '.expected.interval must be an object');
+    assert(expected.interval.kind === 'choice', task.id + '.expected.interval.kind must be choice');
+    requireString(expected.interval.value, task.id + '.expected.interval.value');
+    assert((interactionInfo.intervalOptionIds || {})[expected.interval.value], task.id + '.expected.interval.value must match an interval option id');
+
+    assert(isObject(expected.oldValue), task.id + '.expected.oldValue must be an object');
+    assert(expected.oldValue.kind === 'number', task.id + '.expected.oldValue.kind must be number');
+    assert(isNumber(expected.oldValue.value), task.id + '.expected.oldValue.value must be numeric');
+    if (expected.oldValue.tolerance !== undefined) assert(isNumber(expected.oldValue.tolerance), task.id + '.expected.oldValue.tolerance must be numeric');
+
+    assert(isObject(expected.newValue), task.id + '.expected.newValue must be an object');
+    assert(expected.newValue.kind === 'number', task.id + '.expected.newValue.kind must be number');
+    assert(isNumber(expected.newValue.value), task.id + '.expected.newValue.value must be numeric');
+    if (expected.newValue.tolerance !== undefined) assert(isNumber(expected.newValue.tolerance), task.id + '.expected.newValue.tolerance must be numeric');
+
+    assert(isObject(expected.formula), task.id + '.expected.formula must be an object');
+    validateFormulaExpected(expected.formula, interactionInfo.formulaTokenIds || {}, task.interaction.formula && task.interaction.formula.allowReuse === true, task.id + '.expected.formula');
+
+    assert(isObject(expected.conclusion), task.id + '.expected.conclusion must be an object');
+    assert(expected.conclusion.kind === 'choice', task.id + '.expected.conclusion.kind must be choice');
+    requireString(expected.conclusion.value, task.id + '.expected.conclusion.value');
+    assert((interactionInfo.conclusionOptionIds || {})[expected.conclusion.value], task.id + '.expected.conclusion.value must match a conclusion option id');
+  }
+
   function validateExpected(task, interactionInfo) {
     interactionInfo = interactionInfo || {};
     var optionIds = interactionInfo.optionIds || {};
@@ -1719,6 +1842,9 @@
         validateUnitNotation(expected.unitNotation, task.id + '.expected.unitNotation');
         requireString(task.interaction.unitNotationLabel, task.id + '.interaction.unitNotationLabel');
       }
+      if (task.interaction.selectionMode === 'percentage_claim_control') {
+        validatePercentageClaimExpected(task, interactionInfo);
+      }
       return;
     }
 
@@ -1826,32 +1952,7 @@
     }
 
     if (task.family === 'formula_builder') {
-      assert(expected.kind === 'formula_builder', task.id + '.expected.kind must be formula_builder');
-      requireArray(expected.tokens, task.id + '.expected.tokens', 1);
-      requireArray(expected.acceptedSequences, task.id + '.expected.acceptedSequences', 1);
-      var formulaTokenIds = interactionInfo.tokenIds || {};
-
-      function validateFormulaSequence(sequence, path) {
-        requireArray(sequence, path, 1);
-        var seen = {};
-        sequence.forEach(function (tokenId, idx) {
-          requireString(tokenId, path + '[' + idx + ']');
-          assert(formulaTokenIds[tokenId], path + '[' + idx + '] must match an interaction token');
-          if (!interactionInfo.allowReuse) {
-            assert(!seen[tokenId], path + ' uses token more than once without allowReuse');
-            seen[tokenId] = true;
-          }
-        });
-      }
-
-      validateFormulaSequence(expected.tokens, task.id + '.expected.tokens');
-      var formulaCanonical = expected.tokens.join('\u0001');
-      var formulaIncludesCanonical = false;
-      expected.acceptedSequences.forEach(function (sequence, idx) {
-        validateFormulaSequence(sequence, task.id + '.expected.acceptedSequences[' + idx + ']');
-        if (sequence.join('\u0001') === formulaCanonical) formulaIncludesCanonical = true;
-      });
-      assert(formulaIncludesCanonical, task.id + '.expected.acceptedSequences must include expected.tokens');
+      validateFormulaExpected(expected, interactionInfo.tokenIds || {}, interactionInfo.allowReuse, task.id + '.expected');
       return;
     }
 
@@ -2042,6 +2143,10 @@
       if (expected.toleranceX !== undefined) assert(isNumber(expected.toleranceX), task.id + '.expected.toleranceX must be numeric');
       if (expected.toleranceY !== undefined) assert(isNumber(expected.toleranceY), task.id + '.expected.toleranceY must be numeric');
       assert(/^(decreasing|increasing|constant)$/.test(expected.lineShape), task.id + '.expected.lineShape must be decreasing, increasing, or constant');
+      if (interactionInfo.lineShapeValues && Object.keys(interactionInfo.lineShapeValues).length) {
+        assert(interactionInfo.lineShapeValues[expected.lineShape], task.id + '.expected.lineShape must match an interaction lineShapeOptions value');
+        assert(Object.keys(interactionInfo.lineShapeValues).length >= 2, task.id + '.interaction.lineShapeOptions must allow at least one wrong line-shape action');
+      }
       return;
     }
 
@@ -2101,8 +2206,12 @@
       optionalString(task.interaction.unitNotationPlaceholder, path + '.unitNotationPlaceholder');
       if (task.interaction.answerParsers !== undefined) validateAnswerParsers(task.interaction.answerParsers, path + '.answerParsers');
       if (task.interaction.selectionMode !== undefined) {
-        assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
-        validateIntervalHalvingInteraction(task, path);
+        assert(/^(interval_halving_check|percentage_claim_control)$/.test(task.interaction.selectionMode), path + '.selectionMode must be interval_halving_check or percentage_claim_control when present');
+        if (task.interaction.selectionMode === 'interval_halving_check') {
+          validateIntervalHalvingInteraction(task, path);
+        } else {
+          interactionInfo = validatePercentageClaimInteraction(task, path);
+        }
       }
     } else if (
       task.family === 'numeric_input' ||
@@ -2304,6 +2413,20 @@
     return (paths || []).some(function (workPath) {
       return textGroupsMatch(value, workPath.requiredWorkText || []);
     });
+  }
+
+  function percentageClaimControlMatches(response, task) {
+    if (!response || typeof response !== 'object') return false;
+    if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
+    if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
+    if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
+    if (normalizeText(response.interval) !== normalizeText(task.expected.interval.value)) return false;
+    if (!numberMatches(response.oldValue, task.expected.oldValue)) return false;
+    if (!numberMatches(response.newValue, task.expected.newValue)) return false;
+    if (!formulaBuilderMatches(response.formula, task.expected.formula)) return false;
+    if (normalizeText(response.conclusion) !== normalizeText(task.expected.conclusion.value)) return false;
+    return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer, task.interaction && task.interaction.answerParsers) &&
+      unitNotationMatches(response.unitNotation, task.expected.unitNotation);
   }
 
   function textCriteriaMatches(value, expected) {
@@ -3107,6 +3230,9 @@
     }
     if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
       if (!response || typeof response !== 'object') return false;
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return percentageClaimControlMatches(response, task);
+      }
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
       if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
       if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
@@ -3261,6 +3387,16 @@
       ];
     }
     if (task.family === 'calculation_work_capture') {
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return [
+          '[data-task-id="' + task.id + '"][data-claim-interval-option-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="old-value"]',
+          '[data-task-id="' + task.id + '"][data-input-role="new-value"]',
+          '[data-task-id="' + task.id + '"][data-formula-token-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="final-answer"]',
+          '[data-task-id="' + task.id + '"][data-claim-conclusion-option-id]'
+        ];
+      }
       if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
         return [
           '[data-task-id="' + task.id + '"][data-interval-option-id]',

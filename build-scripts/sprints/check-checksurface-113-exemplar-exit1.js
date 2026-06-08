@@ -156,8 +156,23 @@ function checkSource() {
   assert(graph.interaction.pointSnapMode === 'magnetic_table_point', 'graph task must use magnetic snapping');
   assert(graph.interaction.pointSnapTolerancePx >= 35, 'graph snap tolerance must be forgiving');
   assert(Array.isArray(graph.interaction.axisOptions) && graph.interaction.axisOptions.length >= 4, 'graph axis options must include plausible distractors');
+  assert(Array.isArray(graph.interaction.lineShapeOptions) && graph.interaction.lineShapeOptions.length >= 4, 'graph task must expose line-shape choices');
+  assert(graph.interaction.lineShapeOptions.some((option) => option.value === 'decreasing' && option.kind === 'answer'), 'graph line-shape choices must include decreasing answer');
+  assert(graph.interaction.lineShapeOptions.some((option) => option.value === 'increasing' && option.kind === 'distractor'), 'graph line-shape choices must include increasing distractor');
+  assert(graph.interaction.lineShapeOptions.some((option) => option.value === 'constant' && option.kind === 'distractor'), 'graph line-shape choices must include horizontal distractor');
+  assert(graph.interaction.lineShapeOptions.some((option) => option.value === 'no_relation' && option.kind === 'distractor'), 'graph line-shape choices must include no-relation distractor');
   assert(graph.expected.pointPolicy === 'straight_line_two_distinct_table_points', 'graph task must use straight-line two-point policy');
   assert(Array.isArray(graph.expected.acceptedTablePoints) && graph.expected.acceptedTablePoints.length >= 5, 'graph task must accept all table points');
+  assert(TaskShellEngine.evaluateTask(graph, {
+    axes: { x: 'Q', y: 'P' },
+    points: [{ x: '300', y: '1,5' }, { x: '150', y: '3,0' }],
+    lineShape: 'decreasing',
+  }).matched, 'graph construction must accept two valid points with decreasing line shape');
+  assert(!TaskShellEngine.evaluateTask(graph, {
+    axes: { x: 'Q', y: 'P' },
+    points: [{ x: '300', y: '1,5' }, { x: '150', y: '3,0' }],
+    lineShape: 'increasing',
+  }).matched, 'graph construction must reject the wrong line-shape action');
 
   const reading = findShell(data, 'graph_reading');
   assert(Array.isArray(reading.interaction.stepOrder), 'graph reading must define stepOrder');
@@ -166,37 +181,79 @@ function checkSource() {
   assert(reading.interaction.intervalOptions.some((option) => option.correct === false), 'graph reading must include interval distractors');
   assert(reading.expected.interval && reading.expected.interval.value === '200-250', 'graph reading expected interval must be 200-250');
 
-  const formula = findShell(data, 'formula_builder');
-  assert(formula.interaction.tokens.some((token) => token.kind === 'answer'), 'formula builder must include answer tokens');
-  assert(formula.interaction.tokens.some((token) => token.kind === 'distractor'), 'formula builder must include distractor tokens');
-
   const calculation = findShell(data, 'calculation_work_capture');
-  assert(!calculation.interaction.selectionMode, 'calculation must not use interval-halving dropdown substitute');
+  assert(calculation.interaction.selectionMode === 'percentage_claim_control', 'calculation must render the structured percentage claim control');
+  assert(Array.isArray(calculation.interaction.intervalOptions) && calculation.interaction.intervalOptions.length >= 4, 'calculation must include interval choices');
+  assert(calculation.interaction.intervalOptions.some((option) => option.id === '150-300' && option.correct === true), 'calculation must include the correct 1.50 to 3.00 interval');
+  assert(calculation.interaction.intervalOptions.some((option) => option.correct === false), 'calculation must include interval distractors');
+  assert(calculation.interaction.formula && Array.isArray(calculation.interaction.formula.tokens), 'calculation must embed a formula-builder control');
+  assert(calculation.interaction.formula.tokens.some((token) => token.kind === 'answer'), 'embedded formula builder must include answer tokens');
+  assert(calculation.interaction.formula.tokens.some((token) => token.kind === 'distractor'), 'embedded formula builder must include distractor tokens');
+  assert(Array.isArray(calculation.interaction.conclusionOptions) && calculation.interaction.conclusionOptions.length >= 3, 'calculation must include conclusion choices');
+  assert(calculation.interaction.conclusionOptions.some((option) => option.id === 'drop50' && option.correct === true), 'calculation must include the correct 50 percent drop conclusion');
   assert((calculation.interaction.answerParsers || []).includes('number_with_optional_percent'), 'calculation must declare number_with_optional_percent parser');
   assert((calculation.interaction.answerParsers || []).includes('decrease_phrase_to_negative_percent'), 'calculation must declare decrease_phrase_to_negative_percent parser');
   assert(calculation.expected.finalAnswer.kind === 'number', 'calculation final answer must be numeric');
   assert(calculation.expected.finalAnswer.acceptedNotations.includes('-50%'), 'calculation must accept -50%');
   assert(calculation.expected.finalAnswer.acceptedNotations.includes('50% daling'), 'calculation must accept 50% daling');
+  assert(calculation.expected.interval && calculation.expected.interval.value === '150-300', 'calculation must require the correct source interval');
+  assert(calculation.expected.oldValue && calculation.expected.oldValue.value === 300, 'calculation must require old Q = 300');
+  assert(calculation.expected.newValue && calculation.expected.newValue.value === 150, 'calculation must require new Q = 150');
+  assert(calculation.expected.formula && calculation.expected.formula.kind === 'formula_builder', 'calculation must validate the embedded formula builder');
+  assert(calculation.expected.conclusion && calculation.expected.conclusion.value === 'drop50', 'calculation must validate the conclusion choice');
   assert((calculation.expected.requiredWorkText || []).length === 4, 'calculation must require both interval endpoints and both Q-values');
   assertWorkGroup(calculation, 'startprijs', ['1,50', '1.50']);
   assertWorkGroup(calculation, 'eindprijs', ['3,00', '3.00']);
   assertWorkGroup(calculation, 'oude hoeveelheid', ['300']);
   assertWorkGroup(calculation, 'nieuwe hoeveelheid', ['150']);
+  const correctFormula = calculation.expected.formula.tokens.slice();
   assert(TaskShellEngine.evaluateTask(calculation, {
-    work: 'van EUR 1,50 naar EUR 3,00: (150 - 300) / 300 x 100',
+    interval: '150-300',
+    oldValue: '300',
+    newValue: '150',
+    formula: { tokens: correctFormula },
+    work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
     finalAnswer: '50 procent gedaald',
+    conclusion: 'drop50',
     unitNotation: 'Q daalt met 50 procent',
   }).matched, 'calculation parser must accept natural decrease phrase notation');
   assert(!TaskShellEngine.evaluateTask(calculation, {
-    work: 'van EUR 1,50: (150 - 300) / 300 x 100',
+    interval: '150-300',
+    oldValue: '300',
+    newValue: '150',
+    formula: { tokens: correctFormula },
+    work: 'van EUR 1,50: oude hoeveelheid 300, nieuwe hoeveelheid 150',
     finalAnswer: '-50%',
+    conclusion: 'drop50',
     unitNotation: 'Q daalt met 50 procent',
   }).matched, 'calculation work checker must reject missing end price');
+  assert(!TaskShellEngine.evaluateTask(calculation, {
+    interval: '150-300',
+    oldValue: '',
+    newValue: '150',
+    formula: { tokens: correctFormula },
+    work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
+    finalAnswer: '-50%',
+    conclusion: 'drop50',
+    unitNotation: 'Q daalt met 50 procent',
+  }).matched, 'calculation must reject a missing old Q field');
+  assert(!TaskShellEngine.evaluateTask(calculation, {
+    interval: '150-300',
+    oldValue: '300',
+    newValue: '150',
+    formula: { tokens: correctFormula.slice(0, -1).concat(['newQden']) },
+    work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
+    finalAnswer: '-50%',
+    conclusion: 'drop50',
+    unitNotation: 'Q daalt met 50 procent',
+  }).matched, 'calculation must reject an embedded formula distractor');
 
   return {
     task_families: taskShells(data).map((shell) => shell.family),
     context_blocks: data.contextBlocks.map((block) => `${block.id}:${block.type}`),
     placeholder_count: placeholders.length,
+    structured_claim_control: true,
+    graph_line_shape_values: graph.interaction.lineShapeOptions.map((option) => option.value),
   };
 }
 
@@ -207,8 +264,11 @@ function checkGeneratedOutput() {
   const page = read(pagePath);
   assert(shared.includes('graph_construction_substitute'), 'generated shared data missing graph construction task');
   assert(shared.includes('graph_reading'), 'generated shared data missing graph reading task');
-  assert(shared.includes('formula_builder'), 'generated shared data missing formula builder task');
   assert(shared.includes('calculation_work_capture'), 'generated shared data missing calculation task');
+  assert(shared.includes('percentage_claim_control'), 'generated shared data missing structured percentage claim mode');
+  assert(shared.includes('lineShapeOptions'), 'generated shared data missing graph line-shape choices');
+  assert(shared.includes('newQden'), 'generated shared data missing embedded formula distractor');
+  assert(!/"family":\s*"formula_builder"/.test(shared), 'generated shared data must not split the formula into a separate task');
   assert(shared.includes('magnetic_table_point'), 'generated shared data missing magnetic snapping metadata');
   assert(!shared.includes('ctx-stationbroodjes-formula'), 'generated shared data must not include formula context');
   assert(page.includes('shared/exit-ticket/1.1.3-exit-ticket.js'), 'generated page must load 1.1.3 exit-ticket data');

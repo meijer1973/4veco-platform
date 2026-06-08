@@ -140,6 +140,32 @@
           "pointRowsLabel": "Twee punten uit de tabel",
           "lineConfirmationLabel": "Verbind de punten",
           "lineShapeLabel": "Lijnvorm",
+          "lineShapeOptions": [
+            {
+              "id": "dalend",
+              "label": "Dalend",
+              "value": "decreasing",
+              "kind": "answer"
+            },
+            {
+              "id": "stijgend",
+              "label": "Stijgend",
+              "value": "increasing",
+              "kind": "distractor"
+            },
+            {
+              "id": "horizontaal",
+              "label": "Horizontaal",
+              "value": "constant",
+              "kind": "distractor"
+            },
+            {
+              "id": "geen-verband",
+              "label": "Geen duidelijk verband",
+              "value": "no_relation",
+              "kind": "distractor"
+            }
+          ],
           "xInputLabel": "Waarde op horizontale as",
           "yInputLabel": "Waarde op verticale as",
           "emptyGraphAltText": "Leeg P-Q-diagram met raster. De leerling kiest assen en plaatst twee punten.",
@@ -228,11 +254,11 @@
           "points": [
             {
               "x": 350,
-              "y": 1.0
+              "y": 1
             },
             {
               "x": 150,
-              "y": 3.0
+              "y": 3
             }
           ],
           "toleranceX": 35,
@@ -243,7 +269,7 @@
           "acceptedTablePoints": [
             {
               "x": 350,
-              "y": 1.0
+              "y": 1
             },
             {
               "x": 300,
@@ -251,7 +277,7 @@
             },
             {
               "x": 250,
-              "y": 2.0
+              "y": 2
             },
             {
               "x": 200,
@@ -259,7 +285,7 @@
             },
             {
               "x": 150,
-              "y": 3.0
+              "y": 3
             }
           ]
         },
@@ -342,156 +368,177 @@
       }
     },
     {
-      "id": "procentformule-bouwen",
-      "type": "task_shell",
-      "taskShell": {
-        "id": "procentformule-bouwen",
-        "family": "formula_builder",
-        "skillLabel": "Formule bouwen",
-        "purpose": "Bouw de berekening voor procentuele verandering.",
-        "prompt": "Bouw de berekening waarmee je de procentuele verandering controleert.",
-        "contextRefs": [
-          "ctx-stationbroodjes-table"
-        ],
-        "interaction": {
-          "tokenBankLabel": "Formulebouwstenen",
-          "sequenceLabel": "Jouw berekening",
-          "placeholder": "Klik bouwstenen in de juiste volgorde.",
-          "separator": " ",
-          "tokens": [
-            {
-              "id": "open",
-              "label": "(",
-              "kind": "answer",
-              "category": "grouping"
-            },
-            {
-              "id": "newQ",
-              "label": "nieuwe Q",
-              "kind": "answer",
-              "category": "variable"
-            },
-            {
-              "id": "minus",
-              "label": "−",
-              "kind": "answer",
-              "category": "operator"
-            },
-            {
-              "id": "oldQnum",
-              "label": "oude Q",
-              "kind": "answer",
-              "category": "variable"
-            },
-            {
-              "id": "close",
-              "label": ")",
-              "kind": "answer",
-              "category": "grouping"
-            },
-            {
-              "id": "divide",
-              "label": "÷",
-              "kind": "answer",
-              "category": "operator"
-            },
-            {
-              "id": "oldQden",
-              "label": "oude Q",
-              "kind": "answer",
-              "category": "denominator"
-            },
-            {
-              "id": "times100",
-              "label": "× 100%",
-              "kind": "answer",
-              "category": "multiplier"
-            },
-            {
-              "id": "plus",
-              "label": "+",
-              "kind": "distractor",
-              "category": "operator",
-              "distractorFor": "minus"
-            },
-            {
-              "id": "newQden",
-              "label": "nieuwe Q",
-              "kind": "distractor",
-              "category": "denominator",
-              "distractorFor": "oldQden"
-            },
-            {
-              "id": "oldFirst",
-              "label": "oude Q − nieuwe Q",
-              "kind": "distractor",
-              "category": "numerator",
-              "distractorFor": "newQ"
-            },
-            {
-              "id": "times10",
-              "label": "× 10%",
-              "kind": "distractor",
-              "category": "multiplier",
-              "distractorFor": "times100"
-            }
-          ]
-        },
-        "expected": {
-          "kind": "formula_builder",
-          "tokens": [
-            "open",
-            "newQ",
-            "minus",
-            "oldQnum",
-            "close",
-            "divide",
-            "oldQden",
-            "times100"
-          ],
-          "acceptedSequences": [
-            [
-              "open",
-              "newQ",
-              "minus",
-              "oldQnum",
-              "close",
-              "divide",
-              "oldQden",
-              "times100"
-            ]
-          ]
-        },
-        "feedback": {
-          "matchTitle": "Berekeningstructuur klopt",
-          "matchText": "Je vergelijkt nieuwe Q met oude Q en deelt door oude Q.",
-          "retryTitle": "Controleer teller en noemer",
-          "retryText": "Bouw eerst het verschil tussen nieuwe en oude Q, en vergelijk dat verschil met de oude Q."
-        },
-        "practiceRoute": {
-          "label": "Oefen procentuele verandering",
-          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
-        }
-      }
-    },
-    {
       "id": "claim-50-procent-controleren",
       "type": "task_shell",
       "taskShell": {
         "id": "claim-50-procent-controleren",
         "family": "calculation_work_capture",
         "skillLabel": "Claim controleren",
-        "purpose": "Controleer of een interval een daling van 50 procent laat zien.",
-        "prompt": "Zoek in Tabel 1 een interval waarin Q met 50 procent daalt. Noteer bronwaarden, uitwerking en conclusie.",
+        "purpose": "Controleer zichtbaar de volledige toetsantwoordketen: interval, oude Q, nieuwe Q, formule, percentage en conclusie.",
+        "prompt": "Controleer de claim dat Q met 50 procent daalt. Kies het interval, haal oude en nieuwe Q uit de tabel, bouw de formule, vul het percentage in en kies de conclusie.",
         "contextRefs": [
           "ctx-stationbroodjes-source",
           "ctx-stationbroodjes-table"
         ],
         "interaction": {
+          "selectionMode": "percentage_claim_control",
           "workLabel": "Uitwerking met bronwaarden",
           "finalAnswerLabel": "Procentuele verandering",
+          "finalAnswerSectionLabel": "3d. Vul de procentuele verandering in",
           "unitNotationLabel": "Conclusie",
+          "intervalLabel": "3a. Kies het interval",
+          "intervalLegend": "Welk interval uit Tabel 1 laat een daling van 50 procent zien?",
+          "valueSectionLabel": "3b. Haal de bronwaarden zelf uit de tabel",
+          "oldValueLabel": "Oude hoeveelheid Q",
+          "newValueLabel": "Nieuwe hoeveelheid Q",
+          "oldValuePlaceholder": "oude Q",
+          "newValuePlaceholder": "nieuwe Q",
+          "formulaSectionLabel": "3c. Bouw de berekening",
+          "conclusionLabel": "3e. Conclusie",
+          "conclusionLegend": "Welke conclusie past bij je berekening?",
+          "intervalOptions": [
+            {
+              "id": "100-150",
+              "label": "EUR 1,00 -> EUR 1,50",
+              "correct": false
+            },
+            {
+              "id": "150-200",
+              "label": "EUR 1,50 -> EUR 2,00",
+              "correct": false
+            },
+            {
+              "id": "200-250",
+              "label": "EUR 2,00 -> EUR 2,50",
+              "correct": false
+            },
+            {
+              "id": "250-300",
+              "label": "EUR 2,50 -> EUR 3,00",
+              "correct": false
+            },
+            {
+              "id": "150-300",
+              "label": "EUR 1,50 -> EUR 3,00",
+              "correct": true
+            },
+            {
+              "id": "100-300",
+              "label": "EUR 1,00 -> EUR 3,00",
+              "correct": false
+            }
+          ],
+          "formula": {
+            "tokenBankLabel": "Formulebouwstenen",
+            "sequenceLabel": "Jouw berekening",
+            "placeholder": "Klik bouwstenen in de juiste volgorde.",
+            "separator": " ",
+            "tokens": [
+              {
+                "id": "open",
+                "label": "(",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "newQ",
+                "label": "nieuwe Q",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "minus",
+                "label": "-",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "oldQnum",
+                "label": "oude Q",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "divide",
+                "label": "/",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "oldQden",
+                "label": "oude Q",
+                "kind": "answer",
+                "category": "denominator"
+              },
+              {
+                "id": "times100",
+                "label": "x 100%",
+                "kind": "answer",
+                "category": "multiplier"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "category": "operator",
+                "distractorFor": "minus"
+              },
+              {
+                "id": "newQden",
+                "label": "nieuwe Q",
+                "kind": "distractor",
+                "category": "denominator",
+                "distractorFor": "oldQden"
+              },
+              {
+                "id": "oldFirst",
+                "label": "oude Q - nieuwe Q",
+                "kind": "distractor",
+                "category": "numerator",
+                "distractorFor": "newQ"
+              },
+              {
+                "id": "times10",
+                "label": "x 10%",
+                "kind": "distractor",
+                "category": "multiplier",
+                "distractorFor": "times100"
+              }
+            ]
+          },
           "finalAnswerPlaceholder": "vul percentage in, bijvoorbeeld met %",
+          "conclusionOptions": [
+            {
+              "id": "drop50",
+              "label": "De verkoop daalt met 50 procent.",
+              "finalAnswer": "Q daalt met 50 procent",
+              "correct": true
+            },
+            {
+              "id": "rise50",
+              "label": "De verkoop stijgt met 50 procent.",
+              "finalAnswer": "Q stijgt met 50 procent",
+              "correct": false
+            },
+            {
+              "id": "drop-not-50",
+              "label": "De verkoop daalt, maar niet met 50 procent.",
+              "finalAnswer": "Q daalt niet met 50 procent",
+              "correct": false
+            },
+            {
+              "id": "cannot-check",
+              "label": "Dat kun je met deze tabel niet controleren.",
+              "finalAnswer": "niet te controleren",
+              "correct": false
+            }
+          ],
           "answerParsers": [
             "number_with_optional_percent",
             "decrease_phrase_to_negative_percent"
@@ -554,7 +601,50 @@
             "Kies interval EUR 1,50 tot EUR 3,00.",
             "Gebruik 300 als oude Q en 150 als nieuwe Q.",
             "Benoem een daling van 50 procent."
-          ]
+          ],
+          "interval": {
+            "kind": "choice",
+            "value": "150-300"
+          },
+          "oldValue": {
+            "kind": "number",
+            "value": 300,
+            "tolerance": 0
+          },
+          "newValue": {
+            "kind": "number",
+            "value": 150,
+            "tolerance": 0
+          },
+          "formula": {
+            "kind": "formula_builder",
+            "tokens": [
+              "open",
+              "newQ",
+              "minus",
+              "oldQnum",
+              "close",
+              "divide",
+              "oldQden",
+              "times100"
+            ],
+            "acceptedSequences": [
+              [
+                "open",
+                "newQ",
+                "minus",
+                "oldQnum",
+                "close",
+                "divide",
+                "oldQden",
+                "times100"
+              ]
+            ]
+          },
+          "conclusion": {
+            "kind": "choice",
+            "value": "drop50"
+          }
         },
         "feedback": {
           "matchTitle": "Claimcontrole klopt",

@@ -1,20 +1,26 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
-  "generated": "2026-06-08T07:29:04.248Z",
+  "generated": "2026-06-08T08:38:55.746Z",
   "status": "passed",
   "source": {
     "task_families": [
       "graph_construction_substitute",
       "graph_reading",
-      "formula_builder",
       "calculation_work_capture"
     ],
     "context_blocks": [
       "ctx-stationbroodjes-source:source_excerpt",
       "ctx-stationbroodjes-table:table"
     ],
-    "placeholder_count": 3
+    "placeholder_count": 5,
+    "structured_claim_control": true,
+    "graph_line_shape_values": [
+      "decreasing",
+      "increasing",
+      "constant",
+      "no_relation"
+    ]
   },
   "generated_output": {
     "shared_data": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js",
