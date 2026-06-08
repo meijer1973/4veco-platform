@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T08:59:19.984Z",
+  "generatedAt": "2026-06-08T09:19:40.159Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1443,7 +1443,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-08 Branch in use: codex/quality-standards-20260608 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Ledger Candidate Future Sprints These are not authorised implementation work until a human review explicitly approves the packet. Ledger Rules 1. Every non-trivial quality-standards sprint must add or upda...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-08 Branch in use: codex/quality-standards-20260608 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section, this ledge...",
           "sprints": []
         },
         {
