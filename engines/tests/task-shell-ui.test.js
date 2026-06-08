@@ -1,5 +1,6 @@
 const TaskShellUI = require('../task-shell-ui');
 const TaskShellEngine = require('../task-shell-engine');
+const A96ProofData = require('../../build-scripts/sprints/mtu-ans-proof-impl1-a96-data');
 
 function task(id, family, interaction, expected, feedback) {
     const selfCheck = expected.kind === 'self_check';
@@ -369,7 +370,12 @@ function data() {
                 kind: 'assertion_reason',
                 value: 'both-correct-explains',
                 partialFeedback: 'practice_only'
-            })
+            }),
+            {
+                ...A96ProofData.strictA96Task,
+                id: 'answer-form',
+                contextRefs: undefined
+            }
         ]
     };
 }
@@ -521,6 +527,7 @@ describe('TaskShellUI', () => {
         for (const family of [
             'numeric_input',
             'calculation_work_capture',
+            'calculation_answer_form_capture',
             'final_answer_entry',
             'unit_notation_field',
             'short_constructed_response',
@@ -1006,6 +1013,54 @@ describe('TaskShellUI', () => {
             '[data-task-id="formula-builder"][data-formula-token-id]',
             '[data-task-id="formula-builder"][data-formula-sequence]'
         ]);
+    });
+
+    test('renders and collects calculation answer-form controls', () => {
+        const answerFormTask = {
+            ...A96ProofData.strictA96Task,
+            id: 'answer-form-ui',
+            contextRefs: undefined
+        };
+        const html = TaskShellUI.renderTask(answerFormTask, 0, {});
+        expect(html).toContain('data-task-family="calculation_answer_form_capture"');
+        expect(html).toContain('data-answer-form-task="answer-form-ui"');
+        expect(html).toContain('data-answer-form-step="formula"');
+        expect(html).toContain('data-answer-form-step="substitution"');
+        expect(html).toContain('data-field-id="oldPriceDenominator"');
+        expect(html).toContain('data-formula-max-uses="2"');
+        expect(html).toContain('data-input-role="conclusion"');
+        expect(html).not.toContain('data-input-role="work"');
+        expect(typeof TaskShellUI.collectCalculationAnswerFormResponse).toBe('function');
+
+        const selectedTokens = A96ProofData.passingResponse.methodTokens.map((tokenId) => ({
+            getAttribute: (name) => (name === 'data-formula-selected-token-id' ? tokenId : '')
+        }));
+        const substitutionFields = Object.entries(A96ProofData.passingResponse.substitution).map(([fieldId, value]) => ({
+            value,
+            getAttribute: (name) => (name === 'data-field-id' ? fieldId : '')
+        }));
+        const root = {
+            querySelectorAll: (selector) => {
+                if (selector.includes('data-formula-selected-token-id')) return selectedTokens;
+                if (selector.includes('data-input-role="substitution"')) return substitutionFields;
+                return [];
+            },
+            querySelector: (selector) => {
+                if (selector.includes('data-input-role="final-answer"')) return { value: A96ProofData.passingResponse.finalAnswer };
+                if (selector.includes('data-input-role="unit-notation"')) return { value: A96ProofData.passingResponse.notation };
+                if (selector.includes('data-input-role="conclusion"')) return { value: A96ProofData.passingResponse.conclusion };
+                return null;
+            }
+        };
+
+        expect(TaskShellUI.collectCalculationAnswerFormResponse(root, answerFormTask)).toEqual(A96ProofData.passingResponse);
+
+        const feedback = TaskShellUI.renderFeedback(TaskShellEngine.evaluateTask(
+            answerFormTask,
+            A96ProofData.negativeResponses.wrongDenominator
+        ));
+        expect(feedback).toContain('class="ts-answer-form-feedback"');
+        expect(feedback).toContain('Bronwaarden in de formule');
     });
 
     test('exports step ordering helpers for consuming wrappers', () => {

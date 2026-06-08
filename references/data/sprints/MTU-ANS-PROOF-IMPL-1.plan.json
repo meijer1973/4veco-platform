@@ -13,7 +13,7 @@
   "generated_lesson_output_allowed": false,
   "scope": [
     "Implement one route-specific A96 answer-form proof using the reviewed 1.1.2 calculation prompt.",
-    "Use shared calculation_work_capture task-shell behavior to require method, labelled substitution, intermediate work, final answer, required notation, and contextual conclusion.",
+    "Use bounded shared calculation_answer_form_capture task-shell behavior to visibly require method, labelled substitution, intermediate work, final answer, required notation, and contextual conclusion.",
     "Add a rendered review lab, screenshots, proof JSON, focused tests, and deterministic checker.",
     "Keep A96 out of generic ROUTE_SKILLS and do not implement GEN_A96.",
     "Keep A81 modifier-only and A99 blocked through non-regression checks only.",
@@ -23,6 +23,7 @@
     "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md",
     "node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1",
     "npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js",
+    "npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js",
     "node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js",
     "node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js",
     "node build-scripts/references/check-mtu-answerform-generator-design.js",

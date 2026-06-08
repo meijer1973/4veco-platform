@@ -1,6 +1,6 @@
 # MTU-ANS-PROOF-IMPL-1 Screenshot Manifest
 
-Generated: 2026-06-08T08:05:39.869Z
+Generated: 2026-06-08T10:33:05.200Z
 
 Rendered lab: `reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html`
 

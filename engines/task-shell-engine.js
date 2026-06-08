@@ -13,6 +13,7 @@
     choice: { label: 'Keuzevraag', deterministic: true },
     numeric_input: { label: 'Rekenantwoord', deterministic: true },
     calculation_work_capture: { label: 'Berekening tonen', deterministic: false },
+    calculation_answer_form_capture: { label: 'Bereken-antwoordvorm', deterministic: true },
     final_answer_entry: { label: 'Eindantwoord', deterministic: true },
     unit_notation_field: { label: 'Eenheid/notatie', deterministic: true },
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
@@ -277,6 +278,41 @@
       push(task.interaction.lineShapeLabel);
       push(task.interaction.xInputLabel);
       push(task.interaction.yInputLabel);
+      if (task.interaction.formula) {
+        push(task.interaction.formula.title);
+        push(task.interaction.formula.purpose);
+        push(task.interaction.formula.placeholder);
+        push(task.interaction.formula.tokenBankLabel);
+        push(task.interaction.formula.sequenceLabel);
+        (task.interaction.formula.tokens || []).forEach(function (token) {
+          push(token.label);
+          push(token.description);
+          push(token.usageHint);
+        });
+      }
+      if (task.interaction.substitution) {
+        push(task.interaction.substitution.title);
+        push(task.interaction.substitution.purpose);
+        push(task.interaction.substitution.template);
+        (task.interaction.substitution.fields || []).forEach(function (field) {
+          push(field.label);
+          push(field.placeholder);
+        });
+      }
+      if (task.interaction.answer) {
+        push(task.interaction.answer.title);
+        push(task.interaction.answer.purpose);
+        push(task.interaction.answer.finalAnswerLabel);
+        push(task.interaction.answer.finalAnswerPlaceholder);
+        push(task.interaction.answer.unitNotationLabel);
+        push(task.interaction.answer.unitNotationPlaceholder);
+      }
+      if (task.interaction.context) {
+        push(task.interaction.context.title);
+        push(task.interaction.context.purpose);
+        push(task.interaction.context.label);
+        push(task.interaction.context.placeholder);
+      }
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -786,6 +822,9 @@
     optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
 
     var tokenIds = {};
+    var tokenLabels = {};
+    var tokenKinds = {};
+    var tokenMaxUses = {};
     var distractorCount = 0;
     interaction.tokens.forEach(function (token, idx) {
       assert(isObject(token), path + '.tokens[' + idx + '] must be an object');
@@ -796,8 +835,15 @@
       requireString(token.category, path + '.tokens[' + idx + '].category');
       assert(FORMULA_TOKEN_CATEGORIES[token.category], path + '.tokens[' + idx + '].category must be a formula token category');
       optionalString(token.description, path + '.tokens[' + idx + '].description');
+      optionalString(token.usageHint, path + '.tokens[' + idx + '].usageHint');
+      if (token.maxUses !== undefined) {
+        assert(Number.isInteger(token.maxUses) && token.maxUses >= 1, path + '.tokens[' + idx + '].maxUses must be an integer >= 1');
+      }
       assert(!tokenIds[token.id], 'duplicate formula token id: ' + token.id);
       tokenIds[token.id] = true;
+      tokenLabels[token.id] = token.label;
+      tokenKinds[token.id] = token.kind;
+      tokenMaxUses[token.id] = token.maxUses || 1;
       if (token.kind === 'distractor') distractorCount += 1;
     });
 
@@ -817,6 +863,10 @@
 
     return {
       tokenIds: tokenIds,
+      tokenLabels: tokenLabels,
+      tokenKinds: tokenKinds,
+      tokenMaxUses: tokenMaxUses,
+      tokenDisplayOrder: interaction.tokens.map(function (token) { return token.id; }),
       allowReuse: interaction.allowReuse === true
     };
   }
@@ -1485,6 +1535,128 @@
     }
   }
 
+  function validateCalculationAnswerFormInteraction(task, path) {
+    var interaction = task.interaction;
+    assert(isObject(interaction.formula), path + '.formula is required');
+    requireString(interaction.formula.title, path + '.formula.title');
+    optionalString(interaction.formula.purpose, path + '.formula.purpose');
+    var formulaInfo = validateFormulaInteraction({ id: task.id, interaction: interaction.formula }, path + '.formula');
+
+    assert(isObject(interaction.substitution), path + '.substitution is required');
+    requireString(interaction.substitution.title, path + '.substitution.title');
+    optionalString(interaction.substitution.purpose, path + '.substitution.purpose');
+    optionalString(interaction.substitution.template, path + '.substitution.template');
+    var substitutionFieldIds = validateStructuredFields(interaction.substitution.fields, path + '.substitution.fields');
+
+    assert(isObject(interaction.answer), path + '.answer is required');
+    requireString(interaction.answer.title, path + '.answer.title');
+    optionalString(interaction.answer.purpose, path + '.answer.purpose');
+    requireString(interaction.answer.finalAnswerLabel, path + '.answer.finalAnswerLabel');
+    requireString(interaction.answer.unitNotationLabel, path + '.answer.unitNotationLabel');
+    optionalString(interaction.answer.finalAnswerPlaceholder, path + '.answer.finalAnswerPlaceholder');
+    optionalString(interaction.answer.unitNotationPlaceholder, path + '.answer.unitNotationPlaceholder');
+
+    assert(isObject(interaction.context), path + '.context is required');
+    requireString(interaction.context.title, path + '.context.title');
+    optionalString(interaction.context.purpose, path + '.context.purpose');
+    requireString(interaction.context.label, path + '.context.label');
+    optionalString(interaction.context.placeholder, path + '.context.placeholder');
+
+    return {
+      formula: formulaInfo,
+      substitutionFieldIds: substitutionFieldIds
+    };
+  }
+
+  function tokenUsageCounts(tokens) {
+    var counts = {};
+    (tokens || []).forEach(function (tokenId) {
+      counts[tokenId] = (counts[tokenId] || 0) + 1;
+    });
+    return counts;
+  }
+
+  function methodTokensMatch(tokens, expectedTokens) {
+    if (!Array.isArray(tokens) || !Array.isArray(expectedTokens)) return false;
+    if (tokens.length !== expectedTokens.length) return false;
+    for (var i = 0; i < expectedTokens.length; i += 1) {
+      if (normalizeText(tokens[i]) !== normalizeText(expectedTokens[i])) return false;
+    }
+    return true;
+  }
+
+  function validateNoIdenticalAnswerTokenLabels(formulaInfo, path) {
+    var labels = {};
+    Object.keys(formulaInfo.tokenLabels || {}).forEach(function (tokenId) {
+      if (formulaInfo.tokenKinds[tokenId] !== 'answer') return;
+      var label = normalizeText(formulaInfo.tokenLabels[tokenId]);
+      if (!label) return;
+      assert(!labels[label] || labels[label] === tokenId, path + ' must not contain visually identical answer tokens with different ids: ' + formulaInfo.tokenLabels[tokenId]);
+      labels[label] = tokenId;
+    });
+  }
+
+  function validateCalculationAnswerFormExpected(task, interactionInfo) {
+    var expected = task.expected;
+    assert(expected.kind === 'calculation_answer_form', task.id + '.expected.kind must be calculation_answer_form');
+    var formulaInfo = interactionInfo.formula || {};
+    requireArray(expected.methodTokens, task.id + '.expected.methodTokens', 1);
+    var counts = tokenUsageCounts(expected.methodTokens);
+    expected.methodTokens.forEach(function (tokenId, idx) {
+      requireString(tokenId, task.id + '.expected.methodTokens[' + idx + ']');
+      assert(formulaInfo.tokenIds[tokenId], task.id + '.expected.methodTokens[' + idx + '] must match a formula token');
+      assert(counts[tokenId] <= (formulaInfo.tokenMaxUses[tokenId] || 1), task.id + '.expected.methodTokens uses token ' + tokenId + ' more than allowed');
+    });
+    if (expected.tokenDisplayOrderMustNotEqualMethodTokens !== undefined) {
+      assert(typeof expected.tokenDisplayOrderMustNotEqualMethodTokens === 'boolean', task.id + '.expected.tokenDisplayOrderMustNotEqualMethodTokens must be boolean');
+      if (expected.tokenDisplayOrderMustNotEqualMethodTokens) {
+        assert(!methodTokensMatch(formulaInfo.tokenDisplayOrder, expected.methodTokens), task.id + '.interaction.formula.tokens must not be arranged in accepted answer order');
+      }
+    }
+    if (
+      expected.visualTokenIdentityPolicy &&
+      expected.visualTokenIdentityPolicy.forbid_identical_labels_with_different_answer_ids === true
+    ) {
+      validateNoIdenticalAnswerTokenLabels(formulaInfo, task.id + '.interaction.formula.tokens');
+    }
+
+    assert(isObject(expected.substitution), task.id + '.expected.substitution must be an object');
+    var expectedSubstitutionIds = Object.keys(expected.substitution);
+    var interactionSubstitutionIds = Object.keys(interactionInfo.substitutionFieldIds || {});
+    assert(expectedSubstitutionIds.length === interactionSubstitutionIds.length, task.id + '.expected.substitution must match all substitution fields');
+    interactionSubstitutionIds.forEach(function (fieldId) {
+      assert(Object.prototype.hasOwnProperty.call(expected.substitution, fieldId), task.id + '.expected.substitution missing ' + fieldId);
+      var fieldExpected = expected.substitution[fieldId];
+      assert(isObject(fieldExpected), task.id + '.expected.substitution.' + fieldId + ' must be an object');
+      assert(fieldExpected.kind === 'number' || fieldExpected.kind === 'text', task.id + '.expected.substitution.' + fieldId + '.kind must be number or text');
+      if (fieldExpected.kind === 'number') {
+        assert(isNumber(fieldExpected.value), task.id + '.expected.substitution.' + fieldId + '.value must be numeric');
+        if (fieldExpected.tolerance !== undefined) assert(isNumber(fieldExpected.tolerance), task.id + '.expected.substitution.' + fieldId + '.tolerance must be numeric');
+      } else {
+        requireArray(fieldExpected.accepted, task.id + '.expected.substitution.' + fieldId + '.accepted', 1);
+      }
+    });
+
+    assert(isObject(expected.finalAnswer), task.id + '.expected.finalAnswer is required');
+    assert(
+      expected.finalAnswer.kind === 'number_or_percent_text' || expected.finalAnswer.kind === 'number' || expected.finalAnswer.kind === 'text',
+      task.id + '.expected.finalAnswer.kind must be number_or_percent_text, number, or text'
+    );
+    if (expected.finalAnswer.kind === 'number_or_percent_text') {
+      assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
+      requireStringArray(expected.finalAnswer.acceptedNotations, task.id + '.expected.finalAnswer.acceptedNotations', 1);
+    } else if (expected.finalAnswer.kind === 'number') {
+      assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
+      if (expected.finalAnswer.tolerance !== undefined) assert(isNumber(expected.finalAnswer.tolerance), task.id + '.expected.finalAnswer.tolerance must be numeric');
+    } else {
+      requireArray(expected.finalAnswer.accepted, task.id + '.expected.finalAnswer.accepted', 1);
+    }
+    validateUnitNotation(expected.notation, task.id + '.expected.notation');
+    assert(isObject(expected.conclusion), task.id + '.expected.conclusion is required');
+    validateRequiredTextGroups(expected.conclusion.requiredTextGroups, task.id + '.expected.conclusion.requiredTextGroups');
+    if (expected.criteria !== undefined) requireArray(expected.criteria, task.id + '.expected.criteria', 1);
+  }
+
   function validateRequiredTextGroups(groups, path) {
     requireArray(groups, path, 1);
     groups.forEach(function (group, idx) {
@@ -1666,6 +1838,11 @@
         validateUnitNotation(expected.unitNotation, task.id + '.expected.unitNotation');
         requireString(task.interaction.unitNotationLabel, task.id + '.interaction.unitNotationLabel');
       }
+      return;
+    }
+
+    if (task.family === 'calculation_answer_form_capture') {
+      validateCalculationAnswerFormExpected(task, interactionInfo);
       return;
     }
 
@@ -2050,6 +2227,8 @@
         assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
         validateIntervalHalvingInteraction(task, path);
       }
+    } else if (task.family === 'calculation_answer_form_capture') {
+      interactionInfo = validateCalculationAnswerFormInteraction(task, path);
     } else if (
       task.family === 'numeric_input' ||
       task.family === 'final_answer_entry' ||
@@ -2225,6 +2404,62 @@
     if (!expected) return true;
     if (expected.required === false && !hasValue(value)) return true;
     return textMatches(value, expected.accepted);
+  }
+
+  function answerFormFinalMatches(value, expected) {
+    if (!expected || !expected.kind) return false;
+    if (expected.kind === 'number_or_percent_text') {
+      if (textMatches(value, expected.acceptedNotations)) return true;
+      return numberMatches(value, { kind: 'number', value: expected.value, tolerance: expected.tolerance || 0 });
+    }
+    return finalAnswerMatches(value, expected);
+  }
+
+  function substitutionFieldMatches(value, expected) {
+    if (!expected || !expected.kind) return false;
+    if (expected.kind === 'number') return numberMatches(value, expected);
+    return textMatches(value, expected.accepted);
+  }
+
+  function calculationAnswerFormPartMatches(response, task) {
+    response = response || {};
+    var expected = task.expected || {};
+    var parts = {
+      formula: methodTokensMatch(response.methodTokens, expected.methodTokens),
+      substitution: false,
+      finalAnswer: answerFormFinalMatches(response.finalAnswer, expected.finalAnswer),
+      notation: unitNotationMatches(response.notation, expected.notation),
+      conclusion: requiredTextGroupsMatch(response.conclusion, expected.conclusion && expected.conclusion.requiredTextGroups)
+    };
+    var substitution = isObject(response.substitution) ? response.substitution : {};
+    parts.substitution = Object.keys(expected.substitution || {}).every(function (fieldId) {
+      return substitutionFieldMatches(substitution[fieldId], expected.substitution[fieldId]);
+    });
+    return parts;
+  }
+
+  function calculationAnswerFormMatches(response, task) {
+    if (!isObject(response)) return false;
+    var keys = Object.keys(response).sort().join('|');
+    if (keys !== 'conclusion|finalAnswer|methodTokens|notation|substitution') return false;
+    var parts = calculationAnswerFormPartMatches(response, task);
+    return parts.formula && parts.substitution && parts.finalAnswer && parts.notation && parts.conclusion;
+  }
+
+  function calculationAnswerFormFeedback(response, task) {
+    var parts = calculationAnswerFormPartMatches(response, task);
+    var labels = [
+      { id: 'formula', label: 'Formule of rekenregel' },
+      { id: 'substitution', label: 'Bronwaarden in de formule' },
+      { id: 'finalAnswer', label: 'Eindantwoord' },
+      { id: 'notation', label: 'Eenheid of notatie' },
+      { id: 'conclusion', label: 'Contextzin met richting' }
+    ];
+    return {
+      mode: 'practice_only',
+      missingParts: labels.filter(function (part) { return !parts[part.id]; }),
+      correctParts: labels.filter(function (part) { return parts[part.id]; })
+    };
   }
 
   function textGroupsMatch(value, groups) {
@@ -3050,6 +3285,9 @@
       return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer) &&
         unitNotationMatches(response.unitNotation, task.expected.unitNotation);
     }
+    if (task.family === 'calculation_answer_form_capture' && task.expected.kind === 'calculation_answer_form') {
+      return calculationAnswerFormMatches(response, task);
+    }
     if (
       (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') &&
       task.expected.kind === 'text_criteria'
@@ -3175,6 +3413,9 @@
       var placementFeedback = labelPlacementFeedback(response, task);
       if (placementFeedback) result.labelPlacementFeedback = placementFeedback;
     }
+    if (task.family === 'calculation_answer_form_capture' && !matched) {
+      result.answerFormFeedback = calculationAnswerFormFeedback(response, task);
+    }
     return result;
   }
 
@@ -3210,6 +3451,16 @@
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');
       }
       return plan;
+    }
+    if (task.family === 'calculation_answer_form_capture') {
+      return [
+        '[data-task-id="' + task.id + '"][data-formula-token-id]',
+        '[data-task-id="' + task.id + '"][data-formula-sequence]',
+        '[data-task-id="' + task.id + '"][data-input-role="substitution"]',
+        '[data-task-id="' + task.id + '"][data-input-role="final-answer"]',
+        '[data-task-id="' + task.id + '"][data-input-role="unit-notation"]',
+        '[data-task-id="' + task.id + '"][data-input-role="conclusion"]'
+      ];
     }
     if (task.family === 'graph_reading' && task.interaction && Array.isArray(task.interaction.intervalOptions)) {
       return [

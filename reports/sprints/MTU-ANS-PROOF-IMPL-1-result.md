@@ -14,17 +14,20 @@ Plan: `reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md`
 answer-form proof sprint.
 
 The sprint implemented a review-only shared task-shell lab tied to the reviewed
-`1.1.2` fietsprijs calculation prompt. The proof task uses
-`calculation_work_capture` and requires all six A96 answer-action parts:
-formula/method, labelled substitution, intermediate work, final answer,
-required percent notation, and a short contextual conclusion.
+`1.1.2` fietsprijs calculation prompt. The proof task uses the bounded
+`calculation_answer_form_capture` shared-shell family and visibly requires all
+six A96 answer-action parts: formula/method, labelled substitution,
+intermediate work, final answer, required percent notation, and a short
+contextual conclusion.
 
 The checker proves that final-answer-only, source-only, direction-free,
-example-only, notation-omission, and standalone-A81 responses cannot pass. The
-rendered proof includes initial, retry-feedback, next-action, completed,
-mobile, and mobile dark-mode screenshots. Lead review round 1 returned REVISE
-for rendered-evidence readability issues; the correction log records the
-capture/visual fixes, and round 2 returned PASS.
+example-only, notation-omission, wrong-denominator, missing-substitution,
+left-to-right token-order, visually identical duplicate old-price token, and
+standalone-A81 responses cannot pass. The rendered proof includes initial,
+retry-feedback, next-action, completed, mobile, and mobile dark-mode
+screenshots. Lead review round 1 returned REVISE for the too-hidden answer-form
+surface; the correction log records the structured-form implementation and
+v3 fixture fixes, and round 2 returned PASS.
 
 No `GEN_A96` generator was added. `A96` was not exposed as a generic
 `ROUTE_SKILLS` row. `A81` remains modifier-only, and `A99` remains blocked.
@@ -39,6 +42,7 @@ projection, Scale Gate 1, or student/product use is authorized by this sprint.
 | `node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md` | passed |
 | `node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1` | passed |
 | `npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js` | passed |
+| `npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js` | passed |
 | `node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js` | passed |
 | `node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js` | passed |
 | `node build-scripts/references/check-mtu-answerform-generator-design.js` | passed |
@@ -63,7 +67,11 @@ Implementation and tests:
 - `build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js`
 - `build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js`
 - `build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js`
+- `engines/task-shell-engine.js`
+- `engines/task-shell-ui.js`
+- `engines/task-shell.css`
 - `engines/tests/task-shell-engine.test.js`
+- `engines/tests/task-shell-ui.test.js`
 
 Sprint proof and governance artifacts:
 

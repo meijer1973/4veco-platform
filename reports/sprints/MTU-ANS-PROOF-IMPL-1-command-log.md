@@ -734,3 +734,538 @@ OK sprint command log: MTU-ANS-PROOF-IMPL-1 (29 entries)
 ```text
 
 ```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:32:45.566Z`
+- finished_at: `2026-06-08T10:32:45.704Z`
+- duration_ms: `138`
+- exit_code: `0`
+- stdout_sha256: `3d4ad54824104c03b9fe6da9074c08091774a69780a9f3ebde44e66a6ed314cd`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\MTU-ANS-PROOF-IMPL-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:32:45.582Z`
+- finished_at: `2026-06-08T10:32:45.856Z`
+- duration_ms: `274`
+- exit_code: `0`
+- stdout_sha256: `cf3670a53b35de891aaa40ca45de58e67b55f43329cfd84f1aad3c02eebaedf3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-ANS-PROOF-IMPL-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:32:45.584Z`
+- finished_at: `2026-06-08T10:32:47.251Z`
+- duration_ms: `1667`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3e5ab5fa8b39187fa44337fe6ee6df1e5bcac8976036d6b31d91837e2dc5fe41`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       28 passed, 28 total
+Snapshots:   0 total
+Time:        0.366 s, estimated 1 s
+Ran all test suites matching engines/tests/task-shell-ui.test.js.
+
+```
+## npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:32:45.572Z`
+- finished_at: `2026-06-08T10:32:47.366Z`
+- duration_ms: `1794`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `a9215ff6b478c514b2e9f2cdb1aa939bf9fec91ff1ef07194055e30a5f72130c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       45 passed, 45 total
+Snapshots:   0 total
+Time:        0.48 s, estimated 1 s
+Ran all test suites matching engines/tests/task-shell-engine.test.js.
+
+```
+## node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:32:55.051Z`
+- finished_at: `2026-06-08T10:33:20.111Z`
+- duration_ms: `25060`
+- exit_code: `0`
+- stdout_sha256: `3cf3523121910730476a74215fb8cc84050d791b40406d29b81d60c27fb697f5`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+MTU-ANS-PROOF-IMPL-1 screenshots captured: 6
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-answerform-generator-design.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:33:32.029Z`
+- finished_at: `2026-06-08T10:33:32.103Z`
+- duration_ms: `74`
+- exit_code: `0`
+- stdout_sha256: `80cb1b2c2d058a4ebb8d9a837e682aaaa18a7f24b7fbbdd0486f02982d7b785c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU answer-form generator design
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-skilltree-generator-readiness.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:33:32.043Z`
+- finished_at: `2026-06-08T10:33:32.170Z`
+- duration_ms: `127`
+- exit_code: `0`
+- stdout_sha256: `9cfada4c723408c46994aeccb0aadc8ead4264c5a6262f85b558bb621f44a519`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK skilltree generator readiness
+OK negative fixture rejected: blocked unit marked interactive
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-mtu-evidence-layer.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:33:32.054Z`
+- finished_at: `2026-06-08T10:33:32.189Z`
+- duration_ms: `135`
+- exit_code: `0`
+- stdout_sha256: `674ec4df869615b83a4548ddb2a2a3598b6f6731a24dd4799211d5946086d0ce`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU evidence layer: 256 total, 253 live, 3 deprecated
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:33:32.011Z`
+- finished_at: `2026-06-08T10:33:32.281Z`
+- duration_ms: `270`
+- exit_code: `0`
+- stdout_sha256: `5e124d1855e18bd0c6231cffce1672de5409aab61083cc8269efbe218ca8e109`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK MTU-ANS-PROOF-IMPL-1 A96 proof
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:33:38.493Z`
+- finished_at: `2026-06-08T10:33:49.975Z`
+- duration_ms: `11482`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `9f561a3bea442b0554fd61d8db51efb3873a253aaa7161ae251d1e6c5ca98309`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 15 skipped, 39 passed, 39 of 54 total
+Tests:       87 skipped, 682 passed, 769 total
+Snapshots:   0 total
+Time:        10.789 s, estimated 20 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:02.982Z`
+- finished_at: `2026-06-08T10:34:03.069Z`
+- duration_ms: `87`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:03.002Z`
+- finished_at: `2026-06-08T10:34:03.102Z`
+- duration_ms: `100`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:02.975Z`
+- finished_at: `2026-06-08T10:34:03.441Z`
+- duration_ms: `466`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:03.023Z`
+- finished_at: `2026-06-08T10:34:03.506Z`
+- duration_ms: `483`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:02.998Z`
+- finished_at: `2026-06-08T10:34:03.575Z`
+- duration_ms: `577`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:20.741Z`
+- finished_at: `2026-06-08T10:34:20.827Z`
+- duration_ms: `86`
+- exit_code: `0`
+- stdout_sha256: `d557ea3f956234ad65fe4cf5c84754758040ffc6ee50c1d07a2ac5914af6f437`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\MTU-ANS-PROOF-IMPL-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:20.779Z`
+- finished_at: `2026-06-08T10:34:20.874Z`
+- duration_ms: `95`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js MTU-ANS-PROOF-IMPL-1
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:20.786Z`
+- finished_at: `2026-06-08T10:34:20.874Z`
+- duration_ms: `88`
+- exit_code: `0`
+- stdout_sha256: `462fa46119437cb088e9ba30cf880949e3bf2f3c17e55e5320174f2de0e77b12`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: MTU-ANS-PROOF-IMPL-1 (46 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:20.883Z`
+- finished_at: `2026-06-08T10:34:21.039Z`
+- duration_ms: `156`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `feec567171d6aaa3f16be22a1052d475b4b75c0073a7c9b556a521da7945d3a0`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'engines/task-shell-engine.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'engines/task-shell-ui.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'engines/task-shell.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'engines/tests/task-shell-engine.test.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'engines/tests/task-shell-ui.test.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/MTU-ANS-PROOF-IMPL-1.result.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/json/mtu-ans-proof-impl1-a96-proof.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-baseline.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-diff-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-corrections.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round2.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json', LF will be replaced by CRLF the next time Git touches it
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1 --complete
+
+- cwd: `C:\wt\MTU-ANS-PROOF-IMPL-1\4veco-platform`
+- started_at: `2026-06-08T10:34:20.784Z`
+- finished_at: `2026-06-08T10:34:21.343Z`
+- duration_ms: `559`
+- exit_code: `0`
+- stdout_sha256: `feaca29f0e8d9512b722fa345c3c24aed3c7b07210ed16090abe1114c7956538`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: MTU-ANS-PROOF-IMPL-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

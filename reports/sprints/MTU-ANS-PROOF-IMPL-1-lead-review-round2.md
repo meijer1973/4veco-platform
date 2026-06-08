@@ -11,7 +11,11 @@ Evidence inspected:
 - `build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js`
 - `build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js`
 - `build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js`
+- `engines/task-shell-engine.js`
+- `engines/task-shell-ui.js`
+- `engines/task-shell.css`
 - `engines/tests/task-shell-engine.test.js`
+- `engines/tests/task-shell-ui.test.js`
 - `reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html`
 - `reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md`
 - `reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json`
@@ -26,8 +30,8 @@ Evidence inspected:
 | Review/Test | Agent or tool | Required evidence | Status |
 |---|---|---|---|
 | Route-specific source review | Lead reviewer | Prompt matches reviewed `1.1.2` task while source-data remains unchanged | pass |
-| Answer-form action review | Lead reviewer | Full A96 answer action is visible and enforced | pass |
-| Negative checker review | `node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js` | Final-answer-only, source-only, direction-free, example-only, notation omission, and standalone-A81 fail | pass |
+| Answer-form action review | Lead reviewer | Full A96 answer action is visible and enforced through the structured shared shell | pass |
+| Negative checker review | `node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js` | Final-answer-only, source-only, direction-free, example-only, notation omission, wrong denominator, missing substitution, left-to-right token order, visually identical duplicate old-price tokens, and standalone-A81 fail | pass |
 | Rendered proof review | Lead reviewer plus Browser/visual QA | Corrected desktop/mobile/dark screenshots show readable completed proof states | pass |
 | Boundary review | `node build-scripts/references/check-skilltree-generator-readiness.js` | `A96`, `A81`, and `A99` remain generator-blocked and route-not-exported | pass |
 | Command evidence | `reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.jsonl` | Required focused tests, reference checks, and platform checks pass before closure | pass |
@@ -37,9 +41,11 @@ Evidence inspected:
 Verdict: PASS
 
 Round 2 accepts the bounded route-specific A96 proof. The corrected rendered
-lab and screenshots show the full calculation answer action, the custom checker
-proves incomplete answer forms cannot pass, and the guardrails keep `A96`
-blocked from generic route exposure and `GEN_A96`.
+lab uses `calculation_answer_form_capture`, so reviewers can see the formula
+builder, labelled substitutions, final answer, notation, and contextual
+conclusion without reading JSON. The custom checker proves incomplete or
+misleading answer forms cannot pass, and the guardrails keep `A96` blocked
+from generic route exposure and `GEN_A96`.
 
 ## Blocking Findings
 
@@ -49,7 +55,10 @@ resolved and recaptured.
 ## Specialist Findings
 
 The Browser path confirmed the review lab renders through the local shared task
-shell, final-answer-only remains in retry feedback, the complete answer reaches
+shell as `calculation_answer_form_capture`: four answer-form steps, eleven
+formula tokens, one reusable `oude prijs` token with `maxUses: 2`, three
+substitution fields, final-answer field, notation field, and conclusion field.
+Final-answer-only remains in retry feedback, the complete answer reaches
 next-action and completed states, and mobile/dark viewports have no horizontal
 overflow. The screenshot manifest and proof JSON provide durable artifact
 evidence for the same states.
@@ -60,6 +69,7 @@ Closure command-log evidence must include successful entries for:
 
 - `node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md`
 - `npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js`
+- `npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js`
 - `node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js`
 - `node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js`
 - `node build-scripts/references/check-mtu-answerform-generator-design.js`

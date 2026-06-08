@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T08:09:06.877Z
+Generated: 2026-06-08T10:34:03.496Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3852
+Files indexed: 3878
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 440
+Count: 443
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -451,6 +451,7 @@ Count: 440
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
+- build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
 - build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
@@ -491,6 +492,7 @@ Count: 440
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -537,6 +539,7 @@ Count: 440
 - build-scripts/sprints/emit-visual-qa-harden2-proof.js
 - build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
+- build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js
 - build-scripts/sprints/run-sprint-command.js
 - build-scripts/sprints/task-context-runtime1-fixture.js
 - build-scripts/sprints/task-ingest-playable-lab.js
@@ -616,7 +619,7 @@ Count: 42
 
 ## validators
 
-Count: 376
+Count: 377
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
@@ -762,6 +765,7 @@ Count: 376
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -997,7 +1001,7 @@ Count: 376
 
 ## references
 
-Count: 521
+Count: 523
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1176,6 +1180,8 @@ Count: 521
 - references/data/sprints/MATH-UX-2.result.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
+- references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json
+- references/data/sprints/MTU-ANS-PROOF-IMPL-1.result.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.plan.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.result.json
 - references/data/sprints/MTU-GENBLOCK-HARDEN-1.plan.json
@@ -1523,7 +1529,7 @@ Count: 521
 
 ## reports
 
-Count: 2453
+Count: 2474
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1579,6 +1585,7 @@ Count: 2453
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
 - reports/json/misconception-registry.json
+- reports/json/mtu-ans-proof-impl1-a96-proof.json
 - reports/json/needs-coverage.json
 - reports/json/owned-content-coverage.json
 - reports/json/owned-source-registry.json
@@ -3089,6 +3096,26 @@ Count: 2453
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-planning-review.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-verification-review.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-baseline.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.jsonl
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-diff-summary.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-assignment.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-corrections.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round1.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round2.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-planning-review.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-completed.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-initial.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-next-action.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-retry-feedback.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-completed.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-dark-completed.png
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-baseline.md
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.jsonl
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.md

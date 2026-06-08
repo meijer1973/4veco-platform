@@ -51,6 +51,10 @@
       "status": "passed"
     },
     {
+      "command": "npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js",
+      "status": "passed"
+    },
+    {
       "command": "node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js",
       "status": "passed"
     },
@@ -123,6 +127,7 @@
   },
   "answer_form_proof": {
     "unit_id": "A96",
+    "task_family": "calculation_answer_form_capture",
     "route_specific": true,
     "reviewed_route": "1.1.2",
     "source_task_id": "prijsstijging-procent",
@@ -133,7 +138,14 @@
     "requires_unit_notation": true,
     "requires_contextual_conclusion": true,
     "final_answer_only_passes": false,
+    "source_only_passes": false,
+    "direction_free_passes": false,
+    "example_only_passes": false,
     "notation_omission_passes": false,
+    "wrong_denominator_passes": false,
+    "missing_substitution_field_passes": false,
+    "left_to_right_token_order_passes": false,
+    "visually_identical_duplicate_old_price_tokens_pass": false,
     "standalone_a81_passes": false
   },
   "product_boundaries": {

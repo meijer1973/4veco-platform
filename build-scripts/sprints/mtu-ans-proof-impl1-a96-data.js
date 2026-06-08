@@ -40,105 +40,96 @@ const requiredActionParts = [
 
 const strictA96Task = {
   id: 'a96-112-prijsstijging-procent',
-  family: 'calculation_work_capture',
+  family: 'calculation_answer_form_capture',
   skillLabel: 'Bereken-vraag beantwoorden',
-  purpose: 'Laat de volledige berekening zien bij de 1.1.2 fietsprijs-vraag.',
+  purpose: 'Bouw de bereken-antwoordvorm bij de reviewed fietsprijs-vraag.',
   prompt: sourceTask.prompt,
-  contextRefs: ['ctx-112-fietsprijs'],
+  contextRefs: ['ctx-112-fietsprijs', 'ctx-112-fietsprijs-table'],
   interaction: {
-    workLabel: 'Uitwerking met korte conclusie',
-    finalAnswerLabel: 'Eindantwoord',
-    finalAnswerPlaceholder: 'Vul het getal in',
-    placeholder: 'Schrijf formule, labels, tussenstappen en conclusie.',
-    unitNotationLabel: 'Eenheid of notatie',
-    unitNotationPlaceholder: 'Vul de notatie in',
+    formula: {
+      title: 'Kies de formule of rekenregel',
+      purpose: 'Gebruik de blokken om de procentuele verandering te bouwen.',
+      tokenBankLabel: 'Formuleblokken',
+      sequenceLabel: 'Jouw formule',
+      placeholder: 'Zet de blokken in de juiste volgorde.',
+      separator: ' ',
+      allowReuse: true,
+      tokens: [
+        { id: 'times100', label: 'x 100%', kind: 'answer', category: 'multiplier', maxUses: 1 },
+        { id: 'newPrice', label: 'nieuwe prijs', kind: 'answer', category: 'variable', maxUses: 1 },
+        { id: 'plus', label: '+', kind: 'distractor', category: 'operator', maxUses: 1, distractorFor: 'minus' },
+        { id: 'open', label: '(', kind: 'answer', category: 'grouping', maxUses: 1 },
+        { id: 'divide', label: '/', kind: 'answer', category: 'operator', maxUses: 1 },
+        { id: 'oldMinusNew', label: 'oude prijs - nieuwe prijs', kind: 'distractor', category: 'variable', maxUses: 1, distractorFor: 'newPrice' },
+        { id: 'oldPrice', label: 'oude prijs', kind: 'answer', category: 'variable', maxUses: 2, usageHint: 'Gebruik deze blok twee keer.' },
+        { id: 'close', label: ')', kind: 'answer', category: 'grouping', maxUses: 1 },
+        { id: 'minus', label: '-', kind: 'answer', category: 'operator', maxUses: 1 },
+        { id: 'times10', label: 'x 10', kind: 'distractor', category: 'multiplier', maxUses: 1, distractorFor: 'times100' },
+        { id: 'newDenominator', label: 'nieuwe prijs als noemer', kind: 'distractor', category: 'denominator', maxUses: 1, distractorFor: 'oldPrice' }
+      ]
+    },
+    substitution: {
+      title: 'Vul de bronwaarden in',
+      purpose: 'Laat zien welke waarde bij elk label hoort.',
+      template: '(nieuwe prijs - oude prijs) / oude prijs x 100%',
+      fields: [
+        { id: 'newPrice', label: 'nieuwe prijs', placeholder: '920', inputMode: 'decimal' },
+        { id: 'oldPriceNumerator', label: 'oude prijs in teller', placeholder: '800', inputMode: 'decimal' },
+        { id: 'oldPriceDenominator', label: 'oude prijs in noemer', placeholder: '800', inputMode: 'decimal' }
+      ]
+    },
+    answer: {
+      title: 'Geef het eindantwoord',
+      purpose: 'Noteer de uitkomst en de vereiste procentnotatie.',
+      finalAnswerLabel: 'Eindantwoord',
+      finalAnswerPlaceholder: '15',
+      unitNotationLabel: 'Eenheid of notatie',
+      unitNotationPlaceholder: '%'
+    },
+    context: {
+      title: 'Schrijf de conclusie',
+      purpose: 'Noem kort wat de berekening betekent voor de fietsprijs.',
+      label: 'Contextuele conclusie',
+      placeholder: 'De prijs van de fiets stijgt met ...'
+    },
     showCriteriaBeforeCheck: false
   },
   expected: {
-    kind: 'calculation',
-    finalAnswer: {
-      kind: 'text',
-      accepted: ['15', '15%', '15 procent', '15,0', '15,0%', '15.0', '15.0%']
+    kind: 'calculation_answer_form',
+    methodTokens: ['open', 'newPrice', 'minus', 'oldPrice', 'close', 'divide', 'oldPrice', 'times100'],
+    tokenDisplayOrderMustNotEqualMethodTokens: true,
+    substitution: {
+      newPrice: { kind: 'number', value: 920 },
+      oldPriceNumerator: { kind: 'number', value: 800 },
+      oldPriceDenominator: { kind: 'number', value: 800 }
     },
-    unitNotation: {
+    finalAnswer: {
+      kind: 'number_or_percent_text',
+      value: 15,
+      acceptedNotations: ['15', '15%', '15 procent', '15,0', '15,0%', '15.0', '15.0%']
+    },
+    notation: {
       kind: 'text',
       accepted: ['%', 'procent', 'procentteken'],
       required: true
     },
-    workRequired: true,
+    conclusion: {
+      requiredTextGroups: [
+        ['prijs', 'fiets'],
+        ['stijgt', 'stijging', 'duurder', 'gestegen'],
+        ['15', 'vijftien']
+      ]
+    },
+    visualTokenIdentityPolicy: {
+      forbid_identical_labels_with_different_answer_ids: true,
+      reusable_answer_token_ids: ['oldPrice'],
+      rationale: 'De oude prijs komt in teller en noemer terug als dezelfde zichtbare bouwsteen.'
+    },
     criteria: [
       'Gebruik een formule of rekenregel voor procentuele verandering.',
       'Vul nieuwe en oude prijs met labels in.',
-      'Laat verschil, deling en procentstap zien.',
+      'Laat teller, noemer en procentstap controleerbaar zien.',
       'Geef eindantwoord, notatie en conclusie in context.'
-    ],
-    requiredWorkText: [
-      {
-        label: 'formula or method',
-        any: [
-          'procentuele verandering',
-          'nieuw - oud',
-          'nieuw min oud',
-          'nieuwe prijs - oude prijs',
-          '(nieuw - oud) / oud'
-        ]
-      },
-      {
-        label: 'labelled new price',
-        any: [
-          'nieuwe prijs = 920',
-          'nieuw = 920',
-          'nieuwe prijs 920',
-          'nieuw 920'
-        ]
-      },
-      {
-        label: 'labelled old price',
-        any: [
-          'oude prijs = 800',
-          'oud = 800',
-          'oude prijs 800',
-          'oud 800'
-        ]
-      },
-      {
-        label: 'difference intermediate',
-        any: [
-          '920 - 800 = 120',
-          '920-800=120',
-          'verschil = 120',
-          'verschil 120'
-        ]
-      },
-      {
-        label: 'division intermediate',
-        any: [
-          '120 / 800',
-          '120/800',
-          '120 : 800',
-          '120:800',
-          'gedeeld door 800'
-        ]
-      },
-      {
-        label: 'percent intermediate',
-        any: [
-          '0,15 x 100',
-          '0.15 x 100',
-          '0,15 * 100',
-          '0.15 * 100',
-          '15%'
-        ]
-      },
-      {
-        label: 'contextual conclusion with direction',
-        any: [
-          'prijs stijgt',
-          'stijgt met 15',
-          'fiets wordt 15',
-          'de stijging is 15'
-        ]
-      }
     ],
     answerFormProof: {
       unit_id: 'A96',
@@ -152,7 +143,7 @@ const strictA96Task = {
     matchTitle: 'Berekening compleet',
     matchText: 'Je laat methode, invulling, tussenstappen, notatie en conclusie zien.',
     retryTitle: 'Maak je berekening controleerbaar',
-    retryText: 'Laat niet alleen de uitkomst zien: noteer formule, labels, tussenstap, notatie en korte conclusie.'
+    retryText: 'Vul de formule, bronwaarden, uitkomst, notatie en contextzin apart in.'
   },
   practiceRoute: {
     label: 'Volgende actie: oefen percentages in de 1.1.2 rekenroute',
@@ -175,59 +166,140 @@ const taskSet = {
       bodyMarkdown: 'Een fiets kost eerst 800 euro en daarna 920 euro.',
       sourceRefs: [reviewedRoute.source_file + '#' + reviewedRoute.source_task_id],
       accessibilitySummary: 'Tekstbron met de oude fietsprijs 800 euro en de nieuwe fietsprijs 920 euro.'
+    },
+    {
+      id: 'ctx-112-fietsprijs-table',
+      type: 'table',
+      sourceLabel: 'Reviewed 1.1.2 calculation surface',
+      caption: 'Tabel 1 Fietsprijs',
+      columns: ['Moment', 'Prijs'],
+      rows: [
+        ['Eerst', '800 euro'],
+        ['Daarna', '920 euro']
+      ],
+      altText: 'Tabel met oude fietsprijs 800 euro en nieuwe fietsprijs 920 euro.',
+      sourceMaterialId: reviewedRoute.source_file + '#' + reviewedRoute.source_task_id
     }
   ],
   tasks: [strictA96Task]
 };
 
 const passingResponse = {
-  work: [
-    'Formule: procentuele verandering = (nieuw - oud) / oud x 100.',
-    'Nieuwe prijs = 920, oude prijs = 800.',
-    'Verschil = 920 - 800 = 120.',
-    '120 / 800 = 0,15 en 0,15 x 100 = 15%.',
-    'De prijs stijgt met 15 procent.'
-  ].join('\n'),
+  methodTokens: ['open', 'newPrice', 'minus', 'oldPrice', 'close', 'divide', 'oldPrice', 'times100'],
+  substitution: {
+    newPrice: '920',
+    oldPriceNumerator: '800',
+    oldPriceDenominator: '800'
+  },
   finalAnswer: '15',
-  unitNotation: '%'
+  notation: '%',
+  conclusion: 'De prijs van de fiets stijgt met 15 procent.'
 };
 
 const negativeResponses = {
   finalAnswerOnly: {
-    work: '',
+    methodTokens: [],
+    substitution: {},
     finalAnswer: '15',
-    unitNotation: '%'
+    notation: '%',
+    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   },
   sourceOnly: {
-    work: 'Bron: de fiets kost eerst 800 euro en daarna 920 euro. Nieuwe prijs 920, oude prijs 800.',
-    finalAnswer: '15',
-    unitNotation: '%'
+    methodTokens: [],
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: '800'
+    },
+    finalAnswer: '',
+    notation: '',
+    conclusion: 'De bron zegt dat de fiets eerst 800 euro kost en daarna 920 euro.'
   },
   directionFree: {
-    work: [
-      'Formule: procentuele verandering = (nieuw - oud) / oud x 100.',
-      'Nieuwe prijs = 920, oude prijs = 800.',
-      'Verschil = 920 - 800 = 120.',
-      '120 / 800 = 0,15 en 0,15 x 100 = 15%.'
-    ].join('\n'),
+    methodTokens: passingResponse.methodTokens.slice(),
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: '800'
+    },
     finalAnswer: '15',
-    unitNotation: '%'
+    notation: '%',
+    conclusion: 'De fiets heeft 15 procent.'
   },
   exampleOnly: {
-    work: 'Bijvoorbeeld: bij 800 en 920 kom je op 15%.',
-    finalAnswer: '15',
-    unitNotation: '%'
+    methodTokens: passingResponse.methodTokens.slice(),
+    substitution: {},
+    finalAnswer: '15%',
+    notation: '%',
+    conclusion: 'Bijvoorbeeld 15 procent.'
   },
   notationOmitted: {
-    work: passingResponse.work,
+    methodTokens: passingResponse.methodTokens.slice(),
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: '800'
+    },
     finalAnswer: '15',
-    unitNotation: ''
+    notation: '',
+    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   },
   standaloneA81: {
-    work: 'Ik gebruik de bron: eerst 800 euro en daarna 920 euro.',
+    methodTokens: [],
+    substitution: {},
     finalAnswer: '',
-    unitNotation: ''
+    notation: '',
+    conclusion: 'Ik gebruik de bron: eerst 800 euro en daarna 920 euro.'
+  },
+  wrongDenominator: {
+    methodTokens: passingResponse.methodTokens.slice(),
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: '920'
+    },
+    finalAnswer: '15',
+    notation: '%',
+    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
+  },
+  missingSubstitutionField: {
+    methodTokens: passingResponse.methodTokens.slice(),
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: ''
+    },
+    finalAnswer: '15',
+    notation: '%',
+    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
+  },
+  leftToRightTokenClickOrder: {
+    methodTokens: strictA96Task.interaction.formula.tokens.map((token) => token.id),
+    substitution: {
+      newPrice: '920',
+      oldPriceNumerator: '800',
+      oldPriceDenominator: '800'
+    },
+    finalAnswer: '15',
+    notation: '%',
+    conclusion: 'De prijs van de fiets stijgt met 15 procent.'
   }
+};
+
+const invalidTaskFixtures = {
+  visuallyIdenticalOldPriceTokensWithDistinctIds: (() => {
+    const fixture = JSON.parse(JSON.stringify(strictA96Task));
+    fixture.id = 'a96-invalid-identical-old-price-tokens';
+    fixture.interaction.formula.tokens.push({
+      id: 'oldPriceDenominatorOnly',
+      label: 'oude prijs',
+      kind: 'answer',
+      category: 'variable',
+      maxUses: 1
+    });
+    fixture.expected.methodTokens = ['open', 'newPrice', 'minus', 'oldPrice', 'close', 'divide', 'oldPriceDenominatorOnly', 'times100'];
+    return fixture;
+  })()
 };
 
 module.exports = {
@@ -239,5 +311,6 @@ module.exports = {
   strictA96Task,
   taskSet,
   passingResponse,
-  negativeResponses
+  negativeResponses,
+  invalidTaskFixtures
 };

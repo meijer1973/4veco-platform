@@ -8,12 +8,17 @@ Generated: 2026-06-08
   fietsprijs calculation prompt and tightens the review-only task action to
   require method, labelled substitution, intermediate work, final answer,
   required percent notation, and contextual conclusion.
+- Added bounded shared task-shell support for
+  `calculation_answer_form_capture`, including a visible formula token builder,
+  labelled substitution fields, final answer, notation, contextual conclusion,
+  structured feedback, and reusable-token usage limits.
 - Added a rendered lab/screenshot harness for the route-specific shared
   task-shell proof.
 - Added a deterministic sprint checker for proof contract, negative responses,
   generator-blocked boundaries, screenshot manifest states, and protected
   surface boundaries.
-- Added focused Jest coverage to `engines/tests/task-shell-engine.test.js`.
+- Added focused Jest coverage to `engines/tests/task-shell-engine.test.js` and
+  `engines/tests/task-shell-ui.test.js`.
 
 ## Tests and proof
 

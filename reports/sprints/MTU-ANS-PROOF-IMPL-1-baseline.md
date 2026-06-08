@@ -44,7 +44,8 @@ with student-facing route use and product authority set to false.
 ## Initial risks
 
 - A final-answer-only checker could appear to pass if the proof only checks
-  final answer and notation. This sprint must prove work groups are required.
+  final answer and notation. This sprint must prove the structured
+  answer-form parts are required.
 - Unit/notation could be accidentally optional if the proof reuses the
   reviewed exit-ticket task unchanged. This sprint must use a stricter proof
   task without mutating reviewed source.

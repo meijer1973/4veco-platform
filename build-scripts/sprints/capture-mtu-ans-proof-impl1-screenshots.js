@@ -255,6 +255,10 @@ function labHtml() {
       function input(role) {
         return document.querySelector('[data-task-id="' + task.id + '"][data-input-role="' + role + '"]');
       }
+      function escaped(value) {
+        if (window.CSS && window.CSS.escape) return window.CSS.escape(value);
+        return String(value).replace(/"/g, '\\"');
+      }
       function feedback() {
         return document.querySelector('[data-feedback-for="' + task.id + '"]');
       }
@@ -264,10 +268,31 @@ function labHtml() {
         work.style.height = 'auto';
         if (work.value) work.style.height = Math.max(work.scrollHeight, 180) + 'px';
       }
+      function clearFormula() {
+        var clear = document.querySelector('[data-task-id="' + task.id + '"][data-formula-clear]');
+        if (clear) clear.click();
+      }
+      function setFormulaTokens(tokens) {
+        clearFormula();
+        (tokens || []).forEach(function (tokenId) {
+          var token = document.querySelector('[data-task-id="' + task.id + '"][data-formula-token-id="' + escaped(tokenId) + '"]');
+          if (token) token.click();
+        });
+      }
+      function setSubstitutionValues(values) {
+        var fields = document.querySelectorAll('[data-task-id="' + task.id + '"][data-input-role="substitution"][data-field-id]');
+        fields.forEach(function (field) {
+          var fieldId = field.getAttribute('data-field-id') || '';
+          field.value = values && Object.prototype.hasOwnProperty.call(values, fieldId) ? values[fieldId] : '';
+        });
+      }
       function setValues(response) {
-        input('work').value = response.work || '';
+        response = response || {};
+        setFormulaTokens(response.methodTokens || []);
+        setSubstitutionValues(response.substitution || {});
         input('final-answer').value = response.finalAnswer || '';
-        input('unit-notation').value = response.unitNotation || '';
+        input('unit-notation').value = response.notation || response.unitNotation || '';
+        input('conclusion').value = response.conclusion || '';
         resizeWorkField();
       }
       function setPanels(result) {
@@ -278,7 +303,7 @@ function labHtml() {
         document.body.setAttribute('data-proof-state', result && result.matched === true ? 'next-action' : 'retry-feedback');
       }
       function checkCurrent() {
-        var response = window.TaskShellUI.collectCalculationResponse(document, task);
+        var response = window.TaskShellUI.collectCalculationAnswerFormResponse(document, task);
         var result = window.TaskShellEngine.evaluateTask(task, response);
         feedback().innerHTML = window.TaskShellUI.renderFeedback(result);
         window.__A96_LAST_RESULT__ = result;
@@ -286,7 +311,7 @@ function labHtml() {
         return result;
       }
       function reset() {
-        setValues({ work: '', finalAnswer: '', unitNotation: '' });
+        setValues({ methodTokens: [], substitution: {}, finalAnswer: '', notation: '', conclusion: '' });
         feedback().innerHTML = '';
         document.querySelector('[data-proof-next-action]').hidden = true;
         document.querySelector('[data-proof-completed]').hidden = true;
@@ -311,6 +336,7 @@ function labHtml() {
         checkCurrent: checkCurrent
       };
       document.addEventListener('click', function (event) {
+        if (window.TaskShellUI.handleFormulaBuilderClick(document, event)) return;
         var action = event.target && event.target.getAttribute('data-action');
         if (!action) return;
         if (action === 'check-task') checkCurrent();
@@ -380,11 +406,18 @@ async function inspect(cdp, sessionId) {
         viewport: { width: window.innerWidth, height: window.innerHeight },
         taskFamily: document.querySelector('.ts-task[data-task-family]')?.getAttribute('data-task-family') || '',
         workFieldCount: document.querySelectorAll('[data-input-role="work"]').length,
+        answerFormStepCount: document.querySelectorAll('[data-answer-form-step]').length,
+        formulaTokenButtonCount: document.querySelectorAll('[data-formula-token-id]').length,
+        formulaOldPriceMaxUses: document.querySelector('[data-formula-token-id="oldPrice"]')?.getAttribute('data-formula-max-uses') || '',
+        methodSequenceItemCount: document.querySelectorAll('[data-formula-selected-token-id]').length,
+        substitutionFieldCount: document.querySelectorAll('[data-input-role="substitution"][data-field-id]').length,
         finalAnswerFieldCount: document.querySelectorAll('[data-input-role="final-answer"]').length,
         unitNotationFieldCount: document.querySelectorAll('[data-input-role="unit-notation"]').length,
+        conclusionFieldCount: document.querySelectorAll('[data-input-role="conclusion"]').length,
         criteriaVisibleBeforeCheck: document.querySelectorAll('.ts-criteria').length > 0,
         feedbackState: document.querySelector('[data-feedback-state]')?.getAttribute('data-feedback-state') || '',
         feedbackText: document.querySelector('[data-feedback-for]')?.innerText || '',
+        answerFormFeedbackVisible: document.querySelectorAll('.ts-answer-form-feedback').length > 0,
         nextActionVisible: !document.querySelector('[data-proof-next-action]')?.hidden,
         completedVisible: !document.querySelector('[data-proof-completed]')?.hidden,
         requiredParts: window.__A96_REQUIRED_PARTS || [],
@@ -394,8 +427,23 @@ async function inspect(cdp, sessionId) {
         overflowingCount: Array.from(document.querySelectorAll('body *')).filter(function (el) {
           var style = getComputedStyle(el);
           if (style.display === 'none' || style.visibility === 'hidden') return false;
+          if (el.classList && el.classList.contains('ts-visually-hidden')) return false;
           return el.scrollWidth > el.clientWidth + 1 && el.clientWidth > 0;
-        }).length
+        }).length,
+        overflowingElements: Array.from(document.querySelectorAll('body *')).filter(function (el) {
+          var style = getComputedStyle(el);
+          if (style.display === 'none' || style.visibility === 'hidden') return false;
+          if (el.classList && el.classList.contains('ts-visually-hidden')) return false;
+          return el.scrollWidth > el.clientWidth + 1 && el.clientWidth > 0;
+        }).slice(0, 5).map(function (el) {
+          return {
+            tag: el.tagName,
+            className: el.className || '',
+            text: (el.innerText || el.textContent || '').trim().slice(0, 120),
+            scrollWidth: el.scrollWidth,
+            clientWidth: el.clientWidth
+          };
+        })
       }))()`,
       returnByValue: true
     },
@@ -412,6 +460,19 @@ function evaluationProof() {
     cases[name] = TaskShellEngine.evaluateTask(data.strictA96Task, response).matched === true;
   });
   return cases;
+}
+
+function invalidTaskFixtureProof() {
+  const results = {};
+  Object.entries(data.invalidTaskFixtures || {}).forEach(([name, task]) => {
+    try {
+      TaskShellEngine.validateTask(task);
+      results[name] = { rejected: false, message: '' };
+    } catch (error) {
+      results[name] = { rejected: true, message: error.message };
+    }
+  });
+  return results;
 }
 
 async function main() {
@@ -503,13 +564,22 @@ async function main() {
       screenshot_manifest_json: path.relative(platformRoot, jsonManifestPath).replace(/\\/g, '/'),
       reviewed_route: data.reviewedRoute,
       answer_form_unit: 'A96',
+      answer_form_task_family: data.strictA96Task.family,
       required_action_parts: data.requiredActionParts,
+      structured_answer_form_surface: {
+        formula_token_count: data.strictA96Task.interaction.formula.tokens.length,
+        old_price_token_max_uses: data.strictA96Task.interaction.formula.tokens.find((token) => token.id === 'oldPrice')?.maxUses,
+        substitution_field_ids: data.strictA96Task.interaction.substitution.fields.map((field) => field.id),
+        method_tokens: data.strictA96Task.expected.methodTokens,
+        token_bank_display_order: data.strictA96Task.interaction.formula.tokens.map((token) => token.id)
+      },
       source_task: {
         source_file: data.reviewedRoute.source_file,
         source_task_id: data.sourceTaskId,
         prompt_matches_reviewed_source: data.strictA96Task.prompt === data.sourceTask.prompt
       },
       checker_cases: evaluationProof(),
+      invalid_task_fixtures: invalidTaskFixtureProof(),
       screenshots: manifestCases,
       non_regression: {
         a96_generic_route_exposure: false,

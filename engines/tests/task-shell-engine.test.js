@@ -792,7 +792,11 @@ function fixtures() {
                 value: 'both-correct-explains',
                 partialFeedback: 'practice_only'
             }
-        })
+        }),
+        {
+            ...A96ProofData.strictA96Task,
+            contextRefs: undefined
+        }
     ];
 }
 
@@ -801,6 +805,7 @@ describe('TaskShellEngine', () => {
         expect(Object.keys(TaskShellEngine.FAMILIES)).toEqual(expect.arrayContaining([
             'numeric_input',
             'calculation_work_capture',
+            'calculation_answer_form_capture',
             'final_answer_entry',
             'unit_notation_field',
             'short_constructed_response',
@@ -956,6 +961,16 @@ describe('TaskShellEngine', () => {
         const task = A96ProofData.strictA96Task;
 
         expect(TaskShellEngine.validateTaskSet(A96ProofData.taskSet)).toBe(true);
+        expect(task.family).toBe('calculation_answer_form_capture');
+        expect(task.interaction.formula.tokens).toEqual(expect.arrayContaining([
+            expect.objectContaining({ id: 'oldPrice', label: 'oude prijs', maxUses: 2 }),
+            expect.objectContaining({ id: 'newDenominator', kind: 'distractor' })
+        ]));
+        expect(task.interaction.substitution.fields.map((field) => field.id)).toEqual([
+            'newPrice',
+            'oldPriceNumerator',
+            'oldPriceDenominator'
+        ]);
         expect(task.expected.answerFormProof).toEqual(expect.objectContaining({
             unit_id: 'A96',
             route_specific: true,
@@ -969,18 +984,62 @@ describe('TaskShellEngine', () => {
             'unit_or_notation',
             'short_contextual_conclusion'
         ]);
+        expect(task.expected.methodTokens).toEqual([
+            'open',
+            'newPrice',
+            'minus',
+            'oldPrice',
+            'close',
+            'divide',
+            'oldPrice',
+            'times100'
+        ]);
+        expect(task.expected.visualTokenIdentityPolicy).toEqual(expect.objectContaining({
+            forbid_identical_labels_with_different_answer_ids: true
+        }));
 
         expect(TaskShellEngine.evaluateTask(task, A96ProofData.passingResponse)).toEqual(expect.objectContaining({
             state: 'matched',
             matched: true
         }));
 
+        expect(Object.keys(A96ProofData.negativeResponses)).toEqual(expect.arrayContaining([
+            'finalAnswerOnly',
+            'sourceOnly',
+            'directionFree',
+            'exampleOnly',
+            'notationOmitted',
+            'standaloneA81',
+            'wrongDenominator',
+            'missingSubstitutionField',
+            'leftToRightTokenClickOrder'
+        ]));
         for (const [caseName, response] of Object.entries(A96ProofData.negativeResponses)) {
             expect(TaskShellEngine.evaluateTask(task, response)).toEqual(expect.objectContaining({
                 state: 'retry',
                 matched: false
             }));
             expect(caseName).toBeTruthy();
+        }
+        expect(TaskShellEngine.evaluateTask(task, A96ProofData.negativeResponses.finalAnswerOnly).answerFormFeedback.missingParts)
+            .toEqual(expect.arrayContaining([
+                expect.objectContaining({ id: 'formula' }),
+                expect.objectContaining({ id: 'substitution' })
+            ]));
+        expect(TaskShellEngine.evaluateTask(task, A96ProofData.negativeResponses.wrongDenominator).answerFormFeedback.missingParts)
+            .toEqual(expect.arrayContaining([expect.objectContaining({ id: 'substitution' })]));
+        expect(TaskShellEngine.evaluateTask(task, A96ProofData.negativeResponses.leftToRightTokenClickOrder).answerFormFeedback.missingParts)
+            .toEqual(expect.arrayContaining([expect.objectContaining({ id: 'formula' })]));
+        expect(TaskShellEngine.focusPlan(task)).toEqual([
+            '[data-task-id="a96-112-prijsstijging-procent"][data-formula-token-id]',
+            '[data-task-id="a96-112-prijsstijging-procent"][data-formula-sequence]',
+            '[data-task-id="a96-112-prijsstijging-procent"][data-input-role="substitution"]',
+            '[data-task-id="a96-112-prijsstijging-procent"][data-input-role="final-answer"]',
+            '[data-task-id="a96-112-prijsstijging-procent"][data-input-role="unit-notation"]',
+            '[data-task-id="a96-112-prijsstijging-procent"][data-input-role="conclusion"]'
+        ]);
+        for (const fixture of Object.values(A96ProofData.invalidTaskFixtures)) {
+            expect(() => TaskShellEngine.validateTask(fixture)).toThrow(/visually identical answer tokens/);
         }
     });
 

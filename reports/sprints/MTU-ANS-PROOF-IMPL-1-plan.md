@@ -23,11 +23,12 @@ encodes the calculation answer form: formula or method, labelled
 substitution, intermediate work, final answer, unit/notation, and contextual
 conclusion.
 
-The reviewed `1.1.2` exit-ticket calculation surface already uses the shared
-`calculation_work_capture` task family. This sprint reuses that reviewed
-calculation prompt as a route-specific proof fixture, then tightens the A96
-answer action in the proof task only. The reviewed exit-ticket source remains
-unchanged.
+The reviewed `1.1.2` exit-ticket calculation surface provides the calculation
+prompt and route context. This sprint reuses that reviewed calculation prompt
+as a route-specific proof fixture, then implements a bounded shared-shell
+`calculation_answer_form_capture` proof family so the answer form is visible in
+the rendered task instead of hidden inside one generic work textarea. The
+reviewed exit-ticket source remains unchanged.
 
 ## Quality Standard
 
@@ -49,9 +50,9 @@ general `A96` generator, broader answer-form route exposure, or Scale Gate 1.
 | Specification requirement | Implementation evidence required | Review/proof required | Status |
 |---|---|---|---|
 | `A96` proof is route-specific and connected to reviewed `1.1.2` calculation work. | Proof data derives from `source-data/book-1/exit-ticket/1.1.2-exit-ticket.json` task `prijsstijging-procent` and records the route link. | Custom checker validates the source prompt, route metadata, and rendered lab. | planned |
-| Student action requires formula/rule or calculation method. | `requiredWorkText` includes method groups for percentage change. | Focused Jest and checker reject final-answer-only and example-only responses. | planned |
-| Student action requires labelled substitution. | Work groups require labelled new and old price substitutions. | Focused Jest and checker reject source-only responses. | planned |
-| Student action requires intermediate work. | Work groups require visible difference/fraction/percent intermediate signals. | Focused Jest and checker reject work that skips intermediate calculation. | planned |
+| Student action requires formula/rule or calculation method. | The `calculation_answer_form_capture` task renders a formula token builder with distractors and a required accepted token sequence. | Focused Jest and checker reject final-answer-only, example-only, and left-to-right token-order responses. | planned |
+| Student action requires labelled substitution. | The rendered form includes labelled new-price, old-price-in-teller, and old-price-in-noemer substitution fields. | Focused Jest and checker reject source-only and missing-substitution-field responses. | planned |
+| Student action requires intermediate work. | The substitution template makes `(new price - old price) / old price x 100%` explicit and checks old-price denominator use. | Focused Jest and checker reject wrong-denominator and incomplete calculation-form responses. | planned |
 | Student action requires final answer plus unit/notation. | Expected final answer and required percent notation are deterministic. | Checker rejects omitted notation where required. | planned |
 | Student action requires short contextual conclusion. | Work groups require a contextual direction phrase such as price increase. | Checker rejects direction-free responses. | planned |
 | `A96` is not exposed as a generic route row and `GEN_A96` is not implemented. | No `engines/skilltree/base-elements.js` or `engines/skilltree/generators.js` adoption. | Checker and required generator-readiness checks prove `A96` remains blocked. | planned |
@@ -62,7 +63,8 @@ general `A96` generator, broader answer-form route exposure, or Scale Gate 1.
 
 | Candidate | Decision | Rationale |
 |---|---|---|
-| Use the existing `calculation_work_capture` family instead of a new answer widget. | include_now | The shared shell already owns work/final/notation collection and deterministic matching. |
+| Add a bounded `calculation_answer_form_capture` shared-shell family for this proof. | include_now | Owner feedback and the v3 exemplar require the answer-form structure to be visible, not hidden inside one generic work textarea. |
+| Reuse one visible `oude prijs` token twice instead of duplicate hidden answer tokens. | include_now | The v3 exemplar forbids visually identical correct controls with different hidden IDs; one reusable token with `maxUses: 2` preserves the student-visible action. |
 | Add explicit proof metadata naming the six required answer-action parts. | include_now | This makes the bounded route-specific proof auditable without exposing `A96` generically. |
 | Generate Book 1 output or edit the reviewed `1.1.2` exit ticket source. | defer_named_follow_up | Adoption belongs to a later route-adoption sprint with human review. |
 | Add `GEN_A96` as a randomized skilltree generator. | reject_scope_creep | The user explicitly forbids old-style randomizer work unless a plan proves it preserves the required answer action. |
@@ -72,7 +74,11 @@ general `A96` generator, broader answer-form route exposure, or Scale Gate 1.
 - `build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js`
 - `build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js`
 - `build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js`
+- `engines/task-shell-engine.js`
+- `engines/task-shell-ui.js`
+- `engines/task-shell.css`
 - `engines/tests/task-shell-engine.test.js`
+- `engines/tests/task-shell-ui.test.js`
 - `reports/json/mtu-ans-proof-impl1-a96-proof.json`
 - `reports/sprints/MTU-ANS-PROOF-IMPL-1-*`
 - `references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json`
@@ -137,9 +143,11 @@ general `A96` generator, broader answer-form route exposure, or Scale Gate 1.
 3. Build the bounded A96 proof data from the reviewed `1.1.2` calculation
    task. Keep `A96` out of `ROUTE_SKILLS`, do not add `GEN_A96`, and do not
    edit source-data or generated lesson output.
-4. Add focused calculation-work tests and the deterministic sprint checker.
+4. Add focused calculation-answer-form tests and the deterministic sprint checker.
    Stop if final-answer-only, source-only, direction-free, example-only,
-   notation-omission, or standalone-A81 responses can pass.
+   notation-omission, wrong-denominator, missing-substitution, left-to-right
+   token order, visually indistinguishable duplicate-token fixtures, or
+   standalone-A81 responses can pass.
 5. Generate the rendered review lab and capture desktop, mobile, and dark-mode
    screenshots covering initial, retry/feedback, next-action, and completed
    states.
@@ -157,6 +165,7 @@ general `A96` generator, broader answer-form route exposure, or Scale Gate 1.
 node build-scripts/sprints/check-sprint-plan.js reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md
 node build-scripts/sprints/check-sprint-bundle.js MTU-ANS-PROOF-IMPL-1
 npx.cmd jest --runInBand engines/tests/task-shell-engine.test.js
+npx.cmd jest --runInBand engines/tests/task-shell-ui.test.js
 node build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js
 node build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 node build-scripts/references/check-mtu-answerform-generator-design.js
@@ -182,7 +191,9 @@ focused Jest test evidence, custom checker evidence, required reference
 validator evidence, `npm.cmd run check:platform`, command-log evidence, and
 lead review evidence for round 1/corrections/round 2. The checker must prove
 that final-answer-only, source-only, direction-free, example-only,
-notation-omission, and standalone-A81 responses fail.
+notation-omission, wrong-denominator, missing-substitution, left-to-right
+token-order, visually indistinguishable duplicate-token fixtures, and
+standalone-A81 responses fail.
 
 ## Rollback plan
 
