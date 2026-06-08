@@ -119,7 +119,10 @@ Default agent worktree root:
 
 Before editing files, run the worktree preflight:
 
-- `npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/`
+- `npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean`
+
+Claim mode requires a clean working tree by default. During ongoing work, use
+`--check` without `--require-clean` when dirty files are expected.
 
 Rules:
 

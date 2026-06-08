@@ -52,7 +52,7 @@ function lockPathForGitDir(gitDir) {
   return path.join(path.resolve(gitDir), LOCK_FILENAME);
 }
 
-function parseArgs(argv) {
+function parseArgs(argv, env = process.env) {
   const options = {
     mode: null,
     taskId: null,
@@ -62,6 +62,8 @@ function parseArgs(argv) {
     requireClean: false,
     allowAnchorReadOnly: false,
     forceOwnerOverride: false,
+    repoOwnerApproved: false,
+    ownerOverrideAuthorized: false,
     reason: null,
     worktreePath: null,
     staleWarningMs: DEFAULT_STALE_WARNING_MS,
@@ -94,6 +96,8 @@ function parseArgs(argv) {
       options.allowAnchorReadOnly = true;
     } else if (arg === '--force-owner-override') {
       options.forceOwnerOverride = true;
+    } else if (arg === '--repo-owner-approved') {
+      options.repoOwnerApproved = true;
     } else if (arg === '--reason') {
       const value = argv[index + 1];
       if (!value) throw new Error('missing value for --reason');
@@ -118,6 +122,13 @@ function parseArgs(argv) {
     if (options.forceOwnerOverride && !options.reason) {
       throw new Error('--force-owner-override requires --reason');
     }
+    if (options.forceOwnerOverride && !options.repoOwnerApproved) {
+      throw new Error('--force-owner-override requires --repo-owner-approved');
+    }
+    if (options.forceOwnerOverride && env['4VECO_OWNER_OVERRIDE'] !== '1') {
+      throw new Error('--force-owner-override requires 4VECO_OWNER_OVERRIDE=1');
+    }
+    options.ownerOverrideAuthorized = env['4VECO_OWNER_OVERRIDE'] === '1';
   }
 
   return options;
@@ -244,6 +255,44 @@ function writeLock(lockPath, payload) {
   fs.writeFileSync(lockPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
 }
 
+function ownerOverrideAllowed(options) {
+  return Boolean(
+    options.mode === 'claim' &&
+    options.forceOwnerOverride &&
+    options.repoOwnerApproved &&
+    options.ownerOverrideAuthorized
+  );
+}
+
+function ownerOverrideFailureMessage(options) {
+  const missing = [];
+  if (!options.repoOwnerApproved) missing.push('--repo-owner-approved');
+  if (!options.ownerOverrideAuthorized) missing.push('4VECO_OWNER_OVERRIDE=1');
+  if (missing.length === 0) return null;
+  return `owner override requires ${missing.join(' and ')}`;
+}
+
+function addFailure(summary, failure) {
+  if (summary.failures.includes(failure)) {
+    return { ...summary, ok: false };
+  }
+  return {
+    ...summary,
+    ok: false,
+    failures: [...summary.failures, failure],
+  };
+}
+
+function summarizeConcurrentClaim(gitState, options, lockPath) {
+  const summary = summarizeWorktreeSafety({
+    ...gitState,
+    lockPath,
+    lockState: readLock(lockPath),
+    options,
+  });
+  return addFailure(summary, 'worktree lock was claimed concurrently; rerun --check or --claim');
+}
+
 function summarizeWorktreeSafety(input) {
   const options = {
     mode: 'check',
@@ -252,6 +301,8 @@ function summarizeWorktreeSafety(input) {
     prefixes: DEFAULT_PREFIXES,
     allowAnchorReadOnly: false,
     forceOwnerOverride: false,
+    repoOwnerApproved: false,
+    ownerOverrideAuthorized: false,
     staleWarningMs: DEFAULT_STALE_WARNING_MS,
     ...(input.options || {}),
   };
@@ -307,7 +358,7 @@ function summarizeWorktreeSafety(input) {
     warnings.push(`local branch is behind remote by ${status.behind}`);
   }
   if (status.dirty) {
-    if (options.requireClean) failures.push('working tree is dirty');
+    if (options.mode === 'claim' || options.requireClean) failures.push('working tree is dirty');
     else warnings.push(`working tree is dirty (${status.dirty_count} item${status.dirty_count === 1 ? '' : 's'})`);
   }
 
@@ -320,6 +371,7 @@ function summarizeWorktreeSafety(input) {
   const sameTask = lockPresent && lockRecord.task_id === options.taskId;
   const age = lockPresent ? lockAgeMs(lockRecord, input.now || new Date()) : null;
   const stale = typeof age === 'number' && age > options.staleWarningMs;
+  const canOverrideOwner = ownerOverrideAllowed(options);
 
   if (stale) {
     warnings.push(`worktree lock is older than ${Math.round(options.staleWarningMs / 3600000)} hours`);
@@ -332,14 +384,18 @@ function summarizeWorktreeSafety(input) {
   if (lockPresent) {
     if (!sameTask) failures.push('worktree lock belongs to another task');
     if (!sameOwner) {
-      if (options.forceOwnerOverride && options.mode === 'claim') {
+      if (canOverrideOwner) {
         warnings.push(`overriding worktree lock owned by ${lockRecord.agent_id}: ${options.reason}`);
       } else {
         failures.push('worktree lock is owned by another agent');
+        if (options.forceOwnerOverride && options.mode === 'claim') {
+          const failure = ownerOverrideFailureMessage(options);
+          if (failure) failures.push(failure);
+        }
       }
     }
-    if (stale && (!sameOwner || !sameTask) && !(options.forceOwnerOverride && options.mode === 'claim')) {
-      failures.push('stale worktree lock requires explicit owner override');
+    if (stale && (!sameOwner || !sameTask) && !canOverrideOwner) {
+      failures.push('stale worktree lock requires repository-owner-approved override');
     }
   }
 
@@ -396,7 +452,14 @@ function applyLockMode(gitState, options) {
     if (beforeLockState.present) {
       writeLock(lockPath, payload);
     } else {
-      writeLockExclusive(lockPath, payload);
+      try {
+        writeLockExclusive(lockPath, payload);
+      } catch (error) {
+        if (error && error.code === 'EEXIST') {
+          return summarizeConcurrentClaim(gitState, options, lockPath);
+        }
+        throw error;
+      }
     }
     const afterLockState = readLock(lockPath);
     return summarizeWorktreeSafety({
@@ -448,7 +511,11 @@ function printHelp() {
   node build-scripts/ci/check-agent-worktree-safety.js --require-prefix codex/,agent/
   node build-scripts/ci/check-agent-worktree-safety.js --require-clean
   node build-scripts/ci/check-agent-worktree-safety.js --allow-anchor-read-only
+  node build-scripts/ci/check-agent-worktree-safety.js --force-owner-override --repo-owner-approved --reason "owner approved"; requires 4VECO_OWNER_OVERRIDE=1
   node build-scripts/ci/check-agent-worktree-safety.js --worktree C:/wt/task/4veco-lessen
+
+Notes:
+  --claim requires a clean working tree by default. Use --check during ongoing dirty work.
 `);
 }
 

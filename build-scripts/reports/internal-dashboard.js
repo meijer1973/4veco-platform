@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
+const ANCHOR_PROJECT_ROOT = process.env.FOURVECO_PROJECT_ROOT || 'C:/Projects/4veco';
 const OUTPUT_DIR = path.join(REPO_ROOT, 'reports', 'internal-dashboard');
 const OUTPUT_HTML = path.join(OUTPUT_DIR, 'index.html');
 const OUTPUT_JSON = path.join(OUTPUT_DIR, 'dashboard-data.json');
@@ -111,11 +112,24 @@ const ISSUE_CATEGORIES = [
 const QUALITY_REVIEW = 'knowledge/platform-team-companion-quality-gate-review.md';
 
 function relToAbs(relPath) {
-  return path.resolve(REPO_ROOT, relPath);
+  const direct = path.resolve(REPO_ROOT, relPath);
+  if (fs.existsSync(direct)) return direct;
+  const normalized = slashPath(path.normalize(relPath));
+  if (normalized.startsWith('../')) {
+    const anchor = path.resolve(ANCHOR_PROJECT_ROOT, normalized.slice(3));
+    if (fs.existsSync(anchor)) return anchor;
+  }
+  return direct;
 }
 
 function slashPath(filePath) {
   return filePath.replace(/\\/g, '/');
+}
+
+function repositoryPath(relPath) {
+  const normalized = slashPath(path.normalize(relPath));
+  if (normalized.startsWith('../')) return normalized.slice(3);
+  return `4veco-platform/${normalized}`;
 }
 
 function readText(relPath) {
@@ -225,7 +239,7 @@ function parseRoadmap(source) {
     return {
       ...source,
       exists: false,
-      absolutePath: slashPath(abs),
+      repositoryPath: repositoryPath(source.path),
       generated: '',
       updated: '',
       scope: '',
@@ -239,7 +253,7 @@ function parseRoadmap(source) {
   return {
     ...source,
     exists: true,
-    absolutePath: slashPath(abs),
+    repositoryPath: repositoryPath(source.path),
     generated: extractFirstMatch(markdown, /^Generated:\s*(.+)$/m),
     updated: extractFirstMatch(markdown, /^Updated:\s*(.+)$/m),
     scope: extractFirstMatch(markdown, /^Scope:\s*(.+)$/m),

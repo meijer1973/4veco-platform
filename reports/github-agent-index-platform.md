@@ -1,12 +1,12 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-07T19:24:34.046Z
+Generated: 2026-06-08T05:52:12.649Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
-Root: `C:\wt\AGENT-WORKTREE-SAFETY-1\4veco-platform`
-Files indexed: 3837
-Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees
+Root: `4veco-platform`
+Files indexed: 3852
+Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
 
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 438
+Count: 440
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -140,6 +140,8 @@ Count: 438
 - build-scripts/books/README.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
+- build-scripts/ci/check-agent-worktree-safety.js
+- build-scripts/ci/check-agent-worktree-safety.test.js
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
@@ -614,10 +616,12 @@ Count: 42
 
 ## validators
 
-Count: 374
+Count: 376
 
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
+- build-scripts/ci/check-agent-worktree-safety.js
+- build-scripts/ci/check-agent-worktree-safety.test.js
 - build-scripts/ci/check-branch-protection.js
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
@@ -993,7 +997,7 @@ Count: 374
 
 ## references
 
-Count: 519
+Count: 521
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1052,6 +1056,8 @@ Count: 519
 - references/data/source-document-registry.json
 - references/data/sprints/AGENT-BRANCH-SAFETY-1.plan.json
 - references/data/sprints/AGENT-BRANCH-SAFETY-1.result.json
+- references/data/sprints/AGENT-WORKTREE-SAFETY-1.plan.json
+- references/data/sprints/AGENT-WORKTREE-SAFETY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -1517,7 +1523,7 @@ Count: 519
 
 ## reports
 
-Count: 2442
+Count: 2453
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2334,6 +2340,17 @@ Count: 2442
 - reports/sprints/AGENT-BRANCH-SAFETY-1-plan.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-result.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-baseline.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.jsonl
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-command-log.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-diff-summary.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-assignment.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-corrections.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round1.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-lead-review-round2.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
+- reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md

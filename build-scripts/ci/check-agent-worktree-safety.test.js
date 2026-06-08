@@ -5,6 +5,7 @@ const {
   LOCK_FILENAME,
   applyLockMode,
   lockPathForGitDir,
+  parseArgs,
   readLock,
   summarizeWorktreeSafety,
 } = require('./check-agent-worktree-safety');
@@ -44,6 +45,8 @@ function options(overrides = {}) {
     prefixes: ['codex/', 'agent/'],
     requireClean: false,
     allowAnchorReadOnly: false,
+    repoOwnerApproved: false,
+    ownerOverrideAuthorized: false,
     staleWarningMs: 60 * 60 * 1000,
     ...overrides,
   };
@@ -87,6 +90,18 @@ describe('check-agent-worktree-safety', () => {
     }
   });
 
+  test('claim fails on dirty worktree by default', () => {
+    const summary = summarizeWorktreeSafety({
+      ...state({ statusText: '## codex/task-20260607...origin/main\n M AGENTS.md\n' }),
+      lockState: { present: false, record: null, parseError: null },
+      options: options(),
+    });
+
+    expect(summary.ok).toBe(false);
+    expect(summary.dirty).toBe(true);
+    expect(summary.failures).toContain('working tree is dirty');
+  });
+
   test('claim fails when another agent owns the lock', () => {
     const dir = tempDir();
     try {
@@ -99,6 +114,51 @@ describe('check-agent-worktree-safety', () => {
       expect(summary.ok).toBe(false);
       expect(summary.failures).toContain('worktree lock is owned by another agent');
       expect(readLock(lockPath).record.agent_id).toBe(original.agent_id);
+    } finally {
+      removeDir(dir);
+    }
+  });
+
+  test('owner override requires repository owner approval and env marker', () => {
+    const dir = tempDir();
+    try {
+      const gitDir = path.join(dir, '.git', 'worktrees', 'task');
+      const lockPath = lockPathForGitDir(gitDir);
+      const original = writeExistingLock(lockPath, { agent_id: 'agent-b' });
+
+      const summary = applyLockMode(
+        state({ root: path.join(dir, 'repo'), gitDir }),
+        options({ forceOwnerOverride: true, reason: 'manual cleanup' })
+      );
+
+      expect(summary.ok).toBe(false);
+      expect(summary.failures).toContain('worktree lock is owned by another agent');
+      expect(summary.failures).toContain('owner override requires --repo-owner-approved and 4VECO_OWNER_OVERRIDE=1');
+      expect(readLock(lockPath).record.agent_id).toBe(original.agent_id);
+    } finally {
+      removeDir(dir);
+    }
+  });
+
+  test('owner override can claim same-task foreign lock with explicit approval', () => {
+    const dir = tempDir();
+    try {
+      const gitDir = path.join(dir, '.git', 'worktrees', 'task');
+      const lockPath = lockPathForGitDir(gitDir);
+      writeExistingLock(lockPath, { agent_id: 'agent-b' });
+
+      const summary = applyLockMode(
+        state({ root: path.join(dir, 'repo'), gitDir }),
+        options({
+          forceOwnerOverride: true,
+          repoOwnerApproved: true,
+          ownerOverrideAuthorized: true,
+          reason: 'repository owner approved cleanup',
+        })
+      );
+
+      expect(summary.ok).toBe(true);
+      expect(readLock(lockPath).record.agent_id).toBe('agent-a');
     } finally {
       removeDir(dir);
     }
@@ -198,6 +258,7 @@ describe('check-agent-worktree-safety', () => {
       expect(summary.ok).toBe(false);
       expect(summary.lock.stale).toBe(true);
       expect(summary.failures).toContain('worktree lock is owned by another agent');
+      expect(summary.failures).toContain('stale worktree lock requires repository-owner-approved override');
       expect(fs.readFileSync(lockPath, 'utf8')).toBe(before);
     } finally {
       removeDir(dir);
@@ -342,15 +403,93 @@ describe('check-agent-worktree-safety', () => {
     expect(behind.warnings).toContain('local branch is behind remote by 3');
   });
 
-  test('dirty worktree warns when require-clean is not passed', () => {
+  test('dirty worktree warns in check mode when require-clean is not passed', () => {
     const summary = summarizeWorktreeSafety({
       ...state({ statusText: '## codex/task-20260607...origin/main\n M AGENTS.md\n' }),
-      lockState: { present: false, record: null, parseError: null },
-      options: options(),
+      lockState: {
+        present: true,
+        record: {
+          task_id: 'TASK-1',
+          agent_id: 'agent-a',
+          updated_at_utc: new Date().toISOString(),
+        },
+        parseError: null,
+      },
+      options: options({ mode: 'check' }),
     });
 
     expect(summary.ok).toBe(true);
     expect(summary.warnings).toContain('working tree is dirty (1 item)');
+  });
+
+  test('concurrent claim race returns structured failure', () => {
+    const dir = tempDir();
+    const originalOpenSync = fs.openSync;
+    try {
+      const gitDir = path.join(dir, '.git', 'worktrees', 'task');
+      const lockPath = lockPathForGitDir(gitDir);
+      let intercepted = false;
+      fs.openSync = (target, flags, ...rest) => {
+        if (target === lockPath && flags === 'wx' && !intercepted) {
+          intercepted = true;
+          writeExistingLock(lockPath, { agent_id: 'agent-b' });
+          const error = new Error('EEXIST: file already exists');
+          error.code = 'EEXIST';
+          throw error;
+        }
+        return originalOpenSync.call(fs, target, flags, ...rest);
+      };
+
+      const summary = applyLockMode(state({ root: path.join(dir, 'repo'), gitDir }), options());
+
+      expect(summary.ok).toBe(false);
+      expect(summary.failures).toContain('worktree lock is owned by another agent');
+      expect(summary.failures).toContain('worktree lock was claimed concurrently; rerun --check or --claim');
+    } finally {
+      fs.openSync = originalOpenSync;
+      removeDir(dir);
+    }
+  });
+
+  test('parseArgs requires repo-owner-approved for owner override', () => {
+    expect(() =>
+      parseArgs(['--claim', '--task', 'TASK-1', '--agent', 'agent-a', '--force-owner-override', '--reason', 'cleanup'], {})
+    ).toThrow('--force-owner-override requires --repo-owner-approved');
+
+    expect(() =>
+      parseArgs(
+        [
+          '--claim',
+          '--task',
+          'TASK-1',
+          '--agent',
+          'agent-a',
+          '--force-owner-override',
+          '--repo-owner-approved',
+          '--reason',
+          'cleanup',
+        ],
+        {}
+      )
+    ).toThrow('--force-owner-override requires 4VECO_OWNER_OVERRIDE=1');
+
+    const parsed = parseArgs(
+      [
+        '--claim',
+        '--task',
+        'TASK-1',
+        '--agent',
+        'agent-a',
+        '--force-owner-override',
+        '--repo-owner-approved',
+        '--reason',
+        'cleanup',
+      ],
+      { '4VECO_OWNER_OVERRIDE': '1' }
+    );
+
+    expect(parsed.repoOwnerApproved).toBe(true);
+    expect(parsed.ownerOverrideAuthorized).toBe(true);
   });
 
   test('old same-owner lock warns but remains valid', () => {
