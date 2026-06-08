@@ -3,12 +3,12 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
   "retrieved_date": "2026-06-08",
-  "review_status": "draft_pending_correction_review",
+  "review_status": "draft_accepted_for_bounded_pilot_audit",
   "authority_sources": [
     "nl-inspectie-onderzoekskader-vo-2025",
     "nl-inspectie-op0-basisvaardigheden-2025",
@@ -278,5 +278,5 @@
       "initial_evidence_state": "present_but_weak"
     }
   ],
-  "next_recommended_step": "Human correction review of INSPECT-1A. Do not start INSPECT-2, pilot audit, schema design, validators, overlays, generated lesson-output changes, quality-ref integration, dashboard gates, Scale Gate integration, or compliance claims until explicitly authorised."
+  "next_recommended_step": "INSPECT-2 bounded pilot evidence audit of Book 1 Chapter 1.1 evidence. Do not start schema design, validators, overlays, generated lesson-output changes, quality-ref integration, dashboard gates, Scale Gate integration, or compliance claims until the pilot audit is reviewed."
 }

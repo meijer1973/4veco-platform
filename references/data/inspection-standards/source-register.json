@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "register_id": "inspection-standards-source-register",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit",
   "roadmap_id": "inspection-standards-compatibility",
   "status": "draft",
   "retrieved_date": "2026-06-08",
-  "review_status": "draft_pending_correction_review",
+  "review_status": "draft_accepted_for_bounded_pilot_audit",
   "authority_boundary_note": "This register distinguishes inspection frameworks, curriculum or standards references, accountability systems, and non-inspection comparators. A source is not treated as curriculum authority unless its source_type and notes explicitly say so. The use_in_v0_profile field records whether a source is an inspection_anchor, curriculum_anchor, accountability_context, or comparator_only for the Dutch v0 profile.",
   "sources": [
     {

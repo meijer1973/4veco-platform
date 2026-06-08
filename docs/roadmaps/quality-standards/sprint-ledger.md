@@ -64,7 +64,8 @@ Required default flow:
 | `QS-ROADMAP-HOME-3` | closed | Add sprint-protocol reminder and summary to the quality-standards sprint ledger. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documentation-only reminder based on `AGENTS.md`, `agents/lead-reviewer-agent.md`, and `agents/testing-agent.md`. |
 | `QS-ROADMAP-HOME-4` | closed | Add the final-answer next-step requirement to the sprint-protocol reminder. | `docs/roadmaps/quality-standards/sprint-ledger.md` | this commit | Documents the `AGENTS.md` rule that non-trivial responses must end with explicit operational next-step advice. |
 | `INSPECT-1` | closed / pass_with_corrections | Human review of source register and Dutch VO evidence profile; corrections only after a recorded human decision. | `archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md`; `archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md`; `archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-human-review-response.md` | `abfbbfca` | Human review returned `pass_with_corrections` and authorised INSPECT-1A corrections only. No schema, validator, overlay, generated-output, dashboard-gate, quality-ref, Scale Gate, or compliance-claim authority. |
-| `INSPECT-1A` | closed / pass | Corrections-only packet authorised by Head of Strategy review: Dutch curriculum/assessment source provenance, canonical URL hygiene, safe/forbidden claim tightening, and draft/pending-review preservation. | `archive/sprints/INSPECT-1A/INSPECT-1A-sprint-plan.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-human-review-response.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round2.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md` | this commit | Validation passed, lead review passed round 1 and round 2, and the profile/register remain draft pending correction review. Next action is human correction review, not INSPECT-2. |
+| `INSPECT-1A` | closed / pass | Corrections-only packet authorised by Head of Strategy review: Dutch curriculum/assessment source provenance, canonical URL hygiene, safe/forbidden claim tightening, and draft/pending-review preservation. | `archive/sprints/INSPECT-1A/INSPECT-1A-sprint-plan.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-human-correction-review.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round2.md`; `archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md` | `2214f294` plus this commit | Human correction review passed. Source register and profile remain `status: draft`; `review_status` moved only to `draft_accepted_for_bounded_pilot_audit`. |
+| `INSPECT-2` | closed / pass | Bounded read-only pilot evidence audit of Book 1 Chapter 1.1 against the Dutch v0 evidence categories. | `archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md`; `archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md`; `archive/sprints/INSPECT-2/INSPECT-2-validation-log.md`; `archive/sprints/INSPECT-2/INSPECT-2-lead-review-round2.md`; `archive/sprints/INSPECT-2/INSPECT-2-closure-log.md` | this commit | Audit finds that categories locate real evidence, but recommends profile adjustment before schema design for evidence finality, target-proof status, diagnostic-report status, and product/school boundaries. No lesson-output changes. |
 
 ## Candidate Future Sprints
 
@@ -73,10 +74,10 @@ approves the packet.
 
 | Candidate sprint | Intended scope | Authorisation status |
 | --- | --- | --- |
-| `INSPECT-2` | Evidence schema and validator design for inspection/quality evidence records. | not authorised |
-| `INSPECT-3` | Dutch scoped evidence-pack prototype for one bounded generated output slice. | not authorised |
-| `INSPECT-4` | International common-quality profile design after Dutch profile review. | not authorised |
-| `INSPECT-5` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
+| `INSPECT-3` | Evidence schema and validator design for inspection/quality evidence records, only after the pilot audit and any required profile-adjustment review. | not authorised |
+| `INSPECT-4` | Dutch scoped evidence-pack prototype for one bounded generated output slice. | not authorised |
+| `INSPECT-5` | International common-quality profile design after Dutch profile review. | not authorised |
+| `INSPECT-6` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
 
 ## Ledger Rules
 

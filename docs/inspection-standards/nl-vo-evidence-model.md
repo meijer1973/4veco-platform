@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0, pending INSPECT-1A correction review
-Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene
+Status: draft v0, accepted for bounded pilot audit
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -249,7 +249,6 @@ Forbidden:
 
 ## Recommended Next Step
 
-Send the INSPECT-1A correction packet for human correction review. Do not start
-INSPECT-2, a bounded pilot audit, report-only schema design, validators,
-country overlays, generated lesson changes, quality-ref integration, dashboard
-gates, or compliance claims from this draft alone.
+Review the INSPECT-2 bounded pilot evidence audit. Do not start schema design,
+validators, country overlays, generated lesson changes, quality-ref
+integration, dashboard gates, or compliance claims from this draft alone.

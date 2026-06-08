@@ -71,5 +71,6 @@ changes, compliance claims, or inspectorate-approval claims were added.
 
 ## Required Next Action
 
-Complete validation and lead review, then send the correction packet for human
-correction review before any INSPECT-2, pilot audit, or schema-design work.
+INSPECT-1A has passed human correction review. Continue only to the approved
+INSPECT-2 bounded pilot evidence audit. Do not start schema design, validators,
+overlays, generated lesson-output changes, or compliance claims.

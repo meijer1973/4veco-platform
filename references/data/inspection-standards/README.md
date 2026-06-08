@@ -17,6 +17,11 @@ schemas, validators, overlays, generated reports, evidence packs, lesson-output
 writes, quality-ref integration, dashboard gates, Scale Gate work, or compliance
 claims.
 
+INSPECT-1A passed human correction review. INSPECT-2 is authorised as a bounded
+read-only pilot evidence audit of Book 1 Chapter 1.1. It does not authorise
+schemas, validators, generated evidence packs, lesson-output writes, quality-ref
+integration, dashboard gates, Scale Gate work, or compliance claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
