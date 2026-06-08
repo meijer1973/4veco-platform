@@ -32,6 +32,20 @@
     "required_status_check_display": "platform-ci / validate-platform",
     "required_status_check_context": "validate-platform"
   },
+  "post_review_corrections": {
+    "date": "2026-06-08",
+    "correction_branch": "codex/agent-worktree-review-fixes-20260608",
+    "claim_clean_default": true,
+    "current_claim_command": "npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean",
+    "dirty_ongoing_mode": "--check without --require-clean",
+    "owner_override_requires": [
+      "--reason",
+      "--repo-owner-approved",
+      "4VECO_OWNER_OVERRIDE=1"
+    ],
+    "published_path_policy": "GitHub-facing indexes and dashboard data publish logical repository paths, not transient local worktree paths.",
+    "historical_command_log_note": "Earlier command-log entries are preserved as execution history; clean claim is now enforced by checker logic and documented policy."
+  },
   "acceptance_tests": [
     {
       "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md",

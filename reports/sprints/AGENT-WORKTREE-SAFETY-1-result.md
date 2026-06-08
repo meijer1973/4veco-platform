@@ -62,7 +62,7 @@ Passed through `run-sprint-command.js`:
 - `node build-scripts/ci/check-evidence-line-endings.js`
 - `git diff --check`
 - `git -C C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-lessen diff --check`
-- `npm.cmd run check:agent-worktree-safety -- --claim --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix "codex/,agent/"`
+- `npm.cmd run check:agent-worktree-safety -- --claim --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix "codex/,agent/"` (historical run; post-review policy command now includes `--require-clean`, and claim mode enforces clean worktrees by default)
 - `npm.cmd run check:agent-worktree-safety -- --check --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix "codex/,agent/"`
 - `npm.cmd run check:agent-worktree-safety -- --check --task AGENT-WORKTREE-SAFETY-1 --agent codex-AGENT-WORKTREE-SAFETY-1-20260607 --require-prefix "codex/,agent/" --worktree C:/wt/AGENT-WORKTREE-SAFETY-1/4veco-lessen`
 - `node build-scripts/sprints/check-sprint-command-log.js AGENT-WORKTREE-SAFETY-1`
@@ -75,6 +75,14 @@ Environment setup note:
 - First `npm.cmd run check:platform` failed because the fresh worktree had no
   `node_modules`. `npm.cmd ci` restored dependencies, and the required command
   then passed.
+
+Post-review correction note:
+
+- 2026-06-08 review follow-up folded in `codex/agent-worktree-review-fixes-20260608`.
+- Current initial preflight command is `npm.cmd run check:agent-worktree-safety -- --claim --task <task-id> --agent <agent-id> --require-prefix codex/,agent/ --require-clean`.
+- The checker now fails dirty worktrees in all `--claim` runs, even without the explicit `--require-clean` flag. Dirty in-progress verification belongs in `--check` mode.
+- `--force-owner-override` now requires `--reason`, `--repo-owner-approved`, and `4VECO_OWNER_OVERRIDE=1`.
+- GitHub-facing indexes and dashboard data now publish logical repository paths instead of transient local worktree paths.
 
 ## Changed files
 

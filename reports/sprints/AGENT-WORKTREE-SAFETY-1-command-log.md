@@ -1,5 +1,11 @@
 # Sprint AGENT-WORKTREE-SAFETY-1: Command Log
 
+Post-review note, 2026-06-08: early historical claim commands in this log may
+omit `--require-clean`. The accepted policy command now includes
+`--require-clean`, and the checker enforces clean worktrees for every `--claim`
+run even if the explicit flag is omitted. The raw JSONL command log is preserved
+as historical execution evidence.
+
 ## node build-scripts/sprints/check-sprint-plan.js reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 
 - cwd: `C:\wt\AGENT-WORKTREE-SAFETY-1\4veco-platform`
