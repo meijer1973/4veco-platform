@@ -97,6 +97,20 @@
 
   var INTERNAL_CODE_RE = /\b(?:[A-Z]\d{2}|PV|MTU)\b/;
 
+  var ANSWER_PARSERS = {
+    number_with_optional_percent: parseNumberWithOptionalPercent,
+    decrease_phrase_to_negative_percent: parseDecreasePhraseToNegativePercent
+  };
+
+  var DEFAULT_ANSWER_PARSER_IDS = [
+    'decrease_phrase_to_negative_percent',
+    'number_with_optional_percent'
+  ];
+
+  var NUMERIC_FILLER_WORDS_RE = /\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde|stijging|stijgt|stijgen|steeg|gestegen|toename|toeneemt|toenam|toegenomen|meer|hoger)\b/g;
+
+  var DECREASE_WORD_RE = /\b(daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde)\b/;
+
   var FORMULA_TOKEN_CATEGORIES = {
     numerator: true,
     denominator: true,
@@ -177,18 +191,50 @@
   function cleanNumber(value) {
     if (typeof value === 'number') return value;
     if (typeof value === 'string') {
-      var normalized = value.trim().toLowerCase().replace(/\u2212/g, '-').replace(',', '.');
-      if (!normalized) return NaN;
-      var negativeByPhrase = !/^\s*-/.test(normalized) &&
-        /\b(daling|daalt|afname|afneemt|lager|minder)\b/.test(normalized);
-      var cleaned = normalized
-        .replace(/[€%]/g, ' ')
-        .replace(/\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|afname|afneemt|lager|minder|stijging|stijgt|toename|toeneemt|meer)\b/g, ' ')
-        .replace(/\s+/g, '');
-      if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
-      var parsed = Number(cleaned);
-      if (!isNumber(parsed)) return NaN;
-      return negativeByPhrase ? -Math.abs(parsed) : parsed;
+      return parseNumberWithAnswerParsers(value);
+    }
+    return NaN;
+  }
+
+  function normalizeNumberInput(value) {
+    return String(value == null ? '' : value)
+      .trim()
+      .toLowerCase()
+      .replace(/[\u2212\u2012\u2013\u2014]/g, '-')
+      .replace(',', '.');
+  }
+
+  function parseNormalizedNumber(value, negativeByPhrase) {
+    if (!value) return NaN;
+    var cleaned = value
+      .replace(/[\u20ac%]/g, ' ')
+      .replace(NUMERIC_FILLER_WORDS_RE, ' ')
+      .replace(/\s+/g, '');
+    if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
+    var parsed = Number(cleaned);
+    if (!isNumber(parsed)) return NaN;
+    return negativeByPhrase ? -Math.abs(parsed) : parsed;
+  }
+
+  function parseNumberWithOptionalPercent(value) {
+    return parseNormalizedNumber(normalizeNumberInput(value), false);
+  }
+
+  function parseDecreasePhraseToNegativePercent(value) {
+    var normalized = normalizeNumberInput(value);
+    var negativeByPhrase = !/^\s*-/.test(normalized) && DECREASE_WORD_RE.test(normalized);
+    return parseNormalizedNumber(normalized, negativeByPhrase);
+  }
+
+  function parseNumberWithAnswerParsers(value, parserIds) {
+    if (typeof value === 'number') return value;
+    if (typeof value !== 'string') return NaN;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var parsed = parser(value);
+      if (isNumber(parsed)) return parsed;
     }
     return NaN;
   }
@@ -218,6 +264,13 @@
     requireArray(value, path, minLength || 1);
     value.forEach(function (item, idx) {
       requireString(item, path + '[' + idx + ']');
+    });
+  }
+
+  function validateAnswerParsers(value, path) {
+    requireStringArray(value, path, 1);
+    value.forEach(function (item, idx) {
+      assert(ANSWER_PARSERS[item], path + '[' + idx + '] must be a known answer parser');
     });
   }
 
@@ -1088,7 +1141,7 @@
     requireString(interaction.xAxisLabel, path + '.xAxisLabel');
     requireString(interaction.yAxisLabel, path + '.yAxisLabel');
     requireString(interaction.pointRowsLabel, path + '.pointRowsLabel');
-    requireString(interaction.lineConfirmationLabel, path + '.lineConfirmationLabel');
+    optionalString(interaction.lineConfirmationLabel, path + '.lineConfirmationLabel');
     optionalString(interaction.lineShapeLabel, path + '.lineShapeLabel');
     optionalString(interaction.xInputLabel, path + '.xInputLabel');
     optionalString(interaction.yInputLabel, path + '.yInputLabel');
@@ -1232,6 +1285,48 @@
       assert(conclusionCorrectCount >= 1, path + '.conclusionOptions must include at least one correct conclusion');
       assert(conclusionDistractorCount >= 1, path + '.conclusionOptions must include at least one distractor conclusion');
     }
+  }
+
+  function validateSimpleChoiceOptions(options, path, minimum) {
+    requireArray(options, path, minimum || 2);
+    var ids = {};
+    var correctCount = 0;
+    var distractorCount = 0;
+    options.forEach(function (option, idx) {
+      assert(isObject(option), path + '[' + idx + '] must be an object');
+      requireString(option.id, path + '[' + idx + '].id');
+      requireString(option.label, path + '[' + idx + '].label');
+      assert(typeof option.correct === 'boolean', path + '[' + idx + '].correct must be boolean');
+      optionalString(option.finalAnswer, path + '[' + idx + '].finalAnswer');
+      assert(!ids[option.id], 'duplicate option id: ' + option.id);
+      ids[option.id] = true;
+      if (option.correct) correctCount += 1;
+      else distractorCount += 1;
+    });
+    assert(correctCount >= 1, path + ' must include at least one correct option');
+    assert(distractorCount >= 1, path + ' must include at least one distractor option');
+    return ids;
+  }
+
+  function validatePercentageClaimInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.intervalLabel, path + '.intervalLabel');
+    requireString(interaction.valueSectionLabel, path + '.valueSectionLabel');
+    requireString(interaction.oldValueLabel, path + '.oldValueLabel');
+    requireString(interaction.newValueLabel, path + '.newValueLabel');
+    requireString(interaction.formulaSectionLabel, path + '.formulaSectionLabel');
+    requireString(interaction.conclusionLabel, path + '.conclusionLabel');
+    optionalString(interaction.oldValuePlaceholder, path + '.oldValuePlaceholder');
+    optionalString(interaction.newValuePlaceholder, path + '.newValuePlaceholder');
+    var intervalIds = validateSimpleChoiceOptions(interaction.intervalOptions, path + '.intervalOptions', 2);
+    var conclusionIds = validateSimpleChoiceOptions(interaction.conclusionOptions, path + '.conclusionOptions', 2);
+    assert(isObject(interaction.formula), path + '.formula must be an object');
+    var formulaInfo = validateFormulaInteraction({ id: task.id, interaction: interaction.formula }, path + '.formula');
+    return {
+      intervalOptionIds: intervalIds,
+      conclusionOptionIds: conclusionIds,
+      formulaTokenIds: formulaInfo.tokenIds
+    };
   }
 
   function sourceValueLabelMap(values) {
@@ -1533,6 +1628,60 @@
     if (expected.required !== undefined) {
       assert(typeof expected.required === 'boolean', path + '.required must be boolean');
     }
+  }
+
+  function validateFormulaExpected(expected, tokenIds, allowReuse, path) {
+    assert(expected.kind === 'formula_builder', path + '.kind must be formula_builder');
+    requireArray(expected.tokens, path + '.tokens', 1);
+    requireArray(expected.acceptedSequences, path + '.acceptedSequences', 1);
+
+    function validateFormulaSequence(sequence, sequencePath) {
+      requireArray(sequence, sequencePath, 1);
+      var seen = {};
+      sequence.forEach(function (tokenId, idx) {
+        requireString(tokenId, sequencePath + '[' + idx + ']');
+        assert(tokenIds[tokenId], sequencePath + '[' + idx + '] must match an interaction token');
+        if (!allowReuse) {
+          assert(!seen[tokenId], sequencePath + ' uses token more than once without allowReuse');
+          seen[tokenId] = true;
+        }
+      });
+    }
+
+    validateFormulaSequence(expected.tokens, path + '.tokens');
+    var canonical = expected.tokens.join('\u0001');
+    var includesCanonical = false;
+    expected.acceptedSequences.forEach(function (sequence, idx) {
+      validateFormulaSequence(sequence, path + '.acceptedSequences[' + idx + ']');
+      if (sequence.join('\u0001') === canonical) includesCanonical = true;
+    });
+    assert(includesCanonical, path + '.acceptedSequences must include expected.tokens');
+  }
+
+  function validatePercentageClaimExpected(task, interactionInfo) {
+    var expected = task.expected;
+    assert(isObject(expected.interval), task.id + '.expected.interval must be an object');
+    assert(expected.interval.kind === 'choice', task.id + '.expected.interval.kind must be choice');
+    requireString(expected.interval.value, task.id + '.expected.interval.value');
+    assert((interactionInfo.intervalOptionIds || {})[expected.interval.value], task.id + '.expected.interval.value must match an interval option id');
+
+    assert(isObject(expected.oldValue), task.id + '.expected.oldValue must be an object');
+    assert(expected.oldValue.kind === 'number', task.id + '.expected.oldValue.kind must be number');
+    assert(isNumber(expected.oldValue.value), task.id + '.expected.oldValue.value must be numeric');
+    if (expected.oldValue.tolerance !== undefined) assert(isNumber(expected.oldValue.tolerance), task.id + '.expected.oldValue.tolerance must be numeric');
+
+    assert(isObject(expected.newValue), task.id + '.expected.newValue must be an object');
+    assert(expected.newValue.kind === 'number', task.id + '.expected.newValue.kind must be number');
+    assert(isNumber(expected.newValue.value), task.id + '.expected.newValue.value must be numeric');
+    if (expected.newValue.tolerance !== undefined) assert(isNumber(expected.newValue.tolerance), task.id + '.expected.newValue.tolerance must be numeric');
+
+    assert(isObject(expected.formula), task.id + '.expected.formula must be an object');
+    validateFormulaExpected(expected.formula, interactionInfo.formulaTokenIds || {}, task.interaction.formula && task.interaction.formula.allowReuse === true, task.id + '.expected.formula');
+
+    assert(isObject(expected.conclusion), task.id + '.expected.conclusion must be an object');
+    assert(expected.conclusion.kind === 'choice', task.id + '.expected.conclusion.kind must be choice');
+    requireString(expected.conclusion.value, task.id + '.expected.conclusion.value');
+    assert((interactionInfo.conclusionOptionIds || {})[expected.conclusion.value], task.id + '.expected.conclusion.value must match a conclusion option id');
   }
 
   function validateCalculationAnswerFormInteraction(task, path) {
@@ -1837,6 +1986,9 @@
       if (expected.unitNotation !== undefined) {
         validateUnitNotation(expected.unitNotation, task.id + '.expected.unitNotation');
         requireString(task.interaction.unitNotationLabel, task.id + '.interaction.unitNotationLabel');
+      }
+      if (task.interaction.selectionMode === 'percentage_claim_control') {
+        validatePercentageClaimExpected(task, interactionInfo);
       }
       return;
     }
@@ -2223,9 +2375,14 @@
       optionalString(task.interaction.finalAnswerPlaceholder, path + '.finalAnswerPlaceholder');
       optionalString(task.interaction.unitNotationLabel, path + '.unitNotationLabel');
       optionalString(task.interaction.unitNotationPlaceholder, path + '.unitNotationPlaceholder');
+      if (task.interaction.answerParsers !== undefined) validateAnswerParsers(task.interaction.answerParsers, path + '.answerParsers');
       if (task.interaction.selectionMode !== undefined) {
-        assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
-        validateIntervalHalvingInteraction(task, path);
+        assert(/^(interval_halving_check|percentage_claim_control)$/.test(task.interaction.selectionMode), path + '.selectionMode must be interval_halving_check or percentage_claim_control when present');
+        if (task.interaction.selectionMode === 'interval_halving_check') {
+          validateIntervalHalvingInteraction(task, path);
+        } else {
+          interactionInfo = validatePercentageClaimInteraction(task, path);
+        }
       }
     } else if (task.family === 'calculation_answer_form_capture') {
       interactionInfo = validateCalculationAnswerFormInteraction(task, path);
@@ -2331,10 +2488,19 @@
     });
   }
 
-  function numberMatches(value, expected) {
-    var actual = cleanNumber(value);
-    if (!isNumber(actual)) return false;
-    return Math.abs(actual - expected.value) <= tolerance(expected);
+  function numberMatches(value, expected, parserIds) {
+    if (typeof value === 'number') {
+      return Math.abs(value - expected.value) <= tolerance(expected);
+    }
+    if (typeof value !== 'string') return false;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var actual = parser(value);
+      if (isNumber(actual) && Math.abs(actual - expected.value) <= tolerance(expected)) return true;
+    }
+    return false;
   }
 
   function pointMatches(value, expected) {
@@ -2390,11 +2556,11 @@
     return numberMatches(response && response.value != null ? response.value : response, task.expected);
   }
 
-  function finalAnswerMatches(value, expected) {
+  function finalAnswerMatches(value, expected, parserIds) {
     if (!expected || !expected.kind) return false;
     if (expected.kind === 'number') {
       if (expected.acceptedNotations && textMatches(value, expected.acceptedNotations)) return true;
-      return numberMatches(value, expected);
+      return numberMatches(value, expected, parserIds);
     }
     if (expected.kind === 'text') return textMatches(value, expected.accepted);
     return false;
@@ -2509,6 +2675,20 @@
     if (expected.accepted && textMatches(value, expected.accepted)) return true;
     if (expected.requiredTextGroups && requiredTextGroupsMatch(value, expected.requiredTextGroups)) return true;
     return false;
+  }
+
+  function percentageClaimControlMatches(response, task) {
+    if (!response || typeof response !== 'object') return false;
+    if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
+    if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
+    if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
+    if (normalizeText(response.interval) !== normalizeText(task.expected.interval.value)) return false;
+    if (!numberMatches(response.oldValue, task.expected.oldValue)) return false;
+    if (!numberMatches(response.newValue, task.expected.newValue)) return false;
+    if (!formulaBuilderMatches(response.formula, task.expected.formula)) return false;
+    if (normalizeText(response.conclusion) !== normalizeText(task.expected.conclusion.value)) return false;
+    return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer, task.interaction && task.interaction.answerParsers) &&
+      unitNotationMatches(response.unitNotation, task.expected.unitNotation);
   }
 
   function clozeTextMatches(response, expected) {
@@ -3279,6 +3459,9 @@
     }
     if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
       if (!response || typeof response !== 'object') return false;
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return percentageClaimControlMatches(response, task);
+      }
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
       if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
       if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
@@ -3439,6 +3622,16 @@
       ];
     }
     if (task.family === 'calculation_work_capture') {
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return [
+          '[data-task-id="' + task.id + '"][data-claim-interval-option-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="old-value"]',
+          '[data-task-id="' + task.id + '"][data-input-role="new-value"]',
+          '[data-task-id="' + task.id + '"][data-formula-token-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="final-answer"]',
+          '[data-task-id="' + task.id + '"][data-claim-conclusion-option-id]'
+        ];
+      }
       if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
         return [
           '[data-task-id="' + task.id + '"][data-interval-option-id]',

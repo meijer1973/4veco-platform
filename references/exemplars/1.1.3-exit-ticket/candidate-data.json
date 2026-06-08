@@ -4,12 +4,12 @@
   "parNr": "1.1.3",
   "parName": "Grafieken en tabellen",
   "title": "Exit ticket: van tabel naar grafiek naar kritische controle",
-  "intro": "Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf.",
+  "intro": "Gebruik de bron en het werkvlak. Werk zelfstandig: maak het P-Q-diagram, lees een tussenwaarde af en controleer een procentuele claim.",
   "layout": {
     "kind": "source_task_workspace",
     "framework": "golden_exercise_workbench",
     "kicker": "Exit ticket · §1.1.3",
-    "sourcePaneTitle": "Bron 1 — broodjeskraam bij het station",
+    "sourcePaneTitle": "Bekijk eerst de bron",
     "taskPaneTitle": "Werkvragen",
     "taskPaneIntro": "Gebruik de bron links en werk je antwoorden rechts uit."
   },
@@ -51,27 +51,26 @@
       "Revision: point placement should use magnetic snapping or similarly forgiving tolerance so the task checks graph understanding, not pixel precision.",
       "Revision v3: answer-giving placeholders are forbidden; example placeholders may not contain the correct value.",
       "Revision v3: graph-reading UI order must follow student thinking order: interval first, then read-off value.",
-      "Revision v3: percentage inputs should accept normal student notation such as -50%, -50 procent, or 50% daling.",
-      "Revision v4: graph line draws automatically after the second point; students do not answer a line-slope choice."
+      "Revision v3: percentage inputs should accept normal student notation such as -50%, -50 procent, or 50% daling."
     ]
   },
   "skillMap": {
-    "title": "Oefenroute bij herstel",
+    "title": "Oefenroute",
     "routes": [
       {
         "label": "Tabel naar P-Q-grafiek",
         "surface": "Grafieken",
-        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
       },
       {
         "label": "Interpoleren uit een grafiek",
         "surface": "Grafieken",
-        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
       },
       {
         "label": "Procentuele verandering",
         "surface": "Rekenen",
-        "href": "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
       }
     ]
   },
@@ -80,7 +79,7 @@
       "id": "ctx-stationbroodjes-source",
       "type": "source_excerpt",
       "sourceLabel": "Bron 1",
-      "caption": "Bron 1 — broodjeskraam bij het station",
+      "caption": "Bron 1: Broodjeskraam bij het station",
       "bodyMarkdown": "Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is.",
       "sourceRefs": [
         "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – paragraaf.md"
@@ -130,7 +129,7 @@
         "id": "pq-grafiek-construeren",
         "family": "graph_construction_substitute",
         "skillLabel": "P-Q-grafiek construeren",
-        "purpose": "Kies assen en plaats twee verschillende tabelpunten. Na het tweede punt wordt de lijn automatisch getekend.",
+        "purpose": "Kies assen, plaats twee verschillende tabelpunten en verbind ze tot één lijn die bij de bron past.",
         "prompt": "Maak een economisch P-Q-diagram bij Tabel 1. Twee verschillende tabelpunten zijn genoeg, omdat het verband hier rechtlijnig is.",
         "contextRefs": [
           "ctx-stationbroodjes-source",
@@ -141,6 +140,8 @@
           "xAxisLabel": "Horizontale as",
           "yAxisLabel": "Verticale as",
           "pointRowsLabel": "Twee punten uit de tabel",
+          "lineConfirmationLabel": "Verbind de punten",
+          "lineShapeLabel": "Lijnvorm",
           "xInputLabel": "Waarde op horizontale as",
           "yInputLabel": "Waarde op verticale as",
           "emptyGraphAltText": "Leeg P-Q-diagram met raster. De leerling kiest assen en plaatst twee punten.",
@@ -210,7 +211,33 @@
             }
           ],
           "pointSnapMode": "magnetic_table_point",
-          "pointSnapTolerancePx": 72
+          "pointSnapTolerancePx": 72,
+          "lineShapeOptions": [
+            {
+              "id": "dalend",
+              "label": "Dalend",
+              "value": "decreasing",
+              "kind": "answer"
+            },
+            {
+              "id": "stijgend",
+              "label": "Stijgend",
+              "value": "increasing",
+              "kind": "distractor"
+            },
+            {
+              "id": "horizontaal",
+              "label": "Horizontaal",
+              "value": "constant",
+              "kind": "distractor"
+            },
+            {
+              "id": "geen-verband",
+              "label": "Geen duidelijk verband",
+              "value": "no_relation",
+              "kind": "distractor"
+            }
+          ]
         },
         "expected": {
           "kind": "graph_construction_substitute",
@@ -272,7 +299,7 @@
         },
         "practiceRoute": {
           "label": "Oefen tabel naar P-Q-grafiek",
-          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
+          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
         }
       }
     },
@@ -338,7 +365,7 @@
         },
         "practiceRoute": {
           "label": "Oefen interpoleren uit een grafiek",
-          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
+          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
         }
       }
     },
@@ -410,10 +437,40 @@
             "separator": " ",
             "tokens": [
               {
+                "id": "open",
+                "label": "(",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
                 "id": "newQ",
                 "label": "nieuwe Q",
                 "kind": "answer",
                 "category": "variable"
+              },
+              {
+                "id": "minus",
+                "label": "-",
+                "kind": "answer",
+                "category": "operator"
+              },
+              {
+                "id": "oldQnum",
+                "label": "oude Q",
+                "kind": "answer",
+                "category": "variable"
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer",
+                "category": "grouping"
+              },
+              {
+                "id": "divide",
+                "label": "/",
+                "kind": "answer",
+                "category": "operator"
               },
               {
                 "id": "oldQden",
@@ -422,23 +479,10 @@
                 "category": "denominator"
               },
               {
-                "id": "open",
-                "label": "(",
+                "id": "times100",
+                "label": "x 100%",
                 "kind": "answer",
-                "category": "grouping"
-              },
-              {
-                "id": "times10",
-                "label": "x 10%",
-                "kind": "distractor",
-                "category": "multiplier",
-                "distractorFor": "times100"
-              },
-              {
-                "id": "oldQnum",
-                "label": "oude Q",
-                "kind": "answer",
-                "category": "variable"
+                "category": "multiplier"
               },
               {
                 "id": "plus",
@@ -448,18 +492,6 @@
                 "distractorFor": "minus"
               },
               {
-                "id": "minus",
-                "label": "-",
-                "kind": "answer",
-                "category": "operator"
-              },
-              {
-                "id": "close",
-                "label": ")",
-                "kind": "answer",
-                "category": "grouping"
-              },
-              {
                 "id": "newQden",
                 "label": "nieuwe Q",
                 "kind": "distractor",
@@ -467,23 +499,18 @@
                 "distractorFor": "oldQden"
               },
               {
-                "id": "divide",
-                "label": "/",
-                "kind": "answer",
-                "category": "operator"
-              },
-              {
-                "id": "times100",
-                "label": "x 100%",
-                "kind": "answer",
-                "category": "multiplier"
-              },
-              {
                 "id": "oldFirst",
                 "label": "oude Q - nieuwe Q",
                 "kind": "distractor",
                 "category": "numerator",
                 "distractorFor": "newQ"
+              },
+              {
+                "id": "times10",
+                "label": "x 10%",
+                "kind": "distractor",
+                "category": "multiplier",
+                "distractorFor": "times100"
               }
             ]
           },
@@ -629,7 +656,7 @@
         },
         "practiceRoute": {
           "label": "Oefen procentuele verandering",
-          "href": "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+          "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
         }
       }
     }

@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1.1.3 Exit ticket — excellent exemplar</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --panel-2: #f0f4f8;
+      --text: #142033;
+      --muted: #5b677a;
+      --line: #d8e0eb;
+      --accent: #1c5d99;
+      --accent-soft: #e6f0fa;
+      --good: #216e4e;
+      --good-bg: #e9f7ef;
+      --warn: #8a5a00;
+      --warn-bg: #fff5d6;
+      --bad: #8a1f1f;
+      --bad-bg: #fdeaea;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1020;
+        --panel: #111827;
+        --panel-2: #172033;
+        --text: #eef2ff;
+        --muted: #a6b0c3;
+        --line: #2d3a50;
+        --accent: #8ec5ff;
+        --accent-soft: #102a47;
+        --good: #8ce0b5;
+        --good-bg: #10281e;
+        --warn: #ffd36d;
+        --warn-bg: #332400;
+        --bad: #ffaaa7;
+        --bad-bg: #341414;
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 0 0 8px;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      max-width: 78ch;
+      font-size: 18px;
+    }
+    .route {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .route h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .route a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      background: var(--panel-2);
+    }
+    .route span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 370px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .sticky {
+      position: sticky;
+      top: 16px;
+    }
+    h2, h3 {
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+    h2 { margin: 0 0 12px; font-size: 24px; }
+    h3 { margin: 0 0 8px; font-size: 20px; }
+    p { margin: 0 0 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 15px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: right;
+    }
+    th:first-child, td:first-child { text-align: left; }
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      background: var(--panel-2);
+    }
+    .task {
+      margin-bottom: 18px;
+    }
+    .task-header {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .badge {
+      flex: none;
+      display: inline-grid;
+      place-items: center;
+      min-width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .task-title {
+      margin: 0;
+    }
+    .task-purpose {
+      color: var(--muted);
+      margin: 3px 0 0;
+    }
+    .subtle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 16px;
+    }
+    .label-bank, .slot-grid, .pill-row, .token-bank, .chosen-tokens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    button, input, select {
+      font: inherit;
+    }
+    .chip, .slot, .pill, .token, .small-button {
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      min-height: 40px;
+    }
+    .chip[aria-pressed="true"], .pill[aria-pressed="true"], .token[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .slot {
+      display: block;
+      width: 100%;
+      min-height: 56px;
+      border-radius: 14px;
+      text-align: left;
+      background: transparent;
+    }
+    .slot strong {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .slot span {
+      font-weight: 800;
+    }
+    .graph-shell {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    }
+    #graphSvg {
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      touch-action: manipulation;
+    }
+    .graph-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 10px 0 0;
+    }
+    .graph-actions label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .field {
+      display: grid;
+      gap: 5px;
+    }
+    .field label {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .field input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      color: var(--text);
+      padding: 10px 12px;
+    }
+    .field input:focus, .chip:focus, .pill:focus, .token:focus, .small-button:focus, .slot:focus {
+      outline: 3px solid color-mix(in srgb, var(--accent) 38%, transparent);
+      outline-offset: 2px;
+    }
+    .token-bank {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px;
+      background: var(--panel-2);
+      margin-bottom: 10px;
+    }
+    .chosen-tokens {
+      min-height: 58px;
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+      padding: 10px;
+      background: var(--panel);
+    }
+    .chosen-tokens:empty::before {
+      content: "Klik bouwstenen om je formule hier te bouwen.";
+      color: var(--muted);
+    }
+    .token {
+      font-family: var(--mono);
+      border-radius: 10px;
+    }
+    .feedback {
+      margin-top: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      display: none;
+    }
+    .feedback.show { display: block; }
+    .feedback.good {
+      background: var(--good-bg);
+      color: var(--good);
+      border-color: color-mix(in srgb, var(--good) 42%, var(--line));
+    }
+    .feedback.warn {
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-color: color-mix(in srgb, var(--warn) 42%, var(--line));
+    }
+    .feedback.bad {
+      background: var(--bad-bg);
+      color: var(--bad);
+      border-color: color-mix(in srgb, var(--bad) 42%, var(--line));
+    }
+    .feedback strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .locked {
+      opacity: .55;
+      position: relative;
+    }
+    .locked::after {
+      content: "Rond eerst het vorige onderdeel af.";
+      position: absolute;
+      inset: 12px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 800;
+      color: var(--muted);
+      background: color-mix(in srgb, var(--panel) 86%, transparent);
+      border-radius: 14px;
+      border: 1px dashed var(--line);
+    }
+    .completion {
+      display: none;
+      margin: 20px 0 0;
+      background: var(--good-bg);
+      border-color: color-mix(in srgb, var(--good) 42%, var(--line));
+    }
+    .completion.show { display: block; }
+    details {
+      margin-top: 18px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+    }
+    .note-list {
+      margin: 10px 0 0 18px;
+      color: var(--muted);
+    }
+    .note-list li { margin-bottom: 6px; }
+    @media (max-width: 980px) {
+      .hero, .layout, .two-col {
+        grid-template-columns: 1fr;
+      }
+      .sticky { position: static; }
+    }
+    @media (max-width: 620px) {
+      .wrap { padding: 12px; }
+      .card { padding: 16px; border-radius: 14px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 30px; }
+      .lead { font-size: 16px; }
+      table { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">1.1.3 Grafieken en tabellen</p>
+        <h1>Exit ticket: van tabel naar grafiek naar kritische controle</h1>
+        <p class="lead">Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf.</p>
+      </div>
+      <aside class="card route" aria-label="Oefenroute">
+        <h2>Oefenroute bij herstel</h2>
+        <a href="#"><span>Grafieken</span><strong>Tabel naar P-Q-grafiek</strong></a>
+        <a href="#"><span>Grafieken</span><strong>Interpoleren uit een grafiek</strong></a>
+        <a href="#"><span>Rekenen</span><strong>Procentuele verandering</strong></a>
+      </aside>
+    </section>
+
+    <section class="layout">
+      <aside class="card sticky" aria-label="Bronnen">
+        <h2>Bron 1 — broodjeskraam bij het station</h2>
+        <p>Een broodjeskraam houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. De eigenaar neemt voor deze opdracht aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is.</p>
+        <table aria-label="Prijs en verkochte hoeveelheid broodjes">
+          <thead><tr><th>Prijs P (€)</th><th>Hoeveelheid Q</th></tr></thead>
+          <tbody id="sourceTable"></tbody>
+        </table>
+        <p class="subtle" style="margin-top:12px;">Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; dat hoort bij het P-Q-diagram.</p>
+      </aside>
+
+      <section aria-label="Werkvragen">
+        <article class="card task" id="taskGraph">
+          <div class="task-header">
+            <span class="badge">1</span>
+            <div>
+              <h2 class="task-title">Maak een economisch P-Q-diagram</h2>
+              <p class="task-purpose">Kies de assen, plaats twee verschillende tabelpunten en verbind ze tot één lijn die bij de bron past.</p>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Aslabels</h3>
+              <p class="subtle">Klik een label en plaats het in een asvak.</p>
+              <div class="label-bank" id="labelBank"></div>
+              <div class="slot-grid" style="display:grid;gap:8px;margin-top:12px;">
+                <button class="slot" id="slotX" type="button" onclick="assignAxis('x')"><strong>Horizontale as</strong><span>Nog leeg</span></button>
+                <button class="slot" id="slotY" type="button" onclick="assignAxis('y')"><strong>Verticale as</strong><span>Nog leeg</span></button>
+              </div>
+            </div>
+            <div class="graph-shell">
+              <svg id="graphSvg" viewBox="0 0 680 430" role="img" aria-label="Interactief grafiekwerkvlak"></svg>
+              <div class="graph-actions">
+                <button type="button" class="small-button" onclick="clearPoints()">Wis punten</button>
+                <label><input type="checkbox" id="connectLine"> Verbind mijn punten</label>
+                <label>Lijnvorm:
+                  <select id="lineShape">
+                    <option value="">Kies...</option>
+                    <option value="decreasing">Dalend</option>
+                    <option value="increasing">Stijgend</option>
+                    <option value="flat">Horizontaal</option>
+                    <option value="unclear">Geen verband</option>
+                  </select>
+                </label>
+                <button type="button" class="small-button" onclick="checkGraph()">Controleer grafiek</button>
+              </div>
+              <p class="subtle" id="pointHelp">Kies eerst de assen. Daarna klik je twee verschillende tabelpunten in het raster en verbind je ze.</p>
+              <div class="feedback" id="feedbackGraph" tabindex="-1" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card task locked" id="taskRead">
+          <div class="task-header">
+            <span class="badge">2</span>
+            <div>
+              <h2 class="task-title">Lees een tussenwaarde af</h2>
+              <p class="task-purpose">Gebruik je grafiek en de bron. Geef één afgelezen hoeveelheid.</p>
+            </div>
+          </div>
+          <p>Hoeveel broodjes worden verkocht bij een prijs van <strong>€2,25</strong>?</p>
+          <p class="subtle">Werk in dezelfde volgorde als in je schrift: kies eerst het broninterval waar €2,25 tussen ligt; lees daarna Q af uit je grafieklijn.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label>1. Gebruikt interval</label>
+              <div class="pill-row" id="readIntervals"></div>
+            </div>
+            <div class="field">
+              <label for="readQ">2. Afgelezen hoeveelheid Q</label>
+              <input id="readQ" inputmode="decimal" autocomplete="off" placeholder="vul hoeveelheid in">
+            </div>
+          </div>
+          <button type="button" class="small-button" onclick="checkRead()">Controleer aflezing</button>
+          <div class="feedback" id="feedbackRead" tabindex="-1" role="status" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="taskClaim">
+          <div class="task-header">
+            <span class="badge">3</span>
+            <div>
+              <h2 class="task-title">Controleer een claim over 50% daling</h2>
+              <p class="task-purpose">Zoek het juiste interval, bouw de berekening en geef een conclusie.</p>
+            </div>
+          </div>
+          <p>Een bericht zegt: <strong>“Bij deze prijsstijging daalt de verkoop met 50%.”</strong> Zoek één interval in Bron 1 waarvoor dit klopt.</p>
+
+          <h3>3a. Kies het interval</h3>
+          <div class="pill-row" id="claimIntervals"></div>
+
+          <h3 style="margin-top:16px;">3b. Haal de bronwaarden zelf uit de tabel</h3>
+          <div class="form-grid">
+            <div class="field">
+              <label for="oldQ">Oude hoeveelheid Q</label>
+              <input id="oldQ" inputmode="decimal" autocomplete="off" placeholder="oude Q">
+            </div>
+            <div class="field">
+              <label for="newQ">Nieuwe hoeveelheid Q</label>
+              <input id="newQ" inputmode="decimal" autocomplete="off" placeholder="nieuwe Q">
+            </div>
+            <div class="field">
+              <label for="pct">Procentuele verandering</label>
+              <input id="pct" inputmode="decimal" autocomplete="off" placeholder="vul percentage in, bijvoorbeeld met %">
+            </div>
+          </div>
+
+          <h3>3c. Bouw de berekening</h3>
+          <p class="subtle">Klik bouwstenen. Er zitten verkeerde bouwstenen tussen. Gebruik geen formulekaart; construeer de formule.</p>
+          <div class="token-bank" id="tokenBank"></div>
+          <div class="chosen-tokens" id="chosenTokens"></div>
+          <div class="graph-actions">
+            <button type="button" class="small-button" onclick="undoToken()">Laatste bouwsteen weg</button>
+            <button type="button" class="small-button" onclick="clearFormula()">Wis formule</button>
+          </div>
+
+          <h3 style="margin-top:16px;">3d. Conclusie</h3>
+          <div class="pill-row" id="conclusions"></div>
+
+          <button type="button" class="small-button" style="margin-top:14px;" onclick="checkClaim()">Controleer claim</button>
+          <div class="feedback" id="feedbackClaim" tabindex="-1" role="status" aria-live="polite"></div>
+        </article>
+
+        <section class="card completion" id="completion">
+          <h2>Exit ticket afgerond</h2>
+          <p>Je antwoorden zijn lokaal nagekeken. Als je een onderdeel lastig vond, gebruik dan de oefenroute bovenaan.</p>
+        </section>
+
+        <details class="card">
+          <summary>Ontwerpnotitie voor repository-teams</summary>
+          <ul class="note-list">
+            <li>De student krijgt bron en actieve werkruimte, geen procedureblok en geen vooraf gegeven formule.</li>
+            <li>Gebruik geen antwoordgevende placeholders zoals “bijv. 225” wanneer 225 de juiste uitkomst is. Placeholders moeten neutraal zijn.</li>
+            <li>De volgorde van de interface volgt de denkvolgorde: eerst broninterval kiezen, daarna aflezen; eerst bronwaarden kiezen, daarna berekenen, daarna concluderen.</li>
+            <li>De askeuze is een echte studenthandeling: de opties bevatten plausibele afleiders en de grafiek is niet vooraf gelabeld.</li>
+            <li>Het grafiekwerk is geen “kies het goede antwoord”: de leerling kiest assen, plaatst twee punten in een actief werkvlak en trekt zelf de lijn.</li>
+            <li>Motorische precisie is niet het doel. Gebruik snapping of ruime tolerantie wanneer het wiskundige doel punt-herkenning is.</li>
+            <li>De procenttaak bewaart de toetsantwoordstructuur: interval → oude waarde → nieuwe waarde → formulebouw → berekening → conclusie.</li>
+            <li>Antwoordinvoer is tolerant voor normale notaties zoals “-50%”, “-50 procent” of “50% daling”.</li>
+            <li>Feedback komt na controle en stuurt naar een oefenroute; het product claimt geen cijfer, diagnose, mastery of summatief oordeel.</li>
+          </ul>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const DATA = {
+      table: [
+        { p: 1.00, q: 350 },
+        { p: 1.50, q: 300 },
+        { p: 2.00, q: 250 },
+        { p: 2.50, q: 200 },
+        { p: 3.00, q: 150 }
+      ],
+      labels: [
+        { id: 'Q', label: 'Hoeveelheid Q' },
+        { id: 'P', label: 'Prijs P' },
+        { id: 'omzet', label: 'Omzet' },
+        { id: 'tijd', label: 'Tijd' },
+        { id: 'kraampjes', label: 'Aantal kraampjes' }
+      ],
+      readIntervals: [
+        { id: '150-200', label: '€1,50 → €2,00' },
+        { id: '200-250', label: '€2,00 → €2,50' },
+        { id: '250-300', label: '€2,50 → €3,00' },
+        { id: '100-150', label: '€1,00 → €1,50' }
+      ],
+      claimIntervals: [
+        { id: '100-150', label: '€1,00 → €1,50' },
+        { id: '150-200', label: '€1,50 → €2,00' },
+        { id: '200-250', label: '€2,00 → €2,50' },
+        { id: '250-300', label: '€2,50 → €3,00' },
+        { id: '150-300', label: '€1,50 → €3,00' },
+        { id: '100-300', label: '€1,00 → €3,00' }
+      ],
+      tokens: [
+        { id: 'open', label: '(', kind: 'answer' },
+        { id: 'newQ', label: 'nieuwe Q', kind: 'answer' },
+        { id: 'minus', label: '−', kind: 'answer' },
+        { id: 'oldQ_num', label: 'oude Q', kind: 'answer' },
+        { id: 'close', label: ')', kind: 'answer' },
+        { id: 'divide', label: '÷', kind: 'answer' },
+        { id: 'oldQ_den', label: 'oude Q', kind: 'answer' },
+        { id: 'times100', label: '× 100%', kind: 'answer' },
+        { id: 'plus', label: '+', kind: 'distractor' },
+        { id: 'newQ_den', label: 'nieuwe Q', kind: 'distractor' },
+        { id: 'oldFirst', label: 'oude Q − nieuwe Q', kind: 'distractor' },
+        { id: 'times10', label: '× 10%', kind: 'distractor' }
+      ],
+      conclusions: [
+        { id: 'drop50', label: 'De verkoop daalt met 50%.' },
+        { id: 'rise50', label: 'De verkoop stijgt met 50%.' },
+        { id: 'dropWrong', label: 'De verkoop daalt, maar niet met 50%.' },
+        { id: 'cannot', label: 'Dat kun je met deze tabel niet controleren.' }
+      ]
+    };
+
+    const state = {
+      selectedLabel: null,
+      axis: { x: null, y: null },
+      points: [],
+      selectedReadInterval: null,
+      selectedClaimInterval: null,
+      selectedConclusion: null,
+      formula: [],
+      graphOk: false,
+      readOk: false,
+      claimOk: false
+    };
+
+    const svg = document.getElementById('graphSvg');
+    const plot = { x: 78, y: 32, w: 540, h: 330 };
+
+    function fmtPrice(value) {
+      return '€' + value.toFixed(2).replace('.', ',');
+    }
+
+    function parseNum(value) {
+      if (value == null) return NaN;
+      const normalized = String(value)
+        .trim()
+        .replace(/−/g, '-')
+        .replace(/,/g, '.');
+      const match = normalized.match(/[-+]?\d+(?:\.\d+)?/);
+      return match ? Number(match[0]) : NaN;
+    }
+
+    function parsePercent(value) {
+      if (value == null) return NaN;
+      const raw = String(value).trim().toLowerCase().replace(/−/g, '-');
+      let number = parseNum(raw.replace(/%/g, '').replace(/procent/g, ''));
+      if (!isFinite(number)) return NaN;
+      const explicitlyNegative = /^\s*-/.test(raw);
+      const saysDecrease = /\b(daalt|daling|gedaald|afname|lager)\b/.test(raw);
+      if (!explicitlyNegative && saysDecrease && number > 0) number = -number;
+      return number;
+    }
+
+    function init() {
+      renderSource();
+      renderLabels();
+      renderIntervalPills('readIntervals', DATA.readIntervals, 'selectedReadInterval');
+      renderIntervalPills('claimIntervals', DATA.claimIntervals, 'selectedClaimInterval');
+      renderTokens();
+      renderConclusionPills();
+      renderGraph();
+    }
+
+    function renderSource() {
+      const body = document.getElementById('sourceTable');
+      body.innerHTML = DATA.table.map(row =>
+        `<tr><td>${fmtPrice(row.p)}</td><td>${row.q}</td></tr>`
+      ).join('');
+    }
+
+    function renderLabels() {
+      const bank = document.getElementById('labelBank');
+      bank.innerHTML = DATA.labels.map(label => {
+        const pressed = state.selectedLabel === label.id ? 'true' : 'false';
+        return `<button type="button" class="chip" aria-pressed="${pressed}" onclick="selectLabel('${label.id}')">${label.label}</button>`;
+      }).join('');
+      for (const axis of ['x', 'y']) {
+        const slot = document.getElementById(axis === 'x' ? 'slotX' : 'slotY');
+        const label = DATA.labels.find(item => item.id === state.axis[axis]);
+        slot.querySelector('span').textContent = label ? label.label : 'Nog leeg';
+      }
+    }
+
+    function selectLabel(id) {
+      state.selectedLabel = id;
+      renderLabels();
+    }
+
+    function assignAxis(axis) {
+      if (!state.selectedLabel) return;
+      state.axis[axis] = state.selectedLabel;
+      if (axis === 'x' && state.axis.y === state.selectedLabel) state.axis.y = null;
+      if (axis === 'y' && state.axis.x === state.selectedLabel) state.axis.x = null;
+      state.points = [];
+      state.graphOk = false;
+      lockAfterGraph();
+      renderLabels();
+      renderGraph();
+    }
+
+    function axisScale(axis) {
+      const variable = state.axis[axis];
+      if (variable === 'Q') return { min: 0, max: 400, ticks: [0,50,100,150,200,250,300,350,400], label: 'Hoeveelheid Q' };
+      if (variable === 'P') return { min: 0, max: 3.5, ticks: [0,0.5,1,1.5,2,2.5,3,3.5], label: 'Prijs P (€)' };
+      return { min: 0, max: 10, ticks: [0,2,4,6,8,10], label: variable ? DATA.labels.find(l => l.id === variable).label : '' };
+    }
+
+    function valueToX(value) {
+      const s = axisScale('x');
+      return plot.x + ((value - s.min) / (s.max - s.min)) * plot.w;
+    }
+
+    function valueToY(value) {
+      const s = axisScale('y');
+      return plot.y + plot.h - ((value - s.min) / (s.max - s.min)) * plot.h;
+    }
+
+    function xToValue(x) {
+      const s = axisScale('x');
+      return s.min + ((x - plot.x) / plot.w) * (s.max - s.min);
+    }
+
+    function yToValue(y) {
+      const s = axisScale('y');
+      return s.min + ((plot.y + plot.h - y) / plot.h) * (s.max - s.min);
+    }
+
+    function coarseSnap(axis, value) {
+      const variable = state.axis[axis];
+      if (variable === 'Q') return Math.round(value / 25) * 25;
+      if (variable === 'P') return Math.round(value / 0.25) * 0.25;
+      return Math.round(value * 10) / 10;
+    }
+
+    function tablePointForRow(row) {
+      return {
+        x: state.axis.x === 'Q' ? row.q : row.p,
+        y: state.axis.y === 'P' ? row.p : row.q,
+        row
+      };
+    }
+
+    function magneticSnapPoint(rawX, rawY, svgX, svgY) {
+      if (state.axis.x === 'Q' && state.axis.y === 'P') {
+        let best = null;
+        for (const row of DATA.table) {
+          const candidate = tablePointForRow(row);
+          const px = valueToX(candidate.x);
+          const py = valueToY(candidate.y);
+          const dist = Math.hypot(px - svgX, py - svgY);
+          if (!best || dist < best.dist) best = { dist, point: { x: candidate.x, y: candidate.y, sourceRow: row } };
+        }
+        if (best && best.dist <= 72) return best.point;
+      }
+      return { x: coarseSnap('x', rawX), y: coarseSnap('y', rawY) };
+    }
+
+    function nearestExistingPointIndex(svgX, svgY) {
+      if (!state.points.length) return -1;
+      let best = { index: -1, dist: Infinity };
+      state.points.forEach((point, index) => {
+        const dist = Math.hypot(valueToX(point.x) - svgX, valueToY(point.y) - svgY);
+        if (dist < best.dist) best = { index, dist };
+      });
+      return best.index;
+    }
+
+    function renderGraph() {
+      const sx = axisScale('x');
+      const sy = axisScale('y');
+      const hasAxes = state.axis.x && state.axis.y;
+      const gridColor = getComputedStyle(document.documentElement).getPropertyValue('--line').trim() || '#d8e0eb';
+      const textColor = getComputedStyle(document.documentElement).getPropertyValue('--muted').trim() || '#5b677a';
+      const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#1c5d99';
+
+      const xTicks = sx.ticks.map(t => {
+        const x = valueToX(t);
+        const label = state.axis.x === 'P' ? t.toFixed(t % 1 ? 1 : 0).replace('.', ',') : String(t);
+        return `<line x1="${x}" y1="${plot.y}" x2="${x}" y2="${plot.y + plot.h}" stroke="${gridColor}" stroke-width="1"/>
+          <text x="${x}" y="${plot.y + plot.h + 24}" text-anchor="middle" fill="${textColor}" font-size="13">${hasAxes ? label : ''}</text>`;
+      }).join('');
+      const yTicks = sy.ticks.map(t => {
+        const y = valueToY(t);
+        const label = state.axis.y === 'P' ? t.toFixed(t % 1 ? 1 : 0).replace('.', ',') : String(t);
+        return `<line x1="${plot.x}" y1="${y}" x2="${plot.x + plot.w}" y2="${y}" stroke="${gridColor}" stroke-width="1"/>
+          <text x="${plot.x - 12}" y="${y + 4}" text-anchor="end" fill="${textColor}" font-size="13">${hasAxes ? label : ''}</text>`;
+      }).join('');
+
+      const points = state.points.map((point, i) => {
+        const cx = valueToX(point.x);
+        const cy = valueToY(point.y);
+        return `<g><circle cx="${cx}" cy="${cy}" r="7" fill="${accent}"/><text x="${cx + 10}" y="${cy - 8}" fill="${accent}" font-size="12">P${i+1}</text></g>`;
+      }).join('');
+
+      const line = document.getElementById('connectLine').checked && state.points.length > 1
+        ? `<polyline points="${state.points.map(p => `${valueToX(p.x)},${valueToY(p.y)}`).join(' ')}" fill="none" stroke="${accent}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`
+        : '';
+
+      svg.innerHTML = `
+        <rect x="0" y="0" width="680" height="430" fill="transparent"></rect>
+        <rect x="${plot.x}" y="${plot.y}" width="${plot.w}" height="${plot.h}" fill="transparent" stroke="${gridColor}" stroke-width="2"></rect>
+        ${xTicks}${yTicks}
+        <line x1="${plot.x}" y1="${plot.y + plot.h}" x2="${plot.x + plot.w}" y2="${plot.y + plot.h}" stroke="${textColor}" stroke-width="2"/>
+        <line x1="${plot.x}" y1="${plot.y}" x2="${plot.x}" y2="${plot.y + plot.h}" stroke="${textColor}" stroke-width="2"/>
+        <text x="${plot.x + plot.w / 2}" y="414" text-anchor="middle" fill="${textColor}" font-weight="700">${hasAxes ? sx.label : 'Horizontale as'}</text>
+        <text x="20" y="${plot.y + plot.h / 2}" text-anchor="middle" fill="${textColor}" font-weight="700" transform="rotate(-90, 20, ${plot.y + plot.h / 2})">${hasAxes ? sy.label : 'Verticale as'}</text>
+        ${line}${points}
+      `;
+      document.getElementById('pointHelp').textContent = hasAxes
+        ? `Geplaatste punten: ${state.points.length}/2. Klik ongeveer bij een tabelpunt; het punt springt magnetisch naar de dichtstbijzijnde bronwaarde.`
+        : 'Kies eerst de assen. Daarna klik je twee verschillende tabelpunten in het raster en verbind je ze.';
+    }
+
+    svg.addEventListener('click', function (event) {
+      if (!state.axis.x || !state.axis.y) return;
+      const rect = svg.getBoundingClientRect();
+      const scaleX = 680 / rect.width;
+      const scaleY = 430 / rect.height;
+      const x = (event.clientX - rect.left) * scaleX;
+      const y = (event.clientY - rect.top) * scaleY;
+      if (x < plot.x || x > plot.x + plot.w || y < plot.y || y > plot.y + plot.h) return;
+      const snapped = magneticSnapPoint(xToValue(x), yToValue(y), x, y);
+      if (state.points.length < 2) {
+        state.points.push(snapped);
+      } else {
+        const replaceIndex = nearestExistingPointIndex(x, y);
+        state.points[replaceIndex >= 0 ? replaceIndex : 1] = snapped;
+      }
+      state.graphOk = false;
+      lockAfterGraph();
+      renderGraph();
+    });
+    document.getElementById('connectLine').addEventListener('change', renderGraph);
+
+    function clearPoints() {
+      state.points = [];
+      state.graphOk = false;
+      lockAfterGraph();
+      renderGraph();
+      setFeedback('feedbackGraph', '', '');
+    }
+
+    function matchingTableRowIndex(point) {
+      if (state.axis.x !== 'Q' || state.axis.y !== 'P') return -1;
+      return DATA.table.findIndex(row => Math.abs(point.x - row.q) <= 35 && Math.abs(point.y - row.p) <= 0.20);
+    }
+
+    function selectedTableRowIndexes() {
+      return state.points
+        .map(matchingTableRowIndex)
+        .filter(index => index >= 0);
+    }
+
+    function hasDistinctTablePoints() {
+      return new Set(selectedTableRowIndexes()).size >= 2;
+    }
+
+    function plottedLineIsDecreasing() {
+      if (state.points.length < 2 || state.axis.x !== 'Q' || state.axis.y !== 'P') return false;
+      const [a, b] = state.points;
+      if (a.x === b.x) return false;
+      return ((b.y - a.y) / (b.x - a.x)) < 0;
+    }
+
+    function checkGraph() {
+      const errors = [];
+      if (state.axis.x !== 'Q' || state.axis.y !== 'P') {
+        errors.push('De askeuze past nog niet bij een economisch P-Q-diagram.');
+      }
+      if (state.points.length < 2) {
+        errors.push('Plaats twee verschillende tabelpunten in het werkvlak.');
+      }
+      if (state.axis.x === 'Q' && state.axis.y === 'P' && !hasDistinctTablePoints()) {
+        errors.push('Klik twee verschillende bronwaarden uit de tabel. Je hoeft niet alle vijf punten te plaatsen.');
+      }
+      if (!document.getElementById('connectLine').checked || document.getElementById('lineShape').value !== 'decreasing' || !plottedLineIsDecreasing()) {
+        errors.push('Verbind de twee punten tot één rechte dalende lijn.');
+      }
+      if (errors.length) {
+        state.graphOk = false;
+        lockAfterGraph();
+        setFeedback('feedbackGraph', 'warn', 'Nog niet rond', errors.join(' Gebruik de grafiekenroute als je dit onderdeel wilt oefenen.'));
+        return;
+      }
+      state.graphOk = true;
+      unlock('taskRead');
+      setFeedback('feedbackGraph', 'good', 'Grafiekwerk klopt', 'Je hebt Q horizontaal, P verticaal en twee verschillende tabelpunten gebruikt. Omdat het verband hier rechtlijnig is, bepalen twee punten de lijn.');
+      updateCompletion();
+    }
+
+    function renderIntervalPills(containerId, items, stateKey) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = items.map(item => {
+        const pressed = state[stateKey] === item.id ? 'true' : 'false';
+        return `<button type="button" class="pill" aria-pressed="${pressed}" onclick="selectPill('${stateKey}','${item.id}','${containerId}')">${item.label}</button>`;
+      }).join('');
+    }
+
+    function selectPill(stateKey, id, containerId) {
+      state[stateKey] = id;
+      const items = containerId === 'readIntervals' ? DATA.readIntervals : DATA.claimIntervals;
+      renderIntervalPills(containerId, items, stateKey);
+    }
+
+    function checkRead() {
+      if (!state.graphOk) return;
+      const q = parseNum(document.getElementById('readQ').value);
+      const intervalOk = state.selectedReadInterval === '200-250';
+      const qOk = Math.abs(q - 225) <= 10;
+      if (intervalOk && qOk) {
+        state.readOk = true;
+        unlock('taskClaim');
+        setFeedback('feedbackRead', 'good', 'Aflezing klopt', '€2,25 ligt tussen €2,00 en €2,50; de hoeveelheid ligt rond 225 broodjes.');
+        updateCompletion();
+      } else {
+        state.readOk = false;
+        setFeedback('feedbackRead', 'warn', 'Controleer je aflezing', 'Kijk welke twee tabelpunten rondom €2,25 liggen en lees daar tussenin af.');
+      }
+    }
+
+    function renderTokens() {
+      const bank = document.getElementById('tokenBank');
+      bank.innerHTML = DATA.tokens.map(token => {
+        return `<button type="button" class="token" onclick="addToken('${token.id}')">${token.label}</button>`;
+      }).join('');
+      renderChosenTokens();
+    }
+
+    function addToken(id) {
+      state.formula.push(id);
+      renderChosenTokens();
+    }
+
+    function undoToken() {
+      state.formula.pop();
+      renderChosenTokens();
+    }
+
+    function clearFormula() {
+      state.formula = [];
+      renderChosenTokens();
+    }
+
+    function renderChosenTokens() {
+      const box = document.getElementById('chosenTokens');
+      box.innerHTML = state.formula.map(id => {
+        const token = DATA.tokens.find(t => t.id === id);
+        return `<button type="button" class="token" title="Klik om deze bouwsteen te verwijderen" onclick="removeFirstToken('${id}')">${token ? token.label : id}</button>`;
+      }).join('');
+    }
+
+    function removeFirstToken(id) {
+      const index = state.formula.indexOf(id);
+      if (index >= 0) state.formula.splice(index, 1);
+      renderChosenTokens();
+    }
+
+    function renderConclusionPills() {
+      const container = document.getElementById('conclusions');
+      container.innerHTML = DATA.conclusions.map(item => {
+        const pressed = state.selectedConclusion === item.id ? 'true' : 'false';
+        return `<button type="button" class="pill" aria-pressed="${pressed}" onclick="selectConclusion('${item.id}')">${item.label}</button>`;
+      }).join('');
+    }
+
+    function selectConclusion(id) {
+      state.selectedConclusion = id;
+      renderConclusionPills();
+    }
+
+    function formulaOk() {
+      const expected = ['open','newQ','minus','oldQ_num','close','divide','oldQ_den','times100'];
+      return expected.length === state.formula.length && expected.every((id, i) => state.formula[i] === id);
+    }
+
+    function checkClaim() {
+      if (!state.readOk) return;
+      const oldQ = parseNum(document.getElementById('oldQ').value);
+      const newQ = parseNum(document.getElementById('newQ').value);
+      const pct = parsePercent(document.getElementById('pct').value);
+      const checks = [
+        state.selectedClaimInterval === '150-300',
+        oldQ === 300,
+        newQ === 150,
+        formulaOk(),
+        Math.abs(pct - (-50)) <= 0.1,
+        state.selectedConclusion === 'drop50'
+      ];
+      if (checks.every(Boolean)) {
+        state.claimOk = true;
+        setFeedback('feedbackClaim', 'good', 'Claimcontrole klopt', 'Je gebruikt het interval €1,50 → €3,00: Q gaat van 300 naar 150. De procentuele verandering is −50%, dus de verkoop daalt met 50%.');
+        updateCompletion();
+      } else {
+        state.claimOk = false;
+        setFeedback('feedbackClaim', 'warn', 'Controleer de volledige keten', 'Controleer het gekozen interval, de oude en nieuwe hoeveelheid, de volgorde van je formulebouwstenen en je conclusie. Oefen procentuele verandering als dit onderdeel blijft haperen.');
+      }
+    }
+
+    function setFeedback(id, tone, title, text) {
+      const el = document.getElementById(id);
+      if (!tone) {
+        el.className = 'feedback';
+        el.innerHTML = '';
+        return;
+      }
+      el.className = `feedback show ${tone}`;
+      el.innerHTML = `<strong>${title}</strong><p>${text}</p>`;
+      el.focus({ preventScroll: true });
+    }
+
+    function unlock(id) {
+      document.getElementById(id).classList.remove('locked');
+    }
+
+    function lockAfterGraph() {
+      if (!state.graphOk) {
+        document.getElementById('taskRead').classList.add('locked');
+        document.getElementById('taskClaim').classList.add('locked');
+        state.readOk = false;
+        state.claimOk = false;
+      }
+    }
+
+    function updateCompletion() {
+      document.getElementById('completion').classList.toggle('show', state.graphOk && state.readOk && state.claimOk);
+    }
+
+    init();
+  </script>
+</body>
+</html>

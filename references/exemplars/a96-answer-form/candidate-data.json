@@ -1,0 +1,297 @@
+{
+  "schema_version": 3,
+  "exemplar_id": "A96-answer-form-proof-golden-v3",
+  "surface": "mtu_answer_form_golden_exemplar",
+  "mtu": {
+    "unit_id": "A96",
+    "route_specific": true,
+    "standalone_modifier_pass_allowed": false
+  },
+  "title": "A96 Golden Exemplar — bereken-antwoordvorm",
+  "intro": "Controleer een volledige bereken-antwoordvorm voor een procentuele prijsstijging zonder dubbel werk en zonder visueel identieke verborgen tokenval.",
+  "authority": {
+    "review_only": true,
+    "product_adoption_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_mastery_or_summative_authorized": false
+  },
+  "layout": {
+    "kind": "source_task_workspace",
+    "sourcePaneTitle": "Bronnen",
+    "taskPaneTitle": "Werkvragen",
+    "studentFacingPrinciple": "source-left/task-right on desktop; source-before-task on mobile; one visible card per cognitive operation; do not ask the same calculation step twice"
+  },
+  "contextBlocks": [
+    {
+      "id": "ctx-112-fietsprijs",
+      "type": "source_excerpt",
+      "sourceLabel": "Bron 1",
+      "caption": "Bron 1: Fietsprijs",
+      "bodyMarkdown": "Een fiets kost eerst 800 euro en daarna 920 euro.",
+      "accessibilitySummary": "Tekstbron met oude fietsprijs 800 euro en nieuwe fietsprijs 920 euro."
+    },
+    {
+      "id": "ctx-112-fietsprijs-table",
+      "type": "table",
+      "sourceLabel": "Tabel 1",
+      "caption": "Tabel 1: Oude en nieuwe fietsprijs",
+      "columns": [
+        "Moment",
+        "Prijs"
+      ],
+      "rows": [
+        [
+          "Eerst",
+          "800"
+        ],
+        [
+          "Daarna",
+          "920"
+        ]
+      ],
+      "altText": "Tabel met eerst 800 euro en daarna 920 euro."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "a96-prijsstijging-antwoordvorm",
+      "family": "calculation_answer_form_capture",
+      "status": "new_or_extended_shared_task_family_required",
+      "skillLabel": "Bereken-vraag beantwoorden",
+      "prompt": "Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.",
+      "contextRefs": [
+        "ctx-112-fietsprijs",
+        "ctx-112-fietsprijs-table"
+      ],
+      "operationChain": [
+        "formula_or_calculation_method",
+        "formula_substitution_with_source_values",
+        "final_answer",
+        "unit_or_notation",
+        "short_contextual_direction_sentence"
+      ],
+      "interaction": {
+        "steps": [
+          {
+            "id": "formula",
+            "title": "Schrijf de formule op die je gaat gebruiken",
+            "type": "formula_builder",
+            "rule": "Token bank must not be ordered in the accepted formula sequence. Visually identical correct tokens with different hidden IDs are forbidden; use one reusable token when the same concept appears twice.",
+            "tokens": [
+              {
+                "id": "open",
+                "label": "(",
+                "kind": "answer"
+              },
+              {
+                "id": "plus",
+                "label": "+",
+                "kind": "distractor",
+                "distractorFor": "minus"
+              },
+              {
+                "id": "times100",
+                "label": "× 100%",
+                "kind": "answer"
+              },
+              {
+                "id": "new",
+                "label": "nieuwe prijs",
+                "kind": "answer"
+              },
+              {
+                "id": "divide",
+                "label": "÷",
+                "kind": "answer"
+              },
+              {
+                "id": "oldfirst",
+                "label": "oude − nieuwe",
+                "kind": "distractor",
+                "distractorFor": "new"
+              },
+              {
+                "id": "oldPrice",
+                "label": "oude prijs",
+                "kind": "answer",
+                "maxUses": 2,
+                "usageHint": "gebruik in teller en noemer"
+              },
+              {
+                "id": "close",
+                "label": ")",
+                "kind": "answer"
+              },
+              {
+                "id": "minus",
+                "label": "−",
+                "kind": "answer"
+              },
+              {
+                "id": "times10",
+                "label": "× 10%",
+                "kind": "distractor",
+                "distractorFor": "times100"
+              },
+              {
+                "id": "newden",
+                "label": "nieuwe prijs onder de streep",
+                "kind": "distractor",
+                "distractorFor": "oldPrice"
+              }
+            ],
+            "allowReuseFor": [
+              "oldPrice"
+            ]
+          },
+          {
+            "id": "substitution",
+            "title": "Vul de formule met bronwaarden",
+            "type": "formula_substitution_fields",
+            "derivedFromStep": "formula",
+            "template": "((nieuwe prijs − oude prijs) ÷ oude prijs) × 100%",
+            "fields": [
+              {
+                "id": "newPrice",
+                "label": "nieuwe prijs",
+                "placeholder": "nieuwe prijs",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "oldPriceNumerator",
+                "label": "oude prijs",
+                "placeholder": "oude prijs",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "oldPriceDenominator",
+                "label": "oude prijs",
+                "placeholder": "oude prijs",
+                "inputMode": "decimal"
+              }
+            ]
+          },
+          {
+            "id": "answer",
+            "title": "Bereken je antwoord",
+            "type": "final_answer_with_notation",
+            "fields": [
+              {
+                "id": "finalAnswer",
+                "label": "Eindantwoord",
+                "placeholder": "vul het getal in",
+                "inputMode": "decimal"
+              },
+              {
+                "id": "notation",
+                "label": "Eenheid of notatie",
+                "placeholder": "%, procent of procentpunt",
+                "inputMode": "text"
+              }
+            ]
+          },
+          {
+            "id": "context",
+            "title": "Schrijf de contextzin",
+            "type": "short_contextual_direction_sentence",
+            "field": {
+              "id": "conclusion",
+              "label": "Contextzin",
+              "placeholder": "schrijf wat er met de prijs gebeurt",
+              "inputMode": "text"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "methodTokens": [
+          "open",
+          "new",
+          "minus",
+          "oldPrice",
+          "close",
+          "divide",
+          "oldPrice",
+          "times100"
+        ],
+        "tokenDisplayOrderMustNotEqualMethodTokens": true,
+        "substitution": {
+          "newPrice": {
+            "kind": "number",
+            "value": 920,
+            "tolerance": 0.01
+          },
+          "oldPriceNumerator": {
+            "kind": "number",
+            "value": 800,
+            "tolerance": 0.01
+          },
+          "oldPriceDenominator": {
+            "kind": "number",
+            "value": 800,
+            "tolerance": 0.01
+          }
+        },
+        "finalAnswer": {
+          "kind": "number_or_percent_text",
+          "value": 15,
+          "acceptedNotations": [
+            "15",
+            "15%",
+            "15 procent",
+            "15,0",
+            "15,0%",
+            "15.0",
+            "15.0%"
+          ]
+        },
+        "notation": {
+          "kind": "text",
+          "accepted": [
+            "%",
+            "procent",
+            "procentteken"
+          ],
+          "required": true
+        },
+        "conclusion": {
+          "requiredTextGroups": [
+            [
+              "prijs",
+              "fiets"
+            ],
+            [
+              "stijgt",
+              "stijging",
+              "duurder"
+            ],
+            [
+              "15",
+              "vijftien"
+            ]
+          ]
+        },
+        "visualTokenIdentityPolicy": {
+          "forbid_identical_labels_with_different_answer_ids": true,
+          "repeated_concepts_use_single_reusable_token": true,
+          "reusable_token_ids": [
+            "oldPrice"
+          ]
+        }
+      },
+      "feedback": {
+        "matchTitle": "Berekening compleet",
+        "matchText": "Je noteert de formule, vult de bronwaarden in, geeft eindantwoord met notatie en schrijft een contextzin met richting.",
+        "retryTitle": "Maak je antwoordvorm compleet",
+        "retryText": "Controleer formule, ingevulde bronwaarden, eindantwoord, notatie en contextzin."
+      },
+      "practiceRoute": {
+        "label": "Volgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+      },
+      "designGuardrails": [
+        "Never use visually identical correct controls with different hidden IDs. Repeated concepts use one reusable token with maxUses or equivalent."
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-POLICY-REGRESSION-1",
-  "generated": "2026-06-07T13:00:35.296Z",
+  "generated": "2026-06-08T13:40:31.248Z",
   "status": "passed",
   "policy": {
     "stable_specs_updated": true,
@@ -12,7 +12,7 @@
     "surface_similarity": {
       "1.1.1": 0.18,
       "1.1.2": 0.255,
-      "1.1.3": 0.327
+      "1.1.3": 0.322
     },
     "sources_checked": [
       "1.1.1-korte-check",
