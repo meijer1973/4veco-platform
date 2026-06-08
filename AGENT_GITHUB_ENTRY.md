@@ -26,6 +26,7 @@ Path reliability:
 | How should a specific screenshot, UI state, graph, diagram, chart, or visual asset be reviewed? | `agents/visual-qa-agent.md` |
 | Which book/chapter/paragraph files are published now? | `4veco-lessen` |
 | Are references, validators, roadmaps, or sprint reports current? | `4veco-platform` |
+| How should inspection/accountability evidence work be scoped? | `docs/roadmaps/inspection-standards-roadmap.md`, `references/SOURCE_OF_TRUTH.md`, `4veco-lessen/specifications/product-end-state.md` |
 | Is a copied `shared/` engine file authoritative? | `4veco-platform` |
 | How should official exam-question ingestion, source annexes, correction models, or answer-model decomposition be handled? | `AGENTS.md`, `references/SOURCE_OF_TRUTH.md`, `references/data/exercises/README.md`, `references/reference-team-roadmap.md` |
 
@@ -57,6 +58,7 @@ Useful entry points:
 - `agents/student-experience-review-agent.md`
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
+- `docs/roadmaps/inspection-standards-roadmap.md`
 - `reports/github-agent-index-platform.md` after running `npm.cmd run agent:index`
 
 Task-routing guidance:

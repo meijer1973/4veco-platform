@@ -4,10 +4,17 @@ This folder tracks roadmap versions and old roadmap snapshots for future referen
 
 ## Canonical Rule
 
-Live roadmap files stay at their operational paths. For the references team, the live file is:
+Live roadmap files stay at their operational paths. For the references team, the main live file is:
 
 ```text
 references/reference-team-roadmap.md
+```
+
+Dedicated governance roadmaps may live in this directory when their operational
+path is itself a docs/roadmaps file. Current example:
+
+```text
+docs/roadmaps/inspection-standards-roadmap.md
 ```
 
 Old roadmap snapshots belong under:

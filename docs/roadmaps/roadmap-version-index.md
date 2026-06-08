@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-06-05
+Updated: 2026-06-08
 
 The JSON file is canonical for tooling:
 
@@ -13,6 +13,7 @@ docs/roadmaps/roadmap-version-index.json
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
 | References Team Roadmap | `v3.56-shared-task-ingest-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-SHARED-TASK-INGEST-REPAIR-1 closed PASS WITH FLAGS. Shared task context/source-ingestion readiness is accepted for controlled downstream adoption-preparation only. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, generated lesson output, and product-wide use remain blocked until later rendered-output review and product gates. The next roadmap-controlled step is CHECK-SHORT-EXIT-2 unless the roadmap owner explicitly reorders. |
+| Inspection Standards Compatibility Roadmap | `v0.1-setup-roadmap` | `docs/roadmaps/inspection-standards-roadmap.md` | Proposed governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. No implementation sprints, schemas, validators, generated lesson-output changes, country overlays, or compliance claims are authorised yet; the next recommended sprint is INSPECT-0 Source Register + Dutch Profile Design. |
 
 ## Outdated Archive
 

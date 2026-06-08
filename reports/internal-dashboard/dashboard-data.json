@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T06:23:16.016Z",
+  "generatedAt": "2026-06-08T07:39:39.998Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1423,6 +1423,17 @@
               "exitGate": ""
             }
           ]
+        },
+        {
+          "label": "Inspection standards roadmap",
+          "path": "docs/roadmaps/inspection-standards-roadmap.md",
+          "exists": true,
+          "repositoryPath": "4veco-platform/docs/roadmaps/inspection-standards-roadmap.md",
+          "generated": "",
+          "updated": "",
+          "scope": "```text",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.1-setup-roadmap Sprint status: no implementation sprints authorised yet Human owner: HCS / Marcel Team mode: isolated worktree, roadmap and evidence design first, no broad production 0. Purpose This roadmap defines how 4veco will become inspection-legibl...",
+          "sprints": []
         }
       ],
       "sprints": [

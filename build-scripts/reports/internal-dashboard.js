@@ -35,6 +35,7 @@ const TEAM_TABS = [
       'Owns reference quality, inspection and accountability evidence, exam alignment, skill and goal efficiency, and the question of what should be taught versus omitted.',
     roadmaps: [
       { label: 'References roadmap', path: 'references/reference-team-roadmap.md' },
+      { label: 'Inspection standards roadmap', path: 'docs/roadmaps/inspection-standards-roadmap.md' },
     ],
   },
   {

@@ -105,6 +105,7 @@ Human-readable:
 - `agents/econ-companion-visual-review.md`
 - `agents/visual-qa-agent.md`
 - `references/reference-team-roadmap.md`
+- `docs/roadmaps/inspection-standards-roadmap.md`
 - `docs/roadmaps/roadmap-version-index.json`
 - `references/SOURCE_OF_TRUTH.md`
 - `knowledge/old/platform-team-roadmap.md`
@@ -149,6 +150,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/SOURCE_OF_TRUTH.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
@@ -198,6 +200,7 @@ Use these anchors before free-form browsing.
   "companion_visual_review_agent": "agents/econ-companion-visual-review.md",
   "visual_qa_agent": "agents/visual-qa-agent.md",
   "reference_team_plan": "references/reference-team-roadmap.md",
+  "inspection_standards_roadmap": "docs/roadmaps/inspection-standards-roadmap.md",
   "roadmap_version_index": "docs/roadmaps/roadmap-version-index.json",
   "platform_roadmap": "knowledge/old/platform-team-roadmap.md",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
@@ -221,6 +224,7 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/econ-companion-visual-review.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/agents/visual-qa-agent.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/reference-team-roadmap.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/inspection-standards-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/roadmaps/roadmap-version-index.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/knowledge/old/platform-team-roadmap.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
@@ -256,6 +260,7 @@ index_anchors (full URLs):
   ],
   "roadmap_paths": [
     "references/reference-team-roadmap.md",
+    "docs/roadmaps/inspection-standards-roadmap.md",
     "docs/roadmaps/roadmap-version-index.json",
     "knowledge/old/platform-team-roadmap.md",
     "knowledge/old/three-month-roadmap.md"
@@ -479,7 +484,7 @@ Agents MUST follow this sequence:
    - chapter production -> `BUILD-CHAPTER.md` plus relevant `skills/`
    - build/deploy -> `build-scripts/README.md`, `scripts/deploy.js`, relevant `build-scripts/platform/*`
    - engine behavior -> relevant `engines/*` files and `engines/tests/*`
-   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
+   - roadmap -> `docs/roadmaps/roadmap-version-index.json`, `references/reference-team-roadmap.md`, `docs/roadmaps/inspection-standards-roadmap.md`, legacy `knowledge/old/platform-team-roadmap.md`, and dashboard data
 5. Search declared namespaces only after loading relevant guides and indexes.
 6. Distinguish source files, generated files, and deploy/build targets before making conclusions.
 7. Label every conclusion as one of:
@@ -518,6 +523,7 @@ Rules:
   "reference_research": [
     "RESEARCH_AGENT_MAP_REFERENCES.md",
     "references/reference-team-roadmap.md",
+    "docs/roadmaps/inspection-standards-roadmap.md",
     "references/SOURCE_OF_TRUTH.md",
     "references"
   ],
@@ -624,6 +630,7 @@ Rules:
     "knowledge/old/platform-team-roadmap.md",
     "knowledge/old/three-month-roadmap.md",
     "references/reference-team-roadmap.md",
+    "docs/roadmaps/inspection-standards-roadmap.md",
     "reports/internal-dashboard/dashboard-data.json"
   ]
 }

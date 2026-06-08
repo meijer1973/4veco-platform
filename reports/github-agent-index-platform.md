@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T06:23:16.044Z
+Generated: 2026-06-08T07:39:40.016Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3852
+Files indexed: 3855
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -997,7 +997,7 @@ Count: 376
 
 ## references
 
-Count: 521
+Count: 522
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1031,6 +1031,7 @@ Count: 521
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/README.md
 - references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
@@ -3999,12 +4000,13 @@ _No files indexed in this group._
 
 ## other
 
-Count: 299
+Count: 301
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
@@ -4012,6 +4014,7 @@ Count: 299
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
+- docs/roadmaps/inspection-standards-roadmap.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md
