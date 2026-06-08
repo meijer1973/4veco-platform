@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0
-Sprint: INSPECT-0 Source Register + Dutch Profile Design
+Status: draft v0, pending INSPECT-1A correction review
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -10,10 +10,10 @@ Source register: `references/data/inspection-standards/source-register.json`
 This document explains how 4veco can expose Dutch VO inspection-relevant
 evidence without claiming legal compliance or inspection approval.
 
-The model is evidence-supporting. It helps a school, teacher, or reviewer see
-where 4veco materials already provide evidence for curriculum coherence,
-basic-skills support, didactic quality, assessment alignment, student support,
-accessibility, and internal quality assurance.
+The model is evidence-supporting. It helps a school, teacher, or reviewer
+organise product-side evidence for curriculum coherence, subject-relevant
+basic-skills support, didactic design, assessment alignment, student support,
+accessibility, and product quality assurance.
 
 It does not say that 4veco is compliant with inspection standards. It also does
 not replace school-owned evidence about implementation, classroom practice,
@@ -21,7 +21,7 @@ support decisions, school quality policy, or formal assessment.
 
 ## Authority Basis
 
-The Dutch source basis for this draft is:
+The Dutch inspection source basis for this draft is:
 
 - `nl-inspectie-onderzoekskader-vo-2025`
 - `nl-inspectie-op0-basisvaardigheden-2025`
@@ -29,6 +29,18 @@ The Dutch source basis for this draft is:
 
 These are inspection sources. They are not economics curriculum sources and must
 not be used to create MTUs, target exercises, procedures, or learning goals.
+
+The Dutch curriculum and assessment source basis for this draft is:
+
+- `nl-examenblad-economie-vwo-2026-subject-page`
+- `nl-examenblad-economie-vwo-havo-examenprogramma`
+- `nl-cvte-economie-vwo-syllabus-2026`
+- `nl-examenblad-economie-vwo-2026-cse-1-opgaven`
+- `nl-examenblad-economie-vwo-2026-cse-1-correctievoorschrift`
+
+These are curriculum/assessment sources. They are not inspection sources and
+must not be used to claim inspection approval, legal compliance, or complete
+school-level evidence.
 
 ## Product Boundary
 
@@ -210,8 +222,9 @@ This sprint does not create that tooling.
 Safe:
 
 ```text
-4veco is designed to support Dutch inspection-relevant evidence.
-4veco exposes evidence that helps schools demonstrate curriculum coherence, didactic quality, assessment alignment, student support, accessibility, and internal quality assurance.
+4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.
+4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.
+4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.
 ```
 
 Forbidden:
@@ -220,6 +233,7 @@ Forbidden:
 4veco is compliant with Dutch inspection standards.
 4veco is approved by the Dutch Inspectorate of Education.
 4veco materials by themselves satisfy a school's inspection obligations.
+4veco provides complete OP0/basic-skills evidence for a school or department.
 ```
 
 ## Open Questions For Human Review
@@ -235,7 +249,7 @@ Forbidden:
 
 ## Recommended Next Step
 
-Review this v0 Dutch profile. If accepted, continue to report-only schema design
-or a bounded pilot audit. Do not start validators, country overlays, generated
-lesson changes, quality-ref integration, dashboard gates, or compliance claims
-from this draft alone.
+Send the INSPECT-1A correction packet for human correction review. Do not start
+INSPECT-2, a bounded pilot audit, report-only schema design, validators,
+country overlays, generated lesson changes, quality-ref integration, dashboard
+gates, or compliance claims from this draft alone.

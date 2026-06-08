@@ -3,16 +3,21 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
   "retrieved_date": "2026-06-08",
-  "review_status": "draft_pending_human_review",
+  "review_status": "draft_pending_correction_review",
   "authority_sources": [
     "nl-inspectie-onderzoekskader-vo-2025",
     "nl-inspectie-op0-basisvaardigheden-2025",
-    "nl-inspectie-bijgestelde-onderzoekskaders-2025"
+    "nl-inspectie-bijgestelde-onderzoekskaders-2025",
+    "nl-examenblad-economie-vwo-2026-subject-page",
+    "nl-examenblad-economie-vwo-havo-examenprogramma",
+    "nl-cvte-economie-vwo-syllabus-2026",
+    "nl-examenblad-economie-vwo-2026-cse-1-opgaven",
+    "nl-examenblad-economie-vwo-2026-cse-1-correctievoorschrift"
   ],
   "product_boundary": "This profile defines evidence that 4veco can expose to support school/provider inspection preparation. It is not a compliance certificate and does not replace school implementation evidence or competent-authority judgement.",
   "exercise_first_boundary": "Inspection standards may identify evidence categories and quality requirements, but they do not mint MTUs, target exercises, procedures, lesson goals, or student-facing content. Real CvTE tasks, correction models, reviewed target exercises, and built paragraph target exercises remain stronger curricular evidence.",
@@ -33,15 +38,16 @@
     "present_but_weak"
   ],
   "safe_claims": [
-    "4veco is designed to support Dutch inspection-relevant evidence.",
-    "4veco exposes evidence that helps schools demonstrate curriculum coherence, didactic quality, assessment alignment, student support, accessibility, and internal quality assurance.",
-    "4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval."
+    "4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.",
+    "4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.",
+    "4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence."
   ],
   "forbidden_claims": [
     "4veco is compliant with Dutch inspection standards.",
     "4veco is approved by the Dutch Inspectorate of Education.",
     "4veco materials by themselves satisfy a school's inspection obligations.",
-    "Inspection prose authorises new economics lesson units or target exercises."
+    "Inspection prose authorises new economics lesson units or target exercises.",
+    "4veco provides complete OP0/basic-skills evidence for a school or department."
   ],
   "categories": [
     {
@@ -272,5 +278,5 @@
       "initial_evidence_state": "present_but_weak"
     }
   ],
-  "next_recommended_step": "Human review of this v0 profile, then report-only schema design only if the profile is accepted."
+  "next_recommended_step": "Human correction review of INSPECT-1A. Do not start INSPECT-2, pilot audit, schema design, validators, overlays, generated lesson-output changes, quality-ref integration, dashboard gates, Scale Gate integration, or compliance claims until explicitly authorised."
 }

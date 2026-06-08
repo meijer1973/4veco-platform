@@ -10,6 +10,13 @@ INSPECT-0 is authorised as research/data-only. It adds a source register and
 Dutch evidence-profile draft. It does not authorise schemas, validators, country
 overlays, generated reports, lesson-output writes, or compliance claims.
 
+INSPECT-1A is authorised as a corrections-only packet after human review. It
+adds Dutch curriculum/assessment source provenance, corrects source hygiene, and
+tightens safe/forbidden claims. It does not accept the profile or authorise
+schemas, validators, overlays, generated reports, evidence packs, lesson-output
+writes, quality-ref integration, dashboard gates, Scale Gate work, or compliance
+claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
@@ -40,8 +47,9 @@ Future authorised phases may add:
 Allowed claims should stay evidence-supporting, for example:
 
 ```text
-4veco is designed to support Dutch inspection-relevant evidence.
-4veco exposes evidence that helps schools demonstrate curriculum coherence, didactic quality, assessment alignment, student support, accessibility, and internal quality assurance.
+4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.
+4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.
+4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.
 ```
 
 Forbidden claims include:
@@ -50,4 +58,5 @@ Forbidden claims include:
 4veco is compliant with Dutch inspection standards.
 4veco is compliant with European inspection standards.
 This material set is approved for country X.
+4veco provides complete OP0/basic-skills evidence for a school or department.
 ```

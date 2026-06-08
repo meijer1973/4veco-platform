@@ -98,6 +98,10 @@ function buildBody(branch) {
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1A/INSPECT-1A-sprint-plan.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1A/INSPECT-1A-human-review-response.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md')}`);
   lines.push('');
 
   lines.push('## Owned Course Design');

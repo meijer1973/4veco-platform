@@ -218,9 +218,9 @@ This material set is approved for country X.
 Allowed wording:
 
 ```text
-4veco is designed to support Dutch inspection-relevant evidence.
-4veco exposes inspection evidence that helps schools demonstrate curriculum coherence, didactic quality, assessment alignment, support, and quality assurance.
-4veco includes an international compatibility layer that can be mapped to local standards through country or region overlays.
+4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.
+4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.
+4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.
 ```
 
 ### 3.4 No broad production
@@ -481,7 +481,7 @@ references/data/inspection-standards/source-register.json
 Minimum source coverage:
 
 ```text
-Netherlands: Inspectie van het Onderwijs, VO onderzoekskader, OP0 basisvaardigheden
+Netherlands: Inspectie van het Onderwijs, VO onderzoekskader, OP0 basisvaardigheden, plus CvTE/Examenblad vwo economie syllabus, examenprogramma, official exams, and correction models when Dutch profile evidence discusses curriculum or assessment alignment
 Belgium/Flanders: Onderwijsinspectie Vlaanderen, Referentiekader Onderwijskwaliteit
 England: Ofsted education inspection framework / school inspection toolkit
 Germany: KMK/common references plus note that Laender differ
@@ -507,7 +507,8 @@ Minimum JSON shape:
   "scope": "secondary | upper-secondary | all-school | subject-specific | accountability",
   "why_it_matters_for_4veco": "",
   "citation_policy": "public",
-  "notes": ""
+  "notes": "",
+  "use_in_v0_profile": "inspection_anchor | curriculum_anchor | accountability_context | comparator_only"
 }
 ```
 
