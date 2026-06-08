@@ -40,6 +40,17 @@ become a build-failing validator, dashboard gate, quality-ref integration,
 Scale Gate integration, generated evidence pack, teacher inspection pack,
 country overlay, generated lesson-output mutation path, or compliance claim.
 
+INSPECT-3 passed Head of Strategy review with minor guardrails. INSPECT-4 is
+authorised as report-only validator design. It may add
+`build-scripts/inspection/validate-inspection-evidence.js`,
+`docs/inspection-standards/report-only-validator-design.md`,
+`references/data/inspection-standards/validator-notes.md`,
+`archive/sprints/INSPECT-4/`, and a sample report-only evidence object if
+needed. The validator must remain manual, diagnostic, and non-blocking. It must
+not be integrated into CI, builds, dashboards, quality-ref, Scale Gate,
+generated lesson output, country overlays, teacher inspection packs, generated
+evidence packs, or compliance claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
@@ -47,6 +58,8 @@ Current authorised INSPECT-0 contents:
 - `source-register.json`
 - `nl-vo-evidence-profile.v0.json`
 - `schema-notes.md`
+- `validator-notes.md`
+- `fixtures/pilot-1.1-inspection-evidence.sample.json`
 
 Future authorised phases may add:
 

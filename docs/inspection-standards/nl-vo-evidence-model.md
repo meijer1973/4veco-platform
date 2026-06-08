@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; INSPECT-3 report-only schema design authorised; not final, compliant, or inspection-ready
-Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design
+Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; INSPECT-4 report-only validator design authorised; not final, compliant, or inspection-ready
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -109,6 +109,38 @@ inspection packs, dashboard gates, quality-ref integration, Scale Gate
 integration, country overlays, generated lesson-output changes, legal
 compliance claims, inspectorate approval claims, or complete OP0/basic-skills
 claims.
+
+## INSPECT-4 Report-Only Validator Design
+
+Head of Strategy accepted INSPECT-3 as `pass_with_minor_guardrails` and
+authorised `INSPECT-4 Report-Only Validator Design`.
+
+INSPECT-4 may create:
+
+- `build-scripts/inspection/validate-inspection-evidence.js`
+- `docs/inspection-standards/report-only-validator-design.md`
+- `references/data/inspection-standards/validator-notes.md`
+- `archive/sprints/INSPECT-4/`
+- a sample report-only evidence object, if needed
+
+The validator remains manual, diagnostic, and non-blocking. It may parse an
+inspection-evidence JSON object, check report-only policy constants, check
+required category boundary fields, check target-equivalent and OP0 fields, and
+emit warnings for weak evidence.
+
+Minor guardrails carried into INSPECT-4:
+
+- forbidden-claim checks are known-phrase checks, not complete semantic
+  claim-safety detection;
+- pilot mode does not require all eight categories; only explicit full-report
+  mode may do that;
+- weak evidence can be valid evidence and must not become a schema failure.
+
+INSPECT-4 must not create build-failing validator integration, required CI
+gates, generated evidence packs, teacher inspection packs, dashboard gates,
+quality-ref integration, Scale Gate integration, country overlays, generated
+lesson-output changes, legal compliance claims, inspectorate approval claims,
+or complete OP0/basic-skills claims.
 
 ## Evidence Categories
 
@@ -417,7 +449,7 @@ Screenshot QA proves full accessibility compliance.
 
 ## Recommended Next Step
 
-Review the INSPECT-3 report-only schema design packet. Do not create validators,
-generated evidence packs, teacher inspection packs, dashboard gates,
-quality-ref integration, Scale Gate integration, country overlays, generated
-lesson changes, or compliance claims from this draft alone.
+Review the INSPECT-4 report-only validator design packet. Do not integrate the
+validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson
+output, evidence-pack generation, teacher inspection packs, country overlays,
+or compliance claims from this draft alone.

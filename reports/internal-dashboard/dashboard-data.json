@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T13:24:44.599Z",
+  "generatedAt": "2026-06-08T14:27:27.404Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.3-report-only-schema-design Sprint status: INSPECT-3 Report-Only Schema Design authorised and completed as diagnostic schema design only; validators, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, over...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.4-report-only-validator-design Sprint status: INSPECT-4 Report-Only Validator Design authorised and completed as manual diagnostic validator design only; build-failing integration, required CI gates, evidence packs, dashboard gates, qua...",
           "sprints": []
         },
         {

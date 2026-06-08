@@ -3,7 +3,7 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "Human review of the INSPECT-3 report-only schema design packet. Do not create validators, generated evidence packs, teacher inspection packs, dashboard gates, quality-ref integration, Scale Gate integration, country overlays, lesson-output changes, or compliance claims until a later human review explicitly authorises them.",
+  "next_recommended_step": "Human review of the INSPECT-4 report-only validator design packet. Do not integrate the validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson output, evidence-pack generation, country overlays, teacher inspection packs, or compliance claims until a later human review explicitly authorises that scope.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
@@ -495,6 +495,38 @@
     "required_wording": "This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.",
     "not_approved": [
       "validators that fail builds",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "validator_design_authorization": {
+    "decision": "pass_with_minor_guardrails",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-3 Report-Only Schema Design",
+    "approved_next_action": "INSPECT-4 Report-Only Validator Design",
+    "validator_posture": "node build-scripts/inspection/validate-inspection-evidence.js --input <file> --report-only",
+    "allowed_output_statuses": [
+      "PASS_REPORT_ONLY",
+      "PASS_WITH_WARNINGS_REPORT_ONLY",
+      "SCHEMA_INVALID_REPORT_ONLY"
+    ],
+    "minor_guardrails": [
+      "The validator may check schema conformance and known forbidden phrases, but it must not claim complete semantic detection of unsafe compliance claims.",
+      "If the validator supports both pilot and full-report modes, only full-report mode may require all eight category records.",
+      "Schema validity and evidence strength are separate. Weak evidence can be valid evidence."
+    ],
+    "not_approved": [
+      "build-failing validator integration",
+      "required CI gate",
       "generated evidence packs",
       "teacher inspection packs",
       "dashboard gates",

@@ -98,6 +98,10 @@ function buildBody(branch) {
   lines.push(`- ${platform('docs/inspection-standards/nl-vo-evidence-model.md')}`);
   lines.push(`- ${platform('docs/inspection-standards/report-only-schema-design.md')}`);
   lines.push(`- ${platform('references/data/inspection-standards/schema-notes.md')}`);
+  lines.push(`- ${platform('build-scripts/inspection/validate-inspection-evidence.js')}`);
+  lines.push(`- ${platform('docs/inspection-standards/report-only-validator-design.md')}`);
+  lines.push(`- ${platform('references/data/inspection-standards/validator-notes.md')}`);
+  lines.push(`- ${platform('references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md')}`);
@@ -117,6 +121,10 @@ function buildBody(branch) {
   lines.push(`- ${platform('archive/sprints/INSPECT-3/INSPECT-3-schema-design-packet.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-3/INSPECT-3-validation-log.md')}`);
   lines.push(`- ${platform('archive/sprints/INSPECT-3/INSPECT-3-closure-log.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-4/INSPECT-4-validator-design-packet.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-4/INSPECT-4-validation-log.md')}`);
+  lines.push(`- ${platform('archive/sprints/INSPECT-4/INSPECT-4-closure-log.md')}`);
   lines.push('');
 
   lines.push('## Owned Course Design');

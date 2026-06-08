@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.3-report-only-schema-design`
-Sprint status: `INSPECT-3 Report-Only Schema Design` authorised and completed as diagnostic schema design only; validators, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
+Roadmap version: `v0.4-report-only-validator-design`
+Sprint status: `INSPECT-4 Report-Only Validator Design` authorised and completed as manual diagnostic validator design only; build-failing integration, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -715,6 +715,62 @@ Acceptance criteria:
   dashboard gates, quality-ref, Scale Gate, generated output, or inspection-pack
   generation.
 
+### Phase 3A - Report-only validator design
+
+Goal: create a manual diagnostic validator for report-only inspection-evidence
+objects without turning the schema into a production gate.
+
+Authorisation:
+
+```text
+INSPECT-3 closed as pass_with_minor_guardrails.
+INSPECT-4 Report-Only Validator Design is authorised.
+```
+
+Allowed outputs:
+
+```text
+build-scripts/inspection/validate-inspection-evidence.js
+docs/inspection-standards/report-only-validator-design.md
+references/data/inspection-standards/validator-notes.md
+archive/sprints/INSPECT-4/
+sample or fixture report-only evidence object, if needed
+generated indexes/reports only if roadmap or sprint-packet URLs require refresh
+```
+
+Preferred command posture:
+
+```text
+node build-scripts/inspection/validate-inspection-evidence.js --input <file> --report-only
+```
+
+Allowed output status vocabulary:
+
+```text
+PASS_REPORT_ONLY
+PASS_WITH_WARNINGS_REPORT_ONLY
+SCHEMA_INVALID_REPORT_ONLY
+```
+
+Minor guardrails:
+
+- forbidden-claim checks are not complete semantic claim-safety detection;
+- only explicit full-report mode may require all eight category records;
+- weak evidence can be valid evidence and must not become a schema failure.
+
+Acceptance criteria:
+
+- validator is manual, diagnostic, and report-only;
+- validator checks report-only diagnostic policy constants;
+- validator checks title/source reconciliation, source pointers,
+  product/school boundaries, target-equivalent proof status, and OP0 boundary
+  fields;
+- validator can emit warnings for weak evidence without failing;
+- no package script, CI gate, build-failing validator integration, dashboard
+  gate, quality-ref integration, Scale Gate integration, generated evidence
+  pack, teacher inspection pack, country overlay, generated lesson-output
+  change, or compliance claim is introduced.
+
 ### Phase 4 - Pilot evidence audit on stabilised paragraphs
 
 Goal: test the model on already stabilised material before scaling.
@@ -1075,7 +1131,13 @@ INSPECT-2A passed human review. INSPECT-3 Report-Only Schema Design is authorise
 Current decision after INSPECT-3:
 
 ```text
-Send INSPECT-3 for human review. Do not create validators, generated evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, country overlays, generated lesson-output changes, or compliance claims unless a later human review explicitly authorises them.
+INSPECT-3 passed with minor guardrails. INSPECT-4 Report-Only Validator Design is authorised and may create a manual diagnostic validator and sample report object.
+```
+
+Current decision after INSPECT-4:
+
+```text
+Send INSPECT-4 for human review. Do not integrate the validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson output, evidence-pack generation, teacher inspection packs, country overlays, or compliance claims unless a later human review explicitly authorises that scope.
 ```
 
 ## 11. Setup recommendation

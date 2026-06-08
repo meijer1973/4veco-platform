@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T13:24:44.633Z
+Generated: 2026-06-08T14:27:27.324Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3901
+Files indexed: 3914
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -616,13 +616,14 @@ Count: 42
 
 ## validators
 
-Count: 381
+Count: 382
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -1002,7 +1003,7 @@ Count: 381
 
 ## references
 
-Count: 524
+Count: 526
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1038,6 +1039,7 @@ Count: 524
 - references/data/exercises/target-exercise-overlays.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/README.md
+- references/data/inspection-standards/schema-notes.md
 - references/data/inspection-standards/source-register.json
 - references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
@@ -1508,6 +1510,7 @@ Count: 524
 - references/schemas/exercise-metadata-overlay.schema.json
 - references/schemas/feedback.schema.json
 - references/schemas/game-item.schema.json
+- references/schemas/inspection-evidence.schema.json
 - references/schemas/misconception.schema.json
 - references/schemas/operation-answer-skill-contract.schema.json
 - references/schemas/operation-candidates.schema.json
@@ -4007,7 +4010,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 340
+Count: 350
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4049,11 +4052,21 @@ Count: 340
 - archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round2.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-planning-review.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md
+- archive/sprints/INSPECT-3/INSPECT-3-closure-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-correction-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-human-authorization.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-assignment.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-round1.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-round2.md
+- archive/sprints/INSPECT-3/INSPECT-3-planning-review.md
+- archive/sprints/INSPECT-3/INSPECT-3-schema-design-packet.md
+- archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
 - docs/inspection-standards/nl-vo-evidence-model.md
+- docs/inspection-standards/report-only-schema-design.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
