@@ -1,7 +1,7 @@
 # Inspection Standards Data Overlay
 
 Status: governed overlay for authorised inspection-standards research/data work.
-Roadmap: `docs/roadmaps/inspection-standards-roadmap.md`
+Roadmap: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 
 This directory is the governed data surface for future inspection-standards
 source registers, evidence profiles, and country/region overlays.

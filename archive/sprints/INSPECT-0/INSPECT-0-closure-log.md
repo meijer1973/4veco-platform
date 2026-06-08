@@ -2,7 +2,7 @@
 
 Status: closed pending final commit/push reporting
 Date: 2026-06-08
-Roadmap: `docs/roadmaps/inspection-standards-roadmap.md`
+Roadmap: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Branch: `codex/quality-standards-20260608`
 
 ## Closure Summary
@@ -23,7 +23,7 @@ Added:
 
 Updated:
 
-- `docs/roadmaps/inspection-standards-roadmap.md`
+- `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md`
 
 Generated index/report surfaces are refreshed after the source edits.

@@ -2,7 +2,7 @@
 
 Status: approved bounded research/data sprint
 Date: 2026-06-08
-Roadmap: `docs/roadmaps/inspection-standards-roadmap.md`
+Roadmap: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Branch: `codex/quality-standards-20260608`
 
 ## Review Basis

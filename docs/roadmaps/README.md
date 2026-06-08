@@ -11,10 +11,11 @@ references/reference-team-roadmap.md
 ```
 
 Dedicated governance roadmaps may live in this directory when their operational
-path is itself a docs/roadmaps file. Current example:
+path is itself a docs/roadmaps file. The quality-standards track has its own
+subfolder:
 
 ```text
-docs/roadmaps/inspection-standards-roadmap.md
+docs/roadmaps/quality-standards/
 ```
 
 Old roadmap snapshots belong under:

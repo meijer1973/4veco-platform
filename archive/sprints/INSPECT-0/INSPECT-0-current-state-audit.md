@@ -2,7 +2,7 @@
 
 Status: setup audit only
 Date: 2026-06-08
-Roadmap: `docs/roadmaps/inspection-standards-roadmap.md`
+Roadmap: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Branch: `codex/quality-standards-20260608`
 Platform worktree: `C:/wt/QS-20260608/4veco-platform`
 Lessen evidence worktree: `C:/wt/QS-20260608/4veco-lessen`
@@ -58,7 +58,7 @@ lesson-output changes.
 No existing target path was present before setup:
 
 ```text
-docs/roadmaps/inspection-standards-roadmap.md: absent
+docs/roadmaps/quality-standards/inspection-standards-roadmap.md: absent
 references/data/inspection-standards/: absent
 archive/sprints/INSPECT-0/: absent
 ```
@@ -97,7 +97,7 @@ The project must preserve the strategic and operational product baselines:
 The setup phase adds:
 
 ```text
-docs/roadmaps/inspection-standards-roadmap.md
+docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 references/data/inspection-standards/README.md
 archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 ```

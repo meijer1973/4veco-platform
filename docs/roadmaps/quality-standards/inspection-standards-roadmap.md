@@ -2,13 +2,19 @@
 
 Status: proposed
 Repository: `4veco-platform`
-Primary target path: `docs/roadmaps/inspection-standards-roadmap.md`
+Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v0.1-setup-roadmap`
 Sprint status: `INSPECT-0 Source Register + Dutch Profile Design` authorised as research/data-only; no tooling or production sprints authorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
+
+Companion quality-standards docs:
+
+- `docs/roadmaps/quality-standards/README.md`
+- `docs/roadmaps/quality-standards/sprint-ledger.md`
+- `docs/roadmaps/quality-standards/quality-standards-end-state.md`
 
 ## 0. Purpose
 
@@ -428,7 +434,7 @@ Goal: create the roadmap and record the current repository state.
 Outputs:
 
 ```text
-docs/roadmaps/inspection-standards-roadmap.md
+docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 references/data/inspection-standards/README.md
 archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
 ```
@@ -924,7 +930,7 @@ Only run dashboard refresh if dashboard or roadmap state is affected.
 
 This setup project is done when:
 
-- `docs/roadmaps/inspection-standards-roadmap.md` exists;
+- `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` exists;
 - `references/data/inspection-standards/README.md` exists or a clear reason is
   recorded for deferring it;
 - no generated student-facing artifacts were hand-edited;

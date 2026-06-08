@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T08:20:44.154Z
+Generated: 2026-06-08T08:48:57.236Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3861
+Files indexed: 3864
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4003,7 +4003,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 304
+Count: 307
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4020,7 +4020,6 @@ Count: 304
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
-- docs/roadmaps/inspection-standards-roadmap.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md
@@ -4158,6 +4157,10 @@ Count: 304
 - docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
+- docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- docs/roadmaps/quality-standards/quality-standards-end-state.md
+- docs/roadmaps/quality-standards/README.md
+- docs/roadmaps/quality-standards/sprint-ledger.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
