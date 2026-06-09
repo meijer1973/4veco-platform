@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "INSPECT-7 validation, lead review, and teacher/legal/privacy/Dutch quality-inspection MORE_THAN_SATISFIED review of the bounded no-personal-data Book 1 Chapter 1.1 source object plus report-only Markdown and JSON packs. Do not add a package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate integration, generated lesson output, country overlay, personal-data processing, or compliance/approval claims from this profile or prototype sprint.",
+  "next_recommended_step": "Human owner review of archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md. INSPECT-7 closed with lead review PASS and teacher/legal/privacy/Dutch quality-inspection MORE_THAN_SATISFIED review of the bounded no-personal-data Book 1 Chapter 1.1 source object plus report-only Markdown and JSON packs. Do not start INSPECT-8, INSPECT-9, report/dashboard integration, country overlays, teacher inspection pack generation, gate integration, package script work, CI/build integration, quality-ref integration, Scale Gate integration, generated lesson output, personal-data processing, or compliance/approval claims without a fresh sprint plan and explicit authorisation.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
