@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "schema_usage": "report_only",
+  "diagnostic_policy": {
+    "report_only": true,
+    "diagnostic_only": true,
+    "fail_builds": false,
+    "block_paragraph_production": false,
+    "quality_gate": false,
+    "mutate_generated_output": false,
+    "compliance_claim": false,
+    "required_wording": "This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path."
+  },
+  "profile_id": "nl-vo-evidence-profile",
+  "profile_version": "v0",
+  "record_status": "pilot",
+  "jurisdiction": "Netherlands",
+  "sector": "voortgezet onderwijs",
+  "subject_focus": "vwo economie",
+  "generated_for_scope": {
+    "book": "Book 1",
+    "chapter": "1.1 Hoofdstuk Economisch denken en rekenen",
+    "paragraph_ids": [
+      "1.1.1",
+      "1.1.2",
+      "1.1.3"
+    ],
+    "live_blueprint_titles": [
+      {
+        "paragraph_id": "1.1.1",
+        "title": "Schaarste en economisch denken",
+        "source_path": "../4veco-lessen/course_blueprint_v5.md"
+      },
+      {
+        "paragraph_id": "1.1.2",
+        "title": "Percentages en indexcijfers",
+        "source_path": "../4veco-lessen/course_blueprint_v5.md"
+      },
+      {
+        "paragraph_id": "1.1.3",
+        "title": "Grafieken en tabellen",
+        "source_path": "../4veco-lessen/course_blueprint_v5.md"
+      }
+    ]
+  },
+  "title_source_reconciliation": {
+    "live_blueprint_source": "../4veco-lessen/course_blueprint_v5.md",
+    "mismatch_detected": true,
+    "checked_sources": [
+      {
+        "source_type": "human_review_text",
+        "source_path_or_note": "INSPECT-2 human review text",
+        "observed_title": "1.1.2 Ruilen en rekenen"
+      },
+      {
+        "source_type": "live_blueprint",
+        "source_path_or_note": "../4veco-lessen/course_blueprint_v5.md",
+        "observed_title": "1.1.2 Percentages en indexcijfers"
+      },
+      {
+        "source_type": "target_registry",
+        "source_path_or_note": "references/authored/course-target-exercises.json",
+        "observed_title": "1.1.2 Percentages en indexcijfers"
+      }
+    ],
+    "reconciliation_note": "The report follows the live blueprint title and records the human-review title mismatch as traceability evidence."
+  },
+  "category_records": [
+    {
+      "category_id": "basic_skills",
+      "category_outcome": "accepted_as_present_when_bounded",
+      "evidence_state": "present",
+      "evidence_finality": [
+        "artifact_present",
+        "reviewed_artifact_quality"
+      ],
+      "source_pointers": [
+        {
+          "source_type": "primary_source_artifact",
+          "path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/",
+          "cited_claim": "Book 1 Chapter 1.1 material exposes economics reasoning, calculation, graph/table/source interpretation, and answer construction evidence."
+        },
+        {
+          "source_type": "review_record",
+          "path_or_url": "archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md",
+          "cited_claim": "INSPECT-2 accepted basic-skills evidence as present when bounded to subject material."
+        }
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Economics reasoning, calculation, graph/table/source interpretation, and answer construction inside reviewed product material.",
+        "school_owned_evidence": "School-wide Dutch language, mathematics/arithmetic, citizenship curriculum, classroom practice, and deliberate implementation evidence.",
+        "forbidden_inference": "Do not report subject-material evidence as complete OP0, school-wide basic-skills, or citizenship-curriculum proof."
+      },
+      "subject_material_basic_skills_label": "subject_material_basic_skills_evidence",
+      "op0_boundary": {
+        "not_complete_op0_evidence": true,
+        "not_school_wide_basic_skills_evidence": true,
+        "not_citizenship_curriculum_proof": true,
+        "boundary_note": "This is subject-material basic-skills evidence only."
+      },
+      "report_claim": "Basic-skills evidence is present when bounded to subject-material evidence.",
+      "known_flags": []
+    },
+    {
+      "category_id": "assessment_and_closure",
+      "category_outcome": "accepted_as_present_but_weak",
+      "evidence_state": "present_but_weak",
+      "evidence_finality": [
+        "artifact_present",
+        "target_exercise_migrated",
+        "diagnostic_report_only"
+      ],
+      "source_pointers": [
+        {
+          "source_type": "primary_source_artifact",
+          "path_or_url": "references/authored/course-target-exercises.json",
+          "cited_claim": "Target exercises exist for the pilot scope, but migrated status prevents final-reviewed closure proof."
+        },
+        {
+          "source_type": "diagnostic_report",
+          "path_or_url": "archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md",
+          "cited_claim": "INSPECT-2 found only 1.1.2 has reviewed local target-equivalent proof."
+        }
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Target exercises, answer models, local target-equivalent proof records, and correction guidance where available.",
+        "school_owned_evidence": "Formal assessment policy, grading, PTA, promotion/transition decisions, and summative closure.",
+        "forbidden_inference": "Do not infer closure evidence from target-exercise or answer-model presence alone."
+      },
+      "report_claim": "Assessment and closure evidence is present but weak for this pilot scope.",
+      "known_flags": [
+        "Only 1.1.2 has reviewed local target-equivalent proof.",
+        "1.1.1 and 1.1.3 are not closure-proof ready."
+      ]
+    }
+  ],
+  "report_claim_boundaries": {
+    "safe_claim": "4veco exposes product evidence relevant to Dutch VO inspection preparation.",
+    "forbidden_claims": [
+      "legal compliance",
+      "inspectorate approval",
+      "complete OP0/basic-skills proof"
+    ],
+    "school_boundary_note": "School-owned implementation evidence remains outside this product evidence object.",
+    "op0_boundary_note": "Basic-skills evidence is subject-material evidence, not complete OP0 school evidence."
+  },
+  "known_limitations": [
+    "This sample is a report-only pilot evidence object, not a generated evidence pack or teacher inspection pack."
+  ],
+  "next_action": "INSPECT-5R tri-agent MORE_THAN_SATISFIED review before generator planning, generated evidence packs, or report generation are authorised."
+}

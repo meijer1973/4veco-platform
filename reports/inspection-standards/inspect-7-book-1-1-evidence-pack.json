@@ -1,0 +1,735 @@
+{
+  "schema_version": 1,
+  "pack_id": "inspect-7-book-1-1-evidence-pack",
+  "status": "report_only_prototype",
+  "generated_from": "references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json",
+  "generator": "archive/sprints/INSPECT-7/build-inspect-7-prototype.js",
+  "diagnostic_only": true,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "scope": {
+    "scope_id": "inspect-7-book-1-1",
+    "scope_label": "INSPECT-7 Book 1 Chapter 1.1 Dutch quality evidence prototype",
+    "book": "Boek 1 - Grondslagen, vraag en aanbod",
+    "chapter": "1.1 Hoofdstuk Economisch denken en rekenen",
+    "paragraphs": [
+      {
+        "paragraph_id": "1.1.1",
+        "title": "Schaarste en economisch denken"
+      },
+      {
+        "paragraph_id": "1.1.2",
+        "title": "Percentages en indexcijfers"
+      },
+      {
+        "paragraph_id": "1.1.3",
+        "title": "Grafieken en tabellen"
+      }
+    ],
+    "repository_context": "4veco-platform quality-standards prototype with read-only citations to ../4veco-lessen.",
+    "source_commit": "28eeb8231710af3f179204c6725f015628b8d214",
+    "lesson_repository_status": "read_only_citations_only"
+  },
+  "teacher_first_screen": {
+    "scope_summary": "This report-only prototype organises 4veco product-side evidence for Book 1, Chapter 1.1: 1.1.1 Schaarste en economisch denken, 1.1.2 Percentages en indexcijfers, and 1.1.3 Grafieken en tabellen.",
+    "safe_use_note": "This pack organises bounded 4veco product evidence. It is not an Inspectie judgement, approval, certificate, PTA validation, summative assessment judgement, OP0 completion claim, or proof of classroom implementation. The school owns the full curriculum, implementation, support, assessment, governance, and inspection conversation.",
+    "category_summary": [
+      "curriculum_offer: usable but weak because target exercises and generated lesson folders exist, while target exercises remain migrated/needs-review and exam-code links are absent.",
+      "basic_skills: present when bounded to economics reasoning, calculation, graph/table reading, source/value selection, and answer construction.",
+      "didactic_quality: present through paragraph plans, reviewed Part A material, companion reviews, worked examples, guided practice, and route surfaces.",
+      "student_development_and_support: present but weak because advisory checks and routes exist, but school monitoring and support decisions are not product evidence.",
+      "assessment_and_closure: present but weak because only 1.1.2 has reviewed local target-equivalent proof.",
+      "accessibility_and_inclusion: present but weak because review evidence exists but not a unified full accessibility audit.",
+      "quality_assurance: present through quality-ref YAML, Part A reviews, companion reviews, validators, sprints, lead reviews, and platform validation.",
+      "improvement_cycle: present as product improvement evidence, not school self-evaluation."
+    ],
+    "top_weak_or_missing_evidence": [
+      "No full OP0 or school-wide basic-skills proof.",
+      "No school implementation, monitoring, support, care, PTA, grading, governance, or inspection-dialogue evidence.",
+      "Target exercises remain migrated/needs-review and lack exam-code links for the three paragraphs.",
+      "Target-equivalent proof is reviewed only for the local 1.1.2 case; 1.1.1 and 1.1.3 remain unapproved for completion-language claims.",
+      "Review evidence is useful but not a full accessibility audit."
+    ],
+    "school_evidence_still_needed_summary": [
+      "School curriculum plan, scheduling, classroom enactment, and local policy choices.",
+      "School-wide basic-skills curriculum and practice for Dutch language, mathematics/arithmetic, and citizenship.",
+      "Student monitoring, interventions, accommodations, care plans, and support decisions.",
+      "PTA, grading, summative assessment policy, and transition decisions.",
+      "School governance, self-evaluation, board accountability, and inspection conversation."
+    ],
+    "recommended_next_action": "Use this prototype for external teacher, legal/privacy, and Dutch quality-inspection review. Treat weak evidence as visible review guidance, not as product approval or school evidence."
+  },
+  "official_source_anchors": [
+    {
+      "source_id": "nl-inspectie-onderzoekskader-vo-2025",
+      "required_use": "Dutch VO inspection standard structure and OP/SKA framing.",
+      "boundary": "Inspection framework, not economics curriculum source."
+    },
+    {
+      "source_id": "nl-inspectie-op0-basisvaardigheden-2025",
+      "required_use": "OP0 boundary; subject-material economics evidence only.",
+      "boundary": "Do not claim full OP0, school-wide basic-skills proof, or citizenship curriculum proof."
+    },
+    {
+      "source_id": "nl-inspectie-bijgestelde-onderzoekskaders-2025",
+      "required_use": "2025 framework freshness/change-control note.",
+      "boundary": "Inspection-framework update page, not curriculum authority."
+    },
+    {
+      "source_id": "nl-ap-avg-verantwoordingsplicht",
+      "required_use": "Privacy/accountability boundary for no-personal-data default.",
+      "boundary": "Privacy guardrail only, not proof of AVG/GDPR compliance."
+    },
+    {
+      "source_id": "nl-ap-dpia",
+      "required_use": "Later DPIA/data-processing gate if personal data is ever proposed.",
+      "boundary": "Privacy guardrail only; no personal data is processed in this prototype."
+    },
+    {
+      "source_id": "nl-examenblad-economie-vwo-2026-subject-page",
+      "required_use": "Official Dutch vwo economics curriculum/assessment source hub.",
+      "boundary": "Curriculum and assessment provenance, not inspection approval."
+    },
+    {
+      "source_id": "nl-cvte-economie-vwo-syllabus-2026",
+      "required_use": "Official CvTE syllabus anchor for vwo economics.",
+      "boundary": "Curriculum/assessment source, not a complete school curriculum."
+    }
+  ],
+  "category_records": [
+    {
+      "category_id": "curriculum_offer",
+      "dutch_inspection_anchor": [
+        "OP1 Aanbod"
+      ],
+      "teacher_label": "Curriculum offer",
+      "evidence_state": "present_but_weak",
+      "evidence_strength": "usable_but_weak",
+      "evidence_finality": [
+        "artifact_present",
+        "target_exercise_migrated",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "references/authored/course-target-exercises.json",
+          "summary": "Contains target-exercise records for 1.1.1, 1.1.2, and 1.1.3."
+        },
+        {
+          "path": "../4veco-lessen/course_blueprint_v5.md",
+          "summary": "Lists 1.1.1, 1.1.2, and 1.1.3 with migrated-from-v4-needs-v5-review status."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md",
+          "summary": "Names the live Chapter 1.1 paragraph sequence and dependency plan."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/",
+          "summary": "Generated lesson folders and chapter artifacts exist for the three scoped paragraphs."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "Whole-curriculum plan and scheduling.",
+        "Classroom enactment and local policy choices.",
+        "School-owned implementation evidence."
+      ],
+      "weak_or_missing_evidence": [
+        "Target exercises remain migrated/needs-review.",
+        "Target exercises have no exam-code links.",
+        "Earlier review text used a stale 1.1.2 title; live sources use Percentages en indexcijfers."
+      ],
+      "forbidden_inference": [
+        "Do not infer final-reviewed curriculum evidence from migrated target records.",
+        "Do not infer school curriculum implementation from product folders."
+      ],
+      "evidence_citations": [
+        "archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md",
+        "references/authored/course-target-exercises.json",
+        "../4veco-lessen/course_blueprint_v5.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/_chapter-plan.md"
+      ],
+      "claim_ids": [
+        "QS_PRODUCT_EVIDENCE_SUPPORT",
+        "QS_WEAK_EVIDENCE_VISIBLE"
+      ],
+      "review_flags": [
+        "Title-source reconciliation must preserve 1.1.2 Percentages en indexcijfers.",
+        "Curriculum evidence is useful but weak until v5 target review and exam-code mapping improve."
+      ],
+      "owner_next_action": "Review target-exercise finality and exam-code linkage before broader curriculum claims."
+    },
+    {
+      "category_id": "basic_skills",
+      "dutch_inspection_anchor": [
+        "OP0 Basisvaardigheden"
+      ],
+      "teacher_label": "Subject-material basic-skills support",
+      "evidence_state": "present",
+      "evidence_strength": "strong_if_bounded",
+      "evidence_finality": [
+        "artifact_present",
+        "reviewed_artifact_quality",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "references/authored/course-target-exercises.json",
+          "summary": "Target exercises cover opportunity-cost reasoning, percentage/index calculations, and graph/table interpretation."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – hoofdstuk.md",
+          "summary": "Chapter material exposes economics reasoning, calculation, graphs, tables, and answer construction."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+          "summary": "Review records graph/table definitions, procedures, visual support, and mathematical precision checks."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "School-wide Dutch language, mathematics/arithmetic, and citizenship curriculum choices.",
+        "Classroom practice and deliberate basic-skills implementation.",
+        "School-owned monitoring of basic-skills development."
+      ],
+      "weak_or_missing_evidence": [
+        "Evidence is subject-material economics evidence only.",
+        "No citizenship curriculum proof.",
+        "No school-wide basic-skills proof."
+      ],
+      "forbidden_inference": [
+        "Do not say 4veco provides OP0 evidence.",
+        "Do not say this pack proves school-wide basic-skills provision.",
+        "Do not infer citizenship curriculum implementation."
+      ],
+      "evidence_citations": [
+        "archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md",
+        "references/authored/course-target-exercises.json",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md"
+      ],
+      "claim_ids": [
+        "QS_OP0_SUBJECT_MATERIAL_ONLY",
+        "QS_AUTHORITY_BOUNDARY"
+      ],
+      "review_flags": [
+        "Keep OP0 wording limited to subject-material support.",
+        "Do not generalise economics evidence into full school basic-skills evidence."
+      ],
+      "owner_next_action": "Ask external inspection reviewer to confirm OP0 boundary wording stays subject-material only.",
+      "subject_material_basic_skills_evidence": [
+        "Economics reasoning around scarcity and choices.",
+        "Percentage change and index-number calculation.",
+        "Graph/table reading, drawing, and source/value interpretation.",
+        "Answer construction in target exercises and answer models."
+      ],
+      "op0_boundary_note": "OP0 remains a school/department standard. This prototype shows only product-side economics material relevant to basic-skills preparation.",
+      "not_complete_op0": true,
+      "not_school_wide_basic_skills": true,
+      "not_citizenship_curriculum_proof": true
+    },
+    {
+      "category_id": "didactic_quality",
+      "dutch_inspection_anchor": [
+        "OP3 Pedagogisch-didactisch handelen"
+      ],
+      "teacher_label": "Didactic quality",
+      "evidence_state": "present",
+      "evidence_strength": "strong_product_design_evidence",
+      "evidence_finality": [
+        "reviewed_artifact_quality",
+        "pass_with_flags",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md",
+          "summary": "Part A review records PASS WITH FLAGS after procedure parity and mathematical checks."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md",
+          "summary": "Part A review records concrete definitions, procedures, dual coding, progression, and mathematical precision."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md",
+          "summary": "Part A review records visual support, procedure tables, progression, and mathematical precision."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md",
+          "summary": "Companion review records PASS WITH FLAGS and no hard fails open for 1.1.1."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md",
+          "summary": "Companion review records PASS WITH FLAGS and no hard fails open for 1.1.2."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md",
+          "summary": "Companion review records PASS WITH FLAGS and no hard fails open for 1.1.3."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "Teacher enactment and classroom interaction.",
+        "Adaptation to actual learners.",
+        "Classroom feedback practice."
+      ],
+      "weak_or_missing_evidence": [
+        "PASS WITH FLAGS remains visible and is not converted into unconditional approval.",
+        "Product design evidence is not classroom implementation evidence."
+      ],
+      "forbidden_inference": [
+        "Do not claim product design proves classroom implementation.",
+        "Do not flatten PASS WITH FLAGS into unconditional pass."
+      ],
+      "evidence_citations": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-review.md"
+      ],
+      "claim_ids": [
+        "QS_PRODUCT_EVIDENCE_SUPPORT",
+        "QS_WEAK_EVIDENCE_VISIBLE",
+        "QS_AUTHORITY_BOUNDARY"
+      ],
+      "review_flags": [
+        "All three Part A reviews are PASS WITH FLAGS, not unconditional approval.",
+        "Classroom execution remains school-owned."
+      ],
+      "owner_next_action": "Use teacher review to judge whether this bounded summary is useful without implying classroom evidence."
+    },
+    {
+      "category_id": "student_development_and_support",
+      "dutch_inspection_anchor": [
+        "OP2 Zicht op ontwikkeling en begeleiding"
+      ],
+      "teacher_label": "Student development and support",
+      "evidence_state": "present_but_weak",
+      "evidence_strength": "uneven_product_support_evidence",
+      "evidence_finality": [
+        "artifact_present",
+        "pass_with_flags",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md",
+          "summary": "Names separate advisory short checks and exit-ticket surfaces for the first three paragraphs, with no product-route adoption authority."
+        },
+        {
+          "path": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md",
+          "summary": "Records regenerated playable check-surface evidence and screenshot/proof paths for human review."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/*/index.html",
+          "summary": "Landing pages expose advisory and end-check surfaces."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "Student monitoring records.",
+        "Support decisions, interventions, accommodations, and care plans.",
+        "Teacher follow-up and school-owned support process."
+      ],
+      "weak_or_missing_evidence": [
+        "Check-surface human review packet is prepared, but product authority is held.",
+        "Advisory checks are not school monitoring evidence.",
+        "No student-level records are included or allowed."
+      ],
+      "forbidden_inference": [
+        "Do not treat product checks as school support records.",
+        "Do not infer diagnostics, adaptive routing, mastery, sequencing, or student-facing AI authority."
+      ],
+      "evidence_citations": [
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md"
+      ],
+      "claim_ids": [
+        "QS_TEACHER_ORGANISATION_SUPPORT",
+        "QS_AUTHORITY_BOUNDARY",
+        "QS_WEAK_EVIDENCE_VISIBLE"
+      ],
+      "review_flags": [
+        "No student personal data is used.",
+        "Support evidence is product-side and uneven."
+      ],
+      "owner_next_action": "Keep support evidence advisory and no-personal-data unless a later privacy and school-evidence gate authorises more."
+    },
+    {
+      "category_id": "assessment_and_closure",
+      "dutch_inspection_anchor": [
+        "OP6 Afsluiting"
+      ],
+      "teacher_label": "Assessment and closure",
+      "evidence_state": "present_but_weak",
+      "evidence_strength": "mixed_local_proof",
+      "evidence_finality": [
+        "target_exercise_migrated",
+        "answer_model_present",
+        "target_equivalent_reviewed",
+        "pass_with_flags",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "references/authored/course-target-exercises.json",
+          "summary": "Target exercises and answer expectations exist for 1.1.1, 1.1.2, and 1.1.3."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1 Economisch denken en rekenen – antwoorden.md",
+          "summary": "Chapter answer artifact includes answer sections for 1.1.1, 1.1.2, and 1.1.3."
+        },
+        {
+          "path": "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/gate-closure.md",
+          "summary": "Only the exact 1.1.2 local exit-ticket target-equivalent proof candidate closed PASS WITH FLAGS."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "PTA, grading, and summative assessment policy.",
+        "Transition or promotion decisions.",
+        "Teacher judgement and school assessment records."
+      ],
+      "weak_or_missing_evidence": [
+        "1.1.1 and 1.1.3 target-equivalent claims remain unapproved.",
+        "1.1.2 authority is local, exact, non-summative, and PASS WITH FLAGS.",
+        "Target exercises remain migrated and need v5 review."
+      ],
+      "forbidden_inference": [
+        "Do not infer closure proof from target-exercise presence.",
+        "Do not claim PTA validity or summative validity.",
+        "Do not broaden the 1.1.2 local proof to product-wide authority."
+      ],
+      "evidence_citations": [
+        "references/authored/course-target-exercises.json",
+        "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/gate-closure.md"
+      ],
+      "claim_ids": [
+        "QS_WEAK_EVIDENCE_VISIBLE",
+        "QS_AUTHORITY_BOUNDARY"
+      ],
+      "review_flags": [
+        "1.1.2 local target-equivalent proof is accepted only with flags.",
+        "1.1.1 and 1.1.3 completion language remains held."
+      ],
+      "owner_next_action": "Before broader closure claims, review target exercises and target-equivalent proof for 1.1.1 and 1.1.3.",
+      "target_exercise_finality": "migrated_needs_v5_review",
+      "target_equivalent_proof_status": "1.1.2_target_equivalent_reviewed_local_pass_with_flags; 1.1.1_and_1.1.3_unapproved",
+      "answer_model_status": "answer_artifacts_present",
+      "not_pta_validity": true,
+      "not_summative_validity": true
+    },
+    {
+      "category_id": "accessibility_and_inclusion",
+      "dutch_inspection_anchor": [
+        "Accessibility and inclusion as inspection-relevant support evidence"
+      ],
+      "teacher_label": "Accessibility and inclusion",
+      "evidence_state": "present_but_weak",
+      "evidence_strength": "usable_but_not_complete_audit",
+      "evidence_finality": [
+        "reviewed_artifact_quality",
+        "pass_with_flags",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-companion-visual-review.md",
+          "summary": "Companion review includes visual, alt, layout, and surface checks for 1.1.1."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-companion-visual-review.md",
+          "summary": "Companion review includes visual, alt, layout, and surface checks for 1.1.2."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-companion-visual-review.md",
+          "summary": "Companion review includes visual, alt, layout, and surface checks for 1.1.3."
+        },
+        {
+          "path": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md",
+          "summary": "Live-output evidence names desktop and mobile/dark screenshot evidence for check surfaces."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+          "summary": "Quality-ref YAML records assets, review verdicts, and companion surface status for 1.1.1."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+          "summary": "Quality-ref YAML records assets, review verdicts, and companion surface status for 1.1.2."
+        },
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml",
+          "summary": "Quality-ref YAML records assets, review verdicts, and companion surface status for 1.1.3."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "Individual accommodation decisions.",
+        "Device access and classroom accessibility implementation.",
+        "School inclusion policy and student-specific support."
+      ],
+      "weak_or_missing_evidence": [
+        "No unified inspection accessibility audit.",
+        "Keyboard/focus and inclusive-usability proof is not uniformly present in this report.",
+        "Review statuses are PASS WITH FLAGS where applicable."
+      ],
+      "forbidden_inference": [
+        "Do not claim full accessibility compliance.",
+        "Do not infer individual accommodations from product QA."
+      ],
+      "evidence_citations": [
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml"
+      ],
+      "claim_ids": [
+        "QS_PRODUCT_EVIDENCE_SUPPORT",
+        "QS_WEAK_EVIDENCE_VISIBLE",
+        "QS_AUTHORITY_BOUNDARY"
+      ],
+      "review_flags": [
+        "Useful review evidence exists, but not a complete accessibility audit.",
+        "School-owned accommodations remain outside the product evidence boundary."
+      ],
+      "owner_next_action": "If accessibility becomes a stronger claim later, run a dedicated accessibility audit and external review."
+    },
+    {
+      "category_id": "quality_assurance",
+      "dutch_inspection_anchor": [
+        "SKA quality assurance boundary"
+      ],
+      "teacher_label": "Product quality assurance",
+      "evidence_state": "present",
+      "evidence_strength": "strong_product_qa_evidence",
+      "evidence_finality": [
+        "reviewed_artifact_quality",
+        "validation_log",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/*/*-quality-ref.yaml",
+          "summary": "Quality-ref YAML records Part A, companion, asset, and review states."
+        },
+        {
+          "path": "archive/sprints/INSPECT-6/INSPECT-6-closure-log.md",
+          "summary": "INSPECT-6 records validation, lead review, and three MORE_THAN_SATISFIED external reviews."
+        },
+        {
+          "path": "archive/sprints/INSPECT-7/INSPECT-7-planning-review.md",
+          "summary": "INSPECT-7 planning review passed with no blockers before prototype implementation."
+        },
+        {
+          "path": "npm.cmd run check:platform",
+          "summary": "Platform validation command remains the local test evidence surface for this sprint."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "School self-evaluation and governance quality cycle.",
+        "Board-level accountability.",
+        "Inspection dialogue and school improvement planning."
+      ],
+      "weak_or_missing_evidence": [
+        "Product QA evidence is not school SKA evidence.",
+        "This prototype is diagnostic and report-only."
+      ],
+      "forbidden_inference": [
+        "Do not claim school SKA compliance.",
+        "Do not treat product validation as school governance evidence."
+      ],
+      "evidence_citations": [
+        "archive/sprints/INSPECT-6/INSPECT-6-closure-log.md",
+        "archive/sprints/INSPECT-7/INSPECT-7-planning-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1-quality-ref.yaml",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2-quality-ref.yaml",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3-quality-ref.yaml"
+      ],
+      "claim_ids": [
+        "QS_PRODUCT_EVIDENCE_SUPPORT",
+        "QS_AUTHORITY_BOUNDARY"
+      ],
+      "review_flags": [
+        "Strong product QA evidence, not school QA evidence.",
+        "CI waiver must be explicit if GitHub Actions has no branch run."
+      ],
+      "owner_next_action": "Use validation and external review results to decide whether the prototype is fit for the final review packet.",
+      "product_qa_evidence": [
+        "quality-ref YAML",
+        "Part A reviews",
+        "companion reviews",
+        "sprint plans",
+        "lead reviews",
+        "validation logs",
+        "external review results"
+      ],
+      "not_school_ska_compliance": true,
+      "not_school_self_evaluation": true
+    },
+    {
+      "category_id": "improvement_cycle",
+      "dutch_inspection_anchor": [
+        "Product improvement cycle boundary"
+      ],
+      "teacher_label": "Product improvement cycle",
+      "evidence_state": "present",
+      "evidence_strength": "strong_product_improvement_evidence",
+      "evidence_finality": [
+        "reviewed_artifact_quality",
+        "validation_log",
+        "diagnostic_report_only"
+      ],
+      "4veco_evidence": [
+        {
+          "path": "archive/sprints/INSPECT-5R/INSPECT-5R-closure-log.md",
+          "summary": "Records pre-INSPECT-6 guardrail closure and external review."
+        },
+        {
+          "path": "archive/sprints/INSPECT-6/INSPECT-6-correction-log.md",
+          "summary": "Records planning corrections and no lead/external blockers."
+        },
+        {
+          "path": "archive/sprints/INSPECT-7/INSPECT-7-correction-log.md",
+          "summary": "Records INSPECT-7 planning-review and later correction loop."
+        },
+        {
+          "path": "docs/roadmaps/quality-standards/sprint-ledger.md",
+          "summary": "Records sprint protocol, external-review gate, and current INSPECT-7 status."
+        }
+      ],
+      "school_evidence_still_needed": [
+        "School improvement cycle and self-evaluation.",
+        "School leader decisions and board accountability.",
+        "Inspection preparation narrative owned by the school."
+      ],
+      "weak_or_missing_evidence": [
+        "Product improvement evidence may support school preparation but is not school improvement evidence.",
+        "No school self-evaluation artifacts are present or expected in this product-side pack."
+      ],
+      "forbidden_inference": [
+        "Do not present product improvement as school self-evaluation.",
+        "Do not claim product correction loops satisfy school obligations."
+      ],
+      "evidence_citations": [
+        "archive/sprints/INSPECT-5R/INSPECT-5R-closure-log.md",
+        "archive/sprints/INSPECT-6/INSPECT-6-correction-log.md",
+        "archive/sprints/INSPECT-7/INSPECT-7-correction-log.md",
+        "docs/roadmaps/quality-standards/sprint-ledger.md"
+      ],
+      "claim_ids": [
+        "QS_TEACHER_ORGANISATION_SUPPORT",
+        "QS_AUTHORITY_BOUNDARY",
+        "QS_WEAK_EVIDENCE_VISIBLE"
+      ],
+      "review_flags": [
+        "Product cycle only.",
+        "External review must confirm the pack is useful without school-evidence overclaiming."
+      ],
+      "owner_next_action": "Use reviewer feedback to decide whether this quality-system packet is ready for external human review.",
+      "product_qa_evidence": [
+        "sprint ledger",
+        "correction logs",
+        "lead reviews",
+        "external reviews",
+        "closure logs"
+      ],
+      "not_school_ska_compliance": true,
+      "not_school_self_evaluation": true
+    }
+  ],
+  "claim_records": [
+    {
+      "claim_id": "QS_PRODUCT_EVIDENCE_SUPPORT",
+      "exact_wording": "For this bounded scope, 4veco exposes product-side evidence relevant to Dutch VO inspection preparation.",
+      "category_id": "multiple",
+      "evidence_citations": [
+        "references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json"
+      ],
+      "evidence_strength": "bounded_product_evidence",
+      "product_school_boundary": "Product evidence only; school implementation and competent-authority judgement remain outside the product.",
+      "forbidden_inference_check": "Does not claim approval, legal status, school obligation satisfaction, or final inspection judgement.",
+      "semantic_overclaiming_check": "Bounded to product-side evidence and inspection preparation support.",
+      "review_round": "INSPECT-7 prototype"
+    },
+    {
+      "claim_id": "QS_TEACHER_ORGANISATION_SUPPORT",
+      "exact_wording": "This pack helps teachers and school leaders organise product evidence, weak points, school-owned evidence still needed, and next actions.",
+      "category_id": "multiple",
+      "evidence_citations": [
+        "docs/inspection-standards/teacher-facing-evidence-pack-template.md",
+        "archive/sprints/INSPECT-6/INSPECT-6-external-review-results.md"
+      ],
+      "evidence_strength": "reviewed_teacher_usefulness_design",
+      "product_school_boundary": "Supports organisation only; does not replace the school's evidence narrative.",
+      "forbidden_inference_check": "Does not claim school evidence is complete.",
+      "semantic_overclaiming_check": "Teacher usefulness is procedural and bounded.",
+      "review_round": "INSPECT-7 prototype"
+    },
+    {
+      "claim_id": "QS_OP0_SUBJECT_MATERIAL_ONLY",
+      "exact_wording": "Basic-skills evidence is limited to subject-material economics calculation, graph/table/source interpretation, and answer reasoning; it is not full OP0 or school-wide proof.",
+      "category_id": "basic_skills",
+      "evidence_citations": [
+        "references/data/inspection-standards/source-register.json",
+        "archive/sprints/INSPECT-6/INSPECT-6-external-review-results.md"
+      ],
+      "evidence_strength": "bounded_inspection_boundary",
+      "product_school_boundary": "School owns full OP0/basic-skills curriculum and classroom practice.",
+      "forbidden_inference_check": "Blocks full OP0 and school-wide basic-skills inference.",
+      "semantic_overclaiming_check": "Uses limitation wording and requires inspection reviewer confirmation.",
+      "review_round": "INSPECT-7 prototype"
+    },
+    {
+      "claim_id": "QS_AUTHORITY_BOUNDARY",
+      "exact_wording": "Inspection judgement and school implementation evidence remain with the school/provider and competent authority.",
+      "category_id": "multiple",
+      "evidence_citations": [
+        "docs/inspection-standards/external-review-privacy-and-claim-guardrails.md",
+        "docs/inspection-standards/evidence-pack-source-contract.md"
+      ],
+      "evidence_strength": "reviewed_boundary_claim",
+      "product_school_boundary": "Product pack is diagnostic and report-only.",
+      "forbidden_inference_check": "Blocks approval, certification, school-obligation, and judgement claims.",
+      "semantic_overclaiming_check": "Authority boundary is explicit in every external review prompt.",
+      "review_round": "INSPECT-7 prototype"
+    },
+    {
+      "claim_id": "QS_WEAK_EVIDENCE_VISIBLE",
+      "exact_wording": "Weak, missing, local-only, and pass-with-flags evidence remains visible in this report.",
+      "category_id": "multiple",
+      "evidence_citations": [
+        "archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md",
+        "docs/inspection-standards/evidence-pack-source-contract.md"
+      ],
+      "evidence_strength": "reviewed_reporting_rule",
+      "product_school_boundary": "Weak product evidence is not converted into school evidence.",
+      "forbidden_inference_check": "Does not hide flags or convert weak evidence into approval.",
+      "semantic_overclaiming_check": "Weakness and local-only limits are stated in positive output.",
+      "review_round": "INSPECT-7 prototype"
+    }
+  ],
+  "privacy_boundary": {
+    "personal_data_present": false,
+    "personal_data_scan_note": "The source object cites repository artifacts, review records, generated lesson paths, and official source IDs only. It contains no student names, identifiers, grades, answers, attendance, support/care records, accommodations, classroom photos/audio/video, or other identifying material.",
+    "redaction_required": false,
+    "privacy_gate_required_if_personal_data": true
+  },
+  "validation_policy": {
+    "report_only": true,
+    "required_checks": [
+      "JSON parse source and output",
+      "all eight category records present",
+      "every claim has evidence citations",
+      "every category has product/school boundary fields",
+      "OP0 boundary fields exist for basic_skills",
+      "privacy boundary says personal_data_present false",
+      "known forbidden positive claims absent",
+      "Markdown starts with teacher-facing first screen"
+    ],
+    "ci_policy": "If GitHub Actions has no branch run, record an explicit CI waiver and cite local validation evidence."
+  },
+  "review_policy": {
+    "lead_review_required": true,
+    "external_review_required": true,
+    "required_external_roles": [
+      "teacher",
+      "legal/privacy",
+      "Dutch quality-inspection"
+    ],
+    "required_verdict": "MORE_THAN_SATISFIED",
+    "pass_is_blocking": true
+  },
+  "next_action": "Validate the INSPECT-7 source object and generated report-only packs, push the packet, run lead review, then send to teacher, legal/privacy, and Dutch quality-inspection reviewers until all three return MORE_THAN_SATISFIED."
+}
