@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T12:46:02.873Z
+Generated: 2026-06-09T13:30:04.269Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4093
+Files indexed: 4101
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1037,7 +1037,7 @@ Count: 400
 
 ## references
 
-Count: 568
+Count: 576
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1508,6 +1508,14 @@ Count: 568
 - references/exemplars/a96-answer-form/quality-brief.md
 - references/exemplars/a96-answer-form/README.md
 - references/exemplars/a96-answer-form/ui-framework.md
+- references/exemplars/exemplar-index.json
+- references/exemplars/exemplar-index.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/no-legacy-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/README.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/rollout-notes.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/screenshot-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-snapshot.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md

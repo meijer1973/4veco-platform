@@ -39,9 +39,19 @@
       ],
       "use_for": [
         "repository-compatible shell structure",
+        "source-left/task-right layout",
+        "graph/table interaction reference",
         "source-data contract",
         "generated Golden route snapshot",
         "no-legacy DOM evidence"
+      ],
+      "must_not_use_for": [
+        "formula_token_policy",
+        "hidden_token_trap_policy"
+      ],
+      "limitations": [
+        "The 1.1.3 source snapshot currently contains duplicate visible old Q formula tokens with hidden IDs oldQden and oldQnum.",
+        "Use references/exemplars/a96-answer-form/ for formula-builder policy until the 1.1.3 duplicate-token issue is repaired."
       ],
       "does_not_authorize": [
         "route_migration",

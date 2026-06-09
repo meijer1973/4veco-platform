@@ -10,14 +10,16 @@ The implemented exemplar contains a committed generated route snapshot:
 references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html
 ```
 
-That snapshot was copied from the existing generated lesson route and was not regenerated or hand-edited for this goal.
+That snapshot matches the current committed generated lesson route on `4veco-lessen` `origin/main` after the workbench-header label fix. No lesson output was edited for this goal.
 
 Static route evidence from the snapshot:
 
 ```text
-generated-route-snapshot.html sha256: 236195E191EF8DF46CA3777BE4E4545DA71D9B00C4540453C95E3F182DC8AE49
+generated-route-snapshot.html sha256: 8A7003DFDD2821956D8ECFBD9E4F0E160CB7D1763A716D2FC5625E03780576F4
 source-data-snapshot.json sha256: 32844DF1FED311ACDFE038F2281243543691CD09840C824318A8438180771586
 ```
+
+Formula-token scope is intentionally excluded from this proof. The current `1.1.3` source snapshot contains duplicate visible `oude Q` tokens with hidden IDs `oldQden` and `oldQnum`; use A96 for formula-token policy until that is repaired.
 
 ## Screenshot Capture Status
 

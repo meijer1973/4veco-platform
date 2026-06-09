@@ -10,7 +10,7 @@ It preserves:
 
 ```text
 current source-data contract
-current generated route shell
+current generated route shell after the workbench-header label fix
 current no-legacy shell evidence
 links to the conceptual 1.1.3 exemplar
 links to the A96 answer-form exemplar
@@ -71,6 +71,8 @@ contextual conclusion
 no visually identical hidden-token trap
 ```
 
+Do not use the implemented `1.1.3` snapshot as the formula-token exemplar. Its current source snapshot contains two visible `oude Q` formula tokens with different hidden IDs, `oldQden` and `oldQnum`. Use `references/exemplars/a96-answer-form/` for formula-token policy until the duplicate-token issue is repaired.
+
 ## Next Goal
 
 After this promotion, proceed to:
@@ -86,10 +88,12 @@ reject legacy roots/assets on Golden routes
 reject mixed ge-* and et-* shell contamination
 reject answer-giving placeholders
 reject formula token banks ordered as the answer
-reject visually identical hidden-token traps
+reject visually identical hidden-token traps, including the current oldQden/oldQnum pattern if it appears in future Golden routes
 reject fake graph slope/line-shape questions
 require after-interaction proof
 ```
+
+`GOLDEN-EXERCISE-CHECKERS-1` must reject visually identical hidden-token traps, including the current oldQden/oldQnum pattern if it appears in future Golden routes.
 
 ## Remaining Review Flags
 
