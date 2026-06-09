@@ -1,6 +1,6 @@
 # INSPECT-7 Validation Log
 
-Status: local validation passed, clean worktree passed, explicit CI waiver recorded
+Status: local validation passed, lead review passed, tri-agent external review passed, explicit CI waiver recorded
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -78,11 +78,17 @@ packet on the pushed branch for review.
 ```
 
 Lead-review round 2 found that the packet must not hardcode an earlier reviewed
-SHA as the final external dispatch SHA. The final external-review dispatch
-prompt must cite the exact pushed branch HEAD at dispatch time.
+SHA as the final external dispatch SHA. The external-review dispatch prompt
+cited exact pushed branch HEAD
+`87afb54d43635479c4fa59f5de06c4168b598eac`.
+
+After the round-4 lead-review artifact was pushed, clean worktree safety passed
+again at the external-review dispatch head. GitHub Actions still returned no
+branch runs, so the explicit CI waiver remained in force.
 
 ## Required Next Action
 
-Assign lead review before external tri-agent review. The dispatch prompt must
-cite the exact final pushed branch HEAD, the pushed branch, and this explicit
-CI waiver.
+Record closure artifacts and present the final external-review packet to the
+human owner. Do not start INSPECT-8, INSPECT-9, dashboard/report integration,
+country overlays, teacher inspection pack generation, or gate integration
+without a fresh sprint plan and authorisation.

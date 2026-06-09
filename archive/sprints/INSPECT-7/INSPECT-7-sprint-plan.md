@@ -50,6 +50,7 @@ archive/sprints/INSPECT-7/INSPECT-7-lead-review-round4.md
 archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md
 archive/sprints/INSPECT-7/INSPECT-7-closure-log.md
+archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md
 archive/sprints/INSPECT-7/build-inspect-7-prototype.js
 references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md

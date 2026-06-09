@@ -1,6 +1,6 @@
 # INSPECT-7 Prototype Review Packet
 
-Status: locally validated, pending lead review and external review
+Status: lead reviewed and externally reviewed; tri-agent `MORE_THAN_SATISFIED`
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -103,7 +103,7 @@ Official boundary anchors:
 
 ```text
 Inspectie OP0 Basisvaardigheden:
-https://www.onderwijsinspectie.nl/onderwerpen/toezicht-2017/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0
+https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0
 
 Inspectie bijgestelde onderzoekskaders 2025:
 https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025
@@ -188,6 +188,6 @@ pushed. Do not reuse an earlier packet SHA as `final_reviewed_commit_sha`.
 
 ## Required Next Action
 
-Validate, lead-review, push, and send this packet to the teacher,
-legal/privacy, and Dutch quality-inspection reviewers. Do not close INSPECT-7
-unless all three return `MORE_THAN_SATISFIED`.
+Record the external-review results, close INSPECT-7, and present the final
+external-review packet to the human owner. Do not start a later INSPECT sprint
+without a new sprint plan and authorisation.

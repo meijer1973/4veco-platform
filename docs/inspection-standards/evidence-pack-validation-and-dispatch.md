@@ -15,7 +15,7 @@ It is not a generator, validator implementation, or evidence pack.
 INSPECT-6 and future INSPECT-7 review packets must cite:
 
 - Inspectie OP0 Basisvaardigheden:
-  <https://www.onderwijsinspectie.nl/onderwerpen/toezicht-2017/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0>
+  <https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0>
 - Inspectie bijgestelde onderzoekskaders 2025:
   <https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025>
 - Autoriteit Persoonsgegevens verantwoordingsplicht:

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T09:53:23.552Z
+Generated: 2026-06-09T10:31:01.115Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3977
+Files indexed: 3991
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -617,7 +617,7 @@ Count: 42
 
 ## validators
 
-Count: 392
+Count: 393
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -631,6 +631,7 @@ Count: 392
 - archive/sprints/INSPECT-5/INSPECT-5-validator-refinement-packet.md
 - archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
+- archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -1014,7 +1015,7 @@ Count: 392
 
 ## references
 
-Count: 536
+Count: 537
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1058,6 +1059,7 @@ Count: 536
 - references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
 - references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
 - references/data/inspection-standards/README.md
 - references/data/inspection-standards/schema-notes.md
 - references/data/inspection-standards/source-register.json
@@ -1555,7 +1557,7 @@ Count: 536
 
 ## reports
 
-Count: 2453
+Count: 2455
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1580,6 +1582,8 @@ Count: 2453
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
+- reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
@@ -4031,7 +4035,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 394
+Count: 404
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4118,9 +4122,19 @@ Count: 394
 - archive/sprints/INSPECT-6/INSPECT-6-lead-review-round2.md
 - archive/sprints/INSPECT-6/INSPECT-6-planning-review.md
 - archive/sprints/INSPECT-6/INSPECT-6-sprint-plan.md
+- archive/sprints/INSPECT-7/build-inspect-7-prototype.js
 - archive/sprints/INSPECT-7/INSPECT-7-authorisation.md
+- archive/sprints/INSPECT-7/INSPECT-7-closure-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-correction-log.md
+- archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md
+- archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-assignment.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round1.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round2.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round3.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round4.md
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
+- archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md

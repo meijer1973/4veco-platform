@@ -29,7 +29,7 @@ evidence reporting.
 Future INSPECT-6/7 packets must keep these official-source boundaries visible:
 
 - Dutch Inspectorate OP0 framing:
-  <https://www.onderwijsinspectie.nl/onderwerpen/toezicht-2017/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0>
+  <https://www.onderwijsinspectie.nl/onderwerpen/onderzoekskader-2021-wat-is-er-veranderd/bijstelling-2025/info/op0>
 - Autoriteit Persoonsgegevens accountability guidance:
   <https://autoriteitpersoonsgegevens.nl/themas/basis-avg/avg-algemeen/verantwoordingsplicht>
 - Autoriteit Persoonsgegevens DPIA guidance:

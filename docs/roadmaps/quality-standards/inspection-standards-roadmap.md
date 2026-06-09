@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v1.2-inspect-7-prototype-built`
-Sprint status: `INSPECT-6 Report-Only Generator Planning` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` is built and pending validation, lead review, and external tri-agent review
+Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
+Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -1410,7 +1410,7 @@ Historical decision after INSPECT-5R:
 INSPECT-5R passed tri-agent MORE_THAN_SATISFIED review. INSPECT-6 Report-Only Generator Planning opened as planning-only. Do not implement a generator, generate evidence packs, add dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, personal-data processing, or compliance claims from INSPECT-6.
 ```
 
-Current decision after INSPECT-6:
+Historical decision after INSPECT-6:
 
 ```text
 INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review.
@@ -1422,6 +1422,21 @@ still required before closure.
 Do not add a package script, CI gate, dashboard gate, quality-ref integration,
 Scale Gate integration, country overlay, generated lesson-output mutation,
 personal-data processing, or compliance/approval claim.
+```
+
+Current decision after INSPECT-7:
+
+```text
+INSPECT-7 closed with lead review PASS in round 4 and teacher, legal/privacy,
+and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. The bounded
+Book 1 Chapter 1.1 source object and report-only Markdown/JSON evidence packs
+are accepted as a no-personal-data prototype for Dutch quality-standards
+evidence support.
+No later sprint is authorised by this closure. INSPECT-8, INSPECT-9, report or
+dashboard integration, country overlays, teacher inspection pack generation,
+and gate integration remain candidate future work requiring a fresh sprint
+plan, planning review, lead review, and the mandatory review gate where
+applicable.
 ```
 
 ## 11. Setup recommendation
