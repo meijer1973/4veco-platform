@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T13:22:57.567Z
+Generated: 2026-06-09T13:23:28.770Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4146
+Files indexed: 4148
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1626,7 +1626,7 @@ Count: 568
 
 ## reports
 
-Count: 2546
+Count: 2548
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2165,6 +2165,8 @@ Count: 2546
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
+- reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json
