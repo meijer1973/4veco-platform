@@ -163,15 +163,15 @@ as the final Dutch quality-system packet for external human review.
 4. Is the report-only prototype useful without implying inspection approval or
    school-level proof?
 
-## Dispatch Metadata
+## Dispatch Metadata Used For Lead Review
 
-Before lead/external review, record in the dispatch prompt:
+Lead review used:
 
 ```text
-final_reviewed_commit_sha: <exact final pushed branch HEAD>
+final_reviewed_commit_sha: cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369
 remote_branch: origin/codex/quality-standards-20260608
 remote_push_status: pushed
-platform_ci_validate_platform: <passing run URL or explicit CI waiver>
+platform_ci_validate_platform: explicit CI waiver; gh run list returned []
 local_validation_log: archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 lead_review_round2: archive/sprints/INSPECT-7/INSPECT-7-lead-review-round2.md
 correction_log: archive/sprints/INSPECT-7/INSPECT-7-correction-log.md
