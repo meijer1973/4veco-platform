@@ -73,14 +73,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v0.6-external-review-privacy-claim-guardrails",
+      "version": "v0.7-inspect-5r-tri-agent-accepted",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-09",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-5R is the active pre-INSPECT-6 gate after teacher, legal/privacy, and Dutch quality-inspection reviews returned REVISE. It encodes tri-agent MORE_THAN_SATISFIED review, privacy/no-personal-data defaults, safe-claim templates, OP0 boundaries, and a teacher-facing template. Report-only generator planning, generated evidence packs, teacher inspection packs, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, CI/build integration, personal-data processing, and compliance claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. It encodes tri-agent MORE_THAN_SATISFIED review, privacy/no-personal-data defaults, safe-claim templates, OP0 boundaries, and a teacher-facing template. Report-only generator planning, generated evidence packs, teacher inspection packs, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, CI/build integration, personal-data processing, and compliance claims remain unauthorised until the owner explicitly authorises the next sprint."
     },
     {
       "roadmap_id": "references-team-roadmap",

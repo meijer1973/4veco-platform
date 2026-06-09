@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T07:50:07.556Z
+Generated: 2026-06-09T08:18:03.749Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3947
+Files indexed: 3957
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -617,7 +617,7 @@ Count: 42
 
 ## validators
 
-Count: 389
+Count: 390
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -629,6 +629,7 @@ Count: 389
 - archive/sprints/INSPECT-4/INSPECT-4-validator-design-packet.md
 - archive/sprints/INSPECT-5/INSPECT-5-validation-log.md
 - archive/sprints/INSPECT-5/INSPECT-5-validator-refinement-packet.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -4028,7 +4029,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 367
+Count: 376
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4095,13 +4096,22 @@ Count: 367
 - archive/sprints/INSPECT-5/INSPECT-5-lead-review-round2.md
 - archive/sprints/INSPECT-5/INSPECT-5-planning-review.md
 - archive/sprints/INSPECT-5/INSPECT-5-sprint-plan.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-correction-log.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-external-review-intake.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-assignment.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round1.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round2.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-planning-review.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-review-packet.md
 - archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/nl-vo-evidence-model.md
 - docs/inspection-standards/report-only-schema-design.md
+- docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
