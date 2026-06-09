@@ -114,11 +114,17 @@ classroom implementation claim
    and keep INSPECT-6/7 non-executable until tri-agent `MORE_THAN_SATISFIED`
    review and owner acceptance are recorded.
 9. Create the INSPECT-5R review packet for the three external reviewers.
+   The packet must include calibration checks, planned review questions,
+   evidence links, stop conditions, and direct comment prompts for teacher,
+   legal, and Dutch quality-inspection reviewers.
 10. Validate documentation, JSON, URL/index freshness, branch/worktree safety,
     and the existing report-only validator fixtures.
-11. Run lead-review round 1, record correction log, apply required fixes, and
+11. Before sending the review packet, record the reviewed commit SHA, remote
+    push proof, and either passing `platform-ci / validate-platform` status or
+    an explicit CI waiver.
+12. Run lead-review round 1, record correction log, apply required fixes, and
     run lead-review round 2.
-12. Commit and push before asking the three external reviewers to re-review
+13. Commit and push before asking the three external reviewers to re-review
     the packet. Do not close the gate as passed until all three return
     `MORE_THAN_SATISFIED`.
 
@@ -138,6 +144,11 @@ classroom implementation claim
   with plain-language boundaries.
 - Every future pack-output claim requirement includes concrete evidence
   citations and product/school boundary notes.
+- The INSPECT-5R review packet includes calibration checks, planned review
+  questions, evidence links, stop conditions, and direct comment prompts for
+  teacher, legal, and Dutch quality-inspection reviewers.
+- The packet records reviewed commit SHA, remote push proof, and either passing
+  `platform-ci / validate-platform` status or an explicit CI waiver.
 - No lesson output, generator, dashboard, quality-ref, Scale Gate, CI gate, or
   country-overlay integration is added.
 - Validation and lead-review records exist before the packet is sent.
