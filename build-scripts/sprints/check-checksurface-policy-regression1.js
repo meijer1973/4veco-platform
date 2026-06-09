@@ -110,6 +110,15 @@ function taskShells(data) {
     .map((task) => task.taskShell);
 }
 
+function assertWorkGroup(shell, label, expectedValues) {
+  const groups = shell.expected.requiredWorkText || [];
+  const group = groups.find((entry) => entry && entry.label === label);
+  assert(group, `requiredWorkText missing group: ${label}`);
+  for (const value of expectedValues) {
+    assert((group.any || []).includes(value), `requiredWorkText.${label} missing ${value}`);
+  }
+}
+
 function allTasks(data) {
   return data && Array.isArray(data.tasks) ? data.tasks : [];
 }
@@ -314,6 +323,7 @@ function checkCurrentSources() {
 
   const short113 = sources['1.1.3-korte-check'];
   const exit113 = sources['1.1.3-exit-ticket'];
+  assert(exit113.layout && exit113.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must keep golden exercise workbench framework');
   assert(!containsProcedureGiveaway(exit113), '1.1.3 exit ticket must not teach the graph procedure');
   assert(!containsChoiceOnlySubstitution(short113), '1.1.3 short check must not be choice-only graph substitute');
   assert(!containsChoiceOnlySubstitution(exit113), '1.1.3 exit ticket must not be choice-only graph substitute');
@@ -325,22 +335,42 @@ function checkCurrentSources() {
   assert((exit113.contextBlocks || []).some((block) => block.type === 'table'), '1.1.3 exit ticket must include table context');
   assert(!(exit113.contextBlocks || []).some((block) => block.type === 'formula' || /procedure|flowchart|formula/i.test(asText(block))), '1.1.3 exit ticket must not include formula/procedure context block');
   const exit113Families = taskShells(exit113).map((shell) => shell.family);
-  for (const family of ['graph_construction_substitute', 'graph_reading', 'formula_builder', 'calculation_work_capture']) {
+  for (const family of ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture']) {
     assert(exit113Families.includes(family), `1.1.3 exit ticket missing task family ${family}`);
   }
+  assert(!exit113Families.includes('formula_builder'), '1.1.3 formula builder must be embedded in the calculation task, not split into a separate task');
   const graph113 = taskShells(exit113).find((shell) => shell.family === 'graph_construction_substitute');
   assert(graph113.interaction.hideAxisLabelsUntilAxisSelection === true, '1.1.3 graph must delay axis labels until axis selection');
   assert(graph113.interaction.pointCount === 2, '1.1.3 graph must require exactly two points');
   assert(graph113.interaction.pointSnapMode === 'magnetic_table_point', '1.1.3 graph must use magnetic table-point snapping');
+  assert(graph113.interaction.lineShapeOptions === undefined, '1.1.3 graph must not expose student-facing line-shape choices');
+  assert(graph113.interaction.lineShapeLabel === undefined, '1.1.3 graph must not expose a student-facing line-shape label');
   assert(graph113.expected.pointPolicy === 'straight_line_two_distinct_table_points', '1.1.3 graph must accept two distinct table points');
   assert(Array.isArray(graph113.expected.acceptedTablePoints) && graph113.expected.acceptedTablePoints.length >= 5, '1.1.3 graph must expose accepted table points');
   const read113 = taskShells(exit113).find((shell) => shell.family === 'graph_reading');
   assert(Array.isArray(read113.interaction.stepOrder) && read113.interaction.stepOrder[0] === 'interval_selection', '1.1.3 graph reading must choose interval first');
   assert(read113.expected.interval && read113.expected.interval.value, '1.1.3 graph reading must require selected interval');
   const calc113 = taskShells(exit113).find((shell) => shell.family === 'calculation_work_capture');
-  assert(!calc113.interaction.selectionMode, '1.1.3 calculation must not use interval-halving dropdown substitute');
+  assert(calc113.interaction.selectionMode === 'percentage_claim_control', '1.1.3 calculation must use the structured percentage claim control');
+  assert(Array.isArray(calc113.interaction.intervalOptions) && calc113.interaction.intervalOptions.some((option) => option.id === '150-300' && option.correct === true), '1.1.3 calculation must include the correct source interval choice');
+  assert(calc113.interaction.formula && Array.isArray(calc113.interaction.formula.tokens), '1.1.3 calculation must embed formula-builder tokens');
+  assert(calc113.interaction.formula.tokens.some((token) => token.kind === 'answer'), '1.1.3 embedded formula must include answer tokens');
+  assert(calc113.interaction.formula.tokens.some((token) => token.kind === 'distractor'), '1.1.3 embedded formula must include distractor tokens');
+  assert(Array.isArray(calc113.interaction.conclusionOptions) && calc113.interaction.conclusionOptions.some((option) => option.id === 'drop50' && option.correct === true), '1.1.3 calculation must include the correct conclusion choice');
+  assert((calc113.interaction.answerParsers || []).includes('number_with_optional_percent'), '1.1.3 calculation must declare number parser');
+  assert((calc113.interaction.answerParsers || []).includes('decrease_phrase_to_negative_percent'), '1.1.3 calculation must declare decrease phrase parser');
   assert(calc113.expected.finalAnswer.acceptedNotations.includes('-50%'), '1.1.3 calculation must accept signed percent notation');
   assert(calc113.expected.finalAnswer.acceptedNotations.includes('50% daling'), '1.1.3 calculation must accept decrease phrase notation');
+  assert(calc113.expected.interval && calc113.expected.interval.value === '150-300', '1.1.3 calculation must require the correct interval');
+  assert(calc113.expected.oldValue && calc113.expected.oldValue.value === 300, '1.1.3 calculation must require old Q = 300');
+  assert(calc113.expected.newValue && calc113.expected.newValue.value === 150, '1.1.3 calculation must require new Q = 150');
+  assert(calc113.expected.formula && calc113.expected.formula.kind === 'formula_builder', '1.1.3 calculation must validate the embedded formula sequence');
+  assert(calc113.expected.conclusion && calc113.expected.conclusion.value === 'drop50', '1.1.3 calculation must validate the conclusion choice');
+  assert((calc113.expected.requiredWorkText || []).length === 4, '1.1.3 calculation must require both interval endpoints and both Q-values');
+  assertWorkGroup(calc113, 'startprijs', ['1,50', '1.50']);
+  assertWorkGroup(calc113, 'eindprijs', ['3,00', '3.00']);
+  assertWorkGroup(calc113, 'oude hoeveelheid', ['300']);
+  assertWorkGroup(calc113, 'nieuwe hoeveelheid', ['150']);
 
   for (const key of keys) {
     for (const shell of taskShells(sources[key])) {

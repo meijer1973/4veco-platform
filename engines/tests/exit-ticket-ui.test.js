@@ -713,6 +713,23 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('shared/exit-ticket/1.1.2-exit-ticket.js');
     });
 
+    test('generator shell isolates the 1.1.3 golden exit ticket from the legacy mount', () => {
+        const shell = exitTicketShells.generateShell('1.1.3', 'Grafieken en tabellen', exit113Data, '1.1.3-exit-ticket');
+        expect(shell).toContain('class="ge-topbar"');
+        expect(shell).toContain('class="ge-page" data-golden-ticket-root');
+        expect(shell).toContain('shared/golden-ticket-layout.css');
+        expect(shell).toContain('shared/golden-ticket-graph.js');
+        expect(shell).toContain('shared/golden-ticket-layout.js');
+        expect(shell).toContain('data-graph-id="golden-ticket-113"');
+        expect(shell).not.toContain('id="exit-ticket-app"');
+        expect(shell).not.toContain('class="ge-topbar et-topbar"');
+        expect(shell).not.toContain('class="ge-page et-page"');
+        expect(shell).not.toContain('shared/task-shell.css');
+        expect(shell).not.toContain('shared/exit-ticket.css');
+        expect(shell).not.toContain('shared/task-shell-ui.js');
+        expect(shell).not.toContain('shared/exit-ticket-ui.js');
+    });
+
     test('deploy copies checkpoint runtime and runs the shell generator before landing pages', () => {
         const deploy = fs.readFileSync(path.join(PLATFORM_ROOT, 'scripts', 'deploy.js'), 'utf8');
         expect(deploy).toContain("'task-shell-engine.js'");
@@ -721,6 +738,9 @@ describe('ExitTicketUI', () => {
         expect(deploy).toContain("'exit-ticket-engine.js'");
         expect(deploy).toContain("'exit-ticket-ui.js'");
         expect(deploy).toContain("'exit-ticket.css'");
+        expect(deploy).toContain("'golden-ticket-graph.js'");
+        expect(deploy).toContain("'golden-ticket-layout.js'");
+        expect(deploy).toContain("'golden-ticket-layout.css'");
         const exitTicketIndex = deploy.indexOf('build-exit-ticket-shells.js');
         const landingIndex = deploy.indexOf('build-landing-page.js');
         expect(exitTicketIndex).toBeGreaterThan(-1);
@@ -787,10 +807,11 @@ describe('ExitTicketUI', () => {
         const engine = new ExitTicketEngine({ data: exit113Data });
         const view = ExitTicketUI.buildSkillView(exit113Data, engine, {});
         const html = ExitTicketUI.renderStaticHtml(exit113Data, view);
+        expect(html).toContain('Exit ticket: van tabel naar grafiek naar kritische controle');
         expect(html).toContain('data-task-family="graph_construction_substitute"');
         expect(html).toContain('data-task-family="graph_reading"');
-        expect(html).toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-task-family="calculation_work_capture"');
+        expect(html).not.toContain('data-task-family="formula_builder"');
         expect(html).toContain('data-point-snap-mode="magnetic_table_point"');
         expect(html.indexOf('data-graph-reading-interval-option-id="200-250"')).toBeLessThan(html.indexOf('data-input-role="answer"'));
         expect(html).toContain('placeholder="vul hoeveelheid in"');

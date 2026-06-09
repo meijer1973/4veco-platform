@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T11:29:26.735Z
+Generated: 2026-06-09T11:30:53.524Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3994
+Files indexed: 4091
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,12 +41,15 @@ Count: 8
 
 ## engines
 
-Count: 78
+Count: 81
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
 - engines/exit-ticket-ui.js
 - engines/exit-ticket.css
+- engines/golden-ticket-graph.js
+- engines/golden-ticket-layout.css
+- engines/golden-ticket-layout.js
 - engines/graphical-engine.js
 - engines/graphical-ui.js
 - engines/graphical.css
@@ -124,7 +127,7 @@ Count: 78
 
 ## build scripts
 
-Count: 441
+Count: 453
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -448,10 +451,12 @@ Count: 441
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
+- build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-ux2-screenshots.js
 - build-scripts/sprints/capture-math-ux2-screenshots.js
+- build-scripts/sprints/capture-mtu-ans-proof-impl1-screenshots.js
 - build-scripts/sprints/capture-reason-adopt1-screenshots.js
 - build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
@@ -479,6 +484,10 @@ Count: 441
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
+- build-scripts/sprints/check-golden-ticket-layout-boundary.js
+- build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
+- build-scripts/sprints/check-golden-ticket-no-legacy.js
+- build-scripts/sprints/check-golden-ticket-rendered-proof.js
 - build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -492,6 +501,7 @@ Count: 441
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -536,8 +546,13 @@ Count: 441
 - build-scripts/sprints/emit-gate-bundle-urls.js
 - build-scripts/sprints/emit-url-index.js
 - build-scripts/sprints/emit-visual-qa-harden2-proof.js
+- build-scripts/sprints/fixtures/golden-ticket-layout-boundary-negative.html
+- build-scripts/sprints/fixtures/golden-ticket-reference.html
+- build-scripts/sprints/fixtures/hybrid-frankenstein-exit-ticket.html
+- build-scripts/sprints/fixtures/legacy-exit-ticket.html
 - build-scripts/sprints/generate-reason-std1-proof.js
 - build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js
+- build-scripts/sprints/mtu-ans-proof-impl1-a96-data.js
 - build-scripts/sprints/run-sprint-command.js
 - build-scripts/sprints/task-context-runtime1-fixture.js
 - build-scripts/sprints/task-ingest-playable-lab.js
@@ -617,7 +632,7 @@ Count: 42
 
 ## validators
 
-Count: 393
+Count: 398
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -764,6 +779,10 @@ Count: 393
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
+- build-scripts/sprints/check-golden-ticket-layout-boundary.js
+- build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
+- build-scripts/sprints/check-golden-ticket-no-legacy.js
+- build-scripts/sprints/check-golden-ticket-rendered-proof.js
 - build-scripts/sprints/check-graph-check-ux1.js
 - build-scripts/sprints/check-graph-exit-ux1.js
 - build-scripts/sprints/check-graph-refine1-evidence.js
@@ -777,6 +796,7 @@ Count: 393
 - build-scripts/sprints/check-math-refine1-evidence.js
 - build-scripts/sprints/check-math-ux2-route-output.js
 - build-scripts/sprints/check-merge-handoff-checksurface1.js
+- build-scripts/sprints/check-mtu-ans-proof-impl1-a96.js
 - build-scripts/sprints/check-product-vision-links.js
 - build-scripts/sprints/check-reason-adopt1-route-output.js
 - build-scripts/sprints/check-reason-answerform2-route-output.js
@@ -1015,7 +1035,7 @@ Count: 393
 
 ## references
 
-Count: 537
+Count: 561
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1188,6 +1208,7 @@ Count: 537
 - references/data/sprints/GATE-REASON-STD-1.plan.json
 - references/data/sprints/GATE-SHARED-TASK-INGEST-REPAIR-1.plan.json
 - references/data/sprints/GATE-TASK-FAMILY-1.plan.json
+- references/data/sprints/GOLDEN-EXERCISE-WORKBENCH-PREP-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.plan.json
 - references/data/sprints/GRAPH-REFINE-1.result.json
 - references/data/sprints/GRAPH-UX-2.plan.json
@@ -1209,6 +1230,8 @@ Count: 537
 - references/data/sprints/MATH-UX-2.result.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
+- references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json
+- references/data/sprints/MTU-ANS-PROOF-IMPL-1.result.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.plan.json
 - references/data/sprints/MTU-EVIDENCE-HARDEN-1.result.json
 - references/data/sprints/MTU-GENBLOCK-HARDEN-1.plan.json
@@ -1463,6 +1486,26 @@ Count: 537
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
+- references/exemplars/1.1.3-exit-ticket/candidate-data.json
+- references/exemplars/1.1.3-exit-ticket/implementation-handoff.md
+- references/exemplars/1.1.3-exit-ticket/package-readme.md
+- references/exemplars/1.1.3-exit-ticket/policy-extract.md
+- references/exemplars/1.1.3-exit-ticket/prototype.html
+- references/exemplars/1.1.3-exit-ticket/quality-brief.md
+- references/exemplars/1.1.3-exit-ticket/README.md
+- references/exemplars/1.1.3-exit-ticket/reviews/accessibility-review.md
+- references/exemplars/1.1.3-exit-ticket/reviews/lead-synthesis.md
+- references/exemplars/1.1.3-exit-ticket/reviews/student-experience-review.md
+- references/exemplars/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
+- references/exemplars/1.1.3-exit-ticket/reviews/testing-regression-review.md
+- references/exemplars/1.1.3-exit-ticket/reviews/visual-interaction-review.md
+- references/exemplars/a96-answer-form/candidate-data.json
+- references/exemplars/a96-answer-form/implementation-handoff.md
+- references/exemplars/a96-answer-form/negative-fixtures.json
+- references/exemplars/a96-answer-form/prototype.html
+- references/exemplars/a96-answer-form/quality-brief.md
+- references/exemplars/a96-answer-form/README.md
+- references/exemplars/a96-answer-form/ui-framework.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md
@@ -1476,6 +1519,7 @@ Count: 537
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/teacher-learning-quality-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/testing-regression-review.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/reviews/visual-interaction-review.md
+- references/exemplars/README.md
 - references/external/amstelveencollege_quality_standards.md
 - references/external/exam-questions.json
 - references/external/exams/ha-1022-a-23-1-c.pdf
@@ -1557,7 +1601,7 @@ Count: 537
 
 ## reports
 
-Count: 2455
+Count: 2513
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1576,15 +1620,30 @@ Count: 2455
 - reports/fixtures/gate-ci-proof1/negative-vague-waiver.md
 - reports/fixtures/gate-ci-proof1/positive-json.json
 - reports/fixtures/gate-ci-proof1/positive-markdown.md
+- reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
+- reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html
+- reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1615,6 +1674,7 @@ Count: 2455
 - reports/json/graph-skill-tree.json
 - reports/json/graphical-foundation-coverage.json
 - reports/json/misconception-registry.json
+- reports/json/mtu-ans-proof-impl1-a96-proof.json
 - reports/json/needs-coverage.json
 - reports/json/owned-content-coverage.json
 - reports/json/owned-source-registry.json
@@ -2948,6 +3008,28 @@ Count: 2455
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-corrections.md
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round1.md
 - reports/sprints/GATE-TASK-FAMILY-1-usability-agent-round2.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-PREP-1-plan.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-end-state.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-goal-sequence.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-quality-metrics.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md
+- reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshot-manifest.md
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-desktop-light.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-mobile-light.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-dark-initial.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-after-graph.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-completed.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-feedback.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-initial.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-dark-initial.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-light-after-graph.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-light-initial.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-routing-after-reload.png
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/manifest.json
+- reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-side-by-side.md
+- reports/sprints/GOLDEN-TICKET-RESET-0-baseline.md
 - reports/sprints/GRAPH-CHECK-UX-1-baseline.md
 - reports/sprints/GRAPH-CHECK-UX-1-command-log.jsonl
 - reports/sprints/GRAPH-CHECK-UX-1-command-log.md
@@ -3125,6 +3207,26 @@ Count: 2455
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-planning-review.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-result.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-verification-review.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-baseline.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.jsonl
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-command-log.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-diff-summary.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-assignment.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-corrections.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round1.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-lead-review-round2.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-plan.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-planning-review.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-result.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-completed.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-initial.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-next-action.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-retry-feedback.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-completed.png
+- reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-dark-completed.png
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-baseline.md
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.jsonl
 - reports/sprints/MTU-EVIDENCE-HARDEN-1-command-log.md

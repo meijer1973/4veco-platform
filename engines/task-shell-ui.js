@@ -682,9 +682,11 @@
     var tokens = task.interaction.tokens || [];
     var tokenHtml = tokens.map(function (token) {
       return '<button type="button" class="ts-formula-token" data-task-id="' + escapeHtml(task.id) + '" ' +
-        'data-formula-token-id="' + escapeHtml(token.id) + '" data-formula-token-category="' + escapeHtml(token.category || '') + '" aria-pressed="false">' +
+        'data-formula-token-id="' + escapeHtml(token.id) + '" data-formula-token-category="' + escapeHtml(token.category || '') + '" ' +
+        (token.maxUses ? 'data-formula-max-uses="' + escapeHtml(token.maxUses) + '" ' : '') +
+        'aria-pressed="false">' +
         '<span class="ts-formula-token-label">' + escapeHtml(token.label) + '</span>' +
-        (token.description ? '<span class="ts-formula-token-description">' + escapeHtml(token.description) + '</span>' : '') +
+        (token.description || token.usageHint ? '<span class="ts-formula-token-description">' + escapeHtml(token.description || token.usageHint) + '</span>' : '') +
       '</button>';
     }).join('');
     var placeholder = task.interaction.placeholder || 'Bouw de formule met de blokken.';
@@ -694,6 +696,70 @@
       '</div>' +
       '<div class="ts-formula-bank" role="group" aria-label="' + escapeHtml(task.interaction.tokenBankLabel || 'Formuleblokken') + '">' + tokenHtml + '</div>' +
       '<button type="button" class="ts-formula-clear" data-task-id="' + escapeHtml(task.id) + '" data-formula-clear aria-label="Opgebouwde formule leegmaken">Leegmaken</button>' +
+      renderCriteria(task) +
+    '</div>';
+  }
+
+  function renderCalculationAnswerForm(task) {
+    var interaction = task.interaction || {};
+    var formula = interaction.formula || {};
+    var substitution = interaction.substitution || {};
+    var answer = interaction.answer || {};
+    var context = interaction.context || {};
+    var formulaTask = {
+      id: task.id,
+      interaction: {
+        tokens: formula.tokens || [],
+        allowReuse: formula.allowReuse === true,
+        separator: formula.separator || ' ',
+        placeholder: formula.placeholder || 'Bouw de formule met de blokken.',
+        tokenBankLabel: formula.tokenBankLabel || 'Formulebouwstenen',
+        sequenceLabel: formula.sequenceLabel || 'Jouw formule',
+        showCriteriaBeforeCheck: interaction.showCriteriaBeforeCheck
+      },
+      expected: task.expected || {}
+    };
+    var substitutionFields = (substitution.fields || []).map(function (field) {
+      return '<label class="ts-field ts-answer-form-substitution-field">' +
+        '<span>' + escapeHtml(field.label) + '</span>' +
+        '<input class="ts-input" type="text" inputmode="' + escapeHtml(field.inputMode || 'decimal') + '" autocomplete="off" ' +
+          'data-task-id="' + escapeHtml(task.id) + '" data-input-role="substitution" data-field-id="' + escapeHtml(field.id) + '" ' +
+          'placeholder="' + escapeHtml(field.placeholder || field.label) + '">' +
+      '</label>';
+    }).join('');
+    return '<div class="ts-answer-form" data-answer-form-task="' + escapeHtml(task.id) + '">' +
+      '<section class="ts-answer-form-step" data-answer-form-step="formula">' +
+        '<div class="ts-answer-form-step-head"><span class="ts-answer-form-step-number">1</span><div><h3>' + escapeHtml(formula.title || 'Formule') + '</h3>' +
+        (formula.purpose ? '<p>' + escapeHtml(formula.purpose) + '</p>' : '') + '</div></div>' +
+        renderFormulaBuilder(formulaTask) +
+      '</section>' +
+      '<section class="ts-answer-form-step" data-answer-form-step="substitution">' +
+        '<div class="ts-answer-form-step-head"><span class="ts-answer-form-step-number">2</span><div><h3>' + escapeHtml(substitution.title || 'Invullen') + '</h3>' +
+        (substitution.purpose ? '<p>' + escapeHtml(substitution.purpose) + '</p>' : '') + '</div></div>' +
+        '<div class="ts-answer-form-template" aria-label="' + escapeHtml(substitution.template || substitution.title || 'Invullen') + '">' +
+          (substitution.template ? '<p class="ts-answer-form-template-copy">' + escapeHtml(substitution.template) + '</p>' : '') +
+          '<div class="ts-answer-form-substitution-grid">' + substitutionFields + '</div>' +
+        '</div>' +
+      '</section>' +
+      '<section class="ts-answer-form-step" data-answer-form-step="answer">' +
+        '<div class="ts-answer-form-step-head"><span class="ts-answer-form-step-number">3</span><div><h3>' + escapeHtml(answer.title || 'Eindantwoord') + '</h3>' +
+        (answer.purpose ? '<p>' + escapeHtml(answer.purpose) + '</p>' : '') + '</div></div>' +
+        '<div class="ts-answer-grid">' +
+          '<label class="ts-field"><span>' + escapeHtml(answer.finalAnswerLabel || 'Eindantwoord') + '</span>' +
+            '<input class="ts-input" type="text" inputmode="decimal" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-input-role="final-answer" placeholder="' + escapeHtml(answer.finalAnswerPlaceholder || 'Vul het getal in') + '">' +
+          '</label>' +
+          '<label class="ts-field"><span>' + escapeHtml(answer.unitNotationLabel || 'Eenheid of notatie') + '</span>' +
+            '<input class="ts-input" type="text" inputmode="text" autocomplete="off" data-task-id="' + escapeHtml(task.id) + '" data-input-role="unit-notation" placeholder="' + escapeHtml(answer.unitNotationPlaceholder || 'Vul de notatie in') + '">' +
+          '</label>' +
+        '</div>' +
+      '</section>' +
+      '<section class="ts-answer-form-step" data-answer-form-step="conclusion">' +
+        '<div class="ts-answer-form-step-head"><span class="ts-answer-form-step-number">4</span><div><h3>' + escapeHtml(context.title || 'Conclusie') + '</h3>' +
+        (context.purpose ? '<p>' + escapeHtml(context.purpose) + '</p>' : '') + '</div></div>' +
+        '<label class="ts-field"><span>' + escapeHtml(context.label || 'Korte conclusie') + '</span>' +
+          '<textarea class="ts-textarea" rows="2" data-task-id="' + escapeHtml(task.id) + '" data-input-role="conclusion" placeholder="' + escapeHtml(context.placeholder || 'Schrijf een korte conclusie') + '"></textarea>' +
+        '</label>' +
+      '</section>' +
       renderCriteria(task) +
     '</div>';
   }
@@ -875,6 +941,8 @@
         return renderTextInput(task, 'answer', 'text');
       case 'calculation_work_capture':
         return renderCalculation(task);
+      case 'calculation_answer_form_capture':
+        return renderCalculationAnswerForm(task);
       case 'point_placement':
         return renderPointPlacement(task);
       case 'graph_construction_substitute':
@@ -955,6 +1023,7 @@
     var matchingPairs = renderMatchingPairsFeedback(result && result.matchingPairsFeedback);
     var twoTier = renderTwoTierFeedback(result && result.twoTierFeedback);
     var assertionReason = renderAssertionReasonFeedback(result && result.assertionReasonFeedback);
+    var answerForm = renderAnswerFormFeedback(result && result.answerFormFeedback);
     return '<div class="ts-feedback-card is-' + escapeHtml(state) + '" data-feedback-state="' + escapeHtml(state) + '">' +
       '<strong>' + escapeHtml(result && result.feedbackTitle ? result.feedbackTitle : 'Kijk je antwoord na') + '</strong>' +
       '<p>' + escapeHtml(result && result.feedbackText ? result.feedbackText : '') + '</p>' +
@@ -966,6 +1035,7 @@
       sourceValue +
       sourceChain +
       labelPlacement +
+      answerForm +
       criteria +
       (result && result.practiceRoute ? '<div class="ts-feedback-actions"><a class="ts-feedback-action" href="' + escapeHtml(result.practiceRoute.href) + '">' + escapeHtml(result.practiceRoute.label) + '</a></div>' : '') +
     '</div>';
@@ -1003,6 +1073,14 @@
       renderSelectionList('Nog nodig', feedback.missingRequired) +
       renderSelectionList('Afleider gekozen', feedback.selectedDistractors) +
       renderSelectionList('Begin klopt al', feedback.correctPrefix) +
+    '</div>';
+  }
+
+  function renderAnswerFormFeedback(feedback) {
+    if (!feedback || feedback.mode !== 'practice_only') return '';
+    return '<div class="ts-answer-form-feedback" aria-label="Aanwijzingen bij je berekenantwoord">' +
+      renderSelectionList('Nog nodig', feedback.missingParts) +
+      renderSelectionList('Al controleerbaar', feedback.correctParts) +
     '</div>';
   }
 
@@ -1350,6 +1428,25 @@
       tokens.push(controls[i].getAttribute('data-formula-selected-token-id') || '');
     }
     return { tokens: tokens };
+  }
+
+  function collectCalculationAnswerFormResponse(rootEl, task) {
+    if (!rootEl || !task) {
+      return { methodTokens: [], substitution: {}, finalAnswer: '', notation: '', conclusion: '' };
+    }
+    var substitution = {};
+    var fields = rootEl.querySelectorAll('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="substitution"][data-field-id]');
+    for (var i = 0; i < fields.length; i += 1) {
+      var fieldId = fields[i].getAttribute('data-field-id') || '';
+      if (fieldId) substitution[fieldId] = graphValue(fields[i]);
+    }
+    return {
+      methodTokens: collectFormulaBuilderResponse(rootEl, task).tokens,
+      substitution: substitution,
+      finalAnswer: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="final-answer"]')),
+      notation: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="unit-notation"]')),
+      conclusion: graphValue(rootEl.querySelector('[data-task-id="' + cssEscape(task.id) + '"][data-input-role="conclusion"]'))
+    };
   }
 
   function collectStepOrderingResponse(rootEl, task) {
@@ -2263,12 +2360,14 @@
     var items = formula.querySelectorAll('.ts-formula-item');
     for (var i = 0; i < items.length; i++) {
       var tokenId = items[i].getAttribute('data-formula-selected-token-id');
-      if (tokenId) used[tokenId] = true;
+      if (tokenId) used[tokenId] = (used[tokenId] || 0) + 1;
     }
     var tokens = formula.querySelectorAll('.ts-formula-token');
     for (var j = 0; j < tokens.length; j++) {
       var id = tokens[j].getAttribute('data-formula-token-id');
-      var unavailable = !allowReuse && Boolean(used[id]);
+      var maxAttr = Number(tokens[j].getAttribute('data-formula-max-uses') || '');
+      var maxUses = Number.isInteger(maxAttr) && maxAttr > 0 ? maxAttr : (allowReuse ? Infinity : 1);
+      var unavailable = (used[id] || 0) >= maxUses;
       tokens[j].disabled = unavailable;
       tokens[j].setAttribute('aria-disabled', unavailable ? 'true' : 'false');
       tokens[j].setAttribute('aria-pressed', unavailable ? 'true' : 'false');
@@ -2679,6 +2778,7 @@
     handleSentenceBuilderClick: handleSentenceBuilderClick,
     collectFormulaBuilderResponse: collectFormulaBuilderResponse,
     handleFormulaBuilderClick: handleFormulaBuilderClick,
+    collectCalculationAnswerFormResponse: collectCalculationAnswerFormResponse,
     collectStepOrderingResponse: collectStepOrderingResponse,
     handleStepOrderingClick: handleStepOrderingClick,
     collectMatchingPairsResponse: collectMatchingPairsResponse,
