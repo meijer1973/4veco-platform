@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.1-A",
+  "name": "Book 2 Chapter 2.1 Part A Vertical Slice",
+  "created": "2026-06-08",
+  "plan": "reports/sprints/B2-2.1-A-plan.md",
+  "baseline": "reports/sprints/B2-2.1-A-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "scope": [
+    "Start the Book 2 Chapter 2.1 Part A vertical slice.",
+    "Resolve or explicitly carry the 2.1.4 target gap before final production closure.",
+    "Create a local 2.1.4 exercise and answer plan before writing final mixed-practice output.",
+    "Confirm v5 review status for 2.1.1 through 2.1.3 before final production reliance.",
+    "Create Book 2 Chapter 2.1 printed textbook output through the lesson workflow.",
+    "Generate rendered output and answer materials for Chapter 2.1.",
+    "Preserve product and companion scope boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1-A-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-A",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No protected reference data writes.",
+    "No target-exercise source-record mutation without a separate approved sprint or explicit human decision.",
+    "No external-source writes.",
+    "No generated-output hand patches that bypass the lesson build workflow.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, or broad companion scaling authorization."
+  ]
+}

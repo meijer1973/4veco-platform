@@ -33,6 +33,7 @@ function setupChapter(name, paragraphs) {
   const chapterDir = path.join(TMP, name);
   fs.mkdirSync(chapterDir, { recursive: true });
   fs.mkdirSync(path.join(chapterDir, '_assets'), { recursive: true });
+  const chapterSections = [];
 
   for (const p of paragraphs) {
     const pDir = path.join(chapterDir, p.folder);
@@ -74,10 +75,21 @@ function setupChapter(name, paragraphs) {
     if (p.qualityRef) {
       fs.writeFileSync(path.join(pDir, p.qualityRef.name), p.qualityRef.content);
     }
+
+    chapterSections.push([
+      `# ${p.folder}`,
+      '',
+      '## Opgaven',
+      '',
+      '**Opgave 1**',
+      '',
+      '**A.** Testvraag.',
+      '',
+    ].join('\n'));
   }
 
   // Write chapter files
-  fs.writeFileSync(path.join(chapterDir, '9.9 Test – hoofdstuk.md'), '# Chapter\n');
+  fs.writeFileSync(path.join(chapterDir, '9.9 Test – hoofdstuk.md'), `# Chapter\n\n${chapterSections.join('\n\n')}`);
   fs.writeFileSync(path.join(chapterDir, '9.9 Test – hoofdstuk.html'), '<html></html>');
   fs.writeFileSync(path.join(chapterDir, '9.9 Test – hoofdstuk.pdf'), 'x'.repeat(600000));
   fs.writeFileSync(path.join(chapterDir, '9.9 Test – antwoorden.md'), '# Answers\n');

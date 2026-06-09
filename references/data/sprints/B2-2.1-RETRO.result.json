@@ -1,0 +1,115 @@
+{
+  "sprint_id": "B2-2.1-RETRO",
+  "generated": "2026-06-08",
+  "status": "completed",
+  "plan": "reports/sprints/B2-2.1-RETRO-plan.md",
+  "baseline": "reports/sprints/B2-2.1-RETRO-baseline.md",
+  "result": "reports/sprints/B2-2.1-RETRO-result.md",
+  "diff_summary": "reports/sprints/B2-2.1-RETRO-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "scope": {
+    "assembled_exercise_validation_repaired": true,
+    "stale_chapter_build_failed_repaired_validation": true,
+    "book_2_chapter_2_1_assembly_repaired": true,
+    "book_1_print_layout_rhythm_applied_to_chapter": true,
+    "generated_lesson_output_changed": true,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "source_registry_mutated": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+      "status": "passed",
+      "note": "Chapter validator passed with one warning: chapter PDF size 124 KB."
+    },
+    {
+      "command": "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1-RETRO-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-RETRO",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.1-RETRO-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-RETRO --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "LF-to-CRLF warnings only on sprint checker and validator files."
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.1-RETRO-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.1-RETRO-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.1-RETRO-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.1-RETRO-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "b2-211-213-final-v5-target-review",
+        "description": "2.1.1 through 2.1.3 remain migrated v4 targets needing final v5 review before being treated as reviewed-final target evidence.",
+        "disposition": "carry_forward",
+        "owner": "future v5 target-review sprint",
+        "next_action": "Schedule final v5 review of the migrated 2.1 targets before using them as reviewed-final registry proof.",
+        "blocking": false
+      },
+      {
+        "id": "b2-214-local-production-evidence",
+        "description": "2.1.4 remains local sprint production evidence and was not promoted to source-registry target proof.",
+        "disposition": "carry_forward",
+        "owner": "future target/source sprint or human decision",
+        "next_action": "Promote the local replacement only through a separate approved target/source mutation sprint or explicit human decision.",
+        "blocking": false
+      },
+      {
+        "id": "b2-21-print-pagination-polish",
+        "description": "Chapter margins and line distance were aligned, but broad pagination polish remains a final-print-assembly concern.",
+        "disposition": "accepted_follow_up",
+        "owner": "final print assembly sprint",
+        "next_action": "Tighten pagination when more Book 2 chapters exist and full-book print assembly can judge page rhythm globally.",
+        "blocking": false
+      },
+      {
+        "id": "b2-213-mo-equals-mk-case",
+        "description": "2.1.3 still needs explicit treatment of the MO = MK equality case.",
+        "disposition": "accepted_follow_up",
+        "owner": "v5 review or content-hardening sprint",
+        "next_action": "Add equality-case treatment during final v5 review or a focused marginal-analysis hardening pass.",
+        "blocking": false
+      },
+      {
+        "id": "b2-21-chapter-pdf-size-warning",
+        "description": "Chapter validation passes but warns that the chapter PDF is 124 KB, below the conservative high-confidence image-embedding threshold.",
+        "disposition": "accepted_follow_up",
+        "owner": "final print assembly sprint",
+        "next_action": "Monitor PDF size and image embedding behavior during later Book 2 and full-book assembly.",
+        "blocking": false
+      }
+    ]
+  }
+}

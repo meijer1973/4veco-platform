@@ -144,6 +144,37 @@ function extractImageRefs(folder) {
   return refs;
 }
 
+function escapeRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function mdFileBySuffix(folder, required) {
+  return fs.readdirSync(folder).find(f => {
+    if (!f.endsWith('.md')) return false;
+    const suffix = f.split(' â€“ ').pop() || f;
+    return suffix.includes(required);
+  });
+}
+
+function paragraphChapterSection(chapterMarkdown, folderName) {
+  const startRe = new RegExp(`^#\\s+${escapeRegex(folderName)}\\s*$`, 'm');
+  const start = chapterMarkdown.search(startRe);
+  if (start < 0) return '';
+  const rest = chapterMarkdown.slice(start);
+  const nextMatch = rest.slice(1).search(/\n#\s+\d+\.\d+\.\d+\s+/m);
+  return nextMatch < 0 ? rest : rest.slice(0, nextMatch + 1);
+}
+
+function exerciseMarkerCount(markdown) {
+  const headingMarkers = markdown.match(/^##\s+Opgave\s+\d+\b/gmi) || [];
+  const boldMarkers = markdown.match(/^\*\*Opgave\s+\d+\*\*/gmi) || [];
+  return headingMarkers.length + boldMarkers.length;
+}
+
+function hasExerciseSection(markdown) {
+  return /^##\s+Opgaven\b/im.test(markdown) || exerciseMarkerCount(markdown) > 0;
+}
+
 function validateParagraph(folderName, paraType) {
   const folder = path.join(CHAPTER, folderName);
   const parNr = folderName.split(' ')[0];
@@ -373,6 +404,39 @@ if (hoofdstukPdf) {
     warn(`Chapter PDF size: ${(size / 1024).toFixed(0)} KB (images may be missing)`);
   } else {
     fail(`Chapter PDF too small: ${(size / 1024).toFixed(0)} KB (images likely missing)`);
+  }
+}
+
+// Chapter student-text assembly must include theory exercises, not merely the
+// theory text. Otherwise the book/chapter can validate while every exercise is
+// stranded in paragraph-only output.
+if (hoofdstukMd) {
+  const chapterMarkdown = fs.readFileSync(path.join(CHAPTER, hoofdstukMd), 'utf-8');
+  console.log('\nâ”€â”€ Chapter exercise assembly â”€â”€');
+  for (const folderName of paraFolders) {
+    const type = classifyParagraph(folderName);
+    if (type !== 'theory') continue;
+    const folder = path.join(CHAPTER, folderName);
+    const parNr = folderName.split(' ')[0];
+    const opgavenFile = mdFileBySuffix(folder, 'opgaven');
+    if (!opgavenFile) continue;
+    const opgavenMarkdown = fs.readFileSync(path.join(folder, opgavenFile), 'utf-8');
+    const expectedMarkers = exerciseMarkerCount(opgavenMarkdown);
+    const section = paragraphChapterSection(chapterMarkdown, folderName);
+    if (!section) {
+      fail(`Chapter assembly missing paragraph section for ${parNr}: ${hoofdstukMd}`);
+      continue;
+    }
+    if (!hasExerciseSection(section)) {
+      fail(`Chapter assembly omits exercises for ${parNr}: ${hoofdstukMd} does not include opgaven content`);
+      continue;
+    }
+    const actualMarkers = exerciseMarkerCount(section);
+    if (expectedMarkers > 0 && actualMarkers < expectedMarkers) {
+      fail(`Chapter assembly has incomplete exercises for ${parNr}: expected at least ${expectedMarkers} opgave marker(s), found ${actualMarkers}`);
+    } else {
+      pass(`Chapter includes theory exercises for ${parNr}`);
+    }
   }
 }
 

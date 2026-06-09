@@ -214,6 +214,26 @@ function activeRoadmapContent(file, content) {
   return content;
 }
 
+function currentOperationalRoadmapFiles(root) {
+  const indexPath = path.join(root, 'docs', 'roadmaps', 'roadmap-version-index.json');
+  if (!fs.existsSync(indexPath)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+    const files = new Set();
+    for (const activePath of index.current_operational_roadmaps || []) {
+      files.add(path.join(root, activePath));
+    }
+    for (const entry of index.roadmaps || []) {
+      if (entry && entry.status === 'active' && entry.path) {
+        files.add(path.join(root, entry.path));
+      }
+    }
+    return [...files];
+  } catch (error) {
+    return [];
+  }
+}
+
 function activeFiles(root) {
   const lessonRoot = path.resolve(root, '..', '4veco-lessen');
   const platformFiles = [
@@ -236,7 +256,7 @@ function activeFiles(root) {
     path.join('specifications', 'companion-core-specifications.md'),
     path.join('specifications', 'product-end-state.md'),
   ].map((file) => path.join(lessonRoot, file));
-  return [...platformFiles, ...lessonFiles];
+  return [...new Set([...platformFiles, ...currentOperationalRoadmapFiles(root), ...lessonFiles])];
 }
 
 function parseArgs(argv) {

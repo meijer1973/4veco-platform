@@ -64,7 +64,21 @@ function setupBook() {
   );
 
   fs.mkdirSync(path.join(chapter, '_assets'), { recursive: true });
-  writeText(path.join(chapter, '9.9 Test hoofdstuk.md'), '# Chapter\n');
+  writeText(
+    path.join(chapter, '9.9 Test hoofdstuk.md'),
+    [
+      '# Chapter',
+      '',
+      '# 9.9.1 Theory',
+      '',
+      '## Opgaven',
+      '',
+      '**Opgave 1**',
+      '',
+      '**A.** Testvraag.',
+      '',
+    ].join('\n')
+  );
   writeBlob(path.join(chapter, '9.9 Test hoofdstuk.pdf'), 120000);
   writeText(path.join(chapter, '9.9 Test antwoorden.md'), '# Answers\n');
   writeBlob(path.join(chapter, '9.9 Test antwoorden.pdf'), 20000);
