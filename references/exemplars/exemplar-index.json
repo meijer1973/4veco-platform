@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "index_id": "golden-exemplar-index",
+  "status": "policy_and_implemented_reference_index",
+  "generated_from_goal": "GOLDEN-EXEMPLAR-PROMOTION-1",
+  "entries": [
+    {
+      "id": "1.1.3-exit-ticket-conceptual",
+      "type": "conceptual_exemplar",
+      "path": "references/exemplars/1.1.3-exit-ticket/",
+      "surface": "target_equivalent_exit_ticket_candidate",
+      "paragraph": "1.1.3",
+      "title": "Conceptual graph/table Golden exit-ticket exemplar",
+      "use_for": [
+        "product standard",
+        "operation-chain guidance",
+        "graph/table interaction policy",
+        "review expectations"
+      ],
+      "does_not_authorize": [
+        "product_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language"
+      ]
+    },
+    {
+      "id": "1.1.3-golden-exercise-workbench",
+      "type": "implemented_exemplar",
+      "path": "references/exemplars/implemented/1.1.3-golden-exercise-workbench/",
+      "surface": "target_equivalent_exit_ticket_candidate",
+      "paragraph": "1.1.3",
+      "title": "Repository-compatible Golden Exercise Workbench implementation reference",
+      "source_snapshot": "references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-snapshot.json",
+      "generated_route_snapshot": "references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html",
+      "proof_files": [
+        "references/exemplars/implemented/1.1.3-golden-exercise-workbench/screenshot-proof.md",
+        "references/exemplars/implemented/1.1.3-golden-exercise-workbench/no-legacy-proof.md",
+        "references/exemplars/implemented/1.1.3-golden-exercise-workbench/rollout-notes.md"
+      ],
+      "use_for": [
+        "repository-compatible shell structure",
+        "source-left/task-right layout",
+        "graph/table interaction reference",
+        "source-data contract",
+        "generated Golden route snapshot",
+        "no-legacy DOM evidence"
+      ],
+      "must_not_use_for": [
+        "formula_token_policy",
+        "hidden_token_trap_policy"
+      ],
+      "limitations": [
+        "The 1.1.3 source snapshot currently contains duplicate visible old Q formula tokens with hidden IDs oldQden and oldQnum.",
+        "Use references/exemplars/a96-answer-form/ for formula-builder policy until the 1.1.3 duplicate-token issue is repaired."
+      ],
+      "does_not_authorize": [
+        "route_migration",
+        "renderer_generalization",
+        "generated_lesson_output_churn",
+        "product_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language"
+      ]
+    },
+    {
+      "id": "a96-answer-form",
+      "type": "answer_form_exemplar",
+      "path": "references/exemplars/a96-answer-form/",
+      "surface": "calculation_answer_form_exemplar",
+      "title": "A96 answer-form exemplar",
+      "use_for": [
+        "formula-builder policy",
+        "substitution and final-answer structure",
+        "notation and contextual conclusion",
+        "visible reusable-token policy"
+      ],
+      "does_not_authorize": [
+        "product_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language"
+      ]
+    }
+  ],
+  "next_goal": "GOLDEN-EXERCISE-CHECKERS-1"
+}
