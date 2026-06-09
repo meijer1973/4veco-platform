@@ -274,12 +274,7 @@
       '</section>' +
       '<section class="ge-workbench">' +
         renderSourceCard(data) +
-        '<section class="ge-task-card" data-ge-task-card>' +
-          '<header class="ge-task-header">' +
-            '<p class="ge-card-kicker">Werkbank</p>' +
-            '<h2>' + escapeHtml(layout.taskPaneTitle || 'Werkvragen') + '</h2>' +
-            '<p>' + escapeHtml(layout.taskPaneIntro || '') + '</p>' +
-          '</header>' +
+        '<section class="ge-task-card" data-ge-task-card aria-label="' + attr(layout.taskPaneTitle || 'Werkvragen') + '">' +
           '<ol class="ge-step-list">' +
             renderGraphStep(graphEntry, spec) +
             renderReadingStep(readEntry) +
