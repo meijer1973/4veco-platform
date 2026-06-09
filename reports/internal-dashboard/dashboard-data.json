@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T09:21:13.178Z",
+  "generatedAt": "2026-06-09T09:40:51.858Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v1.0-inspect-7-planning-opened Sprint status: INSPECT-6 Report-Only Generator Planning closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORETHANSATISFIED; INSPECT-7 Dutch Scoped Evidence-Pack Prototype has op...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v1.1-inspect-7-planning-accepted Sprint status: INSPECT-6 Report-Only Generator Planning closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORETHANSATISFIED; INSPECT-7 Dutch Scoped Evidence-Pack Prototype plan...",
           "sprints": []
         },
         {

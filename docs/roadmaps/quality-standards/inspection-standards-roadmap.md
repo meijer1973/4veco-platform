@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v1.0-inspect-7-planning-opened`
-Sprint status: `INSPECT-6 Report-Only Generator Planning` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` has opened as a planned sprint and is pending planning review before implementation
+Roadmap version: `v1.1-inspect-7-planning-accepted`
+Sprint status: `INSPECT-6 Report-Only Generator Planning` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` planning review passed and bounded implementation is in progress
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -1415,9 +1415,9 @@ Current decision after INSPECT-6:
 ```text
 INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review.
 INSPECT-7 Dutch Scoped Evidence-Pack Prototype has opened with an
-authorisation, sprint plan, and correction log. Planning review must pass
-before implementation. The sprint remains bounded to one no-personal-data Book
-1 Chapter 1.1 source object plus report-only Markdown and JSON evidence pack.
+authorisation, sprint plan, planning-review PASS, and correction log. Bounded
+implementation is authorised only for one no-personal-data Book 1 Chapter 1.1
+source object plus report-only Markdown and JSON evidence pack.
 Do not add a package script, CI gate, dashboard gate, quality-ref integration,
 Scale Gate integration, country overlay, generated lesson-output mutation,
 personal-data processing, or compliance/approval claim.

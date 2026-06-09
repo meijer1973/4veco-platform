@@ -1,6 +1,6 @@
 # INSPECT-7 Correction Log
 
-Status: opened, no corrections recorded yet
+Status: planning review passed; no corrections required
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -11,7 +11,8 @@ corrections.
 
 ## Planning Review Corrections
 
-None yet.
+No planning-review corrections were required. Planning review returned `PASS`
+with no blockers.
 
 ## Lead Review Corrections
 
@@ -50,5 +51,6 @@ school SKA compliance claim
 
 ## Required Next Action
 
-Run planning review. If the reviewer returns `REVISE`, record requested
-corrections here before implementation starts.
+Implement only the bounded no-personal-data Book 1 Chapter 1.1 report-only
+prototype. Record validation, lead-review, and external-review corrections here
+if any are requested.

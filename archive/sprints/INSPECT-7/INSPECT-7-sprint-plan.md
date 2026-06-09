@@ -1,6 +1,6 @@
 # INSPECT-7 Sprint Plan
 
-Status: planned, pending planning review
+Status: planning review passed, implementation authorised within bounded scope
 Date: 2026-06-09
 Roadmap: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Ledger: `docs/roadmaps/quality-standards/sprint-ledger.md`

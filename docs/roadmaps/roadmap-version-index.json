@@ -73,14 +73,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v1.0-inspect-7-planning-opened",
+      "version": "v1.1-inspect-7-planning-accepted",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-09",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. INSPECT-7 has opened with authorisation, sprint plan, and correction log for one bounded no-personal-data Book 1 Chapter 1.1 report-only evidence-pack prototype, pending planning review before implementation. Package scripts, CI/build integration, dashboard gates, quality-ref integration, Scale Gate integration, generated lesson-output changes, country overlays, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. INSPECT-7 planning review passed with no blockers and bounded implementation is in progress for one no-personal-data Book 1 Chapter 1.1 source object plus report-only Markdown and JSON evidence pack. Package scripts, CI/build integration, dashboard gates, quality-ref integration, Scale Gate integration, generated lesson-output changes, country overlays, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",
