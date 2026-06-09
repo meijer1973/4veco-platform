@@ -1,6 +1,6 @@
 # INSPECT-5R Review Packet
 
-Status: draft, pending validation, lead review, final commit/push metadata, and external re-review
+Status: validated locally, CI waiver recorded, pending lead review and external re-review
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 Sprint plan: `archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md`
@@ -179,17 +179,16 @@ Evidence needed for MORE_THAN_SATISFIED:
 Before this packet is sent for external re-review, the dispatch must record:
 
 ```text
-reviewed_commit_sha: <final pushed commit>
+reviewed_content_commit_sha: 5dff7e4a
 remote_branch: origin/codex/quality-standards-20260608
-remote_push_status: <pushed/not pushed>
-platform_ci_validate_platform: <passing run URL or explicit CI waiver>
+remote_push_status: pushed
+platform_ci_validate_platform: explicit CI waiver; gh run list returned [] for the branch after implementation commit 5dff7e4a
 local_validation_log: archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
-lead_review_round2: archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round2.md
+lead_review_round2: pending before external dispatch
 ```
 
 ## Required Next Action
 
-Validate, lead-review, push, fill dispatch metadata in the reviewer prompt or
-closure log, and send this packet to the teacher, legal/privacy, and Dutch
-quality-inspection reviewers. Do not authorise INSPECT-6 unless all three
-return `MORE_THAN_SATISFIED`.
+Run lead review, push any correction records, and send this packet to the
+teacher, legal/privacy, and Dutch quality-inspection reviewers. Do not
+authorise INSPECT-6 unless all three return `MORE_THAN_SATISFIED`.
