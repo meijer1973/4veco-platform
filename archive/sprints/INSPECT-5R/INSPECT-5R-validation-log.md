@@ -1,9 +1,10 @@
 # INSPECT-5R Validation Log
 
-Status: local validation passed, explicit CI waiver recorded
+Status: local validation passed, explicit CI waiver rule recorded
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
-Implementation commit checked for CI: `5dff7e4a`
+Latest full-validation content commit: `5dff7e4a`
+Latest metadata-only packet commit reviewed by lead round 1: `cf03dda9`
 
 ## Commands
 
@@ -39,15 +40,16 @@ Tests: 8 skipped, 759 passed, 767 total
 ## CI Proof Or Waiver
 
 `gh run list --branch codex/quality-standards-20260608 --limit 10 --json databaseId,name,status,conclusion,headSha,url`
-returned `[]` after commit `5dff7e4a` was pushed.
+returned `[]` after the INSPECT-5R packet branch was pushed.
 
 Explicit CI waiver:
 
 ```text
 No GitHub Actions `platform-ci / validate-platform` run is available for this
-branch/commit. Use the passing local validation in this log as the review
-evidence for INSPECT-5R, and keep the packet on the pushed branch for external
-review.
+branch. The external-review dispatch prompt must cite the exact final pushed
+branch HEAD and this explicit CI waiver. Use the passing local validation in
+this log as the review evidence for INSPECT-5R, and keep the packet on the
+pushed branch for external review.
 ```
 
 ## Required Next Action

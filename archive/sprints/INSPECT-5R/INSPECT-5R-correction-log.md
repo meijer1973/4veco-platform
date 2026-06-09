@@ -29,6 +29,13 @@ planning-review comments to INSPECT-5R corrections.
 | Review packet content requirements were not explicit enough. | Updated the plan to require calibration checks, planned questions, evidence links, stop conditions, and direct comment prompts. |
 | CI proof or waiver was not explicit enough. | Updated the plan and review packet contract to require reviewed commit SHA, remote push proof, and passing `platform-ci / validate-platform` or explicit CI waiver before external review. |
 
+## Lead Review Round 1 Corrections
+
+| Lead-review finding | Correction |
+|---|---|
+| Lead-review closure proof was missing from the packet. | Added `archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round1.md` and changed the packet dispatch metadata so external dispatch is blocked until round 2 is recorded. |
+| Reviewed-commit and CI-waiver metadata was anchored to `5dff7e4a` while the reviewed branch head was `cf03dda9`. | Replaced stale hard-coded dispatch metadata with a dispatch rule: the external-review prompt must cite the exact final pushed branch HEAD, remote branch, push status, CI waiver, validation log, and lead-review round-2 file. |
+
 ## Scope Guardrail Check
 
 Not added in INSPECT-5R:
@@ -59,6 +66,6 @@ classroom implementation claim
 
 ## Required Next Action
 
-Run validation, create lead-review evidence, push the packet, and send it to
-the teacher, legal/privacy, and Dutch quality-inspection reviewers for
+Run lead-review round 2, push any final correction records, and send the packet
+to the teacher, legal/privacy, and Dutch quality-inspection reviewers for
 `MORE_THAN_SATISFIED` re-review.

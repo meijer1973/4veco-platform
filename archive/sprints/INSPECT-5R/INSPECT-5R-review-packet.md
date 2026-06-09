@@ -1,6 +1,6 @@
 # INSPECT-5R Review Packet
 
-Status: validated locally, CI waiver recorded, pending lead review and external re-review
+Status: validated locally, CI waiver rule recorded, pending lead-review round 2 and external re-review
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 Sprint plan: `archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md`
@@ -176,15 +176,17 @@ Evidence needed for MORE_THAN_SATISFIED:
 
 ## Dispatch Metadata
 
-Before this packet is sent for external re-review, the dispatch must record:
+Before this packet is sent for external re-review, the dispatch prompt must
+record the exact final pushed branch HEAD. This avoids stale self-referential
+SHA text in the packet after final review-log commits.
 
 ```text
-reviewed_content_commit_sha: 5dff7e4a
+final_reviewed_commit_sha: <exact final pushed branch HEAD from git rev-parse HEAD>
 remote_branch: origin/codex/quality-standards-20260608
 remote_push_status: pushed
-platform_ci_validate_platform: explicit CI waiver; gh run list returned [] for the branch after implementation commit 5dff7e4a
+platform_ci_validate_platform: explicit CI waiver; gh run list returned [] for the pushed branch
 local_validation_log: archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
-lead_review_round2: pending before external dispatch
+lead_review_round2: archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round2.md must record PASS or PASS WITH FLAGS before dispatch
 ```
 
 ## Required Next Action
