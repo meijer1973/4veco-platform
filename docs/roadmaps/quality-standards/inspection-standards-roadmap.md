@@ -7,7 +7,7 @@ Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
 Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
-Merge-prep status: `QS-MERGE-2 Final PR Refresh` opened after human PR review because PR #23 became 2 commits behind current `main`; refresh, revalidate, require fresh PR CI, then mark ready/comment/merge only through the PR path if green
+Merge-prep status: `QS-MERGE-2 Final PR Refresh` closed after refreshing PR #23 against current `origin/main`, revalidating, and receiving fresh PR `platform-ci / validate-platform` success for the final-refresh head; mark ready/comment/merge only through the PR path
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
