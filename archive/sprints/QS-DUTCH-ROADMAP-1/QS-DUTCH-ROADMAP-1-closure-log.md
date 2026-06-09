@@ -91,8 +91,8 @@ This closure does not authorise:
 
 ## Commit And Push
 
-Local commit: this commit.
-Remote push: pending until commit is created.
+Local commit: `6bc459a7` plus merge-refresh commit `d03c0de1`.
+Remote push: branch `codex/dutch-quality-scope-roadmap-20260609` pushed to origin before QS-DUTCH-ROADMAP-1A hygiene review.
 
 ## Recommended Next Action
 

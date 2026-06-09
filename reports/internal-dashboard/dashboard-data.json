@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T13:38:21.660Z",
+  "generatedAt": "2026-06-09T14:56:14.712Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "planning/audit only.",
-          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.0-dutch-scope-only-proposal Sprint status: QS-DUTCH-ROADMAP-1 Dutch Scope Roadmap Reset in progress as roadmap/governance work only Human owner: HCS / Marcel Team mode: isolated worktree, Dutch quality-control package first, no broad productio...",
+          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.0-dutch-scope-only-proposal Sprint status: QS-DUTCH-ROADMAP-1 closed / Dutch-only proposal ready for human review; QS-DUTCH-ROADMAP-1A final hygiene and PR prep in progress Human owner: HCS / Marcel Team mode: isolated worktree, Dutch quality-...",
           "sprints": []
         },
         {

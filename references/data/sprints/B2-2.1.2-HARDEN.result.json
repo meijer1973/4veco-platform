@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.1.2-HARDEN",
+  "status": "completed",
+  "completed_on": "2026-06-09",
+  "plan": "reports/sprints/B2-2.1.2-HARDEN-plan.md",
+  "baseline": "reports/sprints/B2-2.1.2-HARDEN-baseline.md",
+  "result": "reports/sprints/B2-2.1.2-HARDEN-result.md",
+  "diff_summary": "reports/sprints/B2-2.1.2-HARDEN-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": true,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "acceptance_tests": [
+    {
+      "command": "python build_pdf.py",
+      "status": "passed"
+    },
+    {
+      "command": "python build_chapter.py",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1.2-HARDEN-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1.2-HARDEN",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node C:/wt/TEXT-20260608/4veco-platform/scripts/validate-paragraph.js --mode part-a --profile publisher-print .",
+      "status": "passed"
+    },
+    {
+      "command": "node C:/wt/TEXT-20260608/4veco-platform/scripts/validate-chapter.js .",
+      "status": "passed",
+      "note": "Passed with one warning: chapter PDF size 232 KB."
+    },
+    {
+      "command": "node C:/wt/TEXT-20260608/4veco-platform/scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print .",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "LF-to-CRLF warnings only on existing platform script edits."
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.1.2-HARDEN-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1.2-HARDEN --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.1.2-HARDEN-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.1.2-HARDEN-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.1.2-HARDEN-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.1.2-HARDEN-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "B2-212-TARGET-V5",
+        "description": "The 2.1.2 target record remains migrated_from_v4_needs_v5_review.",
+        "disposition": "carry_forward",
+        "owner": "textbook_team",
+        "next_action": "Handle in a later target-review/source-record sprint or explicit human decision.",
+        "blocking": false
+      },
+      {
+        "id": "B2-212-PDF-SIZE",
+        "description": "Chapter 2.1 validation still warns that the chapter PDF is 232 KB, although image references and asset-pair checks pass.",
+        "disposition": "accepted_follow_up",
+        "owner": "textbook_team",
+        "next_action": "Monitor during later chapter and book assembly; treat as non-blocking while asset checks continue to pass.",
+        "blocking": false
+      }
+    ]
+  }
+}

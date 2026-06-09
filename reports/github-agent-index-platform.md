@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T13:38:42.891Z
+Generated: 2026-06-09T14:56:14.659Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4146
+Files indexed: 4255
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -640,7 +640,7 @@ Count: 42
 
 ## validators
 
-Count: 409
+Count: 410
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -656,6 +656,7 @@ Count: 409
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md
 - archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
@@ -1054,7 +1055,7 @@ Count: 409
 
 ## references
 
-Count: 568
+Count: 590
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1130,6 +1131,20 @@ Count: 568
 - references/data/sprints/AGENT-BRANCH-SAFETY-1.result.json
 - references/data/sprints/AGENT-WORKTREE-SAFETY-1.plan.json
 - references/data/sprints/AGENT-WORKTREE-SAFETY-1.result.json
+- references/data/sprints/B2-2.1-A.plan.json
+- references/data/sprints/B2-2.1-A.result.json
+- references/data/sprints/B2-2.1-RETRO.plan.json
+- references/data/sprints/B2-2.1-RETRO.result.json
+- references/data/sprints/B2-2.1.1-HARDEN.plan.json
+- references/data/sprints/B2-2.1.1-HARDEN.result.json
+- references/data/sprints/B2-2.1.2-HARDEN.plan.json
+- references/data/sprints/B2-2.1.2-HARDEN.result.json
+- references/data/sprints/B2-2.1.3-HARDEN.plan.json
+- references/data/sprints/B2-2.1.3-HARDEN.result.json
+- references/data/sprints/B2-2.1.4-HARDEN.plan.json
+- references/data/sprints/B2-2.1.4-HARDEN.result.json
+- references/data/sprints/B2-READY-1.plan.json
+- references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
 - references/data/sprints/BOOK1-FIX-1.result.json
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
@@ -1525,6 +1540,14 @@ Count: 568
 - references/exemplars/a96-answer-form/quality-brief.md
 - references/exemplars/a96-answer-form/README.md
 - references/exemplars/a96-answer-form/ui-framework.md
+- references/exemplars/exemplar-index.json
+- references/exemplars/exemplar-index.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/no-legacy-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/README.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/rollout-notes.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/screenshot-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-snapshot.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md
@@ -1627,7 +1650,7 @@ Count: 568
 
 ## reports
 
-Count: 2540
+Count: 2619
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2499,6 +2522,85 @@ Count: 2540
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
+- reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
+- reports/sprints/B2-2.1-A-baseline.md
+- reports/sprints/B2-2.1-A-command-log.jsonl
+- reports/sprints/B2-2.1-A-diff-summary.md
+- reports/sprints/B2-2.1-A-lead-review-assignment.md
+- reports/sprints/B2-2.1-A-lead-review-corrections.md
+- reports/sprints/B2-2.1-A-lead-review-round1.md
+- reports/sprints/B2-2.1-A-lead-review-round2.md
+- reports/sprints/B2-2.1-A-lesson-output-log.md
+- reports/sprints/B2-2.1-A-plan.md
+- reports/sprints/B2-2.1-A-result.md
+- reports/sprints/B2-2.1-A-target-gap-decision.md
+- reports/sprints/B2-2.1-RETRO-baseline.md
+- reports/sprints/B2-2.1-RETRO-command-log.jsonl
+- reports/sprints/B2-2.1-RETRO-diff-summary.md
+- reports/sprints/B2-2.1-RETRO-lead-review-assignment.md
+- reports/sprints/B2-2.1-RETRO-lead-review-corrections.md
+- reports/sprints/B2-2.1-RETRO-lead-review-round1.md
+- reports/sprints/B2-2.1-RETRO-lead-review-round2.md
+- reports/sprints/B2-2.1-RETRO-plan.md
+- reports/sprints/B2-2.1-RETRO-result.md
+- reports/sprints/B2-2.1-RETRO-retrospective-brief.md
+- reports/sprints/B2-2.1.1-HARDEN-baseline.md
+- reports/sprints/B2-2.1.1-HARDEN-command-log.jsonl
+- reports/sprints/B2-2.1.1-HARDEN-diff-summary.md
+- reports/sprints/B2-2.1.1-HARDEN-lead-review-assignment.md
+- reports/sprints/B2-2.1.1-HARDEN-lead-review-corrections.md
+- reports/sprints/B2-2.1.1-HARDEN-lead-review-round1.md
+- reports/sprints/B2-2.1.1-HARDEN-lead-review-round2.md
+- reports/sprints/B2-2.1.1-HARDEN-plan.md
+- reports/sprints/B2-2.1.1-HARDEN-quality-notes.md
+- reports/sprints/B2-2.1.1-HARDEN-result.md
+- reports/sprints/B2-2.1.2-HARDEN-baseline.md
+- reports/sprints/B2-2.1.2-HARDEN-command-log.jsonl
+- reports/sprints/B2-2.1.2-HARDEN-command-log.md
+- reports/sprints/B2-2.1.2-HARDEN-diff-summary.md
+- reports/sprints/B2-2.1.2-HARDEN-import-notes.md
+- reports/sprints/B2-2.1.2-HARDEN-lead-review-assignment.md
+- reports/sprints/B2-2.1.2-HARDEN-lead-review-corrections.md
+- reports/sprints/B2-2.1.2-HARDEN-lead-review-round1.md
+- reports/sprints/B2-2.1.2-HARDEN-lead-review-round2.md
+- reports/sprints/B2-2.1.2-HARDEN-plan.md
+- reports/sprints/B2-2.1.2-HARDEN-result.md
+- reports/sprints/B2-2.1.3-HARDEN-baseline.md
+- reports/sprints/B2-2.1.3-HARDEN-command-log.jsonl
+- reports/sprints/B2-2.1.3-HARDEN-command-log.md
+- reports/sprints/B2-2.1.3-HARDEN-diff-summary.md
+- reports/sprints/B2-2.1.3-HARDEN-import-notes.md
+- reports/sprints/B2-2.1.3-HARDEN-lead-review-assignment.md
+- reports/sprints/B2-2.1.3-HARDEN-lead-review-corrections.md
+- reports/sprints/B2-2.1.3-HARDEN-lead-review-round1.md
+- reports/sprints/B2-2.1.3-HARDEN-lead-review-round2.md
+- reports/sprints/B2-2.1.3-HARDEN-plan.md
+- reports/sprints/B2-2.1.3-HARDEN-result.md
+- reports/sprints/B2-2.1.4-HARDEN-baseline.md
+- reports/sprints/B2-2.1.4-HARDEN-command-log.jsonl
+- reports/sprints/B2-2.1.4-HARDEN-command-log.md
+- reports/sprints/B2-2.1.4-HARDEN-diff-summary.md
+- reports/sprints/B2-2.1.4-HARDEN-import-notes.md
+- reports/sprints/B2-2.1.4-HARDEN-lead-review-assignment.md
+- reports/sprints/B2-2.1.4-HARDEN-lead-review-corrections.md
+- reports/sprints/B2-2.1.4-HARDEN-lead-review-round1.md
+- reports/sprints/B2-2.1.4-HARDEN-lead-review-round2.md
+- reports/sprints/B2-2.1.4-HARDEN-package-BENCHMARK_VS_BOOK1.md
+- reports/sprints/B2-2.1.4-HARDEN-package-BOOK1_COMPARISON_AND_QA.md
+- reports/sprints/B2-2.1.4-HARDEN-package-GOLDEN_EXAMPLE_NOTES.md
+- reports/sprints/B2-2.1.4-HARDEN-package-QUALITY_LOG.md
+- reports/sprints/B2-2.1.4-HARDEN-plan.md
+- reports/sprints/B2-2.1.4-HARDEN-result.md
+- reports/sprints/B2-READY-1-baseline.md
+- reports/sprints/B2-READY-1-command-log.jsonl
+- reports/sprints/B2-READY-1-diff-summary.md
+- reports/sprints/B2-READY-1-lead-review-assignment.md
+- reports/sprints/B2-READY-1-lead-review-corrections.md
+- reports/sprints/B2-READY-1-lead-review-round1.md
+- reports/sprints/B2-READY-1-lead-review-round2.md
+- reports/sprints/B2-READY-1-plan.md
+- reports/sprints/B2-READY-1-readiness-brief.md
+- reports/sprints/B2-READY-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
@@ -4190,7 +4292,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 417
+Count: 424
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4296,6 +4398,10 @@ Count: 417
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-planning-review.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-human-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-sprint-plan.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md
@@ -4461,6 +4567,9 @@ Count: 417
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
+- docs/roadmaps/textbook/sprint-ledger.md
+- docs/roadmaps/textbook/textbook-end-state.md
+- docs/roadmaps/textbook/textbook-production-roadmap.md
 - docs/sprints/example-plan.md
 - docs/sprints/PV-G4-plan.md
 - docs/sprints/PV.1-plan.md

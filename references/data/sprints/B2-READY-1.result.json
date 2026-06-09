@@ -1,0 +1,88 @@
+{
+  "sprint_id": "B2-READY-1",
+  "generated": "2026-06-08",
+  "status": "completed",
+  "plan": "reports/sprints/B2-READY-1-plan.md",
+  "baseline": "reports/sprints/B2-READY-1-baseline.md",
+  "result": "reports/sprints/B2-READY-1-result.md",
+  "diff_summary": "reports/sprints/B2-READY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "scope": {
+    "roadmap_created": true,
+    "textbook_roadmap_folder_created": true,
+    "textbook_sprint_ledger_created": true,
+    "textbook_end_state_draft_created": true,
+    "book_2_print_series_registered": true,
+    "readiness_brief_created": true,
+    "protected_reference_data_changed": false,
+    "generated_lesson_output_changed": false,
+    "target_exercise_registry_changed": false,
+    "product_authority": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-READY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-READY-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-READY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-READY-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "line-ending normalization warnings only"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-READY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-READY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-READY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-READY-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "b2-214-placeholder-target",
+        "description": "2.1.4 remains a placeholder target and must be replaced or explicitly resolved before Chapter 2.1 can be considered production-ready.",
+        "disposition": "carry_forward",
+        "owner": "B2-2.1-A",
+        "next_action": "Resolve or explicitly carry the 2.1.4 target gap before final printed-output closure.",
+        "blocking": false
+      },
+      {
+        "id": "b2-211-213-migrated-target-review",
+        "description": "2.1.1 through 2.1.3 are migrated targets needing v5 review, so they are usable as starting targets but not final proof.",
+        "disposition": "carry_forward",
+        "owner": "B2-2.1-A",
+        "next_action": "Confirm v5 review status for 2.1.1 through 2.1.3 before final production reliance.",
+        "blocking": false
+      },
+      {
+        "id": "textbook-end-state-draft",
+        "description": "The textbook end-state description is an initial draft, not a locked specification.",
+        "disposition": "accepted_follow_up",
+        "owner": "textbook_team",
+        "next_action": "Refine the end-state description as later textbook production and review evidence accumulates.",
+        "blocking": false
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Roadmap Version Index
 
-Updated: 2026-06-08
+Updated: 2026-06-09
 
 The JSON file is canonical for tooling:
 
@@ -13,7 +13,8 @@ docs/roadmaps/roadmap-version-index.json
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
 | References Team Roadmap | `v3.56-shared-task-ingest-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-SHARED-TASK-INGEST-REPAIR-1 closed PASS WITH FLAGS. Shared task context/source-ingestion readiness is accepted for controlled downstream adoption-preparation only. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, generated lesson output, and product-wide use remain blocked until later rendered-output review and product gates. The next roadmap-controlled step is CHECK-SHORT-EXIT-2 unless the roadmap owner explicitly reorders. |
-| Inspection Standards Compatibility Roadmap | `v0.1-setup-roadmap` | `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` | Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. The roadmap now lives in the dedicated quality-standards folder with a sprint ledger and first-attempt quality-standards end-state description. INSPECT-0 Source Register + Dutch Profile Design is authorised as bounded research/data work only. Schemas, validators, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, and compliance claims remain unauthorised. |
+| Textbook Production Roadmap | `v1.2-chapter-2.1-scope` | `docs/roadmaps/textbook/textbook-production-roadmap.md` | Active roadmap for textbook improvement and writing, housed in `docs/roadmaps/textbook/`. Human quality review changed the cadence to one paragraph per sprint. Scope is currently limited to Book 2 Chapter 2.1.x; Chapter 2.2 production is outside this assignment. Companion/product proof remains separate from printed textbook production. |
+| Inspection Standards Compatibility Roadmap | `v1.3-inspect-7-tri-agent-accepted` | `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` | Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-7 closed after lead review round 4 returned PASS and teacher, legal/privacy, and Dutch quality-inspection reviewers each returned MORE_THAN_SATISFIED. The evidence sample remains bounded and report-only; broader generator, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised. |
 
 ## Outdated Archive
 
