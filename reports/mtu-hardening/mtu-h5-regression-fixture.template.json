@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "fixture_id": "replace-with-reviewed-sample-id",
+  "status": "template_not_evidence_do_not_run",
+  "review_packet": "reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json",
+  "template_policy": {
+    "do_not_treat_as_approved_sample": true,
+    "required_status_after_human_approval": "approved_for_mtu_h5_regression",
+    "target_fixture_path_after_approval": "reports/mtu-hardening/mtu-h5-regression-fixture.json"
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "required_defect_classes": [
+    "missing_mtu_for_correction_model_operation",
+    "over_triggered_prerequisite_not_required_by_answer_model",
+    "calculus_route_triggered_where_non_calculus_route_intended",
+    "function_construction_route_triggered_when_point_calculation_enough",
+    "incidence_pass_through_task_without_incidence_mtu",
+    "question_word_without_answer_form_mtu",
+    "scale_factor_usage_without_scaling_unit_mtu",
+    "predictable_misconception_without_tag_or_equivalent_evidence",
+    "apply_analyze_unit_without_usable_canonical_procedure"
+  ],
+  "records": [
+    {
+      "record_id": "replace-with-source-stable-id",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "replace-with-local-evidence-path-or-url"
+      ],
+      "question_word": "berekenen | leg_uit | analyseer | bron | arceer_grafisch | noem | not_applicable",
+      "mapped_mtu_ids": [
+        "replace-with-reviewed-current-mapping-unit-id"
+      ],
+      "mapped_route_tags": [
+        "replace-with-reviewed-route-tag"
+      ],
+      "official_correction_model_operations": [
+        {
+          "operation_id": "replace-with-operation-id",
+          "description": "Replace with official correction-model operation summary.",
+          "mapped_mtu_ids": [
+            "replace-with-reviewed-current-mapping-unit-id"
+          ],
+          "mapped_route_tags": [
+            "replace-with-reviewed-route-tag"
+          ],
+          "expected_required_mtu_ids": [
+            "replace-with-required-live-unit-id"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "replace-with-forbidden-over-trigger-unit-id"
+          ],
+          "expected_route_tags": [
+            "non_calculus | point_calculation | incidence | answer_form | scaling | procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "replace-with-answer-form-unit-id"
+          ],
+          "expected_incidence_mtu_ids": [
+            "replace-with-incidence-unit-id-if-applicable"
+          ],
+          "expected_scaling_mtu_ids": [
+            "replace-with-scaling-unit-id-if-applicable"
+          ],
+          "expected_misconception_refs": [
+            "replace-with-misconception-id-or-evidence-path-if-applicable"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": false,
+          "review_required_hooks": [
+            "replace-or-remove-review-required-hook"
+          ]
+        }
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "replace-with-negative-fixture-id",
+      "expected_status": "fail",
+      "reintroduced_defect_classes": [
+        "replace-with-original-solo-defect-class"
+      ],
+      "records": [
+        {
+          "record_id": "replace-with-negative-record-id",
+          "source_type": "reviewed_target_exercise",
+          "source_evidence_paths": [
+            "replace-with-same-approved-evidence-path-or-url"
+          ],
+          "question_word": "replace-with-question-word",
+          "mapped_mtu_ids": [
+            "replace-with-deliberately-wrong-unit-id"
+          ],
+          "official_correction_model_operations": [
+            {
+              "operation_id": "replace-with-negative-operation-id",
+              "description": "Replace with the defect reintroduced in the fixture only.",
+              "mapped_mtu_ids": [
+                "replace-with-deliberately-wrong-unit-id"
+              ],
+              "expected_required_mtu_ids": [],
+              "expected_forbidden_mtu_ids": [
+                "replace-with-deliberately-wrong-unit-id"
+              ],
+              "expected_route_tags": [],
+              "expected_answer_form_mtu_ids": [],
+              "expected_misconception_refs": [],
+              "missing_mtu_expected": true,
+              "scale_factor_expected": false,
+              "incidence_or_pass_through_expected": false,
+              "predictable_misconception_expected": false,
+              "review_required_hooks": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

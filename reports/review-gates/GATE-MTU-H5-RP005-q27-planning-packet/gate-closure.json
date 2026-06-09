@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-RP005-q27-planning-packet",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-09",
+  "closed_on": "2026-06-09",
+  "status": "approved_more_than_satisfied_no_mutation_authorized",
+  "verdict": "APPROVE_MORE_THAN_SATISFIED",
+  "reviewed_remote_commit": "a7876f6919cde8e6104e6894a30644d643ff8e04",
+  "reviewed_remote_branch": "codex/running-goals-20260608",
+  "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/a7876f6919cde8e6104e6894a30644d643ff8e04",
+  "review_packet_markdown": "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.md",
+  "review_packet_json": "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+  "checker": "build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+  "source_next_repair_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "previous_lane_gate": "reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json",
+  "decision": "Approve the MTU-H5 RP-005 q27 governed planning packet as a remote-available blocked-lane review packet. The packet is evidence-complete for review and machine-checkable, but it does not authorize mapper repair, candidate writes, protected-reference mutation, MTU mutation, lesson output, diagnostics, PV, or product use.",
+  "review_team_threshold": {
+    "minimum_required": "MORE_THAN_SATISFIED",
+    "all_agents_met_threshold": true,
+    "rounds": 1
+  },
+  "review_team": [
+    {
+      "agent": "teacher",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Teacher review found the packet didactically clear as a blocked q27 planning packet, with clean leg-uit-of answer-form limitation, levy/new-price/capacity misconceptions, scale hooks, and no material improvements required."
+    },
+    {
+      "agent": "economist",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Economist review found the q27 official correction-model alignment and D07/D08/D41/D05/A88/A98 semantic routing more than satisfactory."
+    },
+    {
+      "agent": "quality_inspection",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Quality inspection found the packet remote-available, checker-backed, live-validator-bound, explicit about the negative guard, and clean of protected-reference, candidate-storage, and source-extraction writes."
+    }
+  ],
+  "approved_findings": [
+    "q27 remains blocked by live incidence/capacity and per-1,000-liter scaling failures.",
+    "A98 covers the leg-uit-of answer form only.",
+    "D07 is rejected as q27 closure support because it is a percentage pass-through unit, not the q27 levy price/quantity/capacity operation.",
+    "D08 is topic-adjacent but weak until semantic-fit review resolves its A15 elasticity over-trigger risk.",
+    "D41, D05, and A88 are support candidates for a later reviewed q27 route.",
+    "The live H5 q27 failed assertions and review_required hooks remain the negative guard and proof that q27 is not closed."
+  ],
+  "checker_commands": [
+    "node --check build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-next-repair-packet.js",
+    "node build-scripts/references/check-operation-answer-skill-candidates.js",
+    "node build-scripts/reports/validate-report-json.js"
+  ],
+  "local_validation_summary": [
+    "q27 planning packet checker passed",
+    "q19 planning packet checker still passed",
+    "next repair packet checker passed",
+    "operation/answer-skill candidate validation passed",
+    "report JSON validation passed",
+    "protected references, authored target exercises, candidate storage, and source-extraction storage remained clean"
+  ],
+  "authorized_next": {
+    "scope": [
+      "proceed to MTU-H5-RP-006 q15 reasoning answer-skill and procedure semantic-fit lane",
+      "prepare a governed q15 packet and checker using official/source-authoritative evidence",
+      "run the same three-agent MORE_THAN_SATISFIED review threshold before closure"
+    ],
+    "execution_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "blocked_outcomes": [
+    "q27 mapper repair execution",
+    "candidate storage creation",
+    "candidate writes",
+    "protected reference mutation",
+    "machine-reference mutation",
+    "external-source mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "authored target-exercise mutation",
+    "lesson output",
+    "PV or graph mutation",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "completion_claimed": false,
+  "github_actions_evidence": {
+    "claimed": false,
+    "note": "No GitHub Actions run/check ID is claimed for this closure."
+  }
+}
