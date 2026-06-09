@@ -54,5 +54,6 @@ pushed branch for external review.
 
 ## Required Next Action
 
-Run lead-review round 1, record any correction, run round 2, then send the
-pushed packet to the external reviewers.
+Send the pushed INSPECT-5R packet to the teacher, legal/privacy, and Dutch
+quality-inspection reviewers with the exact final pushed branch HEAD and the
+explicit CI waiver in the dispatch prompt.
