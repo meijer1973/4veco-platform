@@ -13,6 +13,16 @@ references/ui/interaction-policy.md
 references/ui/interaction-policy.json
 references/ui/exercise-workbench-policy.md
 references/ui/shared-task-rollout-policy.md
+references/ui/golden-exercise-checker-fixtures.json
+```
+
+Checker entrypoints for this policy layer:
+
+```text
+build-scripts/references/check-layout-registry.js
+build-scripts/references/check-interaction-policy.js
+build-scripts/sprints/check-golden-exercise-workbench.js
+build-scripts/sprints/check-shared-task-ui-policy.js
 ```
 
 ## Source Trail
