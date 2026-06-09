@@ -25,7 +25,8 @@
     "node build-scripts/references/check-roadmap-version-index.js",
     "npm.cmd run agent:index",
     "node build-scripts/sprints/emit-url-index.js --check",
-    "git diff --check"
+    "git diff --check",
+    "git diff --cached --check"
   ],
   "forbidden": [
     "No migration of 1.1.2.",

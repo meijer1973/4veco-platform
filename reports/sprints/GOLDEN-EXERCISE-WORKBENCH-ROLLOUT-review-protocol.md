@@ -32,7 +32,7 @@ no category below 8.0
 anti-spec-gaming >= 9.0
 human-oversight reduction >= 9.0
 lead verdict: PASS or PASS WITH MINOR FLAGS
-````
+```
 
 If any score is below threshold, the `/goal` continues.
 

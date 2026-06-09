@@ -1,4 +1,4 @@
-# Golden Exercise Workbench Rollout â€” End-State Specification
+# Golden Exercise Workbench Rollout -- End-State Specification
 
 Generated: 2026-06-09
 
@@ -6,17 +6,17 @@ Status: PROJECT END-STATE FOR GOLDEN EXERCISE WORKBENCH ROLLOUT
 
 ## End-state sentence
 
-The Golden Exercise Workbench becomes the repositoryâ€™s governed default layout and interaction policy for source-dependent exercise surfaces, with the implemented `1.1.3` Golden Ticket route and the A96 answer-form exemplar serving as the two canonical examples for future exit tickets, short checks, and practice exercises.
+The Golden Exercise Workbench becomes the repository's governed default layout and interaction policy for source-dependent exercise surfaces, with the implemented `1.1.3` Golden Ticket route and the A96 answer-form exemplar serving as the two canonical examples for future exit tickets, short checks, and practice exercises.
 
 ## Product-level ambition
 
 This project is successful only when future coding agents can build high-quality exercise surfaces from repository policy and exemplars without repeated human micromanagement.
 
-The target is not â€œtests pass.â€ The target is that external reviewers can say:
+The target is not "tests pass." The target is that external reviewers can say:
 
 ```text
 This policy is clear enough, concrete enough, and enforceable enough that a new cold agent can build the next exercise to the same product standard without reinventing or patching the old framework.
-````
+```
 
 ## Non-negotiable product principles
 
@@ -122,7 +122,7 @@ source-value controls without source context
 
 ### 6. Locking / grey-out policy
 
-Locking is allowed only when a later step genuinely depends on a previous stepâ€™s output.
+Locking is allowed only when a later step genuinely depends on a previous step's output.
 
 Allowed:
 

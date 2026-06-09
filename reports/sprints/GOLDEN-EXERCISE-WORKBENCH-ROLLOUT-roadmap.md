@@ -16,11 +16,11 @@ positive conceptual exemplar: references/exemplars/1.1.3-exit-ticket/
 positive answer-form exemplar: references/exemplars/a96-answer-form/
 negative pure legacy pattern: et-page / #exit-ticket-app / legacy task-shell assets
 negative hybrid pattern: mixed ge-* and et-* classes around old shell
-````
+```
 
 The current generator still special-cases `1.1.3`; broad rollout requires policy extraction and then renderer generalization.
 
-## Phase 1 â€” Preparation
+## Phase 1 -- Preparation
 
 Sprint:
 
@@ -31,7 +31,7 @@ GOLDEN-EXERCISE-WORKBENCH-PREP-1
 Status:
 
 ```text
-planned
+completed_pending_review
 ```
 
 Goal:
@@ -42,7 +42,7 @@ Create durable end-state, roadmap, ledger, metrics, review protocol, and goal se
 
 No implementation.
 
-## Phase 2 â€” Policy extraction
+## Phase 2 -- Policy extraction
 
 Goal run:
 
@@ -75,7 +75,7 @@ external reviewers score policy clarity >= 8.5
 anti-spec-gaming >= 9
 ```
 
-## Phase 3 â€” Exemplar promotion
+## Phase 3 -- Exemplar promotion
 
 Goal run:
 
@@ -102,7 +102,7 @@ Purpose:
 Make the actual repository-integrated Golden Ticket route easy for future agents to find and copy structurally.
 ```
 
-## Phase 4 â€” Checker hardening
+## Phase 4 -- Checker hardening
 
 Goal run:
 
@@ -137,7 +137,7 @@ reject formula token banks ordered as the answer
 reject visually identical hidden-token traps
 ```
 
-## Phase 5 â€” Renderer generalization
+## Phase 5 -- Renderer generalization
 
 Goal run:
 
@@ -164,7 +164,7 @@ Keep old renderer available for legacy routes.
 Do not migrate multiple routes in this goal.
 ```
 
-## Phase 6 â€” First transfer proof
+## Phase 6 -- First transfer proof
 
 Goal run:
 
@@ -194,7 +194,7 @@ no legacy assets
 no target-equivalent completion claim
 ```
 
-## Phase 7 â€” Short-check variant
+## Phase 7 -- Short-check variant
 
 Goal run:
 
@@ -214,7 +214,7 @@ Key difference:
 short checks may advise, hint, and route; they do not prove target-equivalence.
 ```
 
-## Phase 8 â€” Rollout ledger
+## Phase 8 -- Rollout ledger
 
 Goal run:
 
@@ -238,9 +238,9 @@ Track which surfaces use the policy and which proof states exist.
 ## First recommended implementation order
 
 ```text
-1. 1.1.3 exit ticket â€” implemented reference
-2. 1.1.2 exit ticket â€” first transfer proof
-3. 1.1.1 exit ticket or short check â€” choose by operation fit
+1. 1.1.3 exit ticket -- implemented reference
+2. 1.1.2 exit ticket -- first transfer proof
+3. 1.1.1 exit ticket or short check -- choose by operation fit
 4. first advisory short-check variant
 5. graph/table practice
 6. calculation practice

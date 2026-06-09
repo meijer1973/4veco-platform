@@ -14,7 +14,7 @@ Coding agents have repeatedly drifted toward specification gaming:
 
 - implementing something that passes narrow checks but does not match the intended layout;
 - patching the old `et-*`/`task-shell` framework instead of adopting the Golden framework;
-- stopping at â€œpassâ€ instead of making reviewers genuinely satisfied;
+- stopping at "pass" instead of making reviewers genuinely satisfied;
 - losing earlier human decisions such as graph behavior, route affordance, or formula-builder quality.
 
 This sprint creates stable project instructions so future `/goal` runs optimize toward the end state rather than toward minimal passing changes.
@@ -43,7 +43,7 @@ reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
 reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-quality-metrics.md
 reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
 reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-goal-sequence.md
-````
+```
 
 ## Forbidden work
 
@@ -82,8 +82,17 @@ node build-scripts/references/check-roadmap-version-index.js
 npm.cmd run agent:index
 node build-scripts/sprints/emit-url-index.js --check
 git diff --check
+git diff --cached --check
 ```
 
 ## Closure note
 
 This preparation sprint is not the rollout. It creates the control documents required for the next long-running `/goal`.
+
+Closeout boundary:
+
+```text
+no generated lesson output changed
+no implementation migration performed
+next goal: GOLDEN-EXERCISE-POLICY-1
+```

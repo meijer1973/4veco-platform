@@ -6,13 +6,13 @@ Generated: 2026-06-09
 
 Define concrete `/goal` runs for the project.
 
-## Goal 0 â€” Preparation
+## Goal 0 -- Preparation
 
 ID:
 
 ```text
 GOLDEN-EXERCISE-WORKBENCH-PREP-1
-````
+```
 
 Purpose:
 
@@ -22,7 +22,7 @@ Create durable project-control documents.
 
 No implementation.
 
-## Goal 1 â€” Policy extraction
+## Goal 1 -- Policy extraction
 
 ID:
 
@@ -46,7 +46,7 @@ checkers only if lightweight and needed for policy proof
 
 No migration.
 
-## Goal 2 â€” Exemplar promotion
+## Goal 2 -- Exemplar promotion
 
 ID:
 
@@ -62,7 +62,7 @@ Promote the implemented 1.1.3 route as repository-compatible exemplar and link A
 
 No migration.
 
-## Goal 3 â€” Checker hardening
+## Goal 3 -- Checker hardening
 
 ID:
 
@@ -78,7 +78,7 @@ Generalize no-legacy and Golden workbench checks for any route opting into golde
 
 No migration.
 
-## Goal 4 â€” Renderer generalization
+## Goal 4 -- Renderer generalization
 
 ID:
 
@@ -94,7 +94,7 @@ Make renderer selection data-driven from layout.framework, not hard-coded to 1.1
 
 No broad migration.
 
-## Goal 5 â€” First transfer proof
+## Goal 5 -- First transfer proof
 
 ID:
 
@@ -110,7 +110,7 @@ Apply Golden Exercise Workbench + A96 answer-form rules to 1.1.2 exit ticket.
 
 This is the first real transfer proof.
 
-## Goal 6 â€” Short-check variant
+## Goal 6 -- Short-check variant
 
 ID:
 

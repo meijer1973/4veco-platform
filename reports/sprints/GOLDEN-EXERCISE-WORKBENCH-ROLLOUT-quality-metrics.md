@@ -16,7 +16,7 @@ Each major sprint/goal must be scored by reviewers using these metrics.
 8 = acceptable, but still has visible risk
 7 = revise required
 6 or below = fail for this project
-````
+```
 
 ## Required threshold
 
@@ -29,7 +29,7 @@ human-oversight reduction: >= 9.0
 
 If the threshold is not met, the goal must continue.
 
-## Metric 1 â€” Layout contract clarity
+## Metric 1 -- Layout contract clarity
 
 Questions:
 
@@ -45,7 +45,7 @@ Target:
 >= 9.0
 ```
 
-## Metric 2 â€” Anti-spec-gaming strength
+## Metric 2 -- Anti-spec-gaming strength
 
 Questions:
 
@@ -62,7 +62,7 @@ Target:
 >= 9.0
 ```
 
-## Metric 3 â€” Didactic operation-chain quality
+## Metric 3 -- Didactic operation-chain quality
 
 Questions:
 
@@ -78,7 +78,7 @@ Target:
 >= 8.5
 ```
 
-## Metric 4 â€” Shared-task integration
+## Metric 4 -- Shared-task integration
 
 Questions:
 
@@ -94,7 +94,7 @@ Target:
 >= 8.5
 ```
 
-## Metric 5 â€” Student usability
+## Metric 5 -- Student usability
 
 Questions:
 
@@ -111,7 +111,7 @@ Target:
 >= 8.5
 ```
 
-## Metric 6 â€” Teacher learning quality
+## Metric 6 -- Teacher learning quality
 
 Questions:
 
@@ -127,7 +127,7 @@ Target:
 >= 8.5
 ```
 
-## Metric 7 â€” Accessibility and mobile
+## Metric 7 -- Accessibility and mobile
 
 Questions:
 
@@ -144,7 +144,7 @@ Target:
 >= 8.0
 ```
 
-## Metric 8 â€” Rollout safety
+## Metric 8 -- Rollout safety
 
 Questions:
 
@@ -161,7 +161,7 @@ Target:
 >= 8.5
 ```
 
-## Metric 9 â€” Human-oversight reduction
+## Metric 9 -- Human-oversight reduction
 
 Questions:
 
