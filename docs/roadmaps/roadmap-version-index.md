@@ -13,7 +13,7 @@ docs/roadmaps/roadmap-version-index.json
 | Roadmap | Version | Path | Notes |
 |---|---|---|---|
 | References Team Roadmap | `v3.56-shared-task-ingest-gate-closed` | `references/reference-team-roadmap.md` | Current operating roadmap after GATE-SHARED-TASK-INGEST-REPAIR-1 closed PASS WITH FLAGS. Shared task context/source-ingestion readiness is accepted for controlled downstream adoption-preparation only. Product-route adoption, target-equivalent reliance, diagnostics, mastery/sequencing, PV, Scale Gate 1, generated lesson output, and product-wide use remain blocked until later rendered-output review and product gates. The next roadmap-controlled step is CHECK-SHORT-EXIT-2 unless the roadmap owner explicitly reorders. |
-| Textbook Production Roadmap | `v1.1-paragraph-sprint-series` | `docs/roadmaps/textbook/textbook-production-roadmap.md` | Active roadmap for textbook improvement and writing, housed in `docs/roadmaps/textbook/`. Human quality review changed the cadence to one paragraph per sprint. `B2-2.1.1-HARDEN` closed PASS WITH FLAGS after lead review; `B2-2.1.2-HARDEN` is planned next when the user is ready. `B2-2.2-A` remains paused. Companion/product proof remains separate from printed textbook production. |
+| Textbook Production Roadmap | `v1.2-chapter-2.1-scope` | `docs/roadmaps/textbook/textbook-production-roadmap.md` | Active roadmap for textbook improvement and writing, housed in `docs/roadmaps/textbook/`. Human quality review changed the cadence to one paragraph per sprint. Scope is currently limited to Book 2 Chapter 2.1.x; Chapter 2.2 production is outside this assignment. Companion/product proof remains separate from printed textbook production. |
 
 ## Outdated Archive
 
