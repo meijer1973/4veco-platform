@@ -27,6 +27,10 @@ claims or weak evidence being hidden:
   product claim;
 - every category has `4veco evidence`, `school evidence still needed`,
   `weak/missing evidence`, and `forbidden inference`;
+- a Dutch vwo economics teacher or school leader can understand the planned
+  future output in 5-10 minutes, with scope, safe-use note, evidence summary,
+  weak/missing evidence, school-owned evidence, and recommended next action
+  visible without reading the full technical contract;
 - OP0 remains subject-material economics evidence only;
 - no personal data enters packs by default;
 - safe-claim IDs/templates are required for generated prose;
@@ -44,6 +48,7 @@ claims or weak evidence being hidden:
 archive/sprints/INSPECT-6/INSPECT-6-authorisation.md
 archive/sprints/INSPECT-6/INSPECT-6-sprint-plan.md
 archive/sprints/INSPECT-6/INSPECT-6-planning-review.md
+archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
 archive/sprints/INSPECT-6/INSPECT-6-generator-planning-packet.md
 archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 archive/sprints/INSPECT-6/INSPECT-6-lead-review-assignment.md
@@ -109,18 +114,23 @@ classroom implementation claim
    with: future generator validation steps, reviewer packet requirements,
    dispatch metadata, CI proof/waiver rule, and INSPECT-7 readiness checks.
 7. Create `archive/sprints/INSPECT-6/INSPECT-6-generator-planning-packet.md`
-   for external review.
+   for external review. The packet must cite official-source boundary anchors
+   for OP0/privacy/claim safety: Inspectie OP0, Inspectie bijgestelde
+   onderzoekskaders 2025, Autoriteit Persoonsgegevens verantwoordingsplicht,
+   and Autoriteit Persoonsgegevens DPIA.
 8. Update the roadmap and ledger so INSPECT-6 is active/closed as planning
    only and INSPECT-7 remains candidate work until tri-agent review passes and
    the owner authorises one bounded prototype.
 9. Validate JSON/markdown references, stale next-step language, forbidden
    scope, roadmap version index, URL index, branch/worktree safety, lesson
    repo read-only status, and full platform checks.
-10. Run lead-review round 1, record corrections, and run round 2.
+10. Run lead-review round 1, record corrections in
+    `archive/sprints/INSPECT-6/INSPECT-6-correction-log.md`, and run round 2.
 11. Push the reviewed packet and send it to teacher, legal/privacy, and Dutch
     quality-inspection reviewers.
 12. If any reviewer returns `REVISE` or `PASS`, implement their changes and
-    repeat validation, lead review, push, and tri-agent review.
+    record them in the correction log, then repeat validation, lead review,
+    push, and tri-agent review.
 13. Close INSPECT-6 only after all three reviewers return
     `MORE_THAN_SATISFIED`.
 
@@ -146,7 +156,12 @@ classroom implementation claim
   evidence must be present before one prototype can be generated.
 - The review packet includes calibration checks, role-specific questions,
   evidence links, stop conditions, direct comment prompts, final pushed commit,
-  remote push status, validation proof, and CI proof/waiver.
+  remote push status, validation proof, CI proof/waiver, correction-log
+  pointer, and official-source boundary anchors for OP0/privacy/claim safety.
+- The planned future teacher-facing output is understandable to a Dutch vwo
+  economics teacher or school leader in 5-10 minutes, with `4veco evidence`,
+  `school evidence still needed`, weak/missing evidence, and forbidden
+  inference visibly separated.
 - Teacher, legal/privacy, and Dutch quality-inspection reviewers each return
   `MORE_THAN_SATISFIED`.
 
