@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-sample-selection-packet",
+  "created": "2026-06-08",
+  "status": "approved_with_administrative_remote_closure_repair",
+  "purpose": "Select the reviewed fresh sample required before implementing the MTU-H5 non-mutating mapping regression validator.",
+  "blocked_stop_condition": "Cleared by GATE-MTU-H5 approval with administrative remote-closure repair; reviewed remote commit/hash 735a042ffcd085eca1c5bd2f6819eb1172c2cbd5 is recorded.",
+  "blocked_stop_result_log": "reports/sprints/MTU-H5-blocked-stop-result.md",
+  "validator_scaffold": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "human_review_packet": "reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json",
+  "fixture_template": "reports/mtu-hardening/mtu-h5-regression-fixture.template.json",
+  "review_candidate_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
+  "review_candidate_summary": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "evidence_inspected": [
+    {
+      "path": "reports/mtu-hardening/benchmark-sample-v1.json",
+      "finding": "H1 seed benchmark contains Solo q1-q3 seed cases and stratified slots marked future_sample_required; it is not the approved fresh sample required for MTU-H5."
+    },
+    {
+      "path": "reports/mtu-hardening/failure-taxonomy-v1.md",
+      "finding": "H1 taxonomy names the regression classes MTU-H5 must convert into fixture assertions."
+    },
+    {
+      "path": "build-scripts/references/check-mtu-h2-solo-cases.js",
+      "finding": "Existing H2 checker validates Solo q1-q3 canonical case artifacts and known original defect classes, but does not provide a fresh sample."
+    },
+    {
+      "path": "build-scripts/references/check-mtu-h3-incidence-pass-through-review.js",
+      "finding": "Existing H3 checker validates incidence/pass-through review and lifecycle evidence, but does not provide a fresh MTU-H5 sample."
+    },
+    {
+      "path": "build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js",
+      "finding": "Existing H4 checker validates answer-form/question-type routing evidence, but does not provide a fresh MTU-H5 sample."
+    },
+    {
+      "path": "references/reference-team-roadmap.md",
+      "finding": "MTU-H5 remains planned, not completed, and no approved fresh sample is named there."
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json",
+      "finding": "Read-only registry context only; no mutation was made or authorized."
+    },
+    {
+      "path": "references/authored/course-target-exercises.json",
+      "finding": "Read-only target-exercise context only; no mapping mutation was made or authorized."
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
+      "finding": "Concrete review candidate built from local official VWO 2025 Economie exam/correction-model PDFs and EX2 human gate evidence; it is not approved until human review promotes it."
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md",
+      "finding": "Human-facing summary of the review-candidate fixture, promotion instruction, intentional failure hooks, and non-mutating boundary."
+    }
+  ],
+  "approved_sample_absence_checks": [
+    {
+      "path": "reports/mtu-hardening/mtu-h5-fresh-sample.json",
+      "expected_current_state": "absent"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-reviewed-sample.json",
+      "expected_current_state": "absent"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+      "expected_current_state": "absent"
+    },
+    {
+      "path": "references/data/sprints/MTU-H5.plan.json",
+      "expected_current_state": "absent"
+    }
+  ],
+  "exact_evidence_needed_to_proceed": [
+    {
+      "requirement_id": "H5-EVID-001",
+      "name": "approved fresh sample fixture",
+      "must_include": [
+        "stable sample_id and status approved_for_mtu_h5_regression",
+        "review decision or gate packet path approving the sample",
+        "question records that are not the H1 Solo q1-q3 seed cases",
+        "evidence paths to real exam questions, official correction models, or reviewed target exercises",
+        "source locator for each question or target exercise",
+        "authority boundary with all mutation/product-use flags false"
+      ]
+    },
+    {
+      "requirement_id": "H5-EVID-002",
+      "name": "official correction-model operation decomposition",
+      "must_include": [
+        "operation_id for each official correction-model step",
+        "operation text or official answer-model summary",
+        "required_mtu_ids or explicit missing_mtu_expected flag",
+        "forbidden_mtu_ids for over-trigger guards",
+        "route tags for calculus, non_calculus, function_construction, point_calculation, incidence, answer_form, scaling, misconception, and procedure"
+      ]
+    },
+    {
+      "requirement_id": "H5-EVID-003",
+      "name": "reviewed answer-form and misconception evidence",
+      "must_include": [
+        "question word or prompt action mapped to expected answer-form MTU or reviewed equivalent",
+        "predictable misconception tag, misconception evidence reference, or explicit not_applicable rationale",
+        "scale-factor/unit evidence where the source or answer model uses scale labels",
+        "procedure expectation for every apply/analyze MTU used by the mapping"
+      ]
+    },
+    {
+      "requirement_id": "H5-EVID-004",
+      "name": "negative regression fixture",
+      "must_include": [
+        "at least one deliberately failing fixture that reintroduces an original Solo q1-q3 defect class",
+        "expected checker status fail",
+        "expected failed assertion ids",
+        "no protected reference mutation and no target-exercise mutation"
+      ]
+    }
+  ],
+  "proposed_fixture_schema": {
+    "sample_id": "string",
+    "status": "approved_for_mtu_h5_regression",
+    "review_packet": "path to approving packet or gate decision",
+    "authority_boundary": "all mutation/product-use flags false",
+    "records": [
+      {
+        "record_id": "string",
+        "source_type": "real_exam_question | official_correction_model | reviewed_target_exercise",
+        "source_evidence_paths": [
+          "path"
+        ],
+        "question_word": "string",
+        "official_correction_model_operations": [
+          {
+            "operation_id": "string",
+            "description": "string",
+            "expected_required_mtu_ids": [
+              "unit id"
+            ],
+            "expected_forbidden_mtu_ids": [
+              "unit id"
+            ],
+            "expected_route_tags": [
+              "tag"
+            ],
+            "expected_answer_form_mtu_ids": [
+              "unit id"
+            ],
+            "expected_misconception_refs": [
+              "misconception id or evidence path"
+            ],
+            "scale_factor_expected": "boolean",
+            "incidence_or_pass_through_expected": "boolean",
+            "review_required_hooks": [
+              "string"
+            ]
+          }
+        ]
+      }
+    ],
+    "negative_fixtures": [
+      {
+        "fixture_id": "string",
+        "expected_status": "fail",
+        "reintroduced_defect_classes": [
+          "defect class id"
+        ],
+        "mutated_fixture_only": true
+      }
+    ]
+  },
+  "defect_class_hooks": [
+    {
+      "defect_class": "missing_mtu_for_correction_model_operation",
+      "h1_taxonomy_source": "operation_unit_missing",
+      "mechanical_assertion": "For every official correction-model operation, require either at least one live expected_required_mtu_id or explicit review_required/missing_mtu_expected evidence.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "records[].official_correction_model_operations[].expected_required_mtu_ids"
+    },
+    {
+      "defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+      "h1_taxonomy_source": "content_unit_too_broad",
+      "mechanical_assertion": "Fail when mapped_mtu_ids include expected_forbidden_mtu_ids for the operation.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "expected_forbidden_mtu_ids"
+    },
+    {
+      "defect_class": "calculus_route_triggered_where_non_calculus_route_intended",
+      "h1_taxonomy_source": "over_trigger_derivative_route",
+      "mechanical_assertion": "Fail when operation expects non_calculus and mapped route tags or MTUs include calculus/derivative-only route.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "expected_route_tags plus expected_forbidden_mtu_ids"
+    },
+    {
+      "defect_class": "function_construction_route_triggered_when_point_calculation_enough",
+      "h1_taxonomy_source": "over_trigger_function_construction",
+      "mechanical_assertion": "Fail when operation expects point_calculation and mapped route includes function_construction.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "expected_route_tags"
+    },
+    {
+      "defect_class": "incidence_pass_through_task_without_incidence_mtu",
+      "h1_taxonomy_source": "incidence_family_too_narrow",
+      "mechanical_assertion": "Fail when incidence_or_pass_through_expected is true and no incidence/pass-through MTU or reviewed equivalent is present.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "incidence_or_pass_through_expected"
+    },
+    {
+      "defect_class": "question_word_without_answer_form_mtu",
+      "h1_taxonomy_source": "answer_form_missing",
+      "mechanical_assertion": "Fail when a question word has no expected answer-form MTU or reviewed equivalent.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "question_word plus expected_answer_form_mtu_ids"
+    },
+    {
+      "defect_class": "scale_factor_usage_without_scaling_unit_mtu",
+      "h1_taxonomy_source": "scale_factor_handling_missing",
+      "mechanical_assertion": "Fail when scale_factor_expected is true and no scaling/unit MTU or reviewed equivalent is present.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "scale_factor_expected"
+    },
+    {
+      "defect_class": "predictable_misconception_without_tag_or_equivalent_evidence",
+      "h1_taxonomy_source": "misconception_tag_missing",
+      "mechanical_assertion": "Fail when a predictable misconception is expected and neither misconception refs nor equivalent evidence exists.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "expected_misconception_refs"
+    },
+    {
+      "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+      "h1_taxonomy_source": "procedure_regression_target",
+      "mechanical_assertion": "For mapped apply/analyze units, fail when the live registry unit has no non-empty procedure unless the sample marks a concrete review_required hook.",
+      "status_until_sample_exists": "review_required",
+      "next_validator_hook": "live unit mastery_target/procedure from references/machine/micro-teaching-units.json"
+    }
+  ],
+  "sample_selection_policy": {
+    "minimum_records": 3,
+    "preferred_distribution": [
+      "at least one berekenen or calculation answer-model case",
+      "at least one leg_uit/analyseer reasoning case with misconception risk",
+      "at least one source, scale, graph, incidence, or pass-through case"
+    ],
+    "forbidden_sources": [
+      "syllabus prose alone",
+      "generated reports alone",
+      "unreviewed inferred lesson output",
+      "invented or synthetic product-route tasks"
+    ],
+    "allowed_sources": [
+      "real exam questions with official correction-model evidence",
+      "official correction models",
+      "reviewed target exercises with explicit review provenance"
+    ]
+  },
+  "outputs_allowed_after_sample_approval": [
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.md",
+    "reports/mtu-hardening/mtu-h5-negative-fixture.json",
+    "reports/sprints/MTU-H5-result.md"
+  ],
+  "approved_fresh_sample_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "regression_report_json": "reports/mtu-hardening/mtu-h5-regression-report.json",
+  "regression_report_markdown": "reports/mtu-hardening/mtu-h5-regression-report.md",
+  "gate_closure": "reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json",
+  "approved_sample_presence_checks": [
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+      "expected_current_state": "present"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-report.json",
+      "expected_current_state": "present"
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-regression-report.md",
+      "expected_current_state": "present"
+    },
+    {
+      "path": "reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json",
+      "expected_current_state": "present"
+    }
+  ]
+}

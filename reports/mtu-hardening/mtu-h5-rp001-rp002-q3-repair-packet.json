@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-RP001-RP002-q3-governed-repair-packet",
+  "created": "2026-06-09",
+  "status": "q3_repair_packet_ready_for_three_agent_review_no_mutation_authorized",
+  "purpose": "Prepare the q3 RP-001/RP-002 governed repair lane for review by coupling annual insurance threshold operation coverage with A15 over-trigger prevention.",
+  "source_review_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "source_planning_packet": "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-planning-packet.json",
+  "source_repair_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "reviewed_packet_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "current_gate_commit": "4e76e07193a3881826200dbe726ba4b38f30c78b",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "official_source_evidence": {
+    "question_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#page=2&question=3",
+    "question_pdf_sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3",
+    "correction_pdf_sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+    "question_source_summary": "The official question gives two Zoohee health-insurance variants with monthly premiums and annual deductibles, then asks for the annual care-cost amount up to which the higher deductible is cheaper.",
+    "correction_model_summary": "The correction model awards two points across annual-cost comparison and threshold conclusion. It accepts equivalent methods that compute EUR 1,684 for the statutory-risk maximum-cost comparison, EUR 1,035 annual premium for the higher-deductible variant, and the EUR 649 equal-cost threshold.",
+    "source_values": {
+      "statutory_deductible_eur_per_year": 385,
+      "higher_deductible_eur_per_year": 885,
+      "statutory_premium_eur_per_month": 108.25,
+      "higher_deductible_premium_eur_per_month": 86.25,
+      "accepted_threshold_eur_per_year": 649
+    }
+  },
+  "existing_governance_evidence": [
+    {
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3",
+      "finding": "q3-calc-1 is an operation_registry_need; A61 is source-reading support and A15 is stale/incorrect."
+    },
+    {
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-answer-1",
+      "finding": "q3-answer-1 is an answer_skill_need for threshold-conclusion wording."
+    },
+    {
+      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3",
+      "finding": "q3 A61 support with A15 rejected and q3 answer-skill visibility are preserved as routing facts."
+    },
+    {
+      "path": "references/data/exam-ingestion/operation-answer-skill-contract.json#candidate_routing_facts",
+      "finding": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON and EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION are named design candidates; candidate storage and writes are not authorized."
+    },
+    {
+      "path": "build-scripts/references/lib/exam-ingestion-candidate-validation.js#q3-threshold-rules",
+      "finding": "Dry-run candidate validation already requires A61 support and rejects A15 as q3 annual-threshold support."
+    }
+  ],
+  "operation_decomposition": [
+    {
+      "operation_id": "q3-step-1",
+      "requirement_id": "q3-calc-1",
+      "answer_model_summary": "Compute the statutory-risk annual maximum-cost comparison by combining twelve monthly premiums with the statutory deductible.",
+      "calculation_trace": [
+        "12 x 108.25 + 385 = 1684"
+      ],
+      "expected_required_mtu_ids": [
+        "A61",
+        "A96"
+      ],
+      "expected_missing_operation_candidate": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "source_reading",
+        "annual_cost_threshold",
+        "point_calculation",
+        "answer_form",
+        "procedure"
+      ],
+      "answer_form_hook": "A96 covers bereken answer-form presentation but not the annual-threshold operation itself.",
+      "misconception_hook": "Do not use only the lower monthly premium, and do not treat this as price elasticity.",
+      "scale_hook": "Monthly-to-annual conversion is period conversion, not an exam table scale-factor such as x 1,000.",
+      "procedure_hook": "A61 and A96 procedures are present; the annual-cost threshold operation remains the missing semantic unit/reviewed equivalent."
+    },
+    {
+      "operation_id": "q3-step-2",
+      "requirement_id": "q3-answer-1",
+      "answer_model_summary": "Compute the higher-deductible annual premium, derive the equal-cost threshold, and conclude that the higher deductible is cheaper up to EUR 649 per year.",
+      "calculation_trace": [
+        "12 x 86.25 = 1035",
+        "1684 - 1035 = 649"
+      ],
+      "expected_required_mtu_ids": [
+        "A61",
+        "A96"
+      ],
+      "expected_missing_operation_candidate": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+      "expected_answer_skill_candidate": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+      "forbidden_mtu_ids": [
+        "A15"
+      ],
+      "route_tags": [
+        "source_reading",
+        "annual_cost_threshold",
+        "point_calculation",
+        "answer_form",
+        "procedure"
+      ],
+      "answer_form_hook": "A96 covers visible calculation answer form; threshold wording with direction remains a separate answer-skill need.",
+      "misconception_hook": "The conclusion must preserve direction: higher deductible is cheaper only up to the threshold.",
+      "scale_hook": "No incidence/pass-through or table-scale MTU is expected.",
+      "procedure_hook": "The procedure must keep annual premium, deductible, threshold, and conclusion as a coherent chain."
+    }
+  ],
+  "unit_semantic_fit": [
+    {
+      "unit_id": "A61",
+      "decision": "supporting",
+      "semantic_scope": "Selects the table values needed for the calculation: correct insurance variant, monthly premium, annual deductible, and labels.",
+      "does_not_cover": "Does not itself model the annual-cost threshold comparison."
+    },
+    {
+      "unit_id": "A96",
+      "decision": "supporting_answer_form",
+      "semantic_scope": "Covers bereken-vraag answer presentation: formula, substitution, intermediate steps, final answer, unit, and short conclusion.",
+      "does_not_cover": "Does not itself decide the domain-specific threshold operation or the direction wording."
+    },
+    {
+      "unit_id": "A15",
+      "decision": "forbidden_rejected",
+      "semantic_scope": "Price elasticity of demand.",
+      "rejection_reason": "q3 has no price change / quantity change elasticity calculation, no elasticity interpretation, and no demand-elasticity route. It is an annual insurance cost threshold comparison."
+    }
+  ],
+  "repair_options_matrix": [
+    {
+      "option_id": "Q3-OPTION-A",
+      "title": "Reviewed-equivalent operation route",
+      "decision_now": "recommended_for_next_review",
+      "description": "Accept EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON as a reviewed-equivalent operation in an overlay/packet, while keeping candidate storage and protected references unwritten.",
+      "proof_required": [
+        "operation candidate dry-run validates",
+        "answer-skill candidate dry-run validates",
+        "H5 checker continues to expose the gap until a later closure authorizes a mapper/fixture repair",
+        "A15 remains rejected"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q3-OPTION-B",
+      "title": "Later protected-reference mutation proposal",
+      "decision_now": "defer_requires_separate_gate",
+      "description": "Prepare a future explicit gate that may authorize MTU/operation/answer-skill storage or machine-reference changes.",
+      "proof_required": [
+        "closed gate names exact write lane",
+        "candidate storage creation and writes are explicitly authorized by that later gate",
+        "rollback and validation plan exists before any write"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q3-OPTION-C",
+      "title": "Mapper/checker repair after reviewed equivalent",
+      "decision_now": "defer_until_operation_visible",
+      "description": "Remove A15 from q3 mapping and point q3 to reviewed annual-threshold coverage only after the operation/answer-skill evidence is accepted.",
+      "proof_required": [
+        "q3 mapped MTUs exclude A15",
+        "annual-threshold operation remains covered by a live unit or reviewed equivalent",
+        "negative guard fails if A15 is reintroduced"
+      ],
+      "mutation_authorized_now": false
+    }
+  ],
+  "dry_run_operation_candidate": {
+    "operation_id": "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+    "operation_status": "design_candidate",
+    "label_nl": "Jaarlijkse zorgkosten en eigen-risicodrempel vergelijken",
+    "operation_family": "calculation",
+    "source_exam_item_ids": [
+      "vw-1022-a-25-1-o:opgave-1:question-3"
+    ],
+    "source_requirement_ids": [
+      "q3-calc-1"
+    ],
+    "evidence_refs": [
+      "references/external/exams/vw-1022-a-25-1-o.pdf#page=2&question=3",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3",
+      "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-calc-1",
+      "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3"
+    ],
+    "answer_model_refs": [
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3:q3-step-1",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3:q3-step-2"
+    ],
+    "input_objects": [
+      {
+        "kind": "source_table_values",
+        "values": [
+          "monthly premiums",
+          "annual deductibles"
+        ]
+      }
+    ],
+    "output_expectation": "Derive the annual care-cost threshold where the higher-deductible policy stops being cheaper, preserving euro-per-year units and direction.",
+    "required_steps": [
+      "Select the correct monthly premium and deductible values for both variants.",
+      "Convert monthly premiums to annual premiums.",
+      "Combine annual premium and deductible/care-cost exposure into comparable annual totals.",
+      "Derive the equal-cost threshold.",
+      "State the threshold direction in context."
+    ],
+    "supporting_unit_ids": [
+      "A61"
+    ],
+    "weak_or_rejected_unit_ids": [
+      "A15"
+    ],
+    "unit_support_assessments": [
+      {
+        "unit_id": "A61",
+        "assessment": "supporting",
+        "rationale": "A61 covers selecting correct table values before calculating."
+      },
+      {
+        "unit_id": "A15",
+        "assessment": "rejected",
+        "rationale": "A15 is price elasticity; q3 is not an elasticity calculation and has no price/quantity percentage-change route."
+      }
+    ],
+    "blocking_gap_ids": [],
+    "review_state": "ready_for_three_agent_review",
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "dry_run_answer_skill_candidate": {
+    "answer_skill_id": "EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+    "answer_skill_status": "design_candidate",
+    "label_nl": "Drempelconclusie met eenheid en richting formuleren",
+    "answer_format": "threshold_conclusion",
+    "source_exam_item_ids": [
+      "vw-1022-a-25-1-o:opgave-1:question-3"
+    ],
+    "source_requirement_ids": [
+      "q3-answer-1"
+    ],
+    "correction_model_step_refs": [
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=6&question=3:q3-step-2"
+    ],
+    "point_rule_refs": [
+      "q3 second score point"
+    ],
+    "rewarded_wording": [
+      "threshold/grens of EUR 649 per year",
+      "higher deductible is cheaper up to that euro-per-year threshold"
+    ],
+    "required_terms": [
+      "euro",
+      "per jaar",
+      "grensbedrag"
+    ],
+    "accepted_alternatives": [
+      "drempelbedrag",
+      "tot en met de grens",
+      "tot EUR 649 per jaar"
+    ],
+    "content_support_unit_ids": [
+      "A96"
+    ],
+    "operation_support_ids": [
+      "EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON"
+    ],
+    "blocking_gap_ids": [],
+    "review_state": "ready_for_three_agent_review",
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "negative_regression_requirement": {
+    "guard_id": "q3-a15-overtrigger-guard",
+    "accepted_negative_fixture_type": "live_h5_validator_overtrigger_assertions",
+    "live_overtrigger_assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER",
+      "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER"
+    ],
+    "required_behavior": "Any future q3 mapping/checker repair must fail if A15 is reintroduced as q3 support.",
+    "must_preserve": [
+      "expected_forbidden_mtu_ids includes A15",
+      "A15 is rejected in dry-run operation candidate support assessments",
+      "H5 validator has an over-trigger assertion until the q3 mapping is repaired under a later approved lane"
+    ]
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_three_agent_review",
+    "why_not_complete": "This packet prepares q3 RP-001/RP-002 for review. It does not authorize candidate writes, protected-reference mutation, MTU mutation, mapper repair, lesson output, or product use."
+  }
+}

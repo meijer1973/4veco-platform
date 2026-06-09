@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-RP005-q27-governed-planning-packet",
+  "created": "2026-06-09",
+  "status": "q27_planning_packet_ready_for_three_agent_review_no_mutation_authorized",
+  "purpose": "Prepare the q27 RP-005 governed planning lane for review by making the incidence/pass-through, capacity, and per-1,000-liter scaling gaps explicit without mutating references or claiming q27 closure.",
+  "repair_ids": [
+    "MTU-H5-RP-005"
+  ],
+  "source_review_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "previous_lane_gate": "reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json",
+  "source_repair_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "source_next_repair_packet_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "next_repair_gate_commit": "4e76e07193a3881826200dbe726ba4b38f30c78b",
+  "previous_lane_reviewed_commit": "827c2a433bbe062d48d94202082732807c36b9d3",
+  "previous_lane_remote_commit": "b830c44e0a5a0abe0481b115f210d11041c04f4a",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "official_source_evidence": {
+    "question_pdf": "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+    "question_pdf_sha256": "a15a0766c22f2c4c670646159c9f4193324cba1446dcdfa84b6db55aa9ab2410",
+    "correction_pdf_sha256": "3a932cfd5d33a6130f3bd48d6f1d72ec9663e79534887c8e1d8e4ee14357c3c0",
+    "question_source_summary": "The official question asks whether a EUR 1 per 1,000 liter drinking-water levy counteracts overconsumption in dry summer months, using the graph in figure 1.",
+    "correction_model_summary": "The correction model awards one point for reading that the levy raises the price to EUR 2 per 1,000 liter and creates a new equilibrium where Qv2 equals Qa2 at Q = 14,000, and one point for concluding that demand equals capacity so overconsumption is countered.",
+    "source_values": {
+      "levy_eur_per_1000_liter": 1,
+      "new_price_eur_per_1000_liter": 2,
+      "new_equilibrium_quantity": 14000,
+      "quantity_equals_capacity": true,
+      "total_points": 2
+    }
+  },
+  "existing_governance_evidence": [
+    {
+      "path": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json#MTU-H5-RP-005",
+      "finding": "A98 covers answer form, but D07 is not enough to close levy price/quantity/capacity and scaling coverage."
+    },
+    {
+      "path": "reports/review-gates/GATE-MTU-H3-incidence-pass-through/gate-closure.json",
+      "finding": "MTU-H3 narrowed D07 to tax afwentelingspercentage / percentage burden calculation and kept incidence-family mutation/product authority blocked."
+    },
+    {
+      "path": "reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/gate-closure.json",
+      "finding": "MTU-H3A accepted D41/D42/D43/D45/D46 planning directions only; execution remained unauthorized."
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json#D08",
+      "finding": "D08 matches the topic of heffing tegen overconsumptie, but its current procedure imports elasticity/A15 and a percentage demand-reduction route not required by the official q27 correction model."
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json#A88",
+      "finding": "A88 supports scale labels such as x 1,000 in graph labels and final answers, but the current H5 fixture does not map it and the lane still needs reviewed scaling coverage."
+    }
+  ],
+  "operation_decomposition": [
+    {
+      "operation_id": "q27-step-1",
+      "requirement_id": "q27-incidence-scaling-1",
+      "answer_model_summary": "Read from the graph that the levy leads to price EUR 2 per 1,000 liter and a new equilibrium at Qv2 = Qa2 with Q = 14,000.",
+      "expected_required_mtu_ids": [
+        "A98"
+      ],
+      "supporting_candidate_unit_ids": [
+        "D41",
+        "D05",
+        "A88"
+      ],
+      "weak_or_rejected_unit_ids": [
+        "D08",
+        "D07"
+      ],
+      "expected_missing_operation_candidate": "EX_OP_Q27_LEVY_CAPACITY_OVERCONSUMPTION_CHECK",
+      "route_tags": [
+        "incidence",
+        "tax_or_levy",
+        "source_reading",
+        "scaling",
+        "capacity_constraint",
+        "answer_form",
+        "procedure"
+      ],
+      "answer_form_hook": "A98 covers the leg-uit-of answer form, but not the levy graph/capacity operation itself.",
+      "misconception_hook": "Do not confuse the EUR 1 levy amount with the new price, and do not ignore the Q = 14,000 capacity comparison.",
+      "scale_hook": "The graph and answer use EUR per 1,000 liter; scale/unit handling must remain explicit.",
+      "procedure_hook": "D07's percentage-pass-through procedure is not semantically sufficient for price/quantity/capacity reasoning."
+    },
+    {
+      "operation_id": "q27-step-2",
+      "requirement_id": "q27-capacity-conclusion-1",
+      "answer_model_summary": "Conclude that demand equals capacity, so overconsumption is countered.",
+      "expected_required_mtu_ids": [
+        "A98"
+      ],
+      "supporting_candidate_unit_ids": [
+        "D08",
+        "A88"
+      ],
+      "weak_or_rejected_unit_ids": [
+        "D07"
+      ],
+      "expected_missing_operation_candidate": "EX_OP_Q27_LEVY_CAPACITY_OVERCONSUMPTION_CHECK",
+      "route_tags": [
+        "incidence",
+        "capacity_constraint",
+        "source_reading",
+        "answer_form",
+        "procedure"
+      ],
+      "answer_form_hook": "A98 supports stating the yes/no direction and the reason.",
+      "misconception_hook": "Do not stop at a price rise; the conclusion depends on demand equaling capacity.",
+      "scale_hook": "The conclusion depends on reading the same quantity scale as the capacity line.",
+      "procedure_hook": "D08 is topic-adjacent but imports elasticity/A15 reasoning not present in the correction model, so semantic-fit review is required before using it as closure."
+    }
+  ],
+  "unit_semantic_fit": [
+    {
+      "unit_id": "A98",
+      "decision": "supporting_answer_form",
+      "semantic_scope": "Supports leg-uit-of answer construction: choose direction or yes/no outcome, then give the economic reason.",
+      "does_not_cover": "Does not by itself cover the levy graph, incidence/capacity operation, or per-1,000-liter scale."
+    },
+    {
+      "unit_id": "A88",
+      "decision": "supporting_scaling_candidate",
+      "semantic_scope": "Supports using scale labels such as x 1,000 in graph labels, formulas, and final answers.",
+      "does_not_cover": "Does not by itself cover incidence/pass-through or the capacity conclusion."
+    },
+    {
+      "unit_id": "D41",
+      "decision": "supporting_graph_tax_candidate",
+      "semantic_scope": "Supports labeling tax wedge and consumer/producer price positions in a P-Q diagram after a levy.",
+      "does_not_cover": "Does not by itself decide whether overconsumption is countered."
+    },
+    {
+      "unit_id": "D05",
+      "decision": "supporting_new_equilibrium_candidate",
+      "semantic_scope": "Supports finding the new equilibrium after a levy.",
+      "does_not_cover": "Does not by itself handle the scale/capacity conclusion or answer-form wording."
+    },
+    {
+      "unit_id": "D08",
+      "decision": "weak_topic_match_requires_review",
+      "semantic_scope": "Its topic is heffing tegen overconsumptie.",
+      "rejection_reason": "The current D08 procedure imports A15 elasticity and percentage demand-reduction reasoning not required by q27's official correction model."
+    },
+    {
+      "unit_id": "D07",
+      "decision": "rejected_for_q27_closure",
+      "semantic_scope": "Narrowed tax pass-through percentage / burden-share calculation.",
+      "rejection_reason": "q27 asks whether the levy produces a price/quantity/capacity outcome that counters overconsumption, not an afwentelingspercentage."
+    }
+  ],
+  "dry_run_operation_candidate": {
+    "operation_id": "EX_OP_Q27_LEVY_CAPACITY_OVERCONSUMPTION_CHECK",
+    "operation_status": "design_candidate",
+    "label_nl": "Heffing, schaal en capaciteit gebruiken om overconsumptie te beoordelen",
+    "operation_family": "mixed",
+    "source_exam_item_ids": [
+      "vw-1022-a-25-2-o:opgave-6:question-27"
+    ],
+    "source_requirement_ids": [
+      "q27-step-1",
+      "q27-step-2",
+      "q27-incidence-scaling-1",
+      "q27-capacity-conclusion-1"
+    ],
+    "evidence_refs": [
+      "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+      "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+      "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json#MTU-H5-RP-005",
+      "reports/review-gates/GATE-MTU-H3-incidence-pass-through/gate-closure.json",
+      "reports/review-gates/GATE-MTU-H3A-incidence-cli-mutation-plan/gate-closure.json"
+    ],
+    "answer_model_refs": [
+      "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27:q27-step-1",
+      "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27:q27-step-2"
+    ],
+    "input_objects": [
+      {
+        "object_type": "source_graph",
+        "description": "Figure 1 demand and supply for drinking water per month, including before/after levy lines, drought demand, and capacity line.",
+        "source_ref": "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27"
+      }
+    ],
+    "output_expectation": "Explain whether the levy counters overconsumption by pairing the new price, new equilibrium quantity, capacity equality, and a yes/no conclusion.",
+    "required_steps": [
+      {
+        "step_id": "read-new-price",
+        "description": "Read the post-levy price as EUR 2 per 1,000 liter.",
+        "required_unit_ids": [
+          "D41",
+          "A88"
+        ]
+      },
+      {
+        "step_id": "read-new-quantity",
+        "description": "Read the new equilibrium where Qv2 equals Qa2 at Q = 14,000.",
+        "required_unit_ids": [
+          "D05",
+          "A88"
+        ]
+      },
+      {
+        "step_id": "compare-capacity",
+        "description": "Compare the new demand/equilibrium quantity with capacity.",
+        "required_unit_ids": [
+          "D08"
+        ]
+      },
+      {
+        "step_id": "conclude",
+        "description": "State that overconsumption is countered because demand equals capacity.",
+        "required_unit_ids": [
+          "A98"
+        ]
+      }
+    ],
+    "supporting_unit_ids": [
+      "D41",
+      "D05",
+      "A88"
+    ],
+    "weak_or_rejected_unit_ids": [
+      "D08",
+      "D07"
+    ],
+    "unit_support_assessments": [
+      {
+        "unit_id": "D41",
+        "assessment": "supporting",
+        "rationale": "D41 supports tax wedge and price/quantity labeling in a P-Q diagram after a levy."
+      },
+      {
+        "unit_id": "D05",
+        "assessment": "supporting",
+        "rationale": "D05 supports finding the new equilibrium after a levy."
+      },
+      {
+        "unit_id": "A88",
+        "assessment": "supporting",
+        "rationale": "A88 supports explicit per-1,000-liter scale and unit handling."
+      },
+      {
+        "unit_id": "D08",
+        "assessment": "weak_prerequisite",
+        "rationale": "D08 is topic-adjacent but currently imports A15 elasticity and percentage demand-reduction reasoning not required by q27."
+      },
+      {
+        "unit_id": "D07",
+        "assessment": "rejected",
+        "rationale": "D07 is tax pass-through percentage and does not close the q27 levy price/quantity/capacity operation."
+      }
+    ],
+    "blocking_gap_ids": [
+      "q27-incidence-capacity-gap",
+      "q27-per-1000-liter-scaling-gap",
+      "q27-d08-semantic-fit-gap"
+    ],
+    "review_state": "ready_for_three_agent_review",
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "negative_regression_requirement": {
+    "guard_id": "q27-incidence-scaling-and-d07-overclaim-guard",
+    "accepted_negative_fixture_type": "live_h5_validator_q27_failed_and_review_assertions",
+    "live_failed_assertion_ids": [
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING",
+      "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING"
+    ],
+    "live_review_assertion_markers": [
+      "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
+      "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent",
+      "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation"
+    ],
+    "required_behavior": "Any future q27 repair must fail or review-block if it hides the incidence/capacity gap, hides the per-1,000-liter scaling gap, or claims D07 alone closes q27.",
+    "must_preserve": [
+      "D07 is rejected as q27 closure support",
+      "A98 remains answer-form support only",
+      "A88/D41/D05/D08 are reviewed as support or weak support before any mapper repair",
+      "live q27 H5 assertions remain visible until an approved later repair"
+    ]
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_three_agent_review",
+    "why_not_complete": "This packet prepares q27 RP-005 for governed review. It does not authorize mapper repair, candidate writes, protected-reference mutation, MTU mutation, lesson output, diagnostics, PV, or product use."
+  }
+}

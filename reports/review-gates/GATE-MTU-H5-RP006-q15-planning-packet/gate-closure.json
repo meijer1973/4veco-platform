@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-RP006-q15-planning-packet",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-09",
+  "closed_on": "2026-06-09",
+  "status": "approved_more_than_satisfied_no_mutation_authorized",
+  "verdict": "APPROVE_MORE_THAN_SATISFIED",
+  "reviewed_remote_commit": "2a763a9e362253aa2fbd8f01cb6037a50c3683a2",
+  "reviewed_remote_branch": "codex/running-goals-20260608",
+  "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/2a763a9e362253aa2fbd8f01cb6037a50c3683a2",
+  "review_packet_markdown": "reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.md",
+  "review_packet_json": "reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json",
+  "checker": "build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+  "source_next_repair_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "previous_lane_gate": "reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.json",
+  "decision": "Approve the MTU-H5 RP-006 q15 governed planning packet as a remote-available review packet. The packet is evidence-complete for review and machine-checkable, but it does not authorize mapper repair, candidate writes, protected-reference mutation, MTU mutation, answer-skill mutation, lesson output, diagnostics, PV, or product use.",
+  "review_team_threshold": {
+    "minimum_required": "MORE_THAN_SATISFIED",
+    "all_agents_met_threshold": true,
+    "rounds": 1
+  },
+  "review_team": [
+    {
+      "agent": "teacher",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Teacher review found the packet didactically clear as a blocked q15 planning lane, with D27/F03/F09 content-only support, A97 leg-uit-dat answer-form/procedure support, q15-answer-1 kept visible, trustworthy two-step correction-model explanation, and no material improvements required."
+    },
+    {
+      "agent": "economist",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Economist review found the official correction-model alignment strong: perfect substitutes lead to dominant price-lowering strategy, then lower revenue/profit leads to prisoner dilemma; route tags correctly avoid graph, calculus, function, incidence, and scaling over-triggers."
+    },
+    {
+      "agent": "quality_inspection",
+      "round": 1,
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Quality inspection found the packet remote-available at the reviewed commit, checker-backed, live-validator-bound, explicit about q15 review_required status and the global Solo negative guard, and clean of protected-reference and candidate-storage writes."
+    }
+  ],
+  "approved_findings": [
+    "q15 is review_required only, not failed or closed.",
+    "A97 covers the leg-uit-dat answer form and has a procedure, but semantic-fit review remains required for q15.",
+    "D27, F03, and F09 remain content-only support for perfect substitutes, dominant strategy, and prisoner dilemma.",
+    "q15-answer-1 remains visible as a two-step correction-model answer-skill need.",
+    "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION is accepted as a non-mutating design candidate for review planning only.",
+    "No graph, calculus, function-construction, incidence, or scaling route is introduced for q15.",
+    "The live H5 q15 review_required assertions and the original Solo function-construction negative guard remain the negative regression surface."
+  ],
+  "checker_commands": [
+    "node --check build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js",
+    "node build-scripts/references/check-mtu-h5-next-repair-packet.js",
+    "node build-scripts/references/check-operation-answer-skill-candidates.js",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json"
+  ],
+  "local_validation_summary": [
+    "q15 planning packet checker passed",
+    "q27 planning packet checker still passed",
+    "q19 planning packet checker still passed",
+    "q3 repair packet checker still passed",
+    "next repair packet checker passed",
+    "operation/answer-skill candidate validation passed",
+    "report JSON validation passed",
+    "raw H5 validator preserved q15 review_required assertions and the global Solo negative guard",
+    "protected references, authored target exercises, candidate storage, and source-extraction storage remained clean"
+  ],
+  "authorized_next": {
+    "scope": [
+      "use q15 packet and closure as MTU-H5 RP-006 governed review evidence",
+      "prepare MTU-H5 final rollup or later explicitly authorized repair planning only",
+      "run final verification commands where feasible"
+    ],
+    "execution_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "blocked_outcomes": [
+    "q15 mapper repair execution",
+    "candidate storage creation",
+    "candidate writes",
+    "protected reference mutation",
+    "machine-reference mutation",
+    "external-source mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "authored target-exercise mutation",
+    "lesson output",
+    "PV or graph mutation",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "completion_claimed": false,
+  "github_actions_evidence": {
+    "claimed": false,
+    "note": "No GitHub Actions run/check ID is claimed for this closure."
+  }
+}
