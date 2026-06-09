@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-RP006-q15-governed-planning-packet",
+  "created": "2026-06-09",
+  "status": "q15_planning_packet_ready_for_three_agent_review_no_mutation_authorized",
+  "purpose": "Prepare the q15 RP-006 governed planning lane for review by making the two-step correction-model answer-skill need and A97 procedure semantic-fit review explicit without mutating references or claiming q15 closure.",
+  "repair_ids": [
+    "MTU-H5-RP-006"
+  ],
+  "source_review_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "previous_lane_gate": "reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.json",
+  "source_repair_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "source_exam_item_overlay": "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
+  "source_answer_model_overlay": "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
+  "source_annex_overlay": "references/data/exam-ingestion/exam-source-annex-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
+  "source_operation_answer_contract": "references/data/exam-ingestion/operation-answer-skill-contract.json#q15-answer-1",
+  "source_next_repair_packet_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "next_repair_gate_commit": "4e76e07193a3881826200dbe726ba4b38f30c78b",
+  "previous_lane_reviewed_commit": "a7876f6919cde8e6104e6894a30644d643ff8e04",
+  "previous_lane_remote_commit": "2779e647c01a49372829b8821ddb77941966bcb7",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "official_source_evidence": {
+    "question_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#page=7&question=15",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#page=11&question=15",
+    "question_pdf_sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+    "correction_pdf_sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+    "question_source_summary": "The official question describes Guarda losing monopoly status when Orso Bianco enters with a lower price, equal production costs, and products consumers view as perfect substitutes; students must explain that the firms can end up in a prisoner dilemma.",
+    "correction_model_summary": "The correction model awards one point for explaining that both ice-cream sellers have a dominant strategy to lower price, and one point for explaining that both firms' revenue or profit falls, creating a prisoner dilemma.",
+    "source_values": {
+      "total_points": 2,
+      "point_rule_count": 2,
+      "context_equal_production_costs": true,
+      "entrant_lower_price": true,
+      "perfect_substitutes": true,
+      "dominant_strategy_price_lowering_required": true,
+      "lower_revenue_or_profit_required": true,
+      "prisoner_dilemma_label_required": true,
+      "calculation_required": false,
+      "graph_required": false,
+      "scale_factor_required": false,
+      "incidence_or_pass_through_required": false
+    }
+  },
+  "existing_governance_evidence": [
+    {
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15-content",
+      "finding": "D27, F03, and F09 are accepted as existing MTUs for q15 content coverage only."
+    },
+    {
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15-answer-1",
+      "finding": "q15-answer-1 is classified as answer_skill_need; q15 may only proceed with visible gaps and no mutation."
+    },
+    {
+      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q15-answer-1",
+      "finding": "q15-answer-1 is an answer_skill_candidate with D27/F03/F09 as content-only support and no candidate-storage write authorization."
+    },
+    {
+      "path": "references/data/exam-ingestion/operation-answer-skill-contract.json#q15-answer-1",
+      "finding": "EX_ANS_TWO_STEP_CORRECTION_MODEL_EXPLANATION is a design candidate; D27/F03/F09 cover content only and the two-step correction-model explanation remains separate."
+    },
+    {
+      "path": "references/machine/micro-teaching-units.json#A97",
+      "finding": "A97 has a canonical leg-uit-dat procedure, but the H5 fixture requires semantic-fit review before it can close q15's correction-model-specific answer skill."
+    }
+  ],
+  "q15_current_overlay_summary": {
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+    "ingestion_status": "extracted_pending_review",
+    "prompt_instruction_word": "leg uit",
+    "question_type": "uitleg_dat",
+    "answer_format": "causal_chain",
+    "source_reading_required": true,
+    "reasoning_required": true,
+    "answer_writing_required": true,
+    "calculation_required": false,
+    "graph_required": false,
+    "source_material_status": "extracted_pending_review",
+    "blocking_gap_ids": [],
+    "lesson_build_handoff_status": "ready_with_gaps",
+    "product_boundary": {
+      "student_diagnostics_authorized": false,
+      "adaptive_routing_authorized": false,
+      "mastery_decisions_authorized": false,
+      "automatic_sequencing_authorized": false,
+      "student_facing_ai_authorized": false,
+      "summative_use_authorized": false,
+      "pv_projection_authorized": false,
+      "pv_machine_promotion_authorized": false,
+      "student_facing_output_authorized": false
+    }
+  },
+  "operation_decomposition": [
+    {
+      "operation_id": "q15-step-1",
+      "requirement_id": "q15-answer-1",
+      "answer_model_summary": "Explain that perfect substitutes make consumers price-focused, so both Guarda and Orso Bianco have a dominant strategy to lower or undercut price.",
+      "expected_required_mtu_ids": [
+        "D27",
+        "F03",
+        "A97"
+      ],
+      "expected_missing_operation_candidate": null,
+      "expected_answer_skill_candidate": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION",
+      "forbidden_mtu_ids": [],
+      "forbidden_route_tags": [
+        "calculus_route",
+        "function_construction",
+        "graph_shift",
+        "incidence",
+        "scaling"
+      ],
+      "route_tags": [
+        "non_calculus",
+        "source_reading",
+        "reasoning",
+        "answer_form",
+        "misconception",
+        "procedure"
+      ],
+      "answer_form_hook": "A97 covers the leg-uit-dat causal-chain answer form, but does not by itself prove q15's two-step dominant-strategy/prisoner-dilemma wording is covered.",
+      "misconception_hook": "Do not merely state that products are substitutes; the answer must connect price-focused consumers to a dominant strategy to lower or undercut price.",
+      "scale_hook": "No scale-factor, graph-scale, or per-unit conversion is expected.",
+      "procedure_hook": "A97's generic leg-uit-dat procedure is present but semantic-fit review remains required for this correction-model step."
+    },
+    {
+      "operation_id": "q15-step-2",
+      "requirement_id": "q15-answer-1",
+      "answer_model_summary": "Explain that the individually dominant price-lowering outcome is jointly worse because both firms' revenue or profit falls, so the situation is a prisoner dilemma.",
+      "expected_required_mtu_ids": [
+        "F09",
+        "A97"
+      ],
+      "expected_missing_operation_candidate": null,
+      "expected_answer_skill_candidate": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION",
+      "forbidden_mtu_ids": [],
+      "forbidden_route_tags": [
+        "calculus_route",
+        "function_construction",
+        "graph_shift",
+        "incidence",
+        "scaling"
+      ],
+      "route_tags": [
+        "non_calculus",
+        "reasoning",
+        "answer_form",
+        "misconception",
+        "procedure"
+      ],
+      "answer_form_hook": "A97 supports returning to the given conclusion, while q15-answer-1 remains the correction-model-specific two-step answer-skill need.",
+      "misconception_hook": "Do not name prisoner dilemma without explaining the suboptimal joint outcome through lower revenue or profit for both firms.",
+      "scale_hook": "No scale-factor, graph-scale, or incidence/pass-through interpretation is expected.",
+      "procedure_hook": "The procedure must preserve both score points: dominant strategy to lower price, then lower revenue/profit and prisoner-dilemma conclusion."
+    }
+  ],
+  "answer_form_and_misconception_evidence": {
+    "question_word": "leg_uit_dat",
+    "expected_answer_form": {
+      "status": "present_but_semantic_fit_review_required",
+      "unit_id": "A97",
+      "candidate_answer_skill_id": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION",
+      "rationale": "A97 gives a reusable leg-uit-dat causal-chain procedure; q15 still needs review because the official correction model rewards two specific economic links and mandatory terms."
+    },
+    "misconception_evidence": [
+      {
+        "tag": "perfect_substitutes_without_price-undercutting_incentive",
+        "evidence": "q15-step-1 requires linking perfect substitutes and price-focused consumers to both sellers' dominant strategy to lower or undercut price."
+      },
+      {
+        "tag": "dominant_strategy_without_suboptimal_joint_outcome",
+        "evidence": "q15-step-2 requires lower revenue or profit for both firms and a prisoner-dilemma conclusion."
+      }
+    ],
+    "scale_factor_evidence": {
+      "status": "not_applicable",
+      "rationale": "The official q15 answer model has no table scale, graph scale, per-unit price, or quantity conversion requirement."
+    },
+    "incidence_pass_through_evidence": {
+      "status": "not_applicable",
+      "rationale": "The official q15 answer model is game-theory reasoning, not tax incidence or pass-through reasoning."
+    },
+    "procedure_expectation": {
+      "status": "procedure_review_required",
+      "unit_ids": [
+        "A97"
+      ],
+      "rationale": "A97 has a canonical procedure, but the live H5 fixture deliberately requires semantic-fit review before treating A97 plus content units as closure for q15."
+    }
+  },
+  "unit_semantic_fit": [
+    {
+      "unit_id": "D27",
+      "decision": "supporting_content_only",
+      "semantic_scope": "Supports recognizing that perfect substitutes can replace each other and make price comparison central.",
+      "does_not_cover": "Does not itself cover dominant strategy, prisoner dilemma, or the two-step rewarded explanation."
+    },
+    {
+      "unit_id": "F03",
+      "decision": "supporting_content_only",
+      "semantic_scope": "Supports the concept of a dominant strategy as the best choice regardless of the other player.",
+      "does_not_cover": "Does not itself require the q15 context link from perfect substitutes to undercutting/lowering price."
+    },
+    {
+      "unit_id": "F09",
+      "decision": "supporting_content_only",
+      "semantic_scope": "Supports prisoner-dilemma logic where dominant strategies lead to a suboptimal outcome for both players.",
+      "does_not_cover": "Does not itself ensure the answer states both lower revenue/profit and the q15 correction-model conclusion."
+    },
+    {
+      "unit_id": "A97",
+      "decision": "supporting_answer_form_procedure_review_required",
+      "semantic_scope": "Supports building a leg-uit-dat causal chain from a context cause through intermediate links back to the given conclusion.",
+      "does_not_cover": "Does not by itself close q15-answer-1 because the official model rewards a specific two-part dominant-strategy and prisoner-dilemma explanation."
+    }
+  ],
+  "repair_options_matrix": [
+    {
+      "option_id": "Q15-OPTION-A",
+      "title": "Reviewed-equivalent answer-skill route",
+      "decision_now": "recommended_for_this_lane",
+      "description": "Accept EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION as the reviewed answer-skill route in a packet or overlay, while keeping candidate storage and protected references unwritten.",
+      "proof_required": [
+        "dry-run answer-skill candidate validates",
+        "D27/F03/F09 remain content-only support",
+        "A97 remains answer-form/procedure support only",
+        "the H5 validator continues to expose q15 review_required hooks until a later authorized mapper or fixture repair"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q15-OPTION-B",
+      "title": "Later protected-reference or answer-skill mutation proposal",
+      "decision_now": "defer_requires_separate_gate",
+      "description": "Prepare a later explicit gate only if q15 needs stored answer-skill or MTU changes.",
+      "proof_required": [
+        "closed gate names the exact write lane",
+        "candidate storage creation and writes are explicitly authorized by that later gate",
+        "rollback and validation plan exists before any write"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q15-OPTION-C",
+      "title": "Later mapper/checker repair after reviewed equivalent",
+      "decision_now": "defer_until_answer_skill_reviewed",
+      "description": "Clear q15 review_required only after answer-skill/procedure fit is accepted.",
+      "proof_required": [
+        "q15 still maps D27/F03/F09/A97 without adding graph, calculus, incidence, or scaling routes",
+        "q15-answer-1 is not hidden inside broad content MTUs",
+        "negative guard fails or review-blocks if A97 alone is used as closure"
+      ],
+      "mutation_authorized_now": false
+    }
+  ],
+  "dry_run_answer_skill_candidate": {
+    "answer_skill_id": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION",
+    "answer_skill_status": "design_candidate",
+    "label_nl": "Tweestaps uitleg dominante strategie en gevangenendilemma formuleren",
+    "answer_format": "two_step_explanation",
+    "source_exam_item_ids": [
+      "vw-1022-a-25-1-o:opgave-3:question-15"
+    ],
+    "source_requirement_ids": [
+      "q15-answer-1"
+    ],
+    "correction_model_step_refs": [
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=11&question=15:q15-step-1",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=11&question=15:q15-step-2"
+    ],
+    "point_rule_refs": [
+      "q15-pr-1",
+      "q15-pr-2"
+    ],
+    "rewarded_wording": [
+      "both sellers have a dominant strategy to lower or undercut price when consumers see the products as perfect substitutes",
+      "both firms' revenue or profit falls, so the outcome is suboptimal and a prisoner dilemma arises"
+    ],
+    "required_terms": [
+      "perfecte substituten",
+      "dominante strategie",
+      "prijs verlagen",
+      "gevangenendilemma",
+      "omzet of winst"
+    ],
+    "accepted_alternatives": [
+      "pricing just below the competitor instead of the word undercutting",
+      "lower profit instead of lower revenue when the suboptimal joint outcome remains explicit"
+    ],
+    "content_support_unit_ids": [
+      "D27",
+      "F03",
+      "F09"
+    ],
+    "answer_form_support_unit_ids": [
+      "A97"
+    ],
+    "operation_support_ids": [],
+    "blocking_gap_ids": [],
+    "review_state": "ready_for_three_agent_review_not_reviewed_equivalent",
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "negative_regression_requirement": {
+    "guard_id": "q15-a97-answer-skill-overclaim-guard",
+    "accepted_negative_fixture_type": "live_h5_validator_q15_review_required_assertions_plus_global_solo_negative",
+    "live_review_assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-PROCEDURE-REVIEW-A97",
+      "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-REVIEW-review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need",
+      "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-PROCEDURE-REVIEW-A97",
+      "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-REVIEW-review q15 two-step correction-model explanation as answer-skill need"
+    ],
+    "global_negative_fixture_guard": "MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED",
+    "required_behavior": "Any future q15 repair must fail or review-block if it hides q15-answer-1, treats D27/F03/F09 content coverage as enough for the answer skill, or treats A97 alone as semantic closure.",
+    "must_preserve": [
+      "q15-answer-1 remains visible until reviewed equivalent or separate answer-skill authority exists",
+      "A97 remains answer-form/procedure support only",
+      "no graph, calculus, function-construction, incidence, or scaling route is introduced for q15",
+      "the original Solo q1-q3 negative function-construction guard remains passing as a fail-as-expected fixture"
+    ]
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_three_agent_review",
+    "why_not_complete": "This packet prepares q15 RP-006 for governed review. It does not authorize mapper repair, candidate writes, protected-reference mutation, MTU mutation, answer-skill mutation, lesson output, diagnostics, PV, or product use."
+  }
+}
