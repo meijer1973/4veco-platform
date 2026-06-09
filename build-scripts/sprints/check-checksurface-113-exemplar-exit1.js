@@ -288,13 +288,16 @@ function main() {
   const source = checkSource();
   const exemplarFiles = requireExemplarFiles();
   const generated = checkGeneratedOutput();
-  const ExitTicketUI = require('../../engines/exit-ticket-ui');
-  const engine = new ExitTicketEngine({ data: readJson(SOURCE_PATH) });
-  const rendered = ExitTicketUI.renderStaticHtml(readJson(SOURCE_PATH), ExitTicketUI.buildSkillView(readJson(SOURCE_PATH), engine, {}));
+  const GoldenTicketLayout = require('../../engines/golden-ticket-layout');
+  const rendered = GoldenTicketLayout.renderMain(readJson(SOURCE_PATH));
   assert(rendered.includes('class="ge-workbench"'), 'rendered 1.1.3 output must use ge-workbench');
   assert(rendered.includes('class="ge-source-card"'), 'rendered 1.1.3 output must use ge-source-card');
   assert(rendered.includes('class="ge-task-card"'), 'rendered 1.1.3 output must use ge-task-card');
-  assert((rendered.match(/class="ge-step-card/g) || []).length === 4, 'rendered 1.1.3 output must contain four ge-step-card steps');
+  assert(rendered.includes('class="ge-step ge-step-graph"'), 'rendered 1.1.3 output must include the graph step');
+  assert(rendered.includes('class="ge-step ge-step-reading'), 'rendered 1.1.3 output must include the reading step');
+  assert(rendered.includes('class="ge-step ge-step-claim'), 'rendered 1.1.3 output must include the claim step');
+  assert(!rendered.includes('id="exit-ticket-app"'), 'rendered 1.1.3 output must not use the old exit-ticket app mount');
+  assert(!/\bclass="[^"]*\bet-/.test(rendered), 'rendered 1.1.3 output must not use et-* route shell classes');
   assert(!rendered.includes('et-source-task-workspace'), 'rendered 1.1.3 output must not use the old source/task workspace framework');
   const proof = {
     schema_version: 1,
