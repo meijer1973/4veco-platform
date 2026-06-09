@@ -134,6 +134,33 @@ function requireGitSuccess(args, message) {
   return run.stdout.trim();
 }
 
+function gitSucceeds(args) {
+  return git(args).status === 0;
+}
+
+function requireStartEvidenceLineage(packet) {
+  if (gitSucceeds(['merge-base', '--is-ancestor', packet.start_commit, 'HEAD'])) return;
+
+  const rebase = packet.pr_hygiene_rebase || {};
+  if (rebase.status !== 'allowed_after_human_review_for_pr_update') {
+    fail('start commit is not an ancestor and packet does not record an allowed PR-hygiene rebase');
+  }
+  if (rebase.original_start_commit_retained_as_evidence_anchor !== packet.start_commit) {
+    fail('PR-hygiene rebase must retain the original start commit as evidence anchor');
+  }
+  if (rebase.start_commit_ancestry_may_be_rewritten_by_rebase !== true) {
+    fail('PR-hygiene rebase must explicitly acknowledge rewritten start-commit ancestry');
+  }
+  if (rebase.scope_change_authorized !== false || rebase.repair_execution_authorized !== false) {
+    fail('PR-hygiene rebase must not authorize scope change or repair execution');
+  }
+  if (rebase.base_branch !== 'origin/main') fail('PR-hygiene rebase must target origin/main');
+  requireGitSuccess(
+    ['merge-base', '--is-ancestor', rebase.base_branch, 'HEAD'],
+    'rebased checkout must descend from origin/main'
+  );
+}
+
 function runH5Validator() {
   const run = spawnSync(process.execPath, [
     rel(H5_VALIDATOR),
@@ -177,10 +204,7 @@ function main() {
   if (packet.packet_result?.next_state !== 'ready_for_three_agent_review') fail('packet next_state mismatch');
   requireFalseBoundary(packet.authority_boundary, 'packet.authority_boundary');
 
-  requireGitSuccess(
-    ['merge-base', '--is-ancestor', packet.start_commit, 'HEAD'],
-    'current checkout must descend from requested start commit'
-  );
+  requireStartEvidenceLineage(packet);
   requireGitSuccess(
     ['cat-file', '-e', `${packet.start_commit}:reports/sprints/MTU-H5-blocked-stop-result.md`],
     'start commit must contain MTU-H5 closeout'

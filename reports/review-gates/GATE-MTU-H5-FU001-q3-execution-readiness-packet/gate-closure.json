@@ -9,6 +9,15 @@
   "reviewed_remote_commit": "f8ad19af577772c581ac1f82336b0913fbfea900",
   "reviewed_remote_branch": "codex/mtu-h5-followup-planning",
   "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/f8ad19af577772c581ac1f82336b0913fbfea900",
+  "pr_hygiene_rebase": {
+    "status": "completed_for_pr_update",
+    "base_branch": "origin/main",
+    "original_three_agent_reviewed_packet_commit": "f8ad19af577772c581ac1f82336b0913fbfea900",
+    "rebased_equivalent_packet_commit": "f31278e160c7941fe7a8a9d93abe28e9b5149b33",
+    "rebased_equivalent_closure_commit": "ed627bd27c4648b8b70d9d596a1246112a1138c3",
+    "scope_change_authorized": false,
+    "repair_execution_authorized": false
+  },
   "review_packet_markdown": "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md",
   "review_packet_json": "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json",
   "checker": "build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",

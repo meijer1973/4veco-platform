@@ -7,6 +7,15 @@
   "purpose": "Continue MTU-H5 after final lane closeout by preparing a non-mutating q3 execution-readiness plan. This packet chooses q3 as the highest-value next planning lane because its live H5 failures are concrete missing-operation and A15 over-trigger failures, while the required reviewed-equivalent operation and answer-skill evidence is already remote-closed.",
   "start_commit": "b0daca213d69157168a24a6d25721c300f93ed40",
   "start_branch": "codex/running-goals-20260608",
+  "pr_hygiene_rebase": {
+    "status": "allowed_after_human_review_for_pr_update",
+    "base_branch": "origin/main",
+    "original_start_commit_retained_as_evidence_anchor": "b0daca213d69157168a24a6d25721c300f93ed40",
+    "rebased_equivalent_packet_commit": "f31278e160c7941fe7a8a9d93abe28e9b5149b33",
+    "start_commit_ancestry_may_be_rewritten_by_rebase": true,
+    "scope_change_authorized": false,
+    "repair_execution_authorized": false
+  },
   "repair_planning_lane_id": "MTU-H5-FU-001",
   "source_closeout": "reports/sprints/MTU-H5-blocked-stop-result.md",
   "source_repair_packet": "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json",

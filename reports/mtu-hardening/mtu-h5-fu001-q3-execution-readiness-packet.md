@@ -15,6 +15,12 @@ This is not a mapper repair. It does not edit the fixture, mapper, registries,
 protected references, candidate storage, lessons, PV, diagnostics, product
 routes, or student-facing surfaces.
 
+PR hygiene note: this packet may be rebased onto `origin/main` before merge.
+`b0daca213d69157168a24a6d25721c300f93ed40` remains the original evidence
+anchor, but it need not remain an ancestor after that rebase. The rebase does
+not authorize scope change, mapper repair, fixture mutation, candidate writes,
+or product use.
+
 ## Why Q3
 
 q3 has four live failed H5 assertions:

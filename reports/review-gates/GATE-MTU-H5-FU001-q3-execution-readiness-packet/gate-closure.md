@@ -8,6 +8,14 @@ Reviewed remote commit:
 Reviewed remote branch:
 `codex/mtu-h5-followup-planning`
 
+PR hygiene rebase:
+`f8ad19af577772c581ac1f82336b0913fbfea900` was the three-agent reviewed
+packet commit before the branch was rebased onto `origin/main`. The rebased
+equivalent packet commit is
+`f31278e160c7941fe7a8a9d93abe28e9b5149b33`, and the rebased equivalent
+closure commit is `ed627bd27c4648b8b70d9d596a1246112a1138c3`. This rebase
+does not authorize scope change, repair execution, or product use.
+
 Status: `approved_more_than_satisfied_no_mutation_authorized`
 
 Verdict: **APPROVE MORE THAN SATISFIED**
