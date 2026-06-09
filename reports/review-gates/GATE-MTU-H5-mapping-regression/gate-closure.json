@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-mapping-regression",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-08",
+  "verdict": "REVISE_REPAIRED_LOCAL_APPROVAL",
+  "status": "approved_local_pending_remote_evidence_hash",
+  "human_review_source": "C:/Users/meije/.codex/attachments/0500abee-f9c0-4d88-8bc3-33fe97558951/pasted-text.txt",
+  "source_packet": "reports/mtu-hardening/mtu-h5-sample-selection-packet.json",
+  "review_candidate_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
+  "approved_fresh_sample_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "approved_fixture_status": "approved_for_mtu_h5_regression",
+  "repaired_items": [
+    "q19 operation completeness repaired by adding q19-step-3 for the Aruban goods/services market shift",
+    "expected_forbidden_route_tags added, including function_construction in the negative fixture",
+    "expected_procedure_unit_ids and procedure_review_required_unit_ids added for mechanical procedure reporting",
+    "q19 teken graph/draw answer-form gap marked missing_answer_form_expected",
+    "q3 monthly-to-annual premium handling marked unit_period_conversion_expected, not scale_factor_expected"
+  ],
+  "remote_evidence_closure": {
+    "required": true,
+    "reviewed_remote_commit_hash": null,
+    "status": "pending_commit_and_push",
+    "note": "Do not treat remote publication as proven until a commit hash is recorded here."
+  },
+  "allowed_next_step": "Run only the non-mutating MTU-H5 validator and produce diagnostic pass/fail/review_required reporting.",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  }
+}
