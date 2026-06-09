@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "profile_id": "nl-vo-evidence-profile",
+  "profile_version": "v0",
+  "status": "draft",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails; INSPECT-6 Report-Only Generator Planning; INSPECT-7 Dutch Scoped Evidence-Pack Prototype",
+  "jurisdiction": "Netherlands",
+  "sector": "voortgezet onderwijs",
+  "subject_focus": "vwo economie",
+  "retrieved_date": "2026-06-08",
+  "review_status": "draft_inspect_7_bounded_prototype_tri_agent_accepted",
+  "authority_sources": [
+    "nl-inspectie-onderzoekskader-vo-2025",
+    "nl-inspectie-op0-basisvaardigheden-2025",
+    "nl-inspectie-bijgestelde-onderzoekskaders-2025",
+    "nl-examenblad-economie-vwo-2026-subject-page",
+    "nl-examenblad-economie-vwo-havo-examenprogramma",
+    "nl-cvte-economie-vwo-syllabus-2026",
+    "nl-examenblad-economie-vwo-2026-cse-1-opgaven",
+    "nl-examenblad-economie-vwo-2026-cse-1-correctievoorschrift"
+  ],
+  "product_boundary": "This profile defines evidence that 4veco can expose to support school/provider inspection preparation. It is not a compliance certificate and does not replace school implementation evidence or competent-authority judgement. Every category must preserve a boundary between 4veco product evidence, school-owned evidence, and forbidden inferences.",
+  "exercise_first_boundary": "Inspection standards may identify evidence categories and quality requirements, but they do not mint MTUs, target exercises, procedures, lesson goals, or student-facing content. Real CvTE tasks, correction models, reviewed target exercises, and built paragraph target exercises remain stronger curricular evidence.",
+  "evidence_strength_order": [
+    "official CvTE exam questions and correction models",
+    "reviewed target exercises",
+    "reviewed target-equivalent exit-ticket proof",
+    "built paragraph target exercises",
+    "generated student-facing paragraph artifacts verified in 4veco-lessen",
+    "quality-ref YAML and review records",
+    "diagnostic reports that cite source or review artifacts",
+    "generated dashboard projections",
+    "roadmap/planning records"
+  ],
+  "evidence_states": [
+    "not_applicable",
+    "missing",
+    "implicit",
+    "present",
+    "present_but_weak"
+  ],
+  "safe_claims": [
+    "4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.",
+    "4veco can help teachers and schools organise product-side evidence for curriculum coherence, subject-relevant basic-skills support, didactic design, assessment alignment, student support, accessibility, and product quality assurance.",
+    "4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.",
+    "4veco exposes subject_material_basic_skills_evidence relevant to OP0 basic-skills preparation without claiming complete OP0, school-wide basic-skills, or citizenship-curriculum proof."
+  ],
+  "forbidden_claims": [
+    "4veco is compliant with Dutch inspection standards.",
+    "4veco is approved by the Dutch Inspectorate of Education.",
+    "4veco materials by themselves satisfy a school's inspection obligations.",
+    "Inspection prose authorises new economics lesson units or target exercises.",
+    "4veco provides complete OP0/basic-skills evidence for a school or department.",
+    "4veco provides OP0 evidence.",
+    "4veco provides school-wide basic-skills evidence.",
+    "4veco proves citizenship curriculum implementation.",
+    "A migrated target exercise is final-reviewed curriculum evidence.",
+    "Target-exercise presence proves target-equivalent closure.",
+    "Screenshot QA proves full accessibility compliance."
+  ],
+  "categories": [
+    {
+      "category_id": "curriculum_offer",
+      "label": "Curriculum offer",
+      "dutch_inspection_anchor": [
+        "OP1 Aanbod",
+        "OP0 Basisvaardigheden where the offer concerns Dutch language, mathematics/arithmetic, and citizenship"
+      ],
+      "4veco_evidence_targets": [
+        "official exam/curriculum coverage",
+        "paragraph target exercises",
+        "chapter and module progression",
+        "MTU and operation dependencies",
+        "source-output trace for generated materials"
+      ],
+      "current_evidence_paths": [
+        "references/external/syllabus-eindtermen.json",
+        "references/external/exam-questions.json",
+        "references/authored/course-target-exercises.json",
+        "references/data/alignment-graph.json",
+        "../4veco-lessen/course_blueprint_v5.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Coverage reports are not yet an inspection-specific evidence pack.",
+        "The model must distinguish planned coverage from generated, reviewed lesson evidence.",
+        "Foreign curriculum mappings are not authorised in this Dutch profile.",
+        "Migrated target exercises must not be reported as final-reviewed curriculum evidence.",
+        "Target exercises without exam-code links remain weaker curriculum-alignment evidence.",
+        "Generated lesson artifact presence must be separated from reviewed lesson artifact quality."
+      ],
+      "school_implementation_boundary": "The school remains responsible for its full curriculum plan, scheduling, classroom implementation, and local policy choices.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present_but_weak",
+      "required_state_distinctions": [
+        "curriculum_artifact_present",
+        "target_exercise_present",
+        "target_exercise_migrated",
+        "target_exercise_v5_reviewed",
+        "exam_code_linked",
+        "generated_lesson_artifact_present",
+        "reviewed_lesson_artifact_quality"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Blueprints, chapter/paragraph plans, target-exercise records, generated lesson folders, and reviewed lesson-quality records where present.",
+        "school_owned_evidence": "Full curriculum plan, scheduling, classroom implementation, and local policy choices.",
+        "forbidden_inference": "Do not infer final-reviewed curriculum evidence from migrated target-exercise presence alone."
+      }
+    },
+    {
+      "category_id": "basic_skills",
+      "label": "Basic skills",
+      "dutch_inspection_anchor": [
+        "OP0 Basisvaardigheden"
+      ],
+      "4veco_evidence_targets": [
+        "language and economic reasoning",
+        "calculation and arithmetic fluency",
+        "graph/table/source interpretation",
+        "citizenship and economic participation contexts where relevant"
+      ],
+      "current_evidence_paths": [
+        "references/machine/micro-teaching-units.json",
+        "references/authored/skill-categories.md",
+        "references/authored/vraagtypen-en-opgaveontwerp.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "OP0 evidence is not yet exposed as a dedicated Dutch inspection profile.",
+        "Citizenship/economic participation evidence is likely contextual and should not be overstated.",
+        "Language-reasoning evidence needs careful distinction between Dutch-language skill and economics answer construction.",
+        "This is subject-material basic-skills evidence, not complete OP0 evidence.",
+        "This is not school-wide Dutch-language, mathematics/arithmetic, or citizenship implementation proof.",
+        "Citizenship contexts must remain contextual unless explicit reviewed citizenship-curriculum evidence exists."
+      ],
+      "school_implementation_boundary": "4veco can expose subject-material evidence; the school must show deliberate curriculum choices and classroom practice across all basic skills.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present_when_bounded",
+      "evidence_label": "subject_material_basic_skills_evidence",
+      "product_school_boundary": {
+        "4veco_evidence": "Economics reasoning, calculation, graph/table/source interpretation, and answer construction inside reviewed product material.",
+        "school_owned_evidence": "School-wide Dutch language, mathematics/arithmetic, citizenship curriculum, classroom practice, and deliberate implementation evidence.",
+        "forbidden_inference": "Do not state that 4veco provides complete OP0 evidence or school-wide basic-skills proof."
+      }
+    },
+    {
+      "category_id": "didactic_quality",
+      "label": "Didactic quality",
+      "dutch_inspection_anchor": [
+        "OP3 Pedagogisch-didactisch handelen",
+        "OP1 Aanbod where learning progression and provision are inspected"
+      ],
+      "4veco_evidence_targets": [
+        "explanation",
+        "worked examples",
+        "guided practice",
+        "independent practice",
+        "dual-coded visuals",
+        "consistent procedures",
+        "student-visible route from Start to Check"
+      ],
+      "current_evidence_paths": [
+        "../4veco-lessen/specifications/product-end-state.md",
+        "../4veco-lessen/specifications/companion-core-specifications.md",
+        "AGENTS.md",
+        "BUILD-PARAGRAPH.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Rendered student-route proof is currently bounded and not broad product proof.",
+        "Some companion/check surfaces remain under controlled-scope review rather than scale-ready status.",
+        "PASS WITH FLAGS is useful evidence but is not an unconditional final pass."
+      ],
+      "school_implementation_boundary": "The product can provide didactic materials; the school must show actual teacher practice, adaptation, and classroom interaction.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present",
+      "review_outcome_semantics": [
+        "PASS",
+        "PASS WITH FLAGS",
+        "REVISE",
+        "FAIL"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Paragraph plans, procedure routes, worked examples, guided practice, dual-coding evidence, quality-ref records, companion reviews, and Part A reviews.",
+        "school_owned_evidence": "Actual teacher practice, adaptation, lesson execution, and classroom interaction.",
+        "forbidden_inference": "Do not flatten PASS WITH FLAGS into an unconditional PASS or a Boolean true."
+      }
+    },
+    {
+      "category_id": "student_development_and_support",
+      "label": "Student development and support",
+      "dutch_inspection_anchor": [
+        "OP2 Zicht op ontwikkeling en begeleiding",
+        "OP3 where support affects didactic action"
+      ],
+      "4veco_evidence_targets": [
+        "prerequisite checks",
+        "advisory short checks",
+        "remediation routes",
+        "differentiated practice",
+        "extension/enrichment"
+      ],
+      "current_evidence_paths": [
+        "../4veco-lessen/specifications/product-end-state.md",
+        "../4veco-lessen/specifications/companion-core-specifications.md",
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "known_gaps_or_weaknesses": [
+        "4veco must avoid diagnostic, mastery, automatic sequencing, or summative claims.",
+        "Short-check and exit-ticket surfaces are not complete across all paragraphs.",
+        "Practice routes and checks must be distinguished from school-owned monitoring and support decisions.",
+        "Advisory checks must not be counted as target-equivalent closure proof unless reviewed as such."
+      ],
+      "school_implementation_boundary": "Student monitoring, care plans, support decisions, and intervention records are school-owned evidence, not product-owned evidence.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present_but_weak",
+      "support_evidence_labels": [
+        "advisory_support_evidence",
+        "practice_remediation_route_evidence",
+        "target_equivalent_closure_evidence",
+        "school_owned_monitoring_support_evidence"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Practice routes, hints, route panels, prerequisite checks, advisory checks, and remediation/enrichment suggestions inside the product.",
+        "school_owned_evidence": "Student monitoring, care plans, accommodations, interventions, and support decisions.",
+        "forbidden_inference": "Do not count every check as closure proof or as school-owned student-support evidence."
+      }
+    },
+    {
+      "category_id": "assessment_and_closure",
+      "label": "Assessment and closure",
+      "dutch_inspection_anchor": [
+        "OP6 Afsluiting",
+        "OP1/OP3 where assessment alignment supports offer and didactic quality"
+      ],
+      "4veco_evidence_targets": [
+        "target exercises",
+        "target-equivalent exit tickets",
+        "answer models",
+        "rubrics or correction guidance",
+        "official correction-model decomposition where available"
+      ],
+      "current_evidence_paths": [
+        "references/authored/course-target-exercises.json",
+        "references/external/exam-questions.json",
+        "references/data/exercises/",
+        "reports/review-gates/",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Official correction-model ingestion is not yet fully represented.",
+        "Exit-ticket target-equivalent proof remains controlled and incomplete across the first-three-paragraph product proof set.",
+        "Assessment evidence must remain local and non-summative unless later gates authorise broader claims.",
+        "Target exercise presence is not the same as target-equivalent closure proof.",
+        "Answer-model presence is not the same as reviewed exit-ticket proof.",
+        "Local reviewed target-equivalent proof is not the same as generalised semantic scoring proof."
+      ],
+      "school_implementation_boundary": "School summative assessment policy, PTA/transition decisions, and formal grading remain school responsibilities.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present_but_weak",
+      "target_equivalent_proof_states": [
+        "target_exercise_present",
+        "target_exercise_migrated_needs_review",
+        "target_exercise_v5_reviewed",
+        "answer_model_present",
+        "target_equivalent_not_started",
+        "target_equivalent_advisory_only",
+        "target_equivalent_candidate",
+        "target_equivalent_reviewed_local",
+        "target_equivalent_reviewed_generalised"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Target exercises, answer models, local target-equivalent proof records, rubrics/correction guidance, and official correction-model decomposition where available.",
+        "school_owned_evidence": "Formal assessment policy, grading, PTA, promotion/transition decisions, and summative closure.",
+        "forbidden_inference": "Do not infer closure evidence from target-exercise or answer-model presence alone."
+      }
+    },
+    {
+      "category_id": "accessibility_and_inclusion",
+      "label": "Accessibility and inclusion",
+      "dutch_inspection_anchor": [
+        "Cross-cutting evidence for student access, support, and didactic quality"
+      ],
+      "4veco_evidence_targets": [
+        "readable layout",
+        "alt text",
+        "keyboard/focus behaviour",
+        "contrast",
+        "mobile usability",
+        "inclusive student-facing language"
+      ],
+      "current_evidence_paths": [
+        "agents/accessibility-agent.md",
+        "agents/visual-qa-agent.md",
+        "reports/review-gates/",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Accessibility evidence is currently review/proof-artifact based, not an inspection-specific profile.",
+        "Mobile/dark-mode proof can be route-specific and should not be generalised.",
+        "Screenshot QA is not full accessibility proof.",
+        "Accessibility evidence must be split into sub-evidence labels before broad reporting."
+      ],
+      "school_implementation_boundary": "The school remains responsible for individual accommodations, device access, and inclusive classroom implementation.",
+      "initial_evidence_state": "implicit",
+      "category_evidence_status_after_inspect_2": "accepted_as_present_but_weak",
+      "accessibility_sub_evidence_labels": [
+        "alt_text",
+        "contrast_theme",
+        "mobile_layout",
+        "keyboard_focus",
+        "semantic_structure",
+        "inclusive_student_language",
+        "internal_code_exposure_absent"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Alt text, visual/layout review, contrast/theme checks, mobile layout proof, keyboard/focus evidence, semantic structure evidence, inclusive language review, and absence of internal-code exposure where reviewed.",
+        "school_owned_evidence": "Individual accommodations, device access, school accessibility policy, and inclusive classroom implementation.",
+        "forbidden_inference": "Do not treat screenshot QA or route-local proof as full accessibility compliance."
+      }
+    },
+    {
+      "category_id": "quality_assurance",
+      "label": "Quality assurance",
+      "dutch_inspection_anchor": [
+        "SKA quality assurance standards at governance level",
+        "Evidence supporting systematic school/product quality development"
+      ],
+      "4veco_evidence_targets": [
+        "review records",
+        "quality-ref YAML",
+        "validators",
+        "generated reports",
+        "proof artifacts",
+        "closure logs",
+        "pass-with-flags semantics"
+      ],
+      "current_evidence_paths": [
+        "RESEARCH_AGENT_MAP.md",
+        "RESEARCH_AGENT_MAP_REFERENCES.md",
+        "reports/internal-dashboard/dashboard-data.json",
+        "reports/github-agent-index-platform.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Generated reports are diagnostic and not primary evidence.",
+        "Inspection evidence is not yet integrated into a report-only validator or teacher pack.",
+        "Generated reports must remain diagnostic evidence unless they cite source or review artifacts.",
+        "Future evidence records should distinguish primary source artifacts, review records, diagnostic reports, and generated dashboard projections."
+      ],
+      "school_implementation_boundary": "School governance, self-evaluation, improvement planning, and inspection conversations remain school-owned.",
+      "initial_evidence_state": "present_but_weak",
+      "category_evidence_status_after_inspect_2": "accepted_as_present",
+      "evidence_artifact_types": [
+        "primary_source_artifact",
+        "review_record",
+        "diagnostic_report",
+        "generated_dashboard_projection"
+      ],
+      "product_school_boundary": {
+        "4veco_evidence": "Quality-ref YAML, review records, validators, sprint reports, lead reviews, closure logs, and full platform validation evidence.",
+        "school_owned_evidence": "School governance, self-evaluation, school quality assurance, improvement planning, and inspection conversations.",
+        "forbidden_inference": "Do not treat product QA records as school SKA compliance evidence."
+      }
+    },
+    {
+      "category_id": "improvement_cycle",
+      "label": "Improvement cycle",
+      "dutch_inspection_anchor": [
+        "Quality development and accountability evidence"
+      ],
+      "4veco_evidence_targets": [
+        "issue logs",
+        "correction logs",
+        "review rechecks",
+        "known flags",
+        "recommended next actions",
+        "human-review packets before policy gates"
+      ],
+      "current_evidence_paths": [
+        "archive/sprints/",
+        "references/data/qc/",
+        "reports/review-gates/",
+        "references/reference-team-roadmap.md",
+        "docs/roadmaps/roadmap-version-index.json"
+      ],
+      "known_gaps_or_weaknesses": [
+        "Inspection-specific improvement logs do not exist yet beyond INSPECT-0 setup logs.",
+        "Future evidence packs must separate product improvement from school improvement.",
+        "Product improvement evidence may support school preparation but does not replace school self-evaluation, school quality assurance, or inspection dialogue."
+      ],
+      "school_implementation_boundary": "A 4veco issue/review cycle can support but cannot replace the school's own quality cycle.",
+      "initial_evidence_state": "present_but_weak",
+      "category_evidence_status_after_inspect_2": "accepted_as_present",
+      "product_school_boundary": {
+        "4veco_evidence": "Sprint records, human gates, correction loops, lead reviews, carried flags, validation logs, and next-action records.",
+        "school_owned_evidence": "School self-evaluation, governance quality cycle, board-level accountability, and inspection dialogue.",
+        "forbidden_inference": "Do not present product improvement cycles as school SKA evidence."
+      }
+    }
+  ],
+  "next_recommended_step": "Human owner review of archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md. INSPECT-7 closed with lead review PASS and teacher/legal/privacy/Dutch quality-inspection MORE_THAN_SATISFIED review of the bounded no-personal-data Book 1 Chapter 1.1 source object plus report-only Markdown and JSON packs. Do not start INSPECT-8, INSPECT-9, report/dashboard integration, country overlays, teacher inspection pack generation, gate integration, package script work, CI/build integration, quality-ref integration, Scale Gate integration, generated lesson output, personal-data processing, or compliance/approval claims without a fresh sprint plan and explicit authorisation.",
+  "profile_adjustment_basis": {
+    "decision": "pass_with_required_profile_adjustment",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-2 Bounded Pilot Evidence Audit",
+    "approved_next_action": "INSPECT-2A Profile Adjustment Before Schema Design",
+    "purpose": "Adjust profile language before schema design so future reports distinguish artifact presence, reviewed quality, target-exercise finality, target-equivalent proof, diagnostic report status, and product evidence versus school-owned implementation evidence.",
+    "not_approved": [
+      "schema design",
+      "validators",
+      "generated evidence packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "evidence_finality_states": [
+    "artifact_present",
+    "reviewed_artifact_quality",
+    "pass_with_flags",
+    "target_exercise_migrated",
+    "target_exercise_reviewed",
+    "target_equivalent_reviewed",
+    "diagnostic_report_only",
+    "school_owned_implementation"
+  ],
+  "target_equivalent_proof_states": [
+    "target_exercise_present",
+    "target_exercise_migrated_needs_review",
+    "target_exercise_v5_reviewed",
+    "answer_model_present",
+    "target_equivalent_not_started",
+    "target_equivalent_advisory_only",
+    "target_equivalent_candidate",
+    "target_equivalent_reviewed_local",
+    "target_equivalent_reviewed_generalised"
+  ],
+  "evidence_artifact_types": [
+    "primary_source_artifact",
+    "review_record",
+    "diagnostic_report",
+    "generated_dashboard_projection"
+  ],
+  "required_audit_notes": [
+    {
+      "note_id": "title_source_reconciliation",
+      "requirement": "Every pilot or report must cite the live blueprint title and flag title mismatches between human review text, target registry, chapter plan, and lesson folder.",
+      "reason": "Title mismatch is a traceability issue, not a reason to audit the wrong paragraph."
+    },
+    {
+      "note_id": "target_equivalent_proof_boundary",
+      "requirement": "Target exercise presence is not target-equivalent closure proof; answer-model presence is not reviewed exit-ticket proof; local reviewed proof is not generalised semantic-scoring proof."
+    },
+    {
+      "note_id": "diagnostic_report_status",
+      "requirement": "Reports can guide reviewers to evidence, but reports are diagnostic unless they cite source or review artifacts."
+    },
+    {
+      "note_id": "product_school_boundary",
+      "requirement": "Every category must explicitly state 4veco evidence, school-owned evidence, and forbidden inference."
+    }
+  ],
+  "reporting_boundaries": {
+    "subject_material_basic_skills_evidence": {
+      "allowed_wording": "4veco exposes subject-material evidence relevant to OP0 basic-skills preparation.",
+      "forbidden_overstatements": [
+        "4veco provides OP0 evidence.",
+        "4veco provides complete OP0 evidence.",
+        "4veco provides school-wide basic-skills evidence.",
+        "4veco proves citizenship curriculum implementation."
+      ]
+    },
+    "target_equivalent_proof": [
+      "Target exercise presence is not the same as target-equivalent closure proof.",
+      "Answer-model presence is not the same as reviewed exit-ticket proof.",
+      "Local reviewed proof is not the same as generalised semantic scoring proof."
+    ],
+    "diagnostic_reports": "Generated reports and dashboards are diagnostic evidence unless they cite primary source artifacts or review records.",
+    "pass_with_flags": "PASS WITH FLAGS remains a distinct review outcome and must not be flattened into an unconditional PASS or Boolean true."
+  },
+  "schema_design_authorization": {
+    "decision": "pass",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-2A Profile Adjustment Before Schema Design",
+    "approved_next_action": "INSPECT-3 Report-Only Schema Design",
+    "required_wording": "This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.",
+    "not_approved": [
+      "validators that fail builds",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "validator_design_authorization": {
+    "decision": "pass_with_minor_guardrails",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-3 Report-Only Schema Design",
+    "approved_next_action": "INSPECT-4 Report-Only Validator Design",
+    "validator_posture": "node build-scripts/inspection/validate-inspection-evidence.js --input <file> --report-only",
+    "allowed_output_statuses": [
+      "PASS_REPORT_ONLY",
+      "PASS_WITH_WARNINGS_REPORT_ONLY",
+      "SCHEMA_INVALID_REPORT_ONLY"
+    ],
+    "minor_guardrails": [
+      "The validator may check schema conformance and known forbidden phrases, but it must not claim complete semantic detection of unsafe compliance claims.",
+      "If the validator supports both pilot and full-report modes, only full-report mode may require all eight category records.",
+      "Schema validity and evidence strength are separate. Weak evidence can be valid evidence."
+    ],
+    "not_approved": [
+      "build-failing validator integration",
+      "required CI gate",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "validator_refinement_authorization": {
+    "decision": "pass_with_required_refinement",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-4 Report-Only Validator Design",
+    "approved_next_action": "INSPECT-5 Strictly Non-Blocking Validator Refinement",
+    "purpose": "Remove ambiguity between full JSON Schema validation and focused report-only contract validation before any generator planning.",
+    "chosen_refinement_path": "schema-backed report-only contract validation for the features used by references/schemas/inspection-evidence.schema.json, with explicit invalid-status wording and no production integration",
+    "allowed_output_statuses": [
+      "PASS_REPORT_ONLY",
+      "PASS_WITH_WARNINGS_REPORT_ONLY",
+      "SCHEMA_INVALID_REPORT_ONLY"
+    ],
+    "invalid_status_meaning": "SCHEMA_INVALID_REPORT_ONLY means invalid against the schema-backed report-only inspection-evidence contract checked by the manual validator; it is not a build, dashboard, Scale Gate, quality-ref, compliance, or inspectorate judgement.",
+    "not_approved": [
+      "report-only generator planning",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "CI/build integration",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "generator_planning_authorization": {
+    "decision": "tri_agent_more_than_satisfied",
+    "reviewers": [
+      "Teacher reviewer Dewey",
+      "Legal/privacy reviewer Leibniz",
+      "Dutch quality-inspection reviewer Parfit"
+    ],
+    "date": "2026-06-09",
+    "accepted_prior_sprint": "INSPECT-6 Report-Only Generator Planning",
+    "approved_next_action": "INSPECT-7 Dutch Scoped Evidence-Pack Prototype",
+    "purpose": "Use the accepted report-only generator plan, source contract, validation/dispatch plan, safe-claim boundaries, privacy no-personal-data default, and teacher-facing output shape to prototype one bounded evidence pack.",
+    "bounded_scope": [
+      "Book 1, Chapter 1.1",
+      "1.1.1 Schaarste en economisch denken",
+      "1.1.2 Percentages en indexcijfers",
+      "1.1.3 Grafieken en tabellen"
+    ],
+    "required_start": [
+      "INSPECT-7 sprint plan",
+      "planning review before implementation",
+      "one bounded source object",
+      "one report-only Markdown pack",
+      "one report-only JSON pack"
+    ],
+    "not_approved": [
+      "package script integration",
+      "CI/build integration",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "personal-data processing",
+      "legal compliance claims",
+      "AVG/GDPR compliance claims",
+      "inspectorate approval claims",
+      "inspection-ready claims",
+      "certification claims",
+      "complete OP0/basic-skills claims",
+      "school-obligation-satisfied claims",
+      "PTA validity claims",
+      "summative assessment validity claims",
+      "classroom implementation claims"
+    ]
+  }
+}
