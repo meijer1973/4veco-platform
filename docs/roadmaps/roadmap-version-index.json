@@ -92,7 +92,7 @@
       "owner": "references_team",
       "updated_on": "2026-06-09",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-7 closed after lead review round 4 returned PASS and teacher, legal/privacy, and Dutch quality-inspection reviewers each returned MORE_THAN_SATISFIED. The prototype remains bounded and report-only; broader generator, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-7 closed after lead review round 4 returned PASS and teacher, legal/privacy, and Dutch quality-inspection reviewers each returned MORE_THAN_SATISFIED. The evidence sample remains bounded and report-only; broader generator, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",
