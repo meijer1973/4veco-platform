@@ -106,12 +106,19 @@ primitive types, arrays, conditionals, forbidden exact values, and
 additional-property rules. It does not add an npm dependency and does not
 create a production validator integration.
 
-## Recommended Next Step
+## Historical INSPECT-5 Next Step
 
-Send the INSPECT-5R external review, privacy, and claim-guardrail packet for
-teacher, legal/privacy, and Dutch quality-inspection `MORE_THAN_SATISFIED`
-review. Do not create validator integration, report generator planning,
-evidence packs, dashboard gates, quality-ref integration, Scale Gate
-integration, country overlays, lesson-output changes, personal-data
-processing, or compliance claims until that gate passes and the repository
-owner explicitly authorises the next sprint.
+The INSPECT-5 validator-refinement next step was to send the INSPECT-5R
+external review, privacy, and claim-guardrail packet for teacher,
+legal/privacy, and Dutch quality-inspection `MORE_THAN_SATISFIED` review.
+That historical gate is now closed.
+
+## Current Recommended Next Step
+
+Have the human owner review the QS-DUTCH-ROADMAP-1 Dutch-only roadmap proposal.
+If accepted, start `INSPECT-8 Dutch Evidence Scale Readiness` as a fresh
+planning/audit-only sprint. Do not create validator integration, report
+generator implementation, evidence packs, dashboard gates, quality-ref
+integration, Scale Gate integration, non-Dutch standards work, lesson-output
+changes, personal-data processing, or compliance/approval claims without a
+fresh sprint plan, planning review, lead review, and explicit authorisation.

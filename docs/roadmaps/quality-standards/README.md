@@ -20,8 +20,9 @@ materials alone satisfy a school's obligations.
 
 ## Files
 
-- `inspection-standards-roadmap.md` - roadmap for Dutch inspection-relevant
-  evidence first, then controlled international compatibility overlays.
+- `inspection-standards-roadmap.md` - Dutch-only quality-control roadmap for
+  inspection-relevant product evidence, evidence gaps, teacher/school-facing
+  packets, and clean closure.
 - `sprint-ledger.md` - active ledger for quality-standards sprint status,
   outputs, commits, and next authorisation points.
 - `quality-standards-end-state.md` - first attempt at the intended mature
@@ -39,6 +40,11 @@ materials alone satisfy a school's obligations.
 - `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 - `docs/inspection-standards/nl-vo-evidence-model.md`
 
+Non-Dutch standards sources in `source-register.json`, if present, are
+historical source inventory only. They are not active work in this roadmap and
+must not be expanded into mappings, claims, reports, or implementation until a
+separate non-Dutch worktree and roadmap are explicitly authorised.
+
 ## Boundaries
 
 - 4veco remains exercise-first and exam-grounded.
@@ -53,3 +59,4 @@ materials alone satisfy a school's obligations.
   teacher/school-facing claims requires teacher, legal/privacy, and Dutch
   quality-inspection reviewers to each return `MORE_THAN_SATISFIED`.
 - Evidence packs contain no student-level personal data by default.
+- Non-Dutch quality-standards work is outside this roadmap.

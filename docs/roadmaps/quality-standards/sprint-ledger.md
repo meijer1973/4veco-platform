@@ -2,7 +2,7 @@
 
 Status: active
 Updated on: 2026-06-09
-Branch in use: `codex/quality-standards-20260608`
+Branch in use: `codex/dutch-quality-scope-roadmap-20260609`
 
 ## Purpose
 
@@ -57,8 +57,8 @@ Required default flow:
 
 INSPECT-5R and all later quality-standards sprints that prepare generator
 planning, evidence packs, teacher-facing summaries, public claims, dashboards,
-quality-ref integration, Scale Gate integration, overlays, or generated-output
-changes must use the three-reviewer gate:
+quality-ref integration, Scale Gate integration, non-Dutch standards work, or
+generated-output changes must use the three-reviewer gate:
 
 | Reviewer role | Required verdict before proceeding |
 |---|---|
@@ -102,17 +102,24 @@ authorised.
 | `INSPECT-7` | closed / tri-agent more_than_satisfied | Dutch scoped evidence-pack prototype for Book 1 Chapter 1.1, using INSPECT-6 planning and preserving no-personal-data, safe-claim, OP0, product/school, and competent-authority boundaries. | `archive/sprints/INSPECT-7/INSPECT-7-authorisation.md`; `archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md`; `archive/sprints/INSPECT-7/INSPECT-7-planning-review.md`; `archive/sprints/INSPECT-7/INSPECT-7-correction-log.md`; `archive/sprints/INSPECT-7/INSPECT-7-validation-log.md`; `archive/sprints/INSPECT-7/INSPECT-7-lead-review-round4.md`; `archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md`; `archive/sprints/INSPECT-7/INSPECT-7-closure-log.md`; `archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md`; `archive/sprints/INSPECT-7/build-inspect-7-prototype.js`; `references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json`; `reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md`; `reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json` | this commit | Lead review round 4 returned `PASS`. Teacher, legal/privacy, and Dutch quality-inspection reviewers each returned `MORE_THAN_SATISFIED`. Prototype is bounded and report-only. No broader generator, package script, CI/dashboard/quality-ref/Scale Gate integration, lesson-output mutation, personal-data processing, or compliance/approval claim. |
 | `QS-MERGE-1` | closed / merge-prep complete | Quality Standards Merge Prep. Updated the accepted INSPECT-7 branch against current `origin/main`, revalidated, and opened draft PR #23. | `archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md`; `archive/sprints/QS-MERGE-1/QS-MERGE-1-sprint-plan.md`; `archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md`; `archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md`; `archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md`; draft PR `https://github.com/meijer1973/4veco-platform/pull/23`. | this commit | Merge commit `391620ea` brought the branch to `0 behind` current `origin/main`. Draft PR #23 triggered `platform-ci / validate-platform`; run `27203366610` passed for merge implementation head. No INSPECT-8/9 or integration work is authorised. |
 | `QS-MERGE-2` | closed / final refresh complete | Final PR Refresh. Updated PR #23 against current `origin/main`, revalidated, and verified fresh PR CI for the refresh head. | `archive/sprints/QS-MERGE-2/QS-MERGE-2-human-review.md`; `archive/sprints/QS-MERGE-2/QS-MERGE-2-sprint-plan.md`; `archive/sprints/QS-MERGE-2/QS-MERGE-2-planning-review.md`; `archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md`; `archive/sprints/QS-MERGE-2/QS-MERGE-2-closure-log.md`; PR #23. | this commit | Merge commit `4904b521` brought PR #23 to `0 behind` current `origin/main`. Fresh PR `platform-ci / validate-platform` run `27206828022` passed for the refresh head. No INSPECT-8/9 or integration work is authorised. |
+| `QS-DUTCH-ROADMAP-1` | closed / ready for human review | Reset active quality-standards roadmap to Dutch-only closure path. Remove non-Dutch standards work from active future sprints and preserve any non-Dutch source records only as inactive historical inventory for later separate worktree planning. | `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md`; `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-sprint-plan.md`; `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-planning-review.md`; `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md`; `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md`; `archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md`; roadmap, ledger, README, end-state, and data metadata updates. | this commit | Governance/docs only. Lead review round 2 returned `PASS`. No INSPECT-8 implementation, evidence packs, generator work, dashboard/gate integration, quality-ref integration, Scale Gate work, generated lesson-output mutation, personal-data processing, non-Dutch standards work, or compliance/approval claim. |
 
 ## Candidate Future Sprints
 
 These are not authorised implementation work until a human review explicitly
 approves a new packet. INSPECT-7 is closed as the accepted bounded prototype
-through tri-agent `MORE_THAN_SATISFIED` review.
+through tri-agent `MORE_THAN_SATISFIED` review. The active path is Dutch-only;
+non-Dutch standards work belongs in a later separate worktree and roadmap.
 
 | Candidate sprint | Intended scope | Authorisation status |
 | --- | --- | --- |
-| `INSPECT-8` | International common-quality profile design after Dutch profile/schema/validator review. | not authorised |
-| `INSPECT-9` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
+| `INSPECT-8` | Dutch Evidence Scale Readiness. Planning/audit only: identify which Dutch scopes are ready, where target-exercise finality is weak, where exam-code links are missing, where target-equivalent proof is absent, and what scope could safely be rolled up next. | not authorised |
+| `INSPECT-9` | Dutch Evidence Gap Closure Plan. Convert INSPECT-8 findings into proof requirements and correction routes for target finality, exam-code linkage, target-equivalent proof, accessibility, support/differentiation, source freshness, and product/school boundary wording. | not authorised |
+| `INSPECT-10` | Dutch Report-Only Generator MVP. Implement a reusable Dutch report-only generator only after readiness/gap evidence supports it and review gates pass. | not authorised |
+| `INSPECT-11` | Dutch Multi-Scope Pilot Packs. Generate and review conservative multi-scope Dutch evidence packs from authorised scopes only. | not authorised |
+| `INSPECT-12` | Dutch Teacher/School Evidence Pack. Shape the evidence pack into a 5-10 minute teacher/school-facing review artifact with safe-use note, weak/missing evidence, and school-owned evidence still needed. | not authorised |
+| `INSPECT-13` | Dutch Diagnostic Report Surface Decision. Decide whether to keep the evidence packs standalone or expose Dutch quality-control evidence through a diagnostic report or internal dashboard summary. | not authorised |
+| `INSPECT-14` | Dutch Quality-Control Closure. Close the Dutch package with source/profile status, readiness matrix, generated outputs, reviews, validation, known gaps, and final human packet. | not authorised |
 
 ## Ledger Rules
 
@@ -126,3 +133,5 @@ through tri-agent `MORE_THAN_SATISFIED` review.
    came from the human owner or an accepted review packet.
 5. Do not convert candidate future sprints into active work without preserving
    the existing forbidden-claim and no-lesson-mutation boundaries.
+6. Do not add non-Dutch standards work to this active roadmap. Start a separate
+   worktree and roadmap after Dutch closure if the owner later authorises it.

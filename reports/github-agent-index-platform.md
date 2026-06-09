@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T12:46:02.873Z
+Generated: 2026-06-09T13:35:56.789Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4093
+Files indexed: 4099
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -632,7 +632,7 @@ Count: 42
 
 ## validators
 
-Count: 400
+Count: 401
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -647,6 +647,7 @@ Count: 400
 - archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md
 - archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
@@ -4134,7 +4135,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 412
+Count: 417
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4235,6 +4236,11 @@ Count: 412
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-planning-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-sprint-plan.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md

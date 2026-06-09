@@ -1,15 +1,14 @@
-# Inspection Standards Compatibility Roadmap
+# Dutch Quality Control Roadmap
 
-Status: proposed
+Status: proposed Dutch-only roadmap
 Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
-Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
-Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
-Merge-prep status: `QS-MERGE-2 Final PR Refresh` closed after refreshing PR #23 against current `origin/main`, revalidating, and receiving fresh PR `platform-ci / validate-platform` success for the final-refresh head; mark ready/comment/merge only through the PR path
+Roadmap ID: `dutch-quality-control`
+Roadmap version: `v2.0-dutch-scope-only-proposal`
+Sprint status: `QS-DUTCH-ROADMAP-1 Dutch Scope Roadmap Reset` in progress as roadmap/governance work only
 Human owner: HCS / Marcel
-Team mode: isolated worktree, roadmap and evidence design first, no broad production
+Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
 Companion quality-standards docs:
 
@@ -21,162 +20,52 @@ Companion quality-standards docs:
 
 ## 0. Purpose
 
-This roadmap defines how 4veco will become inspection-legible.
+This roadmap defines the active Dutch quality-control path for 4veco.
 
-The hard baseline is Dutch secondary-education inspection support. The secondary
-strategic goal is an international compatibility layer that makes 4veco easier
-to adapt to the inspection-quality expectations used in major systems,
-especially:
+The goal is a complete Dutch VO/vwo-economie evidence-support package that can
+show, per authorised scope, what 4veco product evidence exists for curriculum
+coherence, didactic quality, assessment alignment, subject-material
+basic-skills support, accessibility, differentiation/support, quality
+assurance, and improvement work.
 
-- Netherlands
-- Belgium, starting with Flanders
-- England / UK where relevant, but do not treat the UK as one inspection system
-- Germany
-- France
-- Italy
-- Spain
-- Poland
-- United States, where inspection is usually replaced by state/local standards,
-  accountability, and accreditation mechanisms
+The endpoint is not a legal, compliance, approval, certification, inspection
+readiness, PTA validity, summative validity, school-obligation, classroom-
+implementation, school SKA, or complete OP0/basic-skills claim.
 
-The intended endpoint is not a legal claim that one generated material set is
-compliant in every country. The intended endpoint is:
+The endpoint is:
 
-> 4veco demonstrably supports Dutch inspection-relevant evidence first, and then
-> exposes a reusable inspection-evidence architecture that can be mapped to the
-> common quality expectations of major international systems through local
-> overlays.
+> 4veco has a Dutch-only, reviewed, report-only quality-control package that
+> helps teachers, school leaders, reviewers, and agents see product-side
+> evidence and known gaps without confusing product evidence with school-owned
+> implementation or competent-authority judgement.
 
-The project belongs primarily in `4veco-platform`, because that repository owns
-generators, reference layers, validators, reports, skills, and roadmap
-infrastructure. `4veco-lessen` is the generated student-facing target and must be
-inspected only as evidence unless a later sprint explicitly authorises mutation.
+Non-Dutch standards work is not part of this roadmap. If the owner later wants
+non-Dutch work, it must start in a separate worktree with a separate roadmap,
+source policy, and review gate.
 
-This roadmap must preserve the 4veco product north star:
+## 1. Ownership And Repository Boundary
 
-- `../4veco-lessen/specifications/product-vision.md` is the strategic product
-  baseline.
-- `../4veco-lessen/specifications/product-end-state.md` is the operational
-  product baseline.
-- 4veco remains exercise-first: real CvTE-style target exercises and reviewed
-  target exercises stay stronger than inspection prose for lesson/unit creation.
+This project belongs primarily in `4veco-platform`, because that repository
+owns:
 
-## 1. Worktree setup instructions
+- roadmaps and sprint ledgers;
+- source registers, evidence profiles, and governed reference data;
+- schemas, validators, and report-only generators;
+- generated reports and internal dashboards;
+- review packets, closure logs, and agent-facing indexes.
 
-This project must start in its own worktree. Do not reuse another active
-agent's worktree. Do not switch branches inside a worktree used by another
-agent.
+`../4veco-lessen` is a generated student-facing evidence target for this
+roadmap. Treat it as read-only unless a future sprint explicitly authorises a
+separate generated-output workflow.
 
-Recommended branch pattern/example:
+Do not hand-edit generated lesson artifacts in `../4veco-lessen`.
 
-```bash
-codex/inspection-standards-roadmap
-```
+## 2. Product Principles
 
-The setup packet for this roadmap was implemented on the existing isolated task
-branch `codex/quality-standards-20260608`. Future INSPECT work may continue on a
-reviewed task branch or use a more specific `codex/inspection-standards-*`
-branch, but the branch name must be recorded in the sprint audit.
+### 2.1 Exercise-First
 
-Recommended platform worktree:
-
-```bash
-../4veco-platform-inspection-standards
-```
-
-### 1.1 Preflight from the existing platform repository
-
-Run from the normal `4veco-platform` checkout:
-
-```bash
-git fetch --prune origin
-git status --short
-git branch --show-current
-git worktree list --porcelain
-```
-
-Stop if:
-
-- the current worktree has unrelated dirty files;
-- the current branch is not the expected branch;
-- another agent is already working in the intended inspection-standards worktree
-  path;
-- the remote is behind/diverged and cannot be reconciled by fast-forward.
-
-### 1.2 Create isolated platform worktree
-
-```bash
-git fetch --prune origin
-git worktree add -b codex/inspection-standards-roadmap ../4veco-platform-inspection-standards origin/main
-cd ../4veco-platform-inspection-standards
-git status --short
-git branch --show-current
-git rev-parse --show-toplevel
-```
-
-Expected result:
-
-```text
-branch: codex/inspection-standards-roadmap
-root:   .../4veco-platform-inspection-standards
-status: clean
-```
-
-### 1.3 Lessen repository access
-
-For the first roadmap phase, treat `4veco-lessen` as a read-only evidence target
-unless the roadmap explicitly authorises a small pointer file or a later sprint
-authorises generated evidence output.
-
-Do not hand-edit generated lesson artifacts in `4veco-lessen`.
-
-If a later phase requires mutation in `4veco-lessen`, create a separate lessen
-worktree:
-
-```bash
-cd ../4veco-lessen
-git fetch --prune origin
-git worktree add -b codex/inspection-standards-evidence ../4veco-lessen-inspection-standards origin/main
-```
-
-Do not create this second worktree unless a sprint plan explicitly needs it.
-
-If a coordinated `4veco-lessen` worktree already exists for the task, record it
-as read-only evidence and do not use it for mutation unless a later sprint plan
-explicitly authorises generated lesson-output work.
-
-## 2. Required reading before implementation
-
-Read these files before changing anything:
-
-```text
-4veco-platform/RESEARCH_AGENT_MAP.md
-4veco-lessen/RESEARCH_AGENT_MAP.md
-4veco-platform/AGENTS.md
-4veco-platform/CLAUDE.md
-4veco-lessen/specifications/product-vision.md
-4veco-lessen/specifications/product-end-state.md
-4veco-platform/references/SOURCE_OF_TRUTH.md
-4veco-platform/references/reference-team-roadmap.md
-4veco-platform/docs/roadmaps/roadmap-version-index.json
-4veco-lessen/lessen-team-roadmap.md
-```
-
-If any raw GitHub fetch fails, verify the file locally and through the GitHub
-connector before concluding the file is absent. Report stale or unfetchable
-repository maps explicitly.
-
-## 3. Operating constraints
-
-This roadmap follows current repository principles.
-
-### 3.1 Exercise-first principle
-
-Do not mint micro-teaching units, procedures, exercises, or learning goals from
-inspection standards alone.
-
-Inspection standards may identify evidence categories and quality requirements.
-They are not the source of truth for economics lesson units.
+Do not mint micro-teaching units, procedures, exercises, target exercises, or
+learning goals from inspection standards alone.
 
 The source hierarchy remains:
 
@@ -184,41 +73,62 @@ The source hierarchy remains:
 2. reviewed target exercises;
 3. built paragraph target exercises;
 4. consolidation/proeftoets material;
-5. syllabus/programme text for grouping and coverage reporting only.
+5. syllabus/programme text for grouping and coverage reporting only;
+6. inspection-quality language for evidence categories and review support only.
 
-### 3.2 No hand edits to protected or generated surfaces
+### 2.2 Product/School Boundary
 
-Do not hand-edit:
+Every generated or reviewed evidence packet must separate:
+
+- `4veco evidence`;
+- school evidence still needed;
+- weak or missing evidence;
+- forbidden inference;
+- owner next action.
+
+4veco may expose product-side evidence. It does not prove school-wide
+implementation, support/care practice, governance, PTA policy, summative
+validity, classroom use, or inspection judgement.
+
+### 2.3 OP0 Boundary
+
+OP0/basic-skills wording must stay subject-material only.
+
+Allowed:
 
 ```text
-references/machine/
-references/external/
-generated reports as if they were source
-generated student-facing artifacts in 4veco-lessen
-shared engine copies inside 4veco-lessen
+4veco exposes subject-material economics evidence relevant to reasoning,
+calculation, graph/table/source use, and answer construction.
 ```
 
-If this project needs persistent structured data, start with a governed overlay:
+Forbidden:
 
 ```text
-references/data/inspection-standards/
+4veco provides OP0 evidence.
+4veco proves complete OP0/basic-skills provision.
+4veco proves school-wide Dutch language, rekenen-wiskunde, or citizenship implementation.
 ```
 
-Use machine-editing pipelines only after a later phase defines validators and
-CLI mutation routes.
+### 2.4 No Personal Data By Default
 
-### 3.3 No false compliance claims
+Evidence packs contain no student-level personal data by default.
+
+Any future use of student-level or identifiable school/person data requires a
+separate explicit privacy/DPIA/data-processing gate before implementation.
+
+### 2.5 No False Claims
 
 Do not write:
 
 ```text
 4veco is compliant with Dutch inspection standards.
-4veco is compliant with European inspection standards.
-4veco meets US standards.
-This material set is approved for country X.
+4veco is approved by the Dutch Inspectorate of Education.
+4veco is inspection-ready.
+4veco materials by themselves satisfy a school's inspection obligations.
+4veco provides complete OP0/basic-skills evidence for a school or department.
 ```
 
-Allowed wording:
+Allowed evidence-support wording:
 
 ```text
 4veco is designed to expose product evidence relevant to Dutch VO inspection preparation.
@@ -226,1033 +136,353 @@ Allowed wording:
 4veco's Dutch evidence profile maps product evidence to inspection-relevant categories without claiming inspection approval, legal compliance, or complete school-level evidence.
 ```
 
-### 3.4 No broad production
+## 3. Current Baseline
 
-This roadmap is a foundation project. It must not trigger broad paragraph
-production, companion scaling, or generated-output rebuilds. Any pilot evidence
-must be bounded to already stabilised paragraphs unless a later human-approved
-sprint says otherwise.
+PR #23 merged the Dutch quality-standards layer through INSPECT-7 into `main`.
 
-## 4. Core strategic analysis
+Closed baseline:
 
-### 4.1 Commonalities across inspection systems
-
-Most systems expect evidence for:
-
-| Common quality area | 4veco evidence target |
+| Sprint | Result |
 |---|---|
-| Curriculum coherence | Book/chapter/paragraph progression maps, target-exercise sequence, concept/skill dependencies |
-| Clear learning goals | Paragraph target exercise, learning-goal table, MTU/operation links |
-| Subject depth | Upper-secondary economics reasoning, calculation, graph/table/source use, transfer tasks |
-| Pedagogical-didactic quality | Explanation, worked example, guided practice, independent practice, check |
-| Assessment alignment | Target exercises, exit tickets, answer models, rubrics, correction-model decomposition |
-| Student support | Prerequisites, diagnostics, remediation, differentiated routes, extension |
-| Basic skills | Language reasoning, calculation, graph interpretation, data/source reading, citizenship/economic participation |
-| Accessibility and inclusion | Readable structure, alt text, keyboard/focus, contrast, mobile checks |
-| Evidence of learning | Short checks, target-equivalent exit tickets, summative practice, validation logs |
-| Internal quality assurance | Review records, quality-ref YAML, generated reports, proof artifacts, closure logs |
-| Improvement cycle | Issue logs, correction logs, rechecks, pass-with-flags semantics |
+| `QS-SETUP-0` | Created quality-standards roadmap folder and current-state audit. |
+| `INSPECT-0` | Created source register and Dutch VO evidence-profile draft. |
+| `INSPECT-1` / `INSPECT-1A` | Human review plus source/claim hygiene corrections. |
+| `INSPECT-2` / `INSPECT-2A` | Bounded Book 1 Chapter 1.1 pilot audit plus profile adjustment. |
+| `INSPECT-3` | Report-only inspection-evidence schema design. |
+| `INSPECT-4` | Manual report-only validator design. |
+| `INSPECT-5` | Strictly non-blocking validator refinement. |
+| `INSPECT-5R` | External review, privacy, teacher-usefulness, OP0, and claim guardrails. |
+| `INSPECT-6` | Report-only generator planning. |
+| `INSPECT-7` | Bounded no-personal-data Book 1 Chapter 1.1 evidence-pack prototype. |
+| `QS-MERGE-1` / `QS-MERGE-2` | Merge-prep and final PR refresh; PR #23 merged through GitHub. |
 
-These commonalities are strong enough to justify a generic
-inspection-evidence architecture.
+INSPECT-7 reached maturity level `L3 Pilot pack`: one bounded generated
+artifact set is mapped and reviewed.
 
-### 4.2 Differences across systems
-
-Differences are too large for one static product package to be fully compliant
-everywhere.
-
-| Difference | Consequence for 4veco |
-|---|---|
-| National vs federal/regional governance | Use country/region overlays, not one global standard file |
-| Curriculum and exam specifications | Dutch vwo remains canonical; foreign mappings require local crosswalks |
-| Inspection object | Inspectors inspect schools/providers, not generated materials alone |
-| Subject structure | Economics may be separate, integrated, exam-board-specific, state-specific, or school-plan-specific |
-| Accountability model | Some systems inspect directly, others use standards/testing/accreditation |
-| Language and legal terminology | Translation is not enough; terminology must be locally mapped |
-| Evidence expectations | Some systems need school self-evaluation packs, others need standards/curriculum crosswalks |
-
-Implementation consequence:
-
-> Build one Dutch canonical evidence model, one international common-quality
-> model, and local overlays. Do not fork generated materials per country unless
-> a later product decision requires it.
-
-## 5. Endpoint definition
-
-The endpoint of this roadmap is reached when 4veco has the capabilities below.
-
-### 5.1 Dutch Inspection Evidence Profile
-
-A Dutch profile exists that maps 4veco materials to inspection-relevant evidence
-categories.
-
-Minimum categories:
-
-```yaml
-dutch_inspection_profile:
-  curriculum_offer:
-    evidence:
-      - official exam/curriculum coverage
-      - paragraph target exercises
-      - chapter/module progression
-  basic_skills:
-    evidence:
-      - language/economic reasoning
-      - calculation
-      - graph/table/source interpretation
-      - citizenship/economic participation contexts where relevant
-  didactic_quality:
-    evidence:
-      - explanations
-      - worked examples
-      - guided practice
-      - independent practice
-      - dual-coded visuals
-      - consistent procedures
-  student_development_and_support:
-    evidence:
-      - prerequisite checks
-      - remediation
-      - differentiated practice
-      - extension/enrichment
-  assessment_and_closure:
-    evidence:
-      - short checks
-      - target-equivalent exit tickets
-      - answer models
-      - rubrics or correction guidance
-  accessibility_and_inclusion:
-    evidence:
-      - readable layout
-      - alt text
-      - keyboard/focus
-      - contrast
-      - mobile usability
-  quality_assurance:
-    evidence:
-      - review records
-      - quality-ref YAML
-      - validators
-      - generated reports
-      - proof artifacts
-      - correction logs
-```
-
-This profile must be a 4veco support model, not a legal compliance certificate.
-
-### 5.2 International Common-Quality Profile
-
-A generic profile exists for common inspection-quality expectations.
-
-Minimum categories:
-
-```yaml
-international_common_quality_profile:
-  curriculum_coherence: true
-  explicit_learning_goals: true
-  progression: true
-  subject_depth: true
-  teaching_quality: true
-  assessment_alignment: true
-  differentiation_and_support: true
-  accessibility_and_inclusion: true
-  student_evidence: true
-  internal_quality_assurance: true
-  improvement_cycle: true
-```
-
-This profile supports country overlays but does not replace them.
-
-### 5.3 Country/region overlay model
-
-The repository has a documented overlay mechanism for local mappings.
-
-Start overlays:
+Accepted INSPECT-7 scope:
 
 ```text
-nl-vo-vwo-economie
-be-flanders-upper-secondary
-england-upper-secondary-economics-or-economics-business
-```
-
-Later overlays:
-
-```text
-germany-by-land
-france-lycee
-italy-upper-secondary
-spain-autonomous-community
-poland-upper-secondary
-us-state-or-ap-economics
-```
-
-Each overlay must include:
-
-```yaml
-overlay:
-  jurisdiction:
-  authority_sources:
-  curriculum_or_inspection_terms:
-  local_subject_mapping:
-  assessment_model:
-  evidence_crosswalk:
-  gaps:
-  safe_claims:
-  forbidden_claims:
-  review_status:
-```
-
-### 5.4 Teacher / school inspection pack generator
-
-The desired mature product can generate a scoped inspection evidence pack.
-
-Minimum generated pack:
-
-```text
-Standards evidence pack
-|-- curriculum coverage map
-|-- progression map
-|-- basic-skills map
-|-- assessment blueprint
-|-- differentiation/support map
-|-- accessibility evidence
-|-- quality-assurance evidence
-|-- known flags and correction log
-`-- safe claims / forbidden claims note
-```
-
-This pack should be useful for a school leader or teacher preparing evidence,
-but must clearly state that final inspection judgement belongs to the
-school/provider and competent authority.
-
-## 6. Roadmap phases
-
-Only `INSPECT-0 Source Register + Dutch Profile Design` is authorised as a
-research/data-only sprint. Later phases remain planning phases until a later
-human review explicitly authorises them.
-
-### Phase 0 - Project setup and current-state audit
-
-Goal: create the roadmap and record the current repository state.
-
-Outputs:
-
-```text
-docs/roadmaps/quality-standards/inspection-standards-roadmap.md
-references/data/inspection-standards/README.md
-archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
-```
-
-Tasks:
-
-1. Create or verify isolated platform worktree.
-2. Read required repo maps and operating rules.
-3. Confirm whether `references/data/inspection-standards/` exists.
-4. Confirm current roadmap state and avoid conflict with active L1.7/L2.0 work.
-5. Add this roadmap file.
-6. Add a short README for the future inspection-standards data overlay.
-7. Do not implement schemas, validators, profiles, or reports yet unless
-   explicitly authorised.
-
-Acceptance criteria:
-
-- roadmap file exists;
-- source/evidence paths are stated;
-- no generated lesson artifacts are edited;
-- no protected references are edited;
-- repository maps/indexes are refreshed if required;
-- remote branch is pushed.
-
-Stop conditions:
-
-- repo maps are stale or unfetchable;
-- current roadmap has already introduced an overlapping inspection track;
-- worktree is dirty with unrelated files;
-- team cannot prove it is alone in the worktree.
-
-### Phase 1 - Authority source register
-
-Goal: collect authoritative inspection/curriculum-quality sources without yet
-turning them into gates.
-
-Target path:
-
-```text
-references/data/inspection-standards/source-register.json
-```
-
-Minimum source coverage:
-
-```text
-Netherlands: Inspectie van het Onderwijs, VO onderzoekskader, OP0 basisvaardigheden, plus CvTE/Examenblad vwo economie syllabus, examenprogramma, official exams, and correction models when Dutch profile evidence discusses curriculum or assessment alignment
-Belgium/Flanders: Onderwijsinspectie Vlaanderen, Referentiekader Onderwijskwaliteit
-England: Ofsted education inspection framework / school inspection toolkit
-Germany: KMK/common references plus note that Laender differ
-France: Ministere / inspection / school evaluation references
-Italy: Sistema Nazionale di Valutazione / RAV / INVALSI where relevant
-Spain: state law and autonomous-community inspection/evaluation model
-Poland: pedagogical supervision / school inspection model
-United States: state standards/accountability model, plus AP/MCEE/C3 only as non-inspection comparators where relevant
-```
-
-Minimum JSON shape:
-
-```json
-{
-  "source_id": "nl-inspectie-onderzoekskader-vo-2025",
-  "jurisdiction": "Netherlands",
-  "authority": "Inspectie van het Onderwijs",
-  "source_type": "inspection_framework",
-  "title": "",
-  "url": "",
-  "retrieved_date": "",
-  "status": "active | superseded | uncertain",
-  "scope": "secondary | upper-secondary | all-school | subject-specific | accountability",
-  "why_it_matters_for_4veco": "",
-  "citation_policy": "public",
-  "notes": "",
-  "use_in_v0_profile": "inspection_anchor | curriculum_anchor | accountability_context | comparator_only"
-}
-```
-
-Acceptance criteria:
-
-- every source has authority, jurisdiction, status, scope, and retrieval date;
-- uncertain sources are explicitly marked uncertain;
-- no source is treated as curriculum authority unless it actually is;
-- no country overlay is created before the common model is reviewed.
-
-### Phase 2 - Dutch Inspection Evidence Profile v0
-
-Goal: define the Dutch baseline evidence model.
-
-Target outputs:
-
-```text
-references/data/inspection-standards/nl-vo-evidence-profile.v0.json
-docs/inspection-standards/nl-vo-evidence-model.md
-```
-
-The Dutch profile must answer:
-
-1. What evidence should 4veco expose for Dutch inspection-relevant
-   curriculum coherence?
-2. Where does 4veco already store or generate that evidence?
-3. Which evidence is missing, weak, or only implicit?
-4. Which parts belong to the school's implementation rather than the platform?
-5. Which claims are safe and which are forbidden?
-
-Required mapping categories:
-
-```text
-curriculum offer
-basic skills
-didactic quality
-student development/support
-assessment/closure
-accessibility/inclusion
-quality assurance
-improvement cycle
-```
-
-Acceptance criteria:
-
-- Dutch profile is evidence-supporting, not compliance-claiming;
-- OP0/basic-skills evidence is explicit;
-- economics-specific evidence includes reasoning, calculation,
-  graph/table/source interpretation, and answer construction;
-- exercise-first principle is preserved;
-- official-exam evidence remains stronger than inspection prose for MTU
-  creation.
-
-### Phase 2A - Profile adjustment before schema design
-
-Goal: adjust the Dutch v0 profile after the bounded pilot audit so schema design
-does not encode weak evidence assumptions.
-
-Authorisation:
-
-```text
-INSPECT-2 closed as pass_with_required_profile_adjustment.
-INSPECT-2A is authorised as corrections-only profile-language work.
-```
-
-Required additions:
-
-```text
-artifact_present
-reviewed_artifact_quality
-pass_with_flags
-target_exercise_migrated
-target_exercise_reviewed
-target_equivalent_reviewed
-diagnostic_report_only
-school_owned_implementation
-```
-
-Target-equivalent proof must distinguish:
-
-```text
-target_exercise_present
-target_exercise_migrated_needs_review
-target_exercise_v5_reviewed
-answer_model_present
-target_equivalent_not_started
-target_equivalent_advisory_only
-target_equivalent_candidate
-target_equivalent_reviewed_local
-target_equivalent_reviewed_generalised
-```
-
-Every future pilot or report must cite the live blueprint title and flag title
-mismatches between human review text, target registry, chapter plan, and lesson
-folder.
-
-Every category must preserve:
-
-```text
-4veco evidence:
-school-owned evidence:
-forbidden inference:
-```
-
-Acceptance criteria:
-
-- the Dutch profile remains draft, not final or compliant;
-- no schema, validator, generated evidence pack, country overlay, dashboard
-  gate, quality-ref integration, Scale Gate work, lesson-output change, or
-  compliance claim is introduced;
-- evidence-finality, target-equivalent proof, subject-material OP0 wording,
-  title/source reconciliation, diagnostic-report status, and product/school
-  boundary language are visible in the profile and model document.
-
-### Phase 3 - Inspection evidence schema
-
-Goal: create a schema for paragraph/artifact evidence without yet making it a hard
-quality gate.
-
-Prerequisite: INSPECT-2A must pass human review. This prerequisite is satisfied:
-Head of Strategy accepted INSPECT-2A as `pass` on 2026-06-08 and authorised
-`INSPECT-3 Report-Only Schema Design`.
-
-INSPECT-3 is report-only and diagnostic:
-
-```text
-This schema is report-only and diagnostic. It does not create a quality gate, compliance claim, or generated-output mutation path.
-```
-
-Possible target paths:
-
-```text
-references/schemas/inspection-evidence.schema.json
-references/data/inspection-standards/schema-notes.md
-docs/inspection-standards/report-only-schema-design.md
-```
-
-Start report-only. Do not fail existing builds yet.
-Do not create a validator script in INSPECT-3.
-
-Candidate evidence object:
-
-```yaml
-inspection_evidence:
-  profile_version: "nl-vo-v0"
-  paragraph_id: "1.1.3"
-  learning_goals:
-    target_exercise_id:
-    official_exam_links:
-    mtu_or_operation_links:
-  basic_skills:
-    language_reasoning:
-    calculation:
-    graph_table_source:
-    citizenship_context:
-  didactic_route:
-    explanation:
-    worked_example:
-    guided_practice:
-    independent_practice:
-    feedback:
-    exit_ticket:
-  differentiation:
-    prerequisite_support:
-    remediation:
-    standard_route:
-    enrichment:
-  accessibility:
-    alt_text:
-    keyboard_focus:
-    contrast:
-    mobile:
-    readable_layout:
-  qa:
-    review_files:
-    quality_ref:
-    validators:
-    proof_artifacts:
-    known_flags:
-```
-
-Design decision required:
-
-- Either extend existing `${parNr}-quality-ref.yaml` with an `inspection:`
-  block;
-- or keep inspection evidence as separate report-side files until the schema
-  stabilises.
-
-Default recommendation:
-
-> Start separate and report-only. Integrate into `quality-ref.yaml` only after
-> one pilot proves the evidence model is stable.
-
-Acceptance criteria:
-
-- schema validates a pilot object;
-- missing fields are warnings, not hard failures;
-- validation report distinguishes "not applicable", "missing", "implicit",
-  "present", and "present but weak";
-- schema does not force every country's evidence into Dutch labels.
-- schema preserves evidence finality, target-equivalent proof, diagnostic-report
-  boundaries, and product/school evidence boundaries;
-- schema remains diagnostic and does not integrate into build failures,
-  dashboard gates, quality-ref, Scale Gate, generated output, or inspection-pack
-  generation.
-
-### Phase 3A - Report-only validator design
-
-Goal: create a manual diagnostic validator for report-only inspection-evidence
-objects without turning the schema into a production gate.
-
-Authorisation:
-
-```text
-INSPECT-3 closed as pass_with_minor_guardrails.
-INSPECT-4 Report-Only Validator Design is authorised.
-```
-
-Allowed outputs:
-
-```text
-build-scripts/inspection/validate-inspection-evidence.js
-docs/inspection-standards/report-only-validator-design.md
-references/data/inspection-standards/validator-notes.md
-archive/sprints/INSPECT-4/
-sample or fixture report-only evidence object, if needed
-generated indexes/reports only if roadmap or sprint-packet URLs require refresh
-```
-
-Preferred command posture:
-
-```text
-node build-scripts/inspection/validate-inspection-evidence.js --input <file> --report-only
-```
-
-Allowed output status vocabulary:
-
-```text
-PASS_REPORT_ONLY
-PASS_WITH_WARNINGS_REPORT_ONLY
-SCHEMA_INVALID_REPORT_ONLY
-```
-
-Minor guardrails:
-
-- forbidden-claim checks are not complete semantic claim-safety detection;
-- only explicit full-report mode may require all eight category records;
-- weak evidence can be valid evidence and must not become a schema failure.
-
-Acceptance criteria:
-
-- validator is manual, diagnostic, and report-only;
-- validator checks report-only diagnostic policy constants;
-- validator checks title/source reconciliation, source pointers,
-  product/school boundaries, target-equivalent proof status, and OP0 boundary
-  fields;
-- validator can emit warnings for weak evidence without failing;
-- no package script, CI gate, build-failing validator integration, dashboard
-  gate, quality-ref integration, Scale Gate integration, generated evidence
-  pack, teacher inspection pack, country overlay, generated lesson-output
-  change, or compliance claim is introduced.
-
-### Phase 3B - Strictly non-blocking validator refinement
-
-Goal: remove ambiguity between full JSON Schema validation and the manual
-report-only validator, while preserving all non-blocking guardrails.
-
-Authorisation:
-
-```text
-INSPECT-4 closed as pass_with_required_refinement.
-INSPECT-5 Strictly Non-Blocking Validator Refinement is authorised.
-```
-
-Decision:
-
-```text
-Use schema-backed validation for the report-only schema features used by
-references/schemas/inspection-evidence.schema.json, while keeping the command
-manual, no-dependency, and non-integrated.
-```
-
-Allowed outputs:
-
-```text
-build-scripts/inspection/validate-inspection-evidence.js refinement
-docs/inspection-standards/report-only-validator-design.md
-references/data/inspection-standards/validator-notes.md
-references/data/inspection-standards/fixtures/negative/
-archive/sprints/INSPECT-5/
-generated indexes/reports only if roadmap or sprint-packet URLs require refresh
-```
-
-Required guardrails:
-
-- keep `--report-only` mandatory;
-- keep `PASS_REPORT_ONLY` and `PASS_WITH_WARNINGS_REPORT_ONLY` as exit code 0;
-- keep weak evidence warning-only;
-- keep pilot mode partial and full-report mode complete;
-- clarify that `SCHEMA_INVALID_REPORT_ONLY` means invalid against the
-  schema-backed report-only inspection-evidence contract checked by the manual
-  validator, not a production, compliance, dashboard, Scale Gate, or
-  inspectorate judgement;
-- add negative fixture coverage for missing required fields, invalid diagnostic
-  constants, extra properties, OP0 boundary failure, target-equivalent proof
-  failure, full-report missing categories, invalid category ids, and known
-  forbidden positive-claim phrases.
-
-Forbidden work:
-
-```text
-report-only generator planning
-package.json script integration
-CI or check:platform integration
-dashboard gate
-Scale Gate integration
-quality-ref integration
-generated evidence pack
-teacher inspection pack
-country overlay
-generated lesson-output mutation
-legal compliance claim
-inspectorate approval claim
-complete OP0/basic-skills claim
-```
-
-### Phase 3C - External review, privacy, and claim guardrails
-
-Goal: encode the user-required teacher/legal/Dutch quality-inspection review
-gate before report-only generator planning or evidence-pack prototyping.
-
-Authorisation:
-
-```text
-INSPECT-5 completed strictly non-blocking validator refinement.
-Initial teacher, legal/privacy, and Dutch quality-inspection external reviews
-all returned REVISE because INSPECT-6/7 were still unauthorised and the
-tri-agent MORE_THAN_SATISFIED gate, privacy boundary, teacher-facing output
-shape, OP0 pack wording, and safe-claim contract were not operational.
-User direction authorises INSPECT-5R as a pre-INSPECT-6 guardrail sprint only.
-```
-
-Decision:
-
-```text
-Insert INSPECT-5R before INSPECT-6. A PASS verdict is not enough for this
-quality-standards track: teacher, legal/privacy, and Dutch quality-inspection
-reviewers must each return MORE_THAN_SATISFIED before INSPECT-6 can be
-authorised.
-```
-
-Allowed outputs:
-
-```text
-docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
-docs/inspection-standards/teacher-facing-evidence-pack-template.md
-docs/inspection-standards/nl-vo-evidence-model.md stale-next-step update
-docs/roadmaps/quality-standards/inspection-standards-roadmap.md
-docs/roadmaps/quality-standards/sprint-ledger.md
-references/data/inspection-standards/README.md status update
-references/data/inspection-standards/nl-vo-evidence-profile.v0.json metadata update
-archive/sprints/INSPECT-5R/
-generated indexes/reports when roadmap or review-packet URLs require refresh
-```
-
-Required guardrails:
-
-- record teacher, legal/privacy, and Dutch quality-inspection reviewers as
-  mandatory external reviewers;
-- use the verdict scale `REVISE`, `PASS`, `MORE_THAN_SATISFIED`;
-- treat any `REVISE` or `PASS` as a stop condition before INSPECT-6;
-- require direct review-packet comments with calibration checks, planned review
-  questions, evidence links, stop conditions, and comment prompts;
-- require lead review before the external review packet is sent;
-- require reviewed commit SHA, remote push proof, and either passing
-  `platform-ci / validate-platform` status or an explicit CI waiver;
-- add privacy/AVG guardrails: no student-level personal data or identifiable
-  school/person data by default, and a later DPIA/data-processing gate before
-  any personal data can enter evidence packs;
-- add safe-claim templates or claim IDs for future generated prose;
-- keep OP0 wording as subject-material evidence only;
-- require future teacher-facing packs to show `4veco evidence`, `school
-  evidence still needed`, and `forbidden inference` per category.
-
-Forbidden work:
-
-```text
-report-only generator implementation
-generated evidence pack
-teacher inspection pack generator
-package.json script integration
-CI or check:platform integration
-dashboard gate
-Scale Gate integration
-quality-ref integration
-country overlay
-generated lesson-output mutation
-student-level personal-data processing
-legal compliance claim
-AVG/GDPR compliance claim
-inspectorate approval claim
-inspection-ready claim
-certification claim
-complete OP0/basic-skills claim
-school-obligation-satisfied claim
-PTA validity claim
-summative assessment validity claim
-classroom implementation claim
-```
-
-INSPECT-5R passed tri-agent `MORE_THAN_SATISFIED` review. INSPECT-6 then
-opened as planning-only and closed without implementing a generator or evidence
-pack.
-
-### Phase 3D - Report-only generator planning
-
-Goal: plan a report-only generator for future bounded Dutch evidence packs
-without implementing the generator or producing a pack.
-
-Authorisation:
-
-```text
-INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection
-reviewers each MORE_THAN_SATISFIED. The persistent owner objective authorises
-continuing the roadmap through INSPECT-7, but INSPECT-6 is planning-only.
-```
-
-Allowed outputs:
-
-```text
-docs/inspection-standards/report-only-generator-plan.md
-docs/inspection-standards/evidence-pack-source-contract.md
-docs/inspection-standards/evidence-pack-validation-and-dispatch.md
-archive/sprints/INSPECT-6/
-docs/roadmaps/quality-standards/inspection-standards-roadmap.md
-docs/roadmaps/quality-standards/sprint-ledger.md
-generated indexes/reports when roadmap or review-packet URLs require refresh
-```
-
-Required guardrails:
-
-- keep INSPECT-6 planning-only;
-- every future generated claim must cite concrete product or review evidence;
-- planning documents may explain context but cannot be sole product proof;
-- future packs must show `4veco evidence`, `school evidence still needed`,
-  weak/missing evidence, and forbidden inference per category;
-- the planned first screen must be understandable to a Dutch vwo economics
-  teacher or school leader in 5-10 minutes;
-- OP0 remains subject-material economics evidence only;
-- no personal data enters packs by default;
-- safe-claim IDs/templates and semantic overclaiming review are required;
-- target-exercise finality, target-equivalent proof status, `PASS WITH FLAGS`,
-  stale evidence, source freshness, and product/school boundaries remain
-  visible;
-- INSPECT-7 remains gated until INSPECT-6 passes tri-agent
-  `MORE_THAN_SATISFIED` review and the owner authorises one bounded prototype.
-
-Forbidden work:
-
-```text
-report-only generator implementation
-generated evidence pack
-teacher inspection pack generator
-package.json script integration
-CI or check:platform integration
-dashboard gate
-Scale Gate integration
-quality-ref integration
-country overlay
-generated lesson-output mutation
-student-level personal-data processing
-legal compliance claim
-AVG/GDPR compliance claim
-inspectorate approval claim
-inspection-ready claim
-certification claim
-complete OP0/basic-skills claim
-school-obligation-satisfied claim
-PTA validity claim
-summative assessment validity claim
-classroom implementation claim
-```
-
-Closure result:
-
-```text
-INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection
-reviewers each MORE_THAN_SATISFIED. No lead-review or external-review blockers
-were raised. INSPECT-7 is eligible to start only as a separate bounded
-prototype sprint with its own sprint plan and planning review.
-```
-
-### Phase 4 - INSPECT-7 Dutch scoped evidence-pack prototype
-
-Goal: create one bounded report-only evidence-pack prototype on already
-stabilised material before scaling.
-
-Authorisation:
-
-```text
-INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review. The
-persistent owner objective authorises continuing the roadmap through INSPECT-7.
-INSPECT-7 must still begin with a dedicated sprint plan and planning review
-before implementation starts.
-```
-
-Pilot scope:
-
-```text
-Book 1, Chapter 1.1
+Book 1 - Grondslagen, vraag en aanbod
+Chapter 1.1 - Economisch denken en rekenen
 1.1.1 Schaarste en economisch denken
 1.1.2 Percentages en indexcijfers
 1.1.3 Grafieken en tabellen
 ```
 
-Note: earlier human review text used `1.1.2 Ruilen en rekenen`. The live course
-blueprint, target-exercise registry, chapter plan, and lesson folder use
-`1.1.2 Percentages en indexcijfers`; audit packets must reconcile this title
-mismatch explicitly.
+Title reconciliation:
 
-Do not rewrite paragraph content during this phase unless the sprint explicitly
-authorises one bounded correction.
+```text
+The live title for 1.1.2 is Percentages en indexcijfers.
+The stale review title Ruilen en rekenen must not be used as the live scope.
+```
+
+All three required external INSPECT-7 reviewers returned
+`MORE_THAN_SATISFIED`:
+
+- teacher reviewer;
+- legal/privacy reviewer;
+- Dutch quality-inspection reviewer.
+
+## 4. Dutch Quality-Control Endpoint
+
+The Dutch package is complete when the repository has these reviewed surfaces.
+
+### 4.1 Dutch Source And Evidence Profile
+
+The Dutch source register and Dutch VO evidence profile are reviewed and
+freshness-managed for Dutch-only use.
+
+Required source areas:
+
+- Inspectie van het Onderwijs VO onderzoekskader and OP0 anchors;
+- Dutch vwo-economie syllabus/programme sources;
+- CvTE/Examenblad official exam questions and correction models;
+- internal target-exercise, target-equivalent, review, accessibility, and
+  quality-assurance records.
+
+### 4.2 Dutch Evidence Readiness Matrix
+
+A readiness matrix exists for authorised Dutch scopes. It records, per
+paragraph/chapter/scope:
+
+- target-exercise finality;
+- exam-code linkage;
+- target-equivalent proof status;
+- generated artifact evidence;
+- review evidence;
+- accessibility evidence;
+- differentiation/support evidence;
+- quality-assurance evidence;
+- weak/missing evidence;
+- school-owned evidence still needed;
+- owner next action.
+
+### 4.3 Dutch Report-Only Evidence Pack Generator
+
+The platform can generate scoped Dutch evidence packs from structured evidence.
+
+The generator stays report-only unless a later human gate explicitly changes
+that. It must not become a build blocker, dashboard gate, quality-ref
+integration, Scale Gate integration, or generated lesson-output mutation path
+without explicit authorisation.
+
+### 4.4 Dutch Multi-Scope Evidence Packs
+
+Evidence packs work across multiple authorised Dutch scopes. Scaling order must
+be conservative:
+
+1. Book 1 Chapter 1.1, using INSPECT-7 as baseline;
+2. additional ready paragraphs in Book 1;
+3. Book 1 published-paragraph status;
+4. broader Dutch scope only after readiness evidence supports it.
+
+Do not jump to all books.
+
+### 4.5 Dutch Teacher/School Evidence Pack
+
+A teacher/school-facing Dutch evidence pack can be reviewed in 5-10 minutes.
+It opens with:
+
+- scope;
+- safe-use note;
+- evidence summary;
+- weak or missing evidence;
+- school-owned evidence still needed;
+- recommended next action.
+
+It must remain clear that final inspection conversation and judgement belong
+to the school/provider and competent authority.
+
+### 4.6 Dutch Quality-Control Closure Packet
+
+The final Dutch closure packet includes:
+
+- source/profile status;
+- readiness matrix;
+- generated evidence packs;
+- validation logs;
+- external review results;
+- known gaps;
+- safe/forbidden claims;
+- decision on whether any diagnostic dashboard/report surface is useful;
+- explicit statement that no compliance/approval claim is made.
+
+## 5. Required Review Gate
+
+All non-trivial Dutch quality-control sprints must follow sprint protocol:
+
+1. sprint plan;
+2. planning review before implementation;
+3. implementation by the main agent;
+4. focused validation with testing evidence;
+5. lead review before closure;
+6. closure log with next operational step.
+
+Any sprint that prepares generator planning, evidence packs,
+teacher/school-facing summaries, public claims, dashboard/report surfaces,
+quality-ref/Scale Gate integration, or generated-output changes must also use
+the three-reviewer gate:
+
+| Reviewer role | Required verdict |
+|---|---|
+| Teacher reviewer | `MORE_THAN_SATISFIED` |
+| Legal/privacy reviewer | `MORE_THAN_SATISFIED` |
+| Dutch quality-inspection reviewer | `MORE_THAN_SATISFIED` |
+
+Verdict scale:
+
+```text
+REVISE
+PASS
+MORE_THAN_SATISFIED
+```
+
+Any `REVISE` or `PASS` blocks progression and requires correction,
+validation, lead review, push, and re-review.
+
+## 6. Dutch-Only Roadmap Sequence
+
+No sprint below is authorised merely because it appears in this roadmap. Each
+needs a fresh sprint plan, planning review, and applicable review gates.
+
+### INSPECT-8 - Dutch Evidence Scale Readiness
+
+Goal: decide which Dutch scopes are ready for additional evidence-pack work.
+
+Scope: planning/audit only.
 
 Outputs:
 
 ```text
-archive/sprints/INSPECT-7/
-references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
-reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
-reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
+archive/sprints/INSPECT-8/
+reports/inspection-standards/dutch-evidence-scale-readiness.md
+reports/inspection-standards/dutch-evidence-scale-readiness.json
 ```
 
-Audit questions:
+Required audit dimensions:
 
-1. Can the model find evidence in paragraph markdown?
-2. Can it find evidence in companion artifacts?
-3. Can it find evidence in quality-ref/review records?
-4. Does it distinguish generated-output completeness from companion-pilot status?
-5. Does it avoid false defects caused by generated-output staleness?
-6. Does it produce a usable teacher-facing evidence summary?
+- paragraph and chapter scope inventory;
+- target-exercise finality;
+- exam-code linkage gaps;
+- target-equivalent proof gaps;
+- review evidence status;
+- generated artifact evidence status;
+- accessibility evidence status;
+- differentiation/support evidence status;
+- school-owned evidence still needed;
+- unsafe-claim risks;
+- recommended next Dutch scope.
 
 Acceptance criteria:
 
-- pilot report covers all three paragraphs;
-- evidence paths are cited;
-- missing evidence is classified by severity;
-- generated vs source artifacts are not confused;
-- no broad scaling recommendation is made from only three paragraphs.
+- no new evidence packs are generated;
+- no source claim is strengthened without reviewed evidence;
+- recommended next scope is conservative and evidence-based;
+- weak/missing evidence remains visible.
 
-Required guardrails:
+### INSPECT-9 - Dutch Evidence Gap Closure Plan
 
-- no personal data;
-- no package script;
-- no CI gate;
-- no dashboard gate;
-- no quality-ref integration;
-- no Scale Gate integration;
+Goal: convert the readiness audit into a correction plan for the evidence
+basis.
+
+Scope: planning and source-evidence hardening design only unless explicitly
+authorised.
+
+Focus areas:
+
+- target-exercise finality route;
+- exam-code linkage route;
+- target-equivalent proof route;
+- accessibility evidence rubric;
+- support/differentiation evidence rubric;
+- stale source freshness policy;
+- product/school boundary wording.
+
+Acceptance criteria:
+
 - no generated lesson-output mutation;
-- no broader generator beyond the bounded prototype;
-- no legal compliance, AVG/GDPR compliance, inspectorate approval,
-  inspection-ready, certification, PTA validity, summative assessment validity,
-  school-obligation-satisfied, classroom-implementation, complete OP0, or
-  school-wide basic-skills claim.
+- no quality-ref or Scale Gate integration;
+- no closure claims for scopes whose evidence is still weak;
+- corrections have proof requirements before they can close.
 
-### Phase 5 - Report and dashboard integration
+### INSPECT-10 - Dutch Report-Only Generator MVP
 
-Goal: make inspection evidence visible to agents and reviewers.
+Goal: implement a reusable Dutch report-only generator after the evidence
+basis is ready enough.
 
-Potential outputs:
+Scope: generator/report-only implementation.
 
-```text
-reports/inspection-standards/nl-vo-summary.md
-reports/inspection-standards/nl-vo-summary.json
-reports/inspection-standards/common-quality-summary.md
-reports/internal-dashboard/dashboard-data.json update if appropriate
-```
-
-Required report dimensions:
+Expected outputs:
 
 ```text
-coverage
-basic skills
-assessment alignment
-differentiation/support
-accessibility
-quality assurance
-missing evidence
-unsafe claims
-international overlay readiness
+build-scripts/inspection/build-dutch-evidence-pack.js
+reports/inspection-standards/<scope>-evidence-pack.md
+reports/inspection-standards/<scope>-evidence-pack.json
 ```
 
 Acceptance criteria:
 
-- report is generated from structured evidence, not hand-written claims;
-- report distinguishes source evidence from generated reports;
-- dashboard integration is diagnostic, not authority;
-- no existing validator becomes a hard gate without human approval.
+- every major claim cites concrete product/review evidence;
+- school-owned evidence remains separate;
+- weak/missing evidence remains visible;
+- package/CI/dashboard/gate integration requires separate approval;
+- three-reviewer gate returns `MORE_THAN_SATISFIED`.
 
-### Phase 6 - International common-quality profile
+### INSPECT-11 - Dutch Multi-Scope Pilot Packs
 
-Goal: create the generic cross-system inspection-quality model.
+Goal: generate and review Dutch evidence packs for more than one authorised
+scope.
 
-Target outputs:
+Conservative scaling order:
+
+1. INSPECT-7 baseline scope re-run;
+2. next ready Chapter 1.1 scope if INSPECT-8/9 evidence supports it;
+3. Book 1 published-paragraph status only if readiness is proven.
+
+Acceptance criteria:
+
+- no broad all-book generation;
+- every scope has readiness evidence;
+- differences between ready, weak, missing, and school-owned evidence are
+  visible;
+- teacher, legal/privacy, and Dutch quality-inspection reviewers return
+  `MORE_THAN_SATISFIED`.
+
+### INSPECT-12 - Dutch Teacher/School Evidence Pack
+
+Goal: make the Dutch evidence pack useful as a school/teacher review artifact.
+
+Scope: teacher/school-facing output shape and review.
+
+Required first screen:
 
 ```text
-references/data/inspection-standards/international-common-quality.v0.json
-docs/inspection-standards/international-common-quality-model.md
-```
-
-Core categories:
-
-```text
-curriculum coherence
-explicit learning goals
-progression
-subject depth
-teaching quality
-assessment alignment
-differentiation/support
-accessibility/inclusion
-evidence of learning
-internal quality assurance
-improvement cycle
-```
-
-Explicit differences to preserve:
-
-```text
-jurisdictional authority
-regional curriculum variation
-subject structure
-assessment model
-inspection vs accountability model
-language/legal terminology
-school-implementation evidence
+Scope
+Safe-use note
+Evidence summary
+Weak or missing evidence
+School-owned evidence still needed
+Recommended next action
 ```
 
 Acceptance criteria:
 
-- common model is not presented as a European standard;
-- differences are documented as first-class fields;
-- every country/region overlay can say "not applicable", "requires local
-  review", or "local evidence needed";
-- safe-claim wording is included.
+- understandable in 5-10 minutes;
+- no inspection approval or compliance claim;
+- no personal data;
+- school-owned implementation remains explicit;
+- three-reviewer gate returns `MORE_THAN_SATISFIED`.
 
-### Phase 7 - First country overlays
+### INSPECT-13 - Dutch Diagnostic Report Surface Decision
 
-Goal: prove the overlay approach with close and explicit systems before harder
-cases.
+Goal: decide whether Dutch quality-control evidence should appear in a
+diagnostic report or internal dashboard.
 
-Recommended order:
+Scope: decision packet first.
 
-1. Netherlands, because it is the hard baseline.
-2. Flanders, because it is linguistically and educationally closest.
-3. England, because Ofsted vocabulary is explicit and useful for international
-   quality comparison.
-
-Target paths:
+Allowed outcomes:
 
 ```text
-references/data/inspection-standards/overlays/nl-vo-vwo-economie.v0.json
-references/data/inspection-standards/overlays/be-flanders-upper-secondary.v0.json
-references/data/inspection-standards/overlays/england-upper-secondary.v0.json
+do not integrate
+diagnostic report only
+internal dashboard summary only
+defer pending stronger evidence
 ```
 
-Do not start Germany, Spain, US, or Belgium-wide overlays until the first three
-overlays have been reviewed. These systems require more regionalisation.
-
-Acceptance criteria:
-
-- overlay maps local terms to common-quality categories;
-- overlay records what cannot be mapped;
-- overlay contains safe and forbidden claims;
-- overlay has review status and reviewer/date fields;
-- no overlay claims legal compliance.
-
-### Phase 8 - Teacher inspection pack generator
-
-Goal: generate usable scoped evidence packs.
-
-Target outputs:
+Forbidden without later explicit approval:
 
 ```text
-build-scripts/inspection/build-inspection-pack.js
-reports/inspection-standards/pilot-scope-inspection-pack.md
-reports/inspection-standards/pilot-scope-inspection-pack.json
+hard CI/build gate
+Scale Gate integration
+quality-ref integration
+generated lesson-output mutation
+public-facing status
+compliance/approval claim
 ```
 
-Pack sections:
+### INSPECT-14 - Dutch Quality-Control Closure
 
-```text
-1. Scope and safe-use note
-2. Curriculum coverage
-3. Progression map
-4. Basic-skills evidence
-5. Assessment and answer-model alignment
-6. Differentiation/support evidence
-7. Accessibility evidence
-8. Quality-assurance evidence
-9. Known flags and improvement log
-10. International compatibility notes
-```
+Goal: close the Dutch quality-control package as a reviewed repository layer.
 
-Acceptance criteria:
+Required closure evidence:
 
-- pack is generated from structured evidence;
-- every major claim points to evidence paths;
-- pack says what belongs to the school's implementation rather than the platform;
-- pack is useful to a teacher/school leader without overclaiming inspection
-  approval.
+- Dutch source/profile status;
+- readiness matrix;
+- generator/report outputs;
+- teacher/school pack review;
+- validation logs;
+- lead review;
+- teacher, legal/privacy, and Dutch quality-inspection
+  `MORE_THAN_SATISFIED` review;
+- final human-review packet;
+- known gaps and next product decision.
 
-### Phase 9 - Gate integration
+Closure does not authorise non-Dutch work. Any non-Dutch project must start
+after Dutch closure in a separate worktree with a separate roadmap.
 
-Goal: decide whether inspection evidence becomes part of Scale Gate / paragraph
-closure.
+## 7. Quality Log Requirements
 
-Possible future gates:
-
-```text
-INSPECT-G1 Dutch Evidence Profile Review
-INSPECT-G2 Pilot Evidence Audit Review
-INSPECT-G3 Report-Only Validator Acceptance
-INSPECT-G4 Teacher Pack Review
-INSPECT-G5 Country Overlay Review
-```
-
-Do not make inspection validation a hard blocker for paragraph production until:
-
-- Dutch evidence profile is reviewed;
-- pilot audit is accepted;
-- report-only validator has run without major false positives;
-- human owner approves gate integration.
-
-Default position:
-
-> Until approved, inspection evidence is diagnostic. It informs quality work but
-> does not block existing foundation-hardening work.
-
-## 7. Quality log requirements
-
-Maintain a quality log during all phases.
+Every future sprint must maintain a quality log when it finds issues.
 
 Each issue must include:
 
@@ -1267,212 +497,68 @@ platform_handoff_required: yes | no
 proof_required_to_close:
 ```
 
-Suggested quality categories:
+Dutch quality categories:
 
 ```text
-external-source-gap
+dutch-source-gap
 dutch-profile-gap
-international-overlay-gap
-schema-gap
-validator-gap
-reporting-gap
+target-exercise-finality-gap
+exam-code-linkage-gap
+target-equivalent-proof-gap
+accessibility-evidence-gap
+support-evidence-gap
 unsafe-claim-risk
 lesson-evidence-gap
 generated-artifact-staleness
 quality-ref-integration-risk
 school-implementation-boundary
+op0-boundary-risk
+privacy-boundary-risk
 ```
 
-## 8. Review and closure rules
+## 8. Current Recommended Next Sprint
 
-For any non-trivial sprint created from this roadmap:
-
-1. planning/review subagent checks baseline, scope, required logs, stop
-   conditions, and evidence;
-2. main agent executes;
-3. specialist subagents may review pedagogy, evidence, accessibility, or code;
-4. verification subagent checks required files and validators;
-5. lead-review cycle happens before closure;
-6. human-review packet is required before a gate changes product policy.
-
-Closure must report:
+Recommended next sprint:
 
 ```text
-local commit hash
-remote push status
-files changed
-validators run
-reports generated
-maps/indexes refreshed
-known flags
-recommended next action
+INSPECT-8 Dutch Evidence Scale Readiness
 ```
 
-Refresh repository maps and indexes when paths, roadmaps, generated reports,
-agents, skills, or review surfaces change.
-
-Minimum likely commands after roadmap/report changes:
-
-```bash
-npm.cmd run agent:index
-node build-scripts/sprints/emit-url-index.js
-npm.cmd run dashboard:internal
-git status --short
-git add ...
-git commit -m "Add inspection standards compatibility roadmap"
-git push -u origin <task-branch>
-```
-
-Only run dashboard refresh if dashboard or roadmap state is affected.
-
-## 9. Initial definition of done for the setup project
-
-This setup project is done when:
-
-- `docs/roadmaps/quality-standards/inspection-standards-roadmap.md` exists;
-- `references/data/inspection-standards/README.md` exists or a clear reason is
-  recorded for deferring it;
-- no generated student-facing artifacts were hand-edited;
-- no protected reference surfaces were hand-edited;
-- repository maps/indexes are refreshed if the new roadmap path requires it;
-- branch is pushed;
-- a PR or review packet explains that no implementation sprints are authorised
-  yet;
-- the team recommends the first real sprint as `INSPECT-0 Source Register +
-  Dutch Profile Design`, not broad implementation.
-
-## 10. First authorised research/data sprint after setup
-
-Name:
+Recommended posture:
 
 ```text
-INSPECT-0 Source Register + Dutch Profile Design
+planning/audit only
+Dutch scope only
+no new evidence packs yet
+no non-Dutch standards work
+no dashboard/gate/quality-ref integration
+no lesson-output mutation
+no personal data
+no compliance or approval claims
 ```
 
-Authorisation status:
+The practical product question for INSPECT-8 is:
+
+> Which Dutch scope can safely become the next evidence-pack target, and what
+> evidence gaps must be closed before scale?
+
+## 9. Explicit Out-Of-Scope Work
+
+The following work is not part of this roadmap:
 
 ```text
-authorised after setup review as bounded research/data work
+non-Dutch standards work
+foreign inspection or accountability mappings
+public-facing claims
+legal compliance claims
+inspectorate approval claims
+complete OP0/basic-skills claims
+student-level personal-data processing
+generated lesson-output mutation
+hard build/CI gates
+Scale Gate integration
+quality-ref integration
 ```
 
-Scope:
-
-```text
-research and structured source register only
-Dutch evidence-profile draft
-no validators yet
-no generated lesson changes
-no country overlays except source inventory
-```
-
-Expected outputs:
-
-```text
-references/data/inspection-standards/source-register.json
-references/data/inspection-standards/nl-vo-evidence-profile.v0.json
-docs/inspection-standards/nl-vo-evidence-model.md
-archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
-archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
-```
-
-Historical decision after INSPECT-0:
-
-```text
-Proceed to review/pilot work before schema design if the Dutch profile still needs evidence-based adjustment.
-```
-
-Current decision after INSPECT-2 and INSPECT-2A:
-
-```text
-INSPECT-2A passed human review. INSPECT-3 Report-Only Schema Design is authorised and may create a diagnostic schema, schema notes, and pilot evidence-object examples.
-```
-
-Current decision after INSPECT-3:
-
-```text
-INSPECT-3 passed with minor guardrails. INSPECT-4 Report-Only Validator Design is authorised and may create a manual diagnostic validator and sample report object.
-```
-
-Current decision after INSPECT-4:
-
-```text
-INSPECT-4 passed with required refinement. INSPECT-5 Strictly Non-Blocking Validator Refinement is authorised. Do not start report-only generator planning, evidence packs, dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, or compliance claims.
-```
-
-Current decision after INSPECT-5:
-
-```text
-Initial teacher, legal/privacy, and Dutch quality-inspection external reviews returned REVISE. INSPECT-5R External Review, Privacy, And Claim Guardrails was authorised as a pre-INSPECT-6 guardrail sprint only.
-```
-
-Historical decision after INSPECT-5R:
-
-```text
-INSPECT-5R passed tri-agent MORE_THAN_SATISFIED review. INSPECT-6 Report-Only Generator Planning opened as planning-only. Do not implement a generator, generate evidence packs, add dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, personal-data processing, or compliance claims from INSPECT-6.
-```
-
-Historical decision after INSPECT-6:
-
-```text
-INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review.
-INSPECT-7 Dutch Scoped Evidence-Pack Prototype has opened with an
-authorisation, sprint plan, planning-review PASS, correction log, one
-no-personal-data Book 1 Chapter 1.1 source object, and report-only Markdown and
-JSON evidence packs. Validation, lead review, and external tri-agent review are
-still required before closure.
-Do not add a package script, CI gate, dashboard gate, quality-ref integration,
-Scale Gate integration, country overlay, generated lesson-output mutation,
-personal-data processing, or compliance/approval claim.
-```
-
-Current decision after INSPECT-7:
-
-```text
-INSPECT-7 closed with lead review PASS in round 4 and teacher, legal/privacy,
-and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. The bounded
-Book 1 Chapter 1.1 source object and report-only Markdown/JSON evidence packs
-are accepted as a no-personal-data prototype for Dutch quality-standards
-evidence support.
-No later sprint is authorised by this closure. INSPECT-8, INSPECT-9, report or
-dashboard integration, country overlays, teacher inspection pack generation,
-and gate integration remain candidate future work requiring a fresh sprint
-plan, planning review, lead review, and the mandatory review gate where
-applicable.
-```
-
-Current decision after human strategic review:
-
-```text
-Product/strategy verdict: PASS.
-Merge-readiness verdict: NOT YET. The branch must first be updated against
-current main and revalidated. QS-MERGE-1 Quality Standards Merge Prep is
-authorised for merge preparation only. Do not merge directly from the current
-branch state, and do not start INSPECT-8, INSPECT-9, international overlays,
-dashboard integration, Scale Gate integration, quality-ref integration,
-teacher inspection pack generation, public-facing claims, generated
-lesson-output mutation, personal-data processing, full OP0/basic-skills claims,
-or compliance/inspectorate-approval claims.
-```
-
-Current decision after PR review:
-
-```text
-Content verdict: PASS.
-Merge verdict: not yet. PR #23 is strategically sound but became 2 commits
-behind current main after QS-MERGE-1. QS-MERGE-2 Final PR Refresh is authorised
-for final branch freshness only. Refresh against current main, revalidate, get
-fresh platform-ci / validate-platform success for the new head, then mark the
-PR ready, add a final-refresh comment, and merge through the normal PR path.
-Do not start INSPECT-8, INSPECT-9, overlays, integration work, public claims,
-lesson-output mutation, personal-data work, full OP0/basic-skills claims, or
-compliance/inspectorate-approval claims.
-```
-
-## 11. Setup recommendation
-
-Keep the first team task narrow: add the roadmap, set up the source/evidence
-folder, and stop. The current lesson roadmap still says broad companion scaling
-is not allowed until several foundation contracts and gates are complete.
-
-This inspection-standards project should therefore begin as a
-reference/reporting/governance track, not as a new production track.
+If non-Dutch work is later desired, start a separate worktree and a separate
+roadmap after the Dutch quality-control package has reached clean closure.

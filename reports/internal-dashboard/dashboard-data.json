@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T12:46:02.931Z",
+  "generatedAt": "2026-06-09T13:35:56.941Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1431,8 +1431,8 @@
           "repositoryPath": "4veco-platform/docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
           "generated": "",
           "updated": "",
-          "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v1.3-inspect-7-tri-agent-accepted Sprint status: INSPECT-7 Dutch Scoped Evidence-Pack Prototype closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORETHANSATISFIED; no later INSPECT sprint is authorised yet Me...",
+          "scope": "planning/audit only.",
+          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.0-dutch-scope-only-proposal Sprint status: QS-DUTCH-ROADMAP-1 Dutch Scope Roadmap Reset in progress as roadmap/governance work only Human owner: HCS / Marcel Team mode: isolated worktree, Dutch quality-control package first, no broad productio...",
           "sprints": []
         },
         {
@@ -1443,7 +1443,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-09 Branch in use: codex/quality-standards-20260608 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section, this ledge...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-09 Branch in use: codex/dutch-quality-scope-roadmap-20260609 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section,...",
           "sprints": []
         },
         {
@@ -1454,7 +1454,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards End State Status: first attempt Date: 2026-06-08 Repository: 4veco-platform Purpose This document describes the intended mature state of the quality-standards layer after it has been implemented. This folder is not about writing student-facing content. It is about the governed standards layer that sits beside generated product artifacts and makes quality evidence visible, traceable, reviewable, and safe to interpret. End-State Sentence At full maturity, 4veco has a governed quality-standards laye...",
+          "summary": "Dutch Quality Control End State Status: Dutch-only target state Date: 2026-06-09 Repository: 4veco-platform Purpose This document describes the intended mature state of the Dutch quality-control layer after it has been implemented. This folder is not about writing student-facing content. It is about the governed Dutch standards layer that sits beside generated product artifacts and makes quality evidence visible, traceable, reviewable, and safe to interpret. End-State Sentence At full maturity, 4veco has a governe...",
           "sprints": []
         }
       ],
