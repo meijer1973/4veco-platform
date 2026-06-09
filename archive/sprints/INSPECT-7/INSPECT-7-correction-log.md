@@ -14,6 +14,12 @@ corrections.
 No planning-review corrections were required. Planning review returned `PASS`
 with no blockers.
 
+## Implementation Notes
+
+Added `archive/sprints/INSPECT-7/INSPECT-7-review-packet.md` as an explicit
+lead/external dispatch artifact. This is review documentation only and does not
+expand prototype scope.
+
 ## Lead Review Corrections
 
 None yet.

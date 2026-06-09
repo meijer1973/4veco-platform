@@ -2,8 +2,8 @@
   "repo": "4veco-platform",
   "root": "4veco-platform",
   "available": true,
-  "generated_at": "2026-06-09T09:40:51.894Z",
-  "file_count": 3976,
+  "generated_at": "2026-06-09T09:53:23.552Z",
+  "file_count": 3977,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
   "skipped_directories": [
     ".cache",
@@ -4088,6 +4088,7 @@
       "archive/sprints/INSPECT-6/INSPECT-6-sprint-plan.md",
       "archive/sprints/INSPECT-7/INSPECT-7-authorisation.md",
       "archive/sprints/INSPECT-7/INSPECT-7-correction-log.md",
+      "archive/sprints/INSPECT-7/INSPECT-7-planning-review.md",
       "archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md",
       "BATCH-CLOSURE-WAIVER.md",
       "BUILD-CHAPTER.md",
