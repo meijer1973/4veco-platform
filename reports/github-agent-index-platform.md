@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T09:47:11.983Z
+Generated: 2026-06-09T11:27:18.889Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3937
+Files indexed: 3944
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1017,7 +1017,7 @@ Count: 381
 
 ## references
 
-Count: 545
+Count: 552
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1564,6 +1564,13 @@ Count: 545
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
+- references/ui/exercise-workbench-policy.md
+- references/ui/interaction-policy.json
+- references/ui/interaction-policy.md
+- references/ui/layout-registry.json
+- references/ui/layout-registry.md
+- references/ui/README.md
+- references/ui/shared-task-rollout-policy.md
 
 ## reports
 

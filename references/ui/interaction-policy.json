@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "policy_id": "golden-exercise-interaction-policy",
+  "status": "policy_extracted",
+  "source_exemplars": [
+    "references/exemplars/1.1.3-exit-ticket/",
+    "references/exemplars/a96-answer-form/",
+    "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json"
+  ],
+  "operation_chains": [
+    [
+      "graph_construction",
+      "graph_reading",
+      "claim_control"
+    ],
+    [
+      "formula_method",
+      "substitution",
+      "final_answer",
+      "notation",
+      "contextual_conclusion"
+    ],
+    [
+      "source_value",
+      "source_chain",
+      "answer_form"
+    ],
+    [
+      "claim_direction",
+      "mechanism",
+      "evidence",
+      "conclusion"
+    ]
+  ],
+  "source_context_policy": {
+    "required": [
+      "source card contains only task-needed material",
+      "source appears before task on mobile",
+      "task steps link to source material through contextRefs or equivalent",
+      "route and recovery links remain secondary"
+    ],
+    "forbidden": [
+      "source-value controls without visible source context",
+      "pre-attempt worked examples on proof/check surfaces",
+      "static answer patterns when answer form is assessed",
+      "formula cards before attempt when formula knowledge is assessed"
+    ]
+  },
+  "task_family_controls": {
+    "graph_construction": {
+      "preferred_controls": [
+        "axis choices",
+        "point placement",
+        "magnetic table-point snapping",
+        "automatic line after determined points"
+      ],
+      "forbidden": [
+        "completed graph recognition",
+        "fake line-shape check"
+      ]
+    },
+    "graph_reading": {
+      "preferred_controls": [
+        "interval-first selector",
+        "tolerant numeric read-off"
+      ],
+      "forbidden": [
+        "numeric answer before interval",
+        "answer-value placeholder"
+      ]
+    },
+    "formula_structure": {
+      "preferred_controls": [
+        "mixed formula-builder tokens",
+        "plausible distractors",
+        "visible reusable token when a concept appears twice"
+      ],
+      "forbidden": [
+        "static formula reveal",
+        "left-to-right answer token order",
+        "visually identical hidden-token trap"
+      ]
+    },
+    "calculation_answer_form": {
+      "preferred_controls": [
+        "formula template blanks",
+        "final answer field",
+        "unit or notation field",
+        "context conclusion field or plausible choices"
+      ],
+      "forbidden": [
+        "generic textarea as the only structured answer capture",
+        "correct-only conclusion list"
+      ]
+    },
+    "reasoning": {
+      "preferred_controls": [
+        "step ordering",
+        "sentence builder",
+        "claim-reason-evidence controls"
+      ],
+      "forbidden": [
+        "generic multiple choice used as a substitute for proof"
+      ]
+    }
+  },
+  "locking_policy": {
+    "allowed_when": [
+      "later operation genuinely depends on earlier output",
+      "disabled controls and aria-disabled state are present",
+      "visible reason is shown"
+    ],
+    "forbidden_when": [
+      "independent questions are locked as style effect",
+      "legacy wizard flow is the only reason",
+      "no visible reason is shown"
+    ],
+    "default_reason_text": "Rond eerst het vorige onderdeel af."
+  },
+  "feedback_policy": {
+    "required": [
+      "local to relevant operation",
+      "visible only after attempt on proof/check surfaces",
+      "neutral and non-summative",
+      "route-oriented where recovery is useful",
+      "stable in layout"
+    ],
+    "forbidden_claims": [
+      "diagnostics",
+      "mastery",
+      "grade",
+      "automatic sequencing",
+      "summative result",
+      "student-facing AI judgement",
+      "Scale Gate readiness",
+      "target-equivalent completion without approval"
+    ]
+  },
+  "surface_distinctions": {
+    "exit_ticket": {
+      "may_be": [
+        "target-equivalent proof candidate"
+      ],
+      "must_not": [
+        "hint-heavy learning flow",
+        "target-equivalent completion language without gate approval"
+      ]
+    },
+    "advisory_short_check": {
+      "may_be": [
+        "advisory",
+        "hinting",
+        "recovery oriented"
+      ],
+      "must_not": [
+        "replace exit ticket",
+        "claim target-equivalent proof"
+      ]
+    }
+  },
+  "proof_states": [
+    "initial",
+    "partial_input",
+    "wrong_retry_feedback",
+    "correct_completed_feedback",
+    "after_graph_or_formula_interaction",
+    "mobile",
+    "dark_mode",
+    "no_legacy_dom",
+    "negative_fixture_results"
+  ]
+}
