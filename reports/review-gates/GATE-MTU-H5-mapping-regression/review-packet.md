@@ -2,14 +2,14 @@
 
 Generated: 2026-06-08
 
-Status: repaired local approval, no mutation authorized.
+Status: approved with administrative remote-closure repair, no mutation authorized.
 
 ## Review Scope
 
 Review whether MTU-H5 has enough approved fresh-sample evidence to run the
-non-mutating mapping regression validator. The human gate verdict was REVISE,
-then approve. The requested fixture/checker contract repairs have been applied
-as repaired local approval and the fixture has been promoted locally.
+non-mutating mapping regression validator. The human gate verdict is APPROVED
+WITH ADMINISTRATIVE REMOTE-CLOSURE REPAIR. The repaired fixture is approved for
+MTU-H5 regression use.
 
 Remote evidence prerequisite: this review packet, the H5 sample-selection
 packet, and cited evidence must be committed and pushed to the normal remote
@@ -82,8 +82,9 @@ Before taking binding answers, confirm:
    does not authorize protected reference mutation, MTU changes, candidate
    writes, target-exercise mutation, lesson output, PV, diagnostics, mastery,
    sequencing, AI, summative use, or student/product use.
-2. The current packet has a repaired local approved fixture attached, and the
-   reviewed remote commit/hash is recorded.
+2. The repaired fixture is approved for MTU-H5 regression use, and the
+   administrative remote-closure repair records reviewed commit
+   `735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`.
 3. Generated reports are diagnostics only and cannot be used as primary
    evidence for the fresh sample.
 
