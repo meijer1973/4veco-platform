@@ -7,6 +7,7 @@ Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
 Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
+Merge-prep status: `QS-MERGE-1 Quality Standards Merge Prep` opened after human strategic review because the branch diverged from `main`; do not merge or start INSPECT-8/9 before merge-prep validation
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -1437,6 +1438,20 @@ dashboard integration, country overlays, teacher inspection pack generation,
 and gate integration remain candidate future work requiring a fresh sprint
 plan, planning review, lead review, and the mandatory review gate where
 applicable.
+```
+
+Current decision after human strategic review:
+
+```text
+Product/strategy verdict: PASS.
+Merge-readiness verdict: NOT YET. The branch must first be updated against
+current main and revalidated. QS-MERGE-1 Quality Standards Merge Prep is
+authorised for merge preparation only. Do not merge directly from the current
+branch state, and do not start INSPECT-8, INSPECT-9, international overlays,
+dashboard integration, Scale Gate integration, quality-ref integration,
+teacher inspection pack generation, public-facing claims, generated
+lesson-output mutation, personal-data processing, full OP0/basic-skills claims,
+or compliance/inspectorate-approval claims.
 ```
 
 ## 11. Setup recommendation

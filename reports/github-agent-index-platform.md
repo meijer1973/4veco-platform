@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T10:31:01.115Z
+Generated: 2026-06-09T11:29:26.735Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3991
+Files indexed: 3994
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4035,7 +4035,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 404
+Count: 407
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4136,6 +4136,9 @@ Count: 404
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
