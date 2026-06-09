@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-READY-1",
+  "name": "Book 2 Section 2.1 Readiness Gate",
+  "created": "2026-06-08",
+  "plan": "reports/sprints/B2-READY-1-plan.md",
+  "baseline": "reports/sprints/B2-READY-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Create and register the active textbook-production roadmap.",
+    "House textbook roadmap materials under docs/roadmaps/textbook/.",
+    "Create a dedicated textbook sprint ledger and first textbook end-state draft.",
+    "Put the Book 2 print series on the roadmap.",
+    "Start B2-READY-1 with sprint plan, baseline, readiness brief, result stub, diff summary, command log, and metadata.",
+    "Inspect 2.1.1 through 2.1.4 target readiness without mutating target-exercise source records.",
+    "Define the Chapter 2.1 notation and graph contract and Book 1 style extraction."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-READY-1-plan.md",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-READY-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-READY-1",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No protected reference data writes.",
+    "No target-exercise source-record writes.",
+    "No external-source writes.",
+    "No generated lesson output writes.",
+    "No writes in ../4veco-lessen.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, or broad companion scaling authorization."
+  ]
+}

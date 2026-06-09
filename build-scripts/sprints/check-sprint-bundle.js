@@ -264,6 +264,31 @@ function requireBacktickedPath(markdown, sectionHeading, expectedPath) {
   }
 }
 
+function roadmapLedgerPaths() {
+  const indexPath = path.join('docs', 'roadmaps', 'roadmap-version-index.json');
+  const fallbackPath = path.join('references', 'reference-team-roadmap.md');
+  if (!fs.existsSync(indexPath)) return fs.existsSync(fallbackPath) ? [fallbackPath] : [];
+
+  const index = readJson(indexPath);
+  const paths = new Set();
+  for (const activePath of index.current_operational_roadmaps || []) {
+    if (fs.existsSync(activePath)) paths.add(activePath);
+  }
+  for (const entry of index.roadmaps || []) {
+    if (entry && entry.status === 'active' && entry.path && fs.existsSync(entry.path)) {
+      paths.add(entry.path);
+    }
+  }
+  if (paths.size === 0 && fs.existsSync(fallbackPath)) paths.add(fallbackPath);
+  return [...paths];
+}
+
+function sprintLedgerRow(markdown, sprintId) {
+  const escaped = sprintId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const rowPattern = new RegExp(`\\|\\s*${escaped}\\s*\\|[^\\n]+\\|\\s*(yes|no)\\s*\\|`);
+  return markdown.match(rowPattern);
+}
+
 const args = process.argv.slice(2);
 const sprintId = args.find((arg) => !arg.startsWith('--'));
 const requireComplete = args.includes('--complete');
@@ -469,14 +494,16 @@ if (requireComplete) {
   }
 }
 
-const roadmapPath = path.join('references', 'reference-team-roadmap.md');
-if (fs.existsSync(roadmapPath) && !allowTestFixture) {
-  const roadmap = readMarkdown(roadmapPath);
-  const rowPattern = new RegExp(`\\| ${sprintId.replace('.', '\\.')} \\|[^\\n]+\\| (yes|no) \\|`);
-  const row = roadmap.match(rowPattern);
-  if (!row) fail(`${roadmapPath} must include ${sprintId} in the sprint ledger`);
-  if (requireComplete && row[1] !== 'yes') {
-    fail(`${roadmapPath} must mark ${sprintId} completed when --complete is used`);
+const ledgerPaths = roadmapLedgerPaths();
+if (ledgerPaths.length > 0 && !allowTestFixture) {
+  const matches = ledgerPaths
+    .map((roadmapPath) => ({ roadmapPath, row: sprintLedgerRow(readMarkdown(roadmapPath), sprintId) }))
+    .filter((entry) => entry.row);
+  if (matches.length === 0) {
+    fail(`an active roadmap sprint ledger must include ${sprintId}; checked ${ledgerPaths.join(', ')}`);
+  }
+  if (requireComplete && !matches.some((entry) => entry.row[1] === 'yes')) {
+    fail(`an active roadmap sprint ledger must mark ${sprintId} completed when --complete is used`);
   }
 }
 

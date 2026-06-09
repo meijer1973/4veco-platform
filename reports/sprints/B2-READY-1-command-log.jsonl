@@ -1,0 +1,7 @@
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-READY-1-plan.md","exit_code":0,"note":"post-textbook-folder relocation"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"node build-scripts/references/check-roadmap-version-index.js","exit_code":0,"note":"post-textbook-folder relocation"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"node build-scripts/sprints/check-scope-language.js --active","exit_code":0,"note":"post-textbook-folder relocation"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-READY-1-result.md","exit_code":0,"note":"post-textbook-folder relocation"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"node build-scripts/sprints/check-sprint-bundle.js B2-READY-1","exit_code":0,"note":"post-textbook-folder relocation"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T10:44:37+02:00","command":"git diff --check","exit_code":0,"note":"post-textbook-folder relocation; line-ending normalization warnings only"}
+{"sprint_id":"B2-READY-1","timestamp":"2026-06-08T11:43:01+02:00","command":"node build-scripts/sprints/check-sprint-bundle.js B2-READY-1 --complete","exit_code":0,"note":"lead review recorded and B2-2.1-A opened"}
