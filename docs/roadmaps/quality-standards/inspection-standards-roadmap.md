@@ -7,7 +7,7 @@ Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
 Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
-Merge-prep status: `QS-MERGE-1 Quality Standards Merge Prep` closed after merging current `origin/main`, revalidating locally, opening draft PR #23, and receiving PR `platform-ci / validate-platform` success for the merge-prep implementation head
+Merge-prep status: `QS-MERGE-2 Final PR Refresh` opened after human PR review because PR #23 became 2 commits behind current `main`; refresh, revalidate, require fresh PR CI, then mark ready/comment/merge only through the PR path if green
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -1452,6 +1452,20 @@ dashboard integration, Scale Gate integration, quality-ref integration,
 teacher inspection pack generation, public-facing claims, generated
 lesson-output mutation, personal-data processing, full OP0/basic-skills claims,
 or compliance/inspectorate-approval claims.
+```
+
+Current decision after PR review:
+
+```text
+Content verdict: PASS.
+Merge verdict: not yet. PR #23 is strategically sound but became 2 commits
+behind current main after QS-MERGE-1. QS-MERGE-2 Final PR Refresh is authorised
+for final branch freshness only. Refresh against current main, revalidate, get
+fresh platform-ci / validate-platform success for the new head, then mark the
+PR ready, add a final-refresh comment, and merge through the normal PR path.
+Do not start INSPECT-8, INSPECT-9, overlays, integration work, public claims,
+lesson-output mutation, personal-data work, full OP0/basic-skills claims, or
+compliance/inspectorate-approval claims.
 ```
 
 ## 11. Setup recommendation
