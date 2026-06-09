@@ -46,6 +46,7 @@ archive/sprints/INSPECT-7/INSPECT-7-lead-review-assignment.md
 archive/sprints/INSPECT-7/INSPECT-7-lead-review-round1.md
 archive/sprints/INSPECT-7/INSPECT-7-lead-review-round2.md
 archive/sprints/INSPECT-7/INSPECT-7-lead-review-round3.md
+archive/sprints/INSPECT-7/INSPECT-7-lead-review-round4.md
 archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md
 archive/sprints/INSPECT-7/INSPECT-7-closure-log.md

@@ -1,6 +1,6 @@
 # INSPECT-7 Correction Log
 
-Status: planning review passed; no corrections required
+Status: planning review passed; lead-review corrections recorded
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -25,6 +25,7 @@ expand prototype scope.
 | Finding | Correction |
 |---|---|
 | Lead review round 2 found stale/ambiguous dispatch SHA metadata: the packet reused `cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369` as a final reviewed SHA after the branch had advanced to `cfc1e5e296f767c7d239a322602efd63eb074aec`. | Recorded the round-2 `REVISE`, changed packet metadata to identify the round-1 packet SHA instead of a final external dispatch SHA, and required the external dispatch prompt to cite the exact final pushed branch HEAD available after lead review passes and all lead-review artifacts are pushed. |
+| Lead review round 3 found contradictory correction-log status metadata: the log said no corrections were required while also recording the round-2 SHA metadata correction. | Recorded the round-3 `REVISE` and updated this log's status metadata to say lead-review corrections were recorded. |
 
 ## External Review Corrections
 
@@ -59,6 +60,5 @@ school SKA compliance claim
 
 ## Required Next Action
 
-Implement only the bounded no-personal-data Book 1 Chapter 1.1 report-only
-prototype. Record validation, lead-review, and external-review corrections here
-if any are requested.
+Push the round-3 record and correction-log status update, then rerun lead
+review against the exact pushed branch HEAD before external-review dispatch.
