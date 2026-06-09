@@ -14,6 +14,12 @@ const STATUS = {
   invalid: 'SCHEMA_INVALID_REPORT_ONLY',
 };
 
+const INVALID_STATUS_MEANING =
+  'SCHEMA_INVALID_REPORT_ONLY means invalid against the schema-backed report-only inspection-evidence contract checked by this manual validator; it is not a build, dashboard, Scale Gate, quality-ref, or compliance judgement.';
+
+const SCHEMA_VALIDATION_SCOPE =
+  'This no-dependency validator reads the inspection-evidence schema and checks the schema features used there: local refs, required fields, constants, enums, primitive types, arrays, conditionals, forbidden exact values, and additional-property rules.';
+
 const KNOWN_FORBIDDEN_PHRASES = [
   '4veco is compliant with Dutch inspection standards',
   '4veco is approved by the Dutch Inspectorate of Education',
@@ -34,6 +40,7 @@ function usage() {
     '  node build-scripts/inspection/validate-inspection-evidence.js --input <file> --report-only [--mode pilot|full-report] [--json]',
     '',
     'This validator is diagnostic and report-only. It is not a build gate.',
+    INVALID_STATUS_MEANING,
   ].join('\n');
 }
 
@@ -119,14 +126,183 @@ function requireString(findings, value, pathLabel) {
 
 function requireConst(findings, value, expected, pathLabel) {
   if (value !== expected) {
-    add(findings, 'error', pathLabel, `must be ${JSON.stringify(expected)}`);
+    add(findings, 'error', pathLabel, `must be ${JSON.stringify(expected)}; received ${JSON.stringify(value)}`);
   }
 }
 
 function requireEnum(findings, value, allowed, pathLabel) {
   if (!allowed.has(value)) {
-    add(findings, 'error', pathLabel, `must be one of: ${Array.from(allowed).join(', ')}`);
+    add(
+      findings,
+      'error',
+      pathLabel,
+      `must be one of: ${Array.from(allowed).join(', ')}; received ${JSON.stringify(value)}`
+    );
   }
+}
+
+function hasOwn(value, key) {
+  return Object.prototype.hasOwnProperty.call(value, key);
+}
+
+function deepEqual(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function resolveSchemaRef(rootSchema, ref) {
+  if (!ref.startsWith('#/')) {
+    throw new Error(`Unsupported schema reference: ${ref}`);
+  }
+  return ref
+    .slice(2)
+    .split('/')
+    .map((part) => part.replace(/~1/g, '/').replace(/~0/g, '~'))
+    .reduce((cursor, part) => {
+      if (!cursor || !hasOwn(cursor, part)) throw new Error(`Missing schema reference: ${ref}`);
+      return cursor[part];
+    }, rootSchema);
+}
+
+function childPath(pathLabel, key) {
+  return pathLabel === 'root' ? key : pointer(pathLabel, key);
+}
+
+function itemPath(pathLabel, index) {
+  return `${pathLabel}[${index}]`;
+}
+
+function matchesType(value, expectedType) {
+  if (expectedType === 'array') return Array.isArray(value);
+  if (expectedType === 'object') return isObject(value);
+  if (expectedType === 'string') return typeof value === 'string';
+  if (expectedType === 'boolean') return typeof value === 'boolean';
+  if (expectedType === 'number') return typeof value === 'number' && Number.isFinite(value);
+  if (expectedType === 'integer') return Number.isInteger(value);
+  if (expectedType === 'null') return value === null;
+  return true;
+}
+
+function validateJsonSchema(findings, schemaNode, value, pathLabel, rootSchema) {
+  if (!schemaNode || typeof schemaNode !== 'object') return;
+
+  if (schemaNode.$ref) {
+    validateJsonSchema(findings, resolveSchemaRef(rootSchema, schemaNode.$ref), value, pathLabel, rootSchema);
+    return;
+  }
+
+  if (Array.isArray(schemaNode.allOf)) {
+    for (const child of schemaNode.allOf) {
+      validateJsonSchema(findings, child, value, pathLabel, rootSchema);
+    }
+  }
+
+  if (schemaNode.if && schemaMatches(schemaNode.if, value, rootSchema)) {
+    validateJsonSchema(findings, schemaNode.then, value, pathLabel, rootSchema);
+  }
+
+  if (Array.isArray(schemaNode.anyOf)) {
+    const matched = schemaNode.anyOf.some((child) => schemaMatches(child, value, rootSchema));
+    if (!matched) {
+      add(findings, 'error', pathLabel, 'must match at least one allowed schema branch');
+    }
+    return;
+  }
+
+  if (schemaNode.not && schemaMatches(schemaNode.not, value, rootSchema)) {
+    add(findings, 'error', pathLabel, 'must not match a forbidden schema branch');
+  }
+
+  if (hasOwn(schemaNode, 'const') && !deepEqual(value, schemaNode.const)) {
+    add(
+      findings,
+      'error',
+      pathLabel,
+      `must be ${JSON.stringify(schemaNode.const)}; received ${JSON.stringify(value)}`
+    );
+  }
+
+  if (Array.isArray(schemaNode.enum) && !schemaNode.enum.includes(value)) {
+    add(
+      findings,
+      'error',
+      pathLabel,
+      `must be one of: ${schemaNode.enum.join(', ')}; received ${JSON.stringify(value)}`
+    );
+  }
+
+  if (schemaNode.type) {
+    const expectedTypes = Array.isArray(schemaNode.type) ? schemaNode.type : [schemaNode.type];
+    if (!expectedTypes.some((expectedType) => matchesType(value, expectedType))) {
+      add(findings, 'error', pathLabel, `must be ${expectedTypes.join(' or ')}`);
+      return;
+    }
+  }
+
+  if (typeof value === 'string') {
+    if (Number.isInteger(schemaNode.minLength) && value.length < schemaNode.minLength) {
+      add(findings, 'error', pathLabel, `must contain at least ${schemaNode.minLength} character(s)`);
+    }
+    if (schemaNode.pattern && !new RegExp(schemaNode.pattern).test(value)) {
+      add(findings, 'error', pathLabel, `must match pattern ${schemaNode.pattern}`);
+    }
+  }
+
+  if (Array.isArray(value)) {
+    if (Number.isInteger(schemaNode.minItems) && value.length < schemaNode.minItems) {
+      add(findings, 'error', pathLabel, `must contain at least ${schemaNode.minItems} item(s)`);
+    }
+    if (schemaNode.items) {
+      value.forEach((item, index) =>
+        validateJsonSchema(findings, schemaNode.items, item, itemPath(pathLabel, index), rootSchema)
+      );
+    }
+  }
+
+  if (isObject(value)) {
+    const properties = isObject(schemaNode.properties) ? schemaNode.properties : {};
+    if (Array.isArray(schemaNode.required)) {
+      for (const field of schemaNode.required) {
+        if (!hasOwn(value, field)) add(findings, 'error', childPath(pathLabel, field), 'is required');
+      }
+    }
+    for (const [key, propertySchema] of Object.entries(properties)) {
+      if (hasOwn(value, key)) {
+        validateJsonSchema(findings, propertySchema, value[key], childPath(pathLabel, key), rootSchema);
+      }
+    }
+    if (hasOwn(schemaNode, 'additionalProperties')) {
+      for (const [key, propertyValue] of Object.entries(value)) {
+        if (hasOwn(properties, key)) continue;
+        if (schemaNode.additionalProperties === false) {
+          add(findings, 'error', childPath(pathLabel, key), 'is not allowed by the schema contract');
+        } else if (isObject(schemaNode.additionalProperties)) {
+          validateJsonSchema(
+            findings,
+            schemaNode.additionalProperties,
+            propertyValue,
+            childPath(pathLabel, key),
+            rootSchema
+          );
+        }
+      }
+    }
+  }
+}
+
+function schemaMatches(schemaNode, value, rootSchema) {
+  const findings = [];
+  validateJsonSchema(findings, schemaNode, value, 'match', rootSchema);
+  return findings.length === 0;
+}
+
+function dedupeFindings(findings) {
+  const seen = new Set();
+  return findings.filter((finding) => {
+    const key = `${finding.severity}\0${finding.path}\0${finding.message}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function scanKnownForbiddenPhrases(findings, value, pathLabel) {
@@ -367,6 +543,8 @@ function validateRecord(schema, record, mode) {
 
   if (!requireObject(findings, record, 'root')) return { findings, warnings };
 
+  validateJsonSchema(findings, schema, record, 'root', schema);
+
   requireConst(findings, record.schema_version, propConst(schema, 'schema_version'), 'schema_version');
   requireConst(findings, record.schema_usage, 'report_only', 'schema_usage');
   validateDiagnosticPolicy(findings, schema, record);
@@ -395,7 +573,7 @@ function validateRecord(schema, record, mode) {
     }
   }
 
-  return { findings, warnings };
+  return { findings: dedupeFindings(findings), warnings: dedupeFindings(warnings) };
 }
 
 function printResult(result, json) {
@@ -409,6 +587,8 @@ function printResult(result, json) {
   console.log(`schema: ${result.schema}`);
   console.log(`errors: ${result.errors.length}`);
   console.log(`warnings: ${result.warnings.length}`);
+  console.log(`invalid_status_meaning: ${result.invalid_status_meaning}`);
+  console.log(`schema_validation_scope: ${result.schema_validation_scope}`);
   console.log('claim_safety_note: known-phrase checks are limited and do not replace human claim-safety review');
   for (const finding of result.errors) {
     console.log(`error: ${finding.path}: ${finding.message}`);
@@ -459,6 +639,8 @@ function main() {
     diagnostic_only: true,
     exits_nonzero_only_for_malformed_or_schema_invalid_input: true,
     claim_safety_limited: true,
+    invalid_status_meaning: INVALID_STATUS_MEANING,
+    schema_validation_scope: SCHEMA_VALIDATION_SCOPE,
   };
 
   printResult(result, options.json);
@@ -473,4 +655,6 @@ module.exports = {
   validateRecord,
   parseArgs,
   STATUS,
+  INVALID_STATUS_MEANING,
+  SCHEMA_VALIDATION_SCOPE,
 };

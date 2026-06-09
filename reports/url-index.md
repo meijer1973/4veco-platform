@@ -46,6 +46,14 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/docs/inspection-standards/report-only-validator-design.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/validator-notes.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/invalid-diagnostic-policy.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/extra-property.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/invalid-category-id.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/full-report-missing-category.sample.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/data/inspection-standards/fixtures/negative/known-forbidden-phrase.sample.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md
@@ -69,6 +77,16 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-4/INSPECT-4-validator-design-packet.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-4/INSPECT-4-validation-log.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-4/INSPECT-4-closure-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-human-authorization.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-sprint-plan.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-planning-review.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-validator-refinement-packet.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-validation-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-lead-review-assignment.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-lead-review-round1.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-correction-log.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-lead-review-round2.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/archive/sprints/INSPECT-5/INSPECT-5-closure-log.md
 
 ## Owned Course Design
 

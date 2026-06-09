@@ -1,7 +1,7 @@
 # Quality Standards Sprint Ledger
 
 Status: active
-Updated on: 2026-06-08
+Updated on: 2026-06-09
 Branch in use: `codex/quality-standards-20260608`
 
 ## Purpose
@@ -68,7 +68,8 @@ Required default flow:
 | `INSPECT-2` | closed / pass_with_required_profile_adjustment | Bounded read-only pilot evidence audit of Book 1 Chapter 1.1 against the Dutch v0 evidence categories. | `archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md`; `archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md`; `archive/sprints/INSPECT-2/INSPECT-2-validation-log.md`; `archive/sprints/INSPECT-2/INSPECT-2-lead-review-round2.md`; `archive/sprints/INSPECT-2/INSPECT-2-closure-log.md` | `1a1f718b` | Head of Strategy accepted the audit and required INSPECT-2A before schema design. Categories locate real evidence, but evidence-finality language was insufficient. |
 | `INSPECT-2A` | closed / pass | Corrections-only profile adjustment before schema design. Adds evidence-finality, target-equivalent proof, subject-material OP0, title/source reconciliation, diagnostic-report status, and per-category product/school boundary language. | `archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md`; `archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md`; `archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md`; `archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round2.md`; `archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md` | `06a7b34f` plus this commit | Head of Strategy accepted INSPECT-2A and authorised INSPECT-3 report-only schema design. Dutch profile remains `status: draft`; `review_status` stays `draft_adjusted_for_schema_design`. |
 | `INSPECT-3` | closed / pass_with_minor_guardrails | Report-only inspection evidence schema design. Creates a diagnostic schema and schema notes while preserving evidence state/finality, target-equivalent proof, source-pointer types, OP0 boundaries, and product/school boundaries. | `references/schemas/inspection-evidence.schema.json`; `docs/inspection-standards/report-only-schema-design.md`; `references/data/inspection-standards/schema-notes.md`; `archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md`; `archive/sprints/INSPECT-3/INSPECT-3-validation-log.md`; `archive/sprints/INSPECT-3/INSPECT-3-closure-log.md` | `360e3ad6` plus this commit | Head of Strategy accepted INSPECT-3 and authorised INSPECT-4. Guardrails: claim checks are not complete semantic detection; only full-report mode may require all eight categories; weak evidence can be valid. |
-| `INSPECT-4` | closed / pass | Report-only validator design. Adds a manual diagnostic validator for inspection-evidence report objects, validator notes, validator design docs, and a pilot sample object. | `build-scripts/inspection/validate-inspection-evidence.js`; `docs/inspection-standards/report-only-validator-design.md`; `references/data/inspection-standards/validator-notes.md`; `references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json`; `archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md`; `archive/sprints/INSPECT-4/INSPECT-4-validation-log.md`; `archive/sprints/INSPECT-4/INSPECT-4-closure-log.md` | this commit | Manual diagnostic command only. No package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate work, generated evidence pack, teacher inspection pack, overlay, generated lesson-output change, or compliance claim. |
+| `INSPECT-4` | closed / pass_with_required_refinement | Report-only validator design. Adds a manual diagnostic validator for inspection-evidence report objects, validator notes, validator design docs, and a pilot sample object. | `build-scripts/inspection/validate-inspection-evidence.js`; `docs/inspection-standards/report-only-validator-design.md`; `references/data/inspection-standards/validator-notes.md`; `references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json`; `archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md`; `archive/sprints/INSPECT-4/INSPECT-4-validation-log.md`; `archive/sprints/INSPECT-4/INSPECT-4-closure-log.md` | `f8b174d2` plus this commit | Head of Strategy accepted INSPECT-4 but required INSPECT-5 before generator planning because the invalid-status/schema-depth boundary needed refinement. |
+| `INSPECT-5` | closed / pass | Strictly non-blocking validator refinement. Clarifies `SCHEMA_INVALID_REPORT_ONLY`, adds schema-backed object-contract checks and repeatable negative fixtures, and keeps the validator manual/non-integrated. | `build-scripts/inspection/validate-inspection-evidence.js`; `references/data/inspection-standards/fixtures/negative/*.sample.json`; `docs/inspection-standards/report-only-validator-design.md`; `references/data/inspection-standards/validator-notes.md`; `archive/sprints/INSPECT-5/INSPECT-5-sprint-plan.md`; `archive/sprints/INSPECT-5/INSPECT-5-validation-log.md`; `archive/sprints/INSPECT-5/INSPECT-5-closure-log.md` | this commit | No report-only generator planning, package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate work, evidence pack, teacher inspection pack, overlay, generated lesson-output change, or compliance claim. |
 
 ## Candidate Future Sprints
 
@@ -77,10 +78,10 @@ approves the packet.
 
 | Candidate sprint | Intended scope | Authorisation status |
 | --- | --- | --- |
-| `INSPECT-5` | Validator human review and possible report-only integration planning, only if Head of Strategy accepts INSPECT-4. | not authorised |
-| `INSPECT-6` | Dutch scoped evidence-pack prototype for one bounded generated output slice, only after report-only schema/validator review and explicit pack authorisation. | not authorised |
-| `INSPECT-7` | International common-quality profile design after Dutch profile/schema/validator review. | not authorised |
-| `INSPECT-8` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
+| `INSPECT-6` | Report-only generator planning, only if Head of Strategy accepts INSPECT-5 and explicitly authorises generator planning. | not authorised |
+| `INSPECT-7` | Dutch scoped evidence-pack prototype for one bounded generated output slice, only after explicit pack authorisation. | not authorised |
+| `INSPECT-8` | International common-quality profile design after Dutch profile/schema/validator review. | not authorised |
+| `INSPECT-9` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
 
 ## Ledger Rules
 

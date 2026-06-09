@@ -73,14 +73,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v0.1-setup-roadmap",
+      "version": "v0.5-strictly-non-blocking-validator-refinement",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-08",
+      "updated_on": "2026-06-09",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. The roadmap now lives in the dedicated quality-standards folder with a sprint ledger and first-attempt quality-standards end-state description. INSPECT-0 Source Register + Dutch Profile Design is authorised as bounded research/data work only. Schemas, validators, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, and compliance claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-5 completed strictly non-blocking validator refinement: schema-backed report-only contract checks, clarified SCHEMA_INVALID_REPORT_ONLY wording, and negative fixtures. Report-only generator planning, generated evidence packs, teacher inspection packs, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, CI/build integration, and compliance claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",

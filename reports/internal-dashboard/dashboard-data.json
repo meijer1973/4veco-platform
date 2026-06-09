@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T14:27:27.404Z",
+  "generatedAt": "2026-06-09T06:26:41.110Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.4-report-only-validator-design Sprint status: INSPECT-4 Report-Only Validator Design authorised and completed as manual diagnostic validator design only; build-failing integration, required CI gates, evidence packs, dashboard gates, qua...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.5-strictly-non-blocking-validator-refinement Sprint status: INSPECT-5 Strictly Non-Blocking Validator Refinement authorised and completed as manual diagnostic validator refinement only; report-only generator planning, build-failing inte...",
           "sprints": []
         },
         {
@@ -1443,7 +1443,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-08 Branch in use: codex/quality-standards-20260608 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section, this ledge...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-09 Branch in use: codex/quality-standards-20260608 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section, this ledge...",
           "sprints": []
         },
         {

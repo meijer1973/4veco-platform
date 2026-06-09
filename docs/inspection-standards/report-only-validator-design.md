@@ -1,7 +1,7 @@
 # Report-Only Inspection Evidence Validator Design
 
-Status: report-only diagnostic validator design
-Sprint: INSPECT-4 Report-Only Validator Design
+Status: report-only diagnostic validator design, refined
+Sprint: INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement
 Validator: `build-scripts/inspection/validate-inspection-evidence.js`
 Schema: `references/schemas/inspection-evidence.schema.json`
 Sample: `references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json`
@@ -12,6 +12,14 @@ INSPECT-4 adds a manual diagnostic validator for report-only inspection evidence
 objects. It is not a build gate, dashboard gate, Scale Gate input,
 quality-ref integration, country overlay mechanism, teacher inspection-pack
 generator, generated-output mutation route, or compliance-claim mechanism.
+
+INSPECT-5 refines the validator after Head of Strategy review of INSPECT-4.
+The validator now performs schema-backed checks for the report-only
+inspection-evidence contract used by
+`references/schemas/inspection-evidence.schema.json`, including required
+fields, constants, enums, primitive types, arrays, local refs, conditionals,
+forbidden exact values, and additional-property rules. It remains a
+no-dependency manual command and is not wired into production validation.
 
 Required posture:
 
@@ -25,6 +33,12 @@ Output status vocabulary:
 PASS_REPORT_ONLY
 PASS_WITH_WARNINGS_REPORT_ONLY
 SCHEMA_INVALID_REPORT_ONLY
+```
+
+Meaning of the invalid status:
+
+```text
+SCHEMA_INVALID_REPORT_ONLY means invalid against the schema-backed report-only inspection-evidence contract checked by this manual validator; it is not a build, dashboard, Scale Gate, quality-ref, or compliance judgement.
 ```
 
 The validator does not use:
@@ -42,6 +56,9 @@ The validator may:
 
 - parse an inspection-evidence JSON object;
 - check required report-only diagnostic policy constants;
+- check the schema-backed object contract for fields, constants, enums, types,
+  arrays, local refs, conditionals, forbidden exact values, and additional
+  properties used by the report-only schema;
 - check title/source reconciliation is present;
 - check source pointers have source types and paths/URLs;
 - check product/school boundary fields are present;
@@ -73,6 +90,8 @@ It must not:
 3. Schema validity and evidence strength are separate. Weak evidence can be
    valid evidence. `present_but_weak`, `target_exercise_migrated`, and
    `diagnostic_report_only` produce warnings, not schema failure.
+4. `SCHEMA_INVALID_REPORT_ONLY` names a manual report-only schema-contract
+   failure. It is not a production gate status and not a compliance finding.
 
 ## Exit Code Policy
 
@@ -83,11 +102,16 @@ PASS_REPORT_ONLY
 PASS_WITH_WARNINGS_REPORT_ONLY
 ```
 
-It exits non-zero only for malformed input or schema-invalid input:
+It exits non-zero only for malformed input or schema-invalid manual input:
 
 ```text
 SCHEMA_INVALID_REPORT_ONLY
 ```
+
+In this context, schema-invalid means invalid against the report-only
+inspection-evidence schema contract checked by this validator. It does not
+mean a build failure, dashboard failure, Scale Gate finding, quality-ref
+finding, legal-compliance judgement, or inspectorate judgement.
 
 This is acceptable for manual validation, but the command is not wired into CI,
 `check:platform`, dashboard gates, paragraph production, Scale Gate, or
@@ -116,7 +140,8 @@ manual object, not a production failure.
 
 ## Recommended Next Step
 
-Send the INSPECT-4 validator design packet for human review. Do not integrate
-the validator into CI, dashboards, quality-ref, Scale Gate, generated output,
-or evidence-pack generation until a later human review explicitly authorises
-that scope.
+Send the INSPECT-5 validator refinement packet for human review. Do not start
+report-only generator planning, evidence-pack work, dashboard integration,
+quality-ref integration, Scale Gate integration, country overlays, generated
+lesson-output changes, CI/build integration, or compliance claims until a later
+human review explicitly authorises that scope.

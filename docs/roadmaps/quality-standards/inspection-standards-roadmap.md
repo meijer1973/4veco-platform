@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.4-report-only-validator-design`
-Sprint status: `INSPECT-4 Report-Only Validator Design` authorised and completed as manual diagnostic validator design only; build-failing integration, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
+Roadmap version: `v0.5-strictly-non-blocking-validator-refinement`
+Sprint status: `INSPECT-5 Strictly Non-Blocking Validator Refinement` authorised and completed as manual diagnostic validator refinement only; report-only generator planning, build-failing integration, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -771,6 +771,70 @@ Acceptance criteria:
   pack, teacher inspection pack, country overlay, generated lesson-output
   change, or compliance claim is introduced.
 
+### Phase 3B - Strictly non-blocking validator refinement
+
+Goal: remove ambiguity between full JSON Schema validation and the manual
+report-only validator, while preserving all non-blocking guardrails.
+
+Authorisation:
+
+```text
+INSPECT-4 closed as pass_with_required_refinement.
+INSPECT-5 Strictly Non-Blocking Validator Refinement is authorised.
+```
+
+Decision:
+
+```text
+Use schema-backed validation for the report-only schema features used by
+references/schemas/inspection-evidence.schema.json, while keeping the command
+manual, no-dependency, and non-integrated.
+```
+
+Allowed outputs:
+
+```text
+build-scripts/inspection/validate-inspection-evidence.js refinement
+docs/inspection-standards/report-only-validator-design.md
+references/data/inspection-standards/validator-notes.md
+references/data/inspection-standards/fixtures/negative/
+archive/sprints/INSPECT-5/
+generated indexes/reports only if roadmap or sprint-packet URLs require refresh
+```
+
+Required guardrails:
+
+- keep `--report-only` mandatory;
+- keep `PASS_REPORT_ONLY` and `PASS_WITH_WARNINGS_REPORT_ONLY` as exit code 0;
+- keep weak evidence warning-only;
+- keep pilot mode partial and full-report mode complete;
+- clarify that `SCHEMA_INVALID_REPORT_ONLY` means invalid against the
+  schema-backed report-only inspection-evidence contract checked by the manual
+  validator, not a production, compliance, dashboard, Scale Gate, or
+  inspectorate judgement;
+- add negative fixture coverage for missing required fields, invalid diagnostic
+  constants, extra properties, OP0 boundary failure, target-equivalent proof
+  failure, full-report missing categories, invalid category ids, and known
+  forbidden positive-claim phrases.
+
+Forbidden work:
+
+```text
+report-only generator planning
+package.json script integration
+CI or check:platform integration
+dashboard gate
+Scale Gate integration
+quality-ref integration
+generated evidence pack
+teacher inspection pack
+country overlay
+generated lesson-output mutation
+legal compliance claim
+inspectorate approval claim
+complete OP0/basic-skills claim
+```
+
 ### Phase 4 - Pilot evidence audit on stabilised paragraphs
 
 Goal: test the model on already stabilised material before scaling.
@@ -1137,7 +1201,13 @@ INSPECT-3 passed with minor guardrails. INSPECT-4 Report-Only Validator Design i
 Current decision after INSPECT-4:
 
 ```text
-Send INSPECT-4 for human review. Do not integrate the validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson output, evidence-pack generation, teacher inspection packs, country overlays, or compliance claims unless a later human review explicitly authorises that scope.
+INSPECT-4 passed with required refinement. INSPECT-5 Strictly Non-Blocking Validator Refinement is authorised. Do not start report-only generator planning, evidence packs, dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, or compliance claims.
+```
+
+Current decision after INSPECT-5:
+
+```text
+Send INSPECT-5 for human review. Do not start report-only generator planning, evidence packs, dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, or compliance claims unless a later human review explicitly authorises that scope.
 ```
 
 ## 11. Setup recommendation

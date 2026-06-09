@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-08T14:27:27.324Z
+Generated: 2026-06-09T06:26:19.325Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3914
+Files indexed: 3928
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -124,7 +124,7 @@ Count: 78
 
 ## build scripts
 
-Count: 440
+Count: 441
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -197,6 +197,7 @@ Count: 440
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
 - build-scripts/lib/convert_presentatie.py
@@ -616,7 +617,7 @@ Count: 42
 
 ## validators
 
-Count: 382
+Count: 387
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -624,6 +625,8 @@ Count: 382
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
 - archive/sprints/INSPECT-3/INSPECT-3-validation-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-validation-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-validator-design-packet.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -632,6 +635,7 @@ Count: 382
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
@@ -809,6 +813,7 @@ Count: 382
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
@@ -816,6 +821,7 @@ Count: 382
 - docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
+- references/data/inspection-standards/validator-notes.md
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
@@ -1003,7 +1009,7 @@ Count: 382
 
 ## references
 
-Count: 526
+Count: 528
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1037,10 +1043,12 @@ Count: 526
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
 - references/data/inspection-standards/nl-vo-evidence-profile.v0.json
 - references/data/inspection-standards/README.md
 - references/data/inspection-standards/schema-notes.md
 - references/data/inspection-standards/source-register.json
+- references/data/inspection-standards/validator-notes.md
 - references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
@@ -4010,7 +4018,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 350
+Count: 358
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4061,6 +4069,14 @@ Count: 350
 - archive/sprints/INSPECT-3/INSPECT-3-planning-review.md
 - archive/sprints/INSPECT-3/INSPECT-3-schema-design-packet.md
 - archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md
+- archive/sprints/INSPECT-4/INSPECT-4-closure-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-correction-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-human-authorization.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-assignment.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-round1.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-round2.md
+- archive/sprints/INSPECT-4/INSPECT-4-planning-review.md
+- archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md

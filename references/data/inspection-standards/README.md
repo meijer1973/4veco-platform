@@ -51,6 +51,16 @@ not be integrated into CI, builds, dashboards, quality-ref, Scale Gate,
 generated lesson output, country overlays, teacher inspection packs, generated
 evidence packs, or compliance claims.
 
+INSPECT-4 passed Head of Strategy review with required refinement. INSPECT-5 is
+authorised as strictly non-blocking validator refinement. It may refine
+validator wording or schema-backed behaviour, add negative fixtures, clarify
+`SCHEMA_INVALID_REPORT_ONLY`, and update validation logs, lead review records,
+URL indexes, roadmaps, and the ledger. It must not start report-only generator
+planning, generated evidence packs, teacher inspection packs, dashboard gates,
+quality-ref integration, Scale Gate integration, country overlays, generated
+lesson-output changes, CI/build integration, legal compliance claims,
+inspectorate approval claims, or complete OP0/basic-skills claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
@@ -60,6 +70,7 @@ Current authorised INSPECT-0 contents:
 - `schema-notes.md`
 - `validator-notes.md`
 - `fixtures/pilot-1.1-inspection-evidence.sample.json`
+- `fixtures/negative/*.sample.json`
 
 Future authorised phases may add:
 

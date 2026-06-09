@@ -3,7 +3,7 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "Human review of the INSPECT-4 report-only validator design packet. Do not integrate the validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson output, evidence-pack generation, country overlays, teacher inspection packs, or compliance claims until a later human review explicitly authorises that scope.",
+  "next_recommended_step": "Human review of the INSPECT-5 strictly non-blocking validator refinement packet. Do not start report-only generator planning, evidence packs, teacher inspection packs, CI/build integration, dashboards, quality-ref integration, Scale Gate integration, generated lesson output, country overlays, or compliance claims until a later human review explicitly authorises that scope.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
@@ -534,6 +534,35 @@
       "Scale Gate integration",
       "country overlays",
       "generated lesson-output changes",
+      "legal compliance claims",
+      "inspectorate approval claims",
+      "complete OP0/basic-skills claims"
+    ]
+  },
+  "validator_refinement_authorization": {
+    "decision": "pass_with_required_refinement",
+    "reviewer": "Head of Strategy",
+    "date": "2026-06-08",
+    "accepted_prior_sprint": "INSPECT-4 Report-Only Validator Design",
+    "approved_next_action": "INSPECT-5 Strictly Non-Blocking Validator Refinement",
+    "purpose": "Remove ambiguity between full JSON Schema validation and focused report-only contract validation before any generator planning.",
+    "chosen_refinement_path": "schema-backed report-only contract validation for the features used by references/schemas/inspection-evidence.schema.json, with explicit invalid-status wording and no production integration",
+    "allowed_output_statuses": [
+      "PASS_REPORT_ONLY",
+      "PASS_WITH_WARNINGS_REPORT_ONLY",
+      "SCHEMA_INVALID_REPORT_ONLY"
+    ],
+    "invalid_status_meaning": "SCHEMA_INVALID_REPORT_ONLY means invalid against the schema-backed report-only inspection-evidence contract checked by the manual validator; it is not a build, dashboard, Scale Gate, quality-ref, compliance, or inspectorate judgement.",
+    "not_approved": [
+      "report-only generator planning",
+      "generated evidence packs",
+      "teacher inspection packs",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "CI/build integration",
       "legal compliance claims",
       "inspectorate approval claims",
       "complete OP0/basic-skills claims"
