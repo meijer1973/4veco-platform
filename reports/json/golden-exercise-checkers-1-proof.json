@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-09T14:39:35.154Z",
+  "generated": "2026-06-09T14:51:18.531Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
@@ -83,6 +83,13 @@
     },
     {
       "id": "visually_identical_hidden_token_trap_oldq",
+      "expected_violation": "visually_identical_hidden_token_trap",
+      "detected_violations": [
+        "visually_identical_hidden_token_trap"
+      ]
+    },
+    {
+      "id": "visually_identical_hidden_token_trap_unmarked_duplicate",
       "expected_violation": "visually_identical_hidden_token_trap",
       "detected_violations": [
         "visually_identical_hidden_token_trap"

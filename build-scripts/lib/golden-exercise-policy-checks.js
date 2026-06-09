@@ -131,11 +131,10 @@ function hiddenTokenTrapErrors(spec) {
   for (const [label, tokens] of byLabel.entries()) {
     const distinctIds = [...new Set(tokens.map((token) => token.id))];
     if (distinctIds.length < 2) continue;
-    const expectedDuplicateIds = distinctIds.filter((id) => expectedSet.has(id));
-    const hasAnswerToken = tokens.some((token) => token.kind === 'answer' || expectedSet.has(token.id));
-    const hasDistractorToken = tokens.some((token) => token.kind === 'distractor');
-    const positionDependent = expectedDuplicateIds.length >= 2 || (expectedDuplicateIds.length === 1 && hasDistractorToken);
-    if (hasAnswerToken && positionDependent) {
+    const answerLikeIds = distinctIds.filter((id) => tokens.some((token) => {
+      return token.id === id && (token.kind === 'answer' || expectedSet.has(token.id));
+    }));
+    if (answerLikeIds.length) {
       errors.push(`${spec.label}: visually identical hidden-token trap for label "${label}" across ids ${distinctIds.join(', ')}`);
     }
   }

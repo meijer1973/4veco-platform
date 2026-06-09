@@ -11,6 +11,7 @@ describe('Golden Exercise Workbench policy checks', () => {
       'answer_giving_placeholder',
       'formula_token_bank_ordered_as_answer',
       'visually_identical_hidden_token_trap_oldq',
+      'visually_identical_hidden_token_trap_unmarked_duplicate',
       'missing_after_interaction_proof',
     ]));
   });

@@ -173,6 +173,43 @@
       }
     },
     {
+      "id": "visually_identical_hidden_token_trap_unmarked_duplicate",
+      "category": "interaction",
+      "expected_violation": "visually_identical_hidden_token_trap",
+      "description": "A duplicate visible label must fail even when the non-answer duplicate omits a distractor marker.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "formula",
+                "family": "calculation_work_capture",
+                "interaction": {
+                  "formula": {
+                    "tokens": [
+                      { "id": "oldDecoy", "label": "oude prijs" },
+                      { "id": "divide", "label": "/" },
+                      { "id": "new", "label": "nieuwe prijs" },
+                      { "id": "oldCorrect", "label": "oude prijs" },
+                      { "id": "times100", "label": "x 100%" }
+                    ]
+                  }
+                },
+                "expected": {
+                  "formula": {
+                    "tokens": ["new", "divide", "oldCorrect", "times100"]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "missing_after_interaction_proof",
       "category": "proof",
       "expected_violation": "missing_after_interaction_proof",
