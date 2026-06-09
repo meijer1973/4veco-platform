@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.1.4-HARDEN",
+  "name": "Book 2 Paragraph 2.1.4 Quality Hardening",
+  "created": "2026-06-09",
+  "plan": "reports/sprints/B2-2.1.4-HARDEN-plan.md",
+  "baseline": "reports/sprints/B2-2.1.4-HARDEN-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "scope": [
+    "Integrate and harden only Book 2 paragraph 2.1.4 Gemengde opgaven: kosten en opbrengsten.",
+    "Use the latest root golden textbook package as local production input.",
+    "Regenerate 2.1.4 rendered output and Chapter 2.1 assembly through the lesson workflow.",
+    "Preserve the Book 1 consolidation contract: no new theory and official mixed-practice shape.",
+    "Keep protected reference data and target-exercise source records read-only.",
+    "Avoid Chapter 2.2 work and broad scaling authorization."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1.4-HARDEN-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.1.4-HARDEN",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven\"",
+    "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.1.4-HARDEN-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.1.4-HARDEN --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No protected reference data writes.",
+    "No target-exercise source-record mutation.",
+    "No source edits to 2.1.1, 2.1.2, or 2.1.3 paragraph folders.",
+    "No Chapter 2.2 import or rewrite.",
+    "No generated-output hand patches that bypass the lesson build workflow.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, or broad companion scaling authorization."
+  ]
+}

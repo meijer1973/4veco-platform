@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
 Roadmap version: `v1.3-inspect-7-tri-agent-accepted`
-Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
+Sprint status: `INSPECT-7 Dutch Scoped Evidence-Pack Sample` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; no later INSPECT sprint is authorised yet
 Merge-prep status: `QS-MERGE-2 Final PR Refresh` closed after refreshing PR #23 against current `origin/main`, revalidating, and receiving fresh PR `platform-ci / validate-platform` success for the final-refresh head; mark ready/comment/merge only through the PR path
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
@@ -229,7 +229,7 @@ Allowed wording:
 ### 3.4 No broad production
 
 This roadmap is a foundation project. It must not trigger broad paragraph
-production, companion scaling, or generated-output rebuilds. Any pilot evidence
+production, companion scaling, or generated-output rebuilds. Any bounded-trial evidence
 must be bounded to already stabilised paragraphs unless a later human-approved
 sprint says otherwise.
 
@@ -567,7 +567,7 @@ Acceptance criteria:
 
 ### Phase 2A - Profile adjustment before schema design
 
-Goal: adjust the Dutch v0 profile after the bounded pilot audit so schema design
+Goal: adjust the Dutch v0 profile after the bounded-trial audit so schema design
 does not encode weak evidence assumptions.
 
 Authorisation:
@@ -604,7 +604,7 @@ target_equivalent_reviewed_local
 target_equivalent_reviewed_generalised
 ```
 
-Every future pilot or report must cite the live blueprint title and flag title
+Every future bounded trial or report must cite the live blueprint title and flag title
 mismatches between human review text, target registry, chapter plan, and lesson
 folder.
 
@@ -703,11 +703,11 @@ Design decision required:
 Default recommendation:
 
 > Start separate and report-only. Integrate into `quality-ref.yaml` only after
-> one pilot proves the evidence model is stable.
+> one bounded trial proves the evidence model is stable.
 
 Acceptance criteria:
 
-- schema validates a pilot object;
+- schema validates a bounded-trial object;
 - missing fields are warnings, not hard failures;
 - validation report distinguishes "not applicable", "missing", "implicit",
   "present", and "present but weak";
@@ -810,7 +810,7 @@ Required guardrails:
 - keep `--report-only` mandatory;
 - keep `PASS_REPORT_ONLY` and `PASS_WITH_WARNINGS_REPORT_ONLY` as exit code 0;
 - keep weak evidence warning-only;
-- keep pilot mode partial and full-report mode complete;
+- keep bounded-trial mode partial and full-report mode complete;
 - clarify that `SCHEMA_INVALID_REPORT_ONLY` means invalid against the
   schema-backed report-only inspection-evidence contract checked by the manual
   validator, not a production, compliance, dashboard, Scale Gate, or
@@ -967,7 +967,7 @@ Required guardrails:
   stale evidence, source freshness, and product/school boundaries remain
   visible;
 - INSPECT-7 remains gated until INSPECT-6 passes tri-agent
-  `MORE_THAN_SATISFIED` review and the owner authorises one bounded prototype.
+  `MORE_THAN_SATISFIED` review and the owner authorises one bounded evidence sample.
 
 Forbidden work:
 
@@ -1001,12 +1001,12 @@ Closure result:
 INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection
 reviewers each MORE_THAN_SATISFIED. No lead-review or external-review blockers
 were raised. INSPECT-7 is eligible to start only as a separate bounded
-prototype sprint with its own sprint plan and planning review.
+evidence-sample sprint with its own sprint plan and planning review.
 ```
 
-### Phase 4 - INSPECT-7 Dutch scoped evidence-pack prototype
+### Phase 4 - INSPECT-7 Dutch scoped evidence-pack sample
 
-Goal: create one bounded report-only evidence-pack prototype on already
+Goal: create one bounded report-only evidence-pack sample on already
 stabilised material before scaling.
 
 Authorisation:
@@ -1018,7 +1018,7 @@ INSPECT-7 must still begin with a dedicated sprint plan and planning review
 before implementation starts.
 ```
 
-Pilot scope:
+Bounded-trial scope:
 
 ```text
 Book 1, Chapter 1.1
@@ -1049,13 +1049,13 @@ Audit questions:
 1. Can the model find evidence in paragraph markdown?
 2. Can it find evidence in companion artifacts?
 3. Can it find evidence in quality-ref/review records?
-4. Does it distinguish generated-output completeness from companion-pilot status?
+4. Does it distinguish generated-output completeness from companion bounded-trial status?
 5. Does it avoid false defects caused by generated-output staleness?
 6. Does it produce a usable teacher-facing evidence summary?
 
 Acceptance criteria:
 
-- pilot report covers all three paragraphs;
+- bounded-trial report covers all three paragraphs;
 - evidence paths are cited;
 - missing evidence is classified by severity;
 - generated vs source artifacts are not confused;
@@ -1070,7 +1070,7 @@ Required guardrails:
 - no quality-ref integration;
 - no Scale Gate integration;
 - no generated lesson-output mutation;
-- no broader generator beyond the bounded prototype;
+- no broader generator beyond the bounded evidence sample;
 - no legal compliance, AVG/GDPR compliance, inspectorate approval,
   inspection-ready, certification, PTA validity, summative assessment validity,
   school-obligation-satisfied, classroom-implementation, complete OP0, or
@@ -1232,7 +1232,7 @@ Possible future gates:
 
 ```text
 INSPECT-G1 Dutch Evidence Profile Review
-INSPECT-G2 Pilot Evidence Audit Review
+INSPECT-G2 Bounded-Trial Evidence Audit Review
 INSPECT-G3 Report-Only Validator Acceptance
 INSPECT-G4 Teacher Pack Review
 INSPECT-G5 Country Overlay Review
@@ -1241,7 +1241,7 @@ INSPECT-G5 Country Overlay Review
 Do not make inspection validation a hard blocker for paragraph production until:
 
 - Dutch evidence profile is reviewed;
-- pilot audit is accepted;
+- bounded-trial audit is accepted;
 - report-only validator has run without major false positives;
 - human owner approves gate integration.
 
@@ -1378,13 +1378,13 @@ archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
 Historical decision after INSPECT-0:
 
 ```text
-Proceed to review/pilot work before schema design if the Dutch profile still needs evidence-based adjustment.
+Proceed to review/bounded-trial work before schema design if the Dutch profile still needs evidence-based adjustment.
 ```
 
 Current decision after INSPECT-2 and INSPECT-2A:
 
 ```text
-INSPECT-2A passed human review. INSPECT-3 Report-Only Schema Design is authorised and may create a diagnostic schema, schema notes, and pilot evidence-object examples.
+INSPECT-2A passed human review. INSPECT-3 Report-Only Schema Design is authorised and may create a diagnostic schema, schema notes, and bounded-trial evidence-object examples.
 ```
 
 Current decision after INSPECT-3:
@@ -1415,7 +1415,7 @@ Historical decision after INSPECT-6:
 
 ```text
 INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review.
-INSPECT-7 Dutch Scoped Evidence-Pack Prototype has opened with an
+INSPECT-7 Dutch Scoped Evidence-Pack Sample has opened with an
 authorisation, sprint plan, planning-review PASS, correction log, one
 no-personal-data Book 1 Chapter 1.1 source object, and report-only Markdown and
 JSON evidence packs. Validation, lead review, and external tri-agent review are
@@ -1431,7 +1431,7 @@ Current decision after INSPECT-7:
 INSPECT-7 closed with lead review PASS in round 4 and teacher, legal/privacy,
 and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. The bounded
 Book 1 Chapter 1.1 source object and report-only Markdown/JSON evidence packs
-are accepted as a no-personal-data prototype for Dutch quality-standards
+are accepted as a no-personal-data evidence sample for Dutch quality-standards
 evidence support.
 No later sprint is authorised by this closure. INSPECT-8, INSPECT-9, report or
 dashboard integration, country overlays, teacher inspection pack generation,
