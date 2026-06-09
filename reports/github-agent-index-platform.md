@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T09:14:12.363Z
+Generated: 2026-06-09T09:21:13.131Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3971
+Files indexed: 3973
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4031,7 +4031,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 388
+Count: 390
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4109,7 +4109,9 @@ Count: 388
 - archive/sprints/INSPECT-5R/INSPECT-5R-review-packet.md
 - archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md
 - archive/sprints/INSPECT-6/INSPECT-6-authorisation.md
+- archive/sprints/INSPECT-6/INSPECT-6-closure-log.md
 - archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-external-review-results.md
 - archive/sprints/INSPECT-6/INSPECT-6-generator-planning-packet.md
 - archive/sprints/INSPECT-6/INSPECT-6-lead-review-assignment.md
 - archive/sprints/INSPECT-6/INSPECT-6-lead-review-round1.md

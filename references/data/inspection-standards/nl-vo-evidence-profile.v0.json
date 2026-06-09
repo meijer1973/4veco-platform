@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "INSPECT-7 dedicated sprint plan and planning review for one bounded no-personal-data Book 1 Chapter 1.1 report-only evidence-pack prototype. Do not add a package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate integration, generated lesson output, country overlay, personal-data processing, or compliance/approval claims from this profile or prototype sprint.",
+  "next_recommended_step": "INSPECT-7 planning review before implementation for one bounded no-personal-data Book 1 Chapter 1.1 report-only evidence-pack prototype. Do not add a package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate integration, generated lesson output, country overlay, personal-data processing, or compliance/approval claims from this profile or prototype sprint.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
