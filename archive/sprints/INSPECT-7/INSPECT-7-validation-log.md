@@ -1,6 +1,6 @@
 # INSPECT-7 Validation Log
 
-Status: local validation passed, clean worktree and CI proof pending pushed packet
+Status: local validation passed, clean worktree passed, explicit CI waiver recorded
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -31,6 +31,8 @@ INSPECT-7 scope and remain diagnostic/report-only.
 | `npm.cmd run check:platform` | 0 | pass | 48 suites and 759 tests passed; 6 suites and 8 tests skipped by existing suite configuration. |
 | `git -C ..\4veco-lessen status --short --branch` | 0 | pass | Lesson repository stayed on `codex/quality-standards-20260608`. |
 | `git -C ..\4veco-lessen diff --name-only` | 0 | pass | No lesson-repository file changes. |
+| `npm.cmd run check:agent-worktree-safety -- --check --task QS-20260608 --agent codex --require-prefix codex/ --require-clean` | 0 | pass | Correct worktree lock, branch prefix, and clean tree after prototype packet push; head `a16a24a047dd73814e7a28b8f77aef9be195f4cd`. |
+| `gh run list --branch codex/quality-standards-20260608 --limit 10 --json databaseId,name,status,conclusion,headSha,url` | 0 | explicit CI waiver | Returned `[]`; no GitHub Actions `platform-ci / validate-platform` run is available for this branch. |
 
 ## Expected Warnings
 
@@ -60,27 +62,23 @@ Confirmed in source/output validation:
 - the assembler has fixed input/output paths and no package script;
 - no lesson-repository files changed.
 
-## Deferred Before External Review
+## CI Proof Or Waiver
 
-Before external teacher/legal/inspection review starts:
+`gh run list --branch codex/quality-standards-20260608 --limit 10 --json databaseId,name,status,conclusion,headSha,url`
+returned `[]` after the INSPECT-7 prototype packet branch was pushed.
 
-1. Commit and push the INSPECT-7 prototype packet.
-2. Run the clean worktree safety check:
-
-```text
-npm.cmd run check:agent-worktree-safety -- --check --task QS-20260608 --agent codex --require-prefix codex/ --require-clean
-```
-
-3. Check for GitHub Actions CI proof:
+Explicit CI waiver:
 
 ```text
-gh run list --branch codex/quality-standards-20260608 --limit 10 --json databaseId,name,status,conclusion,headSha,url
+No GitHub Actions `platform-ci / validate-platform` run is available for this
+branch. The lead-review and external-review dispatch prompts must cite the
+exact final pushed branch HEAD and this explicit CI waiver. Use the passing
+local validation in this log as the review evidence for INSPECT-7, and keep the
+packet on the pushed branch for review.
 ```
-
-4. Record either a passing `platform-ci / validate-platform` run URL or an
-   explicit CI waiver in the lead/external dispatch prompt.
 
 ## Required Next Action
 
-Push the prototype packet, run clean worktree safety and CI proof/waiver
-checks, then assign lead review before external tri-agent review.
+Assign lead review before external tri-agent review. The dispatch prompt must
+cite the exact final pushed branch HEAD, the pushed branch, and this explicit
+CI waiver.

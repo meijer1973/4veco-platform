@@ -1,6 +1,6 @@
 # INSPECT-7 Prototype Review Packet
 
-Status: prototype built, pending validation, lead review, and external review
+Status: locally validated, pending lead review and external review
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
