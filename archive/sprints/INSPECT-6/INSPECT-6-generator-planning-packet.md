@@ -1,6 +1,6 @@
 # INSPECT-6 Generator Planning Packet
 
-Status: draft, pending validation, lead review, and external re-review
+Status: locally validated, pending lead review and external re-review
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
