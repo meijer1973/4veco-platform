@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "fixture_set": "GOLDEN-EXERCISE-CHECKERS-1",
+  "created": "2026-06-09",
+  "fixtures": [
+    {
+      "id": "pure_legacy_et_page_route",
+      "category": "layout",
+      "expected_violation": "legacy_shell_or_asset",
+      "description": "A Golden route cannot pass with the pure legacy et-page / #exit-ticket-app shell.",
+      "payload": {
+        "html_file": "build-scripts/sprints/fixtures/legacy-exit-ticket.html"
+      }
+    },
+    {
+      "id": "hybrid_ge_plus_et_route",
+      "category": "layout",
+      "expected_violation": "hybrid_golden_legacy_shell",
+      "description": "A Golden route cannot pass by wrapping ge-* classes around an et-* shell.",
+      "payload": {
+        "html_file": "build-scripts/sprints/fixtures/hybrid-frankenstein-exit-ticket.html"
+      }
+    },
+    {
+      "id": "golden_route_with_legacy_assets",
+      "category": "layout",
+      "expected_violation": "legacy_asset_on_golden_route",
+      "description": "A Golden route cannot load task-shell.css, exit-ticket.css, or skill-map-route.css.",
+      "payload": {
+        "html": "<!doctype html><html lang=\"nl\"><head><link rel=\"stylesheet\" href=\"../../shared/golden-ticket-layout.css\"><link rel=\"stylesheet\" href=\"../../shared/task-shell.css\"><link rel=\"stylesheet\" href=\"../../shared/exit-ticket.css\"></head><body><header class=\"ge-topbar\"></header><main class=\"ge-page\" data-golden-ticket-root><section class=\"ge-hero\"><div class=\"ge-hero-card\"></div></section><section class=\"ge-workbench\"><aside class=\"ge-source-card\"><h2>Bron 1 - test</h2></aside><section class=\"ge-task-card\" data-ge-task-card aria-label=\"Werkvragen\"><ol class=\"ge-step-list\"></ol><div class=\"ge-feedback\"></div></section></section></main><script src=\"../../shared/exit-ticket/fixture.js\"></script><script src=\"../../shared/golden-ticket-layout.js\"></script></body></html>"
+      }
+    },
+    {
+      "id": "fake_graph_slope_question",
+      "category": "interaction",
+      "expected_violation": "fake_graph_line_shape",
+      "description": "A straight-line two-point graph cannot still ask a line-shape or slope question.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "graph",
+                "family": "graph_construction_substitute",
+                "prompt": "Plaats twee punten en kies daarna of de lijn stijgend of dalend is.",
+                "interaction": {
+                  "pointCount": 2,
+                  "lineShapeLabel": "Lijnvorm",
+                  "lineShapeOptions": [
+                    { "id": "up", "label": "Stijgend" },
+                    { "id": "down", "label": "Dalend" }
+                  ]
+                },
+                "expected": {
+                  "pointPolicy": "straight_line_two_distinct_table_points"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "answer_giving_placeholder",
+      "category": "interaction",
+      "expected_violation": "answer_giving_placeholder",
+      "description": "A graph-reading or calculation placeholder cannot reveal the expected answer.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "read",
+                "family": "graph_reading",
+                "prompt": "Lees de hoeveelheid af.",
+                "interaction": {
+                  "inputPlaceholder": "vul 225 in"
+                },
+                "expected": {
+                  "finalAnswer": {
+                    "value": 225,
+                    "acceptedNotations": ["225"]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "formula_token_bank_ordered_as_answer",
+      "category": "interaction",
+      "expected_violation": "formula_tokens_ordered_answer",
+      "description": "A formula token bank cannot display the answer sequence from left to right.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "formula",
+                "family": "calculation_work_capture",
+                "interaction": {
+                  "formula": {
+                    "tokens": [
+                      { "id": "open", "label": "(" },
+                      { "id": "new", "label": "nieuwe prijs" },
+                      { "id": "minus", "label": "-" },
+                      { "id": "old", "label": "oude prijs" },
+                      { "id": "close", "label": ")" },
+                      { "id": "divide", "label": "/" },
+                      { "id": "old", "label": "oude prijs" },
+                      { "id": "times100", "label": "x 100%" },
+                      { "id": "plus", "label": "+" }
+                    ]
+                  }
+                },
+                "expected": {
+                  "formula": {
+                    "tokens": ["open", "new", "minus", "old", "close", "divide", "old", "times100"]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "visually_identical_hidden_token_trap_oldq",
+      "category": "interaction",
+      "expected_violation": "visually_identical_hidden_token_trap",
+      "description": "The oldQden / oldQnum pattern must fail when it appears in a future Golden route.",
+      "payload": {
+        "data": {
+          "parNr": "2.1.1",
+          "layout": { "framework": "golden_exercise_workbench" },
+          "tasks": [
+            {
+              "type": "task_shell",
+              "taskShell": {
+                "id": "formula",
+                "family": "calculation_work_capture",
+                "interaction": {
+                  "formula": {
+                    "tokens": [
+                      { "id": "newQ", "label": "nieuwe Q", "kind": "answer" },
+                      { "id": "oldQden", "label": "oude Q", "kind": "answer" },
+                      { "id": "oldQnum", "label": "oude Q", "kind": "answer" },
+                      { "id": "divide", "label": "/", "kind": "answer" },
+                      { "id": "times100", "label": "x 100%", "kind": "answer" }
+                    ]
+                  }
+                },
+                "expected": {
+                  "formula": {
+                    "tokens": ["newQ", "divide", "oldQden", "times100", "oldQnum"]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "missing_after_interaction_proof",
+      "category": "proof",
+      "expected_violation": "missing_after_interaction_proof",
+      "description": "Initial render proof alone cannot authorize a graph/formula Golden route.",
+      "payload": {
+        "proof": {
+          "status": "adoption_ready",
+          "surface_has_graph_or_formula": true,
+          "claims_route_adoption": true,
+          "states": [
+            "desktop_initial",
+            "mobile_initial",
+            "dark_mode"
+          ]
+        }
+      }
+    }
+  ]
+}
