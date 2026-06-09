@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-q3-execution",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-09",
+  "status": "pending_human_review",
+  "review_scope": "Approve, revise, or reject the proposed future q3 fixture-only execution surface for MTU-H5-RP-001/RP-002. This review packet does not authorize execution by itself.",
+  "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md",
+  "source_execution_gate_packet_markdown": "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md",
+  "source_execution_gate_packet_json": "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json",
+  "checker": "build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+  "review_entry_bundle": "reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md",
+  "requested_decision": {
+    "decision_needed": "Is the proposed future write surface limited to reports/mtu-hardening/mtu-h5-regression-fixture.json approved for a later execution patch?",
+    "valid_decisions": [
+      "approve_fixture_only_q3_execution_surface",
+      "revise_packet_before_execution_authority",
+      "reject_fixture_only_surface"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "required_if_approving_later_execution": [
+      "explicitly authorize fixture mutation for q3 only",
+      "keep protected references, candidate storage, authored target exercises, lessons, diagnostics, PV, product routes, and student/product use unauthorized unless separately stated",
+      "require q3 A15 over-trigger negative proof after execution",
+      "require q3 reviewed-equivalent operation and answer-skill refs after execution"
+    ]
+  },
+  "review_questions": [
+    "Is the fixture-only write surface unambiguous and sufficient?",
+    "Does the packet correctly avoid protected-reference, candidate-storage, mapper/checker-first, and authored-target-exercise mutation?",
+    "Does the future patch shape preserve A61 and A96 while removing A15 from q3 mappings?",
+    "Does the future patch shape keep A15 as forbidden over-trigger protection?",
+    "Does q3 retain reviewed-equivalent annual-threshold operation coverage?",
+    "Does q3-step-2 retain threshold-conclusion answer-skill visibility?",
+    "Does rollback restore only the current q3 fixture state?",
+    "Are all product/student-use and lesson-output flags false?"
+  ],
+  "required_review_team_threshold": {
+    "agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "all_three_required": true
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md",
+    "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json",
+    "build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json",
+    "reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json",
+    "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json",
+    "reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js"
+  ],
+  "validation_commands": [
+    "node build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "node build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "validation_notes": [
+    "npm run agent:index is a generator. Run it before final diff review and verify generated agent-index files include the q3 execution-gate packet, checker, and gate paths.",
+    "The gate bundle must include full raw-GitHub URLs for every path in must_review."
+  ],
+  "blocked_outcomes": [
+    "q3 fixture mutation before separate approval",
+    "mapper repair",
+    "checker repair except this packet checker",
+    "candidate storage creation",
+    "candidate writes",
+    "protected reference mutation",
+    "machine reference mutation",
+    "authored target-exercise mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "lesson output",
+    "PV",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  }
+}
