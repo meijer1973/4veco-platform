@@ -5,7 +5,8 @@
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
     "references/reference-team-roadmap.md",
-    "docs/roadmaps/textbook/textbook-production-roadmap.md"
+    "docs/roadmaps/textbook/textbook-production-roadmap.md",
+    "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
   ],
   "status_values": [
     "active",
@@ -81,6 +82,17 @@
       "updated_on": "2026-06-08",
       "supersedes": [],
       "notes": "Active roadmap for textbook improvement and writing, housed in docs/roadmaps/textbook/. Human quality review changed the cadence to one paragraph per sprint. B2-2.1.1-HARDEN closed PASS WITH FLAGS after lead review; B2-2.1.2-HARDEN is planned next when the user is ready. B2-2.2-A remains paused. Companion/product proof remains separate from printed textbook production."
+    },
+    {
+      "roadmap_id": "inspection-standards-compatibility",
+      "version": "v1.3-inspect-7-tri-agent-accepted",
+      "title": "Inspection Standards Compatibility Roadmap",
+      "status": "active",
+      "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+      "owner": "references_team",
+      "updated_on": "2026-06-09",
+      "supersedes": [],
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-7 closed after lead review round 4 returned PASS and teacher, legal/privacy, and Dutch quality-inspection reviewers each returned MORE_THAN_SATISFIED. The prototype remains bounded and report-only; broader generator, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",

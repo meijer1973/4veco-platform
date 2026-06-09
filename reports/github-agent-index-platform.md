@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T11:27:18.889Z
+Generated: 2026-06-09T12:46:02.873Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3944
+Files indexed: 4093
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -127,7 +127,7 @@ Count: 81
 
 ## build scripts
 
-Count: 452
+Count: 453
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -200,6 +200,7 @@ Count: 452
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
 - build-scripts/lib/convert_presentatie.py
@@ -631,8 +632,23 @@ Count: 42
 
 ## validators
 
-Count: 381
+Count: 400
 
+- archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
+- archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-validation-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-validation-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-validator-design-packet.md
+- archive/sprints/INSPECT-5/INSPECT-5-validation-log.md
+- archive/sprints/INSPECT-5/INSPECT-5-validator-refinement-packet.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
+- archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md
+- archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -641,6 +657,7 @@ Count: 381
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
@@ -823,6 +840,8 @@ Count: 381
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- docs/inspection-standards/evidence-pack-validation-and-dispatch.md
+- docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.24-lead-review-strict-validation.md
@@ -830,6 +849,7 @@ Count: 381
 - docs/roadmaps/outdated/reference-team-roadmap-v3.40-check-short-exit1-inventory.md
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
+- references/data/inspection-standards/validator-notes.md
 - references/data/sprints/CHECK-Q2-PLAN.plan.json
 - references/data/sprints/CHECK-Q2-PLAN.result.json
 - references/data/sprints/CHECK-SHORT-EXIT-1.plan.json
@@ -1017,7 +1037,7 @@ Count: 381
 
 ## references
 
-Count: 552
+Count: 568
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1051,6 +1071,21 @@ Count: 552
 - references/data/exercises/source-annex-gap-log.json
 - references/data/exercises/source-annex-gap-log.md
 - references/data/exercises/target-exercise-overlays.json
+- references/data/inspection-standards/fixtures/negative/extra-property.sample.json
+- references/data/inspection-standards/fixtures/negative/full-report-missing-category.sample.json
+- references/data/inspection-standards/fixtures/negative/invalid-category-id.sample.json
+- references/data/inspection-standards/fixtures/negative/invalid-diagnostic-policy.sample.json
+- references/data/inspection-standards/fixtures/negative/known-forbidden-phrase.sample.json
+- references/data/inspection-standards/fixtures/negative/missing-op0-boundary.sample.json
+- references/data/inspection-standards/fixtures/negative/missing-required-field.sample.json
+- references/data/inspection-standards/fixtures/negative/missing-target-equivalent-proof.sample.json
+- references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json
+- references/data/inspection-standards/nl-vo-evidence-profile.v0.json
+- references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
+- references/data/inspection-standards/README.md
+- references/data/inspection-standards/schema-notes.md
+- references/data/inspection-standards/source-register.json
+- references/data/inspection-standards/validator-notes.md
 - references/data/misconceptions/misconception-registry.json
 - references/data/owned-content-graph.json
 - references/data/owned-source-registry.json
@@ -1544,6 +1579,7 @@ Count: 552
 - references/schemas/exercise-metadata-overlay.schema.json
 - references/schemas/feedback.schema.json
 - references/schemas/game-item.schema.json
+- references/schemas/inspection-evidence.schema.json
 - references/schemas/misconception.schema.json
 - references/schemas/operation-answer-skill-contract.schema.json
 - references/schemas/operation-candidates.schema.json
@@ -1574,7 +1610,7 @@ Count: 552
 
 ## reports
 
-Count: 2499
+Count: 2501
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1602,6 +1638,8 @@ Count: 2499
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
+- reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
@@ -4096,16 +4134,125 @@ _No files indexed in this group._
 
 ## other
 
-Count: 299
+Count: 412
 
 - .gitattributes
 - .github/ci-python-requirements.txt
 - .github/workflows/platform-ci.yml
 - .gitignore
+- archive/sprints/INSPECT-0/INSPECT-0-closure-log.md
+- archive/sprints/INSPECT-0/INSPECT-0-current-state-audit.md
+- archive/sprints/INSPECT-0/INSPECT-0-sprint-plan.md
+- archive/sprints/INSPECT-1/INSPECT-1-human-review-packet.md
+- archive/sprints/INSPECT-1/INSPECT-1-lead-review-assignment.md
+- archive/sprints/INSPECT-1/INSPECT-1-lead-review-readiness.md
+- archive/sprints/INSPECT-1/INSPECT-1-planning-review.md
+- archive/sprints/INSPECT-1/INSPECT-1-readiness-closure-log.md
+- archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-human-correction-review.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-human-review-response.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-assignment.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round1.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-lead-review-round2.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-planning-review.md
+- archive/sprints/INSPECT-1A/INSPECT-1A-sprint-plan.md
+- archive/sprints/INSPECT-2/INSPECT-2-bounded-pilot-evidence-audit.md
+- archive/sprints/INSPECT-2/INSPECT-2-closure-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-correction-log.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-assignment.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-round1.md
+- archive/sprints/INSPECT-2/INSPECT-2-lead-review-round2.md
+- archive/sprints/INSPECT-2/INSPECT-2-planning-review.md
+- archive/sprints/INSPECT-2/INSPECT-2-sprint-plan.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-closure-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-correction-log.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-correction-packet.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-human-authorization.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-assignment.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round1.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-lead-review-round2.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-planning-review.md
+- archive/sprints/INSPECT-2A/INSPECT-2A-sprint-plan.md
+- archive/sprints/INSPECT-3/INSPECT-3-closure-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-correction-log.md
+- archive/sprints/INSPECT-3/INSPECT-3-human-authorization.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-assignment.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-round1.md
+- archive/sprints/INSPECT-3/INSPECT-3-lead-review-round2.md
+- archive/sprints/INSPECT-3/INSPECT-3-planning-review.md
+- archive/sprints/INSPECT-3/INSPECT-3-schema-design-packet.md
+- archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md
+- archive/sprints/INSPECT-4/INSPECT-4-closure-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-correction-log.md
+- archive/sprints/INSPECT-4/INSPECT-4-human-authorization.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-assignment.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-round1.md
+- archive/sprints/INSPECT-4/INSPECT-4-lead-review-round2.md
+- archive/sprints/INSPECT-4/INSPECT-4-planning-review.md
+- archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md
+- archive/sprints/INSPECT-5/INSPECT-5-closure-log.md
+- archive/sprints/INSPECT-5/INSPECT-5-correction-log.md
+- archive/sprints/INSPECT-5/INSPECT-5-human-authorization.md
+- archive/sprints/INSPECT-5/INSPECT-5-lead-review-assignment.md
+- archive/sprints/INSPECT-5/INSPECT-5-lead-review-round1.md
+- archive/sprints/INSPECT-5/INSPECT-5-lead-review-round2.md
+- archive/sprints/INSPECT-5/INSPECT-5-planning-review.md
+- archive/sprints/INSPECT-5/INSPECT-5-sprint-plan.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-closure-log.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-correction-log.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-external-review-intake.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-external-review-results.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-assignment.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round1.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-lead-review-round2.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-planning-review.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-review-packet.md
+- archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md
+- archive/sprints/INSPECT-6/INSPECT-6-authorisation.md
+- archive/sprints/INSPECT-6/INSPECT-6-closure-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-external-review-results.md
+- archive/sprints/INSPECT-6/INSPECT-6-generator-planning-packet.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-assignment.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-round1.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-round2.md
+- archive/sprints/INSPECT-6/INSPECT-6-planning-review.md
+- archive/sprints/INSPECT-6/INSPECT-6-sprint-plan.md
+- archive/sprints/INSPECT-7/build-inspect-7-prototype.js
+- archive/sprints/INSPECT-7/INSPECT-7-authorisation.md
+- archive/sprints/INSPECT-7/INSPECT-7-closure-log.md
+- archive/sprints/INSPECT-7/INSPECT-7-correction-log.md
+- archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md
+- archive/sprints/INSPECT-7/INSPECT-7-final-external-review-packet.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-assignment.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round1.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round2.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round3.md
+- archive/sprints/INSPECT-7/INSPECT-7-lead-review-round4.md
+- archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
+- archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
+- archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md
+- archive/sprints/QS-MERGE-1/QS-MERGE-1-sprint-plan.md
+- archive/sprints/QS-MERGE-2/QS-MERGE-2-closure-log.md
+- archive/sprints/QS-MERGE-2/QS-MERGE-2-human-review.md
+- archive/sprints/QS-MERGE-2/QS-MERGE-2-planning-review.md
+- archive/sprints/QS-MERGE-2/QS-MERGE-2-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/inspection-standards/evidence-pack-source-contract.md
+- docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
+- docs/inspection-standards/nl-vo-evidence-model.md
+- docs/inspection-standards/report-only-generator-plan.md
+- docs/inspection-standards/report-only-schema-design.md
+- docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
@@ -4246,6 +4393,10 @@ Count: 299
 - docs/roadmaps/outdated/reference-team-roadmap-v3.49-multi-select-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.50-step-ordering-runtime.md
 - docs/roadmaps/outdated/reference-team-roadmap-v3.55-shared-task-context-runtime.md
+- docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+- docs/roadmaps/quality-standards/quality-standards-end-state.md
+- docs/roadmaps/quality-standards/README.md
+- docs/roadmaps/quality-standards/sprint-ledger.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
 - docs/roadmaps/roadmap-version-index.md
