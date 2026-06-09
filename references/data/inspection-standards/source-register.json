@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "register_id": "inspection-standards-source-register",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-6 Report-Only Generator Planning",
   "roadmap_id": "inspection-standards-compatibility",
   "status": "draft",
   "retrieved_date": "2026-06-08",
@@ -135,6 +135,38 @@
       "citation_policy": "public",
       "notes": "Use for official correction-model provenance. Do not generalise it into summative claims, school assessment policy, or inspection compliance evidence.",
       "use_in_v0_profile": "curriculum_anchor"
+    },
+    {
+      "source_id": "nl-ap-avg-verantwoordingsplicht",
+      "jurisdiction": "Netherlands",
+      "authority": "Autoriteit Persoonsgegevens",
+      "source_type": "privacy_regulator_guidance",
+      "title": "Verantwoordingsplicht",
+      "url": "https://autoriteitpersoonsgegevens.nl/themas/basis-avg/avg-algemeen/verantwoordingsplicht",
+      "retrieved_date": "2026-06-09",
+      "status": "active",
+      "scope": "privacy-accountability",
+      "authority_boundary": "Privacy accountability guidance for processing personal data; not education inspection authority, curriculum authority, or proof of 4veco legal compliance.",
+      "why_it_matters_for_4veco": "Provides a Dutch privacy boundary anchor for the no-personal-data default and future accountability requirements if evidence packs ever process personal data.",
+      "citation_policy": "public",
+      "notes": "Use as a privacy guardrail source only. Do not claim AVG/GDPR compliance from this source or from an evidence pack.",
+      "use_in_v0_profile": "privacy_boundary"
+    },
+    {
+      "source_id": "nl-ap-dpia",
+      "jurisdiction": "Netherlands",
+      "authority": "Autoriteit Persoonsgegevens",
+      "source_type": "privacy_regulator_guidance",
+      "title": "Data protection impact assessment (DPIA)",
+      "url": "https://autoriteitpersoonsgegevens.nl/themas/basis-avg/praktisch-avg/data-protection-impact-assessment-dpia",
+      "retrieved_date": "2026-06-09",
+      "status": "active",
+      "scope": "privacy-risk-assessment",
+      "authority_boundary": "Privacy risk-assessment guidance for high-risk personal-data processing; not education inspection authority, curriculum authority, or proof of 4veco legal compliance.",
+      "why_it_matters_for_4veco": "Defines the later privacy/DPIA/data-processing gate that must happen before personal data can enter generated evidence packs.",
+      "citation_policy": "public",
+      "notes": "Use as a privacy guardrail source only. INSPECT-6/7 evidence packs remain no-personal-data by default.",
+      "use_in_v0_profile": "privacy_boundary"
     },
     {
       "source_id": "be-flanders-ok-framework",

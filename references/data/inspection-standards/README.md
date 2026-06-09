@@ -73,6 +73,14 @@ integration, country overlays, generated lesson-output changes, personal-data
 processing, CI/build integration, legal compliance claims, inspectorate
 approval claims, or complete OP0/basic-skills claims.
 
+INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection
+reviewers each `MORE_THAN_SATISFIED`. INSPECT-6 is authorised as report-only
+generator planning. It may add planning documents and privacy boundary source
+anchors for no-personal-data and later DPIA/data-processing gates. It must not
+implement a generator, generate evidence packs, integrate dashboards,
+quality-ref, Scale Gate, CI/build gates, or lesson output, process personal
+data, or make compliance/approval claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:
@@ -98,6 +106,7 @@ Future authorised phases may add:
   procedures, or learning goals.
 - Do not claim legal compliance, approval, accreditation, or inspection
   judgement.
+- Do not claim AVG/GDPR compliance from privacy boundary sources.
 - Do not present migrated target exercises, answer models, diagnostic reports,
   screenshots, or product QA records as final-reviewed school evidence unless a
   reviewed source/review artifact supports that exact claim.

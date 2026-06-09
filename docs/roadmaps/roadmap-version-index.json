@@ -73,14 +73,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v0.7-inspect-5r-tri-agent-accepted",
+      "version": "v0.8-inspect-6-generator-planning",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-09",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. It encodes tri-agent MORE_THAN_SATISFIED review, privacy/no-personal-data defaults, safe-claim templates, OP0 boundaries, and a teacher-facing template. Report-only generator planning, generated evidence packs, teacher inspection packs, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, CI/build integration, personal-data processing, and compliance claims remain unauthorised until the owner explicitly authorises the next sprint."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-6 is active as planning-only report-only generator planning after INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each MORE_THAN_SATISFIED. INSPECT-6 defines future generator architecture, source contract, validation/dispatch plan, safe-claim and semantic-overclaiming requirements, teacher-facing output shape, and INSPECT-7 readiness criteria. Generator implementation, generated evidence packs, teacher inspection packs, generated lesson-output changes, country overlays, dashboard gates, quality-ref integration, Scale Gate integration, CI/build integration, personal-data processing, and compliance claims remain unauthorised."
     },
     {
       "roadmap_id": "references-team-roadmap",

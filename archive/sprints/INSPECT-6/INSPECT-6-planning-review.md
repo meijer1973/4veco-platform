@@ -1,6 +1,6 @@
 # INSPECT-6 Planning Review
 
-Status: revise, corrections applied, pending re-review
+Status: pass after correction
 Date: 2026-06-09
 Reviewer role: planning/review agent
 Reviewed commit: `1ebd19db7bb1509e04b72715cbe4179a65e417a7`
@@ -48,5 +48,22 @@ The sprint plan now requires:
 
 ## Required Next Action
 
-Push the corrected sprint plan and resubmit INSPECT-6 for planning review
-before implementation starts.
+Proceed with INSPECT-6 implementation within planning-only scope. Create only
+the authorised generator planning documents and review packet, then validate,
+lead-review, push, and send the packet for teacher, legal/privacy, and Dutch
+quality-inspection `MORE_THAN_SATISFIED` review.
+
+## Recheck
+
+Recheck commit: `5003eb45`
+
+Verdict: PASS
+
+The reviewer found no remaining blockers. The corrected plan now requires:
+
+- an INSPECT-6 correction log;
+- correction logging for lead-review and external-review loops;
+- a 5-10 minute teacher/school-leader usefulness threshold;
+- visible separation of `4veco evidence`, `school evidence still needed`,
+  weak/missing evidence, and forbidden inference;
+- official-source boundary anchors for OP0/privacy/claim safety.

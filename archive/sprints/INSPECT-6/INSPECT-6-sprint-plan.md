@@ -59,6 +59,8 @@ archive/sprints/INSPECT-6/INSPECT-6-closure-log.md
 docs/inspection-standards/report-only-generator-plan.md
 docs/inspection-standards/evidence-pack-source-contract.md
 docs/inspection-standards/evidence-pack-validation-and-dispatch.md
+references/data/inspection-standards/source-register.json privacy boundary anchors
+references/data/inspection-standards/nl-vo-evidence-profile.v0.json metadata update
 docs/roadmaps/quality-standards/inspection-standards-roadmap.md
 docs/roadmaps/quality-standards/sprint-ledger.md
 docs/roadmaps/roadmap-version-index.json when version metadata changes

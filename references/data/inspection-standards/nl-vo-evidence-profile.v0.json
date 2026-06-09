@@ -3,7 +3,7 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails; INSPECT-6 Report-Only Generator Planning",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "INSPECT-5R teacher, legal/privacy, and Dutch quality-inspection MORE_THAN_SATISFIED review of the external review, privacy, teacher-template, OP0, and safe-claim guardrails. Do not start report-only generator planning, evidence packs, teacher inspection packs, CI/build integration, dashboards, quality-ref integration, Scale Gate integration, generated lesson output, country overlays, personal-data processing, or compliance claims until that gate passes and the repository owner explicitly authorises the next sprint.",
+  "next_recommended_step": "INSPECT-6 teacher, legal/privacy, and Dutch quality-inspection MORE_THAN_SATISFIED review of report-only generator planning. Do not implement a generator, generate evidence packs, add teacher inspection packs, CI/build integration, dashboards, quality-ref integration, Scale Gate integration, generated lesson output, country overlays, personal-data processing, or compliance claims from this profile or planning sprint.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
