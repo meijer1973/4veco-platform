@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-EXERCISE-WORKBENCH-PREP-1",
+  "name": "Golden Exercise Workbench Rollout Preparation",
+  "created": "2026-06-09",
+  "plan": "reports/sprints/GOLDEN-EXERCISE-WORKBENCH-PREP-1-plan.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "broad_rollout_allowed": false,
+  "product_route_adoption_authorized": false,
+  "scale_gate_1_authorized": false,
+  "scope": [
+    "Create durable project-control documents for the Golden Exercise Workbench rollout.",
+    "Record the end-state, roadmap, sprint ledger, quality metrics, review protocol, and goal sequence.",
+    "Ground the documents in the current 1.1.3 Golden Ticket implementation and A96 answer-form exemplar.",
+    "Add minimal sprint plan metadata required by repository convention."
+  ],
+  "acceptance_tests": [
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No migration of 1.1.2.",
+    "No migration of 1.1.1.",
+    "No migration of advisory short checks.",
+    "No migration of graph, math, or reasoning games.",
+    "No generated lesson output changes.",
+    "No deletion or rewrite of legacy renderers.",
+    "No product-use, Scale Gate 1, target-equivalent completion-language, diagnostics, mastery, automatic sequencing, or summative-use claims."
+  ]
+}
