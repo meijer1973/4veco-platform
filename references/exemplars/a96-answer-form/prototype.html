@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A96 golden exemplar v3 — volledige bereken-antwoordvorm</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --panel-2: #edf3f7;
+      --text: #142033;
+      --muted: #5a687a;
+      --line: #d4dee8;
+      --accent: #176c67;
+      --accent-soft: #e4f3ef;
+      --good: #17643e;
+      --good-bg: #e7f6ee;
+      --warn: #8a5a00;
+      --warn-bg: #fff5d8;
+      --bad: #8c2424;
+      --bad-bg: #fbe9e9;
+      --shadow: 0 14px 36px rgba(18, 35, 58, 0.10);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0c121c;
+      --panel: #131d2b;
+      --panel-2: #1a2636;
+      --text: #eef4fb;
+      --muted: #aebdca;
+      --line: #31445a;
+      --accent: #75cfc3;
+      --accent-soft: #12332f;
+      --good: #8ee0b2;
+      --good-bg: #10281e;
+      --warn: #ffd36d;
+      --warn-bg: #332400;
+      --bad: #ffaaa7;
+      --bad-bg: #341414;
+      --shadow: 0 14px 36px rgba(0,0,0,0.34);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    button, input, textarea, select { font: inherit; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 24px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 18px; align-items: stretch; margin-bottom: 18px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(16px, 2.2vw, 22px); }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-weight: 900; text-transform: uppercase; letter-spacing: .04em; font-size: 12px; }
+    h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.015em; }
+    h1 { font-size: clamp(30px, 4vw, 46px); }
+    h2 { font-size: clamp(21px, 2.5vw, 28px); }
+    h3 { font-size: 18px; margin-bottom: 8px; }
+    p { margin: 0 0 12px; }
+    .lead { color: var(--muted); max-width: 78ch; font-size: 18px; margin: 8px 0 0; }
+    .route { display: grid; gap: 10px; align-content: start; }
+    .route a { display: block; text-decoration: none; color: var(--text); border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: var(--panel-2); }
+    .route span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 2px; }
+    .theme-toggle { justify-self: start; margin-top: 10px; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px; padding: 9px 12px; cursor: pointer; }
+    .layout { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 18px; align-items: start; }
+    .source { position: sticky; top: 18px; }
+    .source p { color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 15px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 9px 10px; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: var(--panel-2); color: var(--muted); font-weight: 800; }
+    tr:last-child td { border-bottom: 0; }
+    .tasks { display: grid; gap: 16px; }
+    .task { display: grid; gap: 14px; }
+    .task-head { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 12px; align-items: start; }
+    .badge { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 900; }
+    .purpose { color: var(--muted); margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .step-grid { display: grid; gap: 12px; }
+    .step-grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .token-bank, .chosen-tokens, .pill-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .token-bank { padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel-2); }
+    .chosen-tokens { min-height: 62px; padding: 12px; border: 2px dashed var(--line); border-radius: 14px; background: color-mix(in srgb, var(--panel) 90%, var(--bg)); }
+    .chosen-tokens:empty::before { content: "Klik formulebouwstenen om hier je formule te bouwen."; color: var(--muted); font-weight: 700; }
+    .token, .token-chip, .small-button, .choice-pill { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--text); cursor: pointer; }
+    .token { min-height: 42px; padding: 9px 12px; font-family: var(--mono); font-weight: 800; }
+    .token:hover, .small-button:hover, .choice-pill:hover { border-color: var(--accent); }
+    .token:disabled { opacity: .48; cursor: not-allowed; }
+    .token-chip { display: inline-flex; align-items: center; gap: 5px; min-height: 38px; padding: 6px 7px 6px 11px; background: color-mix(in srgb, var(--accent) 11%, var(--panel)); border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); font-family: var(--mono); font-weight: 800; }
+    .token-chip button { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--text); cursor: pointer; width: 27px; height: 27px; display: inline-grid; place-items: center; font-weight: 900; }
+    .small-button { min-height: 38px; padding: 8px 11px; font-weight: 800; }
+    .choice-pill { min-height: 42px; padding: 9px 12px; display: inline-flex; gap: 8px; align-items: center; }
+    .choice-pill[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 800; }
+    .formula-template { display: grid; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb, var(--panel-2) 70%, var(--panel)); }
+    .formula-line { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; font-family: var(--mono); font-size: clamp(16px, 2vw, 20px); }
+    .field { display: grid; gap: 6px; font-weight: 800; min-width: 0; }
+    .field span { color: var(--muted); font-size: 14px; }
+    .field input, .field textarea { width: 100%; min-height: 46px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--text); padding: 10px 12px; }
+    .field textarea { min-height: 76px; resize: vertical; }
+    .formula-input { width: 92px !important; min-width: 80px; text-align: center; font-weight: 900; font-family: var(--mono); }
+    .answer-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(150px, .45fr); gap: 12px; align-items: end; }
+    .feedback { display: none; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; }
+    .feedback.show { display: block; }
+    .feedback.good { background: var(--good-bg); color: var(--good); border-color: color-mix(in srgb, var(--good) 42%, var(--line)); }
+    .feedback.warn { background: var(--warn-bg); color: var(--warn); border-color: color-mix(in srgb, var(--warn) 42%, var(--line)); }
+    .feedback.bad { background: var(--bad-bg); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 42%, var(--line)); }
+    .feedback strong { display: block; margin-bottom: 4px; }
+    .feedback ul { margin: 8px 0 0 18px; }
+    .locked { opacity: .58; position: relative; }
+    .locked::after { content: "Rond eerst het vorige onderdeel af."; position: absolute; inset: 10px; display: grid; place-items: center; text-align: center; padding: 14px; border: 1px dashed var(--line); border-radius: 14px; background: color-mix(in srgb, var(--panel) 88%, transparent); color: var(--muted); font-weight: 900; }
+    .completion { display: none; background: var(--good-bg); border-color: color-mix(in srgb, var(--good) 42%, var(--line)); }
+    .completion.show { display: block; }
+    details { margin-top: 16px; }
+    summary { cursor: pointer; font-weight: 900; }
+    .note-list { color: var(--muted); margin: 10px 0 0 18px; }
+    .note-list li { margin-bottom: 6px; }
+    :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 38%, transparent); outline-offset: 3px; }
+
+    @media (max-width: 980px) {
+      .hero, .layout { grid-template-columns: 1fr; }
+      .source { position: static; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 12px; }
+      .card { border-radius: 14px; }
+      .step-grid.two, .answer-grid { grid-template-columns: 1fr; }
+      .lead { font-size: 16px; }
+      table { font-size: 14px; }
+      .formula-input { width: 84px !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">A96 Golden exemplar v3</p>
+        <h1>Bereken-vraag: volledige antwoordvorm</h1>
+        <p class="lead">Werk zelfstandig met de bron. Je laat zien welke formule je gebruikt, vult de bronwaarden in, berekent het eindantwoord met notatie en schrijft één contextzin met richting.</p>
+        <button type="button" class="theme-toggle" id="themeToggle">Donkere modus</button>
+      </div>
+      <aside class="card route" aria-label="Oefenroute">
+        <h2>Oefenroute bij herstel</h2>
+        <a href="#"><span>Rekenen</span><strong>Procentuele verandering</strong></a>
+        <a href="#"><span>Antwoordvorm</span><strong>Berekening volledig opschrijven</strong></a>
+        <a href="#"><span>Conclusie</span><strong>Contextzin met richting</strong></a>
+      </aside>
+    </section>
+
+    <section class="layout">
+      <aside class="card source" aria-label="Bronnen">
+        <p class="eyebrow">Bron 1</p>
+        <h2>Fietsprijs</h2>
+        <p>Een fiets kost eerst <strong>800 euro</strong> en daarna <strong>920 euro</strong>.</p>
+        <table aria-label="Oude en nieuwe fietsprijs">
+          <thead><tr><th>Situatie</th><th>Prijs</th></tr></thead>
+          <tbody>
+            <tr><td>Oude prijs</td><td>€800</td></tr>
+            <tr><td>Nieuwe prijs</td><td>€920</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top:12px;">Gebruik alleen deze bronwaarden. De formule staat niet als hulpkaart klaar: die schrijf je eerst zelf op.</p>
+      </aside>
+
+      <section class="tasks" aria-label="Werkvragen">
+        <article class="card task" id="step1">
+          <div class="task-head"><span class="badge">1</span><div><h2>Schrijf de formule op die je gaat gebruiken</h2><p class="purpose">Bouw de formule voor procentuele verandering. De bouwstenen staan niet in de juiste volgorde en er zitten afleiders tussen.</p><p class="muted">De bouwsteen <strong>oude prijs ×2</strong> gebruik je twee keer: één keer in de teller en één keer in de noemer.</p></div></div>
+          <div class="token-bank" id="tokenBank" aria-label="Formulebouwstenen"></div>
+          <div class="chosen-tokens" id="chosenTokens" role="list" aria-label="Jouw formule"></div>
+          <div class="pill-row">
+            <button type="button" class="small-button" id="undoToken">Laatste bouwsteen weg</button>
+            <button type="button" class="small-button" id="clearFormula">Wis formule</button>
+            <button type="button" class="small-button" id="checkFormula">Controleer formule</button>
+          </div>
+          <div class="feedback" id="feedbackFormula" role="status" tabindex="-1" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="step2">
+          <div class="task-head"><span class="badge">2</span><div><h2>Vul de formule in met de bronwaarden</h2><p class="purpose">Gebruik de formule uit stap 1 en vul de oude en nieuwe prijs uit Bron 1 in.</p></div></div>
+          <div class="formula-template" aria-label="Formule met open velden">
+            <p class="muted">Vul alleen de bronwaarden in. De berekening rond je af in stap 3.</p>
+            <div class="formula-line" aria-label="Ingevulde formule">
+              <span>(</span>
+              <label class="field"><span>nieuwe prijs</span><input class="formula-input" id="newPrice" inputmode="decimal" autocomplete="off" placeholder="nieuw"></label>
+              <span>−</span>
+              <label class="field"><span>oude prijs</span><input class="formula-input" id="oldPriceTop" inputmode="decimal" autocomplete="off" placeholder="oud"></label>
+              <span>) ÷</span>
+              <label class="field"><span>oude prijs</span><input class="formula-input" id="oldPriceBottom" inputmode="decimal" autocomplete="off" placeholder="oud"></label>
+              <span>× 100</span>
+            </div>
+          </div>
+          <button type="button" class="small-button" id="checkSubstitution">Controleer bronwaarden</button>
+          <div class="feedback" id="feedbackSubstitution" role="status" tabindex="-1" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="step3">
+          <div class="task-head"><span class="badge">3</span><div><h2>Bereken je antwoord</h2><p class="purpose">Je hebt de berekening al opgezet. Geef nu het eindantwoord en de eenheid of notatie.</p></div></div>
+          <div class="answer-grid">
+            <label class="field"><span>Eindantwoord</span><input id="finalAnswer" inputmode="decimal" autocomplete="off" placeholder="vul het getal in"></label>
+            <label class="field"><span>Eenheid of notatie</span><input id="unitNotation" autocomplete="off" placeholder="bijvoorbeeld % of procent"></label>
+          </div>
+          <button type="button" class="small-button" id="checkAnswer">Controleer eindantwoord</button>
+          <div class="feedback" id="feedbackAnswer" role="status" tabindex="-1" aria-live="polite"></div>
+        </article>
+
+        <article class="card task locked" id="step4">
+          <div class="task-head"><span class="badge">4</span><div><h2>Schrijf de contextzin met richting</h2><p class="purpose">Maak duidelijk wat de berekening betekent in deze bron.</p></div></div>
+          <label class="field"><span>Contextzin</span><textarea id="contextSentence" autocomplete="off" placeholder="schrijf een zin met richting en context"></textarea></label>
+          <button type="button" class="small-button" id="checkContext">Controleer contextzin</button>
+          <div class="feedback" id="feedbackContext" role="status" tabindex="-1" aria-live="polite"></div>
+        </article>
+
+        <section class="card completion" id="completion">
+          <h2>A96-antwoordvorm compleet</h2>
+          <p>Je hebt formule, bronwaarden, eindantwoord, notatie en contextzin zichtbaar gemaakt. Gebruik de oefenroute als een onderdeel nog onzeker voelt.</p>
+        </section>
+
+        <details class="card">
+          <summary>Ontwerpnotitie voor repository-teams</summary>
+          <ul class="note-list">
+            <li>Stap 1 heet expliciet: “Schrijf de formule op die je gaat gebruiken”. De formulebank mag niet links-naar-rechts al het antwoord geven.</li>
+            <li>Stap 2 toont dezelfde formule als open invulstructuur. De leerling vult bronwaarden in; dit vervangt een rommelige algemene textarea.</li>
+            <li>Stap 3 heet “Bereken je antwoord” en vraagt alleen eindantwoord plus eenheid/notatie. Dit voorkomt dubbel werk met de formule-invulling.</li>
+            <li>Stap 4 is alleen de contextzin met richting. De conclusie hoort niet vermengd te worden met de notatiecontrole.</li>
+            <li>De interface toont de antwoordvorm die je op een toets verwacht: formule → invullen → eindantwoord/notatie → contextzin.</li>
+            <li>Geen review-only autofillknoppen in student-output. Testscenario’s horen in fixtures of een aparte review lab, niet in de productkaart.</li>
+            <li>Gebruik nooit twee visueel identieke formulebouwstenen met verschillende verborgen IDs. Als dezelfde bouwsteen twee keer nodig is, gebruik één herbruikbare bouwsteen met een duidelijke gebruiksteller, zoals <strong>oude prijs ×2</strong>.</li>
+          </ul>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const CORRECT_SEQUENCE = ['open','new','minus','oldPrice','close','divide','oldPrice','times100'];
+    const TOKENS = [
+      { id: 'times100', label: '× 100', kind: 'answer' },
+      { id: 'new', label: 'nieuwe prijs', kind: 'answer' },
+      { id: 'plus', label: '+', kind: 'distractor' },
+      { id: 'open', label: '(', kind: 'answer' },
+      { id: 'divide', label: '÷', kind: 'answer' },
+      { id: 'oldMinusNew', label: 'oude prijs − nieuwe prijs', kind: 'distractor' },
+      { id: 'oldPrice', label: 'oude prijs', kind: 'answer', maxUses: 2, usageHint: 'gebruik in teller en noemer' },
+      { id: 'close', label: ')', kind: 'answer' },
+      { id: 'minus', label: '−', kind: 'answer' },
+      { id: 'times10', label: '× 10', kind: 'distractor' },
+      { id: 'newDenom', label: 'nieuwe prijs onder de streep', kind: 'distractor' }
+    ];
+    const state = { tokens: [], passed: { formula: false, substitution: false, answer: false, context: false } };
+
+    const $ = (id) => document.getElementById(id);
+    function normalize(value) { return String(value || '').trim().toLowerCase().replace(/\s+/g, ' '); }
+    function parseNumber(value) {
+      const cleaned = String(value || '')
+        .toLowerCase()
+        .replace(/procent/g, '')
+        .replace(/%/g, '')
+        .replace(/€/g, '')
+        .replace(/\s/g, '')
+        .replace(',', '.');
+      if (!cleaned) return NaN;
+      return Number(cleaned);
+    }
+    function unlock(id) { $(id).classList.remove('locked'); }
+    function lock(id) { $(id).classList.add('locked'); }
+    function setFeedback(id, ok, title, text, missing) {
+      const el = $(id);
+      el.className = 'feedback show ' + (ok ? 'good' : 'bad');
+      el.innerHTML = '<strong>' + title + '</strong><p>' + text + '</p>' + (missing && missing.length ? '<ul>' + missing.map(item => '<li>' + item + '</li>').join('') + '</ul>' : '');
+      el.focus({ preventScroll: true });
+    }
+    function renderTokens() {
+      const bank = $('tokenBank');
+      bank.innerHTML = '';
+      TOKENS.forEach(token => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'token';
+        button.dataset.tokenId = token.id;
+        button.textContent = token.label + (token.maxUses ? ' ×' + token.maxUses : '');
+        const usedCount = state.tokens.filter(value => value === token.id).length;
+        const maxUses = token.maxUses || 1;
+        button.disabled = usedCount >= maxUses;
+        button.addEventListener('click', () => addToken(token.id));
+        bank.appendChild(button);
+      });
+      renderChosen();
+    }
+    function renderChosen() {
+      const chosen = $('chosenTokens');
+      chosen.innerHTML = '';
+      state.tokens.forEach((id, index) => {
+        const token = TOKENS.find(t => t.id === id);
+        const chip = document.createElement('span');
+        chip.className = 'token-chip';
+        chip.setAttribute('role', 'listitem');
+        chip.innerHTML = '<span>' + (token ? token.label : id) + '</span>';
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.setAttribute('aria-label', 'Verwijder ' + (token ? token.label : id));
+        remove.textContent = '×';
+        remove.addEventListener('click', () => { state.tokens.splice(index, 1); renderTokens(); });
+        chip.appendChild(remove);
+        chosen.appendChild(chip);
+      });
+    }
+    function addToken(id) {
+      state.tokens.push(id);
+      state.passed.formula = false;
+      renderTokens();
+    }
+    function sequencesEqual(a, b) {
+      return a.length === b.length && a.every((value, index) => value === b[index]);
+    }
+    function checkFormula() {
+      const ok = sequencesEqual(state.tokens, CORRECT_SEQUENCE);
+      state.passed.formula = ok;
+      if (ok) {
+        setFeedback('feedbackFormula', true, 'Formule klopt', 'Je gebruikt de structuur: (nieuwe prijs − oude prijs) ÷ oude prijs × 100. Dezelfde bouwsteen “oude prijs” wordt op beide plekken gebruikt.');
+        unlock('step2');
+      } else {
+        lock('step2'); lock('step3'); lock('step4'); $('completion').classList.remove('show');
+        const missing = [];
+        if (state.tokens.length < CORRECT_SEQUENCE.length) missing.push('Je formule mist nog bouwstenen.');
+        if (state.tokens.filter(value => value === 'oldPrice').length === 1) missing.push('Gebruik dezelfde bouwsteen “oude prijs” twee keer: in de teller en in de noemer.');
+        if (state.tokens.includes('plus')) missing.push('Gebruik een minteken, geen plusteken.');
+        if (state.tokens.includes('newDenom')) missing.push('De noemer is de oude prijs, niet de nieuwe prijs.');
+        if (state.tokens.includes('oldMinusNew')) missing.push('De volgorde in de teller is nieuwe prijs − oude prijs.');
+        setFeedback('feedbackFormula', false, 'Controleer de formule', 'Bouw de formule opnieuw in de juiste volgorde.', missing);
+      }
+      return ok;
+    }
+    function checkSubstitution() {
+      const n = parseNumber($('newPrice').value);
+      const o1 = parseNumber($('oldPriceTop').value);
+      const o2 = parseNumber($('oldPriceBottom').value);
+      const missing = [];
+      if (n !== 920) missing.push('Nieuwe prijs moet 920 zijn.');
+      if (o1 !== 800) missing.push('Oude prijs in de teller moet 800 zijn.');
+      if (o2 !== 800) missing.push('Oude prijs in de noemer moet 800 zijn.');
+      const ok = missing.length === 0;
+      state.passed.substitution = ok;
+      if (ok) {
+        setFeedback('feedbackSubstitution', true, 'Bronwaarden kloppen', 'Je hebt de bronwaarden correct ingevuld: (920 − 800) ÷ 800 × 100.');
+        unlock('step3');
+      } else {
+        lock('step3'); lock('step4'); $('completion').classList.remove('show');
+        setFeedback('feedbackSubstitution', false, 'Controleer de bronwaarden', 'Haal de waarden direct uit Bron 1 en let op de noemer.', missing);
+      }
+      return ok;
+    }
+    function checkAnswer() {
+      const answer = parseNumber($('finalAnswer').value);
+      const unit = normalize($('unitNotation').value).replace('procentteken', '%');
+      const unitOk = unit === '%' || unit === 'procent' || unit === 'percent';
+      const missing = [];
+      if (Math.abs(answer - 15) > 0.01) missing.push('Het eindantwoord moet 15 zijn.');
+      if (!unitOk) missing.push('Noteer de eenheid of notatie: % of procent.');
+      const ok = missing.length === 0;
+      state.passed.answer = ok;
+      if (ok) {
+        setFeedback('feedbackAnswer', true, 'Eindantwoord en notatie kloppen', 'Je eindantwoord is 15 met procentnotatie.');
+        unlock('step4');
+      } else {
+        lock('step4'); $('completion').classList.remove('show');
+        setFeedback('feedbackAnswer', false, 'Controleer eindantwoord en notatie', 'Bereken (920 − 800) ÷ 800 × 100 en noteer de notatie apart.', missing);
+      }
+      return ok;
+    }
+    function checkContext() {
+      const text = normalize($('contextSentence').value);
+      const hasContext = text.includes('prijs') || text.includes('fiets');
+      const hasDirection = text.includes('stijgt') || text.includes('stijging') || text.includes('gestegen');
+      const hasAnswer = text.includes('15') || text.includes('vijftien');
+      const missing = [];
+      if (!hasContext) missing.push('Noem de context: prijs of fiets.');
+      if (!hasDirection) missing.push('Noem de richting: stijgt of stijging.');
+      if (!hasAnswer) missing.push('Verwerk het resultaat 15% in de zin.');
+      const ok = missing.length === 0;
+      state.passed.context = ok;
+      if (ok) {
+        setFeedback('feedbackContext', true, 'Contextzin klopt', 'Je zin geeft de richting en betekenis van de berekening in deze bron.');
+        $('completion').classList.add('show');
+      } else {
+        $('completion').classList.remove('show');
+        setFeedback('feedbackContext', false, 'Maak de contextzin concreter', 'De zin moet context, richting en resultaat bevatten.', missing);
+      }
+      return ok;
+    }
+
+    $('undoToken').addEventListener('click', () => { state.tokens.pop(); state.passed.formula = false; renderTokens(); });
+    $('clearFormula').addEventListener('click', () => { state.tokens = []; state.passed.formula = false; renderTokens(); lock('step2'); lock('step3'); lock('step4'); $('completion').classList.remove('show'); });
+    $('checkFormula').addEventListener('click', checkFormula);
+    $('checkSubstitution').addEventListener('click', checkSubstitution);
+    $('checkAnswer').addEventListener('click', checkAnswer);
+    $('checkContext').addEventListener('click', checkContext);
+    $('themeToggle').addEventListener('click', () => {
+      const root = document.documentElement;
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      $('themeToggle').textContent = next === 'dark' ? 'Lichte modus' : 'Donkere modus';
+    });
+    renderTokens();
+  </script>
+</body>
+</html>

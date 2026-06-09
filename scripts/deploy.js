@@ -64,6 +64,7 @@ function copyEngines() {
         'skill-map-engine.js', 'skill-map-route-ui.js', 'skill-map-route.css',
         'task-shell-engine.js', 'task-shell-ui.js', 'task-shell.css',
         'exit-ticket-engine.js', 'exit-ticket-ui.js', 'exit-ticket.css',
+        'golden-ticket-graph.js', 'golden-ticket-layout.js', 'golden-ticket-layout.css',
         'skilltree-engine.js', 'skilltree-ui.js', 'skilltree.css',
         'newsdetective-engine.js', 'newsdetective-ui.js', 'newsdetective.css',
         'procedure-engine.js', 'procedure-ui.js', 'procedure.css',

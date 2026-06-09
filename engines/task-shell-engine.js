@@ -13,6 +13,7 @@
     choice: { label: 'Keuzevraag', deterministic: true },
     numeric_input: { label: 'Rekenantwoord', deterministic: true },
     calculation_work_capture: { label: 'Berekening tonen', deterministic: false },
+    calculation_answer_form_capture: { label: 'Bereken-antwoordvorm', deterministic: true },
     final_answer_entry: { label: 'Eindantwoord', deterministic: true },
     unit_notation_field: { label: 'Eenheid/notatie', deterministic: true },
     short_constructed_response: { label: 'Kort antwoord', deterministic: false },
@@ -96,6 +97,20 @@
 
   var INTERNAL_CODE_RE = /\b(?:[A-Z]\d{2}|PV|MTU)\b/;
 
+  var ANSWER_PARSERS = {
+    number_with_optional_percent: parseNumberWithOptionalPercent,
+    decrease_phrase_to_negative_percent: parseDecreasePhraseToNegativePercent
+  };
+
+  var DEFAULT_ANSWER_PARSER_IDS = [
+    'decrease_phrase_to_negative_percent',
+    'number_with_optional_percent'
+  ];
+
+  var NUMERIC_FILLER_WORDS_RE = /\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde|stijging|stijgt|stijgen|steeg|gestegen|toename|toeneemt|toenam|toegenomen|meer|hoger)\b/g;
+
+  var DECREASE_WORD_RE = /\b(daling|daalt|dalen|daalde|gedaald|afname|afneemt|afnam|afgenomen|lager|minder|vermindering|vermindert|verminderde)\b/;
+
   var FORMULA_TOKEN_CATEGORIES = {
     numerator: true,
     denominator: true,
@@ -176,18 +191,50 @@
   function cleanNumber(value) {
     if (typeof value === 'number') return value;
     if (typeof value === 'string') {
-      var normalized = value.trim().toLowerCase().replace(/\u2212/g, '-').replace(',', '.');
-      if (!normalized) return NaN;
-      var negativeByPhrase = !/^\s*-/.test(normalized) &&
-        /\b(daling|daalt|afname|afneemt|lager|minder)\b/.test(normalized);
-      var cleaned = normalized
-        .replace(/[€%]/g, ' ')
-        .replace(/\b(eur|euro|euros|procent|percent|percentage|pct|punten?|broodjes?|stuks?|q|met|van|naar|daling|daalt|afname|afneemt|lager|minder|stijging|stijgt|toename|toeneemt|meer)\b/g, ' ')
-        .replace(/\s+/g, '');
-      if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
-      var parsed = Number(cleaned);
-      if (!isNumber(parsed)) return NaN;
-      return negativeByPhrase ? -Math.abs(parsed) : parsed;
+      return parseNumberWithAnswerParsers(value);
+    }
+    return NaN;
+  }
+
+  function normalizeNumberInput(value) {
+    return String(value == null ? '' : value)
+      .trim()
+      .toLowerCase()
+      .replace(/[\u2212\u2012\u2013\u2014]/g, '-')
+      .replace(',', '.');
+  }
+
+  function parseNormalizedNumber(value, negativeByPhrase) {
+    if (!value) return NaN;
+    var cleaned = value
+      .replace(/[\u20ac%]/g, ' ')
+      .replace(NUMERIC_FILLER_WORDS_RE, ' ')
+      .replace(/\s+/g, '');
+    if (!/^[-+]?\d+(\.\d+)?$/.test(cleaned)) return NaN;
+    var parsed = Number(cleaned);
+    if (!isNumber(parsed)) return NaN;
+    return negativeByPhrase ? -Math.abs(parsed) : parsed;
+  }
+
+  function parseNumberWithOptionalPercent(value) {
+    return parseNormalizedNumber(normalizeNumberInput(value), false);
+  }
+
+  function parseDecreasePhraseToNegativePercent(value) {
+    var normalized = normalizeNumberInput(value);
+    var negativeByPhrase = !/^\s*-/.test(normalized) && DECREASE_WORD_RE.test(normalized);
+    return parseNormalizedNumber(normalized, negativeByPhrase);
+  }
+
+  function parseNumberWithAnswerParsers(value, parserIds) {
+    if (typeof value === 'number') return value;
+    if (typeof value !== 'string') return NaN;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var parsed = parser(value);
+      if (isNumber(parsed)) return parsed;
     }
     return NaN;
   }
@@ -217,6 +264,13 @@
     requireArray(value, path, minLength || 1);
     value.forEach(function (item, idx) {
       requireString(item, path + '[' + idx + ']');
+    });
+  }
+
+  function validateAnswerParsers(value, path) {
+    requireStringArray(value, path, 1);
+    value.forEach(function (item, idx) {
+      assert(ANSWER_PARSERS[item], path + '[' + idx + '] must be a known answer parser');
     });
   }
 
@@ -277,6 +331,41 @@
       push(task.interaction.lineShapeLabel);
       push(task.interaction.xInputLabel);
       push(task.interaction.yInputLabel);
+      if (task.interaction.formula) {
+        push(task.interaction.formula.title);
+        push(task.interaction.formula.purpose);
+        push(task.interaction.formula.placeholder);
+        push(task.interaction.formula.tokenBankLabel);
+        push(task.interaction.formula.sequenceLabel);
+        (task.interaction.formula.tokens || []).forEach(function (token) {
+          push(token.label);
+          push(token.description);
+          push(token.usageHint);
+        });
+      }
+      if (task.interaction.substitution) {
+        push(task.interaction.substitution.title);
+        push(task.interaction.substitution.purpose);
+        push(task.interaction.substitution.template);
+        (task.interaction.substitution.fields || []).forEach(function (field) {
+          push(field.label);
+          push(field.placeholder);
+        });
+      }
+      if (task.interaction.answer) {
+        push(task.interaction.answer.title);
+        push(task.interaction.answer.purpose);
+        push(task.interaction.answer.finalAnswerLabel);
+        push(task.interaction.answer.finalAnswerPlaceholder);
+        push(task.interaction.answer.unitNotationLabel);
+        push(task.interaction.answer.unitNotationPlaceholder);
+      }
+      if (task.interaction.context) {
+        push(task.interaction.context.title);
+        push(task.interaction.context.purpose);
+        push(task.interaction.context.label);
+        push(task.interaction.context.placeholder);
+      }
       if (task.interaction.visual) {
         push(task.interaction.visual.title);
         push(task.interaction.visual.description);
@@ -786,6 +875,9 @@
     optionalString(interaction.sequenceLabel, path + '.sequenceLabel');
 
     var tokenIds = {};
+    var tokenLabels = {};
+    var tokenKinds = {};
+    var tokenMaxUses = {};
     var distractorCount = 0;
     interaction.tokens.forEach(function (token, idx) {
       assert(isObject(token), path + '.tokens[' + idx + '] must be an object');
@@ -796,8 +888,15 @@
       requireString(token.category, path + '.tokens[' + idx + '].category');
       assert(FORMULA_TOKEN_CATEGORIES[token.category], path + '.tokens[' + idx + '].category must be a formula token category');
       optionalString(token.description, path + '.tokens[' + idx + '].description');
+      optionalString(token.usageHint, path + '.tokens[' + idx + '].usageHint');
+      if (token.maxUses !== undefined) {
+        assert(Number.isInteger(token.maxUses) && token.maxUses >= 1, path + '.tokens[' + idx + '].maxUses must be an integer >= 1');
+      }
       assert(!tokenIds[token.id], 'duplicate formula token id: ' + token.id);
       tokenIds[token.id] = true;
+      tokenLabels[token.id] = token.label;
+      tokenKinds[token.id] = token.kind;
+      tokenMaxUses[token.id] = token.maxUses || 1;
       if (token.kind === 'distractor') distractorCount += 1;
     });
 
@@ -817,6 +916,10 @@
 
     return {
       tokenIds: tokenIds,
+      tokenLabels: tokenLabels,
+      tokenKinds: tokenKinds,
+      tokenMaxUses: tokenMaxUses,
+      tokenDisplayOrder: interaction.tokens.map(function (token) { return token.id; }),
       allowReuse: interaction.allowReuse === true
     };
   }
@@ -1038,7 +1141,7 @@
     requireString(interaction.xAxisLabel, path + '.xAxisLabel');
     requireString(interaction.yAxisLabel, path + '.yAxisLabel');
     requireString(interaction.pointRowsLabel, path + '.pointRowsLabel');
-    requireString(interaction.lineConfirmationLabel, path + '.lineConfirmationLabel');
+    optionalString(interaction.lineConfirmationLabel, path + '.lineConfirmationLabel');
     optionalString(interaction.lineShapeLabel, path + '.lineShapeLabel');
     optionalString(interaction.xInputLabel, path + '.xInputLabel');
     optionalString(interaction.yInputLabel, path + '.yInputLabel');
@@ -1182,6 +1285,48 @@
       assert(conclusionCorrectCount >= 1, path + '.conclusionOptions must include at least one correct conclusion');
       assert(conclusionDistractorCount >= 1, path + '.conclusionOptions must include at least one distractor conclusion');
     }
+  }
+
+  function validateSimpleChoiceOptions(options, path, minimum) {
+    requireArray(options, path, minimum || 2);
+    var ids = {};
+    var correctCount = 0;
+    var distractorCount = 0;
+    options.forEach(function (option, idx) {
+      assert(isObject(option), path + '[' + idx + '] must be an object');
+      requireString(option.id, path + '[' + idx + '].id');
+      requireString(option.label, path + '[' + idx + '].label');
+      assert(typeof option.correct === 'boolean', path + '[' + idx + '].correct must be boolean');
+      optionalString(option.finalAnswer, path + '[' + idx + '].finalAnswer');
+      assert(!ids[option.id], 'duplicate option id: ' + option.id);
+      ids[option.id] = true;
+      if (option.correct) correctCount += 1;
+      else distractorCount += 1;
+    });
+    assert(correctCount >= 1, path + ' must include at least one correct option');
+    assert(distractorCount >= 1, path + ' must include at least one distractor option');
+    return ids;
+  }
+
+  function validatePercentageClaimInteraction(task, path) {
+    var interaction = task.interaction;
+    requireString(interaction.intervalLabel, path + '.intervalLabel');
+    requireString(interaction.valueSectionLabel, path + '.valueSectionLabel');
+    requireString(interaction.oldValueLabel, path + '.oldValueLabel');
+    requireString(interaction.newValueLabel, path + '.newValueLabel');
+    requireString(interaction.formulaSectionLabel, path + '.formulaSectionLabel');
+    requireString(interaction.conclusionLabel, path + '.conclusionLabel');
+    optionalString(interaction.oldValuePlaceholder, path + '.oldValuePlaceholder');
+    optionalString(interaction.newValuePlaceholder, path + '.newValuePlaceholder');
+    var intervalIds = validateSimpleChoiceOptions(interaction.intervalOptions, path + '.intervalOptions', 2);
+    var conclusionIds = validateSimpleChoiceOptions(interaction.conclusionOptions, path + '.conclusionOptions', 2);
+    assert(isObject(interaction.formula), path + '.formula must be an object');
+    var formulaInfo = validateFormulaInteraction({ id: task.id, interaction: interaction.formula }, path + '.formula');
+    return {
+      intervalOptionIds: intervalIds,
+      conclusionOptionIds: conclusionIds,
+      formulaTokenIds: formulaInfo.tokenIds
+    };
   }
 
   function sourceValueLabelMap(values) {
@@ -1485,6 +1630,182 @@
     }
   }
 
+  function validateFormulaExpected(expected, tokenIds, allowReuse, path) {
+    assert(expected.kind === 'formula_builder', path + '.kind must be formula_builder');
+    requireArray(expected.tokens, path + '.tokens', 1);
+    requireArray(expected.acceptedSequences, path + '.acceptedSequences', 1);
+
+    function validateFormulaSequence(sequence, sequencePath) {
+      requireArray(sequence, sequencePath, 1);
+      var seen = {};
+      sequence.forEach(function (tokenId, idx) {
+        requireString(tokenId, sequencePath + '[' + idx + ']');
+        assert(tokenIds[tokenId], sequencePath + '[' + idx + '] must match an interaction token');
+        if (!allowReuse) {
+          assert(!seen[tokenId], sequencePath + ' uses token more than once without allowReuse');
+          seen[tokenId] = true;
+        }
+      });
+    }
+
+    validateFormulaSequence(expected.tokens, path + '.tokens');
+    var canonical = expected.tokens.join('\u0001');
+    var includesCanonical = false;
+    expected.acceptedSequences.forEach(function (sequence, idx) {
+      validateFormulaSequence(sequence, path + '.acceptedSequences[' + idx + ']');
+      if (sequence.join('\u0001') === canonical) includesCanonical = true;
+    });
+    assert(includesCanonical, path + '.acceptedSequences must include expected.tokens');
+  }
+
+  function validatePercentageClaimExpected(task, interactionInfo) {
+    var expected = task.expected;
+    assert(isObject(expected.interval), task.id + '.expected.interval must be an object');
+    assert(expected.interval.kind === 'choice', task.id + '.expected.interval.kind must be choice');
+    requireString(expected.interval.value, task.id + '.expected.interval.value');
+    assert((interactionInfo.intervalOptionIds || {})[expected.interval.value], task.id + '.expected.interval.value must match an interval option id');
+
+    assert(isObject(expected.oldValue), task.id + '.expected.oldValue must be an object');
+    assert(expected.oldValue.kind === 'number', task.id + '.expected.oldValue.kind must be number');
+    assert(isNumber(expected.oldValue.value), task.id + '.expected.oldValue.value must be numeric');
+    if (expected.oldValue.tolerance !== undefined) assert(isNumber(expected.oldValue.tolerance), task.id + '.expected.oldValue.tolerance must be numeric');
+
+    assert(isObject(expected.newValue), task.id + '.expected.newValue must be an object');
+    assert(expected.newValue.kind === 'number', task.id + '.expected.newValue.kind must be number');
+    assert(isNumber(expected.newValue.value), task.id + '.expected.newValue.value must be numeric');
+    if (expected.newValue.tolerance !== undefined) assert(isNumber(expected.newValue.tolerance), task.id + '.expected.newValue.tolerance must be numeric');
+
+    assert(isObject(expected.formula), task.id + '.expected.formula must be an object');
+    validateFormulaExpected(expected.formula, interactionInfo.formulaTokenIds || {}, task.interaction.formula && task.interaction.formula.allowReuse === true, task.id + '.expected.formula');
+
+    assert(isObject(expected.conclusion), task.id + '.expected.conclusion must be an object');
+    assert(expected.conclusion.kind === 'choice', task.id + '.expected.conclusion.kind must be choice');
+    requireString(expected.conclusion.value, task.id + '.expected.conclusion.value');
+    assert((interactionInfo.conclusionOptionIds || {})[expected.conclusion.value], task.id + '.expected.conclusion.value must match a conclusion option id');
+  }
+
+  function validateCalculationAnswerFormInteraction(task, path) {
+    var interaction = task.interaction;
+    assert(isObject(interaction.formula), path + '.formula is required');
+    requireString(interaction.formula.title, path + '.formula.title');
+    optionalString(interaction.formula.purpose, path + '.formula.purpose');
+    var formulaInfo = validateFormulaInteraction({ id: task.id, interaction: interaction.formula }, path + '.formula');
+
+    assert(isObject(interaction.substitution), path + '.substitution is required');
+    requireString(interaction.substitution.title, path + '.substitution.title');
+    optionalString(interaction.substitution.purpose, path + '.substitution.purpose');
+    optionalString(interaction.substitution.template, path + '.substitution.template');
+    var substitutionFieldIds = validateStructuredFields(interaction.substitution.fields, path + '.substitution.fields');
+
+    assert(isObject(interaction.answer), path + '.answer is required');
+    requireString(interaction.answer.title, path + '.answer.title');
+    optionalString(interaction.answer.purpose, path + '.answer.purpose');
+    requireString(interaction.answer.finalAnswerLabel, path + '.answer.finalAnswerLabel');
+    requireString(interaction.answer.unitNotationLabel, path + '.answer.unitNotationLabel');
+    optionalString(interaction.answer.finalAnswerPlaceholder, path + '.answer.finalAnswerPlaceholder');
+    optionalString(interaction.answer.unitNotationPlaceholder, path + '.answer.unitNotationPlaceholder');
+
+    assert(isObject(interaction.context), path + '.context is required');
+    requireString(interaction.context.title, path + '.context.title');
+    optionalString(interaction.context.purpose, path + '.context.purpose');
+    requireString(interaction.context.label, path + '.context.label');
+    optionalString(interaction.context.placeholder, path + '.context.placeholder');
+
+    return {
+      formula: formulaInfo,
+      substitutionFieldIds: substitutionFieldIds
+    };
+  }
+
+  function tokenUsageCounts(tokens) {
+    var counts = {};
+    (tokens || []).forEach(function (tokenId) {
+      counts[tokenId] = (counts[tokenId] || 0) + 1;
+    });
+    return counts;
+  }
+
+  function methodTokensMatch(tokens, expectedTokens) {
+    if (!Array.isArray(tokens) || !Array.isArray(expectedTokens)) return false;
+    if (tokens.length !== expectedTokens.length) return false;
+    for (var i = 0; i < expectedTokens.length; i += 1) {
+      if (normalizeText(tokens[i]) !== normalizeText(expectedTokens[i])) return false;
+    }
+    return true;
+  }
+
+  function validateNoIdenticalAnswerTokenLabels(formulaInfo, path) {
+    var labels = {};
+    Object.keys(formulaInfo.tokenLabels || {}).forEach(function (tokenId) {
+      if (formulaInfo.tokenKinds[tokenId] !== 'answer') return;
+      var label = normalizeText(formulaInfo.tokenLabels[tokenId]);
+      if (!label) return;
+      assert(!labels[label] || labels[label] === tokenId, path + ' must not contain visually identical answer tokens with different ids: ' + formulaInfo.tokenLabels[tokenId]);
+      labels[label] = tokenId;
+    });
+  }
+
+  function validateCalculationAnswerFormExpected(task, interactionInfo) {
+    var expected = task.expected;
+    assert(expected.kind === 'calculation_answer_form', task.id + '.expected.kind must be calculation_answer_form');
+    var formulaInfo = interactionInfo.formula || {};
+    requireArray(expected.methodTokens, task.id + '.expected.methodTokens', 1);
+    var counts = tokenUsageCounts(expected.methodTokens);
+    expected.methodTokens.forEach(function (tokenId, idx) {
+      requireString(tokenId, task.id + '.expected.methodTokens[' + idx + ']');
+      assert(formulaInfo.tokenIds[tokenId], task.id + '.expected.methodTokens[' + idx + '] must match a formula token');
+      assert(counts[tokenId] <= (formulaInfo.tokenMaxUses[tokenId] || 1), task.id + '.expected.methodTokens uses token ' + tokenId + ' more than allowed');
+    });
+    if (expected.tokenDisplayOrderMustNotEqualMethodTokens !== undefined) {
+      assert(typeof expected.tokenDisplayOrderMustNotEqualMethodTokens === 'boolean', task.id + '.expected.tokenDisplayOrderMustNotEqualMethodTokens must be boolean');
+      if (expected.tokenDisplayOrderMustNotEqualMethodTokens) {
+        assert(!methodTokensMatch(formulaInfo.tokenDisplayOrder, expected.methodTokens), task.id + '.interaction.formula.tokens must not be arranged in accepted answer order');
+      }
+    }
+    if (
+      expected.visualTokenIdentityPolicy &&
+      expected.visualTokenIdentityPolicy.forbid_identical_labels_with_different_answer_ids === true
+    ) {
+      validateNoIdenticalAnswerTokenLabels(formulaInfo, task.id + '.interaction.formula.tokens');
+    }
+
+    assert(isObject(expected.substitution), task.id + '.expected.substitution must be an object');
+    var expectedSubstitutionIds = Object.keys(expected.substitution);
+    var interactionSubstitutionIds = Object.keys(interactionInfo.substitutionFieldIds || {});
+    assert(expectedSubstitutionIds.length === interactionSubstitutionIds.length, task.id + '.expected.substitution must match all substitution fields');
+    interactionSubstitutionIds.forEach(function (fieldId) {
+      assert(Object.prototype.hasOwnProperty.call(expected.substitution, fieldId), task.id + '.expected.substitution missing ' + fieldId);
+      var fieldExpected = expected.substitution[fieldId];
+      assert(isObject(fieldExpected), task.id + '.expected.substitution.' + fieldId + ' must be an object');
+      assert(fieldExpected.kind === 'number' || fieldExpected.kind === 'text', task.id + '.expected.substitution.' + fieldId + '.kind must be number or text');
+      if (fieldExpected.kind === 'number') {
+        assert(isNumber(fieldExpected.value), task.id + '.expected.substitution.' + fieldId + '.value must be numeric');
+        if (fieldExpected.tolerance !== undefined) assert(isNumber(fieldExpected.tolerance), task.id + '.expected.substitution.' + fieldId + '.tolerance must be numeric');
+      } else {
+        requireArray(fieldExpected.accepted, task.id + '.expected.substitution.' + fieldId + '.accepted', 1);
+      }
+    });
+
+    assert(isObject(expected.finalAnswer), task.id + '.expected.finalAnswer is required');
+    assert(
+      expected.finalAnswer.kind === 'number_or_percent_text' || expected.finalAnswer.kind === 'number' || expected.finalAnswer.kind === 'text',
+      task.id + '.expected.finalAnswer.kind must be number_or_percent_text, number, or text'
+    );
+    if (expected.finalAnswer.kind === 'number_or_percent_text') {
+      assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
+      requireStringArray(expected.finalAnswer.acceptedNotations, task.id + '.expected.finalAnswer.acceptedNotations', 1);
+    } else if (expected.finalAnswer.kind === 'number') {
+      assert(isNumber(expected.finalAnswer.value), task.id + '.expected.finalAnswer.value must be numeric');
+      if (expected.finalAnswer.tolerance !== undefined) assert(isNumber(expected.finalAnswer.tolerance), task.id + '.expected.finalAnswer.tolerance must be numeric');
+    } else {
+      requireArray(expected.finalAnswer.accepted, task.id + '.expected.finalAnswer.accepted', 1);
+    }
+    validateUnitNotation(expected.notation, task.id + '.expected.notation');
+    assert(isObject(expected.conclusion), task.id + '.expected.conclusion is required');
+    validateRequiredTextGroups(expected.conclusion.requiredTextGroups, task.id + '.expected.conclusion.requiredTextGroups');
+    if (expected.criteria !== undefined) requireArray(expected.criteria, task.id + '.expected.criteria', 1);
+  }
+
   function validateRequiredTextGroups(groups, path) {
     requireArray(groups, path, 1);
     groups.forEach(function (group, idx) {
@@ -1666,6 +1987,14 @@
         validateUnitNotation(expected.unitNotation, task.id + '.expected.unitNotation');
         requireString(task.interaction.unitNotationLabel, task.id + '.interaction.unitNotationLabel');
       }
+      if (task.interaction.selectionMode === 'percentage_claim_control') {
+        validatePercentageClaimExpected(task, interactionInfo);
+      }
+      return;
+    }
+
+    if (task.family === 'calculation_answer_form_capture') {
+      validateCalculationAnswerFormExpected(task, interactionInfo);
       return;
     }
 
@@ -2046,10 +2375,17 @@
       optionalString(task.interaction.finalAnswerPlaceholder, path + '.finalAnswerPlaceholder');
       optionalString(task.interaction.unitNotationLabel, path + '.unitNotationLabel');
       optionalString(task.interaction.unitNotationPlaceholder, path + '.unitNotationPlaceholder');
+      if (task.interaction.answerParsers !== undefined) validateAnswerParsers(task.interaction.answerParsers, path + '.answerParsers');
       if (task.interaction.selectionMode !== undefined) {
-        assert(task.interaction.selectionMode === 'interval_halving_check', path + '.selectionMode must be interval_halving_check when present');
-        validateIntervalHalvingInteraction(task, path);
+        assert(/^(interval_halving_check|percentage_claim_control)$/.test(task.interaction.selectionMode), path + '.selectionMode must be interval_halving_check or percentage_claim_control when present');
+        if (task.interaction.selectionMode === 'interval_halving_check') {
+          validateIntervalHalvingInteraction(task, path);
+        } else {
+          interactionInfo = validatePercentageClaimInteraction(task, path);
+        }
       }
+    } else if (task.family === 'calculation_answer_form_capture') {
+      interactionInfo = validateCalculationAnswerFormInteraction(task, path);
     } else if (
       task.family === 'numeric_input' ||
       task.family === 'final_answer_entry' ||
@@ -2152,10 +2488,19 @@
     });
   }
 
-  function numberMatches(value, expected) {
-    var actual = cleanNumber(value);
-    if (!isNumber(actual)) return false;
-    return Math.abs(actual - expected.value) <= tolerance(expected);
+  function numberMatches(value, expected, parserIds) {
+    if (typeof value === 'number') {
+      return Math.abs(value - expected.value) <= tolerance(expected);
+    }
+    if (typeof value !== 'string') return false;
+    var ids = Array.isArray(parserIds) && parserIds.length ? parserIds : DEFAULT_ANSWER_PARSER_IDS;
+    for (var i = 0; i < ids.length; i += 1) {
+      var parser = ANSWER_PARSERS[ids[i]];
+      if (!parser) continue;
+      var actual = parser(value);
+      if (isNumber(actual) && Math.abs(actual - expected.value) <= tolerance(expected)) return true;
+    }
+    return false;
   }
 
   function pointMatches(value, expected) {
@@ -2211,11 +2556,11 @@
     return numberMatches(response && response.value != null ? response.value : response, task.expected);
   }
 
-  function finalAnswerMatches(value, expected) {
+  function finalAnswerMatches(value, expected, parserIds) {
     if (!expected || !expected.kind) return false;
     if (expected.kind === 'number') {
       if (expected.acceptedNotations && textMatches(value, expected.acceptedNotations)) return true;
-      return numberMatches(value, expected);
+      return numberMatches(value, expected, parserIds);
     }
     if (expected.kind === 'text') return textMatches(value, expected.accepted);
     return false;
@@ -2225,6 +2570,62 @@
     if (!expected) return true;
     if (expected.required === false && !hasValue(value)) return true;
     return textMatches(value, expected.accepted);
+  }
+
+  function answerFormFinalMatches(value, expected) {
+    if (!expected || !expected.kind) return false;
+    if (expected.kind === 'number_or_percent_text') {
+      if (textMatches(value, expected.acceptedNotations)) return true;
+      return numberMatches(value, { kind: 'number', value: expected.value, tolerance: expected.tolerance || 0 });
+    }
+    return finalAnswerMatches(value, expected);
+  }
+
+  function substitutionFieldMatches(value, expected) {
+    if (!expected || !expected.kind) return false;
+    if (expected.kind === 'number') return numberMatches(value, expected);
+    return textMatches(value, expected.accepted);
+  }
+
+  function calculationAnswerFormPartMatches(response, task) {
+    response = response || {};
+    var expected = task.expected || {};
+    var parts = {
+      formula: methodTokensMatch(response.methodTokens, expected.methodTokens),
+      substitution: false,
+      finalAnswer: answerFormFinalMatches(response.finalAnswer, expected.finalAnswer),
+      notation: unitNotationMatches(response.notation, expected.notation),
+      conclusion: requiredTextGroupsMatch(response.conclusion, expected.conclusion && expected.conclusion.requiredTextGroups)
+    };
+    var substitution = isObject(response.substitution) ? response.substitution : {};
+    parts.substitution = Object.keys(expected.substitution || {}).every(function (fieldId) {
+      return substitutionFieldMatches(substitution[fieldId], expected.substitution[fieldId]);
+    });
+    return parts;
+  }
+
+  function calculationAnswerFormMatches(response, task) {
+    if (!isObject(response)) return false;
+    var keys = Object.keys(response).sort().join('|');
+    if (keys !== 'conclusion|finalAnswer|methodTokens|notation|substitution') return false;
+    var parts = calculationAnswerFormPartMatches(response, task);
+    return parts.formula && parts.substitution && parts.finalAnswer && parts.notation && parts.conclusion;
+  }
+
+  function calculationAnswerFormFeedback(response, task) {
+    var parts = calculationAnswerFormPartMatches(response, task);
+    var labels = [
+      { id: 'formula', label: 'Formule of rekenregel' },
+      { id: 'substitution', label: 'Bronwaarden in de formule' },
+      { id: 'finalAnswer', label: 'Eindantwoord' },
+      { id: 'notation', label: 'Eenheid of notatie' },
+      { id: 'conclusion', label: 'Contextzin met richting' }
+    ];
+    return {
+      mode: 'practice_only',
+      missingParts: labels.filter(function (part) { return !parts[part.id]; }),
+      correctParts: labels.filter(function (part) { return parts[part.id]; })
+    };
   }
 
   function textGroupsMatch(value, groups) {
@@ -2274,6 +2675,20 @@
     if (expected.accepted && textMatches(value, expected.accepted)) return true;
     if (expected.requiredTextGroups && requiredTextGroupsMatch(value, expected.requiredTextGroups)) return true;
     return false;
+  }
+
+  function percentageClaimControlMatches(response, task) {
+    if (!response || typeof response !== 'object') return false;
+    if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
+    if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
+    if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
+    if (normalizeText(response.interval) !== normalizeText(task.expected.interval.value)) return false;
+    if (!numberMatches(response.oldValue, task.expected.oldValue)) return false;
+    if (!numberMatches(response.newValue, task.expected.newValue)) return false;
+    if (!formulaBuilderMatches(response.formula, task.expected.formula)) return false;
+    if (normalizeText(response.conclusion) !== normalizeText(task.expected.conclusion.value)) return false;
+    return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer, task.interaction && task.interaction.answerParsers) &&
+      unitNotationMatches(response.unitNotation, task.expected.unitNotation);
   }
 
   function clozeTextMatches(response, expected) {
@@ -3044,11 +3459,17 @@
     }
     if (task.family === 'calculation_work_capture' && task.expected.kind === 'calculation') {
       if (!response || typeof response !== 'object') return false;
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return percentageClaimControlMatches(response, task);
+      }
       if (task.expected.workRequired !== false && !hasValue(response.work)) return false;
       if (task.expected.acceptedWorkPaths && !acceptedWorkPathMatches(response.work, task.expected.acceptedWorkPaths)) return false;
       if (!task.expected.acceptedWorkPaths && task.expected.requiredWorkText && !textGroupsMatch(response.work, task.expected.requiredWorkText)) return false;
       return finalAnswerMatches(response.finalAnswer, task.expected.finalAnswer) &&
         unitNotationMatches(response.unitNotation, task.expected.unitNotation);
+    }
+    if (task.family === 'calculation_answer_form_capture' && task.expected.kind === 'calculation_answer_form') {
+      return calculationAnswerFormMatches(response, task);
     }
     if (
       (task.family === 'short_constructed_response' || task.family === 'structured_reasoning') &&
@@ -3175,6 +3596,9 @@
       var placementFeedback = labelPlacementFeedback(response, task);
       if (placementFeedback) result.labelPlacementFeedback = placementFeedback;
     }
+    if (task.family === 'calculation_answer_form_capture' && !matched) {
+      result.answerFormFeedback = calculationAnswerFormFeedback(response, task);
+    }
     return result;
   }
 
@@ -3198,6 +3622,16 @@
       ];
     }
     if (task.family === 'calculation_work_capture') {
+      if (task.interaction && task.interaction.selectionMode === 'percentage_claim_control') {
+        return [
+          '[data-task-id="' + task.id + '"][data-claim-interval-option-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="old-value"]',
+          '[data-task-id="' + task.id + '"][data-input-role="new-value"]',
+          '[data-task-id="' + task.id + '"][data-formula-token-id]',
+          '[data-task-id="' + task.id + '"][data-input-role="final-answer"]',
+          '[data-task-id="' + task.id + '"][data-claim-conclusion-option-id]'
+        ];
+      }
       if (task.interaction && task.interaction.selectionMode === 'interval_halving_check') {
         return [
           '[data-task-id="' + task.id + '"][data-interval-option-id]',
@@ -3210,6 +3644,16 @@
         plan.push('[data-task-id="' + task.id + '"][data-input-role="unit-notation"]');
       }
       return plan;
+    }
+    if (task.family === 'calculation_answer_form_capture') {
+      return [
+        '[data-task-id="' + task.id + '"][data-formula-token-id]',
+        '[data-task-id="' + task.id + '"][data-formula-sequence]',
+        '[data-task-id="' + task.id + '"][data-input-role="substitution"]',
+        '[data-task-id="' + task.id + '"][data-input-role="final-answer"]',
+        '[data-task-id="' + task.id + '"][data-input-role="unit-notation"]',
+        '[data-task-id="' + task.id + '"][data-input-role="conclusion"]'
+      ];
     }
     if (task.family === 'graph_reading' && task.interaction && Array.isArray(task.interaction.intervalOptions)) {
       return [

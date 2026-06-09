@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-ANS-PROOF-IMPL-1",
+  "generated": "2026-06-08T10:33:05.200Z",
+  "status": "route_specific_a96_proof_captured",
+  "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+  "screenshot_manifest": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/manifest.json",
+  "reviewed_route": {
+    "paragraph": "1.1.2",
+    "title": "Percentages en indexcijfers",
+    "source_file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+    "source_task_id": "prijsstijging-procent",
+    "reviewed_surface": "target_equivalent_exit_ticket",
+    "route_href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+    "adoption_authorized": false,
+    "target_equivalent_claim": false,
+    "product_route_adoption": false
+  },
+  "answer_form_unit": "A96",
+  "answer_form_task_family": "calculation_answer_form_capture",
+  "required_action_parts": [
+    "formula_or_calculation_method",
+    "labelled_substitution",
+    "intermediate_work",
+    "final_answer",
+    "unit_or_notation",
+    "short_contextual_conclusion"
+  ],
+  "structured_answer_form_surface": {
+    "formula_token_count": 11,
+    "old_price_token_max_uses": 2,
+    "substitution_field_ids": [
+      "newPrice",
+      "oldPriceNumerator",
+      "oldPriceDenominator"
+    ],
+    "method_tokens": [
+      "open",
+      "newPrice",
+      "minus",
+      "oldPrice",
+      "close",
+      "divide",
+      "oldPrice",
+      "times100"
+    ],
+    "token_bank_display_order": [
+      "times100",
+      "newPrice",
+      "plus",
+      "open",
+      "divide",
+      "oldMinusNew",
+      "oldPrice",
+      "close",
+      "minus",
+      "times10",
+      "newDenominator"
+    ]
+  },
+  "source_task": {
+    "source_file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+    "source_task_id": "prijsstijging-procent",
+    "prompt_matches_reviewed_source": true
+  },
+  "checker_cases": {
+    "passing": true,
+    "finalAnswerOnly": false,
+    "sourceOnly": false,
+    "directionFree": false,
+    "exampleOnly": false,
+    "notationOmitted": false,
+    "standaloneA81": false,
+    "wrongDenominator": false,
+    "missingSubstitutionField": false,
+    "leftToRightTokenClickOrder": false
+  },
+  "invalid_task_fixtures": {
+    "visuallyIdenticalOldPriceTokensWithDistinctIds": {
+      "rejected": true,
+      "message": "a96-invalid-identical-old-price-tokens.interaction.formula.tokens must not contain visually identical answer tokens with different ids: oude prijs"
+    }
+  },
+  "screenshots": [
+    {
+      "case": "desktop-initial",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-initial.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2132
+      },
+      "proof": {
+        "state": "initial",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 0,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "",
+        "feedbackText": "",
+        "answerFormFeedbackVisible": false,
+        "nextActionVisible": false,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": null,
+        "routeLinkCount": 1,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    },
+    {
+      "case": "desktop-retry-feedback",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-retry-feedback.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "final-answer-only",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2510
+      },
+      "proof": {
+        "state": "retry-feedback",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 0,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "retry",
+        "feedbackText": "Maak je berekening controleerbaar\n\nVul de formule, bronwaarden, uitkomst, notatie en contextzin apart in.\n\nNog nodig\nFormule of rekenregel\nBronwaarden in de formule\nAl controleerbaar\nEindantwoord\nEenheid of notatie\nContextzin met richting\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "answerFormFeedbackVisible": true,
+        "nextActionVisible": false,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": false,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    },
+    {
+      "case": "desktop-next-action",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-next-action.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "correct-next-action",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2494
+      },
+      "proof": {
+        "state": "next-action",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 8,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "answerFormFeedbackVisible": false,
+        "nextActionVisible": true,
+        "completedVisible": false,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 4,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    },
+    {
+      "case": "desktop-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/desktop-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2628
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 8,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "answerFormFeedbackVisible": false,
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    },
+    {
+      "case": "mobile-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4469
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 8,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "answerFormFeedbackVisible": false,
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    },
+    {
+      "case": "mobile-dark-completed",
+      "file": "reports/sprints/MTU-ANS-PROOF-IMPL-1-screenshots/mobile-dark-completed.png",
+      "lab": "reports/sprints/MTU-ANS-PROOF-IMPL-1-rendered-lab.html",
+      "action": "complete",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4469
+      },
+      "proof": {
+        "state": "completed",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "taskFamily": "calculation_answer_form_capture",
+        "workFieldCount": 0,
+        "answerFormStepCount": 4,
+        "formulaTokenButtonCount": 11,
+        "formulaOldPriceMaxUses": "2",
+        "methodSequenceItemCount": 8,
+        "substitutionFieldCount": 3,
+        "finalAnswerFieldCount": 1,
+        "unitNotationFieldCount": 1,
+        "conclusionFieldCount": 1,
+        "criteriaVisibleBeforeCheck": false,
+        "feedbackState": "matched",
+        "feedbackText": "Berekening compleet\n\nJe laat methode, invulling, tussenstappen, notatie en conclusie zien.\n\nVolgende actie: oefen percentages in de 1.1.2 rekenroute",
+        "answerFormFeedbackVisible": false,
+        "nextActionVisible": true,
+        "completedVisible": true,
+        "requiredParts": [],
+        "lastMatched": true,
+        "routeLinkCount": 2,
+        "visibleInternalIdCount": 5,
+        "overflowingCount": 0,
+        "overflowingElements": []
+      }
+    }
+  ],
+  "non_regression": {
+    "a96_generic_route_exposure": false,
+    "gen_a96_implemented": false,
+    "a81_standalone_pass_allowed": false,
+    "a99_unblocked": false
+  },
+  "product_boundaries": {
+    "route_specific_lab_proof": true,
+    "generated_lesson_output_changed": false,
+    "protected_reference_data_changed": false,
+    "source_data_changed": false,
+    "product_route_adoption": false,
+    "target_equivalent_claim": false,
+    "diagnostics": false,
+    "mastery": false,
+    "sequencing": false,
+    "pv_projection": false,
+    "scale_gate_1": false,
+    "student_product_use": false
+  }
+}

@@ -1,0 +1,744 @@
+/* Golden Ticket layout for the 1.1.3 proof route. */
+
+:root {
+  --ge-bg: #f7f8fb;
+  --ge-panel: #ffffff;
+  --ge-panel-alt: #eef4f7;
+  --ge-text: #142033;
+  --ge-muted: #58677b;
+  --ge-line: #d6e0e8;
+  --ge-accent: #146c76;
+  --ge-accent-strong: #0e5159;
+  --ge-accent-soft: #e3f4f5;
+  --ge-warm: #9f6a16;
+  --ge-good: #216e4e;
+  --ge-good-bg: #e9f7ef;
+  --ge-warn: #8a5a00;
+  --ge-warn-bg: #fff5d6;
+  --ge-bad: #8a1f1f;
+  --ge-bad-bg: #fdeaea;
+  --ge-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --ge-bg: #101620;
+  --ge-panel: #17202c;
+  --ge-panel-alt: #202b39;
+  --ge-text: #eef3f8;
+  --ge-muted: #aab6c3;
+  --ge-line: #314154;
+  --ge-accent: #76d2df;
+  --ge-accent-strong: #a5e8ef;
+  --ge-accent-soft: #12343a;
+  --ge-warm: #f2c46f;
+  --ge-good: #8ce0b5;
+  --ge-good-bg: #10281e;
+  --ge-warn: #ffd36d;
+  --ge-warn-bg: #332400;
+  --ge-bad: #ffaaa7;
+  --ge-bad-bg: #341414;
+  --ge-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ge-bg);
+  color: var(--ge-text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.ge-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  padding: 12px 24px;
+  background: color-mix(in srgb, var(--ge-panel) 94%, transparent);
+  border-bottom: 1px solid var(--ge-line);
+  backdrop-filter: blur(14px);
+}
+
+.ge-topbar strong {
+  text-align: center;
+  font-size: 15px;
+}
+
+.ge-back,
+.ge-theme-toggle,
+.ge-small-button,
+.ge-primary-action,
+.ge-chip,
+.ge-pill,
+.ge-token,
+.ge-slot {
+  min-height: 40px;
+  border: 1px solid var(--ge-line);
+  border-radius: 999px;
+  background: var(--ge-panel-alt);
+  color: var(--ge-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.ge-back,
+.ge-theme-toggle,
+.ge-small-button,
+.ge-primary-action,
+.ge-chip,
+.ge-pill,
+.ge-token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.ge-back {
+  justify-self: start;
+}
+
+.ge-theme-toggle {
+  justify-self: end;
+}
+
+.ge-back:hover,
+.ge-theme-toggle:hover,
+.ge-small-button:hover,
+.ge-chip:hover,
+.ge-pill:hover,
+.ge-token:hover,
+.ge-slot:hover {
+  border-color: var(--ge-accent);
+  color: var(--ge-accent-strong);
+}
+
+.ge-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+}
+
+.ge-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.ge-hero-card,
+.ge-route-panel {
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel);
+  box-shadow: var(--ge-shadow);
+}
+
+.ge-hero-card {
+  min-height: 206px;
+  padding: 24px;
+}
+
+.ge-route-panel {
+  padding: 18px;
+}
+
+.ge-route-panel h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.ge-kicker,
+.ge-card-kicker,
+.ge-step-kicker {
+  margin: 0 0 8px;
+  color: var(--ge-accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ge-hero h1 {
+  max-width: 840px;
+  margin: 0 0 10px;
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.ge-intro {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--ge-muted);
+  font-size: 18px;
+}
+
+.ge-route-strip {
+  display: grid;
+  gap: 10px;
+}
+
+.ge-route-pill {
+  display: inline-grid;
+  gap: 2px;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel-alt);
+  text-decoration: none;
+}
+
+.ge-route-pill span {
+  color: var(--ge-muted);
+  font-size: 13px;
+}
+
+.ge-route-pill strong {
+  font-size: 14px;
+}
+
+.ge-workbench {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(560px, 1.6fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.ge-source-card,
+.ge-task-card {
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel);
+  box-shadow: var(--ge-shadow);
+}
+
+.ge-source-card {
+  position: sticky;
+  top: 88px;
+  padding: 20px;
+}
+
+.ge-task-card {
+  padding: 22px;
+}
+
+.ge-source-card h2,
+.ge-task-header h2,
+.ge-step h3 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.ge-source-card h2,
+.ge-task-header h2 {
+  font-size: 24px;
+}
+
+.ge-source-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--ge-line);
+}
+
+.ge-source-card > .ge-source-section:first-of-type,
+.ge-source-table-section {
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.ge-source-section h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.ge-source-section p,
+.ge-task-header p,
+.ge-step-purpose,
+.ge-subtle {
+  color: var(--ge-muted);
+}
+
+.ge-source-table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.ge-source-table th,
+.ge-source-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--ge-line);
+  text-align: right;
+}
+
+.ge-source-table th:first-child,
+.ge-source-table td:first-child {
+  text-align: left;
+}
+
+.ge-source-table th {
+  background: var(--ge-panel-alt);
+  color: var(--ge-muted);
+}
+
+.ge-source-note {
+  margin-top: 12px;
+}
+
+.ge-task-header {
+  margin-bottom: 18px;
+}
+
+.ge-task-header p {
+  margin: 8px 0 0;
+}
+
+.ge-step-list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ge-step {
+  position: relative;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--ge-line);
+}
+
+.ge-step:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.ge-step-head {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 14px;
+}
+
+.ge-step-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--ge-accent-soft);
+  color: var(--ge-accent-strong);
+  font-weight: 800;
+}
+
+.ge-step-purpose {
+  margin: 4px 0 0;
+}
+
+.ge-graph-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.ge-axis-panel h4,
+.ge-claim-part h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.ge-chip-row,
+.ge-pill-row,
+.ge-token-bank,
+.ge-chosen-tokens,
+.ge-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.ge-chip[aria-pressed="true"],
+.ge-pill[aria-pressed="true"],
+.ge-token[aria-pressed="true"] {
+  border-color: var(--ge-accent);
+  background: var(--ge-accent-soft);
+  color: var(--ge-accent-strong);
+  font-weight: 700;
+}
+
+.ge-slot-grid {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ge-slot {
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.ge-slot strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ge-muted);
+  font-size: 13px;
+}
+
+.ge-slot span {
+  display: block;
+  font-weight: 800;
+}
+
+.ge-graph-panel {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel-alt);
+}
+
+.ge-graph-wrap {
+  min-height: 0;
+}
+
+.ge-graph {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel);
+  color: var(--ge-muted);
+  touch-action: manipulation;
+}
+
+.ge-graph-bg {
+  fill: transparent;
+}
+
+.ge-graph-plot {
+  fill: transparent;
+  stroke: var(--ge-line);
+  stroke-width: 2;
+}
+
+.ge-graph-grid {
+  stroke: var(--ge-line);
+  stroke-width: 1;
+}
+
+.ge-axis-line {
+  stroke: var(--ge-muted);
+  stroke-width: 2;
+}
+
+.ge-tick-label,
+.ge-axis-label,
+.ge-graph-point-label {
+  fill: currentColor;
+  font-size: 13px;
+}
+
+.ge-axis-label {
+  font-weight: 800;
+}
+
+.ge-graph-line {
+  fill: none;
+  stroke: var(--ge-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ge-graph-point {
+  fill: var(--ge-accent);
+  stroke: var(--ge-panel);
+  stroke-width: 2;
+}
+
+.ge-action-row {
+  margin-top: 10px;
+}
+
+.ge-graph-actions {
+  justify-content: space-between;
+}
+
+.ge-action-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ge-muted);
+}
+
+.ge-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ge-field {
+  display: grid;
+  gap: 6px;
+}
+
+.ge-field-wide {
+  grid-column: 1 / -1;
+}
+
+.ge-field span,
+.ge-field label {
+  color: var(--ge-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ge-field input,
+.ge-chosen-tokens {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--ge-line);
+  border-radius: 8px;
+  background: var(--ge-panel);
+  color: var(--ge-text);
+  padding: 9px 10px;
+}
+
+.ge-claim-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.ge-claim-part {
+  padding-top: 14px;
+  border-top: 1px solid var(--ge-line);
+}
+
+.ge-claim-part:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.ge-token-bank,
+.ge-chosen-tokens {
+  min-height: 46px;
+}
+
+.ge-feedback {
+  display: none;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--ge-line);
+}
+
+.ge-feedback.is-visible {
+  display: block;
+}
+
+.ge-feedback.is-good {
+  border-color: color-mix(in srgb, var(--ge-good) 55%, var(--ge-line));
+  background: var(--ge-good-bg);
+  color: var(--ge-good);
+}
+
+.ge-feedback.is-warn {
+  border-color: color-mix(in srgb, var(--ge-warn) 55%, var(--ge-line));
+  background: var(--ge-warn-bg);
+  color: var(--ge-warn);
+}
+
+.ge-feedback.is-bad {
+  border-color: color-mix(in srgb, var(--ge-bad) 55%, var(--ge-line));
+  background: var(--ge-bad-bg);
+  color: var(--ge-bad);
+}
+
+.ge-feedback strong,
+.ge-feedback p {
+  margin: 0;
+}
+
+.ge-feedback p {
+  margin-top: 4px;
+}
+
+.ge-lock-overlay {
+  display: none;
+}
+
+.ge-locked {
+  overflow: hidden;
+  height: 260px;
+  min-height: 210px;
+  border: 1px solid color-mix(in srgb, var(--ge-line) 70%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ge-panel) 82%, var(--ge-bg));
+  padding: 18px;
+}
+
+.ge-locked > :not(.ge-lock-overlay) {
+  opacity: 0.16;
+  filter: grayscale(0.2);
+}
+
+.ge-locked .ge-lock-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--ge-panel) 80%, transparent),
+    color-mix(in srgb, var(--ge-panel) 94%, transparent)
+  );
+}
+
+.ge-lock-overlay span {
+  color: var(--ge-muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.ge-locked input,
+.ge-locked button {
+  pointer-events: none;
+}
+
+.ge-completion {
+  display: none;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--ge-good) 50%, var(--ge-line));
+  border-radius: 8px;
+  background: var(--ge-good-bg);
+  color: var(--ge-good);
+}
+
+.ge-completion.is-visible {
+  display: block;
+}
+
+.ge-completion h3,
+.ge-completion p {
+  margin: 0;
+}
+
+.ge-completion p {
+  margin-top: 6px;
+}
+
+.ge-primary-action {
+  margin-top: 18px;
+  border-color: var(--ge-accent);
+  background: var(--ge-accent);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.ge-primary-action:hover {
+  border-color: var(--ge-accent-strong);
+  background: var(--ge-accent-strong);
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .ge-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ge-graph-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .ge-topbar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .ge-topbar strong {
+    text-align: left;
+  }
+
+  .ge-theme-toggle {
+    justify-self: start;
+  }
+
+  .ge-page {
+    padding: 24px 16px 40px;
+  }
+
+  .ge-hero-card,
+  .ge-route-panel {
+    padding: 18px;
+  }
+
+  .ge-hero h1 {
+    font-size: 32px;
+  }
+
+  .ge-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .ge-source-card {
+    position: static;
+  }
+
+  .ge-task-card {
+    padding: 18px;
+  }
+
+  .ge-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ge-route-pill {
+    width: 100%;
+  }
+}

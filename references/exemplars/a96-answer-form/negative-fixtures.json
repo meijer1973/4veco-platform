@@ -1,0 +1,192 @@
+{
+  "schema_version": 3,
+  "exemplar_id": "A96-answer-form-proof-golden-v3",
+  "positive": {
+    "completeAnswer": {
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "singleReusableOldPriceToken": {
+      "why_it_must_pass": "The same visual token 'oude prijs' is represented by one reusable hidden ID and appears twice in the accepted sequence.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "tokenPolicy": {
+        "oldPrice": {
+          "label": "oude prijs",
+          "maxUses": 2
+        }
+      }
+    }
+  },
+  "negative": {
+    "leftToRightTokenClickOrder": {
+      "why_it_must_fail": "Token bank display order may not already be the correct formula.",
+      "methodTokens": [
+        "open",
+        "oldPrice",
+        "plus",
+        "newden",
+        "times100",
+        "new",
+        "divide",
+        "oldfirst",
+        "minus",
+        "oldPrice",
+        "close",
+        "times10"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "finalAnswerOnly": {
+      "why_it_must_fail": "A96 proof requires visible formula and substitution, not only answer and notation.",
+      "methodTokens": [],
+      "substitution": {},
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "sourceValuesOnly": {
+      "why_it_must_fail": "Source values without formula, final answer, notation and context sentence are not answer-form proof.",
+      "methodTokens": [],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "",
+      "notation": "",
+      "conclusion": ""
+    },
+    "wrongDenominator": {
+      "why_it_must_fail": "Percentage change divides by old value, not new value.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "920"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "missingNotation": {
+      "why_it_must_fail": "Final numeric answer must carry a unit/notation field.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "",
+      "conclusion": "De prijs van de fiets stijgt met 15 procent."
+    },
+    "conclusionWithoutDirection": {
+      "why_it_must_fail": "Context sentence must say direction: stijgt/duurder/stijging.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "920",
+        "oldPriceNumerator": "800",
+        "oldPriceDenominator": "800"
+      },
+      "finalAnswer": "15",
+      "notation": "%",
+      "conclusion": "De fiets heeft 15 procent."
+    },
+    "vagueExampleOnly": {
+      "why_it_must_fail": "Example-like answer does not prove the route-specific answer form.",
+      "methodTokens": [
+        "open",
+        "new",
+        "minus",
+        "oldPrice",
+        "close",
+        "divide",
+        "oldPrice",
+        "times100"
+      ],
+      "substitution": {
+        "newPrice": "",
+        "oldPriceNumerator": "",
+        "oldPriceDenominator": ""
+      },
+      "finalAnswer": "15%",
+      "notation": "%",
+      "conclusion": "Bijvoorbeeld 15 procent."
+    },
+    "visuallyIdenticalOldPriceTokensWithDistinctIds": {
+      "why_it_must_fail": "Two tokens labelled 'oude prijs' with different hidden IDs create an invisible 50/50 failure for students.",
+      "tokens": [
+        {
+          "id": "oldnum",
+          "label": "oude prijs",
+          "kind": "answer"
+        },
+        {
+          "id": "oldden",
+          "label": "oude prijs",
+          "kind": "answer"
+        }
+      ],
+      "requiredPolicy": "Use one reusable token: { id: 'oldPrice', label: 'oude prijs', maxUses: 2 }."
+    }
+  }
+}

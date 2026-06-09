@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "registry_id": "ui-layout-registry",
+  "status": "policy_extracted",
+  "generated_from_goal": "GOLDEN-EXERCISE-POLICY-1",
+  "layouts": [
+    {
+      "id": "golden_exercise_workbench",
+      "name": "Golden Exercise Workbench",
+      "contract_level": "layout_contract",
+      "status": "governed_policy_currently_special_cased",
+      "current_selector": {
+        "parNr": "1.1.3",
+        "layout.framework": "golden_exercise_workbench"
+      },
+      "current_references": [
+        "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
+        "build-scripts/platform/build-exit-ticket-shells.js",
+        "engines/golden-ticket-layout.js",
+        "engines/golden-ticket-graph.js",
+        "references/exemplars/1.1.3-exit-ticket/",
+        "references/exemplars/a96-answer-form/"
+      ],
+      "required_shell": {
+        "topbar": "header.ge-topbar",
+        "root": "main.ge-page[data-golden-ticket-root]",
+        "required_sections": [
+          ".ge-hero",
+          ".ge-workbench",
+          ".ge-source-card",
+          ".ge-task-card",
+          ".ge-step-list",
+          ".ge-feedback"
+        ],
+        "required_assets": [
+          "golden-ticket-layout.css",
+          "exit-ticket/{sourceKey}.js",
+          "golden-ticket-layout.js"
+        ],
+        "conditional_assets": [
+          {
+            "asset": "golden-ticket-graph.js",
+            "when": "graph construction or graph reading needs Golden graph runtime"
+          }
+        ]
+      },
+      "forbidden_shell": [
+        "#exit-ticket-app",
+        "main.et-page",
+        "header.et-topbar",
+        "task-shell.css",
+        "exit-ticket.css",
+        "skill-map-route.css",
+        "task-shell-ui.js as visible shell",
+        "exit-ticket-ui.js as visible shell",
+        "mixed ge-* and et-* classes"
+      ],
+      "responsive_order": {
+        "desktop": [
+          "source/context-left",
+          "task-right",
+          "route/recovery-secondary",
+          "stable-feedback"
+        ],
+        "mobile": [
+          "hero",
+          "route/recovery-if-short",
+          "source/context",
+          "task-steps",
+          "feedback"
+        ]
+      },
+      "surface_types": [
+        "target_equivalent_exit_ticket_candidate",
+        "advisory_short_check",
+        "source_dependent_practice",
+        "graph_table_practice",
+        "calculation_answer_form_practice",
+        "reasoning_source_use_practice",
+        "review_only_lab"
+      ],
+      "proof_states": [
+        "desktop_initial",
+        "mobile_initial",
+        "dark_mode",
+        "wrong_retry_feedback",
+        "correct_completed",
+        "after_interaction",
+        "route_reload",
+        "no_legacy_dom",
+        "negative_fixture_rejection"
+      ],
+      "does_not_authorize": [
+        "student_product_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language",
+        "diagnostics",
+        "mastery",
+        "automatic_sequencing",
+        "summative_use",
+        "broad_migration"
+      ]
+    }
+  ]
+}

@@ -409,15 +409,15 @@ describe('ExitTicketEngine', () => {
             state: 'matched',
             matched: true
         }));
-        expect(engine.checkTask('procentformule-bouwen', {
-            tokens: ['open', 'newQ', 'minus', 'oldQnum', 'close', 'divide', 'oldQden', 'times100']
-        })).toEqual(expect.objectContaining({
-            state: 'matched',
-            matched: true
-        }));
+        const correctFormula = ['open', 'newQ', 'minus', 'oldQnum', 'close', 'divide', 'oldQden', 'times100'];
         expect(engine.checkTask('claim-50-procent-controleren', {
+            interval: '150-300',
+            oldValue: '300',
+            newValue: '150',
+            formula: { tokens: correctFormula },
             work: 'interval 1,50 tot 3,00: Q gaat van 300 naar 150',
             finalAnswer: '50% daling',
+            conclusion: 'drop50',
             unitNotation: 'Q daalt met 50 procent'
         })).toEqual(expect.objectContaining({
             state: 'matched',
