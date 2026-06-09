@@ -72,6 +72,6 @@ packet on the pushed branch for review.
 
 ## Required Next Action
 
-Assign lead review before external tri-agent review. The dispatch prompt must
-cite the exact final pushed branch HEAD, the pushed branch, and this explicit
-CI waiver.
+Use this validation evidence in the INSPECT-6 closure log. Open INSPECT-7 only
+with a dedicated sprint plan and planning review for one bounded
+no-personal-data prototype.

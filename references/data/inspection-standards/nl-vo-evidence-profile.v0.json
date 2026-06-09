@@ -3,12 +3,12 @@
   "profile_id": "nl-vo-evidence-profile",
   "profile_version": "v0",
   "status": "draft",
-  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails; INSPECT-6 Report-Only Generator Planning",
+  "sprint": "INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails; INSPECT-6 Report-Only Generator Planning; INSPECT-7 Dutch Scoped Evidence-Pack Prototype",
   "jurisdiction": "Netherlands",
   "sector": "voortgezet onderwijs",
   "subject_focus": "vwo economie",
   "retrieved_date": "2026-06-08",
-  "review_status": "draft_adjusted_for_schema_design",
+  "review_status": "draft_generator_planning_tri_agent_accepted",
   "authority_sources": [
     "nl-inspectie-onderzoekskader-vo-2025",
     "nl-inspectie-op0-basisvaardigheden-2025",
@@ -400,7 +400,7 @@
       }
     }
   ],
-  "next_recommended_step": "INSPECT-6 teacher, legal/privacy, and Dutch quality-inspection MORE_THAN_SATISFIED review of report-only generator planning. Do not implement a generator, generate evidence packs, add teacher inspection packs, CI/build integration, dashboards, quality-ref integration, Scale Gate integration, generated lesson output, country overlays, personal-data processing, or compliance claims from this profile or planning sprint.",
+  "next_recommended_step": "INSPECT-7 dedicated sprint plan and planning review for one bounded no-personal-data Book 1 Chapter 1.1 report-only evidence-pack prototype. Do not add a package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate integration, generated lesson output, country overlay, personal-data processing, or compliance/approval claims from this profile or prototype sprint.",
   "profile_adjustment_basis": {
     "decision": "pass_with_required_profile_adjustment",
     "reviewer": "Head of Strategy",
@@ -566,6 +566,51 @@
       "legal compliance claims",
       "inspectorate approval claims",
       "complete OP0/basic-skills claims"
+    ]
+  },
+  "generator_planning_authorization": {
+    "decision": "tri_agent_more_than_satisfied",
+    "reviewers": [
+      "Teacher reviewer Dewey",
+      "Legal/privacy reviewer Leibniz",
+      "Dutch quality-inspection reviewer Parfit"
+    ],
+    "date": "2026-06-09",
+    "accepted_prior_sprint": "INSPECT-6 Report-Only Generator Planning",
+    "approved_next_action": "INSPECT-7 Dutch Scoped Evidence-Pack Prototype",
+    "purpose": "Use the accepted report-only generator plan, source contract, validation/dispatch plan, safe-claim boundaries, privacy no-personal-data default, and teacher-facing output shape to prototype one bounded evidence pack.",
+    "bounded_scope": [
+      "Book 1, Chapter 1.1",
+      "1.1.1 Schaarste en economisch denken",
+      "1.1.2 Percentages en indexcijfers",
+      "1.1.3 Grafieken en tabellen"
+    ],
+    "required_start": [
+      "INSPECT-7 sprint plan",
+      "planning review before implementation",
+      "one bounded source object",
+      "one report-only Markdown pack",
+      "one report-only JSON pack"
+    ],
+    "not_approved": [
+      "package script integration",
+      "CI/build integration",
+      "dashboard gates",
+      "quality-ref integration",
+      "Scale Gate integration",
+      "country overlays",
+      "generated lesson-output changes",
+      "personal-data processing",
+      "legal compliance claims",
+      "AVG/GDPR compliance claims",
+      "inspectorate approval claims",
+      "inspection-ready claims",
+      "certification claims",
+      "complete OP0/basic-skills claims",
+      "school-obligation-satisfied claims",
+      "PTA validity claims",
+      "summative assessment validity claims",
+      "classroom implementation claims"
     ]
   }
 }

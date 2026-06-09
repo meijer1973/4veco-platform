@@ -1,6 +1,6 @@
 # INSPECT-6 Correction Log
 
-Status: planning corrections recorded
+Status: planning corrections recorded; no lead-review or external-review blockers
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -45,7 +45,17 @@ summative assessment validity claim
 classroom implementation claim
 ```
 
+## Lead Review Corrections
+
+No lead-review corrections were required. Lead review round 1 and round 2 both
+returned `PASS` with no blockers.
+
+## External Review Corrections
+
+No external-review corrections were required. Teacher, legal/privacy, and Dutch
+quality-inspection reviewers each returned `MORE_THAN_SATISFIED`.
+
 ## Required Next Action
 
-Run validation, lead review, and external tri-agent review. If any reviewer
-returns `REVISE` or `PASS`, record requested corrections here before re-review.
+Close INSPECT-6 and open INSPECT-7 with a dedicated sprint plan and planning
+review before any bounded prototype implementation starts.

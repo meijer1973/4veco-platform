@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T08:42:49.670Z
+Generated: 2026-06-09T09:14:12.363Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 3962
+Files indexed: 3971
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -617,7 +617,7 @@ Count: 42
 
 ## validators
 
-Count: 390
+Count: 392
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -630,6 +630,7 @@ Count: 390
 - archive/sprints/INSPECT-5/INSPECT-5-validation-log.md
 - archive/sprints/INSPECT-5/INSPECT-5-validator-refinement-packet.md
 - archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
 - build-scripts/ci/check-agent-branch-safety.test.js
 - build-scripts/ci/check-agent-worktree-safety.js
@@ -816,6 +817,7 @@ Count: 390
 - build-scripts/sprints/check-task-shell-ux2.js
 - build-scripts/sprints/check-visual-qa-harden2.js
 - build-scripts/sprints/emit-check-surface-pregate1-proof.js
+- docs/inspection-standards/evidence-pack-validation-and-dispatch.md
 - docs/inspection-standards/report-only-validator-design.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.22-pv2-procedure-visual-schema-validator.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.81-ex6-validator-cli-planning.md
@@ -4029,7 +4031,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 381
+Count: 388
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4107,14 +4109,21 @@ Count: 381
 - archive/sprints/INSPECT-5R/INSPECT-5R-review-packet.md
 - archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md
 - archive/sprints/INSPECT-6/INSPECT-6-authorisation.md
+- archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
+- archive/sprints/INSPECT-6/INSPECT-6-generator-planning-packet.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-assignment.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-round1.md
+- archive/sprints/INSPECT-6/INSPECT-6-lead-review-round2.md
 - archive/sprints/INSPECT-6/INSPECT-6-planning-review.md
 - archive/sprints/INSPECT-6/INSPECT-6-sprint-plan.md
 - BATCH-CLOSURE-WAIVER.md
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/nl-vo-evidence-model.md
+- docs/inspection-standards/report-only-generator-plan.md
 - docs/inspection-standards/report-only-schema-design.md
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md

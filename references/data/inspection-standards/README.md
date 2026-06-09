@@ -81,6 +81,14 @@ implement a generator, generate evidence packs, integrate dashboards,
 quality-ref, Scale Gate, CI/build gates, or lesson output, process personal
 data, or make compliance/approval claims.
 
+INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection
+reviewers each `MORE_THAN_SATISFIED`. INSPECT-7 is planned as one bounded
+no-personal-data Book 1 Chapter 1.1 report-only evidence-pack prototype. It
+must start with a sprint plan and planning review, and it must not add package
+scripts, CI/build gates, dashboard gates, quality-ref integration, Scale Gate
+integration, lesson-output mutation, country overlays, personal-data
+processing, or compliance/approval claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:

@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.8-inspect-6-generator-planning`
-Sprint status: `INSPECT-6 Report-Only Generator Planning` is active as planning-only after INSPECT-5R closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; generator implementation, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, personal-data processing, and compliance claims remain unauthorised
+Roadmap version: `v0.9-inspect-6-tri-agent-accepted`
+Sprint status: `INSPECT-6 Report-Only Generator Planning` closed with teacher, legal/privacy, and Dutch quality-inspection reviewers each `MORE_THAN_SATISFIED`; `INSPECT-7 Dutch Scoped Evidence-Pack Prototype` is planned for one bounded no-personal-data Book 1 Chapter 1.1 prototype and must start with its own sprint plan and planning review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -921,8 +921,9 @@ summative assessment validity claim
 classroom implementation claim
 ```
 
-INSPECT-5R passed tri-agent `MORE_THAN_SATISFIED` review. INSPECT-6 is active
-as planning-only and must not implement a generator or evidence pack.
+INSPECT-5R passed tri-agent `MORE_THAN_SATISFIED` review. INSPECT-6 then
+opened as planning-only and closed without implementing a generator or evidence
+pack.
 
 ### Phase 3D - Report-only generator planning
 
@@ -993,9 +994,28 @@ summative assessment validity claim
 classroom implementation claim
 ```
 
-### Phase 4 - Pilot evidence audit on stabilised paragraphs
+Closure result:
 
-Goal: test the model on already stabilised material before scaling.
+```text
+INSPECT-6 closed with teacher, legal/privacy, and Dutch quality-inspection
+reviewers each MORE_THAN_SATISFIED. No lead-review or external-review blockers
+were raised. INSPECT-7 is eligible to start only as a separate bounded
+prototype sprint with its own sprint plan and planning review.
+```
+
+### Phase 4 - INSPECT-7 Dutch scoped evidence-pack prototype
+
+Goal: create one bounded report-only evidence-pack prototype on already
+stabilised material before scaling.
+
+Authorisation:
+
+```text
+INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review. The
+persistent owner objective authorises continuing the roadmap through INSPECT-7.
+INSPECT-7 must still begin with a dedicated sprint plan and planning review
+before implementation starts.
+```
 
 Pilot scope:
 
@@ -1017,9 +1037,10 @@ authorises one bounded correction.
 Outputs:
 
 ```text
-reports/inspection-standards/pilot-1.1-evidence-audit.md
-reports/inspection-standards/pilot-1.1-evidence-audit.json
-archive/sprints/INSPECT-PILOT-1/...
+archive/sprints/INSPECT-7/
+references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json
+reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
+reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 ```
 
 Audit questions:
@@ -1038,6 +1059,21 @@ Acceptance criteria:
 - missing evidence is classified by severity;
 - generated vs source artifacts are not confused;
 - no broad scaling recommendation is made from only three paragraphs.
+
+Required guardrails:
+
+- no personal data;
+- no package script;
+- no CI gate;
+- no dashboard gate;
+- no quality-ref integration;
+- no Scale Gate integration;
+- no generated lesson-output mutation;
+- no broader generator beyond the bounded prototype;
+- no legal compliance, AVG/GDPR compliance, inspectorate approval,
+  inspection-ready, certification, PTA validity, summative assessment validity,
+  school-obligation-satisfied, classroom-implementation, complete OP0, or
+  school-wide basic-skills claim.
 
 ### Phase 5 - Report and dashboard integration
 
@@ -1368,10 +1404,22 @@ Current decision after INSPECT-5:
 Initial teacher, legal/privacy, and Dutch quality-inspection external reviews returned REVISE. INSPECT-5R External Review, Privacy, And Claim Guardrails was authorised as a pre-INSPECT-6 guardrail sprint only.
 ```
 
-Current decision after INSPECT-5R:
+Historical decision after INSPECT-5R:
 
 ```text
-INSPECT-5R passed tri-agent MORE_THAN_SATISFIED review. INSPECT-6 Report-Only Generator Planning is active as planning-only. Do not implement a generator, generate evidence packs, add dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, personal-data processing, or compliance claims from INSPECT-6.
+INSPECT-5R passed tri-agent MORE_THAN_SATISFIED review. INSPECT-6 Report-Only Generator Planning opened as planning-only. Do not implement a generator, generate evidence packs, add dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, personal-data processing, or compliance claims from INSPECT-6.
+```
+
+Current decision after INSPECT-6:
+
+```text
+INSPECT-6 passed lead review and tri-agent MORE_THAN_SATISFIED review.
+INSPECT-7 Dutch Scoped Evidence-Pack Prototype is planned for one bounded
+no-personal-data Book 1 Chapter 1.1 source object plus report-only Markdown and
+JSON evidence pack. INSPECT-7 must start with a sprint plan and planning review
+before implementation. Do not add a package script, CI gate, dashboard gate,
+quality-ref integration, Scale Gate integration, country overlay, generated
+lesson-output mutation, personal-data processing, or compliance/approval claim.
 ```
 
 ## 11. Setup recommendation

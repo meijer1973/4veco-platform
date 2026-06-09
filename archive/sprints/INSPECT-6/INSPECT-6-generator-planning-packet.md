@@ -1,6 +1,6 @@
 # INSPECT-6 Generator Planning Packet
 
-Status: locally validated, pending lead review and external re-review
+Status: accepted by lead review and external tri-agent review
 Date: 2026-06-09
 Branch: `codex/quality-standards-20260608`
 
@@ -181,15 +181,15 @@ Inspection-boundary improvements required:
 Evidence needed for MORE_THAN_SATISFIED:
 ```
 
-## Dispatch Metadata
+## Dispatch Metadata Used
 
-Before external review, record in the dispatch prompt:
+External review used:
 
 ```text
-final_reviewed_commit_sha: <exact final pushed branch HEAD>
+final_reviewed_commit_sha: 6217443be2a05c0aaa99ff5101d8dc85a1bb0a5f
 remote_branch: origin/codex/quality-standards-20260608
 remote_push_status: pushed
-platform_ci_validate_platform: <passing run URL or explicit CI waiver>
+platform_ci_validate_platform: explicit CI waiver; gh run list returned []
 local_validation_log: archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 lead_review_round2: archive/sprints/INSPECT-6/INSPECT-6-lead-review-round2.md
 correction_log: archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
@@ -197,7 +197,5 @@ correction_log: archive/sprints/INSPECT-6/INSPECT-6-correction-log.md
 
 ## Required Next Action
 
-Validate, lead-review, push, and send this packet to the teacher,
-legal/privacy, and Dutch quality-inspection reviewers. Do not start INSPECT-7
-unless all three return `MORE_THAN_SATISFIED` and the repository owner
-authorises one bounded prototype.
+Close INSPECT-6 and open INSPECT-7 with a dedicated sprint plan and planning
+review for one bounded no-personal-data prototype.
