@@ -163,12 +163,12 @@ as the final Dutch quality-system packet for external human review.
 4. Is the report-only prototype useful without implying inspection approval or
    school-level proof?
 
-## Dispatch Metadata Used For Lead Review
+## Dispatch Metadata
 
-Lead review used:
+Lead-review round 1 used:
 
 ```text
-final_reviewed_commit_sha: cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369
+lead_review_round1_packet_sha: cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369
 remote_branch: origin/codex/quality-standards-20260608
 remote_push_status: pushed
 platform_ci_validate_platform: explicit CI waiver; gh run list returned []
@@ -176,6 +176,15 @@ local_validation_log: archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 lead_review_round2: archive/sprints/INSPECT-7/INSPECT-7-lead-review-round2.md
 correction_log: archive/sprints/INSPECT-7/INSPECT-7-correction-log.md
 ```
+
+Lead-review round 2 initially reviewed remote head
+`cfc1e5e296f767c7d239a322602efd63eb074aec` and returned `REVISE` because the
+metadata above used the stale round-1 packet SHA as if it were the final
+external dispatch SHA.
+
+The external-review dispatch prompt must cite the exact final pushed branch
+HEAD available after lead review passes and all lead-review artifacts are
+pushed. Do not reuse an earlier packet SHA as `final_reviewed_commit_sha`.
 
 ## Required Next Action
 

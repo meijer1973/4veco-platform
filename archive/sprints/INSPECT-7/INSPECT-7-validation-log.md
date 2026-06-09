@@ -31,7 +31,7 @@ INSPECT-7 scope and remain diagnostic/report-only.
 | `npm.cmd run check:platform` | 0 | pass | 48 suites and 759 tests passed; 6 suites and 8 tests skipped by existing suite configuration. |
 | `git -C ..\4veco-lessen status --short --branch` | 0 | pass | Lesson repository stayed on `codex/quality-standards-20260608`. |
 | `git -C ..\4veco-lessen diff --name-only` | 0 | pass | No lesson-repository file changes. |
-| `npm.cmd run check:agent-worktree-safety -- --check --task QS-20260608 --agent codex --require-prefix codex/ --require-clean` | 0 | pass | Correct worktree lock, branch prefix, and clean tree after prototype packet push; prototype content head `a16a24a047dd73814e7a28b8f77aef9be195f4cd`, validation-waiver review head `cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369`. |
+| `npm.cmd run check:agent-worktree-safety -- --check --task QS-20260608 --agent codex --require-prefix codex/ --require-clean` | 0 | pass | Correct worktree lock, branch prefix, and clean tree after prototype packet push; prototype content head `a16a24a047dd73814e7a28b8f77aef9be195f4cd`, validation-waiver review head `cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369`, lead-round-1-recorded head `cfc1e5e296f767c7d239a322602efd63eb074aec`. |
 | `gh run list --branch codex/quality-standards-20260608 --limit 10 --json databaseId,name,status,conclusion,headSha,url` | 0 | explicit CI waiver | Returned `[]`; no GitHub Actions `platform-ci / validate-platform` run is available for this branch. |
 
 ## Expected Warnings
@@ -76,6 +76,10 @@ exact final pushed branch HEAD and this explicit CI waiver. Use the passing
 local validation in this log as the review evidence for INSPECT-7, and keep the
 packet on the pushed branch for review.
 ```
+
+Lead-review round 2 found that the packet must not hardcode an earlier reviewed
+SHA as the final external dispatch SHA. The final external-review dispatch
+prompt must cite the exact pushed branch HEAD at dispatch time.
 
 ## Required Next Action
 

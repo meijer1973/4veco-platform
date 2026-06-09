@@ -22,7 +22,9 @@ expand prototype scope.
 
 ## Lead Review Corrections
 
-None yet.
+| Finding | Correction |
+|---|---|
+| Lead review round 2 found stale/ambiguous dispatch SHA metadata: the packet reused `cf7d1326dfd97be0e1f63ec8c5f30d9d641c6369` as a final reviewed SHA after the branch had advanced to `cfc1e5e296f767c7d239a322602efd63eb074aec`. | Recorded the round-2 `REVISE`, changed packet metadata to identify the round-1 packet SHA instead of a final external dispatch SHA, and required the external dispatch prompt to cite the exact final pushed branch HEAD available after lead review passes and all lead-review artifacts are pushed. |
 
 ## External Review Corrections
 
