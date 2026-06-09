@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-RP003-RP004-q19-governed-planning-packet",
+  "created": "2026-06-09",
+  "status": "q19_planning_packet_ready_for_three_agent_review_no_mutation_authorized",
+  "purpose": "Prepare the q19 RP-003/RP-004 governed planning lane for review by keeping the graph/draw/teken answer-form gap, source-annex gap, graph-object gap, and procedure semantic-fit review visible and machine-checkable.",
+  "repair_ids": [
+    "MTU-H5-RP-003",
+    "MTU-H5-RP-004"
+  ],
+  "source_review_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "previous_lane_gate": "reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json",
+  "source_repair_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "source_exam_item_overlay": "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+  "source_answer_model_overlay": "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+  "source_annex_overlay": "references/data/exam-ingestion/exam-source-annex-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+  "source_extraction_contract": "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract",
+  "source_next_repair_packet_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "next_repair_gate_commit": "4e76e07193a3881826200dbe726ba4b38f30c78b",
+  "previous_lane_reviewed_commit": "c444b8368304c83f5e659adc0671a564a6c80169",
+  "previous_lane_remote_commit": "d994614e34642d559170d1d189aba15a8ecd0852",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "official_source_evidence": {
+    "question_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+    "source_figure_pdf": "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=figuur-1",
+    "correction_pdf": "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+    "question_pdf_sha256": "1b0f56fa3794e92584979e8407c4b8f61c59285047efe8ad1b25d7294bdd83fc",
+    "correction_pdf_sha256": "d10773314c943fb2082dd81368f25ac41936855a3125435b52f0406c6f5fd617",
+    "question_source_summary": "The official question asks students to draw how a rising labor demand in Curacao affects the Curacao labor market, the Curacao goods and services market, and the Aruban goods and services market, then fill in whether equilibrium prices rise or fall.",
+    "source_figure_summary": "The official question refers to a source figure about factors influencing the Curacao and Aruban economies; the current overlay exposes the title but not enough geometry for reconstruction.",
+    "correction_model_summary": "The correction model awards two points for three correct elements: rightward demand shift on the Curacao labor market with wage level rising, rightward demand shift on the Curacao goods and services market with Curacao inflation rising, and rightward demand shift on the Aruban goods and services market with Aruba inflation rising. Correct aggregate-supply shifts for the second and third elements are accepted as an alternative.",
+    "source_values": {
+      "total_points": 2,
+      "required_elements": 3,
+      "partial_credit_two_elements": 1,
+      "partial_credit_one_or_zero_elements": 0,
+      "draw_shift_instruction_distance_cm": 1
+    }
+  },
+  "existing_governance_evidence": [
+    {
+      "path": "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19",
+      "finding": "q19-source-annex-gap and q19-graph-object-gap remain blocking; q19-graph-op-1 uses A42 and D10 as candidates, and A45 is weak support only."
+    },
+    {
+      "path": "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q19",
+      "finding": "q19 extraction fields are accepted as preconditions only; q19 source-annex and graph-object extraction execution remains unauthorized."
+    },
+    {
+      "path": "references/data/exam-ingestion/operation-answer-skill-contract.json#candidate_routing_facts",
+      "finding": "q19 graph/PV or reasoning records must keep q19-source-annex-gap and q19-graph-object-gap visible; A45 cannot be primary q19 graph-shift support."
+    },
+    {
+      "path": "build-scripts/references/lib/exam-ingestion-candidate-validation.js#q19-rules",
+      "finding": "Dry-run operation validation rejects q19 graph/reasoning records that hide q19 blocking gaps or treat A45 as primary support."
+    },
+    {
+      "path": "build-scripts/references/lib/exam-ingestion-candidate-validation.js#source-extraction-rules",
+      "finding": "Dry-run source extraction validation rejects q19 reconstructable status while blocking gaps remain."
+    }
+  ],
+  "q19_current_overlay_summary": {
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "ingestion_status": "reviewed_with_gaps",
+    "prompt_instruction_word": "teken",
+    "question_type": "teken",
+    "graph_required": true,
+    "source_reading_required": true,
+    "reasoning_required": true,
+    "answer_writing_required": true,
+    "source_material_status": "partially_extracted",
+    "blocking_gap_ids": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "lesson_build_handoff_status": "not_ready",
+    "product_boundary": {
+      "student_diagnostics_authorized": false,
+      "adaptive_routing_authorized": false,
+      "mastery_decisions_authorized": false,
+      "automatic_sequencing_authorized": false,
+      "student_facing_ai_authorized": false,
+      "summative_use_authorized": false,
+      "pv_projection_authorized": false,
+      "pv_machine_promotion_authorized": false,
+      "student_facing_output_authorized": false
+    }
+  },
+  "operation_decomposition": [
+    {
+      "operation_id": "q19-step-1",
+      "requirement_id": "q19-graph-op-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "expected_required_mtu_ids": [
+        "A42",
+        "D10",
+        "A81"
+      ],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "graph_shift",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "non_calculus"
+      ],
+      "answer_form_hook": "The question word is teken; no approved graph/draw/teken answer-form MTU or reviewed equivalent exists yet.",
+      "misconception_hook": "A drawn shift without the wage-level direction remains incomplete.",
+      "scale_hook": "No scale-factor or incidence/pass-through route is expected.",
+      "procedure_hook": "A42, D10, and A81 procedures exist but require semantic-fit review because the source figure and worksheet remain unreconstructed."
+    },
+    {
+      "operation_id": "q19-step-2",
+      "requirement_id": "q19-reason-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises.",
+      "expected_required_mtu_ids": [
+        "A42",
+        "D10",
+        "D13",
+        "A81"
+      ],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "graph_shift",
+        "linked_market_reasoning",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "non_calculus"
+      ],
+      "answer_form_hook": "A graph/draw answer-form unit or reviewed equivalent is still missing for the visible drawn-mark plus conclusion format.",
+      "misconception_hook": "Do not stop at a Curacao labor-market shift; the answer must propagate to the Curacao price/inflation direction.",
+      "scale_hook": "No scale-factor or incidence/pass-through route is expected.",
+      "procedure_hook": "D10 and D13 are partial reasoning support only while q19 source/graph extraction gaps remain blocking."
+    },
+    {
+      "operation_id": "q19-step-3",
+      "requirement_id": "q19-reason-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises.",
+      "expected_required_mtu_ids": [
+        "A42",
+        "D10",
+        "D13",
+        "A81"
+      ],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": [
+        "A45"
+      ],
+      "route_tags": [
+        "graph_shift",
+        "linked_market_reasoning",
+        "source_reading",
+        "answer_form",
+        "procedure",
+        "non_calculus"
+      ],
+      "answer_form_hook": "The third graph-shift element is modeled but still lacks an approved graph/draw/teken answer-form MTU or reviewed equivalent.",
+      "misconception_hook": "Do not omit the Aruba spillover or leave the Aruba inflation direction unstated.",
+      "scale_hook": "No scale-factor or incidence/pass-through route is expected.",
+      "procedure_hook": "The multi-market procedure remains review_required until source and graph objects are reconstructable or explicitly accepted with visible limitations."
+    }
+  ],
+  "answer_form_and_misconception_evidence": {
+    "question_word": "teken",
+    "expected_answer_form": {
+      "status": "missing_reviewed_equivalent",
+      "candidate_answer_skill_id": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "not_covered_by": [
+        "A42",
+        "D10",
+        "D13",
+        "A81"
+      ],
+      "rationale": "These units may support graph shift, reasoning, and source use, but none is approved as the graph/draw/teken answer-form coverage for drawn marks plus price/wage direction."
+    },
+    "misconception_evidence": [
+      {
+        "tag": "source_market_shift_without_price_or_wage_direction",
+        "evidence": "q19-step-1 requires both the labor-demand shift and a wage-level direction."
+      },
+      {
+        "tag": "linked_market_shift_without_inflation_direction",
+        "evidence": "q19-step-2 requires the Curacao goods/services market shift and Curacao inflation direction."
+      },
+      {
+        "tag": "foreign_spillover_without_aruba_inflation_direction",
+        "evidence": "q19-step-3 requires the Aruban goods/services market shift and Aruba inflation direction."
+      }
+    ],
+    "scale_factor_evidence": {
+      "status": "not_applicable",
+      "rationale": "The official q19 answer model has drawn market-shift elements and price/wage directions, not per-unit scaling or incidence/pass-through calculation."
+    },
+    "procedure_expectation": {
+      "status": "procedure_review_required",
+      "unit_ids": [
+        "A42",
+        "D10",
+        "D13",
+        "A81"
+      ],
+      "rationale": "Apply/analyze procedures are present but semantic fit remains unapproved because the source figure and worksheet geometry are not reconstructable."
+    }
+  },
+  "unit_semantic_fit": [
+    {
+      "unit_id": "A42",
+      "decision": "supporting_graph_shift_candidate",
+      "semantic_scope": "Supports drawing a graphical shift with before/after direction.",
+      "does_not_cover": "Does not by itself make the q19 worksheet/source figure reconstructable and does not supply the missing graph/draw answer form."
+    },
+    {
+      "unit_id": "D10",
+      "decision": "supporting_market_shift_candidate",
+      "semantic_scope": "Supports demand/supply-shift reasoning after a shock.",
+      "does_not_cover": "Does not fully close q19 chained multi-market reasoning or answer-form coverage while source/graph gaps remain."
+    },
+    {
+      "unit_id": "D13",
+      "decision": "partial_reasoning_support",
+      "semantic_scope": "Partially supports cost/price/inflation reasoning in the linked-market chain.",
+      "does_not_cover": "Does not alone cover the three-market drawing operation or q19 answer form."
+    },
+    {
+      "unit_id": "A81",
+      "decision": "supporting_source_use_candidate",
+      "semantic_scope": "Supports using source information in an answer.",
+      "does_not_cover": "Does not replace the missing source-annex/graph-object extraction or the graph/draw answer-form requirement."
+    },
+    {
+      "unit_id": "A45",
+      "decision": "weak_prerequisite_forbidden_as_primary",
+      "semantic_scope": "P-Q graph drawing from a table may be weak prerequisite background only.",
+      "rejection_reason": "q19 is not drawing a P-Q graph from table values; it is drawing shifts in supplied market diagrams and carrying linked-market conclusions. A45 must not be treated as primary q19 graph-shift coverage."
+    }
+  ],
+  "repair_options_matrix": [
+    {
+      "option_id": "Q19-OPTION-A",
+      "title": "Keep q19 blocked and review the evidence packet",
+      "decision_now": "recommended_for_this_lane",
+      "description": "Use this packet to make the answer-form, source-annex, graph-object, A45, and procedure review state explicit without performing extraction or mapper repair.",
+      "proof_required": [
+        "live H5 validator still exposes q19 answer-form failures",
+        "live H5 validator still exposes q19 procedure/source/graph review hooks",
+        "dry-run source extraction document validates only as blocked, not reconstructable",
+        "future storage remains absent"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q19-OPTION-B",
+      "title": "Later source-annex and graph-object extraction lane",
+      "decision_now": "defer_requires_separate_gate",
+      "description": "A later gate may authorize non-persistent or persistent extraction work only if it names the exact q19 source-annex/graph-object lane and required validator path.",
+      "proof_required": [
+        "source figure and worksheet locators are precise",
+        "axis labels, units, scale/ticks, curve labels, geometry, legend mapping, and student-action regions are reconstructable",
+        "blocking gaps are removed only after review"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q19-OPTION-C",
+      "title": "Later graph/draw answer-form reviewed equivalent",
+      "decision_now": "defer_until_source_graph_evidence_is_adequate",
+      "description": "A later answer-form lane may accept or design graph/draw/teken answer-form coverage only after the source/graph task is adequately visible.",
+      "proof_required": [
+        "q19 operations cite approved graph/draw answer-form coverage",
+        "A42, D10, D13, and A81 are not overclaimed as answer-form coverage",
+        "validator no longer emits q19 answer-form missing assertions"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "option_id": "Q19-OPTION-D",
+      "title": "Later mapper/checker repair",
+      "decision_now": "defer_until_reviewed_equivalents_exist",
+      "description": "Only after source/graph evidence and answer-form/procedure fit are accepted may a future mapper or checker repair change q19 validator state.",
+      "proof_required": [
+        "q19 source-annex and graph-object gaps are resolved or explicitly accepted with visible limitations",
+        "q19 answer-form coverage exists",
+        "A45 primary support remains rejected",
+        "student/product boundaries remain false"
+      ],
+      "mutation_authorized_now": false
+    }
+  ],
+  "dry_run_operation_candidates": [
+    {
+      "operation_id": "EX_OP_Q19_MARKET_SHIFT_GRAPH_ROUTE",
+      "operation_status": "blocked_by_source_gap",
+      "label_nl": "Vraagverschuivingen in gekoppelde marktdiagrammen tekenen",
+      "operation_family": "graphical",
+      "source_exam_item_ids": [
+        "vw-1022-a-25-1-o:opgave-4:question-19"
+      ],
+      "source_requirement_ids": [
+        "q19-graph-op-1"
+      ],
+      "evidence_refs": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-graph-op-1",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19-graph-op-1",
+        "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q19"
+      ],
+      "answer_model_refs": [
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-1",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-2",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-3"
+      ],
+      "input_objects": [
+        {
+          "object_type": "source_figure_and_worksheet",
+          "description": "Official q19 source figure and uitwerkbijlage market diagrams, currently not reconstructable from the overlay.",
+          "source_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19"
+        }
+      ],
+      "output_expectation": "Three drawn market-diagram shifts with paired wage or inflation direction conclusions.",
+      "required_steps": [
+        {
+          "step_id": "curacao-labor",
+          "description": "Draw the Curacao labor demand shift to the right and conclude wage level rises.",
+          "required_unit_ids": [
+            "A42",
+            "D10",
+            "A81"
+          ]
+        },
+        {
+          "step_id": "curacao-goods",
+          "description": "Draw the Curacao goods/services market shift and conclude Curacao inflation rises.",
+          "required_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ]
+        },
+        {
+          "step_id": "aruba-goods",
+          "description": "Draw the Aruban goods/services market shift and conclude Aruba inflation rises.",
+          "required_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ]
+        }
+      ],
+      "supporting_unit_ids": [
+        "A42",
+        "D10"
+      ],
+      "weak_or_rejected_unit_ids": [
+        "A45"
+      ],
+      "unit_support_assessments": [
+        {
+          "unit_id": "A42",
+          "assessment": "supporting",
+          "rationale": "A42 supports graphical before/after shifts."
+        },
+        {
+          "unit_id": "D10",
+          "assessment": "supporting",
+          "rationale": "D10 supports demand/supply-shift reasoning after a shock."
+        },
+        {
+          "unit_id": "A45",
+          "assessment": "weak_prerequisite",
+          "rationale": "A45 is P-Q graph drawing from a table; it may be background only and cannot be primary q19 graph-shift support."
+        }
+      ],
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "review_state": "blocked_by_source_gap",
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      },
+      "mutation_authorized": false,
+      "student_product_use_authorized": false
+    },
+    {
+      "operation_id": "EX_OP_Q19_CHAINED_MARKET_INFLATION_REASONING",
+      "operation_status": "blocked_by_source_gap",
+      "label_nl": "Gekoppelde markten en inflatierichting redeneren",
+      "operation_family": "reasoning",
+      "source_exam_item_ids": [
+        "vw-1022-a-25-1-o:opgave-4:question-19"
+      ],
+      "source_requirement_ids": [
+        "q19-reason-1"
+      ],
+      "evidence_refs": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-reason-1",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19-reason-1"
+      ],
+      "answer_model_refs": [
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-2",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-3"
+      ],
+      "input_objects": [
+        {
+          "object_type": "multi_market_causal_chain",
+          "description": "Causal link from Curacao labor demand through Curacao and Aruba goods/services market outcomes.",
+          "source_ref": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19"
+        }
+      ],
+      "output_expectation": "Explicit wage and inflation direction conclusions paired with the relevant market shifts.",
+      "required_steps": [
+        {
+          "step_id": "labor-to-wage",
+          "description": "Infer wage level rises after labor demand increases.",
+          "required_unit_ids": [
+            "D10"
+          ]
+        },
+        {
+          "step_id": "curacao-to-inflation",
+          "description": "Infer Curacao inflation rises in the goods/services market.",
+          "required_unit_ids": [
+            "D10",
+            "D13"
+          ]
+        },
+        {
+          "step_id": "aruba-spillover",
+          "description": "Infer Aruba inflation rises through linked-market spillover.",
+          "required_unit_ids": [
+            "D10",
+            "D13"
+          ]
+        }
+      ],
+      "supporting_unit_ids": [
+        "D10",
+        "D13"
+      ],
+      "weak_or_rejected_unit_ids": [
+        "A45"
+      ],
+      "unit_support_assessments": [
+        {
+          "unit_id": "D10",
+          "assessment": "supporting",
+          "rationale": "D10 supports demand/supply shift reasoning after a shock."
+        },
+        {
+          "unit_id": "D13",
+          "assessment": "supporting",
+          "rationale": "D13 partially supports cost and price/inflation direction reasoning."
+        },
+        {
+          "unit_id": "A45",
+          "assessment": "weak_prerequisite",
+          "rationale": "A45 cannot be primary q19 reasoning support; the task is not a table-to-P-Q graph construction."
+        }
+      ],
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "review_state": "blocked_by_source_gap",
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      },
+      "mutation_authorized": false,
+      "student_product_use_authorized": false
+    }
+  ],
+  "dry_run_answer_skill_candidate": {
+    "answer_skill_id": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+    "answer_skill_status": "blocked_by_source_gap",
+    "label_nl": "Getekende marktverschuiving met prijs- of loonrichting formuleren",
+    "answer_format": "graph_draw_teken_with_direction",
+    "source_exam_item_ids": [
+      "vw-1022-a-25-1-o:opgave-4:question-19"
+    ],
+    "source_requirement_ids": [
+      "q19-answer-1"
+    ],
+    "correction_model_step_refs": [
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-1",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-2",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19:q19-step-3"
+    ],
+    "point_rule_refs": [
+      "q19-pr-1",
+      "q19-pr-2",
+      "q19-pr-3"
+    ],
+    "rewarded_wording": [
+      "rightward demand shift on the Curacao labor market plus wage level rises",
+      "rightward demand shift on the Curacao goods/services market plus Curacao inflation rises",
+      "rightward demand shift on the Aruban goods/services market plus Aruba inflation rises"
+    ],
+    "required_terms": [
+      "vraaglijn naar rechts",
+      "loonniveau stijgt",
+      "inflatie stijgt"
+    ],
+    "accepted_alternatives": [
+      "correct aggregate-supply shifts for the second and third elements",
+      "equivalent price-level direction wording"
+    ],
+    "content_support_unit_ids": [
+      "A42",
+      "D10",
+      "D13",
+      "A81"
+    ],
+    "operation_support_ids": [
+      "EX_OP_Q19_MARKET_SHIFT_GRAPH_ROUTE",
+      "EX_OP_Q19_CHAINED_MARKET_INFLATION_REASONING"
+    ],
+    "blocking_gap_ids": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "review_state": "blocked_by_source_gap_not_reviewed_equivalent",
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "mutation_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "dry_run_source_extraction_document": {
+    "schema_version": 1,
+    "storage_id": "source-annex-extraction-overlays",
+    "storage_status": "dry_run_embedded_not_persistent",
+    "generated_on": "2026-06-09T00:00:00.000Z",
+    "source_files": [
+      "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "references/data/exam-ingestion/exam-item-overlays.json",
+      "references/data/exam-ingestion/operation-answer-skill-contract.json"
+    ],
+    "authority_boundary": {
+      "protected_reference_mutation_authorized": false,
+      "external_source_mutation_authorized": false,
+      "machine_reference_mutation_authorized": false,
+      "unit_minting_authorized": false,
+      "operation_registry_mutation_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "source_annex_extraction_execution_authorized": false,
+      "pv_graph_mutation_authorized": false,
+      "target_exercise_promotion_authorized": false,
+      "lesson_output_mutation_authorized": false,
+      "cp6_closure_authorized": false,
+      "year1_closure_authorized": false,
+      "student_product_use_authorized": false
+    },
+    "graph_overlays": [
+      {
+        "extraction_id": "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "source_material_id": "q19-curacao-labor-market-graph",
+        "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "graph_type": "p_q_graph",
+        "axis_labels": [
+          "not reconstructable from current overlay"
+        ],
+        "axis_units": [],
+        "scale_or_tick_marks": [],
+        "curve_or_series_labels": [],
+        "coordinates_or_reconstructable_geometry": "not extracted",
+        "legend_mapping": "not extracted",
+        "student_action_regions": [],
+        "extraction_status": "partial_with_blocking_gap",
+        "review_state": "blocked",
+        "blocking_gap_ids": [
+          "q19-source-annex-gap",
+          "q19-graph-object-gap"
+        ],
+        "authority_boundary": {
+          "protected_reference_mutation_authorized": false,
+          "external_source_mutation_authorized": false,
+          "machine_reference_mutation_authorized": false,
+          "unit_minting_authorized": false,
+          "operation_registry_mutation_authorized": false,
+          "answer_skill_mutation_authorized": false,
+          "source_annex_extraction_execution_authorized": false,
+          "pv_graph_mutation_authorized": false,
+          "target_exercise_promotion_authorized": false,
+          "lesson_output_mutation_authorized": false,
+          "cp6_closure_authorized": false,
+          "year1_closure_authorized": false,
+          "student_product_use_authorized": false
+        }
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "source_material_id": "q19-curacao-goods-market-graph",
+        "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "graph_type": "p_q_graph",
+        "axis_labels": [
+          "not reconstructable from current overlay"
+        ],
+        "axis_units": [],
+        "scale_or_tick_marks": [],
+        "curve_or_series_labels": [],
+        "coordinates_or_reconstructable_geometry": "not extracted",
+        "legend_mapping": "not extracted",
+        "student_action_regions": [],
+        "extraction_status": "partial_with_blocking_gap",
+        "review_state": "blocked",
+        "blocking_gap_ids": [
+          "q19-source-annex-gap",
+          "q19-graph-object-gap"
+        ],
+        "authority_boundary": {
+          "protected_reference_mutation_authorized": false,
+          "external_source_mutation_authorized": false,
+          "machine_reference_mutation_authorized": false,
+          "unit_minting_authorized": false,
+          "operation_registry_mutation_authorized": false,
+          "answer_skill_mutation_authorized": false,
+          "source_annex_extraction_execution_authorized": false,
+          "pv_graph_mutation_authorized": false,
+          "target_exercise_promotion_authorized": false,
+          "lesson_output_mutation_authorized": false,
+          "cp6_closure_authorized": false,
+          "year1_closure_authorized": false,
+          "student_product_use_authorized": false
+        }
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "source_material_id": "q19-aruba-goods-market-graph",
+        "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "graph_type": "p_q_graph",
+        "axis_labels": [
+          "not reconstructable from current overlay"
+        ],
+        "axis_units": [],
+        "scale_or_tick_marks": [],
+        "curve_or_series_labels": [],
+        "coordinates_or_reconstructable_geometry": "not extracted",
+        "legend_mapping": "not extracted",
+        "student_action_regions": [],
+        "extraction_status": "partial_with_blocking_gap",
+        "review_state": "blocked",
+        "blocking_gap_ids": [
+          "q19-source-annex-gap",
+          "q19-graph-object-gap"
+        ],
+        "authority_boundary": {
+          "protected_reference_mutation_authorized": false,
+          "external_source_mutation_authorized": false,
+          "machine_reference_mutation_authorized": false,
+          "unit_minting_authorized": false,
+          "operation_registry_mutation_authorized": false,
+          "answer_skill_mutation_authorized": false,
+          "source_annex_extraction_execution_authorized": false,
+          "pv_graph_mutation_authorized": false,
+          "target_exercise_promotion_authorized": false,
+          "lesson_output_mutation_authorized": false,
+          "cp6_closure_authorized": false,
+          "year1_closure_authorized": false,
+          "student_product_use_authorized": false
+        }
+      }
+    ],
+    "source_annex_overlays": [
+      {
+        "extraction_id": "EX_SRC_Q19_SOURCE_FIGURE",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "source_material_id": "figuur-1-factoren-curacao-arubaanse-economie",
+        "annex_type": "source_figure",
+        "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=figuur-1",
+        "prompt_reference": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "worksheet_regions": [],
+        "required_student_marks": [],
+        "extraction_status": "partial_with_blocking_gap",
+        "review_state": "blocked",
+        "blocking_gap_ids": [
+          "q19-source-annex-gap",
+          "q19-graph-object-gap"
+        ],
+        "authority_boundary": {
+          "protected_reference_mutation_authorized": false,
+          "external_source_mutation_authorized": false,
+          "machine_reference_mutation_authorized": false,
+          "unit_minting_authorized": false,
+          "operation_registry_mutation_authorized": false,
+          "answer_skill_mutation_authorized": false,
+          "source_annex_extraction_execution_authorized": false,
+          "pv_graph_mutation_authorized": false,
+          "target_exercise_promotion_authorized": false,
+          "lesson_output_mutation_authorized": false,
+          "cp6_closure_authorized": false,
+          "year1_closure_authorized": false,
+          "student_product_use_authorized": false
+        }
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_UITWERKBIJLAGE",
+        "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "source_material_id": "uitwerkbijlage-vraag-19",
+        "annex_type": "uitwerkbijlage",
+        "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "prompt_reference": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "worksheet_regions": [],
+        "required_student_marks": [],
+        "extraction_status": "partial_with_blocking_gap",
+        "review_state": "blocked",
+        "blocking_gap_ids": [
+          "q19-source-annex-gap",
+          "q19-graph-object-gap"
+        ],
+        "authority_boundary": {
+          "protected_reference_mutation_authorized": false,
+          "external_source_mutation_authorized": false,
+          "machine_reference_mutation_authorized": false,
+          "unit_minting_authorized": false,
+          "operation_registry_mutation_authorized": false,
+          "answer_skill_mutation_authorized": false,
+          "source_annex_extraction_execution_authorized": false,
+          "pv_graph_mutation_authorized": false,
+          "target_exercise_promotion_authorized": false,
+          "lesson_output_mutation_authorized": false,
+          "cp6_closure_authorized": false,
+          "year1_closure_authorized": false,
+          "student_product_use_authorized": false
+        }
+      }
+    ]
+  },
+  "negative_regression_requirement": {
+    "guard_id": "q19-teken-answer-form-and-a45-primary-guard",
+    "accepted_negative_fixture_type": "live_h5_validator_answer_form_and_review_assertions",
+    "live_answer_form_assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-ANSWER-FORM-MISSING",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-ANSWER-FORM-MISSING"
+    ],
+    "live_review_assertion_markers": [
+      "q19-source-annex-gap remains blocking",
+      "q19-graph-object-gap remains blocking",
+      "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+    ],
+    "required_behavior": "Any future q19 mapper/checker repair must fail or review-block if it treats A45 as primary q19 support, hides the source/graph gaps, or claims graph/draw/teken answer-form coverage without a reviewed equivalent.",
+    "must_preserve": [
+      "expected_forbidden_mtu_ids includes A45",
+      "missing_answer_form_expected remains true until reviewed graph/draw coverage exists",
+      "dry-run q19 operation candidates keep q19-source-annex-gap and q19-graph-object-gap",
+      "dry-run source extraction remains partial_with_blocking_gap"
+    ]
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_three_agent_review",
+    "why_not_complete": "This packet prepares q19 RP-003/RP-004 for governed review. It does not authorize source extraction, graph/PV work, candidate writes, protected-reference mutation, MTU mutation, mapper repair, lesson output, or product use."
+  }
+}

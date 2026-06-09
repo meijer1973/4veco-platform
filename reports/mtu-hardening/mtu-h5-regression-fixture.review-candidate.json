@@ -1,0 +1,743 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "fixture_id": "MTU-H5-vwo-2025-ex1-ex2-review-candidate",
+  "sample_id": "MTU-H5-vwo-2025-ex1-ex2-review-candidate",
+  "status": "review_candidate_for_mtu_h5_regression",
+  "review_packet": "reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json",
+  "source_basis": {
+    "fresh_relative_to_h1": true,
+    "h1_seed_cases_excluded": [
+      "vwo-economie-2026-solo:q1",
+      "vwo-economie-2026-solo:q2",
+      "vwo-economie-2026-solo:q3"
+    ],
+    "primary_evidence": [
+      "references/external/exams/vw-1022-a-25-1-o.pdf",
+      "references/external/exams/vw-1022-a-25-1-c.pdf",
+      "references/external/exams/vw-1022-a-25-2-o.pdf",
+      "references/external/exams/vw-1022-a-25-2-c.pdf",
+      "references/data/exam-ingestion/exam-item-overlays.json",
+      "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json",
+      "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/human-interview.json"
+    ],
+    "official_examenblad_urls": [
+      "https://www.examenblad.nl/2025/vwo/vakken/maatschappijvakken/economie-vwo",
+      "https://www.examenblad.nl/2025/vwo/documenten/cse-1/vw-1022-a-25-1-o",
+      "https://www.examenblad.nl/2025/vwo/documenten/cse-1/vw-1022-a-25-1-c",
+      "https://www.examenblad.nl/2025/vwo/documenten/cse-2/vw-1022-a-25-2-o",
+      "https://www.examenblad.nl/2025/vwo/documenten/cse-2/vw-1022-a-25-2-c"
+    ],
+    "approval_needed": "Human review returned REVISE, then approve. This candidate has been repaired locally; formal gate closure still must record the reviewed remote commit/hash."
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "records": [
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#question-3",
+        "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-1:question-3",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 1,
+        "question_num": 3,
+        "points": 2
+      },
+      "question_word": "berekenen",
+      "mapped_mtu_ids": [
+        "A15",
+        "A61",
+        "A96"
+      ],
+      "mapped_route_tags": [
+        "source_reading",
+        "annual_cost_threshold",
+        "answer_form"
+      ],
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q3-step-1",
+          "description": "Compute the annual maximum relevant cost for the statutory-risk option, combining twelve monthly premiums and the statutory deductible.",
+          "answer_model_summary": "The correction model awards one point for a correct intermediate annual-cost comparison using the premium and deductible table.",
+          "mapped_mtu_ids": [
+            "A15",
+            "A61",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "source_reading",
+            "annual_cost_threshold",
+            "answer_form"
+          ],
+          "expected_required_mtu_ids": [
+            "A61",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "source_reading",
+            "point_calculation",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_misconception_refs": [
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-A15-stale-or-incorrect"
+          ],
+          "missing_mtu_expected": true,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A61",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "unit_period_conversion_expected": true,
+          "unit_period_conversion_rationale": "The official correction model requires converting monthly premiums into annual cost; this is not treated as an exam table scale-factor check such as x 1,000."
+        },
+        {
+          "operation_id": "q3-step-2",
+          "description": "Compute the enhanced-risk annual premium, derive the equal-cost threshold, and state that the enhanced deductible is cheaper up to EUR 649 per year.",
+          "answer_model_summary": "The correction model awards one point for deriving the EUR 649 threshold and concluding the enhanced deductible is cheaper up to that annual care-cost amount.",
+          "mapped_mtu_ids": [
+            "A15",
+            "A61",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "source_reading",
+            "annual_cost_threshold",
+            "answer_form"
+          ],
+          "expected_required_mtu_ids": [
+            "A61",
+            "A96"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A15"
+          ],
+          "expected_route_tags": [
+            "source_reading",
+            "point_calculation",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A96"
+          ],
+          "expected_misconception_refs": [
+            "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-threshold-direction-answer-skill-need"
+          ],
+          "missing_mtu_expected": true,
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review threshold-conclusion wording as answer-skill need or governed MTU procedure"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A61",
+            "A96"
+          ],
+          "procedure_review_required_unit_ids": [],
+          "unit_period_conversion_expected": true,
+          "unit_period_conversion_rationale": "The official correction model requires converting monthly premiums into annual cost; this is not treated as an exam table scale-factor check such as x 1,000."
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#question-15",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#question-15",
+        "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-3:question-15",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q15"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 3,
+        "question_num": 15,
+        "points": 2
+      },
+      "question_word": "leg_uit_dat",
+      "mapped_mtu_ids": [
+        "D27",
+        "F03",
+        "F09",
+        "A97"
+      ],
+      "mapped_route_tags": [
+        "non_calculus",
+        "reasoning",
+        "answer_form",
+        "misconception"
+      ],
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q15-step-1",
+          "description": "Explain that when consumers see the products as perfect substitutes, each ice cream seller has a dominant strategy to lower price or undercut the rival.",
+          "answer_model_summary": "The correction model awards one point for explaining that both ice cream sellers have a dominant strategy to lower price.",
+          "mapped_mtu_ids": [
+            "D27",
+            "F03",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "reasoning",
+            "answer_form",
+            "misconception"
+          ],
+          "expected_required_mtu_ids": [
+            "D27",
+            "F03",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [],
+          "expected_route_tags": [
+            "reasoning",
+            "answer_form",
+            "misconception",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_misconception_refs": [
+            "perfect_substitutes_without_price-undercutting_incentive"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [
+            "A97"
+          ]
+        },
+        {
+          "operation_id": "q15-step-2",
+          "description": "Explain that the outcome is suboptimal because both firms end with lower revenue or profit, so the situation is a prisoner dilemma.",
+          "answer_model_summary": "The correction model awards one point for explaining that both firms' revenue or profit falls and that this creates a prisoner dilemma.",
+          "mapped_mtu_ids": [
+            "F09",
+            "A97"
+          ],
+          "mapped_route_tags": [
+            "reasoning",
+            "answer_form",
+            "misconception"
+          ],
+          "expected_required_mtu_ids": [
+            "F09",
+            "A97"
+          ],
+          "expected_forbidden_mtu_ids": [],
+          "expected_route_tags": [
+            "reasoning",
+            "answer_form",
+            "misconception",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A97"
+          ],
+          "expected_misconception_refs": [
+            "dominant_strategy_without_suboptimal_joint_outcome"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review q15 two-step correction-model explanation as answer-skill need"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A97"
+          ],
+          "procedure_review_required_unit_ids": [
+            "A97"
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exams/vw-1022-a-25-1-o.pdf#question-19",
+        "references/external/exams/vw-1022-a-25-1-c.pdf#question-19",
+        "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+        "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-1-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 1,
+        "opgave_num": 4,
+        "question_num": 19,
+        "points": 2
+      },
+      "question_word": "teken",
+      "mapped_mtu_ids": [
+        "A42",
+        "D10",
+        "D13",
+        "A81"
+      ],
+      "mapped_route_tags": [
+        "graph_shift",
+        "source_reading",
+        "linked_market_reasoning",
+        "procedure"
+      ],
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q19-step-1",
+          "description": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+          "answer_model_summary": "One of three required graph-shift elements: rightward demand shift and wage-level conclusion.",
+          "mapped_mtu_ids": [
+            "A42",
+            "D10",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shift",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A42",
+            "D10",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A45"
+          ],
+          "expected_route_tags": [
+            "graph_shift",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [],
+          "expected_misconception_refs": [
+            "source_market_shift_without_price_or_wage_direction"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "q19-source-annex-gap remains blocking",
+            "q19-graph-object-gap remains blocking",
+            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+          ],
+          "expected_forbidden_route_tags": [
+            "full_graph_construction",
+            "calculus_route",
+            "function_construction"
+          ],
+          "missing_answer_form_expected": true,
+          "expected_procedure_unit_ids": [
+            "A42",
+            "D10",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [
+            "A42",
+            "D10",
+            "A81"
+          ]
+        },
+        {
+          "operation_id": "q19-step-2",
+          "description": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises.",
+          "answer_model_summary": "One of three required graph-shift elements: rightward demand shift and inflation conclusion.",
+          "mapped_mtu_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shift",
+            "linked_market_reasoning",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A45"
+          ],
+          "expected_route_tags": [
+            "graph_shift",
+            "linked_market_reasoning",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [],
+          "expected_misconception_refs": [
+            "linked_market_shift_without_inflation_direction"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+          ],
+          "expected_forbidden_route_tags": [
+            "full_graph_construction",
+            "calculus_route",
+            "function_construction"
+          ],
+          "missing_answer_form_expected": true,
+          "expected_procedure_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ]
+        },
+        {
+          "operation_id": "q19-step-3",
+          "description": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises.",
+          "answer_model_summary": "One of three required graph-shift elements: rightward demand shift in the Aruban goods/services market and inflation conclusion.",
+          "mapped_mtu_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "mapped_route_tags": [
+            "graph_shift",
+            "linked_market_reasoning",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_required_mtu_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "expected_forbidden_mtu_ids": [
+            "A45"
+          ],
+          "expected_forbidden_route_tags": [
+            "full_graph_construction",
+            "calculus_route",
+            "function_construction"
+          ],
+          "expected_route_tags": [
+            "graph_shift",
+            "linked_market_reasoning",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [],
+          "missing_answer_form_expected": true,
+          "expected_misconception_refs": [
+            "foreign_spillover_without_aruba_inflation_direction"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": false,
+          "predictable_misconception_expected": true,
+          "expected_procedure_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "procedure_review_required_unit_ids": [
+            "A42",
+            "D10",
+            "D13",
+            "A81"
+          ],
+          "review_required_hooks": [
+            "q19-source-annex-gap remains blocking",
+            "q19-graph-object-gap remains blocking",
+            "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction",
+            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "source_type": "real_exam_question",
+      "source_evidence_paths": [
+        "references/external/exams/vw-1022-a-25-2-o.pdf#question-27",
+        "references/external/exams/vw-1022-a-25-2-c.pdf#question-27",
+        "references/external/exam-questions.json#vw-1022-a-25-2-o:opgave-6:question-27"
+      ],
+      "source_locator": {
+        "exam": "vw-1022-a-25-2-o",
+        "level": "vwo",
+        "year": 2025,
+        "tijdvak": 2,
+        "opgave_num": 6,
+        "question_num": 27,
+        "points": 2
+      },
+      "question_word": "leg_uit_of",
+      "mapped_mtu_ids": [
+        "D07",
+        "A98"
+      ],
+      "mapped_route_tags": [
+        "tax_or_levy",
+        "incidence",
+        "scaling",
+        "answer_form"
+      ],
+      "official_correction_model_operations": [
+        {
+          "operation_id": "q27-step-1",
+          "description": "Explain from the graph that the levy increases the price to EUR 2 per 1,000 liter and creates a new equilibrium at Qv2 = Qa2 where Q = 14,000.",
+          "answer_model_summary": "The correction model awards one point for the new price and equilibrium quantity after the heffing.",
+          "mapped_mtu_ids": [
+            "D07",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "tax_or_levy",
+            "incidence",
+            "scaling",
+            "answer_form"
+          ],
+          "expected_required_mtu_ids": [
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [],
+          "expected_route_tags": [
+            "incidence",
+            "scaling",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_scaling_mtu_ids": [],
+          "expected_misconception_refs": [
+            "heffing_amount_confused_with_price_or_capacity_effect"
+          ],
+          "scale_factor_expected": true,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
+            "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A98",
+            "D07"
+          ],
+          "procedure_review_required_unit_ids": [
+            "D07"
+          ],
+          "missing_incidence_expected": true,
+          "missing_scaling_expected": true
+        },
+        {
+          "operation_id": "q27-step-2",
+          "description": "Conclude that demand equals capacity, so overconsumption is countered.",
+          "answer_model_summary": "The correction model awards one point for linking Q = 14,000 to capacity and the conclusion about overconsumption.",
+          "mapped_mtu_ids": [
+            "D07",
+            "A98"
+          ],
+          "mapped_route_tags": [
+            "incidence",
+            "capacity_constraint",
+            "answer_form"
+          ],
+          "expected_required_mtu_ids": [
+            "A98"
+          ],
+          "expected_forbidden_mtu_ids": [],
+          "expected_route_tags": [
+            "incidence",
+            "source_reading",
+            "answer_form",
+            "procedure"
+          ],
+          "expected_answer_form_mtu_ids": [
+            "A98"
+          ],
+          "expected_incidence_mtu_ids": [],
+          "expected_misconception_refs": [
+            "price_increase_without_quantity_capacity_check"
+          ],
+          "scale_factor_expected": false,
+          "incidence_or_pass_through_expected": true,
+          "predictable_misconception_expected": true,
+          "review_required_hooks": [
+            "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation"
+          ],
+          "expected_forbidden_route_tags": [],
+          "expected_procedure_unit_ids": [
+            "A98",
+            "D07"
+          ],
+          "procedure_review_required_unit_ids": [
+            "D07"
+          ],
+          "missing_incidence_expected": true
+        }
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "negative-solo-q2-function-construction-overtrigger",
+      "expected_status": "fail",
+      "reintroduced_defect_classes": [
+        "function_construction_route_triggered_when_point_calculation_enough"
+      ],
+      "mutated_fixture_only": true,
+      "records": [
+        {
+          "record_id": "negative:vwo-2025-q3:function-construction-overtrigger",
+          "source_type": "real_exam_question",
+          "source_evidence_paths": [
+            "references/external/exams/vw-1022-a-25-1-o.pdf#question-3",
+            "references/external/exams/vw-1022-a-25-1-c.pdf#question-3"
+          ],
+          "question_word": "berekenen",
+          "mapped_mtu_ids": [
+            "A61",
+            "A96"
+          ],
+          "mapped_route_tags": [
+            "point_calculation",
+            "function_construction",
+            "answer_form"
+          ],
+          "official_correction_model_operations": [
+            {
+              "operation_id": "negative-q3-step-1",
+              "description": "Mutated fixture only: reintroduces the Solo q2-style function-construction route where a point/threshold calculation is enough.",
+              "mapped_mtu_ids": [
+                "A61",
+                "A96"
+              ],
+              "mapped_route_tags": [
+                "point_calculation",
+                "function_construction",
+                "answer_form"
+              ],
+              "expected_required_mtu_ids": [
+                "A61",
+                "A96"
+              ],
+              "expected_forbidden_mtu_ids": [],
+              "expected_route_tags": [
+                "point_calculation",
+                "answer_form"
+              ],
+              "expected_answer_form_mtu_ids": [
+                "A96"
+              ],
+              "expected_misconception_refs": [],
+              "scale_factor_expected": false,
+              "incidence_or_pass_through_expected": false,
+              "predictable_misconception_expected": false,
+              "review_required_hooks": [],
+              "expected_forbidden_route_tags": [
+                "function_construction"
+              ],
+              "expected_procedure_unit_ids": [
+                "A61",
+                "A96"
+              ],
+              "procedure_review_required_unit_ids": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gate_review_result": {
+    "verdict": "REVISE_THEN_APPROVE_AFTER_REPAIRS",
+    "review_source": "C:/Users/meije/.codex/attachments/0500abee-f9c0-4d88-8bc3-33fe97558951/pasted-text.txt",
+    "repair_status": "repaired_for_local_approval",
+    "remote_evidence_closure": {
+      "required": true,
+      "reviewed_remote_commit_hash": null,
+      "status": "pending_commit_and_push"
+    }
+  }
+}

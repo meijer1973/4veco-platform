@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T12:46:02.873Z
+Generated: 2026-06-09T13:33:31.475Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4093
+Files indexed: 4148
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -127,7 +127,7 @@ Count: 81
 
 ## build scripts
 
-Count: 453
+Count: 461
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -317,6 +317,14 @@ Count: 453
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
+- build-scripts/references/check-mtu-h5-mapping-regression.js
+- build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
+- build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
+- build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
+- build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
+- build-scripts/references/check-mtu-h5-sample-selection-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -632,7 +640,7 @@ Count: 42
 
 ## validators
 
-Count: 400
+Count: 408
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -695,6 +703,14 @@ Count: 400
 - build-scripts/references/check-mtu-h4-answer-form-question-type-routing.js
 - build-scripts/references/check-mtu-h4a-answer-form-cli-mutation-plan.js
 - build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
+- build-scripts/references/check-mtu-h5-mapping-regression.js
+- build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
+- build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
+- build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
+- build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js
+- build-scripts/references/check-mtu-h5-sample-selection-packet.js
 - build-scripts/references/check-mtu-hardening-benchmark.js
 - build-scripts/references/check-operation-answer-skill-candidates.js
 - build-scripts/references/check-owned-content-graph.js
@@ -1037,7 +1053,7 @@ Count: 400
 
 ## references
 
-Count: 568
+Count: 576
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1508,6 +1524,14 @@ Count: 568
 - references/exemplars/a96-answer-form/quality-brief.md
 - references/exemplars/a96-answer-form/README.md
 - references/exemplars/a96-answer-form/ui-framework.md
+- references/exemplars/exemplar-index.json
+- references/exemplars/exemplar-index.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/no-legacy-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/README.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/rollout-notes.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/screenshot-proof.md
+- references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-snapshot.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/candidate-data.json
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/implementation-handoff.md
 - references/exemplars/product-excellence/check-surfaces/1.1.3-exit-ticket/package-readme.md
@@ -1610,7 +1634,7 @@ Count: 568
 
 ## reports
 
-Count: 2501
+Count: 2540
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1786,6 +1810,28 @@ Count: 2501
 - reports/mtu-hardening/mtu-h4a-answer-form-cli-mutation-plan.md
 - reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json
 - reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.md
+- reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json
+- reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
+- reports/mtu-hardening/mtu-h5-next-repair-packet.json
+- reports/mtu-hardening/mtu-h5-next-repair-packet.md
+- reports/mtu-hardening/mtu-h5-regression-fixture.json
+- reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json
+- reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md
+- reports/mtu-hardening/mtu-h5-regression-fixture.template.json
+- reports/mtu-hardening/mtu-h5-regression-report.json
+- reports/mtu-hardening/mtu-h5-regression-report.md
+- reports/mtu-hardening/mtu-h5-rp001-rp002-q3-planning-packet.json
+- reports/mtu-hardening/mtu-h5-rp001-rp002-q3-planning-packet.md
+- reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json
+- reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.md
+- reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json
+- reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.md
+- reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json
+- reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.md
+- reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json
+- reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.md
+- reports/mtu-hardening/mtu-h5-sample-selection-packet.json
+- reports/mtu-hardening/mtu-h5-sample-selection-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.json
 - reports/mtu-hardening/solo-q1-q3-a20-cli-execution-packet.md
 - reports/mtu-hardening/solo-q1-q3-a20-cli-mutation-plan.json
@@ -2119,6 +2165,22 @@ Count: 2501
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/human-interview.md
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
+- reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json
+- reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.md
+- reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-RP005-q27-planning-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.json
+- reports/review-gates/GATE-MTU-H5-RP006-q15-planning-packet/gate-closure.md
 - reports/review-gates/GATE-PV-G1-schema/bundle-urls.md
 - reports/review-gates/GATE-PV-G1-schema/review-packet.json
 - reports/review-gates/GATE-PV-G1-schema/review-packet.md
@@ -3343,6 +3405,7 @@ Count: 2501
 - reports/sprints/MTU-H4C-execution-log.md
 - reports/sprints/MTU-H4C-plan.md
 - reports/sprints/MTU-H4C-result.md
+- reports/sprints/MTU-H5-blocked-stop-result.md
 - reports/sprints/PV-G4-baseline.md
 - reports/sprints/PV.1-baseline.md
 - reports/sprints/PV.1-diff-summary.md
