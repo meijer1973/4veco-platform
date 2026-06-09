@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-mapping-regression",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-08",
+  "status": "revise_repaired_local_approval_no_mutation",
+  "source_packet": "reports/mtu-hardening/mtu-h5-sample-selection-packet.json",
+  "validator_scaffold": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "fixture_template": "reports/mtu-hardening/mtu-h5-regression-fixture.template.json",
+  "review_candidate_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
+  "review_candidate_summary": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md",
+  "approved_fresh_sample_present": true,
+  "approved_fresh_sample_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "remote_publication_required_before_review": true,
+  "remote_publication_status": "pending_commit_and_push_for_final_hash",
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "evidence_required_to_close_gate": [
+    "approved fresh sample fixture with status approved_for_mtu_h5_regression",
+    "stable non-Solo record ids and source locators",
+    "real exam question, official correction model, or reviewed target-exercise evidence for every record",
+    "official correction-model operation decomposition for every record",
+    "expected required MTUs and expected forbidden MTUs for over-trigger checks",
+    "answer-form, misconception, scale/unit, incidence/pass-through, and procedure hooks where applicable",
+    "at least one negative fixture expected to fail when an original Solo q1-q3 defect class is reintroduced",
+    "review decision accepting, rejecting, or revising reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
+    "authority boundary proving no protected mutation, candidate writes, target-exercise mutation, lesson output, PV, diagnostics, mastery, sequencing, AI, summative, product-route, or student/product use"
+  ],
+  "calibration_questions": [
+    "Confirm this gate reviews MTU-H5 sample selection and validator readiness only; it does not authorize protected reference mutation, MTU changes, candidate writes, target-exercise mutation, lesson output, PV, diagnostics, mastery, sequencing, AI, summative use, or student/product use.",
+    "Confirm the current packet has no approved fresh sample attached; the review must either attach/approve one or leave MTU-H5 blocked.",
+    "Confirm generated reports are diagnostics only and cannot be used as primary evidence for the fresh sample."
+  ],
+  "planned_questions": [
+    {
+      "id": "MTUH5-Q1",
+      "title": "review scope",
+      "question": "Does this gate remain limited to approving a fresh MTU-H5 regression sample and validator readiness, with no mutation or product authority?"
+    },
+    {
+      "id": "MTUH5-Q2",
+      "title": "sample freshness",
+      "question": "Is the proposed sample fresh relative to H1, meaning it does not rely on the Solo q1-q3 seed cases as the positive sample?"
+    },
+    {
+      "id": "MTUH5-Q3",
+      "title": "source authority",
+      "question": "Does every proposed record cite real exam questions, official correction models, or reviewed target exercises rather than syllabus prose or generated reports alone?"
+    },
+    {
+      "id": "MTUH5-Q4",
+      "title": "operation decomposition",
+      "question": "Is each official correction-model operation decomposed enough for MTU-level required-unit and missing-unit assertions?"
+    },
+    {
+      "id": "MTUH5-Q5",
+      "title": "over-trigger guards",
+      "question": "Does each record identify forbidden MTUs or route tags for prerequisites, calculus routes, function construction, and other answer-model over-triggers?"
+    },
+    {
+      "id": "MTUH5-Q6",
+      "title": "answer form hooks",
+      "question": "Does each question word or prompt action cite an answer-form MTU or reviewed equivalent, or an explicit not-applicable rationale?"
+    },
+    {
+      "id": "MTUH5-Q7",
+      "title": "incidence scaling misconception hooks",
+      "question": "Are incidence/pass-through, scale/unit, and predictable misconception hooks present wherever the evidence requires them?"
+    },
+    {
+      "id": "MTUH5-Q8",
+      "title": "procedure hooks",
+      "question": "Are apply/analyze mapped units checked against the live registry for a non-empty canonical procedure, with review_required hooks where the mechanical check is not enough?"
+    },
+    {
+      "id": "MTUH5-Q9",
+      "title": "negative fixture",
+      "question": "Does the packet include at least one negative fixture expected to fail by reintroducing an original Solo q1-q3 defect class?"
+    },
+    {
+      "id": "MTUH5-Q10",
+      "title": "next authority",
+      "question": "If the sample is approved, is the only authorized next step to run the non-mutating MTU-H5 validator and produce diagnostic pass/fail results?"
+    }
+  ],
+  "allowed_next_step_after_approval": {
+    "fixture_path": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "checker": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "report_paths": [
+      "reports/mtu-hardening/mtu-h5-regression-report.json",
+      "reports/mtu-hardening/mtu-h5-regression-report.md"
+    ],
+    "mutation_authorized": false,
+    "product_use_authorized": false
+  },
+  "gate_closure": "reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json",
+  "repaired_items": [
+    "q19 operation completeness repaired by adding q19-step-3 for the Aruban goods/services market shift",
+    "expected_forbidden_route_tags added, including function_construction in the negative fixture",
+    "expected_procedure_unit_ids and procedure_review_required_unit_ids added for mechanical procedure reporting",
+    "q19 teken graph/draw answer-form gap marked missing_answer_form_expected",
+    "q3 monthly-to-annual premium handling marked unit_period_conversion_expected, not scale_factor_expected"
+  ]
+}

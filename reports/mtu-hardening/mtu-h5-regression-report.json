@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "fixture_id": "MTU-H5-vwo-2025-ex1-ex2-approved",
+  "status": "failed",
+  "required_defect_classes": [
+    "missing_mtu_for_correction_model_operation",
+    "over_triggered_prerequisite_not_required_by_answer_model",
+    "calculus_route_triggered_where_non_calculus_route_intended",
+    "function_construction_route_triggered_when_point_calculation_enough",
+    "incidence_pass_through_task_without_incidence_mtu",
+    "question_word_without_answer_form_mtu",
+    "scale_factor_usage_without_scaling_unit_mtu",
+    "predictable_misconception_without_tag_or_equivalent_evidence",
+    "apply_analyze_unit_without_usable_canonical_procedure"
+  ],
+  "procedure_checks": [
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "operation_id": "q3-step-1",
+      "unit_id": "A61",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "operation_id": "q3-step-1",
+      "unit_id": "A96",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "operation_id": "q3-step-2",
+      "unit_id": "A61",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+      "operation_id": "q3-step-2",
+      "unit_id": "A96",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "operation_id": "q15-step-1",
+      "unit_id": "A97",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+      "operation_id": "q15-step-2",
+      "unit_id": "A97",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-1",
+      "unit_id": "A42",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 4,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-1",
+      "unit_id": "D10",
+      "status": "procedure_review_required",
+      "mastery_target": "analyze",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-1",
+      "unit_id": "A81",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-2",
+      "unit_id": "A42",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 4,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-2",
+      "unit_id": "D10",
+      "status": "procedure_review_required",
+      "mastery_target": "analyze",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-2",
+      "unit_id": "D13",
+      "status": "procedure_review_required",
+      "mastery_target": "analyze",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-2",
+      "unit_id": "A81",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-3",
+      "unit_id": "A42",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 4,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-3",
+      "unit_id": "D10",
+      "status": "procedure_review_required",
+      "mastery_target": "analyze",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-3",
+      "unit_id": "D13",
+      "status": "procedure_review_required",
+      "mastery_target": "analyze",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "operation_id": "q19-step-3",
+      "unit_id": "A81",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "operation_id": "q27-step-1",
+      "unit_id": "A98",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "operation_id": "q27-step-1",
+      "unit_id": "D07",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "operation_id": "q27-step-2",
+      "unit_id": "A98",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "operation_id": "q27-step-2",
+      "unit_id": "D07",
+      "status": "procedure_review_required",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+    }
+  ],
+  "buckets": {
+    "passed": [
+      {
+        "assertion_id": "MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED",
+        "defect_classes": [
+          "function_construction_route_triggered_when_point_calculation_enough"
+        ],
+        "failed_assertion_ids": [
+          "negative:vwo-2025-q3:function-construction-overtrigger:negative-q3-step-1:ASSERT-FORBIDDEN-ROUTE-function_construction",
+          "negative:vwo-2025-q3:function-construction-overtrigger:negative-q3-step-1:ASSERT-FUNCTION-CONSTRUCTION"
+        ],
+        "reason": "negative fixture triggered failed assertions as expected"
+      }
+    ],
+    "failed": [
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-MISSING-OPERATION-MTU",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-1",
+        "defect_class": "missing_mtu_for_correction_model_operation",
+        "reason": "official correction-model operation has no required live MTU or reviewed equivalent"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-1",
+        "defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+        "unit_ids": [
+          "A15"
+        ],
+        "reason": "mapped MTUs include units explicitly forbidden by the reviewed answer model"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-MISSING-OPERATION-MTU",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-2",
+        "defect_class": "missing_mtu_for_correction_model_operation",
+        "reason": "official correction-model operation has no required live MTU or reviewed equivalent"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-2",
+        "defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
+        "unit_ids": [
+          "A15"
+        ],
+        "reason": "mapped MTUs include units explicitly forbidden by the reviewed answer model"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "defect_class": "question_word_without_answer_form_mtu",
+        "question_word": "teken",
+        "expected_gap": true,
+        "reason": "question word has an explicit missing answer-form expectation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-ANSWER-FORM-MISSING",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "defect_class": "question_word_without_answer_form_mtu",
+        "question_word": "teken",
+        "expected_gap": true,
+        "reason": "question word has an explicit missing answer-form expectation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-ANSWER-FORM-MISSING",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "defect_class": "question_word_without_answer_form_mtu",
+        "question_word": "teken",
+        "expected_gap": true,
+        "reason": "question word has an explicit missing answer-form expectation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-1",
+        "defect_class": "incidence_pass_through_task_without_incidence_mtu",
+        "reason": "incidence/pass-through operation has no incidence MTU or reviewed equivalent"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-1",
+        "defect_class": "scale_factor_usage_without_scaling_unit_mtu",
+        "reason": "scale/unit operation has no scaling MTU or reviewed equivalent"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-2",
+        "defect_class": "incidence_pass_through_task_without_incidence_mtu",
+        "reason": "incidence/pass-through operation has no incidence MTU or reviewed equivalent"
+      }
+    ],
+    "review_required": [
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-REVIEW-review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-1",
+        "hook": "review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-REVIEW-review threshold-conclusion wording as answer-skill need or governed MTU procedure",
+        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+        "operation_id": "q3-step-2",
+        "hook": "review threshold-conclusion wording as answer-skill need or governed MTU procedure",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-PROCEDURE-REVIEW-A97",
+        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+        "operation_id": "q15-step-1",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A97",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-REVIEW-review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need",
+        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+        "operation_id": "q15-step-1",
+        "hook": "review whether D27/F03 content coverage plus A97 answer form is enough or whether q15-answer-1 remains a separate answer-skill need",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-PROCEDURE-REVIEW-A97",
+        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+        "operation_id": "q15-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A97",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-2:ASSERT-REVIEW-review q15 two-step correction-model explanation as answer-skill need",
+        "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
+        "operation_id": "q15-step-2",
+        "hook": "review q15 two-step correction-model explanation as answer-skill need",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A42",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A42",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-D10",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D10",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A81",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A81",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "hook": "q19-source-annex-gap remains blocking",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "hook": "q19-graph-object-gap remains blocking",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-1",
+        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A42",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A42",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D10",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D10",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D13",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D13",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A81",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A81",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "hook": "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-2",
+        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A42",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A42",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D10",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D10",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D13",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D13",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A81",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "A81",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "hook": "q19-source-annex-gap remains blocking",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "hook": "q19-graph-object-gap remains blocking",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "hook": "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+        "operation_id": "q19-step-3",
+        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-PROCEDURE-REVIEW-D07",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-1",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D07",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-REVIEW-review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-1",
+        "hook": "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-REVIEW-review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-1",
+        "hook": "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent",
+        "reason": "fixture marks this validator hook as review_required"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-PROCEDURE-REVIEW-D07",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-2",
+        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
+        "unit_id": "D07",
+        "reason": "canonical procedure exists but needs semantic fit review for this operation"
+      },
+      {
+        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-REVIEW-review whether this is an incidence/pass-through family case or a distinct levy-capacity operation",
+        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+        "operation_id": "q27-step-2",
+        "hook": "review whether this is an incidence/pass-through family case or a distinct levy-capacity operation",
+        "reason": "fixture marks this validator hook as review_required"
+      }
+    ],
+    "blocked": []
+  },
+  "report_generated": "2026-06-08",
+  "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed entries are expected live coverage gaps, not authorization for reference mutation."
+}
