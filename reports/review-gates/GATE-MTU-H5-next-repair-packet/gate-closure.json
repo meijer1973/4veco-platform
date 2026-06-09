@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-next-repair-packet",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-09",
+  "closed_on": "2026-06-09",
+  "status": "approved_triage_review_packet",
+  "verdict": "APPROVE",
+  "closure_confirmed_by_human": true,
+  "human_review_source": "C:/Users/meije/.codex/attachments/d0a0c579-b4e3-4233-9933-f80492b39d7c/pasted-text.txt",
+  "reviewed_remote_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "reviewed_remote_branch": "codex/running-goals-20260608",
+  "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "review_packet_markdown": "reports/mtu-hardening/mtu-h5-next-repair-packet.md",
+  "review_packet_json": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "checker": "build-scripts/references/check-mtu-h5-next-repair-packet.js",
+  "source_gate_closure": "reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json",
+  "decision": "Approve the MTU-H5 next governed repair packet as a triage/review packet.",
+  "approved_next_state": "ready_for_human_repair-lane_review",
+  "summary": "The reviewed packet correctly routes the current MTU-H5 failed and review_required validator assertions into governed repair lanes, keeps the mutation and product boundary intact, and does not claim that any repair lane is closed.",
+  "validator_summary_confirmed": {
+    "passed": 1,
+    "failed": 10,
+    "review_required": 31,
+    "blocked": 0
+  },
+  "lane_decisions": [
+    {
+      "repair_id": "MTU-H5-RP-001",
+      "lane": "q3 annual insurance threshold operation gap",
+      "verdict": "approve",
+      "note": "Correctly routes the missing annual premium plus deductible threshold operation into a later protected-reference or reviewed-equivalent packet. No MTU minting is approved."
+    },
+    {
+      "repair_id": "MTU-H5-RP-002",
+      "lane": "q3 stale A15 over-trigger guard",
+      "verdict": "approve",
+      "note": "Correctly keeps A15 forbidden and requires future mapping to prove q3 works without A15 while preserving annual-cost operations."
+    },
+    {
+      "repair_id": "MTU-H5-RP-003",
+      "lane": "q19 graph/draw/teken answer-form gap",
+      "verdict": "approve",
+      "note": "Correctly routes teken to a later graph/draw answer-form review and does not treat A42, D10, D13, or A81 as answer-form coverage."
+    },
+    {
+      "repair_id": "MTU-H5-RP-004",
+      "lane": "q19 source-annex, graph-object, and procedure review",
+      "verdict": "approve_review_needed_by_design",
+      "note": "Correctly keeps q19 diagnostic-only and routes source-annex, graph-object, and procedure fit to later EX/q19 evidence review before graph, PV, or lesson-facing work."
+    },
+    {
+      "repair_id": "MTU-H5-RP-005",
+      "lane": "q27 incidence/pass-through and per-1,000-liter scaling gaps",
+      "verdict": "approve",
+      "note": "Correctly identifies that A98 covers answer form while D07 is insufficient to close levy price/quantity/capacity and scaling coverage."
+    },
+    {
+      "repair_id": "MTU-H5-RP-006",
+      "lane": "q15 reasoning answer-skill and procedure semantic-fit review",
+      "verdict": "approve_review_needed_by_design",
+      "note": "Correctly routes q15 to answer-skill and procedure semantic-fit review rather than claiming D27, F03, F09, and A97 are already sufficient."
+    },
+    {
+      "repair_id": "negative-fixture-guard",
+      "lane": "function-construction overtrigger negative fixture",
+      "verdict": "approve",
+      "note": "Preserve the negative guard against reintroducing a function-construction route where a point or threshold calculation is enough."
+    }
+  ],
+  "important_nuance": "The packet's use of diagnostic means internal validator diagnostic reporting only. diagnostics_authorized remains false and no student-facing diagnostic claim is authorized.",
+  "authorized_next": {
+    "scope": [
+      "record this lane-specific approval",
+      "prepare next governed repair-lane planning packets",
+      "open the first follow-up planning lane for MTU-H5-RP-001 and MTU-H5-RP-002 together"
+    ],
+    "recommended_sequence": [
+      "MTU-H5-RP-001 plus MTU-H5-RP-002 q3 planning lane",
+      "MTU-H5-RP-003 plus MTU-H5-RP-004 q19 graph/source/teken cluster",
+      "MTU-H5-RP-005 q27 incidence/scaling lane",
+      "MTU-H5-RP-006 q15 semantic-fit lane"
+    ],
+    "execution_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "github_actions_evidence": {
+    "claimed": false,
+    "note": "Human review reported no workflow runs returned for the reviewed commit; do not claim GitHub Actions evidence unless a later run ID or check result is recorded."
+  }
+}
