@@ -4,7 +4,7 @@ Generated: 2026-06-08
 
 Verdict: `REVISE_REPAIRED_LOCAL_APPROVAL`
 
-Status: approved local fixture, remote evidence hash pending.
+Status: approved remote review ready.
 
 ## Decision
 
@@ -28,8 +28,17 @@ applied locally, and the repaired fixture has been promoted to
 
 ## Remote Evidence Closure
 
-The reviewed remote commit/hash remains pending. This closure does not prove
-remote publication and does not invent a commit hash.
+Reviewed remote commit:
+`735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`
+
+Reviewed remote branch:
+`codex/running-goals-20260608`
+
+Remote review URL:
+`https://github.com/meijer1973/4veco-platform/tree/735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`
+
+That commit contains the MTU-H5 review candidate, approved fixture, validator,
+sample-selection packet, diagnostic report, and cited local evidence paths.
 
 ## Boundary
 

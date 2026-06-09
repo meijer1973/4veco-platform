@@ -10,8 +10,8 @@ MTU-H5 was blocked until a human review supplied a fresh-sample decision. The
 human gate verdict was REVISE, then approve. The requested fixture/checker
 contract repairs have been applied locally, and the approved fixture now exists.
 
-The reviewed remote commit/hash remains pending. This log does not claim remote
-publication proof.
+The reviewed remote commit/hash is recorded:
+`735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`.
 
 ## Artifacts
 
@@ -39,8 +39,8 @@ decomposition, expected required and forbidden MTUs, explicit forbidden route
 tags, answer-form hooks, misconception hooks, scale/unit hooks, procedure
 checks, and one negative regression fixture.
 
-The remaining governance evidence is remote closure: the reviewed remote
-commit/hash remains pending.
+The remote closure is recorded in
+`reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json`.
 
 ## Required Evidence To Proceed
 
