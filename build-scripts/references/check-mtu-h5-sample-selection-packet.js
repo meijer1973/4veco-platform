@@ -562,10 +562,11 @@ if (packet.status === 'approved_after_revise_non_mutating') {
   }
   const closure = readJson(GATE_CLOSURE_JSON);
   if (closure.verdict !== 'REVISE_REPAIRED_LOCAL_APPROVAL') fail('gate closure verdict mismatch');
-  if (closure.remote_evidence_closure?.reviewed_remote_commit_hash !== null) {
-    fail('gate closure must not invent a remote commit hash');
+  if (!/^[0-9a-f]{40}$/.test(String(closure.remote_evidence_closure?.reviewed_remote_commit_hash || ''))) {
+    fail('gate closure must record a 40-character reviewed remote commit hash');
   }
-  requireIncludes(readText(GATE_CLOSURE_MD), 'reviewed remote commit/hash remains pending', 'gate closure markdown');
+  if (closure.remote_evidence_closure?.status !== 'recorded') fail('gate closure remote evidence status must be recorded');
+  requireIncludes(readText(GATE_CLOSURE_MD), 'Reviewed remote commit', 'gate closure markdown');
 }
 
 for (const required of [
@@ -604,7 +605,7 @@ if (packet.status === 'approved_after_revise_non_mutating') {
     'approved_after_revise_non_mutating',
     'reports/mtu-hardening/mtu-h5-regression-fixture.json',
     'node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json',
-    'remote commit/hash remains pending',
+    'reviewed remote commit/hash is recorded',
   ]) {
     requireIncludes(resultLog, required, 'MTU-H5 result log');
   }

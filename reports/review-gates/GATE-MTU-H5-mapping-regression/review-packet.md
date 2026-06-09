@@ -13,8 +13,8 @@ as repaired local approval and the fixture has been promoted locally.
 
 Remote evidence prerequisite: this review packet, the H5 sample-selection
 packet, and cited evidence must be committed and pushed to the normal remote
-branch before final remote closure. The gate closure currently records that the
-reviewed remote commit/hash remains pending.
+branch before final remote closure. The gate closure records reviewed remote
+commit `735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`.
 
 ## Evidence Base
 
@@ -82,8 +82,8 @@ Before taking binding answers, confirm:
    does not authorize protected reference mutation, MTU changes, candidate
    writes, target-exercise mutation, lesson output, PV, diagnostics, mastery,
    sequencing, AI, summative use, or student/product use.
-2. The current packet has a repaired local approved fixture attached; final
-   remote closure must still record the reviewed commit/hash.
+2. The current packet has a repaired local approved fixture attached, and the
+   reviewed remote commit/hash is recorded.
 3. Generated reports are diagnostics only and cannot be used as primary
    evidence for the fresh sample.
 

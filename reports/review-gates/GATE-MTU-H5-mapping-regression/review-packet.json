@@ -12,7 +12,9 @@
   "approved_fresh_sample_present": true,
   "approved_fresh_sample_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
   "remote_publication_required_before_review": true,
-  "remote_publication_status": "pending_commit_and_push_for_final_hash",
+  "remote_publication_status": "reviewed_remote_commit_hash_recorded",
+  "reviewed_remote_commit_hash": "735a042ffcd085eca1c5bd2f6819eb1172c2cbd5",
+  "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/735a042ffcd085eca1c5bd2f6819eb1172c2cbd5",
   "authority_boundary": {
     "protected_reference_mutation_authorized": false,
     "external_source_mutation_authorized": false,
