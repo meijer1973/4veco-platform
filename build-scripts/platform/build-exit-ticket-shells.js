@@ -18,6 +18,7 @@ const MODULE_ROOT = process.env.MODULE_ROOT
   : path.resolve(__dirname, '../..');
 const DASH = '\u2013';
 const ExitTicketEngine = require('../../engines/exit-ticket-engine');
+const GoldenTicketLayout = require('../../engines/golden-ticket-layout');
 
 function escapeHtml(str) {
   return String(str == null ? '' : str)
@@ -41,6 +42,15 @@ function surfaceTitle(data) {
   return surfaceSlug(data) === 'exit-ticket' ? 'Exit ticket' : 'Korte check';
 }
 
+function usesGoldenTicketLayout(data) {
+  return Boolean(
+    data &&
+    data.parNr === '1.1.3' &&
+    data.layout &&
+    data.layout.framework === 'golden_exercise_workbench'
+  );
+}
+
 function writeDataFile(config, sourceKey, data) {
   const targetDataDir = path.join(config.moduleRoot, 'shared', 'exit-ticket');
   fs.mkdirSync(targetDataDir, { recursive: true });
@@ -56,6 +66,9 @@ function writeDataFile(config, sourceKey, data) {
 }
 
 function generateShell(parNr, parName, data = null, sourceKey = parNr) {
+  if (usesGoldenTicketLayout(data)) {
+    return generateGoldenTicketShell(parNr, parName, data, sourceKey);
+  }
   const sharedPath = '../../shared';
   const title = `${parName} - ${surfaceTitle(data)}`;
 
@@ -90,6 +103,39 @@ function generateShell(parNr, parName, data = null, sourceKey = parNr) {
     <script src="${sharedPath}/exit-ticket/${escapeHtml(sourceKey)}.js"></script>
     <script src="${sharedPath}/exit-ticket-engine.js"></script>
     <script src="${sharedPath}/exit-ticket-ui.js"></script>
+</body>
+</html>`;
+}
+
+function generateGoldenTicketShell(parNr, parName, data, sourceKey) {
+  const sharedPath = '../../shared';
+  const title = `${parName} - ${surfaceTitle(data)}`;
+  const main = GoldenTicketLayout.renderMain(data);
+
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(title)}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${sharedPath}/golden-ticket-layout.css">
+    <script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+</head>
+<body>
+    <header class="ge-topbar">
+        <a class="ge-back" href="index.html">&larr; Overzicht</a>
+        <strong>&sect;${escapeHtml(parNr)} ${escapeHtml(parName)}</strong>
+        <button type="button" class="ge-theme-toggle" id="theme-toggle" aria-label="Licht/donker wisselen">Donkere modus</button>
+    </header>
+    <main class="ge-page" data-golden-ticket-root data-source-key="${escapeHtml(sourceKey)}">
+${main}
+    </main>
+    <script src="${sharedPath}/exit-ticket/${escapeHtml(sourceKey)}.js"></script>
+    <script src="${sharedPath}/golden-ticket-graph.js"></script>
+    <script src="${sharedPath}/golden-ticket-layout.js"></script>
 </body>
 </html>`;
 }
@@ -195,6 +241,8 @@ if (require.main === module) {
 
 module.exports = {
   generateShell,
+  generateGoldenTicketShell,
   surfaceSlug,
+  usesGoldenTicketLayout,
   main
 };

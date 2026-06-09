@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-TICKET-LAYOUT-RESET-1",
+  "captured_on": "2026-06-08T13:51:40.568Z",
+  "page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+  "screenshots": [
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-desktop-light.png",
+      "bytes": 294257,
+      "proof": {
+        "reference": true
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-mobile-light.png",
+      "bytes": 268949,
+      "proof": {
+        "reference": true
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-initial.png",
+      "bytes": 263630,
+      "proof": {
+        "state": "initial",
+        "theme": "light",
+        "viewport": "desktop"
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-after-graph.png",
+      "bytes": 315145,
+      "proof": {
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "graphOk": true,
+        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+        "graphPoints": [
+          "350,1",
+          "150,3"
+        ],
+        "lineShape": "decreasing",
+        "afterFirstLineCount": 0,
+        "afterSecondLineCount": 1,
+        "afterSecondLineShape": "decreasing",
+        "autoLineDrawn": true,
+        "checkboxCount": 0,
+        "connectControlCount": 0,
+        "lineShapeControlCount": 0,
+        "readingLocked": false
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-feedback.png",
+      "bytes": 434110,
+      "proof": {
+        "readingOk": true,
+        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes.",
+        "claimLocked": false
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-light-completed.png",
+      "bytes": 472472,
+      "proof": {
+        "claimOk": true,
+        "claimFeedback": "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent.",
+        "completionVisible": true
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-light-initial.png",
+      "bytes": 216627,
+      "proof": {
+        "state": "initial",
+        "theme": "light",
+        "viewport": "mobile"
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-light-after-graph.png",
+      "bytes": 267910,
+      "proof": {
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "graphOk": true,
+        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+        "graphPoints": [
+          "350,1",
+          "150,3"
+        ],
+        "lineShape": "decreasing",
+        "afterFirstLineCount": 0,
+        "afterSecondLineCount": 1,
+        "afterSecondLineShape": "decreasing",
+        "autoLineDrawn": true,
+        "checkboxCount": 0,
+        "connectControlCount": 0,
+        "lineShapeControlCount": 0,
+        "readingLocked": false
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-desktop-dark-initial.png",
+      "bytes": 271810,
+      "proof": {
+        "state": "initial",
+        "theme": "dark",
+        "viewport": "desktop"
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-mobile-dark-initial.png",
+      "bytes": 219489,
+      "proof": {
+        "state": "initial",
+        "theme": "dark",
+        "viewport": "mobile"
+      }
+    },
+    {
+      "file": "reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/implemented-routing-after-reload.png",
+      "bytes": 271810,
+      "proof": {
+        "theme": "dark",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "legacyAssetCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.3-exit-ticket.js",
+          "../../shared/golden-ticket-graph.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "graphId": "golden-ticket-113",
+        "routeLinks": [
+          "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+          "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html",
+          "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        ]
+      }
+    }
+  ]
+}
