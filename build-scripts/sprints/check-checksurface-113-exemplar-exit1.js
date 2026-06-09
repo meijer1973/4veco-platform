@@ -293,6 +293,9 @@ function main() {
   assert(rendered.includes('class="ge-workbench"'), 'rendered 1.1.3 output must use ge-workbench');
   assert(rendered.includes('class="ge-source-card"'), 'rendered 1.1.3 output must use ge-source-card');
   assert(rendered.includes('class="ge-task-card"'), 'rendered 1.1.3 output must use ge-task-card');
+  assert(!rendered.includes('class="ge-task-header"'), 'rendered 1.1.3 output must not expose the internal workbench header');
+  assert(!rendered.includes('>Werkbank<'), 'rendered 1.1.3 output must not show the internal workbench label');
+  assert(!rendered.includes('<h2>Werkvragen</h2>'), 'rendered 1.1.3 output must not show the internal work-questions heading');
   assert(rendered.includes('class="ge-step ge-step-graph"'), 'rendered 1.1.3 output must include the graph step');
   assert(rendered.includes('class="ge-step ge-step-reading'), 'rendered 1.1.3 output must include the reading step');
   assert(rendered.includes('class="ge-step ge-step-claim'), 'rendered 1.1.3 output must include the claim step');
