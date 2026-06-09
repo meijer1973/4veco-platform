@@ -148,6 +148,6 @@
   "known_limitations": [
     "This sample is a report-only pilot evidence object, not a generated evidence pack or teacher inspection pack."
   ],
-  "next_action": "Human review of INSPECT-4 before validator integration, generated evidence packs, or report generation are authorised.",
+  "next_action": "INSPECT-5R tri-agent MORE_THAN_SATISFIED review before generator planning, generated evidence packs, or report generation are authorised.",
   "unexpected_contract_field": "This field is intentionally outside the report-only schema contract."
 }

@@ -140,8 +140,10 @@ manual object, not a production failure.
 
 ## Recommended Next Step
 
-Send the INSPECT-5 validator refinement packet for human review. Do not start
-report-only generator planning, evidence-pack work, dashboard integration,
-quality-ref integration, Scale Gate integration, country overlays, generated
-lesson-output changes, CI/build integration, or compliance claims until a later
-human review explicitly authorises that scope.
+Send the INSPECT-5R external review, privacy, and claim-guardrail packet for
+teacher, legal/privacy, and Dutch quality-inspection `MORE_THAN_SATISFIED`
+review. Do not start report-only generator planning, evidence-pack work,
+dashboard integration, quality-ref integration, Scale Gate integration, country
+overlays, generated lesson-output changes, CI/build integration,
+personal-data processing, or compliance claims until that gate passes and the
+repository owner explicitly authorises the next sprint.

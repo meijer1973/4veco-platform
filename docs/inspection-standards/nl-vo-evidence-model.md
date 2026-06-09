@@ -1,7 +1,7 @@
 # Dutch VO Inspection Evidence Model
 
-Status: draft v0, adjusted for schema-design preparation after INSPECT-2A; INSPECT-4 report-only validator design authorised; not final, compliant, or inspection-ready
-Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design
+Status: draft v0, adjusted for schema-design and validator preparation; INSPECT-5R external review, privacy, and claim guardrails active; not final, compliant, or inspection-ready
+Sprint: INSPECT-0 Source Register + Dutch Profile Design; INSPECT-1A Corrections-Only Source And Claim Hygiene; INSPECT-2 Bounded Pilot Evidence Audit; INSPECT-2A Profile Adjustment Before Schema Design; INSPECT-3 Report-Only Schema Design; INSPECT-4 Report-Only Validator Design; INSPECT-5 Strictly Non-Blocking Validator Refinement; INSPECT-5R External Review, Privacy, And Claim Guardrails
 Profile: `references/data/inspection-standards/nl-vo-evidence-profile.v0.json`
 Source register: `references/data/inspection-standards/source-register.json`
 
@@ -141,6 +141,28 @@ gates, generated evidence packs, teacher inspection packs, dashboard gates,
 quality-ref integration, Scale Gate integration, country overlays, generated
 lesson-output changes, legal compliance claims, inspectorate approval claims,
 or complete OP0/basic-skills claims.
+
+## INSPECT-5 And INSPECT-5R Current Gate
+
+INSPECT-5 completed strictly non-blocking validator refinement. The manual
+validator is still diagnostic and report-only; it is not a production,
+dashboard, Scale Gate, quality-ref, compliance, or inspectorate judgement.
+
+Initial teacher, legal/privacy, and Dutch quality-inspection external reviews
+after INSPECT-5 all returned `REVISE`. The required correction is INSPECT-5R:
+encode the tri-agent `MORE_THAN_SATISFIED` review gate, privacy/no-personal-
+data default, safe-claim contract, teacher-facing template, OP0 wording, and
+product/school evidence boundaries before INSPECT-6 can be authorised.
+
+INSPECT-5R guardrails:
+
+- `docs/inspection-standards/external-review-privacy-and-claim-guardrails.md`
+- `docs/inspection-standards/teacher-facing-evidence-pack-template.md`
+- `archive/sprints/INSPECT-5R/`
+
+INSPECT-6 remains unauthorised until teacher, legal/privacy, and Dutch
+quality-inspection reviewers each return `MORE_THAN_SATISFIED` and the
+repository owner explicitly authorises generator planning.
 
 ## Evidence Categories
 
@@ -449,7 +471,8 @@ Screenshot QA proves full accessibility compliance.
 
 ## Recommended Next Step
 
-Review the INSPECT-4 report-only validator design packet. Do not integrate the
-validator into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson
-output, evidence-pack generation, teacher inspection packs, country overlays,
-or compliance claims from this draft alone.
+Send the INSPECT-5R review packet for teacher, legal/privacy, and Dutch
+quality-inspection `MORE_THAN_SATISFIED` review. Do not integrate the validator
+into CI, builds, dashboards, quality-ref, Scale Gate, generated lesson output,
+evidence-pack generation, teacher inspection packs, country overlays,
+personal-data processing, or compliance claims from this draft alone.

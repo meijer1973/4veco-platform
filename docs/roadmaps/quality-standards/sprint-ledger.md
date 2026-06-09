@@ -53,6 +53,33 @@ Required default flow:
     a human-review packet, run a validation/build step, commit/push, insert a
     new sprint, or deliberately stop/pause.
 
+## Quality-Standards External Review Gate
+
+INSPECT-5R and all later quality-standards sprints that prepare generator
+planning, evidence packs, teacher-facing summaries, public claims, dashboards,
+quality-ref integration, Scale Gate integration, overlays, or generated-output
+changes must use the three-reviewer gate:
+
+| Reviewer role | Required verdict before proceeding |
+|---|---|
+| Teacher reviewer | `MORE_THAN_SATISFIED` |
+| Legal/privacy reviewer | `MORE_THAN_SATISFIED` |
+| Dutch quality-inspection reviewer | `MORE_THAN_SATISFIED` |
+
+Verdict scale:
+
+```text
+REVISE
+PASS
+MORE_THAN_SATISFIED
+```
+
+Any `REVISE` or `PASS` blocks progression. A `PASS` is not enough for this
+quality-standards track because the owner requires the reviewer team to be
+more than merely satisfied. Corrections must be logged, implemented, validated,
+lead-reviewed, pushed, and re-reviewed before the next sprint can be
+authorised.
+
 ## Ledger
 
 | Sprint | Status | Scope | Primary outputs | Commit | Notes |
@@ -70,6 +97,7 @@ Required default flow:
 | `INSPECT-3` | closed / pass_with_minor_guardrails | Report-only inspection evidence schema design. Creates a diagnostic schema and schema notes while preserving evidence state/finality, target-equivalent proof, source-pointer types, OP0 boundaries, and product/school boundaries. | `references/schemas/inspection-evidence.schema.json`; `docs/inspection-standards/report-only-schema-design.md`; `references/data/inspection-standards/schema-notes.md`; `archive/sprints/INSPECT-3/INSPECT-3-sprint-plan.md`; `archive/sprints/INSPECT-3/INSPECT-3-validation-log.md`; `archive/sprints/INSPECT-3/INSPECT-3-closure-log.md` | `360e3ad6` plus this commit | Head of Strategy accepted INSPECT-3 and authorised INSPECT-4. Guardrails: claim checks are not complete semantic detection; only full-report mode may require all eight categories; weak evidence can be valid. |
 | `INSPECT-4` | closed / pass_with_required_refinement | Report-only validator design. Adds a manual diagnostic validator for inspection-evidence report objects, validator notes, validator design docs, and a pilot sample object. | `build-scripts/inspection/validate-inspection-evidence.js`; `docs/inspection-standards/report-only-validator-design.md`; `references/data/inspection-standards/validator-notes.md`; `references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json`; `archive/sprints/INSPECT-4/INSPECT-4-sprint-plan.md`; `archive/sprints/INSPECT-4/INSPECT-4-validation-log.md`; `archive/sprints/INSPECT-4/INSPECT-4-closure-log.md` | `f8b174d2` plus this commit | Head of Strategy accepted INSPECT-4 but required INSPECT-5 before generator planning because the invalid-status/schema-depth boundary needed refinement. |
 | `INSPECT-5` | closed / pass | Strictly non-blocking validator refinement. Clarifies `SCHEMA_INVALID_REPORT_ONLY`, adds schema-backed object-contract checks and repeatable negative fixtures, and keeps the validator manual/non-integrated. | `build-scripts/inspection/validate-inspection-evidence.js`; `references/data/inspection-standards/fixtures/negative/*.sample.json`; `docs/inspection-standards/report-only-validator-design.md`; `references/data/inspection-standards/validator-notes.md`; `archive/sprints/INSPECT-5/INSPECT-5-sprint-plan.md`; `archive/sprints/INSPECT-5/INSPECT-5-validation-log.md`; `archive/sprints/INSPECT-5/INSPECT-5-closure-log.md` | this commit | No report-only generator planning, package script, CI/build integration, dashboard gate, quality-ref integration, Scale Gate work, evidence pack, teacher inspection pack, overlay, generated lesson-output change, or compliance claim. |
+| `INSPECT-5R` | in progress / tri-agent guardrail | External review, privacy, teacher-usefulness, OP0, and claim-safety guardrails before INSPECT-6. Records teacher/legal/privacy/Dutch quality-inspection review as mandatory and requires `MORE_THAN_SATISFIED` from all three roles. | `archive/sprints/INSPECT-5R/INSPECT-5R-sprint-plan.md`; `archive/sprints/INSPECT-5R/INSPECT-5R-external-review-intake.md`; `docs/inspection-standards/external-review-privacy-and-claim-guardrails.md`; `docs/inspection-standards/teacher-facing-evidence-pack-template.md`; roadmap and ledger updates. | pending closure commit | Guardrail sprint only. No report-only generator implementation, evidence pack, dashboard gate, quality-ref integration, Scale Gate work, lesson-output mutation, personal-data processing, or compliance/approval claim. |
 
 ## Candidate Future Sprints
 
@@ -78,8 +106,8 @@ approves the packet.
 
 | Candidate sprint | Intended scope | Authorisation status |
 | --- | --- | --- |
-| `INSPECT-6` | Report-only generator planning, only if Head of Strategy accepts INSPECT-5 and explicitly authorises generator planning. | not authorised |
-| `INSPECT-7` | Dutch scoped evidence-pack prototype for one bounded generated output slice, only after explicit pack authorisation. | not authorised |
+| `INSPECT-6` | Report-only generator planning, only after INSPECT-5R tri-agent review reaches `MORE_THAN_SATISFIED` for teacher, legal/privacy, and Dutch quality-inspection reviewers and the owner explicitly authorises generator planning. | not authorised |
+| `INSPECT-7` | Dutch scoped evidence-pack prototype for one bounded generated output slice, only after INSPECT-6 passes tri-agent review and the owner explicitly authorises a prototype pack. | not authorised |
 | `INSPECT-8` | International common-quality profile design after Dutch profile/schema/validator review. | not authorised |
 | `INSPECT-9` | Scope-wide standards evidence roll-up across authorised generated artifacts and supporting review records. | not authorised |
 

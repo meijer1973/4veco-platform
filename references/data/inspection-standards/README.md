@@ -61,6 +61,18 @@ quality-ref integration, Scale Gate integration, country overlays, generated
 lesson-output changes, CI/build integration, legal compliance claims,
 inspectorate approval claims, or complete OP0/basic-skills claims.
 
+INSPECT-5 completed strictly non-blocking validator refinement. Initial
+teacher, legal/privacy, and Dutch quality-inspection external reviews after
+INSPECT-5 returned `REVISE`. INSPECT-5R is authorised as a guardrail sprint
+only. It may add external-review protocol, privacy/no-personal-data defaults,
+safe-claim templates, teacher-facing evidence-pack template, stale-next-step
+cleanup, roadmap/ledger updates, and INSPECT-5R review artifacts. It must not
+start report-only generator planning, generated evidence packs, teacher
+inspection packs, dashboard gates, quality-ref integration, Scale Gate
+integration, country overlays, generated lesson-output changes, personal-data
+processing, CI/build integration, legal compliance claims, inspectorate
+approval claims, or complete OP0/basic-skills claims.
+
 ## Intended future contents
 
 Current authorised INSPECT-0 contents:

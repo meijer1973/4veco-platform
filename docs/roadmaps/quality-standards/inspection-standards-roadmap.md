@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `inspection-standards-compatibility`
-Roadmap version: `v0.5-strictly-non-blocking-validator-refinement`
-Sprint status: `INSPECT-5 Strictly Non-Blocking Validator Refinement` authorised and completed as manual diagnostic validator refinement only; report-only generator planning, build-failing integration, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, and compliance claims remain unauthorised
+Roadmap version: `v0.6-external-review-privacy-claim-guardrails`
+Sprint status: `INSPECT-5R External Review, Privacy, And Claim Guardrails` is the active pre-INSPECT-6 gate sprint; report-only generator planning, build-failing integration, required CI gates, evidence packs, dashboard gates, quality-ref integration, Scale Gate integration, overlays, generated lesson-output changes, personal-data processing, and compliance claims remain unauthorised
 Human owner: HCS / Marcel
 Team mode: isolated worktree, roadmap and evidence design first, no broad production
 
@@ -15,6 +15,8 @@ Companion quality-standards docs:
 - `docs/roadmaps/quality-standards/README.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
+- `docs/inspection-standards/external-review-privacy-and-claim-guardrails.md`
+- `docs/inspection-standards/teacher-facing-evidence-pack-template.md`
 
 ## 0. Purpose
 
@@ -835,6 +837,94 @@ inspectorate approval claim
 complete OP0/basic-skills claim
 ```
 
+### Phase 3C - External review, privacy, and claim guardrails
+
+Goal: encode the user-required teacher/legal/Dutch quality-inspection review
+gate before report-only generator planning or evidence-pack prototyping.
+
+Authorisation:
+
+```text
+INSPECT-5 completed strictly non-blocking validator refinement.
+Initial teacher, legal/privacy, and Dutch quality-inspection external reviews
+all returned REVISE because INSPECT-6/7 were still unauthorised and the
+tri-agent MORE_THAN_SATISFIED gate, privacy boundary, teacher-facing output
+shape, OP0 pack wording, and safe-claim contract were not operational.
+User direction authorises INSPECT-5R as a pre-INSPECT-6 guardrail sprint only.
+```
+
+Decision:
+
+```text
+Insert INSPECT-5R before INSPECT-6. A PASS verdict is not enough for this
+quality-standards track: teacher, legal/privacy, and Dutch quality-inspection
+reviewers must each return MORE_THAN_SATISFIED before INSPECT-6 can be
+authorised.
+```
+
+Allowed outputs:
+
+```text
+docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
+docs/inspection-standards/teacher-facing-evidence-pack-template.md
+docs/inspection-standards/nl-vo-evidence-model.md stale-next-step update
+docs/roadmaps/quality-standards/inspection-standards-roadmap.md
+docs/roadmaps/quality-standards/sprint-ledger.md
+references/data/inspection-standards/README.md status update
+references/data/inspection-standards/nl-vo-evidence-profile.v0.json metadata update
+archive/sprints/INSPECT-5R/
+generated indexes/reports when roadmap or review-packet URLs require refresh
+```
+
+Required guardrails:
+
+- record teacher, legal/privacy, and Dutch quality-inspection reviewers as
+  mandatory external reviewers;
+- use the verdict scale `REVISE`, `PASS`, `MORE_THAN_SATISFIED`;
+- treat any `REVISE` or `PASS` as a stop condition before INSPECT-6;
+- require direct review-packet comments with calibration checks, planned review
+  questions, evidence links, stop conditions, and comment prompts;
+- require lead review before the external review packet is sent;
+- require reviewed commit SHA, remote push proof, and either passing
+  `platform-ci / validate-platform` status or an explicit CI waiver;
+- add privacy/AVG guardrails: no student-level personal data or identifiable
+  school/person data by default, and a later DPIA/data-processing gate before
+  any personal data can enter evidence packs;
+- add safe-claim templates or claim IDs for future generated prose;
+- keep OP0 wording as subject-material evidence only;
+- require future teacher-facing packs to show `4veco evidence`, `school
+  evidence still needed`, and `forbidden inference` per category.
+
+Forbidden work:
+
+```text
+report-only generator implementation
+generated evidence pack
+teacher inspection pack generator
+package.json script integration
+CI or check:platform integration
+dashboard gate
+Scale Gate integration
+quality-ref integration
+country overlay
+generated lesson-output mutation
+student-level personal-data processing
+legal compliance claim
+AVG/GDPR compliance claim
+inspectorate approval claim
+inspection-ready claim
+certification claim
+complete OP0/basic-skills claim
+school-obligation-satisfied claim
+PTA validity claim
+summative assessment validity claim
+classroom implementation claim
+```
+
+INSPECT-6 remains candidate work until INSPECT-5R passes tri-agent
+`MORE_THAN_SATISFIED` review and the repository owner explicitly authorises
+generator planning.
+
 ### Phase 4 - Pilot evidence audit on stabilised paragraphs
 
 Goal: test the model on already stabilised material before scaling.
@@ -1207,7 +1297,7 @@ INSPECT-4 passed with required refinement. INSPECT-5 Strictly Non-Blocking Valid
 Current decision after INSPECT-5:
 
 ```text
-Send INSPECT-5 for human review. Do not start report-only generator planning, evidence packs, dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, or compliance claims unless a later human review explicitly authorises that scope.
+Initial teacher, legal/privacy, and Dutch quality-inspection external reviews returned REVISE. INSPECT-5R External Review, Privacy, And Claim Guardrails is authorised as a pre-INSPECT-6 guardrail sprint only. Do not start report-only generator planning, evidence packs, dashboards, quality-ref integration, Scale Gate integration, CI/build integration, country overlays, generated lesson-output changes, teacher inspection packs, personal-data processing, or compliance claims unless INSPECT-5R reaches tri-agent MORE_THAN_SATISFIED review and the repository owner explicitly authorises the next sprint.
 ```
 
 ## 11. Setup recommendation

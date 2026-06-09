@@ -2,7 +2,7 @@
 
 Status: active roadmap folder
 Repository: `4veco-platform`
-Updated on: 2026-06-08
+Updated on: 2026-06-09
 
 ## Purpose
 
@@ -26,6 +26,11 @@ materials alone satisfy a school's obligations.
   outputs, commits, and next authorisation points.
 - `quality-standards-end-state.md` - first attempt at the intended mature
   state after the quality-standards layer is implemented.
+- `../../inspection-standards/external-review-privacy-and-claim-guardrails.md`
+  - mandatory review, privacy, and claim-safety guardrails before generator
+  planning or evidence-pack prototyping.
+- `../../inspection-standards/teacher-facing-evidence-pack-template.md` -
+  teacher-facing output template for future bounded evidence packs.
 
 ## Related Source Data
 
@@ -44,3 +49,7 @@ materials alone satisfy a school's obligations.
   remains with the school/provider and the competent authority.
 - Compliance, approval, diagnostic, mastery, summative, and automatic
   sequencing claims require separate explicit human gates.
+- Quality-standards work that prepares generator planning, evidence packs, or
+  teacher/school-facing claims requires teacher, legal/privacy, and Dutch
+  quality-inspection reviewers to each return `MORE_THAN_SATISFIED`.
+- Evidence packs contain no student-level personal data by default.

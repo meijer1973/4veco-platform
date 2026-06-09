@@ -101,7 +101,9 @@ Each pack should expose:
 - safe-claim and forbidden-claim notes.
 
 The pack is for school, teacher, reviewer, and agent use. It is not an
-inspection certificate.
+inspection certificate. It contains no student-level personal data by default;
+any future use of personal data requires a separate privacy/DPIA/data-
+processing gate before generation.
 
 ### 5. Validators, Reports, And Dashboard Surfaces
 
@@ -129,6 +131,11 @@ Quality-standards implementation uses explicit gates:
 - human review before any public-facing claims change;
 - separate approval before integration with Scale Gate or production release
   decisions.
+
+For quality-standards sprints that prepare generator planning, evidence packs,
+teacher/school-facing summaries, or public claims, the mature gate includes
+teacher, legal/privacy, and Dutch quality-inspection reviewers. All three must
+be `MORE_THAN_SATISFIED`; a merely passing review leaves the gate closed.
 
 ## Scope-Wide View
 

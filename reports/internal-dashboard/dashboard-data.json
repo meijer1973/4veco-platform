@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T06:26:41.110Z",
+  "generatedAt": "2026-06-09T07:50:07.514Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "```text",
-          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.5-strictly-non-blocking-validator-refinement Sprint status: INSPECT-5 Strictly Non-Blocking Validator Refinement authorised and completed as manual diagnostic validator refinement only; report-only generator planning, build-failing inte...",
+          "summary": "Inspection Standards Compatibility Roadmap Status: proposed Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: inspection-standards-compatibility Roadmap version: v0.6-external-review-privacy-claim-guardrails Sprint status: INSPECT-5R External Review, Privacy, And Claim Guardrails is the active pre-INSPECT-6 gate sprint; report-only generator planning, build-failing integration, required CI gates, e...",
           "sprints": []
         },
         {

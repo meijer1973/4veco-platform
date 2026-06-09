@@ -108,8 +108,10 @@ create a production validator integration.
 
 ## Recommended Next Step
 
-Send the INSPECT-5 refinement packet for human review. Do not create validator
-integration, report generator planning, evidence packs, dashboard gates,
-quality-ref integration, Scale Gate integration, country overlays,
-lesson-output changes, or compliance claims without later explicit
-authorisation.
+Send the INSPECT-5R external review, privacy, and claim-guardrail packet for
+teacher, legal/privacy, and Dutch quality-inspection `MORE_THAN_SATISFIED`
+review. Do not create validator integration, report generator planning,
+evidence packs, dashboard gates, quality-ref integration, Scale Gate
+integration, country overlays, lesson-output changes, personal-data
+processing, or compliance claims until that gate passes and the repository
+owner explicitly authorises the next sprint.
