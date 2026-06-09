@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T12:37:59.895Z
+Generated: 2026-06-09T12:39:07.558Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4084
+Files indexed: 4099
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1036,7 +1036,7 @@ Count: 399
 
 ## references
 
-Count: 561
+Count: 568
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1599,10 +1599,17 @@ Count: 561
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
+- references/ui/exercise-workbench-policy.md
+- references/ui/interaction-policy.json
+- references/ui/interaction-policy.md
+- references/ui/layout-registry.json
+- references/ui/layout-registry.md
+- references/ui/README.md
+- references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2501
+Count: 2509
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1626,8 +1633,16 @@ Count: 2501
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
