@@ -3,8 +3,8 @@
   "gate_id": "GATE-MTU-H5-mapping-regression",
   "sprint_id": "MTU-H5",
   "created": "2026-06-08",
-  "verdict": "REVISE_REPAIRED_LOCAL_APPROVAL",
-  "status": "approved_remote_review_ready",
+  "verdict": "APPROVED_WITH_ADMINISTRATIVE_REMOTE_CLOSURE_REPAIR",
+  "status": "approved_remote_closure_repaired",
   "human_review_source": "C:/Users/meije/.codex/attachments/0500abee-f9c0-4d88-8bc3-33fe97558951/pasted-text.txt",
   "source_packet": "reports/mtu-hardening/mtu-h5-sample-selection-packet.json",
   "review_candidate_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json",
@@ -24,6 +24,12 @@
     "reviewed_remote_url": "https://github.com/meijer1973/4veco-platform/tree/735a042ffcd085eca1c5bd2f6819eb1172c2cbd5",
     "status": "recorded",
     "note": "This commit contains the MTU-H5 review candidate, approved fixture, validator, sample-selection packet, diagnostic report, and cited local evidence paths."
+  },
+  "administrative_remote_closure_repair": {
+    "required_before_final_closure": true,
+    "completed": true,
+    "repaired_field": "remote_evidence_closure.reviewed_remote_commit_hash",
+    "recorded_commit_hash": "735a042ffcd085eca1c5bd2f6819eb1172c2cbd5"
   },
   "allowed_next_step": "Run only the non-mutating MTU-H5 validator and produce diagnostic pass/fail/review_required reporting.",
   "authority_boundary": {

@@ -3,7 +3,7 @@
   "gate_id": "GATE-MTU-H5-mapping-regression",
   "sprint_id": "MTU-H5",
   "created": "2026-06-08",
-  "status": "revise_repaired_local_approval_no_mutation",
+  "status": "approved_with_administrative_remote_closure_repair_no_mutation",
   "source_packet": "reports/mtu-hardening/mtu-h5-sample-selection-packet.json",
   "validator_scaffold": "build-scripts/references/check-mtu-h5-mapping-regression.js",
   "fixture_template": "reports/mtu-hardening/mtu-h5-regression-fixture.template.json",
@@ -54,7 +54,7 @@
   ],
   "calibration_questions": [
     "Confirm this gate reviews MTU-H5 sample selection and validator readiness only; it does not authorize protected reference mutation, MTU changes, candidate writes, target-exercise mutation, lesson output, PV, diagnostics, mastery, sequencing, AI, summative use, or student/product use.",
-    "Confirm the current packet has no approved fresh sample attached; the review must either attach/approve one or leave MTU-H5 blocked.",
+    "Confirm the repaired fixture is approved for MTU-H5 regression use and the administrative remote-closure repair records reviewed commit 735a042ffcd085eca1c5bd2f6819eb1172c2cbd5.",
     "Confirm generated reports are diagnostics only and cannot be used as primary evidence for the fresh sample."
   ],
   "planned_questions": [

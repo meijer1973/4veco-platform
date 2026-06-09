@@ -2,18 +2,17 @@
 
 Generated: 2026-06-08
 
-Status: `approved_after_revise_non_mutating`
+Status: `approved_with_administrative_remote_closure_repair`
 
 ## Gate State
 
-GATE-MTU-H5 returned REVISE, then approve. The fresh VWO 2025 sample has been
-repaired locally and promoted to an approved non-mutating regression fixture.
-The H1 benchmark at `reports/mtu-hardening/benchmark-sample-v1.json` remains a
-Solo q1-q3 seed benchmark; it is not the positive MTU-H5 sample.
+GATE-MTU-H5 is APPROVED WITH ADMINISTRATIVE REMOTE-CLOSURE REPAIR. The fresh
+VWO 2025 sample is approved for non-mutating MTU-H5 regression use. The H1
+benchmark at `reports/mtu-hardening/benchmark-sample-v1.json` remains a Solo
+q1-q3 seed benchmark; it is not the positive MTU-H5 sample.
 
-The reviewed remote commit/hash remains pending. Do not treat remote
-publication as proven until `reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json`
-records a real commit hash.
+The reviewed remote commit/hash is recorded in
+`reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json`.
 
 ## Evidence Inspected
 
@@ -37,9 +36,9 @@ records a real commit hash.
 - `reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json`
 - `reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.md`
 
-The review packet records repaired local approval only. It does not authorize
-protected reference mutation, target-exercise mutation, generated lesson output,
-product use, or student use.
+The review packet records approval with administrative remote-closure repair. It
+does not authorize protected reference mutation, target-exercise mutation,
+generated lesson output, product use, or student use.
 
 ## Validator Scaffold
 

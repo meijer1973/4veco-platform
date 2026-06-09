@@ -2,17 +2,20 @@
 
 Generated: 2026-06-08
 
-Verdict: `REVISE_REPAIRED_LOCAL_APPROVAL`
+Verdict: `APPROVED_WITH_ADMINISTRATIVE_REMOTE_CLOSURE_REPAIR`
 
-Status: approved remote review ready.
+Status: approved remote closure repaired.
 
 ## Decision
 
-The human review result was REVISE, then approve. The VWO 2025 sample remains
-fresh and source-authoritative. The fixture/checker contract repairs have been
-applied locally, and the repaired fixture has been promoted to
-`reports/mtu-hardening/mtu-h5-regression-fixture.json` with
-`status: approved_for_mtu_h5_regression`.
+The human review result is APPROVED WITH ADMINISTRATIVE REMOTE-CLOSURE REPAIR.
+The repaired fixture is approved for MTU-H5 regression use. The VWO 2025 sample
+is fresh, source-authoritative, decomposed enough, and contains the required
+over-trigger, answer-form, incidence/scaling/misconception, procedure, and
+negative-fixture hooks.
+
+The administrative remote-closure repair is complete: the reviewed remote
+commit/hash is recorded below and is no longer null or pending.
 
 ## Repairs Applied
 

@@ -2,13 +2,13 @@
 
 Generated: 2026-06-08
 
-Status: `approved_after_revise_non_mutating`
+Status: `approved_with_administrative_remote_closure_repair`
 
 ## Decision
 
 MTU-H5 was blocked until a human review supplied a fresh-sample decision. The
-human gate verdict was REVISE, then approve. The requested fixture/checker
-contract repairs have been applied locally, and the approved fixture now exists.
+human gate verdict is APPROVED WITH ADMINISTRATIVE REMOTE-CLOSURE REPAIR. The
+repaired fixture is approved for MTU-H5 regression use.
 
 The reviewed remote commit/hash is recorded:
 `735a042ffcd085eca1c5bd2f6819eb1172c2cbd5`.

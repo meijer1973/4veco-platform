@@ -149,8 +149,11 @@ readText(H4_CHECKER);
 
 if (packet.schema_version !== 1) fail('packet schema_version must be 1');
 if (packet.sprint_id !== 'MTU-H5') fail('packet sprint_id must be MTU-H5');
-if (!['blocked_no_approved_fresh_sample', 'approved_after_revise_non_mutating'].includes(packet.status)) {
-  fail('packet status must be blocked_no_approved_fresh_sample or approved_after_revise_non_mutating');
+if (![
+  'blocked_no_approved_fresh_sample',
+  'approved_with_administrative_remote_closure_repair',
+].includes(packet.status)) {
+  fail('packet status must be blocked_no_approved_fresh_sample or approved_with_administrative_remote_closure_repair');
 }
 if (packet.blocked_stop_result_log !== 'reports/sprints/MTU-H5-blocked-stop-result.md') {
   fail('packet.blocked_stop_result_log must point to reports/sprints/MTU-H5-blocked-stop-result.md');
@@ -170,7 +173,7 @@ if (packet.review_candidate_fixture !== 'reports/mtu-hardening/mtu-h5-regression
 if (packet.review_candidate_summary !== 'reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md') {
   fail('packet.review_candidate_summary must point to mtu-h5-regression-fixture.review-candidate.md');
 }
-if (packet.status === 'approved_after_revise_non_mutating') {
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
   if (packet.approved_fresh_sample_fixture !== 'reports/mtu-hardening/mtu-h5-regression-fixture.json') {
     fail('packet.approved_fresh_sample_fixture must point to mtu-h5-regression-fixture.json');
   }
@@ -263,8 +266,11 @@ for (const source of ['syllabus prose alone', 'generated reports alone']) {
 if (review.schema_version !== 1) fail('review schema_version must be 1');
 if (review.gate_id !== 'GATE-MTU-H5-mapping-regression') fail('review gate_id mismatch');
 if (review.sprint_id !== 'MTU-H5') fail('review sprint_id must be MTU-H5');
-if (!['sample_selection_review_packet_ready_no_mutation', 'revise_repaired_local_approval_no_mutation'].includes(review.status)) {
-  fail('review status must be sample_selection_review_packet_ready_no_mutation or revise_repaired_local_approval_no_mutation');
+if (![
+  'sample_selection_review_packet_ready_no_mutation',
+  'approved_with_administrative_remote_closure_repair_no_mutation',
+].includes(review.status)) {
+  fail('review status must be sample_selection_review_packet_ready_no_mutation or approved_with_administrative_remote_closure_repair_no_mutation');
 }
 if (review.source_packet !== 'reports/mtu-hardening/mtu-h5-sample-selection-packet.json') {
   fail('review source_packet mismatch');
@@ -281,7 +287,7 @@ if (review.review_candidate_fixture !== 'reports/mtu-hardening/mtu-h5-regression
 if (review.review_candidate_summary !== 'reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md') {
   fail('review review_candidate_summary mismatch');
 }
-if (packet.status === 'approved_after_revise_non_mutating') {
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
   if (review.approved_fresh_sample_present !== true) fail('review must record approved_fresh_sample_present true');
   if (review.approved_fresh_sample_fixture !== 'reports/mtu-hardening/mtu-h5-regression-fixture.json') {
     fail('review approved_fresh_sample_fixture must point to mtu-h5-regression-fixture.json');
@@ -306,8 +312,8 @@ for (const required of [
 ]) {
   requireIncludes(reviewMd, required, 'review markdown');
 }
-if (packet.status === 'approved_after_revise_non_mutating') {
-  requireIncludes(reviewMd, 'repaired local approval', 'review markdown');
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
+  requireIncludes(reviewMd, 'approved with administrative remote-closure repair', 'review markdown');
 } else {
   requireIncludes(reviewMd, 'does not approve a fresh sample', 'review markdown');
 }
@@ -518,7 +524,7 @@ for (const status of ['procedure_present', 'procedure_review_required']) {
   if (!procedureStatuses.has(status)) fail(`review-candidate procedure checks missing ${status}`);
 }
 
-if (packet.status === 'approved_after_revise_non_mutating') {
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
   const approved = readJson(APPROVED_FIXTURE);
   if (approved.status !== 'approved_for_mtu_h5_regression') {
     fail('approved fixture status must be approved_for_mtu_h5_regression');
@@ -561,7 +567,7 @@ if (packet.status === 'approved_after_revise_non_mutating') {
     requireIncludes(reportMd, required, 'regression report markdown');
   }
   const closure = readJson(GATE_CLOSURE_JSON);
-  if (closure.verdict !== 'REVISE_REPAIRED_LOCAL_APPROVAL') fail('gate closure verdict mismatch');
+  if (closure.verdict !== 'APPROVED_WITH_ADMINISTRATIVE_REMOTE_CLOSURE_REPAIR') fail('gate closure verdict mismatch');
   if (!/^[0-9a-f]{40}$/.test(String(closure.remote_evidence_closure?.reviewed_remote_commit_hash || ''))) {
     fail('gate closure must record a 40-character reviewed remote commit hash');
   }
@@ -581,7 +587,7 @@ for (const required of [
 ]) {
   requireIncludes(packetMd, required, 'packet markdown');
 }
-if (packet.status === 'approved_after_revise_non_mutating') {
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
   requireIncludes(packetMd, 'Approved Fixture', 'packet markdown');
 } else {
   requireIncludes(packetMd, 'No approved fresh MTU-H5 sample', 'packet markdown');
@@ -600,9 +606,9 @@ for (const required of [
 ]) {
   requireIncludes(resultLog, required, 'blocked-stop result log');
 }
-if (packet.status === 'approved_after_revise_non_mutating') {
+if (packet.status !== 'blocked_no_approved_fresh_sample') {
   for (const required of [
-    'approved_after_revise_non_mutating',
+    'approved_with_administrative_remote_closure_repair',
     'reports/mtu-hardening/mtu-h5-regression-fixture.json',
     'node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json',
     'reviewed remote commit/hash is recorded',
