@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-RP001-RP002-q3-planning-packet",
+  "created": "2026-06-09",
+  "status": "opened_planning_lane_no_mutation_authorized",
+  "purpose": "Open the first MTU-H5 follow-up planning lane for q3 by coupling RP-001 annual insurance threshold operation coverage with RP-002 A15 over-trigger protection.",
+  "source_review_gate": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+  "source_repair_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+  "reviewed_packet_commit": "bb1874e7d50023ee38e1afae8c4116cab3e0573b",
+  "lanes_opened": [
+    {
+      "repair_id": "MTU-H5-RP-001",
+      "title": "q3 annual insurance threshold operation gap",
+      "planning_question": "Does the q3 annual premium plus deductible threshold comparison require a new governed MTU/reviewed equivalent, or can a reviewed existing arithmetic route be strengthened without changing protected references in this planning packet?",
+      "current_validator_failures": [
+        "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-MISSING-OPERATION-MTU",
+        "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-MISSING-OPERATION-MTU"
+      ],
+      "required_future_evidence": [
+        "official q3 correction-model operation evidence with stable source locators",
+        "reviewed operation decomposition for monthly premium to annual cost plus deductible threshold comparison",
+        "decision whether existing A61/A96-style arithmetic and answer-form support is sufficient, insufficient, or only partial",
+        "proof condition for closing the missing-operation assertions without hiding either q3 operation"
+      ],
+      "mutation_authorized_now": false
+    },
+    {
+      "repair_id": "MTU-H5-RP-002",
+      "title": "q3 stale A15 over-trigger guard",
+      "planning_question": "How should the q3 mapping route preserve the annual-cost threshold operation while proving that A15 price elasticity is not triggered?",
+      "current_validator_failures": [
+        "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER",
+        "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER"
+      ],
+      "required_future_evidence": [
+        "explicit q3 route tags proving the task is annual-cost/threshold comparison, not price elasticity",
+        "negative regression fixture or assertion that fails if A15 is reintroduced for q3",
+        "proof that removing A15 does not remove required annual-threshold coverage"
+      ],
+      "mutation_authorized_now": false
+    }
+  ],
+  "planning_deliverables_for_next_review": [
+    "q3 evidence table with record id, operation ids, source locators, answer-model summary, required MTU or explicit missing-MTU expectation, forbidden MTUs, route tags, answer-form hook, misconception hook, and procedure hook",
+    "repair options matrix distinguishing reviewed-equivalent route, mapper/checker repair, and protected-reference mutation proposal",
+    "negative regression requirement preserving the A15 over-trigger guard",
+    "proof list for what must pass before either q3 lane may close"
+  ],
+  "out_of_scope": [
+    "protected reference mutation",
+    "external-source mutation",
+    "machine-reference mutation",
+    "authored target-exercise mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation registry mutation",
+    "answer skill mutation",
+    "candidate storage creation",
+    "candidate writes",
+    "lesson output",
+    "PV",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "next_state": "ready_for_q3_human_planning_review"
+}
