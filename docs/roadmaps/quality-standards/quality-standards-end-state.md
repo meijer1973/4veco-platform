@@ -1,53 +1,53 @@
-# Quality Standards End State
+# Dutch Quality Control End State
 
-Status: first attempt
-Date: 2026-06-08
+Status: Dutch-only target state
+Date: 2026-06-09
 Repository: `4veco-platform`
 
 ## Purpose
 
-This document describes the intended mature state of the quality-standards
-layer after it has been implemented.
+This document describes the intended mature state of the Dutch
+quality-control layer after it has been implemented.
 
 This folder is not about writing student-facing content. It is about the
-governed standards layer that sits beside generated product artifacts and makes
-quality evidence visible, traceable, reviewable, and safe to interpret.
+governed Dutch standards layer that sits beside generated product artifacts
+and makes quality evidence visible, traceable, reviewable, and safe to
+interpret.
 
 ## End-State Sentence
 
-At full maturity, 4veco has a governed quality-standards layer that can show,
-for every authorised evidence scope, which official sources and internal review
-records support curriculum coherence, didactic quality, assessment alignment,
-basic-skills support, accessibility, differentiation, and quality assurance,
-while clearly separating evidence support from compliance or approval claims.
+At full maturity, 4veco has a governed Dutch quality-control layer that can
+show, for every authorised Dutch evidence scope, which official Dutch sources
+and internal review records support curriculum coherence, didactic quality,
+assessment alignment, subject-material basic-skills support, accessibility,
+differentiation/support, and quality assurance, while clearly separating
+evidence support from compliance, approval, school implementation, and
+competent-authority judgement.
 
 ## What Exists At Maturity
 
-### 1. Authoritative Source Register
+### 1. Dutch Source Register
 
-The platform keeps a reviewed register of official and primary sources used for
-quality-standards evidence. Each source records:
+The platform keeps a reviewed Dutch source register for quality-control
+evidence. It covers:
 
-- jurisdiction and competent authority;
-- source type, such as inspection framework, curriculum standard,
-  accountability source, or comparator;
-- retrieval date and freshness status;
-- citation policy;
-- authority boundary;
-- why it matters for 4veco evidence.
+- Inspectie van het Onderwijs VO framework and OP0 anchors;
+- Dutch vwo-economie syllabus/programme sources;
+- CvTE/Examenblad official exam questions and correction models;
+- internal review, target-exercise, target-equivalent, accessibility, and
+  quality-assurance evidence.
 
-The register distinguishes official inspection authority from curriculum,
-exam, accountability, accreditation, and non-inspection comparator sources.
+Any non-Dutch source inventory is inactive for this roadmap and belongs to a
+future separate worktree if the owner later authorises it.
 
-### 2. Evidence Profiles And Overlays
+### 2. Dutch Evidence Profile
 
-The platform has a reviewed Dutch VO evidence profile first. Later overlays are
-added only when separately authorised.
+The platform has a reviewed Dutch VO/vwo-economie evidence profile.
 
-The Dutch profile maps 4veco evidence to categories such as:
+The profile maps 4veco evidence to:
 
 - curriculum offer and progression;
-- basic skills;
+- subject-material basic-skills support;
 - didactic quality;
 - student development and support;
 - assessment and closure;
@@ -55,118 +55,111 @@ The Dutch profile maps 4veco evidence to categories such as:
 - internal quality assurance;
 - improvement cycle.
 
-International overlays may reuse the evidence architecture, but they must not
-pretend that different countries share one inspection regime.
+The profile never turns product evidence into school-wide proof.
 
-### 3. Traceable Evidence Model
+### 3. Dutch Evidence Readiness Matrix
 
-Every standards claim points to concrete evidence rather than prose alone.
-Evidence may include:
+The platform can show readiness per authorised Dutch scope:
 
-- official CvTE questions and correction models;
-- reviewed target exercises;
-- paragraph plans, source traces, and blueprint records;
-- generated artifacts in `4veco-lessen`;
-- MTU and operation dependencies;
-- accessibility and student-experience reviews;
-- teacher-learning-quality review records;
-- generated coverage, dashboard, and validation reports;
-- sprint plans, validation logs, closure logs, and human-review packets.
+- target-exercise finality;
+- exam-code linkage;
+- target-equivalent proof;
+- generated artifact evidence;
+- review evidence;
+- accessibility evidence;
+- differentiation/support evidence;
+- weak or missing evidence;
+- school-owned evidence still needed;
+- owner next action.
 
-Planning documents are weaker evidence than generated and reviewed product
-artifacts. Reports are projections, not sources of truth by themselves.
+### 4. Dutch Evidence Packs
 
-### 4. Generated Evidence Packs
+The platform can generate report-only Dutch evidence packs for authorised
+scopes.
 
-When implementation is mature, the platform can generate evidence packs at
-multiple scopes:
+Each pack exposes:
 
-- paragraph evidence pack;
-- chapter or module evidence pack;
-- generated artifact-set evidence pack;
-- release-scope evidence pack;
-- scope-wide standards evidence pack.
-
-Each pack should expose:
-
-- curriculum and exam coverage;
-- progression and prerequisite structure;
+- scope and safe-use note;
+- curriculum and exam coverage evidence;
+- progression and prerequisite evidence;
 - target-exercise and exit-ticket alignment;
-- basic-skills support;
+- subject-material basic-skills support;
 - didactic sequence and practice design;
-- differentiation and support evidence;
+- differentiation/support evidence;
 - accessibility evidence;
 - assessment and answer-model evidence;
 - known gaps, weak evidence, stale sources, and unresolved flags;
 - safe-claim and forbidden-claim notes.
 
 The pack is for school, teacher, reviewer, and agent use. It is not an
-inspection certificate. It contains no student-level personal data by default;
-any future use of personal data requires a separate privacy/DPIA/data-
-processing gate before generation.
+inspection certificate. It contains no student-level personal data by default.
 
-### 5. Validators, Reports, And Dashboard Surfaces
+### 5. Dutch Teacher/School Pack
 
-The implemented layer has validators and reports that can detect:
+A teacher or school leader can read the first screen in 5-10 minutes and see:
+
+- what the pack covers;
+- what 4veco product evidence exists;
+- what evidence is weak or missing;
+- what evidence belongs to the school;
+- what must not be inferred;
+- what the next action is.
+
+### 6. Validators And Diagnostic Reports
+
+The layer has validators and reports that can detect:
 
 - missing source IDs;
-- stale retrieved dates;
-- profile categories without evidence;
+- stale source retrieval dates;
+- missing evidence categories;
 - generated artifacts that lack required evidence anchors;
 - unsafe claims;
-- broken links to generated evidence paths;
+- broken links to evidence paths;
 - gap records without owner or next action;
 - evidence packs generated from unreviewed sources.
 
-Dashboards may summarize readiness, but they may not turn weak evidence into a
-compliance claim.
+Diagnostics may summarize readiness, but they may not turn weak evidence into
+a compliance claim.
 
-### 6. Review And Gate Protocol
+### 7. Review And Gate Protocol
 
-Quality-standards implementation uses explicit gates:
+Quality-control implementation uses explicit gates:
 
-- source-profile review before evidence profiles become authoritative;
+- source/profile review before evidence profiles become authoritative;
 - schema review before validators are enforced;
-- pilot evidence-pack review before artifact-set reporting scales;
+- bounded evidence-pack review before artifact-set reporting scales;
 - human review before any public-facing claims change;
-- separate approval before integration with Scale Gate or production release
-  decisions.
+- separate approval before integration with Scale Gate, quality-ref, CI/build,
+  or production release decisions.
 
-For quality-standards sprints that prepare generator planning, evidence packs,
-teacher/school-facing summaries, or public claims, the mature gate includes
-teacher, legal/privacy, and Dutch quality-inspection reviewers. All three must
-be `MORE_THAN_SATISFIED`; a merely passing review leaves the gate closed.
+For sprints that prepare generator planning, evidence packs,
+teacher/school-facing summaries, diagnostic report surfaces, or public claims,
+the mature gate includes teacher, legal/privacy, and Dutch quality-inspection
+reviewers. All three must be `MORE_THAN_SATISFIED`; a merely passing review
+leaves the gate closed.
 
-## Scope-Wide View
+## Maturity Levels
 
-When the standards layer reaches mature implementation, it should be able to
-answer these questions without manual reconstruction:
-
-- Which official curriculum, exam, and inspection-relevant sources support the
-  quality evidence?
-- Which generated artifacts and reviewed records are present, reviewed, and
-  still flagged?
-- Where do target exercises prove the intended operation chain?
-- Where do explanations, practice, visuals, checks, and answer models support
-  the target exercise?
-- Where are basic skills, graph/table/source use, reasoning, calculation, and
-  answer-writing demands visible?
-- Which evidence is Dutch-specific, which evidence is generic quality evidence,
-  and which evidence belongs to a later international overlay?
-- What gaps remain before a school-facing evidence pack can be used
-  responsibly?
+| Level | Name | Meaning |
+| --- | --- | --- |
+| `L0` | Setup | Roadmap, folder, ledger, and initial evidence boundaries exist. |
+| `L1` | Source/profile design | Dutch source register and Dutch VO draft profile exist and pass review. |
+| `L2` | Evidence schema | Evidence records, validators, and report contracts are reviewed. |
+| `L3` | Bounded pack | One bounded generated artifact set is mapped and reviewed. |
+| `L4` | Dutch multi-scope scale | Evidence packs work across multiple authorised Dutch scopes with known gaps visible. |
+| `L5` | Dutch quality-control layer | Governed Dutch evidence can be generated across the authorised product scope without unsafe claims. |
 
 ## Safe Claims At Maturity
 
-The mature standards layer may support claims such as:
+The mature Dutch quality-control layer may support claims such as:
 
-- 4veco exposes Dutch inspection-relevant evidence for curriculum coherence,
-  didactic quality, assessment alignment, accessibility, support, and internal
-  quality assurance.
-- 4veco maps generated artifacts to reviewed evidence categories and records
-  known gaps.
-- 4veco can generate school-facing evidence packs that support preparation and
-  review.
+- 4veco exposes Dutch inspection-relevant product evidence for curriculum
+  coherence, didactic quality, assessment alignment, accessibility, support,
+  and internal quality assurance.
+- 4veco maps generated artifacts to reviewed Dutch evidence categories and
+  records known gaps.
+- 4veco can generate school-facing Dutch evidence packs that support
+  preparation and review.
 
 ## Forbidden Claims
 
@@ -178,26 +171,19 @@ The standards layer must not claim:
 - 4veco materials by themselves satisfy a school's inspection obligations.
 - Inspection prose authorises new economics lesson units, target exercises, or
   MTUs.
-- Dashboard readiness is the same as school quality, legal compliance,
-  summative assessment, diagnostics, or mastery.
-
-## Maturity Levels
-
-| Level | Name | Meaning |
-| --- | --- | --- |
-| `L0` | Setup | Roadmap, folder, ledger, and initial evidence boundaries exist. |
-| `L1` | Source/profile design | Source register and Dutch VO draft profile exist and pass human review. |
-| `L2` | Evidence schema | Evidence records, validators, and report contracts are reviewed. |
-| `L3` | Pilot pack | One bounded generated artifact set is mapped and reviewed. |
-| `L4` | Multi-scope scale | Evidence packs work across multiple authorised scopes with known gaps visible. |
-| `L5` | Standards layer | Governed standards evidence can be generated across the authorised product scope without unsafe claims. |
+- Dashboard or report readiness is the same as school quality, legal
+  compliance, summative assessment, diagnostics, mastery, OP0 completion, or
+  school SKA compliance.
 
 ## Open Questions
 
-- Which source freshness interval is acceptable for official inspection and
-  curriculum sources?
-- Which evidence categories must be mandatory before a school-facing pack can
-  be generated?
-- Should standards evidence live only in platform reports, or should selected
-  summaries also be generated into teacher-facing artifacts?
-- What human review role owns approval of safe public claims?
+- Which Dutch scope should follow the INSPECT-7 Book 1 Chapter 1.1 bounded pack?
+- Which source freshness interval is acceptable for Dutch inspection,
+  curriculum, and exam sources?
+- Which target-exercise finality and exam-code linkage evidence is mandatory
+  before scale?
+- Which target-equivalent proof records are mandatory before assessment or
+  closure language can broaden?
+- Should Dutch quality-control evidence stay in platform reports only, or
+  should selected summaries also become teacher/school-facing artifacts after
+  review?

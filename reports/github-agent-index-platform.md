@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T10:32:40.198Z
+Generated: 2026-06-10T11:36:28.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4252
+Files indexed: 4269
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -127,7 +127,7 @@ Count: 81
 
 ## build scripts
 
-Count: 467
+Count: 468
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -224,6 +224,7 @@ Count: 467
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
 - build-scripts/platform/build-exit-ticket-shells.js
+- build-scripts/platform/build-exit-ticket-shells.test.js
 - build-scripts/platform/build-graphical-shells.js
 - build-scripts/platform/build-landing-page.js
 - build-scripts/platform/build-newsdetective-shells.js
@@ -646,7 +647,7 @@ Count: 42
 
 ## validators
 
-Count: 413
+Count: 416
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -661,6 +662,9 @@ Count: 413
 - archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md
 - archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
@@ -4303,7 +4307,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 415
+Count: 428
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4404,6 +4408,19 @@ Count: 415
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-planning-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-human-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-human-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-sprint-plan.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md
