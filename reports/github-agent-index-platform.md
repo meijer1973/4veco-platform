@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T13:34:44.852Z
+Generated: 2026-06-10T15:23:02.881Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4305
+Files indexed: 4307
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4338,7 +4338,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 436
+Count: 438
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4439,6 +4439,7 @@ Count: 436
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/INSPECT-8/INSPECT-8-agent-activity-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-closure-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-coding-agent-handoff.md
 - archive/sprints/INSPECT-8/INSPECT-8-correction-log.md
@@ -4447,6 +4448,7 @@ Count: 436
 - archive/sprints/INSPECT-8/INSPECT-8-lead-review-round2.md
 - archive/sprints/INSPECT-8/INSPECT-8-planning-review.md
 - archive/sprints/INSPECT-8/INSPECT-8-sprint-plan.md
+- archive/sprints/INSPECT-9/INSPECT-9-coding-agent-handoff.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
