@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXIT-TICKET-WORKBENCH-112-RENDERED-1",
+  "generated": "2026-06-10T12:57:19.602Z",
+  "page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+  "cases": [
+    {
+      "case": "desktop-light-initial",
+      "action": "initial",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png",
+      "bytes": 292242,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2743
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "calculationGoodCount": 0,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-wrong-retry",
+      "action": "wrong-retry",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png",
+      "bytes": 299392,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2833
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "prijsstijging-procent",
+            "tone": "warn",
+            "text": "Controleer de basis Gebruik nieuw min oud gedeeld door oud. De oude prijs is hier 800 euro."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "warn",
+            "feedbackText": "Controleer de basis Gebruik nieuw min oud gedeeld door oud. De oude prijs is hier 800 euro."
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 1,
+        "goodFeedbackCount": 0,
+        "calculationGoodCount": 0,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-after-calculation",
+      "action": "after-calculation",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-after-calculation.png",
+      "bytes": 299468,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2833
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "prijsstijging-procent",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 1,
+        "calculationGoodCount": 1,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-after-structured",
+      "action": "after-structured",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-after-structured.png",
+      "bytes": 303414,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2833
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "niet-vier-procent",
+        "feedback": [
+          {
+            "id": "indexpunten-uitleg",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": "good",
+            "feedbackText": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 1,
+        "calculationGoodCount": 0,
+        "structuredGood": true,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-completed",
+      "action": "complete",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed.png",
+      "bytes": 338602,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 3237
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "niet-vier-procent",
+        "feedback": [
+          {
+            "id": "prijsstijging-procent",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "tone": "good",
+            "text": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "tone": "good",
+            "text": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": "good",
+            "feedbackText": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 4,
+        "calculationGoodCount": 3,
+        "structuredGood": true,
+        "allTaskFeedbackGood": true,
+        "completionVisible": true,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-light-initial",
+      "action": "initial",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png",
+      "bytes": 272573,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4289
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "calculationGoodCount": 0,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-light-completed",
+      "action": "complete",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-completed.png",
+      "bytes": 311463,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4951
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "niet-vier-procent",
+        "feedback": [
+          {
+            "id": "prijsstijging-procent",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "tone": "good",
+            "text": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "tone": "good",
+            "text": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": "good",
+            "feedbackText": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 4,
+        "calculationGoodCount": 3,
+        "structuredGood": true,
+        "allTaskFeedbackGood": true,
+        "completionVisible": true,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark-initial",
+      "action": "initial",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png",
+      "bytes": 280470,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4289
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "dark",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "calculationGoodCount": 0,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark-completed",
+      "action": "complete",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-completed.png",
+      "bytes": 315126,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4951
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "dark",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "niet-vier-procent",
+        "feedback": [
+          {
+            "id": "prijsstijging-procent",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "tone": "good",
+            "text": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "tone": "good",
+            "text": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": "good",
+            "feedbackText": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": "good",
+            "feedbackText": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 4,
+        "calculationGoodCount": 3,
+        "structuredGood": true,
+        "allTaskFeedbackGood": true,
+        "completionVisible": true,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "route-reload",
+      "action": "route-reload",
+      "file": "reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png",
+      "bytes": 300088,
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2743
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "dark",
+        "sourceKey": "1.1.2-exit-ticket",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "prijsstijging-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-waarde",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-naar-procent",
+            "family": "calculation_work_capture",
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-uitleg",
+            "family": "structured_short_response",
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "calculationGoodCount": 0,
+        "structuredGood": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "answerRevealingPlaceholderCount": 0,
+        "transferproofVisible": false,
+        "overclaimVisible": false
+      }
+    }
+  ]
+}
