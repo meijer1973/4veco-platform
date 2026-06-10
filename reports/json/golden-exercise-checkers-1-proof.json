@@ -1,11 +1,15 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-10T10:31:41.034Z",
+  "generated": "2026-06-10T11:46:39.917Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
     "supported_variant": "golden_graph_reading_claim_v1",
+    "supported_variants": [
+      "golden_graph_reading_claim_v1",
+      "golden_calculation_structured_v1"
+    ],
     "required_sections": 6
   },
   "interaction_policy": {
@@ -23,6 +27,11 @@
     "snapshot": "references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html"
   },
   "current_golden_sources": [
+    {
+      "file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+      "parNr": "1.1.2",
+      "quarantined_formula_token_traps": []
+    },
     {
       "file": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
       "parNr": "1.1.3",

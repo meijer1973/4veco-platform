@@ -38,4 +38,4 @@ Formula-token warning: the implemented `1.1.3` source snapshot currently contain
 
 ## Current Rollout Position
 
-Only `1.1.3` is currently promoted as an implemented Golden Exercise Workbench reference. The next transfer target remains `1.1.2`; that migration is not part of this exemplar promotion package.
+Only `1.1.3` is currently promoted as an implemented Golden Exercise Workbench reference. `1.1.2` is now a controlled Golden Workbench transfer candidate through `golden_calculation_structured_v1`, but it is not promoted as an implemented exemplar and it does not authorize target-equivalent completion language.

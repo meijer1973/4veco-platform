@@ -126,7 +126,13 @@ function generateShell(parNr, parName, data = null, sourceKey = parNr) {
 function generateGoldenTicketShell(parNr, parName, data, sourceKey) {
   const sharedPath = '../../shared';
   const title = `${parName} - ${surfaceTitle(data)}`;
+  const variant = GoldenTicketLayout.assertSupportedGoldenExerciseVariant(data);
   const main = GoldenTicketLayout.renderMain(data);
+  const assets = GoldenTicketLayout.rendererAssetsForVariant(variant);
+  const scriptTags = assets.scripts.map((asset) => {
+    const src = asset.replace('{sourceKey}', escapeHtml(sourceKey));
+    return `    <script src="${sharedPath}/${src}"></script>`;
+  }).join('\n');
 
   return `<!DOCTYPE html>
 <html lang="nl" data-theme="light">
@@ -149,9 +155,7 @@ function generateGoldenTicketShell(parNr, parName, data, sourceKey) {
     <main class="ge-page" data-golden-ticket-root data-source-key="${escapeHtml(sourceKey)}">
 ${main}
     </main>
-    <script src="${sharedPath}/exit-ticket/${escapeHtml(sourceKey)}.js"></script>
-    <script src="${sharedPath}/golden-ticket-graph.js"></script>
-    <script src="${sharedPath}/golden-ticket-layout.js"></script>
+${scriptTags}
 </body>
 </html>`;
 }

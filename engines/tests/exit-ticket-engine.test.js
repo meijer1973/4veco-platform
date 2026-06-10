@@ -100,20 +100,20 @@ describe('ExitTicketEngine', () => {
         expect(data.tasks.length).toBeLessThanOrEqual(5);
     });
 
-    test('validates the 1.1.2 target-equivalent candidate with exact local copy approval', () => {
+    test('validates the 1.1.2 Golden transfer candidate without completion authority', () => {
         expect(ExitTicketEngine.validateData(targetData)).toBe(true);
         expect(targetData.surface).toBe('target_equivalent_exit_ticket');
         expect(targetData.targetSkillIds).toEqual(['A38', 'A39', 'D31']);
         expect(targetData.metadataAlignment).toEqual(expect.objectContaining({
-            status: 'target_equivalent_aligned',
+            status: 'golden_workbench_transfer_candidate',
             paragraphSkillIds: ['A38', 'A39', 'D31'],
             targetExerciseSkillIds: ['A38', 'A39', 'D31'],
-            targetReadinessEvidence: true,
+            targetReadinessEvidence: false,
         }));
         expect(targetData.targetEquivalent).toEqual({
             candidate: true,
-            gateApproved: true,
-            completionLanguageEligible: true,
+            gateApproved: false,
+            completionLanguageEligible: false,
         });
     });
 
@@ -220,14 +220,14 @@ describe('ExitTicketEngine', () => {
         });
     });
 
-    test('tracks 1.1.2 proof-candidate progress before showing approved completion language', () => {
+    test('tracks 1.1.2 proof-candidate progress while holding completion language', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         expect(engine.getProgress()).toEqual(expect.objectContaining({
             practiceProgressOnly: false,
             targetEquivalentAttempt: true,
             pending: targetData.tasks.length,
             proofCandidate: false,
-            gateApproved: true,
+            gateApproved: false,
             completionLanguageEligible: false,
         }));
 
@@ -260,8 +260,8 @@ describe('ExitTicketEngine', () => {
             matched: targetData.tasks.length,
             needsRepair: 0,
             proofCandidate: true,
-            gateApproved: true,
-            completionLanguageEligible: true,
+            gateApproved: false,
+            completionLanguageEligible: false,
         }));
     });
 

@@ -112,7 +112,7 @@ Rollout must stay staged:
 8. mixed/exam-derived source exercise
 ```
 
-Only the first item is currently implemented. This policy goal does not migrate the remaining items.
+Only the first item is currently promoted as an implemented reference. The 1.1.2 exit ticket may be carried as a controlled transfer candidate, but it does not authorize the remaining rollout items or target-equivalent completion language.
 
 ## Required Data Contract for New Candidates
 

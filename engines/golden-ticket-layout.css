@@ -57,7 +57,8 @@ body {
 }
 
 button,
-input {
+input,
+textarea {
   font: inherit;
 }
 
@@ -533,6 +534,7 @@ a {
 }
 
 .ge-field input,
+.ge-field textarea,
 .ge-chosen-tokens {
   width: 100%;
   min-height: 42px;
@@ -541,6 +543,10 @@ a {
   background: var(--ge-panel);
   color: var(--ge-text);
   padding: 9px 10px;
+}
+
+.ge-field textarea {
+  resize: vertical;
 }
 
 .ge-claim-grid {

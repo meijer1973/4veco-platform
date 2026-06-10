@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T11:36:28.000Z
+Generated: 2026-06-10T11:45:25.265Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4269
+Files indexed: 4280
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -41,7 +41,7 @@ Count: 8
 
 ## engines
 
-Count: 81
+Count: 82
 
 - engines/adaptive-seam.js
 - engines/exit-ticket-engine.js
@@ -92,6 +92,7 @@ Count: 81
 - engines/tests/exit-ticket-metadata-alignment.test.js
 - engines/tests/exit-ticket-ui.test.js
 - engines/tests/fig-3-step-count.test.js
+- engines/tests/golden-ticket-layout.test.js
 - engines/tests/graphical-data.test.js
 - engines/tests/graphical-engine.test.js
 - engines/tests/graphical-ui.test.js
@@ -127,7 +128,7 @@ Count: 81
 
 ## build scripts
 
-Count: 468
+Count: 469
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -492,6 +493,7 @@ Count: 468
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
+- build-scripts/sprints/check-exit-ticket-workbench-112-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
@@ -647,7 +649,7 @@ Count: 42
 
 ## validators
 
-Count: 416
+Count: 417
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -805,6 +807,7 @@ Count: 416
 - build-scripts/sprints/check-checksurface-reset1.js
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
+- build-scripts/sprints/check-exit-ticket-workbench-112-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
@@ -1664,7 +1667,7 @@ Count: 591
 
 ## reports
 
-Count: 2620
+Count: 2629
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1688,8 +1691,16 @@ Count: 2620
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
@@ -1720,6 +1731,7 @@ Count: 2620
 - reports/json/exam-question-extraction-gaps.json
 - reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
+- reports/json/exit-ticket-workbench-112-1-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
