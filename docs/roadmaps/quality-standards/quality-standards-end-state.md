@@ -127,7 +127,7 @@ Quality-control implementation uses explicit gates:
 
 - source/profile review before evidence profiles become authoritative;
 - schema review before validators are enforced;
-- pilot evidence-pack review before artifact-set reporting scales;
+- bounded evidence-pack review before artifact-set reporting scales;
 - human review before any public-facing claims change;
 - separate approval before integration with Scale Gate, quality-ref, CI/build,
   or production release decisions.
@@ -145,7 +145,7 @@ leaves the gate closed.
 | `L0` | Setup | Roadmap, folder, ledger, and initial evidence boundaries exist. |
 | `L1` | Source/profile design | Dutch source register and Dutch VO draft profile exist and pass review. |
 | `L2` | Evidence schema | Evidence records, validators, and report contracts are reviewed. |
-| `L3` | Pilot pack | One bounded generated artifact set is mapped and reviewed. |
+| `L3` | Bounded pack | One bounded generated artifact set is mapped and reviewed. |
 | `L4` | Dutch multi-scope scale | Evidence packs work across multiple authorised Dutch scopes with known gaps visible. |
 | `L5` | Dutch quality-control layer | Governed Dutch evidence can be generated across the authorised product scope without unsafe claims. |
 
@@ -177,7 +177,7 @@ The standards layer must not claim:
 
 ## Open Questions
 
-- Which Dutch scope should follow the INSPECT-7 Book 1 Chapter 1.1 prototype?
+- Which Dutch scope should follow the INSPECT-7 Book 1 Chapter 1.1 bounded pack?
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources?
 - Which target-exercise finality and exam-code linkage evidence is mandatory

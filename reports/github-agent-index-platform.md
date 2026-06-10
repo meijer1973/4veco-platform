@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-09T14:56:14.659Z
+Generated: 2026-06-10T11:36:28.000Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4255
+Files indexed: 4269
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -127,7 +127,7 @@ Count: 81
 
 ## build scripts
 
-Count: 461
+Count: 468
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -207,6 +207,7 @@ Count: 461
 - build-scripts/lib/convert_samenvatting.py
 - build-scripts/lib/convert_vaardigheden.py
 - build-scripts/lib/convert_voorkennis.py
+- build-scripts/lib/golden-exercise-policy-checks.js
 - build-scripts/lib/lib-begeleide-inoefening.js
 - build-scripts/lib/lib-deploy-config.js
 - build-scripts/lib/lib-flowchart-renderer.js
@@ -223,6 +224,7 @@ Count: 461
 - build-scripts/lib/render-presentation-v2-pptx.js
 - build-scripts/lib/verify_svg_geometry.py
 - build-scripts/platform/build-exit-ticket-shells.js
+- build-scripts/platform/build-exit-ticket-shells.test.js
 - build-scripts/platform/build-graphical-shells.js
 - build-scripts/platform/build-landing-page.js
 - build-scripts/platform/build-newsdetective-shells.js
@@ -298,6 +300,8 @@ Count: 461
 - build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
+- build-scripts/references/check-interaction-policy.js
+- build-scripts/references/check-layout-registry.js
 - build-scripts/references/check-misconceptions.js
 - build-scripts/references/check-mtu-answerform-generator-design.js
 - build-scripts/references/check-mtu-evidence-layer.js
@@ -492,6 +496,8 @@ Count: 461
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
+- build-scripts/sprints/check-golden-exercise-workbench.js
+- build-scripts/sprints/check-golden-exercise-workbench.test.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -520,6 +526,7 @@ Count: 461
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
+- build-scripts/sprints/check-shared-task-ui-policy.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -640,7 +647,7 @@ Count: 42
 
 ## validators
 
-Count: 410
+Count: 416
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -657,6 +664,7 @@ Count: 410
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-validation-log.md
 - archive/sprints/QS-MERGE-2/QS-MERGE-2-validation-log.md
 - build-scripts/ci/check-agent-branch-safety.js
@@ -686,6 +694,8 @@ Count: 410
 - build-scripts/references/check-exam-to-mtu-mapping-gate.js
 - build-scripts/references/check-exercise-overlay-conditions.js
 - build-scripts/references/check-exercise-overlays.js
+- build-scripts/references/check-interaction-policy.js
+- build-scripts/references/check-layout-registry.js
 - build-scripts/references/check-misconceptions.js
 - build-scripts/references/check-mtu-answerform-generator-design.js
 - build-scripts/references/check-mtu-evidence-layer.js
@@ -799,6 +809,8 @@ Count: 410
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
 - build-scripts/sprints/check-gate-ci-proof.test.js
+- build-scripts/sprints/check-golden-exercise-workbench.js
+- build-scripts/sprints/check-golden-exercise-workbench.test.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.js
 - build-scripts/sprints/check-golden-ticket-layout-boundary.test.js
 - build-scripts/sprints/check-golden-ticket-no-legacy.js
@@ -827,6 +839,7 @@ Count: 410
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
+- build-scripts/sprints/check-shared-task-ui-policy.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -1055,7 +1068,7 @@ Count: 410
 
 ## references
 
-Count: 590
+Count: 591
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1641,6 +1654,7 @@ Count: 590
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
 - references/ui/exercise-workbench-policy.md
+- references/ui/golden-exercise-checker-fixtures.json
 - references/ui/interaction-policy.json
 - references/ui/interaction-policy.md
 - references/ui/layout-registry.json
@@ -1650,7 +1664,7 @@ Count: 590
 
 ## reports
 
-Count: 2619
+Count: 2620
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1706,6 +1720,7 @@ Count: 2619
 - reports/json/exam-question-extraction-gaps.json
 - reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
+- reports/json/golden-exercise-checkers-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
 - reports/json/graph-skill-tree.json
@@ -4292,7 +4307,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 424
+Count: 428
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4402,6 +4417,10 @@ Count: 424
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-human-review.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-lead-review.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-sprint-plan.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-closure-log.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-human-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-lead-review.md
+- archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-sprint-plan.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-closure-log.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-human-review.md
 - archive/sprints/QS-MERGE-1/QS-MERGE-1-planning-review.md

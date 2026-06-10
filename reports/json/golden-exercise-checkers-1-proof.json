@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
+  "generated": "2026-06-10T10:31:41.034Z",
+  "status": "passed",
+  "layout_registry": {
+    "layout_id": "golden_exercise_workbench",
+    "supported_variant": "golden_graph_reading_claim_v1",
+    "required_sections": 6
+  },
+  "interaction_policy": {
+    "policy_id": "golden-exercise-interaction-policy"
+  },
+  "exemplar_formula_boundary": {
+    "implemented_boundary": "1.1.3-golden-exercise-workbench",
+    "formula_exemplar": "a96-answer-form"
+  },
+  "a96_fixture_policy": {
+    "exemplar_id": "A96-answer-form-proof-golden-v3",
+    "negative_count": 8
+  },
+  "implemented_snapshot": {
+    "snapshot": "references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html"
+  },
+  "current_golden_sources": [
+    {
+      "file": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
+      "parNr": "1.1.3",
+      "quarantined_formula_token_traps": [
+        "claim-50-procent-controleren.interaction.formula: visually identical hidden-token trap for label \"nieuwe q\" across ids newQ, newQden",
+        "claim-50-procent-controleren.interaction.formula: visually identical hidden-token trap for label \"oude q\" across ids oldQden, oldQnum"
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "id": "pure_legacy_et_page_route",
+      "expected_violation": "legacy_shell_or_asset",
+      "detected_violations": [
+        "layout_contract",
+        "legacy_asset_on_golden_route",
+        "legacy_shell_or_asset"
+      ]
+    },
+    {
+      "id": "hybrid_ge_plus_et_route",
+      "expected_violation": "hybrid_golden_legacy_shell",
+      "detected_violations": [
+        "hybrid_golden_legacy_shell",
+        "layout_contract",
+        "legacy_asset_on_golden_route",
+        "legacy_shell_or_asset"
+      ]
+    },
+    {
+      "id": "golden_route_with_legacy_assets",
+      "expected_violation": "legacy_asset_on_golden_route",
+      "detected_violations": [
+        "layout_contract",
+        "legacy_asset_on_golden_route",
+        "legacy_shell_or_asset"
+      ]
+    },
+    {
+      "id": "fake_graph_slope_question",
+      "expected_violation": "fake_graph_line_shape",
+      "detected_violations": [
+        "fake_graph_line_shape"
+      ]
+    },
+    {
+      "id": "answer_giving_placeholder",
+      "expected_violation": "answer_giving_placeholder",
+      "detected_violations": [
+        "answer_giving_placeholder"
+      ]
+    },
+    {
+      "id": "formula_token_bank_ordered_as_answer",
+      "expected_violation": "formula_tokens_ordered_answer",
+      "detected_violations": [
+        "formula_tokens_ordered_answer"
+      ]
+    },
+    {
+      "id": "visually_identical_hidden_token_trap_oldq",
+      "expected_violation": "visually_identical_hidden_token_trap",
+      "detected_violations": [
+        "visually_identical_hidden_token_trap"
+      ]
+    },
+    {
+      "id": "visually_identical_hidden_token_trap_unmarked_duplicate",
+      "expected_violation": "visually_identical_hidden_token_trap",
+      "detected_violations": [
+        "visually_identical_hidden_token_trap"
+      ]
+    },
+    {
+      "id": "missing_after_interaction_proof",
+      "expected_violation": "missing_after_interaction_proof",
+      "detected_violations": [
+        "missing_after_interaction_proof"
+      ]
+    }
+  ],
+  "authority": {
+    "route_migration_authorized": false,
+    "renderer_generalization_authorized": false,
+    "generated_lesson_output_changed": false,
+    "legacy_renderers_deleted": false,
+    "product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "diagnostics_mastery_or_summative_use_authorized": false
+  }
+}

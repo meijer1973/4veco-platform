@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` final hygiene and PR prep in progress
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -147,16 +147,16 @@ Closed baseline:
 | `QS-SETUP-0` | Created quality-standards roadmap folder and current-state audit. |
 | `INSPECT-0` | Created source register and Dutch VO evidence-profile draft. |
 | `INSPECT-1` / `INSPECT-1A` | Human review plus source/claim hygiene corrections. |
-| `INSPECT-2` / `INSPECT-2A` | Bounded Book 1 Chapter 1.1 pilot audit plus profile adjustment. |
+| `INSPECT-2` / `INSPECT-2A` | Bounded Book 1 Chapter 1.1 sample audit plus profile adjustment. |
 | `INSPECT-3` | Report-only inspection-evidence schema design. |
 | `INSPECT-4` | Manual report-only validator design. |
 | `INSPECT-5` | Strictly non-blocking validator refinement. |
 | `INSPECT-5R` | External review, privacy, teacher-usefulness, OP0, and claim guardrails. |
 | `INSPECT-6` | Report-only generator planning. |
-| `INSPECT-7` | Bounded no-personal-data Book 1 Chapter 1.1 evidence-pack prototype. |
+| `INSPECT-7` | Bounded no-personal-data Book 1 Chapter 1.1 evidence-pack sample. |
 | `QS-MERGE-1` / `QS-MERGE-2` | Merge-prep and final PR refresh; PR #23 merged through GitHub. |
 
-INSPECT-7 reached maturity level `L3 Pilot pack`: one bounded generated
+INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
 
 Accepted INSPECT-7 scope:
@@ -365,7 +365,7 @@ Acceptance criteria:
 - no closure claims for scopes whose evidence is still weak;
 - corrections have proof requirements before they can close.
 
-### INSPECT-10 - Dutch Report-Only Generator MVP
+### INSPECT-10 - Dutch Report-Only Generator First Implementation
 
 Goal: implement a reusable Dutch report-only generator after the evidence
 basis is ready enough.
@@ -388,7 +388,7 @@ Acceptance criteria:
 - package/CI/dashboard/gate integration requires separate approval;
 - three-reviewer gate returns `MORE_THAN_SATISFIED`.
 
-### INSPECT-11 - Dutch Multi-Scope Pilot Packs
+### INSPECT-11 - Dutch Bounded Multi-Scope Evidence Packs
 
 Goal: generate and review Dutch evidence packs for more than one authorised
 scope.
