@@ -1,4 +1,4 @@
-// Golden Ticket route renderer for Golden Exercise graph/read/claim proof routes.
+// Golden Ticket route renderer for Golden Exercise proof routes.
 
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -43,7 +43,10 @@
     }) || null;
   }
 
-  var SUPPORTED_VARIANT = 'golden_graph_reading_claim_v1';
+  var GRAPH_VARIANT = 'golden_graph_reading_claim_v1';
+  var CALCULATION_VARIANT = 'golden_calculation_structured_v1';
+  var SUPPORTED_VARIANT = GRAPH_VARIANT;
+  var SUPPORTED_VARIANTS = [GRAPH_VARIANT, CALCULATION_VARIANT];
 
   function isGoldenExerciseWorkbench(data) {
     return Boolean(
@@ -53,33 +56,84 @@
     );
   }
 
-  function supportGaps(data) {
+  function graphSupportGaps(data) {
     var gaps = [];
     if (!findTask(data, 'graph_construction_substitute')) gaps.push('task family graph_construction_substitute');
     if (!findTask(data, 'graph_reading')) gaps.push('task family graph_reading');
     if (!findTask(data, 'calculation_work_capture')) gaps.push('task family calculation_work_capture');
-    if (!Graph.buildGraphSpec(data)) gaps.push('graph spec from graph_construction_substitute');
+    if (!Graph || typeof Graph.buildGraphSpec !== 'function') {
+      gaps.push('Golden graph runtime');
+    } else if (!Graph.buildGraphSpec(data)) {
+      gaps.push('graph spec from graph_construction_substitute');
+    }
     return gaps;
+  }
+
+  function calculationSupportGaps(data) {
+    var gaps = [];
+    var shells = taskShells(data);
+    var families = shells.map(function (entry) { return entry.taskShell.family; });
+    var unsupported = families.filter(function (family) {
+      return family !== 'calculation_work_capture' && family !== 'structured_short_response';
+    });
+    if (!findTask(data, 'calculation_work_capture')) gaps.push('task family calculation_work_capture');
+    if (!findTask(data, 'structured_short_response')) gaps.push('task family structured_short_response');
+    if (unsupported.length) {
+      gaps.push('unsupported task families for calculation/structured variant: ' + Array.from(new Set(unsupported)).join(', '));
+    }
+    if (!Array.isArray(data.contextBlocks) || !data.contextBlocks.length) gaps.push('contextBlocks');
+    return gaps;
+  }
+
+  function supportGaps(data) {
+    return graphSupportGaps(data);
+  }
+
+  function supportGapsByVariant(data) {
+    return {
+      graph: graphSupportGaps(data),
+      calculation: calculationSupportGaps(data)
+    };
   }
 
   function supportedVariantFor(data) {
     if (!isGoldenExerciseWorkbench(data)) return null;
-    return supportGaps(data).length ? null : SUPPORTED_VARIANT;
+    if (!graphSupportGaps(data).length) return GRAPH_VARIANT;
+    if (!calculationSupportGaps(data).length) return CALCULATION_VARIANT;
+    return null;
   }
 
   function assertSupportedGoldenExerciseVariant(data) {
     if (!isGoldenExerciseWorkbench(data)) return null;
-    var gaps = supportGaps(data);
-    if (gaps.length) {
+    var variant = supportedVariantFor(data);
+    if (!variant) {
+      var gaps = supportGapsByVariant(data);
       throw new Error(
         'Unsupported Golden Exercise Workbench variant: current renderer supports ' +
-        SUPPORTED_VARIANT +
-        ' (graph construction + graph reading + calculation/claim control with graph spec); missing ' +
-        gaps.join(', ') +
+        GRAPH_VARIANT +
+        ' (graph construction + graph reading + calculation/claim control with graph spec) and ' +
+        CALCULATION_VARIANT +
+        ' (calculation_work_capture + structured_short_response with context blocks); graph variant missing ' +
+        gaps.graph.join(', ') +
+        '; calculation/structured variant missing ' +
+        gaps.calculation.join(', ') +
         '.'
       );
     }
-    return SUPPORTED_VARIANT;
+    return variant;
+  }
+
+  function needsGraphRuntimeForVariant(variant) {
+    return variant === GRAPH_VARIANT;
+  }
+
+  function rendererAssetsForVariant(variant) {
+    return {
+      stylesheets: ['golden-ticket-layout.css'],
+      scripts: needsGraphRuntimeForVariant(variant)
+        ? ['exit-ticket/{sourceKey}.js', 'golden-ticket-graph.js', 'golden-ticket-layout.js']
+        : ['exit-ticket/{sourceKey}.js', 'golden-ticket-layout.js']
+    };
   }
 
   function sourceBlockTitle(block) {
@@ -120,16 +174,18 @@
     '</section>';
   }
 
-  function renderSourceCard(data) {
+  function renderSourceCard(data, options) {
+    options = options || {};
     var blocks = Array.isArray(data.contextBlocks) ? data.contextBlocks : [];
     var primary = blocks.find(function (block) { return block && block.type !== 'table'; }) || blocks[0] || {};
     var remaining = blocks.filter(function (block) { return block !== primary; });
     var heading = titleCaseAfterSourceLabel(sourceBlockTitle(primary));
+    var note = options.sourceNote || 'Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; dat hoort bij het P-Q-diagram.';
     return '<aside class="ge-source-card" aria-label="Bronnen">' +
       '<h2>' + escapeHtml(heading) + '</h2>' +
       (primary.id ? renderSourceBlock(primary, { showTitle: false }) : '') +
       remaining.map(function (block) { return renderSourceBlock(block, { showTitle: block.type !== 'table' }); }).join('') +
-      '<p class="ge-subtle ge-source-note">Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; dat hoort bij het P-Q-diagram.</p>' +
+      '<p class="ge-subtle ge-source-note">' + escapeHtml(note) + '</p>' +
     '</aside>';
   }
 
@@ -285,6 +341,68 @@
     return '<div class="ge-lock-overlay" aria-hidden="true"><span>Rond eerst het vorige onderdeel af.</span></div>';
   }
 
+  function renderCalculationStep(calcEntry, number) {
+    var task = calcEntry.taskShell;
+    var interaction = task.interaction || {};
+    return '<li class="ge-step ge-step-calculation" data-ge-step="calculation" data-task-id="' + attr(calcEntry.id) + '" data-task-family="' + attr(task.family) + '">' +
+      renderStepHead(String(number), 'Berekening', task.skillLabel, task.purpose) +
+      '<p>' + escapeHtml(task.prompt || '') + '</p>' +
+      '<div class="ge-claim-grid ge-calculation-grid">' +
+        '<section class="ge-claim-part">' +
+          '<h4>' + escapeHtml(interaction.workLabel || 'Berekening') + '</h4>' +
+          '<label class="ge-field ge-field-wide">' +
+            '<span>Methode, invulling en tussenstap</span>' +
+            '<textarea rows="4" autocomplete="off" data-ge-work placeholder="' + attr(interaction.placeholder || 'laat je berekening zien') + '"></textarea>' +
+          '</label>' +
+        '</section>' +
+        '<section class="ge-claim-part">' +
+          '<h4>Antwoord en notatie</h4>' +
+          '<div class="ge-field-grid">' +
+            '<label class="ge-field"><span>' + escapeHtml(interaction.finalAnswerLabel || 'Eindantwoord') + '</span><input type="text" inputmode="decimal" autocomplete="off" data-ge-final-answer placeholder="' + attr(interaction.finalAnswerPlaceholder || 'vul je antwoord in') + '"></label>' +
+            '<label class="ge-field"><span>' + escapeHtml(interaction.unitNotationLabel || 'Notatie') + '</span><input type="text" autocomplete="off" data-ge-unit-notation placeholder="' + attr(interaction.unitNotationPlaceholder || 'vul de notatie in') + '"></label>' +
+          '</div>' +
+        '</section>' +
+      '</div>' +
+      '<div class="ge-action-row"><button type="button" class="ge-small-button" data-ge-check-task>Controleer onderdeel</button></div>' +
+      renderFeedback(task.id) +
+    '</li>';
+  }
+
+  function renderStructuredChoice(option) {
+    return '<button type="button" class="ge-pill" aria-pressed="false" data-ge-structured-choice data-option-id="' + attr(option.id) + '">' +
+      escapeHtml(option.label) +
+    '</button>';
+  }
+
+  function renderStructuredStep(structuredEntry, number) {
+    var task = structuredEntry.taskShell;
+    var interaction = task.interaction || {};
+    var fields = Array.isArray(interaction.fields) ? interaction.fields : [];
+    var options = Array.isArray(interaction.options) ? interaction.options : [];
+    return '<li class="ge-step ge-step-structured" data-ge-step="structured" data-task-id="' + attr(structuredEntry.id) + '" data-task-family="' + attr(task.family) + '">' +
+      renderStepHead(String(number), 'Uitleg', task.skillLabel, task.purpose) +
+      '<p>' + escapeHtml(task.prompt || '') + '</p>' +
+      '<div class="ge-claim-grid ge-structured-grid">' +
+        '<section class="ge-claim-part">' +
+          '<h4>Gegevens voor je uitleg</h4>' +
+          '<div class="ge-field-grid">' +
+            fields.map(function (field) {
+              return '<label class="ge-field"><span>' + escapeHtml(field.label || field.id) + '</span>' +
+                '<input type="text" inputmode="' + attr(field.inputMode || 'text') + '" autocomplete="off" data-ge-structured-field data-field-id="' + attr(field.id) + '" placeholder="' + attr(field.placeholder || 'vul je antwoord in') + '">' +
+              '</label>';
+            }).join('') +
+          '</div>' +
+        '</section>' +
+        '<section class="ge-claim-part">' +
+          '<h4>Korte conclusie</h4>' +
+          '<div class="ge-pill-row" data-ge-structured-options>' + options.map(renderStructuredChoice).join('') + '</div>' +
+        '</section>' +
+      '</div>' +
+      '<div class="ge-action-row"><button type="button" class="ge-small-button" data-ge-check-task>Controleer onderdeel</button></div>' +
+      renderFeedback(task.id) +
+    '</li>';
+  }
+
   function renderCompletion(data) {
     var completion = data.completion || {};
     return '<section class="ge-completion" data-ge-completion>' +
@@ -293,8 +411,7 @@
     '</section>';
   }
 
-  function renderMain(data) {
-    assertSupportedGoldenExerciseVariant(data);
+  function renderGraphMain(data) {
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -326,6 +443,41 @@
       '</section>';
   }
 
+  function renderCalculationMain(data) {
+    var layout = data.layout || {};
+    var kicker = layout.kicker || ('Exit ticket - section ' + (data.parNr || ''));
+    var sourceNote = layout.sourceNote || 'Gebruik deze gegevens als bron voor je berekeningen en uitleg.';
+    var entries = taskShells(data);
+    return '<section class="ge-hero">' +
+      '<div class="ge-hero-card">' +
+        '<p class="ge-kicker">' + escapeHtml(kicker) + '</p>' +
+        '<h1>' + escapeHtml(data.title || 'Exit ticket') + '</h1>' +
+        '<p class="ge-intro">' + escapeHtml(data.intro || '') + '</p>' +
+      '</div>' +
+      renderRouteStrip(data) +
+      '</section>' +
+      '<section class="ge-workbench">' +
+        renderSourceCard(data, { sourceNote: sourceNote }) +
+        '<section class="ge-task-card" data-ge-task-card aria-label="' + attr(layout.taskPaneTitle || 'Werkvragen') + '">' +
+          '<ol class="ge-step-list">' +
+            entries.map(function (entry, index) {
+              if (entry.taskShell.family === 'calculation_work_capture') return renderCalculationStep(entry, index + 1);
+              return renderStructuredStep(entry, index + 1);
+            }).join('') +
+          '</ol>' +
+          renderCompletion(data) +
+          '<button type="button" class="ge-primary-action" data-ge-check-all>Controleer werk</button>' +
+        '</section>' +
+      '</section>';
+  }
+
+  function renderMain(data) {
+    var variant = assertSupportedGoldenExerciseVariant(data);
+    if (variant === GRAPH_VARIANT) return renderGraphMain(data);
+    if (variant === CALCULATION_VARIANT) return renderCalculationMain(data);
+    throw new Error('Unsupported Golden Exercise Workbench variant: ' + variant);
+  }
+
   function query(root, selector) {
     return root.querySelector(selector);
   }
@@ -352,6 +504,87 @@
     if (!Number.isFinite(number)) return NaN;
     if (decrease && number > 0) return -Math.abs(number);
     return number;
+  }
+
+  function normalizeAnswer(value) {
+    return String(value == null ? '' : value)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, ' ');
+  }
+
+  function normalizeWork(value) {
+    return normalizeAnswer(value)
+      .replace(/×/g, 'x')
+      .replace(/÷/g, '/')
+      .replace(/−/g, '-');
+  }
+
+  function compactWork(value) {
+    return normalizeWork(value).replace(/\s+/g, '');
+  }
+
+  function hasValue(value) {
+    return String(value == null ? '' : value).trim().length > 0;
+  }
+
+  function textMatches(value, accepted) {
+    var normalized = normalizeAnswer(value);
+    return (Array.isArray(accepted) ? accepted : []).some(function (item) {
+      return normalizeAnswer(item) === normalized;
+    });
+  }
+
+  function requiredWorkTextMatches(work, groups) {
+    if (!Array.isArray(groups) || !groups.length) return true;
+    var normalized = normalizeWork(work);
+    var compact = compactWork(work);
+    return groups.every(function (group) {
+      return (Array.isArray(group.any) ? group.any : []).some(function (needle) {
+        var normalizedNeedle = normalizeWork(needle);
+        return normalized.indexOf(normalizedNeedle) !== -1 ||
+          compact.indexOf(compactWork(needle)) !== -1;
+      });
+    });
+  }
+
+  function unitNotationMatches(value, expected) {
+    expected = expected || {};
+    if (!hasValue(value) && expected.required === false) return true;
+    return textMatches(value, expected.accepted);
+  }
+
+  function evaluateCalculationResponse(task, response) {
+    var expected = task.expected || {};
+    response = response || {};
+    if (expected.workRequired !== false && !hasValue(response.work)) return false;
+    if (!requiredWorkTextMatches(response.work, expected.requiredWorkText)) return false;
+    return textMatches(response.finalAnswer, (expected.finalAnswer || {}).accepted) &&
+      unitNotationMatches(response.unitNotation, expected.unitNotation);
+  }
+
+  function evaluateStructuredResponse(task, response) {
+    var expected = task.expected || {};
+    response = response || {};
+    var fields = Array.isArray(expected.fields) ? expected.fields : [];
+    var fieldResponses = response.fields || {};
+    var fieldsOk = fields.every(function (field) {
+      return textMatches(fieldResponses[field.id], field.accepted);
+    });
+    var choiceOk = !expected.choice || normalizeAnswer(response.choice) === normalizeAnswer(expected.choice.value);
+    return fieldsOk && choiceOk;
+  }
+
+  function evaluateTaskResponse(task, response) {
+    if (task && task.taskShell) task = task.taskShell;
+    if (!task) return false;
+    if (task.family === 'calculation_work_capture' && (task.expected || {}).kind === 'calculation') {
+      return evaluateCalculationResponse(task, response);
+    }
+    if (task.family === 'structured_short_response' && (task.expected || {}).kind === 'structured_text_criteria') {
+      return evaluateStructuredResponse(task, response);
+    }
+    return false;
   }
 
   function axisOptionByValue(graphTask, value) {
@@ -383,7 +616,7 @@
     if (!step) return;
     step.classList.toggle('ge-locked', locked);
     step.setAttribute('aria-disabled', locked ? 'true' : 'false');
-    queryAll(step, 'input, button').forEach(function (control) {
+    queryAll(step, 'input, button, textarea').forEach(function (control) {
       control.disabled = locked;
     });
   }
@@ -417,11 +650,110 @@
     });
   }
 
+  function initCalculationWorkbench(root, data) {
+    var entries = taskShells(data);
+    var byId = {};
+    var state = { taskOk: {} };
+    entries.forEach(function (entry) {
+      byId[entry.id] = entry.taskShell;
+      state.taskOk[entry.id] = false;
+    });
+
+    function collectCalculationResponse(step) {
+      return {
+        work: query(step, '[data-ge-work]').value,
+        finalAnswer: query(step, '[data-ge-final-answer]').value,
+        unitNotation: query(step, '[data-ge-unit-notation]').value
+      };
+    }
+
+    function collectStructuredResponse(step) {
+      var fields = {};
+      queryAll(step, '[data-ge-structured-field]').forEach(function (field) {
+        fields[field.getAttribute('data-field-id')] = field.value;
+      });
+      var selected = query(step, '[data-ge-structured-choice][aria-pressed="true"]');
+      return {
+        fields: fields,
+        choice: selected ? selected.getAttribute('data-option-id') : ''
+      };
+    }
+
+    function collectResponse(step, task) {
+      if (task.family === 'calculation_work_capture') return collectCalculationResponse(step);
+      if (task.family === 'structured_short_response') return collectStructuredResponse(step);
+      return {};
+    }
+
+    function updateCompletion() {
+      var complete = entries.every(function (entry) { return state.taskOk[entry.id] === true; });
+      var completion = query(root, '[data-ge-completion]');
+      if (completion) completion.classList.toggle('is-visible', complete);
+      return complete;
+    }
+
+    function checkStep(step) {
+      if (!step) return false;
+      var taskId = step.getAttribute('data-task-id');
+      var task = byId[taskId];
+      var ok = evaluateTaskResponse(task, collectResponse(step, task));
+      state.taskOk[taskId] = ok;
+      var feedback = task.feedback || {};
+      setFeedback(
+        root,
+        taskId,
+        ok ? 'good' : 'warn',
+        ok ? feedback.matchTitle : feedback.retryTitle,
+        ok ? feedback.matchText : feedback.retryText
+      );
+      updateCompletion();
+      return ok;
+    }
+
+    root.addEventListener('click', function (event) {
+      var choice = event.target.closest('[data-ge-structured-choice]');
+      if (choice && root.contains(choice)) {
+        var choiceStep = choice.closest('[data-task-id]');
+        setPressed(queryAll(choiceStep, '[data-ge-structured-choice]'), choice);
+        state.taskOk[choiceStep.getAttribute('data-task-id')] = false;
+        updateCompletion();
+        return;
+      }
+
+      var taskCheck = event.target.closest('[data-ge-check-task]');
+      if (taskCheck && root.contains(taskCheck)) {
+        checkStep(taskCheck.closest('[data-task-id]'));
+        return;
+      }
+
+      if (event.target.closest('[data-ge-check-all]')) {
+        queryAll(root, '[data-task-id]').forEach(checkStep);
+      }
+    });
+
+    root.addEventListener('input', function (event) {
+      var step = event.target.closest ? event.target.closest('[data-task-id]') : null;
+      if (!step || !root.contains(step)) return;
+      state.taskOk[step.getAttribute('data-task-id')] = false;
+      updateCompletion();
+    });
+
+    initTheme(root);
+
+    return {
+      variant: CALCULATION_VARIANT,
+      state: state,
+      checkStep: checkStep,
+      evaluateTaskResponse: evaluateTaskResponse
+    };
+  }
+
   function init(root, explicitData) {
     if (!root) return null;
     var data = explicitData || (typeof window !== 'undefined' ? window.EXIT_TICKET_DATA : null);
     if (!data) return null;
-    assertSupportedGoldenExerciseVariant(data);
+    var variant = assertSupportedGoldenExerciseVariant(data);
+    if (variant === CALCULATION_VARIANT) return initCalculationWorkbench(root, data);
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -728,12 +1060,19 @@
   }
 
   return {
+    CALCULATION_VARIANT: CALCULATION_VARIANT,
+    GRAPH_VARIANT: GRAPH_VARIANT,
     SUPPORTED_VARIANT: SUPPORTED_VARIANT,
+    SUPPORTED_VARIANTS: SUPPORTED_VARIANTS.slice(),
     assertSupportedGoldenExerciseVariant: assertSupportedGoldenExerciseVariant,
+    evaluateTaskResponse: evaluateTaskResponse,
     findTask: findTask,
     isGoldenExerciseWorkbench: isGoldenExerciseWorkbench,
+    needsGraphRuntimeForVariant: needsGraphRuntimeForVariant,
     renderMain: renderMain,
+    rendererAssetsForVariant: rendererAssetsForVariant,
     supportGaps: supportGaps,
+    supportGapsByVariant: supportGapsByVariant,
     supportedVariantFor: supportedVariantFor,
     init: init,
     parseNumber: parseNumber,

@@ -317,6 +317,19 @@ function validateLayoutRegistry() {
   assert(selector['layout.framework'] === 'golden_exercise_workbench', 'layout registry must select Golden renderer by layout.framework');
   assert(!Object.prototype.hasOwnProperty.call(selector, 'parNr'), 'layout registry selector must not be pinned to parNr');
   assert(selector.supported_variant === 'golden_graph_reading_claim_v1', 'layout registry must name the current Golden renderer variant');
+  const supportedVariants = asArray(selector.supported_variants);
+  const graphVariant = supportedVariants.find((item) => item.id === 'golden_graph_reading_claim_v1');
+  const calculationVariant = supportedVariants.find((item) => item.id === 'golden_calculation_structured_v1');
+  assert(graphVariant, 'layout registry must list golden_graph_reading_claim_v1 in supported_variants');
+  assert(calculationVariant, 'layout registry must list golden_calculation_structured_v1 in supported_variants');
+  ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture'].forEach((family) => {
+    assert(asArray(graphVariant.required_task_families).includes(family), `graph variant missing required task family ${family}`);
+  });
+  ['calculation_work_capture', 'structured_short_response'].forEach((family) => {
+    assert(asArray(calculationVariant.required_task_families).includes(family), `calculation variant missing required task family ${family}`);
+  });
+  assert(graphVariant.requires_graph_spec === true, 'graph variant must require graph spec support');
+  assert(calculationVariant.requires_graph_spec === false, 'calculation variant must not require graph spec support');
   ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture'].forEach((family) => {
     assert(asArray(selector.required_task_families).includes(family), `layout registry selector missing required task family ${family}`);
   });
@@ -336,6 +349,7 @@ function validateLayoutRegistry() {
   return {
     layout_id: layout.id,
     supported_variant: selector.supported_variant,
+    supported_variants: supportedVariants.map((item) => item.id),
     required_sections: layout.required_shell.required_sections.length,
   };
 }

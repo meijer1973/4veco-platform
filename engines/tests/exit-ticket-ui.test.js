@@ -661,12 +661,13 @@ describe('ExitTicketUI', () => {
         }
     });
 
-    test('renders the 1.1.2 exit ticket candidate with approved local copy hidden before proof', () => {
+    test('renders the direct 1.1.2 task-shell view with neutral completion copy held', () => {
         const html = targetVisibleHtml();
         expect(html).toContain('Exit ticket');
         expect(html).toContain('Procentuele verandering berekenen');
         expect(html).toContain('Indexpunten kort uitleggen');
-        expect(html).toContain('Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt.');
+        expect(html).toContain('Je antwoorden zijn lokaal nagekeken.');
+        expect(html).not.toContain('eindopgave');
         expect(html).toContain('<section class="et-completion" id="et-completion" hidden>');
         expect(html).toContain('data-task-family="calculation_work_capture"');
         expect(html).toContain('data-task-family="structured_short_response"');
@@ -681,9 +682,8 @@ describe('ExitTicketUI', () => {
         expect(html).not.toContain('Bijvoorbeeld 108');
         expect(html).not.toContain('Bijvoorbeeld 3,7');
         expect(html).not.toContain('Bijvoorbeeld 4 indexpunten');
-        expect(html).toContain('Vul je eindantwoord in');
-        expect(html).toContain('placeholder="Bijvoorbeeld %"');
-        expect(html).toContain('placeholder="Bijvoorbeeld indexcijfer"');
+        expect(html).toContain('vul het stijgingspercentage in');
+        expect(html).toContain('placeholder="vul de notatie in"');
         expect((html.match(/class="et-feedback/g) || []).length).toBe(targetData.tasks.length);
         expect((html.match(/class="ts-feedback"/g) || []).length).toBe(0);
         expect(html).not.toMatch(/\b(?:A\d{2}|D\d{2}|PV|MTU)\b/);
@@ -707,10 +707,20 @@ describe('ExitTicketUI', () => {
         expect(shell).toContain('shared/exit-ticket.css');
     });
 
-    test('generator shell uses the source title for the 1.1.2 exit ticket', () => {
+    test('generator shell uses the Golden calculation workbench for the 1.1.2 exit ticket', () => {
         const shell = exitTicketShells.generateShell('1.1.2', 'Percentages en indexcijfers', targetData, '1.1.2-exit-ticket');
         expect(shell).toContain('<title>Percentages en indexcijfers - Exit ticket</title>');
         expect(shell).toContain('shared/exit-ticket/1.1.2-exit-ticket.js');
+        expect(shell).toContain('class="ge-topbar"');
+        expect(shell).toContain('class="ge-page" data-golden-ticket-root');
+        expect(shell).toContain('shared/golden-ticket-layout.css');
+        expect(shell).toContain('shared/golden-ticket-layout.js');
+        expect(shell).toContain('data-ge-work');
+        expect(shell).toContain('data-ge-structured-choice');
+        expect(shell).not.toContain('shared/golden-ticket-graph.js');
+        expect(shell).not.toContain('id="exit-ticket-app"');
+        expect(shell).not.toContain('shared/task-shell.css');
+        expect(shell).not.toContain('shared/exit-ticket.css');
     });
 
     test('generator shell isolates the 1.1.3 golden exit ticket from the legacy mount', () => {

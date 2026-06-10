@@ -27,19 +27,28 @@ Current generator selector:
 data.layout.framework === "golden_exercise_workbench"
 ```
 
-Current supported renderer variant:
+Current supported renderer variants:
 
 ```text
 golden_graph_reading_claim_v1
+golden_calculation_structured_v1
 ```
 
-This variant requires task-shell families:
+The graph variant requires task-shell families:
 
 ```text
 graph_construction_substitute
 graph_reading
 calculation_work_capture
 graph spec from graph_construction_substitute
+```
+
+The calculation/structured transfer variant requires task-shell families:
+
+```text
+calculation_work_capture
+structured_short_response
+contextBlocks referenced by each task
 ```
 
 Routes that opt into `layout.framework: golden_exercise_workbench` but do not match a supported Golden variant must fail with a clear unsupported-variant error. They must not silently fall back to the legacy `et-page` / `#exit-ticket-app` shell.

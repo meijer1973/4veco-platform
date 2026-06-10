@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const shells = require('./build-exit-ticket-shells');
+const exit112Data = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 
 const ROOT = path.resolve(__dirname, '..', '..');
@@ -48,6 +49,7 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
     expect(html).toContain('class="ge-topbar"');
     expect(html).toContain('class="ge-page" data-golden-ticket-root');
     expect(html).toContain('shared/exit-ticket/2.1.1-exit-ticket.js');
+    expect(html).toContain('shared/golden-ticket-graph.js');
     expect(html).toContain('data-graph-id="golden-ticket-211"');
     expect(html).not.toContain('id="exit-ticket-app"');
     expect(html).not.toContain('et-page');
@@ -55,6 +57,34 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
     expect(html).not.toContain('shared/task-shell.css');
     expect(html).not.toContain('shared/exit-ticket.css');
     expect(html).not.toContain('shared/skill-map-route.css');
+    expect(html).not.toContain('shared/task-shell-ui.js');
+    expect(html).not.toContain('shared/exit-ticket-ui.js');
+  });
+
+  test('selects the calculation/structured Golden renderer for the 1.1.2 transfer route', () => {
+    const renderer = shells.goldenExerciseRendererFor(exit112Data);
+    const html = shells.generateShell(
+      '1.1.2',
+      'Percentages en indexcijfers',
+      exit112Data,
+      '1.1.2-exit-ticket'
+    );
+
+    expect(renderer.id).toBe('golden_calculation_structured_v1');
+    expect(shells.usesGoldenExerciseWorkbench(exit112Data)).toBe(true);
+    expect(shells.usesGoldenTicketLayout(exit112Data)).toBe(true);
+    expect(html).toContain('class="ge-topbar"');
+    expect(html).toContain('class="ge-page" data-golden-ticket-root');
+    expect(html).toContain('shared/exit-ticket/1.1.2-exit-ticket.js');
+    expect(html).toContain('shared/golden-ticket-layout.css');
+    expect(html).toContain('shared/golden-ticket-layout.js');
+    expect(html).toContain('data-ge-work');
+    expect(html).toContain('data-ge-structured-choice');
+    expect(html).not.toContain('shared/golden-ticket-graph.js');
+    expect(html).not.toContain('id="exit-ticket-app"');
+    expect(html).not.toContain('et-page');
+    expect(html).not.toContain('shared/task-shell.css');
+    expect(html).not.toContain('shared/exit-ticket.css');
     expect(html).not.toContain('shared/task-shell-ui.js');
     expect(html).not.toContain('shared/exit-ticket-ui.js');
   });

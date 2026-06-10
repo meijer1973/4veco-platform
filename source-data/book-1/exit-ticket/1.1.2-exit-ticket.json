@@ -9,14 +9,22 @@
   "skillScopeIds": ["A38", "A39", "D31"],
   "targetEquivalent": {
     "candidate": true,
-    "gateApproved": true,
-    "completionLanguageEligible": true
+    "gateApproved": false,
+    "completionLanguageEligible": false
+  },
+  "layout": {
+    "kind": "source_task_workspace",
+    "framework": "golden_exercise_workbench",
+    "kicker": "Exit ticket - transferproof 1.1.2",
+    "sourcePaneTitle": "Bronnen",
+    "taskPaneTitle": "Werkvragen",
+    "sourceNote": "Gebruik deze gegevens als bron voor je berekeningen en uitleg."
   },
   "metadataAlignment": {
-    "status": "target_equivalent_aligned",
+    "status": "golden_workbench_transfer_candidate",
     "paragraphSkillIds": ["A38", "A39", "D31"],
     "targetExerciseSkillIds": ["A38", "A39", "D31"],
-    "targetReadinessEvidence": true,
+    "targetReadinessEvidence": false,
     "sourceRefs": {
       "operationChain": "reports/sprints/L1.7B-Q2-operation-chain.md",
       "answerModel": "reports/sprints/L1.7B-Q2-answer-model.md",
@@ -25,7 +33,7 @@
     },
     "notes": [
       "The task sequence covers percentage change, index conversion, percentage change between index values, and the required short notation explanation.",
-      "GATE-L1.7B-Q2 approved this exact local, non-summative completion copy for reviewed 1.1.2 only."
+      "GATE-L1.7B-Q2 approved the earlier local legacy 1.1.2 copy; this Golden Workbench transfer holds target-equivalent readiness and completion language pending review."
     ]
   },
   "skillMap": {
@@ -48,6 +56,45 @@
       }
     ]
   },
+  "contextBlocks": [
+    {
+      "id": "ctx-112-fietsprijs",
+      "type": "source_excerpt",
+      "sourceLabel": "Bron 1",
+      "caption": "Bron 1 - Fietsprijs",
+      "bodyMarkdown": "Een fiets kost eerst 800 euro en daarna 920 euro.",
+      "sourceRefs": [
+        "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json#prijsstijging-procent"
+      ],
+      "accessibilitySummary": "Tekstbron met oude fietsprijs 800 euro en nieuwe fietsprijs 920 euro."
+    },
+    {
+      "id": "ctx-112-boodschappenmand",
+      "type": "table",
+      "sourceLabel": "Tabel 1",
+      "caption": "Tabel 1 - Boodschappenmand",
+      "sourceMaterialId": "exit-ticket-112-boodschappenmand-index",
+      "columns": ["Moment", "Prijs"],
+      "rows": [
+        ["Basisjaar", "150"],
+        ["Dit jaar", "162"]
+      ],
+      "altText": "Tabel met prijs 150 euro in het basisjaar en 162 euro dit jaar."
+    },
+    {
+      "id": "ctx-112-indexverandering",
+      "type": "table",
+      "sourceLabel": "Tabel 2",
+      "caption": "Tabel 2 - Indexverandering",
+      "sourceMaterialId": "exit-ticket-112-indexverandering",
+      "columns": ["Moment", "Index"],
+      "rows": [
+        ["Oude index", "108"],
+        ["Nieuwe index", "112"]
+      ],
+      "altText": "Tabel met oude index 108 en nieuwe index 112."
+    }
+  ],
   "tasks": [
     {
       "id": "prijsstijging-procent",
@@ -58,13 +105,23 @@
         "skillLabel": "Procentuele verandering berekenen",
         "purpose": "Bereken een procentuele stijging vanuit een oude en nieuwe prijs.",
         "prompt": "Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt.",
+        "contextRefs": [
+          "ctx-112-fietsprijs"
+        ],
+        "operationChain": [
+          "formula_or_method",
+          "substitution_with_source_values",
+          "final_answer",
+          "unit_or_notation",
+          "contextual_conclusion"
+        ],
         "interaction": {
           "workLabel": "Berekening",
           "finalAnswerLabel": "Eindantwoord in procenten",
           "placeholder": "Laat formule, invulling en tussenstap zien.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 15",
+          "finalAnswerPlaceholder": "vul het stijgingspercentage in",
           "unitNotationLabel": "Notatie",
-          "unitNotationPlaceholder": "Bijvoorbeeld %"
+          "unitNotationPlaceholder": "vul de notatie in"
         },
         "expected": {
           "kind": "calculation",
@@ -123,13 +180,23 @@
         "skillLabel": "Indexcijfer berekenen",
         "purpose": "Zet een waarde om naar een indexcijfer met basisjaar 100.",
         "prompt": "In het basisjaar kost een boodschappenmand 150 euro. Dit jaar kost dezelfde mand 162 euro. Bereken het indexcijfer van dit jaar.",
+        "contextRefs": [
+          "ctx-112-boodschappenmand"
+        ],
+        "operationChain": [
+          "formula_or_method",
+          "substitution_with_source_values",
+          "final_answer",
+          "unit_or_notation",
+          "contextual_conclusion"
+        ],
         "interaction": {
           "workLabel": "Berekening",
           "finalAnswerLabel": "Indexcijfer",
           "placeholder": "Laat zien welke waarde gedeeld wordt door de basiswaarde.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 108",
+          "finalAnswerPlaceholder": "vul het indexcijfer in",
           "unitNotationLabel": "Notatie",
-          "unitNotationPlaceholder": "Bijvoorbeeld indexcijfer"
+          "unitNotationPlaceholder": "vul de notatie in"
         },
         "expected": {
           "kind": "calculation",
@@ -188,13 +255,23 @@
         "skillLabel": "Verandering tussen indexcijfers berekenen",
         "purpose": "Bereken de procentuele verandering tussen twee indexcijfers.",
         "prompt": "Een index stijgt van 108 naar 112. Bereken de procentuele stijging ten opzichte van 108.",
+        "contextRefs": [
+          "ctx-112-indexverandering"
+        ],
+        "operationChain": [
+          "formula_or_method",
+          "substitution_with_source_values",
+          "final_answer",
+          "unit_or_notation",
+          "contextual_conclusion"
+        ],
         "interaction": {
           "workLabel": "Berekening",
           "finalAnswerLabel": "Eindantwoord in procenten",
           "placeholder": "Gebruik het oude indexcijfer als basis.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 3,7",
+          "finalAnswerPlaceholder": "vul het stijgingspercentage in",
           "unitNotationLabel": "Notatie",
-          "unitNotationPlaceholder": "Bijvoorbeeld %"
+          "unitNotationPlaceholder": "vul de notatie in"
         },
         "expected": {
           "kind": "calculation",
@@ -253,24 +330,33 @@
         "skillLabel": "Indexpunten kort uitleggen",
         "purpose": "Leg kort uit waarom indexpunten niet hetzelfde zijn als procenten.",
         "prompt": "Iemand zegt: de index stijgt van 108 naar 112, dus de stijging is 4 procent. Leg kort uit wat er misgaat.",
+        "contextRefs": [
+          "ctx-112-indexverandering"
+        ],
+        "operationChain": [
+          "source_values",
+          "basis_selection",
+          "final_explanation",
+          "claim_judgment"
+        ],
         "interaction": {
           "fields": [
             {
               "id": "indexpunten",
               "label": "Stijging in indexpunten",
-              "placeholder": "Bijvoorbeeld 4 indexpunten",
+              "placeholder": "vul het aantal indexpunten in",
               "inputMode": "text"
             },
             {
               "id": "basis",
               "label": "Basis voor de procentuele stijging",
-              "placeholder": "Bijvoorbeeld 108",
+              "placeholder": "vul de oude index in",
               "inputMode": "decimal"
             },
             {
               "id": "procentuele-stijging",
               "label": "Procentuele stijging ongeveer",
-              "placeholder": "Bijvoorbeeld 3,7%",
+              "placeholder": "vul het percentage in",
               "inputMode": "decimal"
             }
           ],
@@ -332,7 +418,7 @@
     }
   ],
   "completion": {
-    "title": "Check afgerond",
-    "text": "Je hebt laten zien dat je de eindopgave van deze paragraaf aankunt."
+    "title": "Werk nagekeken",
+    "text": "Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken."
   }
 }

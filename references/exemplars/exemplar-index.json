@@ -81,5 +81,20 @@
       ]
     }
   ],
+  "transfer_candidates": [
+    {
+      "id": "1.1.2-exit-ticket-golden-transfer",
+      "paragraph": "1.1.2",
+      "source": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+      "renderer_variant": "golden_calculation_structured_v1",
+      "status": "controlled_transfer_candidate",
+      "does_not_authorize": [
+        "implemented_exemplar_promotion",
+        "product_use",
+        "scale_gate_1",
+        "target_equivalent_completion_language"
+      ]
+    }
+  ],
   "next_goal": "GOLDEN-EXERCISE-CHECKERS-1"
 }
