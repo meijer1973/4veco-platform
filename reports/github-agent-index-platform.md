@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T11:45:25.265Z
+Generated: 2026-06-10T12:10:35.421Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4280
+Files indexed: 4278
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 469
+Count: 470
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -325,6 +325,7 @@ Count: 469
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
 - build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
@@ -649,7 +650,7 @@ Count: 42
 
 ## validators
 
-Count: 417
+Count: 418
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -720,6 +721,7 @@ Count: 417
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
 - build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
@@ -1667,7 +1669,7 @@ Count: 591
 
 ## reports
 
-Count: 2629
+Count: 2626
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1691,16 +1693,8 @@ Count: 2629
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
@@ -1857,6 +1851,8 @@ Count: 2629
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
 - reports/mtu-hardening/mtu-h5-next-repair-packet.json
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
+- reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
+- reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-regression-fixture.json
 - reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json
 - reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md
@@ -2216,6 +2212,9 @@ Count: 2629
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.md
 - reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
+- reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json
