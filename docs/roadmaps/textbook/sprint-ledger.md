@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-06-09
+Updated: 2026-06-10
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,9 +26,10 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
-| B2-2.1.1-HARDEN | Book 2 Paragraph 2.1.1 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Rewrote 2.1.1 to Book 1-quality didactic structure, exercises, answer model, and rendered output; rebuilt Chapter 2.1 without duplicate 2.1.1 exercises. | Use its quality notes and lead-review flags before opening `B2-2.1.2-HARDEN`. |
-| B2-2.1.2-HARDEN | Book 2 Paragraph 2.1.2 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, repaired assembled-chapter duplication, strengthened the target-equivalent graph-production route, rebuilt paragraph/chapter output, and passed validators. | Carry target-v5 and chapter-PDF-size flags into later target review and assembly work. |
-| B2-2.1.3-HARDEN | Book 2 Paragraph 2.1.3 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, added the one-step `MO = MK` interpretation without profit-maximisation scope creep, rebuilt paragraph/chapter output, and passed validators. | Carry target-v5 and chapter-PDF-size flags into later target review and assembly work. |
+| B2-2.1-TARGET-V5-PROMOTE | Book 2 Chapter 2.1 Target V5 Promotion | yes | Closed PASS WITH FLAGS after lead review. Promoted only 2.1.1 through 2.1.3 target records to `reviewed_final`; kept 2.1.4 placeholder and Chapter 2.2 outside scope. | Use the reviewed-final target records for 2.1.1 through 2.1.3; carry 2.1.4 target-placeholder and Chapter 2.1 PDF-size flags into their separate follow-ups. |
+| B2-2.1.1-HARDEN | Book 2 Paragraph 2.1.1 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Rewrote 2.1.1 to Book 1-quality didactic structure, exercises, answer model, and rendered output; rebuilt Chapter 2.1 without duplicate 2.1.1 exercises. | Target-v5 flag resolved by `B2-2.1-TARGET-V5-PROMOTE`; otherwise use its quality notes before downstream Chapter 2.1 work. |
+| B2-2.1.2-HARDEN | Book 2 Paragraph 2.1.2 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, repaired assembled-chapter duplication, strengthened the target-equivalent graph-production route, rebuilt paragraph/chapter output, and passed validators. | Target-v5 flag resolved by `B2-2.1-TARGET-V5-PROMOTE`; carry chapter-PDF-size monitoring into later assembly work. |
+| B2-2.1.3-HARDEN | Book 2 Paragraph 2.1.3 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, added the one-step `MO = MK` interpretation without profit-maximisation scope creep, rebuilt paragraph/chapter output, and passed validators. | Target-v5 flag resolved by `B2-2.1-TARGET-V5-PROMOTE`; carry chapter-PDF-size monitoring into later assembly work. |
 | B2-2.1.4-HARDEN | Book 2 Paragraph 2.1.4 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the newer root golden package, preserved the consolidation-only `opgaven`/`antwoorden` shape, removed unused package assets from canonical folders, rebuilt paragraph/chapter output, and passed validators. | Carry target-placeholder and Chapter 2.1 PDF-size flags into later target review and print assembly work. |
 | B2-2.2-A | Book 2 Chapter 2.2 Part A | no | Paused outside current scope. Human direction now limits this assignment to Chapter 2.1.x. | Do not resume unless a later human instruction expands the assignment beyond Chapter 2.1.x. |
 | B2-2.1-RETRO | Book 2 Section 2.1 Retrospective | yes | Closed PASS WITH FLAGS after lead review. Repaired the assembled-exercise validation gap, rebuilt Chapter 2.1 so theory exercises appear in the chapter/book, aligned chapter margins and line distance with Book 1 rhythm, and dispositioned carry flags. | Superseded by human direction to open `B2-2.1.1-HARDEN` before any further chapter-wide production. |
