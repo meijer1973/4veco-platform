@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T15:23:02.881Z
+Generated: 2026-06-10T19:19:56.563Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4307
+Files indexed: 4315
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -652,7 +652,7 @@ Count: 42
 
 ## validators
 
-Count: 420
+Count: 421
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -668,6 +668,7 @@ Count: 420
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-validation-log.md
+- archive/sprints/INSPECT-9/INSPECT-9-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
@@ -1673,7 +1674,7 @@ Count: 591
 
 ## reports
 
-Count: 2642
+Count: 2644
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1701,6 +1702,8 @@ Count: 2642
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.json
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
@@ -4338,7 +4341,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 438
+Count: 443
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4448,7 +4451,12 @@ Count: 438
 - archive/sprints/INSPECT-8/INSPECT-8-lead-review-round2.md
 - archive/sprints/INSPECT-8/INSPECT-8-planning-review.md
 - archive/sprints/INSPECT-8/INSPECT-8-sprint-plan.md
+- archive/sprints/INSPECT-9/INSPECT-9-closure-log.md
 - archive/sprints/INSPECT-9/INSPECT-9-coding-agent-handoff.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-assignment.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-round1.md
+- archive/sprints/INSPECT-9/INSPECT-9-planning-review.md
+- archive/sprints/INSPECT-9/INSPECT-9-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
