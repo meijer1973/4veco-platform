@@ -63,12 +63,13 @@ This closure does not authorise:
 
 ## Commit And Push
 
-Local commit: this merge commit.
-Remote push: pending until commit is created and pushed.
+Local commit: this merge commit plus any final closure-log hygiene commit.
+Remote push: completed for PR branch `codex/dutch-quality-scope-roadmap-20260609` during QS-DUTCH-ROADMAP-1B.
 
 ## Required Next Action
 
-Push the branch, wait for fresh PR #28 `platform-ci / validate-platform`
-success, then keep the PR draft until compare is `0 behind` and CI is green.
-After PR #28 merges, the next authorised direction should be only `INSPECT-8
-Dutch Evidence Scale Readiness` as a Dutch-only planning/audit sprint.
+Verify PR #28 remains `0 behind` current `main` and has fresh
+`platform-ci / validate-platform` success before marking ready or merging.
+After PR #28 merges, the next authorised direction should be only
+`INSPECT-8 Dutch Evidence Scale Readiness` as a Dutch-only planning/audit
+sprint.
