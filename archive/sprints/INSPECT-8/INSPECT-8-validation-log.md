@@ -1,6 +1,6 @@
 # INSPECT-8 Validation Log
 
-Status: local validation passed, lead review pending
+Status: local validation passed after rebase, lead review passed
 Date: 2026-06-10
 Branch: `codex/inspect-8-dutch-evidence-scale-readiness-20260610`
 Platform worktree: `C:\wt\INSPECT-8-20260610\4veco-platform`
@@ -65,11 +65,41 @@ Confirmed by diff review:
 ## Known Follow-Up Before Closure
 
 The platform branch became `ahead 1, behind 2` relative to `origin/main`
-during the sprint. Before final commit/push, fetch and reconcile current
-`origin/main`, rerun required validation as needed, and record the resulting
-commit state in the closure log.
+during the sprint. It was rebased cleanly onto `origin/main` after lead review
+round 2 passed. Current branch state after rebase is `ahead 2` and `behind 0`
+before the final closure commit.
+
+## Post-Rebase Validation
+
+After rebase onto `origin/main` at merge commit
+`43ee3f7c` (`Merge pull request #34 from
+meijer1973/codex/exit-ticket-workbench-112-rendered-1-20260610`), validation
+was rerun.
+
+| Command | Exit | Result |
+|---|---:|---|
+| `npm.cmd run check:scope-language` | 0 | pass; active surfaces clean. |
+| `npm.cmd run check:platform` | 0 | pass; 52 suites passed, 6 skipped; 779 tests passed, 8 skipped. Existing fixture warnings printed during test execution. |
+| `npm.cmd run agent:index` | 0 | pass; regenerated platform and lesson GitHub agent indexes. |
+| `npm.cmd run dashboard:internal` | 0 | pass; regenerated internal dashboard files. |
+| `node build-scripts/sprints/emit-url-index.js --check` | 0 | pass; `reports/url-index.md` current. |
+| `node build-scripts/references/check-roadmap-version-index.js` | 0 | pass; 149 entries. |
+| `git diff --check` | 0 | pass. |
+| `git -C ../4veco-lessen status --short --branch` | 0 | pass; detached HEAD and clean. |
+| `git -C ../4veco-lessen diff --name-only` | 0 | pass; no output. |
+| JSON parse check for readiness JSON | 0 | pass. |
+| Markdown required-section check for readiness Markdown | 0 | pass. |
+| Positive forbidden-claim scan | 0 | pass. |
+
+The rebased `origin/main` added a rendered `1.1.2` proof packet with status
+`rendered_proof_complete_pending_review`. Its own authority block does not
+authorize target-equivalent completion language, product-route adoption,
+product use, Scale Gate 1, diagnostics, mastery/sequencing, summative use, PV,
+or student/product use. It therefore does not change the INSPECT-8
+recommendation: no additional evidence-pack generation yet; use INSPECT-9 for
+gap-closure planning.
 
 ## Required Next Action
 
-Run lead review on the INSPECT-8 report packet. If blockers are found, correct
-them, rerun focused validation, and record the correction log before closure.
+Close INSPECT-8 after final generated indexes/dashboard are refreshed for the
+roadmap/ledger/closure updates, commit, push, and record the final state.

@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -155,6 +155,7 @@ Closed baseline:
 | `INSPECT-6` | Report-only generator planning. |
 | `INSPECT-7` | Bounded no-personal-data Book 1 Chapter 1.1 evidence-pack sample. |
 | `QS-MERGE-1` / `QS-MERGE-2` | Merge-prep and final PR refresh; PR #23 merged through GitHub. |
+| `INSPECT-8` | Dutch readiness audit; recommends no additional evidence-pack generation yet and names Book 1 Chapter 1.2 as the INSPECT-9 gap-closure candidate. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -521,13 +522,13 @@ privacy-boundary-risk
 Recommended next sprint:
 
 ```text
-INSPECT-8 Dutch Evidence Scale Readiness
+INSPECT-9 Dutch Evidence Gap Closure Plan
 ```
 
 Recommended posture:
 
 ```text
-planning/audit only
+planning and source-evidence hardening design only
 Dutch scope only
 no new evidence packs yet
 no non-Dutch standards work
@@ -537,10 +538,10 @@ no personal data
 no compliance or approval claims
 ```
 
-The practical product question for INSPECT-8 is:
+The practical product question for INSPECT-9 is:
 
-> Which Dutch scope can safely become the next evidence-pack target, and what
-> evidence gaps must be closed before scale?
+> What proof requirements and correction routes are needed before Book 1
+> Chapter 1.2, or any other Dutch scope, can become evidence-pack work?
 
 ## 9. Explicit Out-Of-Scope Work
 

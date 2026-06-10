@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T13:21:52.392Z
+Generated: 2026-06-10T13:34:44.852Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4287
+Files indexed: 4305
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 470
+Count: 472
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -465,6 +465,7 @@ Count: 470
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
+- build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
@@ -495,6 +496,7 @@ Count: 470
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-1.js
+- build-scripts/sprints/check-exit-ticket-workbench-112-rendered-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
@@ -650,7 +652,7 @@ Count: 42
 
 ## validators
 
-Count: 419
+Count: 420
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -811,6 +813,7 @@ Count: 419
 - build-scripts/sprints/check-context-visual-std1.js
 - build-scripts/sprints/check-exam-source-authority1.js
 - build-scripts/sprints/check-exit-ticket-workbench-112-1.js
+- build-scripts/sprints/check-exit-ticket-workbench-112-rendered-1.js
 - build-scripts/sprints/check-game-arch1-evidence.js
 - build-scripts/sprints/check-game-arch2-evidence.js
 - build-scripts/sprints/check-gate-ci-proof.js
@@ -1670,7 +1673,7 @@ Count: 591
 
 ## reports
 
-Count: 2628
+Count: 2642
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1729,6 +1732,7 @@ Count: 2628
 - reports/json/exam-source-authority1-contract.json
 - reports/json/exercise-overlay-conditions.json
 - reports/json/exit-ticket-workbench-112-1-proof.json
+- reports/json/exit-ticket-workbench-112-rendered-1-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
@@ -3060,6 +3064,19 @@ Count: 2628
 - reports/sprints/EXAM-SOURCE-AUTH-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-source-authority.md
 - reports/sprints/example-result.md
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-rendered-proof.md
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-after-calculation.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-after-structured.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/manifest.json
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-completed.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-completed.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png
+- reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
 - reports/sprints/GAME-ARCH-1-architecture-decision.md
 - reports/sprints/GAME-ARCH-1-baseline.md
 - reports/sprints/GAME-ARCH-1-canonical-ui-model.md
@@ -4321,7 +4338,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 434
+Count: 436
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4422,10 +4439,12 @@ Count: 434
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/INSPECT-8/INSPECT-8-closure-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-coding-agent-handoff.md
 - archive/sprints/INSPECT-8/INSPECT-8-correction-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-lead-review-assignment.md
 - archive/sprints/INSPECT-8/INSPECT-8-lead-review-round1.md
+- archive/sprints/INSPECT-8/INSPECT-8-lead-review-round2.md
 - archive/sprints/INSPECT-8/INSPECT-8-planning-review.md
 - archive/sprints/INSPECT-8/INSPECT-8-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
