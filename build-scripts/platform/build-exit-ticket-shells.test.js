@@ -10,6 +10,10 @@ function clone(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
+function normalizeNewlines(value) {
+  return String(value).replace(/\r\n/g, '\n');
+}
+
 function syntheticSupportedGoldenData() {
   const data = clone(exit113Data);
   data.parNr = '2.1.1';
@@ -30,7 +34,7 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
       path.join(ROOT, 'references', 'exemplars', 'implemented', '1.1.3-golden-exercise-workbench', 'generated-route-snapshot.html'),
       'utf8'
     );
-    expect(generated).toBe(snapshot);
+    expect(normalizeNewlines(generated)).toBe(normalizeNewlines(snapshot));
   });
 
   test('selects the Golden renderer by layout framework and supported capability shape', () => {
