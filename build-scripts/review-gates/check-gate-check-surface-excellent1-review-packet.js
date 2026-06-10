@@ -74,6 +74,9 @@ function requirePacketText() {
     '## Review Scope',
     '## What Changed Since The Superseded Packet',
     '## Evidence Base',
+    '## Non-Negotiable Requirements',
+    '## Core-Requirement Checklist',
+    '## Finding Classification Rule',
     '## Minimum Playable Evidence Inspection',
     '## Calibration Checks',
     '## Planned Review Focus',
@@ -90,12 +93,18 @@ function requirePacketText() {
   }
   for (const phrase of [
     'superseded',
+    '../4veco-lessen/specifications/product-end-state.md',
+    'reports/sprints/CHECK-SHORT-EXIT-2-plan.md',
+    'Non-Negotiable Requirements',
+    'Core-Requirement Checklist',
+    'core_spec_failure',
+    'proof required to close',
     'Shared Task And Check-Surface Integrity Policy',
     'checksurface-policy-regression1-proof.json',
     'smoothie',
     'procedure/flowchart context',
     'interval-halving task includes plausible incorrect intervals',
-    'reviewed `1.1.2` exit ticket remains',
+    'Golden Workbench transfer holds target-equivalent readiness',
     'does not authorize product-route adoption',
     'explicit human confirmation',
   ]) {
@@ -113,7 +122,38 @@ function requirePacketJson(packet, live) {
   assert(packet.human_review_decision === null, 'human review decision must be null');
   assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
   assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
+  assert(
+    packet.required_baselines &&
+      packet.required_baselines.product_end_state === '../4veco-lessen/specifications/product-end-state.md',
+    'packet must require product-end-state baseline'
+  );
+  assert(
+    packet.required_baselines.original_sprint_spec === 'reports/sprints/CHECK-SHORT-EXIT-2-plan.md',
+    'packet must require original sprint spec'
+  );
+  assert(
+    Array.isArray(packet.non_negotiable_requirements) && packet.non_negotiable_requirements.length >= 6,
+    'packet must list non-negotiable requirements'
+  );
+  assert(
+    Array.isArray(packet.core_requirement_checklist) && packet.core_requirement_checklist.length >= 6,
+    'packet must include core requirement checklist'
+  );
+  assert(Array.isArray(packet.finding_classifications), 'packet must include finding classifications');
+  for (const classification of [
+    'core_requirement_met',
+    'quality_improvement_available',
+    'minor_carry_flag',
+    'scale_blocker',
+    'core_spec_failure',
+  ]) {
+    assert(packet.finding_classifications.includes(classification), `packet missing finding classification ${classification}`);
+  }
   for (const source of [
+    '../4veco-lessen/specifications/product-end-state.md',
+    '../4veco-lessen/specifications/companion-core-specifications.md',
+    'reports/sprints/CHECK-SHORT-EXIT-2-plan.md',
+    'reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md',
     'source-data/book-1/exit-ticket/1.1.1-korte-check.json',
     'source-data/book-1/exit-ticket/1.1.1-exit-ticket.json',
     'source-data/book-1/exit-ticket/1.1.2-korte-check.json',
@@ -190,7 +230,7 @@ function requireUnderlyingProofs(packet, live) {
     'axis_labels_delayed',
     'interval_distractors_present',
     'new_exit_completion_language_held',
-    'reviewed_112_exit_preserved',
+    'current_112_transfer_held',
   ]) {
     assert(packet.proof_summary[key] === true, `packet proof summary missing ${key}`);
     assert(live.proof[key] === true, `live proof missing ${key}`);
@@ -204,15 +244,30 @@ function requireSourceData() {
   assert(data113Short.surface === 'advisory_short_check', '1.1.3 short check must be advisory');
   assert(data113Short.contextBlocks.some((block) => block.id === 'ctx-smoothie-short-table'), '1.1.3 short must use smoothie context');
   assert(data113Short.tasks.some((task) => task.taskShell && task.taskShell.interaction.hideAxisLabelsUntilAxisSelection === true), '1.1.3 short must delay axis labels');
-  assert(data113Exit.contextBlocks.length === 3, '1.1.3 exit must have source, table, formula context only');
+  assert(data113Exit.contextBlocks.length === 2, '1.1.3 exit must have source and table context only');
+  assert(data113Exit.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-source'), '1.1.3 exit must include source context');
+  assert(data113Exit.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-table'), '1.1.3 exit must include table context');
   assert(!data113Exit.contextBlocks.some((block) => /procedure|flowchart/i.test(JSON.stringify(block))), '1.1.3 exit must not include procedure context');
   assert(data113Exit.tasks.some((task) => task.taskShell && task.taskShell.interaction.hideAxisLabelsUntilAxisSelection === true), '1.1.3 exit must delay axis labels');
-  const interval = data113Exit.tasks.map((task) => task.taskShell).find((task) => task && task.interaction.selectionMode === 'interval_halving_check');
-  assert(interval, '1.1.3 exit must include interval-halving task');
+  const interval = data113Exit.tasks
+    .map((task) => task.taskShell)
+    .find(
+      (task) =>
+        task &&
+        task.interaction &&
+        ['interval_halving_check', 'percentage_claim_control'].includes(task.interaction.selectionMode)
+    );
+  assert(interval, '1.1.3 exit must include interval/percentage-claim control task');
   assert(interval.interaction.intervalOptions.some((option) => option.correct === false), 'interval task must include distractor intervals');
   assert(interval.interaction.conclusionOptions.some((option) => option.correct === false), 'interval task must include distractor conclusions');
   assert(data113Exit.targetEquivalent.completionLanguageEligible === false, '1.1.3 completion language must remain held');
-  assert(data112Exit.targetEquivalent.completionLanguageEligible === true, '1.1.2 reviewed completion authority must remain true');
+  assert(data112Exit.targetEquivalent.candidate === true, '1.1.2 transfer must remain a target-equivalent candidate');
+  assert(data112Exit.targetEquivalent.gateApproved === false, '1.1.2 Golden Workbench transfer must remain unapproved');
+  assert(data112Exit.targetEquivalent.completionLanguageEligible === false, '1.1.2 Golden Workbench completion language must remain held');
+  assert(
+    JSON.stringify(data112Exit).includes('Golden Workbench transfer holds target-equivalent readiness and completion language pending review'),
+    '1.1.2 source data must record the current Golden Workbench hold'
+  );
 }
 
 function findParagraphDir(paragraphId) {

@@ -58,8 +58,22 @@ function leadReviewPaths(sprintId) {
 }
 
 const LEAD_REVIEW_POLICY_EFFECTIVE_ON = '2026-05-31';
-const LEAD_REVIEW_STRICT_SCHEMA_VERSION = 2;
+const LEAD_REVIEW_SCHEMA_VERSION_V2 = 2;
+const LEAD_REVIEW_SCHEMA_VERSION_V3 = 3;
+const LEAD_REVIEW_FINDING_POLICY_EFFECTIVE_ON = '2026-06-10';
 const COMMAND_LOG_POLICY_EFFECTIVE_ON = '2026-06-03';
+const LEAD_REVIEW_FINDING_CLASSIFICATIONS = new Set([
+  'core_requirement_met',
+  'quality_improvement_available',
+  'minor_carry_flag',
+  'scale_blocker',
+  'core_spec_failure',
+]);
+const LEAD_REVIEW_CARRIED_FLAG_CLASSIFICATIONS = new Set([
+  'quality_improvement_available',
+  'minor_carry_flag',
+  'scale_blocker',
+]);
 const LEGACY_EXEMPTIONS_PATH = path.join(
   'references',
   'data',
@@ -81,6 +95,12 @@ const REQUIRED_LEAD_REVIEW_SECTIONS = [
 
 function dateOnOrAfter(value, cutoff) {
   return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}/.test(value) && value.slice(0, 10) >= cutoff;
+}
+
+function requiredLeadReviewSchemaVersion(planJson) {
+  return dateOnOrAfter(planJson.created, LEAD_REVIEW_FINDING_POLICY_EFFECTIVE_ON)
+    ? LEAD_REVIEW_SCHEMA_VERSION_V3
+    : LEAD_REVIEW_SCHEMA_VERSION_V2;
 }
 
 function hasLeadReviewExemption(planJson) {
@@ -131,7 +151,7 @@ function section(markdown, heading) {
   return match ? match[1].trim() : '';
 }
 
-function validateLeadReviewReport(file, sprintId, roundLabel, expectedFinalVerdict) {
+function validateLeadReviewReport(file, sprintId, roundLabel, expectedFinalVerdict, schemaVersion = LEAD_REVIEW_SCHEMA_VERSION_V2) {
   const markdown = readMarkdown(file);
   if (!/^# Lead Review Summary/m.test(markdown)) {
     fail(`${file} must start with "# Lead Review Summary"`);
@@ -166,6 +186,21 @@ function validateLeadReviewReport(file, sprintId, roundLabel, expectedFinalVerdi
   if (!/(None|No blocking|blocking)/i.test(section(markdown, '## Blocking Findings'))) {
     fail(`${file} Blocking Findings must explicitly state whether blockers exist`);
   }
+  if (schemaVersion >= LEAD_REVIEW_SCHEMA_VERSION_V3) {
+    if (!markdown.includes('## Finding Classification')) {
+      fail(`${file} missing required lead-review section: ## Finding Classification`);
+    }
+    const findingSection = section(markdown, '## Finding Classification');
+    if (!/\|\s*Finding\s*\|\s*Classification\s*\|\s*Blocks\s*\|\s*Does not block\s*\|\s*Proof required to close\s*\|/i.test(findingSection)) {
+      fail(`${file} Finding Classification must include Finding, Classification, Blocks, Does not block, and Proof required to close columns`);
+    }
+    const hasClassification = [...LEAD_REVIEW_FINDING_CLASSIFICATIONS].some((classification) =>
+      findingSection.includes(classification)
+    );
+    if (!hasClassification) {
+      fail(`${file} Finding Classification must use REV-STD-1 classification values`);
+    }
+  }
   if (section(markdown, '## Required Next Action').length < 20) {
     fail(`${file} Required Next Action must be concrete`);
   }
@@ -181,7 +216,51 @@ function validateLeadReviewSupportFile(file, sprintId, label, requiredPatterns) 
   }
 }
 
-function validateLeadReviewFlags(resultJsonPath, leadReview) {
+function hasNonEmptyEvidence(value) {
+  if (typeof value === 'string') return Boolean(value.trim());
+  if (Array.isArray(value)) {
+    return value.length > 0 && value.every((item) => typeof item === 'string' && item.trim());
+  }
+  return false;
+}
+
+function validateLeadReviewFindings(resultJsonPath, leadReview) {
+  if (!Array.isArray(leadReview.findings) || leadReview.findings.length === 0) {
+    fail(`${resultJsonPath} lead_review.findings must list classified findings`);
+  }
+  for (const [index, finding] of leadReview.findings.entries()) {
+    if (!finding || typeof finding !== 'object') {
+      fail(`${resultJsonPath} lead_review.findings[${index}] must be an object`);
+    }
+    for (const key of ['id', 'description', 'classification', 'proof_required_to_close']) {
+      if (typeof finding[key] !== 'string' || !finding[key].trim()) {
+        fail(`${resultJsonPath} lead_review.findings[${index}].${key} must be a non-empty string`);
+      }
+    }
+    if (!LEAD_REVIEW_FINDING_CLASSIFICATIONS.has(finding.classification)) {
+      fail(`${resultJsonPath} lead_review.findings[${index}].classification has unsupported value: ${finding.classification}`);
+    }
+    for (const key of ['evidence', 'blocks', 'does_not_block']) {
+      if (!hasNonEmptyEvidence(finding[key])) {
+        fail(`${resultJsonPath} lead_review.findings[${index}].${key} must be a non-empty string or string array`);
+      }
+    }
+    if (
+      finding.classification === 'core_spec_failure' &&
+      ['PASS', 'PASS WITH FLAGS'].includes(leadReview.final_verdict)
+    ) {
+      fail(`${resultJsonPath} lead_review.findings[${index}] core_spec_failure cannot close as ${leadReview.final_verdict}`);
+    }
+    if (finding.classification === 'scale_blocker' && leadReview.final_verdict === 'PASS') {
+      fail(`${resultJsonPath} lead_review.findings[${index}] scale_blocker cannot close as PASS`);
+    }
+  }
+}
+
+function validateLeadReviewFlags(resultJsonPath, leadReview, schemaVersion = LEAD_REVIEW_SCHEMA_VERSION_V2) {
+  if (schemaVersion >= LEAD_REVIEW_SCHEMA_VERSION_V3) {
+    validateLeadReviewFindings(resultJsonPath, leadReview);
+  }
   if (leadReview.final_verdict === 'PASS') {
     if (Array.isArray(leadReview.flags) && leadReview.flags.length > 0) {
       fail(`${resultJsonPath} lead_review.flags must be empty or omitted when final_verdict is PASS`);
@@ -203,6 +282,16 @@ function validateLeadReviewFlags(resultJsonPath, leadReview) {
     }
     if (!/^(carry_forward|accepted_follow_up|product_scale_blocker|waived_by_human)$/.test(flag.disposition)) {
       fail(`${resultJsonPath} lead_review.flags[${index}].disposition has unsupported value: ${flag.disposition}`);
+    }
+    if (schemaVersion >= LEAD_REVIEW_SCHEMA_VERSION_V3) {
+      if (typeof flag.classification !== 'string' || !LEAD_REVIEW_CARRIED_FLAG_CLASSIFICATIONS.has(flag.classification)) {
+        fail(`${resultJsonPath} lead_review.flags[${index}].classification must be quality_improvement_available, minor_carry_flag, or scale_blocker`);
+      }
+      for (const key of ['blocks', 'does_not_block', 'proof_required_to_close']) {
+        if (!hasNonEmptyEvidence(flag[key])) {
+          fail(`${resultJsonPath} lead_review.flags[${index}].${key} must be a non-empty string or string array`);
+        }
+      }
     }
     if (flag.blocking !== false) {
       fail(`${resultJsonPath} lead_review.flags[${index}].blocking must be false for PASS WITH FLAGS`);
@@ -327,6 +416,7 @@ if (typeof planJson.protected_reference_data_changes_allowed !== 'boolean') {
 const legacyLeadReviewExemptions = loadLegacyLeadReviewExemptions();
 const isLegacyLeadReviewExempt = legacyLeadReviewExemptions.has(sprintId);
 const isHumanGate = planJson.human_review_required === true || inferHumanGate(planMarkdown, sprintId);
+const requiredLeadReviewSchema = requiredLeadReviewSchemaVersion(planJson);
 const leadPolicyApplies =
   sprintId !== 'EXAMPLE' &&
   (!isLegacyLeadReviewExempt ||
@@ -338,8 +428,8 @@ if (leadPolicyApplies && planJson.lead_review_required !== true && !hasLeadRevie
     `${planJsonPath} must declare lead_review_required: true or a lead_review_exemption for sprints created on or after ${LEAD_REVIEW_POLICY_EFFECTIVE_ON}`
   );
 }
-if (leadPolicyApplies && !isLegacyLeadReviewExempt && planJson.lead_review_schema_version !== LEAD_REVIEW_STRICT_SCHEMA_VERSION) {
-  fail(`${planJsonPath} must declare lead_review_schema_version: ${LEAD_REVIEW_STRICT_SCHEMA_VERSION}`);
+if (leadPolicyApplies && !isLegacyLeadReviewExempt && planJson.lead_review_schema_version !== requiredLeadReviewSchema) {
+  fail(`${planJsonPath} must declare lead_review_schema_version: ${requiredLeadReviewSchemaVersion(planJson)}`);
 }
 if (leadPolicyApplies && isHumanGate && planJson.lead_review_exemption) {
   fail(`${planJsonPath} human-review sprints cannot use lead_review_exemption`);
@@ -424,22 +514,22 @@ if (requireComplete) {
       fail(`${resultJsonPath} lead_review.final_verdict must be PASS or PASS WITH FLAGS`);
     }
     if (strictLeadPolicyApplies) {
-      if (resultJson.lead_review_schema_version !== LEAD_REVIEW_STRICT_SCHEMA_VERSION) {
-        fail(`${resultJsonPath} must declare lead_review_schema_version: ${LEAD_REVIEW_STRICT_SCHEMA_VERSION}`);
+      if (resultJson.lead_review_schema_version !== requiredLeadReviewSchema) {
+        fail(`${resultJsonPath} must declare lead_review_schema_version: ${requiredLeadReviewSchema}`);
       }
       validateLeadReviewSupportFile(expected.assignment, sprintId, 'assignment', [
         ['scope', /scope|artifact|task/i],
         ['evidence', /evidence|inspect/i],
         ['reviewer', /lead reviewer|agent/i],
       ]);
-      validateLeadReviewReport(expected.round1, sprintId, 'lead review round 1');
+      validateLeadReviewReport(expected.round1, sprintId, 'lead review round 1', undefined, requiredLeadReviewSchema);
       validateLeadReviewSupportFile(expected.corrections, sprintId, 'corrections', [
         ['round-1 verdict', /round-?1|round 1/i],
         ['correction record', /correction|applied|resolved|accepted/i],
         ['round-2 readiness', /round-?2|round 2|recheck/i],
       ]);
-      validateLeadReviewReport(expected.round2, sprintId, 'lead review round 2', leadReview.final_verdict);
-      validateLeadReviewFlags(resultJsonPath, leadReview);
+      validateLeadReviewReport(expected.round2, sprintId, 'lead review round 2', leadReview.final_verdict, requiredLeadReviewSchema);
+      validateLeadReviewFlags(resultJsonPath, leadReview, requiredLeadReviewSchema);
       if (commandLogPolicyApplies) {
         const substanceResult = spawnSync(
           process.execPath,
