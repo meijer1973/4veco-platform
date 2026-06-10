@@ -1,0 +1,58 @@
+{
+  "source_id": "owned:course-blueprint-v6-three-year",
+  "title": "Course Blueprint v6 Three-Year Draft",
+  "path": "references/owned/course-blueprint-v6-three-year.md",
+  "source_type": "course_blueprint",
+  "authority_level": "owned_curriculum_design_draft",
+  "completion_status": "draft_three_year_reconciliation",
+  "canonical_owned_source": false,
+  "active_year_1_baseline": "owned:course-blueprint-v5",
+  "proposed_supersedes_on_review": "owned:course-blueprint-v5",
+  "relationship_to_v4": "historical_evidence_only",
+  "relationship_to_three_year_concept": "rough_planning_input_reconciled_to_11_books",
+  "assessment_structure": {
+    "years": 3,
+    "books_total": 11,
+    "books_by_year": {
+      "1": [1, 2, 3, 4],
+      "2": [5, 6, 7, 8],
+      "3": [9, 10, 11]
+    },
+    "formal_test_week_model": "one formal test week per book"
+  },
+  "year_1_counts_from_v5": {
+    "1": 12,
+    "2": 12,
+    "3": 14,
+    "4": 16
+  },
+  "test_preparation_policy": {
+    "status": "web_only",
+    "count_bearing": false,
+    "printed_chapter": false,
+    "book_11_role": "final exam training and cumulative integration, not a separate twelfth or thirteenth book"
+  },
+  "allowed_use": [
+    "human_review",
+    "course_design_reconciliation",
+    "three_year_book_level_planning",
+    "exam_operation_spine_design",
+    "future_target_exercise_review_preparation"
+  ],
+  "not_allowed_use": [
+    "external_authority",
+    "automatic_unit_minting_from_prose",
+    "overriding_course_blueprint_v5_before_review",
+    "overriding_reviewed_machine_references",
+    "overriding_external_exam_or_syllabus_authority",
+    "treating_placeholders_as_reviewed_final",
+    "student_facing_lesson_output",
+    "protected_reference_mutation"
+  ],
+  "authority_notes": [
+    "This is a draft umbrella blueprint for human review, not the active production baseline.",
+    "Course Blueprint v5 remains the active Year 1 / Books 1-4 source until this draft is reviewed and promoted.",
+    "The older three-year concept is useful planning input but is not canonical; it used a 13-book model and contains stale registry assumptions.",
+    "Official exam questions, correction models, reviewed target exercises, and CLI-backed registry changes remain stronger than owned prose."
+  ]
+}

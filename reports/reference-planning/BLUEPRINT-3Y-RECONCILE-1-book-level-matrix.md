@@ -1,0 +1,27 @@
+# BLUEPRINT-3Y-RECONCILE-1 Book-Level Matrix
+
+Status: non-mutating draft matrix for v6 three-year review
+
+## Matrix
+
+| Book | Test-week position | Domain clusters | Target exam operations | Cumulative retrieval | Source/graph/table/answer-form load | MTU clusters | Open design decisions |
+|---|---|---|---|---|---|---|---|
+| 1 | Year 1, test week 1 | Foundations, demand, supply, equilibrium | Basic percentage/index work; P-Q graph/table reading; demand/supply shifts; short explanations | Prior arithmetic and reading skills | Light source snippets; simple P-Q graphs and tables; short calculation/explanation answers | Active v5 Year 1 units plus foundation review candidates | Close migrated target-exercise reviews and placeholder integration records. |
+| 2 | Year 1, test week 2 | Costs, revenue, marginal reasoning, elasticity, surplus | Cost/revenue calculations; elasticity interpretation; surplus and welfare-area identification | Book 1 graph, equilibrium, percentage, source reading | Heavier calculations; welfare graphs; table-to-answer chains | v5 Book 2 records; reviewed-final 2.1.1-2.1.3; remaining migrated/placeholder records | Review integration paragraphs and target-exercise distribution. |
+| 3 | Year 1, test week 3 | Taxes, subsidies, price controls, market structures | Policy-instrument analysis; incidence; welfare loss; market-structure comparison | Books 1-2 equilibrium, elasticity, surplus, marginal logic | Multi-step policy diagrams; correction-model style calculation chains | v5 Book 3 records and intervention/market-structure units | Check that no-new-theory gemengde-opgaven are supported by reviewed targets. |
+| 4 | Year 1, test week 4 | Market failure, labour market, trade basics | Externality analysis; labour-market application; comparative advantage and trade reasoning | Books 1-3 market logic and welfare reasoning | Mixed micro cases; labour/trade tables; policy evaluation paragraphs | v5 Book 4 records; labour and trade basics | Keep inflation/CPI and late macro boundary aligned with v5 unless reviewed. |
+| 5 | Year 2, test week 1 | Time, stock-flow, pensions, intertemporal exchange | Distinguish stocks/flows; evaluate time and generation claims; indexation calculations where supported | Year 1 percentage/index and real/nominal foundations | Pension tables, demographic source excerpts, long-horizon answer forms | E-domain and selected H-domain candidates | Exact paragraph count and first reviewed target exercises. |
+| 6 | Year 2, test week 2 | Interest, bonds, housing, financial markets | Interest-rate mechanics; bond price direction; household/market applications | Book 5 time layer; Year 1 percentage/table skills | Financial tables, rate changes, source-supported explanation | H-domain finance/interest candidates and E-domain links | Boundary between finance book and later monetary policy book. |
+| 7 | Year 2, test week 3 | Risk, insurance, asymmetric information | Expected value/loss; moral hazard; adverse selection; principal-agent reasoning | Books 1-2 calculation and source-reading routines; Book 6 finance contexts | Insurance tables, incentive cases, source-chain answers | G-domain risk/information candidates | Decide which expected-value operations need calculation-target anchors. |
+| 8 | Year 2, test week 4 | Game theory, public goods, redistribution, growth/public finance bridge | Dominant strategy/Nash patterns; collective-action reasoning; public intervention and redistribution evaluation | Books 1-7 market, welfare, finance, risk, and source routines | Payoff matrices, policy sources, balanced evaluation answers | F-domain and H-domain public-finance/growth candidates plus selected D-domain units | Compression risk: bridge must not become a loose content dump. |
+| 9 | Year 3, test week 1 | Keynesian macro and fiscal policy | Multiplier/output-gap reasoning; demand/supply shocks; fiscal measure selection | Year 1 real/nominal basics; Year 2 public finance and time reasoning | Macro graphs/tables, policy excerpts, structured policy answer forms | I-domain fiscal/macro candidates and selected H/D links | Need reviewed exam anchors before model-specific paragraph production. |
+| 10 | Year 3, test week 2 | Monetary policy, IS-MB-GA, open economy | Monetary transmission; exchange-rate channel; trilemma/open-economy constraints | Book 6 finance/interest; Book 9 macro model state | Macro model diagrams, exchange-rate tables, source-chain explanations | I-domain monetary/open-economy candidates and H finance links | Decide representation standard for IS-MB-GA and exchange-rate tasks. |
+| 11 | Year 3, test week 3 | Integrated policy and final exam training | Decompose CvTE-style cases; combine source, graph/table, calculation, reasoning, and answer construction; time discipline | Full Books 1-10 retrieval | Highest source load; mixed official-style cases; correction-model answer construction; full-paper practice | Mixed A/D/E/F/G/H/I/L retrieval; no automatic new MTUs | Design Book 11 as operation training, not only a practice-paper folder. |
+
+## Matrix Rules
+
+- Books 1-4 are v5-derived and remain bound to v5 until review.
+- Books 5-11 are draft book-level scopes only.
+- MTU clusters are placement candidates, not mutation authority.
+- Official exam anchors must be added from reviewed exam-ingestion evidence before paragraph-level production.
+- Source/table/graph/answer-form load should increase cumulatively across the route.
