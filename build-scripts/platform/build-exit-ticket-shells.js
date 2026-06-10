@@ -42,13 +42,28 @@ function surfaceTitle(data) {
   return surfaceSlug(data) === 'exit-ticket' ? 'Exit ticket' : 'Korte check';
 }
 
-function usesGoldenTicketLayout(data) {
+function usesGoldenExerciseWorkbench(data) {
   return Boolean(
     data &&
-    data.parNr === '1.1.3' &&
     data.layout &&
     data.layout.framework === 'golden_exercise_workbench'
   );
+}
+
+function assertSupportedGoldenExerciseVariant(data) {
+  return GoldenTicketLayout.assertSupportedGoldenExerciseVariant(data);
+}
+
+function goldenExerciseRendererFor(data) {
+  if (!usesGoldenExerciseWorkbench(data)) return null;
+  return {
+    id: assertSupportedGoldenExerciseVariant(data),
+    renderShell: generateGoldenTicketShell,
+  };
+}
+
+function usesGoldenTicketLayout(data) {
+  return Boolean(goldenExerciseRendererFor(data));
 }
 
 function writeDataFile(config, sourceKey, data) {
@@ -66,8 +81,9 @@ function writeDataFile(config, sourceKey, data) {
 }
 
 function generateShell(parNr, parName, data = null, sourceKey = parNr) {
-  if (usesGoldenTicketLayout(data)) {
-    return generateGoldenTicketShell(parNr, parName, data, sourceKey);
+  const goldenRenderer = goldenExerciseRendererFor(data);
+  if (goldenRenderer) {
+    return goldenRenderer.renderShell(parNr, parName, data, sourceKey);
   }
   const sharedPath = '../../shared';
   const title = `${parName} - ${surfaceTitle(data)}`;
@@ -110,7 +126,13 @@ function generateShell(parNr, parName, data = null, sourceKey = parNr) {
 function generateGoldenTicketShell(parNr, parName, data, sourceKey) {
   const sharedPath = '../../shared';
   const title = `${parName} - ${surfaceTitle(data)}`;
+  const variant = GoldenTicketLayout.assertSupportedGoldenExerciseVariant(data);
   const main = GoldenTicketLayout.renderMain(data);
+  const assets = GoldenTicketLayout.rendererAssetsForVariant(variant);
+  const scriptTags = assets.scripts.map((asset) => {
+    const src = asset.replace('{sourceKey}', escapeHtml(sourceKey));
+    return `    <script src="${sharedPath}/${src}"></script>`;
+  }).join('\n');
 
   return `<!DOCTYPE html>
 <html lang="nl" data-theme="light">
@@ -133,9 +155,7 @@ function generateGoldenTicketShell(parNr, parName, data, sourceKey) {
     <main class="ge-page" data-golden-ticket-root data-source-key="${escapeHtml(sourceKey)}">
 ${main}
     </main>
-    <script src="${sharedPath}/exit-ticket/${escapeHtml(sourceKey)}.js"></script>
-    <script src="${sharedPath}/golden-ticket-graph.js"></script>
-    <script src="${sharedPath}/golden-ticket-layout.js"></script>
+${scriptTags}
 </body>
 </html>`;
 }
@@ -217,15 +237,25 @@ function main() {
       continue;
     }
     seenSurface[surfaceKey] = sourceKey;
+
+    const fileName = `${parNr} ${p.name} ${DASH} ${slug}.html`;
+    let shellHtml;
+    try {
+      shellHtml = generateShell(parNr, p.name, data, sourceKey);
+    } catch (error) {
+      console.error(`  [error] ${sourceKey}: ${error.message}`);
+      errors++;
+      continue;
+    }
+
     if (!cleaned[parNr]) {
       cleanGeneratedCheckPages(found.fullPath);
       cleaned[parNr] = true;
     }
 
     writeDataFile(config, sourceKey, data);
-    const fileName = `${parNr} ${p.name} ${DASH} ${slug}.html`;
     const filePath = path.join(found.fullPath, fileName);
-    fs.writeFileSync(filePath, generateShell(parNr, p.name, data, sourceKey), 'utf8');
+    fs.writeFileSync(filePath, shellHtml, 'utf8');
     console.log(`  [write] shared/exit-ticket/${sourceKey}.js`);
     console.log(`  [write] ${fileName}`);
     generated++;
@@ -242,7 +272,10 @@ if (require.main === module) {
 module.exports = {
   generateShell,
   generateGoldenTicketShell,
+  goldenExerciseRendererFor,
+  assertSupportedGoldenExerciseVariant,
   surfaceSlug,
+  usesGoldenExerciseWorkbench,
   usesGoldenTicketLayout,
   main
 };

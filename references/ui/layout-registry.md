@@ -10,7 +10,7 @@ The layout registry names page-level UI contracts. A layout contract controls th
 
 ### `golden_exercise_workbench`
 
-Status: governed policy extracted from the implemented `1.1.3` Golden Ticket route.
+Status: governed policy extracted from the implemented `1.1.3` Golden Ticket route, with data-driven renderer selection.
 
 Current implementation reference:
 
@@ -24,11 +24,34 @@ engines/golden-ticket-graph.js
 Current generator selector:
 
 ```text
-data.parNr === "1.1.3"
 data.layout.framework === "golden_exercise_workbench"
 ```
 
-The selector is intentionally recorded as current state, not as final policy. Renderer generalization belongs to `GOLDEN-EXERCISE-RENDERER-1`.
+Current supported renderer variants:
+
+```text
+golden_graph_reading_claim_v1
+golden_calculation_structured_v1
+```
+
+The graph variant requires task-shell families:
+
+```text
+graph_construction_substitute
+graph_reading
+calculation_work_capture
+graph spec from graph_construction_substitute
+```
+
+The calculation/structured transfer variant requires task-shell families:
+
+```text
+calculation_work_capture
+structured_short_response
+contextBlocks referenced by each task
+```
+
+Routes that opt into `layout.framework: golden_exercise_workbench` but do not match a supported Golden variant must fail with a clear unsupported-variant error. They must not silently fall back to the legacy `et-page` / `#exit-ticket-app` shell.
 
 ## Required Shell
 

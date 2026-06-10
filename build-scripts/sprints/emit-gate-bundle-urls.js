@@ -36,6 +36,20 @@ function buildRawUrl(owner, repo, branch, relativePath) {
   return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${encodePath(relativePath)}`;
 }
 
+function splitReference(reference) {
+  const hashIndex = reference.indexOf('#');
+  if (hashIndex === -1) return { relativePath: reference, fragment: '' };
+  return {
+    relativePath: reference.slice(0, hashIndex),
+    fragment: reference.slice(hashIndex),
+  };
+}
+
+function buildRawReferenceUrl(owner, repo, branch, reference) {
+  const { relativePath, fragment } = splitReference(reference);
+  return `${buildRawUrl(owner, repo, branch, relativePath)}${fragment}`;
+}
+
 function parseArgs(argv) {
   const args = argv.slice(2);
   let gateId = null;
@@ -75,6 +89,29 @@ function listGateArtifacts(gateDir, relativeRoot = '') {
   return files.sort();
 }
 
+function collectReviewPacketReferences(gateDirAbs) {
+  const reviewPacketPath = path.join(gateDirAbs, 'review-packet.json');
+  if (!fs.existsSync(reviewPacketPath)) return [];
+  const reviewPacket = JSON.parse(fs.readFileSync(reviewPacketPath, 'utf8'));
+  const references = new Set();
+
+  for (const value of reviewPacket.must_review || []) {
+    if (typeof value === 'string' && value.length > 0) references.add(value.replace(/\\/g, '/'));
+  }
+
+  for (const key of [
+    'review_packet_markdown',
+    'source_execution_gate_packet_markdown',
+    'source_execution_gate_packet_json',
+    'checker',
+  ]) {
+    const value = reviewPacket[key];
+    if (typeof value === 'string' && value.length > 0) references.add(value.replace(/\\/g, '/'));
+  }
+
+  return Array.from(references);
+}
+
 function emit(gateId, branch) {
   const { owner, repo } = parseRepoFromPackageJson();
   const gateDirRel = path.posix.join('reports', 'review-gates', gateId);
@@ -88,7 +125,15 @@ function emit(gateId, branch) {
   // it is looking at the canonical bundle-urls.md.
   const artifactSet = new Set(artifacts);
   artifactSet.add('bundle-urls.md');
-  const sortedArtifacts = Array.from(artifactSet).sort();
+
+  const referenceSet = new Set();
+  for (const name of artifactSet) {
+    referenceSet.add(path.posix.join(gateDirRel, name));
+  }
+  for (const reference of collectReviewPacketReferences(gateDirAbs)) {
+    referenceSet.add(reference);
+  }
+  const sortedReferences = Array.from(referenceSet).sort();
 
   const lines = [];
   lines.push(`# ${gateId} — Artifact URLs`);
@@ -99,16 +144,15 @@ function emit(gateId, branch) {
       '`build-scripts/sprints/emit-gate-bundle-urls.js`. Do not hand-edit.'
   );
   lines.push('');
-  for (const name of sortedArtifacts) {
-    const rel = path.posix.join(gateDirRel, name);
-    lines.push(`- ${buildRawUrl(owner, repo, branch, rel)}`);
+  for (const reference of sortedReferences) {
+    lines.push(`- ${buildRawReferenceUrl(owner, repo, branch, reference)}`);
   }
   lines.push('');
   const out = lines.join('\n');
 
   const outPath = path.join(gateDirAbs, 'bundle-urls.md');
   fs.writeFileSync(outPath, out, 'utf8');
-  console.log(`wrote ${path.posix.join(gateDirRel, 'bundle-urls.md')} (${sortedArtifacts.length} artifacts)`);
+  console.log(`wrote ${path.posix.join(gateDirRel, 'bundle-urls.md')} (${sortedReferences.length} artifacts)`);
 }
 
 if (require.main === module) {
@@ -116,4 +160,4 @@ if (require.main === module) {
   emit(gateId, branch);
 }
 
-module.exports = { parseRepoFromPackageJson, encodePath, buildRawUrl };
+module.exports = { parseRepoFromPackageJson, encodePath, buildRawUrl, buildRawReferenceUrl };

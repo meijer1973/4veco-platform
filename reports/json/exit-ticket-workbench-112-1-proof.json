@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "sprint_id": "EXIT-TICKET-WORKBENCH-112-1",
+  "generated": "2026-06-10T11:46:39.902Z",
+  "status": "passed",
+  "source": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+  "renderer": {
+    "selected_variant": "golden_calculation_structured_v1",
+    "graph_runtime_loaded": false,
+    "legacy_shell_loaded": false
+  },
+  "proof_states": [
+    "desktop_initial_contract",
+    "wrong_retry_feedback",
+    "correct_completed",
+    "after_interaction",
+    "no_legacy_dom"
+  ],
+  "response_proof": {
+    "correct": {
+      "prijsstijging-procent": true,
+      "index-naar-waarde": true,
+      "index-naar-procent": true,
+      "indexpunten-uitleg": true
+    },
+    "retry": {
+      "prijsstijging-procent": false,
+      "indexpunten-uitleg": false
+    }
+  },
+  "authority": {
+    "migrated_routes": [
+      "1.1.2-exit-ticket"
+    ],
+    "broad_migration_authorized": false,
+    "generated_lesson_output_changed": false,
+    "legacy_renderers_deleted": false,
+    "product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "diagnostics_mastery_or_summative_use_authorized": false
+  }
+}

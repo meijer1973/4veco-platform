@@ -13,6 +13,17 @@ references/ui/interaction-policy.md
 references/ui/interaction-policy.json
 references/ui/exercise-workbench-policy.md
 references/ui/shared-task-rollout-policy.md
+references/ui/golden-exercise-checker-fixtures.json
+```
+
+Checker entrypoints for this policy layer:
+
+```text
+build-scripts/references/check-layout-registry.js
+build-scripts/references/check-interaction-policy.js
+build-scripts/sprints/check-golden-exercise-workbench.js
+build-scripts/sprints/check-exit-ticket-workbench-112-1.js
+build-scripts/sprints/check-shared-task-ui-policy.js
 ```
 
 ## Source Trail
@@ -28,6 +39,7 @@ build-scripts/platform/build-exit-ticket-shells.js
 engines/golden-ticket-layout.js
 engines/golden-ticket-graph.js
 source-data/book-1/exit-ticket/1.1.3-exit-ticket.json
+source-data/book-1/exit-ticket/1.1.2-exit-ticket.json
 references/exemplars/1.1.3-exit-ticket/
 references/exemplars/a96-answer-form/
 ```
