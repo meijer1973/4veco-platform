@@ -98,9 +98,9 @@ The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may c
 
 | Paragraph | Kind | Title | Status |
 | --- | --- | --- | --- |
-| 2.1.1 | theory | Kostenstructuren | migrated_from_v4_needs_v5_review |
-| 2.1.2 | theory | Opbrengsten, winst en break-even | migrated_from_v4_needs_v5_review |
-| 2.1.3 | theory | Marginale kosten en marginale opbrengsten | migrated_from_v4_needs_v5_review |
+| 2.1.1 | theory | Kostenstructuren | reviewed_final |
+| 2.1.2 | theory | Opbrengsten, winst en break-even | reviewed_final |
+| 2.1.3 | theory | Marginale kosten en marginale opbrengsten | reviewed_final |
 | 2.1.4 | gemengde_opgaven | Gemengde opgaven: kosten en opbrengsten | placeholder_needs_review |
 | 2.2.1 | theory | Prijselasticiteit | migrated_from_v4_needs_v5_review |
 | 2.2.2 | theory | Elasticiteit en omzet | migrated_from_v4_needs_v5_review |
@@ -203,15 +203,15 @@ Count-bearing gemengde-opgaven paragraph. Introduces no new theory; requires a r
 
 ### §2.1.1 - Kostenstructuren
 
-Migrated from v4 target exercise §1.3.2. Needs v5 review before it can be marked reviewed_final.
+Migrated from v4 target exercise section 1.3.2 and reviewed against the v5 target-quality standard by sprint B2-2.1-TARGET-V5-PROMOTE. Status: reviewed_final.
 
 ### §2.1.2 - Opbrengsten, winst en break-even
 
-Migrated from v4 target exercise §1.3.3. Needs v5 review before it can be marked reviewed_final.
+Migrated from v4 target exercise section 1.3.3 and reviewed against the v5 target-quality standard by sprint B2-2.1-TARGET-V5-PROMOTE. Status: reviewed_final.
 
 ### §2.1.3 - Marginale kosten en marginale opbrengsten
 
-Migrated from v4 target exercise §1.4.3. Needs v5 review before it can be marked reviewed_final.
+Migrated from v4 target exercise section 1.4.3 and reviewed against the v5 target-quality standard by sprint B2-2.1-TARGET-V5-PROMOTE. Status: reviewed_final.
 
 ### §2.1.4 - Gemengde opgaven: kosten en opbrengsten
 

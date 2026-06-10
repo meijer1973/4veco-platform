@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.1-TARGET-V5-PROMOTE",
+  "name": "Book 2 Chapter 2.1 Target V5 Promotion",
+  "created": "2026-06-10",
+  "plan": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md",
+  "baseline": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": true,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Promote only Book 2 target records 2.1.1, 2.1.2, and 2.1.3 after governed v5 target-quality review.",
+    "Align the active blueprint, lesson blueprint mirror, local quality refs, roadmap, and ledger with the reviewed_final decision.",
+    "Preserve student-facing lesson content and generated lesson output.",
+    "Keep 2.1.4 placeholder status visible and out of this promotion.",
+    "Avoid Chapter 2.2 work and broad product authorization."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-TARGET-V5-PROMOTE",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\"",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\"",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\"",
+    "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.1-TARGET-V5-PROMOTE-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-TARGET-V5-PROMOTE --complete"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No generated lesson markdown, HTML, PDF, or asset edits.",
+    "No 2.1.4 target promotion.",
+    "No Chapter 2.2 work.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, or broad companion scaling authorization."
+  ]
+}
