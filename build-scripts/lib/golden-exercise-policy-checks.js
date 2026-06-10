@@ -313,6 +313,15 @@ function validateLayoutRegistry() {
   assert(registry.schema_version === 1, 'layout registry schema_version must be 1');
   const layout = asArray(registry.layouts).find((item) => item.id === 'golden_exercise_workbench');
   assert(layout, 'layout registry missing golden_exercise_workbench');
+  const selector = layout.current_selector || {};
+  assert(selector['layout.framework'] === 'golden_exercise_workbench', 'layout registry must select Golden renderer by layout.framework');
+  assert(!Object.prototype.hasOwnProperty.call(selector, 'parNr'), 'layout registry selector must not be pinned to parNr');
+  assert(selector.supported_variant === 'golden_graph_reading_claim_v1', 'layout registry must name the current Golden renderer variant');
+  ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture'].forEach((family) => {
+    assert(asArray(selector.required_task_families).includes(family), `layout registry selector missing required task family ${family}`);
+  });
+  assert(selector.requires_graph_spec === true, 'layout registry selector must require graph spec support');
+  assert(selector.unsupported_behavior === 'fail_with_clear_error_no_legacy_fallback', 'layout registry must require unsupported Golden variants to fail clearly');
   assert(layout.required_shell && layout.required_shell.root === 'main.ge-page[data-golden-ticket-root]', 'layout registry must require golden root');
   ['.ge-hero', '.ge-workbench', '.ge-source-card', '.ge-task-card', '.ge-step-list', '.ge-feedback'].forEach((selector) => {
     assert(asArray(layout.required_shell.required_sections).includes(selector), `layout registry missing required section ${selector}`);
@@ -324,7 +333,11 @@ function validateLayoutRegistry() {
     assert(asArray(layout.forbidden_shell).includes(item), `layout registry missing forbidden shell item ${item}`);
   });
   assert(asArray(layout.proof_states).includes('after_interaction'), 'layout registry must require after_interaction proof state');
-  return { layout_id: layout.id, required_sections: layout.required_shell.required_sections.length };
+  return {
+    layout_id: layout.id,
+    supported_variant: selector.supported_variant,
+    required_sections: layout.required_shell.required_sections.length,
+  };
 }
 
 function validateInteractionPolicy() {

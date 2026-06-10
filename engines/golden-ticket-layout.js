@@ -1,4 +1,4 @@
-// Golden Ticket route renderer for the 1.1.3 exit-ticket proof route.
+// Golden Ticket route renderer for Golden Exercise graph/read/claim proof routes.
 
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -41,6 +41,45 @@
     return taskShells(data).find(function (entry) {
       return entry.taskShell.family === family;
     }) || null;
+  }
+
+  var SUPPORTED_VARIANT = 'golden_graph_reading_claim_v1';
+
+  function isGoldenExerciseWorkbench(data) {
+    return Boolean(
+      data &&
+      data.layout &&
+      data.layout.framework === 'golden_exercise_workbench'
+    );
+  }
+
+  function supportGaps(data) {
+    var gaps = [];
+    if (!findTask(data, 'graph_construction_substitute')) gaps.push('task family graph_construction_substitute');
+    if (!findTask(data, 'graph_reading')) gaps.push('task family graph_reading');
+    if (!findTask(data, 'calculation_work_capture')) gaps.push('task family calculation_work_capture');
+    if (!Graph.buildGraphSpec(data)) gaps.push('graph spec from graph_construction_substitute');
+    return gaps;
+  }
+
+  function supportedVariantFor(data) {
+    if (!isGoldenExerciseWorkbench(data)) return null;
+    return supportGaps(data).length ? null : SUPPORTED_VARIANT;
+  }
+
+  function assertSupportedGoldenExerciseVariant(data) {
+    if (!isGoldenExerciseWorkbench(data)) return null;
+    var gaps = supportGaps(data);
+    if (gaps.length) {
+      throw new Error(
+        'Unsupported Golden Exercise Workbench variant: current renderer supports ' +
+        SUPPORTED_VARIANT +
+        ' (graph construction + graph reading + calculation/claim control with graph spec); missing ' +
+        gaps.join(', ') +
+        '.'
+      );
+    }
+    return SUPPORTED_VARIANT;
   }
 
   function sourceBlockTitle(block) {
@@ -255,6 +294,7 @@
   }
 
   function renderMain(data) {
+    assertSupportedGoldenExerciseVariant(data);
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -381,6 +421,7 @@
     if (!root) return null;
     var data = explicitData || (typeof window !== 'undefined' ? window.EXIT_TICKET_DATA : null);
     if (!data) return null;
+    assertSupportedGoldenExerciseVariant(data);
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -687,8 +728,13 @@
   }
 
   return {
+    SUPPORTED_VARIANT: SUPPORTED_VARIANT,
+    assertSupportedGoldenExerciseVariant: assertSupportedGoldenExerciseVariant,
     findTask: findTask,
+    isGoldenExerciseWorkbench: isGoldenExerciseWorkbench,
     renderMain: renderMain,
+    supportGaps: supportGaps,
+    supportedVariantFor: supportedVariantFor,
     init: init,
     parseNumber: parseNumber,
     parsePercent: parsePercent
