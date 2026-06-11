@@ -14,6 +14,8 @@ references/ui/interaction-policy.json
 references/ui/exercise-workbench-policy.md
 references/ui/shared-task-rollout-policy.md
 references/ui/golden-exercise-checker-fixtures.json
+references/ui/layouts/golden-exercise-workbench-short-check.md
+references/ui/layouts/golden-exercise-workbench-short-check.json
 ```
 
 Checker entrypoints for this policy layer:
@@ -24,6 +26,7 @@ build-scripts/references/check-interaction-policy.js
 build-scripts/sprints/check-golden-exercise-workbench.js
 build-scripts/sprints/check-exit-ticket-workbench-112-1.js
 build-scripts/sprints/check-shared-task-ui-policy.js
+build-scripts/sprints/check-short-check-workbench-policy1.js
 ```
 
 ## Source Trail
@@ -40,6 +43,8 @@ engines/golden-ticket-layout.js
 engines/golden-ticket-graph.js
 source-data/book-1/exit-ticket/1.1.3-exit-ticket.json
 source-data/book-1/exit-ticket/1.1.2-exit-ticket.json
+reports/json/exit-ticket-workbench-112-rendered-1-proof.json
+reports/sprints/EXIT-TICKET-WORKBENCH-112-RENDERED-1-rendered-proof.md
 references/exemplars/1.1.3-exit-ticket/
 references/exemplars/a96-answer-form/
 ```
@@ -64,6 +69,17 @@ golden-ticket-layout.js
 ```
 
 It must not render through `#exit-ticket-app`, `et-page`, mixed `ge-*`/`et-*`, legacy task-shell CSS, legacy exit-ticket CSS, or legacy visible shell scripts.
+
+## Advisory Short Checks
+
+`golden_advisory_short_check_v1` is the governed short-check surface variant:
+
+```text
+references/ui/layouts/golden-exercise-workbench-short-check.md
+references/ui/layouts/golden-exercise-workbench-short-check.json
+```
+
+It allows local route advice, repair feedback, and hidden/collapsible or after-attempt hints. It does not authorize target-equivalent proof, paragraph completion, mastery, diagnostics, grading, automatic sequencing, summative use, product use, PV, or Scale Gate 1.
 
 ## Boundary
 

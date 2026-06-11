@@ -214,6 +214,16 @@ Key difference:
 short checks may advise, hint, and route; they do not prove target-equivalence.
 ```
 
+Required policy outputs:
+
+```text
+references/ui/layouts/golden-exercise-workbench-short-check.md
+references/ui/layouts/golden-exercise-workbench-short-check.json
+reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
+reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
+reports/json/short-check-workbench-policy-1-proof.json
+```
+
 ## Phase 8 -- Rollout ledger
 
 Goal run:
@@ -240,8 +250,8 @@ Track which surfaces use the policy and which proof states exist.
 ```text
 1. 1.1.3 exit ticket -- implemented reference
 2. 1.1.2 exit ticket -- first transfer proof
-3. 1.1.1 exit ticket or short check -- choose by operation fit
-4. first advisory short-check variant
+3. advisory short-check variant -- policy before route migration
+4. 1.1.1 exit ticket or first short check -- choose by operation fit
 5. graph/table practice
 6. calculation practice
 7. reasoning practice
