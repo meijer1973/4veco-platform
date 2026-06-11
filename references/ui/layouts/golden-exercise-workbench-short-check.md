@@ -1,8 +1,8 @@
 # Golden Exercise Workbench Short-Check Variant
 
-Status: governed advisory variant specification for `SHORT-CHECK-WORKBENCH-POLICY-1`.
+Status: governed advisory variant specification with first narrow rendered route for `SHORT-CHECK-WORKBENCH-112-RENDERED-1`.
 
-This file defines how a short check may use the Golden Exercise Workbench without inheriting exit-ticket authority. It is a policy and layout specification. It does not migrate a real route, change generated lesson output, or claim that any short check is ready for student/product use.
+This file defines how a short check may use the Golden Exercise Workbench without inheriting exit-ticket authority. It began as a policy and layout specification in `SHORT-CHECK-WORKBENCH-POLICY-1`. The only current rendered migration authorized by this contract is `1.1.2-korte-check`; that does not claim student/product use and does not authorize a broad short-check rollout.
 
 ## Variant Identity
 
@@ -13,7 +13,7 @@ variant_id: golden_advisory_short_check_v1
 machine_contract: references/ui/layouts/golden-exercise-workbench-short-check.json
 ```
 
-`golden_advisory_short_check_v1` is a surface variant specification. It is not the current renderer selector, and it must not be treated as evidence that a route has been migrated.
+`golden_advisory_short_check_v1` is a narrow current renderer selector for advisory short checks that match the governed choice-task contract. It must not be treated as target-equivalent evidence, paragraph completion evidence, or authorization to migrate other routes.
 
 ## Purpose
 
@@ -154,7 +154,7 @@ If a short-check surface needs source material, the source must remain first-cla
 
 ## Proof Before Rendered Adoption
 
-Before a real short check is migrated, the route-specific proof must include:
+Before or with each real short-check migration, the route-specific proof must include:
 
 ```text
 desktop initial state

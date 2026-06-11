@@ -339,16 +339,21 @@ function validateLayoutRegistry() {
   const supportedVariants = asArray(selector.supported_variants);
   const graphVariant = supportedVariants.find((item) => item.id === 'golden_graph_reading_claim_v1');
   const calculationVariant = supportedVariants.find((item) => item.id === 'golden_calculation_structured_v1');
+  const advisoryVariant = supportedVariants.find((item) => item.id === 'golden_advisory_short_check_v1');
   assert(graphVariant, 'layout registry must list golden_graph_reading_claim_v1 in supported_variants');
   assert(calculationVariant, 'layout registry must list golden_calculation_structured_v1 in supported_variants');
+  assert(advisoryVariant, 'layout registry must list golden_advisory_short_check_v1 in supported_variants');
   ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture'].forEach((family) => {
     assert(asArray(graphVariant.required_task_families).includes(family), `graph variant missing required task family ${family}`);
   });
   ['calculation_work_capture', 'structured_short_response'].forEach((family) => {
     assert(asArray(calculationVariant.required_task_families).includes(family), `calculation variant missing required task family ${family}`);
   });
+  assert(asArray(advisoryVariant.required_task_types).includes('choice'), 'advisory short-check variant must require choice tasks');
+  assert(advisoryVariant.surface_type === 'advisory_short_check', 'advisory short-check variant must declare advisory surface type');
   assert(graphVariant.requires_graph_spec === true, 'graph variant must require graph spec support');
   assert(calculationVariant.requires_graph_spec === false, 'calculation variant must not require graph spec support');
+  assert(advisoryVariant.requires_graph_spec === false, 'advisory short-check variant must not require graph spec support');
   ['graph_construction_substitute', 'graph_reading', 'calculation_work_capture'].forEach((family) => {
     assert(asArray(selector.required_task_families).includes(family), `layout registry selector missing required task family ${family}`);
   });
@@ -443,11 +448,12 @@ function validateShortCheckPolicySpec() {
   assert(layout, 'layout registry missing golden_exercise_workbench for short-check policy');
   const selector = layout.current_selector || {};
   const rendererVariantIds = asArray(selector.supported_variants).map((item) => item && item.id).filter(Boolean);
-  assert(!rendererVariantIds.includes('golden_advisory_short_check_v1'), 'short-check policy variant must not be listed as a current renderer variant');
+  assert(rendererVariantIds.includes('golden_advisory_short_check_v1'), 'short-check policy variant must be listed as a narrow current renderer variant');
   const surfaceSpec = asArray(selector.surface_variant_specs).find((item) => item.id === 'golden_advisory_short_check_v1');
   assert(surfaceSpec, 'layout registry missing golden_advisory_short_check_v1 surface variant spec');
   assert(surfaceSpec.surface_type === 'advisory_short_check', 'short-check surface variant must declare advisory_short_check');
-  assert(surfaceSpec.status === 'policy_defined_no_route_migration', 'short-check surface variant must be policy_defined_no_route_migration');
+  assert(surfaceSpec.status === 'first_route_rendered_pending_review', 'short-check surface variant must be first_route_rendered_pending_review');
+  assert(surfaceSpec.renderer_status === 'current_narrow_renderer_selector', 'short-check surface variant must declare narrow renderer selector status');
   assert(surfaceSpec.specification === 'references/ui/layouts/golden-exercise-workbench-short-check.md', 'short-check surface variant specification path mismatch');
   assert(surfaceSpec.machine_contract === 'references/ui/layouts/golden-exercise-workbench-short-check.json', 'short-check surface variant JSON path mismatch');
   [
@@ -462,11 +468,13 @@ function validateShortCheckPolicySpec() {
   assert(spec.variant_id === 'golden_advisory_short_check_v1', 'short-check spec variant_id mismatch');
   assert(spec.layout_id === 'golden_exercise_workbench', 'short-check spec layout_id mismatch');
   assert(spec.surface_type === 'advisory_short_check', 'short-check spec surface_type mismatch');
-  assert(spec.status === 'policy_defined_no_route_migration', 'short-check spec status mismatch');
-  assert(spec.renderer_status === 'not_a_current_renderer_selector', 'short-check spec must not claim renderer selector status');
-  assert(spec.scope && Array.isArray(spec.scope.real_routes_migrated) && spec.scope.real_routes_migrated.length === 0, 'short-check spec must not migrate real routes');
-  assert(spec.scope.generated_lesson_output_changed === false, 'short-check spec must keep generated_lesson_output_changed false');
-  assert(spec.scope.implementation_migration_authorized === false, 'short-check spec must not authorize implementation migration');
+  assert(spec.status === 'first_route_rendered_pending_review', 'short-check spec status mismatch');
+  assert(spec.renderer_status === 'current_narrow_renderer_selector', 'short-check spec must claim only narrow renderer selector status');
+  assert(spec.scope && Array.isArray(spec.scope.real_routes_migrated), 'short-check spec must list real route migration scope');
+  assert(spec.scope.real_routes_migrated.length === 1 && spec.scope.real_routes_migrated[0] === '1.1.2-korte-check', 'short-check spec must migrate only 1.1.2-korte-check');
+  assert(spec.scope.generated_lesson_output_changed === true, 'short-check spec must record generated_lesson_output_changed true for first route');
+  assert(spec.scope.implementation_migration_authorized === true, 'short-check spec must authorize the narrow implementation migration');
+  assert(spec.scope.broad_migration_authorized === false, 'short-check spec must not authorize broad migration');
   assert(asArray(spec.distinction_table).length >= 6, 'short-check spec must include the required distinction table');
   ['authority', 'operation_proof', 'teaching_flow', 'hints', 'completion_wording', 'proof_states'].forEach((dimension) => {
     assert(asArray(spec.distinction_table).some((row) => row.dimension === dimension), `short-check distinction table missing ${dimension}`);
@@ -537,12 +545,13 @@ function validateShortCheckPolicySpec() {
   ], 'ui readme');
   assertIncludesText(read(PATHS.layoutRegistryMd), [
     'golden_advisory_short_check_v1',
-    'policy-defined only',
+    'narrow current renderer selector',
+    '1.1.2-korte-check',
     'targetEquivalent.candidate: false',
     'no target-equivalent or paragraph-completion claim',
   ], 'layout registry markdown');
   assertIncludesText(read(PATHS.sharedTaskPolicyMd), [
-    'advisory short-check variant policy',
+    'advisory short-check rendered proof',
     'targetEquivalent.candidate',
     'route advice',
     'hidden/collapsible or after-attempt hints',
@@ -551,6 +560,7 @@ function validateShortCheckPolicySpec() {
   return {
     variant_id: spec.variant_id,
     status: spec.status,
+    migrated_routes: spec.scope.real_routes_migrated,
     distinction_rows: spec.distinction_table.length,
     proof_states: spec.proof_before_rendered_adoption.length,
   };

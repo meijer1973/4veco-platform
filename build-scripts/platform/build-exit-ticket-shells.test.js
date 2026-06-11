@@ -3,6 +3,7 @@ const path = require('path');
 
 const shells = require('./build-exit-ticket-shells');
 const exit112Data = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
+const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 
 const ROOT = path.resolve(__dirname, '..', '..');
@@ -81,6 +82,36 @@ describe('exit-ticket shell Golden Exercise renderer selection', () => {
     expect(html).toContain('data-ge-work');
     expect(html).toContain('data-ge-structured-choice');
     expect(html).not.toContain('shared/golden-ticket-graph.js');
+    expect(html).not.toContain('id="exit-ticket-app"');
+    expect(html).not.toContain('et-page');
+    expect(html).not.toContain('shared/task-shell.css');
+    expect(html).not.toContain('shared/exit-ticket.css');
+    expect(html).not.toContain('shared/task-shell-ui.js');
+    expect(html).not.toContain('shared/exit-ticket-ui.js');
+  });
+
+  test('selects the advisory short-check Golden renderer for the 1.1.2 short check', () => {
+    const renderer = shells.goldenExerciseRendererFor(short112Data);
+    const html = shells.generateShell(
+      '1.1.2',
+      'Percentages en indexcijfers',
+      short112Data,
+      '1.1.2-korte-check'
+    );
+
+    expect(renderer.id).toBe('golden_advisory_short_check_v1');
+    expect(shells.usesGoldenExerciseWorkbench(short112Data)).toBe(true);
+    expect(shells.usesGoldenTicketLayout(short112Data)).toBe(true);
+    expect(html).toContain('class="ge-topbar"');
+    expect(html).toContain('class="ge-page" data-golden-ticket-root');
+    expect(html).toContain('shared/exit-ticket/1.1.2-korte-check.js');
+    expect(html).toContain('shared/golden-ticket-layout.css');
+    expect(html).toContain('shared/golden-ticket-layout.js');
+    expect(html).toContain('data-ge-choice-option');
+    expect(html).toContain('data-source-key="1.1.2-korte-check"');
+    expect(html).not.toContain('shared/golden-ticket-graph.js');
+    expect(html).not.toContain('data-ge-work');
+    expect(html).not.toContain('data-ge-structured-choice');
     expect(html).not.toContain('id="exit-ticket-app"');
     expect(html).not.toContain('et-page');
     expect(html).not.toContain('shared/task-shell.css');
