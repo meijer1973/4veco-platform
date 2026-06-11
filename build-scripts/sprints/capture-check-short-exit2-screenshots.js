@@ -220,9 +220,13 @@ function inspectSurface(paragraphId, surface) {
   const tasks = data.tasks || [];
   const taskShells = tasks.filter((task) => task.type === 'task_shell').map((task) => task.taskShell || {});
   const graphTask = taskShells.find((task) => task.family === 'graph_construction_substitute');
+  const percentageClaimTask = taskShells.find(
+    (task) => task.interaction && task.interaction.selectionMode === 'percentage_claim_control'
+  );
   return {
     data_key: key,
     generated_page_exists: true,
+    uses_golden_workbench: html.includes('data-golden-ticket-root'),
     surface: data.surface,
     gate_approved: Boolean(data.targetEquivalent && data.targetEquivalent.gateApproved === true),
     completion_language_eligible: Boolean(data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true),
@@ -231,6 +235,7 @@ function inspectSurface(paragraphId, surface) {
     task_shell_count: taskShells.length,
     task_families: taskShells.map((task) => task.family),
     context_block_count: Array.isArray(data.contextBlocks) ? data.contextBlocks.length : 0,
+    context_ids: (data.contextBlocks || []).map((block) => block.id),
     context_types: (data.contextBlocks || []).map((block) => block.type),
     no_prompt_context_block: !(data.contextBlocks || []).some((block) => block.type === 'prompt' || /prompt/i.test(block.id || '')),
     hidden_hints_allowed: surface === 'short',
@@ -245,7 +250,10 @@ function inspectSurface(paragraphId, surface) {
       expected_line_shape: graphTask.expected.lineShape,
     } : null,
     interval_halving_check: taskShells.some((task) => task.interaction && task.interaction.selectionMode === 'interval_halving_check'),
-    no_completion_section_for_held_candidates: data.completionLanguageEligible !== true,
+    percentage_claim_control: Boolean(percentageClaimTask),
+    formula_builder_present: Boolean(percentageClaimTask && percentageClaimTask.interaction && percentageClaimTask.interaction.formula),
+    source_text_current: surface !== 'exit' || !html.includes('IJskraam'),
+    no_completion_section_for_held_candidates: !(data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true),
     rendered_loader_points_to_key: html.includes(`shared/exit-ticket/${key}.js`),
     forbidden_authority_copy_visible: /\b(diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI|Scale Gate|PV)\b/i.test(html),
   };
@@ -275,10 +283,16 @@ function buildProof(captured) {
       exit_tickets_rendered: Object.keys(paragraphs).every((id) => surfaceProof[`${id}-exit`].task_count > 0),
       short_checks_advisory_only: Object.keys(paragraphs).every((id) => surfaceProof[`${id}-short`].target_readiness_evidence === false),
       new_exit_completion_language_held: ['1.1.1', '1.1.3'].every((id) => surfaceProof[`${id}-exit`].completion_language_eligible === false),
-      reviewed_112_exit_preserved: surfaceProof['1.1.2-exit'].gate_approved === true && surfaceProof['1.1.2-exit'].completion_language_eligible === true,
-      paragraph_113_context_blocks_rendered: surfaceProof['1.1.3-exit'].context_block_count === 4,
+      current_112_transfer_held: surfaceProof['1.1.2-exit'].gate_approved === false &&
+        surfaceProof['1.1.2-exit'].completion_language_eligible === false &&
+        surfaceProof['1.1.2-exit'].target_readiness_evidence === false,
+      historical_112_exact_copy_not_broadened: surfaceProof['1.1.2-exit'].gate_approved === false,
+      paragraph_113_context_blocks_rendered: surfaceProof['1.1.3-exit'].context_block_count === 2,
+      paragraph_113_current_context_ids: surfaceProof['1.1.3-exit'].context_ids.join(',') === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table',
       paragraph_113_graph_workspace_contract_present: surfaceProof['1.1.3-exit'].graph_workspace_required === true,
-      paragraph_113_interval_halving_present: surfaceProof['1.1.3-exit'].interval_halving_check === true,
+      paragraph_113_percentage_claim_control_present: surfaceProof['1.1.3-exit'].percentage_claim_control === true,
+      paragraph_113_formula_builder_present: surfaceProof['1.1.3-exit'].formula_builder_present === true,
+      paragraph_113_current_source_text_confirmed: surfaceProof['1.1.3-exit'].source_text_current === true,
       no_prompt_context_block: Object.values(surfaceProof).every((item) => item.no_prompt_context_block === true),
       no_exit_ticket_content_hints: Object.keys(paragraphs).every((id) => surfaceProof[`${id}-exit`].exit_ticket_hint_free === true),
       no_forbidden_authority_copy: Object.values(surfaceProof).every((item) => item.forbidden_authority_copy_visible === false),

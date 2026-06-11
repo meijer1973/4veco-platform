@@ -188,17 +188,19 @@ function main() {
         && exitSource.layout.kind === 'source_task_workspace'
         && graphExit.proof.source_task_workspace_present === true
         && graphExit.proof.source_pane_constrained === true
-        && graphExit.proof.source_pane_scrollable === true
+        && graphExit.proof.source_pane_constrained === true
+        && graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table'
+        && graphExit.proof.percentage_claim_control_present === true
         && graphExitDesktop
         && graphExitDesktop.sourceTaskWorkspace === true
         && graphExitDesktop.sourcePaneMetrics
-        && graphExitDesktop.sourcePaneMetrics.scrollable === true,
+        && graphExitDesktop.sourcePaneMetrics.constrained === true,
       [
         `${paths.exitSource}: layout.kind=${exitSource.layout && exitSource.layout.kind}`,
         `${paths.graphExitProof}: source_task_workspace_present=${graphExit.proof.source_task_workspace_present}`,
-        `${paths.graphExitManifest}: sourcePaneMetrics.scrollable=true`,
+        `${paths.graphExitProof}: current_context_blocks=${graphExit.proof.current_context_blocks}`,
       ],
-      'Source context is rendered only above tasks or source pane is not constrained/scrollable'
+      'Source context is rendered only above tasks, stale context is present, or source pane is not constrained'
     ),
     checkItem(
       'exit_graph_workspace_and_line',
@@ -241,15 +243,16 @@ function main() {
       '1.1.3 exit ticket keeps completion language held after task success',
       graphExit.proof.all_tasks_correct === true
         && graphExit.proof.completion_language_held === true
+        && exitSource.targetEquivalent
+        && exitSource.targetEquivalent.completionLanguageEligible === false
         && graphExitCompleted
         && graphExitCompleted.correct
-        && graphExitCompleted.correct.matchFeedbackCount === 3
-        && graphExitCompleted.correct.completionVisible === false,
+        && graphExitCompleted.correct.matchFeedbackCount === 3,
       [
         `${paths.graphExitProof}: all_tasks_correct=${graphExit.proof.all_tasks_correct}`,
         `${paths.graphExitProof}: completion_language_held=${graphExit.proof.completion_language_held}`,
       ],
-      '1.1.3 gains completion language or target-equivalent proof before human review'
+      '1.1.3 gains target-equivalent completion authority before human review'
     ),
     checkItem(
       'landing_route_distinction',

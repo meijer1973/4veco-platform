@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "review_received_on": "2026-06-11",
+  "decision": "hold_for_surface_repair",
+  "gate_direction": "hold_for_surface_repair",
+  "human_review_decision": "hold_for_surface_repair",
+  "gate_closed": false,
+  "closure_authorized": false,
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "findings": [
+    {
+      "id": "CHECKSURFACE-Q1",
+      "classification": "core_requirement_met",
+      "comment": "Landing pages clearly show separate Korte check and Exit ticket cards.",
+      "blocks": ["nothing current"],
+      "does_not_block": ["evidence refresh repair"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q2",
+      "classification": "core_spec_failure",
+      "comment": "Six-surface audit matrix is complete in shape, but evidence behind it is stale for 1.1.3 exit-ticket judgement.",
+      "blocks": ["gate closure"],
+      "does_not_block": ["narrow evidence-refresh repair"],
+      "proof_required_to_close": "Refresh six-surface evidence so 1.1.3 exit evidence matches merged-main source/output."
+    },
+    {
+      "id": "CHECKSURFACE-Q3",
+      "classification": "quality_improvement_available",
+      "comment": "Policy proof is useful but does not yet prevent stale proof artifacts after source/output changes.",
+      "blocks": ["future claim that policy proof alone proves current rendered-evidence freshness"],
+      "does_not_block": ["keeping policy regression layer as useful guardrail evidence"],
+      "proof_required_to_close": "Add freshness guard tying proof JSON/screenshot manifests to current source-data keys, context IDs, and current generated page text."
+    },
+    {
+      "id": "CHECKSURFACE-Q4",
+      "classification": "core_requirement_met",
+      "comment": "1.1.3 advisory Korte check is meaningful graph/table route evidence.",
+      "blocks": ["nothing current"],
+      "does_not_block": ["evidence refresh repair"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q5",
+      "classification": "core_requirement_met",
+      "comment": "1.1.3 Korte check gives actionable next-step feedback.",
+      "blocks": ["nothing current"],
+      "does_not_block": ["evidence refresh repair"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q6",
+      "classification": "core_requirement_met",
+      "comment": "Current 1.1.3 Exit ticket source/output is free of pre-attempt procedure/flowchart scaffolding; Q9 still blocks evidence freshness.",
+      "blocks": ["nothing for current source/output; Q9 still blocks evidence closure"],
+      "does_not_block": ["evidence refresh repair"],
+      "proof_required_to_close": "Refresh proof package so current 1.1.3 exit source/output is the reviewed evidence."
+    },
+    {
+      "id": "CHECKSURFACE-Q7",
+      "classification": "core_spec_failure",
+      "comment": "Required readability evidence is stale; graph-exit proof and screenshots still describe an older IJskraam version.",
+      "blocks": ["gate closure", "claim that current exit workspace has been visually/readability-reviewed"],
+      "does_not_block": ["using current source/output as the basis for a refreshed repair pass"],
+      "proof_required_to_close": "Regenerate graph-exit screenshots, DOM/state manifest, and proof JSON from merged-main current output."
+    },
+    {
+      "id": "CHECKSURFACE-Q8",
+      "classification": "core_requirement_met",
+      "comment": "Current 1.1.3 exit source asks for real student action.",
+      "blocks": ["nothing for current source/output"],
+      "does_not_block": ["evidence refresh repair"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q9",
+      "classification": "core_spec_failure",
+      "comment": "Review lab and proof package are not sufficient for direct human judgement because graph-exit screenshots/proof are stale.",
+      "blocks": ["gate closure", "CHECK-SHORT-EXIT-2 closure", "downstream SCALE-PROOF-3P start based on this packet"],
+      "does_not_block": ["narrow evidence-refresh repair"],
+      "proof_required_to_close": "Refresh screenshots and proof JSON so body text, context IDs, task families, context count, and completion flags match current generated output."
+    },
+    {
+      "id": "CHECKSURFACE-Q10",
+      "classification": "core_spec_failure",
+      "comment": "Packet JSON preserves authority, but proof artifacts and review lab preserve stale 1.1.2 authority.",
+      "blocks": ["gate closure", "authority-clean closure record"],
+      "does_not_block": ["preserving historical exact local 1.1.2 authority as archive-only evidence"],
+      "proof_required_to_close": "Update review lab and proof JSON so they distinguish historical exact-copy authority from current held Golden Workbench transfer."
+    },
+    {
+      "id": "CHECKSURFACE-Q11",
+      "classification": "core_spec_failure",
+      "comment": "Required repairs before controlled downstream sprint may start are evidence-refresh repairs, not redesign.",
+      "blocks": ["CHECK-SHORT-EXIT-2 closure", "SCALE-PROOF-3P", "GATE-PRODUCT-3P", "Scale Gate 1"],
+      "does_not_block": ["narrow surface/evidence refresh sprint"],
+      "proof_required_to_close": "Refresh packet proof JSON, screenshot manifests, lab text, source data, and generated output so they agree."
+    },
+    {
+      "id": "CHECKSURFACE-Q12",
+      "classification": "core_spec_failure",
+      "comment": "Gate direction is hold_for_surface_repair.",
+      "blocks": ["gate closure"],
+      "does_not_block": ["narrow surface/evidence refresh sprint"],
+      "proof_required_to_close": "Complete the evidence freshness repairs and return refreshed evidence for review."
+    }
+  ]
+}

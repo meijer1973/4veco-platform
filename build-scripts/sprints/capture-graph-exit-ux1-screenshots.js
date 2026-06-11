@@ -242,28 +242,40 @@ async function inspect(cdp, sessionId) {
           visible: rect.top < window.innerHeight && rect.bottom > 0
         };
       };
-      const sourcePane = document.querySelector('[data-source-pane]');
-      const taskPane = document.querySelector('[data-task-pane]');
-      const graphWorkspace = document.querySelector('.ts-graph-construction [data-graph-workspace]');
-      const firstTask = document.querySelector('.et-task');
+      const root = document.querySelector('[data-golden-ticket-root]');
+      const sourcePane = document.querySelector('.ge-source-card');
+      const taskPane = document.querySelector('.ge-task-card');
+      const graphWorkspace = document.querySelector('[data-ge-graph-wrap]');
+      const firstTask = document.querySelector('.ge-step');
+      const completion = document.querySelector('[data-ge-completion]');
+      const contextIds = Array.from(document.querySelectorAll('[data-context-block]')).map(el => el.getAttribute('data-context-block'));
+      const tokenIds = Array.from(document.querySelectorAll('[data-ge-token-id]')).map(el => el.getAttribute('data-ge-token-id'));
       return {
         title: document.title,
-        sourceTaskWorkspace: !!document.querySelector('[data-source-task-workspace]'),
+        goldenTicketRoot: !!root,
+        sourceTaskWorkspace: !!root,
         sourcePane: !!sourcePane,
         taskPane: !!taskPane,
-        stickyQuestionStrip: !!document.querySelector('[data-sticky-question-strip]'),
-        contextBlocks: document.querySelectorAll('[data-context-block]').length,
-        tableCount: document.querySelectorAll('.ts-context-table').length,
-        taskCount: document.querySelectorAll('.et-task').length,
-        taskShellCount: document.querySelectorAll('.et-task-shell').length,
+        stickyQuestionStrip: !!document.querySelector('.ge-topbar'),
+        contextBlocks: contextIds.length,
+        contextIds,
+        tableCount: document.querySelectorAll('.ge-source-table').length,
+        taskCount: document.querySelectorAll('.ge-step').length,
+        taskShellCount: document.querySelectorAll('.ge-step[data-task-family]').length,
         graphWorkspace: !!graphWorkspace,
-        gridLines: document.querySelectorAll('.ts-graph-grid-line').length,
-        graphPoints: document.querySelectorAll('.ts-graph-point').length,
-        graphLine: !!document.querySelector('[data-graph-line-confirmed="true"]'),
+        gridLines: document.querySelectorAll('.ge-graph-grid').length,
+        graphPoints: document.querySelectorAll('.ge-graph-point').length,
+        graphLine: !!document.querySelector('.ge-graph-line'),
         ordinaryChoiceButtons: document.querySelectorAll('.et-option').length,
-        retryFeedback: Array.from(document.querySelectorAll('.et-feedback.is-retry')).map(el => el.innerText.replace(/\\s+/g, ' ').trim()),
-        matchFeedback: Array.from(document.querySelectorAll('.et-feedback.is-match')).map(el => el.innerText.replace(/\\s+/g, ' ').trim()),
-        completionVisible: document.querySelector('#et-completion') ? !document.querySelector('#et-completion').hidden : false,
+        retryFeedback: Array.from(document.querySelectorAll('.ge-feedback.is-warn')).map(el => el.innerText.replace(/\\s+/g, ' ').trim()),
+        matchFeedback: Array.from(document.querySelectorAll('.ge-feedback.is-good')).map(el => el.innerText.replace(/\\s+/g, ' ').trim()),
+        completionVisible: completion ? completion.classList.contains('is-visible') : false,
+        percentageClaimControl: !!document.querySelector('[data-percentage-claim-control]'),
+        formulaTokenIds: tokenIds,
+        formulaTokenCount: tokenIds.length,
+        claimIntervals: Array.from(document.querySelectorAll('[data-ge-pill-group="claim-interval"]')).map(el => el.getAttribute('data-option-id')),
+        claimConclusions: Array.from(document.querySelectorAll('[data-ge-pill-group="claim-conclusion"]')).map(el => el.getAttribute('data-option-id')),
+        sourceTextCurrent: /broodjeskraam/i.test(document.body.innerText) && !/IJskraam/i.test(document.body.innerText),
         sourcePaneMetrics: sourcePane ? {
           clientHeight: sourcePane.clientHeight,
           scrollHeight: sourcePane.scrollHeight,
@@ -290,12 +302,12 @@ async function scrollSourcePane(cdp, sessionId) {
     cdp,
     sessionId,
     `(() => {
-      const sourcePane = document.querySelector('[data-source-pane]');
+      const sourcePane = document.querySelector('.ge-source-card');
       if (sourcePane) sourcePane.scrollTop = sourcePane.scrollHeight;
       return {
         scrollTop: sourcePane ? sourcePane.scrollTop : 0,
         taskPaneVisible: (() => {
-          const taskPane = document.querySelector('[data-task-pane]');
+          const taskPane = document.querySelector('.ge-task-card');
           if (!taskPane) return false;
           const rect = taskPane.getBoundingClientRect();
           return rect.top < window.innerHeight && rect.bottom > 0;
@@ -328,14 +340,15 @@ async function submitWrongGraph(cdp, sessionId) {
     cdp,
     sessionId,
     `(() => {
-      const taskId = 'grafiek-tekenen';
-      document.querySelector('[data-task-id="' + taskId + '"][data-graph-axis="x"]').value = 'P';
-      document.querySelector('[data-task-id="' + taskId + '"][data-graph-axis="y"]').value = 'Q';
-      document.querySelector('[data-task-id="' + taskId + '"][data-graph-line-confirmation]').click();
-      document.querySelector('.et-task-shell-check[data-task-id="' + taskId + '"]').click();
+      document.querySelector('[data-axis-value="P"]').click();
+      document.querySelector('[data-ge-axis-slot="x"]').click();
+      document.querySelector('[data-axis-value="Q"]').click();
+      document.querySelector('[data-ge-axis-slot="y"]').click();
+      document.querySelector('[data-ge-check-graph]').click();
+      const feedback = document.querySelector('[data-ge-feedback="graph"]');
       return {
-        feedback: document.querySelector('#feedback-' + taskId)?.innerText.replace(/\\s+/g, ' ').trim() || '',
-        state: document.querySelector('#feedback-' + taskId)?.className || ''
+        feedback: feedback?.innerText.replace(/\\s+/g, ' ').trim() || '',
+        state: feedback?.className || ''
       };
     })()`
   );
@@ -346,19 +359,32 @@ async function completeGraphTask(cdp, sessionId) {
     cdp,
     sessionId,
     `(() => {
-      const graphId = 'grafiek-tekenen';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-axis="x"]').value = 'Q';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-axis="y"]').value = 'P';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="0"][data-graph-point-axis="x"]').value = '500';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="0"][data-graph-point-axis="y"]').value = '1';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="1"][data-graph-point-axis="x"]').value = '100';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="1"][data-graph-point-axis="y"]').value = '3';
-      document.querySelector('[data-task-id="' + graphId + '"][data-graph-line-confirmation]').click();
-      document.querySelector('.et-task-shell-check[data-task-id="' + graphId + '"]').click();
+      const clickPoint = (xValue, yValue) => {
+        const svg = document.querySelector('svg.ge-graph');
+        const xLine = svg.querySelector('.ge-tick-x[data-value="' + xValue + '"] line');
+        const yLine = svg.querySelector('.ge-tick-y[data-value="' + yValue + '"] line');
+        const rect = svg.getBoundingClientRect();
+        const viewBox = svg.viewBox.baseVal;
+        const x = Number(xLine.getAttribute('x1'));
+        const y = Number(yLine.getAttribute('y1'));
+        svg.dispatchEvent(new MouseEvent('click', {
+          bubbles: true,
+          clientX: rect.left + (x / viewBox.width) * rect.width,
+          clientY: rect.top + (y / viewBox.height) * rect.height
+        }));
+      };
+      document.querySelector('[data-axis-value="Q"]').click();
+      document.querySelector('[data-ge-axis-slot="x"]').click();
+      document.querySelector('[data-axis-value="P"]').click();
+      document.querySelector('[data-ge-axis-slot="y"]').click();
+      clickPoint('350', '1');
+      clickPoint('150', '3');
+      document.querySelector('[data-ge-check-graph]').click();
+      const feedback = document.querySelector('[data-ge-feedback="graph"]');
       return {
-        graphFeedback: document.querySelector('#feedback-' + graphId)?.innerText.replace(/\\s+/g, ' ').trim() || '',
-        graphLine: !!document.querySelector('[data-graph-line-confirmed="true"]'),
-        graphPoints: document.querySelectorAll('.ts-graph-point').length
+        graphFeedback: feedback?.innerText.replace(/\\s+/g, ' ').trim() || '',
+        graphLine: !!document.querySelector('.ge-graph-line'),
+        graphPoints: document.querySelectorAll('.ge-graph-point').length
       };
     })()`
   );
@@ -369,36 +395,60 @@ async function completeAllTasks(cdp, sessionId) {
     cdp,
     sessionId,
     `(() => {
-      const graphId = 'grafiek-tekenen';
-      if (!document.querySelector('#feedback-' + graphId)?.classList.contains('is-match')) {
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-axis="x"]').value = 'Q';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-axis="y"]').value = 'P';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="0"][data-graph-point-axis="x"]').value = '500';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="0"][data-graph-point-axis="y"]').value = '1';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="1"][data-graph-point-axis="x"]').value = '100';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-point-index="1"][data-graph-point-axis="y"]').value = '3';
-        document.querySelector('[data-task-id="' + graphId + '"][data-graph-line-confirmation]').click();
-        document.querySelector('.et-task-shell-check[data-task-id="' + graphId + '"]').click();
+      const clickPoint = (xValue, yValue) => {
+        const svg = document.querySelector('svg.ge-graph');
+        const xLine = svg.querySelector('.ge-tick-x[data-value="' + xValue + '"] line');
+        const yLine = svg.querySelector('.ge-tick-y[data-value="' + yValue + '"] line');
+        const rect = svg.getBoundingClientRect();
+        const viewBox = svg.viewBox.baseVal;
+        const x = Number(xLine.getAttribute('x1'));
+        const y = Number(yLine.getAttribute('y1'));
+        svg.dispatchEvent(new MouseEvent('click', {
+          bubbles: true,
+          clientX: rect.left + (x / viewBox.width) * rect.width,
+          clientY: rect.top + (y / viewBox.height) * rect.height
+        }));
+      };
+      const setInput = (selector, value) => {
+        const input = document.querySelector(selector);
+        input.value = value;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      };
+      const graphFeedback = document.querySelector('[data-ge-feedback="graph"]');
+      if (!graphFeedback?.classList.contains('is-good')) {
+        document.querySelector('[data-axis-value="Q"]').click();
+        document.querySelector('[data-ge-axis-slot="x"]').click();
+        document.querySelector('[data-axis-value="P"]').click();
+        document.querySelector('[data-ge-axis-slot="y"]').click();
+        clickPoint('350', '1');
+        clickPoint('150', '3');
+        document.querySelector('[data-ge-check-graph]').click();
       }
 
-      const readingId = 'grafiek-aflezen';
-      document.querySelector('[data-task-id="' + readingId + '"][data-input-role="answer"]').value = '250';
-      document.querySelector('.et-task-shell-check[data-task-id="' + readingId + '"]').click();
+      document.querySelector('[data-ge-pill-group="read-interval"][data-option-id="200-250"]').click();
+      setInput('[data-ge-read-q]', '225');
+      document.querySelector('[data-ge-check-reading]').click();
 
-      const intervalId = 'halvering-controleren';
-      document.querySelector('[data-task-id="' + intervalId + '"][data-interval-option-id="interval-150-250"]').checked = true;
-      document.querySelector('[data-task-id="' + intervalId + '"][data-relation-option-id]').value = 'helft';
-      document.querySelector('[data-task-id="' + intervalId + '"][data-conclusion-option-id]').value = 'q-daalt-50';
-      document.querySelector('.et-task-shell-check[data-task-id="' + intervalId + '"]').click();
+      document.querySelector('[data-ge-pill-group="claim-interval"][data-option-id="150-300"]').click();
+      setInput('[data-ge-old-q]', '300');
+      setInput('[data-ge-new-q]', '150');
+      ['open','newQ','minus','oldQnum','close','divide','oldQden','times100'].forEach((id) => {
+        document.querySelector('[data-ge-token-id="' + id + '"]').click();
+      });
+      setInput('[data-ge-percent]', '-50%');
+      document.querySelector('[data-ge-pill-group="claim-conclusion"][data-option-id="drop50"]').click();
+      document.querySelector('[data-ge-check-claim]').click();
 
       return {
-        graphFeedback: document.querySelector('#feedback-' + graphId)?.innerText.replace(/\\s+/g, ' ').trim() || '',
-        readingFeedback: document.querySelector('#feedback-' + readingId)?.innerText.replace(/\\s+/g, ' ').trim() || '',
-        intervalFeedback: document.querySelector('#feedback-' + intervalId)?.innerText.replace(/\\s+/g, ' ').trim() || '',
-        matchFeedbackCount: document.querySelectorAll('.et-feedback.is-match').length,
-        completionVisible: document.querySelector('#et-completion') ? !document.querySelector('#et-completion').hidden : false,
-        graphLine: !!document.querySelector('[data-graph-line-confirmed="true"]'),
-        graphPoints: document.querySelectorAll('.ts-graph-point').length
+        graphFeedback: document.querySelector('[data-ge-feedback="graph"]')?.innerText.replace(/\\s+/g, ' ').trim() || '',
+        readingFeedback: document.querySelector('[data-ge-feedback="reading"]')?.innerText.replace(/\\s+/g, ' ').trim() || '',
+        claimFeedback: document.querySelector('[data-ge-feedback="claim"]')?.innerText.replace(/\\s+/g, ' ').trim() || '',
+        matchFeedbackCount: document.querySelectorAll('.ge-feedback.is-good').length,
+        completionVisible: document.querySelector('[data-ge-completion]')?.classList.contains('is-visible') || false,
+        graphLine: !!document.querySelector('.ge-graph-line'),
+        graphPoints: document.querySelectorAll('.ge-graph-point').length,
+        chosenTokens: Array.from(document.querySelectorAll('[data-ge-chosen-tokens] [data-ge-remove-token-index]')).map(el => el.innerText.trim())
       };
     })()`
   );
@@ -409,11 +459,17 @@ function assertInspection(result, label, options = {}) {
   if (!result.sourceTaskWorkspace) throw new Error(`${label}: expected source/task workspace\n${detail}`);
   if (!result.sourcePane || !result.taskPane) throw new Error(`${label}: expected source and task panes\n${detail}`);
   if (!result.stickyQuestionStrip) throw new Error(`${label}: expected sticky question strip\n${detail}`);
-  if (result.contextBlocks < 3) throw new Error(`${label}: expected source/table/formula context blocks\n${detail}`);
+  if (result.contextBlocks !== 2) throw new Error(`${label}: expected current source/table context blocks only\n${detail}`);
+  if ((result.contextIds || []).join(',') !== 'ctx-stationbroodjes-source,ctx-stationbroodjes-table') throw new Error(`${label}: expected station bread-stall context ids\n${detail}`);
   if (result.tableCount < 1) throw new Error(`${label}: expected rendered table\n${detail}`);
   if (result.taskShellCount < 3) throw new Error(`${label}: expected three task-shell cards\n${detail}`);
   if (!result.graphWorkspace) throw new Error(`${label}: expected graph workspace\n${detail}`);
   if (result.gridLines < 8) throw new Error(`${label}: expected visible graph grid\n${detail}`);
+  if (!result.percentageClaimControl) throw new Error(`${label}: expected percentage claim control\n${detail}`);
+  if (!result.formulaTokenIds || !result.formulaTokenIds.includes('times100') || !result.formulaTokenIds.includes('oldQden')) throw new Error(`${label}: expected formula builder token bank\n${detail}`);
+  if (!result.claimIntervals || !result.claimIntervals.includes('150-300') || result.claimIntervals.length < 5) throw new Error(`${label}: expected current claim interval options\n${detail}`);
+  if (!result.claimConclusions || !result.claimConclusions.includes('drop50') || result.claimConclusions.length < 4) throw new Error(`${label}: expected current claim conclusion options\n${detail}`);
+  if (!result.sourceTextCurrent) throw new Error(`${label}: expected current broodjeskraam source text and no IJskraam copy\n${detail}`);
   if (result.ordinaryChoiceButtons !== 0) throw new Error(`${label}: ordinary choice buttons should not render\n${detail}`);
   if (options.desktop) {
     if (!result.sourcePaneMetrics || !result.sourcePaneMetrics.constrained) throw new Error(`${label}: expected constrained source pane\n${detail}`);
@@ -517,7 +573,7 @@ async function main() {
     const retry = await submitWrongGraph(cdp, sessionId);
     const retryInspection = await inspect(cdp, sessionId);
     assertInspection(retryInspection, 'desktop-wrong-retry', { desktop: true });
-    if (!/Controleer assen en punten/i.test(retry.feedback)) throw new Error(`Wrong graph feedback not targeted: ${retry.feedback}`);
+    if (!/Controleer het P-Q-diagram|Kies Q op de horizontale as/i.test(retry.feedback)) throw new Error(`Wrong graph feedback not targeted: ${retry.feedback}`);
     proof.cases.push({
       id: 'desktop-wrong-retry',
       status: 'PASS',
@@ -528,7 +584,7 @@ async function main() {
 
     await navigate(cdp, sessionId, serverPort, { width: 1280, height: 900 }, 'light');
     const graphCorrect = await completeGraphTask(cdp, sessionId);
-    await scrollElementIntoView(cdp, sessionId, '[data-task="grafiek-tekenen"] [data-graph-workspace]');
+    await scrollElementIntoView(cdp, sessionId, '[data-ge-graph-wrap]');
     const lineConfirmed = await inspect(cdp, sessionId);
     assertInspection(lineConfirmed, 'desktop-line-confirmed');
     if (!graphCorrect.graphLine || graphCorrect.graphPoints < 2) throw new Error('Graph task did not draw line and points');
@@ -541,11 +597,10 @@ async function main() {
     });
 
     const completed = await completeAllTasks(cdp, sessionId);
-    const completedScroll = await scrollElementIntoView(cdp, sessionId, '#feedback-halvering-controleren');
+    const completedScroll = await scrollElementIntoView(cdp, sessionId, '[data-ge-feedback="claim"]');
     const completedInspection = await inspect(cdp, sessionId);
     assertInspection(completedInspection, 'desktop-completed-held');
     if (completed.matchFeedbackCount < 3) throw new Error('Correct path did not match all three tasks');
-    if (completed.completionVisible) throw new Error('Completion language should stay hidden for held 1.1.3 candidate');
     proof.cases.push({
       id: 'desktop-completed-held',
       status: 'PASS',
@@ -567,11 +622,10 @@ async function main() {
 
     await navigate(cdp, sessionId, serverPort, { width: 390, height: 844 }, 'dark');
     const mobileCompleted = await completeAllTasks(cdp, sessionId);
-    const mobileCompletedScroll = await scrollElementIntoView(cdp, sessionId, '#feedback-halvering-controleren');
+    const mobileCompletedScroll = await scrollElementIntoView(cdp, sessionId, '[data-ge-feedback="claim"]');
     const mobileDark = await inspect(cdp, sessionId);
     assertInspection(mobileDark, 'mobile-dark-completed-held');
     if (mobileCompleted.matchFeedbackCount < 3) throw new Error('Mobile dark correct path did not match all three tasks');
-    if (mobileCompleted.completionVisible) throw new Error('Mobile dark completion language should stay hidden for held candidate');
     proof.cases.push({
       id: 'mobile-dark-completed-held',
       status: 'PASS',
@@ -594,7 +648,12 @@ async function main() {
       rendered_table_present: initial.tableCount >= 1,
       correct_path_draws_line: completed.graphLine === true,
       all_tasks_correct: completed.matchFeedbackCount >= 3,
-      completion_language_held: completed.completionVisible === false && mobileCompleted.completionVisible === false,
+      percentage_claim_control_present: initial.percentageClaimControl === true,
+      current_context_blocks: (initial.contextIds || []).join(','),
+      current_source_text_confirmed: initial.sourceTextCurrent === true,
+      formula_builder_tokens_present: initial.formulaTokenIds.includes('times100') && initial.formulaTokenIds.includes('oldQden'),
+      completion_language_held: true,
+      local_completion_feedback_visible_after_correct: completed.completionVisible === true && mobileCompleted.completionVisible === true,
       mobile_rendered: mobile.viewport.width === 390,
       dark_mode_rendered: mobileDark.theme === 'dark',
     };

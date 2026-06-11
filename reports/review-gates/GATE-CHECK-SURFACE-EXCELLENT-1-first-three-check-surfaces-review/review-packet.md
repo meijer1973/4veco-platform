@@ -1,9 +1,10 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 First Three Check Surfaces Review Packet
 
-Generated: 2026-06-06
+Generated: 2026-06-11
 
-Status: renewed direct human-review packet prepared; human review comments have
-not started; no closure or product authority exists.
+Status: direct human review returned `hold_for_surface_repair`; evidence
+refresh repair is ready for renewed review; no closure or product authority
+exists.
 
 The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded. It must not
 be sent as current evidence because renewed human/lead feedback found that
@@ -60,6 +61,11 @@ must not broaden the historical authority.
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json`
+- `reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md`
 - `reports/json/checksurface-policy-regression1-proof.json`
 - `reports/fixtures/checksurface-policy-regression1/negative-fixtures.json`
 - `reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md`
@@ -262,7 +268,7 @@ After comments are returned:
 
 ## Recommended Next Action
 
-Push this renewed packet and all cited evidence, then send it for direct human
-review comments. Do not start `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate
-1, product-route adoption, diagnostics, mastery/sequencing, PV, or
-student/product use from this packet.
+Send this refreshed evidence package back for renewed human review. Do not
+write closure artifacts and do not start `SCALE-PROOF-3P`,
+`GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption, diagnostics,
+mastery/sequencing, PV, or student/product use from this packet.
