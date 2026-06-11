@@ -47,7 +47,7 @@ The currently active sprint sits at the top. Future sprints follow in sequence.
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
-| MIXED-OPGAVEN-TARGET-STANDARD-1 | Mixed-Exercise Target Standard And 2.1.4 Application | no | Active planning sprint. Define the reusable `gemengde_opgaven` target standard, apply it to 2.1.4, and use REV-STD-1 so PASS WITH FLAGS cannot carry a missing core requirement. |
+| MIXED-OPGAVEN-TARGET-STANDARD-1 | Mixed-Exercise Target Standard And 2.1.4 Application | yes | Closed PASS after lead review. Created the reusable `gemengde_opgaven` target standard, applied it to 2.1.4, and resolved the placeholder target without carrying a missing core requirement. |
 | B2-2.1-TARGET-V5-PROMOTE | Book 2 Chapter 2.1 Target V5 Promotion | yes | Closed PASS WITH FLAGS after lead review. Promoted only 2.1.1 through 2.1.3 target records to `reviewed_final`; kept 2.1.4 placeholder and Chapter 2.2 outside scope. |
 | B2-2.1.1-HARDEN | Book 2 Paragraph 2.1.1 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Rewrote 2.1.1 to the Book 1 didactic model and rebuilt Chapter 2.1 without duplicate 2.1.1 exercises. |
 | B2-2.1.2-HARDEN | Book 2 Paragraph 2.1.2 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, repaired assembled-chapter duplication, strengthened graph-production practice, and rebuilt paragraph/chapter output. |
@@ -76,4 +76,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Execute `MIXED-OPGAVEN-TARGET-STANDARD-1`: define the reusable `gemengde_opgaven` target standard, audit 2.1.4, update validator policy/tests, and replace the 2.1.4 placeholder target only if the audit and REV-STD-1 review support explicit target acceptance. Do not start Chapter 2.2 or unrelated lesson production.
+Use the new mixed-opgaven target standard for any future mixed-exercise promotion. Do not start Chapter 2.2 or unrelated lesson production unless a later human instruction expands the assignment beyond Chapter 2.1.x.

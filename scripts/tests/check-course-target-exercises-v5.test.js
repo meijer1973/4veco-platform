@@ -6,7 +6,7 @@ function record(id, overrides = {}) {
   const [module, chapter, paragraph] = id.split('.').map(Number);
   const kind = overrides.paragraph_kind || 'theory';
   const status = overrides.record_status || 'migrated_from_v4_needs_v5_review';
-  return {
+  const base = {
     id,
     module,
     chapter,
@@ -17,12 +17,35 @@ function record(id, overrides = {}) {
     record_status: status,
     target_exercise: status === 'placeholder_needs_review'
       ? { placeholder: true, context: 'Placeholder', subquestions: [] }
-      : { context: 'Migrated', subquestions: [] },
+      : kind === 'gemengde_opgaven'
+        ? {
+          context: 'Reviewed mixed transfer context where students select sources, calculate values, interpret a table or graph, and write an economic conclusion.',
+          subquestions: [
+            { label: 'a', prompt: 'Select the relevant source information.' },
+            { label: 'b', prompt: 'Calculate the required totals and averages.' },
+            { label: 'c', prompt: 'Interpret the table or graph.' },
+            { label: 'd', prompt: 'Write an economic conclusion.' },
+          ],
+        }
+        : { context: 'Migrated', subquestions: [] },
     placeholder_reason: status === 'placeholder_needs_review' ? 'Needs review.' : undefined,
     source_ref: `references/owned/course-blueprint-v5.md §${id}`,
     v5_migration: {
+      source_status: status,
       review_required_before_final: status !== 'reviewed_final',
     },
+  };
+  if (kind === 'gemengde_opgaven' && status === 'reviewed_final') {
+    base.mixed_target_profile = {
+      integrates_paragraphs: ['2.1.1', '2.1.2'],
+      source_selection_required: true,
+      answer_construction_required: true,
+      table_or_graph_interpretation_required: true,
+      no_new_theory: true,
+    };
+  }
+  return {
+    ...base,
     ...overrides,
   };
 }
@@ -62,13 +85,37 @@ describe('check-course-target-exercises-v5', () => {
     expect(errors).toContain('stale v4 source_ref');
   });
 
+  test('accepts reviewed-final mixed targets that meet the standard', () => {
+    const data = validData();
+    const mixed = data.exercises.find((exercise) => exercise.id === '2.1.4');
+    Object.assign(mixed, record('2.1.4', {
+      paragraph_kind: 'gemengde_opgaven',
+      introduces_new_theory: false,
+      record_status: 'reviewed_final',
+    }));
+    expect(validate(data)).toEqual([]);
+  });
+
   test('rejects hidden final placeholders', () => {
     const data = validData();
     const mixed = data.exercises.find((exercise) => exercise.id === '1.1.4');
     mixed.record_status = 'reviewed_final';
     delete mixed.placeholder_reason;
     const errors = validate(data).join('\n');
-    expect(errors).toContain('gemengde_opgaven cannot be reviewed_final during Phase A');
+    expect(errors).toContain('reviewed_final gemengde_opgaven requires a non-placeholder target_exercise');
+  });
+
+  test('rejects reviewed-final mixed targets without profile proof', () => {
+    const data = validData();
+    const mixed = data.exercises.find((exercise) => exercise.id === '2.1.4');
+    Object.assign(mixed, record('2.1.4', {
+      paragraph_kind: 'gemengde_opgaven',
+      introduces_new_theory: false,
+      record_status: 'reviewed_final',
+    }));
+    delete mixed.mixed_target_profile;
+    const errors = validate(data).join('\n');
+    expect(errors).toContain('reviewed_final gemengde_opgaven requires mixed_target_profile');
   });
 
   test('rejects wrong book counts', () => {
