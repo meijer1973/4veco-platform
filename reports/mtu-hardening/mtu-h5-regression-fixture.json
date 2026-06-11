@@ -77,7 +77,6 @@
       },
       "question_word": "berekenen",
       "mapped_mtu_ids": [
-        "A15",
         "A61",
         "A96"
       ],
@@ -92,7 +91,6 @@
           "description": "Compute the annual maximum relevant cost for the statutory-risk option, combining twelve monthly premiums and the statutory deductible.",
           "answer_model_summary": "The correction model awards one point for a correct intermediate annual-cost comparison using the premium and deductible table.",
           "mapped_mtu_ids": [
-            "A15",
             "A61",
             "A96"
           ],
@@ -120,13 +118,15 @@
           "expected_misconception_refs": [
             "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-A15-stale-or-incorrect"
           ],
-          "missing_mtu_expected": true,
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+            "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON"
+          ],
+          "missing_mtu_expected": false,
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A61",
@@ -141,7 +141,6 @@
           "description": "Compute the enhanced-risk annual premium, derive the equal-cost threshold, and state that the enhanced deductible is cheaper up to EUR 649 per year.",
           "answer_model_summary": "The correction model awards one point for deriving the EUR 649 threshold and concluding the enhanced deductible is cheaper up to that annual care-cost amount.",
           "mapped_mtu_ids": [
-            "A15",
             "A61",
             "A96"
           ],
@@ -169,13 +168,19 @@
           "expected_misconception_refs": [
             "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3-threshold-direction-answer-skill-need"
           ],
-          "missing_mtu_expected": true,
+          "reviewed_equivalent_operation_refs": [
+            "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON",
+            "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json#EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON"
+          ],
+          "reviewed_equivalent_answer_skill_refs": [
+            "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json#EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION",
+            "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json#EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION"
+          ],
+          "missing_mtu_expected": false,
           "scale_factor_expected": false,
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review threshold-conclusion wording as answer-skill need or governed MTU procedure"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A61",
