@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T13:51:22.227Z
+Generated: 2026-06-11T13:53:47.794Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4379
+Files indexed: 4380
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4430,7 +4430,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 443
+Count: 444
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4545,6 +4545,7 @@ Count: 443
 - archive/sprints/INSPECT-9/INSPECT-9-lead-review-assignment.md
 - archive/sprints/INSPECT-9/INSPECT-9-lead-review-round1.md
 - archive/sprints/INSPECT-9/INSPECT-9-planning-review.md
+- archive/sprints/INSPECT-9/INSPECT-9-rev-std1-pr-refresh.md
 - archive/sprints/INSPECT-9/INSPECT-9-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
