@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T12:10:37.862Z
+Generated: 2026-06-11T12:33:42.617Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4345
+Files indexed: 4349
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1705,7 +1705,7 @@ Count: 597
 
 ## reports
 
-Count: 2679
+Count: 2683
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1992,6 +1992,8 @@ Count: 2679
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
@@ -4381,6 +4383,8 @@ Count: 2679
 - reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
 - reports/sprints/VISUAL-QA-HARDEN-2-result.md
 - reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
