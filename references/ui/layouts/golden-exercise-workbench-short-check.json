@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "variant_id": "golden_advisory_short_check_v1",
+  "layout_id": "golden_exercise_workbench",
+  "surface_type": "advisory_short_check",
+  "status": "policy_defined_no_route_migration",
+  "generated_from_goal": "SHORT-CHECK-WORKBENCH-POLICY-1",
+  "specification": "references/ui/layouts/golden-exercise-workbench-short-check.md",
+  "machine_contract": "references/ui/layouts/golden-exercise-workbench-short-check.json",
+  "renderer_status": "not_a_current_renderer_selector",
+  "scope": {
+    "real_routes_migrated": [],
+    "generated_lesson_output_changed": false,
+    "legacy_renderers_deleted": false,
+    "implementation_migration_authorized": false
+  },
+  "distinction_table": [
+    {
+      "dimension": "authority",
+      "exit_ticket": "target-equivalent candidate",
+      "advisory_short_check": "advisory"
+    },
+    {
+      "dimension": "operation_proof",
+      "exit_ticket": "same-level operation-chain proof",
+      "advisory_short_check": "may be partial-skill rather than full target chain"
+    },
+    {
+      "dimension": "teaching_flow",
+      "exit_ticket": "no hint-heavy teaching flow",
+      "advisory_short_check": "route advice allowed"
+    },
+    {
+      "dimension": "hints",
+      "exit_ticket": "no hint-heavy learning path",
+      "advisory_short_check": "local hints allowed only hidden/collapsible or after attempt"
+    },
+    {
+      "dimension": "completion_wording",
+      "exit_ticket": "completion language held unless approved",
+      "advisory_short_check": "no completion-language claim"
+    },
+    {
+      "dimension": "proof_states",
+      "exit_ticket": "proof states required",
+      "advisory_short_check": "proof states required before rendered adoption, but never as target-equivalent proof"
+    }
+  ],
+  "allowed_behavior": [
+    "route advice",
+    "local repair feedback after attempt",
+    "hidden or collapsible hints",
+    "after-attempt hints",
+    "partial-skill operation slice",
+    "practice or recovery links"
+  ],
+  "required_layout_quality": [
+    "source/context first where source-dependent",
+    "clear task cards",
+    "student-visible operations",
+    "local feedback after attempt",
+    "mobile proof before rendered adoption",
+    "dark-mode proof before rendered adoption",
+    "no legacy shell"
+  ],
+  "hint_policy": {
+    "allowed": [
+      "hidden/collapsible before attempt",
+      "shown after attempt as local repair help"
+    ],
+    "forbidden": [
+      "hint-heavy replacement for exit-ticket proof",
+      "pre-attempt answer reveal",
+      "always-visible worked example when the operation is being checked"
+    ]
+  },
+  "locking_policy": {
+    "default": "avoid_hard_locking",
+    "allowed_only_when": [
+      "later step genuinely depends on earlier step",
+      "disabled controls and aria-disabled state are present",
+      "visible reason is shown"
+    ],
+    "forbidden_when": [
+      "independent questions are locked as style effect",
+      "legacy wizard flow is the only reason"
+    ]
+  },
+  "required_data_contract": [
+    "surface_type: advisory_short_check",
+    "layout.framework: golden_exercise_workbench",
+    "targetEquivalent.candidate: false",
+    "targetEquivalent.gateApproved: false",
+    "targetEquivalent.completionLanguageEligible: false",
+    "advisory.intent",
+    "contextBlocks when source-dependent",
+    "task operation chain",
+    "task-family controls",
+    "hint policy",
+    "feedback after attempt",
+    "practice/recovery route advice where useful",
+    "authority flags set to false",
+    "proof states collected before rendered adoption"
+  ],
+  "proof_before_rendered_adoption": [
+    "desktop_initial",
+    "mobile_initial",
+    "dark_mode",
+    "wrong_retry_feedback",
+    "correct_local_success_feedback",
+    "after_interaction",
+    "hidden_or_collapsible_hint_state_when_hints_exist",
+    "route_reload",
+    "no_legacy_dom",
+    "negative_fixture_rejection",
+    "authority_boundary_proof"
+  ],
+  "authority": {
+    "advisory_only": true,
+    "target_equivalent_proof_authorized": false,
+    "paragraph_completion_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "grading_authorized": false,
+    "mastery_authorized": false,
+    "automatic_sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "exit_ticket_replacement_authorized": false
+  },
+  "review_targets": {
+    "exit_ticket_short_check_distinction": 9.0,
+    "advisory_copy_safety": 9.0,
+    "layout_transferability": 8.5,
+    "future_agent_usability": 8.5,
+    "minimum_metric_floor": 8.0
+  }
+}

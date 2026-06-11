@@ -182,24 +182,22 @@ target-equivalent completion unless separately approved
 
 ## Exit Ticket vs Short Check
 
-Exit tickets:
+| Dimension | Exit ticket | Advisory short check |
+| --- | --- | --- |
+| Authority | target-equivalent candidate | advisory |
+| Operation proof | same-level operation-chain proof | may be partial-skill rather than full target chain |
+| Teaching flow | no hint-heavy teaching flow | route advice allowed |
+| Hints | no hint-heavy learning path | local hints allowed only hidden/collapsible or after attempt |
+| Completion wording | completion language held unless approved | no completion-language claim |
+| Proof states | proof states required | proof states required before rendered adoption, but never as target-equivalent proof |
 
-```text
-may be target-equivalent proof candidates
-must preserve same-level operation and answer-form proof
-must not use hint-heavy learning flow
-must not claim target-equivalent completion language without gate approval
-```
+Advisory short checks may advise, route, and repair. They may include local recovery feedback and local hints, but hints must be hidden/collapsible before attempt or appear only after an attempt.
 
-Advisory short checks:
+Advisory short checks must not replace exit tickets or claim target-equivalent proof, paragraph completion, mastery, diagnostics, grading, automatic sequencing, summative use, student/product use, PV, or Scale Gate 1.
 
-```text
-may advise, route, and repair
-may include local hints or collapsible help
-may include recovery feedback
-must not replace exit tickets
-must not claim target-equivalent proof
-```
+Short checks should normally avoid hard locking. Lock only when a later step genuinely depends on an earlier step, and show disabled controls, aria-disabled state, and a visible reason.
+
+When a short check uses Golden Exercise Workbench, it still carries the no legacy shell requirement.
 
 ## Proof Policy
 

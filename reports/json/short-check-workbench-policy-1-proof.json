@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SHORT-CHECK-WORKBENCH-POLICY-1",
+  "generated": "2026-06-11T08:52:07.5249142+02:00",
+  "status": "policy_defined_pending_review",
+  "branch": "codex/short-check-workbench-policy-1-20260611",
+  "base": {
+    "platform_main": "7b2d8e5e212d25f808fc9cbf5c727d95c54a94d7",
+    "lesson_main": "7edfc75834e342664ae167bb174034c9b2d33092"
+  },
+  "scope": {
+    "real_routes_migrated": false,
+    "generated_lesson_output_changed": false,
+    "lesson_repo_changed": false,
+    "implementation_migration_authorized": false,
+    "legacy_renderers_deleted": false
+  },
+  "files_created_or_updated": [
+    "references/ui/layouts/golden-exercise-workbench-short-check.md",
+    "references/ui/layouts/golden-exercise-workbench-short-check.json",
+    "references/ui/README.md",
+    "references/ui/layout-registry.md",
+    "references/ui/layout-registry.json",
+    "references/ui/interaction-policy.md",
+    "references/ui/interaction-policy.json",
+    "references/ui/exercise-workbench-policy.md",
+    "references/ui/shared-task-rollout-policy.md",
+    "reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md",
+    "build-scripts/lib/golden-exercise-policy-checks.js",
+    "build-scripts/references/check-layout-registry.js",
+    "build-scripts/references/check-interaction-policy.js",
+    "build-scripts/sprints/check-golden-exercise-workbench.js",
+    "build-scripts/sprints/check-short-check-workbench-policy1.js",
+    "reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md",
+    "reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md",
+    "reports/json/short-check-workbench-policy-1-proof.json"
+  ],
+  "requirements": {
+    "short_checks_are_advisory": true,
+    "route_advice_allowed": true,
+    "local_repair_feedback_allowed": true,
+    "hidden_or_collapsible_hints_allowed": true,
+    "after_attempt_hints_allowed": true,
+    "hard_locking_normally_avoided": true,
+    "source_context_first_where_source_dependent": true,
+    "clear_task_cards_required": true,
+    "local_feedback_required": true,
+    "mobile_dark_proof_required_before_rendered_adoption": true,
+    "no_legacy_shell_required": true
+  },
+  "distinction_table": [
+    {
+      "dimension": "authority",
+      "exit_ticket": "target-equivalent candidate",
+      "advisory_short_check": "advisory"
+    },
+    {
+      "dimension": "operation_proof",
+      "exit_ticket": "same-level operation-chain proof",
+      "advisory_short_check": "may be partial-skill rather than full target chain"
+    },
+    {
+      "dimension": "teaching_flow",
+      "exit_ticket": "no hint-heavy teaching flow",
+      "advisory_short_check": "route advice allowed"
+    },
+    {
+      "dimension": "hints",
+      "exit_ticket": "no hint-heavy learning path",
+      "advisory_short_check": "local hints allowed only hidden/collapsible or after attempt"
+    },
+    {
+      "dimension": "completion_wording",
+      "exit_ticket": "completion language held unless approved",
+      "advisory_short_check": "no completion-language claim"
+    },
+    {
+      "dimension": "proof_states",
+      "exit_ticket": "proof states required",
+      "advisory_short_check": "proof states required before rendered adoption, but never as target-equivalent proof"
+    }
+  ],
+  "authority": {
+    "advisory_only": true,
+    "target_equivalent_proof_authorized": false,
+    "paragraph_completion_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "grading_authorized": false,
+    "mastery_authorized": false,
+    "automatic_sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "student_product_use_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "exit_ticket_replacement_authorized": false
+  },
+  "review_targets": {
+    "exit_ticket_short_check_distinction": 9.0,
+    "advisory_copy_safety": 9.0,
+    "layout_transferability": 8.5,
+    "future_agent_usability": 8.5,
+    "minimum_metric_floor": 8.0
+  },
+  "validation_commands": [
+    {
+      "command": "node build-scripts/references/check-layout-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-interaction-policy.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-golden-exercise-workbench.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-short-check-workbench-policy1.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C C:\\Projects\\4veco\\4veco-lessen status --short --branch",
+      "status": "passed"
+    }
+  ]
+}

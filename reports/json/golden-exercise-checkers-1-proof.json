@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-10T11:46:39.917Z",
+  "generated": "2026-06-11T06:52:41.385Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
@@ -14,6 +14,12 @@
   },
   "interaction_policy": {
     "policy_id": "golden-exercise-interaction-policy"
+  },
+  "short_check_policy": {
+    "variant_id": "golden_advisory_short_check_v1",
+    "status": "policy_defined_no_route_migration",
+    "distinction_rows": 6,
+    "proof_states": 11
   },
   "exemplar_formula_boundary": {
     "implemented_boundary": "1.1.3-golden-exercise-workbench",
