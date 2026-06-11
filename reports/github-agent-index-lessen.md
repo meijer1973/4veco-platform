@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-lessen
 
-Generated: 2026-06-12T13:26:31.912Z
+Generated: 2026-06-12T14:12:50.271Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-lessen`
-Files indexed: 1679
+Files indexed: 1680
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -2557,7 +2557,7 @@ Count: 849
 
 ## other
 
-Count: 454
+Count: 455
 
 - _team-b-reference/1.1.1/uitleg vaardigheden team b.html
 - _team-b-reference/1.1.1/uitleg voorkennis team b.html
@@ -3009,6 +3009,7 @@ Count: 454
 - pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json
 - pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json
 - specifications/companion-core-specifications.md
+- specifications/paragraph-landing-layout-v2.md
 - specifications/product-end-state.md
 - specifications/product-vision.json
 - specifications/product-vision.md

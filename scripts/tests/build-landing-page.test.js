@@ -7,12 +7,44 @@ const PLATFORM_ROOT = path.resolve(__dirname, '..', '..');
 const BUILDER = path.join(PLATFORM_ROOT, 'build-scripts', 'platform', 'build-landing-page.js');
 const DASH = '\u2013';
 
+const REQUIRED_TILE_IDS = [
+    'instapquiz',
+    'nieuwsdetective',
+    'redeneren',
+    'rekenen',
+    'grafieken',
+    'uitleg-vaardigheden',
+    'presentatie',
+    'skill-engine',
+    'begeleide-oefeningen',
+    'zelfstandige-oefeningen',
+    'adaptieve-oefenroute',
+    'korte-check',
+    'exit-ticket',
+    'lesboek-openen',
+    'opgaven-antwoorden',
+    'aanvullend-materiaal',
+];
+
 function writeFile(filePath, body = 'stub') {
     fs.mkdirSync(path.dirname(filePath), { recursive: true });
     fs.writeFileSync(filePath, body);
 }
 
-describe('paragraph landing page student-web links', () => {
+function runBuilder(moduleRoot) {
+    return spawnSync(process.execPath, [BUILDER], {
+        cwd: PLATFORM_ROOT,
+        env: { ...process.env, MODULE_ROOT: moduleRoot },
+        encoding: 'utf8',
+    });
+}
+
+function tileBlock(html, tileId) {
+    const match = html.match(new RegExp(`<(?:a|article)[^>]*data-tile-id="${tileId}"[\\s\\S]*?</(?:a|article)>`));
+    return match ? match[0] : '';
+}
+
+describe('paragraph landing V2 prototype port', () => {
     let tmpDir;
 
     beforeEach(() => {
@@ -56,19 +88,17 @@ describe('paragraph landing page student-web links', () => {
         fs.rmSync(tmpDir, { recursive: true, force: true });
     });
 
-    test('hides Word downloads and legacy exercise rows when HTML counterparts exist', () => {
+    test('emits the approved prototype structure instead of the legacy lesson shell', () => {
         const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
         fs.mkdirSync(paragraph, { recursive: true });
         const prefix = '1.1.1 Testparagraaf';
 
+        writeFile(path.join(paragraph, `${prefix} ${DASH} instapquiz.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} nieuws-detective.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg voorkennis.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg voorkennis.docx`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} nieuws met visual.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} nieuws met visual.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} samenvatting.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} samenvatting.docx`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} presentatie.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} presentatie.pptx`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} stappenplan.html`));
@@ -76,80 +106,80 @@ describe('paragraph landing page student-web links', () => {
         writeFile(path.join(paragraph, `${prefix} ${DASH} wiskundevaardigheden.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} grafiekenspel.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening ${DASH} vragen.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} begeleide inoefening ${DASH} antwoorden.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} basis ${DASH} vragen.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} basis ${DASH} antwoorden.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} midden ${DASH} vragen.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} midden ${DASH} antwoorden.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} verrijking ${DASH} vragen.docx`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} verrijking ${DASH} antwoorden.docx`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} korte-check.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} exit-ticket.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} paragraaf.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} paragraaf.pdf`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.pdf`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.pdf`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} samenvatting.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} nieuws met visual.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} youtube-videos.html`));
 
-        const result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
+        const result = runBuilder(tmpDir);
 
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).not.toContain('Download als Word');
-        expect(html).not.toContain('resource-card-type');
-        expect(html).not.toMatch(/>html<\/span>/i);
-        expect(html).not.toMatch(/href="[^"]+\.docx"/i);
-        expect(html).not.toContain('Basisopgaven');
-        expect(html).not.toContain('Middenopgaven');
-        expect(html).not.toContain('Verrijkingsopgaven');
-        expect(html).not.toContain('Vragen (docx)');
-        expect(html).not.toContain('Antwoorden (docx)');
-        expect(html).toContain('Download als PowerPoint');
-        expect(html).toContain('begeleide%20inoefening.html');
-        expect(html).toContain('data-layout="paragraaf-v2"');
-        expect(html).toContain('data-route-layer="start"');
-        expect(html).toContain('data-route-layer="learn"');
-        expect(html).toContain('data-route-layer="practice"');
-        expect(html).toContain('data-route-layer="deepen"');
-        expect(html).not.toContain('data-route-layer="check"');
-        expect(html).toContain('Start');
-        expect(html).toContain('Leer');
-        expect(html).toContain('Oefen');
-        expect(html).toContain('Verdiep');
-        expect(html).toContain('Kies wat je wilt trainen');
-        expect(html).toContain('data-learning-aspect="reasoning"');
-        expect(html).toContain('data-learning-aspect="calculation"');
-        expect(html).toContain('data-learning-aspect="graphical"');
-        expect(html).toContain('Redeneren');
-        expect(html).toContain('Rekenen');
-        expect(html).toContain('Grafieken');
-        expect(html).toContain('wiskundevaardigheden.html');
-        expect(html).toContain('stappenplan.html');
-        expect(html).toContain('Rekenstappen');
-        expect(html).not.toContain('Rekenen / stappenplan');
-        expect(html).not.toContain('Volledige vaardigheidskaart');
-        expect(html).not.toContain('volledige vaardigheidskaart');
-        expect(html.indexOf('wiskundevaardigheden.html')).toBeLessThan(html.indexOf('stappenplan.html'));
-        expect(html).toContain('Begeleide inoefening');
-        expect(html).toContain('route-secondary-group');
-        expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i);
 
-        const bookHtml = fs.readFileSync(path.join(tmpDir, 'index.html'), 'utf8');
+        for (const marker of ['app-shell', 'route-strip', 'learning-row', 'row-label', 'tile-grid', 'tile']) {
+            expect(html).toContain(marker);
+        }
+        for (const forbidden of [
+            'page-layout',
+            'sidebar-toggle',
+            'sidebar-overlay',
+            'resource-card',
+            'route-secondary-group',
+            'landing-v2-',
+            'data-layout="paragraaf-v2"',
+            '../../shared/voorkennis.css',
+        ]) {
+            expect(html).not.toContain(forbidden);
+        }
+        expect(html).toContain('html[data-theme="dark"]');
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
+        for (const tileId of REQUIRED_TILE_IDS) {
+            expect(html).toContain(`data-tile-id="${tileId}"`);
+        }
+        expect(tileBlock(html, 'adaptieve-oefenroute')).toContain('data-tile-state="in-preparation"');
+        expect(tileBlock(html, 'adaptieve-oefenroute')).not.toMatch(/\shref=/);
+        expect(html).not.toMatch(/\b(PV|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
+
         const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
-        expect(bookHtml).toContain('class="chapter-card domain-economisch"');
-        expect(bookHtml).toContain('data-domain="economisch"');
-        expect(bookHtml).toContain('Korte route door de teststof.');
-        expect(bookHtml).toContain('Verwar oefenen niet met nakijken.');
-        expect(chapterHtml).toContain('class="para-card domain-economisch"');
-        expect(chapterHtml).toContain('data-domain="economisch"');
-        expect(chapterHtml).toContain('Web-first lesmateriaal voor deze paragraaf.');
-        expect(chapterHtml).toContain('Gebruik de oude waarde als basis.');
-        expect(chapterHtml).toContain('Start');
-        expect(chapterHtml).toContain('Leer');
-        expect(chapterHtml).toContain('Oefen');
-        expect(chapterHtml).toContain('Verdiep');
-        expect(chapterHtml).not.toContain('Valkuilen en misvattingen');
+        expect(chapterHtml).toContain('Skill-tree games');
+        expect(chapterHtml).toContain('Open &amp; verdiep');
     });
 
-    test('keeps an unscoped full-catalog skill tree out of the primary calculation route', () => {
+    test('renders missing future surfaces as disabled placeholders with no href', () => {
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.1 Testparagraaf';
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} instapquiz.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.html`));
+
+        const result = runBuilder(tmpDir);
+
+        expect(result.status).toBe(0);
+        const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
+
+        for (const tileId of ['nieuwsdetective', 'rekenen', 'grafieken', 'skill-engine', 'adaptieve-oefenroute', 'korte-check', 'exit-ticket']) {
+            const block = tileBlock(html, tileId);
+            expect(block).toContain('data-tile-state="in-preparation"');
+            expect(block).toContain('aria-disabled="true"');
+            expect(block).not.toMatch(/\shref=/);
+        }
+        expect(tileBlock(html, 'instapquiz')).toContain('href="1.1.1%20Testparagraaf%20%E2%80%93%20instapquiz.html"');
+        expect(html).not.toContain('href="#"');
+    });
+
+    test('keeps an unscoped full-catalog skill tree out of primary route tiles', () => {
         const configPath = path.join(tmpDir, 'deploy-config.json');
         const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
         config.paragraphs[0].skilltree = { skills: null };
@@ -160,26 +190,19 @@ describe('paragraph landing page student-web links', () => {
         const prefix = '1.1.1 Testparagraaf';
 
         writeFile(path.join(paragraph, `${prefix} ${DASH} wiskundevaardigheden.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} stappenplan.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
 
-        const result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
+        const result = runBuilder(tmpDir);
 
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).toContain('Brede vaardigheidskaart');
-        expect(html).toContain('wiskundevaardigheden.html');
-        expect(html).toContain('Rekenstappen');
-        expect(html).toContain('stappenplan.html');
-        expect(html).not.toContain('data-learning-aspect="calculation"');
-        expect(html).not.toContain('Rekenen / stappenplan');
+        expect(tileBlock(html, 'rekenen')).toContain('data-tile-state="in-preparation"');
+        expect(tileBlock(html, 'rekenen')).not.toContain('wiskundevaardigheden.html');
+        expect(tileBlock(html, 'skill-engine')).toContain('data-tile-state="in-preparation"');
+        expect(tileBlock(html, 'skill-engine')).not.toContain('wiskundevaardigheden.html');
     });
 
-    test('routes consolidation pages to mixed practice instead of Verdiep-only', () => {
+    test('renders consolidation pages through the same six-row prototype route', () => {
         const configPath = path.join(tmpDir, 'deploy-config.json');
         const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
         config.paragraphs = [
@@ -197,88 +220,17 @@ describe('paragraph landing page student-web links', () => {
         const prefix = '1.1.4 Gemengde opgaven';
         writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.html`));
         writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.pdf`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.pdf`));
 
-        const result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
+        const result = runBuilder(tmpDir);
 
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).toContain('data-layout="paragraaf-v2"');
-        expect(html).toContain('data-route-layer="practice"');
-        expect(html).toContain('data-consolidation-practice="true"');
-        expect(html).toContain('Oefen gemengd');
-        expect(html).toContain('Maak gemengde opgaven');
-        expect(html).toContain('Gemengde opgaven');
-        expect(html).not.toContain('data-route-layer="deepen"');
-        expect(html).not.toContain('Verdiep');
-        expect(html).not.toMatch(/\b(adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|AI)\b/i);
-
-        const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
-        expect(chapterHtml).toContain('Oefen gemengd');
-        expect(chapterHtml).not.toContain('Verdiep</span>');
-    });
-
-    test('shows Check only when a generated checkpoint page exists', () => {
-        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
-        fs.mkdirSync(paragraph, { recursive: true });
-        const prefix = '1.1.1 Testparagraaf';
-
-        writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.html`));
-        writeFile(path.join(paragraph, `${prefix} ${DASH} redeneer-spel.html`));
-
-        let result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
-        expect(result.status).toBe(0);
-        let html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).not.toContain('data-route-layer="check"');
-
-        writeFile(path.join(paragraph, `${prefix} ${DASH} exit-ticket.html`));
-        result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
-        expect(result.status).toBe(0);
-        html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).toContain('data-route-layer="check"');
-        expect(html).toContain('Exit ticket');
-        expect(html).toContain('data-check-route="exit-ticket"');
-        expect(html).toContain('data-check-purpose="end-check"');
-        expect(html).toContain('Maak de eindcheck met dezelfde soort denkstappen als de eindopgave');
-        expect(html).toContain('Maak eindcheck');
-        expect(html).not.toContain('Korte check');
-        expect(html).not.toContain('Maak de volledige paragraaf-check');
-        expect(html).not.toContain('Rond af met de paragraaf-check');
-
-        writeFile(path.join(paragraph, `${prefix} ${DASH} korte-check.html`));
-        result = spawnSync(process.execPath, [BUILDER], {
-            cwd: PLATFORM_ROOT,
-            env: { ...process.env, MODULE_ROOT: tmpDir },
-            encoding: 'utf8',
-        });
-        expect(result.status).toBe(0);
-        html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect(html).toContain('data-route-layer="check"');
-        expect(html).toContain('Korte check');
-        expect(html).toContain('data-check-route="advisory"');
-        expect(html).toContain('data-check-purpose="local-practice-advice"');
-        expect(html).toContain('Krijg lokaal oefenadvies');
-        expect(html).toContain('dit is geen eindcheck');
-        expect(html).toContain('Exit ticket');
-        expect(html).toContain('data-check-route="exit-ticket"');
-        expect(html).toContain('data-check-purpose="end-check"');
-        expect(html).toContain('Maak de eindcheck met dezelfde soort denkstappen als de eindopgave');
-        expect(html).toContain('Eerst oefenadvies, daarna eindcheck');
-        expect(html).not.toContain('Maak de volledige paragraaf-check');
-        expect(html).not.toContain('Kies wat je nog wilt oefenen');
-        expect(html).not.toMatch(/\b(PV|A\d{2}|B\d{2}|adaptief|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
+        expect(html).toContain('class="app-shell"');
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
+        expect(tileBlock(html, 'zelfstandige-oefeningen')).toContain('data-tile-state="available"');
+        expect(tileBlock(html, 'lesboek-openen')).toContain('data-tile-state="in-preparation"');
+        expect(html).not.toContain('data-consolidation-practice="true"');
+        expect(html).not.toContain('Oefen gemengd');
     });
 });

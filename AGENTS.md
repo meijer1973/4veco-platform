@@ -459,7 +459,7 @@ MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-s
 | `build-reasoning-questions.js` | CSV → JS data file in `shared/reasoning/` |
 | `generate-quiz-shells.js` | HTML shells voor instapquiz |
 | `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
-| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module |
+| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module; paragraph pages must use the approved landing V2 fixtures in `references/ui/paragraph-landing-v2/` |
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
 | `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
 
