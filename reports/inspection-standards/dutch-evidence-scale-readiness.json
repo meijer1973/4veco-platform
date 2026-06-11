@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "report_id": "dutch-evidence-scale-readiness",
+  "sprint_id": "INSPECT-8",
+  "generated_date": "2026-06-10",
+  "status": "report_only_readiness_audit",
+  "diagnostic_only": true,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "evidence_checkout": {
+    "platform_worktree": "C:/wt/INSPECT-8-20260610/4veco-platform",
+    "platform_branch": "codex/inspect-8-dutch-evidence-scale-readiness-20260610",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+    "lesson_evidence_status": "clean_detached_read_only_evidence"
+  },
+  "safe_use_note": "This report is a Dutch-only readiness audit for product-side evidence. It is not an inspection judgement, compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, or school-SKA claim.",
+  "evidence_sources": [
+    "archive/sprints/INSPECT-7/INSPECT-7-closure-log.md",
+    "archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md",
+    "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md",
+    "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json",
+    "references/data/inspection-standards/prototypes/inspect-7-book-1-1.source.json",
+    "references/data/inspection-standards/fixtures/pilot-1.1-inspection-evidence.sample.json",
+    "references/authored/course-target-exercises.json",
+    "references/external/exam-questions.json",
+    "references/external/syllabus-eindtermen.json",
+    "references/data/alignment-graph.json",
+    "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/gate-closure.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md",
+    "reports/review-gates/GATE-PV-G4-lesson-regression/gate-closure.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+  ],
+  "scope_inventory": {
+    "target_registry": {
+      "path": "references/authored/course-target-exercises.json",
+      "module_1_count_bearing_records": 12,
+      "module_1_chapters_represented": [
+        "1.1",
+        "1.2",
+        "1.3"
+      ],
+      "record_status_summary": {
+        "migrated_from_v4_needs_v5_review": 9,
+        "placeholder_needs_review": 3
+      },
+      "exam_code_linked_records": [
+        "1.2.2",
+        "1.2.3",
+        "1.3.1",
+        "1.3.2",
+        "1.3.3"
+      ],
+      "records_without_exam_codes": [
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.1.4",
+        "1.2.1",
+        "1.2.4",
+        "1.3.4"
+      ],
+      "placeholder_records": [
+        "1.1.4",
+        "1.2.4",
+        "1.3.4"
+      ]
+    },
+    "lesson_inventory": {
+      "path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/",
+      "quality_ref_count": 21,
+      "review_file_count": 25,
+      "chapters": [
+        {
+          "chapter_id": "1.1",
+          "chapter_title": "Economisch denken en rekenen",
+          "lesson_paragraphs": [
+            "1.1.1 Schaarste en economisch denken",
+            "1.1.2 Percentages en indexcijfers",
+            "1.1.3 Grafieken en tabellen",
+            "1.1.4 Gemengde opgaven"
+          ],
+          "target_registry_records": 4,
+          "accepted_inspect_7_scope": [
+            "1.1.1",
+            "1.1.2",
+            "1.1.3"
+          ],
+          "companion_review_evidence": "present for 1.1.1, 1.1.2, and 1.1.3",
+          "target_equivalent_evidence": "local reviewed candidate for 1.1.2 only"
+        },
+        {
+          "chapter_id": "1.2",
+          "chapter_title": "Vraag",
+          "lesson_paragraphs": [
+            "1.2.1 Individuele vraag",
+            "1.2.2 Vraagfactoren",
+            "1.2.3 Van individuele naar collectieve vraag",
+            "1.2.4 Gemengde opgaven"
+          ],
+          "target_registry_records": 4,
+          "companion_review_evidence": "missing",
+          "target_equivalent_evidence": "missing"
+        },
+        {
+          "chapter_id": "1.3",
+          "chapter_title": "Aanbod en marktevenwicht",
+          "lesson_paragraphs": [
+            "1.3.1 Aanbod",
+            "1.3.2 Marktevenwicht",
+            "1.3.3 Verschuivingen en nieuw evenwicht",
+            "1.3.4 Gemengde opgaven"
+          ],
+          "target_registry_records": 4,
+          "companion_review_evidence": "missing",
+          "target_equivalent_evidence": "missing"
+        },
+        {
+          "chapter_id": "1.4",
+          "chapter_title": "Marktevenwicht en marginale analyse",
+          "lesson_paragraphs": [
+            "1.4.1 Marktevenwicht",
+            "1.4.2 Verschuivingen",
+            "1.4.3 MK en MO",
+            "1.4.4 Winstmaximalisatie",
+            "1.4.5 Gemengde opgaven"
+          ],
+          "target_registry_records": 0,
+          "companion_review_evidence": "missing",
+          "target_equivalent_evidence": "missing"
+        },
+        {
+          "chapter_id": "1.5",
+          "chapter_title": "Toetsvoorbereiding",
+          "lesson_paragraphs": [
+            "1.5.1 Actieve samenvatting",
+            "1.5.2 Examenvaardigheden",
+            "1.5.3 Integratieoefening",
+            "1.5.4 Proeftoets"
+          ],
+          "target_registry_records": 0,
+          "companion_review_evidence": "missing",
+          "target_equivalent_evidence": "missing"
+        }
+      ]
+    }
+  },
+  "audit_dimensions": [
+    {
+      "dimension": "paragraph_and_chapter_scope_inventory",
+      "state": "present_but_uneven",
+      "finding": "The lesson checkout has 21 Book 1 quality-ref files across chapters 1.1 through 1.5, while the target-exercise registry has 12 count-bearing Module 1 records only for chapters 1.1 through 1.3.",
+      "evidence": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/",
+        "references/authored/course-target-exercises.json"
+      ],
+      "gap": "Chapters 1.4 and 1.5 have generated/review evidence but no matching target-registry records in the inspected registry."
+    },
+    {
+      "dimension": "target_exercise_finality",
+      "state": "weak",
+      "finding": "All nine theory records for Module 1 are still marked migrated_from_v4_needs_v5_review; the three mixed-practice records are placeholders needing review.",
+      "evidence": [
+        "references/authored/course-target-exercises.json"
+      ],
+      "gap": "No inspected Book 1 target record has final v5-reviewed status."
+    },
+    {
+      "dimension": "exam_code_linkage",
+      "state": "partial",
+      "finding": "Exam-code links exist for 1.2.2, 1.2.3, 1.3.1, 1.3.2, and 1.3.3, and the cited codes map to official-question records. Chapter 1.1 has no exam-code links in the target registry.",
+      "evidence": [
+        "references/authored/course-target-exercises.json",
+        "references/external/exam-questions.json",
+        "references/external/syllabus-eindtermen.json"
+      ],
+      "gap": "1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.2.1, 1.2.4, and 1.3.4 lack target-registry exam-code links."
+    },
+    {
+      "dimension": "target_equivalent_proof",
+      "state": "weak",
+      "finding": "Only the exact local 1.1.2 exit-ticket candidate has reviewed target-equivalent proof, and that proof remains local and flagged.",
+      "evidence": [
+        "reports/review-gates/GATE-L1.7B-Q2-exit-ticket-target-equivalent-proof/gate-closure.md"
+      ],
+      "gap": "1.1.1, 1.1.3, all 1.2 records, and all 1.3 records lack reviewed target-equivalent proof."
+    },
+    {
+      "dimension": "review_evidence_status",
+      "state": "present_but_uneven",
+      "finding": "Chapter 1.1 first-three paragraphs have Part A and companion review evidence; chapters 1.2 through 1.5 have paragraph review files but not the same companion-review depth, and 1.5 carries blocked quality-ref records.",
+      "evidence": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "gap": "Review schemas vary, PASS WITH FLAGS remains common, and some quality-ref status is stale or blocked."
+    },
+    {
+      "dimension": "generated_artifact_evidence_status",
+      "state": "present",
+      "finding": "Generated Book 1 lesson folders and quality-ref files exist across 1.1 through 1.5.",
+      "evidence": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/"
+      ],
+      "gap": "Artifact presence is not reviewed quality, target finality, exam alignment, or target-equivalent proof."
+    },
+    {
+      "dimension": "accessibility_evidence_status",
+      "state": "present_but_weak",
+      "finding": "Accessibility-adjacent evidence exists through companion reviews, check-surface packets, asset/alt-text flags, mobile/dark evidence references, and quality-ref records for the accepted first-three paragraph scope.",
+      "evidence": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md"
+      ],
+      "gap": "There is no unified full accessibility audit across Book 1 or across candidate expansion chapters."
+    },
+    {
+      "dimension": "differentiation_support_evidence_status",
+      "state": "present_but_weak",
+      "finding": "Product-side support evidence exists in review notes, route/check surfaces, practice progression, and differentiated exercise language, but it remains advisory product evidence.",
+      "evidence": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md"
+      ],
+      "gap": "No product evidence proves school monitoring, interventions, accommodations, care plans, or support decisions."
+    },
+    {
+      "dimension": "school_owned_evidence_still_needed",
+      "state": "required",
+      "finding": "School-owned evidence is still needed for curriculum planning, classroom implementation, support decisions, PTA/grading/summative policy, governance, and inspection dialogue.",
+      "evidence": [
+        "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+        "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json"
+      ],
+      "gap": "4veco product-side evidence cannot replace school-owned evidence."
+    },
+    {
+      "dimension": "unsafe_claim_risks",
+      "state": "visible",
+      "finding": "Main risks are overclaiming OP0/basic-skills, treating migrated target exercises as final, treating generated artifacts as reviewed quality, treating local 1.1.2 proof as product-wide target-equivalence, treating accessibility screenshots as full proof, or treating product QA as school SKA evidence.",
+      "evidence": [
+        "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+        "archive/sprints/INSPECT-7/INSPECT-7-external-review-results.md"
+      ],
+      "gap": "Future reports must continue carrying forbidden-inference wording per category."
+    }
+  ],
+  "candidate_scope_summary": [
+    {
+      "scope_id": "book-1-chapter-1-1-first-three-paragraphs",
+      "label": "Book 1 Chapter 1.1 accepted first-three paragraph baseline",
+      "ready_for_additional_evidence_pack_work": false,
+      "readiness_state": "baseline_control_scope_only",
+      "evidence_strengths": [
+        "INSPECT-7 bounded sample exists in Markdown and JSON.",
+        "INSPECT-7 closed with teacher, legal/privacy, and Dutch quality-inspection reviewers MORE_THAN_SATISFIED.",
+        "Part A and companion review evidence exists for 1.1.1, 1.1.2, and 1.1.3.",
+        "1.1.2 has local target-equivalent proof with flags."
+      ],
+      "blocking_or_weak_evidence": [
+        "Target records remain migrated_from_v4_needs_v5_review.",
+        "Target records lack exam-code links.",
+        "1.1.1 and 1.1.3 target-equivalent claims remain unapproved.",
+        "First-three check-surface review packet is prepared but not closed."
+      ],
+      "recommended_use": "Use as control scope or baseline re-run only; do not treat as authority to broaden evidence-pack work."
+    },
+    {
+      "scope_id": "book-1-chapter-1-2",
+      "label": "Book 1 Chapter 1.2 Vraag",
+      "ready_for_additional_evidence_pack_work": false,
+      "readiness_state": "strongest_gap_closure_candidate",
+      "evidence_strengths": [
+        "Generated lesson folders, quality refs, and paragraph reviews exist.",
+        "Target records exist for all four chapter records.",
+        "Exam-code links exist for 1.2.2 and 1.2.3."
+      ],
+      "blocking_or_weak_evidence": [
+        "Theory target records remain migrated_from_v4_needs_v5_review.",
+        "1.2.4 is placeholder_needs_review.",
+        "1.2.1 and 1.2.4 lack exam-code links.",
+        "No companion-review evidence was found for this chapter.",
+        "No reviewed target-equivalent proof was found."
+      ],
+      "recommended_use": "Make Chapter 1.2 the first INSPECT-9 gap-closure candidate before any additional evidence pack is generated."
+    },
+    {
+      "scope_id": "book-1-chapter-1-3",
+      "label": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+      "ready_for_additional_evidence_pack_work": false,
+      "readiness_state": "later_gap_closure_candidate",
+      "evidence_strengths": [
+        "Generated lesson folders, quality refs, and paragraph reviews exist.",
+        "Target records exist for all four chapter records.",
+        "Exam-code links are stronger than Chapter 1.2 for 1.3.1 through 1.3.3."
+      ],
+      "blocking_or_weak_evidence": [
+        "Theory target records remain migrated_from_v4_needs_v5_review.",
+        "1.3.4 is placeholder_needs_review.",
+        "1.3.4 lacks exam-code links.",
+        "No companion-review evidence was found for this chapter.",
+        "No reviewed target-equivalent proof was found.",
+        "1.3.1 quality-ref status still carries older blocker wording even though the paragraph review says the mismatch was corrected."
+      ],
+      "recommended_use": "Defer until Chapter 1.2 gap closure and stale quality-ref reconciliation are planned."
+    },
+    {
+      "scope_id": "book-1-chapters-1-4-and-1-5",
+      "label": "Book 1 Chapters 1.4 and 1.5",
+      "ready_for_additional_evidence_pack_work": false,
+      "readiness_state": "not_ready",
+      "evidence_strengths": [
+        "Generated folders, quality refs, and review files exist."
+      ],
+      "blocking_or_weak_evidence": [
+        "No matching Module 1 target-registry records were found in the inspected target registry.",
+        "No reviewed target-equivalent proof was found.",
+        "1.5 quality-ref records include blocked states.",
+        "The proeftoets/test-prep surface creates higher unsafe-claim risk around PTA, summative validity, and school-owned assessment."
+      ],
+      "recommended_use": "Do not use for additional evidence-pack work until target-registry coverage, finality, and assessment-boundary evidence are resolved."
+    }
+  ],
+  "recommended_next_dutch_scope": {
+    "decision": "do_not_generate_additional_evidence_pack_yet",
+    "control_scope": "Book 1 Chapter 1.1 accepted first-three paragraph baseline",
+    "gap_closure_scope": "Book 1 Chapter 1.2 Vraag",
+    "rationale": "Chapter 1.2 is the most plausible next Dutch expansion candidate because it has generated artifacts, paragraph reviews, target records, and partial exam-code linkage. It is not pack-ready because target records are not final, 1.2.4 is a placeholder, exam-code linkage is incomplete, companion/accessibility/support evidence is weak, and target-equivalent proof is missing.",
+    "required_next_sprint": "INSPECT-9 Dutch Evidence Gap Closure Plan",
+    "minimum_proof_before_pack_work": [
+      "v5 review/finality route for 1.2.1, 1.2.2, and 1.2.3 target records",
+      "reviewed integration target for 1.2.4",
+      "exam-code linkage decision for 1.2.1 and 1.2.4",
+      "target-equivalent proof requirements for Chapter 1.2",
+      "review-depth decision for companion, accessibility, and support evidence",
+      "product/school boundary wording retained per category"
+    ]
+  },
+  "evidence_gaps": [
+    {
+      "title": "No final v5 target records in inspected Module 1 registry",
+      "quality_category": "target-exercise-finality-gap",
+      "severity": "high",
+      "affected_surface": "references/authored/course-target-exercises.json",
+      "next_action": "INSPECT-9 should define proof required to move candidate target records from migrated or placeholder status to reviewed finality."
+    },
+    {
+      "title": "Chapter 1.1 has no target-registry exam-code links",
+      "quality_category": "exam-code-linkage-gap",
+      "severity": "high",
+      "affected_surface": "1.1.1, 1.1.2, 1.1.3 target records",
+      "next_action": "INSPECT-9 should decide whether Chapter 1.1 remains a foundational no-code scope or needs explicit syllabus/exam-code linkage before re-use."
+    },
+    {
+      "title": "Chapter 1.2 is incomplete for pack scale",
+      "quality_category": "target-equivalent-proof-gap",
+      "severity": "high",
+      "affected_surface": "Book 1 Chapter 1.2",
+      "next_action": "INSPECT-9 should plan target finality, 1.2.4 integration target review, target-equivalent proof, and accessibility/support evidence requirements."
+    },
+    {
+      "title": "Chapter 1.3 has stale or conflicting review metadata",
+      "quality_category": "generated-artifact-staleness",
+      "severity": "medium",
+      "affected_surface": "1.3.1 quality-ref and review files",
+      "next_action": "Reconcile the older quality-ref blocker wording with the paragraph review that says the mismatch was corrected before treating 1.3 as a next scope."
+    },
+    {
+      "title": "Chapters 1.4 and 1.5 lack inspected target-registry coverage",
+      "quality_category": "lesson-evidence-gap",
+      "severity": "high",
+      "affected_surface": "Book 1 Chapters 1.4 and 1.5",
+      "next_action": "Do not include these chapters in evidence-pack scaling until target-registry authority and assessment-boundary proof are established."
+    }
+  ],
+  "school_owned_evidence_still_needed": [
+    "Full school curriculum plan, scheduling, and implementation choices.",
+    "Classroom enactment, teacher adaptation, and interaction evidence.",
+    "School-wide Dutch language, mathematics/arithmetic, and citizenship basic-skills policy and practice.",
+    "Student monitoring, interventions, accommodations, care plans, and support decisions.",
+    "PTA, grading, summative assessment policy, transition decisions, and formal assessment validity evidence.",
+    "School governance, self-evaluation, improvement planning, board accountability, and inspection-dialogue evidence."
+  ],
+  "unsafe_claim_risks": [
+    "Do not infer final-reviewed curriculum evidence from migrated target records.",
+    "Do not infer target-equivalent closure from target-exercise or answer-model presence.",
+    "Do not generalize the exact 1.1.2 local target-equivalent proof to other paragraphs.",
+    "Do not treat generated artifact presence as reviewed lesson quality.",
+    "Do not treat review screenshots or route-local checks as full accessibility proof.",
+    "Do not treat product route/check surfaces as school monitoring or support evidence.",
+    "Do not treat product QA records as school SKA evidence.",
+    "Do not use proeftoets/test-prep evidence to make PTA, summative-validity, grading, or school-obligation claims."
+  ],
+  "validation_notes": {
+    "created_no_new_evidence_packs": true,
+    "created_no_generator": true,
+    "mutated_lesson_output": false,
+    "processed_personal_data": false,
+    "non_dutch_standards_work": false,
+    "next_required_action": "Run INSPECT-9 as a gap-closure planning sprint before any additional Dutch evidence-pack generation."
+  }
+}

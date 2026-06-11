@@ -177,7 +177,8 @@ The standards layer must not claim:
 
 ## Open Questions
 
-- Which Dutch scope should follow the INSPECT-7 Book 1 Chapter 1.1 bounded pack?
+- INSPECT-8 recommends no additional evidence-pack generation yet; Book 1
+  Chapter 1.2 should be treated as the first INSPECT-9 gap-closure candidate.
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources?
 - Which target-exercise finality and exam-code linkage evidence is mandatory
