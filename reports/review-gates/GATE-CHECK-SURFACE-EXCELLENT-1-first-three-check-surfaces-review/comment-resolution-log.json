@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "repair_sprint": "CHECKSURFACE-EVIDENCE-REFRESH-1",
+  "recorded": "2026-06-11",
+  "gate_direction": "hold_for_surface_repair",
+  "gate_closed": false,
+  "closure_artifacts_authorized": false,
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "resolutions": [
+    {
+      "id": "CHECKSURFACE-Q1",
+      "status": "accepted_no_action",
+      "evidence": ["reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json"]
+    },
+    {
+      "id": "CHECKSURFACE-Q2",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md",
+        "reports/json/checksurface-excellence-audit-3p-proof.json"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q3",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "build-scripts/sprints/capture-graph-exit-ux1-screenshots.js",
+        "build-scripts/sprints/capture-check-short-exit2-screenshots.js",
+        "build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q4",
+      "status": "accepted_no_action",
+      "evidence": ["reports/json/graph-check-ux1-proof.json"]
+    },
+    {
+      "id": "CHECKSURFACE-Q5",
+      "status": "accepted_no_action",
+      "evidence": ["reports/json/graph-check-ux1-proof.json"]
+    },
+    {
+      "id": "CHECKSURFACE-Q6",
+      "status": "fixed_for_rereview",
+      "evidence": ["reports/json/graph-exit-ux1-proof.json"]
+    },
+    {
+      "id": "CHECKSURFACE-Q7",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "reports/json/graph-exit-ux1-proof.json",
+        "reports/sprints/GRAPH-EXIT-UX-1-screenshot-manifest.md",
+        "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q8",
+      "status": "accepted_no_action",
+      "evidence": ["reports/json/graph-exit-ux1-proof.json"]
+    },
+    {
+      "id": "CHECKSURFACE-Q9",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "reports/json/check-short-exit2-proof.json",
+        "reports/json/graph-exit-ux1-proof.json",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q10",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html",
+        "reports/json/check-short-exit2-proof.json",
+        "reports/json/checksurface-excellence-audit-3p-proof.json"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q11",
+      "status": "fixed_for_rereview",
+      "evidence": [
+        "reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md"
+      ]
+    },
+    {
+      "id": "CHECKSURFACE-Q12",
+      "status": "still_blocks_gate_closure",
+      "evidence": ["reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md"]
+    }
+  ],
+  "refreshed_evidence": [
+    "reports/json/graph-exit-ux1-proof.json",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshot-manifest.md",
+    "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json",
+    "reports/json/check-short-exit2-proof.json",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshot-manifest.md",
+    "reports/sprints/CHECK-SHORT-EXIT-2-screenshots/manifest.json",
+    "reports/json/checksurface-excellence-audit-3p-proof.json",
+    "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html"
+  ],
+  "next_required_action": "return refreshed evidence for renewed human review; do not close gate without explicit confirmation"
+}

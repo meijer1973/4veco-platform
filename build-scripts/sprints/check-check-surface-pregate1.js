@@ -186,7 +186,9 @@ function checkUnderlyingProofs() {
   assert(graphCheck.proof.correct_path_reaches_route_advice === true, 'short check must reach route advice');
 
   assert(graphExit.proof.source_task_workspace_present === true, 'exit ticket must have source/task workspace');
-  assert(graphExit.proof.source_pane_scrollable === true, 'exit source pane must be scrollable');
+  assert(graphExit.proof.source_pane_constrained === true, 'exit source pane must be constrained/readable');
+  assert(graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'exit proof must use current station bread-stall context');
+  assert(graphExit.proof.percentage_claim_control_present === true, 'exit proof must include percentage claim control');
   assert(graphExit.proof.task_visible_after_source_scroll === true, 'exit task must remain visible after source scroll');
   assert(graphExit.proof.correct_path_draws_line === true, 'exit graph line must be drawn');
   assert(graphExit.proof.completion_language_held === true, '1.1.3 completion language must stay held');

@@ -154,6 +154,8 @@ URL index (single fetch unlocks the rest of the surface):
   "exam_question_index": "references/external/exam-questions.json",
   "owned_course_blueprint": "references/owned/course-blueprint-v5.md",
   "owned_course_blueprint_meta": "references/owned/course-blueprint-v5.meta.json",
+  "draft_three_year_course_blueprint": "references/owned/course-blueprint-v6-three-year.md",
+  "draft_three_year_course_blueprint_meta": "references/owned/course-blueprint-v6-three-year.meta.json",
   "target_exercise_index": "references/authored/course-target-exercises.json",
   "dashboard_index": "reports/internal-dashboard/dashboard-data.json"
 }
@@ -175,6 +177,8 @@ index_anchors (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/external/exam-questions.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.meta.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/authored/course-target-exercises.json
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/internal-dashboard/dashboard-data.json
 
@@ -254,7 +258,9 @@ Use these index anchors before free-form browsing. They reduce inference and con
   "owned_reference_paths": [
     "references/owned/README.md",
     "references/owned/course-blueprint-v5.md",
-    "references/owned/course-blueprint-v5.meta.json"
+    "references/owned/course-blueprint-v5.meta.json",
+    "references/owned/course-blueprint-v6-three-year.md",
+    "references/owned/course-blueprint-v6-three-year.meta.json"
   ],
   "qc_prompt_paths": [
     "references/qc-prompts/probe-questions.md",
@@ -327,6 +333,8 @@ owned_reference_paths (full URLs):
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/README.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v5.meta.json
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/references/owned/course-blueprint-v6-three-year.meta.json
 
 qc_prompt_paths (full URLs):
 
@@ -361,7 +369,8 @@ Use these templates only after loading the relevant index or README.
   "syllabus_eindterm": "references/external/syllabus-eindtermen.json -> find eindterm by code",
   "exam_question": "references/external/exam-questions.json -> find question by exam metadata, question id, skill id, or exam code",
   "target_exercise": "references/authored/course-target-exercises.json -> find exercise by book/chapter/paragraph metadata",
-  "owned_course_blueprint": "references/owned/course-blueprint-v5.md -> find blueprint paragraph, chapter, target exercise, or difficulty note"
+  "owned_course_blueprint": "references/owned/course-blueprint-v5.md -> find active Year 1 blueprint paragraph, chapter, target exercise, or difficulty note",
+  "draft_three_year_course_blueprint": "references/owned/course-blueprint-v6-three-year.md -> find draft 11-book three-year structure, exam-operation spine, and unresolved design decisions"
 }
 ```
 
@@ -421,7 +430,7 @@ If a constructed path fails, apply `Failure Handling`.
 Use this hierarchy when evidence conflicts:
 
 1. Real CvTE exam questions and correction models in `references/external/exams/` and `references/external/exam-questions.json`.
-2. Blueprint target exercises and owned course design in `references/owned/course-blueprint-v5.md`, plus structured target exercises in `references/authored/course-target-exercises.json`.
+2. Blueprint target exercises and active owned course design in `references/owned/course-blueprint-v5.md`, plus structured target exercises in `references/authored/course-target-exercises.json`; use draft `references/owned/course-blueprint-v6-three-year.md` only for reviewed three-year planning context until promoted.
 3. Machine registries in `references/machine/`.
 4. CvTE syllabus/eindtermen in `references/external/syllabus-eindtermen.json` for grouping and coverage, not automatic unit creation.
 5. Authored didactic judgement in `references/authored/`.
@@ -450,7 +459,7 @@ Agents MUST follow this sequence:
    - term task -> `begrippen.json`
    - exam task -> `exam-questions.json` and relevant exam PDFs
    - syllabus task -> `syllabus-eindtermen.json`
-   - blueprint/course-design task -> `references/owned/course-blueprint-v5.md` and `references/owned/course-blueprint-v5.meta.json`
+   - blueprint/course-design task -> `references/owned/course-blueprint-v5.md` and `references/owned/course-blueprint-v5.meta.json`; for three-year draft reconciliation also load `references/owned/course-blueprint-v6-three-year.md` and `references/owned/course-blueprint-v6-three-year.meta.json`
    - target-exercise task -> `course-target-exercises.json`
    - dashboard/status task -> `reports/internal-dashboard/dashboard-data.json`
 5. Search declared namespaces only when indexes do not answer the question.
@@ -478,7 +487,7 @@ external authority + owned course design + authored target exercises -> machine 
 Rules:
 
 - Upstream source changes can invalidate downstream registry/report claims.
-- `references/external/`, `references/owned/course-blueprint-v5.md`, and `references/authored/course-target-exercises.json` anchor what should be taught.
+- `references/external/`, `references/owned/course-blueprint-v5.md`, and `references/authored/course-target-exercises.json` anchor what should be taught. `references/owned/course-blueprint-v6-three-year.md` is draft three-year planning context until reviewed and promoted.
 - Owned blueprint prose is design rationale; it cannot by itself mint a unit without exercise evidence.
 - `references/machine/` is the current platform registry, not proof that the registry is complete.
 - `reports/` surfaces drift and gaps; it does not settle source truth.
@@ -492,6 +501,7 @@ Rules:
     "references/reference-team-roadmap.md",
     "references/owned/README.md",
     "references/owned/course-blueprint-v5.md",
+    "references/owned/course-blueprint-v6-three-year.md",
     "references/external/README.md",
     "references/external/exams/README.md",
     "references/authored/README.md"
@@ -500,6 +510,8 @@ Rules:
     "references/owned/README.md",
     "references/owned/course-blueprint-v5.md",
     "references/owned/course-blueprint-v5.meta.json",
+    "references/owned/course-blueprint-v6-three-year.md",
+    "references/owned/course-blueprint-v6-three-year.meta.json",
     "references/authored/course-target-exercises.json",
     "reports/blueprint-flag-triage.md"
   ],
@@ -522,6 +534,7 @@ Rules:
     "references/external/exam-questions.json",
     "references/external/syllabus-eindtermen.json",
     "references/owned/course-blueprint-v5.md",
+    "references/owned/course-blueprint-v6-three-year.md",
     "references/authored/vraagtypen-en-opgaveontwerp.md",
     "references/authored/course-target-exercises.json"
   ],
@@ -540,6 +553,7 @@ Rules:
   ],
   "didactic_efficiency": [
     "references/owned/course-blueprint-v5.md",
+    "references/owned/course-blueprint-v6-three-year.md",
     "references/authored/didactiek-principes.md",
     "references/authored/skill-categories.md",
     "references/authored/course-target-exercises.json",

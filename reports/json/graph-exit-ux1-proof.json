@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "sprint_id": "GRAPH-EXIT-UX-1",
-  "generated": "2026-06-06T08:15:02.080Z",
+  "generated": "2026-06-11T12:57:41.752Z",
   "status": "complete",
   "page": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
-  "local_url": "http://127.0.0.1:55689/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
+  "local_url": "http://127.0.0.1:49723/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.3%20Grafieken%20en%20tabellen/1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20exit-ticket.html",
   "authority": {
     "product_route_adoption_authorized": false,
     "new_target_equivalent_completion_language_authorized": false,
@@ -17,17 +17,22 @@
   "proof": {
     "source_task_workspace_present": true,
     "source_pane_constrained": true,
-    "source_pane_scrollable": true,
+    "source_pane_scrollable": false,
     "first_graph_task_visible_initial": true,
     "task_visible_after_source_scroll": true,
-    "context_block_count": 3,
+    "context_block_count": 2,
     "task_shell_count": 3,
     "graph_workspace_present": true,
     "grid_visible": true,
     "rendered_table_present": true,
     "correct_path_draws_line": true,
     "all_tasks_correct": true,
+    "percentage_claim_control_present": true,
+    "current_context_blocks": "ctx-stationbroodjes-source,ctx-stationbroodjes-table",
+    "current_source_text_confirmed": true,
+    "formula_builder_tokens_present": true,
     "completion_language_held": true,
+    "local_completion_feedback_visible_after_correct": true,
     "mobile_rendered": true,
     "dark_mode_rendered": true
   },
@@ -36,47 +41,83 @@
       "id": "desktop-initial",
       "status": "PASS",
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 0,
         "graphLine": false,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [],
         "completionVisible": false,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 796,
-          "scrollHeight": 1043,
+          "clientHeight": 587,
+          "scrollHeight": 587,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": 516,
-          "bottom": 1376,
-          "height": 859,
+          "top": 448,
+          "bottom": 1002,
+          "height": 555,
           "visible": true
         },
         "taskPaneRect": {
-          "top": 390,
-          "bottom": 2427,
-          "height": 2037,
+          "top": 425,
+          "bottom": 1641,
+          "height": 1217,
           "visible": true
         },
         "graphRect": {
-          "top": 804,
-          "bottom": 1144,
-          "height": 340,
+          "top": 575,
+          "bottom": 857,
+          "height": 282,
           "visible": true
         },
         "firstGraphVisible": true,
@@ -86,7 +127,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-initial.png"
     },
@@ -94,51 +135,87 @@
       "id": "desktop-source-scrolled",
       "status": "PASS",
       "scroll": {
-        "scrollTop": 247,
+        "scrollTop": 0,
         "taskPaneVisible": true
       },
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 0,
         "graphLine": false,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [],
         "completionVisible": false,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 796,
-          "scrollHeight": 1043,
-          "scrollTop": 247,
-          "overflowY": "auto",
+          "clientHeight": 587,
+          "scrollHeight": 587,
+          "scrollTop": 0,
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": 516,
-          "bottom": 1376,
-          "height": 859,
+          "top": 448,
+          "bottom": 1002,
+          "height": 555,
           "visible": true
         },
         "taskPaneRect": {
-          "top": 390,
-          "bottom": 2427,
-          "height": 2037,
+          "top": 425,
+          "bottom": 1641,
+          "height": 1217,
           "visible": true
         },
         "graphRect": {
-          "top": 804,
-          "bottom": 1144,
-          "height": 340,
+          "top": 575,
+          "bottom": 857,
+          "height": 282,
           "visible": true
         },
         "firstGraphVisible": true,
@@ -148,7 +225,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-source-scrolled.png"
     },
@@ -156,53 +233,89 @@
       "id": "desktop-wrong-retry",
       "status": "PASS",
       "retry": {
-        "feedback": "Controleer assen en punten Kies Q op de horizontale as, P op de verticale as en klik twee punten uit de tabel. Oefen verder met grafieken",
-        "state": "et-feedback is-retry"
+        "feedback": "Controleer het P-Q-diagram Kies Q op de horizontale as en P op de verticale as. Plaats twee verschillende tabelpunten in het werkvlak.",
+        "state": "ge-feedback is-visible is-warn"
       },
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 0,
         "graphLine": false,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [
-          "Controleer assen en punten Kies Q op de horizontale as, P op de verticale as en klik twee punten uit de tabel. Oefen verder met grafieken"
+          "Controleer het P-Q-diagram Kies Q op de horizontale as en P op de verticale as. Plaats twee verschillende tabelpunten in het werkvlak."
         ],
         "matchFeedback": [],
         "completionVisible": false,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 796,
-          "scrollHeight": 1043,
+          "clientHeight": 587,
+          "scrollHeight": 587,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": 516,
-          "bottom": 1559,
-          "height": 1043,
+          "top": 448,
+          "bottom": 1128,
+          "height": 681,
           "visible": true
         },
         "taskPaneRect": {
-          "top": 390,
-          "bottom": 2610,
-          "height": 2220,
+          "top": 425,
+          "bottom": 1767,
+          "height": 1343,
           "visible": true
         },
         "graphRect": {
-          "top": 804,
-          "bottom": 1144,
-          "height": 340,
+          "top": 575,
+          "bottom": 857,
+          "height": 282,
           "visible": true
         },
         "firstGraphVisible": true,
@@ -212,7 +325,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-wrong-retry.png"
     },
@@ -220,54 +333,90 @@
       "id": "desktop-line-confirmed",
       "status": "PASS",
       "correct": {
-        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
+        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
         "graphLine": true,
         "graphPoints": 2
       },
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 2,
         "graphLine": true,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [
-          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken"
+          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn."
         ],
         "completionVisible": false,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 796,
-          "scrollHeight": 1043,
+          "clientHeight": 587,
+          "scrollHeight": 587,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": -8,
-          "bottom": 1010,
-          "height": 1018,
+          "top": 182,
+          "bottom": 886,
+          "height": 705,
           "visible": true
         },
         "taskPaneRect": {
-          "top": -134,
-          "bottom": 2061,
-          "height": 2195,
+          "top": 159,
+          "bottom": 1695,
+          "height": 1536,
           "visible": true
         },
         "graphRect": {
-          "top": 280,
-          "bottom": 620,
-          "height": 340,
+          "top": 309,
+          "bottom": 591,
+          "height": 282,
           "visible": true
         },
         "firstGraphVisible": true,
@@ -277,7 +426,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png"
     },
@@ -285,66 +434,112 @@
       "id": "desktop-completed-held",
       "status": "PASS",
       "correct": {
-        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
-        "intervalFeedback": "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering",
+        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes.",
+        "claimFeedback": "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent.",
         "matchFeedbackCount": 3,
-        "completionVisible": false,
+        "completionVisible": true,
         "graphLine": true,
-        "graphPoints": 2
+        "graphPoints": 2,
+        "chosenTokens": [
+          "(",
+          "nieuwe Q",
+          "-",
+          "oude Q",
+          ")",
+          "/",
+          "oude Q",
+          "x 100%"
+        ]
       },
       "scroll": {
         "found": true,
-        "top": 647,
-        "bottom": 831,
+        "top": 525,
+        "bottom": 627,
         "visible": true
       },
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 2,
         "graphLine": true,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [
-          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
-          "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering"
+          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes.",
+          "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent."
         ],
-        "completionVisible": false,
+        "completionVisible": true,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 796,
-          "scrollHeight": 1043,
+          "clientHeight": 587,
+          "scrollHeight": 587,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": -1585,
-          "bottom": -567,
-          "height": 1018,
+          "top": -1950,
+          "bottom": -1246,
+          "height": 705,
           "visible": false
         },
         "taskPaneRect": {
-          "top": -1711,
-          "bottom": 852,
-          "height": 2563,
+          "top": -1973,
+          "bottom": 844,
+          "height": 2818,
           "visible": true
         },
         "graphRect": {
-          "top": -1297,
-          "bottom": -957,
-          "height": 340,
+          "top": -1823,
+          "bottom": -1541,
+          "height": 282,
           "visible": false
         },
         "firstGraphVisible": false,
@@ -354,7 +549,7 @@
           "width": 1280,
           "height": 900
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-completed-held.png"
     },
@@ -362,47 +557,83 @@
       "id": "mobile-initial",
       "status": "PASS",
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 0,
         "graphLine": false,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [],
         "completionVisible": false,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 388,
-          "scrollHeight": 1087,
+          "clientHeight": 635,
+          "scrollHeight": 635,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": 1237,
-          "bottom": 2155,
-          "height": 918,
+          "top": 1571,
+          "bottom": 2420,
+          "height": 849,
           "visible": false
         },
         "taskPaneRect": {
-          "top": 1088,
-          "bottom": 3258,
-          "height": 2171,
+          "top": 1552,
+          "bottom": 3055,
+          "height": 1503,
           "visible": false
         },
         "graphRect": {
-          "top": 1639,
-          "bottom": 1939,
-          "height": 300,
+          "top": 2064,
+          "bottom": 2251,
+          "height": 187,
           "visible": false
         },
         "firstGraphVisible": false,
@@ -412,7 +643,7 @@
           "width": 390,
           "height": 844
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-initial.png"
     },
@@ -420,66 +651,112 @@
       "id": "mobile-dark-completed-held",
       "status": "PASS",
       "correct": {
-        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
-        "intervalFeedback": "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering",
+        "graphFeedback": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+        "readingFeedback": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes.",
+        "claimFeedback": "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent.",
         "matchFeedbackCount": 3,
-        "completionVisible": false,
+        "completionVisible": true,
         "graphLine": true,
-        "graphPoints": 2
+        "graphPoints": 2,
+        "chosenTokens": [
+          "(",
+          "nieuwe Q",
+          "-",
+          "oude Q",
+          ")",
+          "/",
+          "oude Q",
+          "x 100%"
+        ]
       },
       "scroll": {
         "found": true,
-        "top": 573,
-        "bottom": 781,
+        "top": 441,
+        "bottom": 567,
         "visible": true
       },
       "inspection": {
-        "title": "Grafieken en tabellen - Exit ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "goldenTicketRoot": true,
         "sourceTaskWorkspace": true,
         "sourcePane": true,
         "taskPane": true,
         "stickyQuestionStrip": true,
-        "contextBlocks": 3,
-        "tableCount": 2,
+        "contextBlocks": 2,
+        "contextIds": [
+          "ctx-stationbroodjes-source",
+          "ctx-stationbroodjes-table"
+        ],
+        "tableCount": 1,
         "taskCount": 3,
         "taskShellCount": 3,
         "graphWorkspace": true,
-        "gridLines": 12,
+        "gridLines": 17,
         "graphPoints": 2,
         "graphLine": true,
         "ordinaryChoiceButtons": 0,
         "retryFeedback": [],
         "matchFeedback": [
-          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal, twee tabelpunten en een dalende lijn. Oefen verder met grafieken",
-          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 250 ijsjes. Oefen grafiek aflezen",
-          "Daling klopt Je kiest een interval waarin de nieuwe hoeveelheid de helft is van de oude hoeveelheid. Oefen procentuele verandering"
+          "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn.",
+          "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes.",
+          "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent."
         ],
-        "completionVisible": false,
+        "completionVisible": true,
+        "percentageClaimControl": true,
+        "formulaTokenIds": [
+          "newQ",
+          "oldQden",
+          "open",
+          "times10",
+          "oldQnum",
+          "plus",
+          "minus",
+          "close",
+          "newQden",
+          "divide",
+          "times100",
+          "oldFirst"
+        ],
+        "formulaTokenCount": 12,
+        "claimIntervals": [
+          "100-150",
+          "150-200",
+          "200-250",
+          "250-300",
+          "150-300",
+          "100-300"
+        ],
+        "claimConclusions": [
+          "drop50",
+          "rise50",
+          "drop-not-50",
+          "cannot-check"
+        ],
+        "sourceTextCurrent": true,
         "sourcePaneMetrics": {
-          "clientHeight": 388,
-          "scrollHeight": 1087,
+          "clientHeight": 635,
+          "scrollHeight": 635,
           "scrollTop": 0,
-          "overflowY": "auto",
+          "overflowY": "visible",
           "constrained": true,
-          "scrollable": true
+          "scrollable": false
         },
         "firstTaskRect": {
-          "top": -1850,
-          "bottom": -724,
-          "height": 1126,
+          "top": -3368,
+          "bottom": -2321,
+          "height": 1047,
           "visible": false
         },
         "taskPaneRect": {
-          "top": -1999,
-          "bottom": 796,
-          "height": 2796,
+          "top": -3387,
+          "bottom": 804,
+          "height": 4191,
           "visible": true
         },
         "graphRect": {
-          "top": -1448,
-          "bottom": -1148,
-          "height": 300,
+          "top": -2875,
+          "bottom": -2688,
+          "height": 187,
           "visible": false
         },
         "firstGraphVisible": false,
@@ -489,7 +766,7 @@
           "width": 390,
           "height": 844
         },
-        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Exit ticket Gebruik de bron, tabel, formule en het grafiekwerkvlak. Werk zelfstandig: maak de grafiek, lees een tussenwaarde af en controleer een procentuele daling. Oefenroute compact Grafieken Grafiek tekenen Vaardigheden Tabel naar P-Q-grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - IJskraam op het strand De paragraaf gebruikt een ijskraamvoorbeeld om te laten zien hoe je tabeldata omzet naar een P-Q-grafiek. De prijs verandert en de verkochte hoeveelheid ijsjes verandert mee. Tekstbron met het ijskraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte ijsjes Tabel met prijzen 1.00, 1.50, 2.00, 2.50 en 3.00 euro en verkochte hoeveelheden 500, 400, 300, 200 en 100 ijsjes. Tabel 1: Prijs en verkochte ijsjes Prijs P (EUR) Aantal verkocht Q 1.00 500 1.50 400 2.00 300 2.50 200 3.00 "
+        "bodyText": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d"
       },
       "screenshot": "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-dark-completed-held.png"
     }

@@ -7,9 +7,9 @@
  * - Do not use this script to mutate references/machine/ or references/external/.
  */
 
-const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { fileFingerprint } = require('./inventory-file-hash');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const SOURCE_MANIFEST = 'references/data/source_manifest.json';
@@ -49,10 +49,6 @@ function walkFiles(rootRel) {
     }
   }
   return out.sort((a, b) => rel(a).localeCompare(rel(b)));
-}
-
-function sha256(filePath) {
-  return crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex');
 }
 
 function ext(pathRel) {
@@ -239,15 +235,15 @@ function classify(pathRel) {
 
 function entryFor(filePath) {
   const pathRel = rel(filePath);
-  const stats = fs.statSync(filePath);
   const base = classify(pathRel);
   const selfGenerated = SELF_GENERATED.has(pathRel);
+  const fingerprint = selfGenerated ? { size_bytes: null, sha256: null } : fileFingerprint(filePath, pathRel);
   return {
     path: pathRel,
     file_name: path.basename(pathRel),
     extension: ext(pathRel),
-    size_bytes: selfGenerated ? null : stats.size,
-    sha256: selfGenerated ? null : sha256(filePath),
+    size_bytes: fingerprint.size_bytes,
+    sha256: fingerprint.sha256,
     ...base,
     self_generated_inventory_file: selfGenerated,
   };
@@ -293,7 +289,7 @@ function main() {
     generated_at: generatedAt,
     sprint_id: 'R0.2',
     scope: 'references/',
-    note: 'Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums.',
+    note: 'Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums. Text file size and sha256 use LF-normalized bytes for OS-stable output.',
     summary: summarize(referencesEntries),
     files: referencesEntries,
   });
@@ -303,7 +299,7 @@ function main() {
     generated_at: generatedAt,
     sprint_id: 'R0.2',
     scope: INVENTORY_ROOTS,
-    note: 'Inventory covers reference sources, generated reports, and reference/report tooling.',
+    note: 'Inventory covers reference sources, generated reports, and reference/report tooling. Text file size and sha256 use LF-normalized bytes for OS-stable output.',
     summary: summarize(documentEntries),
     files: documentEntries,
   });

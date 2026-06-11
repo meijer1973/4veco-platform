@@ -30,9 +30,12 @@
         "feedback_next_action": true
       },
       "exit_ticket": {
-        "purpose": "reviewed_local_target_equivalent_proof",
+        "purpose": "current_golden_workbench_transfer_candidate_held_for_review",
         "student_action": "calculation_work_capture_and_d31_explanation",
-        "completion_language_eligible": true,
+        "completion_language_eligible": false,
+        "gate_approved": false,
+        "target_readiness_evidence": false,
+        "historical_exact_copy_authority_only": true,
         "feedback_next_action": true
       },
       "pair_independent": true
@@ -49,13 +52,16 @@
       },
       "exit_ticket": {
         "purpose": "held_graph_table_target_equivalent_candidate",
-        "student_action": "source_table_formula_graph_construction_graph_reading_interval_halving",
+        "student_action": "broodjeskraam_source_table_graph_construction_graph_reading_percentage_claim_control",
         "completion_language_eligible": false,
         "feedback_next_action": true,
-        "context": "ice_cream_source_table_formula",
+        "context": "stationbroodjes_source_table",
         "procedure_context_removed": true,
+        "static_formula_context_removed": true,
         "axis_labels_delayed": true,
-        "interval_distractors_present": true
+        "interval_distractors_present": true,
+        "formula_builder_present": true,
+        "percentage_claim_control": true
       },
       "pair_independent": true
     }

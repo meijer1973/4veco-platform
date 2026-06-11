@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.1-TARGET-V5-PROMOTE",
+  "status": "completed",
+  "completed_on": "2026-06-10",
+  "plan": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md",
+  "baseline": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-baseline.md",
+  "result": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-result.md",
+  "diff_summary": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-diff-summary.md",
+  "protected_reference_data_changed": true,
+  "generated_lesson_output_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 2,
+  "target_status_decisions": [
+    {
+      "id": "2.1.1",
+      "previous_status": "migrated_from_v4_needs_v5_review",
+      "new_status": "reviewed_final"
+    },
+    {
+      "id": "2.1.2",
+      "previous_status": "migrated_from_v4_needs_v5_review",
+      "new_status": "reviewed_final"
+    },
+    {
+      "id": "2.1.3",
+      "previous_status": "migrated_from_v4_needs_v5_review",
+      "new_status": "reviewed_final"
+    }
+  ],
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-TARGET-V5-PROMOTE",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.1 Kostenstructuren\"",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.2 Opbrengsten, winst en break-even\"",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.3 Marginale kosten en marginale opbrengsten\"",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+      "status": "passed",
+      "note": "Passed with one warning: chapter PDF size 428 KB."
+    },
+    {
+      "command": "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "LF-to-CRLF warnings only on touched platform text files."
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.1-TARGET-V5-PROMOTE-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.1-TARGET-V5-PROMOTE --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "B2-214-TARGET-PLACEHOLDER",
+        "description": "The 2.1.4 consolidation target remains placeholder_needs_review and was intentionally outside this promotion.",
+        "disposition": "carry_forward",
+        "owner": "curriculum_content_owner",
+        "next_action": "Resolve in a later authorized 2.1.4 target-design/source-status workflow.",
+        "blocking": false
+      },
+      {
+        "id": "B2-21-PDF-SIZE",
+        "description": "Chapter 2.1 validation still warns that the chapter PDF is 428 KB, although image references and aggregate asset checks pass.",
+        "disposition": "accepted_follow_up",
+        "owner": "print_build_owner",
+        "next_action": "Monitor during later Chapter 2.1 and Book 2 print assembly.",
+        "blocking": false
+      }
+    ]
+  }
+}

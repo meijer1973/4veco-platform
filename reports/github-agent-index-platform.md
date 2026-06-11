@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-10T19:19:56.563Z
+Generated: 2026-06-11T13:49:46.955Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4315
+Files indexed: 4391
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 472
+Count: 478
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -326,6 +326,7 @@ Count: 472
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
+- build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
 - build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
@@ -385,6 +386,7 @@ Count: 472
 - build-scripts/references/execute-mtu-h4c-answer-form-cli.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
+- build-scripts/references/inventory-file-hash.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
@@ -476,6 +478,7 @@ Count: 472
 - build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
+- build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/capture-source-reconstruct2-screenshots.js
 - build-scripts/sprints/capture-task-context-runtime1-screenshots.js
@@ -528,10 +531,13 @@ Count: 472
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-112-rendered-1.js
+- build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -652,7 +658,7 @@ Count: 42
 
 ## validators
 
-Count: 421
+Count: 446
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -726,6 +732,7 @@ Count: 421
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
+- build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
 - build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js
 - build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js
@@ -800,6 +807,7 @@ Count: 421
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
+- build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -846,10 +854,13 @@ Count: 421
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-112-rendered-1.js
+- build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -915,6 +926,8 @@ Count: 421
 - reports/json/check-short-exit2-proof.json
 - reports/json/check-surface-pregate1-proof.json
 - reports/json/graph-check-ux1-proof.json
+- reports/json/short-check-workbench-112-rendered-1-proof.json
+- reports/json/short-check-workbench-policy-1-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -932,6 +945,10 @@ Count: 421
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
@@ -1062,6 +1079,20 @@ Count: 421
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/manifest.json
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -1078,7 +1109,7 @@ Count: 421
 
 ## references
 
-Count: 591
+Count: 597
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1158,6 +1189,8 @@ Count: 591
 - references/data/sprints/B2-2.1-A.result.json
 - references/data/sprints/B2-2.1-RETRO.plan.json
 - references/data/sprints/B2-2.1-RETRO.result.json
+- references/data/sprints/B2-2.1-TARGET-V5-PROMOTE.plan.json
+- references/data/sprints/B2-2.1-TARGET-V5-PROMOTE.result.json
 - references/data/sprints/B2-2.1.1-HARDEN.plan.json
 - references/data/sprints/B2-2.1.1-HARDEN.result.json
 - references/data/sprints/B2-2.1.2-HARDEN.plan.json
@@ -1626,6 +1659,8 @@ Count: 591
 - references/owned/course-blueprint-v4.meta.json
 - references/owned/course-blueprint-v5.md
 - references/owned/course-blueprint-v5.meta.json
+- references/owned/course-blueprint-v6-three-year.md
+- references/owned/course-blueprint-v6-three-year.meta.json
 - references/owned/README.md
 - references/qc-prompts/exam-derived-skills.md
 - references/qc-prompts/foundation-audit.md
@@ -1669,12 +1704,14 @@ Count: 591
 - references/ui/interaction-policy.md
 - references/ui/layout-registry.json
 - references/ui/layout-registry.md
+- references/ui/layouts/golden-exercise-workbench-short-check.json
+- references/ui/layouts/golden-exercise-workbench-short-check.md
 - references/ui/README.md
 - references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2644
+Count: 2708
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1698,8 +1735,16 @@ Count: 2644
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.json
@@ -1709,6 +1754,10 @@ Count: 2644
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1773,6 +1822,8 @@ Count: 2644
 - reports/json/representation-operation-inventory.json
 - reports/json/representation-transfer-gaps.json
 - reports/json/roadmap-flag-cleanup1.json
+- reports/json/short-check-workbench-112-rendered-1-proof.json
+- reports/json/short-check-workbench-policy-1-proof.json
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
@@ -1863,6 +1914,8 @@ Count: 2644
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
+- reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
+- reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.md
 - reports/mtu-hardening/mtu-h5-regression-fixture.json
 - reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.json
 - reports/mtu-hardening/mtu-h5-regression-fixture.review-candidate.md
@@ -1937,6 +1990,9 @@ Count: 2644
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/CP.6a-lesson-side-recheck.md
 - reports/reference-planning/CP.6b-target-exercise-review.md
@@ -1958,6 +2014,10 @@ Count: 2644
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
+- reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
@@ -1977,6 +2037,10 @@ Count: 2644
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
@@ -2225,6 +2289,9 @@ Count: 2644
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
+- reports/review-gates/GATE-MTU-H5-q3-fixture-execution/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-q3-fixture-execution/review-packet.json
+- reports/review-gates/GATE-MTU-H5-q3-fixture-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json
@@ -2580,6 +2647,17 @@ Count: 2644
 - reports/sprints/B2-2.1-RETRO-plan.md
 - reports/sprints/B2-2.1-RETRO-result.md
 - reports/sprints/B2-2.1-RETRO-retrospective-brief.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-baseline.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-command-log.jsonl
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-command-log.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-diff-summary.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-assignment.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-corrections.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-round1.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-lead-review-round2.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-plan.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-result.md
+- reports/sprints/B2-2.1-TARGET-V5-PROMOTE-review-evidence.md
 - reports/sprints/B2-2.1.1-HARDEN-baseline.md
 - reports/sprints/B2-2.1.1-HARDEN-command-log.jsonl
 - reports/sprints/B2-2.1.1-HARDEN-diff-summary.md
@@ -2637,6 +2715,8 @@ Count: 2644
 - reports/sprints/B2-READY-1-plan.md
 - reports/sprints/B2-READY-1-readiness-brief.md
 - reports/sprints/B2-READY-1-result.md
+- reports/sprints/BLUEPRINT-3Y-RECONCILE-1-plan.md
+- reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
@@ -2749,6 +2829,7 @@ Count: 2644
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/manifest.json
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png
+- reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-command-log.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-assignment.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-corrections.md
@@ -3831,6 +3912,8 @@ Count: 2644
 - reports/sprints/REF-CT2-lead-review-round2.md
 - reports/sprints/REF-CT2-plan.md
 - reports/sprints/REF-CT2-result.md
+- reports/sprints/REV-STD-1-flag-disposition.json
+- reports/sprints/REV-STD-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
@@ -3935,6 +4018,20 @@ Count: 2644
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-verification-review.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/manifest.json
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md
@@ -4315,6 +4412,10 @@ Count: 2644
 - reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
 - reports/sprints/VISUAL-QA-HARDEN-2-result.md
 - reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
+- reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
+- reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md

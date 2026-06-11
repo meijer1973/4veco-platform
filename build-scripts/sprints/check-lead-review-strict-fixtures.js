@@ -50,6 +50,29 @@ const CASES = [
     mode: 'complete',
     expectedStatus: 0,
   },
+  {
+    id: 'TEST-STRICT-6',
+    mode: 'planned',
+    planJson: { created: '2026-06-10' },
+    expectedStatus: 1,
+    expectedText: 'must declare lead_review_schema_version: 3',
+  },
+  {
+    id: 'TEST-STRICT-7',
+    mode: 'complete',
+    schemaVersion: 3,
+    planJson: { created: '2026-06-10', lead_review_schema_version: 3 },
+    expectedStatus: 0,
+  },
+  {
+    id: 'TEST-STRICT-8',
+    mode: 'complete',
+    schemaVersion: 3,
+    omitFindings: true,
+    planJson: { created: '2026-06-10', lead_review_schema_version: 3 },
+    expectedStatus: 1,
+    expectedText: 'lead_review.findings must list classified findings',
+  },
 ];
 
 function fail(message) {
@@ -221,7 +244,7 @@ Round-2 recheck is ready.
 `;
 }
 
-function reviewReport(id, round, thin = false) {
+function reviewReport(id, round, thin = false, schemaVersion = 2) {
   if (thin) {
     return `# Lead Review Summary
 
@@ -245,7 +268,9 @@ Round: lead review round ${round}
 - Evidence inspected:
   - \`reports/sprints/${id}-plan.md\`
   - \`reports/sprints/${id}-baseline.md\`
+  - \`reports/sprints/${id}-result.md\`
   - \`references/data/sprints/${id}.plan.json\`
+  ${schemaVersion >= 3 ? `- \`reports/sprints/${id}-command-log.jsonl\`` : ''}
 
 ## Review Plan
 
@@ -258,7 +283,13 @@ Round: lead review round ${round}
 - Verdict: PASS WITH FLAGS
 - Reason: Fixture passes with a carried validation flag.
 
-## Blocking Findings
+${schemaVersion >= 3 ? `## Finding Classification
+
+| Finding | Classification | Blocks | Does not block | Proof required to close |
+|---|---|---|---|---|
+| ${id}-F1 | minor_carry_flag | Fixture cleanup only | Lead-review schema validation | Remove fixture files after validation |
+
+` : ''}## Blocking Findings
 
 - None.
 
@@ -269,6 +300,7 @@ Round: lead review round ${round}
 ## Test Evidence
 
 - \`node build-scripts/sprints/check-sprint-bundle.js ${id} --complete\` expected path.
+${schemaVersion >= 3 ? `- Command-log evidence: \`reports/sprints/${id}-command-log.jsonl\` records \`node build-scripts/sprints/check-sprint-bundle.js ${id} --complete\` with exit_code 0.` : ''}
 
 ## Learning Quality Evidence
 
@@ -306,7 +338,8 @@ function basePlanJson(id, overrides = {}) {
   };
 }
 
-function resultJson(id, omitFlags = false) {
+function resultJson(id, options = {}) {
+  const schemaVersion = options.schemaVersion || 2;
   const leadReview = {
     assignment: `reports/sprints/${id}-lead-review-assignment.md`,
     round1: `reports/sprints/${id}-lead-review-round1.md`,
@@ -314,12 +347,36 @@ function resultJson(id, omitFlags = false) {
     round2: `reports/sprints/${id}-lead-review-round2.md`,
     final_verdict: 'PASS WITH FLAGS',
   };
-  if (!omitFlags) {
+  if (schemaVersion >= 3 && !options.omitFindings) {
+    leadReview.findings = [
+      {
+        id: `${id}-F1`,
+        description: 'Temporary fixture carries a non-blocking validation flag.',
+        classification: 'minor_carry_flag',
+        evidence: [
+          `reports/sprints/${id}-lead-review-round2.md`,
+          `references/data/sprints/${id}.result.json`,
+        ],
+        blocks: ['fixture cleanup only'],
+        does_not_block: ['lead-review schema validation'],
+        proof_required_to_close: 'Remove fixture files after validation.',
+      },
+    ];
+  }
+  if (!options.omitFlags) {
     leadReview.flags = [
       {
         id: `${id}-F1`,
         description: 'Temporary fixture carries a non-blocking validation flag.',
         disposition: 'accepted_follow_up',
+        ...(schemaVersion >= 3
+          ? {
+              classification: 'minor_carry_flag',
+              blocks: ['fixture cleanup only'],
+              does_not_block: ['lead-review schema validation'],
+              proof_required_to_close: 'Remove fixture files after validation.',
+            }
+          : {}),
         owner: 'LEAD-REVIEW-2',
         next_action: 'Remove fixture files after validation.',
         blocking: false,
@@ -337,14 +394,33 @@ function resultJson(id, omitFlags = false) {
     diff_summary: `reports/sprints/${id}-diff-summary.md`,
     protected_reference_data_changed: false,
     lead_review_required: true,
-    lead_review_schema_version: 2,
+    lead_review_schema_version: schemaVersion,
     lead_review: leadReview,
     acceptance_tests: [{ command: `node build-scripts/sprints/check-sprint-bundle.js ${id} --complete`, status: 'passed' }],
   };
 }
 
+function commandLogJsonl(id) {
+  const command = `node build-scripts/sprints/check-sprint-bundle.js ${id} --complete`;
+  return `${JSON.stringify({
+    schema_version: 1,
+    sprint_id: id,
+    command,
+    cwd: process.cwd(),
+    started_at: '2026-06-10T00:00:00.000Z',
+    finished_at: '2026-06-10T00:00:01.000Z',
+    duration_ms: 1000,
+    exit_code: 0,
+    stdout_sha256: 'fixture',
+    stderr_sha256: 'fixture',
+    stdout_excerpt: 'fixture command log evidence',
+    stderr_excerpt: '',
+  })}\n`;
+}
+
 function createCase(testCase) {
   const id = testCase.id;
+  const schemaVersion = testCase.schemaVersion || 2;
   writeFile(`reports/sprints/${id}-plan.md`, planMarkdown(id));
   writeFile(`reports/sprints/${id}-baseline.md`, baselineMarkdown(id));
   writeFile(`references/data/sprints/${id}.plan.json`, `${JSON.stringify(basePlanJson(id, testCase.planJson || {}), null, 2)}\n`);
@@ -352,10 +428,24 @@ function createCase(testCase) {
     writeFile(`reports/sprints/${id}-result.md`, resultMarkdown(id));
     writeFile(`reports/sprints/${id}-diff-summary.md`, diffMarkdown(id));
     writeFile(`reports/sprints/${id}-lead-review-assignment.md`, supportFile(id, 'assignment'));
-    writeFile(`reports/sprints/${id}-lead-review-round1.md`, reviewReport(id, 1));
+    writeFile(`reports/sprints/${id}-lead-review-round1.md`, reviewReport(id, 1, false, schemaVersion));
     writeFile(`reports/sprints/${id}-lead-review-corrections.md`, supportFile(id, 'corrections'));
-    writeFile(`reports/sprints/${id}-lead-review-round2.md`, reviewReport(id, 2, testCase.thinRound2));
-    writeFile(`references/data/sprints/${id}.result.json`, `${JSON.stringify(resultJson(id, testCase.omitFlags), null, 2)}\n`);
+    writeFile(`reports/sprints/${id}-lead-review-round2.md`, reviewReport(id, 2, testCase.thinRound2, schemaVersion));
+    if (schemaVersion >= 3) {
+      writeFile(`reports/sprints/${id}-command-log.jsonl`, commandLogJsonl(id));
+    }
+    writeFile(
+      `references/data/sprints/${id}.result.json`,
+      `${JSON.stringify(
+        resultJson(id, {
+          omitFlags: testCase.omitFlags,
+          omitFindings: testCase.omitFindings,
+          schemaVersion,
+        }),
+        null,
+        2
+      )}\n`
+    );
   }
 }
 
@@ -373,6 +463,7 @@ function cleanup() {
     ]) {
       fs.rmSync(`reports/sprints/${id}-${suffix}.md`, { force: true });
     }
+    fs.rmSync(`reports/sprints/${id}-command-log.jsonl`, { force: true });
     fs.rmSync(`references/data/sprints/${id}.plan.json`, { force: true });
     fs.rmSync(`references/data/sprints/${id}.result.json`, { force: true });
   }

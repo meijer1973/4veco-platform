@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-q3-fixture-execution-authorization-packet",
+  "created": "2026-06-10",
+  "status": "pending_explicit_q3_fixture_mutation_authorization_no_execution_performed",
+  "purpose": "Prepare the separate execution-authorization review packet required after PR #27 merged. This packet asks whether q3-only mutation of reports/mtu-hardening/mtu-h5-regression-fixture.json is authorized; it does not perform that mutation.",
+  "start_commit": "4ba9084d6a9725d6082b0e21ac39a391832dfb30",
+  "start_branch": "codex/mtu-h5-q3-fixture-execution-gate",
+  "source_execution_gate_pr": "https://github.com/meijer1973/4veco-platform/pull/27",
+  "source_execution_gate_merge_commit": "4ba9084d6a9725d6082b0e21ac39a391832dfb30",
+  "source_execution_gate_head_commit": "3389c3dc1104c85b2c9f5c28122cf3f920abc5ec",
+  "source_human_surface_approval_comment": "https://github.com/meijer1973/4veco-platform/pull/27#issuecomment-4669116659",
+  "execution_authorized_now": false,
+  "fixture_mutation_performed": false,
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json",
+    "reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json",
+    "build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json",
+    "reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json",
+    "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json",
+    "reports/review-gates/GATE-MTU-H5-RP001-RP002-q3-repair-packet/gate-closure.json",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q3",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q3",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js"
+  ],
+  "current_q3_fixture_state_must_remain_unmodified": {
+    "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "record_mapped_mtu_ids": [
+      "A15",
+      "A61",
+      "A96"
+    ],
+    "operations": [
+      {
+        "operation_id": "q3-step-1",
+        "mapped_mtu_ids": [
+          "A15",
+          "A61",
+          "A96"
+        ],
+        "expected_required_mtu_ids": [
+          "A61",
+          "A96"
+        ],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A15"
+        ],
+        "missing_mtu_expected": true,
+        "review_required_hooks": [
+          "review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route"
+        ],
+        "scale_factor_expected": false,
+        "incidence_or_pass_through_expected": false
+      },
+      {
+        "operation_id": "q3-step-2",
+        "mapped_mtu_ids": [
+          "A15",
+          "A61",
+          "A96"
+        ],
+        "expected_required_mtu_ids": [
+          "A61",
+          "A96"
+        ],
+        "expected_answer_form_mtu_ids": [
+          "A96"
+        ],
+        "expected_forbidden_mtu_ids": [
+          "A15"
+        ],
+        "missing_mtu_expected": true,
+        "review_required_hooks": [
+          "review threshold-conclusion wording as answer-skill need or governed MTU procedure"
+        ],
+        "scale_factor_expected": false,
+        "incidence_or_pass_through_expected": false
+      }
+    ]
+  },
+  "requested_authorization": {
+    "gate_id": "GATE-MTU-H5-q3-fixture-execution",
+    "decision_needed": "Explicitly approve, revise, or reject q3-only mutation of reports/mtu-hardening/mtu-h5-regression-fixture.json.",
+    "authorization_phrase_required": true,
+    "exact_approval_text": "APPROVE q3-only fixture mutation for GATE-MTU-H5-q3-fixture-execution. Authorized write surface: reports/mtu-hardening/mtu-h5-regression-fixture.json, q3 record and q3-step-1/q3-step-2 fields only. Authorized execution: remove A15 from q3 mappings, retain A61/A96 support, retain A15 as forbidden, set q3 missing_mtu_expected false only with reviewed-equivalent refs, attach EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON refs, attach EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION refs for q3-step-2, keep scale and incidence false, and preserve a negative A15 regression guard. No protected-reference mutation, candidate storage, candidate writes, authored target-exercise mutation, MTU mutation, operation-registry mutation, answer-skill mutation, lesson output, PV, diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-route readiness claim, or student/product use is authorized.",
+    "valid_decisions": [
+      "approve_q3_only_fixture_mutation",
+      "revise_before_fixture_mutation",
+      "reject_fixture_mutation"
+    ],
+    "approval_must_record": [
+      "reviewed commit hash",
+      "reviewed branch",
+      "explicit q3-only fixture mutation authority",
+      "all blocked surfaces remain false unless separately stated",
+      "negative A15 guard required after execution"
+    ]
+  },
+  "authorized_write_surface_if_approved_later": {
+    "path": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "allowed_record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
+    "allowed_operation_ids": [
+      "q3-step-1",
+      "q3-step-2"
+    ],
+    "mutation_scope": [
+      "q3 record mapped_mtu_ids",
+      "q3-step-1 mapped_mtu_ids",
+      "q3-step-2 mapped_mtu_ids",
+      "q3-step-1 missing_mtu_expected",
+      "q3-step-2 missing_mtu_expected",
+      "q3-step-1 reviewed_equivalent_operation_refs",
+      "q3-step-2 reviewed_equivalent_operation_refs",
+      "q3-step-2 reviewed_equivalent_answer_skill_refs",
+      "q3-step-1 review_required_hooks",
+      "q3-step-2 review_required_hooks"
+    ],
+    "forbidden_write_surfaces": [
+      "references/machine/",
+      "references/authored/course-target-exercises.json",
+      "references/data/exam-ingestion/",
+      "build-scripts/references/check-mtu-h5-mapping-regression.js",
+      "lesson output",
+      "product routes",
+      "student-facing output"
+    ]
+  },
+  "future_patch_preview_if_approved": [
+    {
+      "scope": "q3 record",
+      "field": "mapped_mtu_ids",
+      "change": "remove A15; retain A61 and A96"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "mapped_mtu_ids",
+      "change": "remove A15; retain A61 and A96"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "expected_required_mtu_ids",
+      "change": "retain A61 and A96"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "expected_answer_form_mtu_ids",
+      "change": "retain A96"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "expected_forbidden_mtu_ids",
+      "change": "retain A15"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "missing_mtu_expected",
+      "change": "set false"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "reviewed_equivalent_operation_refs",
+      "change": "add EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON refs"
+    },
+    {
+      "scope": "q3-step-2",
+      "field": "reviewed_equivalent_answer_skill_refs",
+      "change": "add EX_ANS_THRESHOLD_CONCLUSION_UNIT_DIRECTION refs"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "review_required_hooks",
+      "change": "replace current hooks with reviewed-equivalent refs so q3 emits no q3 review_required markers"
+    },
+    {
+      "scope": "q3-step-1 and q3-step-2",
+      "field": "scale_factor_expected and incidence_or_pass_through_expected",
+      "change": "retain false"
+    }
+  ],
+  "post_authorization_required_proof": [
+    "q3 record and q3 operations do not include A15 in mapped_mtu_ids",
+    "q3 record and q3 operations retain A61 and A96",
+    "q3 operations retain expected_forbidden_mtu_ids containing A15",
+    "q3 operations have missing_mtu_expected false",
+    "q3-step-1 and q3-step-2 have reviewed-equivalent annual-threshold operation refs",
+    "q3-step-2 has reviewed-equivalent threshold-conclusion answer-skill refs",
+    "the four current q3 failed assertions disappear",
+    "the two current q3 review_required markers disappear",
+    "non-q3 governed failures remain visible",
+    "the Solo negative fixture still passes as fail-as-expected",
+    "reintroducing A15 recreates q3 ASSERT-OVER-TRIGGER failures",
+    "no protected references, candidate storage, authored target exercises, lessons, PV, diagnostics, product routes, or student surfaces change"
+  ],
+  "validation_commands": [
+    "node build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js",
+    "node build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "node build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false,
+    "q3_fixture_mutation_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_explicit_human_q3_fixture_mutation_authorization_review",
+    "why_not_complete": "The merged q3 execution gate requires explicit later q3-only fixture mutation authorization. This packet prepares that authorization request but does not mutate the fixture."
+  }
+}
