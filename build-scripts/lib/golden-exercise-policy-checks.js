@@ -6,8 +6,15 @@ const boundary = require('../sprints/check-golden-ticket-layout-boundary');
 
 const PATHS = {
   layoutRegistryJson: path.join(ROOT, 'references', 'ui', 'layout-registry.json'),
+  layoutRegistryMd: path.join(ROOT, 'references', 'ui', 'layout-registry.md'),
   interactionPolicyJson: path.join(ROOT, 'references', 'ui', 'interaction-policy.json'),
+  interactionPolicyMd: path.join(ROOT, 'references', 'ui', 'interaction-policy.md'),
+  uiReadme: path.join(ROOT, 'references', 'ui', 'README.md'),
+  exerciseWorkbenchPolicyMd: path.join(ROOT, 'references', 'ui', 'exercise-workbench-policy.md'),
   sharedTaskPolicyMd: path.join(ROOT, 'references', 'ui', 'shared-task-rollout-policy.md'),
+  shortCheckSpecMd: path.join(ROOT, 'references', 'ui', 'layouts', 'golden-exercise-workbench-short-check.md'),
+  shortCheckSpecJson: path.join(ROOT, 'references', 'ui', 'layouts', 'golden-exercise-workbench-short-check.json'),
+  shortCheckProofJson: path.join(ROOT, 'reports', 'json', 'short-check-workbench-policy-1-proof.json'),
   exemplarIndexJson: path.join(ROOT, 'references', 'exemplars', 'exemplar-index.json'),
   implementedSnapshotHtml: path.join(ROOT, 'references', 'exemplars', 'implemented', '1.1.3-golden-exercise-workbench', 'generated-route-snapshot.html'),
   implementedSourceJson: path.join(ROOT, 'references', 'exemplars', 'implemented', '1.1.3-golden-exercise-workbench', 'source-data-snapshot.json'),
@@ -35,6 +42,18 @@ function readJson(file) {
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+function assertIncludesText(text, needles, label) {
+  for (const needle of needles) {
+    assert(text.includes(needle), `${label} missing text: ${needle}`);
+  }
+}
+
+function assertFalseFields(object, fields, label) {
+  for (const field of fields) {
+    assert(object && object[field] === false, `${label}.${field} must be false`);
+  }
 }
 
 function asArray(value) {
@@ -367,7 +386,218 @@ function validateInteractionPolicy() {
   assert(graph, 'interaction policy missing graph_construction controls');
   assert(asArray(graph.forbidden).includes('fake line-shape check'), 'interaction policy must forbid fake line-shape check');
   assert(asArray(policy.proof_states).includes('after_graph_or_formula_interaction'), 'interaction policy must require after graph/formula interaction proof');
+  const exitTicket = policy.surface_distinctions && policy.surface_distinctions.exit_ticket;
+  assert(exitTicket, 'interaction policy missing exit_ticket surface distinction');
+  assert(asArray(exitTicket.must).includes('same-level operation-chain proof'), 'exit ticket distinction must require same-level operation-chain proof');
+  const shortCheck = policy.surface_distinctions && policy.surface_distinctions.advisory_short_check;
+  assert(shortCheck, 'interaction policy missing advisory_short_check surface distinction');
+  [
+    'route advice allowed',
+    'local repair feedback',
+    'partial-skill rather than full target chain',
+  ].forEach((item) => {
+    assert(asArray(shortCheck.may_be).includes(item), `advisory short-check distinction missing may_be item ${item}`);
+  });
+  [
+    'hidden/collapsible before attempt',
+    'shown after attempt as local repair help',
+  ].forEach((item) => {
+    assert(asArray(shortCheck.hint_policy).includes(item), `advisory short-check hint policy missing ${item}`);
+  });
+  [
+    'replace exit ticket',
+    'claim target-equivalent proof',
+    'claim paragraph completion',
+    'claim completion language',
+    'claim mastery',
+    'claim diagnostics',
+    'claim grading',
+    'claim automatic sequencing',
+    'claim summative use',
+    'claim student/product use',
+    'claim PV',
+    'claim Scale Gate 1',
+  ].forEach((item) => {
+    assert(asArray(shortCheck.must_not).includes(item), `advisory short-check distinction missing must_not item ${item}`);
+  });
+  assert(shortCheck.authority && shortCheck.authority.advisory_only === true, 'advisory short-check authority must be advisory_only');
+  assertFalseFields(shortCheck.authority, [
+    'target_equivalent_proof_authorized',
+    'paragraph_completion_authorized',
+    'completion_language_authorized',
+    'diagnostics_authorized',
+    'grading_authorized',
+    'mastery_authorized',
+    'automatic_sequencing_authorized',
+    'summative_use_authorized',
+    'student_product_use_authorized',
+    'pv_authorized',
+    'scale_gate_1_authorized',
+  ], 'advisory_short_check.authority');
   return { policy_id: policy.policy_id };
+}
+
+function validateShortCheckPolicySpec() {
+  const registry = readJson(PATHS.layoutRegistryJson);
+  const layout = asArray(registry.layouts).find((item) => item.id === 'golden_exercise_workbench');
+  assert(layout, 'layout registry missing golden_exercise_workbench for short-check policy');
+  const selector = layout.current_selector || {};
+  const rendererVariantIds = asArray(selector.supported_variants).map((item) => item && item.id).filter(Boolean);
+  assert(!rendererVariantIds.includes('golden_advisory_short_check_v1'), 'short-check policy variant must not be listed as a current renderer variant');
+  const surfaceSpec = asArray(selector.surface_variant_specs).find((item) => item.id === 'golden_advisory_short_check_v1');
+  assert(surfaceSpec, 'layout registry missing golden_advisory_short_check_v1 surface variant spec');
+  assert(surfaceSpec.surface_type === 'advisory_short_check', 'short-check surface variant must declare advisory_short_check');
+  assert(surfaceSpec.status === 'policy_defined_no_route_migration', 'short-check surface variant must be policy_defined_no_route_migration');
+  assert(surfaceSpec.specification === 'references/ui/layouts/golden-exercise-workbench-short-check.md', 'short-check surface variant specification path mismatch');
+  assert(surfaceSpec.machine_contract === 'references/ui/layouts/golden-exercise-workbench-short-check.json', 'short-check surface variant JSON path mismatch');
+  [
+    'references/ui/layouts/golden-exercise-workbench-short-check.md',
+    'references/ui/layouts/golden-exercise-workbench-short-check.json',
+  ].forEach((item) => {
+    assert(asArray(layout.current_references).includes(item), `layout registry current_references missing ${item}`);
+  });
+
+  const spec = readJson(PATHS.shortCheckSpecJson);
+  assert(spec.schema_version === 1, 'short-check spec schema_version must be 1');
+  assert(spec.variant_id === 'golden_advisory_short_check_v1', 'short-check spec variant_id mismatch');
+  assert(spec.layout_id === 'golden_exercise_workbench', 'short-check spec layout_id mismatch');
+  assert(spec.surface_type === 'advisory_short_check', 'short-check spec surface_type mismatch');
+  assert(spec.status === 'policy_defined_no_route_migration', 'short-check spec status mismatch');
+  assert(spec.renderer_status === 'not_a_current_renderer_selector', 'short-check spec must not claim renderer selector status');
+  assert(spec.scope && Array.isArray(spec.scope.real_routes_migrated) && spec.scope.real_routes_migrated.length === 0, 'short-check spec must not migrate real routes');
+  assert(spec.scope.generated_lesson_output_changed === false, 'short-check spec must keep generated_lesson_output_changed false');
+  assert(spec.scope.implementation_migration_authorized === false, 'short-check spec must not authorize implementation migration');
+  assert(asArray(spec.distinction_table).length >= 6, 'short-check spec must include the required distinction table');
+  ['authority', 'operation_proof', 'teaching_flow', 'hints', 'completion_wording', 'proof_states'].forEach((dimension) => {
+    assert(asArray(spec.distinction_table).some((row) => row.dimension === dimension), `short-check distinction table missing ${dimension}`);
+  });
+  [
+    'route advice',
+    'local repair feedback after attempt',
+    'hidden or collapsible hints',
+    'after-attempt hints',
+    'partial-skill operation slice',
+  ].forEach((item) => {
+    assert(asArray(spec.allowed_behavior).includes(item), `short-check spec missing allowed behavior ${item}`);
+  });
+  [
+    'source/context first where source-dependent',
+    'clear task cards',
+    'local feedback after attempt',
+    'mobile proof before rendered adoption',
+    'dark-mode proof before rendered adoption',
+    'no legacy shell',
+  ].forEach((item) => {
+    assert(asArray(spec.required_layout_quality).includes(item), `short-check spec missing layout quality item ${item}`);
+  });
+  assert(spec.authority && spec.authority.advisory_only === true, 'short-check spec authority must be advisory_only');
+  assertFalseFields(spec.authority, [
+    'target_equivalent_proof_authorized',
+    'paragraph_completion_authorized',
+    'completion_language_authorized',
+    'diagnostics_authorized',
+    'grading_authorized',
+    'mastery_authorized',
+    'automatic_sequencing_authorized',
+    'summative_use_authorized',
+    'student_product_use_authorized',
+    'pv_authorized',
+    'scale_gate_1_authorized',
+    'exit_ticket_replacement_authorized',
+  ], 'short_check_spec.authority');
+
+  const requiredMdNeedles = [
+    'target-equivalent candidate',
+    'same-level operation-chain proof',
+    'route advice allowed',
+    'local hints allowed only hidden/collapsible or after attempt',
+    'no completion-language claim',
+    'may be partial-skill rather than full target chain',
+    'target-equivalent proof',
+    'paragraph completion',
+    'mastery',
+    'diagnostics',
+    'grading',
+    'automatic sequencing',
+    'summative use',
+    'student/product use',
+    'PV',
+    'Scale Gate 1',
+    'no legacy shell',
+  ];
+  [
+    [PATHS.shortCheckSpecMd, 'short-check spec markdown'],
+    [PATHS.interactionPolicyMd, 'interaction policy markdown'],
+    [PATHS.exerciseWorkbenchPolicyMd, 'exercise workbench policy markdown'],
+  ].forEach(([file, label]) => assertIncludesText(read(file), requiredMdNeedles, label));
+  assertIncludesText(read(PATHS.uiReadme), [
+    'golden_advisory_short_check_v1',
+    'references/ui/layouts/golden-exercise-workbench-short-check.md',
+    'references/ui/layouts/golden-exercise-workbench-short-check.json',
+  ], 'ui readme');
+  assertIncludesText(read(PATHS.layoutRegistryMd), [
+    'golden_advisory_short_check_v1',
+    'policy-defined only',
+    'targetEquivalent.candidate: false',
+    'no target-equivalent or paragraph-completion claim',
+  ], 'layout registry markdown');
+  assertIncludesText(read(PATHS.sharedTaskPolicyMd), [
+    'advisory short-check variant policy',
+    'targetEquivalent.candidate',
+    'route advice',
+    'hidden/collapsible or after-attempt hints',
+  ], 'shared task policy markdown');
+
+  return {
+    variant_id: spec.variant_id,
+    status: spec.status,
+    distinction_rows: spec.distinction_table.length,
+    proof_states: spec.proof_before_rendered_adoption.length,
+  };
+}
+
+function validateShortCheckPolicyProof() {
+  const proof = readJson(PATHS.shortCheckProofJson);
+  assert(proof.schema_version === 1, 'short-check proof schema_version must be 1');
+  assert(proof.sprint_id === 'SHORT-CHECK-WORKBENCH-POLICY-1', 'short-check proof sprint_id mismatch');
+  assert(['policy_defined_pending_review', 'policy_defined_pending_validation', 'passed'].includes(proof.status), 'short-check proof status mismatch');
+  assert(proof.scope && proof.scope.real_routes_migrated === false, 'short-check proof must state real_routes_migrated false');
+  assert(proof.scope.generated_lesson_output_changed === false, 'short-check proof must state generated_lesson_output_changed false');
+  assert(proof.scope.lesson_repo_changed === false, 'short-check proof must state lesson_repo_changed false');
+  assert(proof.scope.implementation_migration_authorized === false, 'short-check proof must state implementation_migration_authorized false');
+  assert(proof.authority && proof.authority.advisory_only === true, 'short-check proof authority must be advisory_only');
+  assertFalseFields(proof.authority, [
+    'target_equivalent_proof_authorized',
+    'paragraph_completion_authorized',
+    'completion_language_authorized',
+    'diagnostics_authorized',
+    'grading_authorized',
+    'mastery_authorized',
+    'automatic_sequencing_authorized',
+    'summative_use_authorized',
+    'student_product_use_authorized',
+    'pv_authorized',
+    'scale_gate_1_authorized',
+    'exit_ticket_replacement_authorized',
+  ], 'short_check_proof.authority');
+  [
+    'references/ui/layouts/golden-exercise-workbench-short-check.md',
+    'references/ui/layouts/golden-exercise-workbench-short-check.json',
+    'reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md',
+    'reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md',
+    'reports/json/short-check-workbench-policy-1-proof.json',
+  ].forEach((item) => {
+    assert(asArray(proof.files_created_or_updated).includes(item), `short-check proof missing file ${item}`);
+  });
+  assert(proof.review_targets && proof.review_targets.exit_ticket_short_check_distinction >= 9.0, 'short-check proof distinction target must be >= 9.0');
+  assert(proof.review_targets.advisory_copy_safety >= 9.0, 'short-check proof advisory-copy target must be >= 9.0');
+  assert(proof.review_targets.layout_transferability >= 8.5, 'short-check proof layout transferability target must be >= 8.5');
+  assert(proof.review_targets.future_agent_usability >= 8.5, 'short-check proof future-agent usability target must be >= 8.5');
+  return {
+    sprint_id: proof.sprint_id,
+    status: proof.status,
+    validation_commands: asArray(proof.validation_commands).length,
+  };
 }
 
 function validateExemplarIndexFormulaBoundary() {
@@ -467,6 +697,8 @@ module.exports = {
   validateInteractionPolicy,
   validateExemplarIndexFormulaBoundary,
   validateA96FixturePolicy,
+  validateShortCheckPolicySpec,
+  validateShortCheckPolicyProof,
   validateSharedTaskPolicyText,
   loadCheckerFixtures,
   checkNegativeFixtures,

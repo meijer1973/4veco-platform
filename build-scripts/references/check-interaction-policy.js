@@ -3,6 +3,7 @@ const checks = require('../lib/golden-exercise-policy-checks');
 
 function main() {
   const interaction = checks.validateInteractionPolicy();
+  const shortCheckPolicy = checks.validateShortCheckPolicySpec();
   const exemplarBoundary = checks.validateExemplarIndexFormulaBoundary();
   const a96 = checks.validateA96FixturePolicy();
   const fixtures = checks.checkNegativeFixtures((fixture) => fixture.category === 'interaction' || fixture.category === 'proof');
@@ -10,6 +11,7 @@ function main() {
     ok: true,
     check: 'interaction-policy',
     interaction,
+    short_check_policy: shortCheckPolicy,
     exemplarBoundary,
     a96,
     negative_fixtures: fixtures,

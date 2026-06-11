@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T06:38:19.911Z
+Generated: 2026-06-11T06:52:31.473Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4313
+Files indexed: 4319
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 473
+Count: 474
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -533,6 +533,7 @@ Count: 473
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -653,7 +654,7 @@ Count: 42
 
 ## validators
 
-Count: 420
+Count: 424
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -850,6 +851,7 @@ Count: 420
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
 - build-scripts/sprints/check-sprint-bundle.js
@@ -915,6 +917,7 @@ Count: 420
 - reports/json/check-short-exit2-proof.json
 - reports/json/check-surface-pregate1-proof.json
 - reports/json/graph-check-ux1-proof.json
+- reports/json/short-check-workbench-policy-1-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -1062,6 +1065,8 @@ Count: 420
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - scripts/check-book-print-scope.js
 - scripts/check-book.js
 - scripts/check-course-target-exercises-v5.js
@@ -1078,7 +1083,7 @@ Count: 420
 
 ## references
 
-Count: 593
+Count: 595
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1671,12 +1676,14 @@ Count: 593
 - references/ui/interaction-policy.md
 - references/ui/layout-registry.json
 - references/ui/layout-registry.md
+- references/ui/layouts/golden-exercise-workbench-short-check.json
+- references/ui/layouts/golden-exercise-workbench-short-check.md
 - references/ui/README.md
 - references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2656
+Count: 2659
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1771,6 +1778,7 @@ Count: 2656
 - reports/json/representation-operation-inventory.json
 - reports/json/representation-transfer-gaps.json
 - reports/json/roadmap-flag-cleanup1.json
+- reports/json/short-check-workbench-policy-1-proof.json
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
 - reports/json/source-document-registry.json
@@ -3949,6 +3957,8 @@ Count: 2656
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-verification-review.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
 - reports/sprints/SKILLMAP-OP-1-baseline.md
 - reports/sprints/SKILLMAP-OP-1-diff-summary.md

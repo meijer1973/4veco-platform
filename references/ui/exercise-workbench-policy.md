@@ -152,25 +152,27 @@ target-equivalent completion without gate approval
 
 Exit tickets and advisory short checks must remain separate.
 
-Exit tickets:
+| Dimension | Exit ticket | Advisory short check |
+| --- | --- | --- |
+| Authority | target-equivalent candidate | advisory |
+| Operation proof | same-level operation-chain proof | may be partial-skill rather than full target chain |
+| Teaching flow | no hint-heavy teaching flow | route advice allowed |
+| Hints | no hint-heavy learning path | local hints allowed only hidden/collapsible or after attempt |
+| Completion wording | completion language held unless approved | no completion-language claim |
+| Proof states | proof states required | proof states required before rendered adoption, but never as target-equivalent proof |
+
+The governed short-check variant is `golden_advisory_short_check_v1`:
 
 ```text
-target-equivalent proof candidates
-same-level operation and answer-form proof
-no hint-heavy learning flow
-no target-equivalent completion language without gate approval
+references/ui/layouts/golden-exercise-workbench-short-check.md
+references/ui/layouts/golden-exercise-workbench-short-check.json
 ```
 
-Short checks:
+Short checks may include route advice and local repair feedback. Hints must be hidden/collapsible before attempt or shown only after an attempt. They should normally avoid hard locking unless a later step genuinely depends on an earlier step.
 
-```text
-advisory
-may include route advice
-may include local or collapsible hints
-may include repair feedback
-do not replace exit tickets
-do not claim target-equivalent proof
-```
+Short checks must not replace exit tickets or claim target-equivalent proof, paragraph completion, mastery, diagnostics, grading, automatic sequencing, summative use, student/product use, PV, or Scale Gate 1.
+
+When a short check uses Golden Exercise Workbench, it still carries the no legacy shell requirement.
 
 ## Rollout Boundary
 

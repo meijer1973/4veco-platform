@@ -141,21 +141,62 @@
       "may_be": [
         "target-equivalent proof candidate"
       ],
+      "must": [
+        "same-level operation-chain proof",
+        "no hint-heavy teaching flow",
+        "proof states required"
+      ],
       "must_not": [
         "hint-heavy learning flow",
         "target-equivalent completion language without gate approval"
-      ]
+      ],
+      "completion_language": "held unless approved"
     },
     "advisory_short_check": {
       "may_be": [
         "advisory",
-        "hinting",
-        "recovery oriented"
+        "route advice allowed",
+        "local repair feedback",
+        "partial-skill rather than full target chain",
+        "shorter teaching-sense check"
+      ],
+      "hint_policy": [
+        "hidden/collapsible before attempt",
+        "shown after attempt as local repair help"
+      ],
+      "locking_policy": [
+        "normally avoid hard locking",
+        "lock only when a later step genuinely depends on an earlier step",
+        "locked steps require disabled controls, aria-disabled state, and visible reason"
       ],
       "must_not": [
         "replace exit ticket",
-        "claim target-equivalent proof"
-      ]
+        "claim target-equivalent proof",
+        "claim paragraph completion",
+        "claim completion language",
+        "claim mastery",
+        "claim diagnostics",
+        "claim grading",
+        "claim automatic sequencing",
+        "claim summative use",
+        "claim student/product use",
+        "claim PV",
+        "claim Scale Gate 1"
+      ],
+      "authority": {
+        "advisory_only": true,
+        "target_equivalent_proof_authorized": false,
+        "paragraph_completion_authorized": false,
+        "completion_language_authorized": false,
+        "diagnostics_authorized": false,
+        "grading_authorized": false,
+        "mastery_authorized": false,
+        "automatic_sequencing_authorized": false,
+        "summative_use_authorized": false,
+        "student_product_use_authorized": false,
+        "pv_authorized": false,
+        "scale_gate_1_authorized": false
+      }
     }
   },
   "proof_states": [
