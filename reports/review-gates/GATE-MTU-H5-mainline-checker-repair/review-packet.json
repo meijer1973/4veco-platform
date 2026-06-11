@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-mainline-checker-repair",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-11",
+  "status": "ready_for_human_review_three_agent_more_than_satisfied_no_mutation_authorized",
+  "verdict_requested": "APPROVE_CHECKER_ONLY_REPAIR",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/product-vision.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/mtu-hardening/mtu-h5-next-repair-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp001-rp002-q3-repair-packet.json",
+    "reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.json",
+    "reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json",
+    "reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json",
+    "reports/sprints/REV-STD-1-flag-disposition.md"
+  ],
+  "non_negotiable_requirements": [
+    "Do not mutate references/machine/*, references/external/*, authored target exercises, lesson output, candidate storage, or product/student surfaces.",
+    "Do not mint, update, split, merge, or deprecate MTUs.",
+    "Do not change the MTU-H5 fixture or hide q19/q27/q15 live failures and review_required hooks.",
+    "q3 current executed state must exclude A15, retain A61/A96, retain A15 as forbidden, and cite reviewed-equivalent q3 operation and answer-skill evidence.",
+    "A temp negative fixture must prove that reintroducing A15 to q3 still fires the q3 over-trigger guard.",
+    "Historical remote review commits may remain evidence anchors, but current mainline checkers must not require HEAD ancestry from obsolete review-branch tips.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "id": "MTUH5-MAINLINE-CHK-1",
+      "requirement": "q19/q27/q15 planning packet checkers pass on current mainline without weakening source, gate, fixture, and live-validator evidence checks.",
+      "status": "met",
+      "classification": "core_requirement_met",
+      "evidence": [
+        "build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+        "build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+        "build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-CHK-2",
+      "requirement": "q3 historical repair/readiness/execution authorization checkers accept the current executed fixture state and still prove A15 over-trigger regression behavior through a temp negative fixture.",
+      "status": "met",
+      "classification": "core_requirement_met",
+      "evidence": [
+        "build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js",
+        "build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",
+        "build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+        "build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-CHK-3",
+      "requirement": "No protected references, machine references, target exercises, lesson outputs, candidate stores, generated lessons, or student/product surfaces are changed.",
+      "status": "met",
+      "classification": "core_requirement_met",
+      "evidence": [
+        "git diff --name-only"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-CHK-4",
+      "requirement": "REV-STD-1 packet names product end-state, original sprint/gate specs, non-negotiables, core checklist, classified findings, and carried-issue blocks/does_not_block/proof_required_to_close fields.",
+      "status": "met",
+      "classification": "core_requirement_met",
+      "evidence": [
+        "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.json",
+        "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md"
+      ]
+    }
+  ],
+  "classified_findings": [
+    {
+      "id": "MTUH5-MAINLINE-F1",
+      "classification": "core_requirement_met",
+      "finding": "The stale HEAD ancestry requirement was removed from MTU-H5 planning packet checkers where current gate files and reviewed commit anchors already provide durable evidence.",
+      "blocks": [],
+      "does_not_block": [
+        "Checker-only PR review",
+        "Future agents running MTU-H5 packet checkers from current mainline"
+      ],
+      "proof_required_to_close": [
+        "q19, q27, and q15 planning packet checkers pass on updated mainline"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-F2",
+      "classification": "core_requirement_met",
+      "finding": "q3 historical checkers now distinguish pre-execution and post-execution fixture states, and post-execution mode proves A15 reintroduction with a temp negative fixture.",
+      "blocks": [],
+      "does_not_block": [
+        "Checker-only PR review",
+        "MTU-H5 diagnostic validation"
+      ],
+      "proof_required_to_close": [
+        "q3 repair, FU-001, q3 execution-gate, and q3 fixture-execution authorization checkers pass",
+        "Temp fixture path is created under the OS temp directory and removed after validation"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-F3",
+      "classification": "scale_blocker",
+      "finding": "q19 and q27 live H5 coverage remains failed/review_required, and q15 remains review_required. This repair does not close those lanes.",
+      "blocks": [
+        "MTU-H5 full mapping closure",
+        "Product-route readiness claims based on MTU-H5"
+      ],
+      "does_not_block": [
+        "Checker-only mainline repair",
+        "Remote human review of this PR"
+      ],
+      "proof_required_to_close": [
+        "Later explicitly authorized q19/q27/q15 repair gates with reviewed source evidence and passing regression diagnostics"
+      ]
+    },
+    {
+      "id": "MTUH5-MAINLINE-F4",
+      "classification": "core_requirement_met",
+      "finding": "No mutation authority is claimed for protected references, machine references, MTUs, target exercises, candidate stores, lessons, diagnostics, PV, or student/product use.",
+      "blocks": [],
+      "does_not_block": [
+        "Checker-only PR review"
+      ],
+      "proof_required_to_close": [
+        "Git diff remains limited to checker scripts plus this review packet/index artifacts"
+      ]
+    }
+  ],
+  "carried_issues": [
+    {
+      "id": "MTUH5-CARRY-Q19",
+      "classification": "scale_blocker",
+      "issue": "q19 graph/draw answer-form, source-annex, graph-object, and chained market reasoning gaps remain live.",
+      "blocks": [
+        "q19 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q19 coverage"
+      ],
+      "does_not_block": [
+        "Checker-only mainline repair"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q19 repair gate and validator evidence showing q19 failed/review_required hooks resolved without hiding negative guards"
+      ]
+    },
+    {
+      "id": "MTUH5-CARRY-Q27",
+      "classification": "scale_blocker",
+      "issue": "q27 incidence/pass-through, capacity, and per-1,000-liter scaling gaps remain live.",
+      "blocks": [
+        "q27 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q27 coverage"
+      ],
+      "does_not_block": [
+        "Checker-only mainline repair"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q27 repair gate and validator evidence showing q27 incidence/scaling hooks resolved without D07 overclaim"
+      ]
+    },
+    {
+      "id": "MTUH5-CARRY-Q15",
+      "classification": "scale_blocker",
+      "issue": "q15 two-step dominant-strategy/prisoner-dilemma answer-skill semantic-fit review remains required.",
+      "blocks": [
+        "q15 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q15 coverage"
+      ],
+      "does_not_block": [
+        "Checker-only mainline repair"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q15 repair gate and validator evidence showing A97/content-unit semantic fit or reviewed equivalent answer-skill coverage"
+      ]
+    }
+  ],
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "review_team": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Teacher review found the diff checker-only, with q3 preserving A61/A96, A15 forbidden, temp A15 negative guard proof, q19/q27/q15 live gaps still guarded, and all authority boundaries false.",
+      "proof_required_to_close": []
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Economist review found q3 correctly treated as annual insurance threshold reasoning rather than A15 elasticity, q27 incidence/scaling gaps visible, q19 graph/draw gaps visible, and q15 answer-skill/procedure review visible.",
+      "proof_required_to_close": []
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Quality inspection found checker-only scope, narrow stale-ancestry repair, temp negative fixture cleanup in finally, REV-STD-1 packet coverage, and appropriate validation commands.",
+      "proof_required_to_close": [
+        "Intentionally accept or regenerate current repository index artifacts before merge."
+      ]
+    }
+  ],
+  "local_validation_evidence": {
+    "h5_mapping_regression_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "h5_mapping_regression_status": "failed_expected",
+    "h5_bucket_totals": {
+      "passed": 1,
+      "failed": 6,
+      "review_required": 29,
+      "blocked": 0
+    },
+    "h5_question_bucket_counts": {
+      "q3": {
+        "failed": 0,
+        "review_required": 0
+      },
+      "q15": {
+        "failed": 0,
+        "review_required": 4
+      },
+      "q19": {
+        "failed": 3,
+        "review_required": 20
+      },
+      "q27": {
+        "failed": 3,
+        "review_required": 5
+      },
+      "global_negative_guard": {
+        "passed": 1
+      }
+    },
+    "index_artifact_decision": "reports/url-index.md and reports/github-agent-index-platform.* were intentionally regenerated after adding GATE-MTU-H5-mainline-checker-repair so remote reviewers can discover the packet. reports/github-agent-index-lessen.* generated churn was inspected and excluded because it reflects sibling 4veco-lessen local inventory, not this platform checker repair."
+  },
+  "local_validation_summary": [
+    "All seven modified checker scripts passed node --check.",
+    "All seven MTU-H5 checker commands passed on the latest origin/main base.",
+    "MTU-H5 mapping regression preserved the expected failed status with q3 clean and q19/q27/q15 live gaps visible.",
+    "Report JSON validation passed.",
+    "URL index check passed.",
+    "git diff --check passed with line-ending warnings only.",
+    "npm run agent:index completed; the platform index was regenerated for the new gate, and unrelated lessen-index churn was inspected and excluded.",
+    "npm run check:platform exited 0; Jest reported 52 passed suites, 6 skipped suites, 783 passed tests, and 8 skipped tests."
+  ],
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node --check build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js",
+    "node build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js",
+    "node build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js",
+    "node build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "completion_claimed": false
+}
