@@ -26,7 +26,7 @@ Branch: `codex/inspect-9-pr-refresh-20260611`
 - No compliance, approval, inspection-ready, complete OP0, PTA-validity,
   summative-validity, classroom-implementation, school-obligation, or
   school-SKA claim.
-- `PASS WITH FLAGS` may not carry a missing core requirement.
+- PASS WITH FLAGS may not carry a missing core requirement.
 
 ## Core-Requirement Checklist
 
