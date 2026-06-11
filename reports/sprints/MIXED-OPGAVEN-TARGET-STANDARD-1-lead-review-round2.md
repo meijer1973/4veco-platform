@@ -58,6 +58,15 @@ REV-STD-1 classification:
 The lead review explicitly accepts: Yes, 2.1.4 is the intended target form for a
 mixed-exercise section under the new `gemengde_opgaven` target standard.
 
+## Finding Classification
+
+| Finding | Classification | Blocks | Does not block | Proof required to close |
+|---|---|---|---|---|
+| Reusable mixed-opgaven target standard exists. | core_requirement_met | Would block closure if absent. | Does not authorize Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product-use work. | `references/authored/gemengde-opgaven-target-standard.md` exists and is cited by review evidence. |
+| 2.1.4 has a non-placeholder reviewed-final mixed target. | core_requirement_met | Would block closure if placeholder-backed. | Does not promote other mixed records or start Chapter 2.2. | `references/authored/course-target-exercises.json` carries reviewed_final 2.1.4 with `mixed_target_profile`. |
+| Validator and tests enforce the target standard. | core_requirement_met | Would block closure if reviewed-final placeholders could pass. | Does not mutate protected machine or external references. | `node scripts/check-course-target-exercises-v5.js` and `npm.cmd test -- scripts/tests/check-course-target-exercises-v5.test.js` passed. |
+| Chapter 2.1 PDF-size warning remains. | quality_improvement_available | Does not block because validators pass and assets resolve. | Does not block 2.1.4 target acceptance. | Carry to later print assembly monitoring. |
+
 ## Test Evidence
 
 Command-log evidence inspected in

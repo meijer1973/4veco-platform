@@ -7,7 +7,7 @@
   "baseline": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-baseline.md",
   "human_review_required": false,
   "lead_review_required": true,
-  "lead_review_schema_version": 2,
+  "lead_review_schema_version": 3,
   "lead_review_phase": "before_sprint_closure",
   "protected_reference_data_changes_allowed": true,
   "generated_lesson_output_allowed": true,

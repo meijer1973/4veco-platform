@@ -9,7 +9,7 @@
   "diff_summary": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-diff-summary.md",
   "protected_reference_data_changed": true,
   "lead_review_required": true,
-  "lead_review_schema_version": 2,
+  "lead_review_schema_version": 3,
   "scope": {
     "mixed_opgaven_standard_created": true,
     "target_exercise_registry_changed": true,
@@ -91,6 +91,54 @@
     "corrections": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-corrections.md",
     "round2": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round2.md",
     "final_verdict": "PASS",
+    "findings": [
+      {
+        "id": "mixed-standard-created",
+        "description": "Reusable gemengde_opgaven target standard exists and is cited by the 2.1.4 review evidence.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/authored/gemengde-opgaven-target-standard.md",
+          "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-review-evidence.md"
+        ],
+        "blocks": "Blocks closure if absent, because reviewed-final mixed sections would lack a governed target standard.",
+        "does_not_block": "Does not authorize Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product-use work.",
+        "proof_required_to_close": "Standard file exists and lead review accepts it as the governed target standard."
+      },
+      {
+        "id": "214-non-placeholder-target",
+        "description": "2.1.4 has a non-placeholder reviewed-final mixed transfer target and profile evidence.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/authored/course-target-exercises.json",
+          "references/owned/course-blueprint-v5.md"
+        ],
+        "blocks": "Blocks closure if placeholder-backed, because PASS WITH FLAGS may not carry a missing core requirement.",
+        "does_not_block": "Does not promote other gemengde_opgaven records and does not reopen Chapter 2.2 production.",
+        "proof_required_to_close": "Target record is reviewed_final, non-placeholder, and carries mixed_target_profile proof."
+      },
+      {
+        "id": "validator-proof",
+        "description": "Validator and tests enforce reviewed-final mixed targets as governed records rather than hidden placeholders.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "scripts/check-course-target-exercises-v5.js",
+          "scripts/tests/check-course-target-exercises-v5.test.js",
+          "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.jsonl"
+        ],
+        "blocks": "Blocks closure if validation cannot reject reviewed-final placeholders or missing profile proof.",
+        "does_not_block": "Does not change protected machine or external references and does not authorize product-route adoption.",
+        "proof_required_to_close": "Target validator and Jest test commands have exit-code-0 command-log evidence."
+      },
+      {
+        "id": "chapter-pdf-size-monitoring",
+        "description": "Chapter 2.1 validation still reports a PDF-size warning for later print assembly monitoring.",
+        "classification": "quality_improvement_available",
+        "evidence": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.jsonl",
+        "blocks": "Does not block this sprint because paragraph, chapter, book, asset, and bundle validators pass.",
+        "does_not_block": "Does not block 2.1.4 target acceptance; later print assembly owns monitoring.",
+        "proof_required_to_close": "Chapter validator passes with the warning recorded in result and review evidence."
+      }
+    ],
     "flags": []
   }
 }
