@@ -24,6 +24,10 @@ The review repair pass makes v6 an umbrella draft rather than a direct v5 supers
 
 The repaired draft keeps Books 5-10 on a no-printed-test-prep default pending reviewed book design, and it blocks Book 10 technical constructs such as trilemma reasoning or interest parity from paragraph production until exam or target-exercise anchors exist.
 
+## Operational Cleanup
+
+The PR cleanup refreshed the branch from current `main` and repaired the generated inventory hash path. `source_manifest.json` and `document_inventory.json` now record LF-normalized text fingerprints instead of raw platform checkout bytes, while preserving binary bytes. This removes the Windows CRLF artifact for unchanged text files such as `references/authored/course-target-exercises.json`; its generated size/hash now match both the normalized worktree bytes and the Git blob bytes.
+
 ## Verification
 
 Completed checks:
@@ -36,9 +40,14 @@ Completed checks:
 - Ran `node build-scripts/references/check-document-inventory.js`.
 - Ran `node build-scripts/references/check-roadmap-version-index.js`.
 - Ran `node build-scripts/sprints/emit-url-index.js --check`.
+- Ran `npm.cmd run check:scope-language`.
+- Ran `node build-scripts/reports/validate-report-json.js`.
+- Ran `node build-scripts/references/check-mtu-evidence-layer.js`.
+- Ran `node build-scripts/ci/check-evidence-line-endings.js`.
 - Ran `npm.cmd ci` to install the locked test dependencies in this clean worktree.
 - Ran `npm.cmd run check:platform`; Jest reported 52 passed suites, 6 skipped suites, and 779 passed tests.
 - Ran `git diff --check`.
+- Ran exact conflict-marker scan with `rg -n "^(<<<<<<< .+|=======|>>>>>>> .+)$" .`.
 - Ran `npm.cmd run check:agent-worktree-safety -- --check --task BLUEPRINT-3Y-RECONCILE-1 --agent codex --require-prefix codex/,agent/`.
 
 ## Next Action
