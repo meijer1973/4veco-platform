@@ -148,11 +148,14 @@ function checkSourceStillMatchesRubric() {
   assert(shortFamilies.has('table_value_selection'), '1.1.3 short check must keep table value/route selection');
 
   assert(exitSource.layout && exitSource.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must keep source/task workspace layout');
-  assert(Array.isArray(exitSource.contextBlocks) && exitSource.contextBlocks.length === 3, '1.1.3 exit ticket must keep source/table/formula context blocks');
+  assert(Array.isArray(exitSource.contextBlocks) && exitSource.contextBlocks.length === 2, '1.1.3 exit ticket must keep current source/table context blocks only');
+  assert(exitSource.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-source'), '1.1.3 exit ticket must keep station bread-stall source context');
+  assert(exitSource.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-table'), '1.1.3 exit ticket must keep station bread-stall table context');
+  assert(!exitSource.contextBlocks.some((block) => block.type === 'formula'), '1.1.3 exit ticket must not restore static formula context');
   assert(!exitSource.contextBlocks.some((block) => /procedure|flowchart/i.test(`${block.id} ${block.type} ${block.caption || ''}`)), '1.1.3 exit ticket must not expose a procedure context block');
   assert(exitFamilies.has('graph_construction_substitute'), '1.1.3 exit ticket must keep graph construction substitute');
   assert(exitFamilies.has('graph_reading'), '1.1.3 exit ticket must keep graph reading');
-  assert(exitFamilies.has('calculation_work_capture'), '1.1.3 exit ticket must keep calculation/halving task');
+  assert(exitFamilies.has('calculation_work_capture'), '1.1.3 exit ticket must keep calculation/claim-control task');
   assert(exitSource.targetEquivalent && exitSource.targetEquivalent.gateApproved === false, '1.1.3 exit ticket must remain unapproved before retry gate');
   assert(exitSource.targetEquivalent && exitSource.targetEquivalent.completionLanguageEligible === false, '1.1.3 exit ticket completion language must remain held');
 }
@@ -219,7 +222,9 @@ function checkUnderlyingProofs() {
   assert(graphCheck.proof.mobile_rendered === true && graphCheck.proof.dark_mode_rendered === true, 'graph-check proof must show mobile/dark');
 
   assert(graphExit.proof.source_task_workspace_present === true, 'graph-exit proof must show source/task workspace');
-  assert(graphExit.proof.source_pane_scrollable === true, 'graph-exit proof must show scrollable source pane');
+  assert(graphExit.proof.source_pane_constrained === true, 'graph-exit proof must show constrained source pane');
+  assert(graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'graph-exit proof must show current station bread-stall context');
+  assert(graphExit.proof.percentage_claim_control_present === true, 'graph-exit proof must show percentage claim control');
   assert(graphExit.proof.task_visible_after_source_scroll === true, 'graph-exit proof must show task visible after source scroll');
   assert(graphExit.proof.correct_path_draws_line === true, 'graph-exit proof must show same-workspace line');
   assert(graphExit.proof.completion_language_held === true, 'graph-exit proof must keep completion language held');

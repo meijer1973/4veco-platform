@@ -46,18 +46,51 @@ function rejectText(content, pattern, label, file) {
   assert(!pattern.test(content), `${file} contains forbidden ${label}`);
 }
 
-function requireNoPrematureReviewArtifacts() {
+function requireReviewArtifactState(packet) {
   for (const name of [
-    'direct-review-comments.md',
-    'direct-review-comments.json',
-    'comment-resolution-log.md',
-    'comment-resolution-log.json',
     'closure-proposal.md',
     'closure-proposal.json',
     'gate-closure.md',
     'gate-closure.json',
   ]) {
-    assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before human comments`);
+    assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before explicit gate closure authorization`);
+  }
+
+  const reviewArtifacts = [
+    'direct-review-comments.md',
+    'direct-review-comments.json',
+    'comment-resolution-log.md',
+    'comment-resolution-log.json',
+  ];
+  if (packet.human_review_comments_started === true) {
+    for (const name of reviewArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after human review comments are recorded`);
+    }
+    const commentsText = read(`reports/review-gates/${GATE_ID}/direct-review-comments.md`);
+    const comments = readJson(`reports/review-gates/${GATE_ID}/direct-review-comments.json`);
+    const resolutionText = read(`reports/review-gates/${GATE_ID}/comment-resolution-log.md`);
+    const resolution = readJson(`reports/review-gates/${GATE_ID}/comment-resolution-log.json`);
+    assert(comments.gate_direction === 'hold_for_surface_repair', 'direct comments must record hold_for_surface_repair');
+    assert(comments.human_review_decision === 'hold_for_surface_repair', 'direct comments must record the human review decision');
+    assert(Array.isArray(comments.findings) && comments.findings.length === 12, 'direct comments must record twelve CHECKSURFACE findings');
+    assert(resolution.gate_direction === 'hold_for_surface_repair', 'resolution log must preserve held gate direction');
+    assert(resolution.gate_closed === false, 'resolution log must keep the gate open');
+    assert(resolution.closure_artifacts_authorized === false, 'resolution log must not authorize closure artifacts');
+    for (let i = 1; i <= 12; i += 1) {
+      const id = `CHECKSURFACE-Q${i}`;
+      assert(commentsText.includes(id), `direct comments markdown missing ${id}`);
+      assert(resolutionText.includes(id), `resolution log markdown missing ${id}`);
+      const finding = comments.findings.find((item) => item.id === id);
+      assert(finding, `direct comments JSON missing ${id}`);
+      assert(finding.classification, `${id} must include a classification`);
+      assert(Array.isArray(finding.blocks), `${id} must include blocks`);
+      assert(Array.isArray(finding.does_not_block), `${id} must include does_not_block`);
+      assert(finding.proof_required_to_close, `${id} must include proof_required_to_close`);
+    }
+  } else {
+    for (const name of reviewArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before human comments`);
+    }
   }
 }
 
@@ -116,10 +149,20 @@ function requirePacketText() {
 function requirePacketJson(packet, live) {
   assert(packet.gate_id === GATE_ID, 'packet gate id mismatch');
   assert(live.gate_id === GATE_ID, 'live evidence gate id mismatch');
-  assert(packet.status === 'renewed_review_packet_ready_not_reviewed_not_closed', 'packet status mismatch');
+  assert(
+    [
+      'renewed_review_packet_ready_not_reviewed_not_closed',
+      'direct_review_returned_hold_for_surface_repair_not_closed',
+    ].includes(packet.status),
+    'packet status mismatch'
+  );
   assert(packet.supersedes === 'GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review', 'packet must supersede old retry packet');
-  assert(packet.human_review_comments_started === false, 'human review comments must not be started');
-  assert(packet.human_review_decision === null, 'human review decision must be null');
+  if (packet.human_review_comments_started === true) {
+    assert(packet.human_review_decision === 'hold_for_surface_repair', 'human review decision must record hold_for_surface_repair');
+    assert(packet.gate_direction === 'hold_for_surface_repair', 'packet gate direction must record hold_for_surface_repair');
+  } else {
+    assert(packet.human_review_decision === null, 'human review decision must be null before comments');
+  }
   assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
   assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
   assert(
@@ -176,7 +219,13 @@ function requirePacketJson(packet, live) {
   ]) {
     assert(packet.required_decisions.includes(decision), `packet missing decision ${decision}`);
   }
-  assert(live.status === 'renewed_packet_ready_not_reviewed_not_closed', 'live status mismatch');
+  assert(
+    [
+      'renewed_packet_ready_not_reviewed_not_closed',
+      'evidence_refresh_repair_ready_for_re_review_not_closed',
+    ].includes(live.status),
+    'live status mismatch'
+  );
 }
 
 function requireAuthority(packet, live) {
@@ -212,11 +261,22 @@ function requireUnderlyingProofs(packet, live) {
   }
   assert(checkShortExit.proof.all_landing_pages_show_two_check_cards === true, 'landing pages must show both check cards');
   assert(surfaces['1.1.3-short'].task_families.includes('graph_construction_substitute'), '1.1.3 short proof must include graph construction');
-  assert(surfaces['1.1.3-exit'].interval_halving_check === true, '1.1.3 exit proof must include interval halving');
+  assert(surfaces['1.1.3-exit'].context_block_count === 2, '1.1.3 exit proof must record current source/table context only');
+  assert(
+    surfaces['1.1.3-exit'].context_ids.join(',') === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table',
+    '1.1.3 exit proof must record current station bread-stall context ids'
+  );
+  assert(surfaces['1.1.3-exit'].percentage_claim_control === true, '1.1.3 exit proof must include percentage claim control');
+  assert(surfaces['1.1.3-exit'].formula_builder_present === true, '1.1.3 exit proof must include formula builder evidence');
+  assert(surfaces['1.1.3-exit'].source_text_current === true, '1.1.3 exit proof must not carry stale IJskraam copy');
+  assert(checkShortExit.proof.current_112_transfer_held === true, 'check-short-exit2 proof must record current 1.1.2 Golden Workbench transfer as held');
   assert(graphCheck.proof.graph_workspace_present === true, 'graph short check workspace must exist');
   assert(graphCheck.proof.choice_only === false, 'graph short check must not be choice-only');
   assert(graphExit.proof.source_task_workspace_present === true, 'graph exit source/task workspace must exist');
   assert(graphExit.proof.correct_path_draws_line === true, 'graph exit must draw line');
+  assert(graphExit.proof.percentage_claim_control_present === true, 'graph exit must include percentage claim control');
+  assert(graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'graph exit proof must record current context ids');
+  assert(graphExit.proof.current_source_text_confirmed === true, 'graph exit proof must confirm current source text');
   assert(graphExit.proof.completion_language_held === true, '1.1.3 completion language must stay held');
   for (const id of ['CSR1-F1', 'CSR1-F2', 'CSR1-F3', 'CSR1-F4', 'CSR1-F5']) {
     assert(visual.reset_findings_addressed.some((item) => item.id === id && item.status === 'guarded'), `${id} must remain guarded`);
@@ -324,7 +384,7 @@ function main() {
   assert(fs.existsSync(GATE_DIR), `missing gate dir ${GATE_DIR}`);
   const packet = readJson(`reports/review-gates/${GATE_ID}/review-packet.json`);
   const live = readJson(`reports/review-gates/${GATE_ID}/live-output-evidence.json`);
-  requireNoPrematureReviewArtifacts();
+  requireReviewArtifactState(packet);
   requireEvidenceFiles(packet);
   requirePacketText();
   requirePacketJson(packet, live);

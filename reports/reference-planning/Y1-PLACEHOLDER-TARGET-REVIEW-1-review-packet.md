@@ -92,8 +92,8 @@ drafted three integration designs, but CP.6b also explicitly kept them as
 | Paragraph | Current registry status | Draft integration source | Must integrate | Review decision needed |
 |---|---|---|---|---|
 | 1.1.4 | `placeholder_needs_review` | CP.6b draft lunch-box design | scarcity/opportunity cost; percentage and index reasoning; P-Q table/graph reading; data-claim evaluation | Whether the CP.6b draft, revised if needed, is a valid integration target without adding new theory. |
-| 1.2.4 | `placeholder_needs_review` | CP.6b draft smoothie-demand design | individual demand and willingness to pay; movement versus shift; substitute/normal-good reasoning; collective-demand aggregation | Whether the aggregate-demand task is solvable and target-equivalent for Chapter 1.2 consolidation. |
-| 1.3.4 | `placeholder_needs_review` | CP.6b draft notebook-market design | supply shifts; equilibrium calculation; surplus/shortage; new-equilibrium comparison after shifts | Whether the design may carry simultaneous-shift reasoning while the 1.3.3 missing-unit candidate remains unresolved. |
+| 1.2.4 | `placeholder_needs_review` | CP.6b draft smoothie-demand design | individual demand and willingness to pay; movement versus shift; substitute reasoning; income-driven demand increase; collective-demand aggregation | Whether the aggregate-demand task is solvable and target-equivalent for Chapter 1.2 consolidation without relying on an unresolved normal/inferior-good classification term. |
+| 1.3.4 | `placeholder_needs_review` | Revised CP.6b notebook-market design | supply shifts; demand shifts; equilibrium calculation; surplus/shortage; new-equilibrium comparison after one shift at a time | Whether the revised design stays useful while avoiding the unresolved simultaneous-shift missing-unit candidate. |
 
 ## Candidate Target-Exercise Replacements For Review
 
@@ -214,15 +214,15 @@ Subquestions:
   demand curve or a shift? Explain.
 - d. A nearby juice bar lowers its price. Is that likely to shift demand for
   school smoothies left or right? Explain with substitute reasoning.
-- e. Students receive more pocket money and smoothies are treated as a normal
-  good. Show and explain the demand effect.
+- e. Students receive more pocket money and, at each price, they want to buy
+  more smoothies. Show and explain the demand effect.
 
 Required prior skills:
 
 - 1.2.1: individual demand and willingness to pay (`A44`, `D35`, `D36`,
   `D37`).
-- 1.2.2: movement versus shift, substitutes, and normal-good reasoning (`A42`,
-  `D27`, `D32`, `D33`).
+- 1.2.2: movement versus shift, substitutes, and income-driven demand increase
+  (`A42`, `D27`, `D32`, `D33`).
 - 1.2.3: collective demand by horizontal aggregation (`A47`, `A48` per CP.6c
   mapping disposition).
 
@@ -232,7 +232,8 @@ Target operation chain:
 2. Draw the collective demand curve from the aggregated table.
 3. Classify own-price change as movement along the curve.
 4. Classify a substitute-price change as a demand shift.
-5. Classify higher income for a normal good as a rightward demand shift.
+5. Classify a stated income-driven quantity increase at every price as a
+   rightward demand shift.
 
 Answer-form expectations:
 
@@ -252,8 +253,8 @@ Short answer model:
   quantity demanded falls from 6 to 3.
 - d. Demand shifts left. Juice and smoothies are treated as substitutes; a
   cheaper substitute makes some buyers switch away from smoothies.
-- e. Demand shifts right because smoothies are treated as a normal good and
-  higher pocket money increases demand at each price.
+- e. Demand shifts right because the prompt states that students want more
+  smoothies at each price after receiving more pocket money.
 
 Evidence path:
 
@@ -269,8 +270,9 @@ Evidence path:
 No-new-theory rationale:
 
 The task consolidates individual demand, demand factors, movement/shift
-classification, substitutes, normal-good reasoning, and collective demand. It
-does not introduce elasticity, consumer surplus, or market equilibrium.
+classification, substitute reasoning, income-driven demand shifts, and
+collective demand. It does not introduce elasticity, consumer surplus, market
+equilibrium, or normal/inferior-good classification as a required term.
 
 Human/lead review disposition:
 
@@ -279,13 +281,21 @@ reviewer confirms the aggregation and shift explanations are target-equivalent
 for 1.2 consolidation; acceptance would still require a later governed
 authored-registry replacement PR.
 
+Review note:
+
+The candidate intentionally avoids requiring the term "normal good." A reviewer
+may restore that term only if `1.2.2` target quality explicitly accepts the
+normal/inferior-good concept; otherwise the final registry replacement should
+keep the term-free wording above.
+
 ### Candidate 1.3.4 - Notebook Market Equilibrium
 
 Target context:
 
 In the market for notebooks, demand is `Qv = -2P + 120` and supply is
-`Qa = 3P - 30`. A new printing machine increases supply to `Qa = 3P - 15`.
-Later, a school campaign also raises demand to `Qv = -2P + 140`.
+`Qa = 3P - 30`. A new printing machine can increase supply to `Qa = 3P - 15`.
+In a separate scenario, a school campaign can raise demand to `Qv = -2P + 140`
+while supply remains `Qa = 3P - 30`.
 
 Subquestions:
 
@@ -295,10 +305,11 @@ Subquestions:
   calculate its size.
 - c. Calculate the new equilibrium after only the supply increase. Explain the
   direction of the supply shift.
-- d. Calculate the equilibrium when both the supply increase and the demand
-  increase happen.
-- e. Explain which direction quantity changes in the simultaneous-shift case,
-  and why the price direction cannot always be predicted without the numbers.
+- d. Calculate the new equilibrium after only the demand increase. Explain the
+  direction of the demand shift.
+- e. Compare both one-shift scenarios with the original equilibrium. What
+  happens to price and quantity after the supply increase, and what happens
+  after the demand increase?
 
 Required prior skills:
 
@@ -315,15 +326,17 @@ Target operation chain:
 2. Substitute `P` into either equation to find equilibrium `Q`.
 3. Compare `Qv` and `Qa` at a non-equilibrium price.
 4. Recalculate equilibrium after a supply shift.
-5. Recalculate equilibrium after simultaneous supply and demand shifts, then
-   explain what is determinate and what depends on relative shift size.
+5. Recalculate equilibrium after a demand shift, using the original supply
+   curve.
+6. Compare the direction of price and quantity changes in the two separate
+   one-shift scenarios.
 
 Answer-form expectations:
 
 - Algebraic equations with enough working to check the equilibrium.
 - Graph with correctly labelled demand, supply, and equilibrium points.
 - Surplus/shortage answer that identifies which quantity is larger.
-- Written explanation separating the numeric result from the general
+- Written explanation comparing the two one-shift scenarios without importing
   simultaneous-shift reasoning.
 
 Short answer model:
@@ -333,10 +346,11 @@ Short answer model:
   (`aanbodoverschot`) of 25 notebooks.
 - c. `-2P + 120 = 3P - 15`, so `135 = 5P`, `P = 27`; `Q = 66`. Supply shifts
   right because producers supply more at each price.
-- d. `-2P + 140 = 3P - 15`, so `155 = 5P`, `P = 31`; `Q = 78`.
-- e. In this numeric case quantity rises from 60 to 78. In general, a rightward
-  supply shift pushes price down while a rightward demand shift pushes price
-  up, so the price direction depends on the relative size of the shifts.
+- d. `-2P + 140 = 3P - 30`, so `170 = 5P`, `P = 34`; `Q = 72`. Demand shifts
+  right because buyers want more at each price.
+- e. The supply increase lowers price from 30 to 27 and raises quantity from
+  60 to 66. The demand increase raises price from 30 to 34 and raises quantity
+  from 60 to 72.
 
 Evidence path:
 
@@ -346,23 +360,24 @@ Evidence path:
 - Draft source: `reports/reference-planning/CP.6b-target-exercise-review.md`.
 - Coverage blocker: `reports/reference-planning/REF-CT1-year1-coverage.md`.
 - MTU disposition: CP.6c maps supply-curve and surplus/shortage flags to
-  existing `A49` and `A51`, but keeps simultaneous demand+supply shift
-  reasoning as the one true missing-unit candidate.
+  existing `A49` and `A51`. The unresolved simultaneous demand+supply shift
+  candidate remains visible as a separate missing-unit lane and is not used by
+  this revised target exercise.
 
 No-new-theory rationale:
 
-The task consolidates supply shifts, equilibrium calculation, graphing,
-surplus/shortage, and new-equilibrium comparison from 1.3.1-1.3.3. It does not
-introduce costs, revenue, marginal analysis, welfare, taxes, subsidies, or
-price controls.
+The task consolidates supply shifts, demand shifts, equilibrium calculation,
+graphing, surplus/shortage, and new-equilibrium comparison from 1.3.1-1.3.3. It
+does not introduce costs, revenue, marginal analysis, welfare, taxes,
+subsidies, price controls, or simultaneous-shift ambiguity.
 
 Human/lead review disposition:
 
-`proposed_replacement_conditionally_blocked`. The candidate is useful for
-review, but final acceptance must either approve the simultaneous-shift
-reasoning path explicitly or revise subquestions d-e to avoid relying on the
-unresolved 1.3.3 true missing-unit candidate. Acceptance would still require a
-later governed authored-registry replacement PR.
+`proposed_replacement_needs_review`. This revision takes Option B from the
+PR #42 lead review: avoid simultaneous-shift dependency for fast placeholder
+replacement. Acceptance would still require a later governed authored-registry
+replacement PR. Any future restoration of simultaneous-shift reasoning must go
+through a bounded missing-unit design review first.
 
 ## Review Questions
 
@@ -374,9 +389,8 @@ later governed authored-registry replacement PR.
    does the pending 1.1.3 graph/table closure block final reliance?
 4. Does `1.2.4` require A47/A48 aggregation mappings and a bounded decision on
    the 1.2.3 kink/piecewise-demand defer candidate?
-5. Does `1.3.4` require A49/A51 graph and surplus/shortage mappings, and how
-   should the true missing simultaneous-shift candidate be handled before final
-   registry replacement?
+5. Does revised `1.3.4` preserve A49/A51 graph and surplus/shortage mappings
+   while keeping simultaneous-shift reasoning out of the replacement path?
 6. Is any protected mutation authorized now? This packet recommendation is no.
 
 ## Finding Classification
@@ -385,12 +399,13 @@ later governed authored-registry replacement PR.
 |---|---|---|---|---|---|
 | Y1P-001 | scale_blocker | `1.1.4` remains a placeholder target-exercise record. | 1.1.4 reviewed-final claim; placeholder finalization; Year 1 closure; CP-6/Scale Gate reliance on closed Chapter 1.1 consolidation | Publishing this review packet; using CP.6b as draft review input | Human/lead-approved integration target with target operation chain, answer form, evidence path, graph/table mapping disposition, and later governed registry replacement. |
 | Y1P-002 | scale_blocker | `1.2.4` remains a placeholder target-exercise record. | 1.2.4 reviewed-final claim; placeholder finalization; Year 1 closure; CP-6/Scale Gate reliance on closed Chapter 1.2 consolidation | Publishing this review packet; using CP.6b as draft review input | Human/lead-approved integration target with collective-demand operations, movement/shift reasoning, answer form, evidence path, aggregation/kink disposition, and later governed registry replacement. |
-| Y1P-003 | scale_blocker | `1.3.4` remains a placeholder target-exercise record and depends on unresolved 1.3.3 simultaneous-shift design evidence. | 1.3.4 reviewed-final claim; placeholder finalization; Year 1 closure; CP-6/Scale Gate reliance on closed Chapter 1.3 consolidation; mutation using simultaneous-shift reasoning as covered | Publishing this review packet; preparing a bounded missing-unit review | Human/lead-approved integration target plus explicit simultaneous-shift decision, surplus/shortage and graph mapping disposition, answer form, evidence path, and later governed registry replacement. |
+| Y1P-003 | scale_blocker | `1.3.4` remains a placeholder target-exercise record. The revised candidate avoids unresolved simultaneous-shift reasoning. | 1.3.4 reviewed-final claim; placeholder finalization; Year 1 closure; CP-6/Scale Gate reliance on closed Chapter 1.3 consolidation | Publishing this review packet; keeping simultaneous-shift review in a separate lane | Human/lead-approved one-shift-at-a-time integration target with surplus/shortage and graph mapping disposition, answer form, evidence path, and later governed registry replacement. |
 | Y1P-004 | minor_carry_flag | CP.6b draft designs exist but are not REV-STD-1 closure artifacts and not teacher-reviewed final evidence. | Treating CP.6b drafts as reviewed-final target exercises | Using CP.6b designs as inputs for human/lead review | Reviewed disposition accepting, revising, or rejecting each design, with proof recorded before any authored registry edit. |
 | Y1P-005 | core_requirement_met | v5, REF-CT1, and the active registry consistently mark placeholders as non-final. | Nothing now | Placeholder review planning and future governed mutation planning | Preserve visible placeholder status until a later approved registry replacement. |
 | Y1P-006 | core_requirement_met | This packet uses no `PASS WITH FLAGS` verdict and carries no missing core requirement as non-blocking. | Nothing now | Review packet publication | Keep finalization blocked until required proof exists. |
 | Y1P-007 | quality_improvement_available | The packet now includes concrete candidate replacements with target context, subquestions, required prior skills, operation chain, answer-form expectations, short answer model, evidence path, no-new-theory rationale, and review disposition. | Nothing now; these are not final approvals | Human/lead review of concrete proposals; later governed registry-replacement planning | Reviewer accepts, revises, or rejects each candidate and records disposition before any authored registry edit. |
-| Y1P-008 | scale_blocker | Candidate `1.3.4` includes simultaneous-shift reasoning that CP.6c still classifies as a true missing-unit candidate. | Final acceptance of `1.3.4` as reviewed-final if simultaneous-shift reasoning remains unresolved; Year 1 closure | Reviewing the candidate; revising the candidate to remove unresolved simultaneous-shift reliance; preparing bounded missing-unit design review | Human/lead decision either approving the simultaneous-shift reasoning path with governed MTU follow-up or revising the target exercise so final acceptance does not rely on the unresolved missing unit. |
+| Y1P-008 | minor_carry_flag | The simultaneous demand+supply shift candidate remains unresolved, but revised `1.3.4` no longer relies on it. | Restoring simultaneous-shift subquestions to this placeholder replacement; treating simultaneous-shift reasoning as covered | Reviewing the revised one-shift candidate; preparing a separate missing-unit review later | Keep simultaneous-shift reasoning out of the registry-replacement path unless a bounded missing-unit review approves it. |
+| Y1P-009 | minor_carry_flag | Revised `1.2.4` avoids requiring the term "normal good" because normal/inferior-good classification remains a bounded design issue unless `1.2.2` accepts it. | Using "normal good" as required terminology in final `1.2.4` replacement without `1.2.2` review proof | Reviewing the term-free income-driven demand-shift candidate | Reviewer confirms `1.2.2` covers the term, or final replacement keeps the term-free wording. |
 
 ## Recommended Next Operations
 
@@ -399,8 +414,9 @@ later governed authored-registry replacement PR.
    revise, or reject. Treat CP.6b as the source draft, not the final decision.
 3. If accepted or revised, prepare a later governed registry-replacement plan
    for the three placeholder records.
-4. Keep 1.1.3 graph/table closure, 1.2.3 kink disposition, and 1.3.3
-   simultaneous-shift design status visible in any finalization lane.
+4. Keep 1.1.3 graph/table closure and 1.2.3 kink disposition visible in any
+   finalization lane. Keep 1.3.3 simultaneous-shift design status separate
+   unless a later bounded missing-unit review explicitly brings it back.
 5. Do not mutate `references/authored/course-target-exercises.json` from this
    packet alone.
 

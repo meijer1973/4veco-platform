@@ -28,6 +28,12 @@ The candidates are proposed review inputs only. This sprint does not mutate
 protected references, replace placeholders, promote target exercises, close
 Year 1, close CP-6, or generate student-facing lesson output.
 
+PR #42 lead review selected the fast replacement route for `1.3.4`: revise the
+candidate to avoid simultaneous-shift dependency and keep the true missing-unit
+candidate in a separate bounded design-review lane. The `1.2.4` candidate also
+uses term-free income-driven demand wording so it does not depend on unresolved
+normal/inferior-good terminology unless `1.2.2` review later accepts that term.
+
 ## Verification
 
 Completed checks:
@@ -50,12 +56,11 @@ Completed checks:
 
 ## Next Action
 
-Send the concrete placeholder candidate packet for human/lead review. If
-accepted or revised, the next operational PR should prepare a governed
-registry-replacement plan for `1.1.4`, `1.2.4`, and `1.3.4`. `1.3.4` remains
-conditionally blocked until the reviewer either approves the simultaneous-shift
-reasoning path with governed MTU follow-up or revises the candidate to avoid
-that unresolved missing-unit dependency.
+Send the refreshed concrete placeholder candidate packet for human/lead review.
+If accepted or revised, the next operational PR should prepare a governed
+registry-replacement plan for `1.1.4`, `1.2.4`, and `1.3.4`. Keep
+simultaneous-shift reasoning out of the `1.3.4` replacement path unless a later
+bounded missing-unit review explicitly approves bringing it back.
 
 Do not mutate `references/authored/course-target-exercises.json`, finalize
 placeholders, close Year 1, close CP-6, or generate student-facing lesson

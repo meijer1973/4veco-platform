@@ -316,10 +316,15 @@ function checkCurrentSources() {
   }
 
   const reviewed112 = sources['1.1.2-exit-ticket'];
-  assert(reviewed112.targetEquivalent.gateApproved === true, '1.1.2 reviewed authority must remain approved');
-  assert(reviewed112.targetEquivalent.completionLanguageEligible === true, '1.1.2 reviewed completion authority must remain true');
-  assert(reviewed112.metadataAlignment.targetReadinessEvidence === true, '1.1.2 reviewed target-readiness evidence must remain true');
-  assert(!containsAuthorityOverclaim(reviewed112), '1.1.2 authority broadened beyond reviewed local copy');
+  assert(reviewed112.targetEquivalent.gateApproved === false, 'current 1.1.2 Golden Workbench transfer must remain unapproved');
+  assert(reviewed112.targetEquivalent.completionLanguageEligible === false, 'current 1.1.2 Golden Workbench completion language must remain held');
+  assert(reviewed112.metadataAlignment.targetReadinessEvidence === false, 'current 1.1.2 Golden Workbench target-readiness evidence must remain held');
+  assert(
+    JSON.stringify(reviewed112).includes('earlier local legacy 1.1.2 copy') &&
+      JSON.stringify(reviewed112).includes('Golden Workbench transfer holds target-equivalent readiness and completion language pending review'),
+    '1.1.2 must distinguish historical exact-copy authority from current held Golden Workbench transfer'
+  );
+  assert(!containsAuthorityOverclaim(reviewed112), '1.1.2 authority broadened beyond historical exact local copy');
 
   const short113 = sources['1.1.3-korte-check'];
   const exit113 = sources['1.1.3-exit-ticket'];
