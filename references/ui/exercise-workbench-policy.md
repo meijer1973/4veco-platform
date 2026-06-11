@@ -187,7 +187,7 @@ mastery
 automatic sequencing
 summative use
 broad route migration
-generated lesson output churn
+generated lesson output churn outside approved route-specific migrations
 ```
 
 Future goals must still prove route-specific quality and pass review thresholds before migration or adoption.

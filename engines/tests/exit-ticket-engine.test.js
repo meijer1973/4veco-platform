@@ -1,6 +1,7 @@
 const ExitTicketEngine = require('../exit-ticket-engine');
 const data = require('../../source-data/book-1/exit-ticket/1.1.1-korte-check.json');
 const targetData = require('../../source-data/book-1/exit-ticket/1.1.2-exit-ticket.json');
+const short112Data = require('../../source-data/book-1/exit-ticket/1.1.2-korte-check.json');
 const exit113Data = require('../../source-data/book-1/exit-ticket/1.1.3-exit-ticket.json');
 
 function clone(value) {
@@ -115,6 +116,33 @@ describe('ExitTicketEngine', () => {
             gateApproved: false,
             completionLanguageEligible: false,
         });
+    });
+
+    test('validates the 1.1.2 Golden advisory short check with choice context refs', () => {
+        expect(ExitTicketEngine.validateData(short112Data)).toBe(true);
+        expect(short112Data.surface).toBe('advisory_short_check');
+        expect(short112Data.targetEquivalent).toEqual({
+            candidate: false,
+            gateApproved: false,
+            completionLanguageEligible: false,
+        });
+        expect(short112Data.metadataAlignment.targetReadinessEvidence).toBe(false);
+        expect(short112Data.advisory.hintsAbsent).toBe(true);
+
+        const engine = new ExitTicketEngine({ data: short112Data });
+        expect(engine.checkTask('oude-waarde-als-basis', 'b')).toEqual(expect.objectContaining({
+            state: 'retry',
+            matched: false,
+        }));
+        expect(engine.checkTask('oude-waarde-als-basis', 'a')).toEqual(expect.objectContaining({
+            state: 'matched',
+            matched: true,
+        }));
+        const progress = engine.getProgress();
+        expect(progress).toEqual(expect.objectContaining({
+            practiceProgressOnly: true,
+        }));
+        expect(progress).not.toHaveProperty('targetEquivalentAttempt');
     });
 
     test('declares B01/B02 as checkpoint-assessed skills without target-readiness claim', () => {

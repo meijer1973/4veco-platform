@@ -32,6 +32,7 @@ Current supported renderer variants:
 ```text
 golden_graph_reading_claim_v1
 golden_calculation_structured_v1
+golden_advisory_short_check_v1
 ```
 
 Current governed surface variant specifications:
@@ -40,7 +41,7 @@ Current governed surface variant specifications:
 golden_advisory_short_check_v1
 ```
 
-The advisory short-check variant is policy-defined only. It records how short checks may use the Golden Workbench later, but it is not the current renderer selector and it does not migrate a real route.
+The advisory short-check variant is a narrow current renderer selector for governed advisory choice checks. The only current real-route migration under this selector is `1.1.2-korte-check`; this does not authorize broad short-check migration or exit-ticket authority.
 
 The graph variant requires task-shell families:
 
@@ -59,14 +60,18 @@ structured_short_response
 contextBlocks referenced by each task
 ```
 
-The advisory short-check surface variant requires:
+The advisory short-check renderer variant requires:
 
 ```text
 surface_type: advisory_short_check
 layout.framework: golden_exercise_workbench
+layout.variant: golden_advisory_short_check_v1
+ordinary choice tasks
+contextBlocks referenced by each task when source-dependent
 targetEquivalent.candidate: false
 targetEquivalent.gateApproved: false
 targetEquivalent.completionLanguageEligible: false
+metadataAlignment.targetReadinessEvidence: false
 local feedback after attempt
 hidden/collapsible hints or after-attempt hints only
 no target-equivalent or paragraph-completion claim

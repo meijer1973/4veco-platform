@@ -83,7 +83,7 @@ It allows local route advice, repair feedback, and hidden/collapsible or after-a
 
 ## Boundary
 
-This policy package does not migrate routes, generalize the renderer, alter generated lesson output, remove legacy renderers, or authorize student/product use. It is the policy base for later goals:
+This policy package now includes one narrow advisory rendered route, `1.1.2-korte-check`. It still does not authorize broad route migration, target-equivalent short-check proof, general renderer rollout beyond the governed variant, legacy renderer removal, or student/product use. It is the policy base for later goals:
 
 ```text
 GOLDEN-EXEMPLAR-PROMOTION-1
