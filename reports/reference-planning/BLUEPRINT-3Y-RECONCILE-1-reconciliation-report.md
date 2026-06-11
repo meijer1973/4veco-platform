@@ -4,7 +4,7 @@ Status: non-mutating reconciliation report
 
 ## Scope
 
-This report reconciles the active v5 blueprint, the superseded v4 blueprint, and the older three-year concept into an 11-book three-year draft. It creates no machine-reference mutation, target-exercise mutation, or lesson output.
+This report reconciles the active v5 blueprint, the superseded v4 blueprint, and the older three-year concept into an 11-book three-year draft umbrella. It creates no machine-reference mutation, target-exercise mutation, or lesson output, and it does not replace the active Year 1 / Books 1-4 v5 detail without an explicit migration.
 
 ## Evidence Read
 
@@ -63,7 +63,7 @@ Primary local evidence:
 
 | Conflict | Evidence | Resolution |
 |---|---|---|
-| v4 printed test-prep chapters vs v5 web-only test prep | v4 blueprint; v5 core decisions | Preserve v5 policy. Book 11 may be exam-training-heavy, but Books 1-10 do not regain printed test-prep chapters by default. |
+| v4 printed test-prep chapters vs v5 web-only test prep | v4 blueprint; v5 core decisions | Preserve v5 for Books 1-4. Books 5-10 follow a no-printed-test-prep default pending reviewed book design; Book 11 carries exam-training architecture. |
 | v4 partial Year 1 vs final three-year need | v4 meta | Treat v4 as historical owned evidence only. |
 | v5 active but only four books | v5 blueprint and meta | Embed v5 as Year 1 / Books 1-4 inside the draft v6 umbrella. |
 | Older concept 13 books vs intended 11 books | `knowledge/three Year blue print.md` | Compress Year 2 to Books 5-8 and Year 3 to Books 9-11. |
@@ -79,6 +79,16 @@ Primary local evidence:
 | Year 3 | Books 9-11 | Place Keynesian/fiscal macro, monetary/open-economy macro, integrated policy and final exam training. |
 
 The older Book 9 bridge is folded into Book 8 and Book 9. The older Book 12 advanced integration and Book 13 final exam training are folded into Book 11.
+
+## Repair-Pass Adjustments
+
+- v6 metadata now proposes an umbrella role, embeds the active Year 1 v5 baseline, and explicitly does not replace Year 1 detail until an explicit migration.
+- The blueprint now uses an authority-by-claim-type matrix instead of one generic source order, so official exam demand, target-exercise quality, book placement, MTU facts, operation metadata, grouping, and reports keep separate authority boundaries.
+- Books 5-11 now have draft load envelopes, with Book 8 marked as the highest compression-risk book and Book 11 left as an exam-training count-model decision.
+- Book 8 now has an internal 8A-8D spine for strategic interaction, collective action/public goods, redistribution/public finance, and growth/sustainability.
+- Book 11 now has an internal 11A-11D spine for exam operation decomposition, mixed-domain retrieval, correction-model discipline, and timed full-paper practice.
+- The exam-operation spine now splits broad families into operation ids, anchor status, first paragraph candidate, official and target-exercise anchor needs, shared task family, answer form type, and retrieval checkpoints.
+- Book 10 technical constructs such as trilemma reasoning or interest parity are explicitly blocked from paragraph production until supported by exam or target-exercise anchors.
 
 ## Current-State Adjustment To Year 1 Backfill
 

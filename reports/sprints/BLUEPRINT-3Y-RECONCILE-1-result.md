@@ -18,18 +18,29 @@ The active v5 four-book baseline is embedded as Year 1 / Books 1-4 inside a new 
 
 The result also records a current-state correction: older A45+ planning labels are no longer free proposal ids. Current reports and the live registry treat several of them as existing registry facts, so the next Year 1 foundation lane is review/mapping/closure, not automatic re-minting.
 
+## Repair Pass
+
+The review repair pass makes v6 an umbrella draft rather than a direct v5 supersession, replaces the generic source order with an authority-by-claim-type matrix, adds Books 5-11 load envelopes, gives Book 8 and Book 11 internal spines, and expands the exam-operation spine into operation ids with anchor status, task family, answer form, first paragraph candidate, and retrieval checkpoints.
+
+The repaired draft keeps Books 5-10 on a no-printed-test-prep default pending reviewed book design, and it blocks Book 10 technical constructs such as trilemma reasoning or interest parity from paragraph production until exam or target-exercise anchors exist.
+
 ## Verification
 
 Completed checks:
 
-- Parsed JSON sidecars and regenerated inventory JSON.
-- Regenerated `reports/github-agent-index-*`, `reports/url-index.md`, and the internal dashboard.
+- Parsed JSON sidecars and generated JSON reports.
+- Regenerated `reports/github-agent-index-*`, `reports/url-index.md`, the internal dashboard, source manifest, document inventory, and source-document registry.
 - Updated curated GitHub-facing maps for the draft v6 owned source.
-- Ran `git diff --cached --check`.
+- Ran `node build-scripts/references/check-source-document-registry.js`.
+- Ran `node build-scripts/references/check-source-manifest.js`.
+- Ran `node build-scripts/references/check-document-inventory.js`.
+- Ran `node build-scripts/references/check-roadmap-version-index.js`.
+- Ran `node build-scripts/sprints/emit-url-index.js --check`.
+- Ran `npm.cmd ci` to install the locked test dependencies in this clean worktree.
+- Ran `npm.cmd run check:platform`; Jest reported 52 passed suites, 6 skipped suites, and 779 passed tests.
+- Ran `git diff --check`.
 - Ran `npm.cmd run check:agent-worktree-safety -- --check --task BLUEPRINT-3Y-RECONCILE-1 --agent codex --require-prefix codex/,agent/`.
-
-Full platform tests were not run because this sprint changed documentation, indexes, and dashboard timestamps only; no runtime code, protected registry data, or generated lesson output was changed.
 
 ## Next Action
 
-Send the draft v6 blueprint and reference-planning packet for human review. Do not start CLI mutation, Year 2/3 target-exercise production, or student-facing lesson output until that review accepts the 11-book structure and the exam-operation spine.
+Open/review the draft PR for `codex/blueprint-20260610`. Do not start CLI mutation, Year 2/3 target-exercise production, or student-facing lesson output until human review accepts the umbrella role, 11-book structure, load envelopes, and exam-operation spine.
