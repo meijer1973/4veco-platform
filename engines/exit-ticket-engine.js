@@ -156,6 +156,8 @@
       push(block.bodyMarkdown);
       push(block.caption);
       push(block.altText);
+      (block.columns || []).forEach(push);
+      (block.rows || []).forEach(function (row) { (row || []).forEach(push); });
       if (block.table) {
         push(block.table.caption);
         (block.table.headers || []).forEach(push);
@@ -232,6 +234,14 @@
 
   function validateContextTaskSet(data) {
     if (data.contextBlocks === undefined) return true;
+    var hasTaskShellTasks = data.tasks.some(function (task) { return task.type === 'task_shell'; });
+    var hasChoiceTasks = data.tasks.some(function (task) { return task.type === 'choice'; });
+    assert(!(hasTaskShellTasks && hasChoiceTasks), 'contextBlocks do not support mixed task_shell and choice tasks');
+
+    if (hasChoiceTasks) {
+      return validateChoiceContextTaskSet(data);
+    }
+
     var TaskShellEngine = resolveTaskShellEngine();
     assert(TaskShellEngine && typeof TaskShellEngine.validateTaskSet === 'function', 'TaskShellEngine.validateTaskSet is required for contextBlocks');
     var tasks = data.tasks.map(function (task) {
@@ -245,6 +255,55 @@
       contextBlocks: data.contextBlocks,
       tasks: tasks
     });
+  }
+
+  function validateChoiceContextTaskSet(data) {
+    assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length > 0, 'contextBlocks must contain at least one block');
+    var contextIds = {};
+    data.contextBlocks.forEach(function (block, index) {
+      var path = 'contextBlocks[' + index + ']';
+      assert(block && typeof block === 'object', path + ' must be an object');
+      assert(typeof block.id === 'string' && /^ctx-[a-z0-9-]+$/i.test(block.id), path + '.id must be a stable ctx-* id');
+      assert(!contextIds[block.id], 'duplicate context block id: ' + block.id);
+      contextIds[block.id] = true;
+      assert(typeof block.type === 'string' && block.type, path + '.type is required');
+      assert(block.caption || block.title || block.sourceLabel, path + ' needs caption, title, or sourceLabel');
+      if (block.type === 'source_excerpt') {
+        assert(typeof block.bodyMarkdown === 'string' && block.bodyMarkdown, path + '.bodyMarkdown is required');
+        assert(isNonEmptyStringArray(block.sourceRefs), path + '.sourceRefs is required');
+      } else if (block.type === 'table') {
+        assert(isNonEmptyStringArray(block.columns), path + '.columns is required');
+        assert(Array.isArray(block.rows) && block.rows.length > 0, path + '.rows is required');
+        block.rows.forEach(function (row, rowIndex) {
+          assert(Array.isArray(row), path + '.rows[' + rowIndex + '] must be an array');
+          assert(row.length === block.columns.length, path + '.rows[' + rowIndex + '] must match columns length');
+          row.forEach(function (cell, cellIndex) {
+            assert(typeof cell === 'string', path + '.rows[' + rowIndex + '][' + cellIndex + '] must be a string');
+          });
+        });
+      } else {
+        assert(false, path + '.type is not supported for choice-task context blocks');
+      }
+    });
+
+    var referenced = {};
+    data.tasks.forEach(function (task) {
+      assert(task.type === 'choice', 'choice context validation only supports choice tasks');
+      assert(isNonEmptyStringArray(task.contextRefs), task.id + '.contextRefs is required when contextBlocks are present');
+      var local = {};
+      task.contextRefs.forEach(function (ref) {
+        assert(/^ctx-[a-z0-9-]+$/i.test(ref), task.id + '.contextRefs must use stable ctx-* ids');
+        assert(contextIds[ref], task.id + '.contextRefs contains unknown block: ' + ref);
+        assert(!local[ref], task.id + '.contextRefs contains duplicate ref: ' + ref);
+        local[ref] = true;
+        referenced[ref] = true;
+      });
+    });
+
+    Object.keys(contextIds).forEach(function (id) {
+      assert(referenced[id], 'context block is not referenced by any task: ' + id);
+    });
+    return true;
   }
 
   function validateMetadataAlignment(data) {

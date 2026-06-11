@@ -1,14 +1,15 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-11T06:52:41.385Z",
+  "generated": "2026-06-11T07:57:45.345Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
     "supported_variant": "golden_graph_reading_claim_v1",
     "supported_variants": [
       "golden_graph_reading_claim_v1",
-      "golden_calculation_structured_v1"
+      "golden_calculation_structured_v1",
+      "golden_advisory_short_check_v1"
     ],
     "required_sections": 6
   },
@@ -17,7 +18,10 @@
   },
   "short_check_policy": {
     "variant_id": "golden_advisory_short_check_v1",
-    "status": "policy_defined_no_route_migration",
+    "status": "first_route_rendered_pending_review",
+    "migrated_routes": [
+      "1.1.2-korte-check"
+    ],
     "distinction_rows": 6,
     "proof_states": 11
   },
@@ -35,6 +39,11 @@
   "current_golden_sources": [
     {
       "file": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+      "parNr": "1.1.2",
+      "quarantined_formula_token_traps": []
+    },
+    {
+      "file": "source-data/book-1/exit-ticket/1.1.2-korte-check.json",
       "parNr": "1.1.2",
       "quarantined_formula_token_traps": []
     },

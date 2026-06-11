@@ -104,7 +104,7 @@ Rollout must stay staged:
 ```text
 1. 1.1.3 exit ticket as implemented reference
 2. 1.1.2 exit ticket as first transfer proof
-3. advisory short-check variant policy
+3. `1.1.2-korte-check` advisory short-check rendered proof
 4. 1.1.1 exit ticket or first short check by operation fit
 5. graph/table practice
 6. calculation practice
@@ -112,7 +112,7 @@ Rollout must stay staged:
 8. mixed/exam-derived source exercise
 ```
 
-Only the first item is currently promoted as an implemented reference. The 1.1.2 exit ticket may be carried as a controlled transfer candidate, and the advisory short-check variant may be carried as a policy-defined surface specification. Neither authorizes the remaining rollout items, generated lesson output churn, or target-equivalent completion language.
+Only the first item is currently promoted as an implemented reference. The 1.1.2 exit ticket may be carried as a controlled transfer candidate, and `1.1.2-korte-check` may be carried as the first governed advisory short-check rendered proof. Neither authorizes the remaining rollout items, generated lesson output churn beyond the approved route, or target-equivalent completion language.
 
 ## Required Data Contract for New Candidates
 

@@ -3,16 +3,20 @@
   "variant_id": "golden_advisory_short_check_v1",
   "layout_id": "golden_exercise_workbench",
   "surface_type": "advisory_short_check",
-  "status": "policy_defined_no_route_migration",
+  "status": "first_route_rendered_pending_review",
   "generated_from_goal": "SHORT-CHECK-WORKBENCH-POLICY-1",
+  "last_updated_from_goal": "SHORT-CHECK-WORKBENCH-112-RENDERED-1",
   "specification": "references/ui/layouts/golden-exercise-workbench-short-check.md",
   "machine_contract": "references/ui/layouts/golden-exercise-workbench-short-check.json",
-  "renderer_status": "not_a_current_renderer_selector",
+  "renderer_status": "current_narrow_renderer_selector",
   "scope": {
-    "real_routes_migrated": [],
-    "generated_lesson_output_changed": false,
+    "real_routes_migrated": [
+      "1.1.2-korte-check"
+    ],
+    "generated_lesson_output_changed": true,
     "legacy_renderers_deleted": false,
-    "implementation_migration_authorized": false
+    "implementation_migration_authorized": true,
+    "broad_migration_authorized": false
   },
   "distinction_table": [
     {

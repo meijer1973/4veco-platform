@@ -383,6 +383,7 @@ a {
 
 .ge-chip-row,
 .ge-pill-row,
+.ge-choice-options,
 .ge-token-bank,
 .ge-chosen-tokens,
 .ge-action-row {
@@ -498,6 +499,57 @@ a {
 
 .ge-action-row {
   margin-top: 10px;
+}
+
+.ge-choice-options {
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.ge-choice-option {
+  justify-content: flex-start;
+  max-width: 100%;
+  min-height: 44px;
+  border-radius: 8px;
+  text-align: left;
+  white-space: normal;
+}
+
+.ge-context-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 10px;
+  color: var(--ge-muted);
+  font-size: 14px;
+}
+
+.ge-context-refs span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 3px 8px;
+  border: 1px solid var(--ge-line);
+  border-radius: 999px;
+  background: var(--ge-panel-alt);
+}
+
+.ge-choice-route {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: var(--ge-muted);
+  font-size: 14px;
+}
+
+.ge-choice-route span {
+  font-weight: 800;
+}
+
+.ge-choice-route a {
+  color: var(--ge-accent-strong);
+  font-weight: 700;
 }
 
 .ge-graph-actions {
