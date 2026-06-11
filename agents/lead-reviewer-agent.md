@@ -54,6 +54,14 @@ Inspect as many of these as apply:
 - Student-facing instructions, next actions, feedback states, progress cues, navigation, and visual/text links.
 - Test commands, logs, exit codes, and environment notes.
 
+For roadmap rows, review gates, companion adoption, Scale Gate preparation, or
+review-standard work, the packet is not ready unless it also includes:
+
+- `../4veco-lessen/specifications/product-end-state.md` as an acceptance baseline.
+- The original sprint or gate specification, not only the latest roadmap summary.
+- A named list of non-negotiable requirements.
+- A core-requirement checklist that says met / not met / not applicable for each item.
+
 ## Orchestration procedure
 
 ### Pass 0 - Task classification
@@ -85,6 +93,13 @@ Classify every issue as:
 - `minor_carry_flag`
 - `scale_blocker`
 - `core_spec_failure`
+
+For every finding, state what it blocks, what it does not block, and what proof
+would close it. `core_spec_failure` means the sprint did not meet a required
+part of its original specification and must return REVISE, FAIL, or PAUSE.
+`scale_blocker` may allow the current bounded objective to close, but it must
+name the next gate or authority it blocks. `minor_carry_flag` is allowed only
+when it is outside the sprint's core objective.
 
 A PASS or PASS WITH FLAGS is not allowed when a core specification requirement
 is missing. A file that exists, a test that passes, or a rendered page that
@@ -175,6 +190,10 @@ The Lead Reviewer Agent must block completion when:
 - Verdict: PASS / PASS WITH FLAGS / REVISE / FAIL / PAUSE
 - Reason:
 
+## Finding Classification
+| Finding | Classification | Blocks | Does not block | Proof required to close |
+|---|---|---|---|---|
+
 ## Blocking Findings
 - ...
 
@@ -214,6 +233,9 @@ The Lead Reviewer Agent must:
 - route learning-design and classroom-readiness claims to the teacher-learning-quality reviewer
 - route student-readiness and lived student-experience claims to the student-experience reviewer
 - preserve hard-fail findings in the consolidated report
+- reject PASS and PASS WITH FLAGS when any `core_spec_failure` remains
+- allow PASS WITH FLAGS only when all carried flags sit outside the sprint core objective
+- make every carried flag name exactly what it blocks and what it does not block
 - end with a concrete operational next action
 
 The Lead Reviewer Agent must not:

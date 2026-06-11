@@ -61,6 +61,7 @@ Useful entry points:
 - `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 - `docs/roadmaps/quality-standards/sprint-ledger.md`
 - `docs/roadmaps/quality-standards/quality-standards-end-state.md`
+- `references/owned/course-blueprint-v6-three-year.md` (draft three-year blueprint; v5 remains active until review)
 - `reports/github-agent-index-platform.md` after running `npm.cmd run agent:index`
 
 Task-routing guidance:

@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REV-STD-1",
+  "generated_on": "2026-06-10",
+  "scope": [
+    "current platform roadmap Product Proof Track",
+    "current lesson roadmap Product Proof Track",
+    "active review packets",
+    "lead-review instructions",
+    "review-standard specifications",
+    "checker/report surfaces"
+  ],
+  "status_classifications": [
+    "stale",
+    "real_blocker",
+    "non_blocking_carry_flag",
+    "scope_boundary",
+    "missing_evidence_blocker",
+    "historical_archive_flag"
+  ],
+  "finding_classifications": [
+    "core_requirement_met",
+    "quality_improvement_available",
+    "minor_carry_flag",
+    "scale_blocker",
+    "core_spec_failure"
+  ],
+  "summary": {
+    "unresolved_core_spec_failures": 0,
+    "residual_scale_blockers": [
+      "REVSTD1-CHECK-SHORT-EXIT-2",
+      "REVSTD1-SCALE-PROOF-3P",
+      "REVSTD1-GATE-PRODUCT-3P",
+      "REVSTD1-SCALE-GATE-1",
+      "REVSTD1-GAME-ROUTE-AFFORDANCE",
+      "REVSTD1-SKILLMAP-PRODUCT",
+      "REVSTD1-REASONING-ADOPTION",
+      "REVSTD1-DUAL-CODING-TASK-SELECTION",
+      "REVSTD1-ENGINE-UNIFY",
+      "REVSTD1-CHECKSURFACE-113-EXEMPLAR",
+      "REVSTD1-ANSWER-FORM-GENERATOR",
+      "REVSTD1-TASK-FAMILY-ADOPTION",
+      "REVSTD1-SHARED-TASK-INGEST-CARRY"
+    ],
+    "review_standard_hardening_closed": true,
+    "product_authority_changed": false
+  },
+  "dispositions": [
+    {
+      "id": "REVSTD1-REVIEW-STANDARD-HARDENING",
+      "source": "REV-STD-1 roadmap row, lead-reviewer agent, companion review spec, bundle checker",
+      "evidence": [
+        "../4veco-lessen/archive/sprints/REV-STD-1/REV-STD-1-review-standard.md",
+        "../4veco-lessen/specifications/companion-core-specifications.md",
+        "agents/lead-reviewer-agent.md",
+        "build-scripts/sprints/check-sprint-bundle.js"
+      ],
+      "status_classification": "stale",
+      "finding_classification": "core_requirement_met",
+      "description": "The open REV-STD-1 review-standard gap is closed by implemented packet requirements, lead-review classification rules, and schema-v3 checker enforcement.",
+      "blocks": [
+        "nothing after this REV-STD-1 closure"
+      ],
+      "does_not_block": [
+        "remaining product-proof gates",
+        "CHECK-SHORT-EXIT-2 continuation",
+        "GATE-PRODUCT-3P preparation"
+      ],
+      "proof_required_to_close": "Run the REV-STD-1 checker and the lead-review strict fixtures with schema-v3 coverage.",
+      "owner": "REV-STD-1",
+      "next_action": "Keep schema-v3 lead-review findings required for new sprints dated 2026-06-10 or later."
+    },
+    {
+      "id": "REVSTD1-LESSON-GATE-SHARED-STALE",
+      "source": "lesson roadmap versus platform GATE-SHARED-TASK-INGEST-REPAIR-1 closure evidence",
+      "evidence": [
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "references/reference-team-roadmap.md",
+        "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md",
+        "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.json"
+      ],
+      "status_classification": "stale",
+      "finding_classification": "core_requirement_met",
+      "description": "The lesson roadmap still carried an open GATE-SHARED state while the platform roadmap and review-gate artifacts record final PASS WITH FLAGS closure. The roadmap is synced without widening authority.",
+      "blocks": [
+        "nothing after roadmap synchronization"
+      ],
+      "does_not_block": [
+        "CHECK-SHORT-EXIT-2",
+        "adoption-preparation work"
+      ],
+      "proof_required_to_close": "Lesson roadmap row must cite the platform closure evidence and preserve no-product-authority boundaries.",
+      "owner": "roadmap sync",
+      "next_action": "Treat remaining shared-task ingestion flags under REVSTD1-SHARED-TASK-INGEST-CARRY."
+    },
+    {
+      "id": "REVSTD1-SHARED-TASK-INGEST-CARRY",
+      "source": "GATE-SHARED-TASK-INGEST-REPAIR-1 PASS WITH FLAGS closure",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "reports/review-gates/GATE-SHARED-TASK-INGEST-REPAIR-1-shared-task-context-ingestion-repair-review/gate-closure.md"
+      ],
+      "status_classification": "scope_boundary",
+      "finding_classification": "scale_blocker",
+      "description": "The gate closed for adoption-preparation only. Shared-task hardening, graph substitute maturity, carried-value chaining, progressive feedback, source/support/prompt separation, delayed reveal policy, and secondary follow-up work remain bounded carry flags.",
+      "blocks": [
+        "product-route adoption based on source-context ingestion",
+        "target-equivalent proof claims from this gate",
+        "Scale Gate 1 reliance on this lane alone"
+      ],
+      "does_not_block": [
+        "CHECK-SHORT-EXIT-2 planning and packet work",
+        "later adoption-preparation sprints"
+      ],
+      "proof_required_to_close": "A later gate must inspect rendered product-route adoption evidence and explicitly approve the named shared-task hardening concerns.",
+      "owner": "later shared-task hardening/adoption gate",
+      "next_action": "Continue CHECK-SHORT-EXIT-2 before any scale or product-use claim."
+    },
+    {
+      "id": "REVSTD1-CHECK-SHORT-EXIT-2",
+      "source": "CHECK-SHORT-EXIT-2 and GATE-CHECK-SURFACE-EXCELLENT-1",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md"
+      ],
+      "status_classification": "missing_evidence_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "First-three check surfaces are not closed until renewed direct human comments and resolution evidence exist. The current packet is prepared but not reviewed.",
+      "blocks": [
+        "CHECK-SHORT-EXIT-2 closure",
+        "SCALE-PROOF-3P",
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "new completion language for 1.1.1 and 1.1.3",
+        "product-route adoption from the renewed packet"
+      ],
+      "does_not_block": [
+        "remote publication of the review packet",
+        "direct human review comments",
+        "review-standard hardening"
+      ],
+      "proof_required_to_close": "Returned direct human comments for GATE-CHECK-SURFACE-EXCELLENT-1, a resolution log, closure artifacts, and review-standard v3 finding classifications.",
+      "owner": "CHECK-SHORT-EXIT-2 / GATE-CHECK-SURFACE-EXCELLENT-1",
+      "next_action": "Send the renewed packet for direct human review after publication."
+    },
+    {
+      "id": "REVSTD1-SCALE-PROOF-3P",
+      "source": "SCALE-PROOF-3P roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "../4veco-lessen/specifications/product-end-state.md"
+      ],
+      "status_classification": "missing_evidence_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Three-paragraph rendered student-path proof is not produced yet.",
+      "blocks": [
+        "Scale Gate 1",
+        "three-paragraph product-proof claim",
+        "broad product-readiness claim"
+      ],
+      "does_not_block": [
+        "CHECK-SHORT-EXIT-2 review",
+        "GATE-PRODUCT-3P planning"
+      ],
+      "proof_required_to_close": "Rendered proof for landing, Start, Leer, Oefen, skill map, source/context practice, advisory short check, target-equivalent exit ticket, feedback, and next action for 1.1.1 through 1.1.3.",
+      "owner": "SCALE-PROOF-3P",
+      "next_action": "Start only after CHECK-SHORT-EXIT-2 has closure evidence or a human waiver."
+    },
+    {
+      "id": "REVSTD1-GATE-PRODUCT-3P",
+      "source": "GATE-PRODUCT-3P roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "missing_evidence_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Human product readiness review for the three-paragraph product has not run.",
+      "blocks": [
+        "Scale Gate 1",
+        "product readiness approval",
+        "PASS WITH FLAGS that carries missing core product requirements"
+      ],
+      "does_not_block": [
+        "preparing evidence",
+        "review-standard enforcement",
+        "non-authorizing packet work"
+      ],
+      "proof_required_to_close": "Human product-readiness review that inspects rendered student paths and applies REV-STD-1 finding classifications.",
+      "owner": "GATE-PRODUCT-3P",
+      "next_action": "Run after required rendered product proof exists."
+    },
+    {
+      "id": "REVSTD1-SCALE-GATE-1",
+      "source": "Scale Gate 1 roadmap rows",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "../4veco-lessen/specifications/product-end-state.md"
+      ],
+      "status_classification": "real_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Scale Gate 1 remains blocked by open product-proof gates and reasoning/adoption follow-ups. REV-STD-1 closure removes only the review-standard blocker.",
+      "blocks": [
+        "Scale Gate 1",
+        "broad scaling",
+        "diagnostics, adaptive routing, mastery/sequencing, summative use, PV projection, and PV machine promotion"
+      ],
+      "does_not_block": [
+        "bounded adoption-preparation",
+        "direct human review packets",
+        "review-standard hardening"
+      ],
+      "proof_required_to_close": "Closure or explicit human waiver for CHECK-SHORT-EXIT-2, SCALE-PROOF-3P, GATE-PRODUCT-3P, and downstream reasoning/adoption blockers.",
+      "owner": "Scale Gate 1",
+      "next_action": "Do not run until residual scale blockers close or are waived with consequences."
+    },
+    {
+      "id": "REVSTD1-GAME-ROUTE-AFFORDANCE",
+      "source": "GAME-ROUTE-AFFORDANCE-1 roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "real_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Graph, math, reasoning, and skill-map route items still need actionable links or explicit fallbacks.",
+      "blocks": [
+        "coherent first-three product route proof",
+        "Scale Gate 1 reliance on route affordance"
+      ],
+      "does_not_block": [
+        "historical exact 1.1.2 completion-copy boundary",
+        "adoption-preparation planning"
+      ],
+      "proof_required_to_close": "Rendered route evidence showing each relevant route item is actionable and guarded by regression checks.",
+      "owner": "GAME-ROUTE-AFFORDANCE-1",
+      "next_action": "Implement or explicitly waive before product proof."
+    },
+    {
+      "id": "REVSTD1-SKILLMAP-PRODUCT",
+      "source": "SKILLMAP-PRODUCT-1 roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "real_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "The skill map still needs to become an accessible, useful student-facing product surface for the first three paragraphs.",
+      "blocks": [
+        "first-three product proof",
+        "Scale Gate 1 reliance on skill-map surface"
+      ],
+      "does_not_block": [
+        "existing route-layer runtime evidence",
+        "local practice tasks"
+      ],
+      "proof_required_to_close": "Rendered student-facing skill-map proof with no internal-code exposure, actionable route links, and review evidence.",
+      "owner": "SKILLMAP-PRODUCT-1",
+      "next_action": "Complete before Scale Gate 1 unless explicitly waived."
+    },
+    {
+      "id": "REVSTD1-REASONING-ADOPTION",
+      "source": "reasoning follow-up roadmap rows through REASON-ADOPT-2",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "missing_evidence_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Reasoning UX hardening, visual flow, error repair, classification with explanation, source-based explanation, live example-answer evidence, and adoption preparation remain open.",
+      "blocks": [
+        "reasoning product-route adoption",
+        "reasoning-game replacement claim",
+        "target-equivalent reasoning proof",
+        "Scale Gate 1 reliance on reasoning adoption"
+      ],
+      "does_not_block": [
+        "bounded local reasoning practice evidence",
+        "planning/adoption-preparation without product authority"
+      ],
+      "proof_required_to_close": "Route-specific playable/rendered proof and human gate approval for the named reasoning follow-up lanes.",
+      "owner": "REASON-UX-HARDEN-1 through REASON-ADOPT-2",
+      "next_action": "Continue named reasoning follow-up lanes before adoption claims."
+    },
+    {
+      "id": "REVSTD1-DUAL-CODING-TASK-SELECTION",
+      "source": "DUAL-CODING-STD-1 roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "reports/sprints/CONTEXT-VISUAL-STD-1-visual-standard.md"
+      ],
+      "status_classification": "scope_boundary",
+      "finding_classification": "scale_blocker",
+      "description": "Context visual policy is absorbed by CONTEXT-VISUAL-STD-1, but residual task-selection policy remains open and must not become generic decoration work.",
+      "blocks": [
+        "broad dual-coding task-selection standard claim",
+        "Scale Gate 1 reliance on unfinished task-selection policy"
+      ],
+      "does_not_block": [
+        "source-context visual standards already closed",
+        "task-specific visual decisions already reviewed"
+      ],
+      "proof_required_to_close": "A task-selection policy that decides when plain text, table, graph, flowchart, diagram, formula box, or visual construction is required by target-exercise operations.",
+      "owner": "DUAL-CODING-STD-1",
+      "next_action": "Keep scoped to target-operation task selection."
+    },
+    {
+      "id": "REVSTD1-ENGINE-UNIFY",
+      "source": "ENGINE-UNIFY-1 roadmap row",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "real_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Unified engine experience refactor planning remains open across graph, math, reasoning, check, route, hint, feedback, accessibility, context rendering, and mobile/dark behavior.",
+      "blocks": [
+        "unified engine architecture readiness claim",
+        "Scale Gate 1 reliance on unresolved engine unification"
+      ],
+      "does_not_block": [
+        "reviewed local route/surface evidence",
+        "bounded feature-specific proof"
+      ],
+      "proof_required_to_close": "A reviewed keep/wrap/refactor/rebuild/deprecate plan with source-of-truth ownership and product-boundary proof.",
+      "owner": "ENGINE-UNIFY-1",
+      "next_action": "Plan before broad engine scaling claims."
+    },
+    {
+      "id": "REVSTD1-CHECKSURFACE-113-EXEMPLAR",
+      "source": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1 PASS WITH FLAGS",
+      "evidence": [
+        "references/reference-team-roadmap.md"
+      ],
+      "status_classification": "missing_evidence_blocker",
+      "finding_classification": "scale_blocker",
+      "description": "Excellent 1.1.3 exemplar review still carries classroom evidence, end-of-route-only use, mobile task/feedback screenshots, live student evidence, graph/formula/feedback state proof, and full correct/retry automation flags.",
+      "blocks": [
+        "1.1.3 product-route adoption",
+        "target-readiness approval for 1.1.3",
+        "Scale Gate 1 reliance on the exemplar alone"
+      ],
+      "does_not_block": [
+        "bounded specialist acceptance of the exemplar evidence",
+        "held candidate status"
+      ],
+      "proof_required_to_close": "Classroom/live or human-testable evidence, complete mobile state screenshots, graph/formula/feedback proof, and correct/retry automation reviewed under v3 classification.",
+      "owner": "CHECKSURFACE-113-EXEMPLAR-REVIEW-1 follow-up",
+      "next_action": "Keep 1.1.3 completion/product authority held until evidence closes."
+    },
+    {
+      "id": "REVSTD1-ANSWER-FORM-GENERATOR",
+      "source": "MTU-ANS-GEN-DESIGN-1, MTU-ANS-PROOF-IMPL-1, MTU-GENBLOCK-HARDEN-1",
+      "evidence": [
+        "references/reference-team-roadmap.md"
+      ],
+      "status_classification": "scope_boundary",
+      "finding_classification": "scale_blocker",
+      "description": "A80, A81, and A96-A99 answer-form units remain generator-blocked or proof-bounded until generator implementation and reviewed route/product adoption.",
+      "blocks": [
+        "answer-form product-route adoption",
+        "generator-backed interactive exposure for blocked A-domain units",
+        "Scale Gate 1 reliance on answer-form routes"
+      ],
+      "does_not_block": [
+        "reviewed A96 bounded proof artifact",
+        "answer-form design records",
+        "zero-leak exposure hardening"
+      ],
+      "proof_required_to_close": "Generator implementation, route-specific rendered proof, reviewed product adoption, and no-exposure guard proof for blocked units.",
+      "owner": "future answer-form generator/adoption sprints",
+      "next_action": "Do not expose generator-blocked A-domain units in product routes."
+    },
+    {
+      "id": "REVSTD1-TASK-FAMILY-ADOPTION",
+      "source": "structured choice and constrained construction task-family PASS WITH FLAGS rows",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md",
+        "reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md"
+      ],
+      "status_classification": "scope_boundary",
+      "finding_classification": "scale_blocker",
+      "description": "Task families are accepted as runtime/contract evidence, but product-route adoption and target-equivalent reliance still require route-specific rendered proof and later review.",
+      "blocks": [
+        "product-route adoption of task families",
+        "target-equivalent reliance on task families without route proof",
+        "Scale Gate 1 reliance on family acceptance alone"
+      ],
+      "does_not_block": [
+        "family contract/runtime acceptance",
+        "planning and adoption-preparation",
+        "route-specific packet writing"
+      ],
+      "proof_required_to_close": "Route-specific rendered proof, specialist/lead review, and explicit target-operation fit for each adopted family.",
+      "owner": "future route adoption sprints",
+      "next_action": "Carry as a scale blocker, not a task-family acceptance blocker."
+    },
+    {
+      "id": "REVSTD1-TASK-SHELL-UX-CARRY",
+      "source": "TASK-SHELL-UX-2 PASS WITH FLAGS",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "non_blocking_carry_flag",
+      "finding_classification": "minor_carry_flag",
+      "description": "Future screenshot manifest DOM proof and source/render boundary vigilance remain useful follow-ups, but they do not block the already closed task-shell UX sprint.",
+      "blocks": [
+        "future claim that screenshot manifest DOM proof is fully mature"
+      ],
+      "does_not_block": [
+        "current task-shell UX closure",
+        "REV-STD-1 closure",
+        "packet preparation when other required proof exists"
+      ],
+      "proof_required_to_close": "A later checker/report that asserts screenshot manifest DOM proof and source/render parity across adopted routes.",
+      "owner": "future screenshot/route QA hardening",
+      "next_action": "Keep as quality follow-up, not a Scale Gate blocker by itself."
+    },
+    {
+      "id": "REVSTD1-CI-RUNNER-MONITOR",
+      "source": "CI-REMOTE-1 PASS WITH FLAGS",
+      "evidence": [
+        "references/reference-team-roadmap.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "non_blocking_carry_flag",
+      "finding_classification": "minor_carry_flag",
+      "description": "Monitor GitHub windows-latest runner-label migration notice if CI later fails without code changes.",
+      "blocks": [
+        "nothing now"
+      ],
+      "does_not_block": [
+        "REV-STD-1 closure",
+        "Scale Gate evidence review",
+        "product-proof work"
+      ],
+      "proof_required_to_close": "A future CI failure triage can close or renew this monitor if runner labels change.",
+      "owner": "CI maintenance",
+      "next_action": "No action unless CI fails without code changes."
+    },
+    {
+      "id": "REVSTD1-HISTORICAL-DRAFT-FLAGS",
+      "source": "old REV-STD-1 inherited flag table and pre-2026-06-10 archive rows",
+      "evidence": [
+        "../4veco-lessen/archive/sprints/REV-STD-1/REV-STD-1-inherited-flag-table.md",
+        "../4veco-lessen/lessen-team-roadmap.md"
+      ],
+      "status_classification": "historical_archive_flag",
+      "finding_classification": "core_requirement_met",
+      "description": "Old inherited draft rows for math primary route displacement, checkpoint metadata mismatch, checkpoint-only status, and task-form support were superseded by later closure evidence and current blockers.",
+      "blocks": [
+        "nothing current"
+      ],
+      "does_not_block": [
+        "REV-STD-1 closure",
+        "current product-proof work"
+      ],
+      "proof_required_to_close": "Current inherited table must route old rows to their closing sprint or current blocker instead of treating them as active ordinary flags.",
+      "owner": "REV-STD-1",
+      "next_action": "Preserve as historical evidence only."
+    },
+    {
+      "id": "REVSTD1-PRODUCT-BOUNDARY",
+      "source": "standing product-boundary language across roadmaps and stable specs",
+      "evidence": [
+        "../4veco-lessen/specifications/product-end-state.md",
+        "../4veco-lessen/specifications/companion-core-specifications.md",
+        "references/reference-team-roadmap.md"
+      ],
+      "status_classification": "scope_boundary",
+      "finding_classification": "core_requirement_met",
+      "description": "No diagnostics, mastery/sequencing, adaptive routing, summative use, PV projection, PV machine promotion, broad product use, or student/product use is authorized by REV-STD-1.",
+      "blocks": [
+        "unauthorized product-boundary claims"
+      ],
+      "does_not_block": [
+        "bounded review-standard hardening",
+        "evidence preparation",
+        "human review packets"
+      ],
+      "proof_required_to_close": "Only a later explicit gate or human waiver can alter these boundaries.",
+      "owner": "Scale Gate 1 / product governance",
+      "next_action": "Keep boundaries visible in every carried flag and review packet."
+    }
+  ]
+}

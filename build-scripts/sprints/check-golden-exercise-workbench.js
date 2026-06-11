@@ -13,6 +13,7 @@ function main() {
     status: 'passed',
     layout_registry: checks.validateLayoutRegistry(),
     interaction_policy: checks.validateInteractionPolicy(),
+    short_check_policy: checks.validateShortCheckPolicySpec(),
     exemplar_formula_boundary: checks.validateExemplarIndexFormulaBoundary(),
     a96_fixture_policy: checks.validateA96FixturePolicy(),
     implemented_snapshot: checks.checkImplementedSnapshotHtml(),

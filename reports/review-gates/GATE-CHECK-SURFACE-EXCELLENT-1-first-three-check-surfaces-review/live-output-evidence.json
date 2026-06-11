@@ -19,7 +19,7 @@
     "interval_distractors_present": true,
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
-    "reviewed_112_exit_preserved": true
+    "current_112_transfer_held": true
   },
   "screenshots": [
     "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png",
