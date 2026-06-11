@@ -11,6 +11,11 @@ Every generated paragraph route should move students from current readiness to
 target-exercise readiness. Generator, engine, and deploy changes should
 preserve that end state or name the follow-up sprint that restores it.
 
+Generated paragraph landing pages must follow
+`../4veco-lessen/specifications/paragraph-landing-layout-v2.md`. V2 replaces
+the old paragraph landing model. Do not revive or extend the old paragraph
+landing structure without human review.
+
 Sprint plans and active roadmaps must also pass scope-language discipline:
 
 ```bash
@@ -75,7 +80,7 @@ Reusable scripts that generate the automated layer. These are what `scripts/depl
 | `platform/build-skilltree-shells.js` | Skilltree data + HTML shells |
 | `platform/build-procedure-shells.js` | Procedure HTML shells |
 | `platform/build-graphical-shells.js` | Graphical-game HTML shells |
-| `platform/build-landing-page.js` | `index.html` at paragraph/chapter/module level |
+| `platform/build-landing-page.js` | `index.html` at paragraph/chapter/module level; paragraph pages use the V2 route baseline |
 | `platform/build-single-page-nav.js` | Single-page navigation for GitHub Pages |
 
 Use when the source already exists as structured data and the output should be fully reproducible.

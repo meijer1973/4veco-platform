@@ -4,7 +4,7 @@
  * Generates index.html at three levels:
  * - Book page      (overview of all chapters)
  * - Chapter pages  (overview of paragrafen in that chapter)
- * - Paragraaf pages (controlled route with Start / Leer / Oefen / Check / Verdiep)
+ * - Paragraaf pages (V2 route with Start / Skill-tree games / Leer / Oefen / Check / Open & verdiep)
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *
@@ -13,8 +13,8 @@
  * build-scripts/lib/lib-deploy-config.js.
  *
  * Paragraph layout is flat: all companion files sit directly at the paragraph
- * root (no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders). Section
- * membership is derived from filename patterns only.
+ * root (no 1. Voorbereiden / 2. Leren / 3. Oefenen subfolders). Paragraph
+ * landing pages follow specifications/paragraph-landing-layout-v2.md.
  *
  * Run: MODULE_ROOT="<target-book-path>" node build-scripts/platform/build-landing-page.js
  */
@@ -34,11 +34,6 @@ const CONFIG = loadConfig(MODULE_BASE);
 
 const ONLY_ID = null;
 const DRY_RUN = false;
-
-// Hide legacy Word-only task rows (basisopgaven, middenopgaven, verrijkingsopgaven)
-// from student-facing paragraph landing pages. Future paragraph builds should
-// route practice through web-first exercise surfaces.
-const HIDE_TASK_ROWS = true;
 
 console.log(`Target: ${CONFIG.displayLabel} (${CONFIG.moduleRoot})`);
 
@@ -144,34 +139,7 @@ function renderCardPitfalls(item) {
 
 function sectionAvailability(files, item = null) {
   if (!files) return [];
-  const hasGroup = (group) => Object.values(group || {}).some(Boolean);
-  const isConsolidation = isConsolidationParagraph(item);
-  const hasMixedPractice = isConsolidation && files.lesboek && (files.lesboek.opgaven || files.lesboek.antwoorden);
-  const hasBookDeepen = hasGroup(files.lesboek) && !(hasMixedPractice && !files.lesboek.paragraaf);
-  const hasPractice = files.oefenen && (
-    files.oefenen.redeneerSpel ||
-    files.oefenen.stappenplan ||
-    files.oefenen.wiskundevaardigheden ||
-    files.oefenen.grafiekenspel ||
-    files.oefenen.begeleide ||
-    hasMixedPractice ||
-    (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
-  );
-  const hasDeepen = (files.voorbereiden && files.voorbereiden.nieuwsdetective)
-    || (files.leren && (
-      files.leren.presentatie ||
-      files.leren.youtube ||
-      files.leren.nieuws ||
-      files.leren.samenvatting
-    ))
-    || hasBookDeepen;
-  const labels = [];
-  if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
-  if (files.leren && files.leren.vaardigheden) labels.push("Leer");
-  if (hasPractice) labels.push(isConsolidation ? "Oefen gemengd" : "Oefen");
-  if (files.check && (files.check.shortCheck || files.check.exitTicket)) labels.push("Check");
-  if (hasDeepen) labels.push("Verdiep");
-  return labels;
+  return routeRows(files, item).map(row => row.title);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -762,7 +730,7 @@ ${bodyContent}
   <div class="viewer-panel" id="viewerPanel">
     <div class="viewer-bar">
       <span class="viewer-title" id="viewerTitle"></span>
-      <a class="viewer-download" id="viewerDownload" href="#" download>Download</a>
+      <a class="viewer-download" id="viewerDownload" download>Download</a>
       <button class="viewer-close" onclick="closeViewer()">Sluiten &times;</button>
     </div>
     <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
@@ -925,7 +893,7 @@ function renderChapterPage(chapterId, resolvedMap) {
 // PARAGRAAF PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderParagraafPage(paragraaf, files, _resolvedMap) {
+function renderParagraafPageLegacy(paragraaf, files, _resolvedMap) {
   const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
   const accentToken = DOMAIN_SHARED_TOKEN[paragraaf.domain] || "economisch";
   const isConsolidation = isConsolidationParagraph(paragraaf);
@@ -1689,7 +1657,7 @@ ${sidebarItems}
 <div class="viewer-panel" id="viewerPanel">
   <div class="viewer-bar">
     <span class="viewer-title" id="viewerTitle"></span>
-    <a class="viewer-download" id="viewerDownload" href="#" download>Download</a>
+    <a class="viewer-download" id="viewerDownload" download>Download</a>
     <button class="viewer-close" onclick="closeViewer()">Sluiten &times;</button>
   </div>
   <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
@@ -1731,6 +1699,978 @@ if (window.innerWidth > 768) {
 // ═══════════════════════════════════════════════════════════════════════════
 // MAIN
 // ═══════════════════════════════════════════════════════════════════════════
+
+function fileHref(file) {
+  return file ? encPath([file]) : null;
+}
+
+function pairFile(pair, keys) {
+  if (!pair) return null;
+  for (const key of keys) {
+    if (pair[key]) return pair[key];
+  }
+  return null;
+}
+
+function pairHref(pair, keys) {
+  return fileHref(pairFile(pair, keys));
+}
+
+function routeConfig(paragraaf, routeName) {
+  const routes = paragraaf && paragraaf.skilltree && paragraaf.skilltree.skillMapRoutes;
+  return routes && routes[routeName] ? routes[routeName] : null;
+}
+
+function routeIsEnabled(route) {
+  return Boolean(route && route.enabled !== false && (route.title || route.routePurpose || route.practiceHref));
+}
+
+function hasScopedMathSkillTree(paragraaf) {
+  const skills = paragraaf && paragraaf.skilltree && paragraaf.skilltree.skills;
+  return (Array.isArray(skills) && skills.length > 0) || routeIsEnabled(routeConfig(paragraaf, "calculation"));
+}
+
+function hasVisibleSkillRoute(paragraaf) {
+  const routes = paragraaf && paragraaf.skilltree && paragraaf.skilltree.skillMapRoutes;
+  if (!routes || typeof routes !== "object") return false;
+  return Object.values(routes).some(routeIsEnabled);
+}
+
+function tileState(tile) {
+  if (tile && tile.state) return tile.state;
+  const links = tile && Array.isArray(tile.links) ? tile.links : [];
+  const hasLink = Boolean(tile && tile.href) || links.some(link => link && link.href);
+  return hasLink ? "available" : "in-preparation";
+}
+
+function tileStatusLabel(state) {
+  if (state === "available") return "Beschikbaar";
+  if (state === "not-scoped") return "Niet nodig";
+  return "In voorbereiding";
+}
+
+function countRowAvailability(row) {
+  return row.tiles.reduce((count, tile) => count + (tileState(tile) === "available" ? 1 : 0), 0);
+}
+
+function firstActionableTile(rows) {
+  for (const row of rows) {
+    for (const tile of row.tiles) {
+      if (tileState(tile) !== "available") continue;
+      const firstLink = Array.isArray(tile.links) ? tile.links.find(link => link && link.href) : null;
+      const href = tile.href || (firstLink && firstLink.href);
+      if (href) return { ...tile, href };
+    }
+  }
+  return null;
+}
+
+function routeRows(files, paragraaf) {
+  const mathRouteAvailable = Boolean(files.oefenen.wiskundevaardigheden && hasScopedMathSkillTree(paragraaf));
+  const skillEngineAvailable = Boolean(files.oefenen.wiskundevaardigheden && hasVisibleSkillRoute(paragraaf));
+  const presentationHref = pairHref(files.leren.presentatie, ["html", "pptx"]);
+  const presentationLinks = [];
+  if (files.leren.presentatie && files.leren.presentatie.html && files.leren.presentatie.pptx) {
+    presentationLinks.push({ href: fileHref(files.leren.presentatie.pptx), label: "PowerPoint", download: true });
+  }
+  const explanationLinks = [];
+  if (files.voorbereiden.voorkennis && files.voorbereiden.voorkennis.html) {
+    explanationLinks.push({ href: fileHref(files.voorbereiden.voorkennis.html), label: "Voorkennis" });
+  }
+  const guidedLinks = [];
+  if (files.oefenen.stappenplan) {
+    guidedLinks.push({ href: fileHref(files.oefenen.stappenplan), label: "Stappenplan" });
+  }
+
+  const exerciseLinks = [];
+  if (files.lesboek.antwoorden && files.lesboek.antwoorden.html) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.antwoorden.html), label: "Antwoorden" });
+  }
+  if (files.lesboek.opgaven && files.lesboek.opgaven.pdf) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.opgaven.pdf), label: "Opgaven PDF", download: true });
+  }
+  if (files.lesboek.antwoorden && files.lesboek.antwoorden.pdf) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.antwoorden.pdf), label: "Antwoorden PDF", download: true });
+  }
+
+  const textbookLinks = [];
+  if (files.lesboek.paragraaf && files.lesboek.paragraaf.pdf) {
+    textbookLinks.push({ href: fileHref(files.lesboek.paragraaf.pdf), label: "PDF", download: true });
+  }
+
+  const sourceLinks = [];
+  if (files.leren.samenvatting && files.leren.samenvatting.html) {
+    sourceLinks.push({ href: fileHref(files.leren.samenvatting.html), label: "Samenvatting" });
+  }
+  if (files.leren.nieuws && files.leren.nieuws.html) {
+    sourceLinks.push({ href: fileHref(files.leren.nieuws.html), label: "Nieuws met visual" });
+  }
+  if (files.leren.youtube) {
+    sourceLinks.push({ href: fileHref(files.leren.youtube), label: "YouTube" });
+  }
+
+  return [
+    {
+      id: "start",
+      num: 1,
+      title: "Start",
+      hint: "Begin met voorkennis en context.",
+      accent: "wiskunde",
+      tiles: [
+        {
+          id: "instapquiz",
+          title: "Instapquiz voorkennis",
+          desc: "Check snel wat je al weet voordat je begint.",
+          icon: ICONS.quiz,
+          href: fileHref(files.voorbereiden.instapquiz),
+          action: "Start quiz",
+        },
+        {
+          id: "nieuwsdetective",
+          title: "Nieuws-detective",
+          desc: "Verken de economische situatie achter een herkenbaar nieuwsvoorbeeld.",
+          icon: ICONS.search,
+          href: fileHref(files.voorbereiden.nieuwsdetective),
+          action: "Open detective",
+        },
+      ],
+    },
+    {
+      id: "skill-tree-games",
+      num: 2,
+      title: "Skill-tree games",
+      hint: "Train de drie vaardigheidsroutes.",
+      accent: "economisch",
+      tiles: [
+        {
+          id: "redeneren",
+          title: "Redeneren",
+          desc: GAME_ASPECTS.reasoning.summary,
+          icon: ICONS.puzzle,
+          href: fileHref(files.oefenen.redeneerSpel),
+          action: "Oefen redeneren",
+        },
+        {
+          id: "rekenen",
+          title: "Rekenen",
+          desc: GAME_ASPECTS.calculation.summary,
+          icon: ICONS.layers,
+          href: mathRouteAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
+          action: "Oefen rekenen",
+        },
+        {
+          id: "grafieken",
+          title: "Grafieken",
+          desc: GAME_ASPECTS.graphical.summary,
+          icon: ICONS.chart,
+          href: fileHref(files.oefenen.grafiekenspel),
+          action: "Oefen grafieken",
+        },
+      ],
+    },
+    {
+      id: "leer",
+      num: 3,
+      title: "Leer",
+      hint: "Pak de uitleg en het leerpad erbij.",
+      accent: "grafisch",
+      tiles: [
+        {
+          id: "uitleg-vaardigheden",
+          title: "Uitleg vaardigheden",
+          desc: "Leer de kernstappen met voorbeelden en dezelfde aanpak als in de oefeningen.",
+          icon: ICONS.doc,
+          href: pairHref(files.leren.vaardigheden, ["html"]),
+          action: "Open uitleg",
+          links: explanationLinks,
+        },
+        {
+          id: "presentatie",
+          title: "PowerPoint-presentatie",
+          desc: "Gebruik de presentatie om de hoofdlijn en voorbeelden terug te zien.",
+          icon: ICONS.monitor,
+          href: presentationHref,
+          action: "Open presentatie",
+          links: presentationLinks,
+        },
+        {
+          id: "skill-engine",
+          title: "Skill engine / leerpad",
+          desc: "Bekijk de lokale route en de relevante vaardigheden zonder interne codes.",
+          icon: ICONS.steps,
+          href: skillEngineAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
+          action: "Open leerpad",
+        },
+      ],
+    },
+    {
+      id: "oefen",
+      num: 4,
+      title: "Oefen",
+      hint: "Oefen met steun, zelfstandig, of met lokaal advies.",
+      accent: "economisch",
+      tiles: [
+        {
+          id: "begeleide-oefeningen",
+          title: "Begeleide oefeningen",
+          desc: "Werk stap voor stap met hints en denkstappen.",
+          icon: ICONS.users,
+          href: fileHref(files.oefenen.begeleide && files.oefenen.begeleide.interactief),
+          action: "Open begeleiding",
+          links: guidedLinks,
+        },
+        {
+          id: "zelfstandige-oefeningen",
+          title: "Zelfstandige oefeningen",
+          desc: "Maak de opgaven zelfstandig en controleer daarna je aanpak.",
+          icon: ICONS.doc,
+          href: pairHref(files.lesboek.opgaven, ["html"]),
+          action: "Open opgaven",
+          links: exerciseLinks,
+        },
+        {
+          id: "adaptieve-oefenroute",
+          title: "Adaptieve oefenroute",
+          desc: "Lokaal advies voor de voorgestelde volgende oefening komt hier.",
+          icon: ICONS.layers,
+          state: "in-preparation",
+        },
+      ],
+    },
+    {
+      id: "check",
+      num: 5,
+      title: "Check",
+      hint: "Eerst lokaal advies, daarna de eindcheck.",
+      accent: "wiskunde",
+      tiles: [
+        {
+          id: "korte-check",
+          title: "Korte check",
+          desc: "Krijg lokaal oefenadvies. Dit is geen eindcheck en geen cijfer.",
+          icon: ICONS.check,
+          href: fileHref(files.check && files.check.shortCheck),
+          action: "Open korte check",
+        },
+        {
+          id: "exit-ticket",
+          title: "Exit ticket",
+          desc: "Maak de eindcheck met dezelfde soort denkstappen als de paragraafopgave.",
+          icon: ICONS.check,
+          href: fileHref(files.check && files.check.exitTicket),
+          action: "Open exit ticket",
+        },
+      ],
+    },
+    {
+      id: "open-verdiep",
+      num: 6,
+      title: "Open & verdiep",
+      hint: "Open het lesboek, antwoorden en extra materiaal.",
+      accent: "grafisch",
+      tiles: [
+        {
+          id: "lesboek-openen",
+          title: "Lesboek openen",
+          desc: "Lees de volledige paragraaf in de webversie.",
+          icon: ICONS.book,
+          href: pairHref(files.lesboek.paragraaf, ["html", "pdf"]),
+          action: "Open lesboek",
+          links: textbookLinks,
+        },
+        {
+          id: "opgaven-antwoorden",
+          title: "Opgaven & antwoorden",
+          desc: "Open de opgaven en de uitwerkingen bij deze paragraaf.",
+          icon: ICONS.doc,
+          href: pairHref(files.lesboek.opgaven, ["html"]),
+          action: "Open opgaven",
+          links: exerciseLinks,
+        },
+        {
+          id: "aanvullend-materiaal",
+          title: "Aanvullend materiaal",
+          desc: "Gebruik samenvatting, context en video wanneer je extra steun wilt.",
+          icon: ICONS.newspaper,
+          links: sourceLinks,
+        },
+      ],
+    },
+  ];
+}
+
+function renderTileLink(link, className) {
+  if (!link || !link.href) return "";
+  const download = link.download ? " download" : "";
+  return `<a class="${className}" href="${escapeHtml(link.href)}"${download}>${escapeHtml(link.label)}</a>`;
+}
+
+function renderLandingV2Tile(tile, rowAccent) {
+  const state = tileState(tile);
+  const status = tile.statusLabel || tileStatusLabel(state);
+  const links = Array.isArray(tile.links) ? tile.links.filter(link => link && link.href) : [];
+  const primary = state === "available" && tile.href
+    ? renderTileLink({ href: tile.href, label: tile.action || "Openen", download: tile.download }, "landing-v2-tile-primary")
+    : "";
+  const secondary = links
+    .filter(link => !tile.href || link.href !== tile.href)
+    .map(link => renderTileLink(link, "landing-v2-tile-secondary"))
+    .join("");
+  const actions = state === "available" && (primary || secondary)
+    ? `<div class="landing-v2-tile-actions">${primary}${secondary}</div>`
+    : `<div class="landing-v2-placeholder">${escapeHtml(status)}</div>`;
+
+  return `
+        <article class="landing-v2-tile landing-v2-tile-${state} accent-${rowAccent}" data-tile-id="${escapeHtml(tile.id)}" data-tile-state="${escapeHtml(state)}">
+          <div class="landing-v2-tile-icon" aria-hidden="true"><svg viewBox="0 0 24 24">${tile.icon || ICONS.info}</svg></div>
+          <div class="landing-v2-tile-body">
+            <span class="landing-v2-tile-status">${escapeHtml(status)}</span>
+            <h3>${escapeHtml(tile.title)}</h3>
+            <p>${escapeHtml(tile.desc)}</p>
+            ${actions}
+          </div>
+        </article>`;
+}
+
+function renderLandingV2Row(row) {
+  const ready = countRowAvailability(row);
+  const total = row.tiles.length;
+  return `
+      <section class="landing-v2-row" id="${row.id}" data-route-layer="${row.id}" data-row-ready="${ready}" data-row-total="${total}">
+        <div class="landing-v2-row-label accent-${row.accent}">
+          <span class="landing-v2-row-num">${row.num}</span>
+          <div>
+            <h2>${escapeHtml(row.title)}</h2>
+            <p>${escapeHtml(row.hint)}</p>
+          </div>
+        </div>
+        <div class="landing-v2-tile-grid">
+${row.tiles.map(tile => renderLandingV2Tile(tile, row.accent)).join("\n")}
+        </div>
+      </section>`;
+}
+
+function paragraphLandingV2CSS() {
+  return `
+  body[data-layout="paragraph-landing-v2"] {
+    --content-max: 1180px;
+    --heading-letter: 0;
+    letter-spacing: 0;
+  }
+  body[data-layout="paragraph-landing-v2"] .content {
+    min-width: 0;
+  }
+  body[data-layout="paragraph-landing-v2"] .sidebar {
+    border-right: 1px solid var(--border);
+  }
+  .landing-v2-sidebar-header {
+    padding: 1rem 1rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .landing-v2-sidebar-header h2 {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .landing-v2-sidebar-header p {
+    margin: 0.25rem 0 0;
+    color: var(--ink-soft);
+    font-size: 0.74rem;
+  }
+  .landing-v2-sidebar-jump {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .landing-v2-sidebar-jump a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.74rem;
+    line-height: 1.3;
+  }
+  .landing-v2-sidebar-jump a:hover { color: var(--ink); }
+  .landing-v2-nav {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.7rem 0.65rem 1rem;
+  }
+  .landing-v2-nav-item {
+    display: grid;
+    grid-template-columns: 1.7rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.55rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+  .landing-v2-nav-item:hover,
+  .landing-v2-nav-item:focus-visible {
+    color: var(--ink);
+    background: var(--bg-lift);
+    border-color: var(--border);
+    outline: none;
+  }
+  .landing-v2-nav-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 8px;
+    color: var(--accent);
+    background: var(--accent-lt);
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+  .landing-v2-nav-title {
+    display: block;
+    color: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+  .landing-v2-nav-meta {
+    display: block;
+    margin-top: 0.05rem;
+    font-size: 0.67rem;
+    color: var(--ink-muted);
+  }
+  .landing-v2-hero {
+    padding: 0;
+    background:
+      linear-gradient(135deg, color-mix(in oklab, var(--accent) 10%, transparent), transparent 42%),
+      var(--bg-lift);
+    border-bottom: 1px solid var(--border);
+  }
+  .landing-v2-hero::before {
+    background: var(--hero-grad);
+  }
+  .landing-v2-hero-inner {
+    max-width: var(--content-max);
+    padding: 1.15rem 2rem 1.3rem;
+  }
+  .landing-v2-topbar {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    min-height: 2rem;
+    padding-right: 7.5rem;
+    color: var(--ink-muted);
+    font-size: 0.76rem;
+  }
+  .landing-v2-topbar a {
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .landing-v2-topbar a:hover { color: var(--ink); }
+  .landing-v2-topbar .back-link {
+    margin: 0;
+    font-size: 0.76rem;
+  }
+  .landing-v2-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+    gap: 1.25rem;
+    align-items: stretch;
+    margin-top: 0.9rem;
+  }
+  .landing-v2-hero-copy {
+    min-width: 0;
+    display: grid;
+    align-content: center;
+  }
+  .landing-v2-hero-copy h1 {
+    margin-top: 0.85rem;
+    max-width: 13ch;
+  }
+  .landing-v2-hero-copy .hero-sub {
+    max-width: 62ch;
+  }
+  .landing-v2-path-panel {
+    display: grid;
+    align-content: start;
+    gap: 0.7rem;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--bg-card) 88%, var(--bg-lift));
+    box-shadow: var(--shadow-card);
+  }
+  .landing-v2-path-kicker,
+  .landing-v2-tile-status {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--accent);
+  }
+  .landing-v2-path-panel h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  .landing-v2-path-panel p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .landing-v2-path-button {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 8px;
+    padding: 0.48rem 0.75rem;
+    color: var(--bg);
+    background: var(--ink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  html[data-theme="dark"] .landing-v2-path-button {
+    color: #07100b;
+    background: var(--accent);
+  }
+  .landing-v2-route-strip {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.45rem;
+    margin-top: 1.2rem;
+  }
+  .landing-v2-route-chip {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.45rem;
+    align-items: center;
+    min-width: 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--ink);
+    text-decoration: none;
+    box-shadow: var(--shadow-card);
+  }
+  .landing-v2-route-chip:hover,
+  .landing-v2-route-chip:focus-visible {
+    border-color: var(--accent);
+    outline: none;
+  }
+  .landing-v2-chip-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 8px;
+    background: var(--accent-lt);
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 800;
+    font-size: 0.72rem;
+  }
+  .landing-v2-chip-title {
+    display: block;
+    min-width: 0;
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .landing-v2-chip-meta {
+    display: block;
+    margin-top: 0.05rem;
+    color: var(--ink-muted);
+    font-size: 0.66rem;
+    line-height: 1.15;
+  }
+  .landing-v2-main {
+    display: grid;
+    gap: 1rem;
+    width: min(var(--content-max), calc(100vw - var(--sidebar-w) - 56px));
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 1.1rem 2rem 2rem;
+  }
+  .landing-v2-row {
+    display: grid;
+    grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 1rem;
+  }
+  .landing-v2-row:first-child { border-top: 0; }
+  .landing-v2-row-label {
+    position: sticky;
+    top: 1rem;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: start;
+  }
+  .landing-v2-row-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px;
+    color: var(--accent);
+    background: var(--accent-lt);
+    border: 1px solid color-mix(in oklab, var(--accent) 35%, var(--border));
+    font-family: var(--mono);
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+  .landing-v2-row-label h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .landing-v2-row-label p {
+    margin: 0.25rem 0 0;
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+  .landing-v2-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+    min-width: 0;
+  }
+  .landing-v2-tile {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.8rem;
+    min-width: 0;
+    min-height: 178px;
+    padding: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+  }
+  .landing-v2-tile-available:hover {
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-1px);
+  }
+  .landing-v2-tile-in-preparation,
+  .landing-v2-tile-not-scoped {
+    background: color-mix(in oklab, var(--bg-card) 72%, var(--bg-lift));
+    border-style: dashed;
+  }
+  .landing-v2-tile-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 8px;
+    color: var(--accent);
+    background: var(--accent-lt);
+    flex-shrink: 0;
+  }
+  .landing-v2-tile-icon svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .landing-v2-tile-body {
+    display: grid;
+    align-content: start;
+    min-width: 0;
+  }
+  .landing-v2-tile-body h3 {
+    margin: 0.25rem 0 0.25rem;
+    color: var(--ink);
+    font-size: 0.96rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .landing-v2-tile-body p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+  .landing-v2-tile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+  .landing-v2-tile-primary,
+  .landing-v2-tile-secondary,
+  .landing-v2-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    border-radius: 8px;
+    padding: 0.36rem 0.65rem;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .landing-v2-tile-primary {
+    color: var(--bg);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  html[data-theme="dark"] .landing-v2-tile-primary {
+    color: #07100b;
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .landing-v2-tile-secondary {
+    color: var(--accent);
+    background: var(--bg-lift);
+    border: 1px solid var(--border);
+  }
+  .landing-v2-tile-primary:hover,
+  .landing-v2-tile-secondary:hover,
+  .landing-v2-tile-primary:focus-visible,
+  .landing-v2-tile-secondary:focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--accent) 55%, transparent);
+    outline-offset: 2px;
+  }
+  .landing-v2-placeholder {
+    justify-self: start;
+    margin-top: 0.75rem;
+    color: var(--ink-muted);
+    background: var(--bg-lift);
+    border: 1px dashed var(--border-lift);
+  }
+  .accent-economisch { --accent: var(--economisch); --accent-lt: var(--economisch-tint); }
+  .accent-wiskunde { --accent: var(--wiskundig); --accent-lt: var(--wiskundig-tint); }
+  .accent-grafisch { --accent: var(--grafisch); --accent-lt: var(--grafisch-tint); }
+  html[data-theme="dark"] .landing-v2-path-panel,
+  html[data-theme="dark"] .landing-v2-route-chip,
+  html[data-theme="dark"] .landing-v2-tile {
+    box-shadow: var(--shadow-card);
+  }
+  @media (max-width: 1100px) {
+    .landing-v2-route-strip {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .landing-v2-tile-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 860px) {
+    .landing-v2-hero-inner {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+    .landing-v2-topbar {
+      padding-right: 0;
+      padding-top: 2.2rem;
+    }
+    .landing-v2-hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .landing-v2-hero-copy h1 {
+      max-width: 100%;
+      font-size: 1.8rem;
+    }
+    .landing-v2-route-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .landing-v2-main {
+      width: 100%;
+      padding: 0.8rem 1.1rem 1.5rem;
+    }
+    .landing-v2-row {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .landing-v2-row-label {
+      position: static;
+    }
+  }
+  @media (max-width: 620px) {
+    .landing-v2-route-strip,
+    .landing-v2-tile-grid {
+      grid-template-columns: 1fr;
+    }
+    .landing-v2-tile {
+      min-height: 0;
+    }
+    .landing-v2-chip-title,
+    .landing-v2-tile-body h3 {
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+  }`;
+}
+
+function renderRouteChip(row) {
+  const ready = countRowAvailability(row);
+  return `<a class="landing-v2-route-chip accent-${row.accent}" href="#${row.id}" data-section="${row.id}">
+          <span class="landing-v2-chip-num">${row.num}</span>
+          <span>
+            <span class="landing-v2-chip-title">${escapeHtml(row.title)}</span>
+            <span class="landing-v2-chip-meta">${ready}/${row.tiles.length} beschikbaar</span>
+          </span>
+        </a>`;
+}
+
+function renderParagraphLandingV2(paragraaf, files) {
+  const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
+  const accentToken = DOMAIN_SHARED_TOKEN[paragraaf.domain] || "economisch";
+  const rows = routeRows(files, paragraaf);
+  const nextTile = firstActionableTile(rows);
+  const chapterBackHref = "../index.html";
+  const bookBackHref = "../../index.html";
+  const routeChips = rows.map(renderRouteChip).join("\n        ");
+  const sidebarItems = rows.map(row => {
+    const ready = countRowAvailability(row);
+    return `      <a class="landing-v2-nav-item accent-${row.accent}" href="#${row.id}" data-section="${row.id}">
+        <span class="landing-v2-nav-num">${row.num}</span>
+        <span>
+          <span class="landing-v2-nav-title">${escapeHtml(row.title)}</span>
+          <span class="landing-v2-nav-meta">${ready}/${row.tiles.length} beschikbaar</span>
+        </span>
+      </a>`;
+  }).join("\n");
+  const nextAction = nextTile
+    ? `<a class="landing-v2-path-button" href="${escapeHtml(nextTile.href)}">${escapeHtml(nextTile.action || "Openen")} &rarr;</a>`
+    : `<span class="landing-v2-placeholder">In voorbereiding</span>`;
+  const nextTitle = nextTile ? nextTile.title : "Route in voorbereiding";
+  const nextDesc = nextTile
+    ? nextTile.desc
+    : "De route blijft zichtbaar terwijl ontbrekende onderdelen worden opgebouwd.";
+
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+<title>${escapeHtml(paragraaf.id)} ${escapeHtml(paragraaf.name)} - Lesmateriaal</title>
+<link rel="stylesheet" href="../../shared/voorkennis.css">
+<style>${paragraphLandingV2CSS()}</style>
+</head>
+<body data-layout="paragraph-landing-v2" data-accent-domain="${accentToken}">
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
+  <svg viewBox="0 0 24 24">${ICONS.hamburger}</svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="page-layout">
+  <nav class="sidebar" id="sidebar" aria-label="Paragraafroute">
+    <div class="landing-v2-sidebar-header">
+      <h2>${escapeHtml(paragraaf.id)} ${escapeHtml(paragraaf.name)}</h2>
+      <p>Lesroute</p>
+    </div>
+    <div class="landing-v2-sidebar-jump">
+      <a href="${chapterBackHref}">${escapeHtml(chapterFull)}</a>
+      <a href="${bookBackHref}">${escapeHtml(CONFIG.displayLabel)}</a>
+    </div>
+    <div class="landing-v2-nav">
+${sidebarItems}
+    </div>
+  </nav>
+
+  <div class="content">
+    <header class="hero landing-v2-hero">
+      <div class="hero-inner landing-v2-hero-inner">
+        <div class="landing-v2-topbar">
+          <a class="back-link" href="${chapterBackHref}"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>${escapeHtml(chapterFull)}</a>
+          <span>${escapeHtml(CONFIG.displayLabel)}</span>
+        </div>
+        <div class="landing-v2-hero-grid">
+          <div class="landing-v2-hero-copy">
+            <span class="hero-badge">Paragraaf ${escapeHtml(paragraaf.id)}</span>
+            <h1>${escapeHtml(paragraaf.name)}</h1>
+            <p class="hero-sub">Start bij wat je al weet, kies de juiste oefenroute, en sluit af met checkmateriaal zodra dat klaarstaat.</p>
+          </div>
+          <aside class="landing-v2-path-panel" aria-label="Leerpad">
+            <span class="landing-v2-path-kicker">Leerpad</span>
+            <h2>${escapeHtml(nextTitle)}</h2>
+            <p>${escapeHtml(nextDesc)}</p>
+            ${nextAction}
+          </aside>
+        </div>
+        <nav class="landing-v2-route-strip" aria-label="Route stappen">
+        ${routeChips}
+        </nav>
+      </div>
+    </header>
+
+    <main class="landing-v2-main">
+${rows.map(renderLandingV2Row).join("\n")}
+    </main>
+  </div>
+</div>
+
+<div class="viewer-panel" id="viewerPanel">
+  <div class="viewer-bar">
+    <span class="viewer-title" id="viewerTitle"></span>
+    <a class="viewer-download" id="viewerDownload" download>Download</a>
+    <button class="viewer-close" onclick="closeViewer()">Sluiten &times;</button>
+  </div>
+  <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+</div>
+
+<script src="../../shared/voorkennis.js"></script>
+<script>
+function openViewer(href, title) {
+  var abs = new URL(href, window.location.href).href;
+  var viewerURL = "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(abs);
+  document.getElementById("viewerTitle").textContent = title;
+  document.getElementById("viewerDownload").href = href;
+  document.getElementById("viewerFrame").src = viewerURL;
+  document.getElementById("viewerPanel").classList.add("active");
+}
+function closeViewer() {
+  document.getElementById("viewerPanel").classList.remove("active");
+  document.getElementById("viewerFrame").src = "about:blank";
+}
+if (window.innerWidth > 768) {
+  document.addEventListener("click", function(e) {
+    var link = e.target.closest("a[href]");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    if (!href) return;
+    var lower = href.toLowerCase();
+    if (lower.endsWith(".docx") || lower.endsWith(".pptx")) {
+      e.preventDefault();
+      var name = decodeURIComponent(href.split("/").pop()).replace(/\\.[^.]+$/, "");
+      openViewer(href, name);
+    }
+  });
+}
+</script>
+</body>
+</html>`;
+}
+
+function renderParagraafPage(paragraaf, files, _resolvedMap) {
+  return renderParagraphLandingV2(paragraaf, files);
+}
 
 function main() {
   console.log("Building landing pages...\n");

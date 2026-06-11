@@ -10,6 +10,7 @@ Platform repo for generating lesson materials for VWO 4 economie. Contains game 
 - Use `../4veco-lessen/specifications/product-vision.md` as the canonical strategic product read before roadmap, architecture, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/product-end-state.md` as the canonical operational product north star before roadmap, paragraph-build, companion, exit-ticket, exam-ingestion, or Scale Gate work.
 - Use `../4veco-lessen/specifications/companion-core-specifications.md` as the stable companion-surface specification.
+- Use `../4veco-lessen/specifications/paragraph-landing-layout-v2.md` as the canonical generated paragraph landing baseline. V2 replaces the old paragraph landing model; do not revive or extend the old paragraph landing structure without human review.
 - Use [BUILD-PARAGRAPH.md](C:\Projects\4veco\4veco-platform\BUILD-PARAGRAPH.md) as the end-to-end guide for building a complete paragraph.
 - Use [BUILD-CHAPTER.md](C:\Projects\4veco\4veco-platform\BUILD-CHAPTER.md) as the end-to-end guide for assembling paragraphs into a chapter.
 - Use `AGENTS.md` for repo overview, architecture, deploy rules, and quality standards.
@@ -459,7 +460,7 @@ MODULE_ROOT="../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod" node build-s
 | `build-reasoning-questions.js` | CSV → JS data file in `shared/reasoning/` |
 | `generate-quiz-shells.js` | HTML shells voor instapquiz |
 | `build-newsdetective-shells.js` | HTML shells voor nieuws-detective |
-| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module |
+| `build-landing-page.js` | index.html voor paragrafen, hoofdstukken, module; paragraph pages follow `paragraph-landing-layout-v2.md` |
 | `template-B_voorkennis.js` | `uitleg voorkennis.docx` |
 | `pptx-331-rol-overheid.js` | Presentatie `.pptx` (reference builder; uses `lib-pptx.js`) |
 

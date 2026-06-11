@@ -299,6 +299,8 @@ copy-pasting textbook images.
 - **`shared/` lives at book root:** `4veco-lessen/Boek N - Title/shared/` holds engine JS/CSS and the game data files (`shared/questions/`, `shared/procedure/`, etc.).
 - **Legacy subfolder-layout references in older guides are legacy.** For new work, this spec supersedes them. The old game target stays on its subfolder layout until it retires in September 2026.
 
+- **Paragraph landing route:** generated `index.html` pages must follow `../4veco-lessen/specifications/paragraph-landing-layout-v2.md`. V2 replaces the old paragraph landing model. Do not revive or extend the old paragraph landing structure without human review.
+
 ## B0a. First-time Book Setup (one-time per book)
 
 Before the first Part B/complete paragraph in a book, bootstrap the book root. Do this once per book, not once per paragraph.
@@ -392,7 +394,7 @@ old 27-file contract.
 | 24 | `X.Y.Z [Naam] – midden – antwoorden.docx` | Oefenen/middenopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
 | 25 | `X.Y.Z [Naam] – verrijking – vragen.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
 | 26 | `X.Y.Z [Naam] – verrijking – antwoorden.docx` | Oefenen/verrijkingsopgaven | Deprecated/Office only | Do not build for student-web | Legacy three-track exercises | Optional legacy export |
-| 27 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents | Generated |
+| 27 | `index.html` | Root | Yes | `build-landing-page.js` (auto) | Scans folder contents; follows `paragraph-landing-layout-v2.md` | Generated |
 
 > **Flat-layout filename change:** in the retargeted Part B, opgavenset and begeleide-inoefening filenames keep the `X.Y.Z [Naam] –` prefix so they stay unique at the paragraph root (since there are no longer `basisopgaven/` or `begeleide inoefening/` subfolders to disambiguate them). Role labels in the Section column identify pedagogical role only, not folder paths.
 
@@ -712,7 +714,7 @@ Fully automated from data files. deploy.js runs these.
 | `build-procedure-shells.js` | `shared/procedure/*.js` | `<paragraph folder>/*.html` |
 | `build-reasoning-engine.js` | `shared/reasoning/*.js` | `<paragraph folder>/*.html` |
 | `build-skilltree-shells.js` | Book manifest paragraphs with `skilltree` + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `<paragraph folder>/*.html` |
-| `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout) | `index.html` at paragraph/chapter/book levels |
+| `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout); paragraph pages follow `paragraph-landing-layout-v2.md` | `index.html` at paragraph/chapter/book levels |
 | `build-reasoning-questions.js` | CSV file (manual arg) | `shared/reasoning/*.js` |
 
 > **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning. The current skilltree generator only emits for paragraphs that declare `skilltree`; for a complete Part B paragraph, that declaration is required.
