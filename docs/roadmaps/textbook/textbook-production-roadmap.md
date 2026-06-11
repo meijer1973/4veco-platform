@@ -1,6 +1,6 @@
 # Textbook Production Roadmap
 
-Generated: 2026-06-10
+Generated: 2026-06-11
 Roadmap ID: `textbook-production-roadmap`
 Roadmap version: `v1.2-chapter-2.1-scope`
 Roadmap status: `active`
@@ -26,7 +26,8 @@ The current print-production series is limited to Book 2 Chapter 2.1.x. It start
 6. `B2-2.1.3-HARDEN` - rewrite 2.1.3 Marginale kosten en marginale opbrengsten using lessons from 2.1.1 and 2.1.2.
 7. `B2-2.1.4-HARDEN` - rebuild the 2.1.4 mixed-practice paragraph after the theory paragraphs are stable.
 8. `B2-2.1-TARGET-V5-PROMOTE` - promote 2.1.1, 2.1.2, and 2.1.3 target records after the governed v5 target-quality review.
-9. Later Chapter 2.2 work is outside the current assignment.
+9. `MIXED-OPGAVEN-TARGET-STANDARD-1` - define the reusable mixed-exercise target standard and apply it to 2.1.4 before any reviewed-final mixed target claim.
+10. Later Chapter 2.2 work is outside the current assignment.
 
 Do not resume Chapter 2.2 production unless a later human instruction explicitly expands the assignment beyond Chapter 2.1.x.
 
@@ -46,6 +47,7 @@ The currently active sprint sits at the top. Future sprints follow in sequence.
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
+| MIXED-OPGAVEN-TARGET-STANDARD-1 | Mixed-Exercise Target Standard And 2.1.4 Application | no | Active planning sprint. Define the reusable `gemengde_opgaven` target standard, apply it to 2.1.4, and use REV-STD-1 so PASS WITH FLAGS cannot carry a missing core requirement. |
 | B2-2.1-TARGET-V5-PROMOTE | Book 2 Chapter 2.1 Target V5 Promotion | yes | Closed PASS WITH FLAGS after lead review. Promoted only 2.1.1 through 2.1.3 target records to `reviewed_final`; kept 2.1.4 placeholder and Chapter 2.2 outside scope. |
 | B2-2.1.1-HARDEN | Book 2 Paragraph 2.1.1 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Rewrote 2.1.1 to the Book 1 didactic model and rebuilt Chapter 2.1 without duplicate 2.1.1 exercises. |
 | B2-2.1.2-HARDEN | Book 2 Paragraph 2.1.2 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, repaired assembled-chapter duplication, strengthened graph-production practice, and rebuilt paragraph/chapter output. |

@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-06-10
+Updated: 2026-06-11
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,6 +26,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
+| MIXED-OPGAVEN-TARGET-STANDARD-1 | Mixed-Exercise Target Standard And 2.1.4 Application | no | Active planning sprint. Define the reusable `gemengde_opgaven` target standard and apply it to 2.1.4 under REV-STD-1. | Run the planned bundle check, then implement the standard, 2.1.4 audit, validator update, and non-placeholder target only if the audit supports target acceptance. |
 | B2-2.1-TARGET-V5-PROMOTE | Book 2 Chapter 2.1 Target V5 Promotion | yes | Closed PASS WITH FLAGS after lead review. Promoted only 2.1.1 through 2.1.3 target records to `reviewed_final`; kept 2.1.4 placeholder and Chapter 2.2 outside scope. | Use the reviewed-final target records for 2.1.1 through 2.1.3; carry 2.1.4 target-placeholder and Chapter 2.1 PDF-size flags into their separate follow-ups. |
 | B2-2.1.1-HARDEN | Book 2 Paragraph 2.1.1 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Rewrote 2.1.1 to Book 1-quality didactic structure, exercises, answer model, and rendered output; rebuilt Chapter 2.1 without duplicate 2.1.1 exercises. | Target-v5 flag resolved by `B2-2.1-TARGET-V5-PROMOTE`; otherwise use its quality notes before downstream Chapter 2.1 work. |
 | B2-2.1.2-HARDEN | Book 2 Paragraph 2.1.2 Quality Hardening | yes | Closed PASS WITH FLAGS after lead review. Imported the root golden package, repaired assembled-chapter duplication, strengthened the target-equivalent graph-production route, rebuilt paragraph/chapter output, and passed validators. | Target-v5 flag resolved by `B2-2.1-TARGET-V5-PROMOTE`; carry chapter-PDF-size monitoring into later assembly work. |
