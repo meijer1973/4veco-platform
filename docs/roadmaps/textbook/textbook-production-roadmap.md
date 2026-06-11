@@ -76,4 +76,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Do not continue Chapter 2.2 under the current assignment. Treat Book 2 Chapter 2.1.x as the completed integration scope; the next operational step is the final Chapter 2.1.x handoff/remote step, not new lesson production.
+Execute `MIXED-OPGAVEN-TARGET-STANDARD-1`: define the reusable `gemengde_opgaven` target standard, audit 2.1.4, update validator policy/tests, and replace the 2.1.4 placeholder target only if the audit and REV-STD-1 review support explicit target acceptance. Do not start Chapter 2.2 or unrelated lesson production.

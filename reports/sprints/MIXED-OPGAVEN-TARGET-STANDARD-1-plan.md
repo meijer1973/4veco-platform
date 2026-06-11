@@ -109,8 +109,8 @@ PASS WITH FLAGS.
 - `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/_chapter-plan.md`
 - `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-review.md`
 - `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4-quality-ref.yaml`
-- `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven - opgaven.md`
-- `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven - antwoorden.md`
+- `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – opgaven.md`
+- `../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/2.1.4 Gemengde opgaven – antwoorden.md`
 - Regenerated 2.1.4 and Chapter 2.1 HTML/PDF outputs only if scoped source markdown changes require regeneration.
 
 ## Forbidden paths
@@ -150,10 +150,10 @@ PASS WITH FLAGS.
 ## Operationalized sprint procedure
 
 1. Create the sprint plan, baseline, plan JSON, roadmap/ledger row, and run the planned bundle validators before implementation.
-2. Draft `references/authored/gemengde-opgaven-target-standard.md` from existing consolidation-exercise and didactic references. Stop if the draft would redefine mixed sections as theory paragraphs or authorize product/companion behavior.
-3. Audit current 2.1.4 student-facing source against the new standard. Decide whether the existing SmoothBox-centered route is enough or whether a small answering-skill or graph/table-transfer source adjustment is required.
+2. Draft `references/authored/gemengde-opgaven-target-standard.md` from existing consolidation-exercise and didactic references. The standard must include definition, allowed behavior, forbidden behavior, target-record fields, source complexity, skill integration, answering-skill evidence, table/graph interpretation evidence, review checklist, promotion rule, reusable target template, and 2.1.4 application notes. Stop if the draft would redefine mixed sections as theory paragraphs or authorize product/companion behavior.
+3. Audit current 2.1.4 student-facing source against the new standard. Record one explicit outcome: A) current 2.1.4 is accepted unchanged and only target registry/status references change; B) current 2.1.4 is accepted after a small answering-skill or graph/table-transfer repair; or C) current 2.1.4 does not meet the standard and the sprint stops with a blocking result instead of promotion.
 4. If the audit finds a real student-facing gap, edit only scoped 2.1.4 source markdown and rebuild through the lesson workflow. If no gap exists, leave generated output unchanged and record why.
-5. Replace the 2.1.4 target placeholder with a non-placeholder mixed target only after the audit supports the target. Update blueprint and lesson mirror/status notes accordingly.
+5. Replace the 2.1.4 target placeholder with a non-placeholder mixed target only after the audit supports the target. The record must remain visibly distinct from a theory target: `paragraph_kind: gemengde_opgaven`, `introduces_new_theory: false`, no `target_exercise.placeholder: true`, integrated source-selection/calculation/table-or-graph/conclusion subquestions, and a `mixed_target_profile` only if the schema and validator can support it cleanly. Update blueprint and lesson mirror/status notes accordingly.
 6. Update `scripts/check-course-target-exercises-v5.js` and tests so reviewed-final mixed records are allowed only when they meet the new standard. Stop if the validator would permit placeholder-backed reviewed-final records.
 7. Prepare REV-STD-1 review evidence with product end-state citations, this sprint plan as the original spec, non-negotiable requirements, a core checklist, classified findings, and carried-issue fields.
 8. Run acceptance validators. If any core requirement fails, do not close as PASS WITH FLAGS; either fix inside scope or stop with a blocking result.
@@ -208,8 +208,9 @@ generated lesson output outside the scoped 2.1.4 regeneration path.
 
 ## Human review required
 
-No interactive human review gate is required inside this sprint because the
-user authorized the bounded mixed-target standard and 2.1.4 application work in
-this thread. A strict lead-review cycle is required before closure. The lead
-review must use REV-STD-1 and must not return PASS WITH FLAGS if any core
-requirement is missing.
+Human review approved the planning direction after the remote planning review.
+No additional interactive human gate is required inside implementation unless
+the audit requires a substantive student-facing redesign beyond the scoped
+2.1.4 answering-skill or graph/table-transfer adjustment. A strict lead-review
+cycle is required before closure. The lead review must use REV-STD-1 and must
+not return PASS WITH FLAGS if any core requirement is missing.
