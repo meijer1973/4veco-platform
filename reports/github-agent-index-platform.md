@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T06:52:31.473Z
+Generated: 2026-06-11T08:20:06.282Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4319
+Files indexed: 4342
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 474
+Count: 477
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -386,6 +386,7 @@ Count: 474
 - build-scripts/references/execute-mtu-h4c-answer-form-cli.js
 - build-scripts/references/extract-eindtermen.js
 - build-scripts/references/extract-exam-questions.js
+- build-scripts/references/inventory-file-hash.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/math-migration-map.json
 - build-scripts/references/migrate-course-target-exercises-v5.js
@@ -477,6 +478,7 @@ Count: 474
 - build-scripts/sprints/capture-reason-answerform2-screenshots.js
 - build-scripts/sprints/capture-reason-play1-screenshots.js
 - build-scripts/sprints/capture-reason-ux2-screenshots.js
+- build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/capture-skillmap-op1-screenshots.js
 - build-scripts/sprints/capture-source-reconstruct2-screenshots.js
 - build-scripts/sprints/capture-task-context-runtime1-screenshots.js
@@ -533,6 +535,7 @@ Count: 474
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-112-rendered-1.js
 - build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
@@ -654,7 +657,7 @@ Count: 42
 
 ## validators
 
-Count: 424
+Count: 439
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -801,6 +804,7 @@ Count: 424
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
+- build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -851,6 +855,7 @@ Count: 424
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
 - build-scripts/sprints/check-shared-task-ui-policy.js
+- build-scripts/sprints/check-short-check-workbench-112-rendered-1.js
 - build-scripts/sprints/check-short-check-workbench-policy1.js
 - build-scripts/sprints/check-skillmap-op1-route-output.js
 - build-scripts/sprints/check-source-reconstruct2-actual-exam.js
@@ -917,6 +922,7 @@ Count: 424
 - reports/json/check-short-exit2-proof.json
 - reports/json/check-surface-pregate1-proof.json
 - reports/json/graph-check-ux1-proof.json
+- reports/json/short-check-workbench-112-rendered-1-proof.json
 - reports/json/short-check-workbench-policy-1-proof.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
@@ -1065,6 +1071,18 @@ Count: 424
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/manifest.json
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - scripts/check-book-print-scope.js
@@ -1083,7 +1101,7 @@ Count: 424
 
 ## references
 
-Count: 595
+Count: 597
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1633,6 +1651,8 @@ Count: 595
 - references/owned/course-blueprint-v4.meta.json
 - references/owned/course-blueprint-v5.md
 - references/owned/course-blueprint-v5.meta.json
+- references/owned/course-blueprint-v6-three-year.md
+- references/owned/course-blueprint-v6-three-year.meta.json
 - references/owned/README.md
 - references/qc-prompts/exam-derived-skills.md
 - references/qc-prompts/foundation-audit.md
@@ -1683,7 +1703,7 @@ Count: 595
 
 ## reports
 
-Count: 2659
+Count: 2677
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1778,6 +1798,7 @@ Count: 2659
 - reports/json/representation-operation-inventory.json
 - reports/json/representation-transfer-gaps.json
 - reports/json/roadmap-flag-cleanup1.json
+- reports/json/short-check-workbench-112-rendered-1-proof.json
 - reports/json/short-check-workbench-policy-1-proof.json
 - reports/json/skill-operation-registry.json
 - reports/json/skilltree-generator-readiness.json
@@ -1945,6 +1966,9 @@ Count: 2659
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
+- reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/CP.6a-lesson-side-recheck.md
 - reports/reference-planning/CP.6b-target-exercise-review.md
@@ -2659,6 +2683,8 @@ Count: 2659
 - reports/sprints/B2-READY-1-plan.md
 - reports/sprints/B2-READY-1-readiness-brief.md
 - reports/sprints/B2-READY-1-result.md
+- reports/sprints/BLUEPRINT-3Y-RECONCILE-1-plan.md
+- reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
@@ -3957,6 +3983,18 @@ Count: 2659
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-transformation-economy-report.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-verification-review.md
 - reports/sprints/SHARED-TASK-INGEST-PLAYABLE-REPAIR-4-visual-qa-report.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/manifest.json
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-local-success.png
+- reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-plan.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-POLICY-1-result.md
 - reports/sprints/SKILLMAP-OP-1-accessibility-review.md
