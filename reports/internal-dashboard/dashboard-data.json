@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T19:20:03.441Z",
+  "generatedAt": "2026-06-11T07:01:50.902Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1443,7 +1443,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-09 Branch in use: codex/dutch-quality-scope-roadmap-20260609 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roadmap section,...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-11 Branch in use: codex/inspect-9a-chapter-12-target-exam-remediation-20260611 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant...",
           "sprints": []
         },
         {

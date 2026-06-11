@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -157,6 +157,7 @@ Closed baseline:
 | `QS-MERGE-1` / `QS-MERGE-2` | Merge-prep and final PR refresh; PR #23 merged through GitHub. |
 | `INSPECT-8` | Dutch readiness audit; recommends no additional evidence-pack generation yet and names Book 1 Chapter 1.2 as the INSPECT-9 gap-closure candidate. |
 | `INSPECT-9` | Dutch gap-closure plan; defines proof requirements and correction routes for Chapter 1.2 before pack work and keeps Chapter 1.1 as a control scope only unless remediated. |
+| `INSPECT-9A` | Chapter 1.2 target and exam-linkage source remediation; updates the authored target registry for `1.2.1`-`1.2.4`, keeps Chapter 1.1 control-only, and leaves target-equivalent plus accessibility/support proof as blockers before pack work. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -387,6 +388,32 @@ Acceptance criteria:
 - weak or deferred evidence remains visible;
 - no quality-ref, Scale Gate, dashboard gate, or CI/build integration.
 
+### INSPECT-9B - Chapter 1.2 Target-Equivalent And Accessibility/Support Evidence Review
+
+Goal: decide whether Chapter 1.2 has enough reviewed target-equivalent,
+accessibility, and support/differentiation evidence for a later report-only
+generator implementation, or whether those gaps must stay explicit blockers.
+
+Scope: review/design packet only. It may inspect existing generated lesson
+evidence read-only and create platform-side reports, but it must not generate
+new lesson output, evidence packs, package scripts, CI/build gates, dashboard
+gates, quality-ref integration, or Scale Gate integration.
+
+Acceptance criteria:
+
+- no evidence-pack generation;
+- no report-only generator implementation;
+- no generated lesson-output mutation;
+- target-equivalent proof status is explicit per Chapter 1.2 target;
+- accessibility/support evidence is recorded with route-local boundaries;
+- weak or deferred evidence remains visible;
+- Chapter 1.2 is either declared still blocked before INSPECT-10 or granted a
+  tightly scoped report-only-generator implementation posture with named
+  blockers;
+- no compliance, approval, inspection-ready, complete OP0, PTA-validity,
+  summative-validity, classroom-implementation, school-obligation, or
+  school-SKA claim.
+
 ### INSPECT-10 - Dutch Report-Only Generator First Implementation
 
 Goal: implement a reusable Dutch report-only generator after the evidence
@@ -543,13 +570,13 @@ privacy-boundary-risk
 Recommended next sprint:
 
 ```text
-INSPECT-9A Chapter 1.2 Target And Exam-Linkage Remediation
+INSPECT-9B Chapter 1.2 Target-Equivalent And Accessibility/Support Evidence Review
 ```
 
 Recommended posture:
 
 ```text
-source-evidence remediation planning and bounded source-record work only if authorised
+target-equivalent and accessibility/support evidence review only
 Dutch scope only
 no new evidence packs yet
 no non-Dutch standards work
@@ -559,11 +586,12 @@ no personal data
 no compliance or approval claims
 ```
 
-The practical product question for INSPECT-9A is:
+The practical product question for INSPECT-9B is:
 
 > Which Chapter 1.2 target-finality, integration-target, and exam-code
-> decisions can be closed with reviewed source evidence, and which must remain
-> explicit blockers before INSPECT-10 generator implementation?
+> decisions are now source-registry-ready, but which target-equivalent,
+> accessibility, and support evidence gaps must still block or constrain
+> INSPECT-10 generator implementation?
 
 ## 9. Explicit Out-Of-Scope Work
 
