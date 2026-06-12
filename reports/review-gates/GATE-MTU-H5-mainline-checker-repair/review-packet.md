@@ -22,6 +22,20 @@ Original sprint/gate specs:
 - `reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json`
 - `reports/sprints/REV-STD-1-flag-disposition.md`
 
+## Required Remote Review Surface
+
+The generated `bundle-urls.md` must include this review packet plus all seven modified checker scripts:
+
+- `build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js`
+- `build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js`
+- `build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js`
+- `build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js`
+- `build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js`
+- `build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js`
+- `build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js`
+
+The PR Files tab remains the required second review surface for confirming the patch itself and generated-index-only scope. Non-MTU entries in `reports/github-agent-index-platform.*` are generated-index catch-up from the current mainline inventory, not substantive PR scope in this checker-only repair.
+
 ## Non-Negotiables
 
 - Do not mutate `references/machine/*`, `references/external/*`, authored target exercises, lesson output, candidate storage, or product/student surfaces.
@@ -93,7 +107,7 @@ Question bucket counts:
 - q27: 3 failed / 5 review_required
 - global negative guard: 1 passed
 
-Repository index decision: `reports/url-index.md` and `reports/github-agent-index-platform.*` were intentionally regenerated after adding `GATE-MTU-H5-mainline-checker-repair` so remote reviewers can discover the packet. `reports/github-agent-index-lessen.*` generated churn was inspected and excluded because it reflects sibling `4veco-lessen` local inventory, not this platform checker repair.
+Repository index decision: `reports/url-index.md` and `reports/github-agent-index-platform.*` were intentionally regenerated after adding `GATE-MTU-H5-mainline-checker-repair` so remote reviewers can discover the packet. Non-MTU platform-index additions are generated-index catch-up from the current mainline inventory, not substantive PR scope. `reports/github-agent-index-lessen.*` generated churn was inspected and excluded because it reflects sibling `4veco-lessen` local inventory, not this platform checker repair.
 
 Local validation summary:
 
