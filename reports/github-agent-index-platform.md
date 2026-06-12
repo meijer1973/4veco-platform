@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T13:51:24.030Z
+Generated: 2026-06-12T13:54:03.461Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4422
+Files indexed: 4430
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 478
+Count: 479
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -260,6 +260,7 @@ Count: 478
 - build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/build-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/build-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/build-mtu-h5-regression-report.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -1720,7 +1721,7 @@ Count: 600
 
 ## reports
 
-Count: 2718
+Count: 2724
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1746,6 +1747,10 @@ Count: 2718
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -1913,6 +1918,8 @@ Count: 2718
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
 - reports/mtu-hardening/mtu-h5-next-repair-packet.json
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.json
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -4461,7 +4468,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 459
+Count: 460
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4592,6 +4599,7 @@ Count: 459
 - archive/sprints/INSPECT-9B/INSPECT-9B-lead-review-round1.md
 - archive/sprints/INSPECT-9B/INSPECT-9B-lead-review-round2.md
 - archive/sprints/INSPECT-9B/INSPECT-9B-planning-review.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-rev-std1-pr-refresh.md
 - archive/sprints/INSPECT-9B/INSPECT-9B-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
