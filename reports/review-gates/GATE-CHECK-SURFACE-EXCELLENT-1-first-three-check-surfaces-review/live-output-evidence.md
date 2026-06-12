@@ -2,8 +2,8 @@
 
 Generated: 2026-06-12
 
-Status: renewed human review returned `pass_with_flags`; closure proposal is
-ready for explicit human confirmation; gate remains open and not closed.
+Status: gate closure confirmed with carried flags for the narrow first-three
+check-surface evidence gate. Downstream product authority remains blocked.
 
 ## Generated Output
 
@@ -44,7 +44,7 @@ Freshness repair:
 Preflight was rerun on 2026-06-12 after the latest main merges.
 
 - Platform commit:
-  `bbe02553970fbe3bf80a720adad375b15db55bdb`
+  `1069f64d2314d073e9f4015ed08ffabb87e9b3e6`
 - Lesson commit:
   `883a1f7db94d2cc84fb849310a62e01c73d3e292`
 
@@ -56,6 +56,15 @@ Passed checks:
 - `node build-scripts/sprints/check-check-surface-pregate1.js`
 - `node build-scripts/sprints/check-rev-std1-flag-disposition.js`
 - `node build-scripts/sprints/check-scope-language.js --active`
+
+## Gate Closure
+
+Explicit human confirmation accepted the PR #50 closure proposal and authorized
+the narrow `gate-closure.md/json` artifacts.
+
+Closure scope: first-three check-surface evidence only.
+
+No active `core_spec_failure` remains for this gate.
 
 ## Screenshot Evidence
 
