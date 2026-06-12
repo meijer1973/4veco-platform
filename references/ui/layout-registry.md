@@ -32,7 +32,16 @@ Current supported renderer variants:
 ```text
 golden_graph_reading_claim_v1
 golden_calculation_structured_v1
+golden_advisory_short_check_v1
 ```
+
+Current governed surface variant specifications:
+
+```text
+golden_advisory_short_check_v1
+```
+
+The advisory short-check variant is a narrow current renderer selector for governed advisory choice checks. The only current real-route migration under this selector is `1.1.2-korte-check`; this does not authorize broad short-check migration or exit-ticket authority.
 
 The graph variant requires task-shell families:
 
@@ -49,6 +58,23 @@ The calculation/structured transfer variant requires task-shell families:
 calculation_work_capture
 structured_short_response
 contextBlocks referenced by each task
+```
+
+The advisory short-check renderer variant requires:
+
+```text
+surface_type: advisory_short_check
+layout.framework: golden_exercise_workbench
+layout.variant: golden_advisory_short_check_v1
+ordinary choice tasks
+contextBlocks referenced by each task when source-dependent
+targetEquivalent.candidate: false
+targetEquivalent.gateApproved: false
+targetEquivalent.completionLanguageEligible: false
+metadataAlignment.targetReadinessEvidence: false
+local feedback after attempt
+hidden/collapsible hints or after-attempt hints only
+no target-equivalent or paragraph-completion claim
 ```
 
 Routes that opt into `layout.framework: golden_exercise_workbench` but do not match a supported Golden variant must fail with a clear unsupported-variant error. They must not silently fall back to the legacy `et-page` / `#exit-ticket-app` shell.
@@ -156,6 +182,13 @@ Positive answer-form exemplar:
 references/exemplars/a96-answer-form/
 ```
 
+Positive advisory short-check specification:
+
+```text
+references/ui/layouts/golden-exercise-workbench-short-check.md
+references/ui/layouts/golden-exercise-workbench-short-check.json
+```
+
 Positive conceptual check-surface exemplar:
 
 ```text
@@ -189,6 +222,8 @@ route/reload proof
 no-legacy DOM proof
 negative fixture rejection when checkers exist
 ```
+
+For advisory short checks, proof of those states is route-quality evidence only. It must not be described as target-equivalent proof or paragraph completion evidence.
 
 ## Non-Authority
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
+const { fileFingerprint } = require('./inventory-file-hash');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const MANIFEST = 'references/data/source_manifest.json';
@@ -38,10 +38,6 @@ function walkFiles(rootRel) {
   return out.map(rel).sort();
 }
 
-function sha256(pathRel) {
-  return crypto.createHash('sha256').update(fs.readFileSync(path.join(REPO_ROOT, pathRel))).digest('hex');
-}
-
 function main() {
   const full = path.join(REPO_ROOT, MANIFEST);
   if (!fs.existsSync(full)) fail(`missing ${MANIFEST}`);
@@ -61,9 +57,9 @@ function main() {
       if (!entry[field]) fail(`${entry.path} missing ${field}`);
     }
     if (SELF_GENERATED.has(entry.path)) continue;
-    const stats = fs.statSync(path.join(REPO_ROOT, entry.path));
-    if (entry.size_bytes !== stats.size) fail(`${entry.path} size mismatch`);
-    if (entry.sha256 !== sha256(entry.path)) fail(`${entry.path} sha256 mismatch`);
+    const fingerprint = fileFingerprint(path.join(REPO_ROOT, entry.path), entry.path);
+    if (entry.size_bytes !== fingerprint.size_bytes) fail(`${entry.path} size mismatch`);
+    if (entry.sha256 !== fingerprint.sha256) fail(`${entry.path} sha256 mismatch`);
   }
 
   console.log(`OK source manifest: ${manifest.files.length} files`);

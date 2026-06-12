@@ -2,8 +2,8 @@
   "schema_version": 1,
   "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
   "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
-  "generated": "2026-06-06",
-  "status": "renewed_packet_ready_not_reviewed_not_closed",
+  "generated": "2026-06-11",
+  "status": "evidence_refresh_repair_ready_for_re_review_not_closed",
   "deploy_command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
   "deploy_passed": true,
   "proof": {
@@ -17,9 +17,12 @@
     "exit_procedure_context_removed": true,
     "axis_labels_delayed": true,
     "interval_distractors_present": true,
+    "percentage_claim_control_present": true,
+    "current_graph_exit_evidence_refreshed": true,
+    "current_check_surface_evidence_refreshed": true,
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
-    "reviewed_112_exit_preserved": true
+    "current_112_transfer_held": true
   },
   "screenshots": [
     "reports/sprints/GRAPH-CHECK-UX-1-screenshots/desktop-initial.png",

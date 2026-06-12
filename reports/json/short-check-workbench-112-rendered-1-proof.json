@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SHORT-CHECK-WORKBENCH-112-RENDERED-1",
+  "generated": "2026-06-11T07:59:32.261Z",
+  "status": "rendered_proof_complete_pending_review",
+  "source_route": {
+    "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+    "page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – korte-check.html",
+    "local_url": "http://127.0.0.1:54070/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20korte-check.html"
+  },
+  "static_contract": {
+    "html_passed": true,
+    "shared_data_passed": true,
+    "no_legacy_passed": true,
+    "advisory_authority_passed": true
+  },
+  "rendered_states": {
+    "required_cases": [
+      "desktop-light-initial",
+      "desktop-light-wrong-retry",
+      "desktop-light-local-success",
+      "desktop-light-completed-advisory",
+      "mobile-light-initial",
+      "mobile-light-local-success",
+      "mobile-dark-initial",
+      "mobile-dark-local-success",
+      "route-reload"
+    ],
+    "captured_cases": [
+      "desktop-light-initial",
+      "desktop-light-wrong-retry",
+      "desktop-light-local-success",
+      "desktop-light-completed-advisory",
+      "mobile-light-initial",
+      "mobile-light-local-success",
+      "mobile-dark-initial",
+      "mobile-dark-local-success",
+      "route-reload"
+    ],
+    "desktop_mobile_dark_captured": true,
+    "wrong_retry_captured": true,
+    "local_success_captured": true,
+    "completed_advisory_captured": true,
+    "reload_captured": true,
+    "hintsAbsent": true
+  },
+  "authority": {
+    "advisory_only": true,
+    "generated_lesson_output_changed": true,
+    "migrated_routes": [
+      "1.1.2-korte-check"
+    ],
+    "broad_rollout_authorized": false,
+    "exit_ticket_authority_changed": false,
+    "target_equivalent_proof_authorized": false,
+    "paragraph_completion_authorized": false,
+    "completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "grading_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "student_product_use_authorized": false,
+    "product_use_authorized": false,
+    "scale_gate_1_authorized": false
+  },
+  "screenshot_manifest": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/manifest.json",
+  "screenshots": [
+    {
+      "case": "desktop-light-initial",
+      "action": "initial",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-initial.png",
+      "bytes": 221140,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1597
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "firstTaskGood": false,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-wrong-retry",
+      "action": "wrong-retry",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-wrong-retry.png",
+      "bytes": 236008,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1687
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [
+          {
+            "id": "oude-waarde-als-basis",
+            "tone": "warn",
+            "text": "Controleer de noemer De vraag is: hoeveel procent verandert iets ten opzichte van het begin?"
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": "b",
+            "feedbackTone": "warn",
+            "feedbackText": "Controleer de noemer De vraag is: hoeveel procent verandert iets ten opzichte van het begin?"
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 1,
+        "goodFeedbackCount": 0,
+        "firstTaskGood": false,
+        "firstTaskRetry": true,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-local-success",
+      "action": "local-success",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-local-success.png",
+      "bytes": 233121,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1687
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [
+          {
+            "id": "oude-waarde-als-basis",
+            "tone": "good",
+            "text": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": "a",
+            "feedbackTone": "good",
+            "feedbackText": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 1,
+        "firstTaskGood": true,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "desktop-light-completed-advisory",
+      "action": "complete",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png",
+      "bytes": 269816,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1977
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [
+          {
+            "id": "oude-waarde-als-basis",
+            "tone": "good",
+            "text": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          },
+          {
+            "id": "index-zonder-procent",
+            "tone": "good",
+            "text": "Notatie klopt Een indexcijfer noteer je als indexwaarde. Het is geen procentteken."
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "tone": "good",
+            "text": "Goed onderscheid 112 min 108 is 4 indexpunten. De procentuele stijging is 4 gedeeld door 108."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": "a",
+            "feedbackTone": "good",
+            "feedbackText": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": "b",
+            "feedbackTone": "good",
+            "feedbackText": "Notatie klopt Een indexcijfer noteer je als indexwaarde. Het is geen procentteken."
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": "a",
+            "feedbackTone": "good",
+            "feedbackText": "Goed onderscheid 112 min 108 is 4 indexpunten. De procentuele stijging is 4 gedeeld door 108."
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 3,
+        "firstTaskGood": true,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": true,
+        "completionVisible": true,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-light-initial",
+      "action": "initial",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-initial.png",
+      "bytes": 202285,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2885
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "firstTaskGood": false,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-light-local-success",
+      "action": "local-success",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-light-local-success.png",
+      "bytes": 210565,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2999
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [
+          {
+            "id": "oude-waarde-als-basis",
+            "tone": "good",
+            "text": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": "a",
+            "feedbackTone": "good",
+            "feedbackText": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 1,
+        "firstTaskGood": true,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark-initial",
+      "action": "initial",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-initial.png",
+      "bytes": 203991,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2885
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "dark",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "firstTaskGood": false,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "mobile-dark-local-success",
+      "action": "local-success",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/mobile-dark-local-success.png",
+      "bytes": 212467,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 2999
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "dark",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [
+          {
+            "id": "oude-waarde-als-basis",
+            "tone": "good",
+            "text": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": "a",
+            "feedbackTone": "good",
+            "feedbackText": "Basis klopt Bij een procentuele verandering deel je door de oude waarde."
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 1,
+        "firstTaskGood": true,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overclaimVisible": false
+      }
+    },
+    {
+      "case": "route-reload",
+      "action": "route-reload",
+      "file": "reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/route-reload.png",
+      "bytes": 225128,
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 1597
+      },
+      "proof": {
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "dark",
+        "sourceKey": "1.1.2-korte-check",
+        "goldenRoot": true,
+        "exitTicketAppCount": 0,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ],
+        "legacyAssetCount": 0,
+        "graphRuntimeLoaded": false,
+        "layoutRuntimeLoaded": true,
+        "dataLoaded": true,
+        "framework": "golden_exercise_workbench",
+        "variant": "golden_advisory_short_check_v1",
+        "surface": "advisory_short_check",
+        "targetEquivalentCandidate": false,
+        "gateApproved": false,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": false,
+        "advisoryIntent": "Geef lokale oefenroute- en reparatiefeedback voor drie deelstappen van percentages en indexcijfers.",
+        "hintsAbsent": true,
+        "contextBlockCount": 3,
+        "tableCount": 2,
+        "taskCount": 3,
+        "choiceTaskCount": 3,
+        "choiceOptionCount": 9,
+        "workFieldCount": 0,
+        "structuredChoiceCount": 0,
+        "lockCount": 0,
+        "feedback": [],
+        "taskStates": [
+          {
+            "id": "oude-waarde-als-basis",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "index-zonder-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          },
+          {
+            "id": "indexpunten-niet-procent",
+            "selected": null,
+            "feedbackTone": null,
+            "feedbackText": ""
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "goodFeedbackCount": 0,
+        "firstTaskGood": false,
+        "firstTaskRetry": false,
+        "allTaskFeedbackGood": false,
+        "completionVisible": false,
+        "routeLinks": [
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html",
+          "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20redeneer-spel.html"
+        ],
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "overclaimVisible": false
+      }
+    }
+  ]
+}

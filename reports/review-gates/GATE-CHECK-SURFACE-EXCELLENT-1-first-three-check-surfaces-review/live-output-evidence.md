@@ -1,6 +1,9 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 Live Output Evidence
 
-Generated: 2026-06-06
+Generated: 2026-06-11
+
+Status: evidence refresh repair ready for renewed human review; gate remains
+held and not closed.
 
 ## Generated Output
 
@@ -28,6 +31,13 @@ Deploy passed link checks and data validation tests.
 - `reports/json/graph-check-ux1-proof.json`
 - `reports/json/graph-exit-ux1-proof.json`
 - `reports/json/visual-qa-harden2-proof.json`
+
+Freshness repair:
+
+- `1.1.2` current Golden Workbench transfer is recorded as held
+  (`gateApproved: false`, `completionLanguageEligible: false`).
+- `1.1.3` exit evidence now records the current `broodjeskraam` source/table
+  context, `percentage_claim_control`, and formula-builder proof.
 
 ## Screenshot Evidence
 
