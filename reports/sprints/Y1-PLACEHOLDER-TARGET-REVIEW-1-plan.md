@@ -2,17 +2,20 @@
 
 Status: planned non-mutating Book 1 placeholder target-exercise review packet
 
+Task alias: `B1-PLACEHOLDER-TARGET-REVIEW-1`
+
 ## Purpose
 
 Y1-PLACEHOLDER-TARGET-REVIEW-1 prepares the next operational lane named by
-`Y1-FOUNDATION-REVIEW-1`: a REV-STD-1 review packet for the three active v5
-Book 1 gemengde-opgaven placeholder target-exercise records.
+`Y1-FOUNDATION-REVIEW-1` and the lead-review alias
+`B1-PLACEHOLDER-TARGET-REVIEW-1`: a REV-STD-1 review packet for the three
+active v5 Book 1 gemengde-opgaven placeholder target-exercise records.
 
 This sprint does not replace placeholders, promote target exercises, mutate
 protected references, mint MTUs, close Year 1, close CP-6, or generate
-student-facing lesson output. It prepares the evidence and review questions a
-later human/lead review needs before any governed registry replacement can be
-proposed.
+student-facing lesson output. It prepares concrete candidate target exercises,
+evidence, and review questions a later human/lead review needs before any
+governed registry replacement can be proposed.
 
 ## Required Baselines
 
@@ -56,6 +59,10 @@ proposed.
 - The packet classifies placeholder findings and includes `blocks`, `does_not_block`, and `proof_required_to_close`.
 - The packet does not claim `PASS WITH FLAGS`.
 - The packet separates draft integration designs from reviewed-final target exercises.
+- The packet includes concrete candidate target exercises for `1.1.4`, `1.2.4`,
+  and `1.3.4`, each with target context, subquestions, required prior skills,
+  target operation chain, answer-form expectations, short answer model,
+  evidence path, no-new-theory rationale, and human/lead review disposition.
 - The packet does not edit `references/authored/course-target-exercises.json` or `../4veco-lessen`.
 - `npm.cmd run check:platform` passes.
 - REV/reference generated checks pass:

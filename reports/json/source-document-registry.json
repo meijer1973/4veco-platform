@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-11T12:33:20.002Z",
+  "generated_on": "2026-06-12T13:26:42.087Z",
   "status": "pass",
   "summary": {
-    "record_count": 588,
-    "source_manifest_file_count": 597,
+    "record_count": 591,
+    "source_manifest_file_count": 600,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 7,
-      "authored_judgement": 9,
+      "authored_judgement": 10,
       "generated_report": 2,
-      "governance_data": 452,
+      "governance_data": 454,
       "unknown": 48,
       "quality_protocol": 5,
       "planning": 1,
@@ -25,11 +25,11 @@
       "authored_json": 2,
       "report_md": 1,
       "external_pdf": 25,
-      "authored_markdown": 6,
+      "authored_markdown": 7,
       "inventory": 49,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 394,
+      "sprint_metadata": 396,
       "file_json": 10,
       "file_md": 34,
       "file_html": 4,
@@ -43,21 +43,21 @@
     },
     "by_status": {
       "extracted": 5,
-      "active": 25,
+      "active": 26,
       "superseded": 2,
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 450,
+      "governance_data": 452,
       "review_required": 48,
       "planning": 1,
       "schema_contract": 29
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
-      "internal_only": 69,
+      "internal_only": 70,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 487
+      "not_public_citation_source": 489
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -267,8 +267,8 @@
       "generated_status": "manual_source",
       "edit_policy": "versioned_human_reviewed_edit",
       "refresh_policy": "owned_source_review",
-      "source_hash": "2de71cd31175b964a6a5bae175979d52ef54687845b325e800f611809adf4e04",
-      "size_bytes": 18922,
+      "source_hash": "95a1715eb6a82bd53be135d39109da5c99ddf9c0179f8cf29eaf7a497d306666",
+      "size_bytes": 18942,
       "primary_evidence": false,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
@@ -383,7 +383,7 @@
       "title": "Course Target Exercises v5",
       "source_type": "authored_json",
       "authority_level": "authored_judgement",
-      "source_version": "sha256:7f3396620c8f6a8dbb5d03b587e772540e308c0493dca408569aa7a094091cf3",
+      "source_version": "sha256:ad4eeb9f45366cff41a825e4ecc6b0ae3c9b60271d4a47e6ca143db2cd53de50",
       "status": "active",
       "owner": "references_team",
       "citation_policy": "cite_as_human_authored_judgement",
@@ -392,8 +392,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "manual_review",
-      "source_hash": "7f3396620c8f6a8dbb5d03b587e772540e308c0493dca408569aa7a094091cf3",
-      "size_bytes": 147165,
+      "source_hash": "ad4eeb9f45366cff41a825e4ecc6b0ae3c9b60271d4a47e6ca143db2cd53de50",
+      "size_bytes": 149025,
       "primary_evidence": true,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
@@ -1139,6 +1139,42 @@
       "refresh_policy": "manual_review",
       "source_hash": "3612aad5da042dd62e3e629178cde9f6e86873f1e3c7b1666fe33534e5e53b5e",
       "size_bytes": 26087,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-authored-gemengde-opgaven-target-standard",
+      "path": "references/authored/gemengde-opgaven-target-standard.md",
+      "title": "Gemengde Opgaven Target Standard",
+      "source_type": "authored_markdown",
+      "authority_level": "authored_judgement",
+      "source_version": "sha256:4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594",
+      "status": "active",
+      "owner": "references_team",
+      "citation_policy": "cite_as_human_authored_judgement",
+      "public_citation_policy": "internal_only",
+      "layer": "authored_judgement",
+      "generated_status": "manual_source",
+      "edit_policy": "human_reviewed_edit",
+      "refresh_policy": "manual_review",
+      "source_hash": "4a5416cc7ff1501b26f362bff4cf6c7712cc16412a9b1e405c0db63b9b886594",
+      "size_bytes": 6172,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
@@ -8541,6 +8577,82 @@
       "refresh_policy": "sprint_lifecycle",
       "source_hash": "372798f2c387ed385b8aadbffbc242602a79bbfaaaa94317190c3ea968fbf493",
       "size_bytes": 6764,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mixed-opgaven-target-standard-1-plan",
+      "path": "references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.plan.json",
+      "title": "MIXED OPGAVEN TARGET STANDARD 1.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:02b1a820410bb37c3c934b4516bd8e285f5455e1df8ea0d78e93369fcfb50743",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "02b1a820410bb37c3c934b4516bd8e285f5455e1df8ea0d78e93369fcfb50743",
+      "size_bytes": 3768,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-mixed-opgaven-target-standard-1-result",
+      "path": "references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.result.json",
+      "title": "MIXED OPGAVEN TARGET STANDARD 1.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:0b76f4928ec175f5e5bb75fcba3c15a7aeec500e3e6c779f67ae82e7490a6bc6",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "0b76f4928ec175f5e5bb75fcba3c15a7aeec500e3e6c779f67ae82e7490a6bc6",
+      "size_bytes": 7182,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

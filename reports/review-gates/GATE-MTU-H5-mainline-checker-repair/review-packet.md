@@ -1,6 +1,6 @@
 # GATE-MTU-H5-mainline-checker-repair Review Packet
 
-Status: ready for human review; three-agent `MORE_THAN_SATISFIED`; no mutation authorized  
+Status: ready for human review; three-agent `MORE_THAN_SATISFIED`; no mutation authorized
 Requested verdict: `APPROVE_CHECKER_ONLY_REPAIR`
 
 ## Product End-State And Original Spec
