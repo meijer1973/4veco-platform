@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -156,6 +156,7 @@ Closed baseline:
 | `INSPECT-7` | Bounded no-personal-data Book 1 Chapter 1.1 evidence-pack sample. |
 | `QS-MERGE-1` / `QS-MERGE-2` | Merge-prep and final PR refresh; PR #23 merged through GitHub. |
 | `INSPECT-8` | Dutch readiness audit; recommends no additional evidence-pack generation yet and names Book 1 Chapter 1.2 as the INSPECT-9 gap-closure candidate. |
+| `INSPECT-9` | Dutch gap-closure plan; defines proof requirements and correction routes for Chapter 1.2 before pack work and keeps Chapter 1.1 as a control scope only unless remediated. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -366,6 +367,26 @@ Acceptance criteria:
 - no closure claims for scopes whose evidence is still weak;
 - corrections have proof requirements before they can close.
 
+### INSPECT-9A - Chapter 1.2 Target And Exam-Linkage Remediation
+
+Goal: close or explicitly defer the source-evidence prerequisites named by
+INSPECT-9 before any Dutch evidence-pack generator implementation starts.
+
+Scope: target-finality review, integration-target review, and exam-code
+linkage decision planning/remediation for Book 1 Chapter 1.2, with a decision
+on whether Chapter 1.1 control-scope records need remediation before re-use.
+
+Acceptance criteria:
+
+- no evidence-pack generation;
+- no report-only generator implementation;
+- no generated lesson-output mutation;
+- target-record state changes, if authorised, cite exact review evidence;
+- exam-code changes, if authorised, cite official source evidence and an
+  operation-level comparison;
+- weak or deferred evidence remains visible;
+- no quality-ref, Scale Gate, dashboard gate, or CI/build integration.
+
 ### INSPECT-10 - Dutch Report-Only Generator First Implementation
 
 Goal: implement a reusable Dutch report-only generator after the evidence
@@ -522,13 +543,13 @@ privacy-boundary-risk
 Recommended next sprint:
 
 ```text
-INSPECT-9 Dutch Evidence Gap Closure Plan
+INSPECT-9A Chapter 1.2 Target And Exam-Linkage Remediation
 ```
 
 Recommended posture:
 
 ```text
-planning and source-evidence hardening design only
+source-evidence remediation planning and bounded source-record work only if authorised
 Dutch scope only
 no new evidence packs yet
 no non-Dutch standards work
@@ -538,10 +559,11 @@ no personal data
 no compliance or approval claims
 ```
 
-The practical product question for INSPECT-9 is:
+The practical product question for INSPECT-9A is:
 
-> What proof requirements and correction routes are needed before Book 1
-> Chapter 1.2, or any other Dutch scope, can become evidence-pack work?
+> Which Chapter 1.2 target-finality, integration-target, and exam-code
+> decisions can be closed with reviewed source evidence, and which must remain
+> explicit blockers before INSPECT-10 generator implementation?
 
 ## 9. Explicit Out-Of-Scope Work
 
