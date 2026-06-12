@@ -2,8 +2,8 @@
   "repo": "4veco-lessen",
   "root": "4veco-lessen",
   "available": true,
-  "generated_at": "2026-06-12T14:12:50.271Z",
-  "file_count": 1680,
+  "generated_at": "2026-06-12T14:32:16.011Z",
+  "file_count": 1679,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
   "skipped_directories": [
     ".cache",
@@ -2973,7 +2973,6 @@
       "pv-g4-proof-records/reports/PVG4-proof-001-procedure-contract-report.json",
       "pv-g4-proof-records/reports/PVG4-proof-002-a61-table-trace-report.json",
       "specifications/companion-core-specifications.md",
-      "specifications/paragraph-landing-layout-v2.md",
       "specifications/product-end-state.md",
       "specifications/product-vision.json",
       "specifications/product-vision.md",

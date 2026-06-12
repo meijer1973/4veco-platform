@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-2-target-equivalent-accessibility-support-review",
+  "sprint_id": "INSPECT-9B",
+  "generated_date": "2026-06-11",
+  "status": "review_design_packet",
+  "diagnostic_only": true,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "evidence_checkout": {
+    "platform_branch": "codex/inspect-9b-chapter-12-equivalence-support-review-20260611",
+    "platform_base": "f7888135bb57c4544761b483b753d00c09524cff",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+    "lesson_evidence_mode": "detached_head_read_only"
+  },
+  "safe_use_note": "Dutch-only product-side evidence review. Not an evidence pack, generator output, inspection judgement, compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, or school-SKA claim.",
+  "executive_decision": {
+    "summary": "Chapter 1.2 has reviewed target records and useful route-local lesson evidence, but it still lacks reviewed target-equivalent proof and complete accessibility/support evidence.",
+    "chapter_1_2_pack_ready": false,
+    "recommended_next_sprint": "INSPECT-9C",
+    "next_sprint_reason": "Insert target-equivalent proof and accessibility/support remediation before Chapter 1.2 evidence-pack generator work."
+  },
+  "target_equivalent_reviews": [
+    {
+      "paragraph_id": "1.2.1",
+      "source_registry_record_status": "reviewed_final",
+      "route_local_evidence_status": "candidate_present",
+      "target_equivalent_status": "route_local_candidate_only",
+      "evidence_paths": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – opgaven.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1 Individuele vraag – antwoorden.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml"
+      ],
+      "operation_chain_overlap": [
+        "draw individual demand curve",
+        "apply willingness-to-pay buy/no-buy rule",
+        "infer quantity after price drop",
+        "explain downward demand curve"
+      ],
+      "answer_form_overlap": [
+        "graph drawing",
+        "short calculation",
+        "economic explanation"
+      ],
+      "blocking_gaps": [
+        "no reviewed proof record",
+        "consumer-surplus lesson evidence remains outside target-registry code",
+        "local review flags for misconception warning and formula domain"
+      ],
+      "authority_boundary": "Route-local candidate evidence only; does not close target-equivalent proof or pack readiness."
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "source_registry_record_status": "reviewed_final",
+      "route_local_evidence_status": "candidate_present_with_flags",
+      "target_equivalent_status": "route_local_candidate_only_with_flags",
+      "evidence_paths": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – opgaven.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2 Vraagfactoren – antwoorden.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml"
+      ],
+      "operation_chain_overlap": [
+        "separate own-price movement from demand shift",
+        "classify preference, income, and substitute factors",
+        "show graph consequences",
+        "name demand-shift factors"
+      ],
+      "answer_form_overlap": [
+        "graph classification",
+        "short written justification",
+        "factor naming"
+      ],
+      "blocking_gaps": [
+        "no reviewed proof record",
+        "start-exercise hints weak",
+        "stray contradictory answer line",
+        "margarine/substitute wording needs sharper classification"
+      ],
+      "authority_boundary": "Route-local candidate evidence only; local review flags must be resolved or carried before proof use."
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "source_registry_record_status": "reviewed_final",
+      "route_local_evidence_status": "candidate_present",
+      "target_equivalent_status": "route_local_candidate_only",
+      "evidence_paths": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml"
+      ],
+      "operation_chain_overlap": [
+        "calculate collective demand by price",
+        "draw individual and collective demand curves",
+        "derive collective demand algebraically",
+        "explain dropout and kink logic"
+      ],
+      "answer_form_overlap": [
+        "table calculation",
+        "graph drawing",
+        "algebraic derivation",
+        "concept explanation"
+      ],
+      "blocking_gaps": [
+        "no reviewed proof record",
+        "remaining interval and dropout-order flags need explicit carry/close decision",
+        "companion support evidence absent"
+      ],
+      "authority_boundary": "Route-local candidate evidence only; does not close target-equivalent proof or pack readiness."
+    },
+    {
+      "paragraph_id": "1.2.4",
+      "source_registry_record_status": "reviewed_final",
+      "route_local_evidence_status": "integrated_candidate_present_with_flags",
+      "target_equivalent_status": "route_local_candidate_only_with_flags",
+      "evidence_paths": [
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – antwoorden.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md",
+        "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml"
+      ],
+      "operation_chain_overlap": [
+        "calculate collective demand",
+        "distinguish movement from shift",
+        "derive collective demand functions",
+        "read graph quantities and willingness-to-pay intercepts",
+        "classify substitutes/complements",
+        "evaluate flawed demand conclusions"
+      ],
+      "answer_form_overlap": [
+        "calculation",
+        "classification",
+        "graph reading",
+        "short evaluation with criteria"
+      ],
+      "blocking_gaps": [
+        "no reviewed integrated proof record",
+        "frozen-yoghurt substitute mechanism wording flag",
+        "orphaned asset note",
+        "must not be treated as summative/PTA evidence"
+      ],
+      "authority_boundary": "Route-local consolidation candidate only; does not close target-equivalent proof or summative assessment evidence."
+    }
+  ],
+  "accessibility_reviews": [
+    {
+      "dimension": "asset_presence_and_pairing",
+      "status": "route_local_positive",
+      "evidence": "Paragraph reviews and quality refs record present assets, SVG/PNG pairing, and compliant names for Chapter 1.2, with a 1.2.4 orphaned SVG note.",
+      "boundary": "Asset integrity is not full accessibility proof."
+    },
+    {
+      "dimension": "text_equivalents",
+      "status": "route_local_positive",
+      "evidence": "Rendered HTML contains image alt text and hidden figcaptions for reviewed figures.",
+      "boundary": "No separate alt-text quality review was found."
+    },
+    {
+      "dimension": "mobile_layout",
+      "status": "partial_unreviewed",
+      "evidence": "Rendered HTML includes viewport metadata and max-width CSS.",
+      "boundary": "No reviewed mobile screenshot or responsive-layout proof was found."
+    },
+    {
+      "dimension": "contrast_theme",
+      "status": "missing_required_evidence",
+      "evidence": "No reviewed contrast or theme evidence found.",
+      "boundary": "Cannot support contrast/theme claims."
+    },
+    {
+      "dimension": "keyboard_focus",
+      "status": "not_reviewed",
+      "evidence": "No keyboard/focus review found; current cited surfaces are static documents.",
+      "boundary": "Interactive future proof surfaces need keyboard/focus proof."
+    },
+    {
+      "dimension": "semantic_structure",
+      "status": "partial_unreviewed",
+      "evidence": "Markdown/HTML headings, tables, images, and captions exist.",
+      "boundary": "No separate semantic or PDF accessibility audit found."
+    }
+  ],
+  "support_reviews": [
+    {
+      "dimension": "prerequisite_start_state",
+      "status": "route_local_positive",
+      "evidence": "Chapter plan and quality refs record dependencies and voorkennis links.",
+      "boundary": "Product-route prerequisite evidence only."
+    },
+    {
+      "dimension": "scaffolding_fading",
+      "status": "partial_with_flags",
+      "evidence": "Quality refs record progression; paragraph reviews flag weak explicit start-exercise hints.",
+      "boundary": "Does not close support evidence."
+    },
+    {
+      "dimension": "hints_repair_routes",
+      "status": "partial_with_flags",
+      "evidence": "Answer models provide procedural feedback; explicit hints/repair routes are weak.",
+      "boundary": "No school support inference."
+    },
+    {
+      "dimension": "advisory_next_action",
+      "status": "missing_required_evidence",
+      "evidence": "No reviewed advisory short-check or next-action route found.",
+      "boundary": "Cannot support advisory-route claims."
+    },
+    {
+      "dimension": "differentiated_practice",
+      "status": "route_local_positive",
+      "evidence": "Quality refs record differentiated practice and 1.2.4 Denkertjes.",
+      "boundary": "Product-route differentiation only."
+    },
+    {
+      "dimension": "companion_materials",
+      "status": "missing_required_evidence",
+      "evidence": "Quality refs for theory paragraphs state companion materials are absent.",
+      "boundary": "Companion/support evidence remains missing."
+    }
+  ],
+  "inspect_10_posture": {
+    "decision": "blocked_before_chapter_1_2_generator",
+    "allowed_next": "Insert INSPECT-9C target-equivalent proof and accessibility/support remediation before Chapter 1.2 generator work.",
+    "conditional_exception": "A human owner may later authorise diagnostic-only generator work that preserves these blockers as blockers and does not produce pack-ready language.",
+    "blocked_actions": [
+      "Chapter 1.2 evidence-pack generation",
+      "Chapter 1.2 pack-ready language",
+      "generator work that infers target-equivalent proof from ordinary opgaven presence"
+    ]
+  },
+  "quality_log": [
+    {
+      "title": "Chapter 1.2 lacks reviewed target-equivalent proof records",
+      "quality_category": "target-equivalent-proof-gap",
+      "evidence_path_or_url": "reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md",
+      "affected_surface": "1.2.1 through 1.2.4 target-equivalent status",
+      "severity": "high",
+      "next_action": "Insert proof sprint before Chapter 1.2 pack work.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Reviewed proof records comparing operation chain, answer form, scaffold boundary, and authority boundary for all four targets."
+    },
+    {
+      "title": "Chapter 1.2 accessibility evidence is route-local and incomplete",
+      "quality_category": "accessibility-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/",
+      "affected_surface": "Generated HTML/PDF/Markdown lesson surfaces",
+      "severity": "high",
+      "next_action": "Review mobile, contrast/theme, semantic/PDF accessibility, and keyboard/focus applicability before pack-strength claims.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Route-local accessibility review with evidence for the required rubric dimensions or explicit not-applicable decisions."
+    },
+    {
+      "title": "Chapter 1.2 support evidence is incomplete",
+      "quality_category": "support-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/",
+      "affected_surface": "Practice route, hints, companion/advisory support",
+      "severity": "high",
+      "next_action": "Add or review explicit hints/repair, companion/advisory route, and product/school support boundaries.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Reviewed support/differentiation packet showing product-route support and school-owned boundaries."
+    },
+    {
+      "title": "Chapter 1.2 companion evidence is absent in quality refs",
+      "quality_category": "support-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml; ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-quality-ref.yaml; ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml",
+      "affected_surface": "1.2.1 through 1.2.3 quality refs",
+      "severity": "high",
+      "next_action": "Treat companion/support evidence as missing until a separate generated-output or review sprint closes it.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Quality-ref or review evidence showing companion support exists and has been reviewed, or explicit scope decision that it is not required."
+    },
+    {
+      "title": "1.2.2 local review flags constrain proof use",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md",
+      "affected_surface": "1.2.2 doeloefening and answer model",
+      "severity": "medium",
+      "next_action": "Resolve or explicitly carry stray answer-line and substitute-mechanism wording flags before proof closure.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Corrected lesson output or reviewed carry decision before target-equivalent proof closure."
+    },
+    {
+      "title": "1.2.4 local review flags constrain integration proof use",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md",
+      "affected_surface": "1.2.4 consolidation opgaven and asset notes",
+      "severity": "medium",
+      "next_action": "Resolve or explicitly carry frozen-yoghurt wording and orphaned-asset notes before proof closure.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Corrected lesson output or reviewed carry decision before integration proof closure."
+    },
+    {
+      "title": "INSPECT-10 Chapter 1.2 generator work remains blocked",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+      "affected_surface": "Future Dutch report-only generator scope",
+      "severity": "high",
+      "next_action": "Insert remediation sprint or explicitly authorise diagnostic-only generator work that preserves blockers.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Human-reviewed decision that blockers are closed or intentionally carried without pack-ready language."
+    }
+  ],
+  "validation_notes": [
+    "No evidence pack generated.",
+    "No report-only generator implemented.",
+    "No lesson output mutated.",
+    "No source registry mutated.",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration added.",
+    "No personal data processed.",
+    "No non-Dutch standards work started."
+  ]
+}
