@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MIXED-OPGAVEN-TARGET-STANDARD-1",
+  "name": "Mixed-Exercise Target Standard And 2.1.4 Application",
+  "created": "2026-06-11",
+  "plan": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-plan.md",
+  "baseline": "reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": true,
+  "generated_lesson_output_allowed": true,
+  "generated_lesson_output_condition": "Only scoped 2.1.4 source changes may trigger normal HTML/PDF regeneration; no generated output edits are allowed if the audit finds no student-facing gap.",
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Reusable gemengde_opgaven target standard exists.",
+    "2.1.4 has a non-placeholder mixed target before reviewed_final status.",
+    "Validator policy supports reviewed-final mixed targets only when the standard is satisfied.",
+    "2.1.4 audit proves integration of 2.1.1-2.1.3, source selection, table/graph interpretation, and structured economic conclusions.",
+    "2.1.4 introduces no new economic theory.",
+    "Lead review explicitly accepts 2.1.4 as the intended target form for a mixed-exercise section."
+  ],
+  "scope": [
+    "Define a reusable platform-owned target standard for gemengde_opgaven sections.",
+    "Apply the standard to 2.1.4 Gemengde opgaven: kosten en opbrengsten.",
+    "Replace the 2.1.4 placeholder target only if the audit and review evidence support a non-placeholder mixed target.",
+    "Update target-registry validation and tests so reviewed-final mixed targets are governed rather than forbidden wholesale.",
+    "Add or verify compact answering-skill guidance for context-heavy transfer.",
+    "Preserve Chapter 2.2, protected references, and product-scaling boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MIXED-OPGAVEN-TARGET-STANDARD-1",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node scripts/check-course-target-exercises-v5.js",
+    "npm.cmd test -- scripts/tests/check-course-target-exercises-v5.test.js",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven\"",
+    "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js MIXED-OPGAVEN-TARGET-STANDARD-1 --complete"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No Chapter 2.2 or later paragraph production.",
+    "No broad rewrite of 2.1.4 as a normal theory paragraph.",
+    "No new economic theory in 2.1.4.",
+    "No reviewed-final placeholder target.",
+    "No target promotion for other gemengde_opgaven records.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, Scale Gate 1, or broad companion scaling authorization."
+  ]
+}

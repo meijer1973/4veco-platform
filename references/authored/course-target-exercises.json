@@ -900,12 +900,12 @@
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.3.2",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
@@ -979,12 +979,12 @@
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.3.3",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
@@ -1057,37 +1057,85 @@
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.4.3",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {
       "difficulty": "MIXED",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 2.1.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "SmoothBox sells lunchboxes at a school festival. Students use one text source for normal production and one table source for rush production. They combine cost, revenue, profit, break-even, average-cost, and marginal-reasoning skills from 2.1.1-2.1.3, select the relevant source information, and write structured economic conclusions. The target introduces no new economic theory.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Use the normal-production source to write the formulas for TCK, TVK, TK, and TO."
+          },
+          {
+            "label": "b",
+            "prompt": "Calculate TCK, TVK, TK, TO, profit, GTK, and GCK for two production quantities, and explain why GCK changes."
+          },
+          {
+            "label": "c",
+            "prompt": "Calculate and interpret the break-even output in words, including the meaning in a TK/TO graph."
+          },
+          {
+            "label": "d",
+            "prompt": "Use the rush-production table to calculate MK and MO per step."
+          },
+          {
+            "label": "e",
+            "prompt": "Evaluate a claim about whether extra sales after break-even are always equally profitable, using MK, MO, and source evidence."
           }
         ]
       },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "2.1.1",
+          "2.1.2",
+          "2.1.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
+      },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: kosten en opbrengsten."
+        "Consolidate and transfer the chapter skills for Gemengde opgaven: kosten en opbrengsten.",
+        "Select relevant source information from text and table sources.",
+        "Choose between cost, revenue, average, break-even, and marginal operation families.",
+        "Write structured economic answers with calculation, unit, and conclusion."
       ],
       "required_skills": [],
-      "prior_knowledge_assumed": [],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
+      "prior_knowledge_assumed": [
+        "A07",
+        "A08",
+        "A12",
+        "A13",
+        "A14",
+        "A21",
+        "A22",
+        "A29",
+        "A40",
+        "D02",
+        "D26"
       ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "new_skills_introduced": [],
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.1",
+        "A2.10",
+        "A2.11",
+        "A2.12",
+        "A2.15",
+        "D1.16",
+        "D1.17",
+        "D1.21"
+      ],
+      "difficulty_notes": "Count-bearing consolidation paragraph reviewed by MIXED-OPGAVEN-TARGET-STANDARD-1. It introduces no new theory. The difficulty is transfer: students must read a richer business context, select the relevant source information, choose the right operation family, combine total/average/break-even/marginal reasoning, and formulate economic conclusions.",
       "id": "2.1.4",
       "module": 2,
       "chapter": 1,
@@ -1095,14 +1143,13 @@
       "paragraph_title": "Gemengde opgaven: kosten en opbrengsten",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "record_status": "reviewed_final",
       "source_ref": "references/owned/course-blueprint-v5.md §2.1.4",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "reviewed_final",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false
       }
     },
     {

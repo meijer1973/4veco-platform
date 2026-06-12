@@ -10,7 +10,7 @@ const CHAPTER_ROOT = path.join(BOOK_ROOT, '1.1 Hoofdstuk Economisch denken en re
 const proofPath = path.join(ROOT, 'reports', 'json', 'graph-exit-ux1-proof.json');
 
 const ExitTicketEngine = require('../../engines/exit-ticket-engine');
-const ExitTicketUI = require('../../engines/exit-ticket-ui');
+const GoldenTicketLayout = require('../../engines/golden-ticket-layout');
 const TaskShellEngine = require('../../engines/task-shell-engine');
 
 function fail(message) {
@@ -84,81 +84,94 @@ function checkSource() {
   assert(data.targetEquivalent.completionLanguageEligible === false, '1.1.3 completion language must remain held');
   assert(data.metadataAlignment.targetReadinessEvidence === false, '1.1.3 must not claim target readiness');
   assert(data.layout && data.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must opt into source/task workspace');
-  assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 3, '1.1.3 exit ticket must retain source/table/formula context blocks');
+  assert(data.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must render through the Golden Workbench');
+  assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 2, '1.1.3 exit ticket must retain source/table context blocks only');
   assert(!data.contextBlocks.some((block) => /procedure|flowchart/i.test(`${block.id} ${block.type} ${block.caption || ''}`)), '1.1.3 exit ticket must not expose procedure context before attempt');
+  assert(data.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-source'), '1.1.3 exit ticket must include station bread-stall source context');
+  assert(data.contextBlocks.some((block) => block.id === 'ctx-stationbroodjes-table'), '1.1.3 exit ticket must include station bread-stall table context');
   assert(data.contextBlocks.some((block) => block.type === 'table'), '1.1.3 exit ticket must include table context');
+  assert(!data.contextBlocks.some((block) => block.type === 'formula'), '1.1.3 exit ticket must not include a static formula context');
   assert(data.tasks.every((task) => task.type === 'task_shell'), '1.1.3 exit ticket must use task-shell tasks');
 
   const families = taskShells(data).map((task) => task.family);
   assert(families.includes('graph_construction_substitute'), '1.1.3 exit ticket must include graph construction');
   assert(families.includes('graph_reading'), '1.1.3 exit ticket must include graph reading');
-  assert(families.includes('calculation_work_capture'), '1.1.3 exit ticket must include calculation/halving task');
+  assert(families.includes('calculation_work_capture'), '1.1.3 exit ticket must include calculation/claim-control task');
 
-  const graphTask = findTask(data, 'grafiek-tekenen');
+  const graphTask = findTask(data, 'pq-grafiek-construeren');
   assert(graphTask.interaction.hideAxisLabelsUntilAxisSelection === true, 'graph task must hide axis labels before student axis selection');
-  assert(graphTask.interaction.axes.x.ticks.join(',') === '0,100,200,300,400,500', 'graph x ticks must be table-derived');
-  assert(graphTask.interaction.axes.y.ticks.join(',') === '0,1,1.5,2,2.5,3', 'graph y ticks must be table-derived');
+  assert(graphTask.interaction.axes.x.ticks.join(',') === '0,50,100,150,200,250,300,350,400', 'graph x ticks must be table-derived');
+  assert(graphTask.interaction.axes.y.ticks.join(',') === '0,0.5,1,1.5,2,2.5,3,3.5', 'graph y ticks must be table-derived');
   const graphResult = TaskShellEngine.evaluateTask(graphTask, {
     axes: { x: 'Q', y: 'P' },
-    points: [{ x: 500, y: 1 }, { x: 100, y: 3 }],
+    points: [{ x: 350, y: 1 }, { x: 150, y: 3 }],
     lineShape: 'decreasing',
   });
   assert(graphResult.matched === true, 'graph task must accept correct axes, points, and line');
-  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'grafiek-aflezen'), '250');
-  assert(readingResult.matched === true, 'graph reading must accept 250');
-  const halvingTask = findTask(data, 'halvering-controleren');
-  assert(halvingTask.interaction.intervalOptions.some((option) => option.correct === false), 'halving task must include distractor intervals');
-  const halvingResult = TaskShellEngine.evaluateTask(halvingTask, {
-    work: '400 ijsjes naar 200 ijsjes; de helft van de oude hoeveelheid',
-    finalAnswer: 'Q daalt met 50 procent',
+  const readingResult = TaskShellEngine.evaluateTask(findTask(data, 'interpolatie-225'), {
+    interval: '200-250',
+    value: '225',
+  });
+  assert(readingResult.matched === true, 'graph reading must accept interval 200-250 and Q=225');
+  const claimTask = findTask(data, 'claim-50-procent-controleren');
+  assert(claimTask.interaction.selectionMode === 'percentage_claim_control', 'claim task must use structured percentage-claim control');
+  assert(claimTask.interaction.intervalOptions.some((option) => option.correct === false), 'claim task must include distractor intervals');
+  assert(claimTask.interaction.conclusionOptions.some((option) => option.correct === false), 'claim task must include distractor conclusions');
+  const claimResult = TaskShellEngine.evaluateTask(claimTask, {
+    interval: '150-300',
+    oldValue: '300',
+    newValue: '150',
+    formula: { tokens: claimTask.expected.formula.tokens },
+    work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
+    finalAnswer: '-50%',
+    conclusion: 'drop50',
     unitNotation: 'Q daalt met 50 procent',
   });
-  assert(halvingResult.matched === true, 'halving task must accept interval conclusion');
+  assert(claimResult.matched === true, 'claim task must accept the structured 50 percent decrease path');
 
   return data;
 }
 
 function checkRenderer(data) {
-  const html = ExitTicketUI.renderStaticHtml(
-    data,
-    ExitTicketUI.buildSkillView(data, new ExitTicketEngine({ data }), {})
-  );
-  requireText(html, 'et-hero-compact', 'compact hero for source/task workspace');
-  requireText(html, 'data-source-task-workspace', 'source/task workspace');
-  requireText(html, 'data-source-pane', 'source pane');
-  requireText(html, 'data-task-pane', 'task pane');
-  requireText(html, 'data-sticky-question-strip', 'sticky question strip');
-  requireText(html, 'data-task-context', 'context region');
-  requireText(html, 'data-context-block="ctx-icecream-table"', 'table context block');
+  const html = GoldenTicketLayout.renderMain(data);
+  requireText(html, 'class="ge-workbench"', 'Golden Workbench layout');
+  requireText(html, 'class="ge-source-card"', 'Golden source card');
+  requireText(html, 'class="ge-task-card"', 'Golden task card');
+  requireText(html, 'data-context-block="ctx-stationbroodjes-source"', 'station bread-stall source context block');
+  requireText(html, 'data-context-block="ctx-stationbroodjes-table"', 'station bread-stall table context block');
   requireText(html, 'data-task-family="graph_construction_substitute"', 'graph task');
-  requireText(html, 'class="ts-graph-grid-line"', 'visible graph grid');
-  requireText(html, 'data-interval-halving-check', 'interval halving task');
+  requireText(html, 'data-percentage-claim-control', 'percentage claim control');
+  requireText(html, 'data-ge-token-id="times100"', 'formula-builder tokens');
   rejectText(html, /Gemaakte grafiek|data-completed-graph/i, 'separate completed graph block');
+  rejectText(html, /ctx-stationbroodjes-formula|data-context-block="[^"]*formula/i, 'static formula context');
   rejectText(html, /\b(?:diagnostisch|mastery|sequencing|Scale Gate|PV)\b/i, 'forbidden authority copy');
 
-  const workspaceIndex = html.indexOf('data-source-task-workspace');
-  const sourceIndex = html.indexOf('data-source-pane');
-  const taskIndex = html.indexOf('data-task-pane');
+  const workspaceIndex = html.indexOf('class="ge-workbench"');
+  const sourceIndex = html.indexOf('class="ge-source-card"');
+  const taskIndex = html.indexOf('class="ge-task-card"');
   assert(workspaceIndex >= 0 && sourceIndex > workspaceIndex && taskIndex > sourceIndex, 'workspace must contain source pane before task pane');
 }
 
 function checkCss() {
-  const css = read(path.join(ROOT, 'engines', 'exit-ticket.css'));
-  requireText(css, '.et-source-task-workspace', 'source/task workspace CSS');
-  requireText(css, '.et-source-pane', 'source pane CSS');
-  requireText(css, 'overflow: auto', 'scrollable source pane CSS');
-  requireText(css, '.et-task-pane-head', 'sticky question strip CSS');
-  requireText(css, '@media (max-width: 980px)', 'mobile stacked workspace CSS');
+  const css = read(path.join(ROOT, 'engines', 'golden-ticket-layout.css'));
+  requireText(css, '.ge-workbench', 'Golden Workbench CSS');
+  requireText(css, '.ge-source-card', 'source card CSS');
+  requireText(css, '.ge-task-card', 'task card CSS');
+  requireText(css, '.ge-claim-grid', 'percentage claim grid CSS');
+  requireText(css, '@media (max-width: 900px)', 'mobile stacked workspace CSS');
 }
 
 function checkGeneratedOutput() {
   const exitPage = read(findGeneratedFile('1.1.3', 'exit-ticket'));
   const dataFile = read(path.join(BOOK_ROOT, 'shared', 'exit-ticket', '1.1.3-exit-ticket.js'));
-  const exitCss = read(path.join(BOOK_ROOT, 'shared', 'exit-ticket.css'));
+  const exitCss = read(path.join(BOOK_ROOT, 'shared', 'golden-ticket-layout.css'));
   requireText(exitPage, 'shared/exit-ticket/1.1.3-exit-ticket.js', 'exit-ticket data loader');
+  requireText(exitPage, 'data-golden-ticket-root', 'Golden Workbench generated root');
+  requireText(exitPage, 'shared/golden-ticket-layout.js', 'Golden Workbench runtime');
   requireText(dataFile, 'source_task_workspace', 'deployed source/task layout metadata');
   requireText(dataFile, 'graph_construction_substitute', 'deployed graph construction task');
-  requireText(exitCss, '.et-source-task-workspace', 'deployed source/task CSS');
+  requireText(dataFile, 'percentage_claim_control', 'deployed percentage claim task');
+  requireText(exitCss, '.ge-workbench', 'deployed Golden Workbench CSS');
 }
 
 function checkProof() {
@@ -172,6 +185,8 @@ function checkProof() {
   assert(proof.proof.task_visible_after_source_scroll === true, 'proof must preserve task visibility after source scroll');
   assert(proof.proof.correct_path_draws_line === true, 'proof must draw line in same workspace');
   assert(proof.proof.all_tasks_correct === true, 'proof must complete all task checks');
+  assert(proof.proof.percentage_claim_control_present === true, 'proof must record percentage-claim control');
+  assert(proof.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'proof must record current source/table context ids');
   assert(proof.proof.completion_language_held === true, 'proof must keep completion language held');
 
   const requiredCases = [

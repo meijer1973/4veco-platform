@@ -2,21 +2,38 @@
   "schema_version": 1,
   "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
   "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
-  "generated": "2026-06-06",
-  "status": "renewed_review_packet_ready_not_reviewed_not_closed",
+  "generated": "2026-06-12",
+  "status": "closure_proposal_ready_pass_with_flags_not_closed",
   "supersedes": "GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review",
   "superseded_reason": "Renewed human/lead feedback found that accepted shared-task decisions were not preserved in the old retry packet.",
-  "human_review_comments_started": false,
-  "human_review_decision": null,
+  "human_review_comments_started": true,
+  "human_review_decision": "pass_with_flags",
+  "prior_human_review_decision": "hold_for_surface_repair",
+  "gate_direction": "pass_with_flags",
+  "closure_proposal_started": true,
   "gate_closure_authorized": false,
   "remote_publication_required_before_review": true,
   "evidence_base": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+    "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md",
+    "references/data/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1.plan.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json",
+    "reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md",
     "reports/json/checksurface-policy-regression1-proof.json",
     "reports/fixtures/checksurface-policy-regression1/negative-fixtures.json",
     "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md",
@@ -32,6 +49,53 @@
     "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
     "source-data/book-1/exit-ticket/1.1.3-korte-check.json",
     "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json"
+  ],
+  "required_baselines": {
+    "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+    "companion_core_spec": "../4veco-lessen/specifications/companion-core-specifications.md",
+    "original_sprint_spec": "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+    "current_packet_plan": "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md"
+  },
+  "non_negotiable_requirements": [
+    "Use product-end-state.md as the first-three student-path acceptance baseline.",
+    "Preserve separate advisory Korte check and target-equivalent Exit ticket roles.",
+    "Keep both check types inspectable for 1.1.1, 1.1.2, and 1.1.3.",
+    "Preserve the historical exact local 1.1.2 completion-copy boundary and keep the current Golden Workbench transfer held pending review.",
+    "Keep 1.1.1 and 1.1.3 completion language held unless direct review authorizes it.",
+    "Do not authorize product-route adoption, diagnostics, mastery/sequencing, Scale Gate 1, broad product use, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "product_end_state_baseline_cited",
+      "status": "met_for_review_packet"
+    },
+    {
+      "requirement": "original_sprint_spec_cited",
+      "status": "met_for_review_packet"
+    },
+    {
+      "requirement": "six_check_surfaces_inspectable",
+      "status": "met_by_renewed_review"
+    },
+    {
+      "requirement": "advisory_and_exit_roles_distinct",
+      "status": "met_by_renewed_review"
+    },
+    {
+      "requirement": "prior_defects_guarded",
+      "status": "met_with_quality_carry_flags"
+    },
+    {
+      "requirement": "authority_boundaries_preserved",
+      "status": "met_for_this_gate_with_downstream_holds"
+    }
+  ],
+  "finding_classifications": [
+    "core_requirement_met",
+    "quality_improvement_available",
+    "minor_carry_flag",
+    "scale_blocker",
+    "core_spec_failure"
   ],
   "required_review_prompts": [
     "CHECKSURFACE-Q1",
@@ -66,9 +130,45 @@
     "exit_procedure_context_removed": true,
     "axis_labels_delayed": true,
     "interval_distractors_present": true,
+    "percentage_claim_control_present": true,
+    "current_graph_exit_evidence_refreshed": true,
+    "current_check_surface_evidence_refreshed": true,
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
-    "reviewed_112_exit_preserved": true
+    "current_112_transfer_held": true
+  },
+  "current_main_freshness_preflight": {
+    "checked_on": "2026-06-12",
+    "platform_commit": "bbe02553970fbe3bf80a720adad375b15db55bdb",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "checks_passed": [
+      "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
+      "node build-scripts/sprints/check-scope-language.js --active"
+    ]
+  },
+  "renewed_human_review": {
+    "review_received_on": "2026-06-12",
+    "gate_direction": "pass_with_flags",
+    "human_review_decision": "pass_with_flags",
+    "no_active_core_spec_failure_for_this_gate": true,
+    "closure_proposal_allowed": true,
+    "gate_closed": false,
+    "closure_artifacts_authorized": false,
+    "evidence_boundary": "platform for build/checker/report logic; lesson repo for generated student-facing output",
+    "authorized_scope": "first-three check-surface evidence only",
+    "unauthorized_scope": [
+      "product-route adoption",
+      "new target-equivalent completion language",
+      "diagnostics",
+      "mastery/sequencing",
+      "PV",
+      "Scale Gate 1",
+      "student/product use"
+    ]
   },
   "authority_boundary": {
     "generated_lesson_output_already_deployed_as_evidence": true,

@@ -37,6 +37,11 @@
       .map(function (task) { return { id: task.id, taskShell: task.taskShell }; });
   }
 
+  function choiceTasks(data) {
+    return (data.tasks || [])
+      .filter(function (task) { return task && task.type === 'choice'; });
+  }
+
   function findTask(data, family) {
     return taskShells(data).find(function (entry) {
       return entry.taskShell.family === family;
@@ -45,8 +50,9 @@
 
   var GRAPH_VARIANT = 'golden_graph_reading_claim_v1';
   var CALCULATION_VARIANT = 'golden_calculation_structured_v1';
+  var ADVISORY_SHORT_CHECK_VARIANT = 'golden_advisory_short_check_v1';
   var SUPPORTED_VARIANT = GRAPH_VARIANT;
-  var SUPPORTED_VARIANTS = [GRAPH_VARIANT, CALCULATION_VARIANT];
+  var SUPPORTED_VARIANTS = [GRAPH_VARIANT, CALCULATION_VARIANT, ADVISORY_SHORT_CHECK_VARIANT];
 
   function isGoldenExerciseWorkbench(data) {
     return Boolean(
@@ -85,6 +91,50 @@
     return gaps;
   }
 
+  function advisoryShortCheckSupportGaps(data) {
+    var gaps = [];
+    var layout = data && data.layout ? data.layout : {};
+    var targetEquivalent = data && data.targetEquivalent ? data.targetEquivalent : {};
+    var metadataAlignment = data && data.metadataAlignment ? data.metadataAlignment : {};
+    var advisory = data && data.advisory ? data.advisory : {};
+    var choices = choiceTasks(data || {});
+    var shellCount = taskShells(data || {}).length;
+    var blocks = Array.isArray(data && data.contextBlocks) ? data.contextBlocks : [];
+    var blockIds = {};
+
+    blocks.forEach(function (block) {
+      if (block && block.id) blockIds[block.id] = true;
+    });
+
+    if (!data || data.surface !== 'advisory_short_check') gaps.push('surface advisory_short_check');
+    if (layout.variant !== ADVISORY_SHORT_CHECK_VARIANT) gaps.push('layout.variant ' + ADVISORY_SHORT_CHECK_VARIANT);
+    if (targetEquivalent.candidate !== false) gaps.push('targetEquivalent.candidate false');
+    if (targetEquivalent.gateApproved !== false) gaps.push('targetEquivalent.gateApproved false');
+    if (targetEquivalent.completionLanguageEligible !== false) gaps.push('targetEquivalent.completionLanguageEligible false');
+    if (metadataAlignment.targetReadinessEvidence !== false) gaps.push('metadataAlignment.targetReadinessEvidence false');
+    if (!advisory.intent) gaps.push('advisory.intent');
+    if (advisory.hintsAbsent !== true) gaps.push('advisory.hintsAbsent true or governed hint implementation');
+    if (shellCount) gaps.push('ordinary choice tasks only');
+    if (!choices.length) gaps.push('choice tasks');
+    if (!blocks.length) gaps.push('contextBlocks');
+
+    choices.forEach(function (task) {
+      if (!Array.isArray(task.options) || task.options.length < 2) gaps.push(task.id + '.options');
+      if (!task.answer) gaps.push(task.id + '.answer');
+      if (!task.feedback || !task.feedback.matchText || !task.feedback.retryText) gaps.push(task.id + '.feedback');
+      if (!task.practiceRoute || !task.practiceRoute.href || !task.practiceRoute.label) gaps.push(task.id + '.practiceRoute');
+      if (!Array.isArray(task.contextRefs) || !task.contextRefs.length) {
+        gaps.push(task.id + '.contextRefs');
+      } else {
+        task.contextRefs.forEach(function (ref) {
+          if (!blockIds[ref]) gaps.push(task.id + '.contextRefs unknown ' + ref);
+        });
+      }
+    });
+
+    return Array.from(new Set(gaps));
+  }
+
   function supportGaps(data) {
     return graphSupportGaps(data);
   }
@@ -92,7 +142,8 @@
   function supportGapsByVariant(data) {
     return {
       graph: graphSupportGaps(data),
-      calculation: calculationSupportGaps(data)
+      calculation: calculationSupportGaps(data),
+      advisory_short_check: advisoryShortCheckSupportGaps(data)
     };
   }
 
@@ -100,6 +151,7 @@
     if (!isGoldenExerciseWorkbench(data)) return null;
     if (!graphSupportGaps(data).length) return GRAPH_VARIANT;
     if (!calculationSupportGaps(data).length) return CALCULATION_VARIANT;
+    if (!advisoryShortCheckSupportGaps(data).length) return ADVISORY_SHORT_CHECK_VARIANT;
     return null;
   }
 
@@ -113,10 +165,14 @@
         GRAPH_VARIANT +
         ' (graph construction + graph reading + calculation/claim control with graph spec) and ' +
         CALCULATION_VARIANT +
-        ' (calculation_work_capture + structured_short_response with context blocks); graph variant missing ' +
+        ' (calculation_work_capture + structured_short_response with context blocks) and ' +
+        ADVISORY_SHORT_CHECK_VARIANT +
+        ' (advisory choice short check with context blocks and false authority flags); graph variant missing ' +
         gaps.graph.join(', ') +
         '; calculation/structured variant missing ' +
         gaps.calculation.join(', ') +
+        '; advisory short-check variant missing ' +
+        gaps.advisory_short_check.join(', ') +
         '.'
       );
     }
@@ -184,7 +240,9 @@
     return '<aside class="ge-source-card" aria-label="Bronnen">' +
       '<h2>' + escapeHtml(heading) + '</h2>' +
       (primary.id ? renderSourceBlock(primary, { showTitle: false }) : '') +
-      remaining.map(function (block) { return renderSourceBlock(block, { showTitle: block.type !== 'table' }); }).join('') +
+      remaining.map(function (block) {
+        return renderSourceBlock(block, { showTitle: options.showTableTitles === true || block.type !== 'table' });
+      }).join('') +
       '<p class="ge-subtle ge-source-note">' + escapeHtml(note) + '</p>' +
     '</aside>';
   }
@@ -403,6 +461,50 @@
     '</li>';
   }
 
+  function contextLabel(block) {
+    return block.sourceLabel || block.caption || block.title || block.id || 'Context';
+  }
+
+  function renderContextRefs(data, task) {
+    var refs = Array.isArray(task.contextRefs) ? task.contextRefs : [];
+    if (!refs.length) return '';
+    var blocks = Array.isArray(data.contextBlocks) ? data.contextBlocks : [];
+    var byId = {};
+    blocks.forEach(function (block) {
+      if (block && block.id) byId[block.id] = block;
+    });
+    return '<p class="ge-context-refs">Gebruik: ' +
+      refs.map(function (ref) {
+        var block = byId[ref] || { id: ref };
+        return '<span>' + escapeHtml(contextLabel(block).replace(':', ' -')) + '</span>';
+      }).join(' ') +
+    '</p>';
+  }
+
+  function renderChoiceOption(option) {
+    return '<button type="button" class="ge-pill ge-choice-option" aria-pressed="false" data-ge-choice-option data-option-id="' + attr(option.id) + '">' +
+      escapeHtml(option.label) +
+    '</button>';
+  }
+
+  function renderChoiceRoute(task) {
+    var route = task.practiceRoute || {};
+    if (!route.href || !route.label) return '';
+    return '<p class="ge-choice-route"><span>Oefentip</span><a href="' + attr(route.href) + '">' + escapeHtml(route.label) + '</a></p>';
+  }
+
+  function renderChoiceStep(data, task, number) {
+    var options = Array.isArray(task.options) ? task.options : [];
+    return '<li class="ge-step ge-step-choice" data-ge-step="choice" data-task-id="' + attr(task.id) + '">' +
+      renderStepHead(String(number), task.skillLabel || 'Korte check', task.prompt || '', task.purpose) +
+      renderContextRefs(data, task) +
+      '<div class="ge-choice-options" data-ge-choice-options>' + options.map(renderChoiceOption).join('') + '</div>' +
+      '<div class="ge-action-row"><button type="button" class="ge-small-button" data-ge-check-task>Controleer onderdeel</button></div>' +
+      renderFeedback(task.id) +
+      renderChoiceRoute(task) +
+    '</li>';
+  }
+
   function renderCompletion(data) {
     var completion = data.completion || {};
     return '<section class="ge-completion" data-ge-completion>' +
@@ -471,10 +573,38 @@
       '</section>';
   }
 
+  function renderAdvisoryShortCheckMain(data) {
+    var layout = data.layout || {};
+    var kicker = layout.kicker || ('Korte check - paragraaf ' + (data.parNr || ''));
+    var sourceNote = layout.sourceNote || 'Gebruik deze gegevens bij je keuzes. De feedback wijst naar een oefenstap.';
+    var entries = choiceTasks(data);
+    return '<section class="ge-hero ge-hero-advisory">' +
+      '<div class="ge-hero-card">' +
+        '<p class="ge-kicker">' + escapeHtml(kicker) + '</p>' +
+        '<h1>' + escapeHtml(data.title || 'Korte check') + '</h1>' +
+        '<p class="ge-intro">' + escapeHtml(data.intro || '') + '</p>' +
+      '</div>' +
+      renderRouteStrip(data) +
+      '</section>' +
+      '<section class="ge-workbench ge-workbench-advisory">' +
+        renderSourceCard(data, { sourceNote: sourceNote, showTableTitles: true }) +
+        '<section class="ge-task-card" data-ge-task-card aria-label="' + attr(layout.taskPaneTitle || 'Werkvragen') + '">' +
+          '<ol class="ge-step-list">' +
+            entries.map(function (task, index) {
+              return renderChoiceStep(data, task, index + 1);
+            }).join('') +
+          '</ol>' +
+          renderCompletion(data) +
+          '<button type="button" class="ge-primary-action" data-ge-check-all>Controleer alle keuzes</button>' +
+        '</section>' +
+      '</section>';
+  }
+
   function renderMain(data) {
     var variant = assertSupportedGoldenExerciseVariant(data);
     if (variant === GRAPH_VARIANT) return renderGraphMain(data);
     if (variant === CALCULATION_VARIANT) return renderCalculationMain(data);
+    if (variant === ADVISORY_SHORT_CHECK_VARIANT) return renderAdvisoryShortCheckMain(data);
     throw new Error('Unsupported Golden Exercise Workbench variant: ' + variant);
   }
 
@@ -575,9 +705,17 @@
     return fieldsOk && choiceOk;
   }
 
+  function evaluateChoiceResponse(task, response) {
+    var answer = response && typeof response === 'object' ? response.answerId : response;
+    return normalizeAnswer(answer) === normalizeAnswer(task.answer);
+  }
+
   function evaluateTaskResponse(task, response) {
     if (task && task.taskShell) task = task.taskShell;
     if (!task) return false;
+    if (task.type === 'choice' || task.answer) {
+      return evaluateChoiceResponse(task, response);
+    }
     if (task.family === 'calculation_work_capture' && (task.expected || {}).kind === 'calculation') {
       return evaluateCalculationResponse(task, response);
     }
@@ -748,12 +886,83 @@
     };
   }
 
+  function initAdvisoryShortCheckWorkbench(root, data) {
+    var entries = choiceTasks(data);
+    var byId = {};
+    var state = { taskOk: {} };
+    entries.forEach(function (task) {
+      byId[task.id] = task;
+      state.taskOk[task.id] = false;
+    });
+
+    function selectedAnswer(step) {
+      var selected = query(step, '[data-ge-choice-option][aria-pressed="true"]');
+      return selected ? selected.getAttribute('data-option-id') : '';
+    }
+
+    function updateCompletion() {
+      var complete = entries.every(function (task) { return state.taskOk[task.id] === true; });
+      var completion = query(root, '[data-ge-completion]');
+      if (completion) completion.classList.toggle('is-visible', complete);
+      return complete;
+    }
+
+    function checkStep(step) {
+      if (!step) return false;
+      var taskId = step.getAttribute('data-task-id');
+      var task = byId[taskId];
+      var ok = evaluateTaskResponse(task, selectedAnswer(step));
+      state.taskOk[taskId] = ok;
+      var feedback = task.feedback || {};
+      setFeedback(
+        root,
+        taskId,
+        ok ? 'good' : 'warn',
+        ok ? feedback.matchTitle : feedback.retryTitle,
+        ok ? feedback.matchText : feedback.retryText
+      );
+      updateCompletion();
+      return ok;
+    }
+
+    root.addEventListener('click', function (event) {
+      var choice = event.target.closest('[data-ge-choice-option]');
+      if (choice && root.contains(choice)) {
+        var choiceStep = choice.closest('[data-task-id]');
+        setPressed(queryAll(choiceStep, '[data-ge-choice-option]'), choice);
+        state.taskOk[choiceStep.getAttribute('data-task-id')] = false;
+        updateCompletion();
+        return;
+      }
+
+      var taskCheck = event.target.closest('[data-ge-check-task]');
+      if (taskCheck && root.contains(taskCheck)) {
+        checkStep(taskCheck.closest('[data-task-id]'));
+        return;
+      }
+
+      if (event.target.closest('[data-ge-check-all]')) {
+        queryAll(root, '[data-task-id]').forEach(checkStep);
+      }
+    });
+
+    initTheme(root);
+
+    return {
+      variant: ADVISORY_SHORT_CHECK_VARIANT,
+      state: state,
+      checkStep: checkStep,
+      evaluateTaskResponse: evaluateTaskResponse
+    };
+  }
+
   function init(root, explicitData) {
     if (!root) return null;
     var data = explicitData || (typeof window !== 'undefined' ? window.EXIT_TICKET_DATA : null);
     if (!data) return null;
     var variant = assertSupportedGoldenExerciseVariant(data);
     if (variant === CALCULATION_VARIANT) return initCalculationWorkbench(root, data);
+    if (variant === ADVISORY_SHORT_CHECK_VARIANT) return initAdvisoryShortCheckWorkbench(root, data);
     var graphEntry = findTask(data, 'graph_construction_substitute');
     var readEntry = findTask(data, 'graph_reading');
     var claimEntry = findTask(data, 'calculation_work_capture');
@@ -1060,6 +1269,7 @@
   }
 
   return {
+    ADVISORY_SHORT_CHECK_VARIANT: ADVISORY_SHORT_CHECK_VARIANT,
     CALCULATION_VARIANT: CALCULATION_VARIANT,
     GRAPH_VARIANT: GRAPH_VARIANT,
     SUPPORTED_VARIANT: SUPPORTED_VARIANT,

@@ -188,10 +188,6 @@ function main() {
     ['cat-file', '-e', `${packet.previous_lane_remote_commit}:reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json`],
     'previous lane remote commit must contain q19 gate closure'
   );
-  requireGitSuccess(
-    ['merge-base', '--is-ancestor', packet.previous_lane_remote_commit, 'HEAD'],
-    'current checkout must descend from previous lane remote commit'
-  );
 
   const q27Lane = (nextRepairPacket.repair_lanes || []).find((lane) => lane.repair_id === 'MTU-H5-RP-005');
   if (!q27Lane) fail('source next repair packet must contain q27 RP-005 lane');

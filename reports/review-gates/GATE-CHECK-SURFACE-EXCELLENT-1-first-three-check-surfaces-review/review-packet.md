@@ -1,13 +1,22 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 First Three Check Surfaces Review Packet
 
-Generated: 2026-06-06
+Generated: 2026-06-12
 
-Status: renewed direct human-review packet prepared; human review comments have
-not started; no closure or product authority exists.
+Status: renewed human review returned `pass_with_flags`; closure proposal is
+ready for explicit human confirmation; no gate closure or product authority
+exists.
 
 The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded. It must not
 be sent as current evidence because renewed human/lead feedback found that
 accepted shared-task decisions were not preserved.
+
+Renewed direct human review returned: pass_with_flags.
+
+No active core_spec_failure remains for
+`GATE-CHECK-SURFACE-EXCELLENT-1`.
+
+This packet now includes a closure proposal only. `gate-closure.md/json` may be
+written only after explicit human confirmation.
 
 ## Review Scope
 
@@ -27,9 +36,11 @@ for `1.1.1` or `1.1.3`, diagnostics, adaptive routing,
 mastery/sequencing, student-facing AI, summative use, PV projection, PV
 machine promotion, Scale Gate 1, broad product use, or student/product use.
 
-The reviewed `1.1.2` exit ticket remains the previously approved local,
-non-summative completion-language case only. This review must not broaden that
-authority.
+The earlier exact local legacy `1.1.2` completion copy remains a historical
+approved boundary only. The current Golden Workbench transfer holds target-equivalent readiness
+and completion language pending review, with `candidate: true`,
+`gateApproved: false`, and `completionLanguageEligible: false`. This review
+must not broaden the historical authority.
 
 ## What Changed Since The Superseded Packet
 
@@ -47,12 +58,26 @@ authority.
 
 ## Evidence Base
 
+- `../4veco-lessen/specifications/product-end-state.md`
+- `../4veco-lessen/specifications/companion-core-specifications.md`
+- `reports/sprints/CHECK-SHORT-EXIT-2-plan.md`
+- `reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md`
+- `references/data/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1.plan.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json`
+- `reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md`
 - `reports/json/checksurface-policy-regression1-proof.json`
 - `reports/fixtures/checksurface-policy-regression1/negative-fixtures.json`
 - `reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md`
@@ -70,6 +95,40 @@ authority.
 - `source-data/book-1/exit-ticket/1.1.3-exit-ticket.json`
 - `build-scripts/sprints/check-checksurface-policy-regression1.js`
 - `build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js`
+
+## Non-Negotiable Requirements
+
+- Inspect `product-end-state.md` as the acceptance baseline for the first-three
+  student path.
+- Preserve separate advisory `Korte check` and target-equivalent `Exit ticket`
+  roles.
+- Preserve the original `CHECK-SHORT-EXIT-2` objective: both check types must
+  exist for `1.1.1`, `1.1.2`, and `1.1.3`.
+- Preserve the historical exact local `1.1.2` completion-copy boundary and keep
+  the current Golden Workbench transfer held pending review.
+- Keep `1.1.1` and `1.1.3` completion language held unless direct review
+  explicitly authorizes it.
+- Reject product-route adoption, diagnostics, mastery/sequencing, Scale Gate 1,
+  broad product use, and student/product use claims from this packet.
+
+## Core-Requirement Checklist
+
+| Requirement | Current evidence | Required reviewer decision |
+|---|---|---|
+| Product end-state baseline cited | `../4veco-lessen/specifications/product-end-state.md` | Confirm reviewed output matches the baseline or classify the gap |
+| Original sprint/gate specification cited | `CHECK-SHORT-EXIT-2-plan.md` and `CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md` | Confirm no core requirement was narrowed away |
+| Six check surfaces inspectable | audit matrix, proof JSON, review lab | Confirm all six are real review surfaces |
+| Advisory and exit roles remain distinct | source data, generated output, audit matrix | Confirm short checks do not become completion proof |
+| Prior reviewed defects guarded | policy proof and negative fixtures | Confirm prior failures are now hard to reintroduce |
+| Authority boundaries preserved | packet JSON authority fields | Confirm no unauthorized product claim is present |
+
+## Finding Classification Rule
+
+Every direct review comment and lead-review synthesis must classify findings as
+`core_requirement_met`, `quality_improvement_available`, `minor_carry_flag`,
+`scale_blocker`, or `core_spec_failure`. A `core_spec_failure` cannot close as
+PASS WITH FLAGS. Every carried flag must state what it blocks, what it does not
+block, and the proof required to close it.
 
 ## Minimum Playable Evidence Inspection
 
@@ -98,8 +157,10 @@ Checker-readable policy statement: prior reviewed defects are guarded by
 `checksurface-policy-regression1-proof.json`.
 Checker-readable completion-language statement: `1.1.1` and `1.1.3`
 completion language remains held.
-Checker-readable reviewed-112 statement: reviewed `1.1.2` local completion
-authority remains preserved and narrow.
+Checker-readable 112-transfer statement: the historical exact local `1.1.2`
+completion-copy authority remains narrow, and the current Golden Workbench
+transfer holds target-equivalent readiness and completion language pending
+review.
 Checker-readable authority statement: this packet does not authorize
 product-route adoption.
 
@@ -128,7 +189,7 @@ product-route adoption.
 | `1.1.1` short/exit | concept sampling versus held calculation/response candidate | decide whether boundaries are clear |
 | `1.1.2` short/exit | prior reviewed exit authority preserved | decide whether authority stayed narrow |
 | `1.1.3` short check | smoothie graph/table route check | decide whether it is useful advisory practice evidence |
-| `1.1.3` exit ticket | source/table/formula graph workspace, no procedure context | decide whether product-quality blocker is repaired |
+| `1.1.3` exit ticket | source/table graph workspace with calculation follow-up, no procedure context | decide whether product-quality blocker is repaired |
 | policy/regression | negative fixtures all caught | decide whether failure memory is durable enough |
 | product boundary | no downstream authority | decide whether boundary language is strong enough |
 
@@ -177,11 +238,12 @@ controlled downstream sprint may start?
 
 ## Direct Review Comment Protocol
 
-- Default mode is direct packet comments.
-- The reviewer should comment against the prompt IDs above or return a single
-  response preserving the IDs.
-- After comments are returned, the agent must record direct-review comments and
-  write a comment-resolution log.
+- Direct packet comments were returned and recorded in
+  `direct-review-comments.md/json`.
+- The evidence-refresh repair resolution was recorded in
+  `comment-resolution-log.md/json`.
+- Renewed comments were returned and recorded in
+  `renewed-review-comments.md/json`.
 - The agent should ask targeted follow-up questions only for ambiguous,
   missing, or conflicting review authority.
 - A closure proposal may be drafted only after comment evidence is complete.
@@ -201,8 +263,10 @@ Stop the review instead of closing the gate if any of these occur:
 - `1.1.3` interval controls are correct-only;
 - `1.1.1` or `1.1.3` completion language is enabled;
 - reviewed `1.1.2` authority is broadened;
-- direct review comments, closure proposal, or gate closure artifacts are
-  created before human comments are returned;
+- direct review comments are created before human comments are returned;
+- closure proposal artifacts are created before renewed `pass_with_flags`
+  comments are returned;
+- gate closure artifacts are created before explicit human confirmation;
 - product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1,
   or student/product use is claimed.
 
@@ -219,7 +283,7 @@ After comments are returned:
 
 ## Recommended Next Action
 
-Push this renewed packet and all cited evidence, then send it for direct human
-review comments. Do not start `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate
-1, product-route adoption, diagnostics, mastery/sequencing, PV, or
-student/product use from this packet.
+Use `closure-proposal.md/json` as the proposal record and ask for explicit
+human confirmation. Do not write `gate-closure.md/json` and do not start
+`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption,
+diagnostics, mastery/sequencing, PV, or student/product use from this packet.

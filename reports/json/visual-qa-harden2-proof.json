@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "VISUAL-QA-HARDEN-2",
-  "generated": "2026-06-05T21:16:50.172Z",
+  "generated": "2026-06-11T13:05:23.016Z",
   "status": "complete",
   "authority": {
     "product_route_adoption_authorized": false,
@@ -57,9 +57,9 @@
       "evidence": [
         "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json: layout.kind=source_task_workspace",
         "reports/json/graph-exit-ux1-proof.json: source_task_workspace_present=true",
-        "reports/sprints/GRAPH-EXIT-UX-1-screenshots/manifest.json: sourcePaneMetrics.scrollable=true"
+        "reports/json/graph-exit-ux1-proof.json: current_context_blocks=ctx-stationbroodjes-source,ctx-stationbroodjes-table"
       ],
-      "hard_fail_if": "Source context is rendered only above tasks or source pane is not constrained/scrollable"
+      "hard_fail_if": "Source context is rendered only above tasks, stale context is present, or source pane is not constrained"
     },
     {
       "id": "exit_graph_workspace_and_line",
@@ -90,7 +90,7 @@
         "reports/json/graph-exit-ux1-proof.json: all_tasks_correct=true",
         "reports/json/graph-exit-ux1-proof.json: completion_language_held=true"
       ],
-      "hard_fail_if": "1.1.3 gains completion language or target-equivalent proof before human review"
+      "hard_fail_if": "1.1.3 gains target-equivalent completion authority before human review"
     },
     {
       "id": "landing_route_distinction",

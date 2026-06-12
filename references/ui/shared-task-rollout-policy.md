@@ -104,15 +104,15 @@ Rollout must stay staged:
 ```text
 1. 1.1.3 exit ticket as implemented reference
 2. 1.1.2 exit ticket as first transfer proof
-3. 1.1.1 exit ticket or short check by operation fit
-4. first advisory short-check variant
+3. `1.1.2-korte-check` advisory short-check rendered proof
+4. 1.1.1 exit ticket or first short check by operation fit
 5. graph/table practice
 6. calculation practice
 7. reasoning practice
 8. mixed/exam-derived source exercise
 ```
 
-Only the first item is currently promoted as an implemented reference. The 1.1.2 exit ticket may be carried as a controlled transfer candidate, but it does not authorize the remaining rollout items or target-equivalent completion language.
+Only the first item is currently promoted as an implemented reference. The 1.1.2 exit ticket may be carried as a controlled transfer candidate, and `1.1.2-korte-check` may be carried as the first governed advisory short-check rendered proof. Neither authorizes the remaining rollout items, generated lesson output churn beyond the approved route, or target-equivalent completion language.
 
 ## Required Data Contract for New Candidates
 
@@ -133,6 +133,8 @@ proof states collected
 ```
 
 For exit-ticket candidates, `completionLanguageEligible` must remain false unless a later gate explicitly approves it.
+
+For advisory short-check candidates, `targetEquivalent.candidate`, `gateApproved`, and `completionLanguageEligible` must remain false. Local route advice, local repair feedback, and hidden/collapsible or after-attempt hints are allowed, but they must not become diagnostics, mastery, grading, automatic sequencing, summative use, product use, PV, Scale Gate 1, paragraph completion, or target-equivalent proof.
 
 ## Negative Fixture Expectations
 
