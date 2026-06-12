@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T12:03:29.333Z
+Generated: 2026-06-12T13:17:05.874Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4398
+Files indexed: 4412
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -658,7 +658,7 @@ Count: 42
 
 ## validators
 
-Count: 447
+Count: 451
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -946,12 +946,16 @@ Count: 447
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -1110,13 +1114,14 @@ Count: 447
 
 ## references
 
-Count: 597
+Count: 600
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
 - references/authored/economie-terminologie.md
+- references/authored/gemengde-opgaven-target-standard.md
 - references/authored/README.md
 - references/authored/skill-categories.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
@@ -1319,6 +1324,8 @@ Count: 597
 - references/data/sprints/MATH-REFINE-1.result.json
 - references/data/sprints/MATH-UX-2.plan.json
 - references/data/sprints/MATH-UX-2.result.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.plan.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.result.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
 - references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json
@@ -1712,7 +1719,7 @@ Count: 597
 
 ## reports
 
-Count: 2705
+Count: 2716
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1738,10 +1745,6 @@ Count: 2705
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
@@ -2032,12 +2035,16 @@ Count: 2705
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -3475,6 +3482,17 @@ Count: 2705
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-plan.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-baseline.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.jsonl
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-diff-summary.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-assignment.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-corrections.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round2.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-plan.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-result.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-review-evidence.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md
