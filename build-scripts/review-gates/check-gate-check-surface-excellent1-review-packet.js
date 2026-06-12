@@ -47,12 +47,11 @@ function rejectText(content, pattern, label, file) {
 }
 
 function requireReviewArtifactState(packet) {
-  for (const name of [
-    'closure-proposal.md',
-    'closure-proposal.json',
-    'gate-closure.md',
-    'gate-closure.json',
-  ]) {
+  const proposalStarted =
+    packet.closure_proposal_started === true ||
+    packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
+
+  for (const name of ['gate-closure.md', 'gate-closure.json']) {
     assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before explicit gate closure authorization`);
   }
 
@@ -90,6 +89,63 @@ function requireReviewArtifactState(packet) {
   } else {
     for (const name of reviewArtifacts) {
       assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before human comments`);
+    }
+  }
+
+  const proposalArtifacts = [
+    'renewed-review-comments.md',
+    'renewed-review-comments.json',
+    'closure-proposal.md',
+    'closure-proposal.json',
+  ];
+  if (proposalStarted) {
+    for (const name of proposalArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after renewed pass-with-flags review`);
+    }
+    const renewedText = read(`reports/review-gates/${GATE_ID}/renewed-review-comments.md`);
+    const renewed = readJson(`reports/review-gates/${GATE_ID}/renewed-review-comments.json`);
+    const proposalText = read(`reports/review-gates/${GATE_ID}/closure-proposal.md`);
+    const proposal = readJson(`reports/review-gates/${GATE_ID}/closure-proposal.json`);
+
+    assert(renewed.gate_direction === 'pass_with_flags', 'renewed review must record pass_with_flags');
+    assert(renewed.human_review_decision === 'pass_with_flags', 'renewed comments must record pass_with_flags');
+    assert(renewed.no_active_core_spec_failure_for_this_gate === true, 'renewed comments must clear active core failures for this gate');
+    assert(renewed.gate_closed === false, 'renewed comments must keep the gate open');
+    assert(renewed.closure_artifacts_authorized === false, 'renewed comments must not authorize closure artifacts');
+    assert(Array.isArray(renewed.findings) && renewed.findings.length === 12, 'renewed comments must record twelve CHECKSURFACE findings');
+    for (let i = 1; i <= 12; i += 1) {
+      const id = `CHECKSURFACE-Q${i}`;
+      assert(renewedText.includes(id), `renewed comments markdown missing ${id}`);
+      const finding = renewed.findings.find((item) => item.id === id);
+      assert(finding, `renewed comments JSON missing ${id}`);
+      assert(finding.classification, `${id} renewed finding must include a classification`);
+      assert(Array.isArray(finding.blocks), `${id} renewed finding must include blocks`);
+      assert(Array.isArray(finding.does_not_block), `${id} renewed finding must include does_not_block`);
+      assert(finding.proof_required_to_close, `${id} renewed finding must include proof_required_to_close`);
+    }
+    for (const id of ['CF-1', 'CF-2', 'CF-3']) {
+      const flag = renewed.carried_flags && renewed.carried_flags.find((item) => item.id === id);
+      assert(flag, `renewed comments missing carried flag ${id}`);
+      assert(flag.classification, `${id} must include classification`);
+      assert(Array.isArray(flag.blocks), `${id} must include blocks`);
+      assert(Array.isArray(flag.does_not_block), `${id} must include does_not_block`);
+      assert(flag.proof_required_to_close, `${id} must include proof_required_to_close`);
+    }
+
+    assert(proposal.gate_direction === 'pass_with_flags', 'closure proposal must preserve pass_with_flags');
+    assert(proposal.renewed_human_review_decision === 'pass_with_flags', 'closure proposal must cite renewed decision');
+    assert(proposal.no_active_core_spec_failure_for_this_gate === true, 'closure proposal must record no active core failure');
+    assert(proposal.gate_closed === false, 'closure proposal must keep the gate open');
+    assert(proposal.gate_closure_artifacts_authorized === false, 'closure proposal must not authorize closure artifacts');
+    assert(proposal.explicit_human_confirmation_required === true, 'closure proposal must require explicit human confirmation');
+    assert(proposal.authority && proposal.authority.product_route_adoption_authorized === false, 'closure proposal must not authorize product route');
+    assert(proposal.authority.scale_gate_1_authorized === false, 'closure proposal must not authorize Scale Gate 1');
+    requireText(proposalText, 'Renewed direct human review returned: `pass_with_flags`', 'renewed decision', 'closure-proposal.md');
+    requireText(proposalText, 'No active `core_spec_failure` remains', 'core failure clearance', 'closure-proposal.md');
+    requireText(proposalText, '`gate-closure.md/json`', 'gate closure artifact hold', 'closure-proposal.md');
+  } else {
+    for (const name of proposalArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before renewed pass-with-flags review`);
     }
   }
 }
@@ -139,6 +195,8 @@ function requirePacketText() {
     'interval-halving task includes plausible incorrect intervals',
     'Golden Workbench transfer holds target-equivalent readiness',
     'does not authorize product-route adoption',
+    'Renewed direct human review returned: pass_with_flags',
+    'No active core_spec_failure remains',
     'explicit human confirmation',
   ]) {
     requireText(text, phrase, `phrase ${phrase}`, file);
@@ -153,11 +211,21 @@ function requirePacketJson(packet, live) {
     [
       'renewed_review_packet_ready_not_reviewed_not_closed',
       'direct_review_returned_hold_for_surface_repair_not_closed',
+      'closure_proposal_ready_pass_with_flags_not_closed',
     ].includes(packet.status),
     'packet status mismatch'
   );
   assert(packet.supersedes === 'GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review', 'packet must supersede old retry packet');
-  if (packet.human_review_comments_started === true) {
+  const proposalStarted =
+    packet.closure_proposal_started === true ||
+    packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
+  if (proposalStarted) {
+    assert(packet.human_review_comments_started === true, 'closure proposal requires human comments');
+    assert(packet.human_review_decision === 'pass_with_flags', 'latest human review decision must record pass_with_flags');
+    assert(packet.gate_direction === 'pass_with_flags', 'latest gate direction must record pass_with_flags');
+    assert(packet.renewed_human_review && packet.renewed_human_review.no_active_core_spec_failure_for_this_gate === true, 'packet must record no active core failure after renewed review');
+    assert(packet.gate_closure_authorized === false, 'closure proposal must not authorize gate closure');
+  } else if (packet.human_review_comments_started === true) {
     assert(packet.human_review_decision === 'hold_for_surface_repair', 'human review decision must record hold_for_surface_repair');
     assert(packet.gate_direction === 'hold_for_surface_repair', 'packet gate direction must record hold_for_surface_repair');
   } else {
@@ -223,6 +291,7 @@ function requirePacketJson(packet, live) {
     [
       'renewed_packet_ready_not_reviewed_not_closed',
       'evidence_refresh_repair_ready_for_re_review_not_closed',
+      'renewed_review_pass_with_flags_closure_proposal_ready_not_closed',
     ].includes(live.status),
     'live status mismatch'
   );
@@ -375,7 +444,11 @@ function requireBundleUrls() {
   const bundle = path.join(GATE_DIR, 'bundle-urls.md');
   assert(fs.existsSync(bundle), 'bundle-urls.md must exist for remote review');
   const text = fs.readFileSync(bundle, 'utf8');
-  for (const name of ['review-packet.md', 'review-packet.json', 'live-output-evidence.md', 'live-output-evidence.json', 'review-lab.html']) {
+  const required = ['review-packet.md', 'review-packet.json', 'live-output-evidence.md', 'live-output-evidence.json', 'review-lab.html'];
+  for (const name of ['renewed-review-comments.md', 'renewed-review-comments.json', 'closure-proposal.md', 'closure-proposal.json']) {
+    if (fs.existsSync(path.join(GATE_DIR, name))) required.push(name);
+  }
+  for (const name of required) {
     requireText(text, name, `bundle URL for ${name}`, 'bundle-urls.md');
   }
 }
