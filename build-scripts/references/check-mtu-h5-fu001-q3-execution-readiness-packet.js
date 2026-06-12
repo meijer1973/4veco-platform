@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const crypto = require('crypto');
@@ -53,6 +54,11 @@ const REQUIRED_Q3_FAILED_ASSERTIONS = [
   'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-MISSING-OPERATION-MTU',
   'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER',
   'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-MISSING-OPERATION-MTU',
+  'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER',
+];
+
+const REQUIRED_Q3_OVERTRIGGER_ASSERTIONS = [
+  'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER',
   'vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER',
 ];
 
@@ -161,11 +167,11 @@ function requireStartEvidenceLineage(packet) {
   );
 }
 
-function runH5Validator() {
+function runH5Validator(fixturePath = FIXTURE) {
   const run = spawnSync(process.execPath, [
     rel(H5_VALIDATOR),
     '--fixture',
-    rel(FIXTURE),
+    path.isAbsolute(fixturePath) ? fixturePath : rel(fixturePath),
     '--expect-fail',
     '--json',
   ], {
@@ -182,6 +188,66 @@ function runH5Validator() {
   } catch (error) {
     fail(`MTU-H5 validator did not emit JSON: ${error.message}`);
   }
+}
+
+function requireExcludes(values, forbidden, context) {
+  if (values.includes(forbidden)) fail(`${context} must not include ${forbidden}`);
+}
+
+function addA15(values) {
+  return values.includes('A15') ? values : values.concat('A15');
+}
+
+function requireQ3A15NegativeGuard() {
+  const fixtureClone = readJson(FIXTURE);
+  const records = fixtureClone.question_records || fixtureClone.records || [];
+  const q3 = records.find((record) => record.record_id === 'vw-1022-a-25-1-o:opgave-1:question-3');
+  if (!q3) fail('temp negative fixture could not find q3 record');
+  q3.mapped_mtu_ids = addA15(q3.mapped_mtu_ids || []);
+  for (const operation of q3.official_correction_model_operations || []) {
+    operation.mapped_mtu_ids = addA15(operation.mapped_mtu_ids || []);
+  }
+
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mtu-h5-fu001-q3-negative-'));
+  const tempFixture = path.join(tempDir, 'fixture-with-a15.json');
+  try {
+    fs.writeFileSync(tempFixture, JSON.stringify(fixtureClone, null, 2));
+    const result = runH5Validator(tempFixture);
+    const failedIds = new Set((result.buckets.failed || []).map((item) => item.assertion_id));
+    for (const assertionId of REQUIRED_Q3_OVERTRIGGER_ASSERTIONS) {
+      if (!failedIds.has(assertionId)) fail(`q3 temp negative fixture must expose over-trigger assertion: ${assertionId}`);
+    }
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
+function requireQ3CurrentState(q3) {
+  const q3IsPostExecution = !(q3.mapped_mtu_ids || []).includes('A15');
+  requireIncludesAll(q3.mapped_mtu_ids || [], ['A61', 'A96'], 'q3 current mapped MTUs');
+  if (q3IsPostExecution) requireExcludes(q3.mapped_mtu_ids || [], 'A15', 'q3 current mapped MTUs');
+  else requireIncludesAll(q3.mapped_mtu_ids || [], ['A15'], 'q3 current mapped MTUs');
+
+  for (const operation of requireArray(q3, 'official_correction_model_operations', 'q3', 2)) {
+    requireIncludesAll(operation.mapped_mtu_ids || [], ['A61', 'A96'], `${operation.operation_id}.mapped_mtu_ids`);
+    if (q3IsPostExecution) requireExcludes(operation.mapped_mtu_ids || [], 'A15', `${operation.operation_id}.mapped_mtu_ids`);
+    else requireIncludesAll(operation.mapped_mtu_ids || [], ['A15'], `${operation.operation_id}.mapped_mtu_ids`);
+    if (!operation.expected_forbidden_mtu_ids?.includes('A15')) fail(`${operation.operation_id} must forbid A15`);
+    requireIncludesAll(operation.expected_required_mtu_ids || [], ['A61', 'A96'], `${operation.operation_id}.expected_required_mtu_ids`);
+    if (!operation.expected_answer_form_mtu_ids?.includes('A96')) fail(`${operation.operation_id} must require A96`);
+    if (operation.missing_mtu_expected !== !q3IsPostExecution) {
+      fail(`${operation.operation_id}.missing_mtu_expected does not match q3 execution state`);
+    }
+    if (operation.scale_factor_expected !== false) fail(`${operation.operation_id} must not expect scale factor`);
+    if (operation.incidence_or_pass_through_expected !== false) fail(`${operation.operation_id} must not expect incidence/pass-through`);
+    if (q3IsPostExecution) {
+      if (!JSON.stringify(operation.reviewed_equivalent_operation_refs || []).includes('EX_OP_ANNUAL_COST_THRESHOLD_COMPARISON')) {
+        fail(`${operation.operation_id} must cite reviewed-equivalent annual-threshold operation evidence after execution`);
+      }
+      if ((operation.review_required_hooks || []).length !== 0) fail(`${operation.operation_id} must clear q3 review hooks after execution`);
+    }
+  }
+  return q3IsPostExecution;
 }
 
 function main() {
@@ -262,25 +328,25 @@ function main() {
   const records = fixture.question_records || fixture.records || [];
   const q3 = records.find((record) => record.record_id === 'vw-1022-a-25-1-o:opgave-1:question-3');
   if (!q3) fail('fixture must contain q3 record');
-  requireIncludesAll(q3.mapped_mtu_ids || [], ['A15', 'A61', 'A96'], 'q3 current mapped MTUs');
-  for (const operation of requireArray(q3, 'official_correction_model_operations', 'q3', 2)) {
-    if (!operation.expected_forbidden_mtu_ids?.includes('A15')) fail(`${operation.operation_id} must forbid A15`);
-    if (!operation.expected_required_mtu_ids?.includes('A61')) fail(`${operation.operation_id} must require A61`);
-    if (!operation.expected_answer_form_mtu_ids?.includes('A96')) fail(`${operation.operation_id} must require A96`);
-    if (operation.missing_mtu_expected !== true) fail(`${operation.operation_id} must still be missing MTU expected before execution`);
-    if (operation.scale_factor_expected !== false) fail(`${operation.operation_id} must not expect scale factor`);
-    if (operation.incidence_or_pass_through_expected !== false) fail(`${operation.operation_id} must not expect incidence/pass-through`);
-  }
+  const q3IsPostExecution = requireQ3CurrentState(q3);
 
   const result = runH5Validator();
   const failedIds = new Set((result.buckets.failed || []).map((item) => item.assertion_id));
   const reviewIds = (result.buckets.review_required || []).map((item) => item.assertion_id);
   const passedIds = (result.buckets.passed || []).map((item) => item.assertion_id);
-  for (const assertionId of REQUIRED_Q3_FAILED_ASSERTIONS) {
-    if (!failedIds.has(assertionId)) fail(`current validator result must still expose q3 failed assertion: ${assertionId}`);
-  }
-  for (const marker of REQUIRED_Q3_REVIEW_MARKERS) {
-    if (!reviewIds.some((id) => id.includes(marker))) fail(`current validator result must still expose q3 review marker: ${marker}`);
+  if (q3IsPostExecution) {
+    for (const bucket of ['failed', 'review_required']) {
+      const q3Items = (result.buckets[bucket] || []).filter((item) => item.record_id === q3.record_id);
+      if (q3Items.length !== 0) fail(`q3 must be absent from current validator ${bucket} bucket after execution`);
+    }
+    requireQ3A15NegativeGuard();
+  } else {
+    for (const assertionId of REQUIRED_Q3_FAILED_ASSERTIONS) {
+      if (!failedIds.has(assertionId)) fail(`current validator result must still expose q3 failed assertion: ${assertionId}`);
+    }
+    for (const marker of REQUIRED_Q3_REVIEW_MARKERS) {
+      if (!reviewIds.some((id) => id.includes(marker))) fail(`current validator result must still expose q3 review marker: ${marker}`);
+    }
   }
   if (!passedIds.includes(GLOBAL_SOLO_NEGATIVE_ASSERTION)) fail('global Solo negative fixture must remain live');
 
