@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T13:26:31.873Z
+Generated: 2026-06-12T13:49:41.167Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4424
+Files indexed: 4415
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 478
+Count: 479
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -260,6 +260,7 @@ Count: 478
 - build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/build-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/build-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/build-mtu-h5-regression-report.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -1719,7 +1720,7 @@ Count: 600
 
 ## reports
 
-Count: 2728
+Count: 2718
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1743,16 +1744,8 @@ Count: 2728
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
@@ -1764,10 +1757,6 @@ Count: 2728
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1922,6 +1911,8 @@ Count: 2728
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
 - reports/mtu-hardening/mtu-h5-next-repair-packet.json
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.json
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
