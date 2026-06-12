@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T11:56:00.282Z
+Generated: 2026-06-12T13:19:40.481Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4383
+Files indexed: 4412
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -658,7 +658,7 @@ Count: 42
 
 ## validators
 
-Count: 446
+Count: 451
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -675,6 +675,7 @@ Count: 446
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-validation-log.md
 - archive/sprints/INSPECT-9/INSPECT-9-validation-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
@@ -945,12 +946,16 @@ Count: 446
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -1109,13 +1114,14 @@ Count: 446
 
 ## references
 
-Count: 597
+Count: 600
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
 - references/authored/economie-terminologie.md
+- references/authored/gemengde-opgaven-target-standard.md
 - references/authored/README.md
 - references/authored/skill-categories.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
@@ -1318,6 +1324,8 @@ Count: 597
 - references/data/sprints/MATH-REFINE-1.result.json
 - references/data/sprints/MATH-UX-2.plan.json
 - references/data/sprints/MATH-UX-2.result.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.plan.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.result.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
 - references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json
@@ -1711,7 +1719,7 @@ Count: 597
 
 ## reports
 
-Count: 2699
+Count: 2716
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1739,6 +1747,8 @@ Count: 2699
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
+- reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.json
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
@@ -2025,12 +2035,16 @@ Count: 2699
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -3468,6 +3482,17 @@ Count: 2699
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-plan.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-baseline.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.jsonl
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-diff-summary.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-assignment.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-corrections.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round2.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-plan.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-result.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-review-evidence.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md
@@ -4433,7 +4458,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 444
+Count: 452
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4550,6 +4575,14 @@ Count: 444
 - archive/sprints/INSPECT-9/INSPECT-9-planning-review.md
 - archive/sprints/INSPECT-9/INSPECT-9-rev-std1-pr-refresh.md
 - archive/sprints/INSPECT-9/INSPECT-9-sprint-plan.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-closure-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-correction-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-assignment.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round1.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round2.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-rev-std1-pr-refresh.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
