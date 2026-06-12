@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T11:59:03.056Z
+Generated: 2026-06-12T12:03:29.333Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4390
+Files indexed: 4398
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1712,7 +1712,7 @@ Count: 597
 
 ## reports
 
-Count: 2698
+Count: 2705
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1738,6 +1738,10 @@ Count: 2698
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
@@ -2271,6 +2275,9 @@ Count: 2698
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.json
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json
@@ -4433,7 +4440,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 451
+Count: 452
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4556,6 +4563,7 @@ Count: 451
 - archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round1.md
 - archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round2.md
 - archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-rev-std1-pr-refresh.md
 - archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
