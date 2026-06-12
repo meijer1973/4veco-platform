@@ -35,11 +35,6 @@ const CONFIG = loadConfig(MODULE_BASE);
 const ONLY_ID = null;
 const DRY_RUN = false;
 
-// Hide legacy Word-only task rows (basisopgaven, middenopgaven, verrijkingsopgaven)
-// from student-facing paragraph landing pages. Future paragraph builds should
-// route practice through web-first exercise surfaces.
-const HIDE_TASK_ROWS = true;
-
 console.log(`Target: ${CONFIG.displayLabel} (${CONFIG.moduleRoot})`);
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -144,34 +139,7 @@ function renderCardPitfalls(item) {
 
 function sectionAvailability(files, item = null) {
   if (!files) return [];
-  const hasGroup = (group) => Object.values(group || {}).some(Boolean);
-  const isConsolidation = isConsolidationParagraph(item);
-  const hasMixedPractice = isConsolidation && files.lesboek && (files.lesboek.opgaven || files.lesboek.antwoorden);
-  const hasBookDeepen = hasGroup(files.lesboek) && !(hasMixedPractice && !files.lesboek.paragraaf);
-  const hasPractice = files.oefenen && (
-    files.oefenen.redeneerSpel ||
-    files.oefenen.stappenplan ||
-    files.oefenen.wiskundevaardigheden ||
-    files.oefenen.grafiekenspel ||
-    files.oefenen.begeleide ||
-    hasMixedPractice ||
-    (!HIDE_TASK_ROWS && (files.oefenen.basis || files.oefenen.midden || files.oefenen.verrijking))
-  );
-  const hasDeepen = (files.voorbereiden && files.voorbereiden.nieuwsdetective)
-    || (files.leren && (
-      files.leren.presentatie ||
-      files.leren.youtube ||
-      files.leren.nieuws ||
-      files.leren.samenvatting
-    ))
-    || hasBookDeepen;
-  const labels = [];
-  if (files.voorbereiden && (files.voorbereiden.instapquiz || files.voorbereiden.voorkennis)) labels.push("Start");
-  if (files.leren && files.leren.vaardigheden) labels.push("Leer");
-  if (hasPractice) labels.push(isConsolidation ? "Oefen gemengd" : "Oefen");
-  if (files.check && (files.check.shortCheck || files.check.exitTicket)) labels.push("Check");
-  if (hasDeepen) labels.push("Verdiep");
-  return labels;
+  return routeRows(files, item).map(row => row.title);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -925,810 +893,722 @@ function renderChapterPage(chapterId, resolvedMap) {
 // PARAGRAAF PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderParagraafPage(paragraaf, files, _resolvedMap) {
-  const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
-  const accentToken = DOMAIN_SHARED_TOKEN[paragraaf.domain] || "economisch";
-  const isConsolidation = isConsolidationParagraph(paragraaf);
+const PARAGRAPH_V2_FIXTURE_DIR = path.join(__dirname, "..", "..", "references", "ui", "paragraph-landing-v2");
 
-  const ext = (f) => f ? f.split(".").pop().toLowerCase() : "docx";
+function fixtureStyle(name) {
+  const fixturePath = path.join(PARAGRAPH_V2_FIXTURE_DIR, name);
+  const html = fs.readFileSync(fixturePath, "utf8");
+  const match = html.match(/<style>([\s\S]*?)<\/style>/i);
+  if (!match) throw new Error(`Missing <style> block in ${fixturePath}`);
+  return match[1].trim();
+}
 
-  function resourceCard(href, icon, title, desc, _fileType, extraClass = "") {
-    if (!href) return "";
-    return `
-        <a class="resource-card ${extraClass}" href="${href}">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-          </div>
-        </a>`;
-  }
+function fixtureRootBlock(css, selector) {
+  const match = css.match(/:root\s*\{[\s\S]*?\n\s*\}/);
+  if (!match) throw new Error("Missing :root token block in paragraph landing fixture");
+  return match[0].replace(/^:root/, selector);
+}
 
-  // Card for resources that have both an .html web companion and an
-  // Office source file. Student-facing landing pages should prefer HTML and
-  // should not advertise Word downloads. PowerPoint remains available because
-  // it is a classroom presentation source, not a student worksheet route.
-  function resourceCardWithSource(pair, icon, title, desc) {
-    if (!pair) return "";
-    const source = pair.docx || pair.pptx || null;
-    const sourceLabel = pair.pptx ? "PowerPoint" : "Word";
-    const sourceType = pair.pptx ? "pptx" : "docx";
-    if (pair.html && !source) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
-    if (!pair.html && source) {
-      if (pair.docx) return "";
-      return resourceCard(encPath([source]), icon, title, desc, sourceType);
+function paragraphPrototypeCSS() {
+  const lightCSS = fixtureStyle("approved-light.html").replace(/^\s*:root/, "    :root,\n    html[data-theme=\"light\"]");
+  const darkCSS = fixtureStyle("approved-dark.html");
+  const darkTokens = fixtureRootBlock(darkCSS, "html[data-theme=\"dark\"]");
+  return `${lightCSS}
+
+    ${darkTokens}
+
+    html[data-theme="dark"] body {
+      background:
+        radial-gradient(circle at 8% 0%, rgba(92, 228, 211, 0.14), transparent 34rem),
+        radial-gradient(circle at 92% 6%, rgba(241, 163, 79, 0.10), transparent 28rem),
+        linear-gradient(140deg, var(--page), var(--page-2));
     }
-    if (pair.docx) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
-    // Both formats present — emit primary HTML cover-link + Office sub-link.
-    const htmlHref = encPath([pair.html]);
-    const sourceHref = encPath([source]);
-    return `
-        <div class="resource-card resource-card-with-source">
-          <a class="resource-card-cover-link" href="${htmlHref}" aria-label="${title} (web)"></a>
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <div class="resource-sub-links">
-              <a class="resource-sub-link" href="${sourceHref}" download>&darr; Download als ${sourceLabel}</a>
-            </div>
-          </div>
-        </div>`;
+    html[data-theme="dark"] .sidebar {
+      border-right: 1px solid rgba(237, 243, 251, 0.05);
+      background: rgba(9, 16, 25, 0.78);
+    }
+    html[data-theme="dark"] .brand strong { color: var(--ink); }
+    html[data-theme="dark"] .brand-mark {
+      color: #08121d;
+      background: linear-gradient(135deg, #5ce4d3, #6fd29b);
+      box-shadow: 0 12px 24px rgba(92, 228, 211, 0.18);
+    }
+    html[data-theme="dark"] .side-link.current,
+    html[data-theme="dark"] .side-link:hover {
+      background: rgba(19, 33, 49, 0.98);
+      color: var(--ink);
+      box-shadow: var(--shadow-small);
+    }
+    html[data-theme="dark"] .side-number { background: rgba(255, 255, 255, 0.06); }
+    html[data-theme="dark"] .side-link.current .side-number { color: #08121d; }
+    html[data-theme="dark"] .theme-note {
+      background: rgba(19, 33, 49, 0.9);
+      border-color: var(--line-soft);
+    }
+    html[data-theme="dark"] .hero {
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background:
+        linear-gradient(135deg, rgba(19, 33, 49, 0.96), rgba(13, 24, 39, 0.92)),
+        radial-gradient(circle at 20% 20%, rgba(92, 228, 211, 0.10), transparent 24rem),
+        radial-gradient(circle at 88% 8%, rgba(241, 163, 79, 0.08), transparent 22rem);
+    }
+    html[data-theme="dark"] .hero::after {
+      background: radial-gradient(circle, rgba(92, 228, 211, 0.12), transparent 68%);
+    }
+    html[data-theme="dark"] .eyebrow {
+      color: #9cf3e7;
+      border: 1px solid rgba(92, 228, 211, 0.16);
+    }
+    html[data-theme="dark"] .target-panel { background: rgba(15, 27, 40, 0.96); }
+    html[data-theme="dark"] .meter-track { background: rgba(255, 255, 255, 0.06); }
+    html[data-theme="dark"] .meter-fill { background: linear-gradient(90deg, var(--accent), #6fd29b); }
+    html[data-theme="dark"] .route-chip {
+      background: rgba(19, 33, 49, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+    html[data-theme="dark"] .route-chip:hover { border-color: rgba(92, 228, 211, 0.2); }
+    html[data-theme="dark"] .row-label {
+      background: rgba(19, 33, 49, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    html[data-theme="dark"] .row-label .step {
+      color: #08121d;
+      box-shadow: 0 10px 20px rgba(92, 228, 211, 0.16);
+    }
+    html[data-theme="dark"] .tile {
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    html[data-theme="dark"] .tile:hover,
+    html[data-theme="dark"] .tile:focus-visible {
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+      border-color: rgba(92, 228, 211, 0.22);
+    }
+    html[data-theme="dark"] .icon-badge { box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+    html[data-theme="dark"] .notice,
+    html[data-theme="dark"] .tile-disabled {
+      border: 1px solid rgba(255, 188, 102, 0.16);
+      background: rgba(255, 188, 102, 0.08);
+      color: #ffd391;
+    }
+    .theme-note {
+      border: 1px solid var(--line-soft);
+      cursor: pointer;
+      font: inherit;
+    }
+    .route-chip:hover { transform: translateY(-1px); border-color: rgba(31, 111, 120, 0.28); }
+    .tile-disabled {
+      border: 1px solid rgba(168, 91, 0, 0.20);
+      background: #fff6e8;
+      color: #69410f;
+      box-shadow: none;
+    }
+    .tile-disabled:hover,
+    .tile-disabled:focus-visible {
+      transform: none;
+      box-shadow: none;
+      border-color: rgba(168, 91, 0, 0.20);
+    }
+    .tile-primary,
+    .tile-secondary {
+      color: var(--tile-accent, var(--accent));
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .tile-secondary-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .tile-secondary {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--tile-soft, var(--accent-soft));
+      font-size: 0.75rem;
+    }
+    .tile-status {
+      color: var(--warn);
+      font-weight: 850;
+    }
+    @media (max-width: 760px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      .app-shell,
+      .content {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+      .app-shell {
+        display: block;
+      }
+      .content {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .hero,
+      .route-strip,
+      .rows,
+      .learning-row,
+      .tile-grid,
+      .row-label {
+        box-sizing: border-box;
+        width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+        min-width: 0;
+      }
+      .target-panel,
+      .tile {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+      h1 {
+        max-width: calc(100vw - 84px);
+        font-size: 1.75rem;
+        line-height: 1.08;
+      }
+      .lead,
+      .target-panel {
+        max-width: calc(100vw - 84px);
+      }
+      .target-panel {
+        overflow: hidden;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        min-width: 0;
+      }
+      .meter-copy {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      h1,
+      .lead,
+      .target-panel p,
+      .meter-copy,
+      .breadcrumb,
+      .route-chip,
+      .tile {
+        overflow-wrap: anywhere;
+      }
+    }`;
+}
+
+function fileHref(file) {
+  return file ? encPath([file]) : null;
+}
+
+function pairFile(pair, preferred = ["html", "pdf", "pptx"]) {
+  if (!pair) return null;
+  for (const key of preferred) {
+    if (pair[key]) return pair[key];
   }
+  return null;
+}
 
-  function exercisePairCard(pair, icon, title, desc) {
-    if (!pair) return "";
-    const vragenHref = pair.vragen ? encPath([pair.vragen]) : null;
-    const antwHref = pair.antwoorden ? encPath([pair.antwoorden]) : null;
-    return `
-        <div class="resource-card resource-card-pair">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <div class="resource-sub-links">
-              ${vragenHref ? `<a class="resource-sub-link" href="${vragenHref}">Vragen</a>` : ""}
-              ${antwHref ? `<a class="resource-sub-link" href="${antwHref}">Antwoorden</a>` : ""}
-            </div>
-          </div>
-        </div>`;
-  }
+function pairHref(pair, preferred) {
+  return fileHref(pairFile(pair, preferred));
+}
 
-  function interactiveCard(href, icon, title, desc) {
-    return `
-        <a class="resource-card resource-card-interactive" href="${href}">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <span class="resource-card-action">Spelen &rarr;</span>
-          </div>
-        </a>`;
-  }
-
-  function aspectRouteCard({ href, icon, title, desc, aspect }) {
-    const meta = GAME_ASPECTS[aspect];
-    if (!meta) return "";
-    return `
-        <a class="resource-card resource-card-interactive resource-card-aspect aspect-${meta.token}" data-learning-aspect="${aspect}" href="${href}">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <span class="resource-aspect-label badge-${meta.token}">${meta.label}</span>
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <span class="resource-card-action">Oefenen &rarr;</span>
-          </div>
-        </a>`;
-  }
-
-  function checkRouteCard(href, kind) {
-    if (!href) return "";
-    const copy = kind === "short"
-      ? {
-          route: "advisory",
-          purpose: "local-practice-advice",
-          className: "resource-card-check-short",
-          badge: "advies",
-          title: "Korte check",
-          desc: "Krijg lokaal oefenadvies. Je ziet welke stap nu handig is; dit is geen eindcheck.",
-          action: "Krijg oefenadvies",
-        }
-      : {
-          route: "exit-ticket",
-          purpose: "end-check",
-          className: "resource-card-check-exit",
-          badge: "eindcheck",
-          title: "Exit ticket",
-          desc: "Maak de eindcheck met dezelfde soort denkstappen als de eindopgave.",
-          action: "Maak eindcheck",
-        };
-    return `
-        <a class="resource-card resource-card-check ${copy.className}" data-check-route="${copy.route}" data-check-purpose="${copy.purpose}" href="${href}">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.check}</svg></div>
-          <div class="resource-card-body">
-            <span class="resource-aspect-label check-card-kind">${copy.badge}</span>
-            <h3>${copy.title}</h3>
-            <p class="resource-card-purpose">${copy.desc}</p>
-            <span class="resource-card-action">${copy.action} &rarr;</span>
-          </div>
-        </a>`;
-  }
-
-  function begeleidCard(data) {
-    if (!data) return "";
-    const links = [];
-    if (data.interactief) links.push(`<a class="resource-sub-link" href="${encPath([data.interactief])}">Interactief</a>`);
-    if (!links.length) return "";
-    return `
-        <div class="resource-card resource-card-interactive">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${ICONS.users}</svg></div>
-          <div class="resource-card-body">
-            <span class="resource-aspect-label">Begeleid oefenen</span>
-            <h3>Begeleide inoefening</h3>
-            <p>Oefenen met denkstappen en hints</p>
-            <div class="resource-sub-links">${links.join("")}</div>
-          </div>
-        </div>`;
-  }
-
-  // Lesboek tile: primary opens the textbook HTML; sub-link downloads the PDF.
-  // Mirrors resourceCardWithSource but the secondary surface is PDF, not DOCX,
-  // so this card does NOT enter the docx/pptx in-browser viewer.
-  function lesboekCard(pair, icon, title, desc) {
-    if (!pair) return "";
-    if (pair.html && !pair.pdf) return resourceCard(encPath([pair.html]), icon, title, desc, "html");
-    if (!pair.html && pair.pdf) return resourceCard(encPath([pair.pdf]),  icon, title, desc, "pdf");
-    const htmlHref = encPath([pair.html]);
-    const pdfHref  = encPath([pair.pdf]);
-    return `
-        <div class="resource-card resource-card-with-source">
-          <a class="resource-card-cover-link" href="${htmlHref}" aria-label="${title} (web)"></a>
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <div class="resource-sub-links">
-              <a class="resource-sub-link" href="${pdfHref}" download>&darr; Download als PDF</a>
-            </div>
-          </div>
-        </div>`;
-  }
-
-  // Combined Lesboek tile for opgaven + antwoorden. Two HTML sub-links open
-  // the web views; two PDF sub-links download. No primary cover-link, since
-  // there is no single canonical destination for "exercises + answers".
-  function lesboekPairCard(opgaven, antwoorden, icon, title, desc) {
-    if (!opgaven && !antwoorden) return "";
-    const link = (pair, label, kind) => {
-      if (!pair) return "";
-      const file = pair[kind];
-      if (!file) return "";
-      const href = encPath([file]);
-      const dl = kind === "pdf" ? " download" : "";
-      const text = kind === "pdf" ? `&darr; ${label} (PDF)` : label;
-      return `<a class="resource-sub-link" href="${href}"${dl}>${text}</a>`;
-    };
-    const links = [
-      link(opgaven,    "Opgaven",    "html"),
-      link(antwoorden, "Antwoorden", "html"),
-      link(opgaven,    "Opgaven",    "pdf"),
-      link(antwoorden, "Antwoorden", "pdf"),
-    ].filter(Boolean).join("");
-    if (!links) return "";
-    return `
-        <div class="resource-card resource-card-pair">
-          <div class="resource-card-icon"><svg viewBox="0 0 24 24">${icon}</svg></div>
-          <div class="resource-card-body">
-            <h3>${title}</h3>
-            <p>${desc}</p>
-            <div class="resource-sub-links">${links}</div>
-          </div>
-        </div>`;
-  }
-
-  const startCardsOld = [
-    files.voorbereiden.instapquiz      ? resourceCard(encPath([files.voorbereiden.instapquiz]),      ICONS.quiz,   "Instapquiz",       "Test wat je al weet over deze stof", "html") : "",
-    files.voorbereiden.voorkennis      ? resourceCardWithSource(files.voorbereiden.voorkennis,       ICONS.book,   "Voorkennis",       "Herhaal wat je nodig hebt voor deze les") : "",
-    files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
-  ].filter(Boolean).join("\n");
-
-  const lerenCards = [
-    files.leren.presentatie  ? resourceCardWithSource(files.leren.presentatie,   ICONS.monitor,   "Presentatie",         "De les-presentatie met kernpunten") : "",
-    files.leren.vaardigheden ? resourceCardWithSource(files.leren.vaardigheden,  ICONS.doc,       "Uitleg vaardigheden", "Stap-voor-stap uitleg van de lesstof") : "",
-    files.leren.stappenplan  ? resourceCard(encPath([files.leren.stappenplan]),  ICONS.steps,     "Stappenplan",         "Oefen de stappen van elke vaardigheid", "html") : "",
-    files.leren.youtube      ? resourceCard(encPath([files.leren.youtube]),      ICONS.play,      "YouTube-video’s", "Video-uitleg bij de stof", "html") : "",
-    files.leren.nieuws       ? resourceCardWithSource(files.leren.nieuws,        ICONS.newspaper, "Nieuws",              "Actueel artikel met verwerkingsvragen") : "",
-    files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting,  ICONS.check,     "Samenvatting",        "Overzicht van deze paragraaf") : "",
-  ].filter(Boolean).join("\n");
-
-  const oefenenAspectRoutes = [];
-  if (files.oefenen.redeneerSpel) {
-    oefenenAspectRoutes.push(aspectRouteCard({
-      href: encPath([files.oefenen.redeneerSpel]),
-      icon: ICONS.puzzle,
-      title: "Redeneer-spel",
-      desc: GAME_ASPECTS.reasoning.summary,
-      aspect: "reasoning"
-    }));
-  }
-  if (files.oefenen.wiskundevaardigheden) {
-    oefenenAspectRoutes.push(aspectRouteCard({
-      href: encPath([files.oefenen.wiskundevaardigheden]),
-      icon: ICONS.layers,
-      title: "Wiskunde vaardigheden",
-      desc: GAME_ASPECTS.calculation.summary,
-      aspect: "calculation"
-    }));
-  }
-  if (files.oefenen.grafiekenspel) {
-    oefenenAspectRoutes.push(aspectRouteCard({
-      href: encPath([files.oefenen.grafiekenspel]),
-      icon: ICONS.chart,
-      title: "Grafiekenspel",
-      desc: GAME_ASPECTS.graphical.summary,
-      aspect: "graphical"
-    }));
-  }
-  const begeleidHTML = begeleidCard(files.oefenen.begeleide);
-  const routeNames = [];
-  if (files.oefenen.redeneerSpel) routeNames.push("redeneren");
-  if (files.oefenen.wiskundevaardigheden) routeNames.push("rekenen");
-  if (files.oefenen.grafiekenspel) routeNames.push("grafieken lezen");
-  const routeIntro = routeNames.length
-    ? `Deze routes oefenen ${routeNames.join(", ").replace(/, ([^,]*)$/, " en $1")}.`
-    : "Kies een oefenroute die past bij deze paragraaf.";
-  const aspectBlock = oefenenAspectRoutes.length ? `
-        <div class="learning-aspect-block">
-          <div class="learning-aspect-copy">
-            <span class="resource-aspect-label">Oefenroutes</span>
-            <h3>Kies wat je wilt trainen</h3>
-            <p>${routeIntro}</p>
-          </div>
-          <div class="resource-grid learning-aspect-grid">${oefenenAspectRoutes.join("\n")}
-          </div>
-        </div>` : "";
-  const begeleidBlock = begeleidHTML ? `
-        <div class="guided-practice-block">
-          <div class="learning-aspect-copy">
-            <span class="resource-aspect-label">Extra steun</span>
-            <h3>Stap voor stap oefenen</h3>
-            <p>Gebruik deze route als je eerst met meer begeleiding door de opgaven wilt.</p>
-          </div>
-          <div class="resource-grid">${begeleidHTML}
-          </div>
-        </div>` : "";
-  const oefenenCards = [aspectBlock, begeleidBlock].filter(Boolean).join("\n");
-
-  const taskCards = [
-    exercisePairCard(files.oefenen.basis,      ICONS.star0, "Basisopgaven",       "Standaard opgaven"),
-    exercisePairCard(files.oefenen.midden,     ICONS.star1, "Middenopgaven",      "Kortere set, meer zelfstandig"),
-    exercisePairCard(files.oefenen.verrijking, ICONS.star2, "Verrijkingsopgaven", "Extra uitdaging"),
-  ].filter(Boolean).join("\n");
-
-  const lesboekCards = [
-    lesboekCard(files.lesboek.paragraaf, ICONS.book, "Lesboek – uitleg", "De volledige paragraaf uit het lesboek"),
-    lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Lesboek – opgaven & antwoorden", "De opgaven en uitwerkingen uit het lesboek"),
-  ].filter(Boolean).join("\n");
-
-  function secondaryGroup(id, title, desc, body) {
-    if (!body || !body.trim()) return "";
-    return `
-        <details class="route-secondary-group" data-route-secondary="${id}">
-          <summary>
-            <span class="route-secondary-title">${title}</span>
-            <span class="route-secondary-desc">${desc}</span>
-          </summary>
-          <div class="resource-grid route-secondary-grid">${body}
-          </div>
-        </details>`;
-  }
-
-  const startCards = [
-    files.voorbereiden.instapquiz ? resourceCard(encPath([files.voorbereiden.instapquiz]), ICONS.quiz, "Instapquiz", "Check snel wat je al weet", "html") : "",
-    files.voorbereiden.voorkennis ? resourceCardWithSource(files.voorbereiden.voorkennis, ICONS.book, "Voorkennis", "Herhaal wat je nodig hebt voor deze les") : "",
-  ].filter(Boolean).join("\n");
-
-  const leerCards = [
-    files.leren.vaardigheden ? resourceCardWithSource(files.leren.vaardigheden, ICONS.doc, "Uitleg vaardigheden", "Leer de kernstappen met voorbeelden") : "",
-  ].filter(Boolean).join("\n");
-
-  const practiceRoutes = [];
-  if (files.oefenen.redeneerSpel) {
-    practiceRoutes.push(aspectRouteCard({
-      href: encPath([files.oefenen.redeneerSpel]),
-      icon: ICONS.puzzle,
-      title: "Redeneren",
-      desc: GAME_ASPECTS.reasoning.summary,
-      aspect: "reasoning"
-    }));
-  }
-  const hasScopedMathSkillTree = Boolean(
-    files.oefenen.wiskundevaardigheden &&
+function hasScopedMathSkillTree(paragraaf) {
+  return Boolean(
+    paragraaf &&
     paragraaf.skilltree &&
     Array.isArray(paragraaf.skilltree.skills) &&
     paragraaf.skilltree.skills.length > 0
   );
-  const mathSkillTreeRoute = hasScopedMathSkillTree ? files.oefenen.wiskundevaardigheden : null;
-  const unscopedSkillTreeRoute = files.oefenen.wiskundevaardigheden && !hasScopedMathSkillTree
-    ? files.oefenen.wiskundevaardigheden
-    : null;
-  const procedureSupportRoute = files.oefenen.stappenplan;
-  const calculationRoute = mathSkillTreeRoute;
-  if (calculationRoute) {
-    practiceRoutes.push(aspectRouteCard({
-      href: encPath([calculationRoute]),
-      icon: ICONS.layers,
-      title: "Rekenen",
-      desc: GAME_ASPECTS.calculation.summary,
-      aspect: "calculation"
-    }));
+}
+
+function tileState(tile) {
+  if (tile && tile.state) return tile.state;
+  const links = tile && Array.isArray(tile.links) ? tile.links : [];
+  const hasLink = Boolean(tile && tile.href) || links.some(link => link && link.href);
+  return hasLink ? "available" : "in-preparation";
+}
+
+function tileStatusLabel(state) {
+  if (state === "available") return "Beschikbaar";
+  if (state === "not-scoped") return "Niet nodig";
+  return "In voorbereiding";
+}
+
+function countRowAvailability(row) {
+  return row.tiles.reduce((count, tile) => count + (tileState(tile) === "available" ? 1 : 0), 0);
+}
+
+function firstActionableTile(rows) {
+  for (const row of rows) {
+    for (const tile of row.tiles) {
+      if (tileState(tile) !== "available") continue;
+      const firstLink = Array.isArray(tile.links) ? tile.links.find(link => link && link.href) : null;
+      const href = tile.href || (firstLink && firstLink.href);
+      if (href) return { ...tile, href };
+    }
   }
-  if (files.oefenen.grafiekenspel) {
-    practiceRoutes.push(aspectRouteCard({
-      href: encPath([files.oefenen.grafiekenspel]),
-      icon: ICONS.chart,
-      title: "Grafieken",
-      desc: GAME_ASPECTS.graphical.summary,
-      aspect: "graphical"
-    }));
+  return null;
+}
+
+function routeRows(files, paragraaf) {
+  const mathRouteAvailable = Boolean(files.oefenen.wiskundevaardigheden && hasScopedMathSkillTree(paragraaf));
+  const skillEngineAvailable = mathRouteAvailable;
+  const presentationHref = pairHref(files.leren.presentatie, ["html", "pptx"]);
+  const presentationLinks = [];
+  if (files.leren.presentatie && files.leren.presentatie.html && files.leren.presentatie.pptx) {
+    presentationLinks.push({ href: fileHref(files.leren.presentatie.pptx), label: "PowerPoint", download: true });
+  }
+  const explanationLinks = [];
+  if (files.voorbereiden.voorkennis && files.voorbereiden.voorkennis.html) {
+    explanationLinks.push({ href: fileHref(files.voorbereiden.voorkennis.html), label: "Voorkennis" });
+  }
+  const guidedLinks = [];
+  if (files.oefenen.stappenplan) {
+    guidedLinks.push({ href: fileHref(files.oefenen.stappenplan), label: "Stappenplan" });
+  }
+  const exerciseLinks = [];
+  if (files.lesboek.antwoorden && files.lesboek.antwoorden.html) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.antwoorden.html), label: "Antwoorden" });
+  }
+  if (files.lesboek.opgaven && files.lesboek.opgaven.pdf) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.opgaven.pdf), label: "Opgaven PDF", download: true });
+  }
+  if (files.lesboek.antwoorden && files.lesboek.antwoorden.pdf) {
+    exerciseLinks.push({ href: fileHref(files.lesboek.antwoorden.pdf), label: "Antwoorden PDF", download: true });
+  }
+  const textbookLinks = [];
+  if (files.lesboek.paragraaf && files.lesboek.paragraaf.pdf) {
+    textbookLinks.push({ href: fileHref(files.lesboek.paragraaf.pdf), label: "PDF", download: true });
+  }
+  const sourceLinks = [];
+  if (files.leren.samenvatting && files.leren.samenvatting.html) {
+    sourceLinks.push({ href: fileHref(files.leren.samenvatting.html), label: "Samenvatting" });
+  }
+  if (files.leren.nieuws && files.leren.nieuws.html) {
+    sourceLinks.push({ href: fileHref(files.leren.nieuws.html), label: "Nieuws met visual" });
+  }
+  if (files.leren.youtube) {
+    sourceLinks.push({ href: fileHref(files.leren.youtube), label: "YouTube" });
+  }
+  if (files.oefenen.wiskundevaardigheden && !skillEngineAvailable) {
+    sourceLinks.push({ href: fileHref(files.oefenen.wiskundevaardigheden), label: "Vaardigheidskaart" });
   }
 
-  const practiceRouteNames = [];
-  if (files.oefenen.redeneerSpel) practiceRouteNames.push("redeneren");
-  if (calculationRoute) practiceRouteNames.push("rekenen");
-  if (files.oefenen.grafiekenspel) practiceRouteNames.push("grafieken lezen");
-  const practiceIntro = practiceRouteNames.length
-    ? `Kies een oefenroute voor ${practiceRouteNames.join(", ").replace(/, ([^,]*)$/, " of $1")}.`
-    : "Kies een oefenroute die past bij deze paragraaf.";
-  const practiceRouteBlock = practiceRoutes.length ? `
-        <div class="learning-aspect-block">
-          <div class="learning-aspect-copy">
-            <span class="resource-aspect-label">Oefenroutes</span>
-            <h3>Kies wat je wilt trainen</h3>
-            <p>${practiceIntro}</p>
-          </div>
-          <div class="resource-grid learning-aspect-grid">${practiceRoutes.join("\n")}
-          </div>
-        </div>` : "";
-  const procedureSupportCard = procedureSupportRoute
-    ? resourceCard(encPath([procedureSupportRoute]), ICONS.steps, "Rekenstappen", "Gebruik extra steun om de procedure stap voor stap te oefenen", "html")
+  return [
+    {
+      id: "start",
+      layer: "start",
+      num: 1,
+      title: "Start",
+      hint: "Oriënteren, voorkennis ophalen en de paragraaf actueel maken.",
+      chip: "voorkennis + nieuws",
+      grid: "two",
+      tiles: [
+        {
+          id: "instapquiz",
+          tone: "start",
+          pill: "voorkennis",
+          icon: "Q",
+          title: "Instapquiz voorkennis",
+          desc: "Check snel welke begrippen en basishandelingen je al paraat hebt.",
+          href: fileHref(files.voorbereiden.instapquiz),
+          action: "Maak quiz",
+          aria: "Open de voorkennisquiz",
+        },
+        {
+          id: "nieuwsdetective",
+          tone: "econ",
+          pill: "context",
+          icon: "N",
+          title: "Nieuws-detective",
+          desc: "Ontdek waar de economie uit deze paragraaf zichtbaar wordt in een actuele bron.",
+          href: fileHref(files.voorbereiden.nieuwsdetective),
+          action: "Onderzoek bron",
+          aria: "Open de nieuws-detective",
+        },
+      ],
+    },
+    {
+      id: "skills",
+      layer: "skill-tree-games",
+      num: 2,
+      title: "Skill-tree games",
+      hint: "Train de drie hoofdvaardigheden als korte, gerichte spelroutes.",
+      chip: "redeneren - rekenen - grafieken",
+      tiles: [
+        {
+          id: "redeneren",
+          tone: "reason",
+          pill: "redeneren",
+          icon: "R",
+          title: "Redeneren",
+          desc: GAME_ASPECTS.reasoning.summary,
+          href: fileHref(files.oefenen.redeneerSpel),
+          action: "Speel route",
+          aria: "Open het redeneerspel",
+        },
+        {
+          id: "rekenen",
+          tone: "math",
+          pill: "rekenen",
+          icon: "%",
+          title: "Rekenen",
+          desc: GAME_ASPECTS.calculation.summary,
+          href: mathRouteAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
+          action: "Train stappen",
+          aria: "Open het rekenspel",
+        },
+        {
+          id: "grafieken",
+          tone: "graph",
+          pill: "grafieken",
+          icon: "G",
+          title: "Grafieken",
+          desc: GAME_ASPECTS.graphical.summary,
+          href: fileHref(files.oefenen.grafiekenspel),
+          action: "Lees grafiek",
+          aria: "Open het grafiekenspel",
+        },
+      ],
+    },
+    {
+      id: "leer",
+      layer: "leer",
+      num: 3,
+      title: "Leer",
+      hint: "Gebruik uitleg en route-inzicht voordat je zelfstandig gaat oefenen.",
+      chip: "uitleg + presentatie + leerpad",
+      tiles: [
+        {
+          id: "uitleg-vaardigheden",
+          tone: "graph",
+          pill: "uitleg",
+          icon: "U",
+          title: "Uitleg vaardigheden",
+          desc: "De kernstappen van deze paragraaf met korte voorbeelden en vaste begrippen.",
+          href: pairHref(files.leren.vaardigheden, ["html"]),
+          links: explanationLinks,
+          action: "Leer stappen",
+          aria: "Open uitleg vaardigheden",
+        },
+        {
+          id: "presentatie",
+          tone: "econ",
+          pill: "klassikaal",
+          icon: "P",
+          title: "PowerPoint-presentatie",
+          desc: "De lespresentatie met de visuele ankers, kernvragen en klassikale uitleg.",
+          href: presentationHref,
+          links: presentationLinks,
+          action: "Open presentatie",
+          aria: "Open de PowerPoint-presentatie",
+        },
+        {
+          id: "skill-engine",
+          tone: "start",
+          pill: "leerpad",
+          icon: "L",
+          title: "Skill engine / leerpad",
+          desc: "Bekijk welke vaardigheden bij deze paragraaf horen en wat je volgende nuttige stap is.",
+          href: skillEngineAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
+          action: "Bekijk leerpad",
+          aria: "Open de skill engine",
+        },
+      ],
+    },
+    {
+      id: "oefen",
+      layer: "oefen",
+      num: 4,
+      title: "Oefen",
+      hint: "Van steun naar kernopgaven en daarna eventueel routeadvies.",
+      chip: "begeleid - zelfstandig - lokaal advies",
+      tiles: [
+        {
+          id: "begeleide-oefeningen",
+          tone: "check",
+          pill: "met steun",
+          icon: "B",
+          title: "Begeleide oefeningen",
+          desc: "Maak opgaven met hints, tussenstappen en voorbeeldstructuur.",
+          href: files.oefenen.begeleide ? fileHref(files.oefenen.begeleide.interactief) : null,
+          links: guidedLinks,
+          action: "Start begeleid",
+          aria: "Open begeleide oefeningen",
+        },
+        {
+          id: "zelfstandige-oefeningen",
+          tone: "econ",
+          pill: "kern",
+          icon: "Z",
+          title: "Zelfstandige oefeningen",
+          desc: "De normale opgavenroute van de paragraaf: dit is de kern van het oefenen.",
+          href: pairHref(files.lesboek.opgaven, ["html", "pdf"]),
+          links: exerciseLinks,
+          action: "Maak opgaven",
+          aria: "Open zelfstandige oefeningen",
+        },
+        {
+          id: "adaptieve-oefenroute",
+          tone: "math",
+          pill: "lokaal advies",
+          icon: "A",
+          title: "Adaptieve oefenroute",
+          desc: "Een voorgestelde volgende oefening op basis van lokale voortgang komt hier zodra die route klaarstaat.",
+          href: null,
+          action: "Vraag advies",
+          aria: "Open adaptieve oefeningen",
+        },
+      ],
+    },
+    {
+      id: "check",
+      layer: "check",
+      num: 5,
+      title: "Check",
+      hint: "Eerst oefenadvies, daarna een aparte eindcontrole.",
+      chip: "kort advies + exit ticket",
+      grid: "two",
+      tiles: [
+        {
+          id: "korte-check",
+          tone: "check",
+          pill: "advies",
+          icon: "K",
+          title: "Korte check",
+          desc: "Een lichte lokale check die aangeeft welke route nu verstandig is.",
+          href: fileHref(files.check.shortCheck),
+          action: "Krijg oefenadvies",
+          aria: "Open korte check",
+        },
+        {
+          id: "exit-ticket",
+          tone: "reason",
+          pill: "eindcontrole",
+          icon: "E",
+          title: "Exit ticket",
+          desc: "Laat zien dat je de doelopgave op hetzelfde niveau en met dezelfde antwoordvorm aankunt.",
+          href: fileHref(files.check.exitTicket),
+          action: "Maak exit ticket",
+          aria: "Open exit ticket",
+        },
+      ],
+    },
+    {
+      id: "open",
+      layer: "open-verdiep",
+      num: 6,
+      title: "Open & verdiep",
+      hint: "Open het lesboek of aanvullend materiaal wanneer je het nodig hebt.",
+      chip: "lesboek + extra",
+      tiles: [
+        {
+          id: "lesboek-openen",
+          tone: "start",
+          pill: "tekstboek",
+          icon: "L",
+          title: "Lesboek openen",
+          desc: "De volledige paragraaf met uitleg, voorbeelden en visuals.",
+          href: pairHref(files.lesboek.paragraaf, ["html", "pdf"]),
+          links: textbookLinks,
+          action: "Open paragraaf",
+          aria: "Open het lesboek",
+        },
+        {
+          id: "opgaven-antwoorden",
+          tone: "graph",
+          pill: "controle",
+          icon: "O",
+          title: "Opgaven & antwoorden",
+          desc: "Open de opgaven, controleer je aanpak en vergelijk met de uitwerkingen.",
+          href: pairHref(files.lesboek.opgaven, ["html", "pdf"]),
+          links: exerciseLinks,
+          action: "Open bronnen",
+          aria: "Open opgaven en antwoorden",
+        },
+        {
+          id: "aanvullend-materiaal",
+          tone: "econ",
+          pill: "extra",
+          icon: "+",
+          title: "Aanvullend materiaal",
+          desc: "Samenvatting, extra context of video zonder de hoofdroute te verstoppen.",
+          href: sourceLinks.length ? sourceLinks[0].href : null,
+          links: sourceLinks.slice(1),
+          action: "Bekijk extra",
+          aria: "Open extra materiaal",
+        },
+      ],
+    },
+  ];
+}
+
+function renderTile(tile) {
+  const state = tileState(tile);
+  const disabled = state !== "available";
+  const links = Array.isArray(tile.links) ? tile.links.filter(link => link && link.href) : [];
+  const hasSecondary = links.length > 0;
+  const attrs = `class="tile ${escapeHtml(tile.tone)}${disabled ? " tile-disabled" : ""}" data-tile-id="${escapeHtml(tile.id)}" data-tile-state="${escapeHtml(state)}" aria-label="${escapeHtml(tile.aria || tile.title)}"`;
+  const header = `<div class="tile-header"><div class="icon-badge">${escapeHtml(tile.icon)}</div><div><span class="pill">${escapeHtml(disabled ? tileStatusLabel(state).toLowerCase() : tile.pill)}</span><h3>${escapeHtml(tile.title)}</h3><p>${escapeHtml(tile.desc)}</p></div></div>`;
+  const secondary = hasSecondary
+    ? `<div class="tile-secondary-links">${links.map(link => `<a class="tile-secondary" href="${escapeHtml(link.href)}"${link.download ? " download" : ""}>${escapeHtml(link.label)}</a>`).join("")}</div>`
     : "";
-  const supportCards = [procedureSupportCard, begeleidHTML].filter(Boolean).join("\n");
-  const guidedPracticeBlock = supportCards ? `
-        <div class="guided-practice-block">
-          <div class="learning-aspect-copy">
-            <span class="resource-aspect-label">Eerst steun nodig?</span>
-            <h3>Stap voor stap oefenen</h3>
-            <p>Gebruik extra steun voordat je zelfstandig oefent.</p>
+  if (disabled) {
+    return `            <article ${attrs} aria-disabled="true">
+              ${header}
+              <div class="tile-footer"><span class="tile-status">${escapeHtml(tileStatusLabel(state))}</span><span>...</span></div>
+            </article>`;
+  }
+  if (hasSecondary) {
+    return `            <article ${attrs}>
+              ${header}
+              <div class="tile-footer"><a class="tile-primary" href="${escapeHtml(tile.href)}">${escapeHtml(tile.action)}</a><span>&rarr;</span></div>
+              ${secondary}
+            </article>`;
+  }
+  return `            <a ${attrs} href="${escapeHtml(tile.href)}">
+              ${header}
+              <div class="tile-footer"><span>${escapeHtml(tile.action)}</span><span>&rarr;</span></div>
+            </a>`;
+}
+
+function renderRouteChip(row) {
+  return `        <a class="route-chip" href="#${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}"><b>${escapeHtml(row.title)}</b><span>${escapeHtml(row.chip)}</span></a>`;
+}
+
+function renderLearningRow(row) {
+  const gridClass = row.grid === "two" ? "tile-grid two" : "tile-grid";
+  return `        <div class="learning-row" id="${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}" data-row-ready="${countRowAvailability(row)}" data-row-total="${row.tiles.length}">
+          <div class="row-label">
+            <div class="step">${row.num}</div>
+            <div>
+              <h2>${escapeHtml(row.title)}</h2>
+              <p>${escapeHtml(row.hint)}</p>
+            </div>
           </div>
-          <div class="resource-grid">${supportCards}
+          <div class="${gridClass}">
+${row.tiles.map(renderTile).join("\n")}
           </div>
-        </div>` : "";
-  const oefenRouteCards = [practiceRouteBlock, guidedPracticeBlock].filter(Boolean).join("\n");
-  const consolidationPracticeCard = isConsolidation && (files.lesboek.opgaven || files.lesboek.antwoorden)
-    ? lesboekPairCard(files.lesboek.opgaven, files.lesboek.antwoorden, ICONS.doc, "Gemengde opgaven", "Maak de gemengde opgaven en controleer daarna je uitwerkingen")
-    : "";
-  const consolidationPracticeBlock = consolidationPracticeCard ? `
-        <div class="learning-aspect-block" data-consolidation-practice="true">
-          <div class="learning-aspect-copy">
-            <span class="resource-aspect-label">Gemengde opgaven</span>
-            <h3>Oefen gemengd</h3>
-            <p>Gebruik deze route om de vaardigheden uit het hoofdstuk door elkaar te oefenen.</p>
-          </div>
-          <div class="resource-grid">${consolidationPracticeCard}
-          </div>
-        </div>` : "";
-  const oefenCardsFinal = [consolidationPracticeBlock, oefenRouteCards].filter(Boolean).join("\n");
-
-  const checkCards = [
-    files.check && files.check.shortCheck
-      ? checkRouteCard(encPath([files.check.shortCheck]), "short")
-      : "",
-    files.check && files.check.exitTicket
-      ? checkRouteCard(encPath([files.check.exitTicket]), "exit")
-      : ""
-  ].filter(Boolean).join("\n");
-
-  const deepenCards = [
-    files.leren.samenvatting ? resourceCardWithSource(files.leren.samenvatting, ICONS.check, "Samenvatting", "Overzicht van deze paragraaf") : "",
-    files.leren.nieuws ? resourceCardWithSource(files.leren.nieuws, ICONS.newspaper, "Nieuws met visual", "Context en grafiek bij de stof") : "",
-    files.voorbereiden.nieuwsdetective ? resourceCard(encPath([files.voorbereiden.nieuwsdetective]), ICONS.search, "Nieuws-detective", "Ontdek de economie achter het nieuws", "html") : "",
-    files.leren.youtube ? resourceCard(encPath([files.leren.youtube]), ICONS.play, "YouTube-video's", "Video-uitleg bij de stof", "html") : "",
-    unscopedSkillTreeRoute ? resourceCard(encPath([unscopedSkillTreeRoute]), ICONS.layers, "Brede vaardigheidskaart", "Extra overzicht; niet de start van deze oefenroute", "html") : "",
-  ].filter(Boolean).join("\n");
-  const sourceLesboekCards = isConsolidation
-    ? [lesboekCard(files.lesboek.paragraaf, ICONS.book, "Lesboek - uitleg", "De volledige paragraaf uit het lesboek")].filter(Boolean).join("\n")
-    : lesboekCards;
-  const sourceCards = [
-    files.leren.presentatie ? resourceCardWithSource(files.leren.presentatie, ICONS.monitor, "Presentatie", "De les-presentatie en PowerPoint") : "",
-    sourceLesboekCards,
-  ].filter(Boolean).join("\n");
-  const verdiepenCards = [
-    secondaryGroup("deepen", "Verdiep je begrip", "Samenvatting, context en extra uitleg", deepenCards),
-    secondaryGroup("sources", "Lesboek en downloads", "Bronnen, presentatie en lesboek", sourceCards),
-  ].filter(Boolean).join("\n");
-
-  const hasS = startCards.trim().length > 0;
-  const hasLeer = leerCards.trim().length > 0;
-  const hasO = oefenCardsFinal.trim().length > 0;
-  const hasC = checkCards.trim().length > 0;
-  const hasD = verdiepenCards.trim().length > 0;
-
-  // Per-section accent: the four section roles get distinct accents drawn
-  // from the three shared tokens (economisch / wiskunde / grafisch) defined
-  // in engines/voorkennis.css. The hero gradient and back-link continue to
-  // use the paragraph-level accentToken; only the section chrome rotates.
-  const SECTION_ACCENT = {
-    start:   "wiskunde",
-    leer:    "grafisch",
-    oefen:   "economisch",
-    check:   "wiskunde",
-    verdiep: "grafisch",
-  };
-
-  const sections = [];
-  if (hasS) sections.push({ id: "start", num: 1, title: "Start", hint: "Orienteer en haal voorkennis op", body: startCards, accent: SECTION_ACCENT.start, routeLayer: "start" });
-  if (hasLeer) sections.push({ id: "leer", num: 2, title: "Leer", hint: "Leer de kernstappen", body: leerCards, accent: SECTION_ACCENT.leer, routeLayer: "learn" });
-  if (hasO) sections.push({
-    id: "oefen",
-    num: sections.length + 1,
-    title: isConsolidation ? "Oefen gemengd" : "Oefen",
-    hint: isConsolidation ? "Maak gemengde opgaven" : "Kies steun of een oefenroute",
-    body: oefenCardsFinal,
-    accent: SECTION_ACCENT.oefen,
-    layout: "custom",
-    routeLayer: "practice"
-  });
-  if (hasC) sections.push({ id: "check", num: 4, title: "Check", hint: checkSectionHint(files), body: checkCards, accent: SECTION_ACCENT.check, routeLayer: "check" });
-  if (hasD) sections.push({ id: "verdiep", num: sections.length + 1, title: "Verdiep", hint: "Extra context, bronnen en downloads", body: verdiepenCards, accent: SECTION_ACCENT.verdiep, layout: "custom", routeLayer: "deepen" });
-
-  const sidebarItems = sections.map(s => `      <a class="nav-item domain-${s.accent}" href="#${s.id}" data-section="${s.id}" data-route-layer="${s.routeLayer || s.id}">
-        <span class="nav-number">${s.num}</span>
-        <span class="nav-text">
-          <span class="nav-title">${s.title}</span>
-          <span class="nav-badge">${s.hint}</span>
-        </span>
-      </a>`).join("\n");
-
-  const sectionsHTML = sections.map(s => {
-    const bodyHTML = s.layout === "custom" ? s.body : `<div class="resource-grid">${s.body}
         </div>`;
-    return `
-      <section class="section route-section" id="${s.id}" data-route-layer="${s.routeLayer || s.id}">
-        <div class="section-header border-${s.accent}">
-          <span class="section-num bg-${s.accent}">${s.num}</span>
-          <div class="section-title-group">
-            <div class="section-title">${s.title}</div>
-            <span class="section-badge badge-${s.accent}">${s.hint}</span>
-          </div>
-        </div>
-${bodyHTML}
-      </section>`;
+}
+
+function renderPrototypeSidebar(paragraaf, resolvedMap, rows) {
+  const chapter = CONFIG.chapterIndex[paragraaf.chapter];
+  const chapterTitle = chapter ? `Hoofdstuk ${chapter.number}` : paragraaf.chapter;
+  const chapterParagraphs = CONFIG.paragraphs.filter(p => p.chapter === paragraaf.chapter && !CONFIG.isHidden(p.id));
+  const paragraphLinks = chapterParagraphs.map(p => {
+    const resolved = resolvedMap && resolvedMap[p.id];
+    const href = p.id === paragraaf.id ? "index.html" : `../${encPath([resolved ? resolved.folderName : `${p.id} ${p.name}`])}/index.html`;
+    return `      <a class="side-link${p.id === paragraaf.id ? " current" : ""}" href="${href}"><span class="side-number">${escapeHtml(p.id)}</span><span>${escapeHtml(p.name)}</span></a>`;
   }).join("\n");
+  const routeLinks = rows.map(row => `      <a class="side-link" href="#${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}"><span class="side-number">${row.num}</span><span>${escapeHtml(row.title)}</span></a>`).join("\n");
+  return `    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4v</div>
+        <div><strong>Economie VWO 4</strong><small>${escapeHtml(CONFIG.displayLabel)}</small></div>
+      </div>
+      <div class="sidebar-section-title">${escapeHtml(chapterTitle)}</div>
+${paragraphLinks}
+      <div class="sidebar-section-title">Route</div>
+${routeLinks}
+    </aside>`;
+}
 
-  const chapterBackHref = "../index.html";
-  const bookBackHref = "../../index.html";
+function renderParagraafPage(paragraaf, files, resolvedMap) {
+  const chapterFull = CONFIG.chapterFullLabel(paragraaf.chapter);
+  const rows = routeRows(files, paragraaf);
+  const nextTile = firstActionableTile(rows);
+  const nextAction = nextTile
+    ? `<a class="tile-primary" href="${escapeHtml(nextTile.href)}">${escapeHtml(nextTile.action || "Openen")} &rarr;</a>`
+    : `<span class="tile-status">In voorbereiding</span>`;
+  const nextTitle = nextTile ? nextTile.title : "Route in voorbereiding";
+  const nextDesc = nextTile
+    ? nextTile.desc
+    : "De route blijft zichtbaar terwijl ontbrekende onderdelen worden opgebouwd.";
+  const breadcrumbChapter = CONFIG.chapterIndex[paragraaf.chapter] ? `Hoofdstuk ${CONFIG.chapterIndex[paragraaf.chapter].number}` : chapterFull;
 
-  return `<!DOCTYPE html>
+  return `<!doctype html>
 <html lang="nl" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>(function(){try{var m=localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
-<title>${paragraaf.id} ${paragraaf.name} – Lesmateriaal</title>
-<link rel="stylesheet" href="../../shared/voorkennis.css">
-<style>
-  .sidebar-jump {
-    display: block; padding: 0.55rem 1.1rem;
-    font-size: 0.72rem; color: var(--ink-soft);
-    border-bottom: 1px solid var(--border);
-  }
-  .sidebar-jump a { color: var(--accent); }
-  .sidebar-jump a:hover { text-decoration: underline; }
-
-  .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 0.9rem;
-  }
-  .resource-card {
-    display: flex; gap: 0.85rem; align-items: flex-start;
-    background: var(--bg-lift);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    border-radius: 10px;
-    padding: 1rem 1.15rem;
-    color: inherit; text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .resource-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  }
-  .resource-card-icon {
-    flex-shrink: 0; width: 38px; height: 38px; border-radius: 8px;
-    background: var(--accent-lt); color: var(--accent);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .resource-card-icon svg {
-    width: 20px; height: 20px; fill: none; stroke: currentColor;
-    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-  }
-  .resource-card-body { flex: 1; min-width: 0; }
-  .resource-card-body h3 {
-    font-size: 0.98rem; font-weight: 600; color: var(--ink);
-    margin: 0 0 0.2rem;
-  }
-  .resource-card-body p {
-    font-size: 0.82rem; color: var(--ink-soft);
-    line-height: 1.45; margin: 0 0 0.45rem;
-  }
-  .learning-aspect-block,
-  .guided-practice-block {
-    display: grid;
-    gap: 0.85rem;
-  }
-  .guided-practice-block {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-  }
-  .learning-aspect-copy {
-    max-width: 70ch;
-  }
-  .learning-aspect-copy h3 {
-    margin: 0.1rem 0 0.25rem;
-    font-size: 1rem;
-    color: var(--ink);
-  }
-  .learning-aspect-copy p {
-    margin: 0;
-    color: var(--ink-soft);
-    font-size: 0.84rem;
-    line-height: 1.45;
-  }
-  .resource-aspect-label {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 0 0.35rem;
-    font-family: var(--mono);
-    font-size: 0.67rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--ink-soft);
-  }
-  .resource-card-aspect.aspect-economisch {
-    border-left-color: var(--economisch);
-  }
-  .resource-card-aspect.aspect-wiskunde {
-    border-left-color: var(--wiskundig);
-  }
-  .resource-card-aspect.aspect-grafisch {
-    border-left-color: var(--grafisch);
-  }
-  .resource-card-aspect.aspect-economisch .resource-card-icon {
-    color: var(--economisch);
-    background: var(--economisch-tint);
-  }
-  .resource-card-aspect.aspect-wiskunde .resource-card-icon {
-    color: var(--wiskundig);
-    background: var(--wiskundig-tint);
-  }
-  .resource-card-aspect.aspect-grafisch .resource-card-icon {
-    color: var(--grafisch);
-    background: var(--grafisch-tint);
-  }
-  .resource-card-action {
-    display: inline-block;
-    font-size: 0.78rem; font-weight: 600;
-    color: var(--accent);
-  }
-  .resource-card-check {
-    border-left-width: 5px;
-  }
-  .resource-card-check-short {
-    border-left-color: var(--wiskundig);
-  }
-  .resource-card-check-exit {
-    border-left-color: var(--grafisch);
-  }
-  .resource-card-check-short .resource-card-icon {
-    color: var(--wiskundig);
-    background: var(--wiskundig-tint);
-  }
-  .resource-card-check-exit .resource-card-icon {
-    color: var(--grafisch);
-    background: var(--grafisch-tint);
-  }
-  .resource-card-check .check-card-kind {
-    margin-bottom: 0.25rem;
-  }
-  .resource-card-check .resource-card-purpose {
-    min-height: 3.45em;
-  }
-  .resource-sub-links {
-    display: flex; gap: 0.45rem; flex-wrap: wrap;
-    margin-top: 0.3rem;
-  }
-  .resource-sub-link {
-    display: inline-block;
-    font-size: 0.74rem; font-weight: 500;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid var(--border); border-radius: 5px;
-    color: var(--accent); background: var(--bg);
-    transition: background 0.12s, border-color 0.12s;
-  }
-  .resource-sub-link:hover {
-    background: var(--accent-lt);
-    border-color: var(--accent);
-  }
-  .resource-card-pair { border-left-color: var(--accent); }
-  .resource-card-interactive { border-left-color: var(--accent); }
-  .resource-card-with-source { position: relative; border-left-color: var(--accent); }
-  .resource-card-with-source:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  }
-  .resource-card-cover-link {
-    position: absolute; inset: 0;
-    z-index: 1;
-    text-decoration: none;
-    border-radius: 10px;
-  }
-  .resource-card-with-source > .resource-card-icon,
-  .resource-card-with-source > .resource-card-body { position: relative; z-index: 0; pointer-events: none; }
-  .resource-card-with-source .resource-sub-links { position: relative; z-index: 2; pointer-events: auto; }
-  .route-secondary-group {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg-lift);
-    margin-bottom: 0.75rem;
-    overflow: hidden;
-  }
-  .route-secondary-group summary {
-    position: relative;
-    cursor: pointer;
-    display: grid;
-    gap: 0.18rem;
-    padding: 0.9rem 1rem;
-    list-style: none;
-  }
-  .route-secondary-group summary::-webkit-details-marker { display: none; }
-  .route-secondary-group summary::after {
-    content: "+";
-    position: absolute;
-    right: 1rem;
-    margin-top: 0.05rem;
-    color: var(--accent);
-    font-weight: 800;
-  }
-  .route-secondary-group[open] summary::after { content: "-"; }
-  .route-secondary-title {
-    font-weight: 700;
-    color: var(--ink);
-    padding-right: 2rem;
-  }
-  .route-secondary-desc {
-    color: var(--ink-soft);
-    font-size: 0.82rem;
-    line-height: 1.35;
-    padding-right: 2rem;
-  }
-  .route-secondary-grid {
-    padding: 0 1rem 1rem;
-  }
-
-  @media (max-width: 640px) {
-    .resource-grid { grid-template-columns: 1fr; }
-    .route-secondary-group summary { padding-right: 0.85rem; }
-  }
-
-  /* Document viewer (docx/pptx) */
-  .viewer-panel {
-    display: none; position: fixed; inset: 0;
-    background: var(--bg); z-index: 50; flex-direction: column;
-  }
-  .viewer-panel.active { display: flex; }
-  .viewer-bar {
-    display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.55rem 1rem;
-    background: var(--ink); color: #fff;
-    font-size: 0.85rem;
-  }
-  .viewer-title { flex: 1; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .viewer-download {
-    color: #fff; background: var(--accent);
-    padding: 0.28rem 0.75rem; border-radius: 4px;
-    text-decoration: none; font-size: 0.8rem;
-  }
-  .viewer-close {
-    background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
-    padding: 0.28rem 0.75rem; border-radius: 4px;
-    cursor: pointer; font-size: 0.8rem;
-  }
-  .viewer-frame { flex: 1; border: none; width: 100%; background: #fff; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${escapeHtml(paragraaf.id)} ${escapeHtml(paragraaf.name)} - Lesroute</title>
+  <script>(function(){try{var q=new URLSearchParams(location.search).get('theme');var m=(q==='dark'||q==='light')?q:(localStorage.getItem('quizMode')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));document.documentElement.setAttribute('data-theme',m);}catch(e){}})();</script>
+  <style>
+${paragraphPrototypeCSS()}
+  </style>
 </head>
-<body data-layout="paragraaf-v2" data-accent-domain="${accentToken}">
+<body>
+  <div class="app-shell">
+${renderPrototypeSidebar(paragraaf, resolvedMap, rows)}
 
-<button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu openen">
-  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-</button>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-<div class="page-layout">
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <h2>${paragraaf.id} ${paragraaf.name}</h2>
-      <p>Lesmateriaal</p>
-    </div>
-    <div class="sidebar-jump">
-      <a href="${chapterBackHref}">&larr; ${chapterFull}</a><br>
-      <a href="${bookBackHref}">${CONFIG.displayLabel}</a>
-    </div>
-${sidebarItems}
-  </nav>
-
-  <div class="content">
-    <header class="hero">
-      <div class="hero-inner">
-        <a class="back-link" href="${chapterBackHref}"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> ${chapterFull}</a>
-        <span class="hero-badge">Paragraaf ${paragraaf.id}</span>
-        <h1>${paragraaf.name}</h1>
-        <p class="hero-sub">${chapterFull}</p>
+    <main class="content">
+      <div class="topbar">
+        <nav class="breadcrumb" aria-label="Kruimelpad">
+          <a href="../../index.html">${escapeHtml(CONFIG.displayLabel)}</a><span>&rsaquo;</span><a href="../index.html">${escapeHtml(breadcrumbChapter)}</a><span>&rsaquo;</span><span>Paragraaf ${escapeHtml(paragraaf.id)}</span>
+        </nav>
+        <button class="theme-note" id="themeToggle" type="button">Licht thema &middot; duidelijke route</button>
       </div>
-    </header>
 
-    <main>${sectionsHTML}
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Paragraaf landing</div>
+            <h1 id="page-title">${escapeHtml(paragraaf.name)}</h1>
+            <p class="lead">Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen.</p>
+          </div>
+          <aside class="target-panel" aria-label="Leerpadstatus">
+            <h2>Jouw leerpad</h2>
+            <p>${escapeHtml(nextDesc)}</p>
+            <div>${nextAction}</div>
+            <div class="mini-meter" aria-label="Voorbeeld voortgang">
+              <div class="meter-track"><div class="meter-fill"></div></div>
+              <div class="meter-copy"><span>${escapeHtml(nextTitle)}</span><span>richting exit ticket</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="route-strip" aria-label="Routeoverzicht">
+${rows.map(renderRouteChip).join("\n")}
+      </div>
+
+      <section class="rows" aria-label="Paragraafroute">
+${rows.map(renderLearningRow).join("\n\n")}
+      </section>
+
+      <p class="footer-note">Economie VWO 4 &middot; open lesmateriaal &middot; voortgang blijft lokaal op dit apparaat.</p>
     </main>
   </div>
-</div>
-
-<div class="viewer-panel" id="viewerPanel">
-  <div class="viewer-bar">
-    <span class="viewer-title" id="viewerTitle"></span>
-    <a class="viewer-download" id="viewerDownload" href="#" download>Download</a>
-    <button class="viewer-close" onclick="closeViewer()">Sluiten &times;</button>
-  </div>
-  <iframe id="viewerFrame" class="viewer-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-</div>
-
-<script src="../../shared/voorkennis.js"></script>
 <script>
-function openViewer(href, title) {
-  var abs = new URL(href, window.location.href).href;
-  var viewerURL = "https://view.officeapps.live.com/op/embed.aspx?src=" + encodeURIComponent(abs);
-  document.getElementById("viewerTitle").textContent = title;
-  document.getElementById("viewerDownload").href = href;
-  document.getElementById("viewerFrame").src = viewerURL;
-  document.getElementById("viewerPanel").classList.add("active");
-}
-function closeViewer() {
-  document.getElementById("viewerPanel").classList.remove("active");
-  document.getElementById("viewerFrame").src = "about:blank";
-}
-if (window.innerWidth > 768) {
-  document.addEventListener("click", function(e) {
-    var link = e.target.closest("a[href]");
-    if (!link) return;
-    var href = link.getAttribute("href");
-    if (!href) return;
-    var lower = href.toLowerCase();
-    if (lower.endsWith(".docx") || lower.endsWith(".pptx")) {
-      e.preventDefault();
-      var name = decodeURIComponent(href.split("/").pop()).replace(/\\.[^.]+$/, "");
-      openViewer(href, name);
-    }
+(function(){
+  var button = document.getElementById('themeToggle');
+  function applyTheme(mode) {
+    document.documentElement.setAttribute('data-theme', mode);
+    try { localStorage.setItem('quizMode', mode); } catch (e) {}
+    if (button) button.innerHTML = mode === 'dark' ? 'Donker thema &middot; zelfde route' : 'Licht thema &middot; duidelijke route';
+  }
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+  if (button) button.addEventListener('click', function(){
+    applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
-}
+})();
 </script>
 </body>
 </html>`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
+// u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}u{2550}
 // MAIN
 // ═══════════════════════════════════════════════════════════════════════════
 

@@ -37,6 +37,11 @@ node scripts/validate-paragraph.js --mode part-a --profile publisher-print "<par
 > readiness. Two design principles govern every surface: **Dual Coding** (every
 > concept pairs text with a visual) and **Unified Student Experience** (same
 > procedures and approaches across all formats). These are non-negotiable.
+> Paragraph landing V2 additionally uses
+> `../4veco-lessen/specifications/paragraph-landing-layout-v2.md` and the
+> approved visual fixtures in `references/ui/paragraph-landing-v2/` as the
+> visual baseline. Do not build paragraph landing pages from the old lesson
+> shell or old resource-card route.
 
 ## Quality Standard
 
@@ -712,7 +717,7 @@ Fully automated from data files. deploy.js runs these.
 | `build-procedure-shells.js` | `shared/procedure/*.js` | `<paragraph folder>/*.html` |
 | `build-reasoning-engine.js` | `shared/reasoning/*.js` | `<paragraph folder>/*.html` |
 | `build-skilltree-shells.js` | Book manifest paragraphs with `skilltree` + `engines/skilltree/base-elements.js` | `shared/skilltree/*.js` + `<paragraph folder>/*.html` |
-| `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout) | `index.html` at paragraph/chapter/book levels |
+| `build-landing-page.js` | Book manifest + scans paragraph folder contents (filename-based classification, flat layout); paragraph pages use the approved landing V2 fixtures | `index.html` at paragraph/chapter/book levels |
 | `build-reasoning-questions.js` | CSV file (manual arg) | `shared/reasoning/*.js` |
 
 > **Flat layout:** all generators emit directly to the paragraph root — there are no phase subfolders. Each generator calls `loadConfig(MODULE_ROOT)` to read the book's `deploy-config.json` and resolves each `parNr` to its folder via the manifest. Data files whose parNr is not in the manifest are skipped with a warning. The current skilltree generator only emits for paragraphs that declare `skilltree`; for a complete Part B paragraph, that declaration is required.

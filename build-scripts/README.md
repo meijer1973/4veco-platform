@@ -11,6 +11,14 @@ Every generated paragraph route should move students from current readiness to
 target-exercise readiness. Generator, engine, and deploy changes should
 preserve that end state or name the follow-up sprint that restores it.
 
+Paragraph landing V2 is prototype-owned. `platform/build-landing-page.js` must
+use `references/ui/paragraph-landing-v2/approved-light.html` and
+`references/ui/paragraph-landing-v2/approved-dark.html` as the visual baseline
+for generated paragraph landing pages, with the lesson-side contract in
+`../4veco-lessen/specifications/paragraph-landing-layout-v2.md`. Do not rebuild
+paragraph landing pages from the old lesson shell, old shared `voorkennis.css`
+layout, or legacy resource-card paragraph renderer.
+
 Sprint plans and active roadmaps must also pass scope-language discipline:
 
 ```bash

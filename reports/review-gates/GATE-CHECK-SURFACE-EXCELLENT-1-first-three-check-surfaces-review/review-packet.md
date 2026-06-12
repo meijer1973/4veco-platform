@@ -2,9 +2,8 @@
 
 Generated: 2026-06-12
 
-Status: renewed human review returned `pass_with_flags`; closure proposal is
-ready for explicit human confirmation; no gate closure or product authority
-exists.
+Status: gate closure confirmed for the narrow first-three check-surface
+evidence gate; carried flags remain; no product authority exists.
 
 The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded. It must not
 be sent as current evidence because renewed human/lead feedback found that
@@ -15,8 +14,8 @@ Renewed direct human review returned: pass_with_flags.
 No active core_spec_failure remains for
 `GATE-CHECK-SURFACE-EXCELLENT-1`.
 
-This packet now includes a closure proposal only. `gate-closure.md/json` may be
-written only after explicit human confirmation.
+Gate closure confirmed after explicit human confirmation of the PR #50 closure
+proposal. `gate-closure.md/json` now record that narrow closure.
 
 ## Review Scope
 
@@ -77,6 +76,8 @@ must not broaden the historical authority.
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json`
 - `reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md`
 - `reports/json/checksurface-policy-regression1-proof.json`
 - `reports/fixtures/checksurface-policy-regression1/negative-fixtures.json`
@@ -244,6 +245,8 @@ controlled downstream sprint may start?
   `comment-resolution-log.md/json`.
 - Renewed comments were returned and recorded in
   `renewed-review-comments.md/json`.
+- Explicit human confirmation was returned and recorded in
+  `gate-closure.md/json`.
 - The agent should ask targeted follow-up questions only for ambiguous,
   missing, or conflicting review authority.
 - A closure proposal may be drafted only after comment evidence is complete.
@@ -283,7 +286,7 @@ After comments are returned:
 
 ## Recommended Next Action
 
-Use `closure-proposal.md/json` as the proposal record and ask for explicit
-human confirmation. Do not write `gate-closure.md/json` and do not start
-`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption,
-diagnostics, mastery/sequencing, PV, or student/product use from this packet.
+Merge the gate-closure PR after validation. Then handle landing V2 in its own
+review lane before starting `SCALE-PROOF-3P` as proof production. Do not start
+`GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption, diagnostics,
+mastery/sequencing, PV, or student/product use from this packet.

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T13:54:44.626Z
+Generated: 2026-06-12T14:31:34.145Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4426
+Files indexed: 4451
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -659,7 +659,7 @@ Count: 42
 
 ## validators
 
-Count: 452
+Count: 455
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -954,6 +954,8 @@ Count: 452
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
@@ -1086,6 +1088,7 @@ Count: 452
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
@@ -1116,7 +1119,7 @@ Count: 452
 
 ## references
 
-Count: 600
+Count: 603
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1716,12 +1719,15 @@ Count: 600
 - references/ui/layout-registry.md
 - references/ui/layouts/golden-exercise-workbench-short-check.json
 - references/ui/layouts/golden-exercise-workbench-short-check.md
+- references/ui/paragraph-landing-v2/approved-dark.html
+- references/ui/paragraph-landing-v2/approved-light.html
+- references/ui/paragraph-landing-v2/README.md
 - references/ui/README.md
 - references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2720
+Count: 2742
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1745,8 +1751,16 @@ Count: 2720
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -2047,6 +2061,8 @@ Count: 2720
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
@@ -3436,6 +3452,18 @@ Count: 2720
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
 - reports/sprints/L2.0-platform-support-result.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-plan.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/approved-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/approved-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/compare-dark.html
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/compare-light.html
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/comparison-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/comparison-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-mobile-narrow.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-phone-414.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/LEAD-REVIEW-1-baseline.md
 - reports/sprints/LEAD-REVIEW-1-diff-summary.md
 - reports/sprints/LEAD-REVIEW-1-lead-review-assignment.md
