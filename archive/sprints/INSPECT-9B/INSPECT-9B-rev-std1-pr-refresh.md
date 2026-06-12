@@ -17,7 +17,7 @@ Branch: `codex/inspect-9b-pr-refresh-20260612`
 
 ## Freshness Note
 
-- Platform refresh base: `origin/main` at `1069f64d2314d073e9f4015ed08ffabb87e9b3e6`.
+- Platform refresh base: `origin/main` at `5147c9ef95719a4dc79b33ec6bc0c8d56ad27767`.
 - Current lesson evidence commit: `883a1f7db94d2cc84fb849310a62e01c73d3e292`.
 - Original lesson evidence commit: `b858bca602bb7afdf75cad7c3ecc1a79b31fbb76`.
 - Freshness check: no Book 1 Chapter 1.2 lesson-file diff was found between
