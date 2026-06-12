@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T13:24:26.024Z
+Generated: 2026-06-12T12:01:03.282Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4383
+Files indexed: 4395
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -658,7 +658,7 @@ Count: 42
 
 ## validators
 
-Count: 445
+Count: 446
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -674,6 +674,7 @@ Count: 445
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
 - archive/sprints/INSPECT-8/INSPECT-8-validation-log.md
+- archive/sprints/INSPECT-9/INSPECT-9-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
@@ -1710,7 +1711,7 @@ Count: 597
 
 ## reports
 
-Count: 2706
+Count: 2711
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1746,6 +1747,8 @@ Count: 2706
 - reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.json
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
@@ -2277,6 +2280,9 @@ Count: 2706
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.json
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json
@@ -4439,7 +4445,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 438
+Count: 444
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4549,7 +4555,13 @@ Count: 438
 - archive/sprints/INSPECT-8/INSPECT-8-lead-review-round2.md
 - archive/sprints/INSPECT-8/INSPECT-8-planning-review.md
 - archive/sprints/INSPECT-8/INSPECT-8-sprint-plan.md
+- archive/sprints/INSPECT-9/INSPECT-9-closure-log.md
 - archive/sprints/INSPECT-9/INSPECT-9-coding-agent-handoff.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-assignment.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-round1.md
+- archive/sprints/INSPECT-9/INSPECT-9-planning-review.md
+- archive/sprints/INSPECT-9/INSPECT-9-rev-std1-pr-refresh.md
+- archive/sprints/INSPECT-9/INSPECT-9-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md

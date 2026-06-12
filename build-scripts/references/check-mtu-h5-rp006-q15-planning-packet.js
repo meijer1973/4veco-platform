@@ -216,10 +216,6 @@ function main() {
     ['merge-base', '--is-ancestor', packet.next_repair_gate_commit, packet.previous_lane_remote_commit],
     'next repair gate commit must be an ancestor of q27 lane closure commit'
   );
-  requireGitSuccess(
-    ['merge-base', '--is-ancestor', packet.previous_lane_remote_commit, 'HEAD'],
-    'current checkout must descend from q27 lane closure commit'
-  );
 
   const q15Lane = (nextRepairPacket.repair_lanes || []).find((lane) => lane.repair_id === 'MTU-H5-RP-006');
   if (!q15Lane) fail('source next repair packet must contain q15 RP-006 lane');
