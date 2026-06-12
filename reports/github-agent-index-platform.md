@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T14:32:15.950Z
+Generated: 2026-06-12T14:37:28.466Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4443
+Files indexed: 4459
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1727,7 +1727,7 @@ Count: 603
 
 ## reports
 
-Count: 2734
+Count: 2750
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1751,8 +1751,16 @@ Count: 2734
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -1766,6 +1774,10 @@ Count: 2734
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2000,6 +2012,8 @@ Count: 2734
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
+- reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
@@ -2644,6 +2658,8 @@ Count: 2734
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
+- reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
+- reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-result.md
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl

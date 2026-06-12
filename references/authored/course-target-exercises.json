@@ -194,26 +194,89 @@
     {
       "difficulty": "MIXED",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.1.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "A school fundraiser sells healthy lunch boxes. Students use a price-quantity table, a graph, and a campaign claim to combine scarcity, opportunity-cost, percentage, index, table-reading, graphing, interpolation, and data-claim evaluation from 1.1.1-1.1.3. The target introduces no new economic theory.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Draw the lunch-box price-quantity table as a graph with price on the vertical axis and quantity on the horizontal axis: P=EUR 4 -> Q=180, P=EUR 5 -> Q=150, P=EUR 6 -> Q=120, P=EUR 7 -> Q=90."
+          },
+          {
+            "label": "b",
+            "prompt": "Read or interpolate from the graph: about how many lunch boxes would be sold at EUR 5.50?"
+          },
+          {
+            "label": "c",
+            "prompt": "Use EUR 4 as index 100. Calculate the quantity index at EUR 6 and the percentage change in quantity sold from EUR 4 to EUR 6."
+          },
+          {
+            "label": "d",
+            "prompt": "The council chooses EUR 6. Explain the opportunity cost of not choosing EUR 5 in terms of giving up 30 expected boxes sold."
+          },
+          {
+            "label": "e",
+            "prompt": "A poster claims: \"A EUR 2 price increase halves sales.\" Use the table and your calculations to decide whether that claim is correct."
           }
-        ]
+        ],
+        "answer_form_expectations": [
+          "Graph with P on the vertical axis, Q on the horizontal axis, ordered table points, and a readable scale.",
+          "Numeric answers with the correct base value and one clear calculation line.",
+          "Short written explanations that name opportunity cost and refer to the table."
+        ],
+        "short_answer_model": [
+          "a. Plot (Q,P) points (180,4), (150,5), (120,6), and (90,7) with a downward-sloping line through the points.",
+          "b. About 135 lunch boxes.",
+          "c. Quantity index at EUR 6 with EUR 4 as base: 120 / 180 * 100 = 66.7. Percentage change: (120 - 180) / 180 * 100 = -33.3%.",
+          "d. Choosing EUR 6 means giving up 30 expected boxes sold compared with EUR 5. Do not introduce revenue or profit theory.",
+          "e. The claim is not correct for the listed EUR 2 price increases. EUR 4 to EUR 6 falls by one-third, not half; EUR 5 to EUR 7 also does not halve sales."
+        ],
+        "evidence_path": [
+          "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md",
+          "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md",
+          "reports/reference-planning/CP.6c-mtu-backfill-classification.md"
+        ],
+        "no_new_theory_rationale": "The task combines scarcity, opportunity cost, percentages, index numbers, table reading, graph drawing, interpolation, and claim checking. It deliberately avoids revenue, profit, elasticity, consumer surplus, and market-equilibrium theory.",
+        "review_disposition": "accepted_for_governed_registry_replacement"
+      },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "1.1.1",
+          "1.1.2",
+          "1.1.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: economisch denken en rekenen."
+        "Consolidate scarcity and opportunity-cost reasoning with percentage, index, table, graph, interpolation, and claim-evaluation skills.",
+        "Select relevant price-quantity data from a table and graph.",
+        "Write short economic explanations that use source data without introducing revenue or profit theory."
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A38",
+        "A39",
+        "A43",
+        "A45",
+        "A46",
+        "B01",
+        "B02",
+        "D31"
+      ],
+      "prior_knowledge_assumed": [
+        "A38",
+        "A39",
+        "A43",
+        "A45",
+        "A46",
+        "B01",
+        "B02",
+        "D31"
+      ],
       "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "difficulty_notes": "Reviewed integration target accepted from PR #42. It introduces no new theory. The main difficulty is transfer: students must combine graph/table reading, interpolation, percentage/index calculation, opportunity-cost language, and source-claim evaluation without being led step by step.",
       "id": "1.1.4",
       "module": 1,
       "chapter": 1,
@@ -221,14 +284,24 @@
       "paragraph_title": "Gemengde opgaven: economisch denken en rekenen",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "record_status": "reviewed_final",
       "source_ref": "references/owned/course-blueprint-v5.md §1.1.4",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "reviewed_final",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1",
+        "review_completed_on": "2026-06-12"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1",
+        "review_date": "2026-06-12",
+        "candidate_packet": "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md",
+        "quality_log": "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md",
+        "source_pr": "https://github.com/meijer1973/4veco-platform/pull/42",
+        "decision_summary": "Accepted PR #42 candidate target for governed authored-registry replacement. Wording preserves the opportunity-cost focus as giving up 30 expected boxes sold and avoids revenue/profit theory.",
+        "authority_boundary": "Reviewed source-registry replacement only; does not close Year 1, CP-6, target-equivalent proof, graph/table 1.1.3 closure, lesson output, Scale Gate authority, or student-facing product use."
       }
     },
     {
@@ -517,6 +590,17 @@
           }
         ]
       },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "1.2.1",
+          "1.2.2",
+          "1.2.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
+      },
       "lesson_goals": [
         "Consolidate individual demand, willingness-to-pay, and buy/no-buy reasoning in mixed contexts.",
         "Determine collective demand from tables, functions, and graphs by adding quantities at the same price.",
@@ -796,26 +880,92 @@
     {
       "difficulty": "MIXED",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.3.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "In the market for notebooks, students use demand and supply functions, a non-equilibrium price, and two separate one-shift scenarios to combine supply shifts, demand shifts, equilibrium calculation, graphing, surplus/shortage reasoning, and new-equilibrium comparison from 1.3.1-1.3.3. The target introduces no new economic theory and keeps simultaneous-shift reasoning out of the replacement path.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "For Qv = -2P + 120 and Qa = 3P - 30, calculate the original equilibrium price and quantity and mark the point in a graph."
+          },
+          {
+            "label": "b",
+            "prompt": "At P = EUR 35, determine whether there is a surplus or shortage and calculate its size."
+          },
+          {
+            "label": "c",
+            "prompt": "A new printing machine increases supply to Qa = 3P - 15. Calculate the new equilibrium after only the supply increase and explain the direction of the supply shift."
+          },
+          {
+            "label": "d",
+            "prompt": "In a separate scenario, a school campaign raises demand to Qv = -2P + 140 while supply remains Qa = 3P - 30. Calculate the new equilibrium after only the demand increase and explain the direction of the demand shift."
+          },
+          {
+            "label": "e",
+            "prompt": "Compare both one-shift scenarios with the original equilibrium. What happens to price and quantity after the supply increase, and what happens after the demand increase?"
           }
-        ]
+        ],
+        "answer_form_expectations": [
+          "Algebraic equations with enough working to check the equilibrium.",
+          "Graph with correctly labelled demand, supply, and equilibrium points.",
+          "Surplus/shortage answer that identifies which quantity is larger.",
+          "Written comparison of the two separate one-shift scenarios without importing simultaneous-shift reasoning."
+        ],
+        "short_answer_model": [
+          "a. -2P + 120 = 3P - 30, so 150 = 5P, P = 30, Q = 60.",
+          "b. At P = 35, Qv = 50 and Qa = 75; there is an aanbodoverschot of 25 notebooks.",
+          "c. -2P + 120 = 3P - 15, so 135 = 5P, P = 27, Q = 66. Supply shifts right because producers supply more at each price.",
+          "d. -2P + 140 = 3P - 30, so 170 = 5P, P = 34, Q = 72. Demand shifts right because buyers want more at each price.",
+          "e. The supply increase lowers price from 30 to 27 and raises quantity from 60 to 66. The demand increase raises price from 30 to 34 and raises quantity from 60 to 72."
+        ],
+        "evidence_path": [
+          "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md",
+          "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md",
+          "reports/reference-planning/CP.6c-mtu-backfill-classification.md"
+        ],
+        "no_new_theory_rationale": "The task consolidates supply shifts, demand shifts, equilibrium calculation, graphing, surplus/shortage, and new-equilibrium comparison from 1.3.1-1.3.3. It deliberately avoids costs, revenue, marginal analysis, welfare, taxes, subsidies, price controls, and simultaneous-shift ambiguity.",
+        "review_disposition": "accepted_for_governed_registry_replacement"
+      },
+      "mixed_target_profile": {
+        "integrates_paragraphs": [
+          "1.3.1",
+          "1.3.2",
+          "1.3.3"
+        ],
+        "source_selection_required": true,
+        "answer_construction_required": true,
+        "table_or_graph_interpretation_required": true,
+        "no_new_theory": true
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: aanbod en marktevenwicht."
+        "Consolidate supply shifts, demand shifts, equilibrium calculation, surplus/shortage reasoning, and new-equilibrium comparison.",
+        "Select and apply the relevant demand or supply function for each one-shift scenario.",
+        "Compare price and quantity outcomes after separate shifts without using simultaneous-shift reasoning."
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "A49",
+        "A51",
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "prior_knowledge_assumed": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "A49",
+        "A51",
+        "D13",
+        "D32",
+        "D33"
+      ],
       "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "difficulty_notes": "Reviewed integration target accepted from PR #42. It introduces no new theory. The candidate intentionally keeps simultaneous demand+supply shift reasoning out of the replacement path; that remains a separate bounded missing-unit design lane.",
       "id": "1.3.4",
       "module": 1,
       "chapter": 3,
@@ -823,14 +973,24 @@
       "paragraph_title": "Gemengde opgaven: aanbod en marktevenwicht",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "record_status": "reviewed_final",
       "source_ref": "references/owned/course-blueprint-v5.md §1.3.4",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "reviewed_final",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1",
+        "review_completed_on": "2026-06-12"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1",
+        "review_date": "2026-06-12",
+        "candidate_packet": "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md",
+        "quality_log": "reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md",
+        "source_pr": "https://github.com/meijer1973/4veco-platform/pull/42",
+        "decision_summary": "Accepted revised PR #42 one-shift-at-a-time candidate for governed authored-registry replacement. Simultaneous-shift reasoning remains out of scope and stays in a separate missing-unit lane.",
+        "authority_boundary": "Reviewed source-registry replacement only; does not close Year 1, CP-6, target-equivalent proof, 1.3.3 simultaneous-shift missing-unit design, lesson output, Scale Gate authority, or student-facing product use."
       }
     },
     {
