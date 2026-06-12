@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "review_received_on": "2026-06-12",
+  "gate_direction": "pass_with_flags",
+  "human_review_decision": "pass_with_flags",
+  "previous_gate_direction": "hold_for_surface_repair",
+  "no_active_core_spec_failure_for_this_gate": true,
+  "gate_closed": false,
+  "closure_artifacts_authorized": false,
+  "evidence_boundary": {
+    "platform_repo": "build/checker/report logic",
+    "lesson_repo": "generated student-facing output"
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "findings": [
+    {
+      "id": "CHECKSURFACE-Q1",
+      "classification": "core_requirement_met",
+      "comment": "The three landing pages show separate Korte check and Exit ticket cards, with distinct advisory and end-check routes for 1.1.1, 1.1.2, and 1.1.3.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q2",
+      "classification": "core_requirement_met",
+      "comment": "The six-surface audit matrix and proof are current enough for gate review; the stale 1.1.3 exit evidence issue is repaired.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q3",
+      "classification": "quality_improvement_available",
+      "comment": "The policy proof remains useful. Its 1.1.2 authority field is broad, but authoritative packet/lab/check-proof evidence now distinguishes historical exact-copy authority from the current held Golden Workbench transfer.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal for this gate"],
+      "proof_required_to_close": "Future cleanup may rename reviewed_112_completion_authority_preserved to historical_112_exact_copy_authority_preserved or add an explicit current_112_transfer_held key."
+    },
+    {
+      "id": "CHECKSURFACE-Q4",
+      "classification": "core_requirement_met",
+      "comment": "The 1.1.3 advisory Korte check remains a meaningful graph/table route check and stays advisory rather than target-equivalent proof.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q5",
+      "classification": "core_requirement_met",
+      "comment": "The 1.1.3 Korte check feedback is sufficient for this gate and routes students toward table-to-graph, graph-reading, or later exit-ticket work.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q6",
+      "classification": "core_requirement_met",
+      "comment": "The current 1.1.3 Exit ticket is free of pre-attempt procedure or answer-giving scaffolds for this gate.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q7",
+      "classification": "minor_carry_flag",
+      "comment": "The 1.1.3 exit source/task workspace is readable enough for gate acceptance. The proof shows the source pane now fits without scrolling, but the review-lab caption remains semantically stale.",
+      "blocks": ["future review-lab wording polish"],
+      "does_not_block": ["gate closure proposal"],
+      "proof_required_to_close": "Rename the lab caption to Source pane fits, task visible or equivalent in a later evidence-polish pass."
+    },
+    {
+      "id": "CHECKSURFACE-Q8",
+      "classification": "core_requirement_met",
+      "comment": "Graph labels/ticks, point placement, line drawing, interpolation, formula builder, interval choices, and conclusion choices now ask for real student action.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q9",
+      "classification": "core_requirement_met",
+      "comment": "The refreshed screenshot and proof package is sufficient for direct judgement at this gate level.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q10",
+      "classification": "core_requirement_met",
+      "comment": "No current packet, proof, lab, source, or generated-output artifact overclaims product authority in a gate-blocking way.",
+      "blocks": ["nothing in this gate"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "CHECKSURFACE-Q11",
+      "classification": "scale_blocker",
+      "comment": "Nothing else needs surface repair before a closure proposal. Downstream work remains blocked until explicit closure.",
+      "blocks": [
+        "CHECK-SHORT-EXIT-2 closure",
+        "SCALE-PROOF-3P",
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product use"
+      ],
+      "does_not_block": ["drafting a closure proposal for this gate"],
+      "proof_required_to_close": "Closure proposal recording this renewed pass_with_flags review, followed by explicit human confirmation before gate-closure.md/json are written."
+    },
+    {
+      "id": "CHECKSURFACE-Q12",
+      "classification": "pass_with_flags",
+      "comment": "The gate may proceed to a closure proposal. Gate-closure artifacts must not be written yet.",
+      "blocks": ["gate-closure.md/json until explicit human confirmation"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "Explicit human confirmation of the closure decision."
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "CF-1",
+      "title": "downstream product authority remains blocked",
+      "classification": "scale_blocker",
+      "blocks": [
+        "SCALE-PROOF-3P",
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product use"
+      ],
+      "does_not_block": ["closure proposal for GATE-CHECK-SURFACE-EXCELLENT-1"],
+      "proof_required_to_close": "Explicit gate-closure artifact after human confirmation, followed by separate downstream product-proof evidence."
+    },
+    {
+      "id": "CF-2",
+      "title": "landing V2 PRs must not silently change reviewed evidence",
+      "classification": "scale_blocker",
+      "blocks": [
+        "merging PR #47 before closure without holding it outside this gate or refreshing evidence",
+        "merging lesson PR #12 before closure without holding it outside this gate or refreshing evidence"
+      ],
+      "does_not_block": ["this current-main check-surface gate review"],
+      "proof_required_to_close": "Complete this gate closure before merging landing V2, or rerun/refresh the check-surface review against V2 landing outputs."
+    },
+    {
+      "id": "CF-3",
+      "title": "minor review-lab wording polish",
+      "classification": "minor_carry_flag",
+      "blocks": ["future evidence-polish cleanliness"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "Update the desktop-source-scrolled figure caption to match the current non-scroll source-pane state."
+    }
+  ],
+  "next_required_action": "draft closure proposal; do not write gate-closure.md/json until explicit human confirmation"
+}

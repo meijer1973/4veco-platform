@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "proposal_created_on": "2026-06-12",
+  "proposal_status": "human_confirmation_required",
+  "renewed_human_review_decision": "pass_with_flags",
+  "gate_direction": "pass_with_flags",
+  "previous_gate_direction": "hold_for_surface_repair",
+  "no_active_core_spec_failure_for_this_gate": true,
+  "scope": "first-three check-surface evidence only",
+  "eligible_for_gate_closure_after_human_confirmation": true,
+  "gate_closed": false,
+  "gate_closure_artifacts_authorized": false,
+  "explicit_human_confirmation_required": true,
+  "gate_closure_files_to_write_only_after_confirmation": [
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json"
+  ],
+  "current_main_freshness_preflight": {
+    "checked_on": "2026-06-12",
+    "platform_commit": "bbe02553970fbe3bf80a720adad375b15db55bdb",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "checks_passed": [
+      "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
+      "node build-scripts/sprints/check-scope-language.js --active"
+    ]
+  },
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "closure_statement": [
+    "Renewed direct human review returned pass_with_flags.",
+    "No active core_spec_failure remains for GATE-CHECK-SURFACE-EXCELLENT-1.",
+    "The closure scope is limited to first-three check-surface evidence.",
+    "Product-route adoption, new completion language, diagnostics/mastery/PV, Scale Gate 1, and student/product use remain unauthorized."
+  ],
+  "carried_flags": [
+    {
+      "id": "CF-1",
+      "title": "downstream product authority remains blocked",
+      "classification": "scale_blocker",
+      "blocks": [
+        "SCALE-PROOF-3P",
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product use"
+      ],
+      "does_not_block": ["closure proposal for this gate"],
+      "proof_required_to_close": "Explicit gate-closure artifact after human confirmation, followed by separate downstream product-proof evidence."
+    },
+    {
+      "id": "CF-2",
+      "title": "landing V2 PRs must not silently change reviewed evidence",
+      "classification": "scale_blocker",
+      "blocks": [
+        "merging PR #47 / lesson PR #12 before closure without holding them outside this gate or refreshing evidence"
+      ],
+      "does_not_block": ["current-main check-surface gate review"],
+      "proof_required_to_close": "Complete this gate closure before merging landing V2, or rerun/refresh the check-surface review against V2 landing outputs."
+    },
+    {
+      "id": "CF-3",
+      "title": "minor review-lab wording polish",
+      "classification": "minor_carry_flag",
+      "blocks": ["future evidence-polish cleanliness only"],
+      "does_not_block": ["closure proposal"],
+      "proof_required_to_close": "Update the desktop-source-scrolled figure caption to match the current non-scroll source-pane state."
+    }
+  ],
+  "next_required_action": "ask for explicit human confirmation; only after confirmation write gate-closure.md/json"
+}

@@ -1,9 +1,9 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 Live Output Evidence
 
-Generated: 2026-06-11
+Generated: 2026-06-12
 
-Status: evidence refresh repair ready for renewed human review; gate remains
-held and not closed.
+Status: renewed human review returned `pass_with_flags`; closure proposal is
+ready for explicit human confirmation; gate remains open and not closed.
 
 ## Generated Output
 
@@ -38,6 +38,24 @@ Freshness repair:
   (`gateApproved: false`, `completionLanguageEligible: false`).
 - `1.1.3` exit evidence now records the current `broodjeskraam` source/table
   context, `percentage_claim_control`, and formula-builder proof.
+
+## Current-Main Freshness Preflight
+
+Preflight was rerun on 2026-06-12 after the latest main merges.
+
+- Platform commit:
+  `bbe02553970fbe3bf80a720adad375b15db55bdb`
+- Lesson commit:
+  `883a1f7db94d2cc84fb849310a62e01c73d3e292`
+
+Passed checks:
+
+- `node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js`
+- `node build-scripts/sprints/check-graph-exit-ux1.js`
+- `node build-scripts/sprints/check-checksurface-policy-regression1.js`
+- `node build-scripts/sprints/check-check-surface-pregate1.js`
+- `node build-scripts/sprints/check-rev-std1-flag-disposition.js`
+- `node build-scripts/sprints/check-scope-language.js --active`
 
 ## Screenshot Evidence
 

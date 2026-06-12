@@ -1,14 +1,22 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 First Three Check Surfaces Review Packet
 
-Generated: 2026-06-11
+Generated: 2026-06-12
 
-Status: direct human review returned `hold_for_surface_repair`; evidence
-refresh repair is ready for renewed review; no closure or product authority
+Status: renewed human review returned `pass_with_flags`; closure proposal is
+ready for explicit human confirmation; no gate closure or product authority
 exists.
 
 The earlier `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded. It must not
 be sent as current evidence because renewed human/lead feedback found that
 accepted shared-task decisions were not preserved.
+
+Renewed direct human review returned: pass_with_flags.
+
+No active core_spec_failure remains for
+`GATE-CHECK-SURFACE-EXCELLENT-1`.
+
+This packet now includes a closure proposal only. `gate-closure.md/json` may be
+written only after explicit human confirmation.
 
 ## Review Scope
 
@@ -65,6 +73,10 @@ must not broaden the historical authority.
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json`
 - `reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md`
 - `reports/json/checksurface-policy-regression1-proof.json`
 - `reports/fixtures/checksurface-policy-regression1/negative-fixtures.json`
@@ -226,11 +238,12 @@ controlled downstream sprint may start?
 
 ## Direct Review Comment Protocol
 
-- Default mode is direct packet comments.
-- The reviewer should comment against the prompt IDs above or return a single
-  response preserving the IDs.
-- After comments are returned, the agent must record direct-review comments and
-  write a comment-resolution log.
+- Direct packet comments were returned and recorded in
+  `direct-review-comments.md/json`.
+- The evidence-refresh repair resolution was recorded in
+  `comment-resolution-log.md/json`.
+- Renewed comments were returned and recorded in
+  `renewed-review-comments.md/json`.
 - The agent should ask targeted follow-up questions only for ambiguous,
   missing, or conflicting review authority.
 - A closure proposal may be drafted only after comment evidence is complete.
@@ -250,8 +263,10 @@ Stop the review instead of closing the gate if any of these occur:
 - `1.1.3` interval controls are correct-only;
 - `1.1.1` or `1.1.3` completion language is enabled;
 - reviewed `1.1.2` authority is broadened;
-- direct review comments, closure proposal, or gate closure artifacts are
-  created before human comments are returned;
+- direct review comments are created before human comments are returned;
+- closure proposal artifacts are created before renewed `pass_with_flags`
+  comments are returned;
+- gate closure artifacts are created before explicit human confirmation;
 - product-route adoption, diagnostics, mastery/sequencing, PV, Scale Gate 1,
   or student/product use is claimed.
 
@@ -268,7 +283,7 @@ After comments are returned:
 
 ## Recommended Next Action
 
-Send this refreshed evidence package back for renewed human review. Do not
-write closure artifacts and do not start `SCALE-PROOF-3P`,
-`GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption, diagnostics,
-mastery/sequencing, PV, or student/product use from this packet.
+Use `closure-proposal.md/json` as the proposal record and ask for explicit
+human confirmation. Do not write `gate-closure.md/json` and do not start
+`SCALE-PROOF-3P`, `GATE-PRODUCT-3P`, Scale Gate 1, product-route adoption,
+diagnostics, mastery/sequencing, PV, or student/product use from this packet.
