@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-2-target-exam-linkage-remediation",
+  "sprint_id": "INSPECT-9A",
+  "generated_date": "2026-06-11",
+  "status": "source_registry_remediation_recorded",
+  "diagnostic_only": true,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "evidence_checkout": {
+    "platform_worktree": "C:/wt/INSPECT-9A-20260611/4veco-platform",
+    "platform_branch": "codex/inspect-9a-chapter-12-target-exam-remediation-20260611",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+    "lesson_evidence_status": "clean_detached_read_only_evidence"
+  },
+  "safe_use_note": "Dutch-only product-side source-registry remediation. Not an evidence pack, inspection judgement, compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, or school-SKA claim.",
+  "registry_update_summary": {
+    "source_file": "references/authored/course-target-exercises.json",
+    "changed_records": [
+      {
+        "paragraph_id": "1.2.1",
+        "changed_fields": [
+          "exam_codes",
+          "record_status",
+          "review_evidence",
+          "v5_migration"
+        ]
+      },
+      {
+        "paragraph_id": "1.2.2",
+        "changed_fields": [
+          "exam_codes",
+          "record_status",
+          "review_evidence",
+          "v5_migration"
+        ]
+      },
+      {
+        "paragraph_id": "1.2.3",
+        "changed_fields": [
+          "exam_codes",
+          "record_status",
+          "review_evidence",
+          "v5_migration"
+        ]
+      },
+      {
+        "paragraph_id": "1.2.4",
+        "changed_fields": [
+          "difficulty_notes",
+          "exam_codes",
+          "lesson_goals",
+          "missing_units_flagged",
+          "placeholder_reason",
+          "prior_knowledge_assumed",
+          "record_status",
+          "required_skills",
+          "review_evidence",
+          "target_exercise",
+          "v5_migration"
+        ]
+      }
+    ],
+    "accidental_non_scope_changes": [],
+    "field_level_check_status": "passed_for_named_records_only"
+  },
+  "paragraph_decisions": [
+    {
+      "paragraph_id": "1.2.1",
+      "title": "Individuele vraag",
+      "target_record_decision": "reviewed_final",
+      "operation_chain": [
+        "draw individual step-function demand curve",
+        "apply willingness-to-pay buy/no-buy rule",
+        "infer quantity change after price drop",
+        "explain downward demand curve"
+      ],
+      "exam_code_decisions": [
+        {
+          "code": "D1.1",
+          "decision": "link",
+          "evidence": "Target uses willingness-to-pay to decide quantity demanded."
+        },
+        {
+          "code": "D1.2",
+          "decision": "link",
+          "evidence": "Target asks drawing and interpreting an individual demand curve."
+        },
+        {
+          "code": "D3.1",
+          "decision": "no-code-with-rationale",
+          "evidence": "Consumer surplus appears in lesson/practice quality evidence, but not in the current registry target exercise."
+        }
+      ],
+      "carried_limits": [
+        "No target-equivalent proof closure.",
+        "Graph-heavy evidence remains separate.",
+        "D3.1 may be lesson evidence but is not a target-exercise registry code here."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "title": "Vraagfactoren",
+      "target_record_decision": "reviewed_final",
+      "operation_chain": [
+        "separate own-price movement from demand shift",
+        "classify preference/income/substitute factors",
+        "show shift direction graphically",
+        "name demand-shift factors"
+      ],
+      "exam_code_decisions": [
+        {
+          "code": "D1.4b",
+          "decision": "link",
+          "evidence": "Target applies demand shifts caused by income, preferences, other goods, and expectations."
+        },
+        {
+          "code": "D1.9",
+          "decision": "link",
+          "evidence": "Target and generated practice include substitute/complement reasoning; official-question projection contains D1.9 examples."
+        },
+        {
+          "code": "D1.4a",
+          "decision": "defer",
+          "evidence": "The target does not require the full relation between all buyers willingness-to-pay and the collective demand curve."
+        },
+        {
+          "code": "A2.15",
+          "decision": "defer",
+          "evidence": "The target asks graph display, but this sprint does not broaden A-domain graph-code linkage without a separate operation comparison."
+        }
+      ],
+      "carried_limits": [
+        "Generated lesson review flags remain lesson-output issues.",
+        "No generated answer wording changed.",
+        "No target-equivalent proof closure."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "title": "Van individuele naar collectieve vraag",
+      "target_record_decision": "reviewed_final",
+      "operation_chain": [
+        "calculate collective demand from table",
+        "draw individual and collective curves",
+        "derive collective demand algebraically",
+        "explain dropout/kink logic"
+      ],
+      "exam_code_decisions": [
+        {
+          "code": "A2.9",
+          "decision": "link",
+          "evidence": "Target uses equations, tables, and graphs in an economic demand question."
+        },
+        {
+          "code": "D1.3",
+          "decision": "link",
+          "evidence": "Target directly covers the relation between individual and collective demand lines."
+        }
+      ],
+      "carried_limits": [
+        "Horizontal aggregation missing-unit flags remain visible for MTU/backfill work.",
+        "No target-equivalent proof closure."
+      ]
+    },
+    {
+      "paragraph_id": "1.2.4",
+      "title": "Gemengde opgaven: vraag",
+      "target_record_decision": "placeholder_replaced_with_reviewed_integration_target",
+      "operation_chain": [
+        "calculate collective demand",
+        "distinguish movement versus shift",
+        "explain preference/substitute demand factors",
+        "derive collective demand function",
+        "read graph quantities and willingness-to-pay intercepts",
+        "evaluate flawed demand conclusions"
+      ],
+      "exam_code_decisions": [
+        {
+          "code": "A2.9",
+          "decision": "link",
+          "evidence": "Generated consolidation target uses functions, tables, and graphs in economic questions."
+        },
+        {
+          "code": "D1.1",
+          "decision": "link",
+          "evidence": "Generated consolidation target asks maximum willingness-to-pay interpretation."
+        },
+        {
+          "code": "D1.2",
+          "decision": "link",
+          "evidence": "Generated consolidation target uses individual demand curves."
+        },
+        {
+          "code": "D1.3",
+          "decision": "link",
+          "evidence": "Generated consolidation target repeatedly calculates collective demand from individual demand."
+        },
+        {
+          "code": "D1.4b",
+          "decision": "link",
+          "evidence": "Generated consolidation target classifies demand shifts from preferences, own price separation, and other-goods context."
+        },
+        {
+          "code": "D1.9",
+          "decision": "link",
+          "evidence": "Generated consolidation target asks substitute/complement classification."
+        },
+        {
+          "code": "D1.4a",
+          "decision": "defer",
+          "evidence": "The integration target closes D1.3/D1.4b operations without making a broader D1.4a collective willingness-to-pay claim."
+        }
+      ],
+      "carried_limits": [
+        "Frozen-yoghurt wording flag remains visible.",
+        "Quality-ref orphaned-asset note remains visible.",
+        "No generated lesson output changed.",
+        "No target-equivalent proof closure."
+      ]
+    }
+  ],
+  "chapter_1_1_control_scope_decision": {
+    "decision": "keep_control_only_no_registry_mutation",
+    "rationale": "INSPECT-9A scope is Chapter 1.2 remediation. Chapter 1.1 remains accepted only as INSPECT-7 control scope unless a later sprint remediates target finality, exam-code/no-code decisions, and target-equivalent proof boundaries."
+  },
+  "remaining_blockers_before_inspect_10": [
+      "Chapter 1.2 has source-registry target/exam-code remediation, but no reviewed target-equivalent proof.",
+    "Accessibility/support evidence for Chapter 1.2 remains weak and route-local only where present.",
+    "Generated lesson review flags for 1.2.2 and 1.2.4 remain lesson-output follow-up work.",
+    "Source freshness policy is proposed but not operationalized as source/profile maintenance.",
+    "Chapter 1.1 remains control-only for stronger re-use."
+  ],
+  "quality_log": [
+    {
+      "title": "Chapter 1.2 source target registry remediated but target-equivalent proof remains open",
+      "quality_category": "target-equivalent-proof-gap",
+      "evidence_path_or_url": "references/authored/course-target-exercises.json; reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+      "affected_surface": "Book 1 Chapter 1.2 target records and future evidence-pack inputs",
+      "severity": "high",
+      "next_action": "Plan and review Chapter 1.2 target-equivalent proof before using completion or pack-strength language.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Reviewed proof task matching operation chain and answer forms for Chapter 1.2 targets."
+    },
+    {
+      "title": "Consumer-surplus lesson evidence is not a 1.2.1 target-exercise code",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.1 Individuele vraag/1.2.1-quality-ref.yaml",
+      "affected_surface": "1.2.1 D3.1 lesson evidence versus target registry",
+      "severity": "medium",
+      "next_action": "Keep D3.1 out of the 1.2.1 target registry unless a later reviewed target exercise includes consumer-surplus operations.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Reviewed target exercise or target-equivalent proof that actually asks consumer-surplus calculation/explanation."
+    },
+    {
+      "title": "1.2.2 generated-output review flags remain open",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md",
+      "affected_surface": "1.2.2 generated opgaven and answers",
+      "severity": "medium",
+      "next_action": "Carry answer-wording and local style flags until a later generated-output sprint fixes them.",
+      "platform_handoff_required": "no",
+      "proof_required_to_close": "Regenerated or corrected lesson output plus paragraph review confirming the flags are resolved."
+    },
+    {
+      "title": "1.2.3 horizontal-aggregation missing-unit flags remain visible",
+      "quality_category": "target-exercise-finality-gap",
+      "evidence_path_or_url": "references/authored/course-target-exercises.json; references/data/sprints/CP.6b-target-exercise-review.json",
+      "affected_surface": "1.2.3 MTU/backfill evidence",
+      "severity": "medium",
+      "next_action": "Route horizontal-sum and kink flags to MTU/backfill classification before broad closure claims.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "CP.6c-style classification or governed unit/merge decision for the missing-unit flags."
+    },
+    {
+      "title": "1.2.4 integration target carries local generated-output flags",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md; ../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml",
+      "affected_surface": "1.2.4 generated consolidation evidence",
+      "severity": "medium",
+      "next_action": "Carry frozen-yoghurt wording and orphaned-asset notes until a generated-output review sprint resolves or waives them.",
+      "platform_handoff_required": "no",
+      "proof_required_to_close": "Generated-output correction or explicit review decision that the flags are non-blocking for the intended evidence use."
+    },
+    {
+      "title": "Chapter 1.2 accessibility and support evidence still weak",
+      "quality_category": "accessibility-evidence-gap",
+      "evidence_path_or_url": "reports/inspection-standards/dutch-evidence-gap-closure-plan.md",
+      "affected_surface": "Book 1 Chapter 1.2 future evidence-pack candidate",
+      "severity": "high",
+      "next_action": "Run focused accessibility/support evidence review before treating Chapter 1.2 as pack-ready.",
+      "platform_handoff_required": "yes",
+      "proof_required_to_close": "Rubric evidence for alt text/text-equivalent context, contrast/theme, mobile, keyboard/focus, semantics, inclusive language, route advice, hints, and support boundaries."
+    }
+  ],
+  "validation_notes": {
+    "created_evidence_pack": false,
+    "created_generator": false,
+    "added_package_script": false,
+    "added_ci_build_gate": false,
+    "added_dashboard_gate": false,
+    "integrated_quality_ref": false,
+    "integrated_scale_gate": false,
+    "mutated_generated_lesson_output": false,
+    "processed_personal_data": false,
+    "non_dutch_standards_work": false
+  }
+}

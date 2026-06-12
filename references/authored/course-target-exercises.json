@@ -279,17 +279,33 @@
         "D37"
       ],
       "missing_units_flagged": [],
-      "exam_codes": [],
+      "exam_codes": [
+        "D1.1",
+        "D1.2"
+      ],
       "difficulty_notes": "Very intuitive. Pizza/real-life examples work well. Step functions are visual and concrete. One lesson comfortable — use the extra time for a good class discussion about what determines betalingsbereidheid.",
       "source_ref": "references/owned/course-blueprint-v5.md §1.2.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.2.1",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "INSPECT-9A",
+        "review_completed_on": "2026-06-11"
+      },
+      "review_evidence": {
+        "sprint_id": "INSPECT-9A",
+        "review_date": "2026-06-11",
+        "review_report_md": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+        "review_report_json": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
+        "sprint_plan": "archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md",
+        "planning_review": "archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md",
+        "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+        "decision_summary": "Existing doeloefening-aligned individual-demand target reviewed final; D3.1 remains lesson/practice evidence, not a target-exercise registry code.",
+        "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
       }
     },
     {
@@ -343,18 +359,32 @@
         "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
       ],
       "exam_codes": [
+        "D1.4b",
         "D1.9"
       ],
       "difficulty_notes": "The shift vs movement distinction is the single most common error in all of microeconomics. Students confuse these for months. The lesson must hammer this with at least 4–5 examples. One lesson is tight but essential — this concept returns in every subsequent chapter.",
       "source_ref": "references/owned/course-blueprint-v5.md §1.2.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.2.2",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "INSPECT-9A",
+        "review_completed_on": "2026-06-11"
+      },
+      "review_evidence": {
+        "sprint_id": "INSPECT-9A",
+        "review_date": "2026-06-11",
+        "review_report_md": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+        "review_report_json": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
+        "sprint_plan": "archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md",
+        "planning_review": "archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md",
+        "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+        "decision_summary": "Existing doeloefening-aligned demand-factor target reviewed final; D1.9 confirmed and D1.4b added; D1.4a and A2.15 deferred.",
+        "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
       }
     },
     {
@@ -404,43 +434,129 @@
         "Recognise the kink in collective demand when one consumer exits (concept-level)"
       ],
       "exam_codes": [
-        "A2.9"
+        "A2.9",
+        "D1.3"
       ],
       "difficulty_notes": "The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.",
       "source_ref": "references/owned/course-blueprint-v5.md §1.2.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.2.3",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "INSPECT-9A",
+        "review_completed_on": "2026-06-11"
+      },
+      "review_evidence": {
+        "sprint_id": "INSPECT-9A",
+        "review_date": "2026-06-11",
+        "review_report_md": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+        "review_report_json": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
+        "sprint_plan": "archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md",
+        "planning_review": "archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md",
+        "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+        "decision_summary": "Existing doeloefening-aligned collective-demand target reviewed final; A2.9 confirmed and D1.3 added.",
+        "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
       }
     },
     {
       "difficulty": "MIXED",
       "target_exercise": {
-        "placeholder": true,
-        "context": "Placeholder for 1.2.4: integrated practice across this chapter. It consolidates earlier theory and introduces no new theory.",
+        "context": "Integrated practice based on the existing generated 1.2.4 consolidation exercises: Smoothiebar Blend and IJsjes op het strand. The target consolidates individual demand, collective demand, movement versus shift, demand factors, substitute reasoning, graph reading, and function/table work without introducing new theory.",
         "subquestions": [
           {
             "label": "a",
-            "prompt": "Combine at least two earlier skills from this chapter in one exam-style context."
+            "prompt": "Smoothiebar Blend: calculate collective demand at P = EUR 3 by adding student and office-worker quantities at the same price."
+          },
+          {
+            "label": "b",
+            "prompt": "Classify a smoothie price rise from EUR 3 to EUR 4 as movement along the demand curve or demand-curve shift, and justify the answer."
+          },
+          {
+            "label": "c",
+            "prompt": "Explain why a viral preference change shifts student demand to the right and name the demand factor."
+          },
+          {
+            "label": "d",
+            "prompt": "After the preference change, derive the collective demand function while both groups are active."
+          },
+          {
+            "label": "e",
+            "prompt": "Find the price where office workers leave the smoothie market and explain the kink in the collective demand curve."
+          },
+          {
+            "label": "f",
+            "prompt": "Diagnose why more units sold does not always mean that the demand curve shifted."
+          },
+          {
+            "label": "g",
+            "prompt": "IJsjes op het strand: read an individual quantity from the graph at P = EUR 2."
+          },
+          {
+            "label": "h",
+            "prompt": "Read maximum willingness to pay from an individual demand curve and explain the price-axis intercept."
+          },
+          {
+            "label": "i",
+            "prompt": "Calculate collective demand at P = EUR 2 and P = EUR 4.50, accounting for a consumer who leaves the market."
+          },
+          {
+            "label": "j",
+            "prompt": "Separate the own-price rise from the frozen-yoghurt opening and classify each as movement or shift."
+          },
+          {
+            "label": "k",
+            "prompt": "Classify frozen yoghurt as substitute or complement using the context and name the demand-factor effect."
+          },
+          {
+            "label": "l",
+            "prompt": "Evaluate a seller claim that hotter weather and higher demand automatically justify a price increase."
           }
         ]
       },
       "lesson_goals": [
-        "Consolidate and transfer the chapter skills for Gemengde opgaven: vraag."
+        "Consolidate individual demand, willingness-to-pay, and buy/no-buy reasoning in mixed contexts.",
+        "Determine collective demand from tables, functions, and graphs by adding quantities at the same price.",
+        "Distinguish movement along a demand curve from demand-curve shifts in simultaneous-change contexts.",
+        "Classify demand-factor effects, including preference changes and substitute/complement reasoning.",
+        "Interpret dropout and kink logic in collective demand curves."
       ],
-      "required_skills": [],
-      "prior_knowledge_assumed": [],
+      "required_skills": [
+        "A01",
+        "A42",
+        "A44",
+        "D27",
+        "D32",
+        "D33",
+        "D35",
+        "D36",
+        "D37"
+      ],
+      "prior_knowledge_assumed": [
+        "A01",
+        "A42",
+        "A44",
+        "D27",
+        "D32",
+        "D33",
+        "D35",
+        "D36",
+        "D37"
+      ],
       "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "v5_placeholder_needs_review"
+      "missing_units_flagged": [],
+      "exam_codes": [
+        "A2.9",
+        "D1.1",
+        "D1.2",
+        "D1.3",
+        "D1.4b",
+        "D1.9"
       ],
-      "exam_codes": [],
-      "difficulty_notes": "Count-bearing consolidation paragraph. It introduces no new theory and needs a reviewed integration target exercise.",
+      "difficulty_notes": "Reviewed integration target based on existing generated consolidation exercises and review evidence. Local generated-output flags remain visible: frozen-yoghurt wording should avoid overclaiming a price-substitute effect, and the chapter quality-ref records an orphaned asset counterpart.",
       "id": "1.2.4",
       "module": 1,
       "chapter": 2,
@@ -448,14 +564,26 @@
       "paragraph_title": "Gemengde opgaven: vraag",
       "paragraph_kind": "gemengde_opgaven",
       "introduces_new_theory": false,
-      "record_status": "placeholder_needs_review",
-      "placeholder_reason": "Gemengde-opgaven target exercise must be designed as integration/transfer practice.",
+      "record_status": "reviewed_final",
       "source_ref": "references/owned/course-blueprint-v5.md §1.2.4",
       "v5_migration": {
-        "source_status": "placeholder_needs_review",
+        "source_status": "reviewed_final",
         "from_v4_id": null,
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "INSPECT-9A",
+        "review_completed_on": "2026-06-11"
+      },
+      "review_evidence": {
+        "sprint_id": "INSPECT-9A",
+        "review_date": "2026-06-11",
+        "review_report_md": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+        "review_report_json": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
+        "sprint_plan": "archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md",
+        "planning_review": "archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md",
+        "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
+        "decision_summary": "Existing generated 1.2.4 consolidation evidence used to replace placeholder with reviewed source-registry integration target; D1.4a deferred.",
+        "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
       }
     },
     {
