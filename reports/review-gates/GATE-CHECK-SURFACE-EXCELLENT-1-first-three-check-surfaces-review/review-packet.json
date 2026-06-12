@@ -2,13 +2,15 @@
   "schema_version": 1,
   "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
   "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
-  "generated": "2026-06-11",
-  "status": "direct_review_returned_hold_for_surface_repair_not_closed",
+  "generated": "2026-06-12",
+  "status": "closure_proposal_ready_pass_with_flags_not_closed",
   "supersedes": "GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review",
   "superseded_reason": "Renewed human/lead feedback found that accepted shared-task decisions were not preserved in the old retry packet.",
   "human_review_comments_started": true,
-  "human_review_decision": "hold_for_surface_repair",
-  "gate_direction": "hold_for_surface_repair",
+  "human_review_decision": "pass_with_flags",
+  "prior_human_review_decision": "hold_for_surface_repair",
+  "gate_direction": "pass_with_flags",
+  "closure_proposal_started": true,
   "gate_closure_authorized": false,
   "remote_publication_required_before_review": true,
   "evidence_base": [
@@ -27,6 +29,10 @@
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json",
     "reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md",
     "reports/json/checksurface-policy-regression1-proof.json",
     "reports/fixtures/checksurface-policy-regression1/negative-fixtures.json",
@@ -69,19 +75,19 @@
     },
     {
       "requirement": "six_check_surfaces_inspectable",
-      "status": "review_required"
+      "status": "met_by_renewed_review"
     },
     {
       "requirement": "advisory_and_exit_roles_distinct",
-      "status": "review_required"
+      "status": "met_by_renewed_review"
     },
     {
       "requirement": "prior_defects_guarded",
-      "status": "review_required"
+      "status": "met_with_quality_carry_flags"
     },
     {
       "requirement": "authority_boundaries_preserved",
-      "status": "review_required"
+      "status": "met_for_this_gate_with_downstream_holds"
     }
   ],
   "finding_classifications": [
@@ -130,6 +136,39 @@
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
     "current_112_transfer_held": true
+  },
+  "current_main_freshness_preflight": {
+    "checked_on": "2026-06-12",
+    "platform_commit": "bbe02553970fbe3bf80a720adad375b15db55bdb",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "checks_passed": [
+      "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
+      "node build-scripts/sprints/check-scope-language.js --active"
+    ]
+  },
+  "renewed_human_review": {
+    "review_received_on": "2026-06-12",
+    "gate_direction": "pass_with_flags",
+    "human_review_decision": "pass_with_flags",
+    "no_active_core_spec_failure_for_this_gate": true,
+    "closure_proposal_allowed": true,
+    "gate_closed": false,
+    "closure_artifacts_authorized": false,
+    "evidence_boundary": "platform for build/checker/report logic; lesson repo for generated student-facing output",
+    "authorized_scope": "first-three check-surface evidence only",
+    "unauthorized_scope": [
+      "product-route adoption",
+      "new target-equivalent completion language",
+      "diagnostics",
+      "mastery/sequencing",
+      "PV",
+      "Scale Gate 1",
+      "student/product use"
+    ]
   },
   "authority_boundary": {
     "generated_lesson_output_already_deployed_as_evidence": true,
