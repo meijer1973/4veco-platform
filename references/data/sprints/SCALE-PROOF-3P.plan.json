@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SCALE-PROOF-3P",
+  "name": "Three-Paragraph Product Proof",
+  "created": "2026-06-12",
+  "plan": "reports/sprints/SCALE-PROOF-3P-plan.md",
+  "baseline": "reports/sprints/SCALE-PROOF-3P-baseline.md",
+  "command_log": "reports/sprints/SCALE-PROOF-3P-command-log.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Produce rendered first-three student-path proof for 1.1.1, 1.1.2, and 1.1.3.",
+    "Inspect landing, Start, Leer, Oefen, skill map, practice task, advisory short check, target-equivalent exit ticket status, feedback, and next action.",
+    "Emit markdown proof, screenshot/DOM manifest, structured JSON, and deterministic checker.",
+    "Preserve downstream blocks on GATE-PRODUCT-3P, Scale Gate 1, product-route adoption, new completion language, diagnostics, mastery/sequencing, PV, and student/product use."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/SCALE-PROOF-3P-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SCALE-PROOF-3P",
+    "node build-scripts/sprints/check-scale-proof-3p.js",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "npm.cmd run agent:index",
+    "node build-scripts/sprints/emit-url-index.js",
+    "npm.cmd run dashboard:internal",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/SCALE-PROOF-3P-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js SCALE-PROOF-3P --complete",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output changes.",
+    "No hand edits to generated lesson output.",
+    "No engine, task-shell, route, CSS, source-data, or lesson-content repairs.",
+    "No source exit-ticket data writes.",
+    "No edits under references/machine or references/external.",
+    "No target-exercise registry writes.",
+    "No candidate storage creation or candidate writes.",
+    "No GATE-PRODUCT-3P review packet or gate-closure artifacts.",
+    "No Scale Gate 1 artifacts.",
+    "No product-route adoption, new target-equivalent completion language, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, PV projection, PV machine promotion, or student/product use."
+  ],
+  "baseline_shas": {
+    "platform_main": "5147c9efb22fdee11721bea47dff37d271850f29",
+    "lesson_main": "8b007cd86a485518bca8881051e11f5272f162c7",
+    "gate_closure_merge": "91154093e8d4c637f29de4663503e07dbcfca0a4",
+    "platform_landing_v2_merge": "5147c9efb22fdee11721bea47dff37d271850f29",
+    "lesson_landing_v2_merge": "8b007cd86a485518bca8881051e11f5272f162c7"
+  }
+}
