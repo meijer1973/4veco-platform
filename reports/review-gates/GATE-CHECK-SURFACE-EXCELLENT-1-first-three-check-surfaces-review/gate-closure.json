@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "closed_on": "2026-06-12",
+  "status": "closed_with_carried_flags",
+  "gate_direction": "pass_with_flags",
+  "human_confirmation_received": true,
+  "human_confirmation_summary": "Explicit human confirmation accepted PR #50 closure proposal and authorized narrow gate-closure artifacts.",
+  "proposal_pr": 50,
+  "proposal_merge_commit": "5c89e49ed9b7030e2e00add98052b063ee1e8e6b",
+  "closure_base": {
+    "platform_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292"
+  },
+  "scope": "first-three check-surface evidence only",
+  "gate_closed": true,
+  "no_active_core_spec_failure_for_this_gate": true,
+  "closed_evidence": [
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json"
+  ],
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "closure_statement": [
+    "Renewed direct human review returned pass_with_flags.",
+    "Explicit human confirmation was received after PR #50 merged.",
+    "No active core_spec_failure remains for GATE-CHECK-SURFACE-EXCELLENT-1.",
+    "Closure is limited to first-three check-surface evidence.",
+    "Product-route adoption, new completion language, diagnostics/mastery/PV, Scale Gate 1, and student/product use remain unauthorized."
+  ],
+  "carried_flags": [
+    {
+      "id": "CF-1",
+      "title": "downstream product authority remains blocked",
+      "classification": "scale_blocker",
+      "blocks": [
+        "SCALE-PROOF-3P until this closure PR is merged to main",
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "the narrow GATE-CHECK-SURFACE-EXCELLENT-1 closure",
+        "sequenced landing V2 review after this closure lands"
+      ],
+      "proof_required_to_close": "Separate downstream product-proof evidence after this closure is merged."
+    },
+    {
+      "id": "CF-2",
+      "title": "landing V2 PRs must not silently change reviewed evidence",
+      "classification": "scale_blocker",
+      "blocks": [
+        "combining landing V2 with this closure PR",
+        "using pre-V2 landing evidence as post-V2 product proof without refresh"
+      ],
+      "does_not_block": [
+        "reviewing platform PR #47 after this closure PR lands",
+        "reviewing lesson PR #12 after platform PR #47 is handled"
+      ],
+      "proof_required_to_close": "Keep landing V2 in its own review/merge lane and refresh any later evidence that depends on V2 landing output."
+    },
+    {
+      "id": "CF-3",
+      "title": "minor review-lab wording polish",
+      "classification": "minor_carry_flag",
+      "blocks": [
+        "future evidence-polish cleanliness only"
+      ],
+      "does_not_block": [
+        "the narrow GATE-CHECK-SURFACE-EXCELLENT-1 closure"
+      ],
+      "proof_required_to_close": "Update the desktop-source-scrolled figure caption to match the current non-scroll source-pane state in a later evidence-polish pass."
+    }
+  ],
+  "next_recommended_sequence": [
+    "merge this gate-closure PR",
+    "review and merge platform PR #47",
+    "review and merge lesson PR #12",
+    "start SCALE-PROOF-3P as proof production"
+  ]
+}

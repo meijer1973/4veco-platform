@@ -47,12 +47,23 @@ function rejectText(content, pattern, label, file) {
 }
 
 function requireReviewArtifactState(packet) {
+  const closureRecorded =
+    packet.gate_closed === true ||
+    packet.status === 'closed_pass_with_flags_no_downstream_authority';
   const proposalStarted =
+    closureRecorded ||
     packet.closure_proposal_started === true ||
     packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
 
-  for (const name of ['gate-closure.md', 'gate-closure.json']) {
-    assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before explicit gate closure authorization`);
+  const closureArtifacts = ['gate-closure.md', 'gate-closure.json'];
+  if (closureRecorded) {
+    for (const name of closureArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after explicit gate closure confirmation`);
+    }
+  } else {
+    for (const name of closureArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before explicit gate closure authorization`);
+    }
   }
 
   const reviewArtifacts = [
@@ -148,6 +159,35 @@ function requireReviewArtifactState(packet) {
       assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before renewed pass-with-flags review`);
     }
   }
+
+  if (closureRecorded) {
+    const closureText = read(`reports/review-gates/${GATE_ID}/gate-closure.md`);
+    const closure = readJson(`reports/review-gates/${GATE_ID}/gate-closure.json`);
+    assert(closure.gate_direction === 'pass_with_flags', 'gate closure must preserve pass_with_flags');
+    assert(closure.gate_closed === true, 'gate closure must mark this gate closed');
+    assert(closure.human_confirmation_received === true, 'gate closure must cite explicit human confirmation');
+    assert(closure.no_active_core_spec_failure_for_this_gate === true, 'gate closure must record no active core failure');
+    assert(closure.scope === 'first-three check-surface evidence only', 'gate closure scope must stay narrow');
+    assert(closure.authority && closure.authority.product_route_adoption_authorized === false, 'gate closure must not authorize product route');
+    assert(closure.authority.new_target_equivalent_completion_language_authorized === false, 'gate closure must not authorize completion language');
+    assert(closure.authority.diagnostics_authorized === false, 'gate closure must not authorize diagnostics');
+    assert(closure.authority.mastery_or_sequencing_authorized === false, 'gate closure must not authorize mastery or sequencing');
+    assert(closure.authority.pv_authorized === false, 'gate closure must not authorize PV');
+    assert(closure.authority.scale_gate_1_authorized === false, 'gate closure must not authorize Scale Gate 1');
+    assert(closure.authority.student_product_use_authorized === false, 'gate closure must not authorize student/product use');
+    for (const id of ['CF-1', 'CF-2', 'CF-3']) {
+      const flag = closure.carried_flags && closure.carried_flags.find((item) => item.id === id);
+      assert(flag, `gate closure missing carried flag ${id}`);
+      assert(flag.classification, `${id} closure flag must include classification`);
+      assert(Array.isArray(flag.blocks), `${id} closure flag must include blocks`);
+      assert(Array.isArray(flag.does_not_block), `${id} closure flag must include does_not_block`);
+      assert(flag.proof_required_to_close, `${id} closure flag must include proof_required_to_close`);
+    }
+    requireText(closureText, 'Status: closed with carried flags', 'closure status', 'gate-closure.md');
+    requireText(closureText, 'first-three check-surface evidence only', 'narrow closure scope', 'gate-closure.md');
+    requireText(closureText, 'No active `core_spec_failure` remains', 'core failure clearance', 'gate-closure.md');
+    requireText(closureText, 'remain unauthorized', 'downstream authority hold', 'gate-closure.md');
+  }
 }
 
 function requireEvidenceFiles(packet) {
@@ -197,6 +237,7 @@ function requirePacketText() {
     'does not authorize product-route adoption',
     'Renewed direct human review returned: pass_with_flags',
     'No active core_spec_failure remains',
+    'Gate closure confirmed',
     'explicit human confirmation',
   ]) {
     requireText(text, phrase, `phrase ${phrase}`, file);
@@ -212,14 +253,27 @@ function requirePacketJson(packet, live) {
       'renewed_review_packet_ready_not_reviewed_not_closed',
       'direct_review_returned_hold_for_surface_repair_not_closed',
       'closure_proposal_ready_pass_with_flags_not_closed',
+      'closed_pass_with_flags_no_downstream_authority',
     ].includes(packet.status),
     'packet status mismatch'
   );
   assert(packet.supersedes === 'GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review', 'packet must supersede old retry packet');
+  const closureRecorded =
+    packet.gate_closed === true ||
+    packet.status === 'closed_pass_with_flags_no_downstream_authority';
   const proposalStarted =
+    closureRecorded ||
     packet.closure_proposal_started === true ||
     packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
-  if (proposalStarted) {
+  if (closureRecorded) {
+    assert(packet.human_review_comments_started === true, 'gate closure requires human comments');
+    assert(packet.human_review_decision === 'pass_with_flags', 'latest human review decision must record pass_with_flags');
+    assert(packet.gate_direction === 'pass_with_flags', 'latest gate direction must record pass_with_flags');
+    assert(packet.gate_closure_authorized === true, 'gate closure must be authorized after explicit confirmation');
+    assert(packet.confirmed_gate_closure && packet.confirmed_gate_closure.human_confirmation_received === true, 'packet must record explicit closure confirmation');
+    assert(packet.confirmed_gate_closure.gate_closed === true, 'packet must record gate closure');
+    assert(packet.confirmed_gate_closure.no_active_core_spec_failure_for_this_gate === true, 'packet must record no active core failure at closure');
+  } else if (proposalStarted) {
     assert(packet.human_review_comments_started === true, 'closure proposal requires human comments');
     assert(packet.human_review_decision === 'pass_with_flags', 'latest human review decision must record pass_with_flags');
     assert(packet.gate_direction === 'pass_with_flags', 'latest gate direction must record pass_with_flags');
@@ -231,7 +285,7 @@ function requirePacketJson(packet, live) {
   } else {
     assert(packet.human_review_decision === null, 'human review decision must be null before comments');
   }
-  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
+  assert(packet.gate_closure_authorized === closureRecorded, 'gate closure authorization must match recorded closure state');
   assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
   assert(
     packet.required_baselines &&
@@ -292,6 +346,7 @@ function requirePacketJson(packet, live) {
       'renewed_packet_ready_not_reviewed_not_closed',
       'evidence_refresh_repair_ready_for_re_review_not_closed',
       'renewed_review_pass_with_flags_closure_proposal_ready_not_closed',
+      'gate_closed_pass_with_flags_no_downstream_authority',
     ].includes(live.status),
     'live status mismatch'
   );
@@ -445,7 +500,14 @@ function requireBundleUrls() {
   assert(fs.existsSync(bundle), 'bundle-urls.md must exist for remote review');
   const text = fs.readFileSync(bundle, 'utf8');
   const required = ['review-packet.md', 'review-packet.json', 'live-output-evidence.md', 'live-output-evidence.json', 'review-lab.html'];
-  for (const name of ['renewed-review-comments.md', 'renewed-review-comments.json', 'closure-proposal.md', 'closure-proposal.json']) {
+  for (const name of [
+    'renewed-review-comments.md',
+    'renewed-review-comments.json',
+    'closure-proposal.md',
+    'closure-proposal.json',
+    'gate-closure.md',
+    'gate-closure.json',
+  ]) {
     if (fs.existsSync(path.join(GATE_DIR, name))) required.push(name);
   }
   for (const name of required) {
