@@ -1,10 +1,19 @@
 # MTU-H5 Regression Report
 
-Generated: 2026-06-08
+Generated: 2026-06-12
 
 Status: `failed`
 
 Fixture: `MTU-H5-vwo-2025-ex1-ex2-approved`
+
+Source validator:
+
+```text
+node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json
+```
+
+Post-q3 evidence anchor: PR #43 merge commit `48d0fa6d4ce03dff6feeb66955909125264c06f9`
+and `reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md`.
 
 This is a non-mutating diagnostic report from the approved MTU-H5 regression
 fixture. It does not authorize protected reference mutation, authored
@@ -14,24 +23,59 @@ AI, summative use, product-route readiness, or student/product use.
 ## Bucket Counts
 
 | Bucket | Count |
-|---|---:|
+| --- | --- |
 | passed | 1 |
-| failed | 10 |
-| review_required | 31 |
+| failed | 6 |
+| review_required | 29 |
 | blocked | 0 |
+
+## Question And Lane Counts
+
+| Surface | Failed | Review required | Status |
+| --- | --- | --- | --- |
+| q3 | 0 | 0 | clean after q3 fixture execution |
+| q19 | 3 | 20 | graph_draw_source_answer_form_procedure_blocker |
+| q27 | 3 | 5 | incidence_scaling_levy_capacity_procedure_blocker |
+| q15 | 0 | 4 | answer_skill_procedure_semantic_fit_review_blocker |
+| global negative guard | 0 | 0 | 1 passed |
+
+## Remaining Blockers
+
+- q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
+- q19 remains a graph/draw/source/answer-form/procedure blocker: 3 failed / 20 review_required.
+- q27 remains an incidence/scaling/levy-capacity/procedure blocker: 3 failed / 5 review_required.
+- q15 remains an answer-skill/procedure semantic-fit review blocker: 0 failed / 4 review_required.
+- MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
+
+## Lane-Specific Diagnostic Meaning
+
+| Lane | Diagnostic meaning |
+| --- | --- |
+| q19 | graph/draw/teken answer-form gap; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review |
+| q27 | incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review |
+| q15 | A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review |
 
 ## Failed Defect Classes
 
-- `incidence_pass_through_task_without_incidence_mtu`
-- `missing_mtu_for_correction_model_operation`
-- `over_triggered_prerequisite_not_required_by_answer_model`
-- `question_word_without_answer_form_mtu`
-- `scale_factor_usage_without_scaling_unit_mtu`
+| Defect class | Count |
+| --- | --- |
+| `incidence_pass_through_task_without_incidence_mtu` | 2 |
+| `question_word_without_answer_form_mtu` | 3 |
+| `scale_factor_usage_without_scaling_unit_mtu` | 1 |
+
+## Review-Required Classes
+
+| Class or hook group | Count |
+| --- | --- |
+| `apply_analyze_unit_without_usable_canonical_procedure` | 15 |
+| `fixture_review_hooks` | 14 |
 
 ## Procedure Statuses
 
-- `procedure_present`
-- `procedure_review_required`
+| Procedure status | Count |
+| --- | --- |
+| `procedure_present` | 6 |
+| `procedure_review_required` | 15 |
 
 The procedure output distinguishes `procedure_present`, `procedure_missing`,
 and `procedure_review_required`. This run produced no blocked assertions.
@@ -48,3 +92,5 @@ No protected reference mutation authorized. No external-source mutation
 authorized. No machine-reference mutation authorized. No authored
 target-exercise mutation authorized. No MTU minting, update, split, merge, or
 deprecation authorized. No candidate storage or candidate writes authorized.
+No lesson output, PV, diagnostics, product-route readiness, or student/product
+use authorized.

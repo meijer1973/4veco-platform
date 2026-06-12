@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5-POST-Q3-EVIDENCE-REFRESH-1",
+  "parent_sprint": "MTU-H5",
+  "created": "2026-06-12",
+  "status": "diagnostic_report_refreshed_no_mutation_authorized",
+  "purpose": "Refresh MTU-H5 diagnostic report evidence after q3 fixture execution and PR #43 checker hardening.",
+  "source_evidence": {
+    "approved_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "validator": "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "report_generator": "build-scripts/references/build-mtu-h5-regression-report.js",
+    "refreshed_report_json": "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "refreshed_report_markdown": "reports/mtu-hardening/mtu-h5-regression-report.md",
+    "checker_repair_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
+    "checker_repair_merge_commit": "48d0fa6d4ce03dff6feeb66955909125264c06f9"
+  },
+  "index_artifact_decision": "reports/github-agent-index-platform.* was regenerated because this sprint adds a report generator and sprint-result files that future agents must be able to discover. The generated platform index also includes pre-existing current-main inventory catch-up entries from other merged work; those entries are not substantive scope in this evidence-refresh PR. reports/github-agent-index-lessen.* generated churn was inspected and excluded.",
+  "validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+  "report_check_command": "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean"
+    },
+    "q19": {
+      "failed": 3,
+      "review_required": 20,
+      "status": "graph_draw_source_answer_form_procedure_blocker",
+      "diagnostic_focus": "graph/draw/teken answer-form gap; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review"
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "incidence_scaling_levy_capacity_procedure_blocker",
+      "diagnostic_focus": "incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "answer_skill_procedure_semantic_fit_review_blocker",
+      "diagnostic_focus": "A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review"
+    },
+    "global_negative_guard": {
+      "passed": 1
+    },
+    "totals": {
+      "passed": 1,
+      "failed": 6,
+      "review_required": 29,
+      "blocked": 0
+    }
+  },
+  "carried_blockers": [
+    {
+      "id": "MTUH5-CARRY-Q19",
+      "blocks": [
+        "q19 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q19 coverage"
+      ],
+      "does_not_block": [
+        "post-q3 diagnostic evidence refresh"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q19 repair gate and validator evidence showing q19 failed/review_required hooks resolved without hiding negative guards"
+      ]
+    },
+    {
+      "id": "MTUH5-CARRY-Q27",
+      "blocks": [
+        "q27 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q27 coverage"
+      ],
+      "does_not_block": [
+        "post-q3 diagnostic evidence refresh"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q27 repair gate and validator evidence showing q27 incidence/scaling hooks resolved without D07 overclaim"
+      ]
+    },
+    {
+      "id": "MTUH5-CARRY-Q15",
+      "blocks": [
+        "q15 lane closure",
+        "MTU-H5 full mapping closure",
+        "student/product use based on q15 coverage"
+      ],
+      "does_not_block": [
+        "post-q3 diagnostic evidence refresh"
+      ],
+      "proof_required_to_close": [
+        "Later explicit q15 repair gate and validator evidence showing A97/content-unit semantic fit or reviewed equivalent answer-skill coverage"
+      ]
+    }
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "completion_claimed": false,
+  "next_recommended_gate": "MTU-H5-Q19-REPAIR-GATE-1"
+}
