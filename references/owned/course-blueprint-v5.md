@@ -101,7 +101,7 @@ The full target-exercise distribution audit is deferred to L2.4-TEA. L1.5Q may c
 | 2.1.1 | theory | Kostenstructuren | reviewed_final |
 | 2.1.2 | theory | Opbrengsten, winst en break-even | reviewed_final |
 | 2.1.3 | theory | Marginale kosten en marginale opbrengsten | reviewed_final |
-| 2.1.4 | gemengde_opgaven | Gemengde opgaven: kosten en opbrengsten | placeholder_needs_review |
+| 2.1.4 | gemengde_opgaven | Gemengde opgaven: kosten en opbrengsten | reviewed_final |
 | 2.2.1 | theory | Prijselasticiteit | migrated_from_v4_needs_v5_review |
 | 2.2.2 | theory | Elasticiteit en omzet | migrated_from_v4_needs_v5_review |
 | 2.2.3 | theory | Inkomenselasticiteit en kruiselingse elasticiteit | migrated_from_v4_needs_v5_review |
@@ -215,7 +215,7 @@ Migrated from v4 target exercise section 1.4.3 and reviewed against the v5 targe
 
 ### §2.1.4 - Gemengde opgaven: kosten en opbrengsten
 
-Count-bearing gemengde-opgaven paragraph. Introduces no new theory; requires a reviewed integration target exercise before final curriculum-quality claims.
+Count-bearing gemengde-opgaven paragraph. Introduces no new theory. Reviewed against the mixed-opgaven target standard by sprint MIXED-OPGAVEN-TARGET-STANDARD-1. Status: reviewed_final.
 
 ### §2.2.1 - Prijselasticiteit
 
