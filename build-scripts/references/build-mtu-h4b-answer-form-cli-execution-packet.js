@@ -14,6 +14,7 @@ const crypto = require('crypto');
 
 const { validateSpec } = require('./unit-add');
 const { validate, loadTerminology, loadEindtermen } = require('./build-unit-index');
+const { fullHumanGateThroughputFields } = require('../review-gates/review-throughput-fields');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const TODAY = '2026-05-30';
@@ -35,6 +36,12 @@ const PACKET_MD_PATH = 'reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-
 const REVIEW_DIR = `reports/review-gates/${GATE_ID}`;
 const REVIEW_JSON_PATH = `${REVIEW_DIR}/review-packet.json`;
 const REVIEW_MD_PATH = `${REVIEW_DIR}/review-packet.md`;
+const REVIEW_THROUGHPUT_CHANGED_PATHS = [
+  PACKET_JSON_PATH,
+  PACKET_MD_PATH,
+  REVIEW_JSON_PATH,
+  REVIEW_MD_PATH,
+];
 
 const ACCEPTED_IDS = ['A96', 'A97', 'A98', 'A99', 'A80', 'A81'];
 const INVALID_IDS = ['A100'];
@@ -494,6 +501,12 @@ function buildReviewPacket(packet) {
     schema_version: 1,
     gate_id: GATE_ID,
     sprint_id: SPRINT_ID,
+    ...fullHumanGateThroughputFields({
+      gateId: GATE_ID,
+      changedPaths: REVIEW_THROUGHPUT_CHANGED_PATHS,
+      rationale: 'MTU-H4B reviews answer-form unit execution authority and must remain a full human gate.',
+      escalationTriggers: ['protected_reference_execution_authority'],
+    }),
     generated_on: TODAY,
     status: 'review_packet_ready_no_mutation_authorized',
     source_packet: PACKET_JSON_PATH,
