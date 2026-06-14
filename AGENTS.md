@@ -184,6 +184,16 @@ controls a human can use, deterministic proof that the path reaches completion,
 and packet/checker requirements for the lab, data, proof JSON, and screenshots.
 Present the proof so a human can see where problems are, then decide.
 
+Future PR review packets that request lighter review closure must follow
+`docs/review/pr-throughput-policy.md` and include the machine-readable
+throughput fields checked by
+`build-scripts/sprints/check-review-throughput-packet.js`. Autonomous
+classification is never allowed when protected references, machine/external
+references, generated-output product authority, diagnostics, mastery, PV,
+student-use authority, missing changed-path evidence, missing commit-specific
+CI/checker proof, or missing `proof.lead_review` path/result/reviewed-commit
+proof is present.
+
 
 ### Sprint agent structure
 

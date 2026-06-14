@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-1",
+  "name": "PR Throughput Policy",
+  "created": "2026-06-14",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-1-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add a PR throughput policy with PR classes and review autonomy levels.",
+    "Add machine-readable review packet fields for future packets.",
+    "Add a checker that rejects unsafe autonomous classification.",
+    "Add a retrospective report for the requested platform and lesson PR ranges."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1",
+    "node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json",
+    "node node_modules/jest/bin/jest.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+    "npm.cmd run check:review-throughput -- reports/fixtures/review-throughput-1/positive-autonomous.json",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-1",
+    "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-1",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete",
+    "git -C ../4veco-lessen diff --check",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output changes.",
+    "No references/machine or references/external edits.",
+    "No protected reference mutation.",
+    "No product authority changes.",
+    "No diagnostics, mastery, PV, student-use, product-use, adaptive-routing, summative-use, or student-facing AI authority changes."
+  ]
+}

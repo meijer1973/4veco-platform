@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-12T14:37:28.466Z
+Generated: 2026-06-14T18:26:55.885Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4459
+Files indexed: 4474
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 479
+Count: 481
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -533,6 +533,8 @@ Count: 479
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
+- build-scripts/sprints/check-review-throughput-packet.js
+- build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -659,7 +661,7 @@ Count: 42
 
 ## validators
 
-Count: 455
+Count: 457
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -858,6 +860,8 @@ Count: 455
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
+- build-scripts/sprints/check-review-throughput-packet.js
+- build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -1119,7 +1123,7 @@ Count: 455
 
 ## references
 
-Count: 603
+Count: 605
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1489,6 +1493,8 @@ Count: 603
 - references/data/sprints/REF-CT2-precision-dual-coding-audit.json
 - references/data/sprints/REF-CT2.plan.json
 - references/data/sprints/REF-CT2.result.json
+- references/data/sprints/REVIEW-THROUGHPUT-1.plan.json
+- references/data/sprints/REVIEW-THROUGHPUT-1.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -1727,7 +1733,7 @@ Count: 603
 
 ## reports
 
-Count: 2750
+Count: 2759
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1749,18 +1755,20 @@ Count: 2750
 - reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
 - reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
+- reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
+- reports/fixtures/review-throughput-1/negative-escalation-trigger.json
+- reports/fixtures/review-throughput-1/negative-generated-product-authority.json
+- reports/fixtures/review-throughput-1/negative-machine-external-autonomous.json
+- reports/fixtures/review-throughput-1/negative-missing-checker-proof.json
+- reports/fixtures/review-throughput-1/negative-missing-ci-proof.json
+- reports/fixtures/review-throughput-1/negative-missing-lead-review.json
+- reports/fixtures/review-throughput-1/negative-protected-reference-autonomous.json
+- reports/fixtures/review-throughput-1/positive-autonomous.json
+- reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -1774,10 +1782,6 @@ Count: 2750
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -3972,6 +3976,17 @@ Count: 2750
 - reports/sprints/REF-CT2-result.md
 - reports/sprints/REV-STD-1-flag-disposition.json
 - reports/sprints/REV-STD-1-flag-disposition.md
+- reports/sprints/REVIEW-THROUGHPUT-1-baseline.md
+- reports/sprints/REVIEW-THROUGHPUT-1-command-log.jsonl
+- reports/sprints/REVIEW-THROUGHPUT-1-command-log.md
+- reports/sprints/REVIEW-THROUGHPUT-1-diff-summary.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-assignment.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-corrections.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round1.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md
+- reports/sprints/REVIEW-THROUGHPUT-1-plan.md
+- reports/sprints/REVIEW-THROUGHPUT-1-result.md
+- reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
@@ -4500,7 +4515,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 460
+Count: 462
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4666,6 +4681,8 @@ Count: 460
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/review/pr-throughput-policy.md
+- docs/review/review-packet-throughput.schema.json
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md

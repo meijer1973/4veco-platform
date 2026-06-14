@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "packet_id": "REVIEW-THROUGHPUT-POSITIVE-HUMAN-GATE",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "protected_reference",
+  "changed_paths": [
+    "references/authored/course-target-exercises.json"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS"
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_touched"
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false
+  }
+}

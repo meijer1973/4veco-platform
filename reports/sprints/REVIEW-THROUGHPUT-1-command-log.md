@@ -1,0 +1,981 @@
+# Sprint REVIEW-THROUGHPUT-1: Command Log
+
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-1-plan.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:04:30.377Z`
+- finished_at: `2026-06-14T17:04:30.476Z`
+- duration_ms: `99`
+- exit_code: `0`
+- stdout_sha256: `f685212f9556b87cb33b7242b840b262c8af8fbf2832629f72a531bec21a73de`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\REVIEW-THROUGHPUT-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:04:35.522Z`
+- finished_at: `2026-06-14T17:04:35.706Z`
+- duration_ms: `184`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `97a84559c73bf2f597f6dbf6a41d689fcff1bba196794c305622cc2a9d025e62`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: references\data\sprints\REVIEW-THROUGHPUT-1.plan.json human-review sprints must set lead_review_phase: "before_human_gate"
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-1-plan.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:05:16.294Z`
+- finished_at: `2026-06-14T17:05:16.404Z`
+- duration_ms: `110`
+- exit_code: `0`
+- stdout_sha256: `f685212f9556b87cb33b7242b840b262c8af8fbf2832629f72a531bec21a73de`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\REVIEW-THROUGHPUT-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:05:23.929Z`
+- finished_at: `2026-06-14T17:05:24.109Z`
+- duration_ms: `180`
+- exit_code: `1`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `97a84559c73bf2f597f6dbf6a41d689fcff1bba196794c305622cc2a9d025e62`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Sprint bundle check failed: references\data\sprints\REVIEW-THROUGHPUT-1.plan.json human-review sprints must set lead_review_phase: "before_human_gate"
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-1-plan.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:05:45.618Z`
+- finished_at: `2026-06-14T17:05:45.714Z`
+- duration_ms: `96`
+- exit_code: `0`
+- stdout_sha256: `f685212f9556b87cb33b7242b840b262c8af8fbf2832629f72a531bec21a73de`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\REVIEW-THROUGHPUT-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:05:51.685Z`
+- finished_at: `2026-06-14T17:05:51.876Z`
+- duration_ms: `191`
+- exit_code: `0`
+- stdout_sha256: `d4a0ce0a732ff7643e5879cca12f414a87aa56e924f8c8c84e9f8566ee95caa6`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:00.018Z`
+- finished_at: `2026-06-14T17:06:00.084Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `aff09c8ee11432e9f2cf7c0c5683ccf8bd0dd47e1d90a2527dd2c769f13f47ca`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK review throughput packet: REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node node_modules/jest/bin/jest.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:05.531Z`
+- finished_at: `2026-06-14T17:06:06.596Z`
+- duration_ms: `1065`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `883c393076b4f750b6958cd9b645719b729574fcdd201d2a0738fc1cbda4253d`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        0.599 s, estimated 1 s
+Ran all test suites matching build-scripts/sprints/check-review-throughput-packet.test.js.
+
+```
+## npm.cmd run check:review-throughput -- reports/fixtures/review-throughput-1/positive-autonomous.json
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:12.425Z`
+- finished_at: `2026-06-14T17:06:12.800Z`
+- duration_ms: `375`
+- exit_code: `0`
+- stdout_sha256: `1fe83395832b668942a5dbed3d37a9695e6e38bcbc9b4c69b0f4d95eafe2f508`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json
+
+OK review throughput packet: REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:18.302Z`
+- finished_at: `2026-06-14T17:06:18.662Z`
+- duration_ms: `360`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:24.588Z`
+- finished_at: `2026-06-14T17:06:24.645Z`
+- duration_ms: `57`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3a288013420abca951b8e4c81dd0dfc11f126305bb11598940956e7e15c398bc`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:30.565Z`
+- finished_at: `2026-06-14T17:06:30.628Z`
+- duration_ms: `63`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:38.776Z`
+- finished_at: `2026-06-14T17:06:38.836Z`
+- duration_ms: `60`
+- exit_code: `0`
+- stdout_sha256: `cd9127841fcc9e0a72db5deff7c012e1dd5aeff8e4743e4aa327ba464474935b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: REVIEW-THROUGHPUT-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:06:57.112Z`
+- finished_at: `2026-06-14T17:06:57.181Z`
+- duration_ms: `69`
+- exit_code: `0`
+- stdout_sha256: `a2e2b61dceca2e111bdb27d4e5f2d9d051623daa798b4ea4499f1db2ca7baa4d`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: REVIEW-THROUGHPUT-1 (13 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:07:05.808Z`
+- finished_at: `2026-06-14T17:07:05.877Z`
+- duration_ms: `69`
+- exit_code: `0`
+- stdout_sha256: `509a727a2537fa4b84b10e4febfa2b52f5d7781c04a3788346eb85eb70d94711`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\REVIEW-THROUGHPUT-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:07:13.566Z`
+- finished_at: `2026-06-14T17:07:14.064Z`
+- duration_ms: `498`
+- exit_code: `0`
+- stdout_sha256: `9bda05911d23900facc9b0d2d53d7b289a58c61fd3405ce43309d5ce9e0100a1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:07:46.484Z`
+- finished_at: `2026-06-14T17:07:46.543Z`
+- duration_ms: `59`
+- exit_code: `0`
+- stdout_sha256: `cd9127841fcc9e0a72db5deff7c012e1dd5aeff8e4743e4aa327ba464474935b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: REVIEW-THROUGHPUT-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:07:53.700Z`
+- finished_at: `2026-06-14T17:07:53.755Z`
+- duration_ms: `55`
+- exit_code: `0`
+- stdout_sha256: `d46f33103719468ccd285d36d97fe8fdbeee2ccb6965d68fcd9bb7065f82097a`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: REVIEW-THROUGHPUT-1 (17 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:07:59.893Z`
+- finished_at: `2026-06-14T17:07:59.952Z`
+- duration_ms: `59`
+- exit_code: `0`
+- stdout_sha256: `509a727a2537fa4b84b10e4febfa2b52f5d7781c04a3788346eb85eb70d94711`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\REVIEW-THROUGHPUT-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:08:06.278Z`
+- finished_at: `2026-06-14T17:08:06.867Z`
+- duration_ms: `589`
+- exit_code: `0`
+- stdout_sha256: `9bda05911d23900facc9b0d2d53d7b289a58c61fd3405ce43309d5ce9e0100a1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:08:14.646Z`
+- finished_at: `2026-06-14T17:08:14.942Z`
+- duration_ms: `296`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:08:20.000Z`
+- finished_at: `2026-06-14T17:08:20.059Z`
+- duration_ms: `59`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3a288013420abca951b8e4c81dd0dfc11f126305bb11598940956e7e15c398bc`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:08:25.640Z`
+- finished_at: `2026-06-14T17:08:25.695Z`
+- duration_ms: `55`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run agent:index
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:10:12.074Z`
+- finished_at: `2026-06-14T17:10:12.470Z`
+- duration_ms: `396`
+- exit_code: `0`
+- stdout_sha256: `757bd2d6c9fbb06eb4da2161c5029cec5768fbf029a1e1322cbfeda327d27b8c`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 agent:index
+> node build-scripts/reports/github-agent-index.js
+
+Wrote reports\github-agent-index-platform.md
+Wrote reports\github-agent-index-platform.json
+Wrote reports\github-agent-index-lessen.md
+Wrote reports\github-agent-index-lessen.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:10:19.289Z`
+- finished_at: `2026-06-14T17:10:19.365Z`
+- duration_ms: `76`
+- exit_code: `0`
+- stdout_sha256: `b6dcbffa98401f35bd80eae9f3565c5399a7c67e61e3305a71bec9d65deaf083`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+wrote reports/url-index.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run dashboard:internal
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:10:25.490Z`
+- finished_at: `2026-06-14T17:10:25.878Z`
+- duration_ms: `388`
+- exit_code: `0`
+- stdout_sha256: `06ee8f6082308019ba8f54df7ce88c02ee8858ce8f82b6a447024f01b9ba4a48`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 dashboard:internal
+> node build-scripts/reports/internal-dashboard.js
+
+Internal dashboard written to reports\internal-dashboard\index.html
+Dashboard data written to reports\internal-dashboard\dashboard-data.json
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/reports/validate-report-json.js
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:14.055Z`
+- finished_at: `2026-06-14T17:11:14.123Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `ddc392fd80a8b75d400fb30218bcef0a1c4d3ba105856f715a6a056670382e86`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK report JSON contract: 14 report(s)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:19.674Z`
+- finished_at: `2026-06-14T17:11:19.751Z`
+- duration_ms: `77`
+- exit_code: `0`
+- stdout_sha256: `1adcabe317c9c1eb2c918448a22d6ac1609d085d115534e3b21a676aa06c37f4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 149 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/emit-url-index.js --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:25.387Z`
+- finished_at: `2026-06-14T17:11:25.451Z`
+- duration_ms: `64`
+- exit_code: `0`
+- stdout_sha256: `4ce57d27d3afa3a1bb4f291eb152747379da6b1d2d2f5978c2978db6b8e2fea4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK url-index: reports/url-index.md is current
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:35.453Z`
+- finished_at: `2026-06-14T17:11:35.522Z`
+- duration_ms: `69`
+- exit_code: `0`
+- stdout_sha256: `c470d6e3d5a6733fbac5abfcadb5b46c7bb8779d74ef4d00a6e9b0c9f3b152b4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: REVIEW-THROUGHPUT-1 (29 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:41.560Z`
+- finished_at: `2026-06-14T17:11:41.618Z`
+- duration_ms: `58`
+- exit_code: `0`
+- stdout_sha256: `509a727a2537fa4b84b10e4febfa2b52f5d7781c04a3788346eb85eb70d94711`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\REVIEW-THROUGHPUT-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:49.498Z`
+- finished_at: `2026-06-14T17:11:49.918Z`
+- duration_ms: `420`
+- exit_code: `0`
+- stdout_sha256: `9bda05911d23900facc9b0d2d53d7b289a58c61fd3405ce43309d5ce9e0100a1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:11:59.215Z`
+- finished_at: `2026-06-14T17:11:59.294Z`
+- duration_ms: `79`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `3a288013420abca951b8e4c81dd0dfc11f126305bb11598940956e7e15c398bc`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T17:12:05.878Z`
+- finished_at: `2026-06-14T17:12:05.929Z`
+- duration_ms: `51`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:25:56.284Z`
+- finished_at: `2026-06-14T18:25:56.346Z`
+- duration_ms: `62`
+- exit_code: `0`
+- stdout_sha256: `aff09c8ee11432e9f2cf7c0c5683ccf8bd0dd47e1d90a2527dd2c769f13f47ca`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK review throughput packet: REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node node_modules/jest/bin/jest.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:02.249Z`
+- finished_at: `2026-06-14T18:26:03.396Z`
+- duration_ms: `1147`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `b1f90d7e76d896ea25628cf47a7212bd304d7c1897cc148c8210aebd772ff557`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        0.703 s, estimated 1 s
+Ran all test suites matching build-scripts/sprints/check-review-throughput-packet.test.js.
+
+```
+## npm.cmd run check:review-throughput -- reports/fixtures/review-throughput-1/positive-autonomous.json
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:10.389Z`
+- finished_at: `2026-06-14T18:26:10.721Z`
+- duration_ms: `332`
+- exit_code: `0`
+- stdout_sha256: `1fe83395832b668942a5dbed3d37a9695e6e38bcbc9b4c69b0f4d95eafe2f508`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:review-throughput
+> node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json
+
+OK review throughput packet: REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:scope-language
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:16.806Z`
+- finished_at: `2026-06-14T18:26:17.133Z`
+- duration_ms: `327`
+- exit_code: `0`
+- stdout_sha256: `cc7769a6163a1c1d56bcba7238fbe19a9ef40e4fb3b1de5271c78cccb39bea79`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:scope-language
+> node build-scripts/sprints/check-scope-language.js --active
+
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-1
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:25.203Z`
+- finished_at: `2026-06-14T18:26:25.263Z`
+- duration_ms: `60`
+- exit_code: `0`
+- stdout_sha256: `cd9127841fcc9e0a72db5deff7c012e1dd5aeff8e4743e4aa327ba464474935b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: REVIEW-THROUGHPUT-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:32.813Z`
+- finished_at: `2026-06-14T18:26:32.873Z`
+- duration_ms: `60`
+- exit_code: `0`
+- stdout_sha256: `509a727a2537fa4b84b10e4febfa2b52f5d7781c04a3788346eb85eb70d94711`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\REVIEW-THROUGHPUT-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:38.876Z`
+- finished_at: `2026-06-14T18:26:39.253Z`
+- duration_ms: `377`
+- exit_code: `0`
+- stdout_sha256: `9bda05911d23900facc9b0d2d53d7b289a58c61fd3405ce43309d5ce9e0100a1`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: REVIEW-THROUGHPUT-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\REVIEW-20260610\4veco-platform`
+- started_at: `2026-06-14T18:26:45.652Z`
+- finished_at: `2026-06-14T18:26:45.713Z`
+- duration_ms: `61`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `9d582464fa818cd8401e71b629cbb51d2aea584d753499efd91fcff34cd430a1`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'build-scripts/sprints/check-review-throughput-packet.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'build-scripts/sprints/check-review-throughput-packet.test.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/review/pr-throughput-policy.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/review/review-packet-throughput.schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/data/sprints/REVIEW-THROUGHPUT-1.result.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-diagnostics-authority.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-escalation-trigger.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-generated-product-authority.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-machine-external-autonomous.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-missing-checker-proof.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-missing-ci-proof.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/negative-protected-reference-autonomous.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/fixtures/review-throughput-1/positive-autonomous.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/REVIEW-THROUGHPUT-1-command-log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/REVIEW-THROUGHPUT-1-command-log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/REVIEW-THROUGHPUT-1-diff-summary.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/REVIEW-THROUGHPUT-1-plan.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reports/sprints/REVIEW-THROUGHPUT-1-result.md', LF will be replaced by CRLF the next time Git touches it
+
+```
