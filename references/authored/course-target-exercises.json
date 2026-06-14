@@ -35,7 +35,7 @@
         "subquestions": [
           {
             "label": "a",
-            "prompt": "What is his revenue from wheat?"
+            "prompt": "What is his total profit from wheat?"
           },
           {
             "label": "b",
@@ -70,12 +70,45 @@
       "source_ref": "references/owned/course-blueprint-v5.md §1.1.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.1.1",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_completed_on": "2026-06-14"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "review_packet": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
+        "sprint_plan": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+        "decision_summary": "Target aligns to scarcity, opportunity cost, and allocation calculation after correcting weak revenue wording to profit wording.",
+        "authority_boundary": "Reviewed source-registry target-quality decision only; does not close Year 1, CP-6, target-equivalent proof, graph/table evidence, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "reviewed_final",
+        "operation_chain": [
+          "Identify the scarce production choice between wheat and corn.",
+          "Calculate total profit from the chosen wheat allocation.",
+          "Calculate the opportunity cost of the foregone corn allocation.",
+          "Compare an alternative mixed allocation and explain the choice using scarcity."
+        ],
+        "answer_form": [
+          "Numeric profit and opportunity-cost calculations with units or currency labels.",
+          "Short written explanation that names scarcity and opportunity cost."
+        ],
+        "mtu_mapping_decision": "A43, B01, and B02 cover the calculation and concept chain; no missing MTU remains for the registry target.",
+        "blocks": [],
+        "does_not_block": [
+          "Separate target-equivalent lesson proof review",
+          "Separate Year 1 / CP-6 / Scale Gate closure review"
+        ],
+        "proof_required_to_close": "Registry validator passes and review evidence remains linked; later product proof must be handled by separate evidence lanes."
       }
     },
     {
@@ -129,12 +162,46 @@
       "source_ref": "references/owned/course-blueprint-v5.md §1.1.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.1.2",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_completed_on": "2026-06-14"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "review_packet": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
+        "sprint_plan": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+        "decision_summary": "Target covers percentage change, index calculation, index-to-percent conversion, and the D31 index-point trap.",
+        "authority_boundary": "Reviewed source-registry target-quality decision only; does not close Year 1, CP-6, target-equivalent proof, graph/table evidence, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "reviewed_final",
+        "operation_chain": [
+          "Calculate a percentage change from old and new values.",
+          "Calculate an index number from a base year.",
+          "Calculate a percentage change between index values.",
+          "Explain why an index-point change is not automatically the same as a percentage change."
+        ],
+        "answer_form": [
+          "Calculation lines using the correct base value.",
+          "Final percentage or index answer with notation.",
+          "Short explanation distinguishing index points from percent."
+        ],
+        "mtu_mapping_decision": "A38, A39, and D31 cover the target chain; no missing MTU remains for the registry target.",
+        "blocks": [],
+        "does_not_block": [
+          "Separate target-equivalent lesson proof review",
+          "Separate Year 1 / CP-6 / Scale Gate closure review"
+        ],
+        "proof_required_to_close": "Registry validator passes and review evidence remains linked; later product proof must be handled by separate evidence lanes."
       }
     },
     {
@@ -168,27 +235,63 @@
         "Critically interpret claims using data"
       ],
       "required_skills": [
-        "A38"
+        "A38",
+        "A45",
+        "A46"
       ],
       "prior_knowledge_assumed": [
         "A38"
       ],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Draw a (P,Q) graph from a table with the economist's axis convention (P vertical, Q horizontal) (A-domain candidate)",
-        "Read values from a (P,Q) graph; interpolate between data points (A-domain candidate)"
+      "new_skills_introduced": [
+        "A45",
+        "A46"
       ],
+      "missing_units_flagged": [],
       "exam_codes": [],
       "difficulty_notes": "Skill-based, hands-on. Students enjoy the concreteness. The main pitfall is putting axes wrong (price on horizontal instead of vertical). One lesson comfortable.",
       "source_ref": "references/owned/course-blueprint-v5.md §1.1.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.1.3",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_completed_on": "2026-06-14"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "review_packet": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
+        "sprint_plan": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+        "decision_summary": "Target-registry review maps graph drawing and graph reading/interpolation to live A45/A46 units. This does not close separate graph/table lesson-evidence blockers.",
+        "authority_boundary": "Reviewed source-registry target-quality decision only; does not close Year 1, CP-6, target-equivalent proof, graph/table evidence, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "reviewed_final",
+        "operation_chain": [
+          "Read price-quantity data from a table.",
+          "Draw a P-Q graph using economist axes.",
+          "Interpolate a value from the graph.",
+          "Check a percentage claim against the table data."
+        ],
+        "answer_form": [
+          "Graph with P on the vertical axis and Q on the horizontal axis.",
+          "Interpolated numeric answer from the graph.",
+          "Short source-based explanation for the percentage claim."
+        ],
+        "mtu_mapping_decision": "A45 and A46 are live graph/table units, with A38 covering the percentage claim; stale missing-unit flags are cleared for the registry target only.",
+        "blocks": [],
+        "does_not_block": [
+          "Separate target-equivalent lesson proof review",
+          "Separate Year 1 / CP-6 / Scale Gate closure review"
+        ],
+        "proof_required_to_close": "Registry validator passes and review evidence remains linked; later product proof must be handled by separate evidence lanes."
       }
     },
     {
@@ -705,20 +808,22 @@
         "Show supply shifts graphically"
       ],
       "required_skills": [
+        "A42",
+        "A49",
         "D13",
         "D32",
         "D33"
       ],
       "prior_knowledge_assumed": [
+        "A42",
         "D32",
         "D33"
       ],
       "new_skills_introduced": [
+        "A49",
         "D13"
       ],
-      "missing_units_flagged": [
-        "Draw an upward-sloping supply curve with correct economist axes (A-domain candidate)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "D1.12",
         "D1.24"
@@ -727,12 +832,45 @@
       "source_ref": "references/owned/course-blueprint-v5.md §1.3.1",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.3.1",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_completed_on": "2026-06-14"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "review_packet": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
+        "sprint_plan": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+        "decision_summary": "Target covers supply-curve drawing, movement-versus-shift reasoning, supply factors, and supply-shift explanation using live A49/A42/D13/D32/D33 mappings.",
+        "authority_boundary": "Reviewed source-registry target-quality decision only; does not close Year 1, CP-6, target-equivalent proof, graph/table evidence, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "reviewed_final",
+        "operation_chain": [
+          "Identify whether a supply-side event changes supply or quantity supplied.",
+          "Draw or shift the supply curve using economist axes.",
+          "Explain input-cost and subsidy effects on supply.",
+          "Name supply factors and distinguish shifts from movements."
+        ],
+        "answer_form": [
+          "Graphical curve-shift answers with labelled before/after curves.",
+          "Short written explanations naming the relevant supply factor."
+        ],
+        "mtu_mapping_decision": "A49 is live for supply-curve drawing, A42/D32 cover graphical shift versus movement, D33 covers shift factors, and D13 covers cost-driven supply shifts.",
+        "blocks": [],
+        "does_not_block": [
+          "Separate target-equivalent lesson proof review",
+          "Separate Year 1 / CP-6 / Scale Gate closure review"
+        ],
+        "proof_required_to_close": "Registry validator passes and review evidence remains linked; later product proof must be handled by separate evidence lanes."
       }
     },
     {
@@ -772,18 +910,20 @@
       "required_skills": [
         "A02",
         "A04",
-        "A06"
+        "A06",
+        "A49",
+        "A51"
       ],
       "prior_knowledge_assumed": [
-        "A02"
+        "A02",
+        "A49"
       ],
       "new_skills_introduced": [
         "A04",
-        "A06"
+        "A06",
+        "A51"
       ],
-      "missing_units_flagged": [
-        "Determine surplus (aanbodoverschot) vs shortage (vraagoverschot) at a non-equilibrium price and calculate its size (A-domain candidate, prerequisite for government price interventions in §2.4)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.10",
         "A2.12",
@@ -793,12 +933,46 @@
       "source_ref": "references/owned/course-blueprint-v5.md §1.3.2",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.4.1",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_completed_on": "2026-06-14"
+      },
+      "review_evidence": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "review_packet": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
+        "sprint_plan": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+        "decision_summary": "Target covers equilibrium calculation, substitution check, graphing demand/supply curves, and surplus/shortage calculation using live A02/A04/A06/A49/A51 mappings.",
+        "authority_boundary": "Reviewed source-registry target-quality decision only; does not close Year 1, CP-6, target-equivalent proof, graph/table evidence, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "reviewed_final",
+        "operation_chain": [
+          "Set demand equal to supply and solve for equilibrium price.",
+          "Substitute the price back to find and check equilibrium quantity.",
+          "Draw demand and supply curves and mark equilibrium.",
+          "Compare demanded and supplied quantities at a non-equilibrium price."
+        ],
+        "answer_form": [
+          "Algebraic calculation with substitution check.",
+          "Graphical answer with labelled equilibrium point.",
+          "Surplus/shortage answer naming which side is larger and by how much."
+        ],
+        "mtu_mapping_decision": "A51 is live for surplus/shortage at a non-equilibrium price, while A02/A04/A06 cover the algebra and A49 covers market-curve graphing.",
+        "blocks": [],
+        "does_not_block": [
+          "Separate target-equivalent lesson proof review",
+          "Separate Year 1 / CP-6 / Scale Gate closure review"
+        ],
+        "proof_required_to_close": "Registry validator passes and review evidence remains linked; later product proof must be handled by separate evidence lanes."
       }
     },
     {
@@ -845,6 +1019,7 @@
         "A04",
         "A06",
         "A42",
+        "A49",
         "D13"
       ],
       "prior_knowledge_assumed": [
@@ -852,6 +1027,7 @@
         "A04",
         "A06",
         "A42",
+        "A49",
         "D13"
       ],
       "new_skills_introduced": [],
@@ -875,6 +1051,37 @@
         "from_v4_id": "1.4.2",
         "related_v4_ids": [],
         "review_required_before_final": true
+      },
+      "target_quality_review": {
+        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
+        "review_date": "2026-06-14",
+        "disposition": "split_or_missing_unit_review_required",
+        "decision_summary": "One-shift equilibrium recalculation is covered by live mappings, but the simultaneous demand+supply shift item remains a separate concept/design dependency and blocks reviewed_final status.",
+        "operation_chain": [
+          "Calculate a new equilibrium after a supply shift.",
+          "Compare old and new equilibrium after one shift.",
+          "Calculate a new equilibrium after a demand shift.",
+          "Graph one-shift changes with arrows.",
+          "Reason about simultaneous demand and supply shifts and price ambiguity."
+        ],
+        "answer_form": [
+          "Algebraic new-equilibrium calculations.",
+          "Graphical before/after shift representation.",
+          "Conceptual explanation of determinate quantity and ambiguous price under simultaneous shifts."
+        ],
+        "mtu_mapping_decision": "A02/A04/A06/A42/A49/D13 cover the one-shift and graphing chain; simultaneous-shift reasoning remains a missing design decision rather than a reviewed live MTU mapping.",
+        "blocks": [
+          "1.3.3 reviewed_final status",
+          "Year 1 closure",
+          "CP-6 closure",
+          "Scale Gate reliance on Book 1 market-equilibrium coverage"
+        ],
+        "does_not_block": [
+          "1.3.1 and 1.3.2 target-registry promotion",
+          "1.3.4 one-shift mixed target replacement from PR #55",
+          "Ordinary scoped work that does not claim simultaneous-shift closure"
+        ],
+        "proof_required_to_close": "Run B1-SIMSHIFT-MISSING-UNIT-DESIGN-1 or equivalent to decide whether to mint/map a governed unit, revise the target, or keep the item out of Year 1 final coverage."
       }
     },
     {

@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-12T14:37:54.015Z",
+  "generated_on": "2026-06-15T06:17:34.519Z",
   "status": "pass",
   "summary": {
-    "record_count": 594,
-    "source_manifest_file_count": 603,
+    "record_count": 598,
+    "source_manifest_file_count": 607,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 7,
       "authored_judgement": 10,
       "generated_report": 2,
-      "governance_data": 454,
+      "governance_data": 458,
       "unknown": 51,
       "quality_protocol": 5,
       "planning": 1,
@@ -29,7 +29,7 @@
       "inventory": 49,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
-      "sprint_metadata": 396,
+      "sprint_metadata": 400,
       "file_json": 10,
       "file_md": 35,
       "file_html": 6,
@@ -48,7 +48,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 452,
+      "governance_data": 456,
       "review_required": 51,
       "planning": 1,
       "schema_contract": 29
@@ -57,7 +57,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 73,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 489
+      "not_public_citation_source": 493
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -383,7 +383,7 @@
       "title": "Course Target Exercises v5",
       "source_type": "authored_json",
       "authority_level": "authored_judgement",
-      "source_version": "sha256:c452a319e171780b93f404477d89fc2f8f5d8f79a1ffbd6654915bcbbd90b45b",
+      "source_version": "sha256:046cea8efefa6ba662c10ae3455d083afa83db314b993da7cd9f1ce5b6a6bbe7",
       "status": "active",
       "owner": "references_team",
       "citation_policy": "cite_as_human_authored_judgement",
@@ -392,8 +392,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "manual_review",
-      "source_hash": "c452a319e171780b93f404477d89fc2f8f5d8f79a1ffbd6654915bcbbd90b45b",
-      "size_bytes": 165545,
+      "source_hash": "046cea8efefa6ba662c10ae3455d083afa83db314b993da7cd9f1ce5b6a6bbe7",
+      "size_bytes": 178017,
       "primary_evidence": true,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
@@ -14679,6 +14679,158 @@
       ]
     },
     {
+      "document_id": "path-references-data-sprints-review-throughput-1-plan",
+      "path": "references/data/sprints/REVIEW-THROUGHPUT-1.plan.json",
+      "title": "REVIEW THROUGHPUT 1.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:c1fdf03d301184d07d9d5af18d48b08d41c42716a116414e6237824119ad2f0f",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "c1fdf03d301184d07d9d5af18d48b08d41c42716a116414e6237824119ad2f0f",
+      "size_bytes": 2165,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-review-throughput-1-result",
+      "path": "references/data/sprints/REVIEW-THROUGHPUT-1.result.json",
+      "title": "REVIEW THROUGHPUT 1.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:1c5c183ef43f2be9b7045410a3f749cf88fcad7f051dd914237cccfc35c27167",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "1c5c183ef43f2be9b7045410a3f749cf88fcad7f051dd914237cccfc35c27167",
+      "size_bytes": 7632,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-review-throughput-2-plan",
+      "path": "references/data/sprints/REVIEW-THROUGHPUT-2.plan.json",
+      "title": "REVIEW THROUGHPUT 2.Plan",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:8b6ff5867e897100c2bbe2f7d8cb7290bf60a0cf9b31badcf208520f62b3b9b6",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "8b6ff5867e897100c2bbe2f7d8cb7290bf60a0cf9b31badcf208520f62b3b9b6",
+      "size_bytes": 2460,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-sprints-review-throughput-2-result",
+      "path": "references/data/sprints/REVIEW-THROUGHPUT-2.result.json",
+      "title": "REVIEW THROUGHPUT 2.Result",
+      "source_type": "sprint_metadata",
+      "authority_level": "governance_data",
+      "source_version": "sha256:84bd1200cb437318d0b08ac6be8b309913a3927acf554e6119bd41f1130b19ee",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "sprint_process",
+      "refresh_policy": "sprint_lifecycle",
+      "source_hash": "84bd1200cb437318d0b08ac6be8b309913a3927acf554e6119bd41f1130b19ee",
+      "size_bytes": 6492,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
       "document_id": "path-references-data-sprints-rx-1-plan",
       "path": "references/data/sprints/RX.1.plan.json",
       "title": "RX.1.Plan",
@@ -20456,7 +20608,7 @@
       "title": "Reference Team Roadmap",
       "source_type": "roadmap",
       "authority_level": "planning",
-      "source_version": "sha256:9401cc47a1dc96247ffbe3ce83622285409917682b9eeb4622a2e0e7835e5fe4",
+      "source_version": "sha256:832a6de4b4be0a0214f676169d78c618ba5763686cdf1c7683c60c454f89f70b",
       "status": "planning",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -20465,8 +20617,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "roadmap_update",
-      "source_hash": "9401cc47a1dc96247ffbe3ce83622285409917682b9eeb4622a2e0e7835e5fe4",
-      "size_bytes": 406322,
+      "source_hash": "832a6de4b4be0a0214f676169d78c618ba5763686cdf1c7683c60c454f89f70b",
+      "size_bytes": 407633,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
