@@ -26,6 +26,7 @@ closure and does not mutate protected reference data.
 - `build-scripts/sprints/check-review-throughput-packet.js`
 - `build-scripts/sprints/check-review-throughput-packet.test.js`
 - `reports/fixtures/review-throughput-1/*.json`
+- `reports/fixtures/review-throughput-1/*.txt`
 - `reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md`
 - `reports/sprints/REVIEW-THROUGHPUT-1-plan.md`
 - `reports/sprints/REVIEW-THROUGHPUT-1-baseline.md`

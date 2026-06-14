@@ -1,15 +1,12 @@
 {
   "schema_version": 1,
-  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-MACHINE",
+  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-EMPTY-CHANGED-PATHS",
   "pr_throughput_class": "normal_sprint",
   "bundle_id": null,
   "authority_class": "standard",
-  "changed_paths": [
-    "references/external/source-register.json"
-  ],
+  "changed_paths": [],
   "review_autonomy": {
-    "level": "L1",
-    "lead_review_result": "PASS"
+    "level": "L1"
   },
   "human_decision_required": false,
   "paired_prs": [],
@@ -18,8 +15,8 @@
   "proof": {
     "ci": {
       "workflow": "platform-ci / validate-platform",
-      "github_actions_run_id": "27200000002",
-      "reviewed_commit_sha": "cccccccccccccccccccccccccccccccccccccccc",
+      "github_actions_run_id": "27200000009",
+      "reviewed_commit_sha": "4444444444444444444444444444444444444444",
       "conclusion": "success"
     },
     "checkers": [
@@ -31,7 +28,7 @@
     "lead_review": {
       "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
       "result": "PASS",
-      "reviewed_commit_sha": "cccccccccccccccccccccccccccccccccccccccc"
+      "reviewed_commit_sha": "4444444444444444444444444444444444444444"
     }
   }
 }

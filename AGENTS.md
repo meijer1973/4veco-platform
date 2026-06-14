@@ -190,8 +190,9 @@ throughput fields checked by
 `build-scripts/sprints/check-review-throughput-packet.js`. Autonomous
 classification is never allowed when protected references, machine/external
 references, generated-output product authority, diagnostics, mastery, PV,
-student-use authority, missing CI/checker proof, or missing lead-review proof
-is present.
+student-use authority, missing changed-path evidence, missing commit-specific
+CI/checker proof, or missing `proof.lead_review` path/result/reviewed-commit
+proof is present.
 
 
 ### Sprint agent structure

@@ -68,7 +68,16 @@ is still needed.
 - `references/data/sprints/REVIEW-THROUGHPUT-1.plan.json`
 - `references/data/sprints/REVIEW-THROUGHPUT-1.result.json`
 - `references/reference-team-roadmap.md` sprint ledger row for `REVIEW-THROUGHPUT-1`
+- `reports/github-agent-index-platform.*` generated refresh after adding review surfaces
+- `reports/github-agent-index-lessen.*` generated refresh after adding review surfaces
+- `reports/internal-dashboard/*` generated refresh after adding the sprint ledger row
 - `package.json`
+
+Generated-refresh exception: the GitHub agent indexes and internal dashboard may
+be regenerated only to reflect this sprint's new review surfaces and roadmap
+ledger row. These generated refreshes do not authorize lesson output,
+protected-reference data mutation, product authority, diagnostics, mastery, PV,
+or student/product use.
 
 ## Forbidden paths
 
@@ -108,10 +117,11 @@ is still needed.
 3. Add the policy and schema in `docs/review/`, keeping the language
    governance-only and explicit about forbidden authority boundaries.
 4. Add the checker and fixtures. The checker must reject autonomous
-   classification for protected-reference touches, machine/external-reference
-   touches, generated-output product-authority claims, diagnostics/mastery/PV/
-   student-use authority claims, missing CI/checker proof, and missing
-   lead-review result.
+   classification for missing changed-path evidence, protected-reference
+   touches, machine/external-reference touches, generated-output
+   product-authority claims, diagnostics/mastery/PV/student-use authority
+   claims, missing commit-specific CI/checker proof, and missing
+   `proof.lead_review` path/result/reviewed-commit proof.
 5. Add the retrospective report using the GitHub metadata gathered in step 2.
    Classify correct isolation, batching opportunities, lead-review autonomous
    candidates, and full-human-review requirements.
@@ -125,7 +135,8 @@ Stop conditions:
 - Stop if the checker would allow autonomous classification for protected,
   generated-output product-authority, diagnostics, mastery, PV, or student-use
   authority.
-- Stop if CI/checker proof or lead-review proof can be omitted for an
+- Stop if changed-path evidence, commit-specific CI/checker proof, or
+  `proof.lead_review` path/result/reviewed-commit proof can be omitted for an
   autonomous packet.
 - Stop if the retrospective cannot cite GitHub metadata for a requested PR.
 

@@ -29,7 +29,9 @@
       }
     ],
     "lead_review": {
-      "result": "PASS"
+      "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "dddddddddddddddddddddddddddddddddddddddd"
     }
   },
   "authority_claims": {

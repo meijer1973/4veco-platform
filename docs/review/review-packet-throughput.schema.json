@@ -69,7 +69,8 @@
           ]
         },
         "lead_review_result": {
-          "type": "string"
+          "type": "string",
+          "description": "Informational only. Autonomous proof must use proof.lead_review."
         },
         "owner_preapproval": {
           "type": "object",
@@ -122,7 +123,16 @@
       "properties": {
         "ci": {
           "type": "object",
-          "additionalProperties": true
+          "additionalProperties": true,
+          "properties": {
+            "reviewed_commit_sha": {
+              "type": "string",
+              "pattern": "^[A-Fa-f0-9]{40}$"
+            },
+            "conclusion": {
+              "type": "string"
+            }
+          }
         },
         "checkers": {
           "type": "array",
@@ -133,7 +143,24 @@
         },
         "lead_review": {
           "type": "object",
-          "additionalProperties": true
+          "additionalProperties": true,
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "result": {
+              "type": "string",
+              "enum": [
+                "PASS",
+                "PASS WITH FLAGS"
+              ]
+            },
+            "reviewed_commit_sha": {
+              "type": "string",
+              "pattern": "^[A-Fa-f0-9]{40}$"
+            }
+          }
         }
       }
     },

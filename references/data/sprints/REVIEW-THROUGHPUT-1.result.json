@@ -52,7 +52,7 @@
       },
       {
         "id": "REVIEW-THROUGHPUT-1-F2",
-        "description": "The requested machine-readable packet fields and autonomous rejection checker are present.",
+        "description": "The requested machine-readable packet fields and hardened autonomous rejection checker are present.",
         "classification": "core_requirement_met",
         "evidence": [
           "docs/review/review-packet-throughput.schema.json",

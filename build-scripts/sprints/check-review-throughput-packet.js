@@ -120,6 +120,23 @@ function readJson(file) {
   }
 }
 
+function readChangedPathsFile(file) {
+  let content;
+  try {
+    content = fs.readFileSync(file, 'utf8');
+  } catch (error) {
+    fail(`cannot read --changed-paths-file ${file}: ${error.message}`);
+  }
+  const paths = content
+    .split(/\r?\n/)
+    .map((line) => normalizePath(line.trim()))
+    .filter(Boolean);
+  if (paths.length === 0) {
+    fail(`--changed-paths-file ${file} must contain at least one changed path`);
+  }
+  return [...new Set(paths)];
+}
+
 function hasOwn(object, key) {
   return Object.prototype.hasOwnProperty.call(object, key);
 }
@@ -194,21 +211,21 @@ function hasSuccessStatus(value) {
   });
 }
 
-function hasProofIdentity(value) {
+function reviewedCommitSha(value) {
   if (!value || typeof value !== 'object') return false;
-  return [
-    'run_id',
-    'runId',
-    'github_actions_run_id',
-    'githubActionsRunId',
-    'workflow',
-    'context',
-    'job',
-    'command',
+  const candidates = [
     'reviewed_commit_sha',
     'reviewedCommitSha',
     'reviewed_remote_commit_sha',
-  ].some((key) => typeof value[key] === 'string' || typeof value[key] === 'number');
+    'reviewedRemoteCommitSha',
+  ]
+    .map((key) => value[key])
+    .filter((candidate) => typeof candidate === 'string' && candidate.trim());
+  return candidates.find((candidate) => /^[a-f0-9]{40}$/i.test(candidate.trim())) || null;
+}
+
+function hasReviewedCommitSha(value) {
+  return Boolean(reviewedCommitSha(value));
 }
 
 function hasCiProof(packet) {
@@ -222,7 +239,7 @@ function hasCiProof(packet) {
     packet.validation && packet.validation.ci,
   ];
   return candidates.some((candidate) =>
-    asArray(candidate).some((item) => hasSuccessStatus(item) && hasProofIdentity(item))
+    asArray(candidate).some((item) => hasSuccessStatus(item) && hasReviewedCommitSha(item))
   );
 }
 
@@ -244,23 +261,30 @@ function hasCheckerProof(packet) {
   );
 }
 
-function leadReviewResult(packet) {
-  const proof = packet.proof || {};
-  const candidates = [
-    packet.review_autonomy && packet.review_autonomy.lead_review_result,
-    packet.review_autonomy && packet.review_autonomy.leadReviewResult,
-    proof.lead_review && proof.lead_review.result,
-    proof.lead_review && proof.lead_review.final_verdict,
-    proof.leadReview && proof.leadReview.result,
-    packet.lead_review && packet.lead_review.final_verdict,
-    packet.lead_review && packet.lead_review.result,
-    packet.leadReview && packet.leadReview.finalVerdict,
-  ];
-  return candidates.find((candidate) => typeof candidate === 'string' && candidate.trim()) || null;
+function localPathExists(value) {
+  if (typeof value !== 'string' || !value.trim()) return false;
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(value)) return true;
+  return fs.existsSync(path.resolve(process.cwd(), value));
 }
 
-function hasPassingLeadReview(packet) {
-  return ['PASS', 'PASS WITH FLAGS'].includes(normalizeVerdict(leadReviewResult(packet)));
+function validateLeadReviewProof(packet) {
+  const proof = packet.proof || {};
+  const leadReview = proof.lead_review;
+  if (!leadReview || typeof leadReview !== 'object') {
+    fail('autonomous classification rejected: lead-review proof is missing or incomplete');
+  }
+  if (typeof leadReview.path !== 'string' || !leadReview.path.trim()) {
+    fail('autonomous classification rejected: proof.lead_review.path is missing');
+  }
+  if (!localPathExists(leadReview.path)) {
+    fail(`autonomous classification rejected: proof.lead_review.path does not exist (${leadReview.path})`);
+  }
+  if (!['PASS', 'PASS WITH FLAGS'].includes(normalizeVerdict(leadReview.result))) {
+    fail('autonomous classification rejected: proof.lead_review.result is missing or not passing');
+  }
+  if (!hasReviewedCommitSha(leadReview)) {
+    fail('autonomous classification rejected: proof.lead_review.reviewed_commit_sha is missing');
+  }
 }
 
 function hasOwnerPreapproval(packet) {
@@ -285,6 +309,39 @@ function isAutonomous(packet) {
     packet.human_decision_required === false ||
     packet.auto_merge_allowed_after_ci === true
   );
+}
+
+function validateAutonomousChangedPaths(packet, changedPathsFromFile) {
+  if (!hasOwn(packet, 'changed_paths')) {
+    fail('autonomous classification rejected: changed_paths is missing');
+  }
+  if (
+    !Array.isArray(packet.changed_paths) ||
+    packet.changed_paths.length === 0 ||
+    packet.changed_paths.some((item) => typeof item !== 'string' || !item.trim())
+  ) {
+    fail('autonomous classification rejected: changed_paths must be a non-empty array of strings');
+  }
+
+  const packetPaths = [...new Set(packet.changed_paths.map(normalizePath).filter(Boolean))];
+  if (changedPathsFromFile) {
+    const packetSet = new Set(packetPaths);
+    const fileSet = new Set(changedPathsFromFile);
+    const missing = changedPathsFromFile.filter((file) => !packetSet.has(file));
+    const extra = packetPaths.filter((file) => !fileSet.has(file));
+    if (missing.length > 0 || extra.length > 0) {
+      const details = [
+        missing.length > 0 ? `missing from packet: ${missing.join(', ')}` : null,
+        extra.length > 0 ? `not in changed-paths file: ${extra.join(', ')}` : null,
+      ]
+        .filter(Boolean)
+        .join('; ');
+      fail(`autonomous classification rejected: changed_paths does not match --changed-paths-file (${details})`);
+    }
+    return changedPathsFromFile;
+  }
+
+  return packetPaths;
 }
 
 function validateRequiredShape(packet) {
@@ -333,10 +390,10 @@ function validateRequiredShape(packet) {
   }
 }
 
-function validateAutonomousSafety(packet) {
+function validateAutonomousSafety(packet, options = {}) {
   if (!isAutonomous(packet)) return;
 
-  const paths = collectChangedPaths(packet);
+  const paths = validateAutonomousChangedPaths(packet, options.changedPathsFromFile);
   const protectedPaths = paths.filter((file) => matchesAny(file, PROTECTED_REFERENCE_PATTERNS));
   if (protectedPaths.length > 0) {
     fail(`autonomous classification rejected: protected references touched (${protectedPaths.join(', ')})`);
@@ -367,27 +424,49 @@ function validateAutonomousSafety(packet) {
     fail('autonomous classification rejected: checker proof is missing');
   }
 
-  if (!hasPassingLeadReview(packet)) {
-    fail('autonomous classification rejected: lead-review result is missing or not passing');
-  }
+  validateLeadReviewProof(packet);
 
   if (packet.escalation_triggers.length > 0) {
     fail('autonomous classification rejected: escalation_triggers is non-empty');
   }
 }
 
-function validatePacket(packet) {
+function validatePacket(packet, options = {}) {
   validateRequiredShape(packet);
-  validateAutonomousSafety(packet);
+  validateAutonomousSafety(packet, options);
   return true;
 }
 
+function parseArgs(argv) {
+  const options = { packetPath: null, changedPathsFile: null };
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === '--changed-paths-file') {
+      index += 1;
+      if (!argv[index]) fail('--changed-paths-file requires a path');
+      options.changedPathsFile = argv[index];
+    } else if (arg.startsWith('--')) {
+      fail(`unknown option: ${arg}`);
+    } else if (!options.packetPath) {
+      options.packetPath = arg;
+    } else {
+      fail(`unexpected argument: ${arg}`);
+    }
+  }
+  return options;
+}
+
 function runCli(argv) {
-  const file = argv.find((arg) => !arg.startsWith('--'));
-  if (!file) fail('usage: check-review-throughput-packet.js <packet.json>');
-  const packet = readJson(path.resolve(file));
-  validatePacket(packet);
-  console.log(`OK review throughput packet: ${packet.packet_id || file}`);
+  const options = parseArgs(argv);
+  if (!options.packetPath) {
+    fail('usage: check-review-throughput-packet.js <packet.json> [--changed-paths-file <path>]');
+  }
+  const packet = readJson(path.resolve(options.packetPath));
+  const changedPathsFromFile = options.changedPathsFile
+    ? readChangedPathsFile(path.resolve(options.changedPathsFile))
+    : null;
+  validatePacket(packet, { changedPathsFromFile });
+  console.log(`OK review throughput packet: ${packet.packet_id || options.packetPath}`);
 }
 
 if (require.main === module) {

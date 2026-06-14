@@ -19,11 +19,13 @@ machine-readable review packet field contract, autonomous-classification
 checker, checker fixtures/tests, a retrospective report for the requested
 platform and lesson PR ranges, and a complete sprint closure packet.
 
-The checker rejects autonomous classification when protected references are
-touched, machine/external references are touched, generated lesson output
-claims product authority, diagnostics/mastery/PV/student-use authority is
-claimed, CI proof is missing, checker proof is missing, lead-review proof is
-missing, or escalation triggers are non-empty.
+The checker rejects autonomous classification when changed-path evidence is
+missing or mismatched, protected references are touched, machine/external
+references are touched, generated lesson output claims product authority,
+diagnostics/mastery/PV/student-use authority is claimed, commit-specific CI
+proof is missing, checker proof is missing, `proof.lead_review`
+path/result/reviewed-commit proof is missing, or escalation triggers are
+non-empty.
 
 No generated lesson output, protected reference data, product authority,
 diagnostics, mastery, PV, or student/product use was changed or authorized.

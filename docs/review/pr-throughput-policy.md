@@ -28,8 +28,8 @@ student-facing deployment by itself.
 
 | Level | Name | Meaning | Minimum proof |
 |---|---|---|---|
-| `L0` | Mechanical auto-merge candidate | Pure mechanical maintenance with no authority change and no generated lesson output. | Passing CI/checker proof, lead-review result, no escalation triggers, `human_decision_required: false`. |
-| `L1` | Lead-review autonomous | Normal sprint work can close on lead-review judgment when no high-authority surface is touched. | Passing CI/checker proof, lead-review PASS or PASS WITH FLAGS, no escalation triggers, `human_decision_required: false`. |
+| `L0` | Mechanical auto-merge candidate | Pure mechanical maintenance with no authority change and no generated lesson output. | Non-empty string-only `changed_paths`, commit-specific CI proof, checker proof, `proof.lead_review` path/result/reviewed commit proof, no escalation triggers, `human_decision_required: false`. |
+| `L1` | Lead-review autonomous | Normal sprint work can close on lead-review judgment when no high-authority surface is touched. | Non-empty string-only `changed_paths`, commit-specific CI proof, checker proof, `proof.lead_review.result` of PASS or PASS WITH FLAGS, no escalation triggers, `human_decision_required: false`. |
 | `L2` | Owner-preapproved lane | A repeatable lane that the owner has preapproved in writing for a precise class of changes. | Same as L1 plus owner preapproval evidence and exact lane name. |
 | `L3` | Owner one-decision gate | The owner makes one bounded decision after reviewing a complete packet. Use for generated-output or product-adjacent changes that do not require a full multi-review gate. | Complete packet, CI/checker proof or explicit CI waiver, lead review before the owner decision, `human_decision_required: true`. |
 | `L4` | Full human gate | Full human review is required. Use for protected references, product/spec authority, diagnostics, mastery, PV, student/product use, review-gate closure, or unresolved escalation. | Human-review packet, lead review before the human gate, passing CI/checker proof or explicit waiver, recorded decision and closure evidence. |
@@ -47,14 +47,33 @@ companion:
 {
   "bundle_id": "REVIEW-THROUGHPUT-EXAMPLE-1",
   "authority_class": "standard",
+  "changed_paths": [
+    "reports/sprints/EXAMPLE-result.md"
+  ],
   "review_autonomy": {
-    "level": "L1",
-    "lead_review_result": "PASS"
+    "level": "L1"
   },
   "human_decision_required": false,
   "paired_prs": [],
   "auto_merge_allowed_after_ci": true,
-  "escalation_triggers": []
+  "escalation_triggers": [],
+  "proof": {
+    "ci": {
+      "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/EXAMPLE-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  }
 }
 ```
 
@@ -64,11 +83,17 @@ Use `bundle_id: null` when the PR is not bundled. Use an empty array for
 Recommended additional fields:
 
 - `pr_throughput_class`: one of the five PR throughput classes above.
-- `changed_paths`: repository paths changed by the PR.
-- `proof.ci`: workflow/context, run ID, reviewed commit, and success
-  conclusion.
+- `changed_paths`: repository paths changed by the PR. Autonomous packets must
+  provide this as a present, non-empty array of strings. When available, run
+  the checker with `--changed-paths-file <path>` generated from
+  `git diff --name-only origin/main...HEAD` so the packet is checked against
+  the actual PR diff.
+- `proof.ci`: reviewed commit SHA and success conclusion. Workflow, context,
+  run ID, or job name are useful metadata but do not prove CI for an
+  autonomous packet without a reviewed commit SHA.
 - `proof.checkers`: passed checker commands.
-- `proof.lead_review`: path and result.
+- `proof.lead_review`: path, PASS or PASS WITH FLAGS result, and reviewed
+  commit SHA. `review_autonomy.lead_review_result` alone is not proof.
 - `authority_claims`: booleans for product authority, diagnostics, mastery,
   PV, student use, and student/product use.
 
@@ -78,13 +103,15 @@ The schema companion is `docs/review/review-packet-throughput.schema.json`.
 
 The checker must reject autonomous classification when any of these are true:
 
-1. Protected references are touched.
-2. `references/machine/` or `references/external/` is touched.
-3. Generated lesson output claims product authority.
-4. Diagnostics, mastery, PV, or student-use authority is claimed.
-5. CI/checker proof is missing.
-6. Lead-review result is missing.
-7. `escalation_triggers` is non-empty.
+1. Changed-path evidence is missing, empty, not string-only, or does not match
+   `--changed-paths-file` when supplied.
+2. Protected references are touched.
+3. `references/machine/` or `references/external/` is touched.
+4. Generated lesson output claims product authority.
+5. Diagnostics, mastery, PV, or student-use authority is claimed.
+6. Commit-specific CI proof or checker proof is missing.
+7. `proof.lead_review` path/result/reviewed commit proof is missing.
+8. `escalation_triggers` is non-empty.
 
 When any trigger fires, set `human_decision_required: true` and move the packet
 to L3 or L4. Do not clear the trigger by changing wording alone; either remove

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-MACHINE",
+  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-LEAD-RESULT-ONLY",
   "pr_throughput_class": "normal_sprint",
   "bundle_id": null,
   "authority_class": "standard",
   "changed_paths": [
-    "references/external/source-register.json"
+    "reports/sprints/EXAMPLE-result.md"
   ],
   "review_autonomy": {
     "level": "L1",
@@ -18,8 +18,8 @@
   "proof": {
     "ci": {
       "workflow": "platform-ci / validate-platform",
-      "github_actions_run_id": "27200000002",
-      "reviewed_commit_sha": "cccccccccccccccccccccccccccccccccccccccc",
+      "github_actions_run_id": "27200000010",
+      "reviewed_commit_sha": "5555555555555555555555555555555555555555",
       "conclusion": "success"
     },
     "checkers": [
@@ -27,11 +27,6 @@
         "command": "npm.cmd run check:platform",
         "status": "passed"
       }
-    ],
-    "lead_review": {
-      "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
-      "result": "PASS",
-      "reviewed_commit_sha": "cccccccccccccccccccccccccccccccccccccccc"
-    }
+    ]
   }
 }

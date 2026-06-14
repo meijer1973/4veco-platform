@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-14T17:50:39.775Z
+Generated: 2026-06-14T18:26:55.885Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4486
+Files indexed: 4474
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1733,7 +1733,7 @@ Count: 605
 
 ## reports
 
-Count: 2771
+Count: 2759
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1767,16 +1767,8 @@ Count: 2771
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -1790,10 +1782,6 @@ Count: 2771
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
