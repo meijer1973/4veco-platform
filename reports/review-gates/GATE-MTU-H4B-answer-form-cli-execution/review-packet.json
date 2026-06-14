@@ -2,6 +2,26 @@
   "schema_version": 1,
   "gate_id": "GATE-MTU-H4B-answer-form-cli-execution",
   "sprint_id": "MTU-H4B",
+  "packet_id": "GATE-MTU-H4B-answer-form-cli-execution",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json",
+    "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.md",
+    "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json",
+    "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "MTU-H4B reviews answer-form unit execution authority and must remain a full human gate."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_execution_authority"
+  ],
   "generated_on": "2026-05-30",
   "status": "review_packet_ready_no_mutation_authorized",
   "source_packet": "reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json",

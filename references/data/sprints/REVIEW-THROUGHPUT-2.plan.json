@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-2",
+  "name": "Throughput Field Rollout",
+  "created": "2026-06-14",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-2-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-2-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "scope": [
+    "Add a reusable review-throughput field helper for future packet generators.",
+    "Wire selected active full-human-gate packet generators to emit L4 throughput fields.",
+    "Validate adopted generated packets with focused packet checkers.",
+    "Document the CI rollout decision."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-2-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-2",
+    "node node_modules/jest/bin/jest.js build-scripts/review-gates/review-throughput-fields.test.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+    "node build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+    "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json",
+    "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json",
+    "npm.cmd run check:scope-language",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-2",
+    "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-2",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-2-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-2 --complete",
+    "git diff --check"
+  ],
+  "forbidden": [
+    "No generated lesson output changes.",
+    "No references/machine or references/external edits.",
+    "No protected reference mutation.",
+    "No product authority changes.",
+    "No diagnostics, mastery, PV, Scale Gate 1, student-use, product-use, adaptive-routing, summative-use, or student-facing AI authority changes."
+  ]
+}

@@ -99,6 +99,19 @@ Recommended additional fields:
 
 The schema companion is `docs/review/review-packet-throughput.schema.json`.
 
+## Generator Adoption
+
+Review-packet generators should use
+`build-scripts/review-gates/review-throughput-fields.js` for the shared
+machine-readable envelope instead of hand-copying the field set. Human-gated
+packets should emit `L3` or `L4`, set `human_decision_required: true`, keep
+`auto_merge_allowed_after_ci: false`, and list the generated packet surface in
+`changed_paths`.
+
+Do not add a repository-wide CI gate over all historical review packets until
+the archived packet surface is either migrated or an allowlist exists. Focused
+packet checkers may validate packets that have adopted the envelope.
+
 ## Escalation Triggers
 
 The checker must reject autonomous classification when any of these are true:

@@ -15,6 +15,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const { fullHumanGateThroughputFields } = require('../review-gates/review-throughput-fields');
+
 const ROOT = process.cwd();
 const SPRINT_ID = 'MTU-H2E';
 const GATE_ID = 'GATE-MTU-H2E-conditional-lane-execution';
@@ -27,6 +29,12 @@ const PACKET_MD_PATH = 'reports/mtu-hardening/solo-q1-q3-conditional-lane-execut
 const REVIEW_DIR = `reports/review-gates/${GATE_ID}`;
 const REVIEW_JSON_PATH = `${REVIEW_DIR}/review-packet.json`;
 const REVIEW_MD_PATH = `${REVIEW_DIR}/review-packet.md`;
+const REVIEW_THROUGHPUT_CHANGED_PATHS = [
+  PACKET_JSON_PATH,
+  PACKET_MD_PATH,
+  REVIEW_JSON_PATH,
+  REVIEW_MD_PATH,
+];
 
 const LANE_ORDER = ['A12', 'A88', 'A89', 'A90', 'A92', 'A93'];
 const HELD_OUT_OF_SCOPE = ['A20'];
@@ -245,6 +253,12 @@ function build() {
     schema_version: 1,
     gate_id: GATE_ID,
     sprint_id: SPRINT_ID,
+    ...fullHumanGateThroughputFields({
+      gateId: GATE_ID,
+      changedPaths: REVIEW_THROUGHPUT_CHANGED_PATHS,
+      rationale: 'MTU-H2E reviews protected-reference execution authority and must remain a full human gate.',
+      escalationTriggers: ['protected_reference_execution_authority'],
+    }),
     date: DATE,
     status: 'review_packet_ready_no_mutation_authorized',
     review_scope: 'Review the MTU-H2E conditional-lane execution packet only. Decide whether a later bounded CLI execution sprint may be authorized for A12/A88/A89/A90/A92/A93 with A20 held.',

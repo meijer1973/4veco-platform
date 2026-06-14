@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-2",
+  "name": "Throughput Field Rollout",
+  "status": "completed",
+  "completed": "2026-06-14",
+  "completed_on": "2026-06-14",
+  "verdict": "PASS",
+  "result_status": "pass",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-2-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-2-baseline.md",
+  "result": "reports/sprints/REVIEW-THROUGHPUT-2-result.md",
+  "diff_summary": "reports/sprints/REVIEW-THROUGHPUT-2-diff-summary.md",
+  "final_verdict": "PASS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/REVIEW-THROUGHPUT-2-lead-review-assignment.md",
+    "round1": "reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round1.md",
+    "corrections": "reports/sprints/REVIEW-THROUGHPUT-2-lead-review-corrections.md",
+    "round2": "reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md",
+    "round1_verdict": "PASS",
+    "round2_verdict": "PASS",
+    "final_verdict": "PASS",
+    "findings": [
+      {
+        "id": "REVIEW-THROUGHPUT-2-F1",
+        "description": "The shared review-throughput field helper and tests are present.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "build-scripts/review-gates/review-throughput-fields.js",
+          "build-scripts/review-gates/review-throughput-fields.test.js"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not require migrating every historical packet before this focused rollout closes.",
+        "proof_required_to_close": "Jest helper and existing checker tests pass."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-2-F2",
+        "description": "Selected generated packet envelopes validate as L4/high-authority human gates.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json",
+          "reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not introduce autonomous closure or auto-merge for protected-reference execution authority.",
+        "proof_required_to_close": "Direct review-throughput checks pass for both packet JSON files."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-2-F3",
+        "description": "The active H4B packet checker validates the adopted throughput envelope.",
+        "classification": "core_requirement_met",
+        "evidence": "build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+        "blocks": "None.",
+        "does_not_block": "Does not broaden H4B execution, product, or student-use authority.",
+        "proof_required_to_close": "H4B packet checker passes."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-2-F4",
+        "description": "Repository-wide CI promotion remains a documented follow-up.",
+        "classification": "quality_improvement_available",
+        "evidence": "reports/sprints/REVIEW-THROUGHPUT-2-ci-decision.md",
+        "blocks": "None.",
+        "does_not_block": "Does not block focused generator adoption because adopted packets are validated directly.",
+        "proof_required_to_close": "CI decision note remains present and names migration or allowlist prerequisites."
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-2-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-2",
+      "status": "passed"
+    },
+    {
+      "command": "node node_modules/jest/bin/jest.js build-scripts/review-gates/review-throughput-fields.test.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-h4b-answer-form-cli-execution-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-2",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-2-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-2 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false,
+    "product_authority": false
+  },
+  "authorized_next": [
+    "Use build-scripts/review-gates/review-throughput-fields.js for future review-packet generator adoption.",
+    "Validate adopted packets with check-review-throughput-packet.js.",
+    "Do not promote repository-wide CI enforcement until historical packet migration or an active-packet allowlist exists.",
+    "Do not infer generated-output approval, product authority, diagnostics, mastery, PV, Scale Gate 1, or student/product use from this sprint."
+  ]
+}
