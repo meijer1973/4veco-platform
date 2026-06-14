@@ -115,6 +115,22 @@ function requireIncludes(text, needle, context) {
   if (!text.includes(needle)) fail(`${context} must include ${needle}`);
 }
 
+function bucketCounts(result) {
+  return {
+    passed: result.buckets.passed.length,
+    failed: result.buckets.failed.length,
+    review_required: result.buckets.review_required.length,
+    blocked: result.buckets.blocked.length,
+  };
+}
+
+function questionBucketCounts(result, recordId) {
+  return {
+    failed: result.buckets.failed.filter((entry) => entry.record_id === recordId).length,
+    review_required: result.buckets.review_required.filter((entry) => entry.record_id === recordId).length,
+  };
+}
+
 function requireArray(object, key, context, minItems = 1) {
   if (!Array.isArray(object[key]) || object[key].length < minItems) {
     fail(`${context}.${key} must be an array with at least ${minItems} item(s)`);
@@ -562,8 +578,44 @@ if (packet.status !== 'blocked_no_approved_fresh_sample') {
   const reportJson = readJson(REGRESSION_REPORT_JSON);
   if (reportJson.status !== approvedResult.status) fail('regression report JSON status must match approved checker status');
   if (reportJson.fixture_id !== approvedResult.fixture_id) fail('regression report JSON fixture_id must match approved checker output');
+  const reportCounts = bucketCounts(reportJson);
+  const approvedCounts = bucketCounts(approvedResult);
+  for (const [bucket, count] of Object.entries(approvedCounts)) {
+    if (reportCounts[bucket] !== count) {
+      fail(`regression report JSON ${bucket} bucket must match approved checker output`);
+    }
+    if (reportJson.bucket_totals?.[bucket] !== count) {
+      fail(`regression report JSON bucket_totals.${bucket} must match approved checker output`);
+    }
+  }
+  for (const [question, recordId] of Object.entries({
+    q3: 'vw-1022-a-25-1-o:opgave-1:question-3',
+    q15: 'vw-1022-a-25-1-o:opgave-3:question-15',
+    q19: 'vw-1022-a-25-1-o:opgave-4:question-19',
+    q27: 'vw-1022-a-25-2-o:opgave-6:question-27',
+  })) {
+    const expectedQuestionCounts = questionBucketCounts(approvedResult, recordId);
+    if (reportJson.question_bucket_counts?.[question]?.failed !== expectedQuestionCounts.failed) {
+      fail(`regression report JSON question_bucket_counts.${question}.failed must match approved checker output`);
+    }
+    if (reportJson.question_bucket_counts?.[question]?.review_required !== expectedQuestionCounts.review_required) {
+      fail(`regression report JSON question_bucket_counts.${question}.review_required must match approved checker output`);
+    }
+  }
   const reportMd = readText(REGRESSION_REPORT_MD);
-  for (const required of ['MTU-H5 Regression Report', 'procedure_present', 'procedure_review_required', 'No protected reference mutation']) {
+  for (const required of [
+    'MTU-H5 Regression Report',
+    'procedure_present',
+    'procedure_review_required',
+    'No protected reference mutation',
+    'graph/draw/teken answer-form gap',
+    'source-annex and graph-object review',
+    'incidence/pass-through missing',
+    'per-1,000-liter scaling missing',
+    'A97 procedure semantic-fit review',
+    'two-step answer-skill coverage review',
+    'q15 remains an answer-skill/procedure semantic-fit review blocker',
+  ]) {
     requireIncludes(reportMd, required, 'regression report markdown');
   }
   const closure = readJson(GATE_CLOSURE_JSON);

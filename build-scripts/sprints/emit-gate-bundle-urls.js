@@ -99,6 +99,10 @@ function collectReviewPacketReferences(gateDirAbs) {
     if (typeof value === 'string' && value.length > 0) references.add(value.replace(/\\/g, '/'));
   }
 
+  for (const value of reviewPacket.evidence_base || []) {
+    if (typeof value === 'string' && value.length > 0) references.add(value.replace(/\\/g, '/'));
+  }
+
   for (const key of [
     'review_packet_markdown',
     'source_execution_gate_packet_markdown',

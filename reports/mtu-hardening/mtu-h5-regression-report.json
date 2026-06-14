@@ -221,40 +221,6 @@
     ],
     "failed": [
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-MISSING-OPERATION-MTU",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-1",
-        "defect_class": "missing_mtu_for_correction_model_operation",
-        "reason": "official correction-model operation has no required live MTU or reviewed equivalent"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-OVER-TRIGGER",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-1",
-        "defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
-        "unit_ids": [
-          "A15"
-        ],
-        "reason": "mapped MTUs include units explicitly forbidden by the reviewed answer model"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-MISSING-OPERATION-MTU",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-2",
-        "defect_class": "missing_mtu_for_correction_model_operation",
-        "reason": "official correction-model operation has no required live MTU or reviewed equivalent"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-OVER-TRIGGER",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-2",
-        "defect_class": "over_triggered_prerequisite_not_required_by_answer_model",
-        "unit_ids": [
-          "A15"
-        ],
-        "reason": "mapped MTUs include units explicitly forbidden by the reviewed answer model"
-      },
-      {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING",
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
         "operation_id": "q19-step-1",
@@ -304,20 +270,6 @@
       }
     ],
     "review_required": [
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-1:ASSERT-REVIEW-review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-1",
-        "hook": "review whether annual insurance cost threshold is a missing operation unit or strengthened existing arithmetic route",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-1:question-3:q3-step-2:ASSERT-REVIEW-review threshold-conclusion wording as answer-skill need or governed MTU procedure",
-        "record_id": "vw-1022-a-25-1-o:opgave-1:question-3",
-        "operation_id": "q3-step-2",
-        "hook": "review threshold-conclusion wording as answer-skill need or governed MTU procedure",
-        "reason": "fixture marks this validator hook as review_required"
-      },
       {
         "assertion_id": "vw-1022-a-25-1-o:opgave-3:question-15:q15-step-1:ASSERT-PROCEDURE-REVIEW-A97",
         "record_id": "vw-1022-a-25-1-o:opgave-3:question-15",
@@ -539,6 +491,106 @@
     ],
     "blocked": []
   },
-  "report_generated": "2026-06-08",
-  "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed entries are expected live coverage gaps, not authorization for reference mutation."
+  "report_generated": "2026-06-12",
+  "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+  "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+  "source_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
+  "source_merge_commit": "48d0fa6d4ce03dff6feeb66955909125264c06f9",
+  "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.",
+  "bucket_totals": {
+    "passed": 1,
+    "failed": 6,
+    "review_required": 29,
+    "blocked": 0
+  },
+  "question_bucket_counts": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4
+    },
+    "q19": {
+      "failed": 3,
+      "review_required": 20
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5
+    },
+    "global_negative_guard": {
+      "passed": 1
+    }
+  },
+  "failed_by_defect_class": {
+    "question_word_without_answer_form_mtu": 3,
+    "incidence_pass_through_task_without_incidence_mtu": 2,
+    "scale_factor_usage_without_scaling_unit_mtu": 1
+  },
+  "review_required_by_defect_class": {
+    "apply_analyze_unit_without_usable_canonical_procedure": 15,
+    "fixture_review_hooks": 14
+  },
+  "procedure_statuses": {
+    "procedure_present": 6,
+    "procedure_review_required": 15
+  },
+  "remaining_lane_status": {
+    "q3": {
+      "status": "clean_after_q3_fixture_execution",
+      "failed": 0,
+      "review_required": 0,
+      "blocks_mtu_h5_closure": false
+    },
+    "q19": {
+      "status": "graph_draw_source_answer_form_procedure_blocker",
+      "failed": 3,
+      "review_required": 20,
+      "diagnostic_focus": "graph/draw/teken answer-form gap; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review",
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "status": "incidence_scaling_levy_capacity_procedure_blocker",
+      "failed": 3,
+      "review_required": 5,
+      "diagnostic_focus": "incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review",
+      "blocks_mtu_h5_closure": true
+    },
+    "q15": {
+      "status": "answer_skill_procedure_semantic_fit_review_blocker",
+      "failed": 0,
+      "review_required": 4,
+      "diagnostic_focus": "A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review",
+      "blocks_mtu_h5_closure": true
+    }
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false
+  },
+  "completion_claimed": false
 }

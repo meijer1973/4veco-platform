@@ -2,13 +2,17 @@
   "schema_version": 1,
   "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
   "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
-  "generated": "2026-06-06",
-  "status": "renewed_review_packet_ready_not_reviewed_not_closed",
+  "generated": "2026-06-12",
+  "status": "closed_pass_with_flags_no_downstream_authority",
   "supersedes": "GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review",
   "superseded_reason": "Renewed human/lead feedback found that accepted shared-task decisions were not preserved in the old retry packet.",
-  "human_review_comments_started": false,
-  "human_review_decision": null,
-  "gate_closure_authorized": false,
+  "human_review_comments_started": true,
+  "human_review_decision": "pass_with_flags",
+  "prior_human_review_decision": "hold_for_surface_repair",
+  "gate_direction": "pass_with_flags",
+  "closure_proposal_started": true,
+  "gate_closed": true,
+  "gate_closure_authorized": true,
   "remote_publication_required_before_review": true,
   "evidence_base": [
     "../4veco-lessen/specifications/product-end-state.md",
@@ -22,6 +26,17 @@
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json",
+    "reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md",
     "reports/json/checksurface-policy-regression1-proof.json",
     "reports/fixtures/checksurface-policy-regression1/negative-fixtures.json",
     "reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-matrix.md",
@@ -63,19 +78,19 @@
     },
     {
       "requirement": "six_check_surfaces_inspectable",
-      "status": "review_required"
+      "status": "met_by_renewed_review"
     },
     {
       "requirement": "advisory_and_exit_roles_distinct",
-      "status": "review_required"
+      "status": "met_by_renewed_review"
     },
     {
       "requirement": "prior_defects_guarded",
-      "status": "review_required"
+      "status": "met_with_quality_carry_flags"
     },
     {
       "requirement": "authority_boundaries_preserved",
-      "status": "review_required"
+      "status": "met_for_this_gate_with_downstream_holds"
     }
   ],
   "finding_classifications": [
@@ -118,9 +133,58 @@
     "exit_procedure_context_removed": true,
     "axis_labels_delayed": true,
     "interval_distractors_present": true,
+    "percentage_claim_control_present": true,
+    "current_graph_exit_evidence_refreshed": true,
+    "current_check_surface_evidence_refreshed": true,
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
     "current_112_transfer_held": true
+  },
+  "current_main_freshness_preflight": {
+    "checked_on": "2026-06-12",
+    "platform_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "checks_passed": [
+      "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
+      "node build-scripts/sprints/check-scope-language.js --active"
+    ]
+  },
+  "confirmed_gate_closure": {
+    "closed_on": "2026-06-12",
+    "gate_closed": true,
+    "human_confirmation_received": true,
+    "human_confirmation_summary": "Explicit human confirmation accepted PR #50 closure proposal and authorized narrow gate-closure artifacts.",
+    "proposal_pr": 50,
+    "proposal_merge_commit": "5c89e49ed9b7030e2e00add98052b063ee1e8e6b",
+    "base_platform_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "scope": "first-three check-surface evidence only",
+    "no_active_core_spec_failure_for_this_gate": true,
+    "downstream_authority_remains_blocked": true
+  },
+  "renewed_human_review": {
+    "review_received_on": "2026-06-12",
+    "gate_direction": "pass_with_flags",
+    "human_review_decision": "pass_with_flags",
+    "no_active_core_spec_failure_for_this_gate": true,
+    "closure_proposal_allowed": true,
+    "gate_closed": false,
+    "closure_artifacts_authorized": false,
+    "evidence_boundary": "platform for build/checker/report logic; lesson repo for generated student-facing output",
+    "authorized_scope": "first-three check-surface evidence only",
+    "unauthorized_scope": [
+      "product-route adoption",
+      "new target-equivalent completion language",
+      "diagnostics",
+      "mastery/sequencing",
+      "PV",
+      "Scale Gate 1",
+      "student/product use"
+    ]
   },
   "authority_boundary": {
     "generated_lesson_output_already_deployed_as_evidence": true,

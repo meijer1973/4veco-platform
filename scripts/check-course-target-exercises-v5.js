@@ -3,8 +3,10 @@
  * Validates the active v5 target-exercise registry created by L1.5Q.
  *
  * The checker protects the new source-of-truth seam: v5 must have exact book
- * counts, no count-bearing test prep, explicit gemengde-opgaven records, and
- * visible placeholder statuses where records are not reviewed final.
+ * counts, no count-bearing test prep, explicit gemengde-opgaven records,
+ * visible placeholder statuses where records are not reviewed final, and
+ * non-placeholder mixed-target profiles where gemengde-opgaven records have
+ * been explicitly reviewed final.
  */
 
 'use strict';
@@ -42,6 +44,51 @@ function countByBook(exercises) {
     counts[exercise.module] = (counts[exercise.module] || 0) + 1;
   }
   return counts;
+}
+
+function validateReviewedMixedTarget(exercise, label, errors) {
+  const target = exercise.target_exercise;
+  if (!target || target.placeholder === true) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven requires a non-placeholder target_exercise`);
+    return;
+  }
+  if (exercise.placeholder_reason) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven must not carry placeholder_reason`);
+  }
+  if (typeof target.context !== 'string' || target.context.trim().length < 80) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven target_exercise.context must describe the integrated transfer context`);
+  }
+  if (!Array.isArray(target.subquestions) || target.subquestions.length < 4) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven requires at least four integrated subquestions`);
+  }
+
+  const profile = exercise.mixed_target_profile;
+  if (!profile || typeof profile !== 'object') {
+    errors.push(`${label}: reviewed_final gemengde_opgaven requires mixed_target_profile`);
+    return;
+  }
+  if (!Array.isArray(profile.integrates_paragraphs) || profile.integrates_paragraphs.length < 2) {
+    errors.push(`${label}: mixed_target_profile.integrates_paragraphs must name at least two prior paragraphs`);
+  }
+  for (const key of [
+    'source_selection_required',
+    'answer_construction_required',
+    'table_or_graph_interpretation_required',
+    'no_new_theory',
+  ]) {
+    if (profile[key] !== true) {
+      errors.push(`${label}: mixed_target_profile.${key} must be true`);
+    }
+  }
+  if (Array.isArray(exercise.missing_units_flagged) && exercise.missing_units_flagged.some((flag) => String(flag).includes('placeholder'))) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven must not carry placeholder missing-unit flags`);
+  }
+  if (exercise.v5_migration && exercise.v5_migration.review_required_before_final !== false) {
+    errors.push(`${label}: reviewed_final gemengde_opgaven must set v5_migration.review_required_before_final=false`);
+  }
+  if (exercise.v5_migration && exercise.v5_migration.source_status !== 'reviewed_final') {
+    errors.push(`${label}: reviewed_final gemengde_opgaven must set v5_migration.source_status=reviewed_final`);
+  }
 }
 
 function validate(data) {
@@ -112,7 +159,7 @@ function validate(data) {
         errors.push(`${label}: gemengde_opgaven must not introduce new theory`);
       }
       if (exercise.record_status === 'reviewed_final') {
-        errors.push(`${label}: gemengde_opgaven cannot be reviewed_final during Phase A`);
+        validateReviewedMixedTarget(exercise, label, errors);
       }
     }
     if (exercise.record_status === 'placeholder_needs_review') {

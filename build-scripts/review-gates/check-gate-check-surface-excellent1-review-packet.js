@@ -46,18 +46,147 @@ function rejectText(content, pattern, label, file) {
   assert(!pattern.test(content), `${file} contains forbidden ${label}`);
 }
 
-function requireNoPrematureReviewArtifacts() {
-  for (const name of [
+function requireReviewArtifactState(packet) {
+  const closureRecorded =
+    packet.gate_closed === true ||
+    packet.status === 'closed_pass_with_flags_no_downstream_authority';
+  const proposalStarted =
+    closureRecorded ||
+    packet.closure_proposal_started === true ||
+    packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
+
+  const closureArtifacts = ['gate-closure.md', 'gate-closure.json'];
+  if (closureRecorded) {
+    for (const name of closureArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after explicit gate closure confirmation`);
+    }
+  } else {
+    for (const name of closureArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before explicit gate closure authorization`);
+    }
+  }
+
+  const reviewArtifacts = [
     'direct-review-comments.md',
     'direct-review-comments.json',
     'comment-resolution-log.md',
     'comment-resolution-log.json',
+  ];
+  if (packet.human_review_comments_started === true) {
+    for (const name of reviewArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after human review comments are recorded`);
+    }
+    const commentsText = read(`reports/review-gates/${GATE_ID}/direct-review-comments.md`);
+    const comments = readJson(`reports/review-gates/${GATE_ID}/direct-review-comments.json`);
+    const resolutionText = read(`reports/review-gates/${GATE_ID}/comment-resolution-log.md`);
+    const resolution = readJson(`reports/review-gates/${GATE_ID}/comment-resolution-log.json`);
+    assert(comments.gate_direction === 'hold_for_surface_repair', 'direct comments must record hold_for_surface_repair');
+    assert(comments.human_review_decision === 'hold_for_surface_repair', 'direct comments must record the human review decision');
+    assert(Array.isArray(comments.findings) && comments.findings.length === 12, 'direct comments must record twelve CHECKSURFACE findings');
+    assert(resolution.gate_direction === 'hold_for_surface_repair', 'resolution log must preserve held gate direction');
+    assert(resolution.gate_closed === false, 'resolution log must keep the gate open');
+    assert(resolution.closure_artifacts_authorized === false, 'resolution log must not authorize closure artifacts');
+    for (let i = 1; i <= 12; i += 1) {
+      const id = `CHECKSURFACE-Q${i}`;
+      assert(commentsText.includes(id), `direct comments markdown missing ${id}`);
+      assert(resolutionText.includes(id), `resolution log markdown missing ${id}`);
+      const finding = comments.findings.find((item) => item.id === id);
+      assert(finding, `direct comments JSON missing ${id}`);
+      assert(finding.classification, `${id} must include a classification`);
+      assert(Array.isArray(finding.blocks), `${id} must include blocks`);
+      assert(Array.isArray(finding.does_not_block), `${id} must include does_not_block`);
+      assert(finding.proof_required_to_close, `${id} must include proof_required_to_close`);
+    }
+  } else {
+    for (const name of reviewArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before human comments`);
+    }
+  }
+
+  const proposalArtifacts = [
+    'renewed-review-comments.md',
+    'renewed-review-comments.json',
     'closure-proposal.md',
     'closure-proposal.json',
-    'gate-closure.md',
-    'gate-closure.json',
-  ]) {
-    assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before human comments`);
+  ];
+  if (proposalStarted) {
+    for (const name of proposalArtifacts) {
+      assert(fs.existsSync(path.join(GATE_DIR, name)), `${name} must exist after renewed pass-with-flags review`);
+    }
+    const renewedText = read(`reports/review-gates/${GATE_ID}/renewed-review-comments.md`);
+    const renewed = readJson(`reports/review-gates/${GATE_ID}/renewed-review-comments.json`);
+    const proposalText = read(`reports/review-gates/${GATE_ID}/closure-proposal.md`);
+    const proposal = readJson(`reports/review-gates/${GATE_ID}/closure-proposal.json`);
+
+    assert(renewed.gate_direction === 'pass_with_flags', 'renewed review must record pass_with_flags');
+    assert(renewed.human_review_decision === 'pass_with_flags', 'renewed comments must record pass_with_flags');
+    assert(renewed.no_active_core_spec_failure_for_this_gate === true, 'renewed comments must clear active core failures for this gate');
+    assert(renewed.gate_closed === false, 'renewed comments must keep the gate open');
+    assert(renewed.closure_artifacts_authorized === false, 'renewed comments must not authorize closure artifacts');
+    assert(Array.isArray(renewed.findings) && renewed.findings.length === 12, 'renewed comments must record twelve CHECKSURFACE findings');
+    for (let i = 1; i <= 12; i += 1) {
+      const id = `CHECKSURFACE-Q${i}`;
+      assert(renewedText.includes(id), `renewed comments markdown missing ${id}`);
+      const finding = renewed.findings.find((item) => item.id === id);
+      assert(finding, `renewed comments JSON missing ${id}`);
+      assert(finding.classification, `${id} renewed finding must include a classification`);
+      assert(Array.isArray(finding.blocks), `${id} renewed finding must include blocks`);
+      assert(Array.isArray(finding.does_not_block), `${id} renewed finding must include does_not_block`);
+      assert(finding.proof_required_to_close, `${id} renewed finding must include proof_required_to_close`);
+    }
+    for (const id of ['CF-1', 'CF-2', 'CF-3']) {
+      const flag = renewed.carried_flags && renewed.carried_flags.find((item) => item.id === id);
+      assert(flag, `renewed comments missing carried flag ${id}`);
+      assert(flag.classification, `${id} must include classification`);
+      assert(Array.isArray(flag.blocks), `${id} must include blocks`);
+      assert(Array.isArray(flag.does_not_block), `${id} must include does_not_block`);
+      assert(flag.proof_required_to_close, `${id} must include proof_required_to_close`);
+    }
+
+    assert(proposal.gate_direction === 'pass_with_flags', 'closure proposal must preserve pass_with_flags');
+    assert(proposal.renewed_human_review_decision === 'pass_with_flags', 'closure proposal must cite renewed decision');
+    assert(proposal.no_active_core_spec_failure_for_this_gate === true, 'closure proposal must record no active core failure');
+    assert(proposal.gate_closed === false, 'closure proposal must keep the gate open');
+    assert(proposal.gate_closure_artifacts_authorized === false, 'closure proposal must not authorize closure artifacts');
+    assert(proposal.explicit_human_confirmation_required === true, 'closure proposal must require explicit human confirmation');
+    assert(proposal.authority && proposal.authority.product_route_adoption_authorized === false, 'closure proposal must not authorize product route');
+    assert(proposal.authority.scale_gate_1_authorized === false, 'closure proposal must not authorize Scale Gate 1');
+    requireText(proposalText, 'Renewed direct human review returned: `pass_with_flags`', 'renewed decision', 'closure-proposal.md');
+    requireText(proposalText, 'No active `core_spec_failure` remains', 'core failure clearance', 'closure-proposal.md');
+    requireText(proposalText, '`gate-closure.md/json`', 'gate closure artifact hold', 'closure-proposal.md');
+  } else {
+    for (const name of proposalArtifacts) {
+      assert(!fs.existsSync(path.join(GATE_DIR, name)), `${name} must not exist before renewed pass-with-flags review`);
+    }
+  }
+
+  if (closureRecorded) {
+    const closureText = read(`reports/review-gates/${GATE_ID}/gate-closure.md`);
+    const closure = readJson(`reports/review-gates/${GATE_ID}/gate-closure.json`);
+    assert(closure.gate_direction === 'pass_with_flags', 'gate closure must preserve pass_with_flags');
+    assert(closure.gate_closed === true, 'gate closure must mark this gate closed');
+    assert(closure.human_confirmation_received === true, 'gate closure must cite explicit human confirmation');
+    assert(closure.no_active_core_spec_failure_for_this_gate === true, 'gate closure must record no active core failure');
+    assert(closure.scope === 'first-three check-surface evidence only', 'gate closure scope must stay narrow');
+    assert(closure.authority && closure.authority.product_route_adoption_authorized === false, 'gate closure must not authorize product route');
+    assert(closure.authority.new_target_equivalent_completion_language_authorized === false, 'gate closure must not authorize completion language');
+    assert(closure.authority.diagnostics_authorized === false, 'gate closure must not authorize diagnostics');
+    assert(closure.authority.mastery_or_sequencing_authorized === false, 'gate closure must not authorize mastery or sequencing');
+    assert(closure.authority.pv_authorized === false, 'gate closure must not authorize PV');
+    assert(closure.authority.scale_gate_1_authorized === false, 'gate closure must not authorize Scale Gate 1');
+    assert(closure.authority.student_product_use_authorized === false, 'gate closure must not authorize student/product use');
+    for (const id of ['CF-1', 'CF-2', 'CF-3']) {
+      const flag = closure.carried_flags && closure.carried_flags.find((item) => item.id === id);
+      assert(flag, `gate closure missing carried flag ${id}`);
+      assert(flag.classification, `${id} closure flag must include classification`);
+      assert(Array.isArray(flag.blocks), `${id} closure flag must include blocks`);
+      assert(Array.isArray(flag.does_not_block), `${id} closure flag must include does_not_block`);
+      assert(flag.proof_required_to_close, `${id} closure flag must include proof_required_to_close`);
+    }
+    requireText(closureText, 'Status: closed with carried flags', 'closure status', 'gate-closure.md');
+    requireText(closureText, 'first-three check-surface evidence only', 'narrow closure scope', 'gate-closure.md');
+    requireText(closureText, 'No active `core_spec_failure` remains', 'core failure clearance', 'gate-closure.md');
+    requireText(closureText, 'remain unauthorized', 'downstream authority hold', 'gate-closure.md');
   }
 }
 
@@ -106,6 +235,9 @@ function requirePacketText() {
     'interval-halving task includes plausible incorrect intervals',
     'Golden Workbench transfer holds target-equivalent readiness',
     'does not authorize product-route adoption',
+    'Renewed direct human review returned: pass_with_flags',
+    'No active core_spec_failure remains',
+    'Gate closure confirmed',
     'explicit human confirmation',
   ]) {
     requireText(text, phrase, `phrase ${phrase}`, file);
@@ -116,11 +248,44 @@ function requirePacketText() {
 function requirePacketJson(packet, live) {
   assert(packet.gate_id === GATE_ID, 'packet gate id mismatch');
   assert(live.gate_id === GATE_ID, 'live evidence gate id mismatch');
-  assert(packet.status === 'renewed_review_packet_ready_not_reviewed_not_closed', 'packet status mismatch');
+  assert(
+    [
+      'renewed_review_packet_ready_not_reviewed_not_closed',
+      'direct_review_returned_hold_for_surface_repair_not_closed',
+      'closure_proposal_ready_pass_with_flags_not_closed',
+      'closed_pass_with_flags_no_downstream_authority',
+    ].includes(packet.status),
+    'packet status mismatch'
+  );
   assert(packet.supersedes === 'GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review', 'packet must supersede old retry packet');
-  assert(packet.human_review_comments_started === false, 'human review comments must not be started');
-  assert(packet.human_review_decision === null, 'human review decision must be null');
-  assert(packet.gate_closure_authorized === false, 'gate closure must not be authorized');
+  const closureRecorded =
+    packet.gate_closed === true ||
+    packet.status === 'closed_pass_with_flags_no_downstream_authority';
+  const proposalStarted =
+    closureRecorded ||
+    packet.closure_proposal_started === true ||
+    packet.status === 'closure_proposal_ready_pass_with_flags_not_closed';
+  if (closureRecorded) {
+    assert(packet.human_review_comments_started === true, 'gate closure requires human comments');
+    assert(packet.human_review_decision === 'pass_with_flags', 'latest human review decision must record pass_with_flags');
+    assert(packet.gate_direction === 'pass_with_flags', 'latest gate direction must record pass_with_flags');
+    assert(packet.gate_closure_authorized === true, 'gate closure must be authorized after explicit confirmation');
+    assert(packet.confirmed_gate_closure && packet.confirmed_gate_closure.human_confirmation_received === true, 'packet must record explicit closure confirmation');
+    assert(packet.confirmed_gate_closure.gate_closed === true, 'packet must record gate closure');
+    assert(packet.confirmed_gate_closure.no_active_core_spec_failure_for_this_gate === true, 'packet must record no active core failure at closure');
+  } else if (proposalStarted) {
+    assert(packet.human_review_comments_started === true, 'closure proposal requires human comments');
+    assert(packet.human_review_decision === 'pass_with_flags', 'latest human review decision must record pass_with_flags');
+    assert(packet.gate_direction === 'pass_with_flags', 'latest gate direction must record pass_with_flags');
+    assert(packet.renewed_human_review && packet.renewed_human_review.no_active_core_spec_failure_for_this_gate === true, 'packet must record no active core failure after renewed review');
+    assert(packet.gate_closure_authorized === false, 'closure proposal must not authorize gate closure');
+  } else if (packet.human_review_comments_started === true) {
+    assert(packet.human_review_decision === 'hold_for_surface_repair', 'human review decision must record hold_for_surface_repair');
+    assert(packet.gate_direction === 'hold_for_surface_repair', 'packet gate direction must record hold_for_surface_repair');
+  } else {
+    assert(packet.human_review_decision === null, 'human review decision must be null before comments');
+  }
+  assert(packet.gate_closure_authorized === closureRecorded, 'gate closure authorization must match recorded closure state');
   assert(packet.remote_publication_required_before_review === true, 'remote publication must be required');
   assert(
     packet.required_baselines &&
@@ -176,7 +341,15 @@ function requirePacketJson(packet, live) {
   ]) {
     assert(packet.required_decisions.includes(decision), `packet missing decision ${decision}`);
   }
-  assert(live.status === 'renewed_packet_ready_not_reviewed_not_closed', 'live status mismatch');
+  assert(
+    [
+      'renewed_packet_ready_not_reviewed_not_closed',
+      'evidence_refresh_repair_ready_for_re_review_not_closed',
+      'renewed_review_pass_with_flags_closure_proposal_ready_not_closed',
+      'gate_closed_pass_with_flags_no_downstream_authority',
+    ].includes(live.status),
+    'live status mismatch'
+  );
 }
 
 function requireAuthority(packet, live) {
@@ -212,11 +385,22 @@ function requireUnderlyingProofs(packet, live) {
   }
   assert(checkShortExit.proof.all_landing_pages_show_two_check_cards === true, 'landing pages must show both check cards');
   assert(surfaces['1.1.3-short'].task_families.includes('graph_construction_substitute'), '1.1.3 short proof must include graph construction');
-  assert(surfaces['1.1.3-exit'].interval_halving_check === true, '1.1.3 exit proof must include interval halving');
+  assert(surfaces['1.1.3-exit'].context_block_count === 2, '1.1.3 exit proof must record current source/table context only');
+  assert(
+    surfaces['1.1.3-exit'].context_ids.join(',') === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table',
+    '1.1.3 exit proof must record current station bread-stall context ids'
+  );
+  assert(surfaces['1.1.3-exit'].percentage_claim_control === true, '1.1.3 exit proof must include percentage claim control');
+  assert(surfaces['1.1.3-exit'].formula_builder_present === true, '1.1.3 exit proof must include formula builder evidence');
+  assert(surfaces['1.1.3-exit'].source_text_current === true, '1.1.3 exit proof must not carry stale IJskraam copy');
+  assert(checkShortExit.proof.current_112_transfer_held === true, 'check-short-exit2 proof must record current 1.1.2 Golden Workbench transfer as held');
   assert(graphCheck.proof.graph_workspace_present === true, 'graph short check workspace must exist');
   assert(graphCheck.proof.choice_only === false, 'graph short check must not be choice-only');
   assert(graphExit.proof.source_task_workspace_present === true, 'graph exit source/task workspace must exist');
   assert(graphExit.proof.correct_path_draws_line === true, 'graph exit must draw line');
+  assert(graphExit.proof.percentage_claim_control_present === true, 'graph exit must include percentage claim control');
+  assert(graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'graph exit proof must record current context ids');
+  assert(graphExit.proof.current_source_text_confirmed === true, 'graph exit proof must confirm current source text');
   assert(graphExit.proof.completion_language_held === true, '1.1.3 completion language must stay held');
   for (const id of ['CSR1-F1', 'CSR1-F2', 'CSR1-F3', 'CSR1-F4', 'CSR1-F5']) {
     assert(visual.reset_findings_addressed.some((item) => item.id === id && item.status === 'guarded'), `${id} must remain guarded`);
@@ -315,7 +499,18 @@ function requireBundleUrls() {
   const bundle = path.join(GATE_DIR, 'bundle-urls.md');
   assert(fs.existsSync(bundle), 'bundle-urls.md must exist for remote review');
   const text = fs.readFileSync(bundle, 'utf8');
-  for (const name of ['review-packet.md', 'review-packet.json', 'live-output-evidence.md', 'live-output-evidence.json', 'review-lab.html']) {
+  const required = ['review-packet.md', 'review-packet.json', 'live-output-evidence.md', 'live-output-evidence.json', 'review-lab.html'];
+  for (const name of [
+    'renewed-review-comments.md',
+    'renewed-review-comments.json',
+    'closure-proposal.md',
+    'closure-proposal.json',
+    'gate-closure.md',
+    'gate-closure.json',
+  ]) {
+    if (fs.existsSync(path.join(GATE_DIR, name))) required.push(name);
+  }
+  for (const name of required) {
     requireText(text, name, `bundle URL for ${name}`, 'bundle-urls.md');
   }
 }
@@ -324,7 +519,7 @@ function main() {
   assert(fs.existsSync(GATE_DIR), `missing gate dir ${GATE_DIR}`);
   const packet = readJson(`reports/review-gates/${GATE_ID}/review-packet.json`);
   const live = readJson(`reports/review-gates/${GATE_ID}/live-output-evidence.json`);
-  requireNoPrematureReviewArtifacts();
+  requireReviewArtifactState(packet);
   requireEvidenceFiles(packet);
   requirePacketText();
   requirePacketJson(packet, live);

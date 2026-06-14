@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4veco – Paragraaf landing dark prototype v2</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #08121d;
+      --page-2: #0d1827;
+      --paper: #111d2b;
+      --paper-strong: #132131;
+      --ink: #edf3fb;
+      --muted: #a2b1c4;
+      --muted-2: #8192a8;
+      --line: #223346;
+      --line-soft: #1a2938;
+      --accent: #5ce4d3;
+      --accent-soft: rgba(92, 228, 211, 0.14);
+      --econ: #f1a34f;
+      --econ-soft: rgba(241, 163, 79, 0.14);
+      --math: #76b4ff;
+      --math-soft: rgba(118, 180, 255, 0.14);
+      --graph: #6fd29b;
+      --graph-soft: rgba(111, 210, 155, 0.14);
+      --reason: #ba98ff;
+      --reason-soft: rgba(186, 152, 255, 0.15);
+      --check: #43c8aa;
+      --check-soft: rgba(67, 200, 170, 0.14);
+      --warn: #ffbc66;
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
+      --shadow-small: 0 12px 28px rgba(0, 0, 0, 0.26);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --sidebar: 292px;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(92, 228, 211, 0.14), transparent 34rem),
+        radial-gradient(circle at 92% 6%, rgba(241, 163, 79, 0.10), transparent 28rem),
+        linear-gradient(140deg, var(--page), var(--page-2));
+      color: var(--ink);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: var(--sidebar) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 22px 18px;
+      border-right: 1px solid rgba(237, 243, 251, 0.05);
+      background: rgba(9, 16, 25, 0.78);
+      backdrop-filter: blur(18px);
+      overflow: auto;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 8px 18px;
+      border-bottom: 1px solid var(--line-soft);
+      margin-bottom: 18px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #08121d;
+      font-weight: 900;
+      background: linear-gradient(135deg, #5ce4d3, #6fd29b);
+      box-shadow: 0 12px 24px rgba(92, 228, 211, 0.18);
+    }
+
+    .brand strong { color: var(--ink); }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      margin-top: 2px;
+    }
+
+    .sidebar-section-title {
+      margin: 22px 8px 9px;
+      color: var(--muted-2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .side-link {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .side-link.current,
+    .side-link:hover {
+      background: rgba(19, 33, 49, 0.98);
+      color: var(--ink);
+      box-shadow: var(--shadow-small);
+    }
+
+    .side-number {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .side-link.current .side-number {
+      background: var(--accent);
+      color: #08121d;
+    }
+
+    .content {
+      width: min(1180px, calc(100vw - var(--sidebar)));
+      margin: 0 auto;
+      padding: 36px 42px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .breadcrumb span:last-child { color: var(--ink); font-weight: 750; }
+
+    .theme-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(19, 33, 49, 0.9);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-small);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(19, 33, 49, 0.96), rgba(13, 24, 39, 0.92)),
+        radial-gradient(circle at 20% 20%, rgba(92, 228, 211, 0.10), transparent 24rem),
+        radial-gradient(circle at 88% 8%, rgba(241, 163, 79, 0.08), transparent 22rem);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -9% -46% auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(92, 228, 211, 0.12), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) 360px;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #9cf3e7;
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(92, 228, 211, 0.16);
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      max-width: 780px;
+      font-size: clamp(2.05rem, 4.6vw, 4.05rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .lead {
+      max-width: 70ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .target-panel {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(15, 27, 40, 0.96);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-small);
+    }
+
+    .target-panel h2 {
+      margin: 0;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .target-panel p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+    .mini-meter {
+      display: grid;
+      gap: 8px;
+      padding-top: 6px;
+    }
+
+    .meter-track {
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .meter-fill {
+      width: 22%;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #6fd29b);
+    }
+
+    .meter-copy {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted-2);
+      font-size: 0.78rem;
+      font-weight: 650;
+    }
+
+    .route-strip {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin: 20px 0 26px;
+    }
+
+    .route-chip {
+      display: grid;
+      gap: 3px;
+      min-height: 68px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(19, 33, 49, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+
+    .route-chip:hover {
+      transform: translateY(-2px);
+      border-color: rgba(92, 228, 211, 0.2);
+    }
+
+    .route-chip b {
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    .route-chip span {
+      color: var(--muted);
+      font-size: 0.74rem;
+    }
+
+    .rows {
+      display: grid;
+      gap: 18px;
+    }
+
+    .learning-row {
+      display: grid;
+      grid-template-columns: 172px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .row-label {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+      min-height: 160px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(19, 33, 49, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .row-label .step {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: #08121d;
+      font-weight: 900;
+      background: var(--accent);
+      box-shadow: 0 10px 20px rgba(92, 228, 211, 0.16);
+    }
+
+    .row-label h2 {
+      margin: 4px 0 0;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .row-label p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tile-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .tile {
+      position: relative;
+      overflow: hidden;
+      min-height: 160px;
+      display: grid;
+      align-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 22px;
+      background: var(--paper-strong);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: var(--shadow-small);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .tile:hover,
+    .tile:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+      border-color: rgba(92, 228, 211, 0.22);
+      outline: none;
+    }
+
+    .tile::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--tile-accent, var(--accent));
+    }
+
+    .tile::after {
+      content: "";
+      position: absolute;
+      right: -64px;
+      top: -64px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: var(--tile-soft, var(--accent-soft));
+      opacity: 0.95;
+    }
+
+    .tile-header,
+    .tile-footer { position: relative; z-index: 1; }
+
+    .tile-header {
+      display: grid;
+      gap: 12px;
+    }
+
+    .icon-badge {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--tile-soft, var(--accent-soft));
+      color: var(--tile-accent, var(--accent));
+      font-weight: 950;
+      font-size: 1.02rem;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+
+    .tile h3 {
+      margin: 0;
+      font-size: 1.08rem;
+      letter-spacing: -0.025em;
+    }
+
+    .tile p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .tile-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      color: var(--tile-accent, var(--accent));
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--tile-soft, var(--accent-soft));
+      color: var(--tile-accent, var(--accent));
+      font-size: 0.72rem;
+      font-weight: 850;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .start { --tile-accent: var(--accent); --tile-soft: var(--accent-soft); }
+    .reason { --tile-accent: var(--reason); --tile-soft: var(--reason-soft); }
+    .math { --tile-accent: var(--math); --tile-soft: var(--math-soft); }
+    .graph { --tile-accent: var(--graph); --tile-soft: var(--graph-soft); }
+    .econ { --tile-accent: var(--econ); --tile-soft: var(--econ-soft); }
+    .check { --tile-accent: var(--check); --tile-soft: var(--check-soft); }
+
+    .notice {
+      margin: 22px 0 0;
+      padding: 15px 17px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 188, 102, 0.16);
+      background: rgba(255, 188, 102, 0.08);
+      color: #ffd391;
+      font-size: 0.88rem;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 1120px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; display: none; }
+      .content { width: min(100%, 980px); padding: 24px 20px 42px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .route-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .learning-row { grid-template-columns: 1fr; }
+      .row-label { min-height: unset; grid-template-columns: auto 1fr; align-items: center; }
+      .row-label p { grid-column: 2; }
+    }
+
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .theme-note { white-space: normal; }
+      .hero { padding: 22px; border-radius: 22px; }
+      .route-strip,
+      .tile-grid,
+      .tile-grid.two { grid-template-columns: 1fr; }
+      .tile { min-height: 145px; }
+      .row-label { grid-template-columns: 1fr; }
+      .row-label p { grid-column: auto; }
+    }
+  </style>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4v</div>
+        <div>
+          <strong>4veco lessen</strong>
+          <small>Boek 1 · Grondslagen</small>
+        </div>
+      </div>
+
+      <div class="sidebar-section-title">Hoofdstuk 1</div>
+      <a class="side-link current" href="#"><span class="side-number">1.1.1</span><span>Schaarste en economisch denken</span></a>
+      <a class="side-link" href="#"><span class="side-number">1.1.2</span><span>Percentages en indexcijfers</span></a>
+      <a class="side-link" href="#"><span class="side-number">1.1.3</span><span>Grafieken en tabellen</span></a>
+      <a class="side-link" href="#"><span class="side-number">1.1.4</span><span>Gemengde opgaven</span></a>
+
+      <div class="sidebar-section-title">Route</div>
+      <a class="side-link current" href="#start"><span class="side-number">1</span><span>Start</span></a>
+      <a class="side-link" href="#skills"><span class="side-number">2</span><span>Skill-tree games</span></a>
+      <a class="side-link" href="#leer"><span class="side-number">3</span><span>Leer</span></a>
+      <a class="side-link" href="#oefen"><span class="side-number">4</span><span>Oefen</span></a>
+      <a class="side-link" href="#check"><span class="side-number">5</span><span>Check</span></a>
+      <a class="side-link" href="#open"><span class="side-number">6</span><span>Open & verdiep</span></a>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <nav class="breadcrumb" aria-label="Kruimelpad">
+          <span>Boek 1</span><span>›</span><span>Hoofdstuk 1</span><span>›</span><span>Paragraaf 1.1.1</span>
+        </nav>
+        <div class="theme-note">Donker thema · zelfde route, rustiger contrast</div>
+      </div>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Paragraaf landing</div>
+            <h1 id="page-title">Schaarste en economisch denken</h1>
+            <p class="lead">Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen.</p>
+          </div>
+          <aside class="target-panel" aria-label="Leerpadstatus">
+            <h2>Jouw leerpad</h2>
+            <p>Begin met de instapquiz. Daarna kies je een skill-game, uitleg of oefenroute. De korte check geeft lokaal oefenadvies; het exit ticket is de aparte eindcontrole.</p>
+            <div class="mini-meter" aria-label="Voorbeeld voortgang">
+              <div class="meter-track"><div class="meter-fill"></div></div>
+              <div class="meter-copy"><span>Start</span><span>richting exit ticket</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="route-strip" aria-label="Routeoverzicht">
+        <a class="route-chip" href="#start"><b>Start</b><span>voorkennis + nieuws</span></a>
+        <a class="route-chip" href="#skills"><b>Skill games</b><span>redeneren · rekenen · grafieken</span></a>
+        <a class="route-chip" href="#leer"><b>Leer</b><span>uitleg + presentatie + leerpad</span></a>
+        <a class="route-chip" href="#oefen"><b>Oefen</b><span>begeleid · zelfstandig · adaptief</span></a>
+        <a class="route-chip" href="#check"><b>Check</b><span>kort advies + exit ticket</span></a>
+        <a class="route-chip" href="#open"><b>Open</b><span>lesboek + extra</span></a>
+      </div>
+
+      <section class="rows" aria-label="Paragraafroute">
+        <div class="learning-row" id="start">
+          <div class="row-label">
+            <div class="step">1</div>
+            <div>
+              <h2>Start</h2>
+              <p>Oriënteer, activeer voorkennis en maak de paragraaf actueel.</p>
+            </div>
+          </div>
+          <div class="tile-grid two">
+            <a class="tile start" href="#" aria-label="Open de voorkennisquiz">
+              <div class="tile-header"><div class="icon-badge">Q</div><div><span class="pill">voorkennis</span><h3>Instapquiz voorkennis</h3><p>Check snel welke begrippen en basishandelingen je al paraat hebt.</p></div></div>
+              <div class="tile-footer"><span>Maak quiz</span><span>→</span></div>
+            </a>
+            <a class="tile econ" href="#" aria-label="Open de nieuws-detective">
+              <div class="tile-header"><div class="icon-badge">N</div><div><span class="pill">context</span><h3>Nieuws-detective</h3><p>Ontdek waar de economie uit deze paragraaf zichtbaar wordt in een actuele bron.</p></div></div>
+              <div class="tile-footer"><span>Onderzoek bron</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="skills">
+          <div class="row-label">
+            <div class="step">2</div>
+            <div>
+              <h2>Skill-tree games</h2>
+              <p>Train de drie hoofdvaardigheden als korte, gerichte spelroutes.</p>
+            </div>
+          </div>
+          <div class="tile-grid">
+            <a class="tile reason" href="#" aria-label="Open het redeneerspel">
+              <div class="tile-header"><div class="icon-badge">R</div><div><span class="pill">redeneren</span><h3>Redeneerspel</h3><p>Bouw economische verklaringen stap voor stap: oorzaak, mechanisme, gevolg.</p></div></div>
+              <div class="tile-footer"><span>Speel route</span><span>→</span></div>
+            </a>
+            <a class="tile math" href="#" aria-label="Open het rekenspel">
+              <div class="tile-header"><div class="icon-badge">%</div><div><span class="pill">rekenen</span><h3>Rekenspel</h3><p>Oefen berekeningen, tussenstappen, notatie en controle van je antwoord.</p></div></div>
+              <div class="tile-footer"><span>Train stappen</span><span>→</span></div>
+            </a>
+            <a class="tile graph" href="#" aria-label="Open het grafiekenspel">
+              <div class="tile-header"><div class="icon-badge">G</div><div><span class="pill">grafieken</span><h3>Grafiekenspel</h3><p>Lees waarden af, vergelijk lijnen en vertaal grafieken naar economische conclusies.</p></div></div>
+              <div class="tile-footer"><span>Lees grafiek</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="leer">
+          <div class="row-label">
+            <div class="step">3</div>
+            <div>
+              <h2>Leer</h2>
+              <p>Gebruik uitleg en route-inzicht voordat je zelfstandig gaat oefenen.</p>
+            </div>
+          </div>
+          <div class="tile-grid">
+            <a class="tile graph" href="#" aria-label="Open uitleg vaardigheden">
+              <div class="tile-header"><div class="icon-badge">U</div><div><span class="pill">uitleg</span><h3>Uitleg vaardigheden</h3><p>De kernstappen van deze paragraaf met korte voorbeelden en vaste begrippen.</p></div></div>
+              <div class="tile-footer"><span>Leer stappen</span><span>→</span></div>
+            </a>
+            <a class="tile econ" href="#" aria-label="Open de PowerPoint presentatie">
+              <div class="tile-header"><div class="icon-badge">P</div><div><span class="pill">klassikaal</span><h3>PowerPoint-presentatie</h3><p>De lespresentatie met de visuele ankers, kernvragen en klassikale uitleg.</p></div></div>
+              <div class="tile-footer"><span>Open presentatie</span><span>→</span></div>
+            </a>
+            <a class="tile start" href="#" aria-label="Open de skill engine">
+              <div class="tile-header"><div class="icon-badge">L</div><div><span class="pill">leerpad</span><h3>Skill engine</h3><p>Bekijk welke vaardigheden bij deze paragraaf horen en wat je volgende nuttige stap is.</p></div></div>
+              <div class="tile-footer"><span>Bekijk leerpad</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="oefen">
+          <div class="row-label">
+            <div class="step">4</div>
+            <div>
+              <h2>Oefen</h2>
+              <p>Van steun naar kernopgaven en daarna eventueel routeadvies.</p>
+            </div>
+          </div>
+          <div class="tile-grid">
+            <a class="tile check" href="#" aria-label="Open begeleide oefeningen">
+              <div class="tile-header"><div class="icon-badge">B</div><div><span class="pill">met steun</span><h3>Begeleide oefeningen</h3><p>Maak opgaven met hints, tussenstappen en voorbeeldstructuur.</p></div></div>
+              <div class="tile-footer"><span>Start begeleid</span><span>→</span></div>
+            </a>
+            <a class="tile econ" href="#" aria-label="Open zelfstandige oefeningen">
+              <div class="tile-header"><div class="icon-badge">Z</div><div><span class="pill">kern</span><h3>Zelfstandige oefeningen</h3><p>De normale opgavenroute van de paragraaf: dit is de kern van het oefenen.</p></div></div>
+              <div class="tile-footer"><span>Maak opgaven</span><span>→</span></div>
+            </a>
+            <a class="tile math" href="#" aria-label="Open adaptieve oefeningen">
+              <div class="tile-header"><div class="icon-badge">A</div><div><span class="pill">lokaal advies</span><h3>Adaptieve oefenroute</h3><p>Krijg een voorgestelde volgende oefening op basis van je lokale voortgang in deze paragraaf.</p></div></div>
+              <div class="tile-footer"><span>Vraag advies</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="check">
+          <div class="row-label">
+            <div class="step">5</div>
+            <div>
+              <h2>Check</h2>
+              <p>Eerst oefenadvies, daarna een aparte eindcontrole.</p>
+            </div>
+          </div>
+          <div class="tile-grid two">
+            <a class="tile check" href="#" aria-label="Open korte check">
+              <div class="tile-header"><div class="icon-badge">K</div><div><span class="pill">advies</span><h3>Korte check</h3><p>Een lichte lokale check die aangeeft welke route nu verstandig is.</p></div></div>
+              <div class="tile-footer"><span>Krijg oefenadvies</span><span>→</span></div>
+            </a>
+            <a class="tile reason" href="#" aria-label="Open exit ticket">
+              <div class="tile-header"><div class="icon-badge">E</div><div><span class="pill">eindcontrole</span><h3>Exit ticket</h3><p>Laat zien dat je de doelopgave op hetzelfde niveau en met dezelfde antwoordvorm aankunt.</p></div></div>
+              <div class="tile-footer"><span>Maak exit ticket</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="open">
+          <div class="row-label">
+            <div class="step">6</div>
+            <div>
+              <h2>Open & verdiep</h2>
+              <p>Open het lesboek of aanvullend materiaal wanneer je het nodig hebt.</p>
+            </div>
+          </div>
+          <div class="tile-grid">
+            <a class="tile start" href="#" aria-label="Open het lesboek">
+              <div class="tile-header"><div class="icon-badge">L</div><div><span class="pill">tekstboek</span><h3>Lesboek openen</h3><p>De volledige paragraaf met uitleg, voorbeelden en visuals.</p></div></div>
+              <div class="tile-footer"><span>Open paragraaf</span><span>→</span></div>
+            </a>
+            <a class="tile graph" href="#" aria-label="Open opgaven en antwoorden">
+              <div class="tile-header"><div class="icon-badge">O</div><div><span class="pill">controle</span><h3>Opgaven & antwoorden</h3><p>Open de opgaven, controleer je aanpak en vergelijk met de uitwerkingen.</p></div></div>
+              <div class="tile-footer"><span>Open bronnen</span><span>→</span></div>
+            </a>
+            <a class="tile econ" href="#" aria-label="Open extra materiaal">
+              <div class="tile-header"><div class="icon-badge">+</div><div><span class="pill">extra</span><h3>Aanvullend materiaal</h3><p>Samenvatting, extra context, video’s of verrijking zonder de hoofdroute te verstoppen.</p></div></div>
+              <div class="tile-footer"><span>Bekijk extra</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer-note">Economie VWO 4 · open lesmateriaal · voortgang blijft lokaal op dit apparaat.</p>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-14T17:10:12.397Z
+Generated: 2026-06-14T17:50:39.775Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4345
+Files indexed: 4486
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 478
+Count: 481
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -260,6 +260,7 @@ Count: 478
 - build-scripts/references/build-mtu-h2e-conditional-lane-execution-packet.js
 - build-scripts/references/build-mtu-h2i-a20-cli-execution-packet.js
 - build-scripts/references/build-mtu-h4b-answer-form-cli-execution-packet.js
+- build-scripts/references/build-mtu-h5-regression-report.js
 - build-scripts/references/build-owned-content-graph.js
 - build-scripts/references/build-owned-source-registry.js
 - build-scripts/references/build-procedure-game-template-alignment.js
@@ -532,6 +533,8 @@ Count: 478
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
+- build-scripts/sprints/check-review-throughput-packet.js
+- build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -658,7 +661,7 @@ Count: 42
 
 ## validators
 
-Count: 440
+Count: 457
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -673,6 +676,10 @@ Count: 440
 - archive/sprints/INSPECT-5R/INSPECT-5R-validation-log.md
 - archive/sprints/INSPECT-6/INSPECT-6-validation-log.md
 - archive/sprints/INSPECT-7/INSPECT-7-validation-log.md
+- archive/sprints/INSPECT-8/INSPECT-8-validation-log.md
+- archive/sprints/INSPECT-9/INSPECT-9-validation-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-validation-log.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1A/QS-DUTCH-ROADMAP-1A-validation-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1B/QS-DUTCH-ROADMAP-1B-validation-log.md
@@ -853,6 +860,8 @@ Count: 440
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
 - build-scripts/sprints/check-rev-std1-flag-disposition.js
+- build-scripts/sprints/check-review-throughput-packet.js
+- build-scripts/sprints/check-review-throughput-packet.test.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -943,8 +952,18 @@ Count: 440
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -1073,6 +1092,7 @@ Count: 440
 - reports/sprints/GRAPH-CHECK-UX-1-screenshots/mobile-initial.png
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
@@ -1103,13 +1123,14 @@ Count: 440
 
 ## references
 
-Count: 597
+Count: 605
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
 - references/authored/didactiek-principes.md
 - references/authored/economic_mathematical_precision_reference.md
 - references/authored/economie-terminologie.md
+- references/authored/gemengde-opgaven-target-standard.md
 - references/authored/README.md
 - references/authored/skill-categories.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
@@ -1312,6 +1333,8 @@ Count: 597
 - references/data/sprints/MATH-REFINE-1.result.json
 - references/data/sprints/MATH-UX-2.plan.json
 - references/data/sprints/MATH-UX-2.result.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.plan.json
+- references/data/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1.result.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.plan.json
 - references/data/sprints/MTU-ANS-GEN-DESIGN-1.result.json
 - references/data/sprints/MTU-ANS-PROOF-IMPL-1.plan.json
@@ -1470,6 +1493,8 @@ Count: 597
 - references/data/sprints/REF-CT2-precision-dual-coding-audit.json
 - references/data/sprints/REF-CT2.plan.json
 - references/data/sprints/REF-CT2.result.json
+- references/data/sprints/REVIEW-THROUGHPUT-1.plan.json
+- references/data/sprints/REVIEW-THROUGHPUT-1.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -1700,12 +1725,15 @@ Count: 597
 - references/ui/layout-registry.md
 - references/ui/layouts/golden-exercise-workbench-short-check.json
 - references/ui/layouts/golden-exercise-workbench-short-check.md
+- references/ui/paragraph-landing-v2/approved-dark.html
+- references/ui/paragraph-landing-v2/approved-light.html
+- references/ui/paragraph-landing-v2/README.md
 - references/ui/README.md
 - references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2679
+Count: 2771
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1727,15 +1755,45 @@ Count: 2679
 - reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
 - reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
+- reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
+- reports/fixtures/review-throughput-1/negative-escalation-trigger.json
+- reports/fixtures/review-throughput-1/negative-generated-product-authority.json
+- reports/fixtures/review-throughput-1/negative-machine-external-autonomous.json
+- reports/fixtures/review-throughput-1/negative-missing-checker-proof.json
+- reports/fixtures/review-throughput-1/negative-missing-ci-proof.json
+- reports/fixtures/review-throughput-1/negative-missing-lead-review.json
+- reports/fixtures/review-throughput-1/negative-protected-reference-autonomous.json
+- reports/fixtures/review-throughput-1/positive-autonomous.json
+- reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
+- reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md
+- reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
+- reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.json
+- reports/inspection-standards/dutch-evidence-gap-closure-plan.md
+- reports/inspection-standards/dutch-evidence-scale-readiness.json
+- reports/inspection-standards/dutch-evidence-scale-readiness.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1890,6 +1948,8 @@ Count: 2679
 - reports/mtu-hardening/mtu-h5-fu001-q3-execution-readiness-packet.md
 - reports/mtu-hardening/mtu-h5-next-repair-packet.json
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.json
+- reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -1968,6 +2028,8 @@ Count: 2679
 - reports/README.md
 - reports/reference-audits/empty-needs-audit.md
 - reports/reference-cli-coverage.md
+- reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
+- reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
@@ -1992,6 +2054,10 @@ Count: 2679
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
+- reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
@@ -2011,8 +2077,18 @@ Count: 2679
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-RETRY-first-three-check-surfaces-review/review-packet.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/closure-proposal.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/comment-resolution-log.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.json
+- reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/renewed-review-comments.md
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json
 - reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.md
@@ -2250,6 +2326,9 @@ Count: 2679
 - reports/review-gates/GATE-MTU-H4B-answer-form-cli-execution/review-packet.md
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-FU001-q3-execution-readiness-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.json
+- reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-mapping-regression/gate-closure.md
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.json
@@ -2595,6 +2674,8 @@ Count: 2679
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-plan.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-planning-review.md
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
+- reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
+- reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-result.md
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl
@@ -2799,6 +2880,7 @@ Count: 2679
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/desktop-light-initial.png
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/manifest.json
 - reports/sprints/CHECKSURFACE-113-EXEMPLAR-REVIEW-1-screenshots/mobile-dark-initial.png
+- reports/sprints/CHECKSURFACE-EVIDENCE-REFRESH-1-plan.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-command-log.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-assignment.md
 - reports/sprints/CHECKSURFACE-EXCELLENCE-AUDIT-3P-lead-review-corrections.md
@@ -3394,6 +3476,18 @@ Count: 2679
 - reports/sprints/L1.7C-platform-support-result.md
 - reports/sprints/L1.7D-platform-support-result.md
 - reports/sprints/L2.0-platform-support-result.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-plan.md
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/approved-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/approved-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/compare-dark.html
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/compare-light.html
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/comparison-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/comparison-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-dark.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-light.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-mobile-narrow.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-phone-414.png
+- reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
 - reports/sprints/LEAD-REVIEW-1-baseline.md
 - reports/sprints/LEAD-REVIEW-1-diff-summary.md
 - reports/sprints/LEAD-REVIEW-1-lead-review-assignment.md
@@ -3446,6 +3540,17 @@ Count: 2679
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-command-log.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1-plan.md
 - reports/sprints/MERGE-HANDOFF-CHECKSURFACE-1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-baseline.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.jsonl
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-command-log.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-diff-summary.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-assignment.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-corrections.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round1.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-lead-review-round2.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-plan.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-result.md
+- reports/sprints/MIXED-OPGAVEN-TARGET-STANDARD-1-review-evidence.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-baseline.md
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.jsonl
 - reports/sprints/MTU-ANS-GEN-DESIGN-1-command-log.md
@@ -3883,6 +3988,17 @@ Count: 2679
 - reports/sprints/REF-CT2-result.md
 - reports/sprints/REV-STD-1-flag-disposition.json
 - reports/sprints/REV-STD-1-flag-disposition.md
+- reports/sprints/REVIEW-THROUGHPUT-1-baseline.md
+- reports/sprints/REVIEW-THROUGHPUT-1-command-log.jsonl
+- reports/sprints/REVIEW-THROUGHPUT-1-command-log.md
+- reports/sprints/REVIEW-THROUGHPUT-1-diff-summary.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-assignment.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-corrections.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round1.md
+- reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md
+- reports/sprints/REVIEW-THROUGHPUT-1-plan.md
+- reports/sprints/REVIEW-THROUGHPUT-1-result.md
+- reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
@@ -4381,6 +4497,10 @@ Count: 2679
 - reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
 - reports/sprints/VISUAL-QA-HARDEN-2-result.md
 - reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
+- reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
+- reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
+- reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md
@@ -4407,7 +4527,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 428
+Count: 462
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4508,6 +4628,38 @@ Count: 428
 - archive/sprints/INSPECT-7/INSPECT-7-planning-review.md
 - archive/sprints/INSPECT-7/INSPECT-7-review-packet.md
 - archive/sprints/INSPECT-7/INSPECT-7-sprint-plan.md
+- archive/sprints/INSPECT-8/INSPECT-8-agent-activity-log.md
+- archive/sprints/INSPECT-8/INSPECT-8-closure-log.md
+- archive/sprints/INSPECT-8/INSPECT-8-coding-agent-handoff.md
+- archive/sprints/INSPECT-8/INSPECT-8-correction-log.md
+- archive/sprints/INSPECT-8/INSPECT-8-lead-review-assignment.md
+- archive/sprints/INSPECT-8/INSPECT-8-lead-review-round1.md
+- archive/sprints/INSPECT-8/INSPECT-8-lead-review-round2.md
+- archive/sprints/INSPECT-8/INSPECT-8-planning-review.md
+- archive/sprints/INSPECT-8/INSPECT-8-sprint-plan.md
+- archive/sprints/INSPECT-9/INSPECT-9-closure-log.md
+- archive/sprints/INSPECT-9/INSPECT-9-coding-agent-handoff.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-assignment.md
+- archive/sprints/INSPECT-9/INSPECT-9-lead-review-round1.md
+- archive/sprints/INSPECT-9/INSPECT-9-planning-review.md
+- archive/sprints/INSPECT-9/INSPECT-9-rev-std1-pr-refresh.md
+- archive/sprints/INSPECT-9/INSPECT-9-sprint-plan.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-closure-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-correction-log.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-assignment.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round1.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-lead-review-round2.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-planning-review.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-rev-std1-pr-refresh.md
+- archive/sprints/INSPECT-9A/INSPECT-9A-sprint-plan.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-closure-log.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-correction-log.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-lead-review-assignment.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-lead-review-round1.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-lead-review-round2.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-planning-review.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-rev-std1-pr-refresh.md
+- archive/sprints/INSPECT-9B/INSPECT-9B-sprint-plan.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-closure-log.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-human-decision.md
 - archive/sprints/QS-DUTCH-ROADMAP-1/QS-DUTCH-ROADMAP-1-lead-review.md
@@ -4541,6 +4693,8 @@ Count: 428
 - docs/inspection-standards/teacher-facing-evidence-pack-template.md
 - docs/L1.5V/A4-alt-text-infrastructure.md
 - docs/L1.5V/F-plan-part-a-b-separation.md
+- docs/review/pr-throughput-policy.md
+- docs/review/review-packet-throughput.schema.json
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md

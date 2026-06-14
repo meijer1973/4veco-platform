@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing V2 Dark Comparison</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #060d15; color: #edf3fb; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; }
+    .pane { display: grid; gap: 8px; min-width: 0; }
+    h1 { margin: 0; font-size: 14px; font-weight: 800; }
+    iframe { width: 100%; height: 880px; border: 1px solid #223346; border-radius: 8px; background: #08121d; }
+  </style>
+</head>
+<body>
+  <script>try { localStorage.setItem('quizMode', 'dark'); } catch (e) {}</script>
+  <main class="comparison">
+    <section class="pane">
+      <h1>Approved dark prototype</h1>
+      <iframe src="/4veco-platform/references/ui/paragraph-landing-v2/approved-dark.html"></iframe>
+    </section>
+    <section class="pane">
+      <h1>Generated 1.1.1 dark</h1>
+      <iframe src="/4veco-lessen/Boek%201%20-%20Grondslagen%2C%20vraag%20en%20aanbod/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/?theme=dark"></iframe>
+    </section>
+  </main>
+</body>
+</html>

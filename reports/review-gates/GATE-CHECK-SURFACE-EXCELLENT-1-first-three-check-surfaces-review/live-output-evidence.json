@@ -2,8 +2,8 @@
   "schema_version": 1,
   "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
   "sprint_id": "CHECKSURFACE-GATE-RETRY-EXCELLENT-1",
-  "generated": "2026-06-06",
-  "status": "renewed_packet_ready_not_reviewed_not_closed",
+  "generated": "2026-06-12",
+  "status": "gate_closed_pass_with_flags_no_downstream_authority",
   "deploy_command": "node scripts/deploy.js \"../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod\"",
   "deploy_passed": true,
   "proof": {
@@ -17,6 +17,9 @@
     "exit_procedure_context_removed": true,
     "axis_labels_delayed": true,
     "interval_distractors_present": true,
+    "percentage_claim_control_present": true,
+    "current_graph_exit_evidence_refreshed": true,
+    "current_check_surface_evidence_refreshed": true,
     "mobile_dark_reviewable": true,
     "new_exit_completion_language_held": true,
     "current_112_transfer_held": true
@@ -32,6 +35,27 @@
     "reports/sprints/GRAPH-EXIT-UX-1-screenshots/desktop-line-confirmed.png",
     "reports/sprints/GRAPH-EXIT-UX-1-screenshots/mobile-dark-completed-held.png"
   ],
+  "current_main_freshness_preflight": {
+    "checked_on": "2026-06-12",
+    "platform_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+    "lessons_commit": "883a1f7db94d2cc84fb849310a62e01c73d3e292",
+    "checks_passed": [
+      "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
+      "node build-scripts/sprints/check-scope-language.js --active"
+    ]
+  },
+  "gate_closure": {
+    "closed_on": "2026-06-12",
+    "gate_closed": true,
+    "gate_direction": "pass_with_flags",
+    "scope": "first-three check-surface evidence only",
+    "no_active_core_spec_failure_for_this_gate": true,
+    "downstream_authority_remains_blocked": true
+  },
   "authority": {
     "new_target_equivalent_completion_language_authorized": false,
     "product_route_adoption_authorized": false,

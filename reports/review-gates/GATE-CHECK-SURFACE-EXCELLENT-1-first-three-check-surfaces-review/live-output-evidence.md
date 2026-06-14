@@ -1,6 +1,9 @@
 # GATE-CHECK-SURFACE-EXCELLENT-1 Live Output Evidence
 
-Generated: 2026-06-06
+Generated: 2026-06-12
+
+Status: gate closure confirmed with carried flags for the narrow first-three
+check-surface evidence gate. Downstream product authority remains blocked.
 
 ## Generated Output
 
@@ -28,6 +31,40 @@ Deploy passed link checks and data validation tests.
 - `reports/json/graph-check-ux1-proof.json`
 - `reports/json/graph-exit-ux1-proof.json`
 - `reports/json/visual-qa-harden2-proof.json`
+
+Freshness repair:
+
+- `1.1.2` current Golden Workbench transfer is recorded as held
+  (`gateApproved: false`, `completionLanguageEligible: false`).
+- `1.1.3` exit evidence now records the current `broodjeskraam` source/table
+  context, `percentage_claim_control`, and formula-builder proof.
+
+## Current-Main Freshness Preflight
+
+Preflight was rerun on 2026-06-12 after the latest main merges.
+
+- Platform commit:
+  `1069f64d2314d073e9f4015ed08ffabb87e9b3e6`
+- Lesson commit:
+  `883a1f7db94d2cc84fb849310a62e01c73d3e292`
+
+Passed checks:
+
+- `node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js`
+- `node build-scripts/sprints/check-graph-exit-ux1.js`
+- `node build-scripts/sprints/check-checksurface-policy-regression1.js`
+- `node build-scripts/sprints/check-check-surface-pregate1.js`
+- `node build-scripts/sprints/check-rev-std1-flag-disposition.js`
+- `node build-scripts/sprints/check-scope-language.js --active`
+
+## Gate Closure
+
+Explicit human confirmation accepted the PR #50 closure proposal and authorized
+the narrow `gate-closure.md/json` artifacts.
+
+Closure scope: first-three check-surface evidence only.
+
+No active `core_spec_failure` remains for this gate.
 
 ## Screenshot Evidence
 
