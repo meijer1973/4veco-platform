@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "sprint_id": "REVIEW-THROUGHPUT-1",
+  "name": "PR Throughput Policy",
+  "status": "completed",
+  "completed": "2026-06-14",
+  "completed_on": "2026-06-14",
+  "verdict": "PASS",
+  "result_status": "pass",
+  "plan": "reports/sprints/REVIEW-THROUGHPUT-1-plan.md",
+  "baseline": "reports/sprints/REVIEW-THROUGHPUT-1-baseline.md",
+  "result": "reports/sprints/REVIEW-THROUGHPUT-1-result.md",
+  "diff_summary": "reports/sprints/REVIEW-THROUGHPUT-1-diff-summary.md",
+  "final_verdict": "PASS",
+  "protected_reference_data_changed": false,
+  "generated_output_changed": false,
+  "implementation_changed": true,
+  "source_data_mutation_executed": false,
+  "exit_ticket_source_data_changed": false,
+  "reasoning_csv_changed": false,
+  "candidate_storage_created_or_written": false,
+  "target_exercise_field_writes": false,
+  "machine_reference_mutation_executed": false,
+  "external_source_mutated": false,
+  "unit_minting_executed": false,
+  "unit_update_executed": false,
+  "unit_split_executed": false,
+  "unit_deprecation_executed": false,
+  "student_product_use_authorized": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review": {
+    "assignment": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-assignment.md",
+    "round1": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round1.md",
+    "corrections": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-corrections.md",
+    "round2": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
+    "round1_verdict": "REVISE",
+    "round2_verdict": "PASS",
+    "final_verdict": "PASS",
+    "findings": [
+      {
+        "id": "REVIEW-THROUGHPUT-1-F1",
+        "description": "The requested PR throughput policy and review-autonomy ladder are present.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "docs/review/pr-throughput-policy.md",
+          "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not authorize product, diagnostics, mastery, PV, generated-output, or student/product use authority.",
+        "proof_required_to_close": "Policy remains in the diff and round-2 lead review closes PASS."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-1-F2",
+        "description": "The requested machine-readable packet fields and autonomous rejection checker are present.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "docs/review/review-packet-throughput.schema.json",
+          "build-scripts/sprints/check-review-throughput-packet.js",
+          "build-scripts/sprints/check-review-throughput-packet.test.js"
+        ],
+        "blocks": "None.",
+        "does_not_block": "Does not require changing existing review packets or historical PRs.",
+        "proof_required_to_close": "Checker fixture, Jest, npm wrapper, and complete-bundle commands pass in the command log."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-1-F3",
+        "description": "The requested retrospective covers the named platform and lesson PR ranges.",
+        "classification": "core_requirement_met",
+        "evidence": "reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md",
+        "blocks": "None.",
+        "does_not_block": "Does not retroactively merge, reopen, approve, or reject any PR.",
+        "proof_required_to_close": "Retrospective remains present and lead review confirms requested coverage."
+      },
+      {
+        "id": "REVIEW-THROUGHPUT-1-F4",
+        "description": "Future packet-template and CI rollout remain separate follow-up work.",
+        "classification": "quality_improvement_available",
+        "evidence": "reports/sprints/REVIEW-THROUGHPUT-1-result.md",
+        "blocks": "None.",
+        "does_not_block": "Does not block this governance/checker sprint because the checker and schema are callable now.",
+        "proof_required_to_close": "Follow-up remains named without weakening current boundaries."
+      }
+    ]
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/REVIEW-THROUGHPUT-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/fixtures/review-throughput-1/positive-autonomous.json",
+      "status": "passed"
+    },
+    {
+      "command": "node node_modules/jest/bin/jest.js build-scripts/sprints/check-review-throughput-packet.test.js --runInBand",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:review-throughput -- reports/fixtures/review-throughput-1/positive-autonomous.json",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js REVIEW-THROUGHPUT-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js REVIEW-THROUGHPUT-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/REVIEW-THROUGHPUT-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js REVIEW-THROUGHPUT-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    }
+  ],
+  "product_boundaries": {
+    "target_equivalent_completion_claims": false,
+    "paragraph_completion_language": false,
+    "diagnostics": false,
+    "adaptive_routing": false,
+    "mastery": false,
+    "sequencing": false,
+    "student_facing_ai": false,
+    "summative_use": false,
+    "pv_projection": false,
+    "pv_machine_promotion": false,
+    "scale_gate_1": false,
+    "student_product_use": false,
+    "broad_scaling": false
+  },
+  "review_throughput_outputs": {
+    "policy": "docs/review/pr-throughput-policy.md",
+    "schema": "docs/review/review-packet-throughput.schema.json",
+    "checker": "build-scripts/sprints/check-review-throughput-packet.js",
+    "tests": "build-scripts/sprints/check-review-throughput-packet.test.js",
+    "fixtures": "reports/fixtures/review-throughput-1/",
+    "retrospective": "reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md"
+  },
+  "authorized_next": [
+    "Use check-review-throughput-packet.js for future packets that request L0, L1, L2, or auto-merge closure.",
+    "Add throughput fields to future review-packet generators/templates in a separate sprint.",
+    "Decide whether to add check:review-throughput to CI once real packet paths are standardized.",
+    "Do not infer generated-output approval, product authority, diagnostics, mastery, PV, Scale Gate 1, or student/product use from this sprint."
+  ]
+}

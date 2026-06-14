@@ -12,6 +12,7 @@
     "check:book": "node scripts/check-book.js",
     "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",
+    "check:review-throughput": "node build-scripts/sprints/check-review-throughput-packet.js",
     "check:branch-protection": "node build-scripts/ci/check-branch-protection.js",
     "check:agent-branch-safety": "node build-scripts/ci/check-agent-branch-safety.js",
     "check:agent-worktree-safety": "node build-scripts/ci/check-agent-worktree-safety.js",

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "packet_id": "REVIEW-THROUGHPUT-POSITIVE-AUTONOMOUS",
+  "pr_throughput_class": "normal_sprint",
+  "bundle_id": null,
+  "authority_class": "standard",
+  "changed_paths": [
+    "build-scripts/sprints/check-example.js",
+    "reports/sprints/EXAMPLE-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L1",
+    "lead_review_result": "PASS",
+    "rationale": "Normal sprint with complete proof and no escalation triggers."
+  },
+  "human_decision_required": false,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": true,
+  "escalation_triggers": [],
+  "proof": {
+    "ci": {
+      "workflow": "platform-ci / validate-platform",
+      "github_actions_run_id": "27200000000",
+      "reviewed_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/EXAMPLE-lead-review-round2.md",
+      "result": "PASS"
+    }
+  },
+  "authority_claims": {
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  }
+}

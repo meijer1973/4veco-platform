@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-11T08:20:06.282Z
+Generated: 2026-06-14T17:10:12.397Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4342
+Files indexed: 4345
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 477
+Count: 478
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -531,6 +531,7 @@ Count: 477
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -657,7 +658,7 @@ Count: 42
 
 ## validators
 
-Count: 439
+Count: 440
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -851,6 +852,7 @@ Count: 439
 - build-scripts/sprints/check-reason-refine1-evidence.js
 - build-scripts/sprints/check-reason-std1.js
 - build-scripts/sprints/check-reason-ux2-route-output.js
+- build-scripts/sprints/check-rev-std1-flag-disposition.js
 - build-scripts/sprints/check-roadmap-flag-cleanup1.js
 - build-scripts/sprints/check-scope-language.js
 - build-scripts/sprints/check-scope-language.test.js
@@ -1703,7 +1705,7 @@ Count: 597
 
 ## reports
 
-Count: 2677
+Count: 2679
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -3879,6 +3881,8 @@ Count: 2677
 - reports/sprints/REF-CT2-lead-review-round2.md
 - reports/sprints/REF-CT2-plan.md
 - reports/sprints/REF-CT2-result.md
+- reports/sprints/REV-STD-1-flag-disposition.json
+- reports/sprints/REV-STD-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
