@@ -6,7 +6,8 @@
   "current_operational_roadmaps": [
     "references/reference-team-roadmap.md",
     "docs/roadmaps/textbook/textbook-production-roadmap.md",
-    "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+    "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md"
   ],
   "status_values": [
     "active",
@@ -93,6 +94,28 @@
       "updated_on": "2026-06-09",
       "supersedes": [],
       "notes": "Governance roadmap for Dutch inspection-relevant evidence first, then international common-quality overlays. INSPECT-7 closed after lead review round 4 returned PASS and teacher, legal/privacy, and Dutch quality-inspection reviewers each returned MORE_THAN_SATISFIED. The evidence sample remains bounded and report-only; broader generator, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised."
+    },
+    {
+      "roadmap_id": "golden-workbench-rollout-roadmap",
+      "version": "v1.0-surface-stabilization",
+      "title": "Golden Workbench Rollout Roadmap",
+      "status": "active",
+      "path": "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+      "owner": "platform_team",
+      "updated_on": "2026-06-12",
+      "supersedes": [],
+      "notes": "Active subordinate roadmap for the governed Golden Exercise Workbench rollout. It records that the rollout is early governed implementation, not broad adoption, and makes GOLDEN-SURFACE-VISUAL-REVIEW-1 the recommended next sprint before further route migration. It does not supersede the reference-team roadmap or authorize generated lesson output, product-route adoption, target-equivalent completion language, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use."
+    },
+    {
+      "roadmap_id": "golden-workbench-rollout-original-plan",
+      "version": "input-2026-06-12",
+      "title": "Golden Workbench Rollout Original Plan",
+      "status": "historical_input",
+      "path": "docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md",
+      "owner": "platform_team",
+      "updated_on": "2026-06-12",
+      "superseded_by": "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+      "notes": "Original user-supplied planning input used to create the active Golden Workbench Rollout Roadmap."
     },
     {
       "roadmap_id": "references-team-roadmap",
