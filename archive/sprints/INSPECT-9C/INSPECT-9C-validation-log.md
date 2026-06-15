@@ -55,4 +55,3 @@ accessibility, support/advisory route evidence, and check-surface downstream
 authority. These block pack-strength Chapter 1.2 generator work and downstream
 Scale Gate/product-route/diagnostics/mastery/PV/student-use authority, but they
 do not block sending INSPECT-9C for human review.
-

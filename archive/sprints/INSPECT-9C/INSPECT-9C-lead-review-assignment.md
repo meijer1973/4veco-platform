@@ -53,4 +53,3 @@ evidence support, and closure readiness.
 5. Does the INSPECT-10 posture avoid generator implementation, product-route
    adoption, Scale Gate, diagnostics/mastery/PV, and student/product-use
    authority?
-

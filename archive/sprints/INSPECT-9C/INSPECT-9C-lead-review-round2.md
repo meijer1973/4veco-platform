@@ -51,4 +51,3 @@ No blocking findings.
 ## Closure Authorization
 
 Closure authorised after final validation and map/index refresh.
-

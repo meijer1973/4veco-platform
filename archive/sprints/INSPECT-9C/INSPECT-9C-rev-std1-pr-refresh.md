@@ -75,4 +75,3 @@ visible.
 Downstream Scale Gate, product-route adoption, diagnostics/mastery/PV, and
 student/product-use work remain blocked unless the relevant human review gates
 explicitly close or authorize a diagnostic-only carry posture.
-

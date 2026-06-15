@@ -20,4 +20,3 @@ No blocking corrections were required.
 | `1.2.4` frozen-yoghurt wording | `scale_blocker` | Clean `1.2.4` integrated proof closure and pack-strength reliance | INSPECT-9C closure; diagnostic-only planning with blocker visible | Corrected output or reviewed carry/waiver |
 | Chapter 1.2 accessibility/support gaps | `scale_blocker` | Pack-strength accessibility/support and teacher/school-facing pack reliance | INSPECT-9C closure; diagnostic-only planning with gaps visible | Reviewed accessibility/support proof or explicit not-required decisions |
 | Check-surface authority | `scale_blocker` | Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work | INSPECT-9C scoped proof/remediation PR | Renewed human review confirming gate closure and unlocked authority |
-

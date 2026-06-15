@@ -55,4 +55,3 @@ None.
 The packet intentionally leaves pack-strength Chapter 1.2 generator work
 blocked. Human review should confirm whether the diagnostic-only generator
 posture is acceptable before INSPECT-10 starts.
-

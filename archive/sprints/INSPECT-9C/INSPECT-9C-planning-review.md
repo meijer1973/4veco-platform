@@ -49,4 +49,3 @@ No blocking findings.
 
 Implementation may proceed under this plan. Keep `../4veco-lessen` and
 `references/authored/course-target-exercises.json` read-only.
-
