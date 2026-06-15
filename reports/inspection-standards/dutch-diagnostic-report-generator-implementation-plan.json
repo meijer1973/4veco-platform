@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "report_id": "dutch-diagnostic-report-generator-implementation-plan",
+  "sprint_id": "INSPECT-10A",
+  "generated_date": "2026-06-15",
+  "status": "implementation_plan_packet",
+  "diagnostic_only": true,
+  "implementation_plan_only": true,
+  "generator_implemented": false,
+  "diagnostic_report_generated": false,
+  "evidence_pack_generated": false,
+  "teacher_school_pack_generated": false,
+  "public_external_facing_output_generated": false,
+  "chapter_1_2_pack_ready": false,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "implementation_allowed_by_this_packet": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "original_sprint_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md#inspect-10---dutch-report-only-generator-first-implementation",
+  "accepted_diagnostic_planning_packet": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md",
+  "inspect_10r_gate_result": "archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md",
+  "current_controlling_authority": "reports/inspection-standards/chapter-1-2-proof-support-remediation.md#inspect-10-posture",
+  "sprint_plan": "archive/sprints/INSPECT-10A/INSPECT-10A-sprint-plan.md",
+  "rev_std1_disposition": "reports/sprints/REV-STD-1-flag-disposition.md",
+  "safe_use_note": "Dutch-only product-side implementation-plan packet. Not a generator implementation, generated diagnostic report, evidence pack, teacher/school-facing evidence pack, public-facing or external-facing generated report/output/sharing, inspection judgement, legal compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, school-SKA claim, dashboard gate, quality-ref integration, Scale Gate integration, product-route adoption gate, diagnostics/mastery/PV gate, or student/product-use authority. Public/external-facing generated output or sharing requires a later human review gate.",
+  "non_negotiable_requirements": [
+    "Dutch scope only",
+    "Implementation-plan packet only",
+    "No generator implementation in INSPECT-10A",
+    "No generated diagnostic report in INSPECT-10A",
+    "No evidence-pack generation",
+    "No teacher/school-facing evidence-pack generation",
+    "No public-facing or external-facing generated output, report, or sharing without a later human review gate",
+    "No generated lesson-output mutation",
+    "No source-registry mutation",
+    "No references/machine or references/external mutation",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration",
+    "No product-route adoption, diagnostics, mastery/sequencing, PV, or student/product-use authority",
+    "No personal-data processing",
+    "No compliance, approval, inspection-ready, complete OP0, PTA-validity, summative-validity, classroom-implementation, school-obligation, or school-SKA claim",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state, operational_product_end_state, product_vision"
+    },
+    {
+      "requirement": "Original INSPECT-10 specification cited",
+      "status": "met",
+      "evidence": "original_sprint_spec"
+    },
+    {
+      "requirement": "INSPECT-10R gate result cited",
+      "status": "met",
+      "evidence": "inspect_10r_gate_result"
+    },
+    {
+      "requirement": "Current authority limit cited",
+      "status": "met",
+      "evidence": "current_controlling_authority"
+    },
+    {
+      "requirement": "No generator implementation",
+      "status": "met",
+      "evidence": "generator_implemented false"
+    },
+    {
+      "requirement": "No generated diagnostic report",
+      "status": "met",
+      "evidence": "diagnostic_report_generated false"
+    },
+    {
+      "requirement": "No public/external-facing generated output or sharing",
+      "status": "met",
+      "evidence": "public_external_facing_output_generated false"
+    },
+    {
+      "requirement": "Exact future source files named",
+      "status": "met",
+      "evidence": "future_source_file_allowlist"
+    },
+    {
+      "requirement": "Exact future output files named",
+      "status": "met",
+      "evidence": "future_output_file_allowlist"
+    },
+    {
+      "requirement": "Refusal/stop conditions defined",
+      "status": "met",
+      "evidence": "refusal_stop_conditions"
+    },
+    {
+      "requirement": "REV-STD-1 carry fields present",
+      "status": "met",
+      "evidence": "finding_classification includes blocks, does_not_block, and proof_required_to_close"
+    }
+  ],
+  "executive_decision": {
+    "summary": "INSPECT-10A is an implementation-plan packet only. A later internal diagnostic generator implementation is reviewable only if human review accepts the exact source allowlist, output allowlist, refusal contract, and blocker-visible output shape.",
+    "implementation_allowed_by_this_packet": false,
+    "public_external_output_allowed_by_this_packet": false,
+    "future_internal_diagnostic_generator_is_reviewable_after_human_review": true,
+    "pack_strength_chapter_1_2_generator_posture": false,
+    "next_action": "Human review this implementation-plan packet before INSPECT-10B implementation."
+  },
+  "future_source_file_allowlist": [
+    {
+      "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json",
+      "use": "Canonical INSPECT-10 diagnostic status vocabulary, input eligibility, and blocker carry ledger.",
+      "boundary": "Planning authority only; not evidence-pack authority."
+    },
+    {
+      "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md",
+      "use": "Human-readable INSPECT-10 safe-use and review context.",
+      "boundary": "Context only; JSON remains canonical for structured fields."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md",
+      "use": "Confirm INSPECT-10R reviewer result and public/external correction.",
+      "boundary": "Does not authorise implementation by itself."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-proof-support-remediation.json",
+      "use": "Canonical Chapter 1.2 route-local proof and active blockers.",
+      "boundary": "Diagnostic only; no pack-strength inference."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-proof-support-remediation.md",
+      "use": "Human-readable proof/support context.",
+      "boundary": "Context only; no hidden blocker resolution."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json",
+      "use": "Accessibility/support and target-equivalent review inputs from INSPECT-9B.",
+      "boundary": "Diagnostic only; weak evidence remains visible."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md",
+      "use": "Human-readable INSPECT-9B context.",
+      "boundary": "Context only."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
+      "use": "Chapter 1.2 target/exam-linkage source-remediation status from INSPECT-9A.",
+      "boundary": "Diagnostic only; no source-registry mutation."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
+      "use": "Human-readable INSPECT-9A context.",
+      "boundary": "Context only."
+    },
+    {
+      "path": "reports/inspection-standards/dutch-evidence-scale-readiness.json",
+      "use": "INSPECT-8 readiness baseline and conservative next-scope context.",
+      "boundary": "Context only."
+    },
+    {
+      "path": "reports/inspection-standards/dutch-evidence-gap-closure-plan.json",
+      "use": "INSPECT-9 gap categories and proof requirements.",
+      "boundary": "Context only."
+    },
+    {
+      "path": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json",
+      "use": "Historical bounded Chapter 1.1 control sample.",
+      "boundary": "Historical control only; no broad generator authority."
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+      "use": "Safe/forbidden end-state claims.",
+      "boundary": "Claim boundary only."
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-end-state.md",
+      "use": "Operational product boundary reference.",
+      "boundary": "Read-only specification; no lesson-output read."
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-vision.md",
+      "use": "Strategic product boundary reference.",
+      "boundary": "Read-only specification; no lesson-output read."
+    },
+    {
+      "path": "docs/inspection-standards/report-only-generator-plan.md",
+      "use": "Prior generator planning constraints.",
+      "boundary": "Design context only."
+    },
+    {
+      "path": "docs/inspection-standards/evidence-pack-source-contract.md",
+      "use": "Prior source-contract guardrails.",
+      "boundary": "Design context only; not evidence-pack permission."
+    },
+    {
+      "path": "docs/inspection-standards/report-only-validator-design.md",
+      "use": "Prior report-only validation guardrails.",
+      "boundary": "Design context only."
+    }
+  ],
+  "future_output_file_allowlist": [
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-sprint-plan.md",
+      "allowed_purpose": "Later implementation sprint plan.",
+      "boundary": "Must cite this packet and preserve all blockers."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-planning-review.md",
+      "allowed_purpose": "Later planning review.",
+      "boundary": "Must verify no missing core requirement is carried as PASS WITH FLAGS."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-validation-log.md",
+      "allowed_purpose": "Later validation evidence.",
+      "boundary": "Must prove no forbidden surfaces changed."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-lead-review-assignment.md",
+      "allowed_purpose": "Later lead-review assignment.",
+      "boundary": "Must route source/output/refusal checks."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-lead-review-round1.md",
+      "allowed_purpose": "Later lead-review verdict.",
+      "boundary": "Must classify findings with REV-STD-1 fields."
+    },
+    {
+      "path": "archive/sprints/INSPECT-10B/INSPECT-10B-closure-log.md",
+      "allowed_purpose": "Later closure log.",
+      "boundary": "Must keep closure to internal diagnostic output only."
+    },
+    {
+      "path": "build-scripts/inspection/build-dutch-diagnostic-report.js",
+      "allowed_purpose": "Manually invoked internal diagnostic generator.",
+      "boundary": "No package script, CI/build gate, dashboard gate, quality-ref, Scale Gate, lesson output, public/external output, or teacher/school-facing pack integration."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-diagnostic-report.md",
+      "allowed_purpose": "Internal generated diagnostic report for Chapter 1.2.",
+      "boundary": "Must visibly display blockers and safe-use boundaries."
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-diagnostic-report.json",
+      "allowed_purpose": "Machine-readable internal diagnostic report for Chapter 1.2.",
+      "boundary": "Must include the same blocker and refusal fields as Markdown."
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+      "allowed_purpose": "Later roadmap status update.",
+      "boundary": "Must not mark pack-strength or teacher/school-facing work ready."
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/sprint-ledger.md",
+      "allowed_purpose": "Later ledger status update.",
+      "boundary": "Must record implementation boundaries and validation."
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+      "allowed_purpose": "Later open-question/status note.",
+      "boundary": "Must preserve safe/forbidden claims."
+    },
+    {
+      "path": "docs/roadmaps/roadmap-version-index.md",
+      "allowed_purpose": "Later version index update if roadmap version changes.",
+      "boundary": "Must preserve downstream gate blocks."
+    },
+    {
+      "path": "docs/roadmaps/roadmap-version-index.json",
+      "allowed_purpose": "Later canonical version index update if roadmap version changes.",
+      "boundary": "Must preserve downstream gate blocks."
+    }
+  ],
+  "future_generator_output_required_fields": [
+    "scope",
+    "source_files_used",
+    "evidence_status",
+    "4veco_product_evidence",
+    "weak_or_missing_evidence",
+    "blockers",
+    "school_owned_evidence_still_needed",
+    "forbidden_inference",
+    "public_external_sharing_status",
+    "owner_next_action",
+    "proof_required_to_close",
+    "refusal_status"
+  ],
+  "refusal_stop_conditions": [
+    {
+      "code": "STOP_SOURCE_ALLOWLIST_MISMATCH",
+      "trigger": "Requested input is not in the source-file allowlist.",
+      "required_response": "Abort without reading the file.",
+      "owner_next_action": "Open a reviewed plan update.",
+      "proof_required_to_close": "Human-reviewed allowlist update."
+    },
+    {
+      "code": "STOP_OUTPUT_ALLOWLIST_MISMATCH",
+      "trigger": "Requested output is not in the output-file allowlist.",
+      "required_response": "Abort before writing.",
+      "owner_next_action": "Open a reviewed plan update.",
+      "proof_required_to_close": "Human-reviewed output expansion."
+    },
+    {
+      "code": "STOP_MISSING_SOURCE",
+      "trigger": "Required allowlisted source is absent or unparsable.",
+      "required_response": "Abort and report missing source in validation log.",
+      "owner_next_action": "Restore source or update plan.",
+      "proof_required_to_close": "Successful parse and validation."
+    },
+    {
+      "code": "STOP_HIDDEN_BLOCKER",
+      "trigger": "A blocker source exists but generated output would omit it or downgrade it to a flag.",
+      "required_response": "Abort generation.",
+      "owner_next_action": "Fix generator mapping or source data.",
+      "proof_required_to_close": "Lead review confirms blocker is visible."
+    },
+    {
+      "code": "STOP_PACK_STRENGTH_REQUEST",
+      "trigger": "Request asks for evidence-pack, pack-ready, teacher/school-facing, PTA, summative, compliance, OP0, school-obligation, or school-SKA output.",
+      "required_response": "Refuse request.",
+      "owner_next_action": "Route to later evidence-pack/remediation review.",
+      "proof_required_to_close": "Explicit human review unlocking that surface."
+    },
+    {
+      "code": "STOP_PUBLIC_EXTERNAL_REQUEST",
+      "trigger": "Request asks for public-facing or external-facing generated output/report/sharing.",
+      "required_response": "Refuse request.",
+      "owner_next_action": "Route to later public/external human review gate.",
+      "proof_required_to_close": "Three-reviewer acceptance explicitly naming the surface."
+    },
+    {
+      "code": "STOP_PERSONAL_DATA",
+      "trigger": "Input or request includes student-level or identifiable personal data.",
+      "required_response": "Refuse request and do not persist data.",
+      "owner_next_action": "Route to privacy/DPIA/data-processing gate.",
+      "proof_required_to_close": "Privacy gate approval and revised plan."
+    },
+    {
+      "code": "STOP_DOWNSTREAM_GATE_AUTHORITY",
+      "trigger": "Request implies Scale Gate, product-route, diagnostics/mastery/PV, or student/product-use authority.",
+      "required_response": "Refuse request.",
+      "owner_next_action": "Route to the relevant downstream gate.",
+      "proof_required_to_close": "Renewed human review closing that gate."
+    },
+    {
+      "code": "STOP_LESSON_OUTPUT_OR_PROTECTED_REFERENCE",
+      "trigger": "Request would read/write generated lesson output or protected reference surfaces.",
+      "required_response": "Refuse request.",
+      "owner_next_action": "Route to separate generated-output or reference mutation sprint.",
+      "proof_required_to_close": "Fresh authorised plan and validators."
+    },
+    {
+      "code": "STOP_UNCITED_CLAIM",
+      "trigger": "Output would contain a claim-like sentence without an exact source citation.",
+      "required_response": "Abort generation.",
+      "owner_next_action": "Add source mapping or remove claim.",
+      "proof_required_to_close": "Validation proves all claims are cited."
+    }
+  ],
+  "static_sample_diagnostic_output_shape": {
+    "sample_only": true,
+    "generated_report": false,
+    "scope": "Book 1 Chapter 1.2",
+    "source_files_used": [
+      "reports/inspection-standards/chapter-1-2-proof-support-remediation.json",
+      "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json"
+    ],
+    "evidence_status": "diagnostic_candidate_with_blocker",
+    "4veco_product_evidence": [
+      {
+        "target": "1.2.2",
+        "status": "diagnostic_candidate_with_blocker",
+        "source": "reports/inspection-standards/chapter-1-2-proof-support-remediation.json"
+      }
+    ],
+    "weak_or_missing_evidence": [
+      "Chapter 1.2 accessibility/support evidence remains below pack-strength."
+    ],
+    "blockers": [
+      "1.2.2 generated-output substitute-mechanism wording remains active.",
+      "1.2.4 frozen-yoghurt and orphaned-asset blockers remain active.",
+      "Check-surface gate authority remains outside this surface."
+    ],
+    "school_owned_evidence_still_needed": [
+      "School implementation, support/care practice, PTA/summative use, and final inspection conversation remain school/provider-owned."
+    ],
+    "forbidden_inference": [
+      "Do not infer compliance, approval, complete OP0, inspection readiness, pack-strength Chapter 1.2 evidence, diagnostics/mastery/PV, Scale Gate readiness, product-route adoption, or student/product-use authority."
+    ],
+    "public_external_sharing_status": "not_authorized_without_later_human_review",
+    "owner_next_action": "Human review this implementation plan before INSPECT-10B implementation.",
+    "proof_required_to_close": "Three-reviewer acceptance of INSPECT-10A, then INSPECT-10B implementation validation and lead review.",
+    "refusal_status": "none_for_this_static_sample"
+  },
+  "finding_classification": [
+    {
+      "finding": "INSPECT-10A is an implementation-plan packet only.",
+      "classification": "core_requirement_met",
+      "blocks": "Generator implementation, generated diagnostic output, evidence-pack generation, and teacher/school-facing or public/external output in this sprint.",
+      "does_not_block": "Creating the implementation-plan report and sending it for review.",
+      "proof_required_to_close": "Validation and lead review confirm no generator code or generated diagnostic report was created."
+    },
+    {
+      "finding": "Source-file allowlist is exact and narrow.",
+      "classification": "core_requirement_met",
+      "blocks": "Broad lesson-output reads, protected-reference reads, globbed source discovery, and source substitution.",
+      "does_not_block": "Later human review of a narrow internal generator proposal.",
+      "proof_required_to_close": "Future implementation must abort on any source outside the allowlist."
+    },
+    {
+      "finding": "Output-file allowlist is exact and narrow.",
+      "classification": "core_requirement_met",
+      "blocks": "Package/CI/dashboard/quality-ref/Scale Gate integration, teacher/school-facing pack output, public/external output, evidence-pack output, and lesson-output mutation.",
+      "does_not_block": "Later human review of an internal diagnostic generator proposal.",
+      "proof_required_to_close": "Future implementation must abort on any output outside the allowlist."
+    },
+    {
+      "finding": "Original INSPECT-10 first implementation remains blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Evidence-pack generation, teacher/school-facing pack work, package/CI/dashboard/quality-ref/Scale Gate integration, and pack-strength Chapter 1.2 generator posture.",
+      "does_not_block": "INSPECT-10A implementation planning and possible later internal diagnostic-generator implementation after review.",
+      "proof_required_to_close": "More remediation or a later human-reviewed implementation packet explicitly authorising those surfaces."
+    },
+    {
+      "finding": "1.2.2 carries a generated-output substitute-mechanism blocker.",
+      "classification": "scale_blocker",
+      "blocks": "Clean 1.2.2 proof closure, pack-strength reliance, and generated wording that hides the blocker.",
+      "does_not_block": "Internal diagnostic reporting that shows the blocker visibly.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming opgave 10b and allowed substitute-attractiveness wording."
+    },
+    {
+      "finding": "1.2.4 carries frozen-yoghurt and orphaned-asset blockers.",
+      "classification": "scale_blocker",
+      "blocks": "Clean integrated proof closure, pack-strength reliance, asset-cleanliness claims, and generated wording that hides the blockers.",
+      "does_not_block": "Internal diagnostic reporting that shows the blockers visibly.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision, plus corrected asset set or reviewed harmlessness decision."
+    },
+    {
+      "finding": "Chapter 1.2 accessibility/support evidence remains below pack-strength.",
+      "classification": "scale_blocker",
+      "blocks": "Accessibility/support strength claims, teacher/school-facing pack reliance, and pack-strength generator posture.",
+      "does_not_block": "Internal diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed accessibility/support proof packets or explicit not-required decisions."
+    },
+    {
+      "finding": "Check-surface gate authority remains outside INSPECT-10A.",
+      "classification": "scale_blocker",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work.",
+      "does_not_block": "Ordinary scoped diagnostic planning that does not reinterpret check-surface gate authority.",
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and explicitly naming any authority unlocked."
+    },
+    {
+      "finding": "Public/external-facing generated output remains blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Public-facing or external-facing generated diagnostic output, reports, or sharing.",
+      "does_not_block": "Internal diagnostic implementation planning and internal diagnostic output after review.",
+      "proof_required_to_close": "Later human review gate explicitly authorising public/external output or sharing."
+    }
+  ],
+  "blocker_carry_ledger": [
+    {
+      "id": "INSPECT10A-IMPLEMENTATION-NOT-AUTHORIZED",
+      "owner_surface": "INSPECT-10A scope",
+      "blocks": "Generator code and generated diagnostic output in this sprint.",
+      "does_not_block": "Implementation-plan packet.",
+      "proof_required_to_close": "INSPECT-10A validation and lead review showing no generator/report output."
+    },
+    {
+      "id": "INSPECT10A-SOURCE-ALLOWLIST",
+      "owner_surface": "Future generator input contract",
+      "blocks": "Reading non-allowlisted files, generated lesson output, protected references, or substituted sources.",
+      "does_not_block": "Human review of exact source allowlist.",
+      "proof_required_to_close": "Human-approved plan update or future implementation validation."
+    },
+    {
+      "id": "INSPECT10A-OUTPUT-ALLOWLIST",
+      "owner_surface": "Future generator output contract",
+      "blocks": "Writing non-allowlisted files, package/CI/dashboard/quality-ref/Scale Gate integrations, lesson output, evidence packs, teacher/school-facing packs, public/external reports.",
+      "does_not_block": "Human review of exact output allowlist.",
+      "proof_required_to_close": "Human-approved plan update or future implementation validation."
+    },
+    {
+      "id": "INSPECT10A-122-SUBSTITUTE",
+      "owner_surface": "1.2.2 generated output",
+      "blocks": "Clean proof closure and pack-strength reliance.",
+      "does_not_block": "Blocker-visible internal diagnostic reporting.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver."
+    },
+    {
+      "id": "INSPECT10A-124-FROZEN-YOGHURT",
+      "owner_surface": "1.2.4 generated output",
+      "blocks": "Clean integrated proof closure and pack-strength reliance.",
+      "does_not_block": "Blocker-visible internal diagnostic reporting.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver."
+    },
+    {
+      "id": "INSPECT10A-124-ASSET",
+      "owner_surface": "1.2.4 asset set",
+      "blocks": "Clean asset-strength/accessibility reliance.",
+      "does_not_block": "Route-local diagnostic candidate.",
+      "proof_required_to_close": "Corrected asset set or reviewed harmlessness decision."
+    },
+    {
+      "id": "INSPECT10A-ACCESSIBILITY",
+      "owner_surface": "Chapter 1.2 accessibility evidence",
+      "blocks": "Accessibility-strength and teacher/school-facing pack claims.",
+      "does_not_block": "Internal diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed accessibility packet."
+    },
+    {
+      "id": "INSPECT10A-SUPPORT",
+      "owner_surface": "Chapter 1.2 support/advisory evidence",
+      "blocks": "Support-strength, companion/advisory, next-action, and pack-ready claims.",
+      "does_not_block": "Internal diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed support packet."
+    },
+    {
+      "id": "INSPECT10A-CHECK-SURFACE-AUTHORITY",
+      "owner_surface": "Downstream check-surface/product-proof gates",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, student/product-use authority.",
+      "does_not_block": "INSPECT-10A implementation planning.",
+      "proof_required_to_close": "Renewed human review closing check-surface gate authority."
+    },
+    {
+      "id": "INSPECT10A-PUBLIC-EXTERNAL",
+      "owner_surface": "Public/external output authority",
+      "blocks": "Public-facing or external-facing generated output, reports, or sharing.",
+      "does_not_block": "Internal diagnostic implementation planning.",
+      "proof_required_to_close": "Later human review gate explicitly authorising public/external output."
+    }
+  ],
+  "validation_notes": [
+    "No generator code implemented.",
+    "No generated diagnostic report produced.",
+    "No evidence pack generated.",
+    "No teacher/school-facing pack generated.",
+    "No public-facing or external-facing generated output/report/sharing authorized.",
+    "No lesson output mutated.",
+    "No source registry mutated.",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration added.",
+    "No personal data processed.",
+    "No non-Dutch standards work started."
+  ],
+  "next_action": "Send this INSPECT-10A implementation-plan packet for human review. If all three reviewers return MORE_THAN_SATISFIED, the next work may be INSPECT-10B, a narrow internal diagnostic generator implementation sprint that follows this exact allowlist and refusal contract."
+}
