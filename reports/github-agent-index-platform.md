@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T08:22:48.838Z
+Generated: 2026-06-15T11:01:14.622Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4553
+Files indexed: 4562
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1749,7 +1749,7 @@ Count: 608
 
 ## reports
 
-Count: 2810
+Count: 2819
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1815,6 +1815,10 @@ Count: 2810
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2059,6 +2063,8 @@ Count: 2810
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md
+- reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-quality-log.md
+- reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
@@ -2090,6 +2096,7 @@ Count: 2810
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
+- reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -2717,6 +2724,8 @@ Count: 2810
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-result.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-result.md
+- reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-plan.md
+- reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-result.md
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl
