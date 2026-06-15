@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
-  "generated": "2026-06-15T07:37:46.723Z",
+  "generated": "2026-06-15T15:17:42.328Z",
   "status": "passed",
   "source": {
     "task_families": [
@@ -18,8 +18,8 @@
     "graph_line_shape_choices_exposed": false
   },
   "generated_output": {
-    "shared_data": "../../../Projects/4veco/4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js",
-    "exit_page": "../../../Projects/4veco/4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html"
+    "shared_data": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js",
+    "exit_page": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html"
   },
   "exemplar": {
     "directory": "references/exemplars/1.1.3-exit-ticket",
