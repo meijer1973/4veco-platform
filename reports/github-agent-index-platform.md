@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T07:16:25.560Z
+Generated: 2026-06-15T07:22:08.441Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4531
+Files indexed: 4547
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -665,10 +665,11 @@ Count: 42
 
 ## validators
 
-Count: 460
+Count: 461
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
+- archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -1742,7 +1743,7 @@ Count: 607
 
 ## reports
 
-Count: 2793
+Count: 2807
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1781,8 +1782,16 @@ Count: 2793
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
@@ -1800,6 +1809,10 @@ Count: 2793
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2072,6 +2085,7 @@ Count: 2793
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
+- reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -4030,6 +4044,7 @@ Count: 2793
 - reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md
 - reports/sprints/REVIEW-THROUGHPUT-2-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-2-result.md
+- reports/sprints/REVIEW-THROUGHPUT-PR58-PACKET-1-result.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
@@ -4558,7 +4573,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 478
+Count: 479
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4573,6 +4588,7 @@ Count: 478
 - archive/sprints/INSPECT-1/INSPECT-1-planning-review.md
 - archive/sprints/INSPECT-1/INSPECT-1-readiness-closure-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
+- archive/sprints/INSPECT-10/INSPECT-10-closure-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-correction-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-lead-review-assignment.md
 - archive/sprints/INSPECT-10/INSPECT-10-lead-review-round1.md
