@@ -57,6 +57,26 @@ Passed checks:
 - `node build-scripts/sprints/check-rev-std1-flag-disposition.js`
 - `node build-scripts/sprints/check-scope-language.js --active`
 
+## Post-65 Current-Main Evidence Addendum
+
+After platform PR #65 and lesson PR #15, the formal packet evidence was
+refreshed on 2026-06-15 without rewriting the 2026-06-12 closure history.
+
+- Platform current-main baseline:
+  `406f6358f477cfd50361855c45183da8c9f90990`
+- Lesson current-main baseline:
+  `9758f1da5e0c2aeb9e707f749235916df45b3509`
+- Addendum:
+  `post-65-evidence-addendum.md/json`
+- Refreshed proof:
+  `reports/json/graph-exit-ux1-proof.json`
+
+Post-65 freshness result:
+
+- pre-repair formula-token IDs absent: true
+- repaired token IDs present: `oldQBase`, `oldQBeforeChange`, `newQBase`
+- downstream authority remains blocked
+
 ## Gate Closure
 
 Explicit human confirmation accepted the PR #50 closure proposal and authorized

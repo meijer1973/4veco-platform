@@ -24,6 +24,8 @@
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.md",
+    "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.json",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md",
     "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md",
@@ -152,6 +154,23 @@
       "node build-scripts/sprints/check-rev-std1-flag-disposition.js",
       "node build-scripts/sprints/check-scope-language.js --active"
     ]
+  },
+  "post_65_evidence_addendum": {
+    "sprint_id": "CHECKSURFACE-POST65-EVIDENCE-REFRESH-1",
+    "generated": "2026-06-15",
+    "platform_commit": "406f6358f477cfd50361855c45183da8c9f90990",
+    "lesson_commit": "9758f1da5e0c2aeb9e707f749235916df45b3509",
+    "addendum_markdown": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.md",
+    "addendum_json": "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.json",
+    "refreshed_graph_exit_proof": "reports/json/graph-exit-ux1-proof.json",
+    "pre_repair_formula_token_ids_absent": true,
+    "repaired_token_ids_present": [
+      "oldQBase",
+      "oldQBeforeChange",
+      "newQBase"
+    ],
+    "authority_boundary_preserved": true,
+    "new_gate_closure_created": false
   },
   "confirmed_gate_closure": {
     "closed_on": "2026-06-12",

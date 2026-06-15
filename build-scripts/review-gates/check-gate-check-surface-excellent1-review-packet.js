@@ -5,7 +5,10 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
 const GATE_ID = 'GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review';
 const GATE_DIR = path.join(ROOT, 'reports', 'review-gates', GATE_ID);
-const LESSON_ROOT = path.resolve(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod');
+const LESSON_ROOT = path.resolve(
+  process.env.CHECK_SURFACE_BOOK_ROOT ||
+    path.join(ROOT, '..', '4veco-lessen', 'Boek 1 - Grondslagen, vraag en aanbod')
+);
 
 function fail(message) {
   console.error(`check-gate-check-surface-excellent1-review-packet: ${message}`);
@@ -239,6 +242,9 @@ function requirePacketText() {
     'No active core_spec_failure remains',
     'Gate closure confirmed',
     'explicit human confirmation',
+    'Post-65 Current-Main Evidence Addendum',
+    'oldQBase',
+    'oldQBeforeChange',
   ]) {
     requireText(text, phrase, `phrase ${phrase}`, file);
   }
@@ -325,9 +331,17 @@ function requirePacketJson(packet, live) {
     'source-data/book-1/exit-ticket/1.1.2-exit-ticket.json',
     'source-data/book-1/exit-ticket/1.1.3-korte-check.json',
     'source-data/book-1/exit-ticket/1.1.3-exit-ticket.json',
+    `reports/review-gates/${GATE_ID}/post-65-evidence-addendum.md`,
+    `reports/review-gates/${GATE_ID}/post-65-evidence-addendum.json`,
   ]) {
     assert(packet.evidence_base.includes(source), `packet evidence base missing ${source}`);
   }
+  assert(packet.post_65_evidence_addendum, 'packet must include post-65 evidence addendum metadata');
+  assert(packet.post_65_evidence_addendum.new_gate_closure_created === false, 'post-65 addendum must not create a new closure');
+  assert(packet.post_65_evidence_addendum.authority_boundary_preserved === true, 'post-65 addendum must preserve authority boundary');
+  assert(live.post_65_evidence_addendum, 'live evidence must include post-65 addendum metadata');
+  assert(live.post_65_evidence_addendum.new_gate_closure_created === false, 'live post-65 addendum must not create a new closure');
+  assert(live.post_65_evidence_addendum.authority_boundary_preserved === true, 'live post-65 addendum must preserve authority boundary');
   for (let i = 1; i <= 12; i += 1) {
     assert(packet.required_review_prompts.includes(`CHECKSURFACE-Q${i}`), `packet missing prompt CHECKSURFACE-Q${i}`);
   }
@@ -402,6 +416,13 @@ function requireUnderlyingProofs(packet, live) {
   assert(graphExit.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'graph exit proof must record current context ids');
   assert(graphExit.proof.current_source_text_confirmed === true, 'graph exit proof must confirm current source text');
   assert(graphExit.proof.completion_language_held === true, '1.1.3 completion language must stay held');
+  const graphExitTokenIds = graphExit.cases.flatMap((entry) => (entry.inspection && entry.inspection.formulaTokenIds) || []);
+  for (const staleId of ['oldQden', 'oldQnum', 'newQden']) {
+    assert(!graphExitTokenIds.includes(staleId), `graph exit proof must not contain stale formula-token id ${staleId}`);
+  }
+  for (const repairedId of ['oldQBase', 'oldQBeforeChange', 'newQBase']) {
+    assert(graphExitTokenIds.includes(repairedId), `graph exit proof must contain repaired formula-token id ${repairedId}`);
+  }
   for (const id of ['CSR1-F1', 'CSR1-F2', 'CSR1-F3', 'CSR1-F4', 'CSR1-F5']) {
     assert(visual.reset_findings_addressed.some((item) => item.id === id && item.status === 'guarded'), `${id} must remain guarded`);
   }
@@ -466,8 +487,8 @@ function requireGeneratedOutput() {
   for (const paragraphId of ['1.1.1', '1.1.2', '1.1.3']) {
     const dir = findParagraphDir(paragraphId);
     const landing = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
-    requireText(landing, /data-check-route="advisory"/, `${paragraphId} advisory card`, `${paragraphId}/index.html`);
-    requireText(landing, /data-check-route="exit-ticket"/, `${paragraphId} exit card`, `${paragraphId}/index.html`);
+    requireText(landing, /(?:data-check-route="advisory"|data-tile-id="korte-check")/, `${paragraphId} advisory card`, `${paragraphId}/index.html`);
+    requireText(landing, /(?:data-check-route="exit-ticket"|data-tile-id="exit-ticket")/, `${paragraphId} exit card`, `${paragraphId}/index.html`);
   }
   const shared113Short = fs.readFileSync(path.join(LESSON_ROOT, 'shared', 'exit-ticket', '1.1.3-korte-check.js'), 'utf8');
   const shared113Exit = fs.readFileSync(path.join(LESSON_ROOT, 'shared', 'exit-ticket', '1.1.3-exit-ticket.js'), 'utf8');

@@ -66,6 +66,8 @@ must not broaden the historical authority.
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-packet.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/live-output-evidence.json`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.md`
+- `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/post-65-evidence-addendum.json`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/review-lab.html`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/bundle-urls.md`
 - `reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/direct-review-comments.md`
@@ -96,6 +98,20 @@ must not broaden the historical authority.
 - `source-data/book-1/exit-ticket/1.1.3-exit-ticket.json`
 - `build-scripts/sprints/check-checksurface-policy-regression1.js`
 - `build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js`
+
+## Post-65 Current-Main Evidence Addendum
+
+Platform PR #65 and lesson PR #15 repaired the `1.1.3` formula-token evidence
+and mobile visual proof after the 2026-06-12 closure artifacts were created.
+The closure history above remains historical. Current-main evidence now
+incorporates `post-65-evidence-addendum.md/json` and a regenerated
+`reports/json/graph-exit-ux1-proof.json`.
+
+The refreshed graph-exit proof no longer reports pre-repair formula-token IDs.
+It reports `oldQBase`, `oldQBeforeChange`, and `newQBase`.
+
+This addendum does not authorize product-route adoption, diagnostics,
+mastery/sequencing, PV, Scale Gate 1, or student/product use.
 
 ## Non-Negotiable Requirements
 

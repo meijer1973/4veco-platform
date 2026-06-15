@@ -171,6 +171,10 @@ function checkGeneratedOutput() {
   requireText(dataFile, 'source_task_workspace', 'deployed source/task layout metadata');
   requireText(dataFile, 'graph_construction_substitute', 'deployed graph construction task');
   requireText(dataFile, 'percentage_claim_control', 'deployed percentage claim task');
+  requireText(dataFile, 'oldQBase', 'deployed repaired old Q base token');
+  requireText(dataFile, 'oldQBeforeChange', 'deployed repaired old Q numerator token');
+  requireText(dataFile, 'newQBase', 'deployed repaired new Q base token');
+  rejectText(dataFile, /\b(?:oldQden|oldQnum|newQden)\b/, 'stale formula-token ids');
   requireText(exitCss, '.ge-workbench', 'deployed Golden Workbench CSS');
 }
 
@@ -188,6 +192,13 @@ function checkProof() {
   assert(proof.proof.percentage_claim_control_present === true, 'proof must record percentage-claim control');
   assert(proof.proof.current_context_blocks === 'ctx-stationbroodjes-source,ctx-stationbroodjes-table', 'proof must record current source/table context ids');
   assert(proof.proof.completion_language_held === true, 'proof must keep completion language held');
+  const tokenIds = proof.cases.flatMap((entry) => (entry.inspection && entry.inspection.formulaTokenIds) || []);
+  for (const staleId of ['oldQden', 'oldQnum', 'newQden']) {
+    assert(!tokenIds.includes(staleId), `proof must not contain stale formula-token id ${staleId}`);
+  }
+  for (const repairedId of ['oldQBase', 'oldQBeforeChange', 'newQBase']) {
+    assert(tokenIds.includes(repairedId), `proof must contain repaired formula-token id ${repairedId}`);
+  }
 
   const requiredCases = [
     'desktop-initial',

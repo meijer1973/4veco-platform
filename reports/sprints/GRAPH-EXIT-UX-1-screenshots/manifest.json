@@ -28,14 +28,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -126,14 +126,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -226,14 +226,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -327,14 +327,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -407,10 +407,10 @@
         "(",
         "nieuwe Q",
         "-",
-        "oude Q",
+        "oude Q in teller",
         ")",
         "/",
-        "oude Q",
+        "oude Q als basis",
         "x 100%"
       ]
     },
@@ -450,14 +450,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -544,14 +544,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -624,10 +624,10 @@
         "(",
         "nieuwe Q",
         "-",
-        "oude Q",
+        "oude Q in teller",
         ")",
         "/",
-        "oude Q",
+        "oude Q als basis",
         "x 100%"
       ]
     },
@@ -667,14 +667,14 @@
       "percentageClaimControl": true,
       "formulaTokenIds": [
         "newQ",
-        "oldQden",
+        "oldQBase",
         "open",
         "times10",
-        "oldQnum",
+        "oldQBeforeChange",
         "plus",
         "minus",
         "close",
-        "newQden",
+        "newQBase",
         "divide",
         "times100",
         "oldFirst"
@@ -704,20 +704,20 @@
         "scrollable": false
       },
       "firstTaskRect": {
-        "top": -3368,
-        "bottom": -2321,
+        "top": -3468,
+        "bottom": -2421,
         "height": 1047,
         "visible": false
       },
       "taskPaneRect": {
-        "top": -3387,
+        "top": -3487,
         "bottom": 804,
-        "height": 4191,
+        "height": 4291,
         "visible": true
       },
       "graphRect": {
-        "top": -2875,
-        "bottom": -2688,
+        "top": -2975,
+        "bottom": -2788,
         "height": 187,
         "visible": false
       },
