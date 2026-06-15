@@ -26,6 +26,35 @@ const REQUIRED_TILE_IDS = [
     'aanvullend-materiaal',
 ];
 
+const REQUIRED_ROW_IDS = ['start', 'leer', 'check', 'oefen', 'exit-ticket', 'open', 'skills'];
+const REQUIRED_LESSON_ROUTE_IDS = ['start', 'leer', 'check', 'oefen', 'exit-ticket'];
+
+function rowIds(html) {
+    return Array.from(html.matchAll(/<div class="learning-row" id="([^"]+)"/g)).map(match => match[1]);
+}
+
+function routeChipIds(html) {
+    return Array.from(html.matchAll(/<a class="route-chip" href="#([^"]+)"/g)).map(match => match[1]);
+}
+
+function sidebarRouteIds(html) {
+    return Array.from(html.matchAll(/<a class="side-link" href="#([^"]+)" data-route-layer=/g)).map(match => match[1]);
+}
+
+function rowBlock(html, id, nextId) {
+    const start = html.indexOf(`<div class="learning-row" id="${id}"`);
+    const end = nextId ? html.indexOf(`<div class="learning-row" id="${nextId}"`, start) : html.indexOf('</section>', start);
+    return html.slice(start, end);
+}
+
+function chapterCardTags(html) {
+    const match = html.match(/<div class="para-card-tags">([\s\S]*?)<\/div>/);
+    if (!match) {
+        return [];
+    }
+    return Array.from(match[1].matchAll(/<span class="para-card-tag">([^<]+)<\/span>/g)).map(tag => tag[1]);
+}
+
 function writeFile(filePath, body = 'stub') {
     fs.mkdirSync(path.dirname(filePath), { recursive: true });
     fs.writeFileSync(filePath, body);
@@ -40,8 +69,19 @@ function runBuilder(moduleRoot) {
 }
 
 function tileBlock(html, tileId) {
-    const match = html.match(new RegExp(`<(?:a|article)[^>]*data-tile-id="${tileId}"[\\s\\S]*?</(?:a|article)>`));
-    return match ? match[0] : '';
+    const markerIndex = html.indexOf(`data-tile-id="${tileId}"`);
+    if (markerIndex === -1) {
+        return '';
+    }
+    const start = html.lastIndexOf('<', markerIndex);
+    const openEnd = html.indexOf('>', start);
+    const tagName = (html.slice(start, openEnd + 1).match(/^<([a-z]+)/) || [])[1];
+    if (!tagName) {
+        return '';
+    }
+    const close = `</${tagName}>`;
+    const end = html.indexOf(close, openEnd);
+    return end === -1 ? html.slice(start) : html.slice(start, end + close.length);
 }
 
 describe('paragraph landing V2 prototype port', () => {
@@ -139,18 +179,27 @@ describe('paragraph landing V2 prototype port', () => {
             expect(html).not.toContain(forbidden);
         }
         expect(html).toContain('html[data-theme="dark"]');
-        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(7);
+        expect(rowIds(html)).toEqual(REQUIRED_ROW_IDS);
+        expect(routeChipIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
+        expect(sidebarRouteIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
+        expect(rowBlock(html, 'check', 'oefen')).toContain('class="tile-grid single"');
+        expect(rowBlock(html, 'exit-ticket', 'open')).toContain('class="tile-grid single"');
         expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
         for (const tileId of REQUIRED_TILE_IDS) {
             expect(html).toContain(`data-tile-id="${tileId}"`);
         }
+        const explanationTile = tileBlock(html, 'uitleg-vaardigheden');
+        expect(explanationTile).toMatch(/class="tile-primary" href="[^"]*uitleg%20vaardigheden\.html"/);
+        expect(explanationTile).toContain('Open uitleg vaardigheden');
+        expect(explanationTile).toMatch(/class="tile-secondary" href="[^"]*uitleg%20vaardigheden\.docx" download>Uitleg vaardigheden \(Word\)<\/a>/);
+        expect(explanationTile).toMatch(/class="tile-secondary" href="[^"]*uitleg%20voorkennis\.html">Voorkennis<\/a>/);
         expect(tileBlock(html, 'adaptieve-oefenroute')).toContain('data-tile-state="in-preparation"');
         expect(tileBlock(html, 'adaptieve-oefenroute')).not.toMatch(/\shref=/);
         expect(html).not.toMatch(/\b(PV|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
 
         const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
-        expect(chapterHtml).toContain('Skill-tree games');
-        expect(chapterHtml).toContain('Open &amp; verdiep');
+        expect(chapterCardTags(chapterHtml)).toEqual(['Start', 'Leer', 'Check', 'Oefen', 'Exit ticket']);
     });
 
     test('renders missing future surfaces as disabled placeholders with no href', () => {
@@ -166,7 +215,12 @@ describe('paragraph landing V2 prototype port', () => {
 
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
-        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(7);
+        expect(rowIds(html)).toEqual(REQUIRED_ROW_IDS);
+        expect(routeChipIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
+        expect(sidebarRouteIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
+        expect(rowBlock(html, 'check', 'oefen')).toContain('class="tile-grid single"');
+        expect(rowBlock(html, 'exit-ticket', 'open')).toContain('class="tile-grid single"');
         expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
 
         for (const tileId of ['nieuwsdetective', 'rekenen', 'grafieken', 'skill-engine', 'adaptieve-oefenroute', 'korte-check', 'exit-ticket']) {
@@ -176,7 +230,28 @@ describe('paragraph landing V2 prototype port', () => {
             expect(block).not.toMatch(/\shref=/);
         }
         expect(tileBlock(html, 'instapquiz')).toContain('href="1.1.1%20Testparagraaf%20%E2%80%93%20instapquiz.html"');
+        expect(tileBlock(html, 'uitleg-vaardigheden')).toMatch(/href="[^"]*uitleg%20vaardigheden\.html"/);
+        expect(tileBlock(html, 'uitleg-vaardigheden')).toContain('Open uitleg vaardigheden');
         expect(html).not.toContain('href="#"');
+    });
+
+    test('falls back to the vaardigheden Word explainer when HTML is missing', () => {
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.1 Testparagraaf';
+
+        writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg voorkennis.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} uitleg vaardigheden.docx`));
+
+        const result = runBuilder(tmpDir);
+
+        expect(result.status).toBe(0);
+        const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
+        const explanationTile = tileBlock(html, 'uitleg-vaardigheden');
+        expect(explanationTile).toContain('data-tile-state="available"');
+        expect(explanationTile).toMatch(/class="tile-primary" href="[^"]*uitleg%20vaardigheden\.docx"/);
+        expect(explanationTile).toContain('Open uitleg vaardigheden');
+        expect(explanationTile).toMatch(/class="tile-secondary" href="[^"]*uitleg%20voorkennis\.html">Voorkennis<\/a>/);
     });
 
     test('keeps an unscoped full-catalog skill tree out of primary route tiles', () => {
@@ -202,7 +277,7 @@ describe('paragraph landing V2 prototype port', () => {
         expect(tileBlock(html, 'skill-engine')).not.toContain('wiskundevaardigheden.html');
     });
 
-    test('renders consolidation pages through the same six-row prototype route', () => {
+    test('renders consolidation pages through the same seven-row prototype route', () => {
         const configPath = path.join(tmpDir, 'deploy-config.json');
         const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
         config.paragraphs = [
@@ -226,7 +301,10 @@ describe('paragraph landing V2 prototype port', () => {
         expect(result.status).toBe(0);
         const html = fs.readFileSync(path.join(paragraph, 'index.html'), 'utf8');
         expect(html).toContain('class="app-shell"');
-        expect((html.match(/class="learning-row"/g) || []).length).toBe(6);
+        expect((html.match(/class="learning-row"/g) || []).length).toBe(7);
+        expect(rowIds(html)).toEqual(REQUIRED_ROW_IDS);
+        expect(routeChipIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
+        expect(sidebarRouteIds(html)).toEqual(REQUIRED_LESSON_ROUTE_IDS);
         expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
         expect(tileBlock(html, 'zelfstandige-oefeningen')).toContain('data-tile-state="available"');
         expect(tileBlock(html, 'lesboek-openen')).toContain('data-tile-state="in-preparation"');

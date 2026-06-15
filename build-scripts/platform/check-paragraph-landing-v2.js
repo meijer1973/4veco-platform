@@ -43,6 +43,24 @@ const REQUIRED_HTML_MARKERS = [
   "html[data-theme=\"dark\"]",
 ];
 
+const REQUIRED_ROW_IDS = [
+  "start",
+  "leer",
+  "check",
+  "oefen",
+  "exit-ticket",
+  "open",
+  "skills",
+];
+
+const REQUIRED_LESSON_ROUTE_IDS = [
+  "start",
+  "leer",
+  "check",
+  "oefen",
+  "exit-ticket",
+];
+
 const FORBIDDEN_HTML_MARKERS = [
   "page-layout",
   "sidebar-toggle",
@@ -164,6 +182,56 @@ function countMatches(text, pattern) {
   return (text.match(pattern) || []).length;
 }
 
+function routeRowIds(html) {
+  return Array.from(html.matchAll(/<div class="learning-row" id="([^"]+)"/g)).map(match => match[1]);
+}
+
+function routeChipIds(html) {
+  return Array.from(html.matchAll(/<a class="route-chip" href="#([^"]+)"/g)).map(match => match[1]);
+}
+
+function sidebarRouteIds(html) {
+  return Array.from(html.matchAll(/<a class="side-link" href="#([^"]+)" data-route-layer=/g)).map(match => match[1]);
+}
+
+function rowHtml(html, id, nextId) {
+  const start = html.indexOf(`<div class="learning-row" id="${id}"`);
+  if (start === -1) fail(`missing row ${id}`);
+  const end = nextId
+    ? html.indexOf(`<div class="learning-row" id="${nextId}"`, start)
+    : html.indexOf("</section>", start);
+  if (end === -1) fail(`missing end for row ${id}`);
+  return html.slice(start, end);
+}
+
+function tileHtml(html, tileId) {
+  const markerIndex = html.indexOf(`data-tile-id="${tileId}"`);
+  if (markerIndex === -1) return "";
+  const start = html.lastIndexOf("<", markerIndex);
+  const openEnd = html.indexOf(">", start);
+  const tagName = (html.slice(start, openEnd + 1).match(/^<([a-z]+)/) || [])[1];
+  if (!tagName) return "";
+  const close = `</${tagName}>`;
+  const end = html.indexOf(close, openEnd);
+  return end === -1 ? html.slice(start) : html.slice(start, end + close.length);
+}
+
+function assertExplanationTileHasOwnTarget(html, context) {
+  const tile = tileHtml(html, "uitleg-vaardigheden");
+  if (!tile) fail(`${context} missing uitleg-vaardigheden tile`);
+  if (!tile.includes('data-tile-state="available"')) return;
+
+  const hasPrimaryHref =
+    /class="tile-primary" href="[^"]*uitleg%20vaardigheden\.(?:html|docx)"/.test(tile) ||
+    /<a class="tile[^"]*"[^>]*href="[^"]*uitleg%20vaardigheden\.(?:html|docx)"/.test(tile);
+  if (!hasPrimaryHref) {
+    fail(`${context} uitleg-vaardigheden tile must open the uitleg vaardigheden document, not only related links`);
+  }
+  if (!tile.includes("Open uitleg vaardigheden")) {
+    fail(`${context} uitleg-vaardigheden tile primary label must name the uitleg vaardigheden document`);
+  }
+}
+
 function assertDisabledPlaceholdersHaveNoHref(html, context, { requireAtLeastOne = false } = {}) {
   const disabledBlocks = html.match(/<article\s+class="[^"]*\btile-disabled\b[\s\S]*?<\/article>/g) || [];
   const inPreparationBlocks = html.match(/<article[^>]*data-tile-state="in-preparation"[\s\S]*?<\/article>/g) || [];
@@ -183,7 +251,28 @@ function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false
   requireExcludes(html, FORBIDDEN_HTML_MARKERS, context);
 
   const rowCount = countMatches(html, /class="[^"]*\blearning-row\b/g);
-  if (rowCount !== 6) fail(`${context} must render 6 learning rows; found ${rowCount}`);
+  if (rowCount !== 7) fail(`${context} must render 7 learning rows; found ${rowCount}`);
+
+  const rowIds = routeRowIds(html);
+  if (rowIds.join(" > ") !== REQUIRED_ROW_IDS.join(" > ")) {
+    fail(`${context} row order must be ${REQUIRED_ROW_IDS.join(" > ")}; found ${rowIds.join(" > ")}`);
+  }
+
+  const chipIds = routeChipIds(html);
+  if (chipIds.join(" > ") !== REQUIRED_LESSON_ROUTE_IDS.join(" > ")) {
+    fail(`${context} route chips must be ${REQUIRED_LESSON_ROUTE_IDS.join(" > ")}; found ${chipIds.join(" > ")}`);
+  }
+
+  const sidebarIds = sidebarRouteIds(html);
+  if (sidebarIds.join(" > ") !== REQUIRED_LESSON_ROUTE_IDS.join(" > ")) {
+    fail(`${context} sidebar route must be ${REQUIRED_LESSON_ROUTE_IDS.join(" > ")}; found ${sidebarIds.join(" > ")}`);
+  }
+
+  for (const [id, nextId] of [["check", "oefen"], ["exit-ticket", "open"]]) {
+    if (!rowHtml(html, id, nextId).includes('class="tile-grid single"')) {
+      fail(`${context} ${id} row must use full-width single-tile grid`);
+    }
+  }
 
   const tileCount = countMatches(html, /data-tile-id="/g);
   if (tileCount !== 16) fail(`${context} must render 16 tile IDs; found ${tileCount}`);
@@ -191,6 +280,8 @@ function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false
   for (const tileId of REQUIRED_TILE_IDS) {
     if (!html.includes(`data-tile-id="${tileId}"`)) fail(`${context} missing tile ID ${tileId}`);
   }
+
+  assertExplanationTileHasOwnTarget(html, context);
 
   assertDisabledPlaceholdersHaveNoHref(html, context, {
     requireAtLeastOne: requireDisabledPlaceholder,

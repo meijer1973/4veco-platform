@@ -5,7 +5,7 @@
  * - Book page      (overview of all chapters)
  * - Chapter pages  (overview of paragrafen in that chapter)
  * - Paragraaf pages (Paragraph Landing V2 fixture route:
- *   Start / Skill-tree games / Leer / Oefen / Check / Open & verdiep)
+ *   Start / Leer / Check / Oefen / Exit ticket / Open & verdiep / Skill-tree games)
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *
@@ -140,7 +140,7 @@ function renderCardPitfalls(item) {
 
 function sectionAvailability(files, item = null) {
   if (!files) return [];
-  return routeRows(files, item).map(row => row.title);
+  return lessonRouteRows(routeRows(files, item)).map(row => row.title);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -1163,15 +1163,23 @@ function firstActionableTile(rows) {
   return null;
 }
 
+function lessonRouteRows(rows) {
+  return rows.filter(row => row.lessonRoute !== false);
+}
+
 function routeRows(files, paragraaf) {
   const mathRouteAvailable = Boolean(files.oefenen.wiskundevaardigheden && hasScopedMathSkillTree(paragraaf));
   const skillEngineAvailable = mathRouteAvailable;
   const presentationHref = pairHref(files.leren.presentatie, ["html", "pptx"]);
+  const skillsExplanationHref = pairHref(files.leren.vaardigheden, ["html", "docx"]);
   const presentationLinks = [];
   if (files.leren.presentatie && files.leren.presentatie.html && files.leren.presentatie.pptx) {
     presentationLinks.push({ href: fileHref(files.leren.presentatie.pptx), label: "PowerPoint", download: true });
   }
   const explanationLinks = [];
+  if (files.leren.vaardigheden && files.leren.vaardigheden.html && files.leren.vaardigheden.docx) {
+    explanationLinks.push({ href: fileHref(files.leren.vaardigheden.docx), label: "Uitleg vaardigheden (Word)", download: true });
+  }
   if (files.voorbereiden.voorkennis && files.voorbereiden.voorkennis.html) {
     explanationLinks.push({ href: fileHref(files.voorbereiden.voorkennis.html), label: "Voorkennis" });
   }
@@ -1242,52 +1250,9 @@ function routeRows(files, paragraaf) {
       ],
     },
     {
-      id: "skills",
-      layer: "skill-tree-games",
-      num: 2,
-      title: "Skill-tree games",
-      hint: "Train de drie hoofdvaardigheden als korte, gerichte spelroutes.",
-      chip: "redeneren - rekenen - grafieken",
-      tiles: [
-        {
-          id: "redeneren",
-          tone: "reason",
-          pill: "redeneren",
-          icon: "R",
-          title: "Redeneren",
-          desc: GAME_ASPECTS.reasoning.summary,
-          href: fileHref(files.oefenen.redeneerSpel),
-          action: "Speel route",
-          aria: "Open het redeneerspel",
-        },
-        {
-          id: "rekenen",
-          tone: "math",
-          pill: "rekenen",
-          icon: "%",
-          title: "Rekenen",
-          desc: GAME_ASPECTS.calculation.summary,
-          href: mathRouteAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
-          action: "Train stappen",
-          aria: "Open het rekenspel",
-        },
-        {
-          id: "grafieken",
-          tone: "graph",
-          pill: "grafieken",
-          icon: "G",
-          title: "Grafieken",
-          desc: GAME_ASPECTS.graphical.summary,
-          href: fileHref(files.oefenen.grafiekenspel),
-          action: "Lees grafiek",
-          aria: "Open het grafiekenspel",
-        },
-      ],
-    },
-    {
       id: "leer",
       layer: "leer",
-      num: 3,
+      num: 2,
       title: "Leer",
       hint: "Gebruik uitleg en route-inzicht voordat je zelfstandig gaat oefenen.",
       chip: "uitleg + presentatie + leerpad",
@@ -1299,9 +1264,9 @@ function routeRows(files, paragraaf) {
           icon: "U",
           title: "Uitleg vaardigheden",
           desc: "De kernstappen van deze paragraaf met korte voorbeelden en vaste begrippen.",
-          href: pairHref(files.leren.vaardigheden, ["html"]),
-          links: explanationLinks,
-          action: "Leer stappen",
+          href: skillsExplanationHref,
+          links: skillsExplanationHref ? explanationLinks : [],
+          action: "Open uitleg vaardigheden",
           aria: "Open uitleg vaardigheden",
         },
         {
@@ -1326,6 +1291,28 @@ function routeRows(files, paragraaf) {
           href: skillEngineAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
           action: "Bekijk leerpad",
           aria: "Open de skill engine",
+        },
+      ],
+    },
+    {
+      id: "check",
+      layer: "check",
+      num: 3,
+      title: "Check",
+      hint: "Doe een korte lokale check voor oefenadvies voordat je verder oefent.",
+      chip: "kort advies",
+      grid: "single",
+      tiles: [
+        {
+          id: "korte-check",
+          tone: "check",
+          pill: "advies",
+          icon: "K",
+          title: "Korte check",
+          desc: "Een lichte lokale check die aangeeft welke route nu verstandig is.",
+          href: fileHref(files.check.shortCheck),
+          action: "Krijg oefenadvies",
+          aria: "Open korte check",
         },
       ],
     },
@@ -1375,25 +1362,14 @@ function routeRows(files, paragraaf) {
       ],
     },
     {
-      id: "check",
-      layer: "check",
+      id: "exit-ticket",
+      layer: "exit-ticket",
       num: 5,
-      title: "Check",
-      hint: "Eerst oefenadvies, daarna een aparte eindcontrole.",
-      chip: "kort advies + exit ticket",
-      grid: "two",
+      title: "Exit ticket",
+      hint: "Maak de aparte eindcontrole wanneer je klaar bent voor doelopgave-niveau.",
+      chip: "eindcontrole",
+      grid: "single",
       tiles: [
-        {
-          id: "korte-check",
-          tone: "check",
-          pill: "advies",
-          icon: "K",
-          title: "Korte check",
-          desc: "Een lichte lokale check die aangeeft welke route nu verstandig is.",
-          href: fileHref(files.check.shortCheck),
-          action: "Krijg oefenadvies",
-          aria: "Open korte check",
-        },
         {
           id: "exit-ticket",
           tone: "reason",
@@ -1414,6 +1390,7 @@ function routeRows(files, paragraaf) {
       title: "Open & verdiep",
       hint: "Open het lesboek of aanvullend materiaal wanneer je het nodig hebt.",
       chip: "lesboek + extra",
+      lessonRoute: false,
       tiles: [
         {
           id: "lesboek-openen",
@@ -1450,6 +1427,50 @@ function routeRows(files, paragraaf) {
           links: sourceLinks.slice(1),
           action: "Bekijk extra",
           aria: "Open extra materiaal",
+        },
+      ],
+    },
+    {
+      id: "skills",
+      layer: "skill-tree-games",
+      num: 7,
+      title: "Skill-tree games",
+      hint: "Train de drie hoofdvaardigheden als korte, gerichte spelroutes.",
+      chip: "redeneren - rekenen - grafieken",
+      lessonRoute: false,
+      tiles: [
+        {
+          id: "redeneren",
+          tone: "reason",
+          pill: "redeneren",
+          icon: "R",
+          title: "Redeneren",
+          desc: GAME_ASPECTS.reasoning.summary,
+          href: fileHref(files.oefenen.redeneerSpel),
+          action: "Speel route",
+          aria: "Open het redeneerspel",
+        },
+        {
+          id: "rekenen",
+          tone: "math",
+          pill: "rekenen",
+          icon: "%",
+          title: "Rekenen",
+          desc: GAME_ASPECTS.calculation.summary,
+          href: mathRouteAvailable ? fileHref(files.oefenen.wiskundevaardigheden) : null,
+          action: "Train stappen",
+          aria: "Open het rekenspel",
+        },
+        {
+          id: "grafieken",
+          tone: "graph",
+          pill: "grafieken",
+          icon: "G",
+          title: "Grafieken",
+          desc: GAME_ASPECTS.graphical.summary,
+          href: fileHref(files.oefenen.grafiekenspel),
+          action: "Lees grafiek",
+          aria: "Open het grafiekenspel",
         },
       ],
     },
@@ -1490,7 +1511,7 @@ function renderRouteChip(row) {
 }
 
 function renderLearningRow(row) {
-  const gridClass = row.grid === "two" ? "tile-grid two" : "tile-grid";
+  const gridClass = row.grid === "single" ? "tile-grid single" : (row.grid === "two" ? "tile-grid two" : "tile-grid");
   return `        <div class="learning-row" id="${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}" data-row-ready="${countRowAvailability(row)}" data-row-total="${row.tiles.length}">
           <div class="row-label">
             <div class="step">${row.num}</div>
@@ -1514,7 +1535,7 @@ function renderPrototypeSidebar(paragraaf, resolvedMap, rows) {
     const href = p.id === paragraaf.id ? "index.html" : `../${encPath([resolved ? resolved.folderName : `${p.id} ${p.name}`])}/index.html`;
     return `      <a class="side-link${p.id === paragraaf.id ? " current" : ""}" href="${href}"><span class="side-number">${escapeHtml(p.id)}</span><span>${escapeHtml(p.name)}</span></a>`;
   }).join("\n");
-  const routeLinks = rows.map(row => `      <a class="side-link" href="#${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}"><span class="side-number">${row.num}</span><span>${escapeHtml(row.title)}</span></a>`).join("\n");
+  const routeLinks = lessonRouteRows(rows).map(row => `      <a class="side-link" href="#${escapeHtml(row.id)}" data-route-layer="${escapeHtml(row.layer)}"><span class="side-number">${row.num}</span><span>${escapeHtml(row.title)}</span></a>`).join("\n");
   return `    <aside class="sidebar" aria-label="Boeknavigatie">
       <div class="brand">
         <div class="brand-mark">4v</div>
@@ -1583,7 +1604,7 @@ ${renderPrototypeSidebar(paragraaf, resolvedMap, rows)}
       </section>
 
       <div class="route-strip" aria-label="Routeoverzicht">
-${rows.map(renderRouteChip).join("\n")}
+${lessonRouteRows(rows).map(renderRouteChip).join("\n")}
       </div>
 
       <section class="rows" aria-label="Paragraafroute">
