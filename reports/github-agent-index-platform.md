@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T08:19:26.552Z
+Generated: 2026-06-15T08:22:48.838Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4545
+Files indexed: 4553
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 486
+Count: 487
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -233,6 +233,7 @@ Count: 486
 - build-scripts/platform/build-reasoning-engine.js
 - build-scripts/platform/build-reasoning-questions.js
 - build-scripts/platform/build-skilltree-shells.js
+- build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/platform/generate-quiz-shells.js
 - build-scripts/platform/reskin-vaardigheden.js
 - build-scripts/rag/build-chunks.js
@@ -666,7 +667,7 @@ Count: 42
 
 ## validators
 
-Count: 462
+Count: 464
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -701,6 +702,7 @@ Count: 462
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/inspection/validate-inspection-evidence.js
+- build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
 - build-scripts/rag/validate-retrieval-eval-results.js
@@ -1103,6 +1105,7 @@ Count: 462
 - reports/sprints/GRAPH-CHECK-UX-1-verification-review.md
 - reports/sprints/GRAPH-CHECK-UX-1-visual-qa-report.md
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
+- reports/sprints/LANDING-V2-REGRESSION-GUARD-1-validation-log.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-rendered-proof.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshot-manifest.md
 - reports/sprints/SHORT-CHECK-WORKBENCH-112-RENDERED-1-screenshots/desktop-light-completed-advisory.png
@@ -1133,7 +1136,7 @@ Count: 462
 
 ## references
 
-Count: 607
+Count: 608
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1740,12 +1743,13 @@ Count: 607
 - references/ui/paragraph-landing-v2/approved-dark.html
 - references/ui/paragraph-landing-v2/approved-light.html
 - references/ui/paragraph-landing-v2/README.md
+- references/ui/paragraph-landing-v2/ROLLBACK.md
 - references/ui/README.md
 - references/ui/shared-task-rollout-policy.md
 
 ## reports
 
-Count: 2804
+Count: 2810
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1784,6 +1788,10 @@ Count: 2804
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.json
@@ -3521,6 +3529,8 @@ Count: 2804
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-mobile-narrow.png
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-screenshots/generated-1.1.1-phone-414.png
 - reports/sprints/LANDING-V2-FRANKENSTEIN-REPAIR-validation-log.md
+- reports/sprints/LANDING-V2-REGRESSION-GUARD-1-plan.md
+- reports/sprints/LANDING-V2-REGRESSION-GUARD-1-validation-log.md
 - reports/sprints/LEAD-REVIEW-1-baseline.md
 - reports/sprints/LEAD-REVIEW-1-diff-summary.md
 - reports/sprints/LEAD-REVIEW-1-lead-review-assignment.md
