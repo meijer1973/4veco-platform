@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q19-source-graph-extraction-gate-1",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-15",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence.",
+  "original_sprint_gate_spec": "PR #56 / GATE-MTU-H5-Q19-repair-gate-1 approved the next step as MTU-H5-Q19-SOURCE-GRAPH-EXTRACTION-GATE-1 before any q19 fixture, mapper, candidate, protected-reference, or product-route repair.",
+  "review_scope": "Approve, revise, or reject this non-mutating q19 source/graph extraction gate. This review packet does not authorize source-annex extraction execution, graph-object extraction execution, fixture mutation, mapper repair, candidate writes, or product use.",
+  "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.md",
+  "source_extraction_gate_packet_markdown": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.md",
+  "source_extraction_gate_packet_json": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+  "checker": "build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+  "review_entry_bundle": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/bundle-urls.md",
+  "non_negotiable_requirements": [
+    "No source-annex or graph-object extraction execution is authorized.",
+    "No q19 fixture mutation, mapper repair, candidate writes, protected-reference mutation, MTU mutation, lesson output, PV, diagnostics, product route, or student/product use is authorized.",
+    "q19 diagnostic state remains 3 failed / 20 review_required.",
+    "A45 remains forbidden as primary q19 support.",
+    "The future execution surface must keep q19 source-annex and graph-object gaps visible until reviewed evidence closes them.",
+    "The official aggregate-supply alternative for q19-step-2 and q19-step-3 must remain visible alongside the primary rightward demand-shift route.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement_id": "core-1-review-only-boundary",
+      "status": "met",
+      "evidence": "Packet and checker set all authority flags false and reject execution authority."
+    },
+    {
+      "requirement_id": "core-2-live-q19-diagnostic-state",
+      "status": "met",
+      "evidence": "Checker requires live q19 3 failed / 20 review_required plus q3 clean state."
+    },
+    {
+      "requirement_id": "core-3-extraction-surface-named",
+      "status": "met",
+      "evidence": "Packet names source figure, uitwerkbijlage, and three q19 graph objects."
+    },
+    {
+      "requirement_id": "core-4-required-fields-named",
+      "status": "met",
+      "evidence": "Packet carries q19 graph and source-annex extraction fields from the operation-answer-skill contract."
+    },
+    {
+      "requirement_id": "core-5-negative-guards",
+      "status": "met",
+      "evidence": "Checker enforces false reconstructable source/graph guard, A45 over-trigger guard, and inherited Solo q1-q3 negative guard."
+    },
+    {
+      "requirement_id": "core-6-rev-std-1-carried-issues",
+      "status": "met",
+      "evidence": "Findings classify blocks, does_not_block, and proof_required_to_close for q19/q27/q15 carried issues."
+    },
+    {
+      "requirement_id": "core-7-aggregate-supply-alternative-preserved",
+      "status": "met",
+      "evidence": "Packet and checker require the official aggregate-supply alternative caveat for q19-step-2 and q19-step-3."
+    }
+  ],
+  "requested_decision": {
+    "decision_needed": "Should this q19 source/graph extraction gate be accepted as the reviewed, non-mutating precondition before any future extraction execution proposal?",
+    "valid_decisions": [
+      "approve_non_mutating_source_graph_extraction_gate",
+      "revise_source_graph_extraction_gate_before_execution_planning",
+      "reject_source_graph_extraction_gate"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "required_if_approving": [
+      "keep q19 fixture mutation unauthorized",
+      "keep source-annex and graph-object extraction execution unauthorized until a later exact execution gate",
+      "keep q19 candidate storage and candidate writes unauthorized",
+      "keep protected references, machine references, external sources, authored target exercises, lessons, PV, diagnostics, product routes, and student/product use unauthorized unless separately stated",
+      "require graph/draw/teken answer-form coverage or reviewed equivalent before q19 closure"
+    ]
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.md",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+    "build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+    "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.md",
+    "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract"
+  ],
+  "evidence_base": [
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "findings": [
+    {
+      "finding_id": "q19-source-graph-gate-ready",
+      "classification": "supports_approval",
+      "severity": "info",
+      "summary": "The packet names the q19 source figure, worksheet, graph objects, extraction fields, validator guards, accepted aggregate-supply alternative caveat, and review-only authority boundary.",
+      "blocks": [],
+      "does_not_block": ["human review of this non-mutating gate"],
+      "proof_required_to_close": "Human approval under this packet."
+    },
+    {
+      "finding_id": "q19-answer-form-gap-carried",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "q19 still lacks graph/draw/teken answer-form coverage or reviewed equivalent.",
+      "blocks": ["q19 repair", "MTU-H5 closure", "product-route readiness"],
+      "does_not_block": ["review of this source/graph gate"],
+      "proof_required_to_close": "Reviewed graph/draw/teken answer-form coverage exists and q19 answer-form failures clear."
+    },
+    {
+      "finding_id": "q19-source-graph-gaps-carried",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "q19 source-annex and graph-object gaps remain blocking.",
+      "blocks": ["extraction execution closure", "q19 fixture repair", "lesson/product use"],
+      "does_not_block": ["this non-mutating gate review"],
+      "proof_required_to_close": "Reviewed source figure, worksheet, and graph-object reconstruction evidence exists or limitations are explicitly accepted while gaps remain visible."
+    },
+    {
+      "finding_id": "q27-q15-carried",
+      "classification": "carried_blocks",
+      "severity": "medium",
+      "summary": "q27 and q15 remain MTU-H5 blockers outside this q19 gate.",
+      "blocks": ["MTU-H5 full closure", "product-route readiness"],
+      "does_not_block": ["q19 source/graph extraction gate review"],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their validator buckets."
+    }
+  ],
+  "blocked_outcomes": [
+    "q19 source-annex extraction execution",
+    "q19 graph-object extraction execution",
+    "q19 fixture mutation",
+    "q19 mapper repair",
+    "candidate storage creation",
+    "candidate writes",
+    "protected reference mutation",
+    "machine-reference mutation",
+    "external-source mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "authored target-exercise mutation",
+    "lesson output",
+    "PV or graph mutation",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "required_review_team_threshold": {
+    "agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "all_three_required": true
+  },
+  "validation_commands": [
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-repair-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  }
+}
