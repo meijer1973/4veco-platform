@@ -33,6 +33,7 @@ Branch: `codex/inspect-10-diagnostic-generator-planning-20260615`
 | Non-negotiables named | met | Sprint plan, report, lead-review assignment |
 | No generator implementation | met | JSON check and diff scope |
 | No evidence-pack generation | met | JSON check and diff scope |
+| No public/external-facing generated output or sharing | met | Report safe-use note, output rules, JSON flag, and diff scope |
 | Chapter 1.2 blockers visible | met | Report Finding Classification and Blocker-Carry Ledger |
 | Diagnostic status vocabulary present | met | Markdown and JSON report |
 | `blocks`, `does_not_block`, `proof_required_to_close` present | met | JSON check, report, correction log |
@@ -51,6 +52,8 @@ Branch: `codex/inspect-10-diagnostic-generator-planning-20260615`
 - No product-route adoption, diagnostics/mastery/PV, or student/product-use
   authority claimed.
 - No personal data processed.
+- No public-facing or external-facing generated output, report, or sharing
+  authorised.
 - No non-Dutch standards work started.
 
 ## Residual Risk
@@ -62,3 +65,24 @@ generator work, teacher/school-facing evidence-pack reliance, downstream Scale
 Gate/product-route/diagnostics/mastery/PV/student-use authority, and hidden
 blocker reporting. They do not block sending this diagnostic planning packet
 for human review.
+
+## INSPECT-10R Correction Validation
+
+Status: passed
+Date: 2026-06-15
+
+| Command | Result | Notes |
+|---|---|---|
+| INSPECT-10 JSON diagnostic planning flags, public/external gate, and REV-STD-1 carry-field check | pass | JSON parsed; `public_external_facing_output_generated` is `false`; public/external gate terms are present; carry fields remain present. |
+| `node build-scripts/sprints/check-sprint-plan.js archive/sprints/INSPECT-10/INSPECT-10-sprint-plan.md` | pass | Sprint plan still satisfies required plan checks. |
+| `node build-scripts/references/check-roadmap-version-index.js` | pass | `OK roadmap version index: 151 entries`. |
+| `node build-scripts/sprints/emit-url-index.js --check` | pass | URL index current. |
+| `npm.cmd run check:scope-language` | pass | Active surfaces clean. |
+| `git diff --check` | pass | Whitespace check passed. |
+| Forbidden platform-surface check | pass | No forbidden source registry, machine/external refs, package, CI, inspection generator, review-gate script, quality-ref, or Scale Gate files changed by the correction. |
+| Lesson checkout diff | pass | No lesson-output mutation. |
+| `npm.cmd run check:platform` | pass | 45 suites passed, 15 skipped; 725 tests passed, 87 skipped. Existing fixture warning/error-style messages printed, exit code 0. |
+
+The correction only adds explicit public-facing and external-facing generated
+output/report/sharing gate language. It does not implement a generator,
+generate an evidence pack, mutate lesson output, or authorise INSPECT-10A.

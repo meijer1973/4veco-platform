@@ -115,7 +115,8 @@ quality-ref integration, Scale Gate integration, source-registry mutation,
 protected reference mutation, generated lesson-output mutation, personal-data
 processing, non-Dutch standards work, product-route adoption,
 diagnostics/mastery/PV, student/product-use authority, or compliance/approval
-claim was added.
+claim was added. No public-facing or external-facing generated output, report,
+or sharing was authorised.
 
 ## Next Action
 
@@ -123,4 +124,5 @@ Open PR for human review of INSPECT-10. If teacher, legal/privacy, and Dutch
 quality-inspection reviewers all return `MORE_THAN_SATISFIED`, the next stack
 decision is whether to authorise a later diagnostic-only implementation plan or
 implementation sprint. Do not start pack-strength Chapter 1.2 evidence-pack
-generation or teacher/school-facing pack work from this packet alone.
+generation, teacher/school-facing pack work, or public/external-facing
+generated report sharing from this packet alone.

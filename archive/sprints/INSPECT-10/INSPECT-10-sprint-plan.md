@@ -101,6 +101,8 @@ blocker or follow-up, not hidden as a flag.
 - No product-route adoption, diagnostics, mastery/sequencing, PV, or
   student/product-use authority.
 - No personal-data processing.
+- No public-facing or external-facing generated output, report, or sharing
+  without a later human review gate.
 - No compliance, approval, inspection-ready, complete OP0, PTA-validity,
   summative-validity, classroom-implementation, school-obligation, or
   school-SKA claim.
@@ -126,6 +128,7 @@ blocker or follow-up, not hidden as a flag.
 | Generate a Chapter 1.2 evidence pack from the 9C records | reject_scope_creep | Pack-strength Chapter 1.2 generation is blocked |
 | Add package or CI command for report generation | reject_scope_creep | Separate approval required |
 | Produce teacher/school-facing first-screen pack copy | reject_scope_creep | Teacher/school-facing pack work requires later review authority |
+| Produce public-facing or external-facing generated reports or sharing | reject_scope_creep | Public/external-facing output requires later human review authority |
 
 ## Allowed paths
 
@@ -164,6 +167,8 @@ Forbidden:
 - refreshing broad generated reports outside the planned packet and required
   repository indexes;
 - processing personal data;
+- producing public-facing or external-facing generated output, reports, or
+  sharing without a later human review gate;
 - starting non-Dutch standards work;
 - claiming compliance, approval, inspection readiness, complete OP0, PTA
   validity, summative validity, school-obligation closure, school-SKA closure,
@@ -206,15 +211,16 @@ Forbidden:
    and report-only generator/validator design docs.
 3. Create this plan before producing report content. Stop if the plan would
    authorize generator implementation, evidence-pack generation, lesson-output
-   mutation, protected reference mutation, or any hidden blocker.
+   mutation, protected reference mutation, public/external-facing generated
+   output or sharing, or any hidden blocker.
 4. Run planning review against the roadmap, post-9C authority, core
    requirements, allowed paths, forbidden paths, and REV-STD-1 carry fields.
    Stop before implementation if planning review finds a missing core
    requirement.
 5. Build the Markdown and JSON diagnostic planning report. The report must
    define future generator input posture, output status vocabulary, blocker
-   display rules, safe-use language, human-review questions, and exact stop
-   conditions.
+   display rules, public/external sharing boundaries, safe-use language,
+   human-review questions, and exact stop conditions.
 6. Update roadmap, ledger, and end-state documents only to record the
    planning-only state and next action. Stop if an update would mark Chapter
    1.2 pack-ready or imply INSPECT-10 implementation is complete.

@@ -31,9 +31,12 @@ judgement, legal compliance claim, approval, certificate, OP0 completion
 claim, school-obligation claim, PTA-validity claim, summative-validity claim,
 classroom-implementation proof, school-SKA claim, dashboard gate, quality-ref
 integration, Scale Gate integration, product-route adoption gate,
-diagnostics/mastery/PV gate, or student/product-use authority.
+diagnostics/mastery/PV gate, public-facing or external-facing generated
+report/output/sharing, or student/product-use authority.
 
-No personal data is used. No generated lesson output is changed.
+No personal data is used. No generated lesson output is changed. No
+public-facing or external-facing generated diagnostic output, report, or
+sharing is authorised without a later human review gate.
 
 ## Non-Negotiable Requirements
 
@@ -50,6 +53,8 @@ No personal data is used. No generated lesson output is changed.
 - No product-route adoption, diagnostics, mastery/sequencing, PV, or
   student/product-use authority.
 - No personal-data processing.
+- No public-facing or external-facing generated output, report, or sharing
+  without a later human review gate.
 - No compliance, approval, inspection-ready, complete OP0, PTA-validity,
   summative-validity, classroom-implementation, school-obligation, or
   school-SKA claim.
@@ -108,8 +113,9 @@ The future generator may be planned around three layers:
    what is weak or missing, what belongs to the school, what cannot be
    inferred, and what owner action is next.
 3. Review records that show teacher, legal/privacy, and Dutch
-   quality-inspection reviewers were more than satisfied before implementation
-   or teacher/school-facing evidence-pack use proceeds.
+   quality-inspection reviewers were more than satisfied before implementation,
+   public/external-facing generated output or sharing, or
+   teacher/school-facing evidence-pack use proceeds.
 
 The future generator must not:
 
@@ -117,6 +123,8 @@ The future generator must not:
 - hide blockers in footnotes only;
 - turn route-local proof into pack-strength proof;
 - produce teacher/school-facing first-screen pack copy before review;
+- produce public-facing or external-facing generated reports, diagnostic
+  output, or sharing before a later human review gate;
 - produce compliance, approval, OP0, PTA, summative, implementation,
   diagnostics, mastery, PV, product-use, or Scale Gate language;
 - process student-level personal data;
@@ -148,6 +156,7 @@ Weak or missing evidence
 Blockers
 School-owned evidence still needed
 Forbidden inference
+Public/external sharing status
 Owner next action
 Proof required to close
 ```
@@ -155,6 +164,10 @@ Proof required to close
 Every claim-like sentence must cite at least one concrete evidence path and
 must carry a safe claim ID or explicit boundary. Planning documents may explain
 context, but they may not be the sole evidence for a product claim.
+
+Every generated diagnostic section must state that public-facing or
+external-facing output/report/sharing is not authorised unless a later human
+review gate explicitly authorises that surface.
 
 ## Finding Classification
 
@@ -200,7 +213,8 @@ The human review should decide:
 This sprint creates no evidence pack, no generator code, no package script, no
 CI/build gate, no dashboard gate, no quality-ref integration, no Scale Gate
 integration, no source-registry mutation, and no generated lesson-output
-mutation.
+mutation. It also creates no public-facing or external-facing generated output,
+report, or sharing.
 
 No personal data is processed. No non-Dutch standards work is started.
 
@@ -211,4 +225,5 @@ legal/privacy, and Dutch quality-inspection reviewers all return
 `MORE_THAN_SATISFIED`, the next work may be a later scoped implementation plan
 or implementation sprint for a diagnostic report-only generator that preserves
 all blockers visibly. Do not start pack-strength Chapter 1.2 evidence-pack
-generation or teacher/school-facing pack work from this packet alone.
+generation, teacher/school-facing pack work, or public/external-facing
+generated report sharing from this packet alone.
