@@ -1020,7 +1020,10 @@
         "A06",
         "A42",
         "A49",
-        "D13"
+        "D13",
+        "D32",
+        "D33",
+        "D47"
       ],
       "prior_knowledge_assumed": [
         "A02",
@@ -1028,16 +1031,19 @@
         "A06",
         "A42",
         "A49",
-        "D13"
+        "D13",
+        "D32",
+        "D33"
       ],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Reason about simultaneous supply+demand shifts: determinate Q-direction but ambiguous P-direction (concept-level, diagnostic checkpoint)"
+      "new_skills_introduced": [
+        "D47"
       ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.10",
         "A2.12",
         "A2.15",
+        "D1.4b",
         "D1.12",
         "D1.24"
       ],
@@ -1045,43 +1051,53 @@
       "source_ref": "references/owned/course-blueprint-v5.md §1.3.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
-      "record_status": "migrated_from_v4_needs_v5_review",
+      "record_status": "reviewed_final",
       "v5_migration": {
-        "source_status": "migrated_from_v4_needs_v5_review",
+        "source_status": "reviewed_final",
         "from_v4_id": "1.4.2",
         "related_v4_ids": [],
-        "review_required_before_final": true
+        "review_required_before_final": false,
+        "review_completed_by": "B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1",
+        "review_completed_on": "2026-06-15"
       },
       "target_quality_review": {
-        "sprint_id": "B1-MIGRATED-V5-TARGET-QUALITY-1",
-        "review_date": "2026-06-14",
-        "disposition": "split_or_missing_unit_review_required",
-        "decision_summary": "One-shift equilibrium recalculation is covered by live mappings, but the simultaneous demand+supply shift item remains a separate concept/design dependency and blocks reviewed_final status.",
+        "sprint_id": "B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1",
+        "review_date": "2026-06-15",
+        "disposition": "reviewed_final",
+        "decision_summary": "The one-shift equilibrium, graphing, and shift-factor chain remains mapped to live units, and new D47 covers simultaneous demand/supply shift reasoning with determinate quantity and ambiguous price direction without relative magnitudes.",
         "operation_chain": [
           "Calculate a new equilibrium after a supply shift.",
-          "Compare old and new equilibrium after one shift.",
+          "Compare old and new equilibrium after one supply shift.",
           "Calculate a new equilibrium after a demand shift.",
           "Graph one-shift changes with arrows.",
-          "Reason about simultaneous demand and supply shifts and price ambiguity."
+          "Analyze demand and supply shifts in isolation before combining them.",
+          "Reason that when demand and supply both shift right, equilibrium quantity rises while equilibrium price is ambiguous without relative magnitudes.",
+          "Use the combined-equilibrium calculation as confirmation when equations are provided."
         ],
         "answer_form": [
-          "Algebraic new-equilibrium calculations.",
-          "Graphical before/after shift representation.",
-          "Conceptual explanation of determinate quantity and ambiguous price under simultaneous shifts."
+          "Algebraic new-equilibrium calculations with substitution checks where functions are given.",
+          "Graphical before/after shift representation with labelled curves and arrows.",
+          "Conceptual explanation that separates isolated effects, combined directional pressure, determinate quantity, and ambiguous price."
         ],
-        "mtu_mapping_decision": "A02/A04/A06/A42/A49/D13 cover the one-shift and graphing chain; simultaneous-shift reasoning remains a missing design decision rather than a reviewed live MTU mapping.",
-        "blocks": [
-          "1.3.3 reviewed_final status",
-          "Year 1 closure",
-          "CP-6 closure",
-          "Scale Gate reliance on Book 1 market-equilibrium coverage"
-        ],
+        "mtu_mapping_decision": "A02/A04/A06 cover algebraic equilibrium calculation, A42/A49 cover graphical shift representation, D13/D32/D33 cover one-shift and shift-factor reasoning, and D47 covers simultaneous demand/supply shift ambiguity. No simultaneous-shift missing-unit flag remains for the target registry.",
+        "blocks": [],
         "does_not_block": [
-          "1.3.1 and 1.3.2 target-registry promotion",
-          "1.3.4 one-shift mixed target replacement from PR #55",
-          "Ordinary scoped work that does not claim simultaneous-shift closure"
+          "Separate target-equivalent lesson proof review",
+          "Separate graph/table evidence closure",
+          "Separate Year 1 / CP-6 / Scale Gate closure review",
+          "Product-route adoption, diagnostics, mastery, PV, and student/product use gates"
         ],
-        "proof_required_to_close": "Run B1-SIMSHIFT-MISSING-UNIT-DESIGN-1 or equivalent to decide whether to mint/map a governed unit, revise the target, or keep the item out of Year 1 final coverage."
+        "proof_required_to_close": "Registry validator, unit catalog validator, review-throughput packet, and generated metadata checks pass; later product proof remains separate."
+      },
+      "review_evidence": {
+        "sprint_id": "B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1",
+        "review_date": "2026-06-15",
+        "design_decision_packet": "reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-review-packet.md",
+        "implementation_review_packet": "reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-review-packet.md",
+        "quality_log": "reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-quality-log.md",
+        "source_pr": "https://github.com/meijer1973/4veco-platform/pull/68",
+        "decision_summary": "D47 was minted through governed unit CLI as the simultaneous demand/supply shift operation and mapped into 1.3.3 so the target registry no longer carries the simultaneous-shift missing-unit flag.",
+        "authority_boundary": "Protected-reference and authored target-registry implementation only; does not close Year 1, CP-6, target-equivalent lesson proof, generated lesson output, Scale Gate authority, diagnostics, mastery, PV, product-route adoption, or student-facing product use."
       }
     },
     {
