@@ -34,7 +34,11 @@ implementation baselines.
 - Wired `check:landing-v2` into platform CI after Jest.
 - Checker verifies platform generator invariants.
 - Checker renders and verifies a synthetic paragraph landing output.
+- Checker renders a sparse synthetic output that must contain disabled
+  placeholders with no `href`.
 - Checker scans Book 1 generated paragraph indexes in `../4veco-lessen`.
+- Checker allows real lesson outputs to contain zero disabled placeholders so
+  future fully complete paragraphs do not fail the guard.
 - Updated generator comments to clarify Paragraph Landing V2 is fixture-owned.
 - Added rollback policy under `references/ui/paragraph-landing-v2/ROLLBACK.md`.
 - Added explicit #45/#11 superseded-baseline warnings in platform fixture docs
@@ -47,7 +51,8 @@ implementation baselines.
 - `does_not_block`: Current approved landing output remains unchanged as a
   visual baseline; ordinary scoped work can continue if it passes the guard.
 - `proof_required_to_close`: CI must run `npm run check:landing-v2`; local
-  proof must include real Book 1 output scan and link validation.
+  proof must include real Book 1 output scan, sparse disabled-placeholder
+  proof, and link validation.
 
 ## Validation
 
@@ -62,8 +67,10 @@ implementation baselines.
 - `git diff --cached --check`
 - Static Book 1 scan for 1.1.1 through 1.1.4:
   - each page has 6 rows and 16 tile IDs;
-  - disabled placeholders have no `href`;
+  - disabled placeholders, when present, have no `href`;
   - forbidden legacy markers are absent.
+- Sparse synthetic scan requires at least one disabled placeholder and verifies
+  disabled placeholders have no `href`.
 - `npm.cmd run check:platform`
 
 ## Results
@@ -76,5 +83,6 @@ implementation baselines.
 - Report JSON contract check passed.
 - Staged diff check passed.
 - Static Book 1 output scan passed for 1.1.1 through 1.1.4.
+- Sparse synthetic disabled-placeholder proof passed.
 - Full platform check passed: 54 suites passed, 6 skipped; 804 tests passed, 8
   skipped.

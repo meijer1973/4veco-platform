@@ -74,6 +74,39 @@ const REQUIRED_TILE_IDS = [
   "aanvullend-materiaal",
 ];
 
+const DEFAULT_SYNTHETIC_FILES = [
+  "instapquiz.html",
+  "nieuws-detective.html",
+  "uitleg voorkennis.html",
+  "uitleg voorkennis.docx",
+  "uitleg vaardigheden.html",
+  "uitleg vaardigheden.docx",
+  "presentatie.html",
+  "presentatie.pptx",
+  "stappenplan.html",
+  "redeneer-spel.html",
+  "wiskundevaardigheden.html",
+  "grafiekenspel.html",
+  "begeleide inoefening.html",
+  "korte-check.html",
+  "exit-ticket.html",
+  "paragraaf.html",
+  "paragraaf.pdf",
+  "opgaven.html",
+  "opgaven.pdf",
+  "antwoorden.html",
+  "antwoorden.pdf",
+  "samenvatting.html",
+  "nieuws met visual.html",
+  "youtube-videos.html",
+];
+
+const SPARSE_SYNTHETIC_FILES = [
+  "instapquiz.html",
+  "redeneer-spel.html",
+  "uitleg vaardigheden.html",
+];
+
 const BOOK_1_PARAGRAPHS = [
   path.join(
     "Boek 1 - Grondslagen, vraag en aanbod",
@@ -131,19 +164,21 @@ function countMatches(text, pattern) {
   return (text.match(pattern) || []).length;
 }
 
-function requireDisabledPlaceholdersHaveNoHref(html, context) {
+function assertDisabledPlaceholdersHaveNoHref(html, context, { requireAtLeastOne = false } = {}) {
   const disabledBlocks = html.match(/<article\s+class="[^"]*\btile-disabled\b[\s\S]*?<\/article>/g) || [];
   const inPreparationBlocks = html.match(/<article[^>]*data-tile-state="in-preparation"[\s\S]*?<\/article>/g) || [];
   const blocks = [...disabledBlocks, ...inPreparationBlocks];
 
-  if (blocks.length === 0) fail(`${context} must include at least one disabled placeholder`);
+  if (requireAtLeastOne && blocks.length === 0) {
+    fail(`${context} must include at least one disabled placeholder`);
+  }
 
   blocks.forEach((block, index) => {
     if (/\shref=/.test(block)) fail(`${context} disabled placeholder ${index + 1} must not contain href`);
   });
 }
 
-function verifyParagraphHtml(html, context) {
+function verifyParagraphHtml(html, context, { requireDisabledPlaceholder = false } = {}) {
   requireIncludes(html, REQUIRED_HTML_MARKERS, context);
   requireExcludes(html, FORBIDDEN_HTML_MARKERS, context);
 
@@ -157,7 +192,9 @@ function verifyParagraphHtml(html, context) {
     if (!html.includes(`data-tile-id="${tileId}"`)) fail(`${context} missing tile ID ${tileId}`);
   }
 
-  requireDisabledPlaceholdersHaveNoHref(html, context);
+  assertDisabledPlaceholdersHaveNoHref(html, context, {
+    requireAtLeastOne: requireDisabledPlaceholder,
+  });
 }
 
 function writeFile(filePath, body = "stub") {
@@ -165,7 +202,7 @@ function writeFile(filePath, body = "stub") {
   fs.writeFileSync(filePath, body);
 }
 
-function writeSyntheticModule(root) {
+function writeSyntheticModule(root, files = DEFAULT_SYNTHETIC_FILES) {
   fs.mkdirSync(path.join(root, "1.1 Hoofdstuk Test"), { recursive: true });
   fs.writeFileSync(path.join(root, "deploy-config.json"), JSON.stringify({
     nr: 9,
@@ -203,33 +240,6 @@ function writeSyntheticModule(root) {
   const paragraph = path.join(root, "1.1 Hoofdstuk Test", "1.1.1 Testparagraaf");
   fs.mkdirSync(paragraph, { recursive: true });
   const prefix = "1.1.1 Testparagraaf";
-  const files = [
-    "instapquiz.html",
-    "nieuws-detective.html",
-    "uitleg voorkennis.html",
-    "uitleg voorkennis.docx",
-    "uitleg vaardigheden.html",
-    "uitleg vaardigheden.docx",
-    "presentatie.html",
-    "presentatie.pptx",
-    "stappenplan.html",
-    "redeneer-spel.html",
-    "wiskundevaardigheden.html",
-    "grafiekenspel.html",
-    "begeleide inoefening.html",
-    "korte-check.html",
-    "exit-ticket.html",
-    "paragraaf.html",
-    "paragraaf.pdf",
-    "opgaven.html",
-    "opgaven.pdf",
-    "antwoorden.html",
-    "antwoorden.pdf",
-    "samenvatting.html",
-    "nieuws met visual.html",
-    "youtube-videos.html",
-  ];
-
   for (const file of files) {
     writeFile(path.join(paragraph, `${prefix} ${DASH} ${file}`));
   }
@@ -266,6 +276,19 @@ function checkSyntheticOutput() {
   }
 }
 
+function checkSparseSyntheticOutput() {
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "landing-v2-sparse-guard-"));
+  try {
+    const output = writeSyntheticModule(tmpDir, SPARSE_SYNTHETIC_FILES);
+    runBuilder(tmpDir);
+    verifyParagraphHtml(readText(output), "sparse synthetic paragraph index.html", {
+      requireDisabledPlaceholder: true,
+    });
+  } finally {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  }
+}
+
 function checkLessonOutput() {
   if (!fs.existsSync(LESSON_ROOT)) {
     fail(`lesson root not found: ${LESSON_ROOT}`);
@@ -280,6 +303,7 @@ function checkLessonOutput() {
 function main() {
   checkGeneratorSource();
   checkSyntheticOutput();
+  checkSparseSyntheticOutput();
   checkLessonOutput();
   console.log("OK paragraph landing V2 guardrails");
 }
