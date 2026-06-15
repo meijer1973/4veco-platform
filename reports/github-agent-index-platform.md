@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T06:41:53.811Z
+Generated: 2026-06-15T06:46:32.141Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4515
+Files indexed: 4517
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4549,7 +4549,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 470
+Count: 472
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4726,6 +4726,8 @@ Count: 470
 - docs/review/pr-throughput-policy.md
 - docs/review/review-packet-throughput.schema.json
 - docs/roadmaps/final-codex-handoff-roadmap-original.md
+- docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md
+- docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md
 - docs/roadmaps/outdated/final-codex-handoff-roadmap-original.md
 - docs/roadmaps/outdated/README.md
 - docs/roadmaps/outdated/reference-team-roadmap-v2.10-rx1-gate-closed.md
