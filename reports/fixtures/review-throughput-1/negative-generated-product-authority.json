@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-GENERATED-PRODUCT",
+  "pr_throughput_class": "generated_output",
+  "bundle_id": null,
+  "authority_class": "generated_output",
+  "changed_paths": [
+    "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/index.html"
+  ],
+  "review_autonomy": {
+    "level": "L1",
+    "lead_review_result": "PASS"
+  },
+  "human_decision_required": false,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": true,
+  "escalation_triggers": [],
+  "proof": {
+    "ci": {
+      "workflow": "platform-ci / validate-platform",
+      "github_actions_run_id": "27200000003",
+      "reviewed_commit_sha": "dddddddddddddddddddddddddddddddddddddddd",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:book",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "dddddddddddddddddddddddddddddddddddddddd"
+    }
+  },
+  "authority_claims": {
+    "product_authority": true
+  }
+}

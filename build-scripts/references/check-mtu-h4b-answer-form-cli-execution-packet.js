@@ -13,6 +13,7 @@ const path = require('path');
 
 const { validateSpec } = require('./unit-add');
 const { validate, loadTerminology, loadEindtermen } = require('./build-unit-index');
+const { validatePacket: validateReviewThroughputPacket } = require('../sprints/check-review-throughput-packet');
 
 const ROOT = process.cwd();
 const PACKET_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h4b-answer-form-cli-execution-packet.json');
@@ -321,6 +322,7 @@ for (const row of packet.generator_exposure_handling.planned_units) {
 
 if (review.schema_version !== 1) fail('review schema_version must be 1');
 if (review.gate_id !== packet.gate_id) fail('review gate_id mismatch');
+validateReviewThroughputPacket(review);
 if (review.sprint_id !== 'MTU-H4B') fail('review sprint_id must be MTU-H4B');
 if (review.source_packet !== 'reports/mtu-hardening/mtu-h4b-answer-form-cli-execution-packet.json') {
   fail('review source packet mismatch');

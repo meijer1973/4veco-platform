@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/meijer1973/4veco-platform/docs/review/review-packet-throughput.schema.json",
+  "title": "4veco review packet throughput fields",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "bundle_id",
+    "authority_class",
+    "review_autonomy",
+    "human_decision_required",
+    "paired_prs",
+    "auto_merge_allowed_after_ci",
+    "escalation_triggers"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "packet_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pr_throughput_class": {
+      "type": "string",
+      "enum": [
+        "micro_maintenance",
+        "normal_sprint",
+        "generated_output",
+        "high_authority",
+        "cross_repo_bundle"
+      ]
+    },
+    "bundle_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_class": {
+      "type": "string",
+      "enum": [
+        "mechanical",
+        "standard",
+        "generated_output",
+        "high_authority",
+        "protected_reference",
+        "machine_external_reference",
+        "product_authority",
+        "diagnostics_mastery_pv_student_use"
+      ]
+    },
+    "review_autonomy": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "level"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "L0",
+            "L1",
+            "L2",
+            "L3",
+            "L4"
+          ]
+        },
+        "lead_review_result": {
+          "type": "string",
+          "description": "Informational only. Autonomous proof must use proof.lead_review."
+        },
+        "owner_preapproval": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "human_decision_required": {
+      "type": "boolean"
+    },
+    "paired_prs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "repo",
+          "number"
+        ],
+        "properties": {
+          "repo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "auto_merge_allowed_after_ci": {
+      "type": "boolean"
+    },
+    "escalation_triggers": {
+      "type": "array"
+    },
+    "changed_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "ci": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "reviewed_commit_sha": {
+              "type": "string",
+              "pattern": "^[A-Fa-f0-9]{40}$"
+            },
+            "conclusion": {
+              "type": "string"
+            }
+          }
+        },
+        "checkers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "lead_review": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "result": {
+              "type": "string",
+              "enum": [
+                "PASS",
+                "PASS WITH FLAGS"
+              ]
+            },
+            "reviewed_commit_sha": {
+              "type": "string",
+              "pattern": "^[A-Fa-f0-9]{40}$"
+            }
+          }
+        }
+      }
+    },
+    "authority_claims": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

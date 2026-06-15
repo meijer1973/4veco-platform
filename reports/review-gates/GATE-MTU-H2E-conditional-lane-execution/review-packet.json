@@ -2,6 +2,26 @@
   "schema_version": 1,
   "gate_id": "GATE-MTU-H2E-conditional-lane-execution",
   "sprint_id": "MTU-H2E",
+  "packet_id": "GATE-MTU-H2E-conditional-lane-execution",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.json",
+    "reports/mtu-hardening/solo-q1-q3-conditional-lane-execution-packet.md",
+    "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.json",
+    "reports/review-gates/GATE-MTU-H2E-conditional-lane-execution/review-packet.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "MTU-H2E reviews protected-reference execution authority and must remain a full human gate."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_execution_authority"
+  ],
   "date": "2026-05-28",
   "status": "review_packet_ready_no_mutation_authorized",
   "review_scope": "Review the MTU-H2E conditional-lane execution packet only. Decide whether a later bounded CLI execution sprint may be authorized for A12/A88/A89/A90/A92/A93 with A20 held.",

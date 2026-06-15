@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "packet_id": "REVIEW-THROUGHPUT-NEGATIVE-CI-NO-REVIEWED-SHA",
+  "pr_throughput_class": "normal_sprint",
+  "bundle_id": null,
+  "authority_class": "standard",
+  "changed_paths": [
+    "reports/sprints/EXAMPLE-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L1"
+  },
+  "human_decision_required": false,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": true,
+  "escalation_triggers": [],
+  "proof": {
+    "ci": {
+      "workflow": "platform-ci / validate-platform",
+      "github_actions_run_id": "27200000011",
+      "conclusion": "success"
+    },
+    "checkers": [
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ],
+    "lead_review": {
+      "path": "reports/sprints/REVIEW-THROUGHPUT-1-lead-review-round2.md",
+      "result": "PASS",
+      "reviewed_commit_sha": "6666666666666666666666666666666666666666"
+    }
+  }
+}
