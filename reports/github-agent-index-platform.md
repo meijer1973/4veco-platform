@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T11:30:54.744Z
+Generated: 2026-06-15T13:58:40.772Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4562
+Files indexed: 4577
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -668,10 +668,11 @@ Count: 42
 
 ## validators
 
-Count: 466
+Count: 467
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
+- archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -1753,7 +1754,7 @@ Count: 609
 
 ## reports
 
-Count: 2825
+Count: 2827
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1806,6 +1807,8 @@ Count: 2825
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
+- reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json
+- reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
@@ -4601,7 +4604,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 472
+Count: 484
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4616,6 +4619,18 @@ Count: 472
 - archive/sprints/INSPECT-1/INSPECT-1-planning-review.md
 - archive/sprints/INSPECT-1/INSPECT-1-readiness-closure-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
+- archive/sprints/INSPECT-10/INSPECT-10-closure-log.md
+- archive/sprints/INSPECT-10/INSPECT-10-correction-log.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-assignment.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-round1.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-round2.md
+- archive/sprints/INSPECT-10/INSPECT-10-planning-review.md
+- archive/sprints/INSPECT-10/INSPECT-10-sprint-plan.md
+- archive/sprints/INSPECT-10/INSPECT-10R-correction-packet.md
+- archive/sprints/INSPECT-10/INSPECT-10R-dutch-quality-inspection-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-legal-privacy-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-teacher-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
