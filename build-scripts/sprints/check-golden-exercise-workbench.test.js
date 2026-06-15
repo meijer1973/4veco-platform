@@ -20,11 +20,11 @@ describe('Golden Exercise Workbench policy checks', () => {
     expect(() => checks.checkImplementedSnapshotHtml()).not.toThrow();
   });
 
-  test('current 1.1.3 duplicate token trap is quarantined rather than promoted as formula policy', () => {
+  test('current 1.1.3 formula tokens are explicit while A96 remains the formula policy exemplar', () => {
     const current = checks.checkCurrentGoldenSources();
     const implemented = current.find((item) => item.file.endsWith('1.1.3-exit-ticket.json'));
     expect(implemented).toBeTruthy();
-    expect(implemented.quarantined_formula_token_traps.join('\n')).toMatch(/oldQden/);
+    expect(implemented.quarantined_formula_token_traps).toEqual([]);
     expect(() => checks.validateExemplarIndexFormulaBoundary()).not.toThrow();
   });
 });

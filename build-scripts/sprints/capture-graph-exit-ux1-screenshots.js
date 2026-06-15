@@ -433,7 +433,7 @@ async function completeAllTasks(cdp, sessionId) {
       document.querySelector('[data-ge-pill-group="claim-interval"][data-option-id="150-300"]').click();
       setInput('[data-ge-old-q]', '300');
       setInput('[data-ge-new-q]', '150');
-      ['open','newQ','minus','oldQnum','close','divide','oldQden','times100'].forEach((id) => {
+      ['open','newQ','minus','oldQBeforeChange','close','divide','oldQBase','times100'].forEach((id) => {
         document.querySelector('[data-ge-token-id="' + id + '"]').click();
       });
       setInput('[data-ge-percent]', '-50%');
@@ -466,7 +466,7 @@ function assertInspection(result, label, options = {}) {
   if (!result.graphWorkspace) throw new Error(`${label}: expected graph workspace\n${detail}`);
   if (result.gridLines < 8) throw new Error(`${label}: expected visible graph grid\n${detail}`);
   if (!result.percentageClaimControl) throw new Error(`${label}: expected percentage claim control\n${detail}`);
-  if (!result.formulaTokenIds || !result.formulaTokenIds.includes('times100') || !result.formulaTokenIds.includes('oldQden')) throw new Error(`${label}: expected formula builder token bank\n${detail}`);
+  if (!result.formulaTokenIds || !result.formulaTokenIds.includes('times100') || !result.formulaTokenIds.includes('oldQBase')) throw new Error(`${label}: expected formula builder token bank\n${detail}`);
   if (!result.claimIntervals || !result.claimIntervals.includes('150-300') || result.claimIntervals.length < 5) throw new Error(`${label}: expected current claim interval options\n${detail}`);
   if (!result.claimConclusions || !result.claimConclusions.includes('drop50') || result.claimConclusions.length < 4) throw new Error(`${label}: expected current claim conclusion options\n${detail}`);
   if (!result.sourceTextCurrent) throw new Error(`${label}: expected current broodjeskraam source text and no IJskraam copy\n${detail}`);
@@ -651,7 +651,7 @@ async function main() {
       percentage_claim_control_present: initial.percentageClaimControl === true,
       current_context_blocks: (initial.contextIds || []).join(','),
       current_source_text_confirmed: initial.sourceTextCurrent === true,
-      formula_builder_tokens_present: initial.formulaTokenIds.includes('times100') && initial.formulaTokenIds.includes('oldQden'),
+      formula_builder_tokens_present: initial.formulaTokenIds.includes('times100') && initial.formulaTokenIds.includes('oldQBase'),
       completion_language_held: true,
       local_completion_feedback_visible_after_correct: completed.completionVisible === true && mobileCompleted.completionVisible === true,
       mobile_rendered: mobile.viewport.width === 390,

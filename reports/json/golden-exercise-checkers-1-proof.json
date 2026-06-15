@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-EXERCISE-CHECKERS-1",
-  "generated": "2026-06-11T07:57:45.345Z",
+  "generated": "2026-06-15T07:41:44.655Z",
   "status": "passed",
   "layout_registry": {
     "layout_id": "golden_exercise_workbench",
@@ -50,10 +50,7 @@
     {
       "file": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json",
       "parNr": "1.1.3",
-      "quarantined_formula_token_traps": [
-        "claim-50-procent-controleren.interaction.formula: visually identical hidden-token trap for label \"nieuwe q\" across ids newQ, newQden",
-        "claim-50-procent-controleren.interaction.formula: visually identical hidden-token trap for label \"oude q\" across ids oldQden, oldQnum"
-      ]
+      "quarantined_formula_token_traps": []
     }
   ],
   "negative_fixtures": [

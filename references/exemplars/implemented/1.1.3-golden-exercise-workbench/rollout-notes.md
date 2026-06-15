@@ -71,7 +71,10 @@ contextual conclusion
 no visually identical hidden-token trap
 ```
 
-Do not use the implemented `1.1.3` snapshot as the formula-token exemplar. Its current source snapshot contains two visible `oude Q` formula tokens with different hidden IDs, `oldQden` and `oldQnum`. Use `references/exemplars/a96-answer-form/` for formula-token policy until the duplicate-token issue is repaired.
+Do not use the implemented `1.1.3` snapshot as the formula-token policy
+exemplar. Its current source snapshot has local formula-token clarity for this
+route, but `references/exemplars/a96-answer-form/` remains the policy reference
+for reusable-token rules, hidden-token-trap policy, and A96-level formula proof.
 
 ## Next Goal
 
@@ -88,12 +91,13 @@ reject legacy roots/assets on Golden routes
 reject mixed ge-* and et-* shell contamination
 reject answer-giving placeholders
 reject formula token banks ordered as the answer
-reject visually identical hidden-token traps, including the current oldQden/oldQnum pattern if it appears in future Golden routes
+reject visually identical hidden-token traps if they appear in future Golden routes
 reject fake graph slope/line-shape questions
 require after-interaction proof
 ```
 
-`GOLDEN-EXERCISE-CHECKERS-1` must reject visually identical hidden-token traps, including the current oldQden/oldQnum pattern if it appears in future Golden routes.
+`GOLDEN-EXERCISE-CHECKERS-1` must reject visually identical hidden-token traps
+if they appear in future Golden routes.
 
 ## Remaining Review Flags
 

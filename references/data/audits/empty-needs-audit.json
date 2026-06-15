@@ -1,9 +1,9 @@
 {
   "schema_version": "0.1",
   "sprint_id": "R2.1",
-  "generated_at": "2026-06-07T07:31:58.624Z",
+  "generated_at": "2026-06-15T11:28:25.866Z",
   "source_path": "references/machine/micro-teaching-units.json",
-  "live_unit_count": 253,
+  "live_unit_count": 254,
   "empty_needs_count": 52,
   "summary": {
     "by_status": {

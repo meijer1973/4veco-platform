@@ -327,7 +327,7 @@ async function driveClaim(cdp, sessionId) {
       click(document.querySelector('[data-ge-pill-group="claim-interval"][data-option-id="150-300"]'));
       setValue('[data-ge-old-q]', '300');
       setValue('[data-ge-new-q]', '150');
-      ['open', 'newQ', 'minus', 'oldQnum', 'close', 'divide', 'oldQden', 'times100'].forEach((id) => {
+      ['open', 'newQ', 'minus', 'oldQBeforeChange', 'close', 'divide', 'oldQBase', 'times100'].forEach((id) => {
         click(document.querySelector('[data-ge-token-id="' + id + '"]'));
       });
       setValue('[data-ge-percent]', '-50%');

@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "storage_id": "source-annex-extraction-overlays",
+  "storage_status": "future_candidate_storage",
+  "generated_on": "2026-06-15T08:20:00.000Z",
+  "source_files": [
+    "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-execution-gate-1/review-packet.json",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json",
+    "references/external/exams/vw-1022-a-25-1-o.pdf",
+    "references/external/exams/vw-1022-a-25-1-c.pdf",
+    "references/data/exam-ingestion/exam-item-overlays.json",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "graph_overlays": [
+    {
+      "extraction_id": "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_material_id": "q19-curacao-labor-market-graph",
+      "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19; references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+      "graph_type": "market_diagram",
+      "axis_labels": [
+        "reviewed limitation: exact worksheet axis labels are not reliably extracted from the current PDF text layer",
+        "answer-model axis concept: wage level for the Curacao labor market conclusion"
+      ],
+      "axis_units": [
+        "reviewed limitation: axis units are not reconstructed from the current overlay"
+      ],
+      "scale_or_tick_marks": [
+        "official prompt requires shifting the new line by about 1 cm",
+        "reviewed limitation: tick marks and coordinates are not reconstructed"
+      ],
+      "curve_or_series_labels": [
+        "vraaglijn/rightward demand-shift element required by the correction model",
+        "reviewed limitation: original curve labels and full line geometry are not reconstructed"
+      ],
+      "coordinates_or_reconstructable_geometry": "partial only: the required rightward demand shift and wage-level direction are identified from the official prompt/correction model, but worksheet coordinates and original geometry are not reconstructed.",
+      "legend_mapping": "No separate legend is extracted; mapping is by market object and correction-model step q19-step-1.",
+      "student_action_regions": [
+        "Draw the new demand line on the Curacao labor market.",
+        "Conclude that the wage level rises."
+      ],
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      }
+    },
+    {
+      "extraction_id": "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_material_id": "q19-curacao-goods-market-graph",
+      "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19; references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+      "graph_type": "market_diagram",
+      "axis_labels": [
+        "reviewed limitation: exact worksheet axis labels are not reliably extracted from the current PDF text layer",
+        "answer-model axis concept: Curacao price level or inflation direction for the goods and services market conclusion"
+      ],
+      "axis_units": [
+        "reviewed limitation: axis units are not reconstructed from the current overlay"
+      ],
+      "scale_or_tick_marks": [
+        "official prompt requires shifting the new line by about 1 cm",
+        "reviewed limitation: tick marks and coordinates are not reconstructed"
+      ],
+      "curve_or_series_labels": [
+        "primary route: vraaglijn/rightward demand-shift element required by the correction model",
+        "accepted alternative: correct aggregate-supply shift for q19-step-2",
+        "reviewed limitation: original curve labels and full line geometry are not reconstructed"
+      ],
+      "coordinates_or_reconstructable_geometry": "partial only: the required Curacao goods/services market shift and inflation direction are identified from the official prompt/correction model, including the aggregate-supply alternative, but worksheet coordinates and original geometry are not reconstructed.",
+      "legend_mapping": "No separate legend is extracted; mapping is by market object and correction-model step q19-step-2. Aggregate-supply alternatives remain visible.",
+      "student_action_regions": [
+        "Draw the new line on the Curacao goods and services market.",
+        "Primary correction-model route: demand line shifts right.",
+        "Accepted correction-model alternative: correct aggregate-supply shift.",
+        "Conclude that inflation in Curacao rises."
+      ],
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      }
+    },
+    {
+      "extraction_id": "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_material_id": "q19-aruba-goods-market-graph",
+      "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19; references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+      "graph_type": "market_diagram",
+      "axis_labels": [
+        "reviewed limitation: exact worksheet axis labels are not reliably extracted from the current PDF text layer",
+        "answer-model axis concept: Aruba price level or inflation direction for the goods and services market conclusion"
+      ],
+      "axis_units": [
+        "reviewed limitation: axis units are not reconstructed from the current overlay"
+      ],
+      "scale_or_tick_marks": [
+        "official prompt requires shifting the new line by about 1 cm",
+        "reviewed limitation: tick marks and coordinates are not reconstructed"
+      ],
+      "curve_or_series_labels": [
+        "primary route: vraaglijn/rightward demand-shift element required by the correction model",
+        "accepted alternative: correct aggregate-supply shift for q19-step-3",
+        "reviewed limitation: original curve labels and full line geometry are not reconstructed"
+      ],
+      "coordinates_or_reconstructable_geometry": "partial only: the required Aruban goods/services market shift and inflation direction are identified from the official prompt/correction model, including the aggregate-supply alternative, but worksheet coordinates and original geometry are not reconstructed.",
+      "legend_mapping": "No separate legend is extracted; mapping is by market object and correction-model step q19-step-3. Aggregate-supply alternatives remain visible.",
+      "student_action_regions": [
+        "Draw the new line on the Aruban goods and services market.",
+        "Primary correction-model route: demand line shifts right.",
+        "Accepted correction-model alternative: correct aggregate-supply shift.",
+        "Conclude that inflation in Aruba rises."
+      ],
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      }
+    }
+  ],
+  "source_annex_overlays": [
+    {
+      "extraction_id": "EX_SRC_Q19_SOURCE_FIGURE",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_material_id": "figuur-1-factoren-curacao-arubaanse-economie",
+      "annex_type": "source_figure",
+      "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=figuur-1",
+      "prompt_reference": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+      "worksheet_regions": [
+        "Source figure titled Factoren beinvloeding Curacaose en Arubaanse economie.",
+        "reviewed limitation: PDF text layer exposes the figure title but not full diagram geometry or values."
+      ],
+      "required_student_marks": [
+        "Use the source context to trace a rising labor demand in Curacao through the Curacao and Aruban market diagrams.",
+        "reviewed limitation: this source figure record does not by itself reconstruct the worksheet marks."
+      ],
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      }
+    },
+    {
+      "extraction_id": "EX_SRC_Q19_UITWERKBIJLAGE",
+      "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+      "source_material_id": "uitwerkbijlage-vraag-19",
+      "annex_type": "uitwerkbijlage",
+      "source_page_or_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19; references/external/exams/vw-1022-a-25-1-c.pdf#page=14&question=19",
+      "prompt_reference": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+      "worksheet_regions": [
+        "Curacao labor market drawing region.",
+        "Curacao goods and services market drawing region.",
+        "Aruba goods and services market drawing region.",
+        "Conclusion fields for wage level Curacao, inflation Curacao, and inflation Aruba.",
+        "reviewed limitation: exact worksheet coordinates and original graph geometry are not reconstructed."
+      ],
+      "required_student_marks": [
+        "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+        "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises, or use the official aggregate-supply shift alternative.",
+        "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises, or use the official aggregate-supply shift alternative.",
+        "Shift the new demand and/or supply line by about 1 cm as instructed by the official prompt."
+      ],
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_boundary": {
+        "protected_reference_mutation_authorized": false,
+        "external_source_mutation_authorized": false,
+        "machine_reference_mutation_authorized": false,
+        "unit_minting_authorized": false,
+        "operation_registry_mutation_authorized": false,
+        "answer_skill_mutation_authorized": false,
+        "source_annex_extraction_execution_authorized": false,
+        "pv_graph_mutation_authorized": false,
+        "target_exercise_promotion_authorized": false,
+        "lesson_output_mutation_authorized": false,
+        "cp6_closure_authorized": false,
+        "year1_closure_authorized": false,
+        "student_product_use_authorized": false
+      }
+    }
+  ]
+}

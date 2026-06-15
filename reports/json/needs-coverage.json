@@ -1,14 +1,14 @@
 {
   "report_id": "needs-coverage",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-06-07T07:32:07.232Z",
+  "generated_on": "2026-06-15T11:28:46.503Z",
   "source_files": [
     "references/machine/micro-teaching-units.json"
   ],
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_units": 253,
+    "live_units": 254,
     "empty_needs": 52
   },
   "issues": [

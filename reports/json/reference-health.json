@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_by": "build-scripts/reports/generate-reference-health.js",
-  "generated_on": "2026-06-07T07:32:38.574Z",
+  "generated_on": "2026-06-15T11:28:54.661Z",
   "source_files": [
     "references/machine/micro-teaching-units.json",
     "references/machine/begrippen.json",
@@ -20,13 +20,13 @@
     "reports/json/*.json"
   ],
   "unit_counts": {
-    "total": 256,
-    "live": 253,
+    "total": 257,
+    "live": 254,
     "deprecated": 3,
     "by_category": {
       "arbeidsmarkt": 21,
       "goede en slechte tijden": 20,
-      "markt": 43,
+      "markt": 44,
       "risico en informatie": 12,
       "ruilen over tijd": 7,
       "samenwerken en onderhandelen": 20,
@@ -39,7 +39,7 @@
       "1": 61,
       "2": 71,
       "3": 42,
-      "4": 20,
+      "4": 21,
       "5": 23,
       "6": 10,
       "7": 5
@@ -51,7 +51,7 @@
     "underbouw_assumed": 11
   },
   "prior_knowledge_review_status": {
-    "not_reviewed": 232,
+    "not_reviewed": 233,
     "reviewed": 21
   },
   "term_link_coverage": {
@@ -72,11 +72,11 @@
   },
   "unresolved_refs": {
     "status": "warn",
-    "issues": 581
+    "issues": 584
   },
   "qc_findings": {
     "report_count": 18,
-    "total_issues": 980,
+    "total_issues": 979,
     "high_or_critical_issues": 9,
     "by_report_status": {
       "info": 1,

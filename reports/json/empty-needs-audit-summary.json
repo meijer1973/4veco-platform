@@ -1,14 +1,14 @@
 {
   "report_id": "empty-needs-audit-summary",
   "generated_by": "build-scripts/reports/generate-all.js",
-  "generated_on": "2026-06-07T07:32:07.238Z",
+  "generated_on": "2026-06-15T11:28:46.511Z",
   "source_files": [
     "references/data/audits/empty-needs-audit.json"
   ],
   "schema_version": 1,
   "status": "warn",
   "summary": {
-    "live_unit_count": 253,
+    "live_unit_count": 254,
     "empty_needs_count": 52,
     "by_status": {
       "underbouw_assumed": 20,

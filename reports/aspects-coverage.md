@@ -1,7 +1,7 @@
 # Aspects-Coverage Report
 
-Generated: 2026-04-23T14:05:51.911Z
-Live units: 190
+Generated: 2026-06-15T11:17:34.342Z
+Live units: 254
 
 ## Status: **INFORMATIONAL**
 
@@ -11,41 +11,41 @@ The `aspects` field records whether mastery requires **verbaal** reasoning, **gr
 
 | Aspect | Units |
 |---|---|
-| verbaal | 141 |
-| grafisch | 28 |
-| rekenen | 84 |
+| verbaal | 178 |
+| grafisch | 54 |
+| rekenen | 135 |
 
 ## Combinations
 
 | Combination | Units |
 |---|---|
-| verbaal | 96 |
-| rekenen | 36 |
-| rekenen+verbaal | 30 |
-| grafisch+rekenen | 9 |
-| grafisch+rekenen+verbaal | 9 |
-| grafisch+verbaal | 6 |
-| grafisch | 4 |
+| verbaal | 101 |
+| rekenen+verbaal | 57 |
+| rekenen | 42 |
+| grafisch+rekenen | 26 |
+| grafisch+rekenen+verbaal | 10 |
+| grafisch+verbaal | 10 |
+| grafisch | 8 |
 
 ## By domain
 
 | Domain | verbaal | grafisch | rekenen |
 |---|---:|---:|---:|
-| A | 17 | 13 | 41 |
+| A | 45 | 34 | 86 |
 | B | 2 | 0 | 1 |
-| D | 31 | 5 | 12 |
+| D | 38 | 10 | 18 |
 | E | 7 | 0 | 1 |
-| F | 15 | 2 | 5 |
+| F | 17 | 2 | 5 |
 | G | 11 | 0 | 3 |
 | H | 25 | 0 | 10 |
 | I | 19 | 5 | 5 |
 | L | 14 | 3 | 6 |
 
-## Review backlog: 69 unit(s) with no exam citation
+## Review backlog: 134 unit(s) with no exam citation
 
 These units' aspects were inferred from `kern`/`name` text, not from real exam coverage. Review on next curriculum pass.
 
-### Domain A (25)
+### Domain A (79)
 
 - **A03** Functie omschrijven (P↔Q) — aspects: `[rekenen]`
 - **A05** Snijpunt met P-as berekenen — aspects: `[grafisch, rekenen]`
@@ -72,13 +72,67 @@ These units' aspects were inferred from `kern`/`name` text, not from real exam c
 - **A42** Grafische verschuiving met voor-en-na pijlen — aspects: `[grafisch]`
 - **A43** Totale winst uit gemengde allocatie berekenen — aspects: `[rekenen]`
 - **A44** Individuele stapfunctie-vraagcurve tekenen uit betalingsbereidheid — aspects: `[grafisch]`
+- **A45** P-Q grafiek tekenen uit tabel — aspects: `[grafisch]`
+- **A46** Waarden aflezen en interpoleren in P-Q grafiek — aspects: `[grafisch, rekenen]`
+- **A47** Collectieve vraag uit tabellen optellen — aspects: `[rekenen, grafisch]`
+- **A48** Collectieve vraagfunctie algebraisch optellen — aspects: `[rekenen, grafisch]`
+- **A49** Aanbodcurve tekenen met economenassen — aspects: `[grafisch]`
+- **A50** GVK en GCK berekenen — aspects: `[rekenen]`
+- **A51** Overschot en tekort bij niet-evenwichtsprijs berekenen — aspects: `[grafisch, rekenen]`
+- **A52** MK en MO uit tabelverschillen berekenen — aspects: `[rekenen]`
+- **A53** MK benaderen uit kwadratische TK-functie — aspects: `[rekenen]`
+- **A54** Winstoptimum controleren met Q-1, Q en Q+1 — aspects: `[rekenen]`
+- **A55** Gevraagde hoeveelheid voorspellen met elasticiteit — aspects: `[rekenen]`
+- **A56** Korte zijde bepalen bij bindende prijs — aspects: `[grafisch, rekenen]`
+- **A57** Afwentelingspercentage berekenen — aspects: `[rekenen]`
+- **A58** Subsidie-uitgaven berekenen — aspects: `[rekenen]`
+- **A59** Opkoopkosten bij minimumprijs berekenen — aspects: `[grafisch, rekenen]`
+- **A60** Vraagfunctie inverteren bij quotumhoeveelheid — aspects: `[rekenen, grafisch]`
+- **A61** Tabelwaarden selecteren voor berekening — aspects: `[rekenen, verbaal]`
+- **A62** Waarden aflezen uit staafdiagram — aspects: `[grafisch]`
+- **A63** Waarden aflezen uit lijngrafiek — aspects: `[grafisch]`
+- **A64** Aandelen aflezen uit cirkeldiagram — aspects: `[grafisch, rekenen]`
+- **A65** Absolute hoeveelheid berekenen uit aandeel en totaal — aspects: `[grafisch, rekenen]`
+- **A66** Basiswaarde en vergelijkingswaarde in bron bepalen — aspects: `[rekenen, verbaal]`
+- **A67** Procentuele verandering berekenen vanuit tabel — aspects: `[rekenen, verbaal]`
+- **A68** Procentuele verandering berekenen vanuit staafdiagram — aspects: `[grafisch, rekenen]`
+- **A69** Procentuele verandering berekenen vanuit lijngrafiek — aspects: `[grafisch, rekenen]`
+- **A70** Percentagepuntverandering in aandeel herkennen — aspects: `[rekenen, verbaal]`
+- **A72** Indexcijfer berekenen vanuit tabel — aspects: `[rekenen, verbaal]`
+- **A73** Indexverandering aflezen uit lijngrafiek — aspects: `[grafisch, rekenen]`
+- **A74** Procentuele verandering berekenen vanuit indexcijfers — aspects: `[rekenen, verbaal]`
+- **A75** Totale winst berekenen uit opbrengsten- en kostentabel — aspects: `[rekenen, verbaal]`
+- **A76** Totale winst berekenen uit P, GTK en Q — aspects: `[rekenen, verbaal]`
+- **A77** Break-even aflezen uit TO-TK-grafiek — aspects: `[grafisch, rekenen]`
+- **A78** Winst of verlies aflezen uit TO-TK-grafiek — aspects: `[grafisch, rekenen]`
+- **A79** Maximale winst bepalen uit TO-TK-tabel — aspects: `[rekenen, verbaal]`
+- **A80** Noem of geef-aan antwoord geven — aspects: `[verbaal]`
+- **A81** Bron gebruiken in een antwoord — aspects: `[verbaal, grafisch]`
+- **A82** Elasticiteit berekenen uit tabelwaarden — aspects: `[rekenen, verbaal]`
+- **A83** Prijselasticiteit van de vraag berekenen uit P-Q-grafiek — aspects: `[grafisch, rekenen]`
+- **A84** Omzetverandering beoordelen met elasticiteit uit bron — aspects: `[rekenen, verbaal]`
+- **A85** Totale opbrengst puntberekening: TO = P x Q — aspects: `[rekenen, verbaal]`
+- **A86** TVK berekenen uit constante variabele kosten — aspects: `[rekenen, verbaal]`
+- **A87** Onbekende vaste kosten berekenen uit winstvergelijking — aspects: `[rekenen, verbaal]`
+- **A88** Schaalfactoren in examencijfers toepassen — aspects: `[rekenen, verbaal, grafisch]`
+- **A89** GO herkennen als prijsfunctie van de monopolist — aspects: `[verbaal, rekenen]`
+- **A90** MO bepalen uit lineaire GO-regel zonder afgeleiden — aspects: `[rekenen, verbaal]`
+- **A91** MO = gegeven MK oplossen — aspects: `[rekenen, verbaal]`
+- **A92** Nieuwe prijs bepalen na winstmaximaliserende Q — aspects: `[rekenen, verbaal]`
+- **A93** Procentuele prijsverandering na kostenverandering — aspects: `[rekenen, verbaal]`
+- **A94** MO = P en afgeleide MK oplossen — aspects: `[rekenen, verbaal]`
+- **A95** MO = gegeven MK-functie oplossen — aspects: `[rekenen, verbaal]`
+- **A96** Bereken-vraag beantwoorden — aspects: `[rekenen, verbaal]`
+- **A97** Leg-uit-dat antwoord opbouwen — aspects: `[verbaal]`
+- **A98** Leg-uit-of antwoord opbouwen — aspects: `[verbaal]`
+- **A99** Leg uit met voorbeeld beantwoorden — aspects: `[verbaal]`
 
 ### Domain B (2)
 
 - **B01** Schaarste als kerneconomisch probleem — aspects: `[verbaal]`
 - **B02** Alternatieve kosten in een keuze-situatie — aspects: `[verbaal, rekenen]`
 
-### Domain D (10)
+### Domain D (19)
 
 - **D18** Monopolie met prijsdiscriminatie — aspects: `[rekenen]`
 - **D19** Subsidie en Pareto-efficiëntie — aspects: `[verbaal]`
@@ -90,12 +144,23 @@ These units' aspects were inferred from `kern`/`name` text, not from real exam c
 - **D35** Betalingsbereidheid definiëren — aspects: `[verbaal]`
 - **D36** Beslisregel: koop als P ≤ betalingsbereidheid — aspects: `[verbaal, rekenen]`
 - **D37** Wet van de vraag verbaal uitleggen — aspects: `[verbaal]`
+- **D38** GCK daalt door spreiding van constante kosten — aspects: `[verbaal, rekenen]`
+- **D39** Totale surplus als CS plus PS — aspects: `[grafisch, rekenen]`
+- **D40** Surplusrekening bij marktinterventie controleren — aspects: `[grafisch, rekenen]`
+- **D41** Belastingwig en Pc/Pp grafisch labelen — aspects: `[grafisch, verbaal]`
+- **D42** Belastingdruk in eurobedragen berekenen — aspects: `[rekenen, verbaal]`
+- **D43** Subsidie-evenwicht en effectieve prijzen bepalen — aspects: `[rekenen, verbaal]`
+- **D45** Incidentie verklaren met relatieve elasticiteiten — aspects: `[verbaal, grafisch]`
+- **D46** Kostenstijging doorberekenen als pass-through share — aspects: `[rekenen, verbaal]`
+- **D47** Gelijktijdige vraag- en aanbodverschuiving analyseren — aspects: `[verbaal, grafisch]`
 
-### Domain F (3)
+### Domain F (5)
 
 - **F16** MPC–MSC en MPB–MSB onderscheiden — aspects: `[verbaal, grafisch]`
 - **F17** Over- en onderproductiegap bij externaliteiten — aspects: `[rekenen, grafisch]`
 - **F18** Pigou-heffing en corrigerende subsidie bepalen — aspects: `[rekenen]`
+- **F19** Maatschappelijke kosten verbaal herkennen — aspects: `[verbaal]`
+- **F20** Maatschappelijke kosten uitleggen met voorbeeld — aspects: `[verbaal]`
 
 ### Domain G (1)
 

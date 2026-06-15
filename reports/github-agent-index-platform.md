@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T13:56:36.180Z
+Generated: 2026-06-15T13:57:51.515Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4550
+Files indexed: 4589
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 487
+Count: 488
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -475,6 +475,7 @@ Count: 487
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
 - build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js
+- build-scripts/sprints/capture-golden-surface-visual-review1.js
 - build-scripts/sprints/capture-golden-ticket-layout-reset-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-graph-exit-ux1-screenshots.js
@@ -667,7 +668,7 @@ Count: 42
 
 ## validators
 
-Count: 464
+Count: 467
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -1085,6 +1086,9 @@ Count: 464
 - reports/sprints/GATE-CHECK-SHORT-EXIT-2-RETRY-result.md
 - reports/sprints/GATE-CHECK-SHORT-EXIT-2-RETRY-verification-review.md
 - reports/sprints/GATE-TASK-FAMILY-1-human-precheck-corrections.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png
 - reports/sprints/GRAPH-CHECK-UX-1-baseline.md
 - reports/sprints/GRAPH-CHECK-UX-1-command-log.jsonl
 - reports/sprints/GRAPH-CHECK-UX-1-command-log.md
@@ -1136,7 +1140,7 @@ Count: 464
 
 ## references
 
-Count: 608
+Count: 609
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1158,6 +1162,7 @@ Count: 608
 - references/data/exam-ingestion/operation-answer-skill-contract.md
 - references/data/exam-ingestion/README.md
 - references/data/exam-ingestion/review-procedure.md
+- references/data/exam-ingestion/source-annex-extraction-overlays.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
 - references/data/exercises/exam-question-overlays.json
@@ -1749,7 +1754,7 @@ Count: 608
 
 ## reports
 
-Count: 2807
+Count: 2839
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1788,8 +1793,16 @@ Count: 2807
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
@@ -1807,6 +1820,10 @@ Count: 2807
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -1835,6 +1852,7 @@ Count: 2807
 - reports/json/exit-ticket-workbench-112-1-proof.json
 - reports/json/exit-ticket-workbench-112-rendered-1-proof.json
 - reports/json/golden-exercise-checkers-1-proof.json
+- reports/json/golden-surface-visual-review-1-proof.json
 - reports/json/graph-check-ux1-proof.json
 - reports/json/graph-exit-ux1-proof.json
 - reports/json/graph-skill-tree.json
@@ -2053,6 +2071,8 @@ Count: 2807
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md
 - reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-quality-log.md
 - reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-review-packet.md
+- reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-quality-log.md
+- reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
@@ -2085,6 +2105,7 @@ Count: 2807
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
+- reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -2714,6 +2735,8 @@ Count: 2807
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-result.md
 - reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-plan.md
 - reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-result.md
+- reports/sprints/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-plan.md
+- reports/sprints/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-result.md
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl
@@ -3388,6 +3411,20 @@ Count: 2807
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-review-protocol.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-roadmap.md
 - reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-sprint-ledger.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-plan.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-quality-log.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-review.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshot-manifest.md
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-desktop-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-dark.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-desktop-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-dark.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-light.png
+- reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/manifest.json
 - reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshot-manifest.md
 - reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-desktop-light.png
 - reports/sprints/GOLDEN-TICKET-LAYOUT-RESET-1-screenshots/golden-reference-mobile-light.png
@@ -4579,7 +4616,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 479
+Count: 484
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4601,6 +4638,11 @@ Count: 479
 - archive/sprints/INSPECT-10/INSPECT-10-lead-review-round2.md
 - archive/sprints/INSPECT-10/INSPECT-10-planning-review.md
 - archive/sprints/INSPECT-10/INSPECT-10-sprint-plan.md
+- archive/sprints/INSPECT-10/INSPECT-10R-correction-packet.md
+- archive/sprints/INSPECT-10/INSPECT-10R-dutch-quality-inspection-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-legal-privacy-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-teacher-review.md
+- archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
