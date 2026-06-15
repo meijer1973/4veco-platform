@@ -7,6 +7,9 @@ theme-token switching.
 
 Do not implement from the old paragraph landing page.
 Do not implement from the existing lesson shell.
+Do not use platform PR #45 or lesson PR #11 as implementation examples. They
+are explicitly superseded Frankenstein attempts. Use platform PR #47, lesson
+PR #12, and the approved fixtures instead.
 
 The approved fixture files are:
 
