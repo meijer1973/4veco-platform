@@ -1,10 +1,10 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-15T07:15:26.808Z",
+  "generated_on": "2026-06-15T08:26:09.127Z",
   "status": "pass",
   "summary": {
-    "record_count": 598,
-    "source_manifest_file_count": 607,
+    "record_count": 599,
+    "source_manifest_file_count": 608,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
@@ -12,7 +12,7 @@
       "authored_judgement": 10,
       "generated_report": 2,
       "governance_data": 458,
-      "unknown": 51,
+      "unknown": 52,
       "quality_protocol": 5,
       "planning": 1,
       "machine_contract": 29
@@ -31,7 +31,7 @@
       "exercise_overlay_readme": 1,
       "sprint_metadata": 400,
       "file_json": 10,
-      "file_md": 35,
+      "file_md": 36,
       "file_html": 6,
       "machine_projection": 3,
       "owned_source_readme": 1,
@@ -49,13 +49,13 @@
       "generated_diagnostic": 2,
       "mirrored": 25,
       "governance_data": 456,
-      "review_required": 51,
+      "review_required": 52,
       "planning": 1,
       "schema_contract": 29
     },
     "by_public_citation_policy": {
       "public_citation_allowed_with_source_name": 30,
-      "internal_only": 73,
+      "internal_only": 74,
       "internal_diagnostic_only": 2,
       "not_public_citation_source": 493
     },
@@ -21940,7 +21940,7 @@
       "title": "README",
       "source_type": "file_md",
       "authority_level": "unknown",
-      "source_version": "sha256:9e446f6115804dea3ef1a8e514e6d83bde627f0cb8752d737fb9ef80962fd136",
+      "source_version": "sha256:85b62a96021c26e827ba8609a19868c2685105e049248ae5d42b9953677630bd",
       "status": "review_required",
       "owner": "references_team",
       "citation_policy": "citation_requires_review",
@@ -21949,8 +21949,44 @@
       "generated_status": "manual_source",
       "edit_policy": "review_required",
       "refresh_policy": "review_required",
-      "source_hash": "9e446f6115804dea3ef1a8e514e6d83bde627f0cb8752d737fb9ef80962fd136",
-      "size_bytes": 474,
+      "source_hash": "85b62a96021c26e827ba8609a19868c2685105e049248ae5d42b9953677630bd",
+      "size_bytes": 671,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": []
+    },
+    {
+      "document_id": "path-references-ui-paragraph-landing-v2-rollback",
+      "path": "references/ui/paragraph-landing-v2/ROLLBACK.md",
+      "title": "ROLLBACK",
+      "source_type": "file_md",
+      "authority_level": "unknown",
+      "source_version": "sha256:3781f990b6f70e1c66f814fdbd7cdfa32f1bc69b2ba0b6548496527f435c648c",
+      "status": "review_required",
+      "owner": "references_team",
+      "citation_policy": "citation_requires_review",
+      "public_citation_policy": "internal_only",
+      "layer": "unclassified",
+      "generated_status": "manual_source",
+      "edit_policy": "review_required",
+      "refresh_policy": "review_required",
+      "source_hash": "3781f990b6f70e1c66f814fdbd7cdfa32f1bc69b2ba0b6548496527f435c648c",
+      "size_bytes": 1361,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
