@@ -34,7 +34,7 @@ For a new Golden Exercise route:
 
 Do not treat an exemplar as product-use approval. Exemplars preserve implementation and review evidence; they do not authorize Scale Gate 1, diagnostics, mastery, automatic sequencing, summative use, or target-equivalent completion language.
 
-Formula-token warning: the implemented `1.1.3` source snapshot currently contains two visible `oude Q` formula tokens with different hidden IDs, `oldQden` and `oldQnum`. Future calculation/formula work must use `references/exemplars/a96-answer-form/` for formula-builder policy until that duplicate-token issue is repaired.
+Formula-token boundary: the implemented `1.1.3` source snapshot has local formula-token clarity for its percentage-change task, but it remains a route/workbench exemplar rather than the formula-builder policy exemplar. Future calculation/formula policy work must use `references/exemplars/a96-answer-form/` for reusable-token rules, hidden-token-trap policy, and A96-level formula proof.
 
 ## Current Rollout Position
 

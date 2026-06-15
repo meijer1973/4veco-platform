@@ -50,8 +50,8 @@
         "hidden_token_trap_policy"
       ],
       "limitations": [
-        "The 1.1.3 source snapshot currently contains duplicate visible old Q formula tokens with hidden IDs oldQden and oldQnum.",
-        "Use references/exemplars/a96-answer-form/ for formula-builder policy until the 1.1.3 duplicate-token issue is repaired."
+        "The 1.1.3 source snapshot now has local formula-token clarity for its percentage-change task, but it remains an implemented route exemplar rather than the formula-builder policy exemplar.",
+        "Use references/exemplars/a96-answer-form/ for formula-builder policy, reusable-token rules, hidden-token-trap policy, and A96-level formula proof."
       ],
       "does_not_authorize": [
         "route_migration",

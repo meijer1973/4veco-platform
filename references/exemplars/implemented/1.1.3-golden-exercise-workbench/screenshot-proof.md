@@ -10,22 +10,24 @@ The implemented exemplar contains a committed generated route snapshot:
 references/exemplars/implemented/1.1.3-golden-exercise-workbench/generated-route-snapshot.html
 ```
 
-That snapshot matches the current committed generated lesson route on `4veco-lessen` `origin/main` after the workbench-header label fix. No lesson output was edited for this goal.
+That snapshot matches the generated route produced through the platform deploy
+pipeline during the Golden surface visual revision.
 
 Static route evidence from the snapshot:
 
 ```text
-generated-route-snapshot.html sha256: 8A7003DFDD2821956D8ECFBD9E4F0E160CB7D1763A716D2FC5625E03780576F4
-source-data-snapshot.json sha256: 32844DF1FED311ACDFE038F2281243543691CD09840C824318A8438180771586
+generated-route-snapshot.html sha256: 27D7C22C680410C5CEFA831732513B0AE675CD15B5DABF5B976F120DA6707118
+source-data-snapshot.json sha256: B6E049B17C117D825291FE83C218F12CB0CFBF4FCBD3DA718D2C6031B71FCCC1
 ```
 
-Formula-token scope is intentionally excluded from this proof. The current `1.1.3` source snapshot contains duplicate visible `oude Q` tokens with hidden IDs `oldQden` and `oldQnum`; use A96 for formula-token policy until that is repaired.
+The current `1.1.3` source snapshot has local formula-token clarity for this
+route. Formula-token policy is still delegated to A96 for reusable-token rules,
+hidden-token-trap policy, and A96-level proof.
 
 ## Screenshot Capture Status
 
-Live browser screenshot capture was attempted on 2026-06-09 through the in-app browser. Direct `file://` navigation to the local generated lesson route was blocked by the browser URL policy. This proof file therefore records the required screenshot states and the current static snapshot evidence, but it does not claim that fresh PNG screenshots were captured in this goal.
-
-Do not work around the browser URL policy by using an alternate browser surface just to produce screenshots.
+Fresh screenshot proof for the three governed Golden surfaces is recorded in
+`reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/`.
 
 ## Required Screenshot States For Future Capture
 

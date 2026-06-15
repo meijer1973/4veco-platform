@@ -233,7 +233,7 @@ function checkSource() {
     interval: '150-300',
     oldValue: '300',
     newValue: '150',
-    formula: { tokens: correctFormula.slice(0, -1).concat(['newQden']) },
+    formula: { tokens: correctFormula.slice(0, -1).concat(['newQBase']) },
     work: 'van EUR 1,50 naar EUR 3,00: oude hoeveelheid 300, nieuwe hoeveelheid 150',
     finalAnswer: '-50%',
     conclusion: 'drop50',
@@ -260,7 +260,7 @@ function checkGeneratedOutput() {
   assert(shared.includes('golden_exercise_workbench'), 'generated shared data missing golden exercise framework metadata');
   assert(shared.includes('percentage_claim_control'), 'generated shared data missing structured percentage claim mode');
   assert(!shared.includes('lineShapeOptions'), 'generated shared data must not expose graph line-shape choices');
-  assert(shared.includes('newQden'), 'generated shared data missing embedded formula distractor');
+  assert(shared.includes('newQBase'), 'generated shared data missing embedded formula distractor');
   assert(!/"family":\s*"formula_builder"/.test(shared), 'generated shared data must not split the formula into a separate task');
   assert(shared.includes('magnetic_table_point'), 'generated shared data missing magnetic snapping metadata');
   assert(!shared.includes('ctx-stationbroodjes-formula'), 'generated shared data must not include formula context');
