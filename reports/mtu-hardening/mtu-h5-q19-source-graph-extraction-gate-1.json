@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-Q19-source-graph-extraction-gate-1",
+  "gate_id": "GATE-MTU-H5-Q19-source-graph-extraction-gate-1",
+  "created": "2026-06-15",
+  "status": "q19_source_graph_extraction_gate_ready_for_human_review_no_execution_authorized",
+  "purpose": "Prepare the non-mutating q19 source/graph extraction gate approved by PR #56. This packet defines the evidence, fields, negative guards, and authority boundary a later human review must accept before any q19 source-annex or graph-object extraction execution can be considered.",
+  "product_end_state": "MTU-H5 may only move toward closure after q19, q27, and q15 validator blockers are resolved with reviewed evidence. This packet does not claim MTU-H5 closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, or student/product use.",
+  "original_sprint_gate_spec": {
+    "source_gate": "GATE-MTU-H5-Q19-repair-gate-1",
+    "source_packet": "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json",
+    "approved_next_gate": "MTU-H5-Q19-SOURCE-GRAPH-EXTRACTION-GATE-1",
+    "approved_decision": "q19 must proceed next to a source/graph extraction gate before any q19 fixture, mapper, candidate, protected-reference, or product-route repair."
+  },
+  "start_commit": "cee6bb40adf2b855854b28245ca49cc6543fc6cb",
+  "source_pr56_merge_commit": "cee6bb40adf2b855854b28245ca49cc6543fc6cb",
+  "start_branch": "codex/mtu-h5-q19-source-graph-extraction-gate-1-20260615",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.md",
+    "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean_after_q3_fixture_execution"
+    },
+    "q19": {
+      "failed": 3,
+      "review_required": 20,
+      "status": "graph_draw_source_answer_form_procedure_blocker",
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "carried_blocker"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "carried_blocker"
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 6,
+      "review_required": 29,
+      "blocked": 0
+    }
+  },
+  "non_negotiable_requirements": [
+    "No source-annex extraction execution is authorized by this gate.",
+    "No graph-object extraction execution is authorized by this gate.",
+    "No q19 fixture mutation, mapper repair, checker repair that changes q19 outcome, candidate storage, candidate writes, protected-reference mutation, machine-reference mutation, external-source mutation, authored target-exercise mutation, MTU mutation, operation-registry mutation, answer-skill mutation, lesson output, PV, diagnostics, adaptive routing, mastery, sequencing, product-route readiness claim, or student/product use is authorized.",
+    "q19 must remain 3 failed / 20 review_required until reviewed source/graph and answer-form evidence exists.",
+    "A45 must remain forbidden as primary q19 support.",
+    "The future extraction surface must expose the q19 source figure, uitwerkbijlage, three graph objects, and all required fields from the q19 extraction contract or keep blocking gaps visible.",
+    "The official aggregate-supply alternative for q19-step-2 and q19-step-3 must remain visible alongside the primary rightward demand-shift route."
+  ],
+  "q19_extraction_scope": {
+    "gate_type": "non_mutating_source_graph_extraction_review_gate",
+    "execution_authorized_by_this_packet": false,
+    "storage_path_under_review": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "storage_status_required_now": "future_storage_not_created",
+    "future_storage_must_remain_absent_now": true,
+    "source_exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "source_materials_to_review": [
+      {
+        "extraction_id": "EX_SRC_Q19_SOURCE_FIGURE",
+        "source_material_id": "figuur-1-factoren-curacao-arubaanse-economie",
+        "material_kind": "source_annex",
+        "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=figuur-1",
+        "current_status": "partial_with_blocking_gap",
+        "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"]
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_UITWERKBIJLAGE",
+        "source_material_id": "uitwerkbijlage-vraag-19",
+        "material_kind": "worksheet",
+        "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+        "current_status": "partial_with_blocking_gap",
+        "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"]
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+        "source_material_id": "q19-curacao-labor-market-graph",
+        "material_kind": "graph_object",
+        "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "current_status": "partial_with_blocking_gap",
+        "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"]
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+        "source_material_id": "q19-curacao-goods-market-graph",
+        "material_kind": "graph_object",
+        "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "current_status": "partial_with_blocking_gap",
+        "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"]
+      },
+      {
+        "extraction_id": "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+        "source_material_id": "q19-aruba-goods-market-graph",
+        "material_kind": "graph_object",
+        "locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+        "current_status": "partial_with_blocking_gap",
+        "blocking_gap_ids": ["q19-source-annex-gap", "q19-graph-object-gap"]
+      }
+    ],
+    "required_graph_fields": [
+      "source_material_id",
+      "source_page_or_locator",
+      "graph_type",
+      "axis_labels",
+      "axis_units",
+      "scale_or_tick_marks",
+      "curve_or_series_labels",
+      "coordinates_or_reconstructable_geometry",
+      "legend_mapping",
+      "student_action_regions",
+      "extraction_status",
+      "review_state",
+      "blocking_gap_ids"
+    ],
+    "required_source_annex_fields": [
+      "source_material_id",
+      "annex_type",
+      "source_page_or_locator",
+      "prompt_reference",
+      "worksheet_regions",
+      "required_student_marks",
+      "extraction_status",
+      "review_state",
+      "blocking_gap_ids"
+    ],
+    "future_human_review_questions": [
+      "Can the source figure and worksheet be reconstructed with enough geometry to verify the answer task?",
+      "Can the three graph objects expose axes, labels, curve roles, geometry or reviewed limitations, and student-action regions?",
+      "If reconstruction remains incomplete, are the limitations explicit enough to keep q19 blocked rather than silently closing it?",
+      "Does the graph/draw/teken answer-form gap remain visible until separate reviewed coverage exists?"
+    ]
+  },
+  "official_correction_model_caveats": {
+    "q19_steps_2_3_accepted_alternative": "The official correction model accepts correct aggregate-supply shifts for the second and third elements as an alternative to the primary demand-shift route.",
+    "must_preserve_in_future_extraction_gate": true,
+    "applies_to_operation_ids": ["q19-step-2", "q19-step-3"]
+  },
+  "operation_answer_form_hooks": [
+    {
+      "operation_id": "q19-step-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "source_graph_dependency": "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+      "required_student_mark": "rightward demand shift plus wage direction",
+      "expected_required_mtu_ids": ["A42", "D10", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "route_tags": ["graph_shift", "source_reading", "answer_form", "procedure", "non_calculus"]
+    },
+    {
+      "operation_id": "q19-step-2",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises; the official correction model also accepts a correct aggregate-supply shift alternative for this element.",
+      "source_graph_dependency": "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+      "required_student_mark": "rightward demand shift plus Curacao inflation direction, or correct aggregate-supply shift alternative plus equivalent price-level direction",
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model.",
+      "expected_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "route_tags": ["graph_shift", "linked_market_reasoning", "source_reading", "answer_form", "procedure", "non_calculus"]
+    },
+    {
+      "operation_id": "q19-step-3",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises; the official correction model also accepts a correct aggregate-supply shift alternative for this element.",
+      "source_graph_dependency": "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+      "required_student_mark": "rightward demand shift plus Aruba inflation direction, or correct aggregate-supply shift alternative plus equivalent price-level direction",
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model.",
+      "expected_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "route_tags": ["graph_shift", "linked_market_reasoning", "source_reading", "answer_form", "procedure", "non_calculus"]
+    }
+  ],
+  "answer_form_and_misconception_evidence": {
+    "question_word": "teken",
+    "expected_answer_form_status": "missing_reviewed_equivalent",
+    "expected_answer_form_or_equivalent": "graph/draw/teken answer-form MTU or reviewed equivalent for drawn market-shift marks plus price or wage direction",
+    "not_covered_by": ["A42", "D10", "D13", "A81"],
+    "misconception_evidence": [
+      "source_market_shift_without_price_or_wage_direction",
+      "linked_market_shift_without_inflation_direction",
+      "foreign_spillover_without_aruba_inflation_direction"
+    ],
+    "scale_factor_evidence": {
+      "status": "not_applicable",
+      "rationale": "The official q19 answer model has drawn market-shift elements and price/wage directions, not per-unit scaling or incidence/pass-through calculation."
+    },
+    "procedure_expectation": {
+      "status": "procedure_review_required",
+      "unit_ids": ["A42", "D10", "D13", "A81"],
+      "rationale": "Apply/analyze procedures are present but semantic fit remains unapproved until the source figure, worksheet, and graph objects are reconstructable or explicitly accepted with visible limitations."
+    }
+  },
+  "negative_regression_requirements": [
+    {
+      "guard_id": "q19-source-graph-false-reconstructable-negative-guard",
+      "accepted_negative_fixture_type": "temporary_dry_run_source_extraction_document",
+      "expected_behavior": "If any q19 graph or source-annex overlay is marked reconstructable while q19-source-annex-gap or q19-graph-object-gap remains present, the source extraction validator must reject it.",
+      "must_preserve": [
+        "dry-run source extraction remains partial_with_blocking_gap",
+        "q19-source-annex-gap remains visible",
+        "q19-graph-object-gap remains visible",
+        "future source-annex extraction storage remains absent"
+      ]
+    },
+    {
+      "guard_id": "q19-a45-primary-support-negative-guard",
+      "accepted_negative_fixture_type": "inherited_temporary_a45_reintroduction_fixture",
+      "expected_behavior": "If A45 is reintroduced as q19 mapped support, the MTU-H5 validator must emit q19 ASSERT-OVER-TRIGGER failures without mutating the real fixture.",
+      "must_preserve": [
+        "A45 forbidden for every q19 operation",
+        "full_graph_construction, calculus_route, and function_construction remain forbidden route tags"
+      ]
+    },
+    {
+      "guard_id": "solo-q1-q3-original-defect-class-guard",
+      "accepted_negative_fixture_type": "live_h5_global_negative_fixture",
+      "expected_behavior": "The existing Solo q1-q3 function-construction over-trigger negative fixture remains passed as expected.",
+      "must_preserve": [
+        "MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED remains in the validator passed bucket"
+      ]
+    }
+  ],
+  "gate_decision": {
+    "requested_human_decision": "Approve, revise, or reject the q19 source/graph extraction gate as the correct non-mutating precondition before any future extraction execution or q19 fixture/mapper repair.",
+    "valid_decisions": [
+      "approve_non_mutating_source_graph_extraction_gate",
+      "revise_source_graph_extraction_gate_before_execution_planning",
+      "reject_source_graph_extraction_gate"
+    ],
+    "approval_would_authorize": [
+      "Use this packet as the reviewed evidence base for a later exact q19 source/graph extraction execution gate proposal."
+    ],
+    "approval_would_not_authorize": [
+      "source-annex extraction execution",
+      "graph-object extraction execution",
+      "q19 fixture mutation",
+      "mapper repair",
+      "candidate storage creation",
+      "candidate writes",
+      "protected or machine reference mutation",
+      "MTU or answer-skill mutation",
+      "lesson output",
+      "PV, diagnostics, adaptive routing, mastery, sequencing",
+      "product-route readiness or student/product use"
+    ]
+  },
+  "carried_issues": [
+    {
+      "issue_id": "q19-answer-form-gap",
+      "classification": "blocks",
+      "blocks": ["MTU-H5 closure", "q19 fixture repair", "product-route readiness"],
+      "does_not_block": ["this non-mutating source/graph extraction gate review"],
+      "proof_required_to_close": "A graph/draw/teken answer-form MTU or reviewed equivalent exists and q19 answer-form missing assertions clear without overclaiming A42/D10/D13/A81."
+    },
+    {
+      "issue_id": "q19-source-annex-gap",
+      "classification": "blocks",
+      "blocks": ["q19 repair", "source/graph extraction execution closure", "lesson or product use"],
+      "does_not_block": ["human review of this non-mutating extraction gate"],
+      "proof_required_to_close": "Reviewed source figure and worksheet reconstruction exists, or limitations are explicitly accepted while the validator keeps the gap visible."
+    },
+    {
+      "issue_id": "q19-graph-object-gap",
+      "classification": "blocks",
+      "blocks": ["q19 repair", "graph/draw answer-form closure", "PV/product routes"],
+      "does_not_block": ["this review-only gate packet"],
+      "proof_required_to_close": "All three graph objects expose axes, labels, curve roles, geometry or reviewed limitations, legend mapping, and student-action regions."
+    },
+    {
+      "issue_id": "q27-and-q15-carried-blockers",
+      "classification": "carried_blocks",
+      "blocks": ["MTU-H5 full closure", "product-route readiness"],
+      "does_not_block": ["q19 source/graph extraction gate review"],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their failed/review_required validator buckets."
+    }
+  ],
+  "validation_commands": [
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-repair-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "human_review_packet": {
+    "gate_id": "GATE-MTU-H5-Q19-source-graph-extraction-gate-1",
+    "gate_directory": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/",
+    "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.md",
+    "review_packet_json": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.json",
+    "bundle_urls": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/bundle-urls.md",
+    "decision_needed": "Approve, revise, or reject this non-mutating q19 source/graph extraction gate. Approval must not be interpreted as execution authority."
+  },
+  "review_team_threshold": {
+    "required_agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_human_source_graph_extraction_gate_review",
+    "why_not_complete": "This packet prepares the q19 source/graph extraction gate for review. It does not execute extraction, write candidate storage, mutate fixtures or references, repair mappers, change MTUs, produce lessons, claim product readiness, or authorize student/product use."
+  }
+}
