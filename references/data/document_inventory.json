@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-15T11:31:32.536Z",
+  "generated_at": "2026-06-15T14:48:38.587Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -10,7 +10,7 @@
   ],
   "note": "Inventory covers reference sources, generated reports, and reference/report tooling. Text file size and sha256 use LF-normalized bytes for OS-stable output.",
   "summary": {
-    "file_count": 3631,
+    "file_count": 3638,
     "by_layer": {
       "reference_tooling": 183,
       "report_tooling": 14,
@@ -24,7 +24,7 @@
       "planning": 1,
       "schema_contract": 29,
       "governance_policy": 1,
-      "generated_report": 2825
+      "generated_report": 2832
     },
     "by_edit_policy": {
       "code_review": 226,
@@ -35,7 +35,7 @@
       "external_refresh_only": 32,
       "cli_only": 5,
       "versioned_human_reviewed_edit": 7,
-      "generated_by_script": 2825
+      "generated_by_script": 2832
     }
   },
   "files": [
@@ -5290,7 +5290,7 @@
       "file_name": "chunk_index.jsonl",
       "extension": "jsonl",
       "size_bytes": 4112677,
-      "sha256": "dc79d728da0682a269038d0bd36a29e9437f0fd4cd38d626043a5b6437700ce2",
+      "sha256": "71f823b2737979208b6530fa13f4982f19396afd58bc08e37dfdbe1e2f51f58e",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -5390,7 +5390,7 @@
       "file_name": "source-document-registry.json",
       "extension": "json",
       "size_bytes": 899269,
-      "sha256": "5953d69bf07b5810916103698cf352d94a4405ab41ddb58d846db10ed6beedfe",
+      "sha256": "7d174816134e56e29bba2b47e5eaf0ceb64b5633c126d83835bfd82a083cb33b",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
@@ -16681,7 +16681,7 @@
       "file_name": "github-agent-index-lessen.json",
       "extension": "json",
       "size_bytes": 337566,
-      "sha256": "31436d0eaf0d74565632a0977cc1af6a9f131bf767be91251b8dd076156d2a65",
+      "sha256": "902a627c05eff240dca0a09220649617007a4e3f24f4d97a099830ec18df2028",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -16701,7 +16701,7 @@
       "file_name": "github-agent-index-lessen.md",
       "extension": "md",
       "size_bytes": 315637,
-      "sha256": "1ff920de774338affa7ea8330a95014bca2efbd7108e17fa5ba5f32761635f17",
+      "sha256": "20c3c19ac63bf29dedad85e367ff431bc123b704d2ce1963ec966d26e0ce6a97",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -16720,8 +16720,8 @@
       "path": "reports/github-agent-index-platform.json",
       "file_name": "github-agent-index-platform.json",
       "extension": "json",
-      "size_bytes": 336631,
-      "sha256": "c7dae6602b41f257cd568c9b362b656c910aec2fd33db55066227be200499b76",
+      "size_bytes": 338092,
+      "sha256": "f5c491bb3b9d3b6d35bebfdc46901420f6f2db0aab354cc70c961473356d7140",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -16740,8 +16740,8 @@
       "path": "reports/github-agent-index-platform.md",
       "file_name": "github-agent-index-platform.md",
       "extension": "md",
-      "size_bytes": 301816,
-      "sha256": "dfc0cc0c77972f96376e303e6d45af11d8cfe385a09c193c505f172e6216ba94",
+      "size_bytes": 303137,
+      "sha256": "51ee15cb0807581fe3bee31026a2db4485b1bcb2710ae6e8be81024a33652f7d",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -16977,6 +16977,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json",
+      "file_name": "dutch-report-only-generator-diagnostic-planning.json",
+      "extension": "json",
+      "size_bytes": 16178,
+      "sha256": "d009bacef1f04f2cc6466a13e32bca2b01c31e47f1263d7d3467861b7301a7f4",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md",
+      "file_name": "dutch-report-only-generator-diagnostic-planning.md",
+      "extension": "md",
+      "size_bytes": 15261,
+      "sha256": "d90bb7cba92ebfc1d23cc478f95919224d9797a24c46b65f8333c2efb96d9c49",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json",
       "file_name": "inspect-7-book-1-1-evidence-pack.json",
       "extension": "json",
@@ -17020,8 +17060,8 @@
       "path": "reports/internal-dashboard/dashboard-data.json",
       "file_name": "dashboard-data.json",
       "extension": "json",
-      "size_bytes": 462336,
-      "sha256": "9c705318b3304fd2472918163ed844f66952cdbf02a9b89ead262a96ed4fdfe5",
+      "size_bytes": 462337,
+      "sha256": "97e145dd80fc4854fb3848ff531be50d32ecf8e0748eff3e2156102088906210",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -17040,8 +17080,8 @@
       "path": "reports/internal-dashboard/index.html",
       "file_name": "index.html",
       "extension": "html",
-      "size_bytes": 220527,
-      "sha256": "5a543b745c9fd6a9b5d922f66231fdad6a1c310abfc2ee1767d39c9104151918",
+      "size_bytes": 220528,
+      "sha256": "4689f75a2aaeb76b62fa17dca157b81bb02487ec3f01e19741923aa783758d48",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "dashboard_html",
@@ -17321,7 +17361,7 @@
       "file_name": "checksurface-policy-regression1-proof.json",
       "extension": "json",
       "size_bytes": 3290,
-      "sha256": "b8ef435be9ea586de1b26716d1d30a8a265fedf01c3e16eedf21644dad38585c",
+      "sha256": "a2ed0724117420bbe0d318603bd0e7b3e872df75ef3a04e4be930a18a6fef1bb",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -18421,7 +18461,7 @@
       "file_name": "source-document-registry.json",
       "extension": "json",
       "size_bytes": 899024,
-      "sha256": "42c879346e365b979c9bc566ed45594c421beaac4f8423c57bee8102ff14421c",
+      "sha256": "23462da6b46e7b5f24ac0e0bed5ffcf91fc11ab62d3341860efd935c7ad731dd",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
@@ -19601,7 +19641,7 @@
       "file_name": "source-document-registry.md",
       "extension": "md",
       "size_bytes": 8149,
-      "sha256": "d59b8f8c3c06d7d62f1c14f40ed71acce1577985daa20f9add507bd1baa9dc93",
+      "sha256": "bd994cf6725a251bffb847db148d244a02d90ff3706addefc9582e6fc499c021",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
@@ -21857,6 +21897,46 @@
       "self_generated_inventory_file": false
     },
     {
+      "path": "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-quality-log.md",
+      "file_name": "B1-GRAPH-EVIDENCE-113-CLOSURE-1-quality-log.md",
+      "extension": "md",
+      "size_bytes": 1727,
+      "sha256": "dfe4fde4cac516a45c3d1e0cec6c37b8b7d8212bb43a40c329e1ca636d47abf0",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-review-packet.md",
+      "file_name": "B1-GRAPH-EVIDENCE-113-CLOSURE-1-review-packet.md",
+      "extension": "md",
+      "size_bytes": 7903,
+      "sha256": "7c75efec72f3be22baeded38c8a77dd738157c14d84cb17eba6c2dd214c93989",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
       "path": "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
       "file_name": "B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md",
       "extension": "md",
@@ -22605,6 +22685,26 @@
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-1/review-packet.json",
+      "file_name": "review-packet.json",
+      "extension": "json",
+      "size_bytes": 9361,
+      "sha256": "3e375b528f1fac062fcb84416a099a336b8a6c42fec2775b729b17e48423ca8e",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_json",
       "generated_status": "generated_projection",
       "edit_policy": "generated_by_script",
       "owner": "platform_team",
@@ -35122,6 +35222,46 @@
       "extension": "md",
       "size_bytes": 6492,
       "sha256": "587673bcee90a310ac593dee64c1c3337c0b3e32f6fc87f3246135c06d5e7822",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-plan.md",
+      "file_name": "B1-GRAPH-EVIDENCE-113-CLOSURE-1-plan.md",
+      "extension": "md",
+      "size_bytes": 2693,
+      "sha256": "c1dd0371fb1bb7f4808392e0e5df66adab4c08be93989bb26b56038fe9ae20d9",
+      "layer": "generated_report",
+      "authority_level": "generated_report",
+      "source_type": "report_md",
+      "generated_status": "generated_projection",
+      "edit_policy": "generated_by_script",
+      "owner": "platform_team",
+      "refresh_policy": "regenerate",
+      "downstream_dependencies": [
+        "dashboards",
+        "planning",
+        "qc-review"
+      ],
+      "self_generated_inventory_file": false
+    },
+    {
+      "path": "reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-result.md",
+      "file_name": "B1-GRAPH-EVIDENCE-113-CLOSURE-1-result.md",
+      "extension": "md",
+      "size_bytes": 3199,
+      "sha256": "7b2dd68c4ecb220a4db5d991370ec948af51fbee54b51bac5806ba24fec50711",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_md",
