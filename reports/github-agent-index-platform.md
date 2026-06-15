@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-15T06:56:11.282Z
+Generated: 2026-06-15T07:16:25.560Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4523
+Files indexed: 4531
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1742,7 +1742,7 @@ Count: 607
 
 ## reports
 
-Count: 2791
+Count: 2793
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1795,6 +1795,8 @@ Count: 2791
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.md
 - reports/inspection-standards/dutch-evidence-scale-readiness.json
 - reports/inspection-standards/dutch-evidence-scale-readiness.md
+- reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json
+- reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
 - reports/internal-dashboard/dashboard-data.json
@@ -4556,7 +4558,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 472
+Count: 478
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4571,6 +4573,12 @@ Count: 472
 - archive/sprints/INSPECT-1/INSPECT-1-planning-review.md
 - archive/sprints/INSPECT-1/INSPECT-1-readiness-closure-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-sprint-plan.md
+- archive/sprints/INSPECT-10/INSPECT-10-correction-log.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-assignment.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-round1.md
+- archive/sprints/INSPECT-10/INSPECT-10-lead-review-round2.md
+- archive/sprints/INSPECT-10/INSPECT-10-planning-review.md
+- archive/sprints/INSPECT-10/INSPECT-10-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
