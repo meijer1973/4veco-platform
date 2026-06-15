@@ -18,7 +18,7 @@ references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-sna
 
 ```text
 generated-route-snapshot.html sha256: 27D7C22C680410C5CEFA831732513B0AE675CD15B5DABF5B976F120DA6707118
-source-data-snapshot.json sha256: 32844DF1FED311ACDFE038F2281243543691CD09840C824318A8438180771586
+source-data-snapshot.json sha256: B6E049B17C117D825291FE83C218F12CB0CFBF4FCBD3DA718D2C6031B71FCCC1
 ```
 
 ## Positive Golden Evidence
