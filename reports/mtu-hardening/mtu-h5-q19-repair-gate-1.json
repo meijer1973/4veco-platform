@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-Q19-repair-gate-1",
+  "created": "2026-06-12",
+  "status": "q19_repair_gate_ready_for_human_review_no_execution_authorized",
+  "purpose": "Prepare a non-mutating q19 repair gate after PR #51 refreshed the post-q3 diagnostic report. This packet decides the exact next write surface needed before q19 repair can execute.",
+  "index_artifact_decision": "reports/github-agent-index-platform.* was regenerated because this sprint adds q19 repair-gate artifacts that future agents must discover. The generated platform index also includes pre-existing current-main inventory catch-up entries from other merged work, including GATE-CHECK-SURFACE-EXCELLENT-1 gate-closure files; those entries are not substantive scope in this q19 repair-gate PR. reports/github-agent-index-lessen.* generated churn was inspected and excluded.",
+  "start_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+  "start_branch": "codex/mtu-h5-q19-repair-gate-1-20260612",
+  "source_pr51_merge_commit": "1069f64d2314d073e9f4015ed08ffabb87e9b3e6",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.md",
+    "reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/review-gates/GATE-MTU-H5-RP003-RP004-q19-planning-packet/gate-closure.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json#q19",
+    "reports/review-gates/GATE-EX5-operation-answer-skill-contract/gate-closure.json#q19",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean_after_q3_fixture_execution"
+    },
+    "q19": {
+      "failed": 3,
+      "review_required": 20,
+      "status": "graph_draw_source_answer_form_procedure_blocker",
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "carried_blocker"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "carried_blocker"
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 6,
+      "review_required": 29,
+      "blocked": 0
+    }
+  },
+  "q19_live_failed_assertion_ids": [
+    "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING",
+    "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-ANSWER-FORM-MISSING",
+    "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-ANSWER-FORM-MISSING"
+  ],
+  "q19_live_review_markers": [
+    "q19-source-annex-gap remains blocking",
+    "q19-graph-object-gap remains blocking",
+    "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
+    "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+    "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+  ],
+  "operation_decomposition": [
+    {
+      "operation_id": "q19-step-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "expected_required_mtu_ids": ["A42", "D10", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "route_tags": ["graph_shift", "source_reading", "answer_form", "procedure", "non_calculus"]
+    },
+    {
+      "operation_id": "q19-step-2",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises.",
+      "expected_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "route_tags": ["graph_shift", "linked_market_reasoning", "source_reading", "answer_form", "procedure", "non_calculus"]
+    },
+    {
+      "operation_id": "q19-step-3",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises.",
+      "expected_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "expected_missing_answer_form_candidate": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "route_tags": ["graph_shift", "linked_market_reasoning", "source_reading", "answer_form", "procedure", "non_calculus"]
+    }
+  ],
+  "answer_form_and_misconception_evidence": {
+    "question_word": "teken",
+    "expected_answer_form_status": "missing_reviewed_equivalent",
+    "expected_answer_form_or_equivalent": "graph/draw/teken answer-form MTU or reviewed equivalent for drawn market-shift marks plus price or wage direction",
+    "not_covered_by": ["A42", "D10", "D13", "A81"],
+    "misconception_evidence": [
+      "source_market_shift_without_price_or_wage_direction",
+      "linked_market_shift_without_inflation_direction",
+      "foreign_spillover_without_aruba_inflation_direction"
+    ],
+    "scale_factor_evidence": {
+      "status": "not_applicable",
+      "rationale": "The official q19 answer model has drawn market-shift elements and price/wage directions, not per-unit scaling or incidence/pass-through calculation."
+    },
+    "procedure_expectation": {
+      "status": "procedure_review_required",
+      "unit_ids": ["A42", "D10", "D13", "A81"],
+      "rationale": "Apply/analyze procedures are present but semantic fit remains unapproved until the source figure, worksheet, and graph objects are reconstructable or explicitly accepted with visible limitations."
+    }
+  },
+  "write_surface_decision": {
+    "decision_status": "source_graph_extraction_gate_first_no_mutation_authorized",
+    "recommended_next_gate": "MTU-H5-Q19-SOURCE-GRAPH-EXTRACTION-GATE-1",
+    "recommended_next_write_surface_type": "source_annex_and_graph_object_extraction_gate_packet",
+    "recommended_next_write_surface_paths": [
+      "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+      "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.md",
+      "build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.json",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/bundle-urls.md"
+    ],
+    "fixture_only_repair_possible_now": false,
+    "fixture_only_rationale": "A fixture-only q19 repair would hide the unresolved source-annex, graph-object, and graph/draw/teken answer-form gaps. q19 cannot be made current by reviewed-equivalent fixture edits until source/graph evidence and answer-form coverage are separately reviewed.",
+    "source_annex_extraction_needed_before_fixture_repair": true,
+    "graph_object_extraction_needed_before_fixture_repair": true,
+    "graph_draw_teken_answer_form_required": true,
+    "a45_overtrigger_guard_required": true,
+    "future_mapper_or_checker_repair_allowed_now": false,
+    "future_fixture_mutation_allowed_now": false,
+    "future_candidate_storage_allowed_now": false,
+    "future_protected_reference_mutation_allowed_now": false
+  },
+  "answers_to_gate_questions": [
+    {
+      "question_id": 1,
+      "question": "Which current q19 failed assertions remain?",
+      "answer": "The three q19 answer-form failures remain: q19-step-1, q19-step-2, and q19-step-3 each emit ASSERT-ANSWER-FORM-MISSING for the instruction word teken."
+    },
+    {
+      "question_id": 2,
+      "question": "Which q19 review_required hooks remain?",
+      "answer": "Twenty q19 review_required hooks remain: A42/D10/A81 procedure review on step 1; A42/D10/D13/A81 procedure review on steps 2 and 3; q19-source-annex-gap, q19-graph-object-gap, graph/draw/teken answer-form need, chained multi-market reasoning review, and third graph-shift source/graph reconstruction review."
+    },
+    {
+      "question_id": 3,
+      "question": "Is q19 repair possible as fixture-only reviewed-equivalent evidence?",
+      "answer": "No. Fixture-only repair is not acceptable now because q19 still lacks reviewed source-annex reconstruction, graph-object reconstruction, and graph/draw/teken answer-form coverage. A fixture-only edit would risk hiding the diagnostic gaps."
+    },
+    {
+      "question_id": 4,
+      "question": "Does q19 first need source-annex extraction?",
+      "answer": "Yes. A later source-annex extraction gate must establish or explicitly reject the reconstructability of the q19 source figure, worksheet, and student-action regions before q19 can be repaired."
+    },
+    {
+      "question_id": 5,
+      "question": "Does q19 need graph-object extraction before fixture repair?",
+      "answer": "Yes. The three market diagrams need reviewed graph-object evidence for axes, labels, curve roles, geometry or visible limitations, and expected student marks before q19 can leave review_required."
+    },
+    {
+      "question_id": 6,
+      "question": "Is a graph/draw/teken answer-form MTU or reviewed equivalent required?",
+      "answer": "Yes. The required answer form is a drawn market-shift mark plus price or wage direction. A42, D10, D13, and A81 do not cover this answer form by themselves."
+    },
+    {
+      "question_id": 7,
+      "question": "Is A45 an over-trigger that must stay forbidden?",
+      "answer": "Yes. A45 is weak prerequisite background only. It must remain forbidden as primary q19 support because q19 is not table-to-P-Q graph construction."
+    },
+    {
+      "question_id": 8,
+      "question": "What negative guard proves q19 does not regress into full graph construction or function-construction over-trigger?",
+      "answer": "The current fixture keeps full_graph_construction, calculus_route, and function_construction forbidden for all q19 operations. The checker also creates a temporary fixture that reintroduces A45 and requires q19-step-1, q19-step-2, and q19-step-3 ASSERT-OVER-TRIGGER failures without mutating the real fixture."
+    },
+    {
+      "question_id": 9,
+      "question": "What exact write surface is proposed, if any?",
+      "answer": "No execution write surface is authorized by this packet. The next proposed gate surface is a source/graph extraction gate packet and checker, not the H5 fixture, not protected references, not candidate storage, and not product routes."
+    },
+    {
+      "question_id": 10,
+      "question": "What remains blocked after the q19 lane?",
+      "answer": "q19 remains blocked for MTU-H5 closure, product-route readiness, diagnostics, PV, lesson output, and student/product use. q27 and q15 also remain carried blockers."
+    }
+  ],
+  "negative_regression_requirement": {
+    "guard_id": "q19-a45-and-forbidden-route-regression-guard",
+    "accepted_negative_fixture_type": "temporary_a45_reintroduction_fixture_plus_live_q19_answer_form_assertions",
+    "temp_fixture_expected_failed_assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-OVER-TRIGGER",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-OVER-TRIGGER",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-OVER-TRIGGER"
+    ],
+    "must_preserve": [
+      "expected_forbidden_mtu_ids includes A45 for every q19 operation",
+      "expected_forbidden_route_tags includes full_graph_construction, calculus_route, and function_construction for every q19 operation",
+      "missing_answer_form_expected remains true until reviewed graph/draw coverage exists",
+      "q19-source-annex-gap and q19-graph-object-gap remain visible until separately reviewed"
+    ]
+  },
+  "future_proof_required_to_close_q19": [
+    "Source figure and worksheet reconstruction evidence exists or limitations are explicitly accepted.",
+    "Graph objects expose axes, labels, curve roles, geometry or reviewed limitations, legend mapping, and student-action regions.",
+    "A graph/draw/teken answer-form MTU or reviewed equivalent exists.",
+    "A42, D10, D13, and A81 procedure semantic fit is accepted or routed to a later MTU proposal.",
+    "A45 remains weak support only and temp A45 reintroduction still fails the over-trigger guard.",
+    "q19 failed and review_required validator buckets clear only after the above evidence is present."
+  ],
+  "validation_commands": [
+    "node build-scripts/references/check-mtu-h5-q19-repair-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "human_review_packet": {
+    "gate_id": "GATE-MTU-H5-Q19-repair-gate-1",
+    "gate_directory": "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/",
+    "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.md",
+    "review_packet_json": "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.json",
+    "bundle_urls": "reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/bundle-urls.md",
+    "decision_needed": "Approve, revise, or reject the q19 decision that source/graph extraction gate work must precede fixture or mapper repair."
+  },
+  "review_team_threshold": {
+    "required_agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_human_repair_gate_review",
+    "why_not_complete": "This packet decides the q19 repair sequence but does not execute source extraction, graph-object extraction, fixture mutation, mapper repair, candidate writes, protected-reference mutation, MTU mutation, lesson output, diagnostics, PV, product-route readiness, or student/product use."
+  }
+}

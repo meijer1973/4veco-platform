@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-14T18:26:55.885Z
+Generated: 2026-06-15T05:41:25.152Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4474
+Files indexed: 4500
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 481
+Count: 484
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -326,6 +326,7 @@ Count: 481
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -463,6 +464,8 @@ Count: 481
 - build-scripts/review-gates/emit-gate-reason-std1-playable-lab.js
 - build-scripts/review-gates/emit-gate-task-family1-gallery.js
 - build-scripts/review-gates/emit-gate-task-family1-playable-lab.js
+- build-scripts/review-gates/review-throughput-fields.js
+- build-scripts/review-gates/review-throughput-fields.test.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
@@ -661,7 +664,7 @@ Count: 42
 
 ## validators
 
-Count: 457
+Count: 458
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -736,6 +739,7 @@ Count: 457
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -1123,7 +1127,7 @@ Count: 457
 
 ## references
 
-Count: 605
+Count: 607
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1495,6 +1499,8 @@ Count: 605
 - references/data/sprints/REF-CT2.result.json
 - references/data/sprints/REVIEW-THROUGHPUT-1.plan.json
 - references/data/sprints/REVIEW-THROUGHPUT-1.result.json
+- references/data/sprints/REVIEW-THROUGHPUT-2.plan.json
+- references/data/sprints/REVIEW-THROUGHPUT-2.result.json
 - references/data/sprints/RX.1-representation-operation-inventory.json
 - references/data/sprints/RX.1.plan.json
 - references/data/sprints/RX.1.result.json
@@ -1733,7 +1739,7 @@ Count: 605
 
 ## reports
 
-Count: 2759
+Count: 2780
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1755,14 +1761,19 @@ Count: 2759
 - reports/fixtures/golden-ticket-layout/golden-ticket-reference.html
 - reports/fixtures/golden-ticket-layout/hybrid-frankenstein-exit-ticket.html
 - reports/fixtures/golden-ticket-layout/legacy-exit-ticket.html
+- reports/fixtures/review-throughput-1/negative-ci-success-no-reviewed-sha.json
 - reports/fixtures/review-throughput-1/negative-diagnostics-authority.json
+- reports/fixtures/review-throughput-1/negative-empty-changed-paths.json
 - reports/fixtures/review-throughput-1/negative-escalation-trigger.json
 - reports/fixtures/review-throughput-1/negative-generated-product-authority.json
+- reports/fixtures/review-throughput-1/negative-lead-review-result-only.json
 - reports/fixtures/review-throughput-1/negative-machine-external-autonomous.json
+- reports/fixtures/review-throughput-1/negative-missing-changed-paths.json
 - reports/fixtures/review-throughput-1/negative-missing-checker-proof.json
 - reports/fixtures/review-throughput-1/negative-missing-ci-proof.json
 - reports/fixtures/review-throughput-1/negative-missing-lead-review.json
 - reports/fixtures/review-throughput-1/negative-protected-reference-autonomous.json
+- reports/fixtures/review-throughput-1/positive-autonomous.changed-paths.txt
 - reports/fixtures/review-throughput-1/positive-autonomous.json
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
@@ -1938,6 +1949,8 @@ Count: 2759
 - reports/mtu-hardening/mtu-h5-next-repair-packet.md
 - reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.json
 - reports/mtu-hardening/mtu-h5-post-q3-evidence-refresh-1.md
+- reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json
+- reports/mtu-hardening/mtu-h5-q19-repair-gate-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -2323,6 +2336,9 @@ Count: 2759
 - reports/review-gates/GATE-MTU-H5-mapping-regression/review-packet.md
 - reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json
 - reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.md
+- reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
@@ -3987,6 +4003,17 @@ Count: 2759
 - reports/sprints/REVIEW-THROUGHPUT-1-plan.md
 - reports/sprints/REVIEW-THROUGHPUT-1-result.md
 - reports/sprints/REVIEW-THROUGHPUT-1-retrospective.md
+- reports/sprints/REVIEW-THROUGHPUT-2-baseline.md
+- reports/sprints/REVIEW-THROUGHPUT-2-ci-decision.md
+- reports/sprints/REVIEW-THROUGHPUT-2-command-log.jsonl
+- reports/sprints/REVIEW-THROUGHPUT-2-command-log.md
+- reports/sprints/REVIEW-THROUGHPUT-2-diff-summary.md
+- reports/sprints/REVIEW-THROUGHPUT-2-lead-review-assignment.md
+- reports/sprints/REVIEW-THROUGHPUT-2-lead-review-corrections.md
+- reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round1.md
+- reports/sprints/REVIEW-THROUGHPUT-2-lead-review-round2.md
+- reports/sprints/REVIEW-THROUGHPUT-2-plan.md
+- reports/sprints/REVIEW-THROUGHPUT-2-result.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-flag-disposition.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-plan.md
 - reports/sprints/ROADMAP-FLAG-CLEANUP-1-result.md
