@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete pending human review
+Roadmap version: `v2.1-inspect-10-diagnostic-planning`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` ready for human review / diagnostic-only generator planning packet complete
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -160,6 +160,7 @@ Closed baseline:
 | `INSPECT-9A` | Chapter 1.2 target and exam-linkage source remediation; updates the authored target registry for `1.2.1`-`1.2.4`, keeps Chapter 1.1 control-only, and leaves target-equivalent plus accessibility/support proof as blockers before pack work. |
 | `INSPECT-9B` | Chapter 1.2 target-equivalent and accessibility/support evidence review; finds useful route-local lesson evidence but no reviewed target-equivalent proof records or complete accessibility/support evidence, so Chapter 1.2 generator work remains blocked pending remediation. |
 | `INSPECT-9C` | Chapter 1.2 proof and support remediation; records route-local proof status for `1.2.1`-`1.2.4`, carries `1.2.2` and `1.2.4` generated-output blockers, records minimum accessibility/support evidence, and recommends only diagnostic-only INSPECT-10 planning after human acceptance. |
+| `INSPECT-10` | Dutch report-only generator diagnostic planning; defines the future diagnostic generator contract, status vocabulary, input eligibility, blocker display rules, and human-review questions. It creates no generator code and no evidence pack. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -457,6 +458,22 @@ basis is ready enough.
 
 Scope: generator/report-only implementation.
 
+Current authority update after INSPECT-9C and INSPECT-10 planning:
+
+The original implementation goal remains blocked. INSPECT-10 currently exists
+only as diagnostic-only generator planning with Chapter 1.2 blockers visible.
+The planning packet is:
+
+```text
+archive/sprints/INSPECT-10/
+reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
+reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json
+```
+
+It defines a future diagnostic generator contract, but it does not implement
+`build-scripts/inspection/build-dutch-evidence-pack.js`, does not generate an
+evidence pack, and does not authorise teacher/school-facing pack work.
+
 Expected outputs:
 
 ```text
@@ -606,13 +623,13 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Human review of INSPECT-9C Chapter 1.2 Proof And Support Remediation
+Human review of INSPECT-10 Dutch Report-Only Generator Diagnostic Planning
 ```
 
-Recommended posture after human acceptance and merge:
+Recommended posture after human acceptance:
 
 ```text
-INSPECT-10 diagnostic-only report-generator planning only
+Later INSPECT-10 follow-up only if diagnostic-only and blocker-visible
 Dutch scope only
 no pack-strength Chapter 1.2 generator work
 no teacher/school-facing evidence-pack generation
@@ -623,12 +640,12 @@ no personal data
 no compliance or approval claims
 ```
 
-The practical product question carried forward from INSPECT-9C is:
+The practical product question carried forward from INSPECT-10 is:
 
-> Which Chapter 1.2 target-finality, integration-target, and exam-code
-> decisions are source-registry-ready and which route-local proof records can
-> support diagnostic reporting, while `1.2.2`, `1.2.4`, accessibility, and
-> support blockers remain visible constraints on any INSPECT-10 work?
+> Is the diagnostic generator contract, status vocabulary, and blocker display
+> model safe enough for a later implementation sprint, or must more Chapter
+> 1.2 generated-output, accessibility, support, or check-surface authority
+> remediation happen first?
 
 ## 9. Explicit Out-Of-Scope Work
 

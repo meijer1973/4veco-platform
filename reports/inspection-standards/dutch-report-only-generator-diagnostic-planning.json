@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "report_id": "dutch-report-only-generator-diagnostic-planning",
+  "sprint_id": "INSPECT-10",
+  "generated_date": "2026-06-15",
+  "status": "diagnostic_only_planning_packet",
+  "diagnostic_only": true,
+  "generator_implemented": false,
+  "evidence_pack_generated": false,
+  "teacher_school_pack_generated": false,
+  "chapter_1_2_pack_ready": false,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "original_sprint_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md#inspect-10---dutch-report-only-generator-first-implementation",
+  "current_controlling_authority": "reports/inspection-standards/chapter-1-2-proof-support-remediation.md#inspect-10-posture",
+  "sprint_plan": "archive/sprints/INSPECT-10/INSPECT-10-sprint-plan.md",
+  "rev_std1_disposition": "reports/sprints/REV-STD-1-flag-disposition.md",
+  "safe_use_note": "Dutch-only product-side planning packet. Not a generator implementation, evidence pack, teacher/school-facing evidence pack, inspection judgement, legal compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, school-SKA claim, dashboard gate, quality-ref integration, Scale Gate integration, product-route adoption gate, diagnostics/mastery/PV gate, or student/product-use authority.",
+  "non_negotiable_requirements": [
+    "Dutch scope only",
+    "Planning packet only",
+    "No generator implementation",
+    "No evidence-pack generation",
+    "No teacher/school-facing evidence-pack generation",
+    "No generated lesson-output mutation",
+    "No source-registry mutation",
+    "No references/machine or references/external mutation",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration",
+    "No product-route adoption, diagnostics, mastery/sequencing, PV, or student/product-use authority",
+    "No personal-data processing",
+    "No compliance, approval, inspection-ready, complete OP0, PTA-validity, summative-validity, classroom-implementation, school-obligation, or school-SKA claim",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state, operational_product_end_state, product_vision"
+    },
+    {
+      "requirement": "Original INSPECT-10 specification cited",
+      "status": "met",
+      "evidence": "original_sprint_spec"
+    },
+    {
+      "requirement": "Post-9C authority limit cited",
+      "status": "met",
+      "evidence": "current_controlling_authority"
+    },
+    {
+      "requirement": "No generator implementation",
+      "status": "met",
+      "evidence": "generator_implemented false"
+    },
+    {
+      "requirement": "No evidence-pack generation",
+      "status": "met",
+      "evidence": "evidence_pack_generated false"
+    },
+    {
+      "requirement": "Chapter 1.2 blockers visible",
+      "status": "met",
+      "evidence": "finding_classification and blocker_carry_ledger"
+    },
+    {
+      "requirement": "REV-STD-1 carry fields present",
+      "status": "met",
+      "evidence": "finding_classification includes blocks, does_not_block, and proof_required_to_close"
+    }
+  ],
+  "executive_decision": {
+    "summary": "INSPECT-10 is not ready for original first implementation. The current packet is diagnostic-only planning for a future report-only generator with blockers visible.",
+    "implementation_allowed_by_this_packet": false,
+    "future_diagnostic_generator_may_be_planned_after_review": true,
+    "pack_strength_chapter_1_2_generator_posture": false,
+    "next_action": "Human review this planning packet before any later implementation plan or implementation sprint."
+  },
+  "diagnostic_status_vocabulary": [
+    {
+      "status": "route_local_diagnostic_evidence",
+      "meaning": "Product evidence exists for scoped diagnostic reporting only.",
+      "forbidden_inference": "Pack-strength, summative, PTA, school evidence, or product-use authority."
+    },
+    {
+      "status": "diagnostic_candidate_with_blocker",
+      "meaning": "Evidence may be listed, but a named blocker must be displayed before the claim.",
+      "forbidden_inference": "Clean proof closure or hidden blocker resolution."
+    },
+    {
+      "status": "blocked_pack_strength",
+      "meaning": "Evidence cannot support pack-strength or teacher/school-facing evidence-pack language.",
+      "forbidden_inference": "Pack-ready language."
+    },
+    {
+      "status": "missing_required_evidence",
+      "meaning": "Required evidence is absent or not reviewed.",
+      "forbidden_inference": "PASS WITH FLAGS or non-blocking carry."
+    },
+    {
+      "status": "not_authorized_for_this_surface",
+      "meaning": "The sprint/gate does not authorize the proposed surface.",
+      "forbidden_inference": "Implementation by implication."
+    },
+    {
+      "status": "school_owned_evidence_needed",
+      "meaning": "Evidence belongs to the school/provider, not 4veco product artifacts.",
+      "forbidden_inference": "School-obligation closure, school SKA, implementation proof."
+    }
+  ],
+  "input_eligibility_decisions": [
+    {
+      "candidate_input": "INSPECT-7 Chapter 1.1 bounded sample",
+      "decision": "historical_control_only",
+      "reason": "Reviewed as bounded and report-only, not broad generator authority."
+    },
+    {
+      "candidate_input": "Chapter 1.2 1.2.1",
+      "decision": "diagnostic_input_only",
+      "reason": "Route-local proof exists, but pack-strength and teacher/school-facing claims remain blocked."
+    },
+    {
+      "candidate_input": "Chapter 1.2 1.2.2",
+      "decision": "diagnostic_candidate_with_blocker",
+      "reason": "Generated-output substitute-mechanism wording blocks clean proof reliance."
+    },
+    {
+      "candidate_input": "Chapter 1.2 1.2.3",
+      "decision": "diagnostic_input_only",
+      "reason": "Route-local proof exists, but pack-strength and support/accessibility claims remain blocked."
+    },
+    {
+      "candidate_input": "Chapter 1.2 1.2.4",
+      "decision": "diagnostic_candidate_with_blockers",
+      "reason": "Frozen-yoghurt wording and orphaned-asset note block clean proof and asset-strength reliance."
+    },
+    {
+      "candidate_input": "Chapter 1.2 accessibility evidence",
+      "decision": "blocked_pack_strength",
+      "reason": "Mobile, contrast/theme, semantic/PDF, and related review proof remain incomplete."
+    },
+    {
+      "candidate_input": "Chapter 1.2 support evidence",
+      "decision": "blocked_pack_strength",
+      "reason": "Hints/repair, companion/advisory route, and next-action proof remain incomplete."
+    },
+    {
+      "candidate_input": "Check-surface authority",
+      "decision": "not_authorized_for_this_surface",
+      "reason": "Renewed human review is still required before downstream product-proof/Scale Gate reliance."
+    }
+  ],
+  "future_generator_output_required_fields": [
+    "scope",
+    "evidence_status",
+    "4veco_product_evidence",
+    "weak_or_missing_evidence",
+    "blockers",
+    "school_owned_evidence_still_needed",
+    "forbidden_inference",
+    "owner_next_action",
+    "proof_required_to_close"
+  ],
+  "finding_classification": [
+    {
+      "finding": "Original INSPECT-10 first implementation remains blocked.",
+      "classification": "scale_blocker",
+      "blocks": "Generator implementation, evidence-pack generation, package/CI/dashboard/quality-ref/Scale Gate integration, and teacher/school-facing pack work in this sprint.",
+      "does_not_block": "Diagnostic-only planning packet with blockers visible.",
+      "proof_required_to_close": "Human review of this packet, then a later scoped implementation plan that preserves blockers and passes required review."
+    },
+    {
+      "finding": "1.2.1 has route-local diagnostic evidence only.",
+      "classification": "core_requirement_met",
+      "blocks": "Pack-strength, teacher/school-facing, summative, PTA, or school evidence claims.",
+      "does_not_block": "Future diagnostic reporting that labels the status as route-local and non-authoritative.",
+      "proof_required_to_close": "Later pack-strength review if the target is used for teacher/school-facing evidence packs."
+    },
+    {
+      "finding": "1.2.2 carries a generated-output substitute-mechanism blocker.",
+      "classification": "scale_blocker",
+      "blocks": "Clean 1.2.2 target-equivalent closure, pack-strength proof reliance, and generator wording that hides the blocker.",
+      "does_not_block": "Diagnostic planning and future diagnostic reporting if the blocker is visible.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming opgave 10b and allowed substitute-attractiveness wording."
+    },
+    {
+      "finding": "1.2.3 has route-local diagnostic evidence only.",
+      "classification": "core_requirement_met",
+      "blocks": "Pack-strength, teacher/school-facing, summative, PTA, or school evidence claims.",
+      "does_not_block": "Future diagnostic reporting that labels the status as route-local and non-authoritative.",
+      "proof_required_to_close": "Later pack-strength review if the target is used for teacher/school-facing evidence packs."
+    },
+    {
+      "finding": "1.2.4 carries frozen-yoghurt and orphaned-asset blockers.",
+      "classification": "scale_blocker",
+      "blocks": "Clean integrated proof closure, pack-strength proof reliance, asset-cleanliness claims, and generator wording that hides the blockers.",
+      "does_not_block": "Diagnostic planning and future diagnostic reporting if the blockers are visible.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision for frozen-yoghurt wording, plus corrected asset set or reviewed harmlessness decision."
+    },
+    {
+      "finding": "Chapter 1.2 accessibility evidence remains below pack-strength.",
+      "classification": "scale_blocker",
+      "blocks": "Accessibility-strength claims, teacher/school-facing pack reliance, and pack-strength generator posture.",
+      "does_not_block": "Diagnostic planning and future diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed mobile/responsive proof, contrast/theme proof, semantic/PDF proof, keyboard/focus applicability, text-equivalent review, and internal-code/inclusive-language review."
+    },
+    {
+      "finding": "Chapter 1.2 support evidence remains below pack-strength.",
+      "classification": "scale_blocker",
+      "blocks": "Support-strength, companion/advisory, next-action, teacher/school-facing pack reliance, and pack-strength generator posture.",
+      "does_not_block": "Diagnostic planning and future diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed hints/repair evidence, companion/advisory route evidence, next-action evidence, differentiation/support evidence, and product/school support-boundary evidence."
+    },
+    {
+      "finding": "Check-surface gate authority remains outside INSPECT-10.",
+      "classification": "scale_blocker",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work.",
+      "does_not_block": "Ordinary scoped diagnostic planning that does not reinterpret gate authority.",
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and explicitly naming any authority unlocked."
+    }
+  ],
+  "blocker_carry_ledger": [
+    {
+      "id": "INSPECT10-IMPLEMENTATION-BLOCKED",
+      "owner_surface": "Quality-standards generator track",
+      "blocks": "Original INSPECT-10 implementation and generated pack outputs.",
+      "does_not_block": "This planning packet.",
+      "proof_required_to_close": "Three-reviewer acceptance plus later scoped implementation plan."
+    },
+    {
+      "id": "INSPECT10-122-SUBSTITUTE",
+      "owner_surface": "1.2.2 generated output",
+      "blocks": "Clean proof closure and pack-strength reliance.",
+      "does_not_block": "Blocker-visible diagnostic reporting.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver."
+    },
+    {
+      "id": "INSPECT10-124-FROZEN-YOGHURT",
+      "owner_surface": "1.2.4 generated output",
+      "blocks": "Clean integrated proof closure and pack-strength reliance.",
+      "does_not_block": "Blocker-visible diagnostic reporting.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver."
+    },
+    {
+      "id": "INSPECT10-124-ASSET",
+      "owner_surface": "1.2.4 asset set",
+      "blocks": "Clean asset-strength/accessibility reliance.",
+      "does_not_block": "Route-local operation proof candidate.",
+      "proof_required_to_close": "Corrected asset set or reviewed harmlessness decision."
+    },
+    {
+      "id": "INSPECT10-ACCESSIBILITY",
+      "owner_surface": "Chapter 1.2 accessibility evidence",
+      "blocks": "Accessibility-strength and teacher/school-facing pack claims.",
+      "does_not_block": "Diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed accessibility packet."
+    },
+    {
+      "id": "INSPECT10-SUPPORT",
+      "owner_surface": "Chapter 1.2 support/advisory evidence",
+      "blocks": "Support-strength, companion/advisory, next-action, and pack-ready claims.",
+      "does_not_block": "Diagnostic reporting with gaps visible.",
+      "proof_required_to_close": "Reviewed support packet."
+    },
+    {
+      "id": "INSPECT10-CHECK-SURFACE-AUTHORITY",
+      "owner_surface": "Downstream check-surface/product-proof gates",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, student/product-use authority.",
+      "does_not_block": "This diagnostic planning packet.",
+      "proof_required_to_close": "Renewed human review closing check-surface gate authority."
+    }
+  ],
+  "human_review_questions": [
+    "Does this planning contract preserve the post-9C blockers visibly enough?",
+    "Is the diagnostic status vocabulary safe, or does any label imply pack-ready or school-owned authority?",
+    "May a later sprint implement a diagnostic preflight/report generator using this contract, or must more Chapter 1.2 remediation happen first?",
+    "Are the safe-use and forbidden-inference boundaries clear for teacher, legal/privacy, and Dutch quality-inspection review?",
+    "Should the next sprint be implementation planning, a narrow implementation, or further evidence remediation?"
+  ],
+  "validation_notes": [
+    "No evidence pack generated.",
+    "No generator code implemented.",
+    "No teacher/school-facing pack generated.",
+    "No lesson output mutated.",
+    "No source registry mutated.",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration added.",
+    "No personal data processed.",
+    "No non-Dutch standards work started."
+  ],
+  "next_action": "Send this INSPECT-10 diagnostic planning packet for human review. Do not start pack-strength Chapter 1.2 evidence-pack generation or teacher/school-facing pack work from this packet alone."
+}
