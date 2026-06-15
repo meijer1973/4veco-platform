@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review",
+  "sprint_id": "CHECKSURFACE-POST65-EVIDENCE-REFRESH-1",
+  "generated": "2026-06-15",
+  "status": "pass",
+  "purpose": "Reconcile the formal check-surface packet with current main after platform PR #65 and lesson PR #15.",
+  "history_preserved": true,
+  "new_gate_closure_created": false,
+  "current_main_baseline": {
+    "platform_commit": "406f6358f477cfd50361855c45183da8c9f90990",
+    "lesson_commit": "9758f1da5e0c2aeb9e707f749235916df45b3509",
+    "platform_pr_65_merge_commit": "41ace8300a7e344c80d22e9da5512e5eebd391ae",
+    "lesson_pr_15_merge_commit": "9758f1da5e0c2aeb9e707f749235916df45b3509"
+  },
+  "refreshed_evidence": {
+    "graph_exit_proof": "reports/json/graph-exit-ux1-proof.json",
+    "graph_exit_proof_generated": "2026-06-15T12:43:34.705Z",
+    "golden_surface_visual_proof": "reports/json/golden-surface-visual-review-1-proof.json",
+    "canonical_lesson_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod"
+  },
+  "token_evidence": {
+    "pre_repair_formula_token_ids_absent": true,
+    "repaired_token_ids_present": [
+      "oldQBase",
+      "oldQBeforeChange",
+      "newQBase"
+    ],
+    "duplicate_visible_formula_token_labels_absent": true
+  },
+  "result": {
+    "current_main_evidence_consistency": "pass",
+    "stale_token_proof_removed_or_superseded": "pass",
+    "authority_boundary_preserved": "pass",
+    "no_new_product_repair_required": "pass"
+  },
+  "findings": [
+    {
+      "id": "CHECKSURFACE-RR1",
+      "classification": "core_requirement_met",
+      "comment": "The post-PR #65 Golden surface visual proof records Golden roots, mobile overflow absent, and duplicate visible formula-token labels absent.",
+      "blocks": [],
+      "does_not_block": [
+        "evidence refresh work"
+      ],
+      "proof_required_to_close": "reports/json/golden-surface-visual-review-1-proof.json"
+    },
+    {
+      "id": "CHECKSURFACE-RR2",
+      "classification": "core_requirement_met",
+      "comment": "GRAPH-EXIT-UX-1 proof was regenerated on current main and no longer reports old formula-token IDs.",
+      "blocks": [],
+      "does_not_block": [
+        "narrow check-surface current-main reconciliation"
+      ],
+      "proof_required_to_close": "reports/json/graph-exit-ux1-proof.json regenerated with old token IDs absent and repaired IDs present"
+    },
+    {
+      "id": "CHECKSURFACE-RR3",
+      "classification": "scale_blocker",
+      "comment": "Downstream authority remains blocked.",
+      "blocks": [
+        "product-route adoption",
+        "diagnostics",
+        "mastery/PV",
+        "Scale Gate 1",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "narrow evidence refresh"
+      ],
+      "proof_required_to_close": "Separate downstream product-proof gate"
+    }
+  ],
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  }
+}
