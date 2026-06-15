@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q19-source-graph-extraction-execution-gate-1",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-15",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence.",
+  "original_sprint_gate_spec": "PR #62 / GATE-MTU-H5-Q19-source-graph-extraction-gate-1 approved preparing MTU-H5-Q19-SOURCE-GRAPH-EXTRACTION-EXECUTION-GATE-1 before any q19 source-annex or graph-object extraction execution, storage write, fixture repair, mapper repair, or product-route claim.",
+  "review_scope": "Approve, revise, or reject whether a later exact q19 source/graph extraction execution PR may create or update references/data/exam-ingestion/source-annex-extraction-overlays.json with only the five named q19 extraction records. This review packet does not itself authorize execution in this PR.",
+  "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-execution-gate-1/review-packet.md",
+  "source_execution_gate_packet_markdown": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.md",
+  "source_execution_gate_packet_json": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json",
+  "checker": "build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js",
+  "review_entry_bundle": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-execution-gate-1/bundle-urls.md",
+  "non_negotiable_requirements": [
+    "No source-annex or graph-object extraction execution is performed or authorized by this packet.",
+    "No q19 fixture mutation, mapper repair, candidate storage creation, candidate writes, protected-reference mutation, MTU mutation, lesson output, PV, diagnostics, product route, or student/product use is authorized.",
+    "q19 diagnostic state remains 3 failed / 20 review_required.",
+    "q3 remains clean.",
+    "q27 and q15 remain carried MTU-H5 blockers.",
+    "The future write surface is limited to references/data/exam-ingestion/source-annex-extraction-overlays.json and the five exact q19 extraction records.",
+    "A45 remains forbidden as primary q19 support.",
+    "full_graph_construction, calculus_route, and function_construction remain forbidden q19 route tags.",
+    "The official aggregate-supply alternative for q19-step-2 and q19-step-3 must remain visible alongside the primary rightward demand-shift route.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement_id": "core-1-non-executing-boundary",
+      "status": "met",
+      "evidence": "Packet and checker keep all present-tense authority flags false and require future storage to remain absent in this PR."
+    },
+    {
+      "requirement_id": "core-2-future-write-surface-exact",
+      "status": "met",
+      "evidence": "Packet names only source-annex-extraction-overlays.json and the five exact q19 extraction record ids."
+    },
+    {
+      "requirement_id": "core-3-required-fields-exact",
+      "status": "met",
+      "evidence": "Packet carries graph and source-annex required fields in user terms and contract spellings."
+    },
+    {
+      "requirement_id": "core-4-live-q19-diagnostic-state",
+      "status": "met",
+      "evidence": "Checker requires live q19 3 failed / 20 review_required plus q3 clean state."
+    },
+    {
+      "requirement_id": "core-5-negative-guards",
+      "status": "met",
+      "evidence": "Checker enforces false reconstructable source/graph guard, A45 over-trigger guard, and inherited Solo q1-q3 negative guard."
+    },
+    {
+      "requirement_id": "core-6-aggregate-supply-alternative-preserved",
+      "status": "met",
+      "evidence": "Packet and checker require the official aggregate-supply alternative caveat for q19-step-2 and q19-step-3."
+    },
+    {
+      "requirement_id": "core-7-carried-blockers-classified",
+      "status": "met",
+      "evidence": "Findings classify q19, q27, and q15 blockers with blocks / does_not_block / proof_required_to_close."
+    },
+    {
+      "requirement_id": "core-8-remote-discoverability",
+      "status": "met",
+      "evidence": "Checker requires bundle URLs, URL index, and platform agent index entries for the execution-gate artifacts."
+    }
+  ],
+  "requested_decision": {
+    "decision_needed": "Should a later exact q19 source/graph extraction execution PR be allowed to create or update references/data/exam-ingestion/source-annex-extraction-overlays.json with only the five named q19 extraction records?",
+    "valid_decisions": [
+      "approve_later_exact_source_graph_extraction_execution_pr",
+      "revise_execution_gate_before_any_write",
+      "reject_execution_gate"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "later_execution_pr_may_write_if_approved": true,
+    "required_if_approving": [
+      "keep this PR non-executing",
+      "keep q19 fixture mutation unauthorized",
+      "keep mapper repair unauthorized",
+      "limit the later execution PR to the exact storage path and five exact records",
+      "keep q19 answer-form and any remaining source/graph gaps visible until reviewed evidence closes them",
+      "keep q27 and q15 as carried blockers",
+      "keep protected references, machine references, external sources, authored target exercises, lessons, PV, diagnostics, product routes, and student/product use unauthorized unless separately stated"
+    ]
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.md",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json",
+    "build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+    "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-gate-1/review-packet.json",
+    "reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-source-annex-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract"
+  ],
+  "evidence_base": [
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "findings": [
+    {
+      "finding_id": "q19-execution-gate-ready-for-review",
+      "classification": "supports_approval",
+      "severity": "info",
+      "summary": "The packet exactly names the later storage path, five extraction records, required graph/source fields, negative guards, accepted aggregate-supply alternative caveat, and non-executing authority boundary.",
+      "blocks": [],
+      "does_not_block": ["human review of this non-executing execution gate"],
+      "proof_required_to_close": "Human approval under this packet, followed only by a separate exact execution PR if approved."
+    },
+    {
+      "finding_id": "q19-answer-form-gap-carried",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "q19 still lacks graph/draw/teken answer-form coverage or reviewed equivalent.",
+      "blocks": ["q19 repair", "MTU-H5 closure", "product-route readiness"],
+      "does_not_block": ["review of this execution-gate packet"],
+      "proof_required_to_close": "Reviewed graph/draw/teken answer-form coverage exists and q19 answer-form failures clear."
+    },
+    {
+      "finding_id": "q19-source-graph-gaps-carried",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "q19 source-annex and graph-object gaps remain blocking until a later authorized extraction PR writes reviewed evidence or explicit limitations.",
+      "blocks": ["q19 fixture repair", "lesson/product use", "MTU-H5 closure"],
+      "does_not_block": ["human review of whether a later exact extraction PR may proceed"],
+      "proof_required_to_close": "Reviewed source figure, worksheet, and graph-object reconstruction evidence exists or limitations are explicitly accepted while gaps remain visible."
+    },
+    {
+      "finding_id": "q27-q15-carried",
+      "classification": "carried_blocks",
+      "severity": "medium",
+      "summary": "q27 and q15 remain MTU-H5 blockers outside this q19 gate.",
+      "blocks": ["MTU-H5 full closure", "product-route readiness"],
+      "does_not_block": ["q19 source/graph extraction execution-gate review"],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their validator buckets."
+    }
+  ],
+  "blocked_outcomes": [
+    "q19 source-annex extraction execution in this PR",
+    "q19 graph-object extraction execution in this PR",
+    "q19 fixture mutation",
+    "q19 mapper repair",
+    "candidate storage creation",
+    "candidate writes",
+    "protected reference mutation",
+    "machine-reference mutation",
+    "external-source mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "authored target-exercise mutation",
+    "lesson output",
+    "PV or graph mutation",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "required_review_team_threshold": {
+    "agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "all_three_required": true
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-repair-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-rp003-rp004-q19-planning-packet.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  }
+}
