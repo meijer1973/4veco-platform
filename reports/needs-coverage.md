@@ -1,41 +1,49 @@
 # Needs-Coverage Report
 
-Generated: 2026-04-26T20:33:30.188Z
-Live units:      190
-With no needs:   48
+Generated: 2026-06-15T11:17:11.460Z
+Live units:      254
+With no needs:   52
 
 ## Status: **INFORMATIONAL**
 
 Units with empty `needs` are not broken — they simply have no prerequisite edges wired up yet. Wire them via `unit-add-dep` when a paragraph plan, exercise, or explanatory document surfaces a concrete prerequisite.
 
-## Domain A (9)
+## Domain A (20)
 
 - **A01** Lineaire functie opstellen
 - **A02** Vergelijking oplossen
 - **A03** Functie omschrijven (P↔Q)
 - **A04** Substitueren
 - **A05** Snijpunt met P-as berekenen
-- **A18** Comparatief voordeel bepalen
 - **A38** Procentuele verandering berekenen
 - **A42** Grafische verschuiving met voor-en-na pijlen
-- **A43** Totale winst uit gemengde allocatie berekenen
+- **A45** P-Q grafiek tekenen uit tabel
+- **A61** Tabelwaarden selecteren voor berekening
+- **A62** Waarden aflezen uit staafdiagram
+- **A63** Waarden aflezen uit lijngrafiek
+- **A64** Aandelen aflezen uit cirkeldiagram
+- **A80** Noem of geef-aan antwoord geven
+- **A81** Bron gebruiken in een antwoord
+- **A88** Schaalfactoren in examencijfers toepassen
+- **A89** GO herkennen als prijsfunctie van de monopolist
+- **A96** Bereken-vraag beantwoorden
+- **A97** Leg-uit-dat antwoord opbouwen
+- **A98** Leg-uit-of antwoord opbouwen
+- **A99** Leg uit met voorbeeld beantwoorden
 
 ## Domain B (1)
 
 - **B01** Schaarste als kerneconomisch probleem
 
-## Domain D (10)
+## Domain D (7)
 
 - **D02** Constante kosten en winst
-- **D04** Elasticiteit en goederenclassificatie
 - **D09** Homogene en heterogene goederen
-- **D10** Vraag/aanbod-verschuiving bij conjunctuurschok
-- **D13** Kostenstijging en aanbodverschuiving
 - **D15** Marktvormen classificeren
-- **D24** Drie voorwaarden prijsdiscriminatie
 - **D27** Substituten en complementen
 - **D32** Verschuiving versus beweging langs de curve
 - **D35** Betalingsbereidheid definiëren
+- **D42** Belastingdruk in eurobedragen berekenen
 
 ## Domain E (2)
 
@@ -47,9 +55,9 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **F01** Berovingsprobleem herkennen
 - **F02** Collectief goed classificeren
 - **F03** Dominante strategie
-- **F07** Overproductie bij negatieve externe effecten
 - **F15** Verzonken kosten negeren in beslissingen
 - **F16** MPC–MSC en MPB–MSB onderscheiden
+- **F19** Maatschappelijke kosten verbaal herkennen
 
 ## Domain G (5)
 
@@ -59,15 +67,12 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **G10** Informatieasymmetrie verzekeringsmarkt
 - **G11** Wisselkoersrisico bij internationale handel
 
-## Domain H (8)
+## Domain H (5)
 
-- **H01** AOW-leeftijd als houdbaarheidsinstrument
 - **H05** Circulaire economie in groen bbp
 - **H10** Gini-coefficient bij recessie
-- **H13** Minimumuurloon: kostenkanaal naar concurrentiepositie
 - **H16** Soepeler ontslagrecht en werkgeversrisico
 - **H21** Staatsschuldquote berekenen
-- **H24** Wisselkoers en depreciatie
 - **H29** Obligatie als verhandelbaar schuldpapier
 
 ## Domain I (3)
@@ -76,10 +81,9 @@ Units with empty `needs` are not broken — they simply have no prerequisite edg
 - **I06** Deflatiespiraal
 - **I14** Multiplier en lekkages
 
-## Domain L (4)
+## Domain L (3)
 
 - **L01** Waarde marginaal product (VMP)
 - **L03** Afgeleide vraag (derived demand)
 - **L05** Beroepsbevolking, niet-beroepsbevolking, werkloze beroepsbevolking
-- **L18** Voordelen en nadelen van vakbonden
 

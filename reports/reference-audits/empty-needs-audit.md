@@ -1,6 +1,6 @@
 # Empty-Needs Audit
 
-Generated: 2026-06-07T07:31:58.624Z
+Generated: 2026-06-15T11:28:25.866Z
 Sprint: R2.1
 Source: `references/machine/micro-teaching-units.json`
 
@@ -10,7 +10,7 @@ Non-mutating audit. No machine-reference data was changed.
 
 ## Summary
 
-- Live units: 253
+- Live units: 254
 - Units with empty needs: 52
 - Status distribution: underbouw_assumed=20, true_zero=3, ambiguous=27, false_zero=2
 - Severity distribution: low=23, medium=29

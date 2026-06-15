@@ -4531,6 +4531,49 @@
     ]
   },
   {
+    "id": "D47",
+    "name": "Gelijktijdige vraag- en aanbodverschuiving analyseren",
+    "category": "markt",
+    "layer": 4,
+    "kern": "Analyseer bij gelijktijdige verschuivingen van vraag en aanbod welke richting van het marktevenwicht bepaald is en welke zonder relatieve grootte ambigu blijft.",
+    "needs": [
+      "A06",
+      "A42",
+      "A49",
+      "D13",
+      "D32",
+      "D33"
+    ],
+    "exam_codes": [
+      "D1.4b",
+      "D1.24"
+    ],
+    "mastery_target": "analyze",
+    "prior_learning": "new_this_year",
+    "aspects": [
+      "verbaal",
+      "grafisch"
+    ],
+    "terms": [
+      "collectieve-vraaglijn",
+      "collectieve-aanbodlijn",
+      "evenwichtsprijs",
+      "evenwichtshoeveelheid"
+    ],
+    "procedure": [
+      "Analyseer de vraagverschuiving eerst apart en benoem de richting van P* en Q*.",
+      "Analyseer de aanbodverschuiving daarna apart en benoem de richting van P* en Q*.",
+      "Zet de twee richtingsdrukken naast elkaar: gelijke richting is bepaald, tegengestelde druk is ambigu zonder relatieve grootte.",
+      "Bij vraag rechts en aanbod rechts: Q* stijgt, terwijl P* kan stijgen, dalen of gelijk blijven afhankelijk van welke verschuiving sterker is.",
+      "Gebruik een berekend nieuw evenwicht alleen als bevestiging wanneer functies of getallen gegeven zijn."
+    ],
+    "pitfalls": [
+      "Alleen de vraagverschuiving volgen en daardoor automatisch een hogere prijs voorspellen.",
+      "Alleen het eind-evenwicht berekenen zonder uit te leggen wat zonder berekening voorspelbaar was.",
+      "Twee verschuivingen combineren zonder ze eerst afzonderlijk te analyseren."
+    ]
+  },
+  {
     "id": "E01",
     "name": "Intergenerationele ruil",
     "category": "ruilen over tijd",
