@@ -181,18 +181,20 @@ The standards layer must not claim:
   the `1.2.4` integration target, and target-registry exam-code linkage.
   INSPECT-9B reviews target-equivalent and accessibility/support evidence and
   finds useful route-local lesson evidence, but no reviewed target-equivalent
-  proof records or complete accessibility/support evidence. Chapter 1.2
-  generator work remains blocked pending INSPECT-9C-style remediation or an
-  explicit diagnostic-only carry decision.
+  proof records or complete accessibility/support evidence. INSPECT-9C creates
+  route-local proof status for `1.2.1` through `1.2.4`, carries `1.2.2` and
+  `1.2.4` generated-output blockers, and records minimum accessibility/support
+  evidence. Chapter 1.2 pack-strength generator work remains blocked; only
+  diagnostic-only INSPECT-10 planning is recommended after human acceptance.
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources? INSPECT-9 proposes a 180-day recheck trigger
   for later teacher/school-facing pack work, but this still needs adoption in
   a source/profile maintenance step.
-- Which exact proof-record format and reviewer gate should INSPECT-9C use for
-  Chapter 1.2 target-equivalent closure?
-- Which minimum mobile, contrast/theme, semantic/PDF, hint/repair, companion,
-  and advisory-route evidence is mandatory before a scoped INSPECT-10 generator
-  implementation?
+- Which exact proof-record format should become reusable beyond the INSPECT-9C
+  Chapter 1.2 route-local records?
+- Which mobile, contrast/theme, semantic/PDF, hint/repair, companion, and
+  advisory-route evidence must close before Chapter 1.2 can move beyond
+  diagnostic-only generator posture?
 - Should Dutch quality-control evidence stay in platform reports only, or
   should selected summaries also become teacher/school-facing artifacts after
   review?

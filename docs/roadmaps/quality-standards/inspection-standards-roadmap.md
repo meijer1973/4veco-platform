@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.0-dutch-scope-only-proposal`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete pending human review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -159,6 +159,7 @@ Closed baseline:
 | `INSPECT-9` | Dutch gap-closure plan; defines proof requirements and correction routes for Chapter 1.2 before pack work and keeps Chapter 1.1 as a control scope only unless remediated. |
 | `INSPECT-9A` | Chapter 1.2 target and exam-linkage source remediation; updates the authored target registry for `1.2.1`-`1.2.4`, keeps Chapter 1.1 control-only, and leaves target-equivalent plus accessibility/support proof as blockers before pack work. |
 | `INSPECT-9B` | Chapter 1.2 target-equivalent and accessibility/support evidence review; finds useful route-local lesson evidence but no reviewed target-equivalent proof records or complete accessibility/support evidence, so Chapter 1.2 generator work remains blocked pending remediation. |
+| `INSPECT-9C` | Chapter 1.2 proof and support remediation; records route-local proof status for `1.2.1`-`1.2.4`, carries `1.2.2` and `1.2.4` generated-output blockers, records minimum accessibility/support evidence, and recommends only diagnostic-only INSPECT-10 planning after human acceptance. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -602,18 +603,19 @@ privacy-boundary-risk
 
 ## 8. Current Recommended Next Sprint
 
-Recommended next sprint:
+Recommended next operational step:
 
 ```text
-INSPECT-9C Chapter 1.2 Proof And Support Remediation
+Human review of INSPECT-9C Chapter 1.2 Proof And Support Remediation
 ```
 
-Recommended posture:
+Recommended posture after human acceptance and merge:
 
 ```text
-target-equivalent proof and accessibility/support remediation only
+INSPECT-10 diagnostic-only report-generator planning only
 Dutch scope only
-no new evidence packs yet
+no pack-strength Chapter 1.2 generator work
+no teacher/school-facing evidence-pack generation
 no non-Dutch standards work
 no dashboard/gate/quality-ref integration
 no lesson-output mutation
@@ -621,12 +623,12 @@ no personal data
 no compliance or approval claims
 ```
 
-The practical product question for INSPECT-9C is:
+The practical product question carried forward from INSPECT-9C is:
 
 > Which Chapter 1.2 target-finality, integration-target, and exam-code
-> decisions are now source-registry-ready, but which target-equivalent,
-> accessibility, and support blockers can be closed or must still constrain
-> INSPECT-10 generator implementation?
+> decisions are source-registry-ready and which route-local proof records can
+> support diagnostic reporting, while `1.2.2`, `1.2.4`, accessibility, and
+> support blockers remain visible constraints on any INSPECT-10 work?
 
 ## 9. Explicit Out-Of-Scope Work
 

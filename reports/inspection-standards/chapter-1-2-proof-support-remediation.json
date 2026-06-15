@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-2-proof-support-remediation",
+  "sprint_id": "INSPECT-9C",
+  "generated_date": "2026-06-14",
+  "status": "proof_remediation_packet",
+  "diagnostic_only": true,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "original_sprint_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md#inspect-9c---chapter-12-proof-and-support-remediation",
+  "sprint_plan": "archive/sprints/INSPECT-9C/INSPECT-9C-sprint-plan.md",
+  "rev_std1_disposition": "reports/sprints/REV-STD-1-flag-disposition.md",
+  "evidence_checkout": {
+    "platform_branch": "codex/inspect-9c-proof-support-closure-20260614",
+    "platform_base": "8872c43a5961950078b82e422ace21d56ba34bd7",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "8b007cd86a485518bca8881051e11f5272f162c7",
+    "lesson_evidence_mode": "detached_head_read_only"
+  },
+  "safe_use_note": "Dutch-only product-side proof/remediation packet. Not an evidence pack, generator output, inspection judgement, compliance claim, approval, certificate, OP0 completion claim, school-obligation claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, school-SKA claim, product-route adoption gate, diagnostics/mastery/PV gate, or student/product-use authority.",
+  "non_negotiable_requirements": [
+    "Dutch scope only",
+    "Proof/remediation packet only",
+    "No evidence-pack generation",
+    "No report-only generator implementation",
+    "No generated lesson-output mutation",
+    "No source-registry mutation",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration",
+    "No product-route adoption, diagnostics, mastery/sequencing, PV, or student/product-use authority",
+    "No personal-data processing",
+    "No compliance, approval, inspection-ready, complete OP0, PTA-validity, summative-validity, classroom-implementation, school-obligation, or school-SKA claim",
+    "PASS WITH FLAGS may not carry a missing core requirement"
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md INSPECT-9C row and archive/sprints/INSPECT-9C/INSPECT-9C-sprint-plan.md"
+    },
+    {
+      "requirement": "Target proof status exists for 1.2.1 through 1.2.4",
+      "status": "met",
+      "evidence": "target_proof_records"
+    },
+    {
+      "requirement": "Accessibility/support minimum proof records exist",
+      "status": "met",
+      "evidence": "accessibility_reviews and support_reviews"
+    },
+    {
+      "requirement": "Carried issues include REV-STD-1 fields",
+      "status": "met",
+      "evidence": "finding_classification and quality_log"
+    }
+  ],
+  "executive_decision": {
+    "summary": "INSPECT-9C creates proof status for all four Chapter 1.2 targets and a minimum accessibility/support record, but Chapter 1.2 is not pack-strength ready.",
+    "chapter_1_2_pack_ready": false,
+    "diagnostic_only_generator_planning_posture_after_human_acceptance": true,
+    "pack_strength_generator_posture": false,
+    "next_action": "Human review INSPECT-9C. If accepted and merged, plan INSPECT-10 only as diagnostic-only generator work with blockers visible."
+  },
+  "target_proof_records": [
+    {
+      "paragraph_id": "1.2.1",
+      "source_registry_record_status": "reviewed_final",
+      "proof_status": "reviewed_route_local_proof_with_non_blocking_flags",
+      "operation_chain_match": [
+        "draw individual demand curve",
+        "apply willingness-to-pay buy/no-buy rule",
+        "infer quantity after price drop",
+        "explain downward demand"
+      ],
+      "answer_form_match": [
+        "graph drawing",
+        "short calculation",
+        "economic explanation"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Opgaven ask first and answers/model route are separate; start exercises have visual support but weak explicit hint tie-back.",
+      "authority_boundary": "Route-local target-equivalent proof for diagnostic reporting only; not pack-strength, summative, PTA, or school evidence.",
+      "flags": [
+        "misconception box refinement",
+        "start-hint tie-back refinement",
+        "formula-domain wording refinement",
+        "linear-model wording refinement"
+      ],
+      "blocks": [
+        "pack-strength target-equivalent claim"
+      ],
+      "does_not_block": [
+        "INSPECT-9C closure",
+        "diagnostic-only generator planning with blockers visible after human acceptance"
+      ],
+      "proof_required_to_close": "Later pack-strength review if Chapter 1.2 is used for teacher/school-facing evidence packs."
+    },
+    {
+      "paragraph_id": "1.2.2",
+      "source_registry_record_status": "reviewed_final",
+      "proof_status": "proof_candidate_with_blocking_generated_output_flag",
+      "operation_chain_match": [
+        "separate own-price movement from demand shift",
+        "classify preference, income, and substitute factors",
+        "show graph consequences",
+        "name demand-shift factors"
+      ],
+      "answer_form_match": [
+        "graph classification",
+        "short written justification",
+        "factor naming"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Opgaven ask first and answers/model route are separate; start exercises lack explicit hints tied to the procedure.",
+      "authority_boundary": "Route-local proof candidate only until generated-output flag is fixed or waived.",
+      "flags": [
+        "opgave 10b margarine answer should be preference/attractiveness concerning a substitute, not substitute-price change",
+        "stray contradictory answer line",
+        "forward-reference correction",
+        "start-hint tie-back refinement"
+      ],
+      "blocks": [
+        "clean 1.2.2 target-equivalent closure",
+        "pack-strength proof reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-9C closure",
+        "diagnostic-only generator planning with blocker visible"
+      ],
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming opgave 10b and the allowed substitute-attractiveness wording."
+    },
+    {
+      "paragraph_id": "1.2.3",
+      "source_registry_record_status": "reviewed_final",
+      "proof_status": "reviewed_route_local_proof_with_non_blocking_flags",
+      "operation_chain_match": [
+        "calculate collective demand",
+        "draw individual and collective curves",
+        "derive collective demand algebraically",
+        "explain dropout and kink logic"
+      ],
+      "answer_form_match": [
+        "table calculation",
+        "graph drawing",
+        "algebraic derivation",
+        "concept explanation"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Opgaven ask first and answers/model route are separate; corrected doeloefening review supports proof use.",
+      "authority_boundary": "Route-local target-equivalent proof for diagnostic reporting only; not pack-strength, summative, PTA, or school evidence.",
+      "flags": [
+        "positive-vs-non-negative interval convention refinement",
+        "dropout order refinement in non-target exercise",
+        "companion support missing as support evidence"
+      ],
+      "blocks": [
+        "pack-strength target-equivalent claim"
+      ],
+      "does_not_block": [
+        "INSPECT-9C closure",
+        "diagnostic-only generator planning with blockers visible after human acceptance"
+      ],
+      "proof_required_to_close": "Later pack-strength review if Chapter 1.2 is used for teacher/school-facing evidence packs."
+    },
+    {
+      "paragraph_id": "1.2.4",
+      "source_registry_record_status": "reviewed_final",
+      "proof_status": "integrated_proof_candidate_with_blocking_generated_output_flag",
+      "operation_chain_match": [
+        "calculate collective demand",
+        "distinguish movement from shift",
+        "derive collective demand functions",
+        "read graph quantities and willingness-to-pay intercepts",
+        "classify substitutes and complements",
+        "evaluate flawed demand conclusions"
+      ],
+      "answer_form_match": [
+        "calculation",
+        "classification",
+        "graph reading",
+        "short evaluation with criteria"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Consolidation opgaven ask first and answers/model route are separate.",
+      "authority_boundary": "Route-local consolidation proof candidate only; not summative, PTA, pack-strength, or school evidence.",
+      "flags": [
+        "frozen-yoghurt substitute mechanism needs availability/attractiveness wording unless price or relative-price data is added",
+        "orphaned asset note"
+      ],
+      "blocks": [
+        "clean 1.2.4 integrated proof closure",
+        "pack-strength proof reliance",
+        "asset-cleanliness claim for orphaned asset note"
+      ],
+      "does_not_block": [
+        "INSPECT-9C closure",
+        "diagnostic-only generator planning with blockers visible"
+      ],
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming the frozen-yoghurt mechanism, plus corrected asset set or reviewed harmlessness decision for the orphaned asset."
+    }
+  ],
+  "accessibility_reviews": [
+    {
+      "dimension": "asset_presence_and_pairing",
+      "status": "route_local_positive",
+      "evidence": "Paragraph reviews record referenced assets present and SVG/PNG pairs complete for 1.2.1 through 1.2.4.",
+      "boundary": "Asset integrity is not full accessibility proof."
+    },
+    {
+      "dimension": "text_equivalents",
+      "status": "route_local_positive",
+      "evidence": "Rendered Chapter 1.2 HTML contains image alt text and hidden figcaptions.",
+      "boundary": "No separate alt-text quality review found."
+    },
+    {
+      "dimension": "mobile_responsive",
+      "status": "partial_with_required_carry",
+      "evidence": "Rendered HTML contains viewport metadata and responsive CSS signals.",
+      "boundary": "No reviewed mobile screenshot or responsive-layout proof found."
+    },
+    {
+      "dimension": "contrast_theme",
+      "status": "missing_required_evidence",
+      "evidence": "No reviewed contrast/theme evidence found.",
+      "boundary": "Blocks contrast/theme claims and pack-strength accessibility reliance."
+    },
+    {
+      "dimension": "semantic_pdf",
+      "status": "partial_with_required_carry",
+      "evidence": "Markdown/HTML headings, tables, images, captions, and PDFs exist.",
+      "boundary": "No separate semantic or PDF accessibility audit found."
+    },
+    {
+      "dimension": "keyboard_focus",
+      "status": "not_applicable_to_static_cited_surfaces_with_future_carry",
+      "evidence": "Cited surfaces are static Markdown/HTML/PDF documents.",
+      "boundary": "Future interactive diagnostic/proof surfaces need keyboard/focus proof."
+    },
+    {
+      "dimension": "internal_code_exposure_and_inclusive_language",
+      "status": "partial_unreviewed",
+      "evidence": "No internal-code exposure found in inspected snippets and review records; no dedicated inclusive-language review found.",
+      "boundary": "Does not support broad inclusive-language claims."
+    }
+  ],
+  "support_reviews": [
+    {
+      "dimension": "prerequisite_start_state_route",
+      "status": "route_local_positive",
+      "evidence": "Chapter plan records dependencies across 1.2.1 through 1.2.4; quality refs record voorkennis links.",
+      "boundary": "Product-route prerequisite evidence only."
+    },
+    {
+      "dimension": "scaffolding_fading",
+      "status": "partial_with_flags",
+      "evidence": "Quality refs record progression; reviews flag missing explicit start-exercise hints for 1.2.1 through 1.2.3.",
+      "boundary": "Blocks support-strength claims until hints/repair are reviewed or waived."
+    },
+    {
+      "dimension": "hints_repair_routes",
+      "status": "partial_with_flags",
+      "evidence": "Answer models provide procedural feedback; explicit hint/repair route evidence is weak.",
+      "boundary": "Product feedback only; no school support inference."
+    },
+    {
+      "dimension": "companion_advisory_route",
+      "status": "missing_required_evidence",
+      "evidence": "Quality refs for theory paragraphs record companion_materialen aanwezig false; no reviewed advisory short-check or next-action route found.",
+      "boundary": "Blocks companion/advisory and pack-strength support claims."
+    },
+    {
+      "dimension": "next_action_evidence",
+      "status": "missing_required_evidence",
+      "evidence": "No reviewed next-action route evidence found for Chapter 1.2.",
+      "boundary": "Blocks support/advisory readiness claims."
+    },
+    {
+      "dimension": "differentiation_enrichment",
+      "status": "route_local_positive",
+      "evidence": "Quality refs record differentiation; 1.2.4 Denkertjes provide enrichment/evaluation above core questions.",
+      "boundary": "Product-route differentiation only."
+    },
+    {
+      "dimension": "product_school_support_boundary",
+      "status": "school_owned_boundary_required",
+      "evidence": "Existing evidence supports product practice and feedback only.",
+      "boundary": "Does not prove school monitoring, interventions, accommodations, care plans, or classroom support decisions."
+    }
+  ],
+  "finding_classification": [
+    {
+      "finding": "1.2.1 has a reviewed route-local target-equivalent proof record.",
+      "finding_classification": "core_requirement_met",
+      "blocks": "Pack-strength or summative/assessment claims beyond diagnostic route-local proof.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning with blockers visible after human acceptance.",
+      "proof_required_to_close": "Later pack-strength review if Chapter 1.2 is used for teacher/school-facing evidence packs."
+    },
+    {
+      "finding": "1.2.3 has a reviewed route-local target-equivalent proof record.",
+      "finding_classification": "core_requirement_met",
+      "blocks": "Pack-strength or summative/assessment claims beyond diagnostic route-local proof.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning with blockers visible after human acceptance.",
+      "proof_required_to_close": "Later pack-strength review if Chapter 1.2 is used for teacher/school-facing evidence packs."
+    },
+    {
+      "finding": "1.2.2 carries a generated-output substitute-mechanism blocker.",
+      "finding_classification": "scale_blocker",
+      "blocks": "Clean target-equivalent closure for 1.2.2, pack-strength proof reliance, and any generator wording that hides the blocker.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning if blocker remains visible.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming opgave 10b and the allowed substitute-attractiveness wording."
+    },
+    {
+      "finding": "1.2.4 carries a frozen-yoghurt substitute-mechanism blocker.",
+      "finding_classification": "scale_blocker",
+      "blocks": "Clean integrated proof closure for 1.2.4, pack-strength proof reliance, and any generator wording that hides the blocker.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning if blocker remains visible.",
+      "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming the frozen-yoghurt mechanism and safe wording."
+    },
+    {
+      "finding": "Chapter 1.2 accessibility evidence remains below pack-strength.",
+      "finding_classification": "scale_blocker",
+      "blocks": "Accessibility-strength claims, teacher/school-facing pack reliance, and pack-strength generator posture.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning with gaps visible.",
+      "proof_required_to_close": "Reviewed mobile screenshots/responsive proof, contrast/theme proof, semantic/PDF proof where relevant, keyboard/focus applicability, text-equivalent review, and internal-code/inclusive-language review."
+    },
+    {
+      "finding": "Chapter 1.2 support evidence remains below pack-strength.",
+      "finding_classification": "scale_blocker",
+      "blocks": "Support-strength claims, companion/advisory route claims, next-action claims, teacher/school-facing pack reliance, and pack-strength generator posture.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only generator planning with gaps visible.",
+      "proof_required_to_close": "Reviewed hints/repair evidence, companion/advisory route evidence, next-action evidence, differentiation/support evidence, and product/school support-boundary evidence."
+    },
+    {
+      "finding": "Check-surface gate authority remains outside INSPECT-9C.",
+      "finding_classification": "scale_blocker",
+      "blocks": "Downstream Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work that relies on check-surface gate closure.",
+      "does_not_block": "Ordinary scoped INSPECT-9C proof/remediation work.",
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and explicitly naming any authority unlocked."
+    }
+  ],
+  "inspect_10_posture": {
+    "decision": "diagnostic_only_generator_planning_allowed_after_human_acceptance_with_blockers_visible",
+    "not_authorized_by_this_packet": true,
+    "blocked_actions": [
+      "pack-strength Chapter 1.2 generator work",
+      "teacher/school-facing evidence-pack generation",
+      "product-route adoption",
+      "diagnostics/mastery/PV",
+      "Scale Gate integration",
+      "student/product-use authority"
+    ],
+    "allowed_next_after_human_acceptance": "INSPECT-10 planning or implementation only if diagnostic-only, report-only, non-authoritative, and blocker-preserving."
+  },
+  "quality_log": [
+    {
+      "title": "1.2.2 generated-output substitute wording constrains proof use",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.2 Vraagfactoren/1.2.2-review.md",
+      "affected_surface": "1.2.2 doeloefening answer model",
+      "severity": "high",
+      "next_action": "Fix or explicitly waive/carry before clean proof closure.",
+      "platform_handoff_required": "yes",
+      "blocks": "Clean 1.2.2 target-equivalent closure and pack-strength reliance.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only planning with blocker visible.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver naming opgave 10b and allowed wording."
+    },
+    {
+      "title": "1.2.4 frozen-yoghurt wording constrains integration proof use",
+      "quality_category": "lesson-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-review.md",
+      "affected_surface": "1.2.4 consolidation opgaven/answers",
+      "severity": "high",
+      "next_action": "Fix or explicitly waive/carry before clean integrated proof closure.",
+      "platform_handoff_required": "yes",
+      "blocks": "Clean 1.2.4 integrated proof closure and pack-strength reliance.",
+      "does_not_block": "INSPECT-9C closure; diagnostic-only planning with blocker visible.",
+      "proof_required_to_close": "Corrected output or reviewed carry/waiver naming the frozen-yoghurt mechanism."
+    },
+    {
+      "title": "1.2.4 orphaned asset note remains open",
+      "quality_category": "accessibility-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4-quality-ref.yaml",
+      "affected_surface": "1.2.4 asset set",
+      "severity": "medium",
+      "next_action": "Fix or explicitly waive/carry before asset-cleanliness claims.",
+      "platform_handoff_required": "yes",
+      "blocks": "Asset-cleanliness and pack-strength accessibility reliance.",
+      "does_not_block": "INSPECT-9C closure; route-local proof candidate.",
+      "proof_required_to_close": "Corrected asset set or reviewed harmlessness decision."
+    },
+    {
+      "title": "Chapter 1.2 accessibility proof is incomplete",
+      "quality_category": "accessibility-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/",
+      "affected_surface": "Chapter 1.2 HTML/PDF/Markdown surfaces",
+      "severity": "high",
+      "next_action": "Review mobile, contrast/theme, semantic/PDF, keyboard/focus applicability, text equivalents, and inclusive-language/internal-code exposure.",
+      "platform_handoff_required": "yes",
+      "blocks": "Accessibility-strength and pack-ready claims.",
+      "does_not_block": "Diagnostic-only planning with gaps visible.",
+      "proof_required_to_close": "Reviewed accessibility packet covering the required dimensions."
+    },
+    {
+      "title": "Chapter 1.2 support proof is incomplete",
+      "quality_category": "support-evidence-gap",
+      "evidence_path_or_url": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/",
+      "affected_surface": "Chapter 1.2 practice, companion, advisory, and support routes",
+      "severity": "high",
+      "next_action": "Review hints/repair, companion/advisory, next-action, differentiation, and product/school support boundary.",
+      "platform_handoff_required": "yes",
+      "blocks": "Support-strength, companion/advisory, next-action, and pack-ready claims.",
+      "does_not_block": "Diagnostic-only planning with gaps visible.",
+      "proof_required_to_close": "Reviewed support packet or explicit not-required decisions."
+    },
+    {
+      "title": "Check-surface gate authority remains outside this sprint",
+      "quality_category": "quality-ref-integration-risk",
+      "evidence_path_or_url": "reports/sprints/REV-STD-1-flag-disposition.md",
+      "affected_surface": "Downstream product-proof and Scale Gate work",
+      "severity": "high",
+      "next_action": "Keep gate authority separate until renewed human review closes it.",
+      "platform_handoff_required": "yes",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work.",
+      "does_not_block": "INSPECT-9C scoped proof/remediation PR.",
+      "proof_required_to_close": "Human review confirming gate closure and unlocked authority."
+    }
+  ],
+  "validation_notes": [
+    "No evidence pack generated.",
+    "No report-only generator implemented.",
+    "No lesson output mutated.",
+    "No source registry mutated.",
+    "No package script, CI/build gate, dashboard gate, quality-ref integration, or Scale Gate integration added.",
+    "No personal data processed.",
+    "No non-Dutch standards work started."
+  ]
+}
