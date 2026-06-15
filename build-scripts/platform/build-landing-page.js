@@ -4,7 +4,8 @@
  * Generates index.html at three levels:
  * - Book page      (overview of all chapters)
  * - Chapter pages  (overview of paragrafen in that chapter)
- * - Paragraaf pages (controlled route with Start / Leer / Oefen / Check / Verdiep)
+ * - Paragraaf pages (Paragraph Landing V2 fixture route:
+ *   Start / Skill-tree games / Leer / Oefen / Check / Open & verdiep)
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *
@@ -49,10 +50,10 @@ const DOMAIN_COLORS = {
   purple: { main: "#7D3C98", light: "#F4ECF7", dark: "#6C3483" },
 };
 
-// Collapse the deploy-config domain-color keys onto the three accent tokens
-// that engines/voorkennis.css defines (economisch / wiskunde / grafisch).
-// The paragraaf-level index.html is generated against that stylesheet, so
-// every page needs exactly one of these three as its data-accent-domain.
+// Collapse deploy-config domain-color keys onto the three shared companion
+// accent tokens (economisch / wiskunde / grafisch). Paragraph Landing V2 uses
+// approved fixture-owned CSS; these tokens only keep route tile accents aligned
+// with companion surfaces.
 const DOMAIN_SHARED_TOKEN = {
   amber:  "economisch",
   blue:   "wiskunde",
@@ -357,6 +358,8 @@ function renderNav(resolvedMap, pageType, currentId) {
 
 function sharedCSS() {
   // Book/chapter-page-specific overrides on top of voorkennis.css.
+  // Paragraph Landing V2 does not use the old shared voorkennis.css shell; it
+  // is fixture-owned through references/ui/paragraph-landing-v2/.
   // The shared editorial stylesheet owns body, hero, sidebar baseline,
   // .content, main, .section, responsive sidebar collapse, and theme tokens.
   // This block only adds selectors voorkennis.css doesn't define:
