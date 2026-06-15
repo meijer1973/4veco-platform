@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q19-answer-form-gate-1",
+  "sprint_id": "MTU-H5",
+  "created": "2026-06-15",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence.",
+  "original_sprint_gate_spec": "PR #69 wrote only the q19 source/graph extraction overlay. That overlay is partial blocked evidence, not q19 closure. The next authorized lane is a non-mutating q19 graph/draw/teken answer-form decision gate before any fixture, mapper, candidate-storage, answer-skill, MTU, lesson, PV, or product work.",
+  "review_scope": "Approve, revise, or reject the q19 answer-form path: proceed by later reviewed-equivalent answer-skill gate using EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION, require a new MTU governance lane, revise before any downstream write, or reject the answer-form lane.",
+  "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.md",
+  "answer_form_gate_packet_markdown": "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.md",
+  "answer_form_gate_packet_json": "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json",
+  "checker": "build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+  "review_entry_bundle": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/bundle-urls.md",
+  "non_negotiable_requirements": [
+    "No q19 fixture mutation, mapper repair, candidate storage creation, candidate writes, protected-reference mutation, MTU mutation, lesson output, PV, diagnostics, product route, or student/product use is authorized.",
+    "No new q19 source-annex or graph-object extraction execution is performed or authorized by this packet.",
+    "The existing source-annex-extraction-overlays.json file remains partial blocked evidence, not closure evidence.",
+    "q19 diagnostic state remains 3 failed / 20 review_required.",
+    "q3 remains clean.",
+    "q27 and q15 remain carried MTU-H5 blockers.",
+    "A42, D10, D13, and A81 may not be overclaimed as graph/draw/teken answer-form closure.",
+    "A45 remains forbidden as primary q19 support.",
+    "full_graph_construction, calculus_route, and function_construction remain forbidden q19 route tags.",
+    "The official aggregate-supply alternative for q19-step-2 and q19-step-3 remains visible.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement_id": "core-1-non-mutating-boundary",
+      "status": "met",
+      "evidence": "Packet and checker require all authority flags false and no fixture, mapper, candidate, MTU, lesson, PV, product, or student-use write."
+    },
+    {
+      "requirement_id": "core-2-current-source-overlay-recognized",
+      "status": "met",
+      "evidence": "Checker validates source-annex-extraction-overlays.json as present, valid, exact five q19 records, partial_with_blocking_gap, and blocked."
+    },
+    {
+      "requirement_id": "core-3-live-q19-diagnostic-state",
+      "status": "met",
+      "evidence": "Checker requires q19 3 failed / 20 review_required and q3 clean state from both the generated report and live validator output."
+    },
+    {
+      "requirement_id": "core-4-answer-form-gap-visible",
+      "status": "met",
+      "evidence": "Packet and checker require missing q19 graph/draw/teken answer-form expectations for q19-step-1, q19-step-2, and q19-step-3."
+    },
+    {
+      "requirement_id": "core-5-support-units-not-overclaimed",
+      "status": "met",
+      "evidence": "Packet states A42, D10, D13, and A81 are support only and not answer-form closure; checker rejects premature answer-form closure."
+    },
+    {
+      "requirement_id": "core-5a-graph-spacing-constraint-carried",
+      "status": "met",
+      "evidence": "Packet carries the official about-1-cm line-shift instruction as a graph-drawing constraint, not as a numeric scale-factor MTU need."
+    },
+    {
+      "requirement_id": "core-6-negative-guards",
+      "status": "met",
+      "evidence": "Checker enforces the premature answer-form closure guard, A45 over-trigger guard, and inherited Solo q1-q3 negative guard."
+    },
+    {
+      "requirement_id": "core-7-aggregate-supply-alternative-preserved",
+      "status": "met",
+      "evidence": "Packet and checker require the q19-step-2 and q19-step-3 aggregate-supply alternative caveat."
+    },
+    {
+      "requirement_id": "core-8-carried-blockers-classified",
+      "status": "met",
+      "evidence": "Findings classify q19, q27, and q15 blockers with blocks / does_not_block / proof_required_to_close."
+    },
+    {
+      "requirement_id": "core-9-remote-discoverability",
+      "status": "met",
+      "evidence": "Checker requires bundle URLs, URL index, and platform agent index entries for the answer-form gate artifacts."
+    }
+  ],
+  "requested_decision": {
+    "decision_needed": "Should q19 answer-form closure proceed by a later reviewed-equivalent answer-skill execution gate using EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION, require a new MTU governance lane, or be revised before any downstream write?",
+    "valid_decisions": [
+      "approve_reviewed_equivalent_candidate_path",
+      "require_new_mtu_governance_lane",
+      "revise_before_any_downstream_write",
+      "reject_answer_form_lane"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "fixture_mutation_authorized_by_this_packet": false,
+    "required_if_approving_reviewed_equivalent_path": [
+      "keep this PR non-mutating",
+      "keep q19 fixture mutation unauthorized",
+      "keep mapper repair unauthorized",
+      "keep q19 source-annex and graph-object gaps visible until separately reviewed",
+      "keep A42, D10, D13, and A81 as support only, not answer-form closure",
+      "keep A45 and forbidden route tags as negative guards",
+      "keep q27 and q15 as carried blockers",
+      "keep protected references, machine references, external sources, authored target exercises, lessons, PV, diagnostics, product routes, and student/product use unauthorized unless separately stated"
+    ]
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.md",
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json",
+    "build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+    "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json",
+    "reports/review-gates/GATE-MTU-H5-Q19-source-graph-extraction-execution-gate-1/review-packet.json",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-rp003-rp004-q19-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract"
+  ],
+  "evidence_base": [
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "findings": [
+    {
+      "finding_id": "q19-answer-form-decision-ready-for-review",
+      "classification": "supports_review",
+      "severity": "info",
+      "summary": "The packet isolates the q19 teken answer-form decision and gives human reviewers the exact alternatives: reviewed-equivalent answer-skill path, new MTU governance lane, revise, or reject.",
+      "blocks": [],
+      "does_not_block": [
+        "human review of this non-mutating answer-form decision gate"
+      ],
+      "proof_required_to_close": "Human decision under this packet, followed only by a separate authorized execution gate if a downstream write is approved."
+    },
+    {
+      "finding_id": "q19-answer-form-gap-still-blocks-repair",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "q19 still lacks graph/draw/teken answer-form MTU coverage or reviewed equivalent.",
+      "blocks": [
+        "q19 repair",
+        "MTU-H5 closure",
+        "product-route readiness"
+      ],
+      "does_not_block": [
+        "review of this answer-form decision packet"
+      ],
+      "proof_required_to_close": "Reviewed graph/draw/teken answer-form coverage exists and q19 answer-form failures clear without hiding source/graph/procedure hooks."
+    },
+    {
+      "finding_id": "q19-source-graph-gaps-carried",
+      "classification": "blocks",
+      "severity": "high",
+      "summary": "The q19 source overlay exists but remains partial_with_blocking_gap and blocked for every q19 source/graph record.",
+      "blocks": [
+        "q19 full repair",
+        "lesson/product use",
+        "MTU-H5 closure"
+      ],
+      "does_not_block": [
+        "human review of the answer-form path"
+      ],
+      "proof_required_to_close": "Reviewed source figure, worksheet, and graph-object reconstruction evidence exists or limitations are explicitly accepted while gaps remain visible."
+    },
+    {
+      "finding_id": "q19-support-units-not-answer-form-closure",
+      "classification": "guard",
+      "severity": "medium",
+      "summary": "A42, D10, D13, and A81 support concepts/procedures/source reasoning but are not accepted here as graph/draw/teken answer-form closure.",
+      "blocks": [
+        "premature q19 fixture closure"
+      ],
+      "does_not_block": [
+        "human review of a reviewed-equivalent answer-skill path"
+      ],
+      "proof_required_to_close": "A later reviewed-equivalent answer-skill or MTU governance decision explicitly covers the teken answer form."
+    },
+    {
+      "finding_id": "q19-one-centimeter-drawing-constraint-carried",
+      "classification": "guard",
+      "severity": "medium",
+      "summary": "The official about-1-cm line-shift instruction is carried as a graph-drawing constraint for the teken answer form, not as a numeric scale-factor MTU need.",
+      "blocks": [
+        "premature answer-form closure that ignores worksheet geometry limitations"
+      ],
+      "does_not_block": [
+        "human review of the answer-form decision path"
+      ],
+      "proof_required_to_close": "A later reviewed answer-form or graph-object gate explicitly accounts for the about-1-cm drawing constraint while keeping source/graph limitations visible."
+    },
+    {
+      "finding_id": "q27-q15-carried",
+      "classification": "carried_blocks",
+      "severity": "medium",
+      "summary": "q27 and q15 remain MTU-H5 blockers outside this q19 gate.",
+      "blocks": [
+        "MTU-H5 full closure",
+        "product-route readiness"
+      ],
+      "does_not_block": [
+        "q19 answer-form decision-gate review"
+      ],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their validator buckets."
+    }
+  ],
+  "blocked_outcomes": [
+    "q19 fixture mutation",
+    "q19 mapper repair",
+    "candidate storage creation",
+    "candidate writes",
+    "new q19 source-annex extraction execution",
+    "new q19 graph-object extraction execution",
+    "protected reference mutation",
+    "machine-reference mutation",
+    "external-source mutation",
+    "MTU minting/update/split/merge/deprecation",
+    "operation-registry mutation",
+    "answer-skill mutation",
+    "authored target-exercise mutation",
+    "lesson output",
+    "PV or graph mutation",
+    "diagnostics",
+    "adaptive routing",
+    "mastery",
+    "sequencing",
+    "student-facing AI",
+    "summative use",
+    "product-route readiness claim",
+    "student/product use"
+  ],
+  "required_review_team_threshold": {
+    "agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "all_three_required": true
+  },
+  "pre_human_review_team_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Teacher re-review found no remaining teacher-trustworthiness blocks. The repaired reject option is complete, the about-1-cm instruction is correctly carried as a graph-drawing constraint, q19 remains not closed, and no-product/no-student/no-lesson boundaries are clear."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Economist review found the q19 correction-model chain correct, the aggregate-supply alternative preserved for q19-step-2 and q19-step-3, support units not overclaimed, and A45 plus forbidden route guards preserved."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Quality inspection re-review verified the staged whitespace check is clean, the custom checker passes, URL index and report JSON validation pass, live H5 counts remain q19 3/20 with q3 clean, and platform agent index entries exist in Markdown and JSON."
+    }
+  ],
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  }
+}
