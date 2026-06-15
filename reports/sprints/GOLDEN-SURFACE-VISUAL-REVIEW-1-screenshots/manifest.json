@@ -11,7 +11,7 @@
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-desktop-light.png",
       "bytes": 117534,
-      "capture_method": "headless_chromium"
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-exit-ticket",
@@ -23,8 +23,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-light.png",
-      "bytes": 47070,
-      "capture_method": "headless_chromium"
+      "bytes": 50139,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-exit-ticket",
@@ -36,8 +36,8 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-dark.png",
-      "bytes": 47515,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 50961,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -49,8 +49,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png",
-      "bytes": 135860,
-      "capture_method": "headless_chromium"
+      "bytes": 135523,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -62,8 +62,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png",
-      "bytes": 49975,
-      "capture_method": "headless_chromium"
+      "bytes": 52973,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -75,8 +75,8 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png",
-      "bytes": 50248,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 53505,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -88,8 +88,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-desktop-light.png",
-      "bytes": 157272,
-      "capture_method": "headless_chromium"
+      "bytes": 156962,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -101,8 +101,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-light.png",
-      "bytes": 59392,
-      "capture_method": "headless_chromium"
+      "bytes": 60761,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -114,8 +114,8 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-dark.png",
-      "bytes": 59466,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 60754,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     }
   ]
 }

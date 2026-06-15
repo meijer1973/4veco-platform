@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "sprint_id": "GOLDEN-SURFACE-VISUAL-REVIEW-1",
-  "generated_at": "2026-06-15T07:01:59.039Z",
+  "generated_at": "2026-06-15T07:38:06.031Z",
   "book_root": "C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
   "chrome_executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-  "scope_note": "Reads existing generated lesson output only; no lesson output is mutated.",
+  "scope_note": "Captures existing generated lesson output only; the capture step is read-only. For the revision pass, generated lesson output was refreshed beforehand through the platform deploy pipeline.",
   "surfaces": [
     {
       "id": "112-exit-ticket",
@@ -69,6 +69,106 @@
           }
         ],
         "links_resolve": true
+      },
+      "runtime": {
+        "viewports": [
+          {
+            "surface_id": "112-exit-ticket",
+            "surface_label": "1.1.2 exit ticket",
+            "viewport_id": "desktop-light",
+            "requested_viewport": {
+              "id": "desktop-light",
+              "width": 1280,
+              "height": 900,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-desktop-light.png",
+            "screenshot_bytes": 117534,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "page": {
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "bodyScrollWidth": 1280,
+              "bodyClientWidth": 1280
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "112-exit-ticket",
+            "surface_label": "1.1.2 exit ticket",
+            "viewport_id": "mobile-light",
+            "requested_viewport": {
+              "id": "mobile-light",
+              "width": 390,
+              "height": 844,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-light.png",
+            "screenshot_bytes": 50139,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "112-exit-ticket",
+            "surface_label": "1.1.2 exit ticket",
+            "viewport_id": "mobile-dark",
+            "requested_viewport": {
+              "id": "mobile-dark",
+              "width": 390,
+              "height": 844,
+              "theme": "dark"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-dark.png",
+            "screenshot_bytes": 50961,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "dark",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          }
+        ],
+        "mobile_horizontal_overflow_absent": true,
+        "old_formula_token_ids_absent": true,
+        "duplicate_visible_token_labels_absent": true
       },
       "verdict": "PASS"
     },
@@ -153,6 +253,106 @@
         ],
         "links_resolve": true
       },
+      "runtime": {
+        "viewports": [
+          {
+            "surface_id": "112-korte-check",
+            "surface_label": "1.1.2 advisory short check",
+            "viewport_id": "desktop-light",
+            "requested_viewport": {
+              "id": "desktop-light",
+              "width": 1280,
+              "height": 900,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png",
+            "screenshot_bytes": 135523,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "page": {
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "bodyScrollWidth": 1280,
+              "bodyClientWidth": 1280
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "112-korte-check",
+            "surface_label": "1.1.2 advisory short check",
+            "viewport_id": "mobile-light",
+            "requested_viewport": {
+              "id": "mobile-light",
+              "width": 390,
+              "height": 844,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png",
+            "screenshot_bytes": 52973,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "112-korte-check",
+            "surface_label": "1.1.2 advisory short check",
+            "viewport_id": "mobile-dark",
+            "requested_viewport": {
+              "id": "mobile-dark",
+              "width": 390,
+              "height": 844,
+              "theme": "dark"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png",
+            "screenshot_bytes": 53505,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "dark",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [],
+            "token_labels": [],
+            "duplicate_visible_token_labels": []
+          }
+        ],
+        "mobile_horizontal_overflow_absent": true,
+        "old_formula_token_ids_absent": true,
+        "duplicate_visible_token_labels_absent": true
+      },
       "verdict": "PASS"
     },
     {
@@ -187,7 +387,7 @@
         "golden_assets_present": true,
         "legacy_css_absent": true,
         "legacy_ui_absent": true,
-        "old_internal_labels_absent": false,
+        "old_internal_labels_absent": true,
         "answer_giving_placeholders_absent": true,
         "fake_graph_controls_absent": true,
         "links": [
@@ -218,7 +418,293 @@
         ],
         "links_resolve": true
       },
-      "verdict": "REVISE"
+      "runtime": {
+        "viewports": [
+          {
+            "surface_id": "113-exit-ticket",
+            "surface_label": "1.1.3 exit ticket",
+            "viewport_id": "desktop-light",
+            "requested_viewport": {
+              "id": "desktop-light",
+              "width": 1280,
+              "height": 900,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-desktop-light.png",
+            "screenshot_bytes": 156962,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "page": {
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "bodyScrollWidth": 1280,
+              "bodyClientWidth": 1280
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [
+              "newQ",
+              "oldQBase",
+              "open",
+              "times10",
+              "oldQBeforeChange",
+              "plus",
+              "minus",
+              "close",
+              "newQBase",
+              "divide",
+              "times100",
+              "oldFirst"
+            ],
+            "token_labels": [
+              {
+                "id": "newQ",
+                "label": "nieuwe Q"
+              },
+              {
+                "id": "oldQBase",
+                "label": "oude Q als basis"
+              },
+              {
+                "id": "open",
+                "label": "("
+              },
+              {
+                "id": "times10",
+                "label": "x 10%"
+              },
+              {
+                "id": "oldQBeforeChange",
+                "label": "oude Q in teller"
+              },
+              {
+                "id": "plus",
+                "label": "+"
+              },
+              {
+                "id": "minus",
+                "label": "-"
+              },
+              {
+                "id": "close",
+                "label": ")"
+              },
+              {
+                "id": "newQBase",
+                "label": "nieuwe Q als basis"
+              },
+              {
+                "id": "divide",
+                "label": "/"
+              },
+              {
+                "id": "times100",
+                "label": "x 100%"
+              },
+              {
+                "id": "oldFirst",
+                "label": "oude Q - nieuwe Q"
+              }
+            ],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "113-exit-ticket",
+            "surface_label": "1.1.3 exit ticket",
+            "viewport_id": "mobile-light",
+            "requested_viewport": {
+              "id": "mobile-light",
+              "width": 390,
+              "height": 844,
+              "theme": "light"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-light.png",
+            "screenshot_bytes": 60761,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "light",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [
+              "newQ",
+              "oldQBase",
+              "open",
+              "times10",
+              "oldQBeforeChange",
+              "plus",
+              "minus",
+              "close",
+              "newQBase",
+              "divide",
+              "times100",
+              "oldFirst"
+            ],
+            "token_labels": [
+              {
+                "id": "newQ",
+                "label": "nieuwe Q"
+              },
+              {
+                "id": "oldQBase",
+                "label": "oude Q als basis"
+              },
+              {
+                "id": "open",
+                "label": "("
+              },
+              {
+                "id": "times10",
+                "label": "x 10%"
+              },
+              {
+                "id": "oldQBeforeChange",
+                "label": "oude Q in teller"
+              },
+              {
+                "id": "plus",
+                "label": "+"
+              },
+              {
+                "id": "minus",
+                "label": "-"
+              },
+              {
+                "id": "close",
+                "label": ")"
+              },
+              {
+                "id": "newQBase",
+                "label": "nieuwe Q als basis"
+              },
+              {
+                "id": "divide",
+                "label": "/"
+              },
+              {
+                "id": "times100",
+                "label": "x 100%"
+              },
+              {
+                "id": "oldFirst",
+                "label": "oude Q - nieuwe Q"
+              }
+            ],
+            "duplicate_visible_token_labels": []
+          },
+          {
+            "surface_id": "113-exit-ticket",
+            "surface_label": "1.1.3 exit ticket",
+            "viewport_id": "mobile-dark",
+            "requested_viewport": {
+              "id": "mobile-dark",
+              "width": 390,
+              "height": 844,
+              "theme": "dark"
+            },
+            "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-dark.png",
+            "screenshot_bytes": 60754,
+            "capture_method": "headless_chromium_cdp_device_metrics",
+            "theme": "dark",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "page": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "bodyScrollWidth": 390,
+              "bodyClientWidth": 390
+            },
+            "horizontal_overflow": false,
+            "overflowing": [],
+            "content_overflowing": [],
+            "token_ids": [
+              "newQ",
+              "oldQBase",
+              "open",
+              "times10",
+              "oldQBeforeChange",
+              "plus",
+              "minus",
+              "close",
+              "newQBase",
+              "divide",
+              "times100",
+              "oldFirst"
+            ],
+            "token_labels": [
+              {
+                "id": "newQ",
+                "label": "nieuwe Q"
+              },
+              {
+                "id": "oldQBase",
+                "label": "oude Q als basis"
+              },
+              {
+                "id": "open",
+                "label": "("
+              },
+              {
+                "id": "times10",
+                "label": "x 10%"
+              },
+              {
+                "id": "oldQBeforeChange",
+                "label": "oude Q in teller"
+              },
+              {
+                "id": "plus",
+                "label": "+"
+              },
+              {
+                "id": "minus",
+                "label": "-"
+              },
+              {
+                "id": "close",
+                "label": ")"
+              },
+              {
+                "id": "newQBase",
+                "label": "nieuwe Q als basis"
+              },
+              {
+                "id": "divide",
+                "label": "/"
+              },
+              {
+                "id": "times100",
+                "label": "x 100%"
+              },
+              {
+                "id": "oldFirst",
+                "label": "oude Q - nieuwe Q"
+              }
+            ],
+            "duplicate_visible_token_labels": []
+          }
+        ],
+        "mobile_horizontal_overflow_absent": true,
+        "old_formula_token_ids_absent": true,
+        "duplicate_visible_token_labels_absent": true
+      },
+      "verdict": "PASS"
     }
   ],
   "screenshots": [
@@ -233,7 +719,7 @@
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-desktop-light.png",
       "bytes": 117534,
-      "capture_method": "headless_chromium"
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-exit-ticket",
@@ -245,8 +731,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-light.png",
-      "bytes": 47070,
-      "capture_method": "headless_chromium"
+      "bytes": 50139,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-exit-ticket",
@@ -258,8 +744,8 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-dark.png",
-      "bytes": 47515,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 50961,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -271,8 +757,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png",
-      "bytes": 135860,
-      "capture_method": "headless_chromium"
+      "bytes": 135523,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -284,8 +770,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png",
-      "bytes": 49975,
-      "capture_method": "headless_chromium"
+      "bytes": 52973,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "112-korte-check",
@@ -297,8 +783,8 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png",
-      "bytes": 50248,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 53505,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -310,8 +796,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-desktop-light.png",
-      "bytes": 157272,
-      "capture_method": "headless_chromium"
+      "bytes": 156962,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -323,8 +809,8 @@
         "theme": "light"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-light.png",
-      "bytes": 59392,
-      "capture_method": "headless_chromium"
+      "bytes": 60761,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     },
     {
       "surface_id": "113-exit-ticket",
@@ -336,13 +822,481 @@
         "theme": "dark"
       },
       "path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-dark.png",
-      "bytes": 59466,
-      "capture_method": "headless_chromium_force_dark_mode"
+      "bytes": 60754,
+      "capture_method": "headless_chromium_cdp_device_metrics"
     }
   ],
-  "overall_verdict": "REVISE",
+  "runtime_proofs": [
+    {
+      "surface_id": "112-exit-ticket",
+      "surface_label": "1.1.2 exit ticket",
+      "viewport_id": "desktop-light",
+      "requested_viewport": {
+        "id": "desktop-light",
+        "width": 1280,
+        "height": 900,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-desktop-light.png",
+      "screenshot_bytes": 117534,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "bodyClientWidth": 1280
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "112-exit-ticket",
+      "surface_label": "1.1.2 exit ticket",
+      "viewport_id": "mobile-light",
+      "requested_viewport": {
+        "id": "mobile-light",
+        "width": 390,
+        "height": 844,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-light.png",
+      "screenshot_bytes": 50139,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "112-exit-ticket",
+      "surface_label": "1.1.2 exit ticket",
+      "viewport_id": "mobile-dark",
+      "requested_viewport": {
+        "id": "mobile-dark",
+        "width": 390,
+        "height": 844,
+        "theme": "dark"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-exit-ticket-mobile-dark.png",
+      "screenshot_bytes": 50961,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "112-korte-check",
+      "surface_label": "1.1.2 advisory short check",
+      "viewport_id": "desktop-light",
+      "requested_viewport": {
+        "id": "desktop-light",
+        "width": 1280,
+        "height": 900,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-desktop-light.png",
+      "screenshot_bytes": 135523,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "bodyClientWidth": 1280
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "112-korte-check",
+      "surface_label": "1.1.2 advisory short check",
+      "viewport_id": "mobile-light",
+      "requested_viewport": {
+        "id": "mobile-light",
+        "width": 390,
+        "height": 844,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-light.png",
+      "screenshot_bytes": 52973,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "112-korte-check",
+      "surface_label": "1.1.2 advisory short check",
+      "viewport_id": "mobile-dark",
+      "requested_viewport": {
+        "id": "mobile-dark",
+        "width": 390,
+        "height": 844,
+        "theme": "dark"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/112-korte-check-mobile-dark.png",
+      "screenshot_bytes": 53505,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [],
+      "token_labels": [],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "113-exit-ticket",
+      "surface_label": "1.1.3 exit ticket",
+      "viewport_id": "desktop-light",
+      "requested_viewport": {
+        "id": "desktop-light",
+        "width": 1280,
+        "height": 900,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-desktop-light.png",
+      "screenshot_bytes": 156962,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "page": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "bodyScrollWidth": 1280,
+        "bodyClientWidth": 1280
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [
+        "newQ",
+        "oldQBase",
+        "open",
+        "times10",
+        "oldQBeforeChange",
+        "plus",
+        "minus",
+        "close",
+        "newQBase",
+        "divide",
+        "times100",
+        "oldFirst"
+      ],
+      "token_labels": [
+        {
+          "id": "newQ",
+          "label": "nieuwe Q"
+        },
+        {
+          "id": "oldQBase",
+          "label": "oude Q als basis"
+        },
+        {
+          "id": "open",
+          "label": "("
+        },
+        {
+          "id": "times10",
+          "label": "x 10%"
+        },
+        {
+          "id": "oldQBeforeChange",
+          "label": "oude Q in teller"
+        },
+        {
+          "id": "plus",
+          "label": "+"
+        },
+        {
+          "id": "minus",
+          "label": "-"
+        },
+        {
+          "id": "close",
+          "label": ")"
+        },
+        {
+          "id": "newQBase",
+          "label": "nieuwe Q als basis"
+        },
+        {
+          "id": "divide",
+          "label": "/"
+        },
+        {
+          "id": "times100",
+          "label": "x 100%"
+        },
+        {
+          "id": "oldFirst",
+          "label": "oude Q - nieuwe Q"
+        }
+      ],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "113-exit-ticket",
+      "surface_label": "1.1.3 exit ticket",
+      "viewport_id": "mobile-light",
+      "requested_viewport": {
+        "id": "mobile-light",
+        "width": 390,
+        "height": 844,
+        "theme": "light"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-light.png",
+      "screenshot_bytes": 60761,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [
+        "newQ",
+        "oldQBase",
+        "open",
+        "times10",
+        "oldQBeforeChange",
+        "plus",
+        "minus",
+        "close",
+        "newQBase",
+        "divide",
+        "times100",
+        "oldFirst"
+      ],
+      "token_labels": [
+        {
+          "id": "newQ",
+          "label": "nieuwe Q"
+        },
+        {
+          "id": "oldQBase",
+          "label": "oude Q als basis"
+        },
+        {
+          "id": "open",
+          "label": "("
+        },
+        {
+          "id": "times10",
+          "label": "x 10%"
+        },
+        {
+          "id": "oldQBeforeChange",
+          "label": "oude Q in teller"
+        },
+        {
+          "id": "plus",
+          "label": "+"
+        },
+        {
+          "id": "minus",
+          "label": "-"
+        },
+        {
+          "id": "close",
+          "label": ")"
+        },
+        {
+          "id": "newQBase",
+          "label": "nieuwe Q als basis"
+        },
+        {
+          "id": "divide",
+          "label": "/"
+        },
+        {
+          "id": "times100",
+          "label": "x 100%"
+        },
+        {
+          "id": "oldFirst",
+          "label": "oude Q - nieuwe Q"
+        }
+      ],
+      "duplicate_visible_token_labels": []
+    },
+    {
+      "surface_id": "113-exit-ticket",
+      "surface_label": "1.1.3 exit ticket",
+      "viewport_id": "mobile-dark",
+      "requested_viewport": {
+        "id": "mobile-dark",
+        "width": 390,
+        "height": 844,
+        "theme": "dark"
+      },
+      "screenshot_path": "reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/113-exit-ticket-mobile-dark.png",
+      "screenshot_bytes": 60754,
+      "capture_method": "headless_chromium_cdp_device_metrics",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyClientWidth": 390
+      },
+      "horizontal_overflow": false,
+      "overflowing": [],
+      "content_overflowing": [],
+      "token_ids": [
+        "newQ",
+        "oldQBase",
+        "open",
+        "times10",
+        "oldQBeforeChange",
+        "plus",
+        "minus",
+        "close",
+        "newQBase",
+        "divide",
+        "times100",
+        "oldFirst"
+      ],
+      "token_labels": [
+        {
+          "id": "newQ",
+          "label": "nieuwe Q"
+        },
+        {
+          "id": "oldQBase",
+          "label": "oude Q als basis"
+        },
+        {
+          "id": "open",
+          "label": "("
+        },
+        {
+          "id": "times10",
+          "label": "x 10%"
+        },
+        {
+          "id": "oldQBeforeChange",
+          "label": "oude Q in teller"
+        },
+        {
+          "id": "plus",
+          "label": "+"
+        },
+        {
+          "id": "minus",
+          "label": "-"
+        },
+        {
+          "id": "close",
+          "label": ")"
+        },
+        {
+          "id": "newQBase",
+          "label": "nieuwe Q als basis"
+        },
+        {
+          "id": "divide",
+          "label": "/"
+        },
+        {
+          "id": "times100",
+          "label": "x 100%"
+        },
+        {
+          "id": "oldFirst",
+          "label": "oude Q - nieuwe Q"
+        }
+      ],
+      "duplicate_visible_token_labels": []
+    }
+  ],
+  "overall_verdict": "PASS",
   "authority_boundary": {
-    "generated_lesson_output_mutated": false,
+    "generated_lesson_output_mutated_by_repair_deploy": true,
+    "generated_lesson_output_mutated_by_capture": false,
     "target_exercise_registry_mutated": false,
     "product_route_adoption_authorized": false,
     "target_equivalent_completion_authorized": false,

@@ -1,6 +1,6 @@
 # GOLDEN-SURFACE-VISUAL-REVIEW-1 Screenshot Manifest
 
-Generated: 2026-06-15T07:01:59.039Z
+Generated: 2026-06-15T07:38:06.031Z
 
 ## Scope
 
@@ -33,6 +33,7 @@ Generated: 2026-06-15T07:01:59.039Z
 - Legacy CSS/runtime absent: true
 - Links resolve: true
 - Authority held: true
+- Mobile horizontal overflow absent: true
 
 ### 1.1.2 advisory short check
 
@@ -42,13 +43,17 @@ Generated: 2026-06-15T07:01:59.039Z
 - Legacy CSS/runtime absent: true
 - Links resolve: true
 - Authority held: true
+- Mobile horizontal overflow absent: true
 
 ### 1.1.3 exit ticket
 
-- Verdict: `REVISE`
+- Verdict: `PASS`
 - Golden root present: true
 - Legacy shell absent: true
 - Legacy CSS/runtime absent: true
 - Links resolve: true
 - Authority held: true
+- Mobile horizontal overflow absent: true
 - Fake graph controls absent: true
+- Old formula-token ids absent: true
+- Duplicate visible token labels absent: true

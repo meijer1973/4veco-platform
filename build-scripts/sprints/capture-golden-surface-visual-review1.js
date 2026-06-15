@@ -82,6 +82,10 @@ function pageAbs(surface) {
   return path.join(bookRoot, pageRel(surface));
 }
 
+function urlPath(surface) {
+  return pageRel(surface).split('/').map(encodeURIComponent).join('/');
+}
+
 function dataAbs(surface) {
   return path.join(platformRoot, 'source-data', 'book-1', 'exit-ticket', `${surface.sourceKey}.json`);
 }
@@ -221,6 +225,220 @@ function captureScreenshot(url, file, viewport) {
   });
 }
 
+function getJson(url) {
+  return new Promise((resolve, reject) => {
+    http.get(url, (res) => {
+      let body = '';
+      res.setEncoding('utf8');
+      res.on('data', (chunk) => { body += chunk; });
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(body));
+        } catch (error) {
+          reject(error);
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
+async function waitForVersion(port) {
+  const started = Date.now();
+  let lastError = null;
+  while (Date.now() - started < 10000) {
+    try {
+      return await getJson(`http://127.0.0.1:${port}/json/version`);
+    } catch (error) {
+      lastError = error;
+      await delay(100);
+    }
+  }
+  throw lastError || new Error('Timed out waiting for Chrome DevTools');
+}
+
+function openCdp(wsUrl) {
+  return new Promise((resolve, reject) => {
+    const ws = new WebSocket(wsUrl);
+    let nextId = 1;
+    const pending = new Map();
+
+    ws.onopen = () => {
+      resolve({
+        send(method, params, sessionId) {
+          const id = nextId++;
+          const message = { id, method, params: params || {} };
+          if (sessionId) message.sessionId = sessionId;
+          return new Promise((innerResolve, innerReject) => {
+            pending.set(id, { resolve: innerResolve, reject: innerReject });
+            ws.send(JSON.stringify(message));
+          });
+        },
+        close() {
+          ws.close();
+        },
+      });
+    };
+
+    ws.onerror = (error) => reject(error);
+    ws.onmessage = (event) => {
+      const message = JSON.parse(String(event.data));
+      if (!message.id || !pending.has(message.id)) return;
+      const entry = pending.get(message.id);
+      pending.delete(message.id);
+      if (message.error) {
+        entry.reject(new Error(message.error.message || JSON.stringify(message.error)));
+      } else {
+        entry.resolve(message.result || {});
+      }
+    };
+  });
+}
+
+async function evaluateJson(cdp, sessionId, expression) {
+  const result = await cdp.send('Runtime.evaluate', {
+    expression,
+    returnByValue: true,
+    awaitPromise: true,
+  }, sessionId);
+  if (!result.result || result.result.type !== 'object') {
+    throw new Error(`Unexpected Runtime.evaluate result: ${JSON.stringify(result)}`);
+  }
+  return result.result.value;
+}
+
+async function inspectRuntimeProofs(port) {
+  const cdpPort = await findFreePort();
+  const profileDir = path.join(process.env.TEMP || 'C:\\tmp\\Codex-work', `golden-surface-visual-review1-chrome-${Date.now()}`);
+  await fsp.mkdir(profileDir, { recursive: true });
+  const chrome = spawn(chromeExe, [
+    '--headless=new',
+    '--disable-gpu',
+    '--hide-scrollbars',
+    '--no-first-run',
+    '--disable-extensions',
+    '--disable-background-networking',
+    `--remote-debugging-port=${cdpPort}`,
+    `--user-data-dir=${profileDir}`,
+    'about:blank',
+  ], { stdio: ['ignore', 'ignore', 'pipe'] });
+
+  let cdp;
+  try {
+    const version = await waitForVersion(cdpPort);
+    cdp = await openCdp(version.webSocketDebuggerUrl);
+    const target = await cdp.send('Target.createTarget', { url: 'about:blank' });
+    const attached = await cdp.send('Target.attachToTarget', { targetId: target.targetId, flatten: true });
+    const sessionId = attached.sessionId;
+    await cdp.send('Page.enable', {}, sessionId);
+    await cdp.send('Runtime.enable', {}, sessionId);
+
+    const runtimeProofs = [];
+    for (const surface of surfaces) {
+      for (const viewport of viewports) {
+        await cdp.send('Emulation.setDeviceMetricsOverride', {
+          width: viewport.width,
+          height: viewport.height,
+          deviceScaleFactor: 1,
+          mobile: viewport.width < 520,
+        }, sessionId);
+        await cdp.send('Page.navigate', { url: `http://127.0.0.1:${port}/${urlPath(surface)}` }, sessionId);
+        await delay(900);
+        await cdp.send('Runtime.evaluate', {
+          expression: `(() => {
+            try { localStorage.setItem('quizMode', '${viewport.theme}'); } catch (_error) {}
+            document.documentElement.setAttribute('data-theme', '${viewport.theme}');
+          })()`,
+          returnByValue: true,
+        }, sessionId);
+        await delay(200);
+        const proof = await evaluateJson(cdp, sessionId, `(() => {
+          const doc = document.documentElement;
+          const body = document.body;
+          const viewportWidth = Math.max(window.innerWidth || 0, doc.clientWidth || 0);
+          const nodes = Array.from(document.body ? document.body.querySelectorAll('*') : []);
+          const overflowing = nodes.map((node) => {
+            const rect = node.getBoundingClientRect();
+            if (rect.width <= 0 || rect.height <= 0) return null;
+            const left = Math.floor(rect.left);
+            const right = Math.ceil(rect.right);
+            if (left >= -1 && right <= viewportWidth + 1) return null;
+            const text = (node.innerText || node.textContent || '').replace(/\\s+/g, ' ').trim();
+            return {
+              tag: node.tagName.toLowerCase(),
+              className: typeof node.className === 'string' ? node.className : '',
+              text: text.slice(0, 120),
+              left,
+              right,
+              width: Math.ceil(rect.width)
+            };
+          }).filter(Boolean).slice(0, 20);
+          const contentOverflowing = nodes.map((node) => {
+            if (!(node instanceof HTMLElement)) return null;
+            if (node.clientWidth <= 0 || node.scrollWidth <= node.clientWidth + 1) return null;
+            const text = (node.innerText || node.textContent || '').replace(/\\s+/g, ' ').trim();
+            return {
+              tag: node.tagName.toLowerCase(),
+              className: typeof node.className === 'string' ? node.className : '',
+              text: text.slice(0, 120),
+              scrollWidth: node.scrollWidth,
+              clientWidth: node.clientWidth
+            };
+          }).filter(Boolean).slice(0, 20);
+          const tokenIds = Array.from(document.querySelectorAll('[data-ge-token-id]')).map((node) => node.getAttribute('data-ge-token-id'));
+          const tokenLabels = Array.from(document.querySelectorAll('[data-ge-token-id]')).map((node) => ({
+            id: node.getAttribute('data-ge-token-id'),
+            label: (node.innerText || node.textContent || '').replace(/\\s+/g, ' ').trim()
+          }));
+          const visibleAnswerLabels = tokenLabels
+            .filter((item) => item.label)
+            .reduce((map, item) => {
+              map[item.label] = (map[item.label] || 0) + 1;
+              return map;
+            }, {});
+          return {
+            theme: doc.getAttribute('data-theme'),
+            viewport: { width: window.innerWidth, height: window.innerHeight },
+            page: {
+              scrollWidth: doc.scrollWidth,
+              clientWidth: doc.clientWidth,
+              bodyScrollWidth: body ? body.scrollWidth : 0,
+              bodyClientWidth: body ? body.clientWidth : 0
+            },
+            horizontal_overflow: doc.scrollWidth > doc.clientWidth + 1 || (body && body.scrollWidth > body.clientWidth + 1) || overflowing.length > 0 || contentOverflowing.length > 0,
+            overflowing,
+            content_overflowing: contentOverflowing,
+            token_ids: tokenIds,
+            token_labels: tokenLabels,
+            duplicate_visible_token_labels: Object.keys(visibleAnswerLabels).filter((label) => visibleAnswerLabels[label] > 1)
+          };
+        })()`);
+        const screenshot = await cdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true }, sessionId);
+        const screenshotFile = path.join(screenshotDir, `${surface.id}-${viewport.id}.png`);
+        await fsp.writeFile(screenshotFile, Buffer.from(screenshot.data, 'base64'));
+        runtimeProofs.push({
+          surface_id: surface.id,
+          surface_label: surface.label,
+          viewport_id: viewport.id,
+          requested_viewport: viewport,
+          screenshot_path: rel(screenshotFile),
+          screenshot_bytes: fs.statSync(screenshotFile).size,
+          capture_method: 'headless_chromium_cdp_device_metrics',
+          ...proof,
+        });
+      }
+    }
+    return runtimeProofs;
+  } finally {
+    if (cdp) cdp.close();
+    try { chrome.kill(); } catch (_error) { /* noop */ }
+    try {
+      await fsp.rm(profileDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
+    } catch (_error) {
+      // Temporary browser profile cleanup is best-effort.
+    }
+  }
+}
+
 function loadedHrefOrSrc(html, fileName) {
   const escaped = fileName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return new RegExp('<(?:link|script)\\b[^>]*(?:href|src)=["\'][^"\']*' + escaped + '["\'][^>]*>', 'i').test(html);
@@ -315,8 +533,15 @@ function verdictForSurface(facts, surface) {
     facts.source.gate_approved_false,
     facts.source.completion_language_eligible_false,
     facts.source.target_readiness_evidence_false,
+    facts.runtime.mobile_horizontal_overflow_absent,
   ];
-  if (surface.id === '113-exit-ticket') required.push(facts.html.fake_graph_controls_absent);
+  if (surface.id === '113-exit-ticket') {
+    required.push(
+      facts.html.fake_graph_controls_absent,
+      facts.runtime.old_formula_token_ids_absent,
+      facts.runtime.duplicate_visible_token_labels_absent
+    );
+  }
   if (surface.authority === 'advisory_only') {
     required.push(
       facts.source.target_equivalent_candidate === false,
@@ -358,10 +583,16 @@ function mdManifest(proof) {
     lines.push(`- Legacy CSS/runtime absent: ${surface.html.legacy_css_absent && surface.html.legacy_ui_absent}`);
     lines.push(`- Links resolve: ${surface.html.links_resolve}`);
     lines.push(`- Authority held: ${surface.source.gate_approved_false && surface.source.completion_language_eligible_false && surface.source.target_readiness_evidence_false}`);
+    lines.push(`- Mobile horizontal overflow absent: ${surface.runtime.mobile_horizontal_overflow_absent}`);
     if (surface.id === '113-exit-ticket') {
       lines.push(`- Fake graph controls absent: ${surface.html.fake_graph_controls_absent}`);
+      lines.push(`- Old formula-token ids absent: ${surface.runtime.old_formula_token_ids_absent}`);
+      lines.push(`- Duplicate visible token labels absent: ${surface.runtime.duplicate_visible_token_labels_absent}`);
     }
     lines.push('');
+  }
+  while (lines[lines.length - 1] === '') {
+    lines.pop();
   }
   return `${lines.join('\n')}\n`;
 }
@@ -375,26 +606,22 @@ async function main() {
 
   const port = await findFreePort();
   const server = await startStaticServer(bookRoot, port);
-  const screenshots = [];
+  let screenshots = [];
+  let runtimeProofs = [];
   try {
     for (const surface of surfaces) {
       const pageFile = pageAbs(surface);
       if (!fs.existsSync(pageFile)) throw new Error(`Missing rendered page: ${pageFile}`);
-      const urlPath = pageRel(surface).split('/').map(encodeURIComponent).join('/');
-      for (const viewport of viewports) {
-        const name = `${surface.id}-${viewport.id}.png`;
-        const file = path.join(screenshotDir, name);
-        await captureScreenshot(`http://127.0.0.1:${port}/${urlPath}`, file, viewport);
-        screenshots.push({
-          surface_id: surface.id,
-          surface_label: surface.label,
-          viewport,
-          path: rel(file),
-          bytes: fs.statSync(file).size,
-          capture_method: viewport.theme === 'dark' ? 'headless_chromium_force_dark_mode' : 'headless_chromium',
-        });
-      }
     }
+    runtimeProofs = await inspectRuntimeProofs(port);
+    screenshots = runtimeProofs.map((proof) => ({
+      surface_id: proof.surface_id,
+      surface_label: proof.surface_label,
+      viewport: proof.requested_viewport,
+      path: proof.screenshot_path,
+      bytes: proof.screenshot_bytes,
+      capture_method: proof.capture_method,
+    }));
   } finally {
     server.close();
   }
@@ -404,6 +631,10 @@ async function main() {
     const dataFile = dataAbs(surface);
     const html = readText(pageFile);
     const data = readJson(dataFile);
+    const runtimeViewports = runtimeProofs.filter((proof) => proof.surface_id === surface.id);
+    const mobileRuntime = runtimeViewports.filter((proof) => /^mobile/.test(proof.viewport_id));
+    const tokenIds = runtimeViewports.flatMap((proof) => proof.token_ids || []);
+    const duplicateLabels = runtimeViewports.flatMap((proof) => proof.duplicate_visible_token_labels || []);
     const facts = {
       id: surface.id,
       label: surface.label,
@@ -412,6 +643,12 @@ async function main() {
       source_data: rel(dataFile),
       source: sourceFacts(data, surface),
       html: htmlFacts(html, pageFile),
+      runtime: {
+        viewports: runtimeViewports,
+        mobile_horizontal_overflow_absent: mobileRuntime.length > 0 && mobileRuntime.every((proof) => proof.horizontal_overflow === false),
+        old_formula_token_ids_absent: !tokenIds.some((id) => id === 'oldQden' || id === 'oldQnum'),
+        duplicate_visible_token_labels_absent: duplicateLabels.length === 0,
+      },
     };
     facts.verdict = verdictForSurface(facts, surface);
     return facts;
@@ -423,12 +660,14 @@ async function main() {
     generated_at: new Date().toISOString(),
     book_root: bookRoot,
     chrome_executable: chromeExe,
-    scope_note: 'Reads existing generated lesson output only; no lesson output is mutated.',
+    scope_note: 'Captures existing generated lesson output only; the capture step is read-only. For the revision pass, generated lesson output was refreshed beforehand through the platform deploy pipeline.',
     surfaces: surfaceProof,
     screenshots,
+    runtime_proofs: runtimeProofs,
     overall_verdict: surfaceProof.every((surface) => surface.verdict === 'PASS') ? 'PASS' : 'REVISE',
     authority_boundary: {
-      generated_lesson_output_mutated: false,
+      generated_lesson_output_mutated_by_repair_deploy: true,
+      generated_lesson_output_mutated_by_capture: false,
       target_exercise_registry_mutated: false,
       product_route_adoption_authorized: false,
       target_equivalent_completion_authorized: false,

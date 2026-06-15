@@ -17,7 +17,7 @@ references/exemplars/implemented/1.1.3-golden-exercise-workbench/source-data-sna
 ## Hashes
 
 ```text
-generated-route-snapshot.html sha256: 8A7003DFDD2821956D8ECFBD9E4F0E160CB7D1763A716D2FC5625E03780576F4
+generated-route-snapshot.html sha256: 27D7C22C680410C5CEFA831732513B0AE675CD15B5DABF5B976F120DA6707118
 source-data-snapshot.json sha256: 32844DF1FED311ACDFE038F2281243543691CD09840C824318A8438180771586
 ```
 
@@ -83,4 +83,8 @@ $json -match '"framework"\s*:\s*"golden_exercise_workbench"'
 
 ## Boundary
 
-This proof establishes the snapshot shell and asset boundary. It does not prove rendered visual quality, interaction state, keyboard behavior, mobile/dark screenshots, or formula-token policy. Those remain screenshot/reviewer proof obligations before broader route adoption; formula-token policy remains delegated to A96 until the `1.1.3` duplicate-token issue is repaired.
+This proof establishes the snapshot shell and asset boundary. It does not prove
+rendered visual quality, interaction state, keyboard behavior, mobile/dark
+screenshots, or formula-token policy. Those remain screenshot/reviewer proof
+obligations before broader route adoption; formula-token policy remains
+delegated to A96.

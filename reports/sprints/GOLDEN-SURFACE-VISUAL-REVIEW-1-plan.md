@@ -1,7 +1,7 @@
 # GOLDEN-SURFACE-VISUAL-REVIEW-1 Plan
 
 Date: 2026-06-15
-Status: completed_review
+Status: completed_repair_review
 
 ## Objective
 
@@ -43,11 +43,15 @@ This sprint does not:
 - migrate `1.1.1`;
 - migrate `1.1.3-korte-check`;
 - mutate target-exercise registry data;
-- mutate generated lesson output;
+- hand-edit generated lesson output;
 - claim product-route adoption;
 - claim target-equivalent completion language;
 - authorize diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product
   use, or student/product use.
+
+The revision pass does regenerate Book 1 lesson output through the platform
+deploy pipeline on lesson branch
+`codex/golden-surface-visual-revision-1-20260615`.
 
 ## Core Requirements
 
@@ -77,7 +81,17 @@ Remove-Item Env:\GOLDEN_SURFACE_BOOK_ROOT
 ```
 
 5. Visually inspect the generated desktop/mobile/dark screenshots.
-6. Record verdict and classified findings.
+6. Repair the two `REVISE` findings:
+   - mobile horizontal overflow / right-edge clipping;
+   - `1.1.3` duplicate visible `oude Q` formula-token ambiguity.
+7. Regenerate Book 1 output through:
+
+```powershell
+node scripts/deploy.js "C:\Projects\4veco\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
+```
+
+8. Regenerate screenshots, DOM evidence, and verdict.
+9. Record verdict and classified findings.
 
 ## Deliverables
 

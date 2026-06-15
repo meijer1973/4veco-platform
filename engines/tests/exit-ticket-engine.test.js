@@ -437,7 +437,7 @@ describe('ExitTicketEngine', () => {
             state: 'matched',
             matched: true
         }));
-        const correctFormula = ['open', 'newQ', 'minus', 'oldQnum', 'close', 'divide', 'oldQden', 'times100'];
+        const correctFormula = ['open', 'newQ', 'minus', 'oldQBeforeChange', 'close', 'divide', 'oldQBase', 'times100'];
         expect(engine.checkTask('claim-50-procent-controleren', {
             interval: '150-300',
             oldValue: '300',

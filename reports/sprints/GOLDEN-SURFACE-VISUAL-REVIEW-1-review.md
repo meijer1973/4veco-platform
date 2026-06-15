@@ -1,7 +1,8 @@
 # GOLDEN-SURFACE-VISUAL-REVIEW-1 Review
 
 Date: 2026-06-15
-Verdict: REVISE
+Verdict after revision: PASS
+Prior verdict before repair: REVISE
 
 ## Review Basis
 
@@ -35,6 +36,9 @@ Evidence inspected:
 - `1.1.2` target-equivalent completion authority must remain held.
 - `1.1.2-korte-check` must remain advisory only.
 - `1.1.3` must not reintroduce fake slope/connect-line graph controls.
+- Mobile states must not clip or horizontally overflow at 390px.
+- `1.1.3` formula tokens must not expose duplicate visible `oude Q` labels
+  through hidden internal IDs.
 - Review findings must classify what blocks, what does not block, and what
   proof is required to close.
 
@@ -52,84 +56,65 @@ Evidence inspected:
 | `1.1.2` exit-ticket authority held | passed | `gateApproved: false`, `completionLanguageEligible: false`, `targetReadinessEvidence: false` |
 | `1.1.2-korte-check` advisory-only status held | passed | `targetEquivalent.candidate: false`, advisory proof false, hints absent, route advice true |
 | `1.1.3` fake slope/connect-line controls absent | passed | proof JSON: `fake_graph_controls_absent: true` |
-| Mobile text fits the viewport | revise | screenshots show right-edge clipping on mobile hero/source text |
-| `1.1.3` formula-token ambiguity absent | revise | DOM contains `oldQden` / `oldQnum`; visible duplicate `oude Q` token labels remain |
+| Mobile text fits the viewport | passed | runtime proof: `scrollWidth == clientWidth == 390`, zero overflowing elements for mobile light/dark |
+| `1.1.3` formula-token ambiguity absent | passed | DOM/runtime proof: no `oldQden` / `oldQnum`; duplicate visible token labels absent |
 
 ## Findings
 
 ### GSVR1-F1: Mobile views clip right-edge text
 
-Classification: REVISE
+Classification: CLOSED
 
-The mobile captures show horizontal clipping in the Golden Workbench layout.
-This appears in the in-scope mobile screenshots, including:
-
-- `112-exit-ticket-mobile-light.png`
-- `112-exit-ticket-mobile-dark.png`
-- `112-korte-check-mobile-light.png`
-- `113-exit-ticket-mobile-light.png`
-- `113-exit-ticket-mobile-dark.png`
-
-The core route architecture is correct, but the viewport does not fully contain
-hero/source text at 390px width.
+Original result: REVISE. Mobile screenshots showed right-edge clipping at
+390px.
 
 blocks:
 
-- clean PASS for `GOLDEN-SURFACE-VISUAL-REVIEW-1`;
-- claiming the three surfaces are visually stabilized on mobile;
-- using this review as evidence for later product-route adoption.
+- closed. This no longer blocks clean PASS for
+  `GOLDEN-SURFACE-VISUAL-REVIEW-1`.
 
 does_not_block:
 
-- the no-legacy-shell finding;
-- the authority-held finding;
-- the route-link finding;
-- preparing a focused repair sprint or PR.
+- broader product-route adoption, Scale Gate 1, diagnostics, mastery/PV, and
+  student/product use remain outside this sprint's authority.
 
 proof_required_to_close:
 
-- refreshed mobile light and mobile dark screenshots at 390px width for the
-  three in-scope surfaces;
-- no visible right-edge clipping in hero, source, task, and route-panel text;
-- preferably a DOM/browser proof that `document.documentElement.scrollWidth <=
-  document.documentElement.clientWidth` for each mobile state.
+- satisfied. Refreshed mobile light/dark screenshots show clean wrapping.
+- satisfied. Runtime proof records no horizontal overflow and zero overflowing
+  elements for all mobile states.
 
 ### GSVR1-F2: `1.1.3` formula-token ambiguity remains
 
-Classification: REVISE
+Classification: CLOSED
 
-The `1.1.3` exit-ticket DOM still contains formula-builder token ids
-`oldQden` and `oldQnum`, both rendered with the visible label `oude Q`. This
-matches the known limitation in the original plan: `1.1.3` is valid as a
-layout/graph/no-legacy reference, but not as the formula-token exemplar.
+Original result: REVISE. The `1.1.3` exit-ticket DOM exposed `oldQden` and
+`oldQnum`, both visibly labelled `oude Q`.
 
 blocks:
 
-- claiming `1.1.3` is the formula-token exemplar;
-- closing the "no old/internal formula-token issue" part of this review;
-- using `1.1.3` as evidence for A96-level formula-token quality.
+- closed. This no longer blocks clean PASS for the visual review sprint.
 
 does_not_block:
 
-- using `1.1.3` as a Golden shell / graph-workspace / no-legacy reference;
-- the fake slope/connect-line control finding, which passed;
-- authority-held status.
+- `1.1.3` still remains an implemented route/workbench exemplar, not the
+  formal formula-builder policy exemplar. A96 remains the formula policy
+  reference for reusable-token rules and hidden-token-trap policy.
 
 proof_required_to_close:
 
-- revised `1.1.3` formula task labels or token model that removes duplicate
-  ambiguous `oude Q` visible tokens;
-- refreshed DOM proof showing no `oldQden` / `oldQnum` exposed in the route;
-- refreshed screenshot or interaction proof for the formula task area.
+- satisfied. Source and deployed output now use distinct visible tokens:
+  `oldQBeforeChange`, `oldQBase`, and `newQBase`.
+- satisfied. Runtime proof records old formula-token IDs absent and duplicate
+  visible token labels absent.
 
 ### GSVR1-N1: Sibling lesson worktree is stale
 
 Classification: NOTE
 
-The sibling lesson worktree at `C:\wt\EXERCISES-20260609\4veco-lessen` is on
-`codex/exercises-20260609` and still renders legacy `1.1.2` routes. The
-canonical lesson `main` at `C:\Projects\4veco\4veco-lessen` renders the three
-in-scope routes with the Golden shell and was used for this review.
+The sibling lesson worktree at `C:\wt\EXERCISES-20260609\4veco-lessen` is not
+the evidence source for this review. The canonical lesson worktree at
+`C:\Projects\4veco\4veco-lessen` was deployed and used for proof.
 
 blocks:
 
@@ -139,7 +124,7 @@ blocks:
 does_not_block:
 
 - this review, because evidence was regenerated against canonical lesson
-  `main`.
+  output.
 
 proof_required_to_close:
 
@@ -148,18 +133,15 @@ proof_required_to_close:
 
 ## Conclusion
 
-Verdict is REVISE.
+Verdict after revision is PASS.
 
-The three in-scope routes pass the architectural and authority checks: Golden
-root present, legacy/hybrid shell absent, route links resolving, `1.1.2`
-authority held, `1.1.2-korte-check` advisory-only, and `1.1.3` fake graph
-controls absent.
+The three in-scope routes pass the architectural, authority, mobile-layout, and
+token-clarity checks: Golden root present, legacy/hybrid shell absent, route
+links resolving, `1.1.2` authority held, `1.1.2-korte-check` advisory-only,
+`1.1.3` fake graph controls absent, mobile overflow absent, and old ambiguous
+formula-token IDs absent.
 
-The sprint does not reach PASS because mobile text clipping is visible and the
-known `1.1.3` formula-token ambiguity remains. No product-route adoption,
-completion-language authority, diagnostics, mastery/sequencing, PV, Scale Gate
-1, broad product use, or student/product use is authorized.
-
-Recommended next action: open a focused repair sprint for Golden Workbench
-mobile overflow and `1.1.3` formula-token clarity, then rerun
-`GOLDEN-SURFACE-VISUAL-REVIEW-1`.
+This PASS authorizes moving to the next planned review step. It does not
+authorize product-route adoption, completion-language authority, diagnostics,
+mastery/sequencing, PV, Scale Gate 1 closure, broad product use, or
+student/product use.

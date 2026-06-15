@@ -33,19 +33,23 @@ rollout-notes.md
 source-data/book-1/exit-ticket/1.1.3-exit-ticket.json
 ```
 
-`generated-route-snapshot.html` matches the current committed lesson artifact on `4veco-lessen` `origin/main` after the workbench-header label fix:
+`generated-route-snapshot.html` matches the generated lesson route produced on
+the lesson revision branch during the Golden surface visual revision deploy:
 
 ```text
-../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html
+C:\Projects\4veco\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod\...\1.1.3 Grafieken en tabellen\1.1.3 exit-ticket route
 ```
 
-The snapshot can also be reproduced from the current platform source data with `build-scripts/platform/build-exit-ticket-shells.js`. No lesson output was edited for this exemplar package.
+The snapshot can also be reproduced from the current platform source data with
+`build-scripts/platform/build-exit-ticket-shells.js`. Generated lesson output
+was refreshed through the deploy pipeline only; no generated output was
+hand-edited for this exemplar package.
 
 ## Snapshot Hashes
 
 ```text
-generated-route-snapshot.html sha256: 8A7003DFDD2821956D8ECFBD9E4F0E160CB7D1763A716D2FC5625E03780576F4
-source-data-snapshot.json sha256: 32844DF1FED311ACDFE038F2281243543691CD09840C824318A8438180771586
+generated-route-snapshot.html sha256: 27D7C22C680410C5CEFA831732513B0AE675CD15B5DABF5B976F120DA6707118
+source-data-snapshot.json sha256: B6E049B17C117D825291FE83C218F12CB0CFBF4FCBD3DA718D2C6031B71FCCC1
 ```
 
 ## Why This Is the Implemented Reference
@@ -89,7 +93,7 @@ two source points for a straight-line graph
 automatic line after determined points
 interval-before-read-off graph reading
 structured claim-control placement
-formula-token policy must be taken from A96 until the 1.1.3 duplicate-token issue is repaired
+local formula-token clarity for this route; formula-token policy still belongs to A96
 local feedback after attempt
 no target-equivalent completion claim
 ```
@@ -105,14 +109,10 @@ graph/table interaction reference
 route/no-legacy reference
 ```
 
-Do not use it as the formula-token exemplar. The current source snapshot contains two visible `oude Q` formula tokens with different hidden IDs:
-
-```text
-oldQden
-oldQnum
-```
-
-Future calculation/formula work must use `references/exemplars/a96-answer-form/` for formula-builder policy until the `1.1.3` duplicate-token issue is repaired.
+Do not use it as the formula-token policy exemplar. The current source snapshot
+has local formula-token clarity for this route, but future calculation/formula
+policy work must still use `references/exemplars/a96-answer-form/` for
+reusable-token rules, hidden-token-trap policy, and A96-level formula proof.
 
 ## How Future Agents Should Use It
 

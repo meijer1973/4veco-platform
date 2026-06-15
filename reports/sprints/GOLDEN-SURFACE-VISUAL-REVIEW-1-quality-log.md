@@ -1,7 +1,8 @@
 # GOLDEN-SURFACE-VISUAL-REVIEW-1 Quality Log
 
 Date: 2026-06-15
-Branch: `codex/golden-surface-visual-review-1-20260615`
+Platform branch: `codex/golden-surface-visual-review-1-20260615`
+Lesson branch: `codex/golden-surface-visual-revision-1-20260615`
 
 ## Repository State
 
@@ -19,40 +20,35 @@ C:\Projects\4veco\4veco-lessen
 ```
 
 The sibling lesson worktree under `C:\wt\EXERCISES-20260609\4veco-lessen` was
-not used as final evidence because it is on `codex/exercises-20260609` and
-contains stale legacy `1.1.2` output.
+not used as evidence because it is on `codex/exercises-20260609` and contains
+stale legacy `1.1.2` output.
 
 ## Commands Run
 
 ```powershell
-gh pr view 57 --json number,state,closed,closedAt,mergedAt,mergedBy,mergeCommit,isDraft,mergeable,mergeStateStatus,headRefName,headRefOid,url
-git fetch origin --prune
-git switch -c codex/golden-surface-visual-review-1-20260615 origin/main
-git branch -D codex/golden-workbench-rollout-roadmap-20260612
-git push origin --delete codex/golden-workbench-rollout-roadmap-20260612
+gh pr view 65 --json number,state,isDraft,headRefName,headRefOid,baseRefName,url,mergeable,mergeStateStatus
 git status -sb
 git log -1 --oneline
-git stash push -u -m golden-surface-visual-review-1-artifacts
-git fetch origin --prune
-git rebase origin/main
-git stash pop
 git -C C:\Projects\4veco\4veco-lessen fetch origin --prune
-git -C C:\Projects\4veco\4veco-lessen status -sb
-git -C C:\Projects\4veco\4veco-lessen rev-list --left-right --count origin/main...HEAD
+git -C C:\Projects\4veco\4veco-lessen switch -c codex/golden-surface-visual-revision-1-20260615 origin/main
+npm.cmd test -- engines/tests/golden-ticket-layout.test.js engines/tests/exit-ticket-engine.test.js build-scripts/sprints/check-golden-exercise-workbench.test.js --runInBand
+node build-scripts/sprints/check-golden-exercise-workbench.js
+node scripts/deploy.js "C:\Projects\4veco\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
+node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js "C:\Projects\4veco\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod"
 $env:GOLDEN_SURFACE_BOOK_ROOT='C:\Projects\4veco\4veco-lessen\Boek 1 - Grondslagen, vraag en aanbod'
 node build-scripts/sprints/capture-golden-surface-visual-review1.js
 Remove-Item Env:\GOLDEN_SURFACE_BOOK_ROOT
 node --check build-scripts/sprints/capture-golden-surface-visual-review1.js
-node build-scripts/references/check-roadmap-version-index.js
-npm.cmd run check:scope-language
-node build-scripts/ci/check-evidence-line-endings.js
-node build-scripts/reports/validate-report-json.js
-git diff --check
 ```
+
+The deploy command completed with valid local references, reachable interactive
+files, and data validation tests passing.
 
 ## Generated Evidence
 
 ```text
+reports/json/checksurface-113-exemplar-exit1-proof.json
+reports/json/golden-exercise-checkers-1-proof.json
 reports/json/golden-surface-visual-review-1-proof.json
 reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshot-manifest.md
 reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/
@@ -61,42 +57,59 @@ reports/sprints/GOLDEN-SURFACE-VISUAL-REVIEW-1-screenshots/
 Generated proof summary:
 
 ```text
-overall_verdict: REVISE
+overall_verdict: PASS
 screenshots: 9
 112-exit-ticket: PASS
 112-korte-check: PASS
-113-exit-ticket: REVISE
+113-exit-ticket: PASS
+mobile_runtime_overflow: false for every 390px mobile state
+old_formula_token_ids_absent: true
+duplicate_visible_token_labels_absent: true
 ```
+
+## Repair Notes
+
+`GSVR1-F1` mobile clipping was repaired through shared Golden layout CSS:
+
+- grid children and panels now have explicit `min-width: 0`;
+- long headings, intro copy, route pills, controls, inputs, and tables wrap
+  within their containers;
+- screenshot capture now uses CDP device metrics, matching the runtime proof.
+
+`GSVR1-F2` formula-token ambiguity was repaired in `1.1.3` source data:
+
+- `oldQden` became `oldQBase` with visible label `oude Q als basis`;
+- `oldQnum` became `oldQBeforeChange` with visible label `oude Q in teller`;
+- `newQden` became `newQBase` with visible label `nieuwe Q als basis`;
+- the expected formula sequence was updated to the repaired token IDs.
 
 ## Visual Inspection Notes
 
 `1.1.2` exit ticket:
 
 - Desktop light view uses the Golden shell and source/task split.
-- Mobile light and dark views preserve the Golden shell and route panel, but
-  text is clipped at the right viewport edge.
+- Mobile light and dark views wrap cleanly at 390px.
 - Authority remains held.
 
 `1.1.2-korte-check`:
 
 - Desktop light view is advisory and uses the Golden shell.
-- Mobile light and dark views preserve the advisory route structure, but text
-  clipping appears at the right viewport edge.
+- Mobile light and dark views wrap cleanly at 390px.
 - Advisory-only status remains held.
 
 `1.1.3` exit ticket:
 
 - Desktop light view uses the Golden shell, source/task split, graph workspace,
   and route panel.
-- Mobile light and dark views preserve structure, but hero text clips at the
-  right viewport edge.
+- Mobile light and dark views wrap cleanly at 390px.
 - Fake slope/connect-line controls are absent.
-- Formula-token ambiguity remains: `oldQden` and `oldQnum` both render as
-  visible `oude Q` tokens.
+- Formula-token ambiguity is closed; old internal token IDs and duplicate
+  visible token labels are absent.
 
 ## Boundary Confirmation
 
-No generated lesson output was edited. No target-exercise registry data was
-mutated. No product-route adoption, completion-language authority,
-diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or
-student/product use is authorized by this review.
+Generated lesson output was regenerated through the platform deploy pipeline on
+the lesson branch. It was not hand-edited. Target-exercise registry data was not
+mutated. No product-route adoption, completion-language authority, diagnostics,
+mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use
+is authorized by this review.

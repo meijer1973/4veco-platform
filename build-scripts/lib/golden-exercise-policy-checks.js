@@ -617,7 +617,8 @@ function validateExemplarIndexFormulaBoundary() {
   assert(asArray(implemented.must_not_use_for).includes('formula_token_policy'), 'implemented 1.1.3 must not be formula-token policy');
   assert(asArray(implemented.must_not_use_for).includes('hidden_token_trap_policy'), 'implemented 1.1.3 must not be hidden-token policy');
   const limitText = asText(implemented.limitations);
-  assert(/oldQden/.test(limitText) && /oldQnum/.test(limitText), 'implemented 1.1.3 limitation must name oldQden and oldQnum');
+  assert(/A96/.test(limitText) && /formula-builder policy/i.test(limitText), 'implemented 1.1.3 limitation must keep A96 as formula-builder policy');
+  assert(/local formula-token clarity/i.test(limitText), 'implemented 1.1.3 limitation must distinguish local clarity from formula-token policy');
   const a96 = asArray(index.entries).find((entry) => entry.id === 'a96-answer-form');
   assert(a96 && asArray(a96.use_for).includes('formula-builder policy'), 'A96 must remain formula-builder policy exemplar');
   return { implemented_boundary: implemented.id, formula_exemplar: a96.id };
