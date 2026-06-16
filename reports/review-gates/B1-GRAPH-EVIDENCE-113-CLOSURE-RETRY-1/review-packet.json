@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "packet_id": "B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1",
+  "sprint_id": "B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1",
+  "pr_number": 77,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/77",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": "B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1",
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "references/data/document_inventory.json",
+    "references/data/rag/chunk_index.jsonl",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/checksurface-113-exemplar-exit1-proof.json",
+    "reports/json/checksurface-policy-regression1-proof.json",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-quality-log.md",
+    "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-review-packet.md",
+    "reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json",
+    "reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-plan.md",
+    "reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "HUMAN_REVIEW_RECORDED_FLAG_IMPLEMENTATION_REQUIRED",
+    "rationale": "This packet records the high-authority target-equivalent flag decision. It does not mutate source authority flags or generated lesson output."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "target_equivalent_closure_decision",
+    "completion_language_boundary",
+    "scale_gate_reliance_boundary",
+    "student_product_use_boundary"
+  ],
+  "authority_claims": {
+    "source_data_mutation_performed": false,
+    "generated_lesson_output_mutation_performed": false,
+    "machine_reference_mutation_performed": false,
+    "authored_target_registry_mutation_performed": false,
+    "target_equivalent_proof_closed": false,
+    "target_equivalent_proof_human_decision_recorded": true,
+    "target_equivalent_proof_approved_for_flag_implementation": true,
+    "source_flag_implementation_required": true,
+    "gate_approved_authorized": true,
+    "target_readiness_evidence_authorized": true,
+    "completion_language_authorized": false,
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "year1_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false
+  },
+  "merged_prs_reviewed": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "pr_number": 76,
+      "merge_commit": "2d8a16a4e7d992d30640a9ff366470bdd3e88bc7",
+      "purpose": "Metadata alignment repair and refreshed platform proof."
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "pr_number": 17,
+      "merge_commit": "efc4fc2b194d7a43d072dcba89f755b02cf55574",
+      "purpose": "Generated lesson output companion."
+    }
+  ],
+  "product_end_state_and_original_spec": {
+    "product_end_state": "Separate advisory Korte check and target-equivalent Exit ticket roles; target-equivalent proof must require real student work, be rendered and inspectable, and avoid product, diagnostics, mastery, PV, Scale Gate, or student/product-use authority without separate human gates.",
+    "original_specs": [
+      "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+      "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+      "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md",
+      "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.json",
+      "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-review-packet.md",
+      "reports/reference-planning/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-review-packet.md"
+    ]
+  },
+  "non_negotiable_requirements": [
+    "Use A38/A45/A46 as the reviewed-final 1.1.3 mapping.",
+    "Confirm P vertical, Q horizontal, table-to-graph construction, graph reading/interpolation, and source-claim checking.",
+    "Confirm platform source metadata and generated lesson output agree.",
+    "Keep advisory Korte check and target-equivalent Exit ticket roles separate.",
+    "Record the human review decision for gateApproved, targetReadinessEvidence, and completionLanguageEligible explicitly.",
+    "Do not mutate source flags in this decision packet.",
+    "Do not authorize Year 1, CP-6, Scale Gate, product-route, diagnostics, mastery, PV, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "target_registry_mapping_reviewed_final",
+      "status": "met",
+      "evidence": "references/authored/course-target-exercises.json"
+    },
+    {
+      "requirement": "source_metadata_aligned_to_a38_a45_a46",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json; source-data/book-1/exit-ticket/1.1.3-korte-check.json"
+    },
+    {
+      "requirement": "generated_lesson_output_merged",
+      "status": "met",
+      "evidence": "4veco-lessen PR #17 merge commit efc4fc2"
+    },
+    {
+      "requirement": "graph_table_operation_chain_preserved",
+      "status": "met",
+      "evidence": "reports/json/graph-exit-ux1-proof.json; reports/json/graph-check-ux1-proof.json"
+    },
+    {
+      "requirement": "rendered_proof_current",
+      "status": "met",
+      "evidence": "reports/json/checksurface-113-exemplar-exit1-proof.json; screenshot artifacts"
+    },
+    {
+      "requirement": "authority_flags_human_decision",
+      "status": "met",
+      "evidence": "Human review approves gateApproved=true and targetReadinessEvidence=true; completionLanguageEligible remains false"
+    },
+    {
+      "requirement": "source_flag_implementation",
+      "status": "proof_required_to_close",
+      "evidence": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1 must update source data and generated output"
+    },
+    {
+      "requirement": "downstream_authority_separated",
+      "status": "met",
+      "evidence": "authority_claims all downstream flags false"
+    }
+  ],
+  "findings": [
+    {
+      "id": "B1GE113CR-001",
+      "classification": "core_requirement_met",
+      "finding": "1.1.3 source metadata now uses A38/A45/A46 consistently.",
+      "blocks": [],
+      "does_not_block": [
+        "human closure review"
+      ],
+      "proof_required_to_close": "N/A"
+    },
+    {
+      "id": "B1GE113CR-002",
+      "classification": "core_requirement_met",
+      "finding": "Rendered proof covers P vertical, Q horizontal, table-to-graph construction, graph reading/interpolation, and source-claim checking.",
+      "blocks": [],
+      "does_not_block": [
+        "human authority decision"
+      ],
+      "proof_required_to_close": "Human reviewer inspects proof JSON and screenshots."
+    },
+    {
+      "id": "B1GE113CR-003",
+      "classification": "human_decision_recorded",
+      "finding": "Human review approves gateApproved=true and targetReadinessEvidence=true while keeping completionLanguageEligible=false.",
+      "blocks": [
+        "source-data state matching the decision",
+        "generated lesson output matching the decision"
+      ],
+      "does_not_block": [
+        "merging this decision packet"
+      ],
+      "proof_required_to_close": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1 mutates source data, regenerates lesson output, and refreshes proof."
+    },
+    {
+      "id": "B1GE113CR-004",
+      "classification": "scale_blocker",
+      "finding": "Downstream product authority remains blocked.",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "human review of 1.1.3 graph/table target-equivalent proof"
+      ],
+      "proof_required_to_close": "Separate downstream product-proof gates after target-equivalent proof closes, if it closes."
+    }
+  ],
+  "human_review_decision": {
+    "gateApproved": "approve_true",
+    "targetReadinessEvidence": "approve_true",
+    "completionLanguageEligible": "keep_false",
+    "source_data_mutation_in_this_pr": false,
+    "next_sprint": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1"
+  },
+  "checks_run": [
+    {
+      "command": "node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-exit-ux1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-graph-check-ux1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-check-surface-pregate1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/check-course-target-exercises-v5.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:review-throughput -- reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/rag/validate-chunks.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-document-registry.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-source-manifest.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-document-inventory.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-mtu-evidence-layer.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/ci/check-evidence-line-endings.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ..\\4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "platform exact conflict-marker scan: rg -n \"^(<<<<<<< .+|=======|>>>>>>> .+)$\" .",
+      "status": "passed_no_matches"
+    },
+    {
+      "command": "lesson exact conflict-marker scan: rg -n \"^(<<<<<<< .+|=======|>>>>>>> .+)$\" .",
+      "status": "passed_no_matches"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed_with_known_fixture_diagnostics"
+    }
+  ],
+  "decision": {
+    "verdict": "HUMAN_REVIEW_RECORDED_FLAG_IMPLEMENTATION_REQUIRED",
+    "target_equivalent_graph_evidence_closed": false,
+    "target_equivalent_graph_evidence_decision": "approve_gate_and_target_readiness_keep_completion_language_held",
+    "recommended_next_action": "Run B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1 to update source flags, regenerate lesson output, refresh proof, and keep downstream authority held."
+  }
+}
