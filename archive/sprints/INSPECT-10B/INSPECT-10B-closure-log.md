@@ -97,8 +97,9 @@ Pre-human specialist subagent review round 1 returned `REVISE` from
 teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection
 reviewers because the generated JSON embedded volatile platform `HEAD`
 metadata. The generator has been repaired to use a stable
-`platform_head_policy` note instead. Validation, CI, and specialist subagent
-review must rerun before human review.
+`platform_head_policy` note instead. Local validation now passes after the
+repair commit, including generator `--check` after commit. Fresh PR CI and
+specialist subagent review must rerun before human review.
 
 The legacy sprint bundle checker is not applicable because it expects
 `reports/sprints/<id>-plan.md`, while INSPECT-10B is explicitly allowlisted
@@ -121,8 +122,8 @@ under `archive/sprints/INSPECT-10B/`.
 
 ## Next Action
 
-Commit and push the deterministic-output repair, wait for fresh PR CI, and
-rerun the teacher/usefulness, legal/privacy/claims, and Dutch
-quality-inspection subagent reviews. Human review remains blocked until those
-pre-human reviews pass. Do not proceed to INSPECT-11 or any downstream
-authority without a new human-reviewed sprint packet.
+Push the deterministic-output repair, wait for fresh PR CI, and rerun the
+teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection
+subagent reviews. Human review remains blocked until those pre-human reviews
+pass. Do not proceed to INSPECT-11 or any downstream authority without a new
+human-reviewed sprint packet.

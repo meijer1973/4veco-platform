@@ -132,9 +132,9 @@ work requires a new human-reviewed sprint packet.
 
 ## Required Next Action
 
-Commit the deterministic-output repair, rerun local validation, verify
-generator `--check` still passes after the commit, push the repaired branch,
-wait for fresh PR CI, and rerun the three pre-human specialist subagent
-reviews. Do not start human review until those specialist reviews return the
-required verdicts. Do not proceed to INSPECT-11 or any downstream authority
-until human review explicitly authorises a new scoped sprint.
+Push the repaired branch, wait for fresh PR CI, and rerun the three pre-human
+specialist subagent reviews. The deterministic-output repair has passed local
+validation after commit. Do not start human review until those specialist
+reviews return the required verdicts. Do not proceed to INSPECT-11 or any
+downstream authority until human review explicitly authorises a new scoped
+sprint.

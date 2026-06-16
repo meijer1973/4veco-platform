@@ -175,8 +175,24 @@ the report no longer embeds the platform commit SHA. Platform commit evidence
 must live in validation logs, PR status, and CI, not in deterministic generated
 output.
 
+## Post-Repair Validation
+
+After committing the deterministic-output repair, validation was rerun.
+
+| Command | Exit | Evidence |
+|---|---:|---|
+| `node build-scripts/inspection/build-dutch-diagnostic-report.js --check` | 0 | Passed after commit `3bd823f9`; report no longer becomes stale when platform `HEAD` changes |
+| Expanded diagnostic generator refusal spot checks | 0 | Public/external, evidence-pack, teacher, student-data, product-route, diagnostics, Scale Gate, dashboard, quality-ref, CI, and lesson-output requests returned expected stop codes |
+| `node build-scripts/sprints/check-sprint-plan.js archive/sprints/INSPECT-10B/INSPECT-10B-sprint-plan.md` | 0 | `OK sprint plan` |
+| `npm.cmd run check:scope-language` | 0 | `OK scope-language check: active surfaces` |
+| `node build-scripts/references/check-roadmap-version-index.js` | 0 | `OK roadmap version index: 151 entries` |
+| `node build-scripts/sprints/emit-url-index.js --check` | 0 | `OK url-index: reports/url-index.md is current` |
+| `git diff --check origin/main` | 0 | No whitespace errors |
+| `git -C ..\4veco-lessen status --short` | 0 | No output; lesson checkout clean/read-only |
+| `npm.cmd run check:platform` | 0 | Jest passed: 54 suites passed, 6 skipped; 806 tests passed, 8 skipped |
+
 ## Conclusion
 
-Validation must be rerun after committing the deterministic-output repair.
-No human review may start until the three pre-human specialist subagents rerun
-and return the required verdicts.
+The deterministic-output repair has passed local validation. No human review
+may start until the three pre-human specialist subagents rerun and return the
+required verdicts.
