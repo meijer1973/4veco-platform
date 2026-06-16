@@ -86,10 +86,11 @@ Notable evidence:
 
 Final refresh passed after merging current `origin/main` into the branch. The
 first merge brought in PR #74. `main` then advanced again via PR #78 while the
-first refreshed CI was running, so the branch was refreshed a second time. Both
-merges were clean. The diagnostic report regenerated deterministically, the
-generator EOF hygiene fix removed a range-diff whitespace warning, and the
-lesson checkout remained clean/read-only.
+first refreshed CI was running, so the branch was refreshed a second time.
+`main` advanced again via PR #80 while the second refreshed CI was running, so
+the branch was refreshed a third time. All merges were clean. The diagnostic
+report regenerated deterministically, the generator EOF hygiene fix removed a
+range-diff whitespace warning, and the lesson checkout remained clean/read-only.
 
 The legacy sprint bundle checker is not applicable because it expects
 `reports/sprints/<id>-plan.md`, while INSPECT-10B is explicitly allowlisted

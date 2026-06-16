@@ -148,6 +148,14 @@ rerun and passed: generator `--check`, refusal spot checks, scope-language,
 roadmap-version index, URL index, `git diff --check origin/main`, lesson
 checkout clean/read-only check, and `npm.cmd run check:platform`.
 
+A third fetch after the second refreshed CI found `main` had advanced again via
+PR #80 (`GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1`). Current
+`origin/main` was merged cleanly a third time. The diagnostic report
+regenerated with no file changes. The same validation set was rerun and passed:
+generator `--check`, refusal spot checks, scope-language, roadmap-version
+index, URL index, `git diff --check origin/main`, lesson checkout
+clean/read-only check, and `npm.cmd run check:platform`.
+
 ## Conclusion
 
 Validation passes for the INSPECT-10B implementation scope after final refresh

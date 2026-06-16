@@ -54,9 +54,11 @@ FLAGS.
 Final refresh note: current `origin/main` was merged cleanly after PR review
 found the branch stale. `main` advanced again via PR #78 while the first
 refreshed CI was running, so `origin/main` was merged cleanly a second time.
-The refreshed head passed generator `--check`, refusal spot checks,
-scope-language, roadmap-version index, URL index, range diff hygiene, lesson
-checkout clean/read-only check, and `check:platform`.
+`main` advanced again via PR #80 while the second refreshed CI was running, so
+`origin/main` was merged cleanly a third time. The refreshed head passed
+generator `--check`, refusal spot checks, scope-language, roadmap-version
+index, URL index, range diff hygiene, lesson checkout clean/read-only check,
+and `check:platform`.
 
 ## Blocking Findings
 

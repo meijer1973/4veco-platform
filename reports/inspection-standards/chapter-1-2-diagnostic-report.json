@@ -128,7 +128,7 @@
     }
   ],
   "source_checkout_notes": {
-    "platform_head": "306187ba64800b78883e146d06ff17bb26f45b41",
+    "platform_head": "ba8fadb3b6f436ec768780cc6b12d5d1b828ebd6",
     "lesson_specs_head": "8b007cd86a485518bca8881051e11f5272f162c7",
     "lesson_specs_mode": "read-only specification source; no generated lesson-output path is read"
   },
