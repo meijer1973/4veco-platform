@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T08:19:17.559Z
+Generated: 2026-06-16T08:24:09.123Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4620
+Files indexed: 4629
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1761,7 +1761,7 @@ Count: 609
 
 ## reports
 
-Count: 2856
+Count: 2865
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1802,6 +1802,10 @@ Count: 2856
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
@@ -2071,6 +2075,8 @@ Count: 2856
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-review-packet.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-quality-log.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-review-packet.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-quality-log.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-review-packet.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
@@ -2111,6 +2117,7 @@ Count: 2856
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-1/review-packet.json
+- reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json
 - reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
@@ -2749,6 +2756,8 @@ Count: 2856
 - reports/sprints/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-plan.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-result.md
+- reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-plan.md
+- reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-result.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-result.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
