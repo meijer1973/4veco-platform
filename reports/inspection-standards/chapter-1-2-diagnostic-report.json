@@ -128,7 +128,7 @@
     }
   ],
   "source_checkout_notes": {
-    "platform_head": "ba8fadb3b6f436ec768780cc6b12d5d1b828ebd6",
+    "platform_head_policy": "not_embedded_in_generated_output; use validation logs and PR CI for platform commit evidence",
     "lesson_specs_head": "8b007cd86a485518bca8881051e11f5272f162c7",
     "lesson_specs_mode": "read-only specification source; no generated lesson-output path is read"
   },
@@ -613,7 +613,7 @@
     },
     {
       "code": "STOP_DOWNSTREAM_GATE_AUTHORITY",
-      "condition": "A request tries to unlock Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority."
+      "condition": "A request tries to unlock package/CI, dashboard, quality-ref, Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority."
     },
     {
       "code": "STOP_LESSON_OUTPUT_OR_PROTECTED_REFERENCE",

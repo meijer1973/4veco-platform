@@ -132,7 +132,9 @@ work requires a new human-reviewed sprint packet.
 
 ## Required Next Action
 
-Push the refreshed INSPECT-10B branch, wait for fresh PR CI, and send the PR
-for renewed three-reviewer human review. Do not proceed to INSPECT-11 or any
-downstream authority until human review explicitly authorises a new scoped
-sprint.
+Commit the deterministic-output repair, rerun local validation, verify
+generator `--check` still passes after the commit, push the repaired branch,
+wait for fresh PR CI, and rerun the three pre-human specialist subagent
+reviews. Do not start human review until those specialist reviews return the
+required verdicts. Do not proceed to INSPECT-11 or any downstream authority
+until human review explicitly authorises a new scoped sprint.

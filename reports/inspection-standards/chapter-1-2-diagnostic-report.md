@@ -129,7 +129,7 @@ Default run generated only the allowlisted internal diagnostic report pair.
 | `STOP_PACK_STRENGTH_REQUEST` | A request asks for pack-strength, teacher/school-facing, or evidence-pack language. |
 | `STOP_PUBLIC_EXTERNAL_REQUEST` | A request asks for public/external generated output or public/external sharing. |
 | `STOP_PERSONAL_DATA` | A request introduces student-level, school-identifiable, or personal data. |
-| `STOP_DOWNSTREAM_GATE_AUTHORITY` | A request tries to unlock Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority. |
+| `STOP_DOWNSTREAM_GATE_AUTHORITY` | A request tries to unlock package/CI, dashboard, quality-ref, Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority. |
 | `STOP_LESSON_OUTPUT_OR_PROTECTED_REFERENCE` | A request reads or mutates lesson output or protected references outside the exact allowlist. |
 | `STOP_UNCITED_CLAIM` | A generated claim lacks a source path. |
 

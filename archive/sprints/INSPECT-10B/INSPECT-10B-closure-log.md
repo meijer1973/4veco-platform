@@ -70,7 +70,8 @@ Outputs:
 
 ## Validation Summary
 
-Validation passed. See
+Validation previously passed before the pre-human subagent review found a
+determinism blocker. See
 `archive/sprints/INSPECT-10B/INSPECT-10B-validation-log.md`.
 
 Notable evidence:
@@ -92,6 +93,13 @@ the branch was refreshed a third time. All merges were clean. The diagnostic
 report regenerated deterministically, the generator EOF hygiene fix removed a
 range-diff whitespace warning, and the lesson checkout remained clean/read-only.
 
+Pre-human specialist subagent review round 1 returned `REVISE` from
+teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection
+reviewers because the generated JSON embedded volatile platform `HEAD`
+metadata. The generator has been repaired to use a stable
+`platform_head_policy` note instead. Validation, CI, and specialist subagent
+review must rerun before human review.
+
 The legacy sprint bundle checker is not applicable because it expects
 `reports/sprints/<id>-plan.md`, while INSPECT-10B is explicitly allowlisted
 under `archive/sprints/INSPECT-10B/`.
@@ -100,7 +108,7 @@ under `archive/sprints/INSPECT-10B/`.
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
-| INSPECT-10B internal diagnostic generator is implemented and final-refresh validated. | `core_requirement_met` | Broader generator surfaces outside allowlist | PR/human review for INSPECT-10B | Fresh PR CI and renewed three-reviewer human review |
+| INSPECT-10B internal diagnostic generator needed deterministic-output repair after subagent review. | `core_spec_failure` | Human review and merge until repair validation/subagent rerun pass | Content-level review of blocker visibility and refusal posture | Commit repair, rerun validation after commit, wait fresh CI, rerun specialist subagents |
 | Legacy bundle checker cannot validate this archive packet. | `minor_carry_flag` | Treating legacy bundle helper output as closure proof | INSPECT-10B closure because creating unallowlisted `reports/sprints` copies would violate the gate | Later checker support for archive-sprints packets |
 | Chapter 1.2 blockers remain open. | `scale_blocker` | Pack-strength, teacher/school-facing, public/external, Scale Gate, product-route adoption, diagnostics/mastery/PV, and student/product-use work | Internal diagnostic report output | Later scoped remediation and human review |
 
@@ -113,7 +121,8 @@ under `archive/sprints/INSPECT-10B/`.
 
 ## Next Action
 
-Push the refreshed INSPECT-10B branch, wait for fresh PR CI, and send the PR
-for renewed teacher, legal/privacy, and Dutch quality-inspection review. Do not
-proceed to INSPECT-11 or any downstream authority without a new human-reviewed
-sprint packet.
+Commit and push the deterministic-output repair, wait for fresh PR CI, and
+rerun the teacher/usefulness, legal/privacy/claims, and Dutch
+quality-inspection subagent reviews. Human review remains blocked until those
+pre-human reviews pass. Do not proceed to INSPECT-11 or any downstream
+authority without a new human-reviewed sprint packet.

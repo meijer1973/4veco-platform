@@ -156,8 +156,27 @@ generator `--check`, refusal spot checks, scope-language, roadmap-version
 index, URL index, `git diff --check origin/main`, lesson checkout
 clean/read-only check, and `npm.cmd run check:platform`.
 
+## Pre-Human Subagent Review Round 1
+
+Pre-human specialist subagent review was run after the third refresh. All
+three reviewers returned `REVISE`, not `MORE_THAN_SATISFIED`, because the
+generated JSON included volatile platform `HEAD` metadata. That made
+`node build-scripts/inspection/build-dutch-diagnostic-report.js --check` fail
+after a commit changed the branch head.
+
+| Reviewer | Verdict | Blocking finding | Correction |
+|---|---|---|---|
+| Teacher/usefulness | `REVISE` | Generated report JSON stale on current head | Replaced volatile platform head metadata with stable `platform_head_policy` |
+| Legal/privacy/claims | `REVISE` | Generated report currentness proof missing and validation artifacts overclaimed currentness | Replaced volatile platform head metadata and will rerun validation after commit |
+| Dutch quality-inspection | `REVISE` | HEAD-sensitive `platform_head` field made generator proof non-repeatable | Replaced volatile platform head metadata and will rerun subagent review |
+
+The repair is in `build-scripts/inspection/build-dutch-diagnostic-report.js`:
+the report no longer embeds the platform commit SHA. Platform commit evidence
+must live in validation logs, PR status, and CI, not in deterministic generated
+output.
+
 ## Conclusion
 
-Validation passes for the INSPECT-10B implementation scope after final refresh
-against current `origin/main`. No missing core requirement is carried as PASS
-WITH FLAGS. Renewed three-reviewer human review remains required before merge.
+Validation must be rerun after committing the deterministic-output repair.
+No human review may start until the three pre-human specialist subagents rerun
+and return the required verdicts.
