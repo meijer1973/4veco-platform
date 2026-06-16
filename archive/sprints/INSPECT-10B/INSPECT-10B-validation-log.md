@@ -191,8 +191,23 @@ After committing the deterministic-output repair, validation was rerun.
 | `git -C ..\4veco-lessen status --short` | 0 | No output; lesson checkout clean/read-only |
 | `npm.cmd run check:platform` | 0 | Jest passed: 54 suites passed, 6 skipped; 806 tests passed, 8 skipped |
 
+## Pre-Human Subagent Review Round 2
+
+After the deterministic-output repair was committed, pushed, and fresh PR CI
+passed on head `ddcef8e15a9806a74840c77cf5fba7b54c82eb69`, the three
+pre-human specialist subagent reviews were rerun.
+
+| Reviewer | Verdict | Finding classification | blocks | does_not_block | proof_required_to_close |
+|---|---|---|---|---|---|
+| Teacher/usefulness | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Teacher/school-facing reuse, evidence-pack, public/external, product-use reinterpretation | Human review receiving this specialist proof for internal diagnostic scope | Current report, generator `--check`, refusal checks, later scoped remediation for carried Chapter 1.2 blockers |
+| Legal/privacy/claims | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Pack-strength, teacher/school-facing, public/external, Scale Gate, product-route, diagnostics/mastery/PV, student/product-use, clean proof-closure reliance | Human review receiving this specialist proof for INSPECT-10B as an internal diagnostic generator only | Later scoped remediation and renewed human review for downstream or stronger evidence surfaces |
+| Dutch quality-inspection | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Clean proof closure, pack-strength reliance, teacher/school-facing readiness, Scale Gate 1, product-route adoption, diagnostics/mastery/PV, student/product-use | Internal blocker-visible diagnostic reporting | Corrected output or reviewed carry/waiver; reviewed accessibility/support packets; renewed human review explicitly closing check-surface authority |
+
 ## Conclusion
 
-The deterministic-output repair has passed local validation. No human review
-may start until the three pre-human specialist subagents rerun and return the
-required verdicts.
+The deterministic-output repair has passed local validation, fresh PR CI, and
+all three pre-human specialist subagent reruns. Human review may now start for
+INSPECT-10B's internal diagnostic generator scope only. Downstream Scale Gate
+1, product-route adoption, diagnostics/mastery/PV, student/product-use,
+teacher/school-facing, public/external, evidence-pack, and pack-strength work
+remain blocked until separately scoped human review closes those issues.

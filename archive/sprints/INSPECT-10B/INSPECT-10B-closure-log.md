@@ -99,7 +99,15 @@ reviewers because the generated JSON embedded volatile platform `HEAD`
 metadata. The generator has been repaired to use a stable
 `platform_head_policy` note instead. Local validation now passes after the
 repair commit, including generator `--check` after commit. Fresh PR CI and
-specialist subagent review must rerun before human review.
+specialist subagent review then reran before human review.
+
+Pre-human specialist subagent review round 2 returned `MORE_THAN_SATISFIED`
+from teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection on
+head `ddcef8e15a9806a74840c77cf5fba7b54c82eb69`. The reviewers classified the
+repair as meeting core requirements in scope and carried Chapter 1.2,
+accessibility/support, and check-surface authority issues as blockers for
+downstream work rather than blockers for INSPECT-10B internal diagnostic
+review.
 
 The legacy sprint bundle checker is not applicable because it expects
 `reports/sprints/<id>-plan.md`, while INSPECT-10B is explicitly allowlisted
@@ -109,7 +117,8 @@ under `archive/sprints/INSPECT-10B/`.
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
-| INSPECT-10B internal diagnostic generator needed deterministic-output repair after subagent review. | `core_spec_failure` | Human review and merge until repair validation/subagent rerun pass | Content-level review of blocker visibility and refusal posture | Commit repair, rerun validation after commit, wait fresh CI, rerun specialist subagents |
+| Round 1 deterministic-output failure was repaired and closed by validation, CI, and specialist subagent rerun. | `closed_core_spec_failure` | Nothing remains blocked by this repaired defect | Human review receiving INSPECT-10B specialist proof for internal diagnostic generator scope | PR status for latest pushed-head CI |
+| Deterministic-output repair and specialist subagent rerun completed. | `core_requirement_met` | Downstream authority, pack-strength, teacher/school-facing, public/external, Scale Gate, product-route, diagnostics/mastery/PV, and student/product-use work | Human review receiving INSPECT-10B specialist proof for internal diagnostic generator scope | Human review of PR #79 and later scoped remediation for carried blockers |
 | Legacy bundle checker cannot validate this archive packet. | `minor_carry_flag` | Treating legacy bundle helper output as closure proof | INSPECT-10B closure because creating unallowlisted `reports/sprints` copies would violate the gate | Later checker support for archive-sprints packets |
 | Chapter 1.2 blockers remain open. | `scale_blocker` | Pack-strength, teacher/school-facing, public/external, Scale Gate, product-route adoption, diagnostics/mastery/PV, and student/product-use work | Internal diagnostic report output | Later scoped remediation and human review |
 
@@ -122,8 +131,8 @@ under `archive/sprints/INSPECT-10B/`.
 
 ## Next Action
 
-Push the deterministic-output repair, wait for fresh PR CI, and rerun the
-teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection
-subagent reviews. Human review remains blocked until those pre-human reviews
-pass. Do not proceed to INSPECT-11 or any downstream authority without a new
-human-reviewed sprint packet.
+Human review may now start for INSPECT-10B's internal diagnostic generator
+scope only. Do not proceed to INSPECT-11, downstream Scale Gate 1,
+product-route adoption, diagnostics/mastery/PV, student/product-use,
+teacher/school-facing, public/external, evidence-pack, or pack-strength work
+without a new human-reviewed sprint packet.

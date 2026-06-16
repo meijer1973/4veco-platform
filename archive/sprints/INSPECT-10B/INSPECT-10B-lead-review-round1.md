@@ -132,9 +132,9 @@ work requires a new human-reviewed sprint packet.
 
 ## Required Next Action
 
-Push the repaired branch, wait for fresh PR CI, and rerun the three pre-human
-specialist subagent reviews. The deterministic-output repair has passed local
-validation after commit. Do not start human review until those specialist
-reviews return the required verdicts. Do not proceed to INSPECT-11 or any
-downstream authority until human review explicitly authorises a new scoped
-sprint.
+Fresh PR CI passed after the deterministic-output repair, and the three
+pre-human specialist subagent reruns returned `MORE_THAN_SATISFIED`:
+teacher/usefulness, legal/privacy/claims, and Dutch quality-inspection. Human
+review may now start for INSPECT-10B's internal diagnostic generator scope
+only. Do not proceed to INSPECT-11 or any downstream authority until human
+review explicitly authorises a new scoped sprint.
