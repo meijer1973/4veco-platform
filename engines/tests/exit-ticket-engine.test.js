@@ -413,13 +413,14 @@ describe('ExitTicketEngine', () => {
         expect(pointResult.boundaryFlags.targetEquivalentProof).toBe(false);
     });
 
-    test('validates the excellent 1.1.3 exit-ticket candidate without proof authority', () => {
+    test('validates the excellent 1.1.3 exit-ticket as approved readiness evidence without completion authority', () => {
         expect(ExitTicketEngine.validateData(exit113Data)).toBe(true);
         expect(exit113Data.targetEquivalent).toEqual(expect.objectContaining({
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false
         }));
-        expect(exit113Data.metadataAlignment.targetReadinessEvidence).toBe(false);
+        expect(exit113Data.metadataAlignment.status).toBe('target_equivalent_aligned');
+        expect(exit113Data.metadataAlignment.targetReadinessEvidence).toBe(true);
 
         const engine = new ExitTicketEngine({ data: exit113Data });
         expect(engine.checkTask('pq-grafiek-construeren', {
@@ -450,6 +451,11 @@ describe('ExitTicketEngine', () => {
         })).toEqual(expect.objectContaining({
             state: 'matched',
             matched: true
+        }));
+        expect(engine.getProgress()).toEqual(expect.objectContaining({
+            proofCandidate: true,
+            gateApproved: true,
+            completionLanguageEligible: false
         }));
     });
 });

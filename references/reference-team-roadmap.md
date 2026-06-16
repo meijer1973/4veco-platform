@@ -94,6 +94,7 @@ Core standard:
 
 | Sprint | Name | Completed | Current State |
 |--------|------|-----------|---------------|
+| B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1 | 1.1.3 Graph Evidence Flag Implementation | yes | Closed implementation sprint after `B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1` recorded the human decision. Set only the `1.1.3` target-equivalent exit-ticket source flags to `gateApproved:true` and `targetReadinessEvidence:true`, kept `completionLanguageEligible:false`, regenerated paired Book 1 lesson output from platform source, and updated current validators/tests that previously encoded the pre-review hold. `1.1.3-korte-check` remains advisory and non-target-readiness. No Year 1 closure, CP-6 closure, Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product use is authorized. |
 | MTU-ANS-GEN-DESIGN-1 | Answer-Form Generator And Proof Design | yes | Closed 2026-06-07 as PASS. Designed the reviewed generator/proof route for `A80`, `A81`, and `A96`-`A99` while preserving generator-blocked no-exposure guardrails. The design classifies `A80`, `A81`, and `A96`-`A98` as route-specific shared-task-shell proof work, keeps `A81` modifier-only with an underlying answer form, and keeps `A99` held pending live evidence. No generator implementation, source-data write, generated lesson output, PV projection, diagnostics, adaptive routing, mastery/sequencing, Scale Gate 1, product-route adoption, or student/product authority was authorized. |
 | MTU-ANS-PROOF-IMPL-1 | A96 Answer-Form Proof Implementation | yes | Closed bounded proof sprint. Implements a route-specific shared-task-shell proof for `A96` using the reviewed `1.1.2` calculation prompt, requiring method/rule, labelled substitution, intermediate work, final answer, required notation, and contextual conclusion. Keeps `A96` out of generic `ROUTE_SKILLS`, avoids `GEN_A96`, keeps `A81` modifier-only, keeps `A99` blocked, and authorizes no generated lesson output, product-route adoption, target-equivalent claim, diagnostics, mastery/sequencing, PV projection, Scale Gate 1, or student/product use. |
 | CHECKSURFACE-113-EXEMPLAR-REVIEW-1 | Excellent 1.1.3 Exit Ticket Specialist Review | yes | Closed 2026-06-07 as PASS WITH FLAGS after teacher-learning, student-experience, visual/interaction, accessibility, testing/regression, and lead-synthesis reviews. Added desktop light/mobile dark rendered proof, Browser DOM proof, a review checker, and lead-review records. Round 1 found an inert visible exit-ticket theme toggle and stale implementation-checker review-state assumption; corrections bound the toggle in platform runtime, redeployed Book 1 shared output through deploy, added focused test coverage, and updated the checker while preserving held authority. Flags remain for classroom evidence, end-of-route use only, mobile task/feedback screenshots, live student evidence, graph/formula/feedback state proof, and full correct/retry automation. No completion language, target-readiness approval, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use is authorized. |
@@ -2690,14 +2691,14 @@ Update 2026-06-02: `GATE-TASK-FAMILY-1 Structured Choice And Construction Task-F
 
 ## Immediate Next Sprint
 
-Next action after `CHECKSURFACE-GATE-RETRY-EXCELLENT-1`: push the renewed
-`GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review` packet and
-send that packet for direct human review comments. The previous
-`GATE-CHECK-SHORT-EXIT-2-RETRY` packet is superseded and must not be sent as
-current evidence. Do not start
-`SHARED-TASK-HARDENING-SERIES-PLAN-1`, `SCALE-PROOF-3P`, `GATE-PRODUCT-3P`,
-or Scale Gate 1 before the check-surface reset sequence and retry gate have
-closed with authority.
+Next action after `B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1`: complete PR
+review and merge for the source/generated parity implementation, then prepare
+the next product-proof or Scale Gate preparation packet only if it preserves
+the remaining holds. The previous `GATE-CHECK-SHORT-EXIT-2-RETRY` packet is
+superseded and must not be sent as current evidence. Do not start
+`SHARED-TASK-HARDENING-SERIES-PLAN-1`, broad product-route adoption, diagnostics,
+mastery, PV, student/product use, or Scale Gate 1 closure from this flag
+implementation alone.
 
 The repaired shared task context/ingestion lane must run in this order unless
 a later human waiver explicitly records consequences:

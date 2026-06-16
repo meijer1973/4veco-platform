@@ -80,9 +80,10 @@ function checkSource() {
   assert(ExitTicketEngine.validateData(data), '1.1.3-exit-ticket must validate');
   assert(data.surface === 'target_equivalent_exit_ticket', '1.1.3 must remain target-equivalent candidate surface');
   assert(data.targetEquivalent.candidate === true, '1.1.3 must remain candidate');
-  assert(data.targetEquivalent.gateApproved === false, '1.1.3 must not become gate approved');
+  assert(data.targetEquivalent.gateApproved === true, '1.1.3 must record human-approved gate evidence');
   assert(data.targetEquivalent.completionLanguageEligible === false, '1.1.3 completion language must remain held');
-  assert(data.metadataAlignment.targetReadinessEvidence === false, '1.1.3 must not claim target readiness');
+  assert(data.metadataAlignment.status === 'target_equivalent_aligned', '1.1.3 metadata status must record target-equivalent alignment');
+  assert(data.metadataAlignment.targetReadinessEvidence === true, '1.1.3 must record human-approved target readiness evidence');
   assert(data.layout && data.layout.kind === 'source_task_workspace', '1.1.3 exit ticket must opt into source/task workspace');
   assert(data.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must render through the Golden Workbench');
   assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 2, '1.1.3 exit ticket must retain source/table context blocks only');

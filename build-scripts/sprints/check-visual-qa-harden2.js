@@ -156,7 +156,8 @@ function checkSourceStillMatchesRubric() {
   assert(exitFamilies.has('graph_construction_substitute'), '1.1.3 exit ticket must keep graph construction substitute');
   assert(exitFamilies.has('graph_reading'), '1.1.3 exit ticket must keep graph reading');
   assert(exitFamilies.has('calculation_work_capture'), '1.1.3 exit ticket must keep calculation/claim-control task');
-  assert(exitSource.targetEquivalent && exitSource.targetEquivalent.gateApproved === false, '1.1.3 exit ticket must remain unapproved before retry gate');
+  assert(exitSource.targetEquivalent && exitSource.targetEquivalent.gateApproved === true, '1.1.3 exit ticket must record approved gate evidence after retry gate');
+  assert(exitSource.metadataAlignment && exitSource.metadataAlignment.targetReadinessEvidence === true, '1.1.3 exit ticket must record approved target-readiness evidence after retry gate');
   assert(exitSource.targetEquivalent && exitSource.targetEquivalent.completionLanguageEligible === false, '1.1.3 exit ticket completion language must remain held');
 }
 
