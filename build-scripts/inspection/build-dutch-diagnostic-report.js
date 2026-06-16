@@ -390,7 +390,7 @@ function buildReport() {
     },
     owner_next_action: {
       action:
-        "Send INSPECT-10B for lead review and human review as an internal diagnostic generator only; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.",
+        "Keep this as a manually invoked internal diagnostic generator only. Review and harden stability before any broader diagnostic scope; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.",
       source: "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json",
     },
     proof_required_to_close: [],
@@ -636,6 +636,12 @@ function renderMarkdown(report) {
   lines.push("|---|---|---:|");
   report.source_files_used.forEach((item) => {
     lines.push(`| \`${escapeCell(item.path)}\` | \`${item.sha256}\` | ${item.bytes} |`);
+  });
+  lines.push("");
+  lines.push("## Output Files Written");
+  lines.push("");
+  report.output_files_written.forEach((item) => {
+    lines.push(`- \`${item}\``);
   });
   lines.push("");
   lines.push("## Output Boundary");
