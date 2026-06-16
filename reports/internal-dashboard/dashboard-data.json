@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T14:48:36.672Z",
+  "generatedAt": "2026-06-15T15:21:19.437Z",
   "internalOnly": true,
   "teams": [
     {
@@ -3272,8 +3272,8 @@
             {
               "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
               "name": "Shared Task Context And Ingestion Repair Human Review",
-              "completed": "no",
-              "currentState": "Fourth direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`; platform `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` has now prepared renewed review evidence for the narrowed interaction-clarity blockers and reviewer correction pass. The Repair 4 packet records conceptual actual-exam task 1, `649` plus reasonable yearly unit validation, accepted `22x12 = 264, 264 + 385 = 649` shortcut work, targeted feedback, progressive support, same-workspace textbook graph line, grid visible before axis labels/scale, table-derived graph ticks, simplified 50 percent follow-up with conclusion acceptance/shared `interval_halving_check` focus-plan proof, duplicate-label removal, visual QA/checker hardening, lead-review, verification, and refreshed playable screenshots/proof. Gate remains open pending renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send Repair 4 packet for renewed direct human review.",
+              "completed": "yes",
+              "currentState": "**CLOSED PASS WITH FLAGS / ADOPTION-PREPARATION ONLY.** Platform gate closure evidence records final direct human review at reviewed remote evidence commit `95f0eda5f51eb7868cb947dc3e8f081957b2afb4`. It accepts Repair 4 and reviewer correction pass for source-context ingestion readiness only. Carried flags remain for later shared-task hardening, graph substitute maturity, carried-value chaining, progressive calculation feedback, prompt/source/support separation, delayed reveal policy, and the secondary 50 percent follow-up. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use authorized. Next: continue `CHECK-SHORT-EXIT-2`.",
               "exitGate": ""
             },
             {
@@ -3357,7 +3357,7 @@
               "sprint": "SCALE-PROOF-3P",
               "name": "Three-Paragraph Product Proof",
               "completed": "no",
-              "currentState": "Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or the repaired shared task context/ingestion track is explicitly waived. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
+              "currentState": "Blocked until `CHECK-SHORT-EXIT-2` and `GATE-PRODUCT-3P` supply closure evidence or a human waiver explicitly records consequences. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
               "exitGate": ""
             },
             {
@@ -3371,7 +3371,7 @@
               "sprint": "Scale Gate 1",
               "name": "Foundation Hardening Scale Gate",
               "completed": "no",
-              "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the repaired shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-REPAIR-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+              "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and `GATE-PRODUCT-3P`, or a human waiver explicitly records consequences. `REV-STD-1` is closed as review-standard hardening only; it does not close the remaining product-proof gates.",
               "exitGate": ""
             },
             {
@@ -3599,14 +3599,6 @@
           "roadmap": "Lessen roadmap"
         },
         {
-          "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
-          "name": "Shared Task Context And Ingestion Repair Human Review",
-          "completed": "no",
-          "currentState": "Fourth direct human review comments returned 2026-06-05 with decision `hold_for_playable_repair`; platform `SHARED-TASK-INGEST-PLAYABLE-REPAIR-4` has now prepared renewed review evidence for the narrowed interaction-clarity blockers and reviewer correction pass. The Repair 4 packet records conceptual actual-exam task 1, `649` plus reasonable yearly unit validation, accepted `22x12 = 264, 264 + 385 = 649` shortcut work, targeted feedback, progressive support, same-workspace textbook graph line, grid visible before axis labels/scale, table-derived graph ticks, simplified 50 percent follow-up with conclusion acceptance/shared `interval_halving_check` focus-plan proof, duplicate-label removal, visual QA/checker hardening, lead-review, verification, and refreshed playable screenshots/proof. Gate remains open pending renewed direct human review; no closure, generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, or student/product use authorized. Next: send Repair 4 packet for renewed direct human review.",
-          "exitGate": "",
-          "roadmap": "Lessen roadmap"
-        },
-        {
           "sprint": "DUAL-CODING-STD-1",
           "name": "Dual-Coding Exercise Standard",
           "completed": "no",
@@ -3634,7 +3626,7 @@
           "sprint": "SCALE-PROOF-3P",
           "name": "Three-Paragraph Product Proof",
           "completed": "no",
-          "currentState": "Hold until `GATE-SHARED-TASK-INGEST-REPAIR-1` closes or the repaired shared task context/ingestion track is explicitly waived. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
+          "currentState": "Blocked until `CHECK-SHORT-EXIT-2` and `GATE-PRODUCT-3P` supply closure evidence or a human waiver explicitly records consequences. Produce student-path proof for landing, Start, Leer, Oefen, skill map, practice task with source/context where relevant, advisory short check, target-equivalent exit ticket, feedback, and next action for `1.1.1`-`1.1.3`.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -3650,7 +3642,7 @@
           "sprint": "Scale Gate 1",
           "name": "Foundation Hardening Scale Gate",
           "completed": "no",
-          "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, the repaired shared task context/ingestion track through `GATE-SHARED-TASK-INGEST-REPAIR-1`, `GATE-PRODUCT-3P`, and `REV-STD-1`, or a human waiver explicitly records consequences.",
+          "currentState": "Blocked until the Product Proof Track closes, including the downstream reasoning follow-ups through `REASON-ADOPT-2`, `CHECK-SHORT-EXIT-2`, `SCALE-PROOF-3P`, and `GATE-PRODUCT-3P`, or a human waiver explicitly records consequences. `REV-STD-1` is closed as review-standard hardening only; it does not close the remaining product-proof gates.",
           "exitGate": "",
           "roadmap": "Lessen roadmap"
         },
@@ -4135,6 +4127,14 @@
           "roadmap": "Lessen roadmap"
         },
         {
+          "sprint": "GATE-SHARED-TASK-INGEST-REPAIR-1",
+          "name": "Shared Task Context And Ingestion Repair Human Review",
+          "completed": "yes",
+          "currentState": "**CLOSED PASS WITH FLAGS / ADOPTION-PREPARATION ONLY.** Platform gate closure evidence records final direct human review at reviewed remote evidence commit `95f0eda5f51eb7868cb947dc3e8f081957b2afb4`. It accepts Repair 4 and reviewer correction pass for source-context ingestion readiness only. Carried flags remain for later shared-task hardening, graph substitute maturity, carried-value chaining, progressive calculation feedback, prompt/source/support separation, delayed reveal policy, and the secondary 50 percent follow-up. No generated lesson output, protected reference mutation, source-data mutation, product-route adoption, target-equivalent proof, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use authorized. Next: continue `CHECK-SHORT-EXIT-2`.",
+          "exitGate": "",
+          "roadmap": "Lessen roadmap"
+        },
+        {
           "sprint": "SHARED-TASK-INGEST-PLAYABLE-REPAIR-1",
           "name": "Shared Task Ingest Playable Lab Repair",
           "completed": "yes",
@@ -4199,8 +4199,8 @@
           "roadmap": "Lessen roadmap"
         }
       ],
-      "completedCount": 48,
-      "openCount": 37
+      "completedCount": 49,
+      "openCount": 36
     },
     {
       "id": "innovation",

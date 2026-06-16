@@ -15,13 +15,13 @@
   },
   "targetSkillIds": [
     "A38",
-    "A61",
-    "A63"
+    "A45",
+    "A46"
   ],
   "skillScopeIds": [
     "A38",
-    "A61",
-    "A63"
+    "A45",
+    "A46"
   ],
   "targetEquivalent": {
     "candidate": true,
@@ -32,11 +32,13 @@
     "status": "target_equivalent_candidate_pending_review",
     "paragraphSkillIds": [
       "A38",
-      "A61",
-      "A63"
+      "A45",
+      "A46"
     ],
     "targetExerciseSkillIds": [
-      "A38"
+      "A38",
+      "A45",
+      "A46"
     ],
     "targetReadinessEvidence": false,
     "sourceRefs": {
@@ -52,7 +54,8 @@
       "Revision v3: answer-giving placeholders are forbidden; example placeholders may not contain the correct value.",
       "Revision v3: graph-reading UI order must follow student thinking order: interval first, then read-off value.",
       "Revision v3: percentage inputs should accept normal student notation such as -50%, -50 procent, or 50% daling.",
-      "Revision v4: graph line draws automatically after the second point; students do not answer a line-slope choice."
+      "Revision v4: graph line draws automatically after the second point; students do not answer a line-slope choice.",
+      "Revision v5: metadata aligns to the reviewed-final 1.1.3 target registry A38/A45/A46 while target-equivalent authority flags remain held."
     ]
   },
   "skillMap": {
