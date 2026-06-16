@@ -51,6 +51,11 @@ INSPECT-10B faithfully implements the narrow internal diagnostic generator
 authorised by INSPECT-10A. No missing core requirement is carried as PASS WITH
 FLAGS.
 
+Final refresh note: current `origin/main` was merged cleanly after PR review
+found the branch stale. The refreshed head passed generator `--check`, refusal
+spot checks, scope-language, roadmap-version index, URL index, range diff
+hygiene, lesson checkout clean/read-only check, and `check:platform`.
+
 ## Blocking Findings
 
 No blocking findings for INSPECT-10B closure.
@@ -88,6 +93,7 @@ lesson-output requests.
 | `node build-scripts/sprints/emit-url-index.js --check` | PASS |
 | `git diff --check` | PASS |
 | `npm.cmd run check:platform` | PASS |
+| Final refresh against current `origin/main` | PASS |
 
 ## Learning Quality Evidence
 
@@ -122,6 +128,7 @@ work requires a new human-reviewed sprint packet.
 
 ## Required Next Action
 
-Commit and push the INSPECT-10B branch, open a PR, wait for CI, and send the PR
-for human review. Do not proceed to INSPECT-11 or any downstream authority
-until human review explicitly authorises a new scoped sprint.
+Push the refreshed INSPECT-10B branch, wait for fresh PR CI, and send the PR
+for renewed three-reviewer human review. Do not proceed to INSPECT-11 or any
+downstream authority until human review explicitly authorises a new scoped
+sprint.

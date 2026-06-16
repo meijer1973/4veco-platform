@@ -1,6 +1,6 @@
 # INSPECT-10B Closure Log
 
-Status: PR-ready
+Status: final refresh validated / renewed review pending
 Date: 2026-06-16
 Sprint: `INSPECT-10B`
 
@@ -84,6 +84,11 @@ Notable evidence:
 - `git diff --check` passed with only CRLF normalization warnings.
 - `npm.cmd run check:platform` passed.
 
+Final refresh passed after merging current `origin/main` into the branch. The
+merge was clean, the diagnostic report regenerated deterministically, the
+generator EOF hygiene fix removed a range-diff whitespace warning, and the
+lesson checkout remained clean/read-only.
+
 The legacy sprint bundle checker is not applicable because it expects
 `reports/sprints/<id>-plan.md`, while INSPECT-10B is explicitly allowlisted
 under `archive/sprints/INSPECT-10B/`.
@@ -92,7 +97,7 @@ under `archive/sprints/INSPECT-10B/`.
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
-| INSPECT-10B internal diagnostic generator is implemented and validated. | `core_requirement_met` | Broader generator surfaces outside allowlist | PR/human review for INSPECT-10B | Fresh PR CI and human review |
+| INSPECT-10B internal diagnostic generator is implemented and final-refresh validated. | `core_requirement_met` | Broader generator surfaces outside allowlist | PR/human review for INSPECT-10B | Fresh PR CI and renewed three-reviewer human review |
 | Legacy bundle checker cannot validate this archive packet. | `minor_carry_flag` | Treating legacy bundle helper output as closure proof | INSPECT-10B closure because creating unallowlisted `reports/sprints` copies would violate the gate | Later checker support for archive-sprints packets |
 | Chapter 1.2 blockers remain open. | `scale_blocker` | Pack-strength, teacher/school-facing, public/external, Scale Gate, product-route adoption, diagnostics/mastery/PV, and student/product-use work | Internal diagnostic report output | Later scoped remediation and human review |
 
@@ -105,6 +110,7 @@ under `archive/sprints/INSPECT-10B/`.
 
 ## Next Action
 
-Commit and push the INSPECT-10B branch, open a PR, wait for fresh PR CI, and
-send the PR for human review. Do not proceed to INSPECT-11 or any downstream
-authority without a new human-reviewed sprint packet.
+Push the refreshed INSPECT-10B branch, wait for fresh PR CI, and send the PR
+for renewed teacher, legal/privacy, and Dutch quality-inspection review. Do not
+proceed to INSPECT-11 or any downstream authority without a new human-reviewed
+sprint packet.

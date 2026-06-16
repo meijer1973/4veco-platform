@@ -1,6 +1,6 @@
 # INSPECT-10B Validation Log
 
-Status: PASS
+Status: PASS / final refresh validated
 Date: 2026-06-16
 Sprint: `INSPECT-10B`
 
@@ -117,5 +117,31 @@ Target statuses:
 
 ## Conclusion
 
-Validation passes for the INSPECT-10B implementation scope. No missing core
-requirement is carried as PASS WITH FLAGS.
+## PR Final Refresh Evidence
+
+Final refresh command sequence:
+
+| Command | Exit | Evidence |
+|---|---:|---|
+| `git fetch --prune origin` | 0 | Fetched current `origin/main`; PR branch was `1 ahead / 3 behind` before refresh |
+| `git merge origin/main --no-edit` | 0 | Merged current `origin/main` cleanly with no conflicts |
+| `node build-scripts/inspection/build-dutch-diagnostic-report.js` | 0 | Regenerated the diagnostic report after merge |
+| `node build-scripts/inspection/build-dutch-diagnostic-report.js --check` | 0 | `INSPECT-10B diagnostic report output is current.` |
+| Diagnostic generator refusal spot checks for `--public`, `--evidence-pack`, `--product-route`, and `--lesson-output` | 0 | Returned expected stop codes |
+| `npm.cmd run check:scope-language` | 0 | `OK scope-language check: active surfaces` |
+| `node build-scripts/references/check-roadmap-version-index.js` | 0 | `OK roadmap version index: 151 entries` |
+| `node build-scripts/sprints/emit-url-index.js --check` | 0 | `OK url-index: reports/url-index.md is current` |
+| `git diff --check origin/main` | 0 | No whitespace errors after generator EOF fix; Git printed CRLF normalization warnings |
+| `git -C ..\4veco-lessen status --short` | 0 | No output; lesson checkout remained clean/read-only |
+| `npm.cmd run check:platform` | 0 | Jest passed: 54 suites passed, 6 skipped; 806 tests passed, 8 skipped |
+
+The merge brought in PR #74 platform CI / landing-route changes. The
+diagnostic report regenerated deterministically, with only refreshed platform
+head/source metadata and the generator EOF hygiene fix changing the report
+pair. All Chapter 1.2 blockers remain visible.
+
+## Conclusion
+
+Validation passes for the INSPECT-10B implementation scope after final refresh.
+No missing core requirement is carried as PASS WITH FLAGS. Renewed
+three-reviewer human review remains required before merge.

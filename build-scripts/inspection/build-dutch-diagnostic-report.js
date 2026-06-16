@@ -653,7 +653,6 @@ function renderMarkdown(report) {
   lines.push(`| generated_lesson_output_mutated | \`${report.generated_lesson_output_mutated}\` |`);
   lines.push(`| source_registry_mutated | \`${report.source_registry_mutated}\` |`);
   lines.push(`| personal_data_present | \`${report.personal_data_present}\` |`);
-  lines.push("");
 
   return `${lines.join("\n")}\n`;
 }

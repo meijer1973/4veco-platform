@@ -172,4 +172,3 @@ Default run generated only the allowlisted internal diagnostic report pair.
 | generated_lesson_output_mutated | `false` |
 | source_registry_mutated | `false` |
 | personal_data_present | `false` |
-
