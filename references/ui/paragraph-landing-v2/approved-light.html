@@ -297,7 +297,7 @@
 
     .route-strip {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 10px;
       margin: 20px 0 26px;
     }
@@ -376,6 +376,7 @@
     }
 
     .tile-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tile-grid.single { grid-template-columns: 1fr; }
 
     .tile {
       position: relative;
@@ -518,7 +519,8 @@
       .hero { padding: 22px; border-radius: 22px; }
       .route-strip,
       .tile-grid,
-      .tile-grid.two { grid-template-columns: 1fr; }
+      .tile-grid.two,
+      .tile-grid.single { grid-template-columns: 1fr; }
       .tile { min-height: 145px; }
       .row-label { grid-template-columns: 1fr; }
       .row-label p { grid-column: auto; }
@@ -544,11 +546,10 @@
 
       <div class="sidebar-section-title">Route</div>
       <a class="side-link current" href="#start"><span class="side-number">1</span><span>Start</span></a>
-      <a class="side-link" href="#skills"><span class="side-number">2</span><span>Skill-tree games</span></a>
-      <a class="side-link" href="#leer"><span class="side-number">3</span><span>Leer</span></a>
+      <a class="side-link" href="#leer"><span class="side-number">2</span><span>Leer</span></a>
+      <a class="side-link" href="#check"><span class="side-number">3</span><span>Check</span></a>
       <a class="side-link" href="#oefen"><span class="side-number">4</span><span>Oefen</span></a>
-      <a class="side-link" href="#check"><span class="side-number">5</span><span>Check</span></a>
-      <a class="side-link" href="#open"><span class="side-number">6</span><span>Open & verdiep</span></a>
+      <a class="side-link" href="#exit-ticket"><span class="side-number">5</span><span>Exit ticket</span></a>
     </aside>
 
     <main class="content">
@@ -564,11 +565,11 @@
           <div>
             <div class="eyebrow">Paragraaf landing</div>
             <h1 id="page-title">Schaarste en economisch denken</h1>
-            <p class="lead">Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen.</p>
+            <p class="lead">Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna leren, kort checken, oefenen, de exit ticket maken, bronnen openen en skill-games trainen.</p>
           </div>
           <aside class="target-panel" aria-label="Leerpadstatus">
             <h2>Jouw leerpad</h2>
-            <p>Begin met de instapquiz. Daarna kies je een skill-game, uitleg of oefenroute. De korte check geeft lokaal oefenadvies; het exit ticket is de aparte eindcontrole.</p>
+            <p>Begin met de instapquiz. Daarna ga je naar uitleg en een korte check voor oefenadvies. Het exit ticket blijft de aparte eindcontrole; skill-games staan onderaan als extra training.</p>
             <div class="mini-meter" aria-label="Voorbeeld voortgang">
               <div class="meter-track"><div class="meter-fill"></div></div>
               <div class="meter-copy"><span>Start</span><span>richting exit ticket</span></div>
@@ -579,11 +580,10 @@
 
       <div class="route-strip" aria-label="Routeoverzicht">
         <a class="route-chip" href="#start"><b>Start</b><span>voorkennis + nieuws</span></a>
-        <a class="route-chip" href="#skills"><b>Skill games</b><span>redeneren · rekenen · grafieken</span></a>
         <a class="route-chip" href="#leer"><b>Leer</b><span>uitleg + presentatie + leerpad</span></a>
+        <a class="route-chip" href="#check"><b>Check</b><span>kort advies</span></a>
         <a class="route-chip" href="#oefen"><b>Oefen</b><span>begeleid · zelfstandig · adaptief</span></a>
-        <a class="route-chip" href="#check"><b>Check</b><span>kort advies + exit ticket</span></a>
-        <a class="route-chip" href="#open"><b>Open</b><span>lesboek + extra</span></a>
+        <a class="route-chip" href="#exit-ticket"><b>Exit ticket</b><span>eindcontrole</span></a>
       </div>
 
       <section class="rows" aria-label="Paragraafroute">
@@ -595,7 +595,7 @@
               <p>Oriënteer, activeer voorkennis en maak de paragraaf actueel.</p>
             </div>
           </div>
-          <div class="tile-grid two">
+          <div class="tile-grid single">
             <a class="tile start" href="#" aria-label="Open de voorkennisquiz">
               <div class="tile-header"><div class="icon-badge">Q</div><div><span class="pill">voorkennis</span><h3>Instapquiz voorkennis</h3><p>Check snel welke begrippen en basishandelingen je al paraat hebt.</p></div></div>
               <div class="tile-footer"><span>Maak quiz</span><span>→</span></div>
@@ -607,33 +607,9 @@
           </div>
         </div>
 
-        <div class="learning-row" id="skills">
-          <div class="row-label">
-            <div class="step">2</div>
-            <div>
-              <h2>Skill-tree games</h2>
-              <p>Train de drie hoofdvaardigheden als korte, gerichte spelroutes.</p>
-            </div>
-          </div>
-          <div class="tile-grid">
-            <a class="tile reason" href="#" aria-label="Open het redeneerspel">
-              <div class="tile-header"><div class="icon-badge">R</div><div><span class="pill">redeneren</span><h3>Redeneerspel</h3><p>Bouw economische verklaringen stap voor stap: oorzaak, mechanisme, gevolg.</p></div></div>
-              <div class="tile-footer"><span>Speel route</span><span>→</span></div>
-            </a>
-            <a class="tile math" href="#" aria-label="Open het rekenspel">
-              <div class="tile-header"><div class="icon-badge">%</div><div><span class="pill">rekenen</span><h3>Rekenspel</h3><p>Oefen berekeningen, tussenstappen, notatie en controle van je antwoord.</p></div></div>
-              <div class="tile-footer"><span>Train stappen</span><span>→</span></div>
-            </a>
-            <a class="tile graph" href="#" aria-label="Open het grafiekenspel">
-              <div class="tile-header"><div class="icon-badge">G</div><div><span class="pill">grafieken</span><h3>Grafiekenspel</h3><p>Lees waarden af, vergelijk lijnen en vertaal grafieken naar economische conclusies.</p></div></div>
-              <div class="tile-footer"><span>Lees grafiek</span><span>→</span></div>
-            </a>
-          </div>
-        </div>
-
         <div class="learning-row" id="leer">
           <div class="row-label">
-            <div class="step">3</div>
+            <div class="step">2</div>
             <div>
               <h2>Leer</h2>
               <p>Gebruik uitleg en route-inzicht voordat je zelfstandig gaat oefenen.</p>
@@ -642,7 +618,7 @@
           <div class="tile-grid">
             <a class="tile graph" href="#" aria-label="Open uitleg vaardigheden">
               <div class="tile-header"><div class="icon-badge">U</div><div><span class="pill">uitleg</span><h3>Uitleg vaardigheden</h3><p>De kernstappen van deze paragraaf met korte voorbeelden en vaste begrippen.</p></div></div>
-              <div class="tile-footer"><span>Leer stappen</span><span>→</span></div>
+              <div class="tile-footer"><span>Open uitleg vaardigheden</span><span>→</span></div>
             </a>
             <a class="tile econ" href="#" aria-label="Open de PowerPoint presentatie">
               <div class="tile-header"><div class="icon-badge">P</div><div><span class="pill">klassikaal</span><h3>PowerPoint-presentatie</h3><p>De lespresentatie met de visuele ankers, kernvragen en klassikale uitleg.</p></div></div>
@@ -651,6 +627,22 @@
             <a class="tile start" href="#" aria-label="Open de skill engine">
               <div class="tile-header"><div class="icon-badge">L</div><div><span class="pill">leerpad</span><h3>Skill engine</h3><p>Bekijk welke vaardigheden bij deze paragraaf horen en wat je volgende nuttige stap is.</p></div></div>
               <div class="tile-footer"><span>Bekijk leerpad</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="learning-row" id="check">
+          <div class="row-label">
+            <div class="step">3</div>
+            <div>
+              <h2>Check</h2>
+              <p>Doe een korte lokale check voor oefenadvies voordat je verder oefent.</p>
+            </div>
+          </div>
+          <div class="tile-grid single">
+            <a class="tile check" href="#" aria-label="Open korte check">
+              <div class="tile-header"><div class="icon-badge">K</div><div><span class="pill">advies</span><h3>Korte check</h3><p>Een lichte lokale check die aangeeft welke route nu verstandig is.</p></div></div>
+              <div class="tile-footer"><span>Krijg oefenadvies</span><span>→</span></div>
             </a>
           </div>
         </div>
@@ -679,19 +671,15 @@
           </div>
         </div>
 
-        <div class="learning-row" id="check">
+        <div class="learning-row" id="exit-ticket">
           <div class="row-label">
             <div class="step">5</div>
             <div>
-              <h2>Check</h2>
-              <p>Eerst oefenadvies, daarna een aparte eindcontrole.</p>
+              <h2>Exit ticket</h2>
+              <p>Maak de aparte eindcontrole wanneer je klaar bent voor doelopgave-niveau.</p>
             </div>
           </div>
           <div class="tile-grid two">
-            <a class="tile check" href="#" aria-label="Open korte check">
-              <div class="tile-header"><div class="icon-badge">K</div><div><span class="pill">advies</span><h3>Korte check</h3><p>Een lichte lokale check die aangeeft welke route nu verstandig is.</p></div></div>
-              <div class="tile-footer"><span>Krijg oefenadvies</span><span>→</span></div>
-            </a>
             <a class="tile reason" href="#" aria-label="Open exit ticket">
               <div class="tile-header"><div class="icon-badge">E</div><div><span class="pill">eindcontrole</span><h3>Exit ticket</h3><p>Laat zien dat je de doelopgave op hetzelfde niveau en met dezelfde antwoordvorm aankunt.</p></div></div>
               <div class="tile-footer"><span>Maak exit ticket</span><span>→</span></div>
@@ -722,6 +710,30 @@
             </a>
           </div>
         </div>
+        <div class="learning-row" id="skills">
+          <div class="row-label">
+            <div class="step">7</div>
+            <div>
+              <h2>Skill-tree games</h2>
+              <p>Train de drie hoofdvaardigheden als korte, gerichte spelroutes.</p>
+            </div>
+          </div>
+          <div class="tile-grid">
+            <a class="tile reason" href="#" aria-label="Open het redeneerspel">
+              <div class="tile-header"><div class="icon-badge">R</div><div><span class="pill">redeneren</span><h3>Redeneerspel</h3><p>Bouw economische verklaringen stap voor stap: oorzaak, mechanisme, gevolg.</p></div></div>
+              <div class="tile-footer"><span>Speel route</span><span>→</span></div>
+            </a>
+            <a class="tile math" href="#" aria-label="Open het rekenspel">
+              <div class="tile-header"><div class="icon-badge">%</div><div><span class="pill">rekenen</span><h3>Rekenspel</h3><p>Oefen berekeningen, tussenstappen, notatie en controle van je antwoord.</p></div></div>
+              <div class="tile-footer"><span>Train stappen</span><span>→</span></div>
+            </a>
+            <a class="tile graph" href="#" aria-label="Open het grafiekenspel">
+              <div class="tile-header"><div class="icon-badge">G</div><div><span class="pill">grafieken</span><h3>Grafiekenspel</h3><p>Lees waarden af, vergelijk lijnen en vertaal grafieken naar economische conclusies.</p></div></div>
+              <div class="tile-footer"><span>Lees grafiek</span><span>→</span></div>
+            </a>
+          </div>
+        </div>
+
       </section>
 
       <p class="footer-note">Economie VWO 4 · open lesmateriaal · voortgang blijft lokaal op dit apparaat.</p>
