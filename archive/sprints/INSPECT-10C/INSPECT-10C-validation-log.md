@@ -69,3 +69,24 @@ The generated report pair was hardened by:
 Refresh against current `origin/main`, push, wait for fresh PR CI, and rerun
 the three specialist subagent reviews because INSPECT-10C changes generator
 behavior/output vocabulary.
+
+## Post-Main-Merge Validation
+
+After the first implementation commit, `origin/main` was merged cleanly into
+the INSPECT-10C branch. The merge brought in unrelated reference/check-surface
+updates and did not stale the diagnostic report pair.
+
+| Command | Exit | Evidence |
+|---|---:|---|
+| `node build-scripts/sprints/check-sprint-plan.js archive/sprints/INSPECT-10C/INSPECT-10C-sprint-plan.md` | 0 | `OK sprint plan` |
+| `node build-scripts/inspection/build-dutch-diagnostic-report.js --check` | 0 | `INSPECT-10B diagnostic report output is current.` |
+| `node build-scripts/inspection/check-dutch-diagnostic-report-stability.js` | 0 | `OK INSPECT-10C diagnostic stability check source_files=18 output_files=2 refusal_cases=16 generator_sha256=3a8242fd44691f8735140a730ff4d2395f9bd57eed186597b9151aae68a8d2fa` |
+| `npm.cmd run check:scope-language` | 0 | `OK scope-language check: active surfaces` |
+| `node build-scripts/references/check-roadmap-version-index.js` | 0 | `OK roadmap version index: 151 entries` |
+| `node build-scripts/sprints/emit-url-index.js --check` | 0 | `OK url-index: reports/url-index.md is current` |
+| `git diff --check origin/main` | 0 | No whitespace errors |
+| `git -C ..\4veco-lessen status --short` | 0 | No output; lesson checkout clean/read-only |
+| `npm.cmd run check:platform` | 0 | Jest passed: 54 suites passed, 6 skipped; 806 tests passed, 8 skipped |
+
+Next required step remains fresh PR CI and the three specialist subagent
+reviews before human review.
