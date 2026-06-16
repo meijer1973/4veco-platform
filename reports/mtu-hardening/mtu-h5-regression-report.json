@@ -221,33 +221,6 @@
     ],
     "failed": [
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-1",
-        "defect_class": "question_word_without_answer_form_mtu",
-        "question_word": "teken",
-        "expected_gap": true,
-        "reason": "question word has an explicit missing answer-form expectation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-ANSWER-FORM-MISSING",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "defect_class": "question_word_without_answer_form_mtu",
-        "question_word": "teken",
-        "expected_gap": true,
-        "reason": "question word has an explicit missing answer-form expectation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-ANSWER-FORM-MISSING",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "defect_class": "question_word_without_answer_form_mtu",
-        "question_word": "teken",
-        "expected_gap": true,
-        "reason": "question word has an explicit missing answer-form expectation"
-      },
-      {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
         "operation_id": "q27-step-1",
@@ -339,13 +312,6 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-1",
-        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A42",
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
         "operation_id": "q19-step-2",
@@ -382,13 +348,6 @@
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
         "operation_id": "q19-step-2",
         "hook": "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
         "reason": "fixture marks this validator hook as review_required"
       },
       {
@@ -445,13 +404,6 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-graph/draw/teken answer-form MTU or reviewed equivalent still needed",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "hook": "graph/draw/teken answer-form MTU or reviewed equivalent still needed",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-PROCEDURE-REVIEW-D07",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
         "operation_id": "q27-step-1",
@@ -491,7 +443,7 @@
     ],
     "blocked": []
   },
-  "report_generated": "2026-06-12",
+  "report_generated": "2026-06-16",
   "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
   "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
   "source_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
@@ -499,8 +451,8 @@
   "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.",
   "bucket_totals": {
     "passed": 1,
-    "failed": 6,
-    "review_required": 29,
+    "failed": 3,
+    "review_required": 26,
     "blocked": 0
   },
   "question_bucket_counts": {
@@ -513,8 +465,8 @@
       "review_required": 4
     },
     "q19": {
-      "failed": 3,
-      "review_required": 20
+      "failed": 0,
+      "review_required": 17
     },
     "q27": {
       "failed": 3,
@@ -525,13 +477,12 @@
     }
   },
   "failed_by_defect_class": {
-    "question_word_without_answer_form_mtu": 3,
     "incidence_pass_through_task_without_incidence_mtu": 2,
     "scale_factor_usage_without_scaling_unit_mtu": 1
   },
   "review_required_by_defect_class": {
     "apply_analyze_unit_without_usable_canonical_procedure": 15,
-    "fixture_review_hooks": 14
+    "fixture_review_hooks": 11
   },
   "procedure_statuses": {
     "procedure_present": 6,
@@ -545,10 +496,10 @@
       "blocks_mtu_h5_closure": false
     },
     "q19": {
-      "status": "graph_draw_source_answer_form_procedure_blocker",
-      "failed": 3,
-      "review_required": 20,
-      "diagnostic_focus": "graph/draw/teken answer-form gap; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review",
+      "status": "source_graph_procedure_reasoning_review_blocker",
+      "failed": 0,
+      "review_required": 17,
+      "diagnostic_focus": "answer-form equivalent accepted by PR #80; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review",
       "blocks_mtu_h5_closure": true
     },
     "q27": {

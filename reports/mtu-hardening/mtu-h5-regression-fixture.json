@@ -378,6 +378,9 @@
             "procedure"
           ],
           "expected_answer_form_mtu_ids": [],
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ],
           "expected_misconception_refs": [
             "source_market_shift_without_price_or_wage_direction"
           ],
@@ -386,15 +389,14 @@
           "predictable_misconception_expected": true,
           "review_required_hooks": [
             "q19-source-annex-gap remains blocking",
-            "q19-graph-object-gap remains blocking",
-            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+            "q19-graph-object-gap remains blocking"
           ],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
             "function_construction"
           ],
-          "missing_answer_form_expected": true,
+          "missing_answer_form_expected": false,
           "expected_procedure_unit_ids": [
             "A42",
             "D10",
@@ -440,6 +442,9 @@
             "procedure"
           ],
           "expected_answer_form_mtu_ids": [],
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ],
           "expected_misconception_refs": [
             "linked_market_shift_without_inflation_direction"
           ],
@@ -447,15 +452,14 @@
           "incidence_or_pass_through_expected": false,
           "predictable_misconception_expected": true,
           "review_required_hooks": [
-            "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
-            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+            "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
           ],
           "expected_forbidden_route_tags": [
             "full_graph_construction",
             "calculus_route",
             "function_construction"
           ],
-          "missing_answer_form_expected": true,
+          "missing_answer_form_expected": false,
           "expected_procedure_unit_ids": [
             "A42",
             "D10",
@@ -508,7 +512,10 @@
             "procedure"
           ],
           "expected_answer_form_mtu_ids": [],
-          "missing_answer_form_expected": true,
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ],
+          "missing_answer_form_expected": false,
           "expected_misconception_refs": [
             "foreign_spillover_without_aruba_inflation_direction"
           ],
@@ -530,8 +537,7 @@
           "review_required_hooks": [
             "q19-source-annex-gap remains blocking",
             "q19-graph-object-gap remains blocking",
-            "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction",
-            "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+            "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
           ]
         }
       ]

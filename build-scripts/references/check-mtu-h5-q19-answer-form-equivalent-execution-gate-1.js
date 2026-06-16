@@ -59,6 +59,7 @@ const SOURCE_IDS = [
 
 const Q19_STEPS = ['q19-step-1', 'q19-step-2', 'q19-step-3'];
 const FORBIDDEN_ROUTE_TAGS = ['full_graph_construction', 'calculus_route', 'function_construction'];
+const POST_EXECUTION_CHECKER = 'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js';
 const REQUIRED_Q19_FAILED_ASSERTIONS = Q19_STEPS.map((step) => (
   `${Q19_RECORD_ID}:${step}:ASSERT-ANSWER-FORM-MISSING`
 ));
@@ -225,15 +226,26 @@ function requireCurrentDiagnosticState(packet) {
   const report = readJson(REGRESSION_REPORT_JSON);
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must remain 0/0');
-  if (counts.q19?.failed !== 3 || counts.q19?.review_required !== 20) fail('report q19 counts must remain 3/20');
+  const q19IsPreExecution = counts.q19?.failed === 3 && counts.q19?.review_required === 20;
+  const q19IsPostExecution = counts.q19?.failed === 0 && counts.q19?.review_required === 17;
+  if (!q19IsPreExecution && !q19IsPostExecution) fail('report q19 counts must be pre-execution 3/20 or post-execution 0/17');
   if (counts.q27?.failed !== 3 || counts.q27?.review_required !== 5) fail('report q27 counts must remain 3/5');
   if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must remain 0/4');
   if (packet.current_diagnostic_state?.q19?.failed !== 3 || packet.current_diagnostic_state?.q19?.review_required !== 20) {
-    fail('packet q19 current diagnostic state must be 3/20');
+    fail('historical packet q19 current diagnostic state must remain 3/20');
   }
 
   const result = runH5Validator();
-  requireIncludesAll(assertionIds(result, 'failed'), REQUIRED_Q19_FAILED_ASSERTIONS, 'live validator failed assertions');
+  if (q19IsPreExecution) {
+    requireIncludesAll(assertionIds(result, 'failed'), REQUIRED_Q19_FAILED_ASSERTIONS, 'live validator failed assertions');
+  } else {
+    for (const assertionId of REQUIRED_Q19_FAILED_ASSERTIONS) {
+      if (assertionIds(result, 'failed').includes(assertionId)) fail(`post-execution validator must clear ${assertionId}`);
+    }
+    if (assertionIds(result, 'review_required').some((id) => id.includes(ANSWER_HOOK))) {
+      fail('post-execution validator must clear q19 answer-form-needed review hooks');
+    }
+  }
   if (countForRecord(result, 'failed', Q3_RECORD_ID) !== 0 || countForRecord(result, 'review_required', Q3_RECORD_ID) !== 0) {
     fail('q3 must remain clean');
   }
@@ -268,9 +280,20 @@ function requireCurrentFixtureShape() {
   if ((q19.mapped_mtu_ids || []).includes('A45')) fail('q19 mapped_mtu_ids must not include A45');
   for (const operationId of Q19_STEPS) {
     const operation = findOperation(q19, operationId);
-    if (operation.missing_answer_form_expected !== true) fail(`${operationId}.missing_answer_form_expected must remain true in this PR`);
-    if ((operation.answer_form_reviewed_equivalent_refs || []).length > 0) fail(`${operationId}.answer_form_reviewed_equivalent_refs must not exist in this PR`);
-    requireIncludes(operation.review_required_hooks || [], ANSWER_HOOK, `${operationId}.review_required_hooks`);
+    const postExecution = operation.missing_answer_form_expected === false;
+    if (operation.missing_answer_form_expected !== true && operation.missing_answer_form_expected !== false) {
+      fail(`${operationId}.missing_answer_form_expected must be a boolean`);
+    }
+    if (postExecution) {
+      const refs = operation.answer_form_reviewed_equivalent_refs || [];
+      if (refs.length !== 1 || refs[0] !== ANSWER_REF) fail(`${operationId}.answer_form_reviewed_equivalent_refs must contain the approved reviewed equivalent after execution`);
+      if ((operation.review_required_hooks || []).includes(ANSWER_HOOK)) {
+        fail(`${operationId}.review_required_hooks must not include the answer-form-needed hook after execution`);
+      }
+    } else {
+      if ((operation.answer_form_reviewed_equivalent_refs || []).length > 0) fail(`${operationId}.answer_form_reviewed_equivalent_refs must not exist before execution`);
+      requireIncludes(operation.review_required_hooks || [], ANSWER_HOOK, `${operationId}.review_required_hooks`);
+    }
     requireIncludes(operation.expected_forbidden_mtu_ids || [], 'A45', `${operationId}.expected_forbidden_mtu_ids`);
     requireIncludesAll(operation.expected_forbidden_route_tags || [], FORBIDDEN_ROUTE_TAGS, `${operationId}.expected_forbidden_route_tags`);
   }
@@ -554,6 +577,8 @@ function main() {
     requireIncludes(packet.validation_commands || [], command, 'packet validation commands');
     requireIncludes(gate.validation_commands || [], command, 'gate validation commands');
   }
+  const postExecutionChecker = path.join(ROOT, POST_EXECUTION_CHECKER);
+  if (fs.existsSync(postExecutionChecker)) runNode(postExecutionChecker);
 
   for (const [text, context] of [[packetMd, 'packet markdown'], [gateMd, 'gate markdown']]) {
     for (const required of [

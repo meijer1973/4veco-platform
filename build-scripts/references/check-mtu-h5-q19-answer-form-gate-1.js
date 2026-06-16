@@ -39,6 +39,8 @@ const REVIEW_BRANCH = 'codex/mtu-h5-q19-answer-form-gate-1-20260615';
 const Q19_RECORD_ID = 'vw-1022-a-25-1-o:opgave-4:question-19';
 const Q3_RECORD_ID = 'vw-1022-a-25-1-o:opgave-1:question-3';
 const ANSWER_SKILL_ID = 'EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION';
+const ANSWER_REF = 'reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION';
+const ANSWER_HOOK = 'graph/draw/teken answer-form MTU or reviewed equivalent still needed';
 const AGGREGATE_SUPPLY_CAVEAT =
   'Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model.';
 
@@ -62,10 +64,13 @@ const REQUIRED_Q19_FAILED_ASSERTIONS = [
 const REQUIRED_Q19_REVIEW_MARKERS = [
   'q19-source-annex-gap remains blocking',
   'q19-graph-object-gap remains blocking',
-  'graph/draw/teken answer-form MTU or reviewed equivalent still needed',
+  ANSWER_HOOK,
   'q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support',
   'q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction',
 ];
+
+const REQUIRED_Q19_POST_EXECUTION_REVIEW_MARKERS = REQUIRED_Q19_REVIEW_MARKERS
+  .filter((marker) => marker !== ANSWER_HOOK);
 
 const FORBIDDEN_ROUTE_TAGS = [
   'full_graph_construction',
@@ -208,16 +213,28 @@ function requireCurrentDiagnosticState(packet) {
   const report = readJson(REGRESSION_REPORT_JSON);
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must remain 0/0');
-  if (counts.q19?.failed !== 3 || counts.q19?.review_required !== 20) fail('report q19 counts must remain 3/20');
+  const q19IsPreExecution = counts.q19?.failed === 3 && counts.q19?.review_required === 20;
+  const q19IsPostExecution = counts.q19?.failed === 0 && counts.q19?.review_required === 17;
+  if (!q19IsPreExecution && !q19IsPostExecution) fail('report q19 counts must be pre-execution 3/20 or post-execution 0/17');
   if (counts.q27?.failed !== 3 || counts.q27?.review_required !== 5) fail('report q27 counts must remain 3/5');
   if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must remain 0/4');
   if (packet.current_diagnostic_state?.q19?.failed !== 3 || packet.current_diagnostic_state?.q19?.review_required !== 20) {
-    fail('packet q19 diagnostic state must be 3/20');
+    fail('historical packet q19 diagnostic state must remain 3/20');
   }
 
   const result = runH5Validator();
-  requireIncludesAll(assertionIds(result, 'failed'), REQUIRED_Q19_FAILED_ASSERTIONS, 'live validator failed assertions');
-  for (const marker of REQUIRED_Q19_REVIEW_MARKERS) {
+  if (q19IsPreExecution) {
+    requireIncludesAll(assertionIds(result, 'failed'), REQUIRED_Q19_FAILED_ASSERTIONS, 'live validator failed assertions');
+  } else {
+    for (const assertionId of REQUIRED_Q19_FAILED_ASSERTIONS) {
+      if (assertionIds(result, 'failed').includes(assertionId)) fail(`post-execution validator must clear ${assertionId}`);
+    }
+    if (assertionIds(result, 'review_required').some((id) => id.includes(ANSWER_HOOK))) {
+      fail('post-execution validator must clear q19 answer-form-needed review hooks');
+    }
+  }
+  const expectedMarkers = q19IsPreExecution ? REQUIRED_Q19_REVIEW_MARKERS : REQUIRED_Q19_POST_EXECUTION_REVIEW_MARKERS;
+  for (const marker of expectedMarkers) {
     if (!assertionIds(result, 'review_required').some((id) => id.includes(marker))) {
       fail(`live validator must expose q19 review marker: ${marker}`);
     }
@@ -269,9 +286,23 @@ function requireFixtureQ19Shape() {
 
   for (const operation of q19.official_correction_model_operations || []) {
     if (!/^q19-step-[123]$/.test(operation.operation_id || '')) fail('unexpected q19 operation id');
-    if (operation.missing_answer_form_expected !== true) fail(`${operation.operation_id}.missing_answer_form_expected must remain true`);
+    const postExecution = operation.missing_answer_form_expected === false;
+    if (operation.missing_answer_form_expected !== true && operation.missing_answer_form_expected !== false) {
+      fail(`${operation.operation_id}.missing_answer_form_expected must be a boolean`);
+    }
     if ((operation.expected_answer_form_mtu_ids || []).length !== 0) fail(`${operation.operation_id}.expected_answer_form_mtu_ids must remain empty`);
-    if ((operation.answer_form_reviewed_equivalent_refs || []).length) fail(`${operation.operation_id}.answer_form_reviewed_equivalent_refs must not be present in this PR`);
+    if (postExecution) {
+      if (!Array.isArray(operation.answer_form_reviewed_equivalent_refs) ||
+          operation.answer_form_reviewed_equivalent_refs.length !== 1 ||
+          operation.answer_form_reviewed_equivalent_refs[0] !== ANSWER_REF) {
+        fail(`${operation.operation_id}.answer_form_reviewed_equivalent_refs must contain the reviewed q19 answer-form equivalent after execution`);
+      }
+      if ((operation.review_required_hooks || []).includes(ANSWER_HOOK)) {
+        fail(`${operation.operation_id}.review_required_hooks must not include the answer-form-needed hook after execution`);
+      }
+    } else if ((operation.answer_form_reviewed_equivalent_refs || []).length) {
+      fail(`${operation.operation_id}.answer_form_reviewed_equivalent_refs must not be present before execution`);
+    }
     requireIncludes(operation.expected_forbidden_mtu_ids || [], 'A45', `${operation.operation_id}.expected_forbidden_mtu_ids`);
     requireIncludesAll(operation.expected_forbidden_route_tags || [], FORBIDDEN_ROUTE_TAGS, `${operation.operation_id}.expected_forbidden_route_tags`);
     if (['q19-step-2', 'q19-step-3'].includes(operation.operation_id)) {
