@@ -142,9 +142,10 @@ function checkSource() {
   assert(ExitTicketEngine.validateData(data), '1.1.3 exit-ticket source must validate');
   assert(data.surface === 'target_equivalent_exit_ticket', 'surface must be target_equivalent_exit_ticket');
   assert(data.layout && data.layout.framework === 'golden_exercise_workbench', '1.1.3 exit ticket must opt into the golden exercise workbench framework');
-  assert(data.targetEquivalent && data.targetEquivalent.gateApproved === false, 'targetEquivalent gateApproved must remain false');
+  assert(data.targetEquivalent && data.targetEquivalent.gateApproved === true, 'targetEquivalent gateApproved must record the human-approved flag');
   assert(data.targetEquivalent.completionLanguageEligible === false, 'completion language must remain held');
-  assert(data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === false, 'target readiness evidence must remain false');
+  assert(data.metadataAlignment && data.metadataAlignment.status === 'target_equivalent_aligned', 'metadata status must record target-equivalent alignment');
+  assert(data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === true, 'target readiness evidence must record the human-approved flag');
   assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 2, 'context must contain exactly source and table');
   assert(data.contextBlocks.some((block) => block.type === 'source_excerpt'), 'context must include source excerpt');
   assert(data.contextBlocks.some((block) => block.type === 'table'), 'context must include table');
@@ -258,6 +259,9 @@ function checkGeneratedOutput() {
   assert(shared.includes('graph_reading'), 'generated shared data missing graph reading task');
   assert(shared.includes('calculation_work_capture'), 'generated shared data missing calculation task');
   assert(shared.includes('golden_exercise_workbench'), 'generated shared data missing golden exercise framework metadata');
+  assert(shared.includes('"gateApproved": true'), 'generated shared data must record human-approved gate evidence');
+  assert(shared.includes('"targetReadinessEvidence": true'), 'generated shared data must record human-approved target readiness evidence');
+  assert(shared.includes('"completionLanguageEligible": false'), 'generated shared data must keep completion language held');
   assert(shared.includes('percentage_claim_control'), 'generated shared data missing structured percentage claim mode');
   assert(!shared.includes('lineShapeOptions'), 'generated shared data must not expose graph line-shape choices');
   assert(shared.includes('newQBase'), 'generated shared data missing embedded formula distractor');
@@ -316,9 +320,10 @@ function main() {
       next_state: exemplarFiles.next_state,
     },
     authority: {
-      target_readiness_evidence_authorized: false,
+      gate_approved_authorized: true,
+      target_readiness_evidence_authorized: true,
       completion_language_authorized: false,
-      human_review_completed: false,
+      human_review_completed: true,
     },
   };
   fs.mkdirSync(path.dirname(PROOF_PATH), { recursive: true });

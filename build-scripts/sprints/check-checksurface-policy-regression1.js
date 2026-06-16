@@ -229,6 +229,10 @@ function containsAuthorityOverclaim(data) {
     if (/beheerst|automatisch door|volgende paragraaf|diagnost|summatief|cijfer/.test(completionText)) return true;
     return false;
   }
+  if (data.parNr === '1.1.3') {
+    if (data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true) return true;
+    return BAD_COMPLETION.test(text);
+  }
   if (data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true) return true;
   if (data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === true) return true;
   return BAD_COMPLETION.test(text);
@@ -307,13 +311,18 @@ function checkCurrentSources() {
     assert(!containsMissingFeedbackOrNextAction(exitData), `${par} exit ticket has missing feedback or next action`);
   }
 
-  for (const key of ['1.1.1-exit-ticket', '1.1.3-exit-ticket']) {
-    const data = sources[key];
-    assert(data.targetEquivalent && data.targetEquivalent.gateApproved === false, `${key} must remain unapproved`);
-    assert(data.targetEquivalent.completionLanguageEligible === false, `${key} completion language must remain held`);
-    assert(data.metadataAlignment.targetReadinessEvidence === false, `${key} must not claim target-readiness evidence`);
-    assert(!containsAuthorityOverclaim(data), `${key} has authority overclaim`);
-  }
+  const held111 = sources['1.1.1-exit-ticket'];
+  assert(held111.targetEquivalent && held111.targetEquivalent.gateApproved === false, '1.1.1-exit-ticket must remain unapproved');
+  assert(held111.targetEquivalent.completionLanguageEligible === false, '1.1.1-exit-ticket completion language must remain held');
+  assert(held111.metadataAlignment.targetReadinessEvidence === false, '1.1.1-exit-ticket must not claim target-readiness evidence');
+  assert(!containsAuthorityOverclaim(held111), '1.1.1-exit-ticket has authority overclaim');
+
+  const approved113 = sources['1.1.3-exit-ticket'];
+  assert(approved113.targetEquivalent && approved113.targetEquivalent.gateApproved === true, '1.1.3-exit-ticket must record human-approved gate evidence');
+  assert(approved113.targetEquivalent.completionLanguageEligible === false, '1.1.3-exit-ticket completion language must remain held');
+  assert(approved113.metadataAlignment.targetReadinessEvidence === true, '1.1.3-exit-ticket must record human-approved target-readiness evidence');
+  assert(approved113.metadataAlignment.status === 'target_equivalent_aligned', '1.1.3-exit-ticket metadata must record target-equivalent alignment');
+  assert(!containsAuthorityOverclaim(approved113), '1.1.3-exit-ticket has authority overclaim');
 
   const reviewed112 = sources['1.1.2-exit-ticket'];
   assert(reviewed112.targetEquivalent.gateApproved === false, 'current 1.1.2 Golden Workbench transfer must remain unapproved');

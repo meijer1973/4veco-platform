@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-113-EXEMPLAR-EXIT-1",
-  "generated": "2026-06-16T06:52:24.667Z",
+  "generated": "2026-06-16T10:00:56.439Z",
   "status": "passed",
   "source": {
     "task_families": [
@@ -41,8 +41,9 @@
     "next_state": "reviewed_with_flags"
   },
   "authority": {
-    "target_readiness_evidence_authorized": false,
+    "gate_approved_authorized": true,
+    "target_readiness_evidence_authorized": true,
     "completion_language_authorized": false,
-    "human_review_completed": false
+    "human_review_completed": true
   }
 }
