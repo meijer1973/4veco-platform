@@ -189,10 +189,14 @@ The standards layer must not claim:
   INSPECT-10A defines exact source/output allowlists, refusal/stop conditions,
   and a static output shape for a possible later internal diagnostic generator.
   Its three-reviewer gate returned `MORE_THAN_SATISFIED` from teacher,
-  legal/privacy, and Dutch quality-inspection roles. Neither INSPECT-10 nor
-  INSPECT-10A implements a generator or generates an evidence pack. Chapter
-  1.2 pack-strength generator work remains blocked pending later scoped
-  authority.
+  legal/privacy, and Dutch quality-inspection roles. INSPECT-10B implements
+  only the manually invoked internal diagnostic generator and Chapter 1.2
+  diagnostic report pair inside those allowlists. INSPECT-10B does not generate
+  an evidence pack, teacher/school-facing pack, public/external output, package
+  script, CI/build gate, dashboard gate, quality-ref integration, Scale Gate
+  integration, source-registry mutation, or generated lesson-output mutation.
+  Chapter 1.2 pack-strength generator work remains blocked pending later
+  scoped authority.
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources? INSPECT-9 proposes a 180-day recheck trigger
   for later teacher/school-facing pack work, but this still needs adoption in
@@ -202,10 +206,9 @@ The standards layer must not claim:
 - Which mobile, contrast/theme, semantic/PDF, hint/repair, companion, and
   advisory-route evidence must close before Chapter 1.2 can move beyond
   diagnostic-only internal generator posture?
-- Should human review authorise `INSPECT-10B` as a narrow internal diagnostic
-  generator implementation using only the INSPECT-10A source/output allowlists,
-  or should more generated-output, accessibility, support, public/external, or
-  check-surface remediation happen first?
+- Does human review accept the INSPECT-10B internal diagnostic generator and
+  Chapter 1.2 diagnostic report pair as faithful to INSPECT-10A, with all
+  carried blockers visible and no downstream authority unlocked?
 - Should Dutch quality-control evidence stay in platform reports only, or
   should selected summaries also become teacher/school-facing artifacts after
   review?

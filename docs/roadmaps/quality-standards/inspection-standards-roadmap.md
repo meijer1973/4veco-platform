@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.2-inspect-10a-implementation-plan`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` human review passed / implementation-plan packet merge-ready
+Roadmap version: `v2.3-inspect-10b-internal-diagnostic-report`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` implementation complete / internal diagnostic report ready for review
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -162,6 +162,7 @@ Closed baseline:
 | `INSPECT-9C` | Chapter 1.2 proof and support remediation; records route-local proof status for `1.2.1`-`1.2.4`, carries `1.2.2` and `1.2.4` generated-output blockers, records minimum accessibility/support evidence, and recommends only diagnostic-only INSPECT-10 planning after human acceptance. |
 | `INSPECT-10` | Dutch report-only generator diagnostic planning; defines the future diagnostic generator contract, status vocabulary, input eligibility, blocker display rules, and human-review questions. It creates no generator code and no evidence pack. |
 | `INSPECT-10A` | Diagnostic report generator implementation plan; names exact future source files, output files, refusal/stop conditions, and static output shape for a later internal generator. The three-reviewer gate returned `MORE_THAN_SATISFIED` from teacher, legal/privacy, and Dutch quality-inspection roles. It creates no generator code and no diagnostic report. |
+| `INSPECT-10B` | Internal diagnostic report generator implementation; creates a manually invoked internal generator and a Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source allowlist while preserving all blockers. It creates no evidence pack, teacher/school-facing pack, public/external output, package/CI/dashboard/quality-ref/Scale Gate integration, source-registry mutation, or generated lesson-output mutation. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -459,13 +460,15 @@ basis is ready enough.
 
 Scope: generator/report-only implementation.
 
-Current authority update after INSPECT-9C, INSPECT-10, and INSPECT-10A
-planning:
+Current authority update after INSPECT-9C, INSPECT-10, INSPECT-10A, and
+INSPECT-10B:
 
-The original implementation goal remains blocked. INSPECT-10 currently exists
-only as accepted diagnostic-only generator planning with Chapter 1.2 blockers
-visible. INSPECT-10A exists only as implementation planning for a possible
-later internal diagnostic generator. The planning packets are:
+The original broad implementation goal remains blocked. INSPECT-10 exists as
+accepted diagnostic-only generator planning with Chapter 1.2 blockers visible.
+INSPECT-10A exists as accepted implementation planning for a narrow internal
+diagnostic generator. INSPECT-10B implements only that narrow internal
+diagnostic generator and generated Chapter 1.2 diagnostic report pair. The
+relevant packets and generated outputs are:
 
 ```text
 archive/sprints/INSPECT-10/
@@ -474,20 +477,25 @@ reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.jso
 archive/sprints/INSPECT-10A/
 reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.md
 reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.json
+archive/sprints/INSPECT-10B/
+build-scripts/inspection/build-dutch-diagnostic-report.js
+reports/inspection-standards/chapter-1-2-diagnostic-report.md
+reports/inspection-standards/chapter-1-2-diagnostic-report.json
 ```
 
 INSPECT-10 defines a future diagnostic generator contract. INSPECT-10A names
 the exact source-file allowlist, exact future output-file allowlist,
 blocker-visible output contract, refusal/stop conditions, and static sample
-shape for a later internal diagnostic generator. Neither packet implements
-`build-scripts/inspection/build-dutch-evidence-pack.js`, creates
-`build-scripts/inspection/build-dutch-diagnostic-report.js`, generates a
-diagnostic report, generates an evidence pack, or authorises
-teacher/school-facing pack work, public/external-facing output, package/CI/
-dashboard/quality-ref/Scale Gate integration, lesson-output mutation, product-
-route adoption, diagnostics/mastery/PV, or student/product-use work.
+shape for a later internal diagnostic generator. INSPECT-10B creates
+`build-scripts/inspection/build-dutch-diagnostic-report.js` and the Chapter 1.2
+internal diagnostic report pair. It does not implement
+`build-scripts/inspection/build-dutch-evidence-pack.js`, generate an evidence
+pack, or authorise teacher/school-facing pack work, public/external-facing
+output, package/CI/dashboard/quality-ref/Scale Gate integration, lesson-output
+mutation, product-route adoption, diagnostics/mastery/PV, or student/product-
+use work.
 
-Expected outputs:
+Original broad expected outputs remain blocked:
 
 ```text
 build-scripts/inspection/build-dutch-evidence-pack.js
@@ -636,33 +644,27 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Merge PR #75 after fresh CI, zero-behind status, and no unresolved PR comments
+Send INSPECT-10B for PR/human review after validation and fresh PR CI pass
 ```
 
-Recommended posture after PR #75 merge:
+Recommended posture after INSPECT-10B review:
 
 ```text
-INSPECT-10B follow-up only if internal, diagnostic-only, and blocker-visible
-Dutch scope only
-exact source-file allowlist only
-exact output-file allowlist only
-no pack-strength Chapter 1.2 generator work
-no teacher/school-facing evidence-pack generation
-no public-facing or external-facing generated output/report/sharing
-no non-Dutch standards work
-no dashboard/gate/quality-ref integration
-no lesson-output mutation
-no personal data
-no compliance or approval claims
+accept or revise only the internal diagnostic generator/report pair
+do not proceed to INSPECT-11 without a new human-reviewed sprint packet
+keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
+keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
+keep generated lesson-output mutation blocked
+keep product-route adoption, diagnostics/mastery/PV, and student/product-use authority blocked
+keep non-Dutch standards work out of this roadmap
+keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-10A is:
+The practical product question carried forward from INSPECT-10B is:
 
-> Are the exact source/output allowlists, refusal contract, and blocker-visible
-> output shape safe enough to authorise a later internal INSPECT-10B
-> diagnostic generator implementation, or must more Chapter 1.2 generated-
-> output, accessibility, support, public/external, or check-surface authority
-> remediation happen first?
+> Does human review accept this manually invoked internal diagnostic generator
+> and Chapter 1.2 diagnostic report pair as faithful to INSPECT-10A, with all
+> carried blockers visible and no downstream authority unlocked?
 
 ## 9. Explicit Out-Of-Scope Work
 
