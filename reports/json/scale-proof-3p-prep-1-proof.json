@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "sprint_id": "SCALE-PROOF-3P-PREP-1",
+  "generated": "2026-06-16",
+  "status": "prep_pass_gate_blocked",
+  "verdict": "PREP COMPLETE / GATE-PRODUCT-3P NOT READY",
+  "baseline": {
+    "platform_branch_base": "a4838db18467833f550602eecd32ca9b943fbae9",
+    "post_65_check_surface_baseline": "406f6358f477cfd50361855c45183da8c9f90990",
+    "lesson_main": "efc4fc2b194d7a43d072dcba89f755b02cf55574"
+  },
+  "required_citations": {
+    "product_end_state": [
+      "../4veco-lessen/specifications/product-end-state.md",
+      "../4veco-lessen/specifications/companion-core-specifications.md"
+    ],
+    "original_specs": [
+      "reports/sprints/CHECK-SHORT-EXIT-2-plan.md",
+      "reports/sprints/CHECKSURFACE-GATE-RETRY-EXCELLENT-1-plan.md",
+      "reports/review-gates/GATE-CHECK-SURFACE-EXCELLENT-1-first-three-check-surfaces-review/gate-closure.md",
+      "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
+      "references/reference-team-roadmap.md"
+    ]
+  },
+  "readiness_scores": {
+    "evidence_inventory_completeness": 9.2,
+    "authority_boundary_clarity": 9.6,
+    "blocker_specificity": 9.4,
+    "readiness_map_usefulness_for_later_gate_product_3p": 8.8
+  },
+  "paragraphs": [
+    {
+      "paragraph_id": "1.1.1",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A43",
+        "B01",
+        "B02"
+      ],
+      "landing_route_links_observed": true,
+      "advisory_short_check_present": true,
+      "exit_ticket_candidate": true,
+      "gate_approved": false,
+      "completion_language_eligible": false,
+      "product_gate_ready": false
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "landing_route_links_observed": true,
+      "advisory_short_check_present": true,
+      "golden_visual_proof_present": true,
+      "exit_ticket_candidate": true,
+      "gate_approved": false,
+      "completion_language_eligible": false,
+      "product_gate_ready": false
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A38",
+        "A45",
+        "A46"
+      ],
+      "landing_route_links_observed": true,
+      "advisory_short_check_present": true,
+      "graph_exit_proof_present": true,
+      "graph_exit_token_evidence_repaired": true,
+      "source_data_skill_metadata_current": true,
+      "generated_lesson_metadata_current": true,
+      "source_data_skill_metadata_observed": [
+        "A38",
+        "A45",
+        "A46"
+      ],
+      "target_readiness_evidence": false,
+      "gate_approved": false,
+      "completion_language_eligible": false,
+      "product_gate_ready": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "SP3P-001",
+      "classification": "core_requirement_met",
+      "finding": "First-three source-registry target records are reviewed_final.",
+      "blocks": [],
+      "does_not_block": [
+        "product-proof preparation",
+        "later rendered evidence planning"
+      ],
+      "proof_required_to_close": "Preserve course-target-exercises validator and B1-MIGRATED-V5-TARGET-QUALITY-1 evidence links."
+    },
+    {
+      "id": "SP3P-002",
+      "classification": "core_requirement_met",
+      "finding": "The check-surface gate is closed narrowly with post-65 current evidence.",
+      "blocks": [],
+      "does_not_block": [
+        "non-authorizing product-proof preparation"
+      ],
+      "proof_required_to_close": "Preserve post-65 evidence addendum and refreshed graph-exit proof."
+    },
+    {
+      "id": "SP3P-003",
+      "classification": "core_requirement_met",
+      "finding": "1.1.3 source data and generated lesson output now map graph/check routes to reviewed-final A38/A45/A46.",
+      "blocks": [],
+      "does_not_block": [
+        "renewed graph/table closure review",
+        "non-mutating prep publication"
+      ],
+      "proof_required_to_close": "Preserve B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1 evidence and current generated output."
+    },
+    {
+      "id": "SP3P-004",
+      "classification": "core_requirement_missing",
+      "finding": "Exit-ticket target-equivalent flags remain held.",
+      "blocks": [
+        "completion-language claims",
+        "product-route adoption",
+        "GATE-PRODUCT-3P closure"
+      ],
+      "does_not_block": [
+        "check-surface closure",
+        "proof preparation"
+      ],
+      "proof_required_to_close": "Human review after repairs explicitly authorizes target-equivalent proof or records residual blockers."
+    },
+    {
+      "id": "SP3P-005",
+      "classification": "core_requirement_missing",
+      "finding": "Full first-three rendered product-path proof has not been captured as a gate packet.",
+      "blocks": [
+        "GATE-PRODUCT-3P",
+        "Scale Gate 1",
+        "product readiness claim"
+      ],
+      "does_not_block": [
+        "evidence-map publication",
+        "repair planning"
+      ],
+      "proof_required_to_close": "Rendered desktop/mobile/dark evidence for landing, Start, Leer, Oefen, skill map, practice, advisory check, exit ticket, feedback, and next action."
+    },
+    {
+      "id": "SP3P-006",
+      "classification": "scale_blocker",
+      "finding": "Downstream authority remains blocked.",
+      "blocks": [
+        "product-route adoption",
+        "diagnostics",
+        "mastery/sequencing",
+        "PV",
+        "Scale Gate 1",
+        "broad product use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "non-authorizing prep",
+        "source-data alignment planning"
+      ],
+      "proof_required_to_close": "Separate GATE-PRODUCT-3P and downstream Scale Gate review after missing core proof is repaired."
+    }
+  ],
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "recommended_next_sprint": "B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1",
+  "validation": {
+    "status": "passed",
+    "commands": [
+      "CHECK_SURFACE_BOOK_ROOT=C:\\Projects\\4veco\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod node build-scripts/review-gates/check-gate-check-surface-excellent1-review-packet.js",
+      "node build-scripts/sprints/check-golden-exercise-workbench.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/references/check-roadmap-version-index.js",
+      "npm.cmd run check:scope-language",
+      "node build-scripts/reports/validate-report-json.js",
+      "node build-scripts/sprints/emit-url-index.js --check",
+      "npm.cmd run check:platform",
+      "git diff --check",
+      "git -C C:\\Projects\\4veco\\4veco-lessen diff --check"
+    ]
+  }
+}
