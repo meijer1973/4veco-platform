@@ -2,7 +2,7 @@
   "schema_version": 1,
   "registry_id": "source-document-registry",
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-16T09:16:14.777Z",
+  "generated_on": "2026-06-16T10:32:37.344Z",
   "storage_decision": {
     "registry_location": "references/data/source-document-registry.json",
     "machine_registry_created": false,
@@ -390,7 +390,7 @@
       "title": "Course Target Exercises v5",
       "source_type": "authored_json",
       "authority_level": "authored_judgement",
-      "source_version": "sha256:4296086bbfbec12887073c20f1c69b268873622757bc2598bd45f221d5c06a3e",
+      "source_version": "sha256:b5473877479b34885f325a1f45ef8fa84da9e6f534af593e17cd1dc6230631f6",
       "status": "active",
       "owner": "references_team",
       "citation_policy": "cite_as_human_authored_judgement",
@@ -399,8 +399,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "manual_review",
-      "source_hash": "4296086bbfbec12887073c20f1c69b268873622757bc2598bd45f221d5c06a3e",
-      "size_bytes": 179590,
+      "source_hash": "b5473877479b34885f325a1f45ef8fa84da9e6f534af593e17cd1dc6230631f6",
+      "size_bytes": 180927,
       "primary_evidence": true,
       "curriculum_authority": true,
       "allowed_downstream_uses": [

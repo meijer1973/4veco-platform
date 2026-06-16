@@ -531,9 +531,7 @@
         "D32",
         "D33"
       ],
-      "missing_units_flagged": [
-        "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
-      ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "D1.4b",
         "D1.9"
@@ -561,6 +559,20 @@
         "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
         "decision_summary": "Existing doeloefening-aligned demand-factor target reviewed final; D1.9 confirmed and D1.4b added; D1.4a and A2.15 deferred.",
         "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
+      },
+      "terminology_decision": {
+        "sprint_id": "B1-NORMAL-INFERIOR-TERM-DECISION-1",
+        "review_date": "2026-06-16",
+        "decision": "keep_year1_target_term_light",
+        "decision_summary": "Year 1 1.2.2 may use supplied normal-good context for an income-driven demand-shift task, but students are not required to classify normal versus inferior goods as an active Year 1 target operation.",
+        "target_operation_boundary": "Given a stated income change and supplied good type where needed, students determine the direction of the demand-curve shift and distinguish it from an own-price movement. Normal-vs-inferior classification and income-elasticity interpretation stay outside Year 1 target requirements.",
+        "mixed_target_boundary": "1.2.4 remains term-free and may consolidate income-driven demand shifts without requiring normal/inferior-good terminology.",
+        "evidence": {
+          "review_packet": "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-review-packet.md",
+          "quality_log": "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-quality-log.md",
+          "sprint_plan": "reports/sprints/B1-NORMAL-INFERIOR-TERM-DECISION-1-plan.md"
+        },
+        "authority_boundary": "Authored target-registry terminology decision only; does not close target-equivalent lesson proof, Year 1, CP-6, Scale Gate, product-route adoption, diagnostics, mastery, PV, or student/product-use authority."
       }
     },
     {

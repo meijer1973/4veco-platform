@@ -1,12 +1,12 @@
 # Owned Content Coverage
 
-Generated: 2026-06-15T11:17:41Z
+Generated: 2026-06-16T10:32:24Z
 Status: INFO
 
 ## Summary
 
-- Nodes: 917
-- Edges: 1382
+- Nodes: 916
+- Edges: 1381
 - Paragraphs linked: 54
 - Units linked: 114
 - Terms linked: 46
@@ -18,7 +18,7 @@ Status: INFO
 
 - implementation_trace: 411
 - owned_exercise_evidence: 367
-- projection: 604
+- projection: 603
 
 ## By Source Surface Type
 
@@ -45,7 +45,7 @@ Status: INFO
 - quality_reference_yaml: 12
 - review_note: 16
 - summary_surface: 5
-- target_exercise_index: 360
+- target_exercise_index: 359
 - vaardigheden_surface: 8
 - visual_png_projection: 216
 - visual_svg_source: 216

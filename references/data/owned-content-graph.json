@@ -3,7 +3,7 @@
   "graph_id": "owned-content-graph",
   "sprint_id": "R9.2",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-06-15T11:17:41Z",
+  "generated_on": "2026-06-16T10:32:24Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",
@@ -21,8 +21,8 @@
     "external_authority_edges_created": false,
     "student_facing_uses_blocked": true
   },
-  "node_count": 917,
-  "edge_count": 1382,
+  "node_count": 916,
+  "edge_count": 1381,
   "nodes": [
     {
       "node_id": "blueprint_chapter:1.1",
@@ -5579,12 +5579,6 @@
       "label": "4.3.2 Ruilwinst en ruilvoet",
       "paragraph_id": "4.3.2",
       "difficulty": "MEDIUM"
-    },
-    {
-      "node_id": "quality_issue:1.2.2:missing-unit-1",
-      "node_type": "quality_issue",
-      "label": "1.2.2 missing unit flag 1",
-      "flag": "Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)"
     },
     {
       "node_id": "quality_issue:1.2.3:missing-unit-1",
@@ -42445,40 +42439,6 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "cdf35f7dd13b7100d5a45bcda0e0c5ce2e1ff89585ec6951e7bd4684c5e7b535"
-    },
-    {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-1.2.2-QUALITY-ISSUE-1.2.2-MISSING-UNIT-1-1.2.2-1.2.2-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:1.2.2",
-      "to": "quality_issue:1.2.2:missing-unit-1",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "1.2.2",
-      "record_id": "1.2.2:flag-1",
-      "unit_ids": [
-        "A42",
-        "D27",
-        "D32",
-        "D33"
-      ],
-      "term_ids": [
-        "complementariteit",
-        "substitueerbaarheid"
-      ],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Classify a normal vs inferior good response to an income change (concept-level, prerequisite for D11 inkomenselasticiteit)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "447b15fcef445b83361a99c8ea7dae62a838c6deb26d06d8b06d3a6edcdb1c7d"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-1.2.3-QUALITY-ISSUE-1.2.3-MISSING-UNIT-1-1.2.3-1.2.3-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
