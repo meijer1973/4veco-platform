@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "packet_id": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1",
+  "sprint_id": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1",
+  "bundle_id": "B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1",
+  "packet_type": "implementation_review_packet",
+  "review_standard": "REV-STD-1",
+  "pr_throughput_class": "cross_repo_bundle",
+  "authority_class": "high_authority",
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "Implements a recorded human-review authority decision and touches paired generated lesson output."
+  },
+  "human_decision_required": true,
+  "paired_prs": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/b1-graph-evidence-113-flag-implementation-1-20260616"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/b1-graph-evidence-113-flag-implementation-1-20260616"
+    }
+  ],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "unexpected source-data mutation beyond 1.1.3-exit-ticket",
+    "completionLanguageEligible changes to true",
+    "product, diagnostics, mastery, PV, Scale Gate, or student/product authority claimed"
+  ],
+  "date": "2026-06-16",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-review-packet.md",
+    "reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json"
+  ],
+  "non_negotiable_requirements": [
+    "Implement exactly gateApproved:true, targetReadinessEvidence:true, completionLanguageEligible:false for source-data/book-1/exit-ticket/1.1.3-exit-ticket.json.",
+    "Keep 1.1.3-korte-check advisory and non-target-readiness.",
+    "Regenerate paired lesson output from platform source only.",
+    "Do not authorize Year 1, CP-6, Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Human decision implemented exactly",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.3-exit-ticket.json"
+    },
+    {
+      "requirement": "Generated lesson output parity",
+      "status": "met",
+      "evidence": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.3-exit-ticket.js"
+    },
+    {
+      "requirement": "Completion language held",
+      "status": "met",
+      "evidence": "targetEquivalent.completionLanguageEligible remains false"
+    },
+    {
+      "requirement": "Advisory short-check boundary held",
+      "status": "met",
+      "evidence": "node build-scripts/sprints/check-graph-check-ux1.js"
+    },
+    {
+      "requirement": "Downstream authority held",
+      "status": "met",
+      "evidence": "carried_issues"
+    }
+  ],
+  "findings": [
+    {
+      "id": "B1GE113FI-001",
+      "classification": "pass",
+      "severity": "low",
+      "finding": "Source and generated lesson data match the recorded human decision.",
+      "status": "closed"
+    },
+    {
+      "id": "B1GE113FI-002",
+      "classification": "carried_issue",
+      "severity": "high",
+      "finding": "Completion language remains disabled.",
+      "status": "open_by_design"
+    },
+    {
+      "id": "B1GE113FI-003",
+      "classification": "carried_issue",
+      "severity": "critical",
+      "finding": "Scale Gate, product-route, diagnostics, mastery, PV, and student/product authorities remain held.",
+      "status": "open_by_design"
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue": "completionLanguageEligible remains false",
+      "blocks": "1.1.3 completion copy and paragraph-completion claims",
+      "does_not_block": "Merging gate/readiness source flag implementation",
+      "proof_required_to_close": "Later explicit human gate approving completion language"
+    },
+    {
+      "issue": "Downstream product authority remains held",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics, mastery, PV, student/product use",
+      "does_not_block": "Merging this source/generated parity implementation",
+      "proof_required_to_close": "Later product-proof and Scale Gate packets using REV-STD-1"
+    }
+  ],
+  "checks_run": [
+    "npx.cmd jest --runInBand --runTestsByPath engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-ui.test.js engines/tests/golden-ticket-layout.test.js build-scripts/platform/build-exit-ticket-shells.test.js build-scripts/sprints/check-golden-ticket-layout-boundary.test.js",
+    "node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js",
+    "node build-scripts/sprints/check-graph-exit-ux1.js",
+    "node build-scripts/sprints/check-graph-check-ux1.js",
+    "node build-scripts/sprints/check-checksurface-policy-regression1.js"
+  ],
+  "recommendation": "merge_after_ci"
+}

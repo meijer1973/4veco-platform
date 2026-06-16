@@ -55,7 +55,7 @@ const surfaces = [
     suffix: 'exit-ticket',
     sourceKey: '1.1.3-exit-ticket',
     label: '1.1.3 exit ticket',
-    authority: 'target_equivalent_held',
+    authority: 'target_equivalent_readiness_approved',
   },
 ];
 
@@ -508,9 +508,9 @@ function sourceFacts(data, surface) {
     layout_framework: data.layout && data.layout.framework,
     layout_variant: data.layout && data.layout.variant || null,
     target_equivalent_candidate: target.candidate === true,
-    gate_approved_false: target.gateApproved === false,
+    gate_approved: target.gateApproved === true,
     completion_language_eligible_false: target.completionLanguageEligible === false,
-    target_readiness_evidence_false: metadata.targetReadinessEvidence === false,
+    target_readiness_evidence: metadata.targetReadinessEvidence === true,
     advisory_target_equivalent_proof_false: surface.authority === 'advisory_only' ? advisory.targetEquivalentProof === false : null,
     advisory_hints_absent: surface.authority === 'advisory_only' ? advisory.hintsAbsent === true : null,
     advisory_route_advice: surface.authority === 'advisory_only' ? advisory.routeAdvice === true : null,
@@ -519,6 +519,8 @@ function sourceFacts(data, surface) {
 }
 
 function verdictForSurface(facts, surface) {
+  const authorityHeld = surface.authority === 'target_equivalent_held';
+  const readinessApproved = surface.authority === 'target_equivalent_readiness_approved';
   const required = [
     facts.html.golden_root_present,
     facts.html.exit_ticket_app_absent,
@@ -530,9 +532,11 @@ function verdictForSurface(facts, surface) {
     facts.html.old_internal_labels_absent,
     facts.html.answer_giving_placeholders_absent,
     facts.html.links_resolve,
-    facts.source.gate_approved_false,
     facts.source.completion_language_eligible_false,
-    facts.source.target_readiness_evidence_false,
+    authorityHeld ? facts.source.gate_approved === false : true,
+    authorityHeld ? facts.source.target_readiness_evidence === false : true,
+    readinessApproved ? facts.source.gate_approved === true : true,
+    readinessApproved ? facts.source.target_readiness_evidence === true : true,
     facts.runtime.mobile_horizontal_overflow_absent,
   ];
   if (surface.id === '113-exit-ticket') {
@@ -582,7 +586,9 @@ function mdManifest(proof) {
     lines.push(`- Legacy shell absent: ${surface.html.exit_ticket_app_absent && surface.html.legacy_shell_classes_absent}`);
     lines.push(`- Legacy CSS/runtime absent: ${surface.html.legacy_css_absent && surface.html.legacy_ui_absent}`);
     lines.push(`- Links resolve: ${surface.html.links_resolve}`);
-    lines.push(`- Authority held: ${surface.source.gate_approved_false && surface.source.completion_language_eligible_false && surface.source.target_readiness_evidence_false}`);
+    lines.push(`- Gate approved: ${surface.source.gate_approved}`);
+    lines.push(`- Target-readiness evidence: ${surface.source.target_readiness_evidence}`);
+    lines.push(`- Completion language held: ${surface.source.completion_language_eligible_false}`);
     lines.push(`- Mobile horizontal overflow absent: ${surface.runtime.mobile_horizontal_overflow_absent}`);
     if (surface.id === '113-exit-ticket') {
       lines.push(`- Fake graph controls absent: ${surface.html.fake_graph_controls_absent}`);

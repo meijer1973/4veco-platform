@@ -1,6 +1,6 @@
 # GOLDEN-SURFACE-VISUAL-REVIEW-1 Screenshot Manifest
 
-Generated: 2026-06-15T07:38:06.031Z
+Generated: 2026-06-16T09:15:28.112Z
 
 ## Scope
 
@@ -32,7 +32,9 @@ Generated: 2026-06-15T07:38:06.031Z
 - Legacy shell absent: true
 - Legacy CSS/runtime absent: true
 - Links resolve: true
-- Authority held: true
+- Gate approved: false
+- Target-readiness evidence: false
+- Completion language held: true
 - Mobile horizontal overflow absent: true
 
 ### 1.1.2 advisory short check
@@ -42,7 +44,9 @@ Generated: 2026-06-15T07:38:06.031Z
 - Legacy shell absent: true
 - Legacy CSS/runtime absent: true
 - Links resolve: true
-- Authority held: true
+- Gate approved: false
+- Target-readiness evidence: false
+- Completion language held: true
 - Mobile horizontal overflow absent: true
 
 ### 1.1.3 exit ticket
@@ -52,7 +56,9 @@ Generated: 2026-06-15T07:38:06.031Z
 - Legacy shell absent: true
 - Legacy CSS/runtime absent: true
 - Links resolve: true
-- Authority held: true
+- Gate approved: true
+- Target-readiness evidence: true
+- Completion language held: true
 - Mobile horizontal overflow absent: true
 - Fake graph controls absent: true
 - Old formula-token ids absent: true

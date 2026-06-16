@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T08:24:09.123Z
+Generated: 2026-06-16T09:15:57.458Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4629
+Files indexed: 4625
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1761,7 +1761,7 @@ Count: 609
 
 ## reports
 
-Count: 2865
+Count: 2861
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1802,10 +1802,6 @@ Count: 2865
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
