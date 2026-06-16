@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T09:15:57.458Z
+Generated: 2026-06-16T10:18:00.749Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4625
+Files indexed: 4640
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 490
+Count: 492
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -201,6 +201,7 @@ Count: 490
 - build-scripts/content/legacy-target/vaardigheden-352-naar-het-examen.js
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
+- build-scripts/inspection/build-dutch-diagnostic-report.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -327,6 +328,7 @@ Count: 490
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
@@ -670,12 +672,13 @@ Count: 42
 
 ## validators
 
-Count: 472
+Count: 474
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-validation-log.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -749,6 +752,7 @@ Count: 472
 - build-scripts/references/check-mtu-h5-fu001-q3-execution-readiness-packet.js
 - build-scripts/references/check-mtu-h5-mapping-regression.js
 - build-scripts/references/check-mtu-h5-next-repair-packet.js
+- build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
@@ -1761,7 +1765,7 @@ Count: 609
 
 ## reports
 
-Count: 2861
+Count: 2868
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1804,6 +1808,8 @@ Count: 2861
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
+- reports/inspection-standards/chapter-1-2-diagnostic-report.json
+- reports/inspection-standards/chapter-1-2-diagnostic-report.md
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.json
 - reports/inspection-standards/chapter-1-2-proof-support-remediation.md
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json
@@ -2073,6 +2079,8 @@ Count: 2861
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-review-packet.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-quality-log.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-review-packet.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-quality-log.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-review-packet.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
@@ -2114,6 +2122,7 @@ Count: 2861
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json
+- reports/review-gates/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
@@ -2754,6 +2763,8 @@ Count: 2861
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-plan.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-result.md
+- reports/sprints/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-plan.md
+- reports/sprints/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-result.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-result.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
@@ -4645,7 +4656,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 495
+Count: 500
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4683,6 +4694,11 @@ Count: 495
 - archive/sprints/INSPECT-10A/INSPECT-10A-sprint-plan.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-teacher-review.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-three-reviewer-gate-results.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-closure-log.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-lead-review-assignment.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-lead-review-round1.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-planning-review.md
+- archive/sprints/INSPECT-10B/INSPECT-10B-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md

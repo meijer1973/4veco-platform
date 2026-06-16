@@ -20,8 +20,8 @@ const QUESTION_RECORDS = {
 
 const LANE_DETAILS = {
   q19: {
-    status: 'graph_draw_source_answer_form_procedure_blocker',
-    summary: 'graph/draw/teken answer-form gap; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review',
+    status: 'source_graph_procedure_reasoning_review_blocker',
+    summary: 'answer-form equivalent accepted by PR #80; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review',
   },
   q27: {
     status: 'incidence_scaling_levy_capacity_procedure_blocker',
@@ -284,9 +284,9 @@ ${markdownTable(['Surface', 'Failed', 'Review required', 'Status'], questionRows
 ## Remaining Blockers
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
-- q19 remains a graph/draw/source/answer-form/procedure blocker: 3 failed / 20 review_required.
-- q27 remains an incidence/scaling/levy-capacity/procedure blocker: 3 failed / 5 review_required.
-- q15 remains an answer-skill/procedure semantic-fit review blocker: 0 failed / 4 review_required.
+- q19 remains a source/graph/procedure/reasoning review blocker: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
+- q27 remains an incidence/scaling/levy-capacity/procedure blocker: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
+- q15 remains an answer-skill/procedure semantic-fit review blocker: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
 - MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
 
 ## Lane-Specific Diagnostic Meaning
