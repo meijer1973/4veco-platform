@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-16T10:35:30.863Z",
+  "generated_at": "2026-06-16T10:37:12.023Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -23180,8 +23180,8 @@
       "path": "reports/review-gates/B1-NORMAL-INFERIOR-TERM-DECISION-1/review-packet.json",
       "file_name": "review-packet.json",
       "extension": "json",
-      "size_bytes": 8017,
-      "sha256": "dcacaae65714e9c3bf26431e5dc49d5092ff91e478abd4105d3968514d563189",
+      "size_bytes": 8065,
+      "sha256": "5ad0556169a10588ef5816bf38ebc3cfd2224f29ffe5bc7e27c65329cbde4dc8",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
