@@ -76,3 +76,21 @@ this sprint, original INSPECT-10 evidence-pack implementation, `1.2.2`,
 authority, and public/external-facing generated output. These block the
 claims and surfaces they name. They do not block sending this implementation-
 plan packet for human review.
+
+## INSPECT-10A Three-Reviewer Gate Validation
+
+Status: passed
+Date: 2026-06-16
+
+| Check | Result | Notes |
+|---|---|---|
+| Teacher review | pass | Hume, `019ecf2c-a07c-78e1-83af-ef5b74fdde0a`, returned `MORE_THAN_SATISFIED`. |
+| Legal/privacy review | pass | Copernicus, `019ecf2c-cf51-7ee1-949b-3983f82943ee`, returned `MORE_THAN_SATISFIED`. |
+| Dutch quality-inspection review | pass | Halley, `019ecf2d-1134-73a2-b5ef-af1d51f9ca11`, returned `MORE_THAN_SATISFIED`. |
+| REV-STD-1 gate artifact check | pass | Role reviews and gate summary cite product end-state/original spec, name non-negotiables, include core checklists, classify findings, and include `blocks`, `does_not_block`, and `proof_required_to_close`. |
+| INSPECT-10R stale wording cleanup | pass | Replaced the stale legal/privacy round-1 checklist note with wording that records `REVISE`, correction, and `MORE_THAN_SATISFIED` re-review. |
+
+The three-reviewer gate does not implement the generator, generate a
+diagnostic report, generate an evidence pack, create teacher/school-facing
+output, create public/external output, mutate lesson output, or authorise
+downstream product/gate use.

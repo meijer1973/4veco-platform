@@ -188,9 +188,11 @@ The standards layer must not claim:
   with blocker-visible status vocabulary and input eligibility decisions.
   INSPECT-10A defines exact source/output allowlists, refusal/stop conditions,
   and a static output shape for a possible later internal diagnostic generator.
-  Neither INSPECT-10 nor INSPECT-10A implements a generator or generates an
-  evidence pack. Chapter 1.2 pack-strength generator work remains blocked
-  pending human review and later scoped authority.
+  Its three-reviewer gate returned `MORE_THAN_SATISFIED` from teacher,
+  legal/privacy, and Dutch quality-inspection roles. Neither INSPECT-10 nor
+  INSPECT-10A implements a generator or generates an evidence pack. Chapter
+  1.2 pack-strength generator work remains blocked pending later scoped
+  authority.
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources? INSPECT-9 proposes a 180-day recheck trigger
   for later teacher/school-facing pack work, but this still needs adoption in

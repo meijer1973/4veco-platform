@@ -1,6 +1,6 @@
 # INSPECT-10A Closure Log
 
-Status: ready for human review / implementation-plan packet complete
+Status: human review passed / implementation-plan packet merge-ready
 Date: 2026-06-15
 Sprint: `INSPECT-10A`
 Branch: `codex/inspect-10a-diagnostic-generator-implementation-plan-20260615`
@@ -10,7 +10,7 @@ Lesson evidence checkout: `C:\Projects\4veco\4veco-lessen` read-only fallback
 ## Closure Decision
 
 INSPECT-10A is closed locally as a diagnostic report generator
-implementation-plan packet ready for human review.
+implementation-plan packet whose three-reviewer gate passed.
 
 The packet defines exact future source files, exact future output files,
 blocker-visible output fields, refusal/stop conditions, a static sample output
@@ -47,6 +47,10 @@ It does not implement a generator and does not generate a diagnostic report.
 - `archive/sprints/INSPECT-10A/INSPECT-10A-lead-review-round1.md`
 - `archive/sprints/INSPECT-10A/INSPECT-10A-correction-log.md`
 - `archive/sprints/INSPECT-10A/INSPECT-10A-lead-review-round2.md`
+- `archive/sprints/INSPECT-10A/INSPECT-10A-teacher-review.md`
+- `archive/sprints/INSPECT-10A/INSPECT-10A-legal-privacy-review.md`
+- `archive/sprints/INSPECT-10A/INSPECT-10A-dutch-quality-inspection-review.md`
+- `archive/sprints/INSPECT-10A/INSPECT-10A-three-reviewer-gate-results.md`
 - `archive/sprints/INSPECT-10A/INSPECT-10A-closure-log.md`
 - `reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.md`
 - `reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.json`
@@ -115,6 +119,9 @@ It does not implement a generator and does not generate a diagnostic report.
   passed, 87 skipped. Existing fixture warning/error-style messages printed,
   exit code 0.
 - Staged whitespace check passed.
+- INSPECT-10A three-reviewer gate passed:
+  teacher, legal/privacy, and Dutch quality-inspection reviewers all returned
+  `MORE_THAN_SATISFIED`.
 
 ## Boundaries Preserved
 
@@ -129,11 +136,14 @@ added.
 
 ## Next Action
 
-Open PR for human review of INSPECT-10A. If teacher, legal/privacy, and Dutch
-quality-inspection reviewers all return `MORE_THAN_SATISFIED`, the next stack
-decision is whether to authorise `INSPECT-10B` as a narrow internal diagnostic
-generator implementation sprint using exactly the source/output allowlists and
-refusal contract defined here. Do not start pack-strength Chapter 1.2
-evidence-pack generation, teacher/school-facing pack work, public/external-
-facing generated report sharing, Scale Gate work, product-route adoption,
-diagnostics/mastery/PV, or student/product-use work from this packet alone.
+Refresh PR #75 against current `main` if needed, verify 0-behind status,
+verify fresh `platform-ci / validate-platform`, verify no unresolved PR
+comments, mark the PR ready, and merge through the normal PR path.
+
+After PR #75 merges, the next stack decision is whether to authorise
+`INSPECT-10B` as a narrow internal diagnostic generator implementation sprint
+using exactly the source/output allowlists and refusal contract defined here.
+Do not start pack-strength Chapter 1.2 evidence-pack generation,
+teacher/school-facing pack work, public/external-facing generated report
+sharing, Scale Gate work, product-route adoption, diagnostics/mastery/PV, or
+student/product-use work from this packet alone.

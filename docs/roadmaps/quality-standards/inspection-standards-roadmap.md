@@ -6,7 +6,7 @@ Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadm
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
 Roadmap version: `v2.2-inspect-10a-implementation-plan`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` ready for human review / implementation-plan packet complete
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` human review passed / implementation-plan packet merge-ready
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -161,7 +161,7 @@ Closed baseline:
 | `INSPECT-9B` | Chapter 1.2 target-equivalent and accessibility/support evidence review; finds useful route-local lesson evidence but no reviewed target-equivalent proof records or complete accessibility/support evidence, so Chapter 1.2 generator work remains blocked pending remediation. |
 | `INSPECT-9C` | Chapter 1.2 proof and support remediation; records route-local proof status for `1.2.1`-`1.2.4`, carries `1.2.2` and `1.2.4` generated-output blockers, records minimum accessibility/support evidence, and recommends only diagnostic-only INSPECT-10 planning after human acceptance. |
 | `INSPECT-10` | Dutch report-only generator diagnostic planning; defines the future diagnostic generator contract, status vocabulary, input eligibility, blocker display rules, and human-review questions. It creates no generator code and no evidence pack. |
-| `INSPECT-10A` | Diagnostic report generator implementation plan; names exact future source files, output files, refusal/stop conditions, and static output shape for a later internal generator. It creates no generator code and no diagnostic report. |
+| `INSPECT-10A` | Diagnostic report generator implementation plan; names exact future source files, output files, refusal/stop conditions, and static output shape for a later internal generator. The three-reviewer gate returned `MORE_THAN_SATISFIED` from teacher, legal/privacy, and Dutch quality-inspection roles. It creates no generator code and no diagnostic report. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -636,13 +636,13 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Human review of INSPECT-10A Dutch Diagnostic Report Generator Implementation Plan
+Merge PR #75 after fresh CI, zero-behind status, and no unresolved PR comments
 ```
 
-Recommended posture after human acceptance:
+Recommended posture after PR #75 merge:
 
 ```text
-Later INSPECT-10B follow-up only if internal, diagnostic-only, and blocker-visible
+INSPECT-10B follow-up only if internal, diagnostic-only, and blocker-visible
 Dutch scope only
 exact source-file allowlist only
 exact output-file allowlist only

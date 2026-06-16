@@ -39,7 +39,7 @@ the corrected head.
 | Non-negotiable requirements named | met | Individual review files |
 | Findings classified | met | Decision and corrections required |
 | `blocks` / `does_not_block` / `proof_required_to_close` included for carried issue | met | Quality log |
-| PASS WITH FLAGS does not carry a missing core requirement | met | Legal/privacy verdict is `REVISE`, not PASS WITH FLAGS |
+| PASS WITH FLAGS does not carry a missing core requirement | met | The legal/privacy round-1 issue was treated as `REVISE`, corrected, and re-reviewed to `MORE_THAN_SATISFIED` |
 
 ## Decision
 

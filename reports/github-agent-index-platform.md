@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T06:53:01.341Z
+Generated: 2026-06-16T06:53:47.808Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4617
+Files indexed: 4621
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -4640,7 +4640,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 491
+Count: 495
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4669,11 +4669,15 @@ Count: 491
 - archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-closure-log.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-correction-log.md
+- archive/sprints/INSPECT-10A/INSPECT-10A-dutch-quality-inspection-review.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-lead-review-assignment.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-lead-review-round1.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-lead-review-round2.md
+- archive/sprints/INSPECT-10A/INSPECT-10A-legal-privacy-review.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-planning-review.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-sprint-plan.md
+- archive/sprints/INSPECT-10A/INSPECT-10A-teacher-review.md
+- archive/sprints/INSPECT-10A/INSPECT-10A-three-reviewer-gate-results.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md

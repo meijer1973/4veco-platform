@@ -93,7 +93,7 @@
       "owner": "references_team",
       "updated_on": "2026-06-15",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10A is ready for human review as diagnostic generator implementation planning: it names exact future source files, output files, blocker-visible fields, refusal/stop conditions, and a static output shape for a possible later internal generator. Generator implementation, generated diagnostic reports, evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10A passed the three-reviewer gate as diagnostic generator implementation planning: it names exact future source files, output files, blocker-visible fields, refusal/stop conditions, and a static output shape for a possible later internal generator. Generator implementation, generated diagnostic reports, evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",
