@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-Q19-answer-form-equivalent-execution-gate-1",
+  "gate_id": "GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1",
+  "created": "2026-06-16",
+  "status": "q19_answer_form_equivalent_execution_gate_ready_for_human_review_no_mutation_authorized",
+  "purpose": "Prepare the exact non-mutating execution authorization packet for a later PR that may add reviewed-equivalent q19 graph/draw/teken answer-form refs to the MTU-H5 regression fixture. This packet does not edit the fixture.",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence. This packet does not claim q19 closure or MTU-H5 closure.",
+  "original_sprint_gate_spec": {
+    "immediate_prior_gate_pr": 73,
+    "immediate_prior_gate_merge_commit": "406f6358f477cfd50361855c45183da8c9f90990",
+    "immediate_prior_gate_head_commit": "977da232feb372b1617cd556f17b601163a71776",
+    "prior_gate": "GATE-MTU-H5-Q19-answer-form-gate-1",
+    "prior_gate_packet": "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json",
+    "prior_human_decision_comment": "https://github.com/meijer1973/4veco-platform/pull/73#issuecomment-4709154403",
+    "approved_decision": "approve_reviewed_equivalent_candidate_path",
+    "approved_next_lane": "MTU-H5-Q19-ANSWER-FORM-EQUIVALENT-EXECUTION-GATE-1",
+    "approved_boundary": "Prepare a separate reviewed-equivalent answer-form execution gate. Do not mutate the fixture yet."
+  },
+  "review_branch": "codex/mtu-h5-q19-answer-form-equivalent-execution-gate-1-20260616",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded; official PDF evidence is cited by stable local source path and summarized.",
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json",
+    "reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.json",
+    "reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/bundle-urls.md",
+    "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+  ],
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean_after_q3_fixture_execution"
+    },
+    "q19": {
+      "failed": 3,
+      "review_required": 20,
+      "status": "graph_draw_source_answer_form_procedure_blocker",
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "carried_blocker"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "carried_blocker"
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 6,
+      "review_required": 29,
+      "blocked": 0
+    }
+  },
+  "expected_post_execution_dry_run_state_if_later_pr_applies_exact_plan": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0
+    },
+    "q19": {
+      "failed": 0,
+      "review_required": 17,
+      "still_blocks_mtu_h5_closure": true,
+      "remaining_focus": "source-annex, graph-object, chained reasoning, third graph-shift dependency, and procedure semantic-fit hooks"
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 3,
+      "review_required": 26,
+      "blocked": 0
+    }
+  },
+  "non_negotiable_requirements": [
+    "This packet does not mutate reports/mtu-hardening/mtu-h5-regression-fixture.json.",
+    "No q19 fixture mutation, mapper repair, candidate storage creation, candidate writes, protected-reference mutation, machine-reference mutation, external-source mutation, authored target-exercise mutation, MTU mutation, operation-registry mutation, answer-skill mutation, lesson output, PV, diagnostics, adaptive routing, mastery, sequencing, product-route readiness claim, or student/product use is authorized in this PR.",
+    "The later execution PR, if human-approved, is limited to the exact q19 fixture-field edits named in future_exact_write_plan.",
+    "The q19 source overlay must remain partial_with_blocking_gap / blocked evidence, not closure evidence.",
+    "q19 must remain 3 failed / 20 review_required in this PR.",
+    "q3 must remain clean.",
+    "q27 and q15 remain carried MTU-H5 blockers.",
+    "The later exact execution plan may clear only q19 graph/draw/teken answer-form failures and answer-form-needed review hooks.",
+    "The later exact execution plan must preserve q19-source-annex-gap and q19-graph-object-gap visibility.",
+    "The later exact execution plan must preserve q19 procedure semantic-fit review hooks.",
+    "A42, D10, D13, and A81 remain support/procedure/source-reasoning units only and must not be overclaimed as graph/draw/teken answer-form closure.",
+    "A45 must remain forbidden as primary q19 support.",
+    "full_graph_construction, calculus_route, and function_construction remain forbidden route tags for q19.",
+    "The official aggregate-supply alternative for q19-step-2 and q19-step-3 must remain visible.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "reviewed_equivalent_answer_skill": {
+    "answer_skill_id": "EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+    "status": "reviewed_equivalent_execution_gate_candidate_not_written",
+    "answer_format": "graph_draw_market_shift_direction",
+    "question_word": "teken",
+    "covers": "Drawn market-shift marks paired with the required price or wage direction in the official q19 correction model.",
+    "does_not_cover": [
+      "source-annex reconstruction",
+      "graph-object reconstruction",
+      "worksheet geometry or full graph construction",
+      "procedure semantic-fit approval",
+      "q19 chained reasoning closure",
+      "q27 or q15 blockers",
+      "product-route readiness"
+    ],
+    "evidence_refs": [
+      "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json#answer_form_decision_surface",
+      "reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.json#requested_decision",
+      "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+      "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_UITWERKBIJLAGE",
+      "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19"
+    ],
+    "authority_boundary": {
+      "unit_minting_authorized": false,
+      "answer_skill_mutation_authorized": false,
+      "candidate_writes_authorized": false,
+      "fixture_mutation_authorized": false,
+      "student_product_use_authorized": false
+    }
+  },
+  "future_exact_write_plan": {
+    "target_surface": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "target_record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "this_packet_writes_target_surface": false,
+    "later_execution_pr_required_after_human_approval": true,
+    "later_execution_pr_scope_if_approved": "A later dedicated execution PR may edit only the three named q19 operation records in reports/mtu-hardening/mtu-h5-regression-fixture.json, applying the exact field plan below.",
+    "reviewed_equivalent_ref_to_add": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+    "operation_updates": [
+      {
+        "operation_id": "q19-step-1",
+        "operation_path": "records[record_id=vw-1022-a-25-1-o:opgave-4:question-19].official_correction_model_operations[operation_id=q19-step-1]",
+        "add_fields": {
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ]
+        },
+        "update_fields": {
+          "missing_answer_form_expected": false
+        },
+        "remove_review_required_hooks": [
+          "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+        ],
+        "must_preserve_review_required_hooks": [
+          "q19-source-annex-gap remains blocking",
+          "q19-graph-object-gap remains blocking"
+        ],
+        "must_preserve_forbidden_mtu_ids": [
+          "A45"
+        ],
+        "must_preserve_forbidden_route_tags": [
+          "full_graph_construction",
+          "calculus_route",
+          "function_construction"
+        ]
+      },
+      {
+        "operation_id": "q19-step-2",
+        "operation_path": "records[record_id=vw-1022-a-25-1-o:opgave-4:question-19].official_correction_model_operations[operation_id=q19-step-2]",
+        "add_fields": {
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ]
+        },
+        "update_fields": {
+          "missing_answer_form_expected": false
+        },
+        "remove_review_required_hooks": [
+          "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+        ],
+        "must_preserve_review_required_hooks": [
+          "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+        ],
+        "must_preserve_forbidden_mtu_ids": [
+          "A45"
+        ],
+        "must_preserve_forbidden_route_tags": [
+          "full_graph_construction",
+          "calculus_route",
+          "function_construction"
+        ],
+        "must_preserve_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+      },
+      {
+        "operation_id": "q19-step-3",
+        "operation_path": "records[record_id=vw-1022-a-25-1-o:opgave-4:question-19].official_correction_model_operations[operation_id=q19-step-3]",
+        "add_fields": {
+          "answer_form_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION"
+          ]
+        },
+        "update_fields": {
+          "missing_answer_form_expected": false
+        },
+        "remove_review_required_hooks": [
+          "graph/draw/teken answer-form MTU or reviewed equivalent still needed"
+        ],
+        "must_preserve_review_required_hooks": [
+          "q19-source-annex-gap remains blocking",
+          "q19-graph-object-gap remains blocking",
+          "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+        ],
+        "must_preserve_forbidden_mtu_ids": [
+          "A45"
+        ],
+        "must_preserve_forbidden_route_tags": [
+          "full_graph_construction",
+          "calculus_route",
+          "function_construction"
+        ],
+        "must_preserve_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+      }
+    ],
+    "fields_that_must_not_change_later_under_this_plan": [
+      "record_id",
+      "source_evidence_paths",
+      "mapped_mtu_ids",
+      "mapped_route_tags",
+      "expected_required_mtu_ids",
+      "expected_forbidden_mtu_ids",
+      "expected_forbidden_route_tags",
+      "expected_procedure_unit_ids",
+      "procedure_review_required_unit_ids",
+      "source-annex-extraction-overlays.json",
+      "references/machine/micro-teaching-units.json",
+      "references/machine/micro-teaching-units.md",
+      "references/authored/course-target-exercises.json"
+    ]
+  },
+  "negative_regression_requirements": [
+    {
+      "guard_id": "q19-exact-answer-form-dry-run-positive-guard",
+      "accepted_fixture_type": "temporary_q19_fixture_clone",
+      "expected_behavior": "Applying the exact future write plan to a temporary fixture clone clears only the three q19 answer-form failed assertions and the three answer-form-needed review hooks, leaving q19 source/graph/procedure hooks visible."
+    },
+    {
+      "guard_id": "q19-source-graph-hook-removal-negative-guard",
+      "accepted_negative_fixture_type": "temporary_q19_fixture_clone",
+      "expected_behavior": "A temporary clone that adds answer-form reviewed-equivalent refs but removes q19 source-annex or graph-object hooks must be rejected by this gate checker without mutating the real fixture."
+    },
+    {
+      "guard_id": "q19-a45-primary-support-negative-guard",
+      "accepted_negative_fixture_type": "temporary_a45_reintroduction_fixture",
+      "expected_behavior": "If A45 is reintroduced as q19 mapped support, the MTU-H5 validator must emit q19 ASSERT-OVER-TRIGGER failures without mutating the real fixture."
+    },
+    {
+      "guard_id": "solo-q1-q3-original-defect-class-guard",
+      "accepted_negative_fixture_type": "live_h5_global_negative_fixture",
+      "expected_behavior": "The existing Solo q1-q3 function-construction over-trigger negative fixture remains passed as expected."
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue_id": "q19-source-annex-gap",
+      "classification": "blocks",
+      "blocks": [
+        "q19 full repair",
+        "lesson or product use",
+        "MTU-H5 closure"
+      ],
+      "does_not_block": [
+        "human review of this exact answer-form equivalent execution gate"
+      ],
+      "proof_required_to_close": "Reviewed source figure and worksheet reconstruction exists, or limitations are explicitly accepted while the validator keeps the gap visible."
+    },
+    {
+      "issue_id": "q19-graph-object-gap",
+      "classification": "blocks",
+      "blocks": [
+        "q19 full repair",
+        "PV/product routes",
+        "MTU-H5 closure"
+      ],
+      "does_not_block": [
+        "human review of this exact answer-form equivalent execution gate"
+      ],
+      "proof_required_to_close": "All three graph objects expose axes, labels, curve roles, geometry or reviewed limitations, legend mapping, and student-action regions."
+    },
+    {
+      "issue_id": "q19-procedure-and-reasoning-review-hooks",
+      "classification": "blocks",
+      "blocks": [
+        "q19 full repair",
+        "product-route readiness"
+      ],
+      "does_not_block": [
+        "human review of whether the answer-form-only future execution plan is exact"
+      ],
+      "proof_required_to_close": "Separate reviewed evidence clears q19 A42/D10/D13/A81 semantic-fit procedure hooks and chained/third-graph reasoning hooks."
+    },
+    {
+      "issue_id": "q27-and-q15-carried-blockers",
+      "classification": "carried_blocks",
+      "blocks": [
+        "MTU-H5 full closure",
+        "product-route readiness"
+      ],
+      "does_not_block": [
+        "q19 answer-form equivalent execution-gate review"
+      ],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their failed/review_required validator buckets."
+    }
+  ],
+  "requested_human_decision": {
+    "decision_needed": "Approve, revise, or reject whether a later exact execution PR may apply only the future_exact_write_plan q19 fixture edits.",
+    "valid_decisions": [
+      "approve_later_exact_answer_form_equivalent_execution_pr",
+      "revise_execution_gate_before_any_fixture_write",
+      "reject_execution_gate"
+    ],
+    "approval_would_authorize": [
+      "Use this packet as the reviewed authority basis for a separate later execution PR that edits only the named q19 operation fields in reports/mtu-hardening/mtu-h5-regression-fixture.json."
+    ],
+    "approval_would_not_authorize": [
+      "fixture mutation in this PR",
+      "mapper repair",
+      "candidate storage creation",
+      "candidate writes",
+      "protected or machine reference mutation",
+      "external-source mutation",
+      "authored target-exercise mutation",
+      "MTU or answer-skill mutation",
+      "source-annex or graph-object extraction execution",
+      "source overlay mutation",
+      "lesson output",
+      "PV, diagnostics, adaptive routing, mastery, sequencing",
+      "product-route readiness or student/product use",
+      "MTU-H5 closure",
+      "q19 full closure"
+    ]
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "human_review_packet": {
+    "gate_id": "GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1",
+    "gate_directory": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1/",
+    "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1/review-packet.md",
+    "review_packet_json": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1/review-packet.json",
+    "bundle_urls": "reports/review-gates/GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1/bundle-urls.md",
+    "decision_needed": "Approve, revise, or reject the later exact q19 answer-form equivalent fixture execution plan before any fixture write."
+  },
+  "review_team_threshold": {
+    "required_agents": [
+      "teacher",
+      "economist",
+      "quality_inspection"
+    ],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "checker_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "execution_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_human_q19_answer_form_equivalent_execution_gate_review",
+    "why_not_complete": "This packet prepares a later exact fixture execution authorization. It does not mutate fixtures or references, repair mappers, write candidates, change MTUs, produce lessons, claim product readiness, or authorize student/product use."
+  }
+}

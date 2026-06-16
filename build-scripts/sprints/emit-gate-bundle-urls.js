@@ -46,6 +46,7 @@ function splitReference(reference) {
 }
 
 function buildRawReferenceUrl(owner, repo, branch, reference) {
+  if (/^https?:\/\//.test(reference)) return reference;
   const { relativePath, fragment } = splitReference(reference);
   return `${buildRawUrl(owner, repo, branch, relativePath)}${fragment}`;
 }
