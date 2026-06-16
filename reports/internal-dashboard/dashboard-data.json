@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T09:15:45.814Z",
+  "generatedAt": "2026-06-16T10:39:45.731Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "planning/audit only.",
-          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.2-inspect-10a-implementation-plan Sprint status: QS-DUTCH-ROADMAP-1 closed / Dutch-only proposal ready for human review; QS-DUTCH-ROADMAP-1A closed / PR prep complete; QS-DUTCH-ROADMAP-1B closed / CI repair ready for PR validation; INSPECT-8 c...",
+          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.3-inspect-10b-internal-diagnostic-report Sprint status: QS-DUTCH-ROADMAP-1 closed / Dutch-only proposal ready for human review; QS-DUTCH-ROADMAP-1A closed / PR prep complete; QS-DUTCH-ROADMAP-1B closed / CI repair ready for PR validation; INSP...",
           "sprints": []
         },
         {
@@ -1443,7 +1443,7 @@
           "generated": "",
           "updated": "",
           "scope": "",
-          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-15 Branch in use: codex/inspect-10a-diagnostic-generator-implementation-plan-20260615 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the r...",
+          "summary": "Quality Standards Sprint Ledger Status: active Updated on: 2026-06-16 Branch in use: codex/inspect-10b-internal-diagnostic-generator-20260616 Purpose This ledger tracks the quality-standards roadmap track separately from the large references-team roadmap. It records what has actually been authorised, implemented, validated, and pushed. Sprint Protocol Reminder Every non-trivial quality-standards roadmap sprint must follow the repository sprint protocol before implementation starts. Read AGENTS.md, the relevant roa...",
           "sprints": []
         },
         {

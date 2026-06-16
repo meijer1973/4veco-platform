@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T10:18:00.749Z
+Generated: 2026-06-16T10:39:45.132Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4640
+Files indexed: 4653
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1151,7 +1151,7 @@ Count: 474
 
 ## references
 
-Count: 609
+Count: 612
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1161,6 +1161,7 @@ Count: 609
 - references/authored/gemengde-opgaven-target-standard.md
 - references/authored/README.md
 - references/authored/skill-categories.md
+- references/authored/textbook-rendered-page-acceptance-standard.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
 - references/data/alignment-graph.json
 - references/data/audits/empty-needs-audit.json
@@ -1623,6 +1624,8 @@ Count: 609
 - references/data/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
+- references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.plan.json
+- references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.result.json
 - references/data/sprints/VISION-1.plan.json
 - references/data/sprints/VISION-1.result.json
 - references/data/unit-design-status/unit-design-status-overlay.json
@@ -1765,7 +1768,7 @@ Count: 609
 
 ## reports
 
-Count: 2868
+Count: 2878
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -4601,6 +4604,16 @@ Count: 2868
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-dark-112-exit-ticket-task-shell.png
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-light-112-exit-ticket-unit-fields.png
 - reports/sprints/TASK-SHELL-UX-2-ui-contract.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-baseline.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-command-log.jsonl
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-command-log.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-diff-summary.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-assignment.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-corrections.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round1.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md
+- reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md
 - reports/sprints/VISION-1-baseline.md
 - reports/sprints/VISION-1-command-log.jsonl
 - reports/sprints/VISION-1-command-log.md
