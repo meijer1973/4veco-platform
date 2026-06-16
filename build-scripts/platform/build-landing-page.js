@@ -4,8 +4,9 @@
  * Generates index.html at three levels:
  * - Book page      (overview of all chapters)
  * - Chapter pages  (overview of paragrafen in that chapter)
- * - Paragraaf pages (Paragraph Landing V2 fixture route:
- *   Start / Leer / Check / Oefen / Exit ticket / Open & verdiep / Skill-tree games)
+ * - Paragraaf pages render Landing V2 rows:
+ *   Start / Leer / Check / Oefen / Exit ticket / Open & verdiep / Skill-tree games.
+ *   Only Start / Leer / Check / Oefen / Exit ticket are lesson-route navigation.
  *
  * All pages include a left navigation sidebar showing the full book structure.
  *

@@ -76,4 +76,16 @@ describe('platform-ci-evidence', () => {
       validateEvidence(validEvidence({ platform: { ...validEvidence().platform, head_sha: 'bad' } }))
     ).toThrow(/platform.head_sha/);
   });
+
+  test('platform workflow checks out a matching lessen branch for paired PRs', () => {
+    const workflow = fs.readFileSync(
+      path.join(__dirname, '..', '..', '.github', 'workflows', 'platform-ci.yml'),
+      'utf8'
+    );
+
+    expect(workflow).toContain('Use matching lessen branch when available');
+    expect(workflow).toContain('github.head_ref');
+    expect(workflow).toContain('ls-remote --exit-code --heads origin');
+    expect(workflow).toContain('checkout --detach FETCH_HEAD');
+  });
 });
