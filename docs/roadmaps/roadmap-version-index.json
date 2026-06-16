@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-12",
+  "updated_on": "2026-06-15",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -86,14 +86,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v2.1-inspect-10-diagnostic-planning",
+      "version": "v2.2-inspect-10a-implementation-plan",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-15",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10 is ready for human review as diagnostic-only report-generator planning: it defines blocker-visible status vocabulary and future generator constraints, while original implementation, evidence-pack generation, teacher/school-facing pack work, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10A passed the three-reviewer gate as diagnostic generator implementation planning: it names exact future source files, output files, blocker-visible fields, refusal/stop conditions, and a static output shape for a possible later internal generator. Generator implementation, generated diagnostic reports, evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",

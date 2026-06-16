@@ -185,10 +185,14 @@ The standards layer must not claim:
   route-local proof status for `1.2.1` through `1.2.4`, carries `1.2.2` and
   `1.2.4` generated-output blockers, and records minimum accessibility/support
   evidence. INSPECT-10 defines a diagnostic-only generator planning contract
-  with blocker-visible status vocabulary and input eligibility decisions, but
-  it does not implement a generator or generate an evidence pack. Chapter 1.2
-  pack-strength generator work remains blocked pending human review and later
-  scoped authority.
+  with blocker-visible status vocabulary and input eligibility decisions.
+  INSPECT-10A defines exact source/output allowlists, refusal/stop conditions,
+  and a static output shape for a possible later internal diagnostic generator.
+  Its three-reviewer gate returned `MORE_THAN_SATISFIED` from teacher,
+  legal/privacy, and Dutch quality-inspection roles. Neither INSPECT-10 nor
+  INSPECT-10A implements a generator or generates an evidence pack. Chapter
+  1.2 pack-strength generator work remains blocked pending later scoped
+  authority.
 - Which source freshness interval is acceptable for Dutch inspection,
   curriculum, and exam sources? INSPECT-9 proposes a 180-day recheck trigger
   for later teacher/school-facing pack work, but this still needs adoption in
@@ -197,7 +201,11 @@ The standards layer must not claim:
   Chapter 1.2 route-local records?
 - Which mobile, contrast/theme, semantic/PDF, hint/repair, companion, and
   advisory-route evidence must close before Chapter 1.2 can move beyond
-  diagnostic-only generator posture?
+  diagnostic-only internal generator posture?
+- Should human review authorise `INSPECT-10B` as a narrow internal diagnostic
+  generator implementation using only the INSPECT-10A source/output allowlists,
+  or should more generated-output, accessibility, support, public/external, or
+  check-surface remediation happen first?
 - Should Dutch quality-control evidence stay in platform reports only, or
   should selected summaries also become teacher/school-facing artifacts after
   review?
