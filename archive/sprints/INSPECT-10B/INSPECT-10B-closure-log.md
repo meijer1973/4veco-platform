@@ -85,7 +85,9 @@ Notable evidence:
 - `npm.cmd run check:platform` passed.
 
 Final refresh passed after merging current `origin/main` into the branch. The
-merge was clean, the diagnostic report regenerated deterministically, the
+first merge brought in PR #74. `main` then advanced again via PR #78 while the
+first refreshed CI was running, so the branch was refreshed a second time. Both
+merges were clean. The diagnostic report regenerated deterministically, the
 generator EOF hygiene fix removed a range-diff whitespace warning, and the
 lesson checkout remained clean/read-only.
 

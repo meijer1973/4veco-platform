@@ -140,8 +140,16 @@ diagnostic report regenerated deterministically, with only refreshed platform
 head/source metadata and the generator EOF hygiene fix changing the report
 pair. All Chapter 1.2 blockers remain visible.
 
+A second fetch after the first refreshed CI found `main` had advanced again via
+PR #78 (`SCALE-PROOF-3P-PREP-1`). Current `origin/main` was merged cleanly a
+second time. The second regeneration changed only the diagnostic JSON platform
+head metadata; the Markdown report stayed stable. The same validation set was
+rerun and passed: generator `--check`, refusal spot checks, scope-language,
+roadmap-version index, URL index, `git diff --check origin/main`, lesson
+checkout clean/read-only check, and `npm.cmd run check:platform`.
+
 ## Conclusion
 
-Validation passes for the INSPECT-10B implementation scope after final refresh.
-No missing core requirement is carried as PASS WITH FLAGS. Renewed
-three-reviewer human review remains required before merge.
+Validation passes for the INSPECT-10B implementation scope after final refresh
+against current `origin/main`. No missing core requirement is carried as PASS
+WITH FLAGS. Renewed three-reviewer human review remains required before merge.
