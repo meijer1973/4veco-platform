@@ -49,7 +49,12 @@ hardening only:
 
 ## Next Action
 
-Complete final validation, refresh against current `origin/main`, push, wait
-for fresh PR CI, and rerun the three required specialist subagent reviews
-because INSPECT-10C changes generator behavior/output vocabulary. Human review
-remains blocked until those pre-human reviews pass.
+Fresh PR CI passed and the three required specialist subagent reviews returned
+`MORE_THAN_SATISFIED` from teacher/usefulness, legal/privacy/claims, and Dutch
+quality-inspection. Human review may now start for INSPECT-10C's internal
+diagnostic generator review/stability-hardening scope only. Do not proceed to
+evidence packs, teacher/school-facing output, public/external output,
+package/CI, dashboard, quality-ref, Scale Gate, product-route adoption,
+diagnostics/mastery/PV, student/product-use, generated lesson-output,
+protected-reference, source-registry, personal-data, or compliance/approval
+work without a new human-reviewed sprint packet.

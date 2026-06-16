@@ -90,3 +90,19 @@ updates and did not stale the diagnostic report pair.
 
 Next required step remains fresh PR CI and the three specialist subagent
 reviews before human review.
+
+## Pre-Human Subagent Review
+
+After fresh PR CI passed on head
+`d3690c614f5dca1bf0205c1191aa6a88115d56d5`, the three specialist subagent
+reviews were run.
+
+| Reviewer | Verdict | Finding classification | blocks | does_not_block | proof_required_to_close |
+|---|---|---|---|---|---|
+| Teacher/usefulness | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Evidence-pack, teacher/school-facing, public/external, pack-strength, downstream use | Human review receiving INSPECT-10C specialist proof | Stability checker pass, generator `--check`, fresh CI, later scoped human review for stronger surfaces |
+| Legal/privacy/claims | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Public/external, compliance, approval, school-owned evidence claims, any downstream or externalized use | Manual internal diagnostic review/stability hardening | Stability checker and generator `--check` remain green; fresh scoped review before any new surface |
+| Dutch quality-inspection | `MORE_THAN_SATISFIED` | `core_requirement_met`; carried `scale_blocker` | Teacher/school-facing, pack-strength, public/external, Scale Gate, product-route, diagnostics/mastery/PV, student/product-use | Internal diagnostic stability hardening | Stability checker and fresh CI remain green; later scoped human review for stronger surfaces |
+
+All three reviewers confirmed that human review may receive this specialist
+proof. Human review remains limited to INSPECT-10C diagnostic generator
+review/stability hardening only.

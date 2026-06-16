@@ -60,6 +60,8 @@ Sprint: `INSPECT-10C`
 
 ## Verdict
 
-PASS for the INSPECT-10C internal stability-hardening implementation, pending
-full validation, fresh PR CI, and the required specialist subagent gate before
-human review.
+PASS for the INSPECT-10C internal stability-hardening implementation. Full
+validation passed, fresh PR CI passed, and the required teacher/usefulness,
+legal/privacy/claims, and Dutch quality-inspection specialist subagent reviews
+all returned `MORE_THAN_SATISFIED`. Human review may receive this specialist
+proof for INSPECT-10C's internal diagnostic stability-hardening scope only.
