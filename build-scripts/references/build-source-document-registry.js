@@ -36,6 +36,8 @@ const EXPLICIT_DOCUMENT_IDS = {
   'reports/json/exam-question-extraction-gaps.json': 'r4.2-exam-question-extraction-gaps',
   'references/owned/course-blueprint-v5.md': 'course-blueprint-v5',
   'references/owned/course-blueprint-v5.meta.json': 'course-blueprint-v5-meta',
+  'references/owned/course-blueprint-v6-three-year.md': 'course-blueprint-v6-three-year',
+  'references/owned/course-blueprint-v6-three-year.meta.json': 'course-blueprint-v6-three-year-meta',
   'references/owned/course-blueprint-v4.md': 'course-blueprint-v4',
   'references/owned/course-blueprint-v4.meta.json': 'course-blueprint-v4-meta',
   'references/external/syllabus-economie-vwo-2026-versie-2.pdf': 'syllabus-economie-vwo-2026-versie-2',
@@ -56,6 +58,8 @@ const EXPLICIT_TITLES = {
   'r4.2-exam-question-extraction-gaps': 'R4.2 Exam Question Extraction Gaps',
   'course-blueprint-v5': 'Course Blueprint v5',
   'course-blueprint-v5-meta': 'Course Blueprint v5 Metadata',
+  'course-blueprint-v6-three-year': 'Course Blueprint v6 Three-Year Umbrella',
+  'course-blueprint-v6-three-year-meta': 'Course Blueprint v6 Three-Year Metadata',
   'course-blueprint-v4': 'Course Blueprint v4',
   'course-blueprint-v4-meta': 'Course Blueprint v4 Metadata',
 };
@@ -128,6 +132,8 @@ function sourceVersionFor(entry) {
   const hash = entry.sha256 ? `sha256:${entry.sha256}` : 'version:unhashed-generated-inventory';
   if (relPath === 'references/owned/course-blueprint-v5.md') return 'owned:course-blueprint-v5';
   if (relPath === 'references/owned/course-blueprint-v5.meta.json') return 'owned:course-blueprint-v5-meta';
+  if (relPath === 'references/owned/course-blueprint-v6-three-year.md') return 'owned:course-blueprint-v6-three-year';
+  if (relPath === 'references/owned/course-blueprint-v6-three-year.meta.json') return 'owned:course-blueprint-v6-three-year-meta';
   if (relPath === 'references/owned/course-blueprint-v4.md') return 'owned:course-blueprint-v4';
   if (relPath === 'references/owned/course-blueprint-v4.meta.json') return 'owned:course-blueprint-v4-meta';
   if (relPath === 'references/external/syllabus-economie-vwo-2026-versie-2.pdf') return 'CvTE:syllabus-economie-vwo-2026-v2';
@@ -421,6 +427,7 @@ function markdownReport(registry) {
     record.authority_level === 'external_primary' ||
     record.authority_level === 'machine_registry' ||
     record.path === 'references/owned/course-blueprint-v5.md' ||
+    record.path === 'references/owned/course-blueprint-v6-three-year.md' ||
     record.path === 'references/authored/course-target-exercises.json' ||
     record.path === 'references/owned/course-blueprint-v4.md'
   ));

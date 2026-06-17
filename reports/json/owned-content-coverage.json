@@ -1,7 +1,7 @@
 {
   "report_id": "owned-content-coverage",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-06-17T10:49:29Z",
+  "generated_on": "2026-06-17T11:04:50Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",

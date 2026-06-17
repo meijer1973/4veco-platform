@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T11:33:46.184Z
+Generated: 2026-06-18T06:02:51.745Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4791
+Files indexed: 4811
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1791,7 +1791,7 @@ Count: 619
 
 ## reports
 
-Count: 2969
+Count: 2989
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1830,8 +1830,16 @@ Count: 2969
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1857,6 +1865,10 @@ Count: 2969
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2144,6 +2156,11 @@ Count: 2969
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-decision.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-matrix.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-quality-log.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-review-packet.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-subagent-review.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/CP.6a-lesson-side-recheck.md
 - reports/reference-planning/CP.6b-target-exercise-review.md
@@ -2187,6 +2204,7 @@ Count: 2969
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
+- reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -2957,6 +2975,8 @@ Count: 2969
 - reports/sprints/B2-READY-1-result.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-plan.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
+- reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-plan.md
+- reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
