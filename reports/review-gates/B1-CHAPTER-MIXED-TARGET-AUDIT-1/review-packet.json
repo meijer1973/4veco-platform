@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "packet_id": "B1-CHAPTER-MIXED-TARGET-AUDIT-1",
+  "sprint_id": "B1-CHAPTER-MIXED-TARGET-AUDIT-1",
+  "pr_number": 89,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/89",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "references/data/document_inventory.json",
+    "references/data/owned-content-graph.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/owned-content-coverage.json",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/owned-content-coverage.md",
+    "reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-quality-log.md",
+    "reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-review-packet.md",
+    "reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json",
+    "reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-plan.md",
+    "reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PENDING",
+    "rationale": "This audit classifies whether reviewed-final Book 1 mixed targets carry unresolved target dependencies. It is report-only, but it affects Year 1 closure readiness and therefore requires human review."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "year1_closure_boundary",
+    "mixed_target_core_blocker_found",
+    "scale_gate_reliance_boundary",
+    "product_authority_boundary"
+  ],
+  "date": "2026-06-17",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+    "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md",
+    "reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md",
+    "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-review-packet.md",
+    "reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-review-packet.md"
+  ],
+  "non_negotiable_requirements": [
+    "Do not carry a missing core requirement under PASS WITH FLAGS.",
+    "Do not mutate references/authored/course-target-exercises.json in this audit lane.",
+    "Keep 1.2.4 term-free unless a later explicit review changes that boundary.",
+    "Keep 1.3.4 one-shift-only unless a later explicit review changes that boundary.",
+    "Do not edit references/machine/* or references/external/*.",
+    "Do not generate lesson output.",
+    "Do not authorize Year 1, CP-6, Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Non-negotiables named",
+      "status": "met",
+      "evidence": "non_negotiable_requirements"
+    },
+    {
+      "requirement": "Core-requirement checklist included",
+      "status": "met",
+      "evidence": "core_requirement_checklist"
+    },
+    {
+      "requirement": "Findings classified",
+      "status": "met",
+      "evidence": "findings"
+    },
+    {
+      "requirement": "blocks / does_not_block / proof_required_to_close included",
+      "status": "met",
+      "evidence": "carried_flags"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "The 1.2.4 kink/dropout dependency is classified as a core blocker, not a non-blocking flag."
+    }
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "target_registry_mutation_authorized": false,
+    "year1_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false
+  },
+  "audit_summary": [
+    {
+      "target_id": "1.1.4",
+      "disposition": "pass_for_registry_mixed_target_audit",
+      "finding_id": "B1CMTA-001"
+    },
+    {
+      "target_id": "1.2.4",
+      "disposition": "core_blocker_found",
+      "finding_id": "B1CMTA-003"
+    },
+    {
+      "target_id": "1.3.4",
+      "disposition": "pass_as_one_shift_mixed_target",
+      "finding_id": "B1CMTA-004"
+    }
+  ],
+  "findings": [
+    {
+      "id": "B1CMTA-001",
+      "classification": "core_requirement_met",
+      "severity": "medium",
+      "finding": "1.1.4 consolidates only the approved Chapter 1.1 target scope.",
+      "status": "pass"
+    },
+    {
+      "id": "B1CMTA-002",
+      "classification": "core_requirement_met",
+      "severity": "medium",
+      "finding": "1.2.4 remains term-free for normal/inferior-good terminology.",
+      "status": "pass"
+    },
+    {
+      "id": "B1CMTA-003",
+      "classification": "core_requirement_blocker",
+      "severity": "high",
+      "finding": "1.2.4 requires collective-demand kink/dropout reasoning while 1.2.3 still carries that dependency as flagged/deferred.",
+      "status": "open"
+    },
+    {
+      "id": "B1CMTA-004",
+      "classification": "scope_boundary",
+      "severity": "medium",
+      "finding": "1.3.4 remains one-shift mixed practice and does not absorb simultaneous-shift reasoning.",
+      "status": "preserved"
+    },
+    {
+      "id": "B1CMTA-005",
+      "classification": "scale_blocker",
+      "severity": "critical",
+      "finding": "This audit is not product proof or downstream authority.",
+      "status": "open"
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "B1CMTA-003",
+      "classification": "core_requirement_blocker",
+      "flag": "1.2.4 collective-demand kink/dropout dependency remains unresolved.",
+      "blocks": [
+        "Clean mixed-target audit closure for 1.2.4",
+        "Year 1 closure",
+        "CP-6 closure",
+        "Scale Gate reliance on closed Book 1 mixed targets"
+      ],
+      "does_not_block": [
+        "Publishing this audit packet",
+        "Preserving 1.1.4 and 1.3.4 scoped audit findings"
+      ],
+      "proof_required_to_close": "A follow-up lane decides whether to map/refine the kink/dropout operation, waive/remove it from required Year 1 performance, or rewrite 1.2.4 to avoid the dependency."
+    },
+    {
+      "id": "B1CMTA-005",
+      "classification": "scale_blocker",
+      "flag": "Downstream product authority remains held.",
+      "blocks": [
+        "Year 1 closure",
+        "CP-6 closure",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "Publishing this scoped audit packet",
+        "Ordinary scoped work that does not claim downstream authority"
+      ],
+      "proof_required_to_close": "Later closure/product-proof gates using REV-STD-1 and rendered/product evidence."
+    }
+  ],
+  "recommended_next_action": "Open B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1 or an equivalent lane before any clean Book 1 mixed-target audit closure claim."
+}
