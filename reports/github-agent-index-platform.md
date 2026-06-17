@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T07:57:26.726Z
+Generated: 2026-06-17T08:31:32.825Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4691
+Files indexed: 4710
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1157,7 +1157,7 @@ Count: 478
 
 ## references
 
-Count: 612
+Count: 615
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1167,6 +1167,7 @@ Count: 612
 - references/authored/gemengde-opgaven-target-standard.md
 - references/authored/README.md
 - references/authored/skill-categories.md
+- references/authored/textbook-figure-standard.md
 - references/authored/textbook-rendered-page-acceptance-standard.md
 - references/authored/vraagtypen-en-opgaveontwerp.md
 - references/data/alignment-graph.json
@@ -1630,6 +1631,8 @@ Count: 612
 - references/data/sprints/TASK-INGEST-TRANSFORM-3-TEXTBOOK.result.json
 - references/data/sprints/TASK-SHELL-UX-2.plan.json
 - references/data/sprints/TASK-SHELL-UX-2.result.json
+- references/data/sprints/TEXTBOOK-FIGURE-STANDARD-1.plan.json
+- references/data/sprints/TEXTBOOK-FIGURE-STANDARD-1.result.json
 - references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.plan.json
 - references/data/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1.result.json
 - references/data/sprints/VISION-1.plan.json
@@ -1774,7 +1777,7 @@ Count: 612
 
 ## reports
 
-Count: 2898
+Count: 2914
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1839,6 +1842,7 @@ Count: 2898
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
+- reports/json/b1-graph-evidence-112-closure-and-implementation-bundle-1-proof.json
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-route-copy1-proof.json
@@ -2087,6 +2091,8 @@ Count: 2898
 - reports/reference-cli-coverage.md
 - reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-quality-log.md
 - reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-review-packet.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-quality-log.md
+- reports/reference-planning/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-review-packet.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-quality-log.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-review-packet.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-CLOSURE-1-quality-log.md
@@ -2136,6 +2142,7 @@ Count: 2898
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json
+- reports/review-gates/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json
@@ -2780,6 +2787,8 @@ Count: 2898
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-plan.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-result.md
+- reports/sprints/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-plan.md
+- reports/sprints/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-plan.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-1-plan.md
@@ -4630,6 +4639,16 @@ Count: 2898
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-dark-112-exit-ticket-task-shell.png
 - reports/sprints/TASK-SHELL-UX-2-screenshots/mobile-light-112-exit-ticket-unit-fields.png
 - reports/sprints/TASK-SHELL-UX-2-ui-contract.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-baseline.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-command-log.jsonl
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-command-log.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-diff-summary.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-assignment.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-corrections.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-round1.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-round2.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md
+- reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-baseline.md
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-command-log.jsonl
 - reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-command-log.md

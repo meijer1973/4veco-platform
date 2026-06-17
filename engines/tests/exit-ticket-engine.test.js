@@ -101,19 +101,19 @@ describe('ExitTicketEngine', () => {
         expect(data.tasks.length).toBeLessThanOrEqual(5);
     });
 
-    test('validates the 1.1.2 Golden transfer candidate without completion authority', () => {
+    test('validates the 1.1.2 Golden transfer readiness approval without completion authority', () => {
         expect(ExitTicketEngine.validateData(targetData)).toBe(true);
         expect(targetData.surface).toBe('target_equivalent_exit_ticket');
         expect(targetData.targetSkillIds).toEqual(['A38', 'A39', 'D31']);
         expect(targetData.metadataAlignment).toEqual(expect.objectContaining({
-            status: 'golden_workbench_transfer_candidate',
+            status: 'target_equivalent_aligned',
             paragraphSkillIds: ['A38', 'A39', 'D31'],
             targetExerciseSkillIds: ['A38', 'A39', 'D31'],
-            targetReadinessEvidence: false,
+            targetReadinessEvidence: true,
         }));
         expect(targetData.targetEquivalent).toEqual({
             candidate: true,
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false,
         });
     });
@@ -248,14 +248,14 @@ describe('ExitTicketEngine', () => {
         });
     });
 
-    test('tracks 1.1.2 proof-candidate progress while holding completion language', () => {
+    test('tracks 1.1.2 approved readiness progress while holding completion language', () => {
         const engine = new ExitTicketEngine({ data: targetData });
         expect(engine.getProgress()).toEqual(expect.objectContaining({
             practiceProgressOnly: false,
             targetEquivalentAttempt: true,
             pending: targetData.tasks.length,
             proofCandidate: false,
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false,
         }));
 
@@ -288,7 +288,7 @@ describe('ExitTicketEngine', () => {
             matched: targetData.tasks.length,
             needsRepair: 0,
             proofCandidate: true,
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false,
         }));
     });
