@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-17T07:18:21.012Z",
+  "generated_at": "2026-06-17T07:20:18.076Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -23200,8 +23200,8 @@
       "path": "reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json",
       "file_name": "review-packet.json",
       "extension": "json",
-      "size_bytes": 7821,
-      "sha256": "fae6d6a36953d03cc9f3ede313b54af8912ddc3809c534ea107a11fdf74d2ed9",
+      "size_bytes": 7869,
+      "sha256": "4f321c1292967e82f753b3c21cad9e5039da04104f3a061e7655ac8b11073131",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
