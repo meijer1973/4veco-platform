@@ -1,6 +1,6 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-17T06:36:57.734Z",
+  "generated_on": "2026-06-17T07:15:03.129Z",
   "status": "pass",
   "summary": {
     "record_count": 603,
@@ -2674,7 +2674,7 @@
       "title": "Owned Content Graph",
       "source_type": "inventory",
       "authority_level": "governance_data",
-      "source_version": "sha256:dfa27930b7f60b24ecd8c83d587e94d739d6700cf118ad657d4ce94f5439459b",
+      "source_version": "sha256:3ddbd501bea2c651bafd3e4f8343c8ba6f4a313f347dfe68bf615660ebef8a7b",
       "status": "governance_data",
       "owner": "references_team",
       "citation_policy": "cite_as_governance_record_only",
@@ -2683,7 +2683,7 @@
       "generated_status": "generated_or_sprint_metadata",
       "edit_policy": "generated_by_inventory_script",
       "refresh_policy": "regenerate",
-      "source_hash": "dfa27930b7f60b24ecd8c83d587e94d739d6700cf118ad657d4ce94f5439459b",
+      "source_hash": "3ddbd501bea2c651bafd3e4f8343c8ba6f4a313f347dfe68bf615660ebef8a7b",
       "size_bytes": 2559122,
       "primary_evidence": false,
       "curriculum_authority": false,
