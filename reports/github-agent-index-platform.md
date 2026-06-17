@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T09:33:57.428Z
+Generated: 2026-06-17T09:41:29.146Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4762
+Files indexed: 4756
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 496
+Count: 497
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -333,6 +333,7 @@ Count: 496
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
@@ -676,7 +677,7 @@ Count: 42
 
 ## validators
 
-Count: 481
+Count: 482
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -764,6 +765,7 @@ Count: 481
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js
 - build-scripts/references/check-mtu-h5-q19-repair-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
@@ -1784,7 +1786,7 @@ Count: 617
 
 ## reports
 
-Count: 2951
+Count: 2944
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1823,16 +1825,8 @@ Count: 2951
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1856,10 +1850,6 @@ Count: 2951
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2025,6 +2015,8 @@ Count: 2951
 - reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json
 - reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.md
+- reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json
+- reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.md
 - reports/mtu-hardening/mtu-h5-q19-repair-gate-1.json
 - reports/mtu-hardening/mtu-h5-q19-repair-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json
@@ -2465,6 +2457,9 @@ Count: 2951
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-answer-form-gate-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-repair-gate-1/review-packet.md

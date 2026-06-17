@@ -11,6 +11,8 @@ const GATE_REVIEW = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H5-Q19-
 const REGRESSION_REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.json');
 const REGRESSION_REPORT_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.md');
 const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-mapping-regression.js');
+const PROCEDURE_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-procedure-semantic-fit-package-1.json');
+const PROCEDURE_GATE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1', 'review-packet.json');
 
 const Q3_RECORD_ID = 'vw-1022-a-25-1-o:opgave-1:question-3';
 const Q15_RECORD_ID = 'vw-1022-a-25-1-o:opgave-3:question-15';
@@ -150,6 +152,30 @@ function requireCounts(result, label, expected = EXPECTED_COUNTS) {
   }
 }
 
+function q19ProcedurePackageExecuted() {
+  if (!fs.existsSync(PROCEDURE_PACKAGE_JSON)) return false;
+  const packet = readJson(PROCEDURE_PACKAGE_JSON);
+  if (packet.status !== 'executed_after_subagent_lead_approval') return false;
+  const gate = readJson(PROCEDURE_GATE_JSON);
+  if (gate.status !== 'executed_after_subagent_lead_approval') {
+    fail('q19 procedure package is executed but gate packet is not');
+  }
+  if (packet.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION' ||
+      gate.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION') {
+    fail('q19 procedure package execution must have lead approval');
+  }
+  return true;
+}
+
+function currentExpectedCounts() {
+  const expected = JSON.parse(JSON.stringify(EXPECTED_COUNTS));
+  if (q19ProcedurePackageExecuted()) {
+    expected.q19.review_required = 6;
+    expected.overall.review_required = 15;
+  }
+  return expected;
+}
+
 function requireApprovalContinuity() {
   const packet = readJson(GATE_PACKET);
   const review = readJson(GATE_REVIEW);
@@ -198,19 +224,32 @@ function requireFixturePostState(fixture) {
 }
 
 function requireRegressionReport() {
+  const procedurePackageExecuted = q19ProcedurePackageExecuted();
+  const expectedQ19ReviewRequired = procedurePackageExecuted ? 6 : 17;
+  const expectedStatus = procedurePackageExecuted
+    ? 'source_graph_reasoning_review_blocker'
+    : 'source_graph_procedure_reasoning_review_blocker';
+  const expectedBlockerText = procedurePackageExecuted
+    ? 'q19 remains a source/graph/reasoning review blocker: 0 failed / 6 review_required'
+    : 'q19 remains a source/graph/procedure/reasoning review blocker: 0 failed / 17 review_required';
   const report = readJson(REGRESSION_REPORT_JSON);
   const reportMd = readText(REGRESSION_REPORT_MD);
   if (report.question_bucket_counts?.q19?.failed !== 0) fail('report q19 failed count must be 0');
-  if (report.question_bucket_counts?.q19?.review_required !== 17) fail('report q19 review_required count must be 17');
-  if (report.remaining_lane_status?.q19?.status !== 'source_graph_procedure_reasoning_review_blocker') {
+  if (report.question_bucket_counts?.q19?.review_required !== expectedQ19ReviewRequired) {
+    fail(`report q19 review_required count must be ${expectedQ19ReviewRequired}`);
+  }
+  if (report.remaining_lane_status?.q19?.status !== expectedStatus) {
     fail('report q19 lane status must reflect post-answer-form execution state');
   }
   for (const text of [
-    'q19 | 0 | 17 | source_graph_procedure_reasoning_review_blocker',
-    'q19 remains a source/graph/procedure/reasoning review blocker: 0 failed / 17 review_required',
+    `q19 | 0 | ${expectedQ19ReviewRequired} | ${expectedStatus}`,
+    expectedBlockerText,
     'answer-form equivalent accepted by PR #80',
   ]) {
     if (!reportMd.includes(text)) fail(`report markdown must include ${text}`);
+  }
+  if (procedurePackageExecuted && reportMd.includes('A42/D10/D13/A81 procedure semantic-fit review')) {
+    fail('report markdown must not claim q19 procedure semantic-fit review after procedure package execution');
   }
   for (const stale of ['3 failed / 20 review_required', 'graph/draw/teken answer-form gap']) {
     if (reportMd.includes(stale)) fail(`report markdown must not include stale q19 text: ${stale}`);
@@ -234,8 +273,9 @@ function requireNegativeAnswerFormRegression(fixture) {
   const result = runH5Validator(tempFixture);
   const q19Failed = countForRecord(result, 'failed', Q19_RECORD_ID);
   const q19Review = countForRecord(result, 'review_required', Q19_RECORD_ID);
-  if (q19Failed !== 3 || q19Review !== 20) {
-    fail(`negative answer-form regression must restore q19 3 failed / 20 review_required, got ${q19Failed} / ${q19Review}`);
+  const expectedQ19Review = q19ProcedurePackageExecuted() ? 9 : 20;
+  if (q19Failed !== 3 || q19Review !== expectedQ19Review) {
+    fail(`negative answer-form regression must restore q19 3 failed / ${expectedQ19Review} review_required, got ${q19Failed} / ${q19Review}`);
   }
 }
 
@@ -244,10 +284,11 @@ function main() {
   const fixture = readJson(FIXTURE);
   requireFixturePostState(fixture);
   const result = runH5Validator();
-  requireCounts(result, 'current fixture');
+  requireCounts(result, 'current fixture', currentExpectedCounts());
   requireRegressionReport();
   requireNegativeAnswerFormRegression(fixture);
-  console.log('OK MTU-H5 q19 answer-form equivalent execution 1: q19 0 failed / 17 review_required; q27/q15 carried');
+  const expected = currentExpectedCounts();
+  console.log(`OK MTU-H5 q19 answer-form equivalent execution 1: q19 0 failed / ${expected.q19.review_required} review_required; q27/q15 carried`);
 }
 
 main();

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1",
+  "package_id": "MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1",
+  "created": "2026-06-17",
+  "status": "executed_after_subagent_lead_approval",
+  "review_standard": "REV-STD-1",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence.",
+  "original_sprint_gate_spec": "PR #87 approved the next q19 lane as approve_exact_procedure_semantic_fit_execution_gate. This packet prepares the exact q19 fixture write surface for subagent lead review before execution.",
+  "non_negotiable_requirements": [
+    "q19 starts at 0 failed / 17 review_required.",
+    "Only q19 procedure_review_required_unit_ids may be changed, and only to empty arrays after subagent lead approval.",
+    "q19 source-annex and graph-object hooks remain visible blockers.",
+    "q19 chained reasoning and third graph-shift hooks remain visible blockers.",
+    "q19 answer-form reviewed-equivalent evidence from PR #81 remains intact.",
+    "A45 remains forbidden as primary q19 support.",
+    "Forbidden route tags remain full_graph_construction, calculus_route, and function_construction.",
+    "q27 and q15 remain carried blockers.",
+    "No protected-reference, machine-reference, external-source, authored target-exercise, MTU, operation-registry, answer-skill, candidate, source-overlay, lesson, PV, diagnostic, product-route, or student-facing mutation is authorized.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement_id": "core-1-current-state",
+      "status": "met",
+      "evidence": "Current MTU-H5 report shows q19 0 failed / 17 review_required, with q27 3/5 and q15 0/4 carried."
+    },
+    {
+      "requirement_id": "core-2-exact-write-surface",
+      "status": "met",
+      "evidence": "The only proposed write surface is q19 procedure_review_required_unit_ids in reports/mtu-hardening/mtu-h5-regression-fixture.json."
+    },
+    {
+      "requirement_id": "core-3-semantic-fit-matrix",
+      "status": "met",
+      "evidence": "The matrix maps q19-step-1 to A42/D10/A81 and q19-step-2/3 to A42/D10/D13/A81."
+    },
+    {
+      "requirement_id": "core-4-non-procedure-hooks-preserved",
+      "status": "met",
+      "evidence": "Source-annex, graph-object, chained reasoning, and third graph-shift hooks are explicitly preserved."
+    },
+    {
+      "requirement_id": "core-5-boundary",
+      "status": "met",
+      "evidence": "Authority boundary forbids protected/reference/MTU/candidate/source-overlay/lesson/PV/diagnostic/product/student-use mutation."
+    },
+    {
+      "requirement_id": "core-6-negative-guards",
+      "status": "met",
+      "evidence": "Package checker includes reintroduction, premature closure, and A45 over-trigger temporary-clone guards."
+    }
+  ],
+  "requested_subagent_lead_decision": {
+    "valid_decisions": [
+      "APPROVE_EXECUTION",
+      "REJECT_EXECUTION_REQUIRES_GOVERNANCE",
+      "REVISE_GATE"
+    ],
+    "decision_needed": "Decide whether the exact q19 procedure_review_required_unit_ids write surface may be executed now."
+  },
+  "administrative_and_generated_write_surface": {
+    "authorized_after_subagent_lead_approval": true,
+    "purpose": "Record subagent lead approval, refresh generated H5 regression report/index evidence, and keep historical/mainline q19 checkers aligned after the exact q19 fixture execution.",
+    "paths": [
+      "build-scripts/references/build-mtu-h5-regression-report.js",
+      "build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js",
+      "build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js",
+      "build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js",
+      "build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js",
+      "build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js",
+      "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json",
+      "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.md",
+      "reports/mtu-hardening/mtu-h5-regression-report.json",
+      "reports/mtu-hardening/mtu-h5-regression-report.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.json",
+      "reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/bundle-urls.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md",
+      "reports/url-index.md"
+    ],
+    "not_authorized": [
+      "candidate stores",
+      "lesson output",
+      "PV or diagnostics",
+      "product routes",
+      "student-facing output"
+    ]
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.md",
+    "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json",
+    "build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-procedure-reasoning-gate-1.json",
+    "references/machine/micro-teaching-units.json#A42",
+    "references/machine/micro-teaching-units.json#D10",
+    "references/machine/micro-teaching-units.json#D13",
+    "references/machine/micro-teaching-units.json#A81"
+  ],
+  "findings": [
+    {
+      "finding_id": "q19-procedure-fit-ready-for-execution-review",
+      "classification": "supports_execution_review",
+      "blocks": [],
+      "does_not_block": ["subagent lead review of the exact procedure semantic-fit write surface"],
+      "proof_required_to_close": "Subagent lead returns APPROVE_EXECUTION and post-execution checker verifies q19 procedure hooks cleared while non-procedure hooks remain."
+    },
+    {
+      "finding_id": "q19-source-graph-reasoning-still-blocks",
+      "classification": "carried_blocks",
+      "blocks": ["q19 full closure", "MTU-H5 closure", "product-route readiness"],
+      "does_not_block": ["procedure semantic-fit execution"],
+      "proof_required_to_close": "Separate source/graph/reasoning lane resolves or explicitly accepts these hooks."
+    },
+    {
+      "finding_id": "q27-q15-carried",
+      "classification": "carried_blocks",
+      "blocks": ["MTU-H5 closure", "product-route readiness"],
+      "does_not_block": ["q19 procedure semantic-fit execution"],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their validator buckets."
+    }
+  ],
+  "subagent_lead_review": {
+    "status": "approved",
+    "teacher_verdict": "MORE_THAN_SATISFIED",
+    "economist_verdict": "MORE_THAN_SATISFIED",
+    "quality_verdict": "MORE_THAN_SATISFIED",
+    "lead_verdict": "APPROVE_EXECUTION",
+    "lead_summary": "Lead approved clearing only the three q19 procedure_review_required_unit_ids arrays to [] after all three review roles returned MORE_THAN_SATISFIED.",
+    "final_surface_review": {
+      "teacher_verdict": "MORE_THAN_SATISFIED",
+      "economist_verdict": "MORE_THAN_SATISFIED",
+      "quality_verdict": "MORE_THAN_SATISFIED",
+      "lead_verdict": "APPROVE_FINAL_SURFACE",
+      "summary": "Final review approved the expanded admin/generated checker, report, bundle URL, and index surface without broadening the exact q19 fixture write."
+    }
+  },
+  "authority_boundary": {
+    "fixture_mutation_authorized_if_subagent_lead_approves": true,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q19_closure_claimed": false,
+    "mtu_h5_closure_claimed": false
+  }
+}

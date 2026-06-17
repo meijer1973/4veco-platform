@@ -33,6 +33,8 @@ const REGRESSION_REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-
 const FIXTURE = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-fixture.json');
 const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-mapping-regression.js');
 const ITEM_OVERLAY = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'exam-item-overlays.json');
+const PROCEDURE_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-procedure-semantic-fit-package-1.json');
+const PROCEDURE_GATE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1', 'review-packet.json');
 
 const EXPECTED_GATE = 'GATE-MTU-H5-Q19-answer-form-equivalent-execution-gate-1';
 const EXPECTED_PACKET = 'MTU-H5-Q19-answer-form-equivalent-execution-gate-1';
@@ -205,6 +207,21 @@ function allQ19SourceRecords(doc) {
     .filter((record) => record.source_exam_item_id === Q19_RECORD_ID);
 }
 
+function q19ProcedurePackageExecuted() {
+  if (!fs.existsSync(PROCEDURE_PACKAGE_JSON)) return false;
+  const packet = readJson(PROCEDURE_PACKAGE_JSON);
+  if (packet.status !== 'executed_after_subagent_lead_approval') return false;
+  const gate = readJson(PROCEDURE_GATE_JSON);
+  if (gate.status !== 'executed_after_subagent_lead_approval') {
+    fail('q19 procedure package is executed but gate packet is not');
+  }
+  if (packet.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION' ||
+      gate.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION') {
+    fail('q19 procedure package execution must have lead approval');
+  }
+  return true;
+}
+
 function requirePriorGateContinuity(packet) {
   runNode(PRIOR_CHECKER);
   const priorPacket = readJson(PRIOR_PACKET);
@@ -228,7 +245,12 @@ function requireCurrentDiagnosticState(packet) {
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must remain 0/0');
   const q19IsPreExecution = counts.q19?.failed === 3 && counts.q19?.review_required === 20;
   const q19IsPostExecution = counts.q19?.failed === 0 && counts.q19?.review_required === 17;
-  if (!q19IsPreExecution && !q19IsPostExecution) fail('report q19 counts must be pre-execution 3/20 or post-execution 0/17');
+  const q19IsPostProcedureExecution = q19ProcedurePackageExecuted() &&
+    counts.q19?.failed === 0 &&
+    counts.q19?.review_required === 6;
+  if (!q19IsPreExecution && !q19IsPostExecution && !q19IsPostProcedureExecution) {
+    fail('report q19 counts must be pre-execution 3/20, post-answer-form 0/17, or post-procedure 0/6');
+  }
   if (counts.q27?.failed !== 3 || counts.q27?.review_required !== 5) fail('report q27 counts must remain 3/5');
   if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must remain 0/4');
   if (packet.current_diagnostic_state?.q19?.failed !== 3 || packet.current_diagnostic_state?.q19?.review_required !== 20) {
@@ -394,8 +416,10 @@ function requireExactFuturePlanDryRun(packet) {
     if (assertionIds(result, 'review_required').some((id) => id.includes(ANSWER_HOOK))) {
       fail('dry-run must clear q19 answer-form-needed review hooks');
     }
-    if (countForRecord(result, 'failed', Q19_RECORD_ID) !== 0 || countForRecord(result, 'review_required', Q19_RECORD_ID) !== 17) {
-      fail('dry-run q19 counts must be 0 failed / 17 review_required');
+    const expectedQ19ReviewRequired = q19ProcedurePackageExecuted() ? 6 : 17;
+    if (countForRecord(result, 'failed', Q19_RECORD_ID) !== 0 ||
+        countForRecord(result, 'review_required', Q19_RECORD_ID) !== expectedQ19ReviewRequired) {
+      fail(`dry-run q19 counts must be 0 failed / ${expectedQ19ReviewRequired} review_required`);
     }
     if (countForRecord(result, 'failed', Q3_RECORD_ID) !== 0 || countForRecord(result, 'review_required', Q3_RECORD_ID) !== 0) {
       fail('dry-run q3 must remain clean');
