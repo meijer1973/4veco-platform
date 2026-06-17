@@ -20,6 +20,7 @@ Human-authored references that the platform still hand-edits. This is the **lega
 | `economic_mathematical_precision_reference.md` | likely stays `authored/` (expert precision judgement) |
 | `didactiek-principes.md` | likely stays `authored/` (pedagogical philosophy) |
 | `textbook-rendered-page-acceptance-standard.md` | likely stays `authored/` (textbook rendered-output acceptance judgement) |
+| `textbook-figure-standard.md` | likely stays `authored/` (textbook figure and graph acceptance judgement) |
 | `gemengde-opgaven-target-standard.md` | likely stays `authored/` until mixed-target policy becomes machine-checkable |
 | `course-target-exercises.json` | Active authored target-exercise registry; currently v5. Long-term path is `machine/` once target exercises become first-class machine-edited entries. |
 | `archive/course-target-exercises-v4.json` | Historical v4 registry archive retained for evidence anchors and migration traceability. |

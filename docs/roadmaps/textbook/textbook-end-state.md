@@ -65,6 +65,18 @@ generated output, or missing answer models as future work.
 Policy-only or metadata-only sprints may mark rendered proof as not applicable
 only when they do not change student-facing output and say so explicitly.
 
+## Figure Acceptance
+
+`references/authored/textbook-figure-standard.md` is the standing figure and
+graph standard for textbook sprints. It defines source preflight expectations
+for editable figure source, SVG/PNG pairing, stale export prevention, graph
+axes, units, labels, staged figures, color-not-sole-meaning, and graph/text
+concordance.
+
+The figure standard does not replace rendered-page proof. A figure passes only
+when its labels, values, axes, captions, and answer-model references are
+correct in source and readable on the final rendered page.
+
 ## Curriculum Coherence
 
 The three-year set should avoid isolated topic islands. Each book should prepare the next:

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TEXTBOOK-FIGURE-STANDARD-1",
+  "name": "Textbook Figure Standard",
+  "created": "2026-06-17",
+  "plan": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md",
+  "baseline": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": true,
+  "generated_lesson_output_allowed": false,
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Textbook figure standard exists.",
+    "Rendered-page acceptance remains final authority for student-facing figure closure.",
+    "Source asset expectations exist for editable source, SVG/PNG pairing, regeneration, stable filenames, and stale export prevention.",
+    "Economic graph conventions exist for axes, units, direct labels, staged figures, color-not-sole-meaning, and text/number concordance.",
+    "Student-facing figure defects are blockers, not PASS WITH FLAGS carry items.",
+    "Textbook workflow and lead-review instructions cite the figure standard.",
+    "No lesson content, generated lesson output, protected machine/external reference data, or product gates are changed."
+  ],
+  "scope": [
+    "Add a durable platform-owned textbook figure standard.",
+    "Wire the standard into textbook sprint/review expectations.",
+    "Record sprint evidence under reports/sprints and references/data/sprints.",
+    "Preserve product-gate, paragraph-production, and generated-output boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md",
+    "node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1",
+    "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete",
+    "npm.cmd run check:platform",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "git -C ../4veco-lessen status --short --branch"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No edits under ../4veco-lessen.",
+    "No textbook paragraph, chapter, or book content edits.",
+    "No generated lesson output regeneration.",
+    "No validator that claims to judge subjective visual quality automatically.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, product-route adoption, or student/product-use authorization."
+  ]
+}
