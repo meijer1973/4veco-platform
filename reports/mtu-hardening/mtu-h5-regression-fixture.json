@@ -402,11 +402,7 @@
             "D10",
             "A81"
           ],
-          "procedure_review_required_unit_ids": [
-            "A42",
-            "D10",
-            "A81"
-          ]
+          "procedure_review_required_unit_ids": []
         },
         {
           "operation_id": "q19-step-2",
@@ -466,12 +462,7 @@
             "D13",
             "A81"
           ],
-          "procedure_review_required_unit_ids": [
-            "A42",
-            "D10",
-            "D13",
-            "A81"
-          ]
+          "procedure_review_required_unit_ids": []
         },
         {
           "operation_id": "q19-step-3",
@@ -528,12 +519,7 @@
             "D13",
             "A81"
           ],
-          "procedure_review_required_unit_ids": [
-            "A42",
-            "D10",
-            "D13",
-            "A81"
-          ],
+          "procedure_review_required_unit_ids": [],
           "review_required_hooks": [
             "q19-source-annex-gap remains blocking",
             "q19-graph-object-gap remains blocking",

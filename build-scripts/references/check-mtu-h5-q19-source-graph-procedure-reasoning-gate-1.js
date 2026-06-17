@@ -24,6 +24,8 @@ const GATE_BUNDLE = path.join(GATE_DIR, 'bundle-urls.md');
 const URL_INDEX = path.join(ROOT, 'reports', 'url-index.md');
 const AGENT_INDEX = path.join(ROOT, 'reports', 'github-agent-index-platform.md');
 const AGENT_INDEX_JSON = path.join(ROOT, 'reports', 'github-agent-index-platform.json');
+const PROCEDURE_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-procedure-semantic-fit-package-1.json');
+const PROCEDURE_GATE_JSON = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1', 'review-packet.json');
 
 const REGRESSION_REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.json');
 const FIXTURE = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-fixture.json');
@@ -73,6 +75,9 @@ const EXPECTED_Q19_REVIEW_ASSERTIONS = [
   'vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-graph-object-gap remains blocking',
   'vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction',
 ];
+
+const EXPECTED_Q19_POST_PROCEDURE_REVIEW_ASSERTIONS = EXPECTED_Q19_REVIEW_ASSERTIONS
+  .filter((assertionId) => !assertionId.includes(':ASSERT-PROCEDURE-REVIEW-'));
 
 const FORBIDDEN_Q19_ANSWER_FORM_ASSERTIONS = [
   'vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-ANSWER-FORM-MISSING',
@@ -222,6 +227,27 @@ function q19Items(result, bucket) {
   return (result.buckets?.[bucket] || []).filter((item) => item.record_id === Q19_RECORD_ID);
 }
 
+function q19ProcedurePackageExecuted() {
+  if (!fs.existsSync(PROCEDURE_PACKAGE_JSON)) return false;
+  const packet = readJson(PROCEDURE_PACKAGE_JSON);
+  if (packet.status !== 'executed_after_subagent_lead_approval') return false;
+  const gate = readJson(PROCEDURE_GATE_JSON);
+  if (gate.status !== 'executed_after_subagent_lead_approval') {
+    fail('q19 procedure package is executed but gate packet is not');
+  }
+  if (packet.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION' ||
+      gate.subagent_lead_review?.lead_verdict !== 'APPROVE_EXECUTION') {
+    fail('q19 procedure package execution must have lead approval');
+  }
+  for (const role of ['teacher', 'economist', 'quality']) {
+    if (packet.subagent_lead_review?.[`${role}_verdict`] !== 'MORE_THAN_SATISFIED' ||
+        gate.subagent_lead_review?.[`${role}_verdict`] !== 'MORE_THAN_SATISFIED') {
+      fail(`q19 procedure package ${role} verdict must be MORE_THAN_SATISFIED`);
+    }
+  }
+  return true;
+}
+
 function records(fixture) {
   return fixture.records || fixture.question_records || [];
 }
@@ -238,29 +264,40 @@ function allQ19SourceRecords(doc) {
 }
 
 function requireCurrentDiagnosticState(packet) {
+  const procedurePackageExecuted = q19ProcedurePackageExecuted();
+  const expectedQ19ReviewRequired = procedurePackageExecuted ? 6 : 17;
+  const expectedOverallReviewRequired = procedurePackageExecuted ? 15 : 26;
+  const expectedQ19ReviewAssertions = procedurePackageExecuted
+    ? EXPECTED_Q19_POST_PROCEDURE_REVIEW_ASSERTIONS
+    : EXPECTED_Q19_REVIEW_ASSERTIONS;
   const report = readJson(REGRESSION_REPORT_JSON);
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must be 0/0');
-  if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 17) fail('report q19 counts must be current post-PR81 0/17');
+  if (counts.q19?.failed !== 0 || counts.q19?.review_required !== expectedQ19ReviewRequired) {
+    fail(`report q19 counts must be live 0/${expectedQ19ReviewRequired}`);
+  }
   if (counts.q27?.failed !== 3 || counts.q27?.review_required !== 5) fail('report q27 counts must remain 3/5');
   if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must remain 0/4');
+  if (report.bucket_totals?.failed !== 3 || report.bucket_totals?.review_required !== expectedOverallReviewRequired) {
+    fail(`report overall counts must be 3 failed / ${expectedOverallReviewRequired} review_required`);
+  }
 
   if (packet.current_diagnostic_state?.q19?.failed !== 0 ||
       packet.current_diagnostic_state?.q19?.review_required !== 17) {
-    fail('packet q19 diagnostic state must be 0/17');
+    fail('packet q19 diagnostic state must remain historical 0/17');
   }
   if (packet.current_diagnostic_state?.overall?.failed !== 3 ||
       packet.current_diagnostic_state?.overall?.review_required !== 26) {
-    fail('packet overall diagnostic state must be 3 failed / 26 review_required');
+    fail('packet overall diagnostic state must remain historical 3 failed / 26 review_required');
   }
 
   const result = runH5Validator();
   if (q19Items(result, 'failed').length !== 0) fail('validator q19 failed bucket must be empty');
   const q19ReviewIds = q19Items(result, 'review_required').map((item) => item.assertion_id);
-  if (q19ReviewIds.length !== EXPECTED_Q19_REVIEW_ASSERTIONS.length) {
-    fail(`validator q19 review_required count must be ${EXPECTED_Q19_REVIEW_ASSERTIONS.length}`);
+  if (q19ReviewIds.length !== expectedQ19ReviewAssertions.length) {
+    fail(`validator q19 review_required count must be ${expectedQ19ReviewAssertions.length}`);
   }
-  requireIncludesAll(q19ReviewIds, EXPECTED_Q19_REVIEW_ASSERTIONS, 'validator q19 review_required assertions');
+  requireIncludesAll(q19ReviewIds, expectedQ19ReviewAssertions, 'validator q19 review_required assertions');
   for (const assertionId of FORBIDDEN_Q19_ANSWER_FORM_ASSERTIONS) {
     if (assertionIds(result, 'failed').includes(assertionId)) fail(`answer-form assertion must remain cleared: ${assertionId}`);
   }
@@ -277,6 +314,7 @@ function requireCurrentDiagnosticState(packet) {
 }
 
 function requireFixtureQ19Shape(packet) {
+  const procedurePackageExecuted = q19ProcedurePackageExecuted();
   const fixture = readJson(FIXTURE);
   const q19 = findRecord(fixture, Q19_RECORD_ID);
   if (q19.question_word !== 'teken') fail('q19 question_word must be teken');
@@ -298,9 +336,14 @@ function requireFixtureQ19Shape(packet) {
     }
     requireIncludes(operation.expected_forbidden_mtu_ids || [], 'A45', `${operation.operation_id}.expected_forbidden_mtu_ids`);
     requireIncludesAll(operation.expected_forbidden_route_tags || [], FORBIDDEN_ROUTE_TAGS, `${operation.operation_id}.expected_forbidden_route_tags`);
-    if (!Array.isArray(operation.procedure_review_required_unit_ids) ||
+    if (procedurePackageExecuted) {
+      if (!Array.isArray(operation.procedure_review_required_unit_ids) ||
+          operation.procedure_review_required_unit_ids.length !== 0) {
+        fail(`${operation.operation_id}.procedure_review_required_unit_ids must be cleared by approved procedure package`);
+      }
+    } else if (!Array.isArray(operation.procedure_review_required_unit_ids) ||
         operation.procedure_review_required_unit_ids.length === 0) {
-      fail(`${operation.operation_id}.procedure_review_required_unit_ids must remain visible`);
+      fail(`${operation.operation_id}.procedure_review_required_unit_ids must remain visible before procedure package execution`);
     }
   }
 

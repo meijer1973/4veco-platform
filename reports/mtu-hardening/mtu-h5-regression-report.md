@@ -1,6 +1,6 @@
 # MTU-H5 Regression Report
 
-Generated: 2026-06-16
+Generated: 2026-06-17
 
 Status: `failed`
 
@@ -26,7 +26,7 @@ AI, summative use, product-route readiness, or student/product use.
 | --- | --- |
 | passed | 1 |
 | failed | 3 |
-| review_required | 26 |
+| review_required | 15 |
 | blocked | 0 |
 
 ## Question And Lane Counts
@@ -34,7 +34,7 @@ AI, summative use, product-route readiness, or student/product use.
 | Surface | Failed | Review required | Status |
 | --- | --- | --- | --- |
 | q3 | 0 | 0 | clean after q3 fixture execution |
-| q19 | 0 | 17 | source_graph_procedure_reasoning_review_blocker |
+| q19 | 0 | 6 | source_graph_reasoning_review_blocker |
 | q27 | 3 | 5 | incidence_scaling_levy_capacity_procedure_blocker |
 | q15 | 0 | 4 | answer_skill_procedure_semantic_fit_review_blocker |
 | global negative guard | 0 | 0 | 1 passed |
@@ -42,7 +42,7 @@ AI, summative use, product-route readiness, or student/product use.
 ## Remaining Blockers
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
-- q19 remains a source/graph/procedure/reasoning review blocker: 0 failed / 17 review_required.
+- q19 remains a source/graph/reasoning review blocker: 0 failed / 6 review_required.
 - q27 remains an incidence/scaling/levy-capacity/procedure blocker: 3 failed / 5 review_required.
 - q15 remains an answer-skill/procedure semantic-fit review blocker: 0 failed / 4 review_required.
 - MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
@@ -51,7 +51,7 @@ AI, summative use, product-route readiness, or student/product use.
 
 | Lane | Diagnostic meaning |
 | --- | --- |
-| q19 | answer-form equivalent accepted by PR #80; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review |
+| q19 | answer-form equivalent accepted by PR #80; procedure semantic-fit accepted by MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1; source-annex and graph-object review; chained multi-market reasoning; third graph-shift dependency |
 | q27 | incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review |
 | q15 | A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review |
 
@@ -66,15 +66,15 @@ AI, summative use, product-route readiness, or student/product use.
 
 | Class or hook group | Count |
 | --- | --- |
-| `apply_analyze_unit_without_usable_canonical_procedure` | 15 |
+| `apply_analyze_unit_without_usable_canonical_procedure` | 4 |
 | `fixture_review_hooks` | 11 |
 
 ## Procedure Statuses
 
 | Procedure status | Count |
 | --- | --- |
-| `procedure_present` | 6 |
-| `procedure_review_required` | 15 |
+| `procedure_present` | 17 |
+| `procedure_review_required` | 4 |
 
 The procedure output distinguishes `procedure_present`, `procedure_missing`,
 and `procedure_review_required`. This run produced no blocked assertions.

@@ -73,100 +73,100 @@
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-1",
       "unit_id": "A42",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 4,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-1",
       "unit_id": "D10",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "analyze",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-1",
       "unit_id": "A81",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-2",
       "unit_id": "A42",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 4,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-2",
       "unit_id": "D10",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "analyze",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-2",
       "unit_id": "D13",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "analyze",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-2",
       "unit_id": "A81",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-3",
       "unit_id": "A42",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 4,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-3",
       "unit_id": "D10",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "analyze",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-3",
       "unit_id": "D13",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "analyze",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
       "operation_id": "q19-step-3",
       "unit_id": "A81",
-      "status": "procedure_review_required",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
@@ -274,30 +274,6 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A42",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-1",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A42",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-D10",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-1",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D10",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A81",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-1",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A81",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
         "operation_id": "q19-step-1",
@@ -312,75 +288,11 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A42",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A42",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D10",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D10",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D13",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D13",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A81",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-2",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A81",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
         "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
         "operation_id": "q19-step-2",
         "hook": "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
         "reason": "fixture marks this validator hook as review_required"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A42",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A42",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D10",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D10",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D13",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D13",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A81",
-        "record_id": "vw-1022-a-25-1-o:opgave-4:question-19",
-        "operation_id": "q19-step-3",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "A81",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
       },
       {
         "assertion_id": "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
@@ -443,7 +355,7 @@
     ],
     "blocked": []
   },
-  "report_generated": "2026-06-16",
+  "report_generated": "2026-06-17",
   "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
   "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
   "source_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
@@ -452,7 +364,7 @@
   "bucket_totals": {
     "passed": 1,
     "failed": 3,
-    "review_required": 26,
+    "review_required": 15,
     "blocked": 0
   },
   "question_bucket_counts": {
@@ -466,7 +378,7 @@
     },
     "q19": {
       "failed": 0,
-      "review_required": 17
+      "review_required": 6
     },
     "q27": {
       "failed": 3,
@@ -481,12 +393,12 @@
     "scale_factor_usage_without_scaling_unit_mtu": 1
   },
   "review_required_by_defect_class": {
-    "apply_analyze_unit_without_usable_canonical_procedure": 15,
+    "apply_analyze_unit_without_usable_canonical_procedure": 4,
     "fixture_review_hooks": 11
   },
   "procedure_statuses": {
-    "procedure_present": 6,
-    "procedure_review_required": 15
+    "procedure_present": 17,
+    "procedure_review_required": 4
   },
   "remaining_lane_status": {
     "q3": {
@@ -496,10 +408,11 @@
       "blocks_mtu_h5_closure": false
     },
     "q19": {
-      "status": "source_graph_procedure_reasoning_review_blocker",
+      "status": "source_graph_reasoning_review_blocker",
       "failed": 0,
-      "review_required": 17,
-      "diagnostic_focus": "answer-form equivalent accepted by PR #80; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review",
+      "review_required": 6,
+      "diagnostic_focus": "answer-form equivalent accepted by PR #80; procedure semantic-fit accepted by MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1; source-annex and graph-object review; chained multi-market reasoning; third graph-shift dependency",
+      "procedure_semantic_fit_executed": true,
       "blocks_mtu_h5_closure": true
     },
     "q27": {

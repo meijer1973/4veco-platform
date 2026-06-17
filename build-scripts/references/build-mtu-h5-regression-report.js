@@ -22,6 +22,14 @@ const LANE_DETAILS = {
   q19: {
     status: 'source_graph_procedure_reasoning_review_blocker',
     summary: 'answer-form equivalent accepted by PR #80; source-annex and graph-object review; chained multi-market reasoning; A42/D10/D13/A81 procedure semantic-fit review',
+    blocker_label: 'source/graph/procedure/reasoning review blocker',
+    procedure_semantic_fit_executed: false,
+  },
+  q19_after_procedure_semantic_fit: {
+    status: 'source_graph_reasoning_review_blocker',
+    summary: 'answer-form equivalent accepted by PR #80; procedure semantic-fit accepted by MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1; source-annex and graph-object review; chained multi-market reasoning; third graph-shift dependency',
+    blocker_label: 'source/graph/reasoning review blocker',
+    procedure_semantic_fit_executed: true,
   },
   q27: {
     status: 'incidence_scaling_levy_capacity_procedure_blocker',
@@ -166,9 +174,20 @@ function authorityBoundary() {
   return Object.fromEntries(AUTHORITY_FALSE_KEYS.map((key) => [key, false]));
 }
 
+function q19LaneDetails(result) {
+  const q19ProcedureReviewRemaining = result.buckets.review_required.some((item) => (
+    item.record_id === QUESTION_RECORDS.q19 &&
+    String(item.assertion_id || '').includes(':ASSERT-PROCEDURE-REVIEW-')
+  ));
+  return q19ProcedureReviewRemaining
+    ? LANE_DETAILS.q19
+    : LANE_DETAILS.q19_after_procedure_semantic_fit;
+}
+
 function buildReport(result, generatedDate) {
   const totals = bucketTotals(result);
   const questions = questionBucketCounts(result);
+  const q19Details = q19LaneDetails(result);
   return {
     ...result,
     report_generated: generatedDate,
@@ -193,10 +212,11 @@ function buildReport(result, generatedDate) {
         blocks_mtu_h5_closure: false,
       },
       q19: {
-        status: LANE_DETAILS.q19.status,
+        status: q19Details.status,
         failed: questions.q19.failed,
         review_required: questions.q19.review_required,
-        diagnostic_focus: LANE_DETAILS.q19.summary,
+        diagnostic_focus: q19Details.summary,
+        procedure_semantic_fit_executed: q19Details.procedure_semantic_fit_executed,
         blocks_mtu_h5_closure: true,
       },
       q27: {
@@ -233,15 +253,16 @@ function objectRows(object) {
 
 function renderMarkdown(report) {
   const totals = report.bucket_totals;
+  const q19Details = report.remaining_lane_status.q19;
   const questionRows = [
     ['q3', report.question_bucket_counts.q3.failed, report.question_bucket_counts.q3.review_required, 'clean after q3 fixture execution'],
-    ['q19', report.question_bucket_counts.q19.failed, report.question_bucket_counts.q19.review_required, LANE_DETAILS.q19.status],
+    ['q19', report.question_bucket_counts.q19.failed, report.question_bucket_counts.q19.review_required, q19Details.status],
     ['q27', report.question_bucket_counts.q27.failed, report.question_bucket_counts.q27.review_required, LANE_DETAILS.q27.status],
     ['q15', report.question_bucket_counts.q15.failed, report.question_bucket_counts.q15.review_required, LANE_DETAILS.q15.status],
     ['global negative guard', 0, 0, `${report.question_bucket_counts.global_negative_guard.passed} passed`],
   ];
   const laneRows = [
-    ['q19', LANE_DETAILS.q19.summary],
+    ['q19', q19Details.diagnostic_focus],
     ['q27', LANE_DETAILS.q27.summary],
     ['q15', LANE_DETAILS.q15.summary],
   ];
@@ -284,7 +305,7 @@ ${markdownTable(['Surface', 'Failed', 'Review required', 'Status'], questionRows
 ## Remaining Blockers
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
-- q19 remains a source/graph/procedure/reasoning review blocker: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
+- q19 remains a ${q19Details.status === 'source_graph_reasoning_review_blocker' ? 'source/graph/reasoning review blocker' : 'source/graph/procedure/reasoning review blocker'}: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
 - q27 remains an incidence/scaling/levy-capacity/procedure blocker: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
 - q15 remains an answer-skill/procedure semantic-fit review blocker: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
 - MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
