@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-3-diagnostic-readiness-remediation-plan",
+  "sprint_id": "INSPECT-11A",
+  "generated_date": "2026-06-17",
+  "status": "planning_evidence_readiness_remediation_design",
+  "diagnostic_report_generated": false,
+  "evidence_pack_generated": false,
+  "compliance_claim": false,
+  "personal_data_present": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "strategic_product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "original_sprint_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md#inspect-11a---chapter-13-diagnostic-readiness-remediation-plan",
+  "controlling_prior_output": "reports/inspection-standards/internal-diagnostic-scope-readiness.json",
+  "sprint_plan": "archive/sprints/INSPECT-11A/INSPECT-11A-sprint-plan.md",
+  "evidence_checkout": {
+    "platform_branch": "codex/inspect-11a-chapter-13-readiness-remediation-20260617",
+    "platform_base": "0c18948cebbff1b0adcc214e42d07d1e9063bdb8",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "8b007cd86a485518bca8881051e11f5272f162c7",
+    "lesson_evidence_mode": "read_only_junction"
+  },
+  "safe_use_note": "Internal Dutch planning and evidence-readiness remediation design only. Not a diagnostic report, evidence pack, teacher/school-facing artifact, public/external output, compliance claim, approval claim, inspection-ready claim, complete OP0 claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, school-obligation proof, school-SKA proof, product-route adoption gate, diagnostics/mastery/PV gate, Scale Gate closure, student-use authority, or product-use authority.",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1.",
+    "Cite product end-state and original sprint/gate spec.",
+    "Name non-negotiable requirements.",
+    "Include a core-requirement checklist.",
+    "Classify findings.",
+    "Include blocks, does_not_block, and proof_required_to_close for carried issues.",
+    "PASS WITH FLAGS may not carry a missing core requirement.",
+    "Dutch-only.",
+    "Planning/evidence-readiness remediation design only.",
+    "No new diagnostic report.",
+    "No evidence pack.",
+    "No teacher/school-facing or public/external output.",
+    "No dashboard gate, quality-ref integration, CI/package integration, Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student-use, or product-use authority.",
+    "No generated lesson-output mutation.",
+    "No protected-reference or source-registry mutation.",
+    "No personal-data processing.",
+    "No compliance, approval, inspection-ready, complete OP0, PTA-validity, summative-validity, classroom-implementation, school-obligation, or school-SKA claim."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state and operational_product_end_state"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "original_sprint_spec and controlling_prior_output"
+    },
+    {
+      "requirement": "Non-negotiables named",
+      "status": "met",
+      "evidence": "non_negotiable_requirements"
+    },
+    {
+      "requirement": "Chapter 1.3 targets inventoried",
+      "status": "met",
+      "evidence": "target_inventory"
+    },
+    {
+      "requirement": "Quality-ref/review reconciliation included",
+      "status": "met",
+      "evidence": "quality_ref_review_reconciliation"
+    },
+    {
+      "requirement": "Proof-record plan included per target",
+      "status": "met",
+      "evidence": "proof_record_plan"
+    },
+    {
+      "requirement": "Accessibility/support plan included",
+      "status": "met",
+      "evidence": "accessibility_support_plan"
+    },
+    {
+      "requirement": "Carried issues include REV-STD-1 fields",
+      "status": "met",
+      "evidence": "blocker_ledger"
+    },
+    {
+      "requirement": "PASS WITH FLAGS does not carry a missing core requirement",
+      "status": "met",
+      "evidence": "executive_decision.chapter_1_3_diagnostic_report_ready is false; missing proof remains blocking"
+    }
+  ],
+  "executive_decision": {
+    "summary": "Chapter 1.3 remains the best next planning/remediation candidate, but it is not ready for diagnostic report generation. The next route is a bounded remediation/proof sprint that first reconciles stale lesson-side quality-ref/review state, then creates reviewed proof, accessibility/support, and companion/advisory records.",
+    "chapter_1_3_remediation_plan_complete": true,
+    "chapter_1_3_diagnostic_report_ready": false,
+    "chapter_1_3_pack_strength_ready": false,
+    "recommended_next_route": "INSPECT-11B Chapter 1.3 quality-ref/review reconciliation and proof/accessibility/support remediation, not report generation",
+    "allowed_next_work_after_human_acceptance": [
+      "Chapter 1.3 quality-ref/review reconciliation as read-only planning or separately authorised lesson-side repair",
+      "Chapter 1.3 route-local proof-record creation for 1.3.1 through 1.3.4",
+      "Chapter 1.3 accessibility/support and companion/advisory evidence review",
+      "Explicit 1.3.4 reviewed integration/no-code decision"
+    ],
+    "forbidden_next_work_without_later_human_review": [
+      "Chapter 1.3 diagnostic report generation",
+      "evidence-pack generation",
+      "teacher/school-facing output",
+      "public/external output",
+      "dashboard gate or quality-ref integration",
+      "Scale Gate integration",
+      "product-route adoption",
+      "diagnostics/mastery/PV",
+      "student/product-use authority",
+      "generated lesson-output mutation",
+      "protected-reference mutation",
+      "personal-data processing",
+      "compliance or approval claims"
+    ]
+  },
+  "target_inventory": [
+    {
+      "paragraph_id": "1.3.1",
+      "title": "Aanbod",
+      "source_registry_status": "reviewed_final",
+      "exam_codes": [
+        "D1.12",
+        "D1.24"
+      ],
+      "skills": [
+        "A42",
+        "A49",
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "target_summary": "Supply curve, supply factors, movement along supply versus supply-curve shift.",
+      "review_evidence": "B1-MIGRATED-V5-TARGET-QUALITY-1, 2026-06-14",
+      "operation_chain_required": [
+        "identify supply event as changed supply versus changed quantity supplied",
+        "draw or shift the supply curve",
+        "explain input-cost and subsidy effects",
+        "name supply factors and distinguish shifts from movements"
+      ],
+      "answer_forms_required": [
+        "graphical curve-shift answer",
+        "short written explanation"
+      ],
+      "source_authority_boundary": "Source-registry target finality only; no diagnostic, pack-strength, product-route, or school-facing authority."
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "title": "Marktevenwicht",
+      "source_registry_status": "reviewed_final",
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15"
+      ],
+      "skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A49",
+        "A51"
+      ],
+      "target_summary": "Solve market equilibrium, substitute to find quantity, draw curves/equilibrium, and identify surplus or shortage at a non-equilibrium price.",
+      "review_evidence": "B1-MIGRATED-V5-TARGET-QUALITY-1, 2026-06-14",
+      "operation_chain_required": [
+        "set demand equal to supply and solve price",
+        "substitute price to calculate quantity",
+        "draw demand and supply curves with equilibrium",
+        "compare quantities at a non-equilibrium price"
+      ],
+      "answer_forms_required": [
+        "algebraic calculation with substitution",
+        "graph",
+        "surplus or shortage naming"
+      ],
+      "source_authority_boundary": "Source-registry target finality only; no diagnostic, pack-strength, product-route, or school-facing authority."
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "title": "Verschuivingen en nieuw evenwicht",
+      "source_registry_status": "reviewed_final",
+      "exam_codes": [
+        "A2.10",
+        "A2.12",
+        "A2.15",
+        "D1.4b",
+        "D1.12",
+        "D1.24"
+      ],
+      "skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "A49",
+        "D13",
+        "D32",
+        "D33",
+        "D47"
+      ],
+      "target_summary": "One-shift equilibrium effects plus simultaneous demand/supply shift ambiguity where price depends on relative magnitudes.",
+      "review_evidence": "B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1, 2026-06-15",
+      "operation_chain_required": [
+        "calculate one-shift equilibrium",
+        "draw graph shifts and arrows",
+        "isolate demand and supply effects",
+        "reason that both-right shifts raise quantity while price is ambiguous without relative magnitudes",
+        "use calculation to confirm price direction where data is supplied"
+      ],
+      "answer_forms_required": [
+        "calculation",
+        "graph shift",
+        "verbal explanation of ambiguous price effect"
+      ],
+      "source_authority_boundary": "Protected-reference and target-registry authority only; no diagnostic, pack-strength, product-route, or school-facing authority."
+    },
+    {
+      "paragraph_id": "1.3.4",
+      "title": "Gemengde opgaven",
+      "source_registry_status": "reviewed_final",
+      "exam_codes": [],
+      "paragraph_kind": "gemengde_opgaven",
+      "introduces_new_theory": false,
+      "skills": [
+        "A02",
+        "A04",
+        "A06",
+        "A42",
+        "A49",
+        "A51",
+        "D13",
+        "D32",
+        "D33"
+      ],
+      "target_summary": "Reviewed no-new-theory integration target for notebooks, demand/supply functions, non-equilibrium price, and one-shift scenarios; excludes simultaneous-shift reasoning.",
+      "review_evidence": "B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1, 2026-06-12",
+      "operation_chain_required": [
+        "combine demand and supply functions",
+        "solve equilibrium",
+        "interpret non-equilibrium price",
+        "apply one-shift scenarios only"
+      ],
+      "answer_forms_required": [
+        "integrated calculation",
+        "graph reading",
+        "short explanation"
+      ],
+      "source_authority_boundary": "Reviewed integration/no-new-theory target in source registry only; no diagnostic, pack-strength, product-route, or school-facing authority."
+    }
+  ],
+  "quality_ref_review_reconciliation": [
+    {
+      "paragraph_id": "1.3.1",
+      "quality_ref_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-quality-ref.yaml",
+      "quality_ref_state": "stale_blocker_language",
+      "review_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1-review.md",
+      "review_state": "later_review_records_correction",
+      "current_reconciliation_status": "conflicting_stale_quality_ref_reconciled_as_blocking_until_refreshed",
+      "finding": "The quality ref still says blocker: numerical graph-text mismatch in supply figures. The later review records the previous graph-text mismatch as corrected and treats remaining points as non-blocking refinement flags.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "blocks": [
+        "clean Chapter 1.3 diagnostic consideration",
+        "quality-ref reliance without refresh",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "naming Chapter 1.3 as a later remediation candidate"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile `1.3.1-quality-ref.yaml` against `1.3.1-review.md`, with reviewer confirmation that the graph-text mismatch is corrected and remaining flags are non-blocking for the intended route."
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "quality_ref_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-quality-ref.yaml",
+      "quality_ref_state": "stale_migrated_from_v4_needs_v5_review",
+      "review_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2-review.md",
+      "review_state": "pass_with_flags_after_specific_prompt_correction",
+      "current_reconciliation_status": "stale_quality_ref_conflicts_with_newer_source_registry_reviewed_final",
+      "finding": "The quality ref still says migrated_from_v4_needs_v5_review and cp6_quality_ready false, while source registry records reviewed_final and the review records corrected subsidy wording plus only maintenance flags.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "blocks": [
+        "clean Chapter 1.3 diagnostic consideration",
+        "claim that lesson-side quality-ref state is current",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later proof/remediation work"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile `1.3.2-quality-ref.yaml`, source-registry reviewed_final evidence, and `1.3.2-review.md`; decide whether duplicate opgaven remain a harmless maintenance flag or proof-use carry."
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "quality_ref_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-quality-ref.yaml",
+      "quality_ref_state": "stale_migrated_from_v4_needs_v5_review",
+      "review_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3-review.md",
+      "review_state": "pass_with_flags_after_stale_reference_and_ambiguity_correction",
+      "current_reconciliation_status": "stale_quality_ref_conflicts_with_newer_source_registry_reviewed_final",
+      "finding": "The quality ref still says migrated_from_v4_needs_v5_review and cp6_quality_ready false, while the source registry records reviewed_final and the review records corrected stale forward reference and ambiguity wording.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "blocks": [
+        "clean Chapter 1.3 diagnostic consideration",
+        "claim that simultaneous-shift proof is lesson-side current",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later proof/remediation work"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile `1.3.3-quality-ref.yaml`, source-registry reviewed_final evidence, and `1.3.3-review.md`; explicitly carry or close duplicate-opgaven and simultaneous-shift proof risks."
+    },
+    {
+      "paragraph_id": "1.3.4",
+      "quality_ref_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-quality-ref.yaml",
+      "quality_ref_state": "stale_placeholder_needs_review",
+      "review_file": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4-review.md",
+      "review_state": "pass_with_flags_before_later_source_registry_integration_target_finality",
+      "current_reconciliation_status": "stale_quality_ref_and_review_conflict_with_newer_reviewed_integration_target",
+      "finding": "The quality ref and review still describe the target as placeholder/not promoted, while the source registry now records a reviewed no-new-theory integration target.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "blocks": [
+        "clean Chapter 1.3 diagnostic consideration",
+        "using 1.3.4 as diagnostic integration target without explicit decision",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later proof/remediation work"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile `1.3.4-quality-ref.yaml`, `1.3.4-review.md`, and the reviewed integration target; record explicit no-new-theory/no-code diagnostic posture."
+    }
+  ],
+  "proof_record_plan": [
+    {
+      "paragraph_id": "1.3.1",
+      "planned_proof_status": "required_before_diagnostic_consideration",
+      "operation_chain_proof_required": [
+        "trace every supply factor exercise to movement versus shift",
+        "verify graph coordinates and text align after the recorded correction",
+        "verify cost/subsidy examples use safe supply-curve logic"
+      ],
+      "answer_form_proof_required": [
+        "graphical shift answer",
+        "short written explanation",
+        "factor naming"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Verify opgaven ask first and answers/model route are separate; classify early-start hints as support evidence, not as target proof.",
+      "scaffold_audit_plan": {
+        "evidence_paths": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – opgaven.md",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.1 Aanbod/1.3.1 Aanbod – antwoorden.md"
+        ],
+        "pre_attempt_surface_checked": "Supply-factor and curve-shift opgaven before answer/model text.",
+        "hint_visibility_before_attempt": "Record whether early-start hints are visible before the learner commits to a supply movement/shift answer; if visible, classify as support scaffold rather than answer leakage.",
+        "answer_model_reveal_point": "Answers/model route must remain in the separate antwoorden surface or after the opgave attempt boundary.",
+        "repair_after_answer_route": "Worked feedback should point to curve direction, movement-versus-shift distinction, and corrected graph/text coordinates without asserting mastery.",
+        "reviewer_decision_required": "pass, carry as weak support, or block proof use if answer/model content appears before attempt."
+      },
+      "local_only_vs_generalisable_authority": "Route-local proof can support only later internal diagnostic consideration if all blockers are closed; it does not generalise to pack-strength or school-facing claims.",
+      "proof_required_to_close": "Reviewed proof record matching operation chain, answer forms, corrected graph-text evidence, scaffold boundary, and carried support/accessibility flags."
+    },
+    {
+      "paragraph_id": "1.3.2",
+      "planned_proof_status": "required_before_diagnostic_consideration",
+      "operation_chain_proof_required": [
+        "verify demand equals supply solving steps",
+        "verify substitution quantity calculation",
+        "verify equilibrium graph construction",
+        "verify surplus/shortage classification at non-equilibrium prices"
+      ],
+      "answer_form_proof_required": [
+        "algebraic calculation",
+        "graph",
+        "surplus or shortage naming"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Verify opgaven ask first and answers/model route are separate; duplicate opgaven pattern must be classified as harmless maintenance flag or proof-use carry.",
+      "scaffold_audit_plan": {
+        "evidence_paths": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – opgaven.md",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.2 Marktevenwicht/1.3.2 Marktevenwicht – antwoorden.md"
+        ],
+        "pre_attempt_surface_checked": "Equilibrium, substitution, graph, and surplus/shortage opgaven before answer/model text.",
+        "hint_visibility_before_attempt": "Record whether hints reveal equation setup or only remind the learner to equate demand and supply.",
+        "answer_model_reveal_point": "Worked calculation and graph answers must remain in the separate antwoorden surface or after the opgave attempt boundary.",
+        "repair_after_answer_route": "Worked feedback should point to equation setup, substitution check, and surplus/shortage comparison without asserting diagnostics or mastery.",
+        "reviewer_decision_required": "pass, carry duplicate-opgaven as harmless maintenance, carry duplicate-opgaven as proof-use flag, or block proof use if answer/model content appears before attempt."
+      },
+      "local_only_vs_generalisable_authority": "Route-local proof can support only later internal diagnostic consideration if stale quality-ref state is reconciled; it does not generalise to pack-strength or school-facing claims.",
+      "proof_required_to_close": "Reviewed proof record matching equilibrium operation chain, answer forms, subsidy correction, duplicate-opgaven decision, scaffold boundary, and carried support/accessibility flags."
+    },
+    {
+      "paragraph_id": "1.3.3",
+      "planned_proof_status": "required_before_diagnostic_consideration",
+      "operation_chain_proof_required": [
+        "verify one-shift calculation and graph shift tasks",
+        "verify isolated demand and supply effect reasoning",
+        "verify simultaneous both-right shift reasoning",
+        "verify price ambiguity and quantity-rise language"
+      ],
+      "answer_form_proof_required": [
+        "calculation",
+        "graph shift",
+        "verbal ambiguity explanation"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Verify opgaven ask first and answers/model route are separate; distinguish target proof from extension/support tasks.",
+      "scaffold_audit_plan": {
+        "evidence_paths": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – opgaven.md",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.3 Verschuivingen en nieuw evenwicht/1.3.3 Verschuivingen en nieuw evenwicht – antwoorden.md"
+        ],
+        "pre_attempt_surface_checked": "One-shift and simultaneous-shift opgaven before answer/model text.",
+        "hint_visibility_before_attempt": "Record whether hints preserve price-ambiguity reasoning or reveal the conclusion before the learner attempts it.",
+        "answer_model_reveal_point": "Worked effect-isolation and ambiguity explanations must remain in the separate antwoorden surface or after the opgave attempt boundary.",
+        "repair_after_answer_route": "Worked feedback should point to isolated demand/supply effects, both-right quantity effect, and price ambiguity without asserting mastery.",
+        "reviewer_decision_required": "pass, carry weak simultaneous-shift support, or block proof use if answer/model content appears before attempt."
+      },
+      "local_only_vs_generalisable_authority": "Route-local proof can support only later internal diagnostic consideration if stale quality-ref state and simultaneous-shift proof risks are reconciled; it does not generalise to pack-strength or school-facing claims.",
+      "proof_required_to_close": "Reviewed proof record matching one-shift and simultaneous-shift operation chains, answer forms, ambiguity wording, scaffold boundary, and carried support/accessibility flags."
+    },
+    {
+      "paragraph_id": "1.3.4",
+      "planned_proof_status": "required_before_diagnostic_consideration",
+      "operation_chain_proof_required": [
+        "verify integrated demand and supply function work",
+        "verify equilibrium solving and graph reading",
+        "verify non-equilibrium price interpretation",
+        "verify one-shift-only boundary and exclusion of simultaneous-shift reasoning"
+      ],
+      "answer_form_proof_required": [
+        "integrated calculation",
+        "graph reading",
+        "short explanation"
+      ],
+      "scaffold_no_answer_before_attempt_boundary": "Verify mixed opgaven ask first and answers/model route are separate; record no-new-theory boundary explicitly.",
+      "scaffold_audit_plan": {
+        "evidence_paths": [
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – opgaven.md",
+          "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.3 Hoofdstuk Aanbod en marktevenwicht/1.3.4 Gemengde opgaven/1.3.4 Gemengde opgaven – antwoorden.md"
+        ],
+        "pre_attempt_surface_checked": "Mixed equilibrium, graph-reading, non-equilibrium price, and one-shift opgaven before answer/model text.",
+        "hint_visibility_before_attempt": "Record whether any hint introduces new theory or simultaneous-shift reasoning; such content must be carried as out of target.",
+        "answer_model_reveal_point": "Integrated calculation and graph-reading answers must remain in the separate antwoorden surface or after the opgave attempt boundary.",
+        "repair_after_answer_route": "Worked feedback should point to the relevant earlier Chapter 1.3 procedure and one-shift boundary without creating a new target.",
+        "reviewer_decision_required": "pass, carry no-new-theory boundary risk, or block proof use if answer/model content appears before attempt."
+      },
+      "local_only_vs_generalisable_authority": "Route-local proof can support only later internal diagnostic consideration if the reviewed integration/no-code decision is explicit; it does not generalise to pack-strength or school-facing claims.",
+      "proof_required_to_close": "Reviewed proof record matching the integration target, no-new-theory/no-code posture, answer forms, scaffold boundary, and carried support/accessibility flags."
+    }
+  ],
+  "chapter_1_3_4_decision": {
+    "decision_for_inspect_11a": "explicit_no_report_decision_with_required_later_reviewed_integration_no_code_record",
+    "rationale": "The source registry now records 1.3.4 as a reviewed no-new-theory integration target with no exam codes, but lesson-side quality-ref/review files remain stale. INSPECT-11A therefore may plan the decision but may not use 1.3.4 as a diagnostic target until a later review reconciles those surfaces.",
+    "blocks": [
+      "using 1.3.4 in any Chapter 1.3 diagnostic report",
+      "claiming Chapter 1.3 diagnostic readiness",
+      "pack-strength or teacher/school-facing reliance"
+    ],
+    "does_not_block": [
+      "INSPECT-11A planning closure",
+      "planning later 1.3.4 integration/no-code review"
+    ],
+    "proof_required_to_close": "Later reviewed integration/no-code record confirming that 1.3.4 introduces no new theory, needs no direct exam-code link, excludes simultaneous-shift reasoning, and is safe only as a consolidation target."
+  },
+  "accessibility_support_plan": [
+    {
+      "dimension": "mobile_responsive",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Capture or review responsive layout evidence for Chapter 1.3 static lesson surfaces and any future diagnostic-rendered surface.",
+      "blocks": [
+        "accessibility-strength claim",
+        "pack-strength reliance",
+        "teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed mobile/responsive evidence naming viewport coverage and any layout limitations."
+    },
+    {
+      "dimension": "contrast_theme",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Review contrast/theme evidence for diagrams, tables, and rendered text, including light/dark or print/PDF implications where relevant.",
+      "blocks": [
+        "contrast or theme accessibility claim",
+        "pack-strength reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed contrast/theme record or explicit not-applicable decision per cited surface."
+    },
+    {
+      "dimension": "semantic_pdf",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Review heading/table/figure semantics and PDF rendering expectations for cited static surfaces.",
+      "blocks": [
+        "semantic or PDF accessibility claim",
+        "teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed semantic/PDF evidence or explicit limitation record."
+    },
+    {
+      "dimension": "keyboard_focus_applicability",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Review whether the cited Chapter 1.3 surfaces are static Markdown/HTML/PDF or include interactive routes. For static-only surfaces, record an explicit not-applicable decision; for any interactive or future diagnostic-rendered surface, review keyboard navigation and focus visibility.",
+      "blocks": [
+        "keyboard/focus accessibility claim",
+        "interactive diagnostic-surface reliance",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed keyboard/focus applicability decision for static surfaces, or reviewed keyboard navigation and focus-visible evidence for any interactive surface."
+    },
+    {
+      "dimension": "text_equivalent_alt_caption",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Review image alt text, captions, text alternatives, and graph descriptions for Chapter 1.3 figures.",
+      "blocks": [
+        "text-equivalent accessibility claim",
+        "graph-heavy diagnostic reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed text-equivalent record for each cited graph/figure or explicit carry decision."
+    },
+    {
+      "dimension": "internal_code_and_inclusive_language",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Review whether internal codes, stale migration labels, or inaccessible/inclusive-language risks appear in student-facing or diagnostic-facing text.",
+      "blocks": [
+        "clean teacher/school-facing text claim",
+        "public/external output claim"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed internal-code exposure and inclusive-language record."
+    },
+    {
+      "dimension": "hints_repair",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Use `support_usefulness_plan.hints_repair_by_target` to review hint and repair routes separately from target proof, especially early-start hints and answer-model feedback.",
+      "blocks": [
+        "support-strength claim",
+        "student-use authority",
+        "diagnostics/mastery/PV reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed per-target hints/repair record, or explicit carry decision naming weak/absent routes."
+    },
+    {
+      "dimension": "companion_advisory_route",
+      "status": "missing_required_evidence",
+      "plan": "Use `support_usefulness_plan.companion_advisory_by_target` to review companion visual evidence, advisory short-checks, or explicit not-applicable decisions per target.",
+      "blocks": [
+        "companion/advisory claim",
+        "support-strength claim",
+        "teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later Chapter 1.3 support remediation"
+      ],
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-required decision for 1.3.1 through 1.3.4."
+    },
+    {
+      "dimension": "next_action_evidence",
+      "status": "required_before_diagnostic_consideration",
+      "plan": "Use `support_usefulness_plan.next_actions_by_target` to review whether learners receive safe next-action routes after errors or weak answers; keep this separate from school-owned intervention claims.",
+      "blocks": [
+        "next-action support claim",
+        "diagnostics/mastery/PV reliance",
+        "student-use authority"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Reviewed per-target next-action evidence and product/school support-boundary statement."
+    },
+    {
+      "dimension": "product_school_support_boundary",
+      "status": "required_boundary",
+      "plan": "Tie every support record to `support_usefulness_plan.product_school_support_boundary`: product evidence may describe practice, feedback, and known gaps only; school monitoring, interventions, accommodations, PTA, summative, classroom implementation, and SKA remain school-owned.",
+      "blocks": [
+        "school implementation claim",
+        "PTA or summative claim",
+        "school-SKA claim",
+        "compliance or approval claim"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure"
+      ],
+      "proof_required_to_close": "Legal/privacy/claims review confirms the boundary language remains non-authoritative."
+    }
+  ],
+  "support_usefulness_plan": {
+    "hints_repair_by_target": [
+      {
+        "paragraph_id": "1.3.1",
+        "support_route_inspected": "Early supply-factor and curve-shift opgaven plus worked answer/model feedback.",
+        "useful_repair_counts_as": "Feedback helps the learner distinguish movement along the supply curve from a supply-curve shift, check graph direction/coordinates, and revisit input-cost or subsidy logic.",
+        "absent_or_weak_evidence_to_check": "The 1.3.1 review flags limited explicit early-start hints; the stale quality-ref blocker must not be treated as closed support evidence until reconciled.",
+        "proof_required_to_close": "Reviewer records whether hints are absent, non-revealing, or answer-leaking; records whether answer feedback gives a safe repair route; and classifies remaining hint weakness as blocking or non-blocking for the intended route."
+      },
+      {
+        "paragraph_id": "1.3.2",
+        "support_route_inspected": "Equilibrium-calculation, graph, and surplus/shortage opgaven plus worked answer/model feedback.",
+        "useful_repair_counts_as": "Feedback points the learner to set demand equal to supply, substitute price to quantity, compare Qv/Qa at a non-equilibrium price, and correct graph placement.",
+        "absent_or_weak_evidence_to_check": "Duplicate opgaven pattern and stale quality-ref status must be classified before support reliance.",
+        "proof_required_to_close": "Reviewer records whether the support route helps repair equation setup, substitution, and shortage/surplus classification without revealing answers before attempt."
+      },
+      {
+        "paragraph_id": "1.3.3",
+        "support_route_inspected": "One-shift and simultaneous-shift opgaven plus worked answer/model feedback.",
+        "useful_repair_counts_as": "Feedback helps the learner isolate demand and supply effects, preserve the both-right quantity-rise conclusion, and explain price ambiguity only when relative magnitudes are unknown.",
+        "absent_or_weak_evidence_to_check": "Any hint that gives away price ambiguity before the attempt must be carried; duplicate opgaven and stale quality-ref state remain unresolved until reviewed.",
+        "proof_required_to_close": "Reviewer records whether hints preserve reasoning, whether feedback repairs incorrect price/quantity conclusions, and whether simultaneous-shift support remains a carry flag."
+      },
+      {
+        "paragraph_id": "1.3.4",
+        "support_route_inspected": "Mixed integrated opgaven plus worked answer/model feedback.",
+        "useful_repair_counts_as": "Feedback points the learner back to the relevant earlier Chapter 1.3 procedure, helps repair equilibrium/non-equilibrium/one-shift errors, and does not introduce new theory.",
+        "absent_or_weak_evidence_to_check": "Because lesson-side files still describe the target as placeholder/not promoted, support usefulness cannot be relied on until the integration/no-code posture is reconciled.",
+        "proof_required_to_close": "Reviewer records whether feedback stays inside the reviewed no-new-theory integration boundary and whether any new-theory or simultaneous-shift content must be carried as out of target."
+      }
+    ],
+    "companion_advisory_by_target": [
+      {
+        "paragraph_id": "1.3.1",
+        "companion_visual_evidence": "No companion visual review file found in the inspected Chapter 1.3 evidence set.",
+        "advisory_short_check_evidence": "No reviewed advisory short-check evidence found.",
+        "not_applicable_decision_needed": true,
+        "rationale": "Supply graphs are visual enough that absence of companion/advisory evidence blocks support-strength claims unless a reviewer explicitly decides the route is not required for the intended diagnostic posture.",
+        "next_remediation_action": "Add reviewed companion/advisory evidence or record an explicit not-applicable decision with rationale.",
+        "proof_required_to_close": "Per-target companion/advisory review decision for 1.3.1."
+      },
+      {
+        "paragraph_id": "1.3.2",
+        "companion_visual_evidence": "No companion visual review file found in the inspected Chapter 1.3 evidence set.",
+        "advisory_short_check_evidence": "No reviewed advisory short-check evidence found.",
+        "not_applicable_decision_needed": true,
+        "rationale": "Equilibrium calculation and graph work may need a narrower retry/check route; absence blocks advisory-support claims.",
+        "next_remediation_action": "Add reviewed companion/advisory evidence or record an explicit not-applicable decision with rationale.",
+        "proof_required_to_close": "Per-target companion/advisory review decision for 1.3.2."
+      },
+      {
+        "paragraph_id": "1.3.3",
+        "companion_visual_evidence": "No companion visual review file found in the inspected Chapter 1.3 evidence set.",
+        "advisory_short_check_evidence": "No reviewed advisory short-check evidence found.",
+        "not_applicable_decision_needed": true,
+        "rationale": "Simultaneous-shift ambiguity is a high-risk reasoning point; advisory or explicit not-required evidence is needed before support-strength reliance.",
+        "next_remediation_action": "Add reviewed companion/advisory evidence or record an explicit not-applicable decision with rationale.",
+        "proof_required_to_close": "Per-target companion/advisory review decision for 1.3.3."
+      },
+      {
+        "paragraph_id": "1.3.4",
+        "companion_visual_evidence": "No companion visual review file found in the inspected Chapter 1.3 evidence set.",
+        "advisory_short_check_evidence": "No reviewed advisory short-check evidence found.",
+        "not_applicable_decision_needed": true,
+        "rationale": "Mixed opgaven need a safe next route that points back to prior procedures without implying a new target; absence blocks support-strength reliance.",
+        "next_remediation_action": "Add reviewed companion/advisory evidence or record an explicit not-applicable decision with rationale.",
+        "proof_required_to_close": "Per-target companion/advisory review decision for 1.3.4."
+      }
+    ],
+    "next_actions_by_target": [
+      {
+        "paragraph_id": "1.3.1",
+        "weak_answer_or_error_case": "Learner confuses movement with shift, reverses supply-curve direction, or mismatches graph/text quantities.",
+        "allowed_product_next_actions": [
+          "retry the same opgave after checking movement-versus-shift criteria",
+          "reread the supply-factor explanation in the paragraph",
+          "inspect worked feedback for graph direction and coordinate consistency",
+          "practice a narrower supply-factor classification item"
+        ],
+        "forbidden_next_actions": [
+          "diagnose mastery status",
+          "trigger teacher intervention",
+          "claim school support completion",
+          "issue grade or summative judgement"
+        ],
+        "proof_required_to_close": "Reviewed next-action route naming the allowed product action and preserving the forbidden school/product-authority boundary."
+      },
+      {
+        "paragraph_id": "1.3.2",
+        "weak_answer_or_error_case": "Learner solves equilibrium incorrectly, skips substitution, misdraws graph, or misclassifies shortage/surplus.",
+        "allowed_product_next_actions": [
+          "retry the calculation using demand equals supply",
+          "reread the equilibrium worked example",
+          "inspect worked feedback for substitution and Qv/Qa comparison",
+          "practice a narrower equation-solving or graph-reading item"
+        ],
+        "forbidden_next_actions": [
+          "diagnose mastery status",
+          "trigger teacher intervention",
+          "claim school support completion",
+          "issue grade or summative judgement"
+        ],
+        "proof_required_to_close": "Reviewed next-action route naming the allowed product action and preserving the forbidden school/product-authority boundary."
+      },
+      {
+        "paragraph_id": "1.3.3",
+        "weak_answer_or_error_case": "Learner treats simultaneous both-right shifts as a fixed price direction, misses quantity rise, or fails to isolate effects.",
+        "allowed_product_next_actions": [
+          "retry by listing demand effect and supply effect separately",
+          "reread the shift-and-new-equilibrium explanation",
+          "inspect worked feedback for price ambiguity and quantity effect",
+          "practice a narrower one-shift item before returning to simultaneous shifts"
+        ],
+        "forbidden_next_actions": [
+          "diagnose mastery status",
+          "trigger teacher intervention",
+          "claim school support completion",
+          "issue grade or summative judgement"
+        ],
+        "proof_required_to_close": "Reviewed next-action route naming the allowed product action and preserving the forbidden school/product-authority boundary."
+      },
+      {
+        "paragraph_id": "1.3.4",
+        "weak_answer_or_error_case": "Learner mixes procedures, applies simultaneous-shift reasoning, or treats mixed opgaven as new theory.",
+        "allowed_product_next_actions": [
+          "retry after identifying which earlier Chapter 1.3 procedure applies",
+          "reread the relevant earlier paragraph section",
+          "inspect worked feedback for equilibrium, graph reading, non-equilibrium price, or one-shift steps",
+          "practice a narrower earlier-target item before returning to mixed opgaven"
+        ],
+        "forbidden_next_actions": [
+          "diagnose mastery status",
+          "trigger teacher intervention",
+          "claim school support completion",
+          "issue grade or summative judgement",
+          "introduce simultaneous-shift reasoning as part of the 1.3.4 target"
+        ],
+        "proof_required_to_close": "Reviewed next-action route naming the allowed product action, preserving the no-new-theory boundary, and preserving the forbidden school/product-authority boundary."
+      }
+    ],
+    "product_school_support_boundary": {
+      "allowed_product_support_statements": [
+        "The product provides practice prompts.",
+        "The product provides worked feedback or answer-model text where reviewed.",
+        "The product can point learners to retry, reread a cited section, inspect worked feedback, or practice a narrower skill where that route is reviewed.",
+        "The product records known weak or missing support evidence as blockers."
+      ],
+      "forbidden_school_owned_claims": [
+        "The school has implemented the support route.",
+        "A teacher intervention has occurred or is required.",
+        "A care plan, accommodation, or remediation duty is satisfied.",
+        "PTA, summative, grading, classroom implementation, school SKA, or inspection judgement is valid.",
+        "The learner has a diagnosed mastery status."
+      ],
+      "record_application": "Every later support record must cite the allowed product action it supports and explicitly avoid the forbidden school-owned claims."
+    }
+  },
+  "blocker_ledger": [
+    {
+      "id": "INSPECT11A-13-QUALITY-REF-REVIEW-RECONCILIATION",
+      "finding": "Chapter 1.3 lesson-side quality-ref and review state is stale or conflicting across all four targets.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "severity": "high",
+      "owner_surface": "lesson-side review/quality-ref plus platform remediation plan",
+      "blocks": [
+        "Chapter 1.3 diagnostic report generation",
+        "clean diagnostic readiness claim",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "selecting INSPECT-11B as a remediation/proof sprint"
+      ],
+      "proof_required_to_close": "Reviewed reconciliation for 1.3.1 through 1.3.4 that resolves stale quality refs, later reviews, source-registry status, and carried flags.",
+      "recommended_next_route": "INSPECT-11B first phase"
+    },
+    {
+      "id": "INSPECT11A-13-PROOF-RECORDS-MISSING",
+      "finding": "Chapter 1.3 lacks route-local proof records in the INSPECT-9C format.",
+      "classification": "scale_blocker",
+      "gap_type": "target-equivalent-proof-gap",
+      "severity": "high",
+      "owner_surface": "platform proof/remediation packet using read-only lesson evidence",
+      "blocks": [
+        "Chapter 1.3 diagnostic report generation",
+        "target-equivalent proof reliance",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later proof-record creation"
+      ],
+      "proof_required_to_close": "Reviewed proof records for 1.3.1 through 1.3.4 with operation-chain match, answer-form match, scaffold/no-answer-before-attempt boundary, local-only authority boundary, and carried flags.",
+      "recommended_next_route": "INSPECT-11B proof-record workstream"
+    },
+    {
+      "id": "INSPECT11A-134-INTEGRATION-NO-CODE-DECISION",
+      "finding": "1.3.4 needs an explicit reviewed integration/no-code diagnostic posture before it can be considered in a diagnostic scope.",
+      "classification": "scale_blocker",
+      "gap_type": "exam-code-linkage-gap",
+      "severity": "high",
+      "owner_surface": "platform remediation plan and later reviewed source/lesson reconciliation",
+      "blocks": [
+        "using 1.3.4 in Chapter 1.3 diagnostic report generation",
+        "Chapter 1.3 diagnostic readiness claim",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning the 1.3.4 integration/no-code review"
+      ],
+      "proof_required_to_close": "Reviewed record confirming 1.3.4 is no-new-theory integration, has an explicit no-code/no-direct-exam-code decision, and excludes simultaneous-shift reasoning.",
+      "recommended_next_route": "INSPECT-11B first phase"
+    },
+    {
+      "id": "INSPECT11A-13-ACCESSIBILITY-SUPPORT-PACKET",
+      "finding": "Chapter 1.3 lacks diagnostic-depth accessibility and support evidence.",
+      "classification": "scale_blocker",
+      "gap_type": "accessibility-evidence-gap",
+      "severity": "high",
+      "owner_surface": "platform proof/remediation packet using read-only lesson evidence",
+      "blocks": [
+        "accessibility-strength claim",
+        "support-strength claim",
+        "diagnostic readiness",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "planning later accessibility/support review"
+      ],
+      "proof_required_to_close": "Reviewed mobile/responsive, contrast/theme, semantic/PDF, keyboard/focus applicability, text-equivalent, internal-code/inclusive-language, hints/repair, companion/advisory, next-action, and product/school support-boundary evidence.",
+      "recommended_next_route": "INSPECT-11B accessibility/support workstream"
+    },
+    {
+      "id": "INSPECT11A-13-COMPANION-ADVISORY",
+      "finding": "No companion visual review files were found for 1.3.1 through 1.3.4, and advisory-route evidence is absent.",
+      "classification": "scale_blocker",
+      "gap_type": "support-evidence-gap",
+      "severity": "medium",
+      "owner_surface": "platform support review plus later lesson-side evidence if authorised",
+      "blocks": [
+        "companion/advisory claim",
+        "support-strength claim",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11A planning closure",
+        "route-local target proof planning if carried visibly"
+      ],
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decisions per target.",
+      "recommended_next_route": "INSPECT-11B support workstream"
+    },
+    {
+      "id": "INSPECT11A-13-CHECK-SURFACE-AUTHORITY",
+      "finding": "Check-surface gate authority remains separate from Chapter 1.3 remediation planning.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-integration-risk",
+      "severity": "high",
+      "owner_surface": "human review gate outside INSPECT-11A",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product-use work relying on check-surface gate closure"
+      ],
+      "does_not_block": [
+        "ordinary scoped INSPECT-11A planning work",
+        "Chapter 1.3 proof/remediation planning with no authority claim"
+      ],
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and explicitly naming any authority unlocked.",
+      "recommended_next_route": "separate human gate; not INSPECT-11A"
+    }
+  ],
+  "finding_classification": [
+    {
+      "finding": "Chapter 1.3 is the best next planning/remediation candidate, not a diagnostic-report scope.",
+      "classification": "core_requirement_met",
+      "gap_type": "planning_recommendation",
+      "blocks": "Chapter 1.3 diagnostic report generation until reconciliation, proof, accessibility/support, companion/advisory, specialist gate, and human review are complete.",
+      "does_not_block": "INSPECT-11A closure and planning INSPECT-11B.",
+      "proof_required_to_close": "Human-reviewed later remediation packet with all blockers closed or explicitly carried without missing core requirements."
+    },
+    {
+      "finding": "All Chapter 1.3 targets have reviewed source-registry finality, but lesson-side quality-ref/review state is stale or conflicting.",
+      "classification": "scale_blocker",
+      "gap_type": "quality-ref-review-reconciliation-gap",
+      "blocks": "Diagnostic readiness, quality-ref reliance, and pack-strength claims.",
+      "does_not_block": "Source-registry inventory and planning a reconciliation route.",
+      "proof_required_to_close": "Reviewed reconciliation records per target."
+    },
+    {
+      "finding": "1.3.4 has a reviewed integration target but no direct exam codes.",
+      "classification": "scale_blocker",
+      "gap_type": "exam-code-linkage-gap",
+      "blocks": "Using 1.3.4 in a diagnostic scope without explicit no-code/no-new-theory decision.",
+      "does_not_block": "Planning the decision route.",
+      "proof_required_to_close": "Reviewed integration/no-code record."
+    },
+    {
+      "finding": "Chapter 1.3 accessibility/support and companion/advisory evidence is below diagnostic-readiness depth.",
+      "classification": "scale_blocker",
+      "gap_type": "accessibility-evidence-gap",
+      "blocks": "Accessibility/support claims, pack-strength reliance, and teacher/school-facing reliance.",
+      "does_not_block": "INSPECT-11A planning closure.",
+      "proof_required_to_close": "Reviewed accessibility/support packet and companion/advisory record."
+    }
+  ],
+  "next_action": "Send INSPECT-11A for subagent lead/specialist review, validation, PR CI, and then human review. If accepted, plan INSPECT-11B as Chapter 1.3 quality-ref/review reconciliation plus proof/accessibility/support remediation only; do not generate a Chapter 1.3 diagnostic report."
+}
