@@ -86,14 +86,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v2.3-inspect-10b-internal-diagnostic-report",
+      "version": "v2.4-inspect-10c-diagnostic-stability",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
       "updated_on": "2026-06-16",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B implements only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B merged only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. INSPECT-10C is the active diagnostic generator review/stability-hardening step for Markdown/JSON alignment, source-hash stability, refusal coverage, blocker visibility, and stable post-merge owner action. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard, quality-ref, Scale Gate, generated lesson-output, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",

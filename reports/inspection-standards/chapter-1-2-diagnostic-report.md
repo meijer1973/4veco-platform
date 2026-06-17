@@ -94,7 +94,7 @@ Source: `reports/inspection-standards/dutch-report-only-generator-diagnostic-pla
 
 ## owner_next_action
 
-Send INSPECT-10B for lead review and human review as an internal diagnostic generator only; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.
+Keep this as a manually invoked internal diagnostic generator only. Review and harden stability before any broader diagnostic scope; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.
 
 Source: `reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json`
 
@@ -149,12 +149,17 @@ Default run generated only the allowlisted internal diagnostic report pair.
 | `reports/inspection-standards/dutch-evidence-scale-readiness.json` | `154de37d192a1dc3c6c587ac3a6629c7669af3be4d43a2be7534cb38f7a4c3e0` | 20304 |
 | `reports/inspection-standards/dutch-evidence-gap-closure-plan.json` | `ede8f63819f9cf157c715150df8a3ef986c43405f2c85aeee0f4dd010cdf089c` | 22749 |
 | `reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json` | `58addd68e96d99c948ef4999799a7a6c770449e771abb8b052b4845a5045f178` | 38467 |
-| `docs/roadmaps/quality-standards/quality-standards-end-state.md` | `ca5c6fccb0c72f48c6bf2071b227ef7c281211fc609df3d007ca7d13983a3ff7` | 9003 |
+| `docs/roadmaps/quality-standards/quality-standards-end-state.md` | `a4c2395cb41635c7190a24eb3a480097d9c112265b9ae0ae6e36ebe6981a1f42` | 9239 |
 | `../4veco-lessen/specifications/product-end-state.md` | `48da85d599adc912997b357599919ea7916509f849c21c7a5814c80252493cfa` | 25844 |
 | `../4veco-lessen/specifications/product-vision.md` | `8e7e0c60c350146f1b8ece8bca8c41beab8c2d8ef4ae4874f77c121a226e08df` | 7890 |
 | `docs/inspection-standards/report-only-generator-plan.md` | `61e96d594b89cc217cdb3855ecb265855d98f1b814142e64d9ba236fee345ae4` | 9182 |
 | `docs/inspection-standards/evidence-pack-source-contract.md` | `4f6a248378e32dc97fe5194148343d1bfd1ccfe2f633eedcc2e088fc15c5bdca` | 6394 |
 | `docs/inspection-standards/report-only-validator-design.md` | `e788a5e0b67b2dd3c909bc10c4426b0223db6a1516290c1b6d8ecdf90cac2133` | 5417 |
+
+## Output Files Written
+
+- `reports/inspection-standards/chapter-1-2-diagnostic-report.md`
+- `reports/inspection-standards/chapter-1-2-diagnostic-report.json`
 
 ## Output Boundary
 

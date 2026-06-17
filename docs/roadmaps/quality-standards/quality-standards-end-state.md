@@ -195,6 +195,9 @@ The standards layer must not claim:
   an evidence pack, teacher/school-facing pack, public/external output, package
   script, CI/build gate, dashboard gate, quality-ref integration, Scale Gate
   integration, source-registry mutation, or generated lesson-output mutation.
+  INSPECT-10C is the scoped review/stability-hardening follow-up for that
+  manual internal tool only; it may not widen audience, authority, or
+  integration.
   Chapter 1.2 pack-strength generator work remains blocked pending later
   scoped authority.
 - Which source freshness interval is acceptable for Dutch inspection,
@@ -206,9 +209,10 @@ The standards layer must not claim:
 - Which mobile, contrast/theme, semantic/PDF, hint/repair, companion, and
   advisory-route evidence must close before Chapter 1.2 can move beyond
   diagnostic-only internal generator posture?
-- Does human review accept the INSPECT-10B internal diagnostic generator and
-  Chapter 1.2 diagnostic report pair as faithful to INSPECT-10A, with all
-  carried blockers visible and no downstream authority unlocked?
+- Does human review accept INSPECT-10C stability hardening of the INSPECT-10B
+  internal diagnostic generator and Chapter 1.2 diagnostic report pair, with
+  Markdown/JSON alignment, source-hash stability, refusal coverage, all carried
+  blockers visible, and no downstream authority unlocked?
 - Should Dutch quality-control evidence stay in platform reports only, or
   should selected summaries also become teacher/school-facing artifacts after
   review?

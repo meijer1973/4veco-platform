@@ -98,8 +98,8 @@
     },
     {
       "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
-      "sha256": "ca5c6fccb0c72f48c6bf2071b227ef7c281211fc609df3d007ca7d13983a3ff7",
-      "bytes": 9003
+      "sha256": "a4c2395cb41635c7190a24eb3a480097d9c112265b9ae0ae6e36ebe6981a1f42",
+      "bytes": 9239
     },
     {
       "path": "../4veco-lessen/specifications/product-end-state.md",
@@ -562,7 +562,7 @@
     "source": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json"
   },
   "owner_next_action": {
-    "action": "Send INSPECT-10B for lead review and human review as an internal diagnostic generator only; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.",
+    "action": "Keep this as a manually invoked internal diagnostic generator only. Review and harden stability before any broader diagnostic scope; do not use it for pack-strength, teacher/school-facing, public/external, or downstream gate work.",
     "source": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json"
   },
   "proof_required_to_close": [
