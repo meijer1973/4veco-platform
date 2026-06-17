@@ -1,24 +1,24 @@
 # Owned Content Coverage
 
-Generated: 2026-06-17T07:57:24Z
+Generated: 2026-06-17T08:13:42Z
 Status: INFO
 
 ## Summary
 
-- Nodes: 916
-- Edges: 1381
+- Nodes: 915
+- Edges: 1386
 - Paragraphs linked: 54
-- Units linked: 114
+- Units linked: 116
 - Terms linked: 46
-- Owned exercise evidence edges: 367
+- Owned exercise evidence edges: 375
 - Generated-artifact warning edges: 602
 - Generated artifacts are primary evidence: false
 
 ## By Edge Type
 
 - implementation_trace: 411
-- owned_exercise_evidence: 367
-- projection: 603
+- owned_exercise_evidence: 375
+- projection: 600
 
 ## By Source Surface Type
 
@@ -34,7 +34,7 @@ Status: INFO
 - machine_unit_term_projection: 191
 - nieuws_met_visual: 9
 - opgaven_html: 12
-- opgaven_markdown: 75
+- opgaven_markdown: 79
 - opgaven_pdf: 12
 - other_owned_lesson_file: 3
 - owned_markdown_surface: 3
@@ -45,7 +45,7 @@ Status: INFO
 - quality_reference_yaml: 12
 - review_note: 16
 - summary_surface: 5
-- target_exercise_index: 359
+- target_exercise_index: 360
 - vaardigheden_surface: 8
 - visual_png_projection: 216
 - visual_svg_source: 216

@@ -1,6 +1,6 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-17T07:57:25.353Z",
+  "generated_on": "2026-06-17T08:18:42.508Z",
   "status": "pass",
   "summary": {
     "record_count": 603,
@@ -383,7 +383,7 @@
       "title": "Course Target Exercises v5",
       "source_type": "authored_json",
       "authority_level": "authored_judgement",
-      "source_version": "sha256:b5473877479b34885f325a1f45ef8fa84da9e6f534af593e17cd1dc6230631f6",
+      "source_version": "sha256:4aa7ad1a008b7e256d482f15364c7e9a2b726547e60b08face66f1363ebbf9d5",
       "status": "active",
       "owner": "references_team",
       "citation_policy": "cite_as_human_authored_judgement",
@@ -392,8 +392,8 @@
       "generated_status": "manual_source",
       "edit_policy": "human_reviewed_edit",
       "refresh_policy": "manual_review",
-      "source_hash": "b5473877479b34885f325a1f45ef8fa84da9e6f534af593e17cd1dc6230631f6",
-      "size_bytes": 180927,
+      "source_hash": "4aa7ad1a008b7e256d482f15364c7e9a2b726547e60b08face66f1363ebbf9d5",
+      "size_bytes": 185097,
       "primary_evidence": true,
       "curriculum_authority": true,
       "allowed_downstream_uses": [
@@ -2674,7 +2674,7 @@
       "title": "Owned Content Graph",
       "source_type": "inventory",
       "authority_level": "governance_data",
-      "source_version": "sha256:25504b32b9ee280ecaad53913b87c294db90b79619ce8101fc686cab7d3f1632",
+      "source_version": "sha256:ffe445beee6328c8106829a53cc69d670380766c320597ecaec2594bcfd0f12e",
       "status": "governance_data",
       "owner": "references_team",
       "citation_policy": "cite_as_governance_record_only",
@@ -2683,8 +2683,8 @@
       "generated_status": "generated_or_sprint_metadata",
       "edit_policy": "generated_by_inventory_script",
       "refresh_policy": "regenerate",
-      "source_hash": "25504b32b9ee280ecaad53913b87c294db90b79619ce8101fc686cab7d3f1632",
-      "size_bytes": 2559122,
+      "source_hash": "ffe445beee6328c8106829a53cc69d670380766c320597ecaec2594bcfd0f12e",
+      "size_bytes": 2569354,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [

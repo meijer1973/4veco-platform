@@ -3,7 +3,7 @@
   "graph_id": "owned-content-graph",
   "sprint_id": "R9.2",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-06-17T07:57:24Z",
+  "generated_on": "2026-06-17T08:13:42Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",
@@ -21,8 +21,8 @@
     "external_authority_edges_created": false,
     "student_facing_uses_blocked": true
   },
-  "node_count": 916,
-  "edge_count": 1381,
+  "node_count": 915,
+  "edge_count": 1386,
   "nodes": [
     {
       "node_id": "blueprint_chapter:1.1",
@@ -5581,24 +5581,6 @@
       "difficulty": "MEDIUM"
     },
     {
-      "node_id": "quality_issue:1.2.3:missing-unit-1",
-      "node_type": "quality_issue",
-      "label": "1.2.3 missing unit flag 1",
-      "flag": "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)"
-    },
-    {
-      "node_id": "quality_issue:1.2.3:missing-unit-2",
-      "node_type": "quality_issue",
-      "label": "1.2.3 missing unit flag 2",
-      "flag": "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)"
-    },
-    {
-      "node_id": "quality_issue:1.2.3:missing-unit-3",
-      "node_type": "quality_issue",
-      "label": "1.2.3 missing unit flag 3",
-      "flag": "Recognise the kink in collective demand when one consumer exits (concept-level)"
-    },
-    {
       "node_id": "quality_issue:2.1.1:missing-unit-1",
       "node_type": "quality_issue",
       "label": "2.1.1 missing unit flag 1",
@@ -6796,6 +6778,16 @@
       "label": "A46"
     },
     {
+      "node_id": "unit:A47",
+      "node_type": "unit",
+      "label": "A47"
+    },
+    {
+      "node_id": "unit:A48",
+      "node_type": "unit",
+      "label": "A48"
+    },
+    {
       "node_id": "unit:A49",
       "node_type": "unit",
       "label": "A49"
@@ -7374,7 +7366,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2.3",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -7386,7 +7380,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "8c1d197bdf512d6f58e04fe2e734ac2256e66f71e6fe45e95b5053607db9eb52"
+      "source_hash": "6638260b2831eccfb20a17f0cfc3d8f80ceec0f80ab1290195928c8c8bcb4aa5"
     },
     {
       "edge_id": "OCG-BLUEPRINT-PROJECTS-TO-CHAPTER-BLUEPRINT-COURSE-BLUEPRINT-V5-BLUEPRINT-CHAPTER-1.2-1.2.4-1.2.4-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -7405,6 +7399,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -7426,7 +7422,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "a37d34f747098a888065684232291f3bed88741147bea6bcd67f752da731dce4"
+      "source_hash": "764a8c673c9254f3388dbc929cfa61c76572ec76cffbdc9276e05426be9506db"
     },
     {
       "edge_id": "OCG-BLUEPRINT-PROJECTS-TO-CHAPTER-BLUEPRINT-COURSE-BLUEPRINT-V5-BLUEPRINT-CHAPTER-1.3-1.3.1-1.3.1-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -9244,7 +9240,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2.3",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -9256,7 +9254,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "07d431c5b9cbd158970f196e4026ebd0912b9d146f073e16fb909001c50e9330"
+      "source_hash": "d77aeca68da404a1add4225b6c27c1241881e143bb788a4d38f8460d8e27befc"
     },
     {
       "edge_id": "OCG-CHAPTER-PROJECTS-TO-PARAGRAPH-BLUEPRINT-CHAPTER-1.2-PARAGRAPH-1.2.4-1.2.4-1.2.4-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -9275,6 +9273,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -9296,7 +9296,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "ebd3e747ea05cd6a7aa83076a903c64dea2057fd7a548457e26ad3ae117d5839"
+      "source_hash": "b4dc0567605c6e87f3dfcfd5e588a609e3ed74f81aa6f2a9932228a9ca55c895"
     },
     {
       "edge_id": "OCG-CHAPTER-PROJECTS-TO-PARAGRAPH-BLUEPRINT-CHAPTER-1.3-PARAGRAPH-1.3.1-1.3.1-1.3.1-REFERENCES-OWNED-COURSE-BLUEPRINT-V5.MD",
@@ -17553,7 +17553,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-quality-ref.yaml",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17565,7 +17567,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "67ce5b5889b12cef2318cdf3871cd64cc63ad12c7087649916ab732bb0ff0fd4"
+      "source_hash": "77aad446ba62cb7bb8d7760f1d59029b7bd1e6a8339a650ad0a596ae71866034"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-REVIEW.MD-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-REVIEW.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-REVIEW.MD",
@@ -17581,7 +17583,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3-review.md",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17593,7 +17597,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "894f052730bd3c27671bc35e18c30abe4295d4b565794f5f3b995929daad7467"
+      "source_hash": "43d816058b5bc7d7ebe6634f9e08439f1a7094857f84e4954f8a36c59e6dac0b"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ANTWOORDEN.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ANTWOORDEN.HTML",
@@ -17609,7 +17613,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.html",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17621,7 +17627,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "5100979cd04a0baf5c66f06cf602f51b63a61b34d6cfb8a7df84183805bf4469"
+      "source_hash": "ffa21dbc11c6c09fd75dbc960d486d4c496a69e5951e842262618199c340adc8"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ANTWOORDEN.PDF-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ANTWOORDEN.PDF",
@@ -17637,7 +17643,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.pdf",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17649,7 +17657,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "fe43572652349321511f2e28f7060d5a4ba48145c9727c2d3728adafa2437c3a"
+      "source_hash": "76576edc6f33033499331470632adb3bf1ace965dead7835d787eeac1d77928c"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.HTML",
@@ -17665,7 +17673,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.html",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17677,7 +17687,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "58cbf931b0b8cdc15ccc9c535ac37130b6e00891607a4337f1eb6e2b798c4b46"
+      "source_hash": "459cc1c49520e35cf870149161011f12f5c371b9ff7395f530ec64badabe2f50"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.PDF-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.PDF",
@@ -17693,7 +17703,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.pdf",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17705,7 +17717,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "6b6c4427c6d162471bcb8c77a7142fc71dbd9f89113cdbf997bf15f2b21eaedb"
+      "source_hash": "830c75a8da381cb20c9928b715da045747c98b0aa0f936a85eac544aef7fe1c0"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.HTML",
@@ -17721,7 +17733,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.html",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17733,7 +17747,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "d18d65fc1b295802bb60b5fcfc5d18bb235c370f5fe3260a76966acb74595643"
+      "source_hash": "06f50cb193d810d3b363a0313740974f19da66414c93fd6e7d419316f0dc9618"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.PDF-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.PDF",
@@ -17749,7 +17763,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.pdf",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17761,7 +17777,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "6b406f1804e8250f59eb32ef47c44f017873968639f78c4f19fc55be2c6c1309"
+      "source_hash": "2e4e62f5ff05cfb593a1271f5f3e99cae440050dede99e311ace1fb0eadee8c1"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.PNG",
@@ -17777,7 +17793,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_ex_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17789,7 +17807,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "67993a240169917db2cecc0afd2b504cb32a227f7ed6e9f83cc90bba8c98bf56"
+      "source_hash": "52a863ed9b69809d38bdaf7833343fa71c8d06933e011ec9b953accca8f9ee97"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.PNG",
@@ -17805,7 +17823,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_ex_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17817,7 +17837,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "4accf549373877084baac1c2f5a38bd79985979b48e852b068331d44bc665faa"
+      "source_hash": "edb5b84bb648c7c9892a1f62f2476e23946d0ee3ff66e9c32b7f7c499345ff91"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.PNG",
@@ -17833,7 +17853,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17845,7 +17867,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "fe95bc1ad321267f0376cecdf9dddc3df807a33f994290c2cd7a900b6c730153"
+      "source_hash": "cf3b78d980b2e7456e05b228e6f8d7282295f08c674345e2eda6cdfff9d0a283"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.PNG",
@@ -17861,7 +17883,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17873,7 +17897,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "9a7d389d66fa5ef0aaa3f634b6c8725c9079ac86bcb00446e987e4f294aa5703"
+      "source_hash": "7832639fef1712e3e0e80bb2fa54436b458993d1a9769d6f5e1f58686bd0b4ef"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.PNG",
@@ -17889,7 +17913,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_3.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17901,7 +17927,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "1dc544ecb3d73e18980056d259a83c5e62d0083a776ec8db2a75a6eb48701702"
+      "source_hash": "d9337f21ec75f17370243804b9be506c5108b0919582337c681782ad1fe3d60a"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.PNG",
@@ -17917,7 +17943,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_4.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17929,7 +17957,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "935c4068a31aa20c89e9ff1449810010adf07d1afe92db2aff3a49bb2679b40b"
+      "source_hash": "46cbd42280ca9fd1c204a49348023755e2d06dd9c560e45d7eed6c3ccc89384d"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.PNG",
@@ -17945,7 +17973,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_5.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17957,7 +17987,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "cb6f4bf544d2c48b92eb9e42355de332a70c56badcebf5429464ba6f5a1a507b"
+      "source_hash": "8aa1c40e93d47d308d31df2357d45bd91ae5fa9bce732d782214047d638477b3"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.PNG",
@@ -17973,7 +18003,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -17985,7 +18017,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "169392e2aba09d73d8e18e55a900f8a357e5338303ff52174bfe6f648b0556ac"
+      "source_hash": "1f9cf6db3aa851b55ff9423c12fef8b22d7c8f47ca33706193e4ec7e9866224d"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PYCACHE-BUILD-PDF.CPYTHON-314.PYC-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PYCACHE-BUILD-PDF.CPYTHON-314.PYC-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PYCACHE-BUILD-PDF.CPYTHON-314.PYC",
@@ -18001,7 +18033,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/__pycache__/build_pdf.cpython-314.pyc",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18013,7 +18047,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "949801bdeecc03f88ac8c0d42280793ec5a999db38ed9e38eb5bfda887ba19c5"
+      "source_hash": "04d154b217f173aa891b6e5d4a4d77c9369a89af8c1e7c5092bccab1b7ab7702"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.HTML-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.HTML",
@@ -18032,6 +18066,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18053,7 +18089,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "e7eadb9053d4462d2df0b0f49c25ab9c082632724500478790f9653f0579ba3a"
+      "source_hash": "2c3e115a8e5228ef97933dda5d90b98cc75b81d7811971acf82a90a8f478df59"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.PDF-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.PDF-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.PDF",
@@ -18072,6 +18108,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18093,7 +18131,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "d7261716e33a6515aa399826ddb0ec32162d253b56d29516e0055b510363b16f"
+      "source_hash": "491c305aa040637be7b65925146754701aef2c5daa8dd3089eee7c45c62eed22"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.HTML-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.HTML",
@@ -18112,6 +18150,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18133,7 +18173,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "5547aefd9b230deec4160f668d77825936ed1154525fce47c429d17aecb861d6"
+      "source_hash": "937be8407afbd44f6e4e1eb6d6a2e93e7e8024f0edb435d173f5e9aab9b867a4"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.PDF-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.PDF-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.PDF",
@@ -18152,6 +18192,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18173,7 +18215,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "095431740131ea4a7f4faa9b20da2e372fce1c4869b7c80a9afc9aa5617602cd"
+      "source_hash": "e2a52b51966069454d0e80a7abb48ae2dc1e8cb5dd25ea667d3a0ea25bad7745"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-QUALITY-REF.YAML-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-QUALITY-REF.YAML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-QUALITY-REF.YAML",
@@ -18192,6 +18234,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18213,7 +18257,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "40a64b59984e042d0669045cb7e9f332f13b1c4f9ca759f798838c37e3e7b2ac"
+      "source_hash": "970ae7eb5d71fc1fa38ff2913f4422151efb36128abdd7d9066b23532d35fd30"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-REVIEW.MD-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-REVIEW.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-REVIEW.MD",
@@ -18232,6 +18276,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18253,7 +18299,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "b8d30057abfb1e55700e2195982a66ffe7cba1a3adbd21a37ba0d067afa9f648"
+      "source_hash": "3695eb8985e7f96d48280b80a14e8480b65aadecc8377a59d182811aaab5fb9a"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.PNG-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.PNG",
@@ -18272,6 +18318,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -18293,7 +18341,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "b3167defecce3230911baa40c426ced7a0964c5cec533b2b2e24153c547e4d1f"
+      "source_hash": "89572b3c562b4f00d6d1e4c0e54126d1cc20bee7b51de7af2edfedd778d2a062"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.PNG-PARAGRAPH-1.2.1-1.2.1-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.PNG",
@@ -18844,7 +18892,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_ex_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18856,7 +18906,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "b83f1050b7eca885b8a1d49c3cbcd557338602902aea4467ffe94b66743159a8"
+      "source_hash": "52fa6773121d84ab280a69f8767b0964969827869d45513e5fb6b3b14d84232a"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.PNG",
@@ -18872,7 +18922,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_ex_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18884,7 +18936,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "1337e6b7e91dd5d753177c1ea1d2974c098b0aa6e84d51022c22c174a3611a14"
+      "source_hash": "5090a81fe4496fc8f7056e6e95a0b977d23accef9e9614cdaee977ed803886ff"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.PNG",
@@ -18900,7 +18952,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18912,7 +18966,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "03d9e8c7081475c71cd729ca7c10c44e0aa5a92a0cf9614803075e6bc69213a3"
+      "source_hash": "835e7f29a4c101a4f8f4f80da52e1ef5960f8a1b00e6db754b70c9fcc4a5d53c"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.PNG",
@@ -18928,7 +18982,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18940,7 +18996,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "aa111d867a7bc9d3114c7d7465c0eee09d241c057ad5a482c1deadf1d25eef70"
+      "source_hash": "2c22301fcc5c82f00e3b28e7a05901314d4585c29073542a48db1d50c4d9b7a9"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.PNG",
@@ -18956,7 +19012,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_3.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18968,7 +19026,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3aa5dd0e833b2acfa2e1daa4f2c899fec484a4a867b74c67307dbae733b99cfd"
+      "source_hash": "a26083827dd5e975522c69bdc48a8e399fec63892266b02aa812d899ba048235"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.PNG",
@@ -18984,7 +19042,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_4.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -18996,7 +19056,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "a378cbcdd29fbbc86c58e8b8cc3fb26d5abf2c6c2c92767266d0b66e5a3be160"
+      "source_hash": "e7a1992a255defd79a6c63324e03d44655d0b70baca4de86f883841cc00581ef"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.PNG",
@@ -19012,7 +19072,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_5.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -19024,7 +19086,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "80238d8f11ed53fb897716078533eeead73a10e91ebb48e1a8e37ca6fc4a5160"
+      "source_hash": "465e4d419e3e41559f8d49badb3944a109b9e7e49b5ff1189c04d4f6dcee7cd2"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.PNG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.PNG",
@@ -19040,7 +19102,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_6.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -19052,7 +19116,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "8311b858f867108275af2f9489117f48a4c68de96fbe4f977f96a4b71d0c9c10"
+      "source_hash": "3ba36bb878bb585e25e2c21c043f3c0ffdc0435979124e6cdf718b6a76e766a7"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.PNG-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.PNG",
@@ -19071,6 +19135,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -19092,7 +19158,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "123f700fe71448b3eda04c9492d5935077e666a6d765c542010d5f9324476130"
+      "source_hash": "b53f50e54ccb8eab5a29875a64d13bbc8ed2b89def5ca8633f0819c5571d9b01"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.HTML-PARAGRAPH-1.3.1-1.3.1-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.HTML-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.HTML",
@@ -22880,7 +22946,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_ex_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -22892,7 +22960,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "a3b7b1c3f486b67d081ff7554dcf22a075948407c3e3749db1d3f6c45c4c40fc"
+      "source_hash": "fa35abe8598e4d8d63f84a5c76749c4ee1e782d1c314ef752cacd7de38b72d25"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-EX-2.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-EX-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-EX-2.PNG",
@@ -22908,7 +22976,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_ex_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -22920,7 +22990,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "a59811ff76f1edd28fd6601f65901e876f4324e4ba06f3d44d337d987d43032d"
+      "source_hash": "d50a1919b941c94a5ad0406d21733e12b7623ca8292d8469c0780ecf48c2d952"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-1.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-1.PNG",
@@ -22936,7 +23006,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_1.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -22948,7 +23020,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "eb44e83ecbfe162e8df64bbfeb0de1d332362f977d54a5bbe3d46a4a4dd37758"
+      "source_hash": "6d34e7300d5a923a50402f6d8863113aceff30d9edba022f5312f964f0adab9e"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-2.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-2.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-2.PNG",
@@ -22964,7 +23036,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_2.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -22976,7 +23050,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "f59ab23315a6d2bece5887613c37ee0f2b2d7c79397dd700c622b60d4d901dcc"
+      "source_hash": "7f4698b533256a920a33d0051ebaf2079708ec94c07a631f683b2cfc4991c9a4"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-3.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-3.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-3.PNG",
@@ -22992,7 +23066,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_3.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -23004,7 +23080,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "99d7debf4347c9b235cc5c85aa7610c410e333758ecfa540023301dc70d1a1f3"
+      "source_hash": "7531df89790272d9be5d9c2552f1aa7d16015b47a715c974d87ca761ed545107"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-4.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-4.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-4.PNG",
@@ -23020,7 +23096,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_4.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -23032,7 +23110,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "77226556183abe408632ead9d743269069691b15c943fc09a003f6badbb2d53e"
+      "source_hash": "012e5bd6a65c1b631b5d1f56aa6a8d1464ca1b2fc7f37f77b1b697088d840db4"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-5.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-5.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-5.PNG",
@@ -23048,7 +23126,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_5.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -23060,7 +23140,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "baf6e8288f8466c0e712b662ffac2046edf04a0954155785b3e05e07bd1ed296"
+      "source_hash": "af5271447e8d7c2feca1ba0c41b1298a9cf7a75a97b97152731d697c80b21564"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-6.PNG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-6.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-6.PNG",
@@ -23076,7 +23156,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_6.png",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -23088,7 +23170,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "7eff022d6f12a312e6ba7c8347d82639e7011cb736f9c20089b95a69be744017"
+      "source_hash": "de2c8ae72178c62155a6921d422b6fbc82149360f6a9395f563ea09bc38a98af"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.4-EX-1.PNG-PARAGRAPH-1.2.4-1.2.4-ASSETS-1.2.4-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.4-EX-1.PNG",
@@ -23107,6 +23189,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -23128,7 +23212,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3e24853e0010645db24dbfca00dd92f3494a0df02462585eea1038f7a04dc92b"
+      "source_hash": "0209814e60bee710caceb6c891821b1b0ba38d682c89695b319a39e8751508d8"
     },
     {
       "edge_id": "OCG-GENERATED-ARTIFACT-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.3.1-EX-1.PNG-PARAGRAPH-1.3.1-1.3.1-ASSETS-1.3.1-EX-1.PNG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.3.1-EX-1.PNG",
@@ -24961,6 +25045,62 @@
       "source_hash": "9944a6c5992eb3e26a9bf5e32f520983ce46bb07cd1c31b05449b1020e3f8d92"
     },
     {
+      "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-UNIT-A47-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD",
+      "from": "owned_source:..-4veco-lessen-boek-1-grondslagen-vraag-en-aanbod-1.2-hoofdstuk-vraag-1.2.3-van-individuele-naar-collectieve-vraag-1.2.3-van-individuele-naar-collectieve-vraag",
+      "to": "unit:A47",
+      "relation": "owned_exercise_source_supports_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+      "source_surface_type": "opgaven_markdown",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_lesson_exercise",
+      "authority_weight": 65,
+      "paragraph_id": "1.2.3",
+      "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+      "unit_ids": [
+        "A47"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned exercise markdown evidence for lesson alignment; not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "6b67eeade7ec82c6226d522d6883f95d18bfe67652ece475efe9054d7fdabcf2"
+    },
+    {
+      "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-UNIT-A48-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD",
+      "from": "owned_source:..-4veco-lessen-boek-1-grondslagen-vraag-en-aanbod-1.2-hoofdstuk-vraag-1.2.3-van-individuele-naar-collectieve-vraag-1.2.3-van-individuele-naar-collectieve-vraag",
+      "to": "unit:A48",
+      "relation": "owned_exercise_source_supports_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+      "source_surface_type": "opgaven_markdown",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_lesson_exercise",
+      "authority_weight": 65,
+      "paragraph_id": "1.2.3",
+      "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
+      "unit_ids": [
+        "A48"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned exercise markdown evidence for lesson alignment; not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "c55b104abd0942bd1d06a7fc3c6bce01053b11bf99d698a1252edc6785fc3c93"
+    },
+    {
       "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-UNIT-A01-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD",
       "from": "owned_source:..-4veco-lessen-boek-1-grondslagen-vraag-en-aanbod-1.2-hoofdstuk-vraag-1.2.4-gemengde-opgaven-1.2.4-gemengde-opgaven-opgaven.md",
       "to": "unit:A01",
@@ -25045,6 +25185,62 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "bc4fa9bd8deb3aa44da1cc9e303bd4d2a541c9eaa6a4b032e12b2dd3fa6dbb55"
+    },
+    {
+      "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-UNIT-A47-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD",
+      "from": "owned_source:..-4veco-lessen-boek-1-grondslagen-vraag-en-aanbod-1.2-hoofdstuk-vraag-1.2.4-gemengde-opgaven-1.2.4-gemengde-opgaven-opgaven.md",
+      "to": "unit:A47",
+      "relation": "owned_exercise_source_supports_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+      "source_surface_type": "opgaven_markdown",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_lesson_exercise",
+      "authority_weight": 65,
+      "paragraph_id": "1.2.4",
+      "record_id": "1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+      "unit_ids": [
+        "A47"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned exercise markdown evidence for lesson alignment; not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "5be1be06ee13e43f9f7393c7b9e0c6c82dee9751ef0a4dc2b9e598809db839ee"
+    },
+    {
+      "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-UNIT-A48-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD",
+      "from": "owned_source:..-4veco-lessen-boek-1-grondslagen-vraag-en-aanbod-1.2-hoofdstuk-vraag-1.2.4-gemengde-opgaven-1.2.4-gemengde-opgaven-opgaven.md",
+      "to": "unit:A48",
+      "relation": "owned_exercise_source_supports_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+      "source_surface_type": "opgaven_markdown",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_lesson_exercise",
+      "authority_weight": 65,
+      "paragraph_id": "1.2.4",
+      "record_id": "1.2 Hoofdstuk Vraag/1.2.4 Gemengde opgaven/1.2.4 Gemengde opgaven – opgaven.md",
+      "unit_ids": [
+        "A48"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned exercise markdown evidence for lesson alignment; not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "db3dd56685052638637cd2e0d596472007e6578a353f6baec8624478e67b9880"
     },
     {
       "edge_id": "OCG-OWNED-EXERCISE-SOURCE-SUPPORTS-UNIT-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-UNIT-D27-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD",
@@ -29030,7 +29226,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – antwoorden.md",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29042,7 +29240,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "e640d60c4c8bc8bce8a47c9dfa25734b8643578ac35c0435e13909721dc10404"
+      "source_hash": "1f033629be3e985f83ef860dbb74ddbca0baa290015f709f35cf2051e43d8893"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-OPGAVEN.MD",
@@ -29058,7 +29256,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – opgaven.md",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": true,
@@ -29070,7 +29270,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "6b7849b7220969ade70715d43ec3b21ce90de2e9ea7016de0b87a2c7116badf2"
+      "source_hash": "9109af6a47c711aa00c1d1474e76992c1f7b86854224364ff5a358fe4d1423ae"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-PARAGRAAF.MD",
@@ -29086,7 +29286,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/1.2.3 Van individuele naar collectieve vraag – paragraaf.md",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29098,7 +29300,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "ecbcd451f60a04e0982b6bf1ec8dd6e12397bf1b5711b70750c321dbf90b45d0"
+      "source_hash": "35c3676ed2135837ff15501952b70d683ae6eccd97fc70794910a99329d477fa"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-1.SVG",
@@ -29114,7 +29316,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_ex_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29126,7 +29330,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "43373e46294b4c67715d5b4752b4979aa3c4c2ee055abe5f6f22b2c2c4647227"
+      "source_hash": "50f956ce8edb2d9bc532de145d4ba8d7b6cc68e792750bdbf71381cb1b4f13f5"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-EX-2.SVG",
@@ -29142,7 +29346,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_ex_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29154,7 +29360,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3dc29533484d70805561b9912a173c9303acdc1f67dc04d08a0eaf25d05b7a84"
+      "source_hash": "25ceb981215cc9747c282931891ad2e048d1cf6fa01d6b37be6f89b45aee90ab"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-1.SVG",
@@ -29170,7 +29376,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29182,7 +29390,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "bec57a42e8f67ab183859dfbfabcebeca5918bc05b5c549b12456ecd307dda53"
+      "source_hash": "28fd587e2ef94fc84810356a0c8abd32249fb5c1eca7df51b73c7de241f03d68"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-2.SVG",
@@ -29198,7 +29406,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29210,7 +29420,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "e96895549e6cfa626c4a46b1edd9e8087ee2780e9d9ec323c302aca364970e69"
+      "source_hash": "2f91b39412e48f66fc169ed6cad37fba1bf9255c78e425e96e280647ca6f05aa"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-3.SVG",
@@ -29226,7 +29436,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_3.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29238,7 +29450,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "98ad72c6355fe2b998b20a781653ff0ef9fccd13f7d7e75e63850c5f1eafd41e"
+      "source_hash": "89ec3315956c9942aad6a5a5ccedfbb1351150b1b4f8e7b206a1258f02817ec3"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-4.SVG",
@@ -29254,7 +29466,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_4.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29266,7 +29480,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3d09bb3efe494577141d2d217e103dca23be5389155446a71a822fecf38cc745"
+      "source_hash": "d5b3735548b21d8cb2faca343fe96eea8fbf411c4169b782ae825d08dcf3372c"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-5.SVG",
@@ -29282,7 +29496,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_5.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29294,7 +29510,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "880c632278db4ea58437c9cc063b16d36137003269150ab11be08553b712de13"
+      "source_hash": "7d137bd28bdc0ce5a0c467241d5bbaec52cec7691e732ca0b49b50e5db738f0e"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.3-VAN-INDIVIDUELE-NAAR-COLLECTIEVE-VRAAG-ASSETS-1.2.3-FIG-6.SVG",
@@ -29310,7 +29526,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/_assets/1.2.3_fig_6.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -29322,7 +29540,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "112db61a8cdc0043a3893a6d65718719a55df889c419639a6a5da00c9967b605"
+      "source_hash": "abd776ee5f3a440400dded9ad4d31477e4a8b94dd6249df62c9ac2587f60bf45"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.MD-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-ANTWOORDEN.MD",
@@ -29341,6 +29559,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -29362,7 +29582,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "e6817a1b3e2985d69657dbbd1b46395e912852b2a5e0582aa06e0041eec286d8"
+      "source_hash": "ea50476590455261e3730b548bd7c43ad1396a2955e7b3cf9902dbf5ca41ba99"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-1.2.4-GEMENGDE-OPGAVEN-OPGAVEN.MD",
@@ -29381,6 +29601,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -29402,7 +29624,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "b0c2feaf084269ffccb4040a866d668a6ff3acf1a9f7681f39b6c8a5c3c3f3ad"
+      "source_hash": "0e6bb1d34b8b54afbc0e63712b29975bae858a815eac92b14e57d272be3a0190"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.SVG-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-ASSETS-1.2.4-EX-1.SVG",
@@ -29421,6 +29643,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -29442,7 +29666,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "c56b441bbe10d187d6154ecbb45a39d36ac7742bf09d9422a970fb25e4caf5a9"
+      "source_hash": "5ce77cac1eb171481c03ac88acd55b871703febd92352abcc18db56459f1a81a"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.SVG-PARAGRAPH-1.2.1-1.2.1-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.1-EX-1.SVG",
@@ -29993,7 +30217,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_ex_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30005,7 +30231,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3982500ef8e4883d486226ba2f0e6bba6659465a8cc53d58ce3c4e0698163d66"
+      "source_hash": "24e3bacb361e2d4295922794ddd50b1db91d7fbc6e2b9068c8bac2b8927666d5"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-EX-2.SVG",
@@ -30021,7 +30247,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_ex_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30033,7 +30261,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "76f774577155499bce49176857ec68d7a8f7fd095d2a82d1eef30eaaf3e9ccca"
+      "source_hash": "c2913ae552731bd6e99d672f89083e39ecfaeae90cff99e5ca1621097b1331ac"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-1.SVG",
@@ -30049,7 +30277,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30061,7 +30291,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "3dc2cd3bfea70c8a4791ae244b5792f47a7efff1ca8436665a901222070647a1"
+      "source_hash": "fe4cbf63fbaf32f087698af30bfbbbc2cdbf00a52c3c92dec645808febecae41"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-2.SVG",
@@ -30077,7 +30307,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30089,7 +30321,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "8868c6c6dd788d2ed6d0d3fc7e70536d4773dad533501b595556e5922c79567e"
+      "source_hash": "be23fda85a12d429f8dd068da4b9ebdc44e722fb372b20a37fbd08202d2e9eeb"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-3.SVG",
@@ -30105,7 +30337,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_3.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30117,7 +30351,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "32c26bb67828d582a7b05465f65d40dc2a62472652c74e1c8eba1baae468efb6"
+      "source_hash": "074776c9eef903f360f4a90e4f6ea13c2c4fa62eb30fde5395251adab7d8335a"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-4.SVG",
@@ -30133,7 +30367,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_4.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30145,7 +30381,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "0209c0d2a7f645c3be3f94b4d80c1da3204072bba872e84e88de8262524f5cf1"
+      "source_hash": "183181cf2d1c279ac0fe7754d1346356e06258b80639919637b2a74c26563716"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-5.SVG",
@@ -30161,7 +30397,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_5.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30173,7 +30411,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "254d4dfc9aac583aaf69e4525af26cc6ace4cfdf7baf131a4a035ffdbc42b66a"
+      "source_hash": "9f5a4cc32bfd74ab5d65ea80ec1357044e04d26c7c19146417af9ffda292b3ff"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.SVG-PARAGRAPH-1.2.3-1.2.3-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.3-FIG-6.SVG",
@@ -30189,7 +30427,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/_assets/1.2.3_fig_6.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -30201,7 +30441,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "90cb2ae361a2537c38e6812c2f7a30fba278fe313b550b5d2128bcbd3b4a2c24"
+      "source_hash": "febc813ec79eb98dd05cb9d9b5b6c7c8b23f34b85c94806672d90a52287efc80"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.SVG-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-ASSETS-1.2.4-EX-1.SVG",
@@ -30220,6 +30460,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -30241,7 +30483,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "f96f291ff433a7a7db1ee92b1608d7dfda80bbf091fdf51d2d11084982974221"
+      "source_hash": "8b6c431b97662dba149bd78608fb90ed7c22bb3a41e6d3b2978f70bd636364f5"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.MD-PARAGRAPH-1.3.1-1.3.1-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.MD-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-1.3.1-AANBOD-ANTWOORDEN.MD",
@@ -33274,7 +33516,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_ex_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33286,7 +33530,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "adea427e4d9e53dcb30644033d727f2e22f76604fa8db171df3120f6567b1f35"
+      "source_hash": "5bb443508ad6ba0e23b1915e771c5117da266070fb5667d17441bdf41497b0ab"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-EX-2.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-EX-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-EX-2.SVG",
@@ -33302,7 +33546,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_ex_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33314,7 +33560,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "e238b1eb7d2696166cb9fdd18c24ea45e0ed1f6d8afbbf70d171d858bd9fb132"
+      "source_hash": "0c40a83b1cfa0123124eeb17e47416ad1ab84e7d881e0292148cd62a705d9fc2"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-1.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-1.SVG",
@@ -33330,7 +33576,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_1.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33342,7 +33590,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "ff67ab645a13319692d21a7e3c1ed5533b03bf50f75d6d313c2c29bc1b2d3e90"
+      "source_hash": "b08f199b54e2fe8b6451c658ec1bdbe757b289aed2aaa79b43070de1753730fa"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-2.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-2.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-2.SVG",
@@ -33358,7 +33606,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_2.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33370,7 +33620,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "8d3c3d04038ceb4b940e0f297d6c58b813306468cfdf6d27421eebcdc841e123"
+      "source_hash": "0bb8d849cc39798b7c061627f68a95d4c9aac4787427563034421f7cc65e1e23"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-3.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-3.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-3.SVG",
@@ -33386,7 +33636,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_3.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33398,7 +33650,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "25ee318510bb293733b4b6f6ae028b71b63dbdc500b13198c2845d486154d180"
+      "source_hash": "ab9e1451a16c776518abdd7e021b4db2cb0faaf7968c59d1a44b660384a430d3"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-4.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-4.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-4.SVG",
@@ -33414,7 +33666,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_4.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33426,7 +33680,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "ffc82e7ffe3470695303e57466af5879d2de5c7b54cfa5d28c2bbc3c54ec1f71"
+      "source_hash": "413abffec42ccb482fd5103eec6fd408064bc095d263df257f380d31858b2b38"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-5.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-5.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-5.SVG",
@@ -33442,7 +33696,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_5.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33454,7 +33710,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "cb97fec7a86fec534285d4273d6cc6cf5b02b73c8c8a91b594eafb65735fb53c"
+      "source_hash": "e8e2d684d36804ad77d53c57de1f2eca4b48d03d9c25e948877ea1425c86907d"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-6.SVG-PARAGRAPH-1.2.3-1.2.3-ASSETS-1.2.3-FIG-6.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.3-FIG-6.SVG",
@@ -33470,7 +33726,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "_assets/1.2.3_fig_6.svg",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -33482,7 +33740,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "eb8f05457352aae249017e802bb0ac06fe7bf44b3ff9ff48f0e1a2caa414ba0b"
+      "source_hash": "fa8863bd482a83ba527438c2bc144d350f915fee4164cb0e82e5f4f880a083a1"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.4-EX-1.SVG-PARAGRAPH-1.2.4-1.2.4-ASSETS-1.2.4-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.2.4-EX-1.SVG",
@@ -33501,6 +33759,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -33522,7 +33782,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "dca7d94300887b3d4297eb579113a828756148f4a0ed9d3b2124a5f6d71ee8a6"
+      "source_hash": "c163bce6ac07be0ca74b461dc151d8d98e69e35bd3156e029cc74deaf4b13003"
     },
     {
       "edge_id": "OCG-OWNED-SOURCE-PROJECTS-TO-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.3.1-EX-1.SVG-PARAGRAPH-1.3.1-1.3.1-ASSETS-1.3.1-EX-1.SVG-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-ASSETS-1.3.1-EX-1.SVG",
@@ -34635,7 +34895,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2.3",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": true,
@@ -34647,7 +34909,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "db84ab05566135f47f4442ee681237690761a202280e68e24c3d754e7e72274f"
+      "source_hash": "b932b060b91b041c96ceefea2c977e9437dc0f7f406b18ab231a2e591803b142"
     },
     {
       "edge_id": "OCG-PARAGRAPH-HAS-TARGET-EXERCISE-PARAGRAPH-1.2.4-TARGET-EXERCISE-1.2.4-1.2.4-1.2.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -34666,6 +34928,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -34687,7 +34951,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "5c47ab3ca8eb009ef152d18811117834c5cef3ba2e0f76c0b7006e154f057d89"
+      "source_hash": "a5ae89e2aad23df9afbecd6ccec6a746baf66933cf56883212f55377e6697b5d"
     },
     {
       "edge_id": "OCG-PARAGRAPH-HAS-TARGET-EXERCISE-PARAGRAPH-1.3.1-TARGET-EXERCISE-1.3.1-1.3.1-1.3.1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -42235,7 +42499,9 @@
       "paragraph_id": "1.2.3",
       "record_id": "1.2 Hoofdstuk Vraag/1.2.3 Van individuele naar collectieve vraag/build_pdf.py",
       "unit_ids": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "term_ids": [],
       "primary_evidence": false,
@@ -42247,7 +42513,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "0de114c71f053a5be583181061f31c7a62503236efcd2716f55c371087546d62"
+      "source_hash": "6098c1ae9636b17fb381b559eb8029d4da3a5f7ced731e96bb711f59a8232552"
     },
     {
       "edge_id": "OCG-SOURCE-IMPLEMENTS-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-BUILD-PDF.PY-PARAGRAPH-1.2.4-1.2.4-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-BUILD-PDF.PY-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.2-HOOFDSTUK-VRAAG-1.2.4-GEMENGDE-OPGAVEN-BUILD-PDF.PY",
@@ -42266,6 +42532,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -42287,7 +42555,7 @@
       "review_status": "projected",
       "curriculum_authority": false,
       "retrieval_authority": true,
-      "source_hash": "37c096c8de9ad2bb683747193fa11459b04e2f1bc0402bcb0bc39dd8106ba13e"
+      "source_hash": "56abfdbcfb495544287380c9ce3a31ce452b6a35ced32cdf713b51ea79f45114"
     },
     {
       "edge_id": "OCG-SOURCE-IMPLEMENTS-PARAGRAPH-OWNED-SOURCE-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-BUILD-PDF.PY-PARAGRAPH-1.3.1-1.3.1-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-BUILD-PDF.PY-..-4VECO-LESSEN-BOEK-1-GRONDSLAGEN-VRAAG-EN-AANBOD-1.3-HOOFDSTUK-AANBOD-EN-MARKTEVENWICHT-1.3.1-AANBOD-BUILD-PDF.PY",
@@ -42439,90 +42707,6 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "cdf35f7dd13b7100d5a45bcda0e0c5ce2e1ff89585ec6951e7bd4684c5e7b535"
-    },
-    {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-1.2.3-QUALITY-ISSUE-1.2.3-MISSING-UNIT-1-1.2.3-1.2.3-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:1.2.3",
-      "to": "quality_issue:1.2.3:missing-unit-1",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "1.2.3",
-      "record_id": "1.2.3:flag-1",
-      "unit_ids": [
-        "A01"
-      ],
-      "term_ids": [],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "6cf7d174061f1d2d9746f0dfc74fbc40236533db00e415f4978094122a495eec"
-    },
-    {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-1.2.3-QUALITY-ISSUE-1.2.3-MISSING-UNIT-2-1.2.3-1.2.3-FLAG-2-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:1.2.3",
-      "to": "quality_issue:1.2.3:missing-unit-2",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "1.2.3",
-      "record_id": "1.2.3:flag-2",
-      "unit_ids": [
-        "A01"
-      ],
-      "term_ids": [],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "70bf5c3422d1844e9919726d54a506a5e87feb81d3919f6404562432557343bc"
-    },
-    {
-      "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-1.2.3-QUALITY-ISSUE-1.2.3-MISSING-UNIT-3-1.2.3-1.2.3-FLAG-3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
-      "from": "target_exercise:1.2.3",
-      "to": "quality_issue:1.2.3:missing-unit-3",
-      "relation": "target_exercise_has_missing_unit_flag",
-      "edge_type": "projection",
-      "source_path": "references/authored/course-target-exercises.json",
-      "source_surface_type": "target_exercise_index",
-      "source_status": "exercise_evidence",
-      "authority_level": "owned_curriculum_design",
-      "authority_weight": 75,
-      "paragraph_id": "1.2.3",
-      "record_id": "1.2.3:flag-3",
-      "unit_ids": [
-        "A01"
-      ],
-      "term_ids": [],
-      "primary_evidence": false,
-      "evidence_status": "projection_only",
-      "generated_artifact_warning": false,
-      "not_external_authority": true,
-      "not_machine_registry_authority": true,
-      "notes": "Owned target exercise missing-unit flag: Recognise the kink in collective demand when one consumer exits (concept-level)",
-      "review_status": "projected",
-      "curriculum_authority": false,
-      "retrieval_authority": true,
-      "source_hash": "42b6702c6fc5ea67c260688bec169263a74c86786b2d1ef83401668f8ea963ea"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-HAS-MISSING-UNIT-FLAG-TARGET-EXERCISE-2.1.1-QUALITY-ISSUE-2.1.1-MISSING-UNIT-1-2.1.1-2.1.1-FLAG-1-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
@@ -45489,6 +45673,62 @@
       "source_hash": "d93084507c9b8919c275f92bec9a1121f9a714fddbfe329c786abf0014b861ca"
     },
     {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.3-UNIT-A47-1.2.3-1.2.3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:1.2.3",
+      "to": "unit:A47",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "1.2.3",
+      "record_id": "1.2.3",
+      "unit_ids": [
+        "A47"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "d5c8ab925bf553138f2bca083f7ceda7f0accec1468c250a1694a3375818ba60"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.3-UNIT-A48-1.2.3-1.2.3-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:1.2.3",
+      "to": "unit:A48",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "1.2.3",
+      "record_id": "1.2.3",
+      "unit_ids": [
+        "A48"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "040dca965e8a929429e4143cbcef740561af574d60712c99606923caebe5ff5a"
+    },
+    {
       "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.4-UNIT-A01-1.2.4-1.2.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
       "from": "target_exercise:1.2.4",
       "to": "unit:A01",
@@ -45573,6 +45813,62 @@
       "curriculum_authority": false,
       "retrieval_authority": true,
       "source_hash": "83956e710954cfc09c11afa08a529a194e7d722d1c8a7ea32a87716d6d31c219"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.4-UNIT-A47-1.2.4-1.2.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:1.2.4",
+      "to": "unit:A47",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "1.2.4",
+      "record_id": "1.2.4",
+      "unit_ids": [
+        "A47"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "b222811fa4f94fc13b569b3ffcb3f2bbc9cacdf61b11649204435fc16b3083bf"
+    },
+    {
+      "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.4-UNIT-A48-1.2.4-1.2.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
+      "from": "target_exercise:1.2.4",
+      "to": "unit:A48",
+      "relation": "target_exercise_requires_unit",
+      "edge_type": "owned_exercise_evidence",
+      "source_path": "references/authored/course-target-exercises.json",
+      "source_surface_type": "target_exercise_index",
+      "source_status": "exercise_evidence",
+      "authority_level": "owned_curriculum_design",
+      "authority_weight": 75,
+      "paragraph_id": "1.2.4",
+      "record_id": "1.2.4",
+      "unit_ids": [
+        "A48"
+      ],
+      "term_ids": [],
+      "primary_evidence": true,
+      "evidence_status": "explicit_owned_evidence",
+      "generated_artifact_warning": false,
+      "not_external_authority": true,
+      "not_machine_registry_authority": true,
+      "notes": "Owned target-exercise required unit; supports owned alignment, not external authority.",
+      "review_status": "projected",
+      "curriculum_authority": false,
+      "retrieval_authority": true,
+      "source_hash": "1a3ff38d8c08769c733ba9c7744bb54e160afce04655405e1aaa9473512bd36c"
     },
     {
       "edge_id": "OCG-TARGET-EXERCISE-REQUIRES-UNIT-TARGET-EXERCISE-1.2.4-UNIT-D27-1.2.4-1.2.4-REFERENCES-AUTHORED-COURSE-TARGET-EXERCISES.JSON",
