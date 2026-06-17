@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T08:31:32.825Z
+Generated: 2026-06-17T08:41:25.195Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4710
+Files indexed: 4718
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1777,7 +1777,7 @@ Count: 615
 
 ## reports
 
-Count: 2914
+Count: 2922
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2091,6 +2091,11 @@ Count: 2914
 - reports/reference-cli-coverage.md
 - reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-quality-log.md
 - reports/reference-planning/B1-CHAPTER-MIXED-TARGET-AUDIT-1-review-packet.md
+- reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-decision-packet.md
+- reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-mixed-target-audit-rerun.md
+- reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-quality-log.md
+- reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-review-packet.md
+- reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-subagent-review.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-quality-log.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-review-packet.md
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-quality-log.md
@@ -2142,6 +2147,7 @@ Count: 2914
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json
+- reports/review-gates/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-1/review-packet.json
@@ -2787,6 +2793,8 @@ Count: 2914
 - reports/sprints/AGENT-WORKTREE-SAFETY-1-result.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-plan.md
 - reports/sprints/B1-CHAPTER-MIXED-TARGET-AUDIT-1-result.md
+- reports/sprints/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-plan.md
+- reports/sprints/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-plan.md
 - reports/sprints/B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-result.md
 - reports/sprints/B1-GRAPH-EVIDENCE-113-ALIGNMENT-REPAIR-1-plan.md
