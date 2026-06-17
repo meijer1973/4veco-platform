@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.2-READY-1",
+  "name": "Book 2 Chapter 2.2 Readiness",
+  "created": "2026-06-17",
+  "plan": "reports/sprints/B2-2.2-READY-1-plan.md",
+  "baseline": "reports/sprints/B2-2.2-READY-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": false,
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Target readiness for 2.2.1 through 2.2.4 is inspected and dispositioned.",
+    "Elasticity notation and sign conventions are explicit for Ev, Ei, and Ek.",
+    "Graph and table conventions are explicit for demand movement, before/after tables, revenue rectangles, and figure proof.",
+    "Common misconceptions are listed before paragraph writing.",
+    "Answer-model routes are defined for calculation, table, graph, explanation, and mixed-source questions.",
+    "Rendered-page and figure-proof expectations cite the active standards.",
+    "The 2.2.4 mixed-opgaven reuse decision is explicit.",
+    "No paragraphs, generated lesson output, target registry records, protected machine data, external data, or product gates are changed."
+  ],
+  "scope": [
+    "Open B2-2.2-READY-1 from the active textbook roadmap.",
+    "Create Chapter 2.2 readiness evidence for targets, notation, signs, graphs, tables, misconceptions, answer models, rendered proof, figure proof, and mixed-opgaven reuse.",
+    "Record current lesson-repo Chapter 2.2 state as observed baseline only.",
+    "Prepare the entry criteria for B2-2.2.1-HARDEN without starting paragraph production."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2-READY-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2-READY-1",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.2-READY-1-result.md",
+    "node build-scripts/sprints/check-sprint-command-log.js B2-2.2-READY-1",
+    "node build-scripts/sprints/check-lead-review-substance.js B2-2.2-READY-1",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2-READY-1 --complete",
+    "npm.cmd run check:platform",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "git -C ../4veco-lessen status --short --branch"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No protected reference data writes.",
+    "No target-exercise source-record writes.",
+    "No generated lesson output writes.",
+    "No writes in ../4veco-lessen.",
+    "No paragraph writing.",
+    "No Book 2 Chapter 2.3 processing.",
+    "No Book 3 processing.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, product-route adoption, PV, Scale Gate 1, check-surface gate closure, or broad companion scaling authorization."
+  ]
+}
