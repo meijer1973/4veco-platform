@@ -50,6 +50,12 @@ const EXPECTED_ADMIN_GENERATED_PATHS = [
 const ALLOWED_CHANGED_PATHS = [
   ...EXPECTED_ADMIN_GENERATED_PATHS,
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
+  'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md',
 ];
 
 const FORBIDDEN_CHANGED_PATH_PATTERNS = [
