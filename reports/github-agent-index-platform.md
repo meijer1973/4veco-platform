@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-16T10:39:45.132Z
+Generated: 2026-06-17T06:37:00.280Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4653
+Files indexed: 4665
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 492
+Count: 493
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -202,6 +202,7 @@ Count: 492
 - build-scripts/content/legacy-target/voorkennis-351-afsluiting.js
 - build-scripts/content/legacy-target/voorkennis-352-naar-het-examen.js
 - build-scripts/inspection/build-dutch-diagnostic-report.js
+- build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/lib/convert_begeleide_inoefening.py
 - build-scripts/lib/convert_nieuws.py
@@ -672,13 +673,14 @@ Count: 42
 
 ## validators
 
-Count: 474
+Count: 476
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
 - archive/sprints/INSPECT-10/INSPECT-10-validation-log.md
 - archive/sprints/INSPECT-10A/INSPECT-10A-validation-log.md
 - archive/sprints/INSPECT-10B/INSPECT-10B-validation-log.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -708,6 +710,7 @@ Count: 474
 - build-scripts/ci/check-branch-protection.test.js
 - build-scripts/ci/check-evidence-line-endings.js
 - build-scripts/ci/check-evidence-line-endings.test.js
+- build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/rag/validate-chunks.js
@@ -1768,7 +1771,7 @@ Count: 612
 
 ## reports
 
-Count: 2878
+Count: 2883
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2086,6 +2089,8 @@ Count: 2878
 - reports/reference-planning/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-review-packet.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-quality-log.md
 - reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md
+- reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-quality-log.md
+- reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-review-packet.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-quality-log.md
 - reports/reference-planning/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-review-packet.md
 - reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-quality-log.md
@@ -2127,6 +2132,7 @@ Count: 2878
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1/review-packet.json
 - reports/review-gates/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/B1-MIGRATED-V5-TARGET-QUALITY-1/review-packet.json
+- reports/review-gates/B1-NORMAL-INFERIOR-TERM-DECISION-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
@@ -2770,6 +2776,8 @@ Count: 2878
 - reports/sprints/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-result.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md
 - reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-result.md
+- reports/sprints/B1-NORMAL-INFERIOR-TERM-DECISION-1-plan.md
+- reports/sprints/B1-NORMAL-INFERIOR-TERM-DECISION-1-result.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-plan.md
 - reports/sprints/B1-PLACEHOLDER-REGISTRY-REPLACEMENT-1-result.md
 - reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-plan.md
@@ -4669,7 +4677,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 500
+Count: 505
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4712,6 +4720,11 @@ Count: 500
 - archive/sprints/INSPECT-10B/INSPECT-10B-lead-review-round1.md
 - archive/sprints/INSPECT-10B/INSPECT-10B-planning-review.md
 - archive/sprints/INSPECT-10B/INSPECT-10B-sprint-plan.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-closure-log.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-lead-review-assignment.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-lead-review-round1.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-planning-review.md
+- archive/sprints/INSPECT-10C/INSPECT-10C-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
