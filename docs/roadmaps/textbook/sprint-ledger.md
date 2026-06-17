@@ -1,6 +1,6 @@
 # Textbook Sprint Ledger
 
-Updated: 2026-06-12
+Updated: 2026-06-16
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Current Rule
@@ -26,6 +26,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 
 | Sprint | Name | Completed | Current State | Required Next Action |
 |---|---|---|---|---|
+| TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1 | Rendered-Page Acceptance Policy | yes | Closed as platform-only policy sprint. Added durable rendered-page acceptance standard so future textbook sprints treat final rendered PDF/HTML as student-facing readability/layout proof while markdown remains the content source of truth. No lesson content or generated output edits. | Use `references/authored/textbook-rendered-page-acceptance-standard.md` in future student-facing textbook sprint plans, result records, and lead reviews. Next paragraph-production work still requires explicit human opening. |
 | B2-2.2-READY-1 | Book 2 Chapter 2.2 Readiness | no | Planned next, not started. Prepare Chapter 2.2 Elasticiteit before paragraph writing: target readiness for 2.2.1-2.2.4, notation/sign conventions, graph/table conventions, misconception list, answer-model route, and the 2.2.4 mixed-opgaven reuse decision. | Do not start until a human instruction opens the sprint. When opened, create the plan, plan JSON, baseline, and planned bundle check before any production work. No paragraph writing and no generated lesson output during readiness. |
 | B2-2.2.1-HARDEN | Book 2 Paragraph 2.2.1 Prijselasticiteit Quality Hardening | no | Planned after `B2-2.2-READY-1`. Should teach price elasticity calculation, sign/absolute-value interpretation, and elastic/inelastic classification. | Start only after the readiness sprint explicitly approves the 2.2.1 target route. |
 | B2-2.2.2-HARDEN | Book 2 Paragraph 2.2.2 Elasticiteit En Omzet Quality Hardening | no | Planned after 2.2.1. Should connect elasticity to total revenue effects using tables and carefully bounded visuals. | Start only after 2.2.1 closes and the target route remains coherent. |
@@ -54,5 +55,7 @@ Every agent working from this ledger must use the repository sprint protocol bef
 ## Ledger Guardrails
 
 Do not mark a sprint complete because files merely exist. Closure requires evidence that the printed output satisfies the specification, student-facing quality floor, target-exercise intent, rendered-output checks, and required review process.
+
+For any sprint that changes student-facing textbook output, closure must cite the rendered-page acceptance standard and include full-page rendered proof from the final output: PDF/HTML path, page PNGs or contact sheet, pages inspected, and defect disposition for clipping, overlap, unreadable labels, table overflow, missing figures, blank pages, broken glyphs, and stale generated output. Cropped figures and source checks are supporting evidence only.
 
 Do not use this ledger to authorize diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative decisions, product-wide use, or broad companion scaling. Those remain separate product gates.

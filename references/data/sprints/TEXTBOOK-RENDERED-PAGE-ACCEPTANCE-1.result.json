@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+  "generated": "2026-06-16",
+  "status": "completed",
+  "plan": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md",
+  "baseline": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-baseline.md",
+  "result": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md",
+  "diff_summary": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "platform_branch": "codex/textbook-rendered-page-acceptance-1-20260616",
+  "lessen_branch": "detached-origin-main-read-only",
+  "rendered_proof": {
+    "required": false,
+    "reason": "Policy-only sprint; no student-facing textbook output changed.",
+    "future_standard": "references/authored/textbook-rendered-page-acceptance-standard.md"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1 --complete",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run agent:index",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run dashboard:internal",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-lead-review-round2.md",
+    "final_verdict": "PASS",
+    "flags": [],
+    "findings": [
+      {
+        "id": "rendered_standard_core",
+        "description": "Rendered-page acceptance standard exists and preserves the content-source versus rendered-proof boundary.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/authored/textbook-rendered-page-acceptance-standard.md",
+          "docs/roadmaps/textbook/textbook-end-state.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure and future textbook use of the standard.",
+        "proof_required_to_close": "Standard exists and is cited by result and lead-review evidence."
+      },
+      {
+        "id": "visible_defect_blocker_rule",
+        "description": "Visible student-facing rendered defects are blockers and cannot be carried as PASS WITH FLAGS missing core requirements.",
+        "classification": "core_requirement_met",
+        "evidence": "references/authored/textbook-rendered-page-acceptance-standard.md",
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Pass/fail rule names clipping, overlap, unreadable labels, overflow, missing figures/glyphs, stale output, missing answer model, and placeholder-backed targets as blocking examples."
+      },
+      {
+        "id": "workflow_wiring_core",
+        "description": "Textbook workflow and lead-review instructions cite the new standard.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "docs/roadmaps/textbook/textbook-production-roadmap.md",
+          "docs/roadmaps/textbook/sprint-ledger.md",
+          "references/authored/README.md",
+          "agents/lead-reviewer-agent.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Workflow files cite the standard and future proof expectation."
+      },
+      {
+        "id": "lesson_boundary_clean",
+        "description": "No lesson content or generated lesson output changed.",
+        "classification": "core_requirement_met",
+        "evidence": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-command-log.jsonl",
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Command log includes successful `git -C ../4veco-lessen diff --check`."
+      },
+      {
+        "id": "follow_up_automation_named",
+        "description": "Detailed figure rules and rendered-proof automation are named follow-ups, not missing core policy requirements.",
+        "classification": "quality_improvement_available",
+        "evidence": "references/authored/textbook-rendered-page-acceptance-standard.md",
+        "blocks": "Nothing in this policy sprint.",
+        "does_not_block": "Closure of the rendered-page acceptance policy sprint.",
+        "proof_required_to_close": "Future `TEXTBOOK-FIGURE-STANDARD-1`, `RENDERED-PROOF-WORKFLOW-1`, and `TEXTBOOK-QUALITY-REF-SCHEMA-RENDERED-PROOF-1` sprints may close the named follow-ups."
+      }
+    ]
+  },
+  "blocked_claims": [
+    "lesson content changes",
+    "generated lesson output",
+    "protected machine or external reference data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_work": "Use references/authored/textbook-rendered-page-acceptance-standard.md in future student-facing textbook sprint plans, result records, and lead reviews. Start B2-2.2-READY-1 only after explicit human opening."
+}
