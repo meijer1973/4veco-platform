@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.6-inspect-11-scope-readiness`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` in progress / internal diagnostic scope readiness audit
+Roadmap version: `v2.7-inspect-11a-chapter-13-remediation-plan`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` in progress / Chapter 1.3 diagnostic readiness remediation plan
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -600,6 +600,49 @@ Acceptance criteria:
 - lead review and specialist reviews are complete before human review if the
   audit recommends considering a new diagnostic scope.
 
+### INSPECT-11A - Chapter 1.3 Diagnostic Readiness Remediation Plan
+
+Goal: convert the INSPECT-11 Chapter 1.3 recommendation into a concrete
+planning/evidence-readiness remediation packet before any later diagnostic
+report generation is considered.
+
+Scope:
+
+- inventory `1.3.1` through `1.3.4` source-registry target status;
+- reconcile lesson-side quality-ref/review state, including stale
+  `1.3.1-quality-ref.yaml` blocker language versus the later
+  `1.3.1-review.md` correction;
+- design per-target proof records for operation-chain match, answer-form
+  match, scaffold/no-answer-before-attempt boundary, and local-only authority;
+- record an explicit `1.3.4` integration/no-code decision route;
+- design accessibility, support, companion/advisory, next-action, and
+  product/school-boundary proof requirements;
+- keep every blocker fielded with `blocks`, `does_not_block`, and
+  `proof_required_to_close`.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11A/
+reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.md
+reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.json
+```
+
+Acceptance criteria:
+
+- no new diagnostic report is generated;
+- no evidence pack is generated;
+- no generated lesson output, protected reference, or source-registry record is
+  mutated;
+- Chapter 1.3 is not declared diagnostic-ready, pack-strength, or
+  teacher/school-facing ready;
+- the remediation plan cites product end-state and original sprint/gate spec;
+- all carried issues include `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- lead review and specialist reviews are complete before human review;
+- the recommendation names only a later bounded remediation/proof route, not
+  report generation.
+
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
 Goal: make the Dutch evidence pack useful as a school/teacher review artifact.
@@ -713,15 +756,16 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-11 internal diagnostic scope readiness audit
+Complete INSPECT-11A Chapter 1.3 diagnostic readiness remediation plan
 ```
 
-Recommended posture after INSPECT-10D merge:
+Recommended posture after INSPECT-11 merge:
 
 ```text
-accept or revise only INSPECT-11 readiness-audit output and candidate recommendation
-do not generate a new diagnostic report during INSPECT-11
+accept or revise only INSPECT-11A remediation-plan output and next-route recommendation
+do not generate a new diagnostic report during INSPECT-11A
 keep the older multi-scope evidence-pack INSPECT-11 row blocked
+keep Chapter 1.3 diagnostic report generation blocked until later human-reviewed remediation closes core proof gaps
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
 keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
 keep generated lesson-output mutation blocked
@@ -730,12 +774,13 @@ keep non-Dutch standards work out of this roadmap
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-10D into
-INSPECT-11 is:
+The practical product question carried forward from INSPECT-11 into
+INSPECT-11A is:
 
-> Which Dutch scope is mature enough to be considered for internal diagnostic
-> reporting next, and what blockers prevent that consideration from becoming
-> report generation, evidence-pack generation, or downstream authority?
+> What exact proof, quality-ref/review reconciliation, accessibility/support,
+> companion/advisory, and authority-boundary work is required before Chapter
+> 1.3 can move from best next planning candidate to any future diagnostic
+> report consideration?
 
 ## 9. Explicit Out-Of-Scope Work
 
