@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.2.1-HARDEN",
+  "name": "Book 2 Paragraph 2.2.1 Prijselasticiteit Quality Hardening",
+  "created": "2026-06-17",
+  "plan": "reports/sprints/B2-2.2.1-HARDEN-plan.md",
+  "baseline": "reports/sprints/B2-2.2.1-HARDEN-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Only Book 2 paragraph 2.2.1 is hardened.",
+    "Pre-existing untracked Chapter 2.2 lesson output is audited and dispositioned before being used as evidence.",
+    "The paragraph preserves old-value percentage-change denominators.",
+    "The paragraph reports signed Ev before classifying with |Ev|.",
+    "The answer model follows formula, old/new values, percentage changes, substitution, signed result, rounded result, classification, and economic interpretation.",
+    "Rendered-page proof is produced for changed student-facing output.",
+    "Figure proof is produced for changed or retained figures, or a no-changed-figures rationale is recorded.",
+    "No target source records, protected reference data, 2.2.2, 2.2.3, 2.2.4, Chapter 2.3, Book 3, or product gates are changed."
+  ],
+  "scope": [
+    "Open B2-2.2.1-HARDEN from the active textbook roadmap after human continue instruction.",
+    "Audit and disposition the pre-existing untracked Chapter 2.2 lesson output.",
+    "Build canonical 2.2.1 paragraph, opgaven, antwoorden, rendered output, rendered proof, figure proof, result evidence, and lead review.",
+    "Leave later Chapter 2.2 paragraphs for their own sprints."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2.1-HARDEN-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.1-HARDEN",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/references/check-roadmap-version-index.js",
+    "npm.cmd run check:platform",
+    "node scripts/validate-paragraph.js --mode part-a --profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit\"",
+    "node scripts/validate-chapter.js \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.2.1-HARDEN-result.md",
+    "node build-scripts/sprints/check-sprint-command-log.js B2-2.2.1-HARDEN",
+    "node build-scripts/sprints/check-lead-review-substance.js B2-2.2.1-HARDEN",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.1-HARDEN --complete",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check",
+    "git -C ../4veco-lessen status --short --branch"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No protected reference data writes.",
+    "No target-exercise source-record mutation.",
+    "No source edits to 2.2.2, 2.2.3, or 2.2.4 except stale-output disposition.",
+    "No generated-output hand patches that bypass the lesson build workflow.",
+    "No Book 2 Chapter 2.3 or Book 3 processing.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, product-wide use, product-route adoption, PV, Scale Gate 1, check-surface gate closure, or broad companion scaling authorization."
+  ]
+}

@@ -75,14 +75,14 @@
     },
     {
       "roadmap_id": "textbook-production-roadmap",
-      "version": "v1.6-b2-2.2-readiness-closed",
+      "version": "v1.8-b2-2.2.1-closed",
       "title": "Textbook Production Roadmap",
       "status": "active",
       "path": "docs/roadmaps/textbook/textbook-production-roadmap.md",
       "owner": "textbook_team",
       "updated_on": "2026-06-17",
       "supersedes": [],
-      "notes": "Active roadmap for textbook improvement and writing, housed in docs/roadmaps/textbook/. Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13 merged the mixed-opgaven target standard and reviewed-final 2.1.4 target/output. Rendered-page acceptance and figure standards now govern future textbook proof expectations. B2-2.2-READY-1 closed Chapter 2.2 Elasticiteit readiness before paragraph writing; the next planned production step is B2-2.2.1-HARDEN after explicit human opening. Companion/product proof, check-surface closure, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain separate and blocked until their own gates close."
+      "notes": "Active roadmap for textbook improvement and writing, housed in docs/roadmaps/textbook/. Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13 merged the mixed-opgaven target standard and reviewed-final 2.1.4 target/output. Rendered-page acceptance and figure standards now govern future textbook proof expectations. B2-2.2-READY-1 closed Chapter 2.2 Elasticiteit readiness before paragraph writing. B2-2.2.1-HARDEN closed PASS WITH FLAGS after 2.2.1-only output, stale Chapter 2.2 disposition, rendered-page proof, figure proof, validators, and lead review. B2-2.2.2-HARDEN is next planned but not started. Companion/product proof, check-surface closure, Scale Gate 1, diagnostics/mastery/PV, and student/product-use work remain separate and blocked until their own gates close."
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
