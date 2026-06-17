@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T10:17:55.207Z
+Generated: 2026-06-17T11:27:18.818Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4756
+Files indexed: 4799
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -677,7 +677,7 @@ Count: 42
 
 ## validators
 
-Count: 482
+Count: 483
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -687,6 +687,7 @@ Count: 482
 - archive/sprints/INSPECT-10C/INSPECT-10C-validation-log.md
 - archive/sprints/INSPECT-10D/INSPECT-10D-validation-log.md
 - archive/sprints/INSPECT-11/INSPECT-11-validation-log.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -1164,7 +1165,7 @@ Count: 482
 
 ## references
 
-Count: 617
+Count: 619
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1258,6 +1259,8 @@ Count: 617
 - references/data/sprints/B2-2.1.3-HARDEN.result.json
 - references/data/sprints/B2-2.1.4-HARDEN.plan.json
 - references/data/sprints/B2-2.1.4-HARDEN.result.json
+- references/data/sprints/B2-2.2-READY-1.plan.json
+- references/data/sprints/B2-2.2-READY-1.result.json
 - references/data/sprints/B2-READY-1.plan.json
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
@@ -1786,7 +1789,7 @@ Count: 617
 
 ## reports
 
-Count: 2944
+Count: 2976
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1825,8 +1828,16 @@ Count: 2944
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1837,6 +1848,8 @@ Count: 2944
 - reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md
+- reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.json
+- reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.md
 - reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.json
 - reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.md
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.json
@@ -1850,6 +1863,10 @@ Count: 2944
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2156,6 +2173,10 @@ Count: 2944
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-review-packet.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-subagent-review.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-target-status.md
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
@@ -2789,6 +2810,7 @@ Count: 2944
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -2917,6 +2939,17 @@ Count: 2944
 - reports/sprints/B2-2.1.4-HARDEN-package-QUALITY_LOG.md
 - reports/sprints/B2-2.1.4-HARDEN-plan.md
 - reports/sprints/B2-2.1.4-HARDEN-result.md
+- reports/sprints/B2-2.2-READY-1-baseline.md
+- reports/sprints/B2-2.2-READY-1-command-log.jsonl
+- reports/sprints/B2-2.2-READY-1-command-log.md
+- reports/sprints/B2-2.2-READY-1-diff-summary.md
+- reports/sprints/B2-2.2-READY-1-lead-review-assignment.md
+- reports/sprints/B2-2.2-READY-1-lead-review-corrections.md
+- reports/sprints/B2-2.2-READY-1-lead-review-round1.md
+- reports/sprints/B2-2.2-READY-1-lead-review-round2.md
+- reports/sprints/B2-2.2-READY-1-plan.md
+- reports/sprints/B2-2.2-READY-1-readiness-brief.md
+- reports/sprints/B2-2.2-READY-1-result.md
 - reports/sprints/B2-READY-1-baseline.md
 - reports/sprints/B2-READY-1-command-log.jsonl
 - reports/sprints/B2-READY-1-diff-summary.md
@@ -4723,6 +4756,8 @@ Count: 2944
 - reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
 - reports/sprints/VISUAL-QA-HARDEN-2-result.md
 - reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
+- reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-plan.md
+- reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-result.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
@@ -4753,7 +4788,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 524
+Count: 532
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4819,6 +4854,12 @@ Count: 524
 - archive/sprints/INSPECT-11/INSPECT-11-planning-review.md
 - archive/sprints/INSPECT-11/INSPECT-11-specialist-gate-results.md
 - archive/sprints/INSPECT-11/INSPECT-11-sprint-plan.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-closure-log.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-correction-log.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-lead-review-round1.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-lead-review-round2.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-specialist-gate-results.md
+- archive/sprints/INSPECT-11A/INSPECT-11A-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
@@ -5127,6 +5168,8 @@ Count: 524
 - docs/roadmaps/quality-standards/sprint-ledger.md
 - docs/roadmaps/README.md
 - docs/roadmaps/roadmap-version-index.json
+- docs/roadmaps/roadmap-version-index.md
+- docs/roadmaps/roadmap-version-index.md
 - docs/roadmaps/roadmap-version-index.md
 - docs/roadmaps/textbook/sprint-ledger.md
 - docs/roadmaps/textbook/textbook-end-state.md

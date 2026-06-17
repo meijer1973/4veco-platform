@@ -1,0 +1,198 @@
+{
+  "sprint_id": "B2-2.2-READY-1",
+  "generated": "2026-06-17",
+  "status": "completed",
+  "plan": "reports/sprints/B2-2.2-READY-1-plan.md",
+  "baseline": "reports/sprints/B2-2.2-READY-1-baseline.md",
+  "result": "reports/sprints/B2-2.2-READY-1-result.md",
+  "diff_summary": "reports/sprints/B2-2.2-READY-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "scope": {
+    "chapter_2_2_readiness_prepared": true,
+    "target_readiness_221_224_inspected": true,
+    "elasticity_notation_sign_contract_created": true,
+    "graph_table_contract_created": true,
+    "misconception_list_created": true,
+    "answer_model_route_created": true,
+    "rendered_page_expectations_cited": true,
+    "figure_proof_expectations_cited": true,
+    "mixed_opgaven_reuse_decision_recorded": true,
+    "protected_reference_data_changed": false,
+    "target_exercise_registry_changed": false,
+    "generated_lesson_output_changed": false,
+    "book_2_chapter_2_3_processed": false,
+    "book_3_processed": false,
+    "product_authority": false
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2-READY-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.2-READY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --short --branch",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.2-READY-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js B2-2.2-READY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js B2-2.2-READY-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js B2-2.2-READY-1 --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/B2-2.2-READY-1-lead-review-assignment.md",
+    "round1": "reports/sprints/B2-2.2-READY-1-lead-review-round1.md",
+    "corrections": "reports/sprints/B2-2.2-READY-1-lead-review-corrections.md",
+    "round2": "reports/sprints/B2-2.2-READY-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "findings": [
+      {
+        "id": "core-readiness-requirements-met",
+        "description": "Target readiness, notation/sign convention, graph/table convention, misconception list, answer-model route, rendered-page expectations, figure-proof expectations, and mixed-opgaven reuse decision are present.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "reports/sprints/B2-2.2-READY-1-readiness-brief.md",
+          "reports/sprints/B2-2.2-READY-1-lead-review-round2.md"
+        ],
+        "blocks": "No closure surface after round-2 validation.",
+        "does_not_block": "Starting B2-2.2.1-HARDEN after readiness closure and human opening.",
+        "proof_required_to_close": "Maintain the readiness brief and final lead-review PASS WITH FLAGS record."
+      },
+      {
+        "id": "b2-221-223-migrated-target-review",
+        "description": "2.2.1 through 2.2.3 remain migrated target records needing governed v5 promotion evidence before reviewed-final target claims.",
+        "classification": "minor_carry_flag",
+        "evidence": [
+          "references/authored/course-target-exercises.json",
+          "reports/sprints/B2-2.2-READY-1-readiness-brief.md"
+        ],
+        "blocks": "Reviewed-final target promotion and final curriculum-quality claims for 2.2.1 through 2.2.3.",
+        "does_not_block": "Using the targets as planning evidence for B2-2.2.1-HARDEN after readiness closure and human opening.",
+        "proof_required_to_close": "Complete governed target-promotion evidence in B2-2.2-TARGET-V5-PROMOTE or paragraph-specific target review."
+      },
+      {
+        "id": "b2-224-placeholder-mixed-target",
+        "description": "2.2.4 remains placeholder-backed and must be replaced or explicitly accepted under the mixed-opgaven standard before any final mixed-section claim.",
+        "classification": "minor_carry_flag",
+        "evidence": [
+          "references/authored/course-target-exercises.json",
+          "references/authored/gemengde-opgaven-target-standard.md",
+          "reports/sprints/B2-2.2-READY-1-readiness-brief.md"
+        ],
+        "blocks": "Reviewed-final target claims and final mixed-section closure for 2.2.4.",
+        "does_not_block": "2.2.1 hardening after readiness closure and human opening.",
+        "proof_required_to_close": "B2-2.2.4-HARDEN-MIXED-1 must replace or explicitly accept a non-placeholder mixed target using the mixed-opgaven standard."
+      },
+      {
+        "id": "b2-223-density-risk",
+        "description": "2.2.3 combines Ei, Ek, goods classification, and demand-function reasoning, so later hardening must scaffold the route.",
+        "classification": "quality_improvement_available",
+        "evidence": [
+          "reports/sprints/B2-2.2-READY-1-readiness-brief.md"
+        ],
+        "blocks": "Closing 2.2.3 output without a scaffolded route and signed classifications.",
+        "does_not_block": "2.2.1 hardening after readiness closure and human opening.",
+        "proof_required_to_close": "B2-2.2.3-HARDEN must show scaffolded Ei, Ek, and demand-function work."
+      },
+      {
+        "id": "preexisting-untracked-chapter-22-output",
+        "description": "The lesson repo has pre-existing untracked Chapter 2.2 output that this sprint observes but does not edit or accept as repository-processed evidence.",
+        "classification": "minor_carry_flag",
+        "evidence": [
+          "reports/sprints/B2-2.2-READY-1-baseline.md",
+          "reports/sprints/B2-2.2-READY-1-command-log.jsonl"
+        ],
+        "blocks": "Treating the pre-existing untracked files as accepted or merged Chapter 2.2 output.",
+        "does_not_block": "Readiness closure, because the files are baseline-only and no lesson-output write occurred.",
+        "proof_required_to_close": "A later authorized paragraph-output sprint must own, regenerate, or disposition Chapter 2.2 output with rendered proof."
+      }
+    ],
+    "flags": [
+      {
+        "id": "b2-221-223-migrated-target-review",
+        "description": "2.2.1 through 2.2.3 remain migrated target records needing governed v5 promotion evidence before reviewed-final target claims.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "B2-2.2-TARGET-V5-PROMOTE",
+        "next_action": "Promote only after governed target-quality evidence supports each record.",
+        "blocks": "Reviewed-final target promotion and final curriculum-quality claims for 2.2.1 through 2.2.3.",
+        "does_not_block": "Using the targets as planning evidence for B2-2.2.1-HARDEN after readiness closure and human opening.",
+        "proof_required_to_close": "Complete governed target-promotion evidence in B2-2.2-TARGET-V5-PROMOTE or paragraph-specific target review.",
+        "blocking": false
+      },
+      {
+        "id": "b2-224-placeholder-mixed-target",
+        "description": "2.2.4 remains placeholder-backed and must be replaced or explicitly accepted under the mixed-opgaven standard before any final mixed-section claim.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "B2-2.2.4-HARDEN-MIXED-1",
+        "next_action": "Replace or explicitly accept a non-placeholder mixed target using the mixed-opgaven standard.",
+        "blocks": "Reviewed-final target claims and final mixed-section closure for 2.2.4.",
+        "does_not_block": "2.2.1 hardening after readiness closure and human opening.",
+        "proof_required_to_close": "B2-2.2.4-HARDEN-MIXED-1 must replace or explicitly accept a non-placeholder mixed target using the mixed-opgaven standard.",
+        "blocking": false
+      },
+      {
+        "id": "b2-223-density-risk",
+        "description": "2.2.3 combines Ei, Ek, goods classification, and demand-function reasoning, so later hardening must scaffold the route.",
+        "classification": "quality_improvement_available",
+        "disposition": "carry_forward",
+        "owner": "B2-2.2.3-HARDEN",
+        "next_action": "Scaffold Ei, Ek, and demand-function work during 2.2.3 hardening.",
+        "blocks": "Closing 2.2.3 output without a scaffolded route and signed classifications.",
+        "does_not_block": "2.2.1 hardening after readiness closure and human opening.",
+        "proof_required_to_close": "B2-2.2.3-HARDEN must show scaffolded Ei, Ek, and demand-function work.",
+        "blocking": false
+      },
+      {
+        "id": "preexisting-untracked-chapter-22-output",
+        "description": "The lesson repo has pre-existing untracked Chapter 2.2 output that this sprint observes but does not edit or accept as repository-processed evidence.",
+        "classification": "minor_carry_flag",
+        "disposition": "carry_forward",
+        "owner": "B2-2.2.1-HARDEN",
+        "next_action": "Later paragraph-output work must own, regenerate, or disposition the Chapter 2.2 output through its authorized workflow.",
+        "blocks": "Treating the pre-existing untracked files as accepted or merged Chapter 2.2 output.",
+        "does_not_block": "Readiness closure, because the files are baseline-only and no lesson-output write occurred.",
+        "proof_required_to_close": "A later authorized paragraph-output sprint must own, regenerate, or disposition Chapter 2.2 output with rendered proof.",
+        "blocking": false
+      }
+    ]
+  }
+}
