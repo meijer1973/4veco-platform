@@ -497,7 +497,7 @@ function proofMarkdown(generated, localUrl, captured) {
     '- Deployed the generated 1.1.2 exit-ticket output into the Book 1 lesson repo.',
     '- Confirmed the route uses `header.ge-topbar`, `main.ge-page[data-golden-ticket-root]`, `golden-ticket-layout.css`, `shared/exit-ticket/1.1.2-exit-ticket.js`, and `golden-ticket-layout.js`.',
     '- Confirmed the calculation/structured route does not load `golden-ticket-graph.js` or legacy task-shell/exit-ticket assets.',
-    '- Confirmed generated lesson output changed; platform source polish changed only the student-facing kicker.',
+    '- Confirmed generated lesson output changed only for the approved readiness flags and authority notes.',
     '',
     '## Rendered Evidence',
     '',
@@ -511,6 +511,7 @@ function proofMarkdown(generated, localUrl, captured) {
     '- No broad rollout.',
     '- No product use authorization.',
     '- No Scale Gate 1.',
+    '- Target-equivalent readiness approved for `1.1.2-exit-ticket` only.',
     '- No target-equivalent completion-language claim.',
     '- No diagnostics, mastery, automatic sequencing, summative use, or PV authorization.',
     ''

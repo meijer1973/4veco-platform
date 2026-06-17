@@ -37,7 +37,7 @@ describe('exit-ticket metadata alignment', () => {
         expect(data.metadataAlignment.notes.join(' ')).toMatch(/does not yet cover the full A43/i);
     });
 
-    test('1.1.2 Golden transfer candidate covers the selected target operation chain without readiness authority', () => {
+    test('1.1.2 Golden transfer covers the selected target operation chain with approved readiness authority', () => {
         const ids = unitIds();
         const target = targetRegistry.exercises.find((exercise) => exercise.id === targetData.parNr);
 
@@ -47,11 +47,11 @@ describe('exit-ticket metadata alignment', () => {
         expect(targetData.targetSkillIds).toEqual(targetData.metadataAlignment.paragraphSkillIds);
         expect(targetData.skillScopeIds).toEqual(targetData.metadataAlignment.paragraphSkillIds);
         expect(targetData.metadataAlignment.targetExerciseSkillIds).toEqual(target.required_skills);
-        expect(targetData.metadataAlignment.targetReadinessEvidence).toBe(false);
-        expect(targetData.metadataAlignment.status).toBe('golden_workbench_transfer_candidate');
+        expect(targetData.metadataAlignment.targetReadinessEvidence).toBe(true);
+        expect(targetData.metadataAlignment.status).toBe('target_equivalent_aligned');
         expect(targetData.targetEquivalent).toEqual({
             candidate: true,
-            gateApproved: false,
+            gateApproved: true,
             completionLanguageEligible: false,
         });
 

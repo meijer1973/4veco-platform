@@ -133,9 +133,10 @@ function checkData(data, dataFile) {
   assert(data.layout && data.layout.framework === 'golden_exercise_workbench', 'deployed 1.1.2 must use Golden Workbench framework');
   assert(data.layout.kicker === 'Exit ticket - paragraaf 1.1.2', 'deployed 1.1.2 kicker must be student-facing');
   assert(data.targetEquivalent && data.targetEquivalent.candidate === true, 'target-equivalent candidate flag must remain true');
-  assert(data.targetEquivalent.gateApproved === false, 'gate approval must remain held false');
+  assert(data.targetEquivalent.gateApproved === true, 'gate approval must record approved readiness evidence');
   assert(data.targetEquivalent.completionLanguageEligible === false, 'completion language must remain held false');
-  assert(data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === false, 'target readiness evidence must remain held false');
+  assert(data.metadataAlignment && data.metadataAlignment.status === 'target_equivalent_aligned', 'target alignment status must be approved');
+  assert(data.metadataAlignment && data.metadataAlignment.targetReadinessEvidence === true, 'target readiness evidence must record approved readiness');
   assert(Array.isArray(data.contextBlocks) && data.contextBlocks.length === 3, 'deployed 1.1.2 must contain three context blocks');
   const contextIds = new Set(data.contextBlocks.map((block) => block.id));
   const tasks = (data.tasks || []).filter((item) => item && item.type === 'task_shell' && item.taskShell);
@@ -183,6 +184,9 @@ function checkCase(capture) {
   assert(proof.taskCount === 4, `${capture.case}: expected four rendered tasks`);
   assert(proof.calculationTaskCount === 3, `${capture.case}: expected three calculation tasks`);
   assert(proof.structuredTaskCount === 1, `${capture.case}: expected one structured task`);
+  assert(proof.gateApproved === true, `${capture.case}: gate approval must record approved readiness evidence`);
+  assert(proof.completionLanguageEligible === false, `${capture.case}: completion language must remain held false`);
+  assert(proof.targetReadinessEvidence === true, `${capture.case}: target readiness evidence must record approved readiness`);
   assert(proof.contextBlockCount === 3, `${capture.case}: expected three context blocks`);
   assert(proof.answerRevealingPlaceholderCount === 0, `${capture.case}: answer-revealing placeholders visible`);
   assert(proof.transferproofVisible === false, `${capture.case}: internal transferproof label visible`);
@@ -275,7 +279,7 @@ function main() {
   checkHtml(read(pageFile), pageFile);
   checkData(loadDeployedData(dataFile), dataFile);
   checkRenderedProof();
-  console.log(`${SPRINT_ID} passed: rendered 1.1.2 lesson output, screenshots, and held-authority boundaries verified`);
+  console.log(`${SPRINT_ID} passed: rendered 1.1.2 lesson output, screenshots, approved readiness, and held completion/downstream boundaries verified`);
 }
 
 try {

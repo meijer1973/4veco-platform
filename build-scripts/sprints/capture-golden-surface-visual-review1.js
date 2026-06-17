@@ -39,7 +39,7 @@ const surfaces = [
     suffix: 'exit-ticket',
     sourceKey: '1.1.2-exit-ticket',
     label: '1.1.2 exit ticket',
-    authority: 'target_equivalent_held',
+    authority: 'target_equivalent_readiness_approved',
   },
   {
     id: '112-korte-check',

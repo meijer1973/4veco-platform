@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "EXIT-TICKET-WORKBENCH-112-1",
-  "generated": "2026-06-10T11:46:39.902Z",
+  "generated": "2026-06-17T07:59:33.191Z",
   "status": "passed",
   "source": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
   "renderer": {
@@ -32,6 +32,8 @@
     "migrated_routes": [
       "1.1.2-exit-ticket"
     ],
+    "gate_approved": true,
+    "target_readiness_evidence": true,
     "broad_migration_authorized": false,
     "generated_lesson_output_changed": false,
     "legacy_renderers_deleted": false,

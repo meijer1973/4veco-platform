@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "packet_id": "B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1",
+  "sprint_id": "B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1",
+  "bundle_id": "B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1",
+  "packet_type": "closure_and_implementation_review_packet",
+  "review_standard": "REV-STD-1",
+  "pr_throughput_class": "cross_repo_bundle",
+  "authority_class": "high_authority",
+  "review_autonomy": {
+    "level": "L4",
+    "rationale": "Implements a target-readiness authority change and touches paired generated lesson output."
+  },
+  "human_decision_required": true,
+  "paired_prs": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/b1-graph-evidence-112-bundle-1-20260617"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/b1-graph-evidence-112-bundle-1-20260617"
+    }
+  ],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "unexpected source-data mutation beyond 1.1.2-exit-ticket",
+    "completionLanguageEligible changes to true",
+    "1.1.2-korte-check becomes target-readiness evidence",
+    "product, diagnostics, mastery, PV, Scale Gate, or student/product authority claimed"
+  ],
+  "date": "2026-06-17",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "../4veco-lessen/specifications/companion-core-specifications.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/GATE-PRODUCT-3P-PREP-2-result.md",
+    "reports/sprints/GATE-PRODUCT-3P-PREP-2-evidence-map.md",
+    "reports/sprints/GATE-PRODUCT-3P-PREP-2-blocker-log.md",
+    "reports/json/gate-product-3p-prep-2-proof.json",
+    "reports/sprints/L1.7B-Q2-operation-chain.md",
+    "reports/sprints/L1.7B-Q2-answer-model.md"
+  ],
+  "non_negotiable_requirements": [
+    "Implement exactly gateApproved:true, targetReadinessEvidence:true, completionLanguageEligible:false for source-data/book-1/exit-ticket/1.1.2-exit-ticket.json.",
+    "Keep source-data/book-1/exit-ticket/1.1.2-korte-check.json advisory and non-target-readiness.",
+    "Regenerate paired lesson output from platform source only.",
+    "Do not authorize completion language, product-route adoption, diagnostics, mastery, PV, Scale Gate 1, broad product use, or student/product use."
+  ],
+  "lead_synthesis": {
+    "verdict": "APPROVE_FLAG_IMPLEMENTATION",
+    "rationale": "Three specialist reviewers approved implementation, and the repository reviewer requested authority review only as a precondition. This packet supplies that REV-STD-1 authority review and implements the same minimal change set.",
+    "completion_language_authorized": false,
+    "downstream_authority_authorized": false
+  },
+  "core_requirement_checklist": [
+    {
+      "requirement": "A38 percentage-change task aligned",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json"
+    },
+    {
+      "requirement": "A39 index-number task aligned",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json"
+    },
+    {
+      "requirement": "D31 index-points trap aligned",
+      "status": "met",
+      "evidence": "task indexpunten-uitleg"
+    },
+    {
+      "requirement": "Generated lesson output parity",
+      "status": "met",
+      "evidence": "../4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js"
+    },
+    {
+      "requirement": "Completion language held",
+      "status": "met",
+      "evidence": "targetEquivalent.completionLanguageEligible remains false"
+    },
+    {
+      "requirement": "Advisory short-check boundary held",
+      "status": "met",
+      "evidence": "source-data/book-1/exit-ticket/1.1.2-korte-check.json"
+    },
+    {
+      "requirement": "Downstream authority held",
+      "status": "met",
+      "evidence": "carried_issues"
+    }
+  ],
+  "findings": [
+    {
+      "id": "B1GE112B1-001",
+      "classification": "pass",
+      "severity": "low",
+      "finding": "1.1.2 exit-ticket source and generated lesson data match the approved readiness state.",
+      "status": "closed"
+    },
+    {
+      "id": "B1GE112B1-002",
+      "classification": "carried_issue",
+      "severity": "high",
+      "finding": "Completion language remains disabled.",
+      "status": "open_by_design"
+    },
+    {
+      "id": "B1GE112B1-003",
+      "classification": "carried_issue",
+      "severity": "critical",
+      "finding": "Scale Gate, product-route, diagnostics, mastery, PV, and student/product authorities remain held.",
+      "status": "open_by_design"
+    },
+    {
+      "id": "B1GE112B1-004",
+      "classification": "carried_issue",
+      "severity": "high",
+      "finding": "Full first-three product path proof remains unclosed.",
+      "status": "open_by_design"
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue": "completionLanguageEligible remains false",
+      "blocks": "1.1.2 completion copy, paragraph-completion claims, automatic next-paragraph permission, mastery-like wording",
+      "does_not_block": "Merging gate/readiness source flag implementation",
+      "proof_required_to_close": "Later explicit human/product gate approving completion language"
+    },
+    {
+      "issue": "Downstream product authority remains held",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics, mastery, PV, student/product use",
+      "does_not_block": "Merging this source/generated parity implementation",
+      "proof_required_to_close": "Later product-proof and Scale Gate packets using REV-STD-1"
+    },
+    {
+      "issue": "Full first-three product path remains missing",
+      "blocks": "GATE-PRODUCT-3P closure and downstream Scale Gate closure",
+      "does_not_block": "Merging this 1.1.2 exit-ticket readiness implementation",
+      "proof_required_to_close": "Gate packet covering landing, Start, Leer, Oefen, skill map, practice, advisory check, exit ticket, feedback, and next action for 1.1.1-1.1.3"
+    }
+  ],
+  "proof_refs": [
+    "reports/json/b1-graph-evidence-112-closure-and-implementation-bundle-1-proof.json",
+    "reports/json/exit-ticket-workbench-112-1-proof.json",
+    "reports/json/exit-ticket-workbench-112-rendered-1-proof.json",
+    "reports/json/golden-surface-visual-review-1-proof.json",
+    "reports/json/checksurface-policy-regression1-proof.json"
+  ],
+  "recommendation": "merge_after_ci_platform_first_lesson_second"
+}

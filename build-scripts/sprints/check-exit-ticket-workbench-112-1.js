@@ -100,9 +100,10 @@ function main() {
   assert(GoldenTicketLayout.supportedVariantFor(exit113) === 'golden_graph_reading_claim_v1', '1.1.3 must keep graph Golden variant');
   assert(GoldenTicketLayout.supportedVariantFor(exit111) === null, '1.1.1 must not be migrated in this transfer');
   assert(exit112.targetEquivalent.candidate === true, '1.1.2 remains a target-equivalent candidate');
-  assert(exit112.targetEquivalent.gateApproved === false, '1.1.2 Golden transfer must hold gate approval');
+  assert(exit112.targetEquivalent.gateApproved === true, '1.1.2 Golden transfer must record approved gate evidence');
   assert(exit112.targetEquivalent.completionLanguageEligible === false, '1.1.2 Golden transfer must hold completion language');
-  assert(exit112.metadataAlignment.targetReadinessEvidence === false, '1.1.2 Golden transfer must hold target-readiness evidence');
+  assert(exit112.metadataAlignment.status === 'target_equivalent_aligned', '1.1.2 Golden transfer must record target-equivalent alignment');
+  assert(exit112.metadataAlignment.targetReadinessEvidence === true, '1.1.2 Golden transfer must record target-readiness evidence');
   assertContextRefs(exit112);
   assertNoOverclaim(JSON.stringify(exit112.completion || {}), '1.1.2 completion copy');
 
@@ -146,6 +147,8 @@ function main() {
     response_proof: responseProof,
     authority: {
       migrated_routes: ['1.1.2-exit-ticket'],
+      gate_approved: true,
+      target_readiness_evidence: true,
       broad_migration_authorized: false,
       generated_lesson_output_changed: false,
       legacy_renderers_deleted: false,

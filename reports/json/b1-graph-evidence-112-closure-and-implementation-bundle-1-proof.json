@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1",
+  "generated": "2026-06-17T07:50:46.171Z",
+  "status": "implementation_complete_validation_passed_pending_pr_review",
+  "decision": {
+    "lead_synthesis": "APPROVE_FLAG_IMPLEMENTATION",
+    "gateApproved": true,
+    "targetReadinessEvidence": true,
+    "completionLanguageEligible": false,
+    "scope": "1.1.2-exit-ticket only"
+  },
+  "source_state": {
+    "path": "source-data/book-1/exit-ticket/1.1.2-exit-ticket.json",
+    "surface": "target_equivalent_exit_ticket",
+    "target_skill_ids": ["A38", "A39", "D31"],
+    "metadata_status": "target_equivalent_aligned",
+    "gate_approved": true,
+    "target_readiness_evidence": true,
+    "completion_language_eligible": false
+  },
+  "advisory_short_check_state": {
+    "path": "source-data/book-1/exit-ticket/1.1.2-korte-check.json",
+    "surface": "advisory_short_check",
+    "target_equivalent_candidate": false,
+    "target_readiness_evidence": false
+  },
+  "generated_lesson_output": {
+    "repository": "meijer1973/4veco-lessen",
+    "branch": "codex/b1-graph-evidence-112-bundle-1-20260617",
+    "changed_files": [
+      "Boek 1 - Grondslagen, vraag en aanbod/shared/exit-ticket/1.1.2-exit-ticket.js"
+    ],
+    "hand_edited": false
+  },
+  "internal_review": [
+    {
+      "role": "teacher_didactic",
+      "verdict": "APPROVE_FLAG_IMPLEMENTATION"
+    },
+    {
+      "role": "layout_rendered_output",
+      "verdict": "APPROVE_FLAG_IMPLEMENTATION"
+    },
+    {
+      "role": "authority_boundary",
+      "verdict": "APPROVE_FLAG_IMPLEMENTATION"
+    },
+    {
+      "role": "repository_ci",
+      "verdict": "HOLD_FOR_AUTHORITY_REVIEW",
+      "resolution": "Condition satisfied by this REV-STD-1 bundle; implementation scope matched the repository reviewer's minimal change set."
+    }
+  ],
+  "proof_refs": [
+    "reports/json/exit-ticket-workbench-112-1-proof.json",
+    "reports/json/exit-ticket-workbench-112-rendered-1-proof.json",
+    "reports/json/golden-surface-visual-review-1-proof.json",
+    "reports/json/checksurface-policy-regression1-proof.json",
+    "reports/json/golden-exercise-checkers-1-proof.json"
+  ],
+  "authority": {
+    "completion_language_authorized": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "broad_product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "gate_product_3p_closed": false
+  },
+  "validation": {
+    "completed": [
+      "npx.cmd jest --runInBand --runTestsByPath engines/tests/exit-ticket-engine.test.js engines/tests/exit-ticket-metadata-alignment.test.js engines/tests/exit-ticket-ui.test.js engines/tests/golden-ticket-layout.test.js build-scripts/platform/build-exit-ticket-shells.test.js",
+      "node build-scripts/sprints/check-exit-ticket-workbench-112-1.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node build-scripts/sprints/capture-exit-ticket-workbench-112-rendered-screenshots.js",
+      "node build-scripts/sprints/check-exit-ticket-workbench-112-rendered-1.js --book-root <canonical Book 1 root>",
+      "node build-scripts/sprints/capture-golden-surface-visual-review1.js",
+      "node build-scripts/sprints/check-golden-exercise-workbench.js",
+      "node scripts/check-course-target-exercises-v5.js",
+      "node build-scripts/reports/validate-report-json.js",
+      "node build-scripts/references/check-roadmap-version-index.js",
+      "node build-scripts/sprints/emit-url-index.js --check",
+      "npm.cmd run check:scope-language",
+      "npm.cmd run check:platform",
+      "npm.cmd run check:book -- --skip-chapters <canonical Book 1 root>",
+      "git diff --check",
+      "git -C <lesson repo> diff --check"
+    ],
+    "pending_final_pr_validation": []
+  }
+}

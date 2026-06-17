@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sprint_id": "CHECKSURFACE-POLICY-REGRESSION-1",
-  "generated": "2026-06-16T09:12:38.744Z",
+  "generated": "2026-06-17T07:59:33.226Z",
   "status": "passed",
   "policy": {
     "stable_specs_updated": true,
@@ -112,7 +112,9 @@
     }
   ],
   "authority": {
-    "reviewed_112_completion_authority_preserved": true,
+    "current_112_target_readiness_authority_approved": true,
+    "current_112_completion_language_authorized": false,
+    "historical_112_exact_copy_authority_not_broadened": true,
     "new_111_or_113_completion_language_authorized": false,
     "product_route_adoption_authorized": false,
     "diagnostics_authorized": false,

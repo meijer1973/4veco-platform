@@ -325,15 +325,16 @@ function checkCurrentSources() {
   assert(!containsAuthorityOverclaim(approved113), '1.1.3-exit-ticket has authority overclaim');
 
   const reviewed112 = sources['1.1.2-exit-ticket'];
-  assert(reviewed112.targetEquivalent.gateApproved === false, 'current 1.1.2 Golden Workbench transfer must remain unapproved');
+  assert(reviewed112.targetEquivalent.gateApproved === true, 'current 1.1.2 Golden Workbench transfer must record approved gate evidence');
   assert(reviewed112.targetEquivalent.completionLanguageEligible === false, 'current 1.1.2 Golden Workbench completion language must remain held');
-  assert(reviewed112.metadataAlignment.targetReadinessEvidence === false, 'current 1.1.2 Golden Workbench target-readiness evidence must remain held');
+  assert(reviewed112.metadataAlignment.status === 'target_equivalent_aligned', 'current 1.1.2 Golden Workbench metadata must record target-equivalent alignment');
+  assert(reviewed112.metadataAlignment.targetReadinessEvidence === true, 'current 1.1.2 Golden Workbench target-readiness evidence must be approved');
   assert(
-    JSON.stringify(reviewed112).includes('earlier local legacy 1.1.2 copy') &&
-      JSON.stringify(reviewed112).includes('Golden Workbench transfer holds target-equivalent readiness and completion language pending review'),
-    '1.1.2 must distinguish historical exact-copy authority from current held Golden Workbench transfer'
+    JSON.stringify(reviewed112).includes('B1-GRAPH-EVIDENCE-112-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1') &&
+      JSON.stringify(reviewed112).includes('Completion language remains held'),
+    '1.1.2 must record narrow readiness approval while holding completion language'
   );
-  assert(!containsAuthorityOverclaim(reviewed112), '1.1.2 authority broadened beyond historical exact local copy');
+  assert(!containsAuthorityOverclaim(reviewed112), '1.1.2 authority broadened beyond readiness approval');
 
   const short113 = sources['1.1.3-korte-check'];
   const exit113 = sources['1.1.3-exit-ticket'];
@@ -436,7 +437,9 @@ function main() {
     current_sources: current,
     negative_fixtures: negativeFixtures,
     authority: {
-      reviewed_112_completion_authority_preserved: true,
+      current_112_target_readiness_authority_approved: true,
+      current_112_completion_language_authorized: false,
+      historical_112_exact_copy_authority_not_broadened: true,
       new_111_or_113_completion_language_authorized: false,
       product_route_adoption_authorized: false,
       diagnostics_authorized: false,
