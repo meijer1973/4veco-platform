@@ -26,7 +26,7 @@ baseline, but generated paragraph cards must show neutral `Paragraaf N` /
 navigation/orientation only: paragraph route rows, checks, games, textbook
 links, and other companion resources remain on paragraph landing pages.
 
-Book Landing V2 Minimal Navigation is prototype-owned one level higher. Book
+Book Landing V2 Minimal Navigation is fixture-owned one level higher. Book
 pages must use `references/ui/book-landing-v2/approved-minimal.html` as the
 visual baseline, and generated chapter cards must show neutral `Hoofdstuk N` /
 `Hoofdstukroute` labels instead of fallback aspect/domain labels. Book pages are
