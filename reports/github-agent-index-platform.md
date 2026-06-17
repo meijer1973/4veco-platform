@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T10:49:42.040Z
+Generated: 2026-06-17T11:29:23.699Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4776
+Files indexed: 4782
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 497
+Count: 498
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -338,6 +338,7 @@ Count: 497
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -677,7 +678,7 @@ Count: 42
 
 ## validators
 
-Count: 482
+Count: 483
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -770,6 +771,7 @@ Count: 482
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-execution-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js
+- build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -1788,7 +1790,7 @@ Count: 619
 
 ## reports
 
-Count: 2962
+Count: 2967
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2027,6 +2029,8 @@ Count: 2962
 - reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-source-graph-procedure-reasoning-gate-1.json
 - reports/mtu-hardening/mtu-h5-q19-source-graph-procedure-reasoning-gate-1.md
+- reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json
+- reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -2478,6 +2482,9 @@ Count: 2962
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
