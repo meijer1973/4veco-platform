@@ -1,0 +1,44 @@
+{
+  "cards": [
+    {
+      "href": "1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html",
+      "id": "1.1",
+      "labels": [
+        "Hoofdstuk 1",
+        "Hoofdstukroute",
+        "4 paragrafen"
+      ],
+      "paragraphTags": [
+        "1.1.1 Schaarste en economisch denken",
+        "1.1.2 Percentages en indexcijfers",
+        "1.1.3 Grafieken en tabellen",
+        "1.1.4 Gemengde opgaven"
+      ],
+      "summaryLinks": 0
+    }
+  ],
+  "chapterCardDomainTextCount": 0,
+  "directParagraphHrefCount": 0,
+  "directResourceHrefCount": 0,
+  "forbiddenMarkerCounts": {
+    "chapter-card-domain": 0,
+    "page-layout": 0,
+    "sidebar-overlay": 0,
+    "sidebar-toggle": 0,
+    "viewer-panel": 0
+  },
+  "hasAppShell": true,
+  "hasBookOverview": true,
+  "hasChapterList": true,
+  "hasDarkDom": true,
+  "hasSidebar": true,
+  "hrefs": [
+    "index.html",
+    "1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html",
+    "1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html",
+    "1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html"
+  ],
+  "layout": "book-landing-v2",
+  "title": "Boek 1: Grondslagen, vraag en aanbod - Boeknavigatie",
+  "url": "http://127.0.0.1:8768/Boek%201%20-%20Grondslagen%2C%20vraag%20en%20aanbod/index.html"
+}

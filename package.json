@@ -11,6 +11,7 @@
     "check:platform": "jest --runInBand",
     "check:landing-v2": "node build-scripts/platform/check-paragraph-landing-v2.js",
     "check:chapter-landing-v2": "node build-scripts/platform/check-chapter-landing-v2.js",
+    "check:book-landing-v2": "node build-scripts/platform/check-book-landing-v2.js",
     "check:book": "node scripts/check-book.js",
     "check:scope-language": "node build-scripts/sprints/check-scope-language.js --active",
     "check:gate-ci-proof": "node build-scripts/sprints/check-gate-ci-proof.js",

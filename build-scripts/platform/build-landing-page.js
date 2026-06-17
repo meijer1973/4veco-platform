@@ -2,7 +2,9 @@
  * Build Landing Pages (flat layout)
  *
  * Generates index.html at three levels:
- * - Book page      (overview of all chapters)
+ * - Book page renders Book Landing V2 Minimal Navigation:
+ *   orientation only, with chapter cards linking to chapter index.html pages.
+ *   Paragraph route rows and companion resources stay on paragraph pages.
  * - Chapter pages render Chapter Landing V2 Minimal Navigation:
  *   orientation only, with paragraph cards linking to paragraph index.html
  *   pages. Learning-route rows and companion resources stay on paragraph
@@ -417,11 +419,11 @@ function sharedCSS() {
     border-left-color: var(--ch-color); background: var(--bg-lift);
   }
 
-  body[data-layout="landing-book-v1"],
+  body[data-layout="legacy-book-shell-v1"],
   body[data-layout="landing-chapter-v1"] {
     --content-max: 1040px;
   }
-  body[data-layout="landing-book-v1"] main,
+  body[data-layout="legacy-book-shell-v1"] main,
   body[data-layout="landing-chapter-v1"] main {
     display: grid;
     gap: 1rem;
@@ -573,13 +575,13 @@ function sharedCSS() {
   }
 
   @media (max-width: 640px) {
-    body[data-layout="landing-book-v1"] .content,
+    body[data-layout="legacy-book-shell-v1"] .content,
     body[data-layout="landing-chapter-v1"] .content {
       width: 100vw;
       max-width: 100vw;
       overflow-x: hidden;
     }
-    body[data-layout="landing-book-v1"] main,
+    body[data-layout="legacy-book-shell-v1"] main,
     body[data-layout="landing-chapter-v1"] main {
       width: 100vw;
       max-width: 100vw;
@@ -587,7 +589,7 @@ function sharedCSS() {
       padding-left: 18px; padding-right: 18px;
       overflow-x: hidden;
     }
-    body[data-layout="landing-book-v1"] .hero h1,
+    body[data-layout="legacy-book-shell-v1"] .hero h1,
     body[data-layout="landing-chapter-v1"] .hero h1 {
       font-size: 1.45rem;
       line-height: 1.18;
@@ -711,7 +713,7 @@ const ICONS = {
 // ═══════════════════════════════════════════════════════════════════════════
 
 function pageShell(title, dc, navHTML, bodyContent, sharedPrefix, accentToken) {
-  const layoutName = sharedPrefix === "shared" ? "landing-book-v1" : "landing-chapter-v1";
+  const layoutName = sharedPrefix === "shared" ? "legacy-book-shell-v1" : "landing-chapter-v1";
   return `<!DOCTYPE html>
 <html lang="nl" data-theme="light">
 <head>
@@ -794,50 +796,203 @@ if (window.innerWidth > 768) {
 // BOOK PAGE (top-level index.html at the target root)
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderBookPage(resolvedMap) {
-  const dc = { main: "#1E2761", light: "#EBF5FB", dark: "#154360" }; // navy
-  const navHTML = renderNav(resolvedMap, "book", null);
+const BOOK_V2_FIXTURE_DIR = path.join(__dirname, "..", "..", "references", "ui", "book-landing-v2");
 
-  let bodyHTML = `
-<header class="hero">
-  <div class="hero-inner">
-    <span class="hero-badge">Boek ${CONFIG.nr}</span>
-    <h1>${CONFIG.name}</h1>
-  </div>
-</header>
-<main>`;
+function bookFixtureStyle() {
+  const fixturePath = path.join(BOOK_V2_FIXTURE_DIR, "approved-minimal.html");
+  const html = fs.readFileSync(fixturePath, "utf8");
+  const match = html.match(/<style>([\s\S]*?)<\/style>/i);
+  if (!match) throw new Error(`Missing <style> block in ${fixturePath}`);
+  return match[1].trim();
+}
 
-  for (const ch of CONFIG.chapters) {
-    const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === ch.id && !CONFIG.isHidden(p.id));
-    if (!paragrafen.length) continue;
-    const dc2 = DOMAIN_COLORS[ch.domain];
-    const token = domainToken(ch.domain);
-    const meta = landingMeta(ch);
-    const summary = meta.summary || ch.summary || `${paragrafen.length} paragrafen met lesmateriaal, oefenroutes en lesboekbestanden.`;
+function bookMinimalCSS() {
+  return `${bookFixtureStyle()}
+
+    .book-overview,
+    .chapter-list,
+    .book-chapter-card,
+    .target-panel {
+      min-width: 0;
+    }
+    .book-chapter-card .chapter-card-index + .chapter-card-index {
+      background: transparent;
+      border-style: dashed;
+    }
+    .book-chapter-card .chapter-number {
+      background: color-mix(in srgb, var(--ch-color, var(--accent)) 12%, transparent);
+      color: var(--ch-color, var(--accent));
+    }
+    .book-chapter-card .chapter-summary-tag {
+      background: color-mix(in srgb, var(--ch-color, var(--accent)) 10%, transparent);
+      color: var(--ch-color, var(--accent));
+    }`;
+}
+
+function bookPageShell(title, bodyContent) {
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('bookMinimalTheme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (error) {}
+  })();
+</script>
+<title>${title}</title>
+<style>${bookMinimalCSS()}</style>
+</head>
+<body data-layout="book-landing-v2">
+${bodyContent}
+<script>
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('bookMinimalTheme', next); } catch (error) {}
+  }
+</script>
+</body>
+</html>`;
+}
+
+function visibleBookChapters(resolvedMap) {
+  return CONFIG.chapters
+    .map(ch => ({
+      ch,
+      paragraphs: CONFIG.paragraphs.filter(p => p.chapter === ch.id && !CONFIG.isHidden(p.id) && resolvedMap[p.id]),
+    }))
+    .filter(item => item.paragraphs.length);
+}
+
+function renderBookMinimalSidebar(visibleChapters) {
+  const chapterLinks = visibleChapters.map(({ ch }) => {
     const chFolder = encodeURIComponent(ch.folder);
-    const pitfallHTML = renderCardPitfalls(ch);
+    return `<a class="side-link" href="${chFolder}/index.html"><span class="side-number">H${escapeHtml(String(ch.number))}</span><span>${escapeHtml(ch.name)}</span></a>`;
+  }).join("\n        ");
 
-    bodyHTML += `
-  <a class="chapter-card domain-${token}" data-domain="${token}" data-chapter-id="${escapeHtml(ch.id)}" href="${chFolder}/index.html" style="--ch-color: ${dc2.main}">
-    <div class="chapter-card-header">
-      <div>
-        <span class="chapter-card-domain">${domainLabel(token)}</span>
-        <h3><span class="ch-num">H${ch.number}</span>${escapeHtml(ch.name)}</h3>
+  return `    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4V</div>
+        <div>
+          <strong>${escapeHtml(CONFIG.displayLabel)}</strong>
+          <span>Boekoverzicht</span>
+        </div>
       </div>
-      <div class="chapter-card-count">${paragrafen.length} paragrafen</div>
-    </div>
-    <p class="chapter-card-summary">${escapeHtml(summary)}</p>${pitfallHTML ? `\n    ${pitfallHTML}` : ""}
-    <div class="chapter-card-items">
-      ${paragrafen.map(p => `<span class="chapter-card-item">${escapeHtml(p.id)} ${escapeHtml(p.name)}</span>`).join("\n      ")}
-    </div>
-  </a>`;
+
+      <section class="sidebar-block" aria-label="Boek">
+        <p class="sidebar-section-title">Boek</p>
+        <a class="side-link current" href="index.html"><span class="side-number">B${escapeHtml(String(CONFIG.nr))}</span><span>${escapeHtml(CONFIG.name)}</span></a>
+      </section>
+
+      <section class="sidebar-block" aria-label="Hoofdstukken">
+        <p class="sidebar-section-title">Hoofdstukken</p>
+        ${chapterLinks}
+      </section>
+    </aside>`;
+}
+
+function renderBookPage(resolvedMap) {
+  const visibleChapters = visibleBookChapters(resolvedMap);
+  const visibleParagraphCount = visibleChapters.reduce((total, item) => total + item.paragraphs.length, 0);
+  const meta = landingMeta(CONFIG);
+  const summary = meta.summary || CONFIG.summary || "Open een hoofdstuk om verder te werken.";
+  const sidebarHTML = renderBookMinimalSidebar(visibleChapters);
+
+  const chapterChips = visibleChapters.map(({ ch }) => {
+    const href = `${encodeURIComponent(ch.folder)}/index.html`;
+    return `<a class="chapter-chip" href="${href}"><b>H${escapeHtml(String(ch.number))}</b><span>${escapeHtml(ch.name)}</span></a>`;
+  }).join("\n        ");
+
+  let cardHTML = "";
+  for (const { ch, paragraphs } of visibleChapters) {
+    const dc = DOMAIN_COLORS[ch.domain] || DOMAIN_COLORS.blue;
+    const token = domainToken(ch.domain);
+    const href = `${encodeURIComponent(ch.folder)}/index.html`;
+    const chMeta = landingMeta(ch);
+    const chSummary = chMeta.summary || ch.summary || `${paragraphs.length} paragrafen in dit hoofdstuk.`;
+    const paragraphItems = paragraphs.map(p => `<span class="chapter-summary-tag">${escapeHtml(p.id)} ${escapeHtml(p.name)}</span>`).join("");
+
+    cardHTML += `
+          <a class="book-chapter-card domain-${token}" data-domain="${token}" data-chapter-id="${escapeHtml(ch.id)}" href="${href}" style="--ch-color: ${dc.main}; --ch-soft: ${dc.light};">
+            <div class="chapter-number">H${escapeHtml(String(ch.number))}</div>
+            <div class="chapter-info">
+              <div class="chapter-card-topline">
+                <span class="chapter-card-index">Hoofdstuk ${escapeHtml(String(ch.number))}</span>
+                <span class="chapter-card-index">Hoofdstukroute</span>
+                <span class="chapter-card-index">${paragraphs.length} paragrafen</span>
+              </div>
+              <h3>${escapeHtml(ch.name)}</h3>
+              <p>${escapeHtml(chSummary)}</p>
+              <div class="chapter-summary-tags" aria-label="Paragrafen in dit hoofdstuk">${paragraphItems}</div>
+            </div>
+            <div class="open-arrow" aria-hidden="true">&rarr;</div>
+          </a>`;
   }
 
-  bodyHTML += `
-</main>
-<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
+  const bodyHTML = `
+  <div class="app-shell book-shell">
+${sidebarHTML}
+    <main class="content">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">${escapeHtml(CONFIG.displayLabel)}</p>
+          <strong>Boek ${escapeHtml(String(CONFIG.nr))}</strong>
+        </div>
+        <button class="theme-note" type="button" onclick="toggleTheme()" aria-label="Wissel tussen licht en donker thema">Licht / donker</button>
+      </div>
 
-  return pageShell(`${CONFIG.displayLabel}`, dc, navHTML, bodyHTML, "shared", "wiskunde");
+      <section class="hero book-hero" aria-labelledby="book-title">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Boek ${escapeHtml(String(CONFIG.nr))}</p>
+            <h1 id="book-title">${escapeHtml(CONFIG.name)}</h1>
+            <p>${escapeHtml(summary)}</p>
+          </div>
+          <aside class="target-panel book-panel" aria-label="Boekinformatie">
+            <h2>Boekinformatie</h2>
+            <p>${escapeHtml(CONFIG.displayLabel)}. Open een hoofdstukpagina om de paragrafen te kiezen.</p>
+            <div class="stats">
+              <div class="stat"><strong>${visibleChapters.length}</strong><span>hoofdstukken</span></div>
+              <div class="stat"><strong>${visibleParagraphCount}</strong><span>paragrafen</span></div>
+              <div class="stat"><strong>VWO 4</strong><span>niveau</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <nav class="book-overview chapter-strip" aria-label="Snel naar hoofdstuk">
+        ${chapterChips}
+      </nav>
+
+      <section aria-labelledby="chapters-title">
+        <div class="section-title">
+          <div>
+            <h2 id="chapters-title">Hoofdstukken in dit boek</h2>
+            <p>Open een hoofdstukpagina om de paragrafen te kiezen.</p>
+          </div>
+        </div>
+
+        <div class="book-overview chapter-list">
+${cardHTML}
+        </div>
+      </section>
+
+      <aside class="book-note">
+        <strong>Ontwerpprincipe:</strong> deze boekpagina blijft navigatie en ori&euml;ntatie. Leeractiviteiten, checks, games en lesboekbronnen horen op paragraafpagina's.
+      </aside>
+
+      <p class="footer-note">Economie VWO 4 &middot; ${escapeHtml(CONFIG.displayLabel)} &middot; boeknavigatie</p>
+    </main>
+  </div>`;
+
+  return bookPageShell(`${CONFIG.displayLabel} - Boeknavigatie`, bodyHTML);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

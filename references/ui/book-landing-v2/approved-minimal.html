@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4veco - Boek landing minimal prototype</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('bookMinimalTheme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {}
+    })();
+  </script>
+  <style>
+    :root,
+    html[data-theme="light"] {
+      color-scheme: light;
+      --page: #f7f4ed;
+      --page-2: #eef7f4;
+      --paper: #fffdf8;
+      --paper-strong: #ffffff;
+      --ink: #1d2530;
+      --muted: #687484;
+      --muted-2: #8a95a3;
+      --line-soft: #ebe6da;
+      --accent: #1f6f78;
+      --accent-soft: #dff2f3;
+      --econ: #b86b28;
+      --econ-soft: #fff0df;
+      --shadow: 0 18px 45px rgba(31, 42, 55, 0.10);
+      --shadow-small: 0 10px 22px rgba(31, 42, 55, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --sidebar: 292px;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --page: #08121d;
+      --page-2: #0d1827;
+      --paper: #111d2b;
+      --paper-strong: #132131;
+      --ink: #edf3fb;
+      --muted: #a2b1c4;
+      --muted-2: #8192a8;
+      --line-soft: #1a2938;
+      --accent: #5ce4d3;
+      --accent-soft: rgba(92, 228, 211, 0.14);
+      --econ: #f1a34f;
+      --econ-soft: rgba(241, 163, 79, 0.14);
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
+      --shadow-small: 0 12px 28px rgba(0, 0, 0, 0.26);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 34rem),
+        radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--econ) 13%, transparent), transparent 28rem),
+        linear-gradient(140deg, var(--page), var(--page-2));
+      color: var(--ink);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: var(--sidebar) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 22px 18px;
+      border-right: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+      background: color-mix(in srgb, var(--paper) 74%, transparent);
+      backdrop-filter: blur(18px);
+      overflow: auto;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 8px 18px;
+      border-bottom: 1px solid var(--line-soft);
+      margin-bottom: 18px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      background: linear-gradient(135deg, #1f6f78, #2b9771);
+      box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 22%, transparent);
+    }
+    html[data-theme="dark"] .brand-mark { color: #08121d; background: linear-gradient(135deg, #5ce4d3, #6fd29b); }
+    .brand strong { display: block; }
+    .brand small { display: block; color: var(--muted); font-size: 0.76rem; margin-top: 2px; }
+
+    .sidebar-section-title {
+      margin: 22px 8px 9px;
+      color: var(--muted-2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .side-link {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+    .side-link.current,
+    .side-link:hover {
+      background: color-mix(in srgb, var(--paper-strong) 94%, var(--accent) 6%);
+      color: var(--ink);
+      box-shadow: var(--shadow-small);
+    }
+    .side-number {
+      min-width: 42px;
+      height: 32px;
+      padding-inline: 6px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .side-link.current .side-number { background: var(--accent); color: white; }
+    html[data-theme="dark"] .side-link.current .side-number { color: #08121d; }
+
+    .content {
+      width: min(1180px, calc(100vw - var(--sidebar)));
+      margin: 0 auto;
+      padding: 36px 42px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .breadcrumb span:last-child { color: var(--ink); font-weight: 750; }
+    .theme-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--paper-strong) 88%, var(--accent) 12%);
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.82rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-small);
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--paper-strong) 96%, var(--accent) 4%), color-mix(in srgb, var(--paper) 92%, var(--accent) 8%)),
+        radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 24rem),
+        radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--econ) 8%, transparent), transparent 22rem);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: 26px;
+      align-items: stretch;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 28px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 850;
+    }
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2rem, 5vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .lead,
+    .hero p {
+      max-width: 62ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .target-panel {
+      display: grid;
+      align-content: start;
+      gap: 16px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--paper-strong) 94%, var(--accent) 6%);
+      box-shadow: var(--shadow-small);
+    }
+    .target-panel h2 { margin: 0; font-size: 1rem; }
+    .target-panel p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .stat {
+      min-width: 0;
+      padding: 12px;
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--paper) 82%, var(--ink) 4%);
+      border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+    }
+    .stat strong { display: block; font-size: 1.25rem; }
+    .stat span { display: block; margin-top: 2px; color: var(--muted-2); font-size: 0.72rem; }
+
+    .chapter-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0 26px;
+    }
+    .chapter-chip {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+      padding: 13px 14px;
+      border-radius: 16px;
+      background: var(--paper-strong);
+      border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+      box-shadow: var(--shadow-small);
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .chapter-chip:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 24%, transparent); }
+    .chapter-chip b { font-size: 0.9rem; color: var(--ink); }
+    .chapter-chip span { color: var(--muted); font-size: 0.74rem; }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin: 8px 0 14px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 1.28rem;
+    }
+    .section-title p { margin: 5px 0 0; color: var(--muted); }
+
+    .chapter-list {
+      display: grid;
+      gap: 14px;
+    }
+    .book-chapter-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 98px minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: var(--paper-strong);
+      border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+      box-shadow: var(--shadow-small);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+    .book-chapter-card:hover,
+    .book-chapter-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--accent) 24%, transparent);
+      box-shadow: 0 16px 32px rgba(31, 42, 55, 0.13);
+      outline: none;
+    }
+    html[data-theme="dark"] .book-chapter-card:hover { box-shadow: 0 16px 32px rgba(0, 0, 0, 0.30); }
+    .chapter-number {
+      width: 78px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--ch-color, var(--accent)) 12%, transparent);
+      color: var(--ch-color, var(--accent));
+      font-weight: 950;
+      font-size: 1.05rem;
+      font-variant-numeric: tabular-nums;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ch-color, var(--accent)) 15%, transparent);
+    }
+    .chapter-info { min-width: 0; }
+    .chapter-card-topline {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+    .chapter-card-index {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--paper) 82%, var(--ink) 5%);
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 850;
+    }
+    .book-chapter-card h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      letter-spacing: 0;
+    }
+    .book-chapter-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .chapter-summary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+    .chapter-summary-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .open-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .book-note {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--paper-strong) 84%, var(--accent) 6%);
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      box-shadow: var(--shadow-small);
+    }
+    .book-note strong { color: var(--ink); }
+    .footer-note {
+      margin-top: 28px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 1120px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; display: none; }
+      .content { width: min(100%, 980px); padding: 24px 20px 42px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .chapter-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .theme-note { white-space: normal; }
+      .hero { padding: 22px; border-radius: 22px; }
+      .chapter-strip { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .book-chapter-card { grid-template-columns: 1fr; align-items: start; }
+      .chapter-number { width: 64px; height: 64px; border-radius: 18px; }
+      .open-arrow { display: none; }
+    }
+  </style>
+</head>
+<body data-layout="book-landing-v2">
+  <div class="app-shell book-shell">
+    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4v</div>
+        <div>
+          <strong>4veco</strong>
+          <small>Boekoverzicht</small>
+        </div>
+      </div>
+
+      <div class="sidebar-section-title">Boek</div>
+      <a class="side-link current" href="index.html"><span class="side-number">B1</span><span>Grondslagen, vraag en aanbod</span></a>
+
+      <div class="sidebar-section-title">Hoofdstukken</div>
+      <a class="side-link" href="1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html"><span class="side-number">H1</span><span>Economisch denken en rekenen</span></a>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <nav class="breadcrumb" aria-label="Kruimelpad">
+          <span>Boek 1</span><span>&rsaquo;</span><span>Grondslagen, vraag en aanbod</span>
+        </nav>
+        <button class="theme-note" type="button" onclick="toggleTheme()" aria-label="Wissel tussen licht en donker thema">Licht / donker</button>
+      </div>
+
+      <section class="hero book-hero" aria-labelledby="book-title">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Boek 1</div>
+            <h1 id="book-title">Grondslagen, vraag en aanbod</h1>
+            <p class="lead">Een rustig boekoverzicht. Kies een hoofdstuk om verder te werken; de leerroute, oefeningen en checks blijven op de paragraafpagina's.</p>
+          </div>
+          <aside class="target-panel book-panel" aria-label="Boekinformatie">
+            <h2>Boekinformatie</h2>
+            <p>Overzicht van hoofdstukken in dit boek. Open een hoofdstukpagina om de paragrafen te kiezen.</p>
+            <div class="stats">
+              <div class="stat"><strong>1</strong><span>hoofdstuk</span></div>
+              <div class="stat"><strong>4</strong><span>paragrafen</span></div>
+              <div class="stat"><strong>VWO 4</strong><span>niveau</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <nav class="book-overview chapter-strip" aria-label="Snel naar hoofdstuk">
+        <a class="chapter-chip" href="1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html"><b>H1</b><span>Economisch denken en rekenen</span></a>
+      </nav>
+
+      <section aria-labelledby="chapters-title">
+        <div class="section-title">
+          <div>
+            <h2 id="chapters-title">Hoofdstukken in dit boek</h2>
+            <p>Open een hoofdstukpagina om de paragrafen te kiezen.</p>
+          </div>
+        </div>
+
+        <div class="book-overview chapter-list">
+          <a class="book-chapter-card" data-chapter-id="1.1" href="1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html">
+            <div class="chapter-number">H1</div>
+            <div class="chapter-info">
+              <div class="chapter-card-topline"><span class="chapter-card-index">Hoofdstuk 1</span><span class="chapter-card-index">Hoofdstukroute</span><span class="chapter-card-index">4 paragrafen</span></div>
+              <h3>Economisch denken en rekenen</h3>
+              <p>Open de hoofdstukpagina om de paragrafen in dit hoofdstuk te kiezen.</p>
+              <div class="chapter-summary-tags" aria-label="Paragrafen in dit hoofdstuk"><span class="chapter-summary-tag">1.1.1 Schaarste en economisch denken</span><span class="chapter-summary-tag">1.1.2 Percentages en indexcijfers</span><span class="chapter-summary-tag">1.1.3 Grafieken en tabellen</span><span class="chapter-summary-tag">1.1.4 Gemengde opgaven</span></div>
+            </div>
+            <div class="open-arrow" aria-hidden="true">&rarr;</div>
+          </a>
+        </div>
+      </section>
+
+      <aside class="book-note">
+        <strong>Ontwerpprincipe:</strong> deze boekpagina blijft navigatie en ori&euml;ntatie. Leeractiviteiten, checks, games en lesboekbronnen horen op paragraafpagina's.
+      </aside>
+
+      <p class="footer-note">Economie VWO 4 &middot; Boek 1: Grondslagen, vraag en aanbod &middot; boeknavigatie</p>
+    </main>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('bookMinimalTheme', next); } catch (error) {}
+    }
+  </script>
+</body>
+</html>
