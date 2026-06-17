@@ -19,6 +19,13 @@ for generated paragraph landing pages, with the lesson-side contract in
 paragraph landing pages from the old lesson shell, old shared `voorkennis.css`
 layout, or legacy resource-card paragraph renderer.
 
+Chapter Landing V2 Minimal Navigation is also prototype-owned. Chapter pages
+must use `references/ui/chapter-landing-v2/approved-minimal.html` as the visual
+baseline, but generated paragraph cards must show neutral `Paragraaf N` /
+`Lesroute` labels instead of fallback aspect/domain labels. Chapter pages are
+navigation/orientation only: paragraph route rows, checks, games, textbook
+links, and other companion resources remain on paragraph landing pages.
+
 Sprint plans and active roadmaps must also pass scope-language discipline:
 
 ```bash
