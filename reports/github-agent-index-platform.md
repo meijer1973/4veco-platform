@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T09:41:29.146Z
+Generated: 2026-06-17T10:49:42.040Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4756
+Files indexed: 4776
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1164,7 +1164,7 @@ Count: 482
 
 ## references
 
-Count: 617
+Count: 619
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1258,6 +1258,8 @@ Count: 617
 - references/data/sprints/B2-2.1.3-HARDEN.result.json
 - references/data/sprints/B2-2.1.4-HARDEN.plan.json
 - references/data/sprints/B2-2.1.4-HARDEN.result.json
+- references/data/sprints/B2-2.2-READY-1.plan.json
+- references/data/sprints/B2-2.2-READY-1.result.json
 - references/data/sprints/B2-READY-1.plan.json
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
@@ -1786,7 +1788,7 @@ Count: 617
 
 ## reports
 
-Count: 2944
+Count: 2962
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2156,6 +2158,10 @@ Count: 2944
 - reports/reference-planning/REF-CT2-cp6-status-update.md
 - reports/reference-planning/REF-CT2-graph-visual-surface-evidence.md
 - reports/reference-planning/REF-CT2-precision-dual-coding-audit.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-quality-log.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-review-packet.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-subagent-review.md
+- reports/reference-planning/Y1-FOUNDATION-CLOSURE-REVIEW-1-target-status.md
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
@@ -2789,6 +2795,7 @@ Count: 2944
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-mobile-dark-completed.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
+- reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -2917,6 +2924,17 @@ Count: 2944
 - reports/sprints/B2-2.1.4-HARDEN-package-QUALITY_LOG.md
 - reports/sprints/B2-2.1.4-HARDEN-plan.md
 - reports/sprints/B2-2.1.4-HARDEN-result.md
+- reports/sprints/B2-2.2-READY-1-baseline.md
+- reports/sprints/B2-2.2-READY-1-command-log.jsonl
+- reports/sprints/B2-2.2-READY-1-command-log.md
+- reports/sprints/B2-2.2-READY-1-diff-summary.md
+- reports/sprints/B2-2.2-READY-1-lead-review-assignment.md
+- reports/sprints/B2-2.2-READY-1-lead-review-corrections.md
+- reports/sprints/B2-2.2-READY-1-lead-review-round1.md
+- reports/sprints/B2-2.2-READY-1-lead-review-round2.md
+- reports/sprints/B2-2.2-READY-1-plan.md
+- reports/sprints/B2-2.2-READY-1-readiness-brief.md
+- reports/sprints/B2-2.2-READY-1-result.md
 - reports/sprints/B2-READY-1-baseline.md
 - reports/sprints/B2-READY-1-command-log.jsonl
 - reports/sprints/B2-READY-1-diff-summary.md
@@ -4723,6 +4741,8 @@ Count: 2944
 - reports/sprints/VISUAL-QA-HARDEN-2-product-qa-rubric.md
 - reports/sprints/VISUAL-QA-HARDEN-2-result.md
 - reports/sprints/VISUAL-QA-HARDEN-2-verification-review.md
+- reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-plan.md
+- reports/sprints/Y1-FOUNDATION-CLOSURE-REVIEW-1-result.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-plan.md
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
