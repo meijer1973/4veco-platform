@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "packet_id": "B1-NORMAL-INFERIOR-TERM-DECISION-1",
+  "sprint_id": "B1-NORMAL-INFERIOR-TERM-DECISION-1",
+  "pr_number": 84,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/84",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "protected_reference",
+  "changed_paths": [
+    "references/authored/course-target-exercises.json",
+    "references/data/document_inventory.json",
+    "references/data/owned-content-graph.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/owned-content-coverage.json",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/owned-content-coverage.md",
+    "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-quality-log.md",
+    "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-review-packet.md",
+    "reports/review-gates/B1-NORMAL-INFERIOR-TERM-DECISION-1/review-packet.json",
+    "reports/sprints/B1-NORMAL-INFERIOR-TERM-DECISION-1-plan.md",
+    "reports/sprints/B1-NORMAL-INFERIOR-TERM-DECISION-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PENDING",
+    "rationale": "This PR touches the authored target-exercise registry and closes a carried terminology flag, so it requires human review before merge."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "protected_reference_touched",
+    "carried_missing_unit_flag_closed",
+    "year1_closure_blocker",
+    "scale_gate_reliance_blocker"
+  ],
+  "date": "2026-06-16",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md",
+    "reports/reference-planning/B1-MIGRATED-V5-TARGET-QUALITY-1-review-packet.md"
+  ],
+  "non_negotiable_requirements": [
+    "Do not carry a missing core requirement under PASS WITH FLAGS.",
+    "Keep Year 1 1.2.2 term-light: supplied normal-good context is allowed; active normal-vs-inferior classification is not required.",
+    "Keep 1.2.4 term-free unless a later explicit review changes that boundary.",
+    "Do not edit references/machine/* or references/external/*.",
+    "Do not generate lesson output.",
+    "Do not authorize Year 1, CP-6, Scale Gate 1, product-route adoption, diagnostics, mastery, PV, or student/product use."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/B1-NORMAL-INFERIOR-TERM-DECISION-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "reports/sprints/B1-MIGRATED-V5-TARGET-QUALITY-1-plan.md"
+    },
+    {
+      "requirement": "Non-negotiables named",
+      "status": "met",
+      "evidence": "non_negotiable_requirements"
+    },
+    {
+      "requirement": "Core-requirement checklist included",
+      "status": "met",
+      "evidence": "core_requirement_checklist"
+    },
+    {
+      "requirement": "Findings classified",
+      "status": "met",
+      "evidence": "findings"
+    },
+    {
+      "requirement": "blocks / does_not_block / proof_required_to_close included",
+      "status": "met",
+      "evidence": "carried_flags"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "The stale 1.2.2 missing-unit flag is removed rather than carried."
+    }
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false,
+    "generated_lesson_output_authorized": false,
+    "year1_closure_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false
+  },
+  "proof": {
+    "checkers": [
+      {
+        "command": "node scripts/check-course-target-exercises-v5.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-owned-content-graph.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/B1-NORMAL-INFERIOR-TERM-DECISION-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-document-registry.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-manifest.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-document-inventory.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "decision": {
+    "status": "registry_decision_ready",
+    "normal_inferior_missing_unit_flag": "closed_for_registry",
+    "year1_1_2_2_boundary": "Supplied normal-good context may be used for income-driven demand-shift reasoning; active normal-vs-inferior classification is not a Year 1 target operation.",
+    "year1_1_2_4_boundary": "Term-free mixed demand practice remains required."
+  },
+  "findings": [
+    {
+      "id": "B1NI-001",
+      "classification": "core_requirement_met",
+      "severity": "medium",
+      "finding": "1.2.2 gives the good type in the prompt and asks for the demand-shift effect, not classification of normal versus inferior goods.",
+      "status": "closed_for_registry"
+    },
+    {
+      "id": "B1NI-003",
+      "classification": "core_requirement_met",
+      "severity": "medium",
+      "finding": "1.2.4 remains term-free and does not introduce normal/inferior-good terminology.",
+      "status": "preserved"
+    },
+    {
+      "id": "B1NI-005",
+      "classification": "scale_blocker",
+      "severity": "critical",
+      "finding": "This packet is not product proof and does not close downstream authority.",
+      "status": "open"
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "B1NI-004",
+      "classification": "carried_issue",
+      "flag": "Target-equivalent lesson proof is not closed by this registry terminology decision.",
+      "blocks": [
+        "Clean target-equivalent proof claims for generated 1.2.2 or 1.2.4 lesson output"
+      ],
+      "does_not_block": [
+        "Merging this authored-registry terminology decision"
+      ],
+      "proof_required_to_close": "A later lesson-evidence packet proves the generated lesson operation chain and answer forms."
+    },
+    {
+      "id": "B1NI-005",
+      "classification": "scale_blocker",
+      "flag": "Downstream product authority remains held.",
+      "blocks": [
+        "Year 1 closure",
+        "CP-6 closure",
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "Publishing this scoped decision PR",
+        "Ordinary scoped work that does not claim downstream authority"
+      ],
+      "proof_required_to_close": "Later closure/product-proof gates using REV-STD-1 and rendered/product evidence."
+    }
+  ],
+  "recommended_next_action": "Run B1-CHAPTER-MIXED-TARGET-AUDIT-1 after merge."
+}

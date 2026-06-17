@@ -1,7 +1,7 @@
 {
   "report_id": "owned-content-coverage",
   "generated_by": "build-scripts/references/build-owned-content-graph.js",
-  "generated_on": "2026-06-15T11:17:41Z",
+  "generated_on": "2026-06-17T06:36:55Z",
   "source_files": [
     "references/data/owned-source-registry.json",
     "references/authored/course-target-exercises.json",
@@ -14,8 +14,8 @@
   "status": "info",
   "issues": [],
   "summary": {
-    "node_count": 917,
-    "edge_count": 1382,
+    "node_count": 916,
+    "edge_count": 1381,
     "paragraph_count": 54,
     "unit_count": 114,
     "term_count": 46,
@@ -24,7 +24,7 @@
     "by_edge_type": {
       "implementation_trace": 411,
       "owned_exercise_evidence": 367,
-      "projection": 604
+      "projection": 603
     },
     "by_relation": {
       "blueprint_projects_to_chapter": 54,
@@ -35,7 +35,7 @@
       "paragraph_has_target_exercise": 54,
       "projected_unit_uses_term": 191,
       "source_implements_paragraph": 12,
-      "target_exercise_has_missing_unit_flag": 68,
+      "target_exercise_has_missing_unit_flag": 67,
       "target_exercise_requires_unit": 238
     },
     "by_source_surface_type": {
@@ -62,7 +62,7 @@
       "quality_reference_yaml": 12,
       "review_note": 16,
       "summary_surface": 5,
-      "target_exercise_index": 360,
+      "target_exercise_index": 359,
       "vaardigheden_surface": 8,
       "visual_png_projection": 216,
       "visual_svg_source": 216,
@@ -72,7 +72,7 @@
     "by_source_status": {
       "answer_model": 12,
       "authored_source": 333,
-      "exercise_evidence": 435,
+      "exercise_evidence": 434,
       "generated_projection": 590,
       "implementation_output": 12
     },
