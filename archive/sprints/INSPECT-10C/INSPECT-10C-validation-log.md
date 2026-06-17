@@ -111,7 +111,8 @@ review/stability hardening only.
 
 After human review returned PASS with a freshness hold, current `origin/main`
 was merged cleanly into the PR branch. The refresh brought in unrelated MTU Q19
-updates and did not stale the diagnostic report pair.
+and textbook rendered-page acceptance updates and did not stale the diagnostic
+report pair.
 
 | Command | Exit | Evidence |
 |---|---:|---|
