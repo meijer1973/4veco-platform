@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "package_id": "MTU-H5-Q19-SOURCE-GRAPH-REASONING-PACKAGE-1",
+  "gate_id": "GATE-MTU-H5-Q19-source-graph-reasoning-package-1",
+  "created": "2026-06-17",
+  "status": "ready_for_remote_human_review_after_subagent_lead_hold_no_fixture_mutation",
+  "start_commit": "1104325a066bec624eb4af66bfe968e0ceed8921",
+  "review_branch": "codex/mtu-h5-q19-source-graph-reasoning-package-1-20260617",
+  "purpose": "Record a current-state, non-mutating q19 source/graph/reasoning hold package after the q19 answer-form and procedure semantic-fit execution lanes. The package prevents future agents from clearing the remaining six q19 review hooks without stronger reviewed evidence.",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence. This package does not close q19 or MTU-H5.",
+  "original_sprint_gate_spec": {
+    "source": "post-PR-94 MTU-H5 q19 lane selection",
+    "pr94": "https://github.com/meijer1973/4veco-platform/pull/94",
+    "pr94_merge_commit": "1104325a066bec624eb4af66bfe968e0ceed8921",
+    "approved_next_lane": "MTU-H5-Q19-SOURCE-GRAPH-REASONING-PACKAGE-1",
+    "boundary": "Package and checker only. No fixture mutation, source-overlay mutation, protected-reference mutation, candidate writes, lesson output, diagnostics, PV, product route, or student/product use is authorized."
+  },
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded. Official prompt and correction-model sources are cited by stable local source paths and summarized.",
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json",
+    "reports/review-gates/GATE-MTU-H5-Q19-procedure-semantic-fit-execution-gate-1/review-packet.json",
+    "references/machine/micro-teaching-units.json#A42",
+    "references/machine/micro-teaching-units.json#D10",
+    "references/machine/micro-teaching-units.json#D13",
+    "references/machine/micro-teaching-units.json#A81",
+    "references/machine/micro-teaching-units.json#A45"
+  ],
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean_after_q3_fixture_execution"
+    },
+    "q19": {
+      "failed": 0,
+      "review_required": 6,
+      "status": "source_graph_reasoning_review_blocker",
+      "procedure_semantic_fit_executed": true,
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "carried_blocker"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "carried_blocker"
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 3,
+      "review_required": 15,
+      "blocked": 0
+    }
+  },
+  "non_negotiable_requirements": [
+    "q19 remains 0 failed / 6 review_required.",
+    "All six q19 source/graph/reasoning review hooks remain visible in the fixture and validator report.",
+    "q19 answer-form reviewed-equivalent evidence from PR #81 remains intact.",
+    "q19 procedure_review_required_unit_ids remain empty after PR #94.",
+    "A45 remains forbidden as primary q19 support.",
+    "Forbidden route tags remain full_graph_construction, calculus_route, and function_construction.",
+    "The q19 source overlay remains partial_with_blocking_gap and blocked.",
+    "The q19 chained multi-market reasoning hook remains an operation_registry_need with only D10/D13 partial support.",
+    "The q19 third graph-shift hook remains dependent on blocked source/graph reconstruction.",
+    "q27 and q15 remain carried blockers.",
+    "No fixture, source-overlay, protected-reference, machine-reference, external-source, authored target-exercise, MTU, operation-registry, answer-skill, candidate, lesson, PV, diagnostic, product-route, or student-facing mutation is authorized.",
+    "PASS WITH FLAGS may not carry a missing core requirement."
+  ],
+  "live_q19_remaining_hook_inventory": {
+    "count": 6,
+    "assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+    ],
+    "by_operation": [
+      {
+        "operation_id": "q19-step-1",
+        "hooks": [
+          "q19-source-annex-gap remains blocking",
+          "q19-graph-object-gap remains blocking"
+        ]
+      },
+      {
+        "operation_id": "q19-step-2",
+        "hooks": [
+          "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+        ]
+      },
+      {
+        "operation_id": "q19-step-3",
+        "hooks": [
+          "q19-source-annex-gap remains blocking",
+          "q19-graph-object-gap remains blocking",
+          "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+        ]
+      }
+    ]
+  },
+  "operation_evidence_surface": [
+    {
+      "operation_id": "q19-step-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "current_required_mtu_ids": ["A42", "D10", "A81"],
+      "current_procedure_review_required_unit_ids": [],
+      "remaining_review_hooks": [
+        "q19-source-annex-gap remains blocking",
+        "q19-graph-object-gap remains blocking"
+      ],
+      "hold_decision": "hold",
+      "hold_rationale": "The current overlay identifies the labor-market shift and wage direction but does not reconstruct the worksheet axes, labels, coordinates, or full graph geometry. The source-annex and graph-object gaps still block human review and MTU mapping.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"]
+    },
+    {
+      "operation_id": "q19-step-2",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises; the official correction model also accepts a correct aggregate-supply shift alternative.",
+      "current_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "current_procedure_review_required_unit_ids": [],
+      "remaining_review_hooks": [
+        "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+      ],
+      "hold_decision": "hold",
+      "hold_rationale": "D10 and D13 are coherent partial support for demand-shift and cost-push routes, but the live exam overlay still classifies the linked market chain as operation_registry_need. The current evidence does not make D10/D13/A81 a reviewed-equivalent closure for the chained Curacao labor to Curacao inflation reasoning.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+    },
+    {
+      "operation_id": "q19-step-3",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises; the official correction model also accepts a correct aggregate-supply shift alternative.",
+      "current_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "current_procedure_review_required_unit_ids": [],
+      "remaining_review_hooks": [
+        "q19-source-annex-gap remains blocking",
+        "q19-graph-object-gap remains blocking",
+        "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+      ],
+      "hold_decision": "hold",
+      "hold_rationale": "The Aruban graph-shift element is modeled as a required student action, but the graph/source reconstruction is still blocked. The third graph-shift hook must remain visible until stronger reviewed source and graph evidence exists.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+    }
+  ],
+  "answer_form_and_misconception_evidence": [
+    {
+      "operation_id": "q19-step-1",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["source_market_shift_without_price_or_wage_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scaling/unit operation.",
+      "procedure_expectation": "A42, D10, and A81 procedures are accepted; source/graph hooks remain held."
+    },
+    {
+      "operation_id": "q19-step-2",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["linked_market_shift_without_inflation_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scaling/unit operation.",
+      "procedure_expectation": "A42, D10, D13, and A81 procedures are accepted; chained reasoning remains held."
+    },
+    {
+      "operation_id": "q19-step-3",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["foreign_spillover_without_aruba_inflation_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scaling/unit operation.",
+      "procedure_expectation": "A42, D10, D13, and A81 procedures are accepted; source/graph and third graph-shift hooks remain held."
+    }
+  ],
+  "source_overlay_state": {
+    "storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "storage_expected_to_exist": true,
+    "storage_status": "future_candidate_storage",
+    "status_interpretation": "Every q19 source/graph overlay record remains partial_with_blocking_gap and blocked. The overlay is evidence for current review, not q19 closure.",
+    "required_graph_record_ids": [
+      "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+      "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+      "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH"
+    ],
+    "required_source_record_ids": [
+      "EX_SRC_Q19_SOURCE_FIGURE",
+      "EX_SRC_Q19_UITWERKBIJLAGE"
+    ],
+    "all_records_must_have": {
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_flags_false": true
+    }
+  },
+  "exam_item_overlay_evidence": {
+    "exam_item_id": "vw-1022-a-25-1-o:opgave-4:question-19",
+    "ingestion_status": "reviewed_with_gaps",
+    "source_material_status": "partially_extracted",
+    "blocking_gap_ids": [
+      "q19-source-annex-gap",
+      "q19-graph-object-gap"
+    ],
+    "blocked_uses": [
+      "full_exam_reconstruction",
+      "mtu_mapping",
+      "lesson_build_handoff",
+      "human_review"
+    ],
+    "q19_reasoning_status": "operation_registry_need",
+    "q19_reasoning_candidate_unit_ids": ["D10", "D13"],
+    "mutation_authorized": false,
+    "lesson_handoff_status": "not_ready"
+  },
+  "hold_matrix": [
+    {
+      "hold_id": "q19-source-annex-hold",
+      "classification": "blocks",
+      "held_hooks": [
+        "q19-source-annex-gap remains blocking"
+      ],
+      "evidence_refs": [
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_SOURCE_FIGURE",
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_UITWERKBIJLAGE",
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-source-annex-gap"
+      ],
+      "reason_to_hold": "The current source figure and worksheet records are partial and explicitly blocked; they do not reconstruct the full annex layout or source figure needed for independent review.",
+      "proof_required_to_close": "Reviewed source figure and worksheet reconstruction, or an explicit reviewed limitation-acceptance decision that keeps downstream limitations visible."
+    },
+    {
+      "hold_id": "q19-graph-object-hold",
+      "classification": "blocks",
+      "held_hooks": [
+        "q19-graph-object-gap remains blocking"
+      ],
+      "evidence_refs": [
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-graph-object-gap"
+      ],
+      "reason_to_hold": "The current graph objects expose market roles and required student actions but not reliable axes, labels, worksheet coordinates, or original curve geometry.",
+      "proof_required_to_close": "All three graph objects expose axes, curve roles, geometry or reviewed limitations, legend mapping, and student-action regions with human approval."
+    },
+    {
+      "hold_id": "q19-chained-reasoning-hold",
+      "classification": "blocks",
+      "held_hooks": [
+        "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+      ],
+      "evidence_refs": [
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-reason-1",
+        "references/machine/micro-teaching-units.json#D10",
+        "references/machine/micro-teaching-units.json#D13",
+        "references/machine/micro-teaching-units.json#A81"
+      ],
+      "reason_to_hold": "D10/D13/A81 support relevant parts of the route, but no fresh decision accepts them as reviewed-equivalent closure for the chained multi-market operation.",
+      "proof_required_to_close": "Reviewer records exact reviewed-equivalent support boundaries for D10/D13/A81, or a later operation-registry/MTU governance lane remains live."
+    },
+    {
+      "hold_id": "q19-third-graph-shift-hold",
+      "classification": "blocks",
+      "held_hooks": [
+        "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+      ],
+      "evidence_refs": [
+        "references/data/exam-ingestion/source-annex-extraction-overlays.json#EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+        "references/data/exam-ingestion/exam-item-overlays.json#q19-graph-3"
+      ],
+      "reason_to_hold": "The Aruban graph action is represented but still relies on blocked graph/source reconstruction.",
+      "proof_required_to_close": "Reviewed acceptance of the Aruban graph action, inflation direction, source linkage, and aggregate-supply alternative."
+    }
+  ],
+  "exact_write_surface": {
+    "fixture_mutation_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "authorized_paths": [
+      "build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js",
+      "build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+      "reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json",
+      "reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md",
+      "reports/url-index.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md"
+    ],
+    "not_authorized": [
+      "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+      "references/machine/*",
+      "references/external/*",
+      "references/authored/course-target-exercises.json",
+      "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+      "candidate stores",
+      "lesson output",
+      "PV or diagnostics",
+      "product routes",
+      "student-facing output"
+    ]
+  },
+  "negative_regression_guards": [
+    {
+      "guard_id": "q19-premature-all-hooks-closure-negative-guard",
+      "accepted_negative_fixture_type": "temporary_q19_fixture_clone",
+      "expected_behavior": "A temporary clone that removes all six q19 review hooks must be rejected by the package checker without mutating the real fixture."
+    },
+    {
+      "guard_id": "q19-chained-reasoning-premature-clear-negative-guard",
+      "accepted_negative_fixture_type": "temporary_q19_fixture_clone",
+      "expected_behavior": "A temporary clone that removes only the q19-step-2 chained reasoning hook must be rejected by the package checker without mutating the real fixture."
+    },
+    {
+      "guard_id": "q19-source-overlay-false-reconstructable-negative-guard",
+      "accepted_negative_fixture_type": "temporary_source_overlay_clone",
+      "expected_behavior": "A temporary source overlay clone that marks q19 records reconstructable while blocking gaps remain must be rejected."
+    },
+    {
+      "guard_id": "q19-a45-primary-support-negative-guard",
+      "accepted_negative_fixture_type": "temporary_a45_reintroduction_fixture",
+      "expected_behavior": "A temporary clone that reintroduces A45 as q19 primary support must produce q19 ASSERT-OVER-TRIGGER failures."
+    },
+    {
+      "guard_id": "solo-q1-q3-original-defect-class-guard",
+      "accepted_negative_fixture_type": "live_h5_global_negative_fixture",
+      "expected_behavior": "The inherited Solo q1-q3 function-construction over-trigger negative fixture remains in the validator passed bucket."
+    }
+  ],
+  "review_team_threshold": {
+    "required_agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "pre_human_review_team_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "The package is educationally and assessively clear as a non-mutating HOLD package. It preserves all six q19 source/graph/reasoning hooks, keeps q19 at 0 failed / 6 review_required, maintains answer-form reviewed-equivalent evidence, leaves procedure review cleared, treats the 1 cm instruction as non-numeric scaling, preserves misconception hooks, and keeps A45/forbidden-route guards visible."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "The HOLD package is economically sound. It correctly keeps all six q19 source/graph/reasoning hooks live, treats D10/D13/A81 as partial support only for chained reasoning, preserves aggregate-supply alternatives for steps 2 and 3, treats the 1 cm instruction as graph-position rather than numeric scale, and authorizes no fixture/source/reference/product/student mutation."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "The remote-discoverability blocker is resolved. Bundle, URL index, and platform agent indexes are present, staged, referenced, and enforced unconditionally by the package checker. The staged write surface is confined to approved package/checker/index paths, with no fixture/source/reference/product/student mutation."
+    }
+  ],
+  "subagent_lead_review": {
+    "required": true,
+    "status": "approved",
+    "minimum_verdict": "APPROVE_HOLD_PACKAGE",
+    "lead_verdict": "APPROVE_HOLD_PACKAGE",
+    "lead_summary": "Lead approved the non-mutating q19 source/graph/reasoning hold package after all three review roles returned MORE_THAN_SATISFIED. q19 remains 0 failed / 6 review_required; all six source/graph/reasoning hooks are held; no fixture/source/reference/product/student mutation is authorized."
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "authority_boundary": {
+    "fixture_mutation_authorized": false,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q19_closure_claimed": false,
+    "mtu_h5_closure_claimed": false,
+    "execution_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_remote_human_review_no_mutation_authorized",
+    "why_not_complete": "This package intentionally holds all six remaining q19 source/graph/reasoning hooks. It does not mutate fixtures or references, repair mappers, write candidates, change MTUs, produce lessons, claim product readiness, close q19, close MTU-H5, or authorize student/product use."
+  }
+}
