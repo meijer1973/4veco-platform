@@ -149,7 +149,7 @@ Default run generated only the allowlisted internal diagnostic report pair.
 | `reports/inspection-standards/dutch-evidence-scale-readiness.json` | `154de37d192a1dc3c6c587ac3a6629c7669af3be4d43a2be7534cb38f7a4c3e0` | 20304 |
 | `reports/inspection-standards/dutch-evidence-gap-closure-plan.json` | `ede8f63819f9cf157c715150df8a3ef986c43405f2c85aeee0f4dd010cdf089c` | 22749 |
 | `reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json` | `58addd68e96d99c948ef4999799a7a6c770449e771abb8b052b4845a5045f178` | 38467 |
-| `docs/roadmaps/quality-standards/quality-standards-end-state.md` | `a4c2395cb41635c7190a24eb3a480097d9c112265b9ae0ae6e36ebe6981a1f42` | 9239 |
+| `docs/roadmaps/quality-standards/quality-standards-end-state.md` | `10f9874eb12e5748991a0c92334ec74871dee9d64662591fc51aa2d0d65270ec` | 9039 |
 | `../4veco-lessen/specifications/product-end-state.md` | `48da85d599adc912997b357599919ea7916509f849c21c7a5814c80252493cfa` | 25844 |
 | `../4veco-lessen/specifications/product-vision.md` | `8e7e0c60c350146f1b8ece8bca8c41beab8c2d8ef4ae4874f77c121a226e08df` | 7890 |
 | `docs/inspection-standards/report-only-generator-plan.md` | `61e96d594b89cc217cdb3855ecb265855d98f1b814142e64d9ba236fee345ae4` | 9182 |
