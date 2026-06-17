@@ -101,6 +101,10 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function pluralNl(count, singular, plural) {
+  return Number(count) === 1 ? singular : plural;
+}
+
 function domainToken(domain) {
   return DOMAIN_SHARED_TOKEN[domain] || "economisch";
 }
@@ -959,7 +963,7 @@ ${sidebarHTML}
             <h2>Boekinformatie</h2>
             <p>${escapeHtml(CONFIG.displayLabel)}. Open een hoofdstukpagina om de paragrafen te kiezen.</p>
             <div class="stats">
-              <div class="stat"><strong>${visibleChapters.length}</strong><span>hoofdstukken</span></div>
+              <div class="stat"><strong>${visibleChapters.length}</strong><span>${pluralNl(visibleChapters.length, "hoofdstuk", "hoofdstukken")}</span></div>
               <div class="stat"><strong>${visibleParagraphCount}</strong><span>paragrafen</span></div>
               <div class="stat"><strong>VWO 4</strong><span>niveau</span></div>
             </div>

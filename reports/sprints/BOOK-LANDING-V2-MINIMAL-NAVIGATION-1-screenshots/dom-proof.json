@@ -27,6 +27,7 @@
     "sidebar-toggle": 0,
     "viewer-panel": 0
   },
+  "forbiddenOnePlural": false,
   "hasAppShell": true,
   "hasBookOverview": true,
   "hasChapterList": true,
@@ -39,6 +40,11 @@
     "1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html"
   ],
   "layout": "book-landing-v2",
+  "stats": [
+    "1 hoofdstuk",
+    "4 paragrafen",
+    "VWO 4 niveau"
+  ],
   "title": "Boek 1: Grondslagen, vraag en aanbod - Boeknavigatie",
   "url": "http://127.0.0.1:8768/Boek%201%20-%20Grondslagen%2C%20vraag%20en%20aanbod/index.html"
 }

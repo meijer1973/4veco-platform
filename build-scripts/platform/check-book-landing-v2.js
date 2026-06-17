@@ -124,6 +124,10 @@ function verifyBookHtml(html, context, expectedCards) {
   requireIncludes(html, REQUIRED_HTML_MARKERS, context);
   requireExcludes(html, FORBIDDEN_HTML_MARKERS, context);
 
+  if (html.includes("<strong>1</strong><span>hoofdstukken</span>")) {
+    fail(`${context} must render singular stat label as 1 hoofdstuk`);
+  }
+
   if (/<span class="[^"]*chapter-card-domain[^"]*">/.test(html)) {
     fail(`${context} must not render visible chapter domain/aspect labels`);
   }

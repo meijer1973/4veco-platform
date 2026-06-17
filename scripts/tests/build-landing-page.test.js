@@ -394,6 +394,8 @@ describe('paragraph landing V2 prototype port', () => {
         expect(bookChapterCards(bookHtml)).toEqual([
             { id: '1.1', href: '1.1%20Hoofdstuk%20Test/index.html' },
         ]);
+        expect(bookHtml).toContain('<strong>1</strong><span>hoofdstuk</span>');
+        expect(bookHtml).not.toContain('<strong>1</strong><span>hoofdstukken</span>');
         expect(bookHtml).toContain('Hoofdstuk 1');
         expect(bookHtml).toContain('Hoofdstukroute');
         expect(bookHtml).not.toMatch(/<span class="[^"]*chapter-card-domain[^"]*">Rekenen<\/span>/);
