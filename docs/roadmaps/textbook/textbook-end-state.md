@@ -1,6 +1,6 @@
 # Textbook End State Draft
 
-Updated: 2026-06-08
+Updated: 2026-06-16
 Roadmap: `docs/roadmaps/textbook/textbook-production-roadmap.md`
 
 ## Purpose
@@ -42,6 +42,28 @@ The full set is complete only when every count-bearing paragraph has:
 - Validated asset references, SVG/PNG pairs where relevant, and graph/table concordance.
 - Chapter-level and book-level validation.
 - A quality/reflection record naming any carried flags and why they do not block publication.
+
+## Rendered-Page Acceptance
+
+`references/authored/textbook-rendered-page-acceptance-standard.md` is the
+standing rendered-output standard for textbook sprints.
+
+Markdown, paragraph plans, target records, source markdown, answer markdown,
+and governed registries remain the content source of truth. Final rendered PDF
+and HTML pages are the acceptance proof for student-facing readability, layout,
+visual legibility, and print/product quality.
+
+Any sprint that changes student-facing textbook output must include full-page
+rendered proof from the final output: PDF/HTML path, page PNGs or contact
+sheet, pages inspected, and defect disposition. Source validators, cropped
+figures, SVG text-size checks, and asset inventories are supporting evidence
+only. A visible student-facing defect in the final rendered page blocks
+closure; PASS WITH FLAGS may not carry missing rendered proof, unreadable
+figures, clipped text, table overflow, missing figures, broken glyphs, stale
+generated output, or missing answer models as future work.
+
+Policy-only or metadata-only sprints may mark rendered proof as not applicable
+only when they do not change student-facing output and say so explicitly.
 
 ## Curriculum Coherence
 

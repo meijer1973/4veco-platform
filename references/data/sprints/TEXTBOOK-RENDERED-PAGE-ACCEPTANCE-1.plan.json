@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+  "name": "Rendered-Page Acceptance Policy",
+  "created": "2026-06-16",
+  "plan": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md",
+  "baseline": "reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": true,
+  "generated_lesson_output_allowed": false,
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Rendered-page acceptance standard exists.",
+    "Markdown and target records remain content source of truth.",
+    "Rendered PDF/HTML pages are acceptance proof for student-facing readability, layout, visual quality, and print/product quality.",
+    "Student-facing textbook changes require full-page rendered proof, page PNGs or contact sheets, pages inspected, and defect disposition.",
+    "Visible student-facing defects are blockers, not PASS WITH FLAGS carry items.",
+    "Proof artifact convention exists for future PDF page renders and contact sheets.",
+    "Textbook workflow and lead-review instructions cite the rendered-page acceptance standard.",
+    "No lesson content, generated lesson output, protected machine/external reference data, or product gates are changed."
+  ],
+  "scope": [
+    "Add a durable platform-owned rendered-page acceptance standard.",
+    "Wire the standard into textbook sprint/review expectations.",
+    "Record sprint evidence under reports/sprints and references/data/sprints.",
+    "Preserve product-gate and generated-output boundaries."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1",
+    "node build-scripts/sprints/check-scope-language.js --active",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1-result.md",
+    "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1 --complete",
+    "npm.cmd run check:platform",
+    "git diff --check",
+    "git -C ../4veco-lessen diff --check"
+  ],
+  "forbidden": [
+    "No edits under references/machine or references/external.",
+    "No edits under ../4veco-lessen.",
+    "No textbook paragraph, chapter, or book content edits.",
+    "No generated lesson output regeneration.",
+    "No validator that claims to judge subjective visual quality automatically.",
+    "No diagnostics, adaptive routing, mastery, sequencing, student-facing AI, summative use, PV projection, PV machine promotion, Scale Gate 1, product-route adoption, or student/product-use authorization."
+  ]
+}

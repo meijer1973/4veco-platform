@@ -62,6 +62,13 @@ review-standard work, the packet is not ready unless it also includes:
 - A named list of non-negotiable requirements.
 - A core-requirement checklist that says met / not met / not applicable for each item.
 
+For textbook sprints that touch student-facing PDF or HTML output, also inspect
+`references/authored/textbook-rendered-page-acceptance-standard.md`. The packet
+is not ready unless it identifies final rendered proof or states why rendered
+proof is not applicable. Rendered proof means full-page final-output evidence,
+such as page PNGs or a contact sheet plus pages inspected and defect
+disposition. Cropped figures and source checks are supporting evidence only.
+
 ## Orchestration procedure
 
 ### Pass 0 - Task classification
