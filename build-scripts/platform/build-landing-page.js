@@ -37,7 +37,7 @@ const MODULE_BASE = process.env.MODULE_ROOT
 
 const CONFIG = loadConfig(MODULE_BASE);
 
-const ONLY_ID = null;
+const ONLY_ID = process.env.ONLY_ID || process.env.PARAGRAPH_ID || process.argv[2] || null;
 const DRY_RUN = false;
 
 console.log(`Target: ${CONFIG.displayLabel} (${CONFIG.moduleRoot})`);
@@ -1168,6 +1168,10 @@ function paragraphPrototypeCSS() {
       cursor: pointer;
       font: inherit;
     }
+    .content {
+      box-sizing: border-box;
+      max-width: min(1180px, calc(100vw - var(--sidebar)));
+    }
     .route-chip:hover { transform: translateY(-1px); border-color: rgba(31, 111, 120, 0.28); }
     .tile-disabled {
       border: 1px solid rgba(168, 91, 0, 0.20);
@@ -1535,7 +1539,7 @@ function routeRows(files, paragraaf) {
       layer: "exit-ticket",
       num: 5,
       title: "Exit ticket",
-      hint: "Maak de aparte eindcontrole wanneer je klaar bent voor doelopgave-niveau.",
+      hint: "Maak de aparte eindcontrole wanneer je de paragraaf hebt geoefend.",
       chip: "eindcontrole",
       grid: "single",
       tiles: [
@@ -1545,7 +1549,7 @@ function routeRows(files, paragraaf) {
           pill: "eindcontrole",
           icon: "E",
           title: "Exit ticket",
-          desc: "Laat zien dat je de doelopgave op hetzelfde niveau en met dezelfde antwoordvorm aankunt.",
+          desc: "Werk de eindcontrole uit en gebruik de feedback om je volgende oefenstap te kiezen.",
           href: fileHref(files.check.exitTicket),
           action: "Maak exit ticket",
           aria: "Open exit ticket",
