@@ -9,21 +9,21 @@
   "skillScopeIds": ["A43", "B01", "B02"],
   "targetEquivalent": {
     "candidate": true,
-    "gateApproved": false,
+    "gateApproved": true,
     "completionLanguageEligible": false
   },
   "metadataAlignment": {
-    "status": "target_equivalent_candidate_pending_review",
+    "status": "target_equivalent_aligned",
     "paragraphSkillIds": ["A43", "B01", "B02"],
     "targetExerciseSkillIds": ["A43", "B01", "B02"],
-    "targetReadinessEvidence": false,
+    "targetReadinessEvidence": true,
     "sourceRefs": {
       "targetExerciseRegistry": "references/authored/course-target-exercises.json#paragraph_id=1.1.1",
       "unitRegistry": "references/machine/micro-teaching-units.json"
     },
     "notes": [
-      "This source implements the 1.1.1 target-operation chain as a held candidate.",
-      "Completion language remains disabled until the CHECK-SHORT-EXIT-2 human gate reviews rendered output."
+      "B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1 lead review approves target-equivalent readiness for this 1.1.1 exit ticket only.",
+      "Completion language remains held; this does not authorize product-route adoption, diagnostics, mastery, PV, Scale Gate 1, broad product use, or student product use."
     ]
   },
   "skillMap": {
