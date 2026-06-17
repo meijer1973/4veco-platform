@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "sprint_id": "TEXTBOOK-FIGURE-STANDARD-1",
+  "generated": "2026-06-17",
+  "status": "completed",
+  "plan": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md",
+  "baseline": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-baseline.md",
+  "result": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md",
+  "diff_summary": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-diff-summary.md",
+  "protected_reference_data_changed": false,
+  "generated_lesson_output_changed": false,
+  "source_data_changed": false,
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "review_standard": "REV-STD-1",
+  "platform_branch": "codex/textbook-figure-standard-1-20260617",
+  "lessen_branch": "read-only-pre-existing-untracked-output",
+  "rendered_proof": {
+    "required": false,
+    "reason": "Policy-only sprint; no student-facing textbook output or figure placement changed.",
+    "future_standard": "references/authored/textbook-figure-standard.md"
+  },
+  "acceptance_tests": [
+    {
+      "command": "node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-scope-language.js --active",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C ../4veco-lessen status --short --branch",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-FIGURE-STANDARD-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete",
+      "status": "passed"
+    }
+  ],
+  "lead_review": {
+    "assignment": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-assignment.md",
+    "round1": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-round1.md",
+    "corrections": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-corrections.md",
+    "round2": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-lead-review-round2.md",
+    "final_verdict": "PASS WITH FLAGS",
+    "flags": [
+      {
+        "id": "rendered_proof_workflow_follow_up",
+        "description": "Rendered proof automation and quality-ref schema wiring remain separate follow-up sprints.",
+        "classification": "scale_blocker",
+        "disposition": "accepted_follow_up",
+        "owner": "textbook_team",
+        "next_action": "Open `RENDERED-PROOF-WORKFLOW-1` before claiming automated rendered-proof production or schema-backed quality-ref closure.",
+        "blocks": [
+          "Automated rendered-proof manifest/contact-sheet workflow",
+          "Quality-ref schema adoption for rendered figure proof"
+        ],
+        "does_not_block": "Closure of this platform-only textbook figure standard sprint.",
+        "proof_required_to_close": "Future `RENDERED-PROOF-WORKFLOW-1` and `TEXTBOOK-QUALITY-REF-SCHEMA-RENDERED-PROOF-1` result packets with validators and lead review.",
+        "blocking": false
+      }
+    ],
+    "findings": [
+      {
+        "id": "figure_standard_core",
+        "description": "Textbook figure standard exists and defines source asset hygiene, graph conventions, readability guards, proof layers, blockers, mixed-section rules, and closure fields.",
+        "classification": "core_requirement_met",
+        "evidence": "references/authored/textbook-figure-standard.md",
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure and future textbook use of the standard.",
+        "proof_required_to_close": "Standard exists and is cited by result and lead-review evidence."
+      },
+      {
+        "id": "rendered_authority_preserved",
+        "description": "The figure standard preserves full-page rendered proof as final acceptance authority and treats source checks as preflight.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "references/authored/textbook-figure-standard.md",
+          "references/authored/textbook-rendered-page-acceptance-standard.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Purpose and Proof Requirements sections state that source checks do not replace full-page rendered proof."
+      },
+      {
+        "id": "figure_blocker_rule",
+        "description": "Visible student-facing figure defects are blockers and cannot be carried as PASS WITH FLAGS missing core requirements.",
+        "classification": "core_requirement_met",
+        "evidence": "references/authored/textbook-figure-standard.md",
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Blocking Defects section names unreadable labels, clipping, graph/text contradictions, missing figures, stale exports, color-only required meaning, and missing figure proof."
+      },
+      {
+        "id": "workflow_wiring_core",
+        "description": "Textbook workflow and lead-review instructions cite the figure standard.",
+        "classification": "core_requirement_met",
+        "evidence": [
+          "docs/roadmaps/textbook/textbook-production-roadmap.md",
+          "docs/roadmaps/textbook/sprint-ledger.md",
+          "docs/roadmaps/textbook/textbook-end-state.md",
+          "references/authored/README.md",
+          "agents/lead-reviewer-agent.md"
+        ],
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Workflow files cite the standard and future proof expectation."
+      },
+      {
+        "id": "lesson_boundary_clean",
+        "description": "No lesson content or generated lesson output changed in this sprint.",
+        "classification": "core_requirement_met",
+        "evidence": "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-command-log.jsonl",
+        "blocks": "Nothing.",
+        "does_not_block": "Sprint closure.",
+        "proof_required_to_close": "Command log includes successful `git -C ../4veco-lessen diff --check` and status evidence."
+      },
+      {
+        "id": "automation_schema_follow_up",
+        "description": "Rendered-proof automation and quality-ref schema work remain named follow-ups, not missing core figure-standard requirements.",
+        "classification": "scale_blocker",
+        "evidence": [
+          "reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md",
+          "references/authored/textbook-rendered-page-acceptance-standard.md"
+        ],
+        "blocks": "Automated rendered-proof scaling and schema adoption.",
+        "does_not_block": "Closure of this bounded figure-standard policy sprint.",
+        "proof_required_to_close": "Future `RENDERED-PROOF-WORKFLOW-1` and `TEXTBOOK-QUALITY-REF-SCHEMA-RENDERED-PROOF-1` sprints may close the named follow-ups."
+      }
+    ]
+  },
+  "blocked_claims": [
+    "lesson content changes",
+    "generated lesson output",
+    "Book 2 Chapter 2.2 readiness start",
+    "protected machine or external reference data mutation",
+    "product-route adoption",
+    "target-equivalent proof",
+    "diagnostics",
+    "adaptive routing",
+    "mastery/sequencing",
+    "student-facing AI",
+    "PV",
+    "Scale Gate 1",
+    "student/product use"
+  ],
+  "next_authorized_work": "Use references/authored/textbook-figure-standard.md with the rendered-page acceptance standard in future figure-heavy textbook sprint plans, result records, and lead reviews. Start B2-2.2-READY-1 only after explicit human opening; open rendered-proof workflow/schema follow-ups separately."
+}

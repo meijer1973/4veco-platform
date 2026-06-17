@@ -1,18 +1,18 @@
 # Textbook Production Roadmap
 
-Generated: 2026-06-16
+Generated: 2026-06-17
 Roadmap ID: `textbook-production-roadmap`
-Roadmap version: `v1.3-chapter-2.2-readiness`
+Roadmap version: `v1.4-textbook-figure-standard`
 Roadmap status: `active`
 Version index: `docs/roadmaps/roadmap-version-index.json`
 Folder: `docs/roadmaps/textbook/`
 Sprint ledger: `docs/roadmaps/textbook/sprint-ledger.md`
 End-state draft: `docs/roadmaps/textbook/textbook-end-state.md`
-Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Book 2 Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13. The next planned production direction is controlled readiness for Book 2 Chapter 2.2 Elasticiteit.
+Scope: textbook improvement and writing work that prepares, builds, verifies, and reviews printed textbook output in `../4veco-lessen`, with planning evidence and sprint records in this repository. Book 2 Chapter 2.1 is closed for now after platform PR #48 and lesson PR #13. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` and `TEXTBOOK-FIGURE-STANDARD-1` have closed platform-only policy standards for rendered-page proof and figure/graph source preflight. The next planned production direction is controlled readiness for Book 2 Chapter 2.2 Elasticiteit.
 
 ## Operating Goal
 
-Improve and write the textbook one paragraph at a time. Chapter 2.1 now has current target evidence, rendered proof, validation evidence, and lead-review evidence, so it should not be polished further unless a concrete rendered-output defect appears. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` records the rendered-page acceptance standard that future textbook sprints must cite. The next paragraph-production step remains Chapter 2.2 readiness through `B2-2.2-READY-1` after explicit human opening.
+Improve and write the textbook one paragraph at a time. Chapter 2.1 now has current target evidence, rendered proof, validation evidence, and lead-review evidence, so it should not be polished further unless a concrete rendered-output defect appears. `TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1` records the rendered-page acceptance standard and `TEXTBOOK-FIGURE-STANDARD-1` records the figure/graph source-asset standard that future textbook sprints must cite. The next paragraph-production step remains Chapter 2.2 readiness through `B2-2.2-READY-1` after explicit human opening.
 
 ## Book 2 Print Series
 
@@ -53,6 +53,7 @@ When an active sprint exists, it sits at the top. When no sprint is active, the 
 
 | Sprint | Name | Completed | Current State |
 |---|---|---|---|
+| TEXTBOOK-FIGURE-STANDARD-1 | Textbook Figure Standard | yes | Closed as platform-only policy sprint. Added durable figure and graph source-asset standard so future textbook sprints treat SVG/PNG pairing, labels, graph conventions, density, color-not-sole-meaning, and graph/text concordance as preflight proof while final rendered pages remain acceptance proof. No lesson content or generated output edits. |
 | TEXTBOOK-RENDERED-PAGE-ACCEPTANCE-1 | Rendered-Page Acceptance Policy | yes | Closed as platform-only policy sprint. Added durable rendered-page acceptance standard so future textbook sprints treat final rendered PDF/HTML as student-facing readability/layout proof while markdown remains the content source of truth. No lesson content or generated output edits. |
 | B2-2.2-READY-1 | Book 2 Chapter 2.2 Readiness | no | Planned next, not started. Prepare target readiness, elasticity notation/sign conventions, graph/table conventions, misconception list, answer-model route, and mixed-opgaven reuse decision before paragraph writing. |
 | B2-2.2.1-HARDEN | Book 2 Paragraph 2.2.1 Prijselasticiteit Quality Hardening | no | Planned after readiness. Focus on price elasticity calculation, sign/absolute-value interpretation, and elastic/inelastic classification. |
@@ -92,4 +93,4 @@ Do not mutate `references/machine/`, `references/external/`, protected reference
 
 ## Next Action
 
-Do not start a paragraph-production sprint until a human explicitly opens the next production step. Then create `B2-2.2-READY-1` as a readiness sprint for Chapter 2.2 Elasticiteit. The first production sprint must cite `references/authored/textbook-rendered-page-acceptance-standard.md`, plan targets, notation/sign conventions, graph/table conventions, misconceptions, answer-model routines, rendered-page proof expectations, and the 2.2.4 mixed-opgaven reuse decision before any paragraph writing or lesson-output regeneration.
+Do not start a paragraph-production sprint until a human explicitly opens the next production step. Then create `B2-2.2-READY-1` as a readiness sprint for Chapter 2.2 Elasticiteit. The first production sprint must cite `references/authored/textbook-rendered-page-acceptance-standard.md` and `references/authored/textbook-figure-standard.md`, plan targets, notation/sign conventions, graph/table conventions, misconceptions, answer-model routines, rendered-page proof expectations, figure-source preflight expectations, and the 2.2.4 mixed-opgaven reuse decision before any paragraph writing or lesson-output regeneration.

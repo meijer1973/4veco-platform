@@ -69,6 +69,13 @@ proof is not applicable. Rendered proof means full-page final-output evidence,
 such as page PNGs or a contact sheet plus pages inspected and defect
 disposition. Cropped figures and source checks are supporting evidence only.
 
+For textbook sprints that touch figures, graphs, charts, SVG/PNG pairs, or
+figure placement, also inspect
+`references/authored/textbook-figure-standard.md`. The packet is not ready
+unless it lists changed figure assets, source preflight evidence or a reason it
+is not applicable, and final rendered proof for changed figure pages. Source
+asset checks do not replace rendered-page acceptance.
+
 ## Orchestration procedure
 
 ### Pass 0 - Task classification

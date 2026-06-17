@@ -1,0 +1,905 @@
+# Sprint TEXTBOOK-FIGURE-STANDARD-1: Command Log
+
+## node build-scripts/sprints/check-scope-language.js --active
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:37:44.273Z`
+- finished_at: `2026-06-17T06:37:44.412Z`
+- duration_ms: `139`
+- exit_code: `0`
+- stdout_sha256: `50a3121f3d2af49c043a1d608461b62afb93af1f7b5601b4eb2a71f9a622985b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:37:44.271Z`
+- finished_at: `2026-06-17T06:37:44.469Z`
+- duration_ms: `198`
+- exit_code: `0`
+- stdout_sha256: `62ef637a4ab9e456619d309bfdd146573f7f97070e343c198e6b464b188c7c21`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:37:57.301Z`
+- finished_at: `2026-06-17T06:37:57.709Z`
+- duration_ms: `408`
+- exit_code: `0`
+- stdout_sha256: `d3d8c651de29143d990be7a3367ac9d66a93eeb19d387f5ce5fbeb751c267a11`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:38:37.981Z`
+- finished_at: `2026-06-17T06:38:38.102Z`
+- duration_ms: `121`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen status --short --branch
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:38:38.006Z`
+- finished_at: `2026-06-17T06:38:38.117Z`
+- duration_ms: `111`
+- exit_code: `0`
+- stdout_sha256: `dda5011a6dc89e1c832c07a02cfcbb30df52e08c56491553538779f205236378`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+## codex/b2-2.2.1-harden-20260615...origin/main [behind 8]
+?? "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/"
+?? "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/"
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:38:38.006Z`
+- finished_at: `2026-06-17T06:38:38.140Z`
+- duration_ms: `134`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `5e3abac64ef96541e5b12676c842ec51ca4dfef739038e095eafcb89d9e7fd2c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'agents/lead-reviewer-agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/sprint-ledger.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/textbook-end-state.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/textbook-production-roadmap.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/authored/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/authored/textbook-rendered-page-acceptance-standard.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:38:37.981Z`
+- finished_at: `2026-06-17T06:38:39.050Z`
+- duration_ms: `1069`
+- exit_code: `1`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `3e8b7f68c0ce4945253c177ae9728266bc2dd58dee00391a600d1301c1a829e9`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+'jest' is not recognized as an internal or external command,
+operable program or batch file.
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:39:48.513Z`
+- finished_at: `2026-06-17T06:40:11.139Z`
+- duration_ms: `22626`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `5b78a25e85ce102bf24c44042d318c746010fc1cc3a2de42cf7c42deffcd9abe`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 54 passed, 54 of 60 total
+Tests:       8 skipped, 806 passed, 814 total
+Snapshots:   0 total
+Time:        20.99 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:50:02.336Z`
+- finished_at: `2026-06-17T06:50:02.441Z`
+- duration_ms: `105`
+- exit_code: `0`
+- stdout_sha256: `f45b899f55e5e5c018b011fa7257ea0dc034c57d9aa13d88f42edd46b0e7f8f3`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: TEXTBOOK-FIGURE-STANDARD-1 (8 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:50:02.366Z`
+- finished_at: `2026-06-17T06:50:02.466Z`
+- duration_ms: `100`
+- exit_code: `0`
+- stdout_sha256: `0f9dee01fc96b41c8288a1a7b730798d580260775bc317a4690bc6a4a1d6e9d9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:21.974Z`
+- finished_at: `2026-06-17T06:54:22.066Z`
+- duration_ms: `92`
+- exit_code: `0`
+- stdout_sha256: `40bda88219c76855524191367d19e3f235504197b45afc197290d70226414aa2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: TEXTBOOK-FIGURE-STANDARD-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:21.988Z`
+- finished_at: `2026-06-17T06:54:22.584Z`
+- duration_ms: `596`
+- exit_code: `0`
+- stdout_sha256: `f92b61b9691c729892556393ce65788f784bcafe97e1b8872165df1c446dec97`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:54.384Z`
+- finished_at: `2026-06-17T06:54:54.466Z`
+- duration_ms: `82`
+- exit_code: `0`
+- stdout_sha256: `5aeb2b7263b31df341b6fedcbfa36dd0f43c72e7338c3c63626ea3907d5c4fe4`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: TEXTBOOK-FIGURE-STANDARD-1 (12 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:54.459Z`
+- finished_at: `2026-06-17T06:54:54.559Z`
+- duration_ms: `100`
+- exit_code: `0`
+- stdout_sha256: `0f9dee01fc96b41c8288a1a7b730798d580260775bc317a4690bc6a4a1d6e9d9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:54.578Z`
+- finished_at: `2026-06-17T06:54:54.646Z`
+- duration_ms: `68`
+- exit_code: `0`
+- stdout_sha256: `40bda88219c76855524191367d19e3f235504197b45afc197290d70226414aa2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: TEXTBOOK-FIGURE-STANDARD-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:54:54.918Z`
+- finished_at: `2026-06-17T06:54:55.414Z`
+- duration_ms: `496`
+- exit_code: `0`
+- stdout_sha256: `f92b61b9691c729892556393ce65788f784bcafe97e1b8872165df1c446dec97`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:55:11.384Z`
+- finished_at: `2026-06-17T06:55:11.473Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:55:11.394Z`
+- finished_at: `2026-06-17T06:55:11.494Z`
+- duration_ms: `100`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `5e3abac64ef96541e5b12676c842ec51ca4dfef739038e095eafcb89d9e7fd2c`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+warning: in the working copy of 'agents/lead-reviewer-agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/sprint-ledger.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/textbook-end-state.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/roadmaps/textbook/textbook-production-roadmap.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/authored/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'references/authored/textbook-rendered-page-acceptance-standard.md', LF will be replaced by CRLF the next time Git touches it
+
+```
+## node build-scripts/sprints/check-scope-language.js --active
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:55:11.384Z`
+- finished_at: `2026-06-17T06:55:11.525Z`
+- duration_ms: `141`
+- exit_code: `0`
+- stdout_sha256: `50a3121f3d2af49c043a1d608461b62afb93af1f7b5601b4eb2a71f9a622985b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:55:26.043Z`
+- finished_at: `2026-06-17T06:55:26.138Z`
+- duration_ms: `95`
+- exit_code: `0`
+- stdout_sha256: `4a1bd7748e8aed5f56e28ca6f1422a8a6f49717fc691c158eb0aa3eb5cf20ac0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 151 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/references/check-roadmap-version-index.js
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:06.426Z`
+- finished_at: `2026-06-17T06:57:06.492Z`
+- duration_ms: `66`
+- exit_code: `0`
+- stdout_sha256: `4a1bd7748e8aed5f56e28ca6f1422a8a6f49717fc691c158eb0aa3eb5cf20ac0`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK roadmap version index: 151 entries
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:28.553Z`
+- finished_at: `2026-06-17T06:57:28.641Z`
+- duration_ms: `88`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-scope-language.js --active
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:28.553Z`
+- finished_at: `2026-06-17T06:57:28.686Z`
+- duration_ms: `133`
+- exit_code: `0`
+- stdout_sha256: `50a3121f3d2af49c043a1d608461b62afb93af1f7b5601b4eb2a71f9a622985b`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK scope-language check: active surfaces
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-plan.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-plan.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:28.514Z`
+- finished_at: `2026-06-17T06:57:28.693Z`
+- duration_ms: `179`
+- exit_code: `0`
+- stdout_sha256: `62ef637a4ab9e456619d309bfdd146573f7f97070e343c198e6b464b188c7c21`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint plan: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-plan.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:28.522Z`
+- finished_at: `2026-06-17T06:57:28.813Z`
+- duration_ms: `291`
+- exit_code: `0`
+- stdout_sha256: `d3d8c651de29143d990be7a3367ac9d66a93eeb19d387f5ce5fbeb751c267a11`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 planned/active
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen diff --check
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:44.156Z`
+- finished_at: `2026-06-17T06:57:44.227Z`
+- duration_ms: `71`
+- exit_code: `0`
+- stdout_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## git -C ../4veco-lessen status --short --branch
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:44.188Z`
+- finished_at: `2026-06-17T06:57:44.263Z`
+- duration_ms: `75`
+- exit_code: `0`
+- stdout_sha256: `dda5011a6dc89e1c832c07a02cfcbb30df52e08c56491553538779f205236378`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+## codex/b2-2.2.1-harden-20260615...origin/main [behind 8]
+?? "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.1 Hoofdstuk Kosten en opbrengsten/2.1.4 Gemengde opgaven/_assets/"
+?? "Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/"
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## npm.cmd run check:platform
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:57:43.838Z`
+- finished_at: `2026-06-17T06:58:08.656Z`
+- duration_ms: `24818`
+- exit_code: `0`
+- stdout_sha256: `5b7bf8f7931706e85d713ae2021b836cfa9d35bc326f4ab0207b5c5df088730a`
+- stderr_sha256: `3a3ae3bd8b3dd7eb63d5e36ae48ad58dc52bb90a3f71f1c9eea3004334c45494`
+
+### stdout excerpt
+
+```text
+
+> 4veco-platform@1.0.0 check:platform
+> jest --runInBand
+
+
+```
+
+### stderr excerpt
+
+```text
+Cannot parse chapter folder name: bad-name
+Expected format: "X.Y Hoofdstuk Name"
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ MISSING review report (X.Y.Z-review.md)
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ quality_ref reports missing assets: 9.9.1-quality-ref.yaml
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ✗ Part A review verdict is FAIL: 9.9.1-review.md
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ Non-compliant asset name: B9C9S1_fig_1.svg (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.svg does not start with 9.9.1_
+  ✗ Non-compliant asset name: B9C9S1_fig_1.png (must match X.Y.Z_{type}_{number}.ext)
+  ✗ Asset prefix mismatch: B9C9S1_fig_1.png does not start with 9.9.1_
+  ⚠ No _chapter-plan.md
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.png (expected 9.9.*)
+  ✗ Chapter asset wrong prefix: B9C9S1_fig_1.svg (expected 9.9.*)
+  ⚠ No _chapter-plan.md
+  ✗ Chapter aggregate asset differs from paragraph source: 9.9.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING toetsmatrijs.md
+  ✗ Expected 3 PDFs, found 2
+  ⚠ Orphaned asset: 9.5.4_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ✗ MISSING samenvatting.md
+  ✗ Expected 2 PDFs, found 1
+  ⚠ Orphaned asset: 9.5.1_fig_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.5.1_mc_1.svg
+  ⚠ No _chapter-plan.md
+  ⚠ Orphaned asset: 9.9.4_ex_1.svg
+  ⚠ No _chapter-plan.md
+
+Test Suites: 6 skipped, 54 passed, 54 of 60 total
+Tests:       8 skipped, 806 passed, 814 total
+Snapshots:   0 total
+Time:        23.866 s
+Ran all test suites.
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:58:23.205Z`
+- finished_at: `2026-06-17T06:58:23.307Z`
+- duration_ms: `102`
+- exit_code: `0`
+- stdout_sha256: `3add08a8cfd319de857dff98c4fc92f12cc4dc83e892543357bc27c209d6e117`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: TEXTBOOK-FIGURE-STANDARD-1 (28 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:58:23.258Z`
+- finished_at: `2026-06-17T06:58:23.356Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `0f9dee01fc96b41c8288a1a7b730798d580260775bc317a4690bc6a4a1d6e9d9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:58:23.264Z`
+- finished_at: `2026-06-17T06:58:23.359Z`
+- duration_ms: `95`
+- exit_code: `0`
+- stdout_sha256: `40bda88219c76855524191367d19e3f235504197b45afc197290d70226414aa2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: TEXTBOOK-FIGURE-STANDARD-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T06:58:23.284Z`
+- finished_at: `2026-06-17T06:58:24.570Z`
+- duration_ms: `1286`
+- exit_code: `0`
+- stdout_sha256: `f92b61b9691c729892556393ce65788f784bcafe97e1b8872165df1c446dec97`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-lead-review-substance.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T07:00:00.692Z`
+- finished_at: `2026-06-17T07:00:00.790Z`
+- duration_ms: `98`
+- exit_code: `0`
+- stdout_sha256: `40bda88219c76855524191367d19e3f235504197b45afc197290d70226414aa2`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK lead-review substance: TEXTBOOK-FIGURE-STANDARD-1
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-result.js reports/sprints/TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T07:00:00.716Z`
+- finished_at: `2026-06-17T07:00:00.805Z`
+- duration_ms: `89`
+- exit_code: `0`
+- stdout_sha256: `0f9dee01fc96b41c8288a1a7b730798d580260775bc317a4690bc6a4a1d6e9d9`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint result: reports\sprints\TEXTBOOK-FIGURE-STANDARD-1-result.md
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-command-log.js TEXTBOOK-FIGURE-STANDARD-1
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T07:00:00.712Z`
+- finished_at: `2026-06-17T07:00:00.811Z`
+- duration_ms: `99`
+- exit_code: `0`
+- stdout_sha256: `b18d35b06bb6fd0c6f0866336fd30d17e18be5ea2c441d6d333404fcb2c78f60`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint command log: TEXTBOOK-FIGURE-STANDARD-1 (33 entries)
+
+```
+
+### stderr excerpt
+
+```text
+
+```
+## node build-scripts/sprints/check-sprint-bundle.js TEXTBOOK-FIGURE-STANDARD-1 --complete
+
+- cwd: `C:\wt\TEXT-20260608\4veco-platform-rendered-policy`
+- started_at: `2026-06-17T07:00:00.692Z`
+- finished_at: `2026-06-17T07:00:01.298Z`
+- duration_ms: `606`
+- exit_code: `0`
+- stdout_sha256: `f92b61b9691c729892556393ce65788f784bcafe97e1b8872165df1c446dec97`
+- stderr_sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+
+### stdout excerpt
+
+```text
+OK sprint bundle: TEXTBOOK-FIGURE-STANDARD-1 complete
+
+```
+
+### stderr excerpt
+
+```text
+
+```

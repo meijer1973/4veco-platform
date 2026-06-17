@@ -92,6 +92,9 @@ A student-facing defect is a blocker, not a flag.
 Figure source checks are preflight checks. Final figure acceptance is based on
 full-page rendered proof.
 
+`references/authored/textbook-figure-standard.md` defines the detailed figure
+and graph source-asset standard for future textbook sprints.
+
 Source-level hygiene should still be maintained:
 
 - figures should keep editable source where possible, normally SVG;
@@ -214,14 +217,14 @@ Those remain separate product gates.
 ## Follow-Up Standards
 
 The rendered-page acceptance policy intentionally leaves detailed automation
-and figure-specific standards to separate work:
+to separate work:
 
-- `TEXTBOOK-FIGURE-STANDARD-1`: detailed source-asset and rendered figure
-  standard.
 - `RENDERED-PROOF-WORKFLOW-1`: standardized PDF-to-PNG/contact-sheet workflow
   and proof manifests.
 - `TEXTBOOK-QUALITY-REF-SCHEMA-RENDERED-PROOF-1`: quality-ref schema or
   convention for rendered-page proof fields.
 
-These are follow-ups. They are not prerequisites for this standard to govern
+`TEXTBOOK-FIGURE-STANDARD-1` closed the figure-specific source-asset and
+rendered figure standard in `references/authored/textbook-figure-standard.md`.
+The remaining follow-ups are not prerequisites for this standard to govern
 future textbook sprint closure.
