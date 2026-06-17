@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "report_id": "internal-diagnostic-scope-readiness",
+  "sprint_id": "INSPECT-11",
+  "generated_date": "2026-06-17",
+  "status": "internal_readiness_audit_complete",
+  "diagnostic_only": true,
+  "internal_only": true,
+  "readiness_audit_only": true,
+  "new_diagnostic_report_generated": false,
+  "evidence_pack_generated": false,
+  "teacher_school_output_generated": false,
+  "public_external_output_generated": false,
+  "dashboard_gate_created": false,
+  "quality_ref_or_scale_gate_integration_created": false,
+  "generated_lesson_output_mutated": false,
+  "protected_reference_or_source_registry_mutated": false,
+  "personal_data_present": false,
+  "compliance_or_approval_claim": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "original_sprint_gate_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "controlling_authorisation": "archive/sprints/INSPECT-11/INSPECT-11-authorisation-note.md",
+  "operating_procedure": "docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md",
+  "safe_use_note": "This is an internal Dutch diagnostic scope readiness audit only. It is not a diagnostic report, evidence pack, teacher/school-facing artifact, public/external output, compliance claim, approval claim, inspection-ready claim, complete OP0 claim, PTA-validity claim, summative-validity claim, classroom-implementation proof, school-obligation proof, school-SKA proof, product-route adoption gate, diagnostics/mastery/PV gate, student-use authority, or product-use authority.",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1.",
+    "PASS WITH FLAGS may not carry a missing core requirement.",
+    "Dutch-only internal diagnostic readiness audit only.",
+    "No new generator implementation.",
+    "No new diagnostic report generation.",
+    "No evidence-pack generation.",
+    "No teacher/school-facing output.",
+    "No public/external output.",
+    "No dashboard gate, quality-ref integration, CI/package integration, Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student-use, or product-use authority.",
+    "No generated lesson-output mutation.",
+    "No protected-reference or source-registry mutation.",
+    "No personal-data processing.",
+    "No compliance, approval, inspection-ready, complete OP0, PTA-validity, summative-validity, classroom-implementation, school-obligation, or school-SKA claim."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state and operational_product_end_state"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "original_sprint_gate_spec and controlling_authorisation"
+    },
+    {
+      "requirement": "Non-negotiables named",
+      "status": "met",
+      "evidence": "non_negotiable_requirements"
+    },
+    {
+      "requirement": "Candidate scopes compared",
+      "status": "met",
+      "evidence": "candidate_scope_matrix"
+    },
+    {
+      "requirement": "Every candidate has blocker fields",
+      "status": "met",
+      "evidence": "candidate_scope_matrix[].blockers"
+    },
+    {
+      "requirement": "No new diagnostic report generated",
+      "status": "met",
+      "evidence": "output_boundary and git diff validation"
+    },
+    {
+      "requirement": "No evidence pack generated",
+      "status": "met",
+      "evidence": "output_boundary and git diff validation"
+    },
+    {
+      "requirement": "Chapter 1.2 remains internal diagnostic only",
+      "status": "met",
+      "evidence": "candidate_scope_matrix entry book-1-chapter-1-2"
+    },
+    {
+      "requirement": "No downstream authority unlocked",
+      "status": "met",
+      "evidence": "forbidden_inference and finding_classification"
+    }
+  ],
+  "candidate_scope_matrix": [
+    {
+      "scope_id": "book-1-chapter-1-1-first-three-control",
+      "label": "Book 1 Chapter 1.1 first-three baseline",
+      "candidate_type": "control_scope",
+      "source_registry_finality": "current registry records for 1.1.1 through 1.1.4 are reviewed_final; INSPECT-7 first-three evidence remains historical bounded sample evidence",
+      "exam_code_linkage": "no target-registry exam codes for 1.1.1 through 1.1.3",
+      "target_equivalent_proof": "partial and narrow; 1.1.2 has local target-equivalent proof with flags, while 1.1.1 and 1.1.3 require separate target-equivalent proof boundaries before stronger reliance",
+      "generated_output_flags": [
+        "Chapter 1.1 accepted baseline is useful as a control, but check-surface authority remains outside this audit"
+      ],
+      "accessibility_support_evidence": "stronger than later chapters because first-three Part A and companion visual reviews exist, but not sufficient to unlock product-route or Scale Gate authority",
+      "companion_advisory_evidence": "companion visual reviews exist for 1.1.1, 1.1.2, and 1.1.3; check-surface/product-use authority remains blocked",
+      "school_owned_boundary": "product evidence only; no school implementation, PTA, summative, classroom-use, or school-SKA proof",
+      "allowed_diagnostic_status": "historical_control_only",
+      "may_consider_new_diagnostic_report": false,
+      "recommendation": "Use as a control comparator only; do not make it the next diagnostic expansion candidate.",
+      "blockers": [
+        {
+          "id": "INSPECT11-1113-EXAM-CODE",
+          "finding": "Chapter 1.1 first-three target records lack exam-code or reviewed no-code decisions.",
+          "classification": "exam-code-linkage-gap",
+          "blocks": "New diagnostic report scope, pack-strength reuse, and teacher/school-facing reliance.",
+          "does_not_block": "Using Chapter 1.1 as historical control evidence.",
+          "proof_required_to_close": "Reviewed exam-code/no-code decision per target with source-backed rationale."
+        },
+        {
+          "id": "INSPECT11-1113-CHECK-SURFACE",
+          "finding": "Check-surface and product-use authority remain outside this audit.",
+          "classification": "scale_blocker",
+          "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use reliance.",
+          "does_not_block": "Internal readiness comparison.",
+          "proof_required_to_close": "Renewed human review confirming check-surface gate closure and explicitly naming any authority unlocked."
+        }
+      ]
+    },
+    {
+      "scope_id": "book-1-chapter-1-2-current-diagnostic",
+      "label": "Book 1 Chapter 1.2 Vraag",
+      "candidate_type": "current_diagnostic_scope",
+      "source_registry_finality": "reviewed_final for 1.2.1 through 1.2.4 after INSPECT-9A/9C",
+      "exam_code_linkage": "target registry contains exam links for 1.2.1 through 1.2.4 after remediation",
+      "target_equivalent_proof": "route-local diagnostic proof exists for 1.2.1 and 1.2.3; 1.2.2 and 1.2.4 carry generated-output blockers",
+      "generated_output_flags": [
+        "1.2.2 substitute-mechanism wording blocker",
+        "1.2.4 frozen-yoghurt mechanism blocker",
+        "1.2.4 orphaned asset note"
+      ],
+      "accessibility_support_evidence": "below pack-strength; mobile, contrast/theme, semantic/PDF, support, hints/repair, companion/advisory, and next-action proof remain incomplete",
+      "companion_advisory_evidence": "missing or below pack-strength for Chapter 1.2",
+      "school_owned_boundary": "product diagnostic evidence only; no school implementation, PTA, summative, classroom-use, or school-SKA proof",
+      "allowed_diagnostic_status": "existing_internal_diagnostic_scope_only",
+      "may_consider_new_diagnostic_report": false,
+      "recommendation": "Keep Chapter 1.2 as the only existing diagnostic report pair and preserve all blockers.",
+      "blockers": [
+        {
+          "id": "INSPECT11-122-SUBSTITUTE",
+          "finding": "1.2.2 generated-output substitute-mechanism wording remains a blocker.",
+          "classification": "scale_blocker",
+          "blocks": "Clean 1.2.2 proof closure, pack-strength reliance, and any broader diagnostic generation that hides the blocker.",
+          "does_not_block": "Existing blocker-visible internal diagnostic reporting.",
+          "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming opgave 10b and safe substitute-attractiveness wording."
+        },
+        {
+          "id": "INSPECT11-124-FROZEN-YOGHURT",
+          "finding": "1.2.4 frozen-yoghurt substitute mechanism remains a blocker.",
+          "classification": "scale_blocker",
+          "blocks": "Clean integrated proof closure, pack-strength reliance, and broader diagnostic generation that hides the blocker.",
+          "does_not_block": "Existing blocker-visible internal diagnostic reporting.",
+          "proof_required_to_close": "Corrected generated output or reviewed waiver/carry decision naming the frozen-yoghurt mechanism and safe wording."
+        },
+        {
+          "id": "INSPECT11-12-ACCESS-SUPPORT",
+          "finding": "Chapter 1.2 accessibility/support evidence remains below pack-strength.",
+          "classification": "support-evidence-gap",
+          "blocks": "Accessibility-strength, support-strength, teacher/school-facing pack, and pack-ready claims.",
+          "does_not_block": "Existing internal diagnostic reporting with gaps visible.",
+          "proof_required_to_close": "Reviewed accessibility/support packet covering mobile, contrast/theme, semantic/PDF, keyboard/focus applicability, hints/repair, companion/advisory, next-action, and product/school support boundary."
+        }
+      ]
+    },
+    {
+      "scope_id": "book-1-chapter-1-3-candidate-under-test",
+      "label": "Book 1 Chapter 1.3 Aanbod en marktevenwicht",
+      "candidate_type": "next_readiness_remediation_candidate",
+      "source_registry_finality": "reviewed_final for 1.3.1 through 1.3.4",
+      "exam_code_linkage": "exam-code links exist for 1.3.1 through 1.3.3; 1.3.4 is no-new-theory gemengde opgaven and needs an explicit integration/no-code decision before diagnostic use",
+      "target_equivalent_proof": "not yet present in the INSPECT-9C route-local proof-record format",
+      "generated_output_flags": [
+        "Chapter 1.3 paragraph reviews and quality refs mostly pass with flags",
+        "Chapter 1.3 remediation must reconcile stale lesson-side quality-ref and review state, including 1.3.1 quality-ref blocker language versus later review correction evidence",
+        "1.3 lacks companion visual reviews",
+        "1.3 lacks accessibility/support review at the diagnostic-readiness depth used for Chapter 1.2"
+      ],
+      "accessibility_support_evidence": "quality refs and paragraph reviews exist, but no reviewed mobile/contrast/theme/semantic/support/advisory packet exists",
+      "companion_advisory_evidence": "no companion visual review files found for 1.3.1 through 1.3.4",
+      "school_owned_boundary": "product evidence only; no school implementation, PTA, summative, classroom-use, or school-SKA proof",
+      "allowed_diagnostic_status": "candidate_for_later_readiness_remediation_only",
+      "may_consider_new_diagnostic_report": false,
+      "recommendation": "Make Chapter 1.3 the next planning/remediation candidate, not a generated report scope. A later INSPECT-11A-style sprint should produce source/proof/support readiness evidence before any diagnostic report implementation is considered.",
+      "blockers": [
+        {
+          "id": "INSPECT11-13-PROOF-FORMAT",
+          "finding": "Chapter 1.3 lacks reviewed route-local target-equivalent proof records in the Chapter 1.2/INSPECT-9C format.",
+          "classification": "target-equivalent-proof-gap",
+          "blocks": "New diagnostic report generation, pack-strength reliance, and teacher/school-facing reliance.",
+          "does_not_block": "Selecting Chapter 1.3 as the next planning/remediation candidate.",
+          "proof_required_to_close": "Reviewed proof records for 1.3.1 through 1.3.4 with operation-chain and answer-form match plus carried flags."
+        },
+        {
+          "id": "INSPECT11-13-QUALITY-REF-REVIEW-STATE",
+          "finding": "Chapter 1.3 lesson-side quality-ref and review status must be reconciled before diagnostic consideration, including the stale-state risk where 1.3.1-quality-ref.yaml still carries blocker language while 1.3.1-review.md records the graph-text mismatch as corrected.",
+          "classification": "quality-ref-review-reconciliation-gap",
+          "blocks": "Any later Chapter 1.3 diagnostic report consideration, pack-strength reliance, and teacher/school-facing reliance.",
+          "does_not_block": "INSPECT-11 readiness audit closure because the audit already blocks Chapter 1.3 report generation.",
+          "proof_required_to_close": "Reviewed 1.3.1 through 1.3.4 proof records that reconcile quality-ref status, review status, carried blockers, and correction evidence before any diagnostic report consideration."
+        },
+        {
+          "id": "INSPECT11-13-COMPANION",
+          "finding": "Chapter 1.3 lacks companion visual review and advisory-route evidence.",
+          "classification": "support-evidence-gap",
+          "blocks": "Support-strength, companion/advisory, teacher/school-facing, and pack-ready claims.",
+          "does_not_block": "Internal readiness planning.",
+          "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decisions per 1.3 target."
+        },
+        {
+          "id": "INSPECT11-13-ACCESS",
+          "finding": "Chapter 1.3 lacks a diagnostic-readiness accessibility/support packet.",
+          "classification": "accessibility-evidence-gap",
+          "blocks": "Accessibility-strength and broader diagnostic/report readiness.",
+          "does_not_block": "Planning a Chapter 1.3 remediation sprint.",
+          "proof_required_to_close": "Reviewed mobile, contrast/theme, semantic/PDF, keyboard/focus applicability, text-equivalent, internal-code, inclusive-language, hints/repair, and product/school-boundary evidence."
+        }
+      ]
+    },
+    {
+      "scope_id": "book-1-chapter-1-4-and-1-5-controls",
+      "label": "Book 1 Chapter 1.4 / 1.5 controls",
+      "candidate_type": "not_ready_controls",
+      "source_registry_finality": "no matching count-bearing target-registry records found for 1.4/1.5 in the inspected active target registry",
+      "exam_code_linkage": "not established in active target registry",
+      "target_equivalent_proof": "not present",
+      "generated_output_flags": [
+        "1.4 review files mostly pass with flags but remain outside target-registry authority",
+        "1.5 quality refs include BLOCKED states and assessment-boundary risk"
+      ],
+      "accessibility_support_evidence": "not reviewed to diagnostic-readiness depth",
+      "companion_advisory_evidence": "not established",
+      "school_owned_boundary": "higher risk for 1.5 because toets/proeftoets surfaces can be misread as PTA, summative, or school assessment proof",
+      "allowed_diagnostic_status": "not_ready",
+      "may_consider_new_diagnostic_report": false,
+      "recommendation": "Do not use 1.4/1.5 as the next diagnostic scope candidate.",
+      "blockers": [
+        {
+          "id": "INSPECT11-145-TARGET-REGISTRY",
+          "finding": "1.4/1.5 lack active target-registry authority in the inspected registry.",
+          "classification": "target-exercise-finality-gap",
+          "blocks": "Diagnostic report consideration, evidence-pack work, and teacher/school-facing reliance.",
+          "does_not_block": "Using 1.4/1.5 as negative control examples in this audit.",
+          "proof_required_to_close": "Reviewed target-registry coverage or explicit non-count/non-target policy before any readiness claim."
+        },
+        {
+          "id": "INSPECT11-15-ASSESSMENT-BOUNDARY",
+          "finding": "1.5 toetsvoorbereiding surfaces create assessment-boundary risk.",
+          "classification": "school-implementation-boundary",
+          "blocks": "PTA, summative-validity, school assessment, teacher/school-facing, and inspection-readiness claims.",
+          "does_not_block": "Internal negative-control analysis.",
+          "proof_required_to_close": "Human-reviewed assessment-boundary packet distinguishing product practice from school-owned assessment policy."
+        }
+      ]
+    }
+  ],
+  "readiness_ranking": [
+    {
+      "rank": 1,
+      "scope_id": "book-1-chapter-1-3-candidate-under-test",
+      "decision": "best_next_planning_remediation_candidate",
+      "reason": "Reviewed_final target records, generated lesson artifacts, paragraph reviews, quality refs, and exam links for 1.3.1 through 1.3.3 make it the strongest next candidate to remediate, but missing proof/support/accessibility evidence blocks diagnostic report generation."
+    },
+    {
+      "rank": 2,
+      "scope_id": "book-1-chapter-1-1-first-three-control",
+      "decision": "control_only",
+      "reason": "Reviewed INSPECT-7 baseline and companion reviews make it useful as a control, but check-surface and exam-code/no-code authority remain outside this sprint."
+    },
+    {
+      "rank": 3,
+      "scope_id": "book-1-chapter-1-2-current-diagnostic",
+      "decision": "keep_current_scope_only",
+      "reason": "Chapter 1.2 already has the sole internal diagnostic report pair and must preserve its blockers."
+    },
+    {
+      "rank": 4,
+      "scope_id": "book-1-chapter-1-4-and-1-5-controls",
+      "decision": "not_ready",
+      "reason": "Target-registry coverage, target-equivalent proof, support/accessibility proof, and assessment-boundary proof are insufficient."
+    }
+  ],
+  "recommended_next_action": {
+    "decision": "plan_chapter_1_3_readiness_remediation_before_any_new_report",
+    "recommended_sprint": "INSPECT-11A Chapter 1.3 Diagnostic Readiness Remediation Plan",
+    "allowed_next_work": "planning and evidence-readiness remediation only",
+    "forbidden_next_work": [
+      "new diagnostic report generation",
+      "evidence-pack generation",
+      "teacher/school-facing output",
+      "public/external output",
+      "dashboard or quality-ref integration",
+      "Scale Gate integration",
+      "product-route adoption",
+      "diagnostics/mastery/PV",
+      "student-use or product-use authority",
+      "generated lesson-output mutation without a fresh scoped sprint",
+      "protected-reference mutation",
+      "personal-data processing",
+      "compliance or approval claims"
+    ],
+    "minimum_proof_before_diagnostic_report_consideration": [
+      "Reviewed route-local proof records for 1.3.1 through 1.3.4.",
+      "Reconciled lesson-side quality-ref and review status for 1.3.1 through 1.3.4, including stale quality-ref blocker language versus later review corrections.",
+      "Explicit 1.3.4 integration/no-code decision.",
+      "Chapter 1.3 accessibility/support packet.",
+      "Companion/advisory route evidence or explicit carry decisions.",
+      "Finding classification with blocks/does_not_block/proof_required_to_close for every carried flag.",
+      "Three specialist reviews returning MORE_THAN_SATISFIED before human review if report expansion is recommended."
+    ]
+  },
+  "forbidden_inference": [
+    "Chapter 1.3 is ready for a new diagnostic report.",
+    "Chapter 1.3 is pack-strength or teacher/school-facing ready.",
+    "Chapter 1.2 blockers are closed.",
+    "Chapter 1.1 control evidence unlocks product-route adoption or Scale Gate authority.",
+    "1.4/1.5 assessment surfaces prove PTA, summative validity, classroom implementation, school obligation, or school-SKA evidence.",
+    "4veco is compliant, approved, inspection-ready, OP0-complete, PTA-valid, or summative-valid.",
+    "This audit authorises dashboard gates, quality-ref integration, public/external sharing, diagnostics/mastery/PV, student-use, or product-use authority."
+  ],
+  "school_owned_evidence_still_needed": [
+    "School implementation and classroom-use evidence.",
+    "Monitoring, intervention, accommodation, and care-plan evidence.",
+    "PTA, grading, summative-validity, and assessment-policy evidence.",
+    "School SKA, inspection conversation, and competent-authority judgement evidence."
+  ],
+  "finding_classification": [
+    {
+      "finding": "Chapter 1.3 is the best next planning/remediation candidate.",
+      "classification": "planning_recommendation",
+      "blocks": "New diagnostic report generation until proof/support/accessibility evidence and quality-ref/review status are reviewed.",
+      "does_not_block": "Planning an INSPECT-11A readiness-remediation sprint.",
+      "proof_required_to_close": "Reviewed Chapter 1.3 proof records, reconciled lesson-side quality-ref/review status, support/accessibility evidence, specialist gate, and human review."
+    },
+    {
+      "finding": "Chapter 1.2 remains the only existing diagnostic report pair.",
+      "classification": "scale_blocker_preserved",
+      "blocks": "Additional diagnostic report scopes, evidence packs, and downstream authority.",
+      "does_not_block": "Internal readiness comparison.",
+      "proof_required_to_close": "Later scoped implementation sprint after human review."
+    },
+    {
+      "finding": "The old roadmap INSPECT-11 evidence-pack row remains blocked.",
+      "classification": "scope_control",
+      "blocks": "Evidence-pack generation and teacher/school-facing output.",
+      "does_not_block": "The re-scoped INSPECT-11 readiness audit.",
+      "proof_required_to_close": "New human-reviewed sprint explicitly authorising evidence-pack work."
+    }
+  ],
+  "output_boundary": {
+    "diagnostic_report_generated": false,
+    "evidence_pack_generated": false,
+    "teacher_school_output_generated": false,
+    "public_external_output_generated": false,
+    "lesson_output_mutated": false,
+    "protected_reference_mutated": false,
+    "dashboard_gate_created": false,
+    "downstream_authority_unlocked": false
+  }
+}

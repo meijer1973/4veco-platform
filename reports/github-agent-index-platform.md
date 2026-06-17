@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T08:41:25.195Z
+Generated: 2026-06-17T09:33:57.428Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4718
+Files indexed: 4762
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 494
+Count: 496
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,6 +235,7 @@ Count: 494
 - build-scripts/platform/build-reasoning-engine.js
 - build-scripts/platform/build-reasoning-questions.js
 - build-scripts/platform/build-skilltree-shells.js
+- build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/platform/generate-quiz-shells.js
 - build-scripts/platform/reskin-vaardigheden.js
@@ -499,6 +500,7 @@ Count: 494
 - build-scripts/sprints/capture-task-ingest-transform2-screenshots.js
 - build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
+- build-scripts/sprints/check-b1-target-evidence-111-closure-and-implementation-bundle-1.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -674,7 +676,7 @@ Count: 42
 
 ## validators
 
-Count: 478
+Count: 481
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -683,6 +685,7 @@ Count: 478
 - archive/sprints/INSPECT-10B/INSPECT-10B-validation-log.md
 - archive/sprints/INSPECT-10C/INSPECT-10C-validation-log.md
 - archive/sprints/INSPECT-10D/INSPECT-10D-validation-log.md
+- archive/sprints/INSPECT-11/INSPECT-11-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -714,6 +717,7 @@ Count: 478
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
+- build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/rag/validate-chunks.js
 - build-scripts/rag/validate-query-output.js
@@ -841,6 +845,7 @@ Count: 478
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
+- build-scripts/sprints/check-b1-target-evidence-111-closure-and-implementation-bundle-1.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -1157,7 +1162,7 @@ Count: 478
 
 ## references
 
-Count: 615
+Count: 617
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1760,6 +1765,8 @@ Count: 615
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
+- references/ui/chapter-landing-v2/approved-minimal.html
+- references/ui/chapter-landing-v2/README.md
 - references/ui/exercise-workbench-policy.md
 - references/ui/golden-exercise-checker-fixtures.json
 - references/ui/interaction-policy.json
@@ -1777,7 +1784,7 @@ Count: 615
 
 ## reports
 
-Count: 2922
+Count: 2951
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1816,8 +1823,16 @@ Count: 2922
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1838,11 +1853,18 @@ Count: 2922
 - reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json
 - reports/inspection-standards/inspect-7-book-1-1-evidence-pack.md
+- reports/inspection-standards/internal-diagnostic-scope-readiness.json
+- reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
 - reports/json/b1-graph-evidence-112-closure-and-implementation-bundle-1-proof.json
+- reports/json/b1-target-evidence-111-closure-and-implementation-bundle-1-proof.json
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-route-copy1-proof.json
@@ -2116,6 +2138,8 @@ Count: 2922
 - reports/reference-planning/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-review-packet.md
 - reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-quality-log.md
 - reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-review-packet.md
+- reports/reference-planning/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-quality-log.md
+- reports/reference-planning/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
@@ -2157,6 +2181,7 @@ Count: 2922
 - reports/review-gates/B1-NORMAL-INFERIOR-TERM-DECISION-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
+- reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -2815,6 +2840,8 @@ Count: 2922
 - reports/sprints/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1-result.md
 - reports/sprints/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-plan.md
 - reports/sprints/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-result.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-plan.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-result.md
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl
@@ -2915,6 +2942,15 @@ Count: 2922
 - reports/sprints/BOOK1-FIX-1-lead-review-round2.md
 - reports/sprints/BOOK1-FIX-1-plan.md
 - reports/sprints/BOOK1-FIX-1-result.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-review-packet.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshot-manifest.md
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/chapter-1-1-desktop-dark.png
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/chapter-1-1-desktop-light.png
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/chapter-1-1-mobile-light.png
+- reports/sprints/CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/dom-proof.json
 - reports/sprints/CHECK-Q2-PLAN-baseline.md
 - reports/sprints/CHECK-Q2-PLAN-diff-summary.md
 - reports/sprints/CHECK-Q2-PLAN-gate-handoff.md
@@ -4722,7 +4758,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 514
+Count: 524
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4778,6 +4814,16 @@ Count: 514
 - archive/sprints/INSPECT-10D/INSPECT-10D-planning-review.md
 - archive/sprints/INSPECT-10D/INSPECT-10D-specialist-gate-results.md
 - archive/sprints/INSPECT-10D/INSPECT-10D-sprint-plan.md
+- archive/sprints/INSPECT-11/INSPECT-11-authorisation-note.md
+- archive/sprints/INSPECT-11/INSPECT-11-closure-log.md
+- archive/sprints/INSPECT-11/INSPECT-11-correction-log.md
+- archive/sprints/INSPECT-11/INSPECT-11-lead-review-assignment.md
+- archive/sprints/INSPECT-11/INSPECT-11-lead-review-round1.md
+- archive/sprints/INSPECT-11/INSPECT-11-lead-review-round2.md
+- archive/sprints/INSPECT-11/INSPECT-11-lead-review-round3.md
+- archive/sprints/INSPECT-11/INSPECT-11-planning-review.md
+- archive/sprints/INSPECT-11/INSPECT-11-specialist-gate-results.md
+- archive/sprints/INSPECT-11/INSPECT-11-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md

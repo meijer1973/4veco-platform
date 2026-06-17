@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.5-inspect-10d-operating-procedure`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` in progress / internal diagnostic tool operating procedure
+Roadmap version: `v2.6-inspect-11-scope-readiness`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` in progress / internal diagnostic scope readiness audit
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -165,6 +165,7 @@ Closed baseline:
 | `INSPECT-10B` | Internal diagnostic report generator implementation; creates a manually invoked internal generator and a Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source allowlist while preserving all blockers. PR #79 merged it as internal diagnostic only. |
 | `INSPECT-10C` | Diagnostic generator review / stability hardening; checks the merged generator/report pair for Markdown/JSON alignment, source-hash stability, refusal coverage, blocker visibility, and stable post-merge owner action. It creates no evidence pack, teacher/school-facing pack, public/external output, package/CI/dashboard/quality-ref/Scale Gate integration, source-registry mutation, or generated lesson-output mutation. |
 | `INSPECT-10D` | Internal diagnostic tool acceptance and operating procedure; defines when the manual generator may be run, required preconditions and post-run checks, changed-output semantics, byte-stable checkout expectations, and stop conditions before any broader use. It creates no new report output, generator behavior, integration, or downstream authority. |
+| `INSPECT-11` | Internal diagnostic scope readiness audit; compares Chapter 1.1 control, current Chapter 1.2 diagnostic scope, Chapter 1.3 candidate evidence, and Chapter 1.4/1.5 controls before any new diagnostic report is generated. It creates no new diagnostic report, evidence pack, teacher/school-facing output, public/external output, integration, generated lesson-output mutation, protected-reference mutation, personal-data processing, or downstream authority. |
 
 INSPECT-7 reached maturity level `L3 Bounded pack`: one bounded generated
 artifact set is mapped and reviewed.
@@ -559,25 +560,45 @@ Acceptance criteria:
   student/product-use, generated lesson-output mutation, protected-reference
   mutation, personal-data processing, and compliance/approval claims.
 
-### INSPECT-11 - Dutch Bounded Multi-Scope Evidence Packs
+### INSPECT-11 - Internal Diagnostic Scope Readiness Audit
 
-Goal: generate and review Dutch evidence packs for more than one authorised
-scope.
+Goal: determine whether the internal diagnostic tool can safely be considered
+for a Dutch scope beyond the current Chapter 1.2 report pair, and identify the
+next candidate scope without generating any new diagnostic report.
 
-Conservative scaling order:
+This section supersedes the older INSPECT-11 evidence-pack implementation row
+for this sprint only. The older multi-scope evidence-pack work remains
+blocked until a later human-reviewed sprint explicitly authorises it.
 
-1. INSPECT-7 baseline scope re-run;
-2. next ready Chapter 1.1 scope if INSPECT-8/9 evidence supports it;
-3. Book 1 published-paragraph status only if readiness is proven.
+Required candidate comparison:
+
+1. Book 1 Chapter 1.1 first-three baseline as control scope;
+2. Book 1 Chapter 1.2 as current internal diagnostic scope;
+3. Book 1 Chapter 1.3 as candidate under test;
+4. Book 1 Chapter 1.4 / 1.5 as not-ready controls.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11/
+reports/inspection-standards/internal-diagnostic-scope-readiness.md
+reports/inspection-standards/internal-diagnostic-scope-readiness.json
+```
 
 Acceptance criteria:
 
-- no broad all-book generation;
-- every scope has readiness evidence;
-- differences between ready, weak, missing, and school-owned evidence are
-  visible;
-- teacher, legal/privacy, and Dutch quality-inspection reviewers return
-  `MORE_THAN_SATISFIED`.
+- no new diagnostic report is generated;
+- no evidence pack is generated;
+- every candidate has blockers listed with `blocks`, `does_not_block`, and
+  `proof_required_to_close`;
+- Chapter 1.2 remains internal diagnostic only;
+- no scope is declared pack-strength;
+- no teacher/school-facing, public/external, Scale Gate, product-route,
+  diagnostics/mastery/PV, student-use, or product-use authority is unlocked;
+- the recommendation names only a next planning/remediation step, not report
+  generation;
+- lead review and specialist reviews are complete before human review if the
+  audit recommends considering a new diagnostic scope.
 
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
@@ -692,14 +713,15 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-10D internal diagnostic tool operating procedure
+Complete INSPECT-11 internal diagnostic scope readiness audit
 ```
 
-Recommended posture after INSPECT-10C merge:
+Recommended posture after INSPECT-10D merge:
 
 ```text
-accept or revise only INSPECT-10D operating procedure for the internal diagnostic generator/report pair
-do not proceed to INSPECT-11 without a new human-reviewed sprint packet
+accept or revise only INSPECT-11 readiness-audit output and candidate recommendation
+do not generate a new diagnostic report during INSPECT-11
+keep the older multi-scope evidence-pack INSPECT-11 row blocked
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
 keep package/CI/dashboard/quality-ref/Scale Gate integration blocked
 keep generated lesson-output mutation blocked
@@ -708,13 +730,12 @@ keep non-Dutch standards work out of this roadmap
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-10C into
-INSPECT-10D is:
+The practical product question carried forward from INSPECT-10D into
+INSPECT-11 is:
 
-> Does human review accept the operating procedure for the manually invoked
-> internal diagnostic generator, including allowed invocation, preconditions,
-> post-run checks, changed-output semantics, byte-stable checkout expectations,
-> stop conditions, and no downstream authority unlocked?
+> Which Dutch scope is mature enough to be considered for internal diagnostic
+> reporting next, and what blockers prevent that consideration from becoming
+> report generation, evidence-pack generation, or downstream authority?
 
 ## 9. Explicit Out-Of-Scope Work
 
