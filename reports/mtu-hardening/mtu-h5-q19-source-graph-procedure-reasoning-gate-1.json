@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "packet_id": "MTU-H5-Q19-source-graph-procedure-reasoning-gate-1",
+  "gate_id": "GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1",
+  "created": "2026-06-17",
+  "status": "q19_source_graph_procedure_reasoning_gate_ready_for_human_review_no_mutation_authorized",
+  "purpose": "Prepare the current, non-mutating q19 review gate for the remaining source-annex, graph-object, procedure semantic-fit, chained multi-market reasoning, and third graph-shift hooks after PR #69 source/graph overlay execution and PR #81 answer-form equivalent execution.",
+  "product_end_state": "MTU-H5 remains blocked from closure, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use until q19, q27, and q15 blockers are resolved by reviewed evidence. This packet does not claim q19 closure or MTU-H5 closure.",
+  "original_sprint_gate_spec": {
+    "product_end_state_spec": "../4veco-lessen/specifications/product-end-state.md",
+    "triage_packet": "reports/mtu-hardening/mtu-h5-next-repair-packet.json#MTU-H5-RP-004",
+    "triage_gate_closure": "reports/review-gates/GATE-MTU-H5-next-repair-packet/gate-closure.json",
+    "source_graph_execution_pr": 69,
+    "source_graph_execution_merge_commit": "6c207a758f2278eece39feb8ef757106c4bffa01",
+    "source_graph_execution_head_commit": "58d42ab00c6439411770a722be6105f0bccdbffb",
+    "answer_form_execution_pr": 81,
+    "answer_form_execution_merge_commit": "f4931bf347cf92f94bee427c43199253e61a420c",
+    "answer_form_execution_head_commit": "0afcd72650ced796bcd4e6526a460ae20ead79c5",
+    "approved_next_lane": "MTU-H5-Q19-SOURCE-GRAPH-PROCEDURE-REASONING-GATE-1",
+    "approved_boundary": "Build a non-mutating current-state q19 gate. Do not execute fixture closure, mutate references, write candidates, change MTUs, produce lessons, claim product-route readiness, or authorize student/product use."
+  },
+  "start_commit": "43b375a3325638983bf55d65714b1c62f1fae843",
+  "review_branch": "codex/mtu-h5-q19-source-graph-procedure-reasoning-gate-1-20260617",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded. Official prompt and correction-model pages are cited by stable local source path and summarized.",
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-gate-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json",
+    "build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js",
+    "references/data/exam-ingestion/exam-item-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/exam-answer-model-overlays.json#vw-1022-a-25-1-o:opgave-4:question-19",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+    "references/machine/micro-teaching-units.json#A42",
+    "references/machine/micro-teaching-units.json#D10",
+    "references/machine/micro-teaching-units.json#D13",
+    "references/machine/micro-teaching-units.json#A81",
+    "references/machine/micro-teaching-units.json#A45"
+  ],
+  "current_diagnostic_state": {
+    "q3": {
+      "failed": 0,
+      "review_required": 0,
+      "status": "clean_after_q3_fixture_execution"
+    },
+    "q19": {
+      "failed": 0,
+      "review_required": 17,
+      "status": "source_graph_procedure_reasoning_review_blocker",
+      "blocks_mtu_h5_closure": true
+    },
+    "q27": {
+      "failed": 3,
+      "review_required": 5,
+      "status": "carried_blocker"
+    },
+    "q15": {
+      "failed": 0,
+      "review_required": 4,
+      "status": "carried_blocker"
+    },
+    "overall": {
+      "passed": 1,
+      "failed": 3,
+      "review_required": 26,
+      "blocked": 0
+    }
+  },
+  "current_q19_review_required_inventory": {
+    "count": 17,
+    "procedure_review_assertion_count": 11,
+    "fixture_review_hook_count": 6,
+    "assertion_ids": [
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A42",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-D10",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-PROCEDURE-REVIEW-A81",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A42",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D10",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-D13",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-PROCEDURE-REVIEW-A81",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A42",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D10",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-D13",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-PROCEDURE-REVIEW-A81",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+    ]
+  },
+  "known_historical_or_stale_surfaces": [
+    {
+      "path": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-gate-1.json",
+      "status": "historical_pre_pr69_pre_pr81_gate",
+      "live_authoritative_for_current_counts": false,
+      "note": "This packet records a historical 3 failed / 20 review_required q19 state before answer-form execution. Use the current regression report and this packet for live counts."
+    },
+    {
+      "path": "reports/mtu-hardening/mtu-h5-q19-source-graph-extraction-execution-gate-1.json",
+      "status": "historical_pre_pr69_pre_pr81_execution_gate",
+      "live_authoritative_for_current_counts": false,
+      "note": "This packet prepared the PR #69 source overlay execution. It is not current diagnostic-count evidence after PR #81."
+    },
+    {
+      "path": "references/data/exam-ingestion/operation-answer-skill-contract.json#q19_extraction_contract",
+      "status": "contract_fields_still_use_future-storage-language",
+      "live_authoritative_for_current_counts": false,
+      "note": "The current overlay file exists from PR #69; this contract is cited for required fields and blocking gaps, not for live storage status."
+    }
+  ],
+  "official_prompt_and_correction_model_summary": {
+    "prompt_locator": "references/external/exams/vw-1022-a-25-1-o.pdf#page=8-9&question=19",
+    "correction_model_locator": "references/external/exams/vw-1022-a-25-1-c.pdf#page=13-14&question=19",
+    "question_word": "teken",
+    "prompt_summary": "The prompt asks for new demand and/or supply lines on the Curacao labor market, the Curacao goods and services market, and the Aruban goods and services market, with the new line shifted about 1 cm, and for the price or wage directions to be filled in.",
+    "correction_summary": "The correction model awards the three elements for rightward demand shifts and rising wage/inflation conclusions; for q19-step-2 and q19-step-3 it also accepts correct aggregate-supply shifts as an alternative.",
+    "scale_factor_evidence": {
+      "status": "not_numeric_scale_factor_mtu_need",
+      "rationale": "The about-1-cm instruction is a graph-drawing spacing constraint for the drawn answer form, not a unit scaling or incidence/pass-through calculation."
+    }
+  },
+  "source_overlay_state": {
+    "storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "storage_expected_to_exist": true,
+    "storage_status": "future_candidate_storage",
+    "status_interpretation": "PR #69 wrote five q19 source/graph overlay records. Every q19 record remains partial_with_blocking_gap and blocked; the overlay is evidence for current review, not q19 closure.",
+    "required_graph_record_ids": [
+      "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+      "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+      "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH"
+    ],
+    "required_source_record_ids": [
+      "EX_SRC_Q19_SOURCE_FIGURE",
+      "EX_SRC_Q19_UITWERKBIJLAGE"
+    ],
+    "all_records_must_have": {
+      "extraction_status": "partial_with_blocking_gap",
+      "review_state": "blocked",
+      "blocking_gap_ids": [
+        "q19-source-annex-gap",
+        "q19-graph-object-gap"
+      ],
+      "authority_flags_false": true
+    }
+  },
+  "operation_evidence_surface": [
+    {
+      "operation_id": "q19-step-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "current_required_mtu_ids": ["A42", "D10", "A81"],
+      "current_procedure_review_required_unit_ids": ["A42", "D10", "A81"],
+      "remaining_review_hooks": [
+        "q19-source-annex-gap remains blocking",
+        "q19-graph-object-gap remains blocking"
+      ],
+      "reviewer_decision_needed": "Decide whether A42, D10, and A81 are semantically sufficient for this labor-market graph operation while the source/graph overlay remains partial and blocked, or whether procedure fit must stay blocked until source/graph reconstruction improves.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"]
+    },
+    {
+      "operation_id": "q19-step-2",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods and services market and conclude that inflation in Curacao rises; the official correction model also accepts a correct aggregate-supply shift alternative.",
+      "current_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "current_procedure_review_required_unit_ids": ["A42", "D10", "D13", "A81"],
+      "remaining_review_hooks": [
+        "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+      ],
+      "reviewer_decision_needed": "Decide whether D10/D13 plus A42/A81 are enough as reviewed equivalent support for the linked market reasoning, or whether a later operation-registry or MTU governance lane is still needed.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+    },
+    {
+      "operation_id": "q19-step-3",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods and services market and conclude that inflation in Aruba rises; the official correction model also accepts a correct aggregate-supply shift alternative.",
+      "current_required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "current_procedure_review_required_unit_ids": ["A42", "D10", "D13", "A81"],
+      "remaining_review_hooks": [
+        "q19-source-annex-gap remains blocking",
+        "q19-graph-object-gap remains blocking",
+        "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+      ],
+      "reviewer_decision_needed": "Decide whether the Aruban third graph-shift element can be treated as reviewed under the current partial overlays, or whether it must remain blocked until source/graph reconstruction is stronger.",
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "accepted_alternative_caveat": "Correct aggregate-supply shifts for q19-step-2 and q19-step-3 are accepted as an alternative in the official correction model."
+    }
+  ],
+  "unit_semantic_fit_matrix": [
+    {
+      "unit_id": "A42",
+      "unit_name": "Grafische verschuiving met voor-en-na pijlen",
+      "mastery_target": "apply",
+      "applies_to_operation_ids": ["q19-step-1", "q19-step-2", "q19-step-3"],
+      "current_support_summary": "A42 teaches drawing an old and shifted demand or supply curve with D/D' or S/S' labels and direction arrows.",
+      "fit_question": "Is A42 sufficient for q19's required shifted-line drawing without overclaiming full graph construction or worksheet geometry?",
+      "proof_required_to_close": "Reviewer confirms A42 covers the drawn shift action for all three q19 graph objects while A45 and full_graph_construction remain forbidden."
+    },
+    {
+      "unit_id": "D10",
+      "unit_name": "Vraag/aanbod-verschuiving bij conjunctuurschok",
+      "mastery_target": "analyze",
+      "applies_to_operation_ids": ["q19-step-1", "q19-step-2", "q19-step-3"],
+      "current_support_summary": "D10 analyzes how a shock shifts demand or supply and changes equilibrium price and quantity.",
+      "fit_question": "Is D10 enough for the short-run demand-shift logic and wage/inflation direction, including linked market effects?",
+      "proof_required_to_close": "Reviewer confirms D10 fits the official demand-shift route and does not hide the remaining chained-market reasoning hook."
+    },
+    {
+      "unit_id": "D13",
+      "unit_name": "Kostenstijging en aanbodverschuiving",
+      "mastery_target": "analyze",
+      "applies_to_operation_ids": ["q19-step-2", "q19-step-3"],
+      "current_support_summary": "D13 analyzes cost increases and aggregate supply shifts that raise equilibrium price.",
+      "fit_question": "Does D13 support only the accepted aggregate-supply alternative for q19-step-2 and q19-step-3, without replacing the primary demand-shift route?",
+      "proof_required_to_close": "Reviewer confirms D13 is alternative-route support for steps 2 and 3 only and is not required for q19-step-1."
+    },
+    {
+      "unit_id": "A81",
+      "unit_name": "Bron gebruiken in een antwoord",
+      "mastery_target": "apply",
+      "applies_to_operation_ids": ["q19-step-1", "q19-step-2", "q19-step-3"],
+      "current_support_summary": "A81 teaches using a source observation as evidence or start point and completing the underlying answer form.",
+      "fit_question": "Is A81 enough as source-use support while the actual q19 source figure and worksheet remain partial_with_blocking_gap?",
+      "proof_required_to_close": "Reviewer confirms A81 is only source-use support, not source/graph reconstruction closure."
+    }
+  ],
+  "exact_evidence_needed_to_decide": [
+    {
+      "evidence_id": "q19-source-annex-decision-evidence",
+      "covers_hooks": [
+        "q19-source-annex-gap remains blocking"
+      ],
+      "current_evidence": [
+        "EX_SRC_Q19_SOURCE_FIGURE",
+        "EX_SRC_Q19_UITWERKBIJLAGE",
+        "official prompt and correction-model locators"
+      ],
+      "missing_or_review_needed": "Human review must decide whether the current source figure and worksheet summaries, with explicit limitations, are enough for a later fixture hook update or must remain blocking until stronger reconstruction exists.",
+      "proof_required_to_close": "Reviewed source figure and worksheet reconstruction, or explicit reviewed acceptance of current limitations while downstream tools keep the limitation visible."
+    },
+    {
+      "evidence_id": "q19-graph-object-decision-evidence",
+      "covers_hooks": [
+        "q19-graph-object-gap remains blocking",
+        "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+      ],
+      "current_evidence": [
+        "EX_SRC_Q19_CURACAO_LABOR_MARKET_GRAPH",
+        "EX_SRC_Q19_CURACAO_GOODS_MARKET_GRAPH",
+        "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH"
+      ],
+      "missing_or_review_needed": "Human review must decide whether current axis-label, curve-label, student-action, and limitation records are enough for a later hook update; exact worksheet coordinates and original geometry are not reconstructed.",
+      "proof_required_to_close": "All three graph objects expose axes, market object, curve roles, geometry or reviewed limitations, student-action regions, answer-model direction, and aggregate-supply alternatives where applicable."
+    },
+    {
+      "evidence_id": "q19-procedure-semantic-fit-evidence",
+      "covers_hooks": [
+        "ASSERT-PROCEDURE-REVIEW-A42",
+        "ASSERT-PROCEDURE-REVIEW-D10",
+        "ASSERT-PROCEDURE-REVIEW-D13",
+        "ASSERT-PROCEDURE-REVIEW-A81"
+      ],
+      "current_evidence": [
+        "canonical procedures for A42, D10, D13, and A81",
+        "q19 official correction-model operation summaries",
+        "source-annex extraction overlay limitations"
+      ],
+      "missing_or_review_needed": "Human review must decide operation-by-operation whether each procedure is semantically fit for q19 or should remain review_required until source/graph evidence improves.",
+      "proof_required_to_close": "A reviewed operation/unit matrix approves exact unit-operation fit and names any units that must remain review_required."
+    },
+    {
+      "evidence_id": "q19-chained-market-reasoning-evidence",
+      "covers_hooks": [
+        "q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support"
+      ],
+      "current_evidence": [
+        "D10 and D13 procedure summaries",
+        "official q19 three-element correction model",
+        "source figure and worksheet partial overlay records"
+      ],
+      "missing_or_review_needed": "Human review must decide whether D10/D13/A81 are enough as reviewed-equivalent support for the chain from Curacao labor demand to Curacao and Aruban inflation, or whether a later operation-registry/MTU governance lane is required.",
+      "proof_required_to_close": "Reviewer records either reviewed-equivalent support with exact boundaries, or keeps a separate operation-registry need live."
+    },
+    {
+      "evidence_id": "q19-third-graph-shift-evidence",
+      "covers_hooks": [
+        "q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+      ],
+      "current_evidence": [
+        "EX_SRC_Q19_ARUBA_GOODS_MARKET_GRAPH",
+        "official correction-model q19-step-3",
+        "A42/D10/D13/A81 procedure summaries"
+      ],
+      "missing_or_review_needed": "Human review must decide whether the Aruban graph-shift element is sufficiently modeled under current partial overlays or remains blocked by source/graph reconstruction.",
+      "proof_required_to_close": "Reviewed acceptance of the Aruban graph action, inflation direction, source linkage, and aggregate-supply alternative, or explicit continued block."
+    }
+  ],
+  "decision_options": [
+    {
+      "decision_id": "approve_exact_procedure_semantic_fit_execution_gate",
+      "human_decision_label": "Approve preparing a later exact procedure semantic-fit execution gate for only the q19 unit-operation pairs explicitly accepted by reviewers.",
+      "would_authorize_now": [],
+      "later_execution_pr_would_be_limited_to": [
+        "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+        "q19-step-1, q19-step-2, q19-step-3 procedure_review_required_unit_ids fields",
+        "only reviewer-approved unit-operation pairs"
+      ],
+      "must_preserve": [
+        "q19 source-annex and graph-object hooks unless explicitly separately approved",
+        "q19 chained/third graph hooks unless explicitly separately approved",
+        "A45 and forbidden route tags",
+        "q27 and q15 carried blockers"
+      ]
+    },
+    {
+      "decision_id": "approve_exact_source_graph_limitation_acceptance_gate",
+      "human_decision_label": "Approve preparing a later exact source/graph limitation-acceptance gate if reviewers accept the current partial overlays as sufficient evidence for specific source/graph hooks.",
+      "would_authorize_now": [],
+      "later_execution_pr_would_be_limited_to": [
+        "only named q19 source-annex and graph-object review hooks",
+        "no overlay mutation",
+        "no product-route readiness claim"
+      ],
+      "must_preserve": [
+        "visible partial_with_blocking_gap limitation language unless a separate authorized source-overlay repair changes it",
+        "no PV graph route or student-facing graph use"
+      ]
+    },
+    {
+      "decision_id": "approve_exact_chained_reasoning_reviewed_equivalent_gate",
+      "human_decision_label": "Approve preparing a later exact reviewed-equivalent gate for the q19 chained multi-market reasoning hook.",
+      "would_authorize_now": [],
+      "later_execution_pr_would_be_limited_to": [
+        "the q19-step-2 chained multi-market reasoning review hook",
+        "reviewed-equivalent evidence boundaries for D10/D13/A81"
+      ],
+      "must_preserve": [
+        "no operation-registry mutation",
+        "no MTU minting or update",
+        "no hidden q19 full-closure claim"
+      ]
+    },
+    {
+      "decision_id": "keep_all_remaining_q19_hooks_blocked",
+      "human_decision_label": "Keep all 17 q19 review_required assertions live and require stronger source/graph or procedure evidence before any exact execution gate.",
+      "would_authorize_now": [],
+      "later_execution_pr_would_be_limited_to": [],
+      "must_preserve": [
+        "q19 remains 0 failed / 17 review_required",
+        "q27 and q15 remain carried blockers",
+        "no mutation or product-use authority"
+      ]
+    },
+    {
+      "decision_id": "revise_this_gate_before_any_execution_planning",
+      "human_decision_label": "Revise this gate packet/checker before choosing a q19 execution lane.",
+      "would_authorize_now": [],
+      "later_execution_pr_would_be_limited_to": [],
+      "must_preserve": [
+        "this packet remains non-mutating",
+        "no fixture, reference, candidate, MTU, lesson, PV, product, or student-use write"
+      ]
+    }
+  ],
+  "requested_human_decision": {
+    "decision_needed": "Decide the next exact q19 lane for the remaining 17 review_required assertions: procedure semantic-fit execution gate, source/graph limitation-acceptance gate, chained-reasoning reviewed-equivalent gate, keep all q19 hooks blocked, or revise this gate first.",
+    "valid_decisions": [
+      "approve_exact_procedure_semantic_fit_execution_gate",
+      "approve_exact_source_graph_limitation_acceptance_gate",
+      "approve_exact_chained_reasoning_reviewed_equivalent_gate",
+      "keep_all_remaining_q19_hooks_blocked",
+      "revise_this_gate_before_any_execution_planning"
+    ],
+    "approval_would_not_authorize": [
+      "q19 fixture mutation in this PR",
+      "source overlay mutation",
+      "mapper repair",
+      "candidate storage creation",
+      "candidate writes",
+      "protected or machine reference mutation",
+      "external-source mutation",
+      "authored target-exercise mutation",
+      "MTU or answer-skill mutation",
+      "operation-registry mutation",
+      "lesson output",
+      "PV, diagnostics, adaptive routing, mastery, sequencing",
+      "product-route readiness or student/product use",
+      "q19 closure",
+      "MTU-H5 closure"
+    ]
+  },
+  "negative_regression_requirements": [
+    {
+      "guard_id": "q19-premature-all-hooks-closure-negative-guard",
+      "accepted_negative_fixture_type": "temporary_q19_fixture_clone",
+      "expected_behavior": "If a temporary q19 fixture clone removes source/graph/reasoning hooks and all procedure_review_required_unit_ids without an approved human decision, the checker must reject it without mutating the real fixture.",
+      "must_preserve": [
+        "live q19 remains 0 failed / 17 review_required",
+        "source/graph hooks stay visible",
+        "procedure review unit ids stay visible"
+      ]
+    },
+    {
+      "guard_id": "q19-source-overlay-false-reconstructable-negative-guard",
+      "accepted_negative_fixture_type": "temporary_source_overlay_clone",
+      "expected_behavior": "If a temporary q19 source/graph overlay clone is marked reconstructable while q19-source-annex-gap or q19-graph-object-gap remains present, the source extraction validator must reject it.",
+      "must_preserve": [
+        "real source overlay remains partial_with_blocking_gap",
+        "real source overlay remains blocked",
+        "no source overlay mutation"
+      ]
+    },
+    {
+      "guard_id": "q19-a45-primary-support-negative-guard",
+      "accepted_negative_fixture_type": "temporary_a45_reintroduction_fixture",
+      "expected_behavior": "If A45 is reintroduced as q19 mapped support, the MTU-H5 validator must emit q19 ASSERT-OVER-TRIGGER failures without mutating the real fixture.",
+      "must_preserve": [
+        "A45 forbidden for every q19 operation",
+        "full_graph_construction, calculus_route, and function_construction remain forbidden route tags"
+      ]
+    },
+    {
+      "guard_id": "solo-q1-q3-original-defect-class-guard",
+      "accepted_negative_fixture_type": "live_h5_global_negative_fixture",
+      "expected_behavior": "The existing Solo q1-q3 function-construction over-trigger negative fixture remains passed as expected.",
+      "must_preserve": [
+        "MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED remains in the validator passed bucket"
+      ]
+    }
+  ],
+  "carried_issues": [
+    {
+      "issue_id": "q19-source-annex-gap",
+      "classification": "blocks",
+      "blocks": ["q19 full repair", "lesson/product use", "MTU-H5 closure"],
+      "does_not_block": ["human review of this non-mutating q19 current-state gate"],
+      "proof_required_to_close": "Reviewed source figure and worksheet reconstruction exists, or limitations are explicitly accepted while downstream reports keep the limitation visible."
+    },
+    {
+      "issue_id": "q19-graph-object-gap",
+      "classification": "blocks",
+      "blocks": ["q19 full repair", "PV/product routes", "MTU-H5 closure"],
+      "does_not_block": ["human review of this q19 current-state gate"],
+      "proof_required_to_close": "All three graph objects expose axes, labels, curve roles, geometry or reviewed limitations, legend mapping, and student-action regions."
+    },
+    {
+      "issue_id": "q19-procedure-semantic-fit",
+      "classification": "blocks",
+      "blocks": ["q19 full repair", "product-route readiness"],
+      "does_not_block": ["human review of this gate and possible procedure-only execution planning"],
+      "proof_required_to_close": "A reviewed operation/unit matrix accepts or rejects A42, D10, D13, and A81 for each q19 operation."
+    },
+    {
+      "issue_id": "q19-chained-and-third-graph-reasoning",
+      "classification": "blocks",
+      "blocks": ["q19 full repair", "product-route readiness"],
+      "does_not_block": ["human review of this gate and possible reviewed-equivalent planning"],
+      "proof_required_to_close": "Reviewed evidence either accepts D10/D13/A81 as bounded support for chained/third-graph reasoning or keeps a separate operation-registry/MTU need live."
+    },
+    {
+      "issue_id": "q27-and-q15-carried-blockers",
+      "classification": "carried_blocks",
+      "blocks": ["MTU-H5 full closure", "product-route readiness"],
+      "does_not_block": ["q19 current-state gate review"],
+      "proof_required_to_close": "Separate q27 and q15 gates clear their failed/review_required validator buckets."
+    }
+  ],
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "npm run agent:index",
+    "npm run check:platform"
+  ],
+  "human_review_packet": {
+    "gate_id": "GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1",
+    "gate_directory": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/",
+    "review_packet_markdown": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/review-packet.md",
+    "review_packet_json": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/review-packet.json",
+    "bundle_urls": "reports/review-gates/GATE-MTU-H5-Q19-source-graph-procedure-reasoning-gate-1/bundle-urls.md",
+    "decision_needed": "Decide the exact next q19 lane for the remaining source/graph/procedure/reasoning hooks before any fixture, mapper, candidate, MTU, lesson, PV, product, or student-use work."
+  },
+  "review_team_threshold": {
+    "required_agents": ["teacher", "economist", "quality_inspection"],
+    "minimum_verdict": "MORE_THAN_SATISFIED",
+    "packet_accepted_without_all_three": false
+  },
+  "pre_human_review_team_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Second-round teacher review found no blocking issues. The packet makes the q19 educational/evidence decision clear, keeps q19 at 0 failed / 17 review_required, preserves q27/q15 carried blockers, satisfies REV-STD-1 structure, and does not imply closure, product-route readiness, or student/product use."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Second-round economist review found no required economic improvements. The packet correctly bounds Curacao labor demand, wage and inflation effects, Curacao/Aruba goods-services markets, aggregate-supply alternatives for steps 2 and 3, the non-numeric 1 cm drawing constraint, A42/D10/D13/A81 semantic-fit review, and A45 forbidden-route guards."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED",
+      "summary": "Second-round quality inspection found no blocking issues. The gate records q19 0 failed / 17 review_required, carries q27 3/5 and q15 0/4, marks historical q19 3/20 surfaces non-live, keeps all mutation/product/student-use authorities false, includes negative guards, and is discoverable through bundle URLs, URL index, and platform agent index."
+    }
+  ],
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_annex_extraction_execution_authorized": false,
+    "graph_object_extraction_execution_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "fixture_mutation_authorized": false,
+    "mapper_repair_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "pv_graph_mutation_authorized": false,
+    "target_exercise_promotion_authorized": false,
+    "cp6_closure_authorized": false,
+    "year1_closure_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q19_closure_claimed": false,
+    "mtu_h5_closure_claimed": false,
+    "execution_authorized_now": false
+  },
+  "packet_result": {
+    "completion_claimed": false,
+    "next_state": "ready_for_human_q19_source_graph_procedure_reasoning_gate_review",
+    "why_not_complete": "This packet prepares the current q19 source/graph/procedure/reasoning decision surface. It does not mutate fixtures or references, repair mappers, write candidates, change MTUs, produce lessons, claim product readiness, close q19, close MTU-H5, or authorize student/product use."
+  }
+}
