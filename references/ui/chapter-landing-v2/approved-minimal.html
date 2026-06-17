@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4veco – Hoofdstuk landing minimal prototype</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('chapterMinimalTheme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {}
+    })();
+  </script>
+  <style>
+    :root,
+    html[data-theme="light"] {
+      color-scheme: light;
+      --page: #f7f4ed;
+      --page-2: #eef7f4;
+      --paper: #fffdf8;
+      --paper-strong: #ffffff;
+      --ink: #1d2530;
+      --muted: #687484;
+      --muted-2: #8a95a3;
+      --line: #ddd8cc;
+      --line-soft: #ebe6da;
+      --accent: #1f6f78;
+      --accent-soft: #dff2f3;
+      --math: #1d6f9f;
+      --math-soft: #e4f2fb;
+      --econ: #b86b28;
+      --econ-soft: #fff0df;
+      --graph: #26845f;
+      --graph-soft: #e4f5eb;
+      --shadow: 0 18px 45px rgba(31, 42, 55, 0.10);
+      --shadow-small: 0 10px 22px rgba(31, 42, 55, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --sidebar: 292px;
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --page: #08121d;
+      --page-2: #0d1827;
+      --paper: #111d2b;
+      --paper-strong: #132131;
+      --ink: #edf3fb;
+      --muted: #a2b1c4;
+      --muted-2: #8192a8;
+      --line: #223346;
+      --line-soft: #1a2938;
+      --accent: #5ce4d3;
+      --accent-soft: rgba(92, 228, 211, 0.14);
+      --math: #76b4ff;
+      --math-soft: rgba(118, 180, 255, 0.14);
+      --econ: #f1a34f;
+      --econ-soft: rgba(241, 163, 79, 0.14);
+      --graph: #6fd29b;
+      --graph-soft: rgba(111, 210, 155, 0.14);
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
+      --shadow-small: 0 12px 28px rgba(0, 0, 0, 0.26);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 34rem),
+        radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--econ) 13%, transparent), transparent 28rem),
+        linear-gradient(140deg, var(--page), var(--page-2));
+      color: var(--ink);
+      font-family: var(--font);
+      line-height: 1.45;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .app-shell {
+      display: grid;
+      grid-template-columns: var(--sidebar) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 22px 18px;
+      border-right: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+      background: color-mix(in srgb, var(--paper) 74%, transparent);
+      backdrop-filter: blur(18px);
+      overflow: auto;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 8px 18px;
+      border-bottom: 1px solid var(--line-soft);
+      margin-bottom: 18px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      background: linear-gradient(135deg, #1f6f78, #2b9771);
+      box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 22%, transparent);
+    }
+    html[data-theme="dark"] .brand-mark { color: #08121d; background: linear-gradient(135deg, #5ce4d3, #6fd29b); }
+    .brand strong { display: block; }
+    .brand small { display: block; color: var(--muted); font-size: 0.76rem; margin-top: 2px; }
+
+    .sidebar-section-title {
+      margin: 22px 8px 9px;
+      color: var(--muted-2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .side-link {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+    .side-link.current,
+    .side-link:hover {
+      background: color-mix(in srgb, var(--paper-strong) 94%, var(--accent) 6%);
+      color: var(--ink);
+      box-shadow: var(--shadow-small);
+    }
+    .side-number {
+      min-width: 42px;
+      height: 32px;
+      padding-inline: 6px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .side-link.current .side-number { background: var(--accent); color: white; }
+    html[data-theme="dark"] .side-link.current .side-number { color: #08121d; }
+
+    .content {
+      width: min(1180px, calc(100vw - var(--sidebar)));
+      margin: 0 auto;
+      padding: 36px 42px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .breadcrumb span:last-child { color: var(--ink); font-weight: 750; }
+    .theme-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--paper-strong) 88%, var(--accent) 12%);
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.82rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-small);
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--paper-strong) 96%, var(--accent) 4%), color-mix(in srgb, var(--paper) 92%, var(--accent) 8%)),
+        radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 24rem),
+        radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--econ) 8%, transparent), transparent 22rem);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) 330px;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid color-mix(in srgb, var(--accent) 16%, transparent);
+    }
+    h1 {
+      margin: 14px 0 10px;
+      max-width: 780px;
+      font-size: clamp(2.05rem, 4.6vw, 4.05rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+    .lead {
+      max-width: 70ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+    .chapter-panel {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--paper-strong) 94%, var(--accent) 6%);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-small);
+    }
+    .chapter-panel h2 {
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .chapter-panel p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .stat {
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--paper) 74%, var(--accent) 8%);
+      border: 1px solid var(--line-soft);
+      padding: 10px;
+    }
+    .stat strong { display: block; font-size: 1.1rem; color: var(--ink); }
+    .stat span { display: block; margin-top: 2px; color: var(--muted-2); font-size: 0.72rem; }
+
+    .chapter-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 20px 0 26px;
+    }
+    .chapter-chip {
+      display: grid;
+      gap: 3px;
+      min-height: 68px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--paper-strong) 88%, var(--accent) 4%);
+      border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+      box-shadow: var(--shadow-small);
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .chapter-chip:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 24%, transparent); }
+    .chapter-chip b { font-size: 0.9rem; color: var(--ink); }
+    .chapter-chip span { color: var(--muted); font-size: 0.74rem; }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin: 0 0 14px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+    .section-title p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .paragraph-list {
+      display: grid;
+      gap: 14px;
+    }
+    .para-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 98px minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: var(--paper-strong);
+      border: 1px solid color-mix(in srgb, var(--ink) 7%, transparent);
+      box-shadow: var(--shadow-small);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+    .para-card:hover,
+    .para-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--accent) 24%, transparent);
+      box-shadow: 0 16px 32px rgba(31, 42, 55, 0.13);
+      outline: none;
+    }
+    html[data-theme="dark"] .para-card:hover { box-shadow: 0 16px 32px rgba(0, 0, 0, 0.30); }
+    .para-num {
+      width: 78px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: var(--math-soft);
+      color: var(--math);
+      font-weight: 950;
+      font-size: 1.05rem;
+      font-variant-numeric: tabular-nums;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--math) 15%, transparent);
+    }
+    .para-info { min-width: 0; }
+    .para-card-topline {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+    .para-card-domain,
+    .para-card-index {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--math-soft);
+      color: var(--math);
+      font-size: 0.72rem;
+      font-weight: 850;
+    }
+    .para-card-index {
+      background: color-mix(in srgb, var(--paper) 82%, var(--ink) 5%);
+      color: var(--muted);
+    }
+    .para-card h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      letter-spacing: -0.025em;
+    }
+    .para-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .para-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+    .para-card-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .open-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .chapter-note {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--paper-strong) 84%, var(--accent) 6%);
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      box-shadow: var(--shadow-small);
+    }
+    .chapter-note strong { color: var(--ink); }
+    .footer-note {
+      margin-top: 28px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 1120px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; display: none; }
+      .content { width: min(100%, 980px); padding: 24px 20px 42px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .chapter-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .theme-note { white-space: normal; }
+      .hero { padding: 22px; border-radius: 22px; }
+      .chapter-strip { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .para-card { grid-template-columns: 1fr; align-items: start; }
+      .para-num { width: 64px; height: 64px; border-radius: 18px; }
+      .open-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4v</div>
+        <div>
+          <strong>4veco</strong>
+          <small>Hoofdstukoverzicht</small>
+        </div>
+      </div>
+
+      <a class="side-link" href="../index.html"><span class="side-number">B1</span><span>Grondslagen, vraag en aanbod</span></a>
+
+      <div class="sidebar-section-title">Hoofdstuk</div>
+      <a class="side-link current" href="index.html"><span class="side-number">H1</span><span>Economisch denken en rekenen</span></a>
+
+      <div class="sidebar-section-title">Paragrafen</div>
+      <a class="side-link" href="1.1.1%20Schaarste%20en%20economisch%20denken/index.html"><span class="side-number">1.1.1</span><span>Schaarste en economisch denken</span></a>
+      <a class="side-link" href="1.1.2%20Percentages%20en%20indexcijfers/index.html"><span class="side-number">1.1.2</span><span>Percentages en indexcijfers</span></a>
+      <a class="side-link" href="1.1.3%20Grafieken%20en%20tabellen/index.html"><span class="side-number">1.1.3</span><span>Grafieken en tabellen</span></a>
+      <a class="side-link" href="1.1.4%20Gemengde%20opgaven/index.html"><span class="side-number">1.1.4</span><span>Gemengde opgaven</span></a>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <nav class="breadcrumb" aria-label="Kruimelpad">
+          <span>Boek 1</span><span>›</span><span>Hoofdstuk 1</span><span>›</span><span>Economisch denken en rekenen</span>
+        </nav>
+        <button class="theme-note" type="button" onclick="toggleTheme()" aria-label="Wissel tussen licht en donker thema">◐ Licht / donker</button>
+      </div>
+
+      <section class="hero" aria-labelledby="chapter-title">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Hoofdstuk 1 · rekenen</div>
+            <h1 id="chapter-title">Economisch denken en rekenen</h1>
+            <p class="lead">Een rustig hoofdstukoverzicht. De echte leerroute, oefeningen en checks blijven op de paragraafpagina’s. Deze pagina helpt vooral om snel de juiste paragraaf te openen.</p>
+          </div>
+          <aside class="chapter-panel" aria-label="Hoofdstukinformatie">
+            <h2>Hoofdstukinformatie</h2>
+            <p>Boek 1: Grondslagen, vraag en aanbod. Dit hoofdstuk bevat vier paragraafpagina’s met elk hun eigen route.</p>
+            <div class="stats">
+              <div class="stat"><strong>4</strong><span>paragrafen</span></div>
+              <div class="stat"><strong>H1</strong><span>hoofdstuk</span></div>
+              <div class="stat"><strong>VWO 4</strong><span>niveau</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <nav class="chapter-strip" aria-label="Snel naar paragraaf">
+        <a class="chapter-chip" href="1.1.1%20Schaarste%20en%20economisch%20denken/index.html"><b>1.1.1</b><span>Schaarste en economisch denken</span></a>
+        <a class="chapter-chip" href="1.1.2%20Percentages%20en%20indexcijfers/index.html"><b>1.1.2</b><span>Percentages en indexcijfers</span></a>
+        <a class="chapter-chip" href="1.1.3%20Grafieken%20en%20tabellen/index.html"><b>1.1.3</b><span>Grafieken en tabellen</span></a>
+        <a class="chapter-chip" href="1.1.4%20Gemengde%20opgaven/index.html"><b>1.1.4</b><span>Gemengde opgaven</span></a>
+      </nav>
+
+      <section aria-labelledby="paragraphs-title">
+        <div class="section-title">
+          <div>
+            <h2 id="paragraphs-title">Paragrafen in dit hoofdstuk</h2>
+            <p>Open een paragraafpagina voor de leerroute, uitleg, oefeningen en checks.</p>
+          </div>
+        </div>
+
+        <div class="paragraph-list">
+          <a class="para-card" data-domain="wiskunde" data-paragraph-id="1.1.1" href="1.1.1%20Schaarste%20en%20economisch%20denken/index.html">
+            <div class="para-num">1.1.1</div>
+            <div class="para-info">
+              <div class="para-card-topline"><span class="para-card-domain">Rekenen</span><span class="para-card-index">Paragraaf 1</span></div>
+              <h3>Schaarste en economisch denken</h3>
+              <p>Open de webpagina’s, oefeningen en lesboekbronnen voor deze paragraaf.</p>
+              <div class="para-card-tags"><span class="para-card-tag">Start</span><span class="para-card-tag">Leer</span><span class="para-card-tag">Check</span><span class="para-card-tag">Oefen</span><span class="para-card-tag">Exit ticket</span></div>
+            </div>
+            <div class="open-arrow">→</div>
+          </a>
+
+          <a class="para-card" data-domain="wiskunde" data-paragraph-id="1.1.2" href="1.1.2%20Percentages%20en%20indexcijfers/index.html">
+            <div class="para-num">1.1.2</div>
+            <div class="para-info">
+              <div class="para-card-topline"><span class="para-card-domain">Rekenen</span><span class="para-card-index">Paragraaf 2</span></div>
+              <h3>Percentages en indexcijfers</h3>
+              <p>Open de webpagina’s, oefeningen en lesboekbronnen voor deze paragraaf.</p>
+              <div class="para-card-tags"><span class="para-card-tag">Start</span><span class="para-card-tag">Leer</span><span class="para-card-tag">Check</span><span class="para-card-tag">Oefen</span><span class="para-card-tag">Exit ticket</span></div>
+            </div>
+            <div class="open-arrow">→</div>
+          </a>
+
+          <a class="para-card" data-domain="wiskunde" data-paragraph-id="1.1.3" href="1.1.3%20Grafieken%20en%20tabellen/index.html">
+            <div class="para-num">1.1.3</div>
+            <div class="para-info">
+              <div class="para-card-topline"><span class="para-card-domain">Rekenen</span><span class="para-card-index">Paragraaf 3</span></div>
+              <h3>Grafieken en tabellen</h3>
+              <p>Open de webpagina’s, oefeningen en lesboekbronnen voor deze paragraaf.</p>
+              <div class="para-card-tags"><span class="para-card-tag">Start</span><span class="para-card-tag">Leer</span><span class="para-card-tag">Check</span><span class="para-card-tag">Oefen</span><span class="para-card-tag">Exit ticket</span></div>
+            </div>
+            <div class="open-arrow">→</div>
+          </a>
+
+          <a class="para-card" data-domain="wiskunde" data-paragraph-id="1.1.4" href="1.1.4%20Gemengde%20opgaven/index.html">
+            <div class="para-num">1.1.4</div>
+            <div class="para-info">
+              <div class="para-card-topline"><span class="para-card-domain">Rekenen</span><span class="para-card-index">Paragraaf 4</span></div>
+              <h3>Gemengde opgaven</h3>
+              <p>Open de webpagina’s, oefeningen en lesboekbronnen voor deze paragraaf.</p>
+              <div class="para-card-tags"><span class="para-card-tag">Start</span><span class="para-card-tag">Leer</span><span class="para-card-tag">Check</span><span class="para-card-tag">Oefen</span><span class="para-card-tag">Exit ticket</span></div>
+            </div>
+            <div class="open-arrow">→</div>
+          </a>
+        </div>
+      </section>
+
+      <aside class="chapter-note">
+        <strong>Ontwerpprincipe:</strong> deze hoofdstukpagina blijft bewust sober. Zij organiseert het hoofdstuk en stuurt door naar paragraafpagina’s; de leeractiviteiten zelf horen niet op dit niveau.
+      </aside>
+
+      <p class="footer-note">Economie VWO 4 · Boek 1: Grondslagen, vraag en aanbod · hoofdstuknavigatie</p>
+    </main>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('chapterMinimalTheme', next); } catch (error) {}
+    }
+  </script>
+</body>
+</html>

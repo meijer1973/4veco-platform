@@ -3,7 +3,10 @@
  *
  * Generates index.html at three levels:
  * - Book page      (overview of all chapters)
- * - Chapter pages  (overview of paragrafen in that chapter)
+ * - Chapter pages render Chapter Landing V2 Minimal Navigation:
+ *   orientation only, with paragraph cards linking to paragraph index.html
+ *   pages. Learning-route rows and companion resources stay on paragraph
+ *   Landing V2 pages.
  * - Paragraaf pages render Landing V2 rows:
  *   Start / Leer / Check / Oefen / Exit ticket / Open & verdiep / Skill-tree games.
  *   Only Start / Leer / Check / Oefen / Exit ticket are lesson-route navigation.
@@ -841,7 +844,7 @@ function renderBookPage(resolvedMap) {
 // CHAPTER PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderChapterPage(chapterId, resolvedMap) {
+function renderChapterPageLegacy(chapterId, resolvedMap) {
   const ch = CONFIG.chapterIndex[chapterId];
   const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === chapterId && !CONFIG.isHidden(p.id));
   const dc = DOMAIN_COLORS[ch.domain];
@@ -894,6 +897,225 @@ function renderChapterPage(chapterId, resolvedMap) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+const CHAPTER_V2_FIXTURE_DIR = path.join(__dirname, "..", "..", "references", "ui", "chapter-landing-v2");
+
+function chapterFixtureStyle() {
+  const fixturePath = path.join(CHAPTER_V2_FIXTURE_DIR, "approved-minimal.html");
+  const html = fs.readFileSync(fixturePath, "utf8");
+  const match = html.match(/<style>([\s\S]*?)<\/style>/i);
+  if (!match) throw new Error(`Missing <style> block in ${fixturePath}`);
+  return match[1].trim();
+}
+
+function chapterMinimalCSS() {
+  const fixtureCSS = chapterFixtureStyle().replace(/\n\s*\.para-card-domain,\r?\n/g, "\n");
+  return `${fixtureCSS}
+
+    .chapter-paragraph-card,
+    .paragraph-route-tags,
+    .target-panel,
+    .chapter-overview {
+      min-width: 0;
+    }
+    .chapter-paragraph-card .para-card-index + .para-card-index {
+      background: transparent;
+      border-style: dashed;
+    }`;
+}
+
+function chapterPageShell(title, bodyContent) {
+  return `<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('chapterMinimalTheme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved === 'dark' || saved === 'light' ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (error) {}
+  })();
+</script>
+<title>${title}</title>
+<style>${chapterMinimalCSS()}</style>
+</head>
+<body data-layout="chapter-landing-v2">
+${bodyContent}
+<script>
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('chapterMinimalTheme', next); } catch (error) {}
+  }
+</script>
+</body>
+</html>`;
+}
+
+function chapterNavHref(pageType, targetChapter, targetParagraaf, resolvedMap, currentChapterId) {
+  const ch = CONFIG.chapterIndex[targetChapter];
+  const chFolder = ch ? encodeURIComponent(ch.folder) : "";
+  const resolved = targetParagraaf ? resolvedMap[targetParagraaf] : null;
+  const pFolder = resolved ? encodeURIComponent(resolved.folderName) : "";
+
+  if (pageType === "book") return "../index.html";
+  if (pageType === "chapter") return targetChapter === currentChapterId ? "index.html" : `../${chFolder}/index.html`;
+  if (targetChapter === currentChapterId) return `${pFolder}/index.html`;
+  return `../${chFolder}/${pFolder}/index.html`;
+}
+
+function renderChapterMinimalSidebar(chapterId, resolvedMap) {
+  const currentChapter = CONFIG.chapterIndex[chapterId];
+  const currentParagraphs = CONFIG.paragraphs.filter(p => p.chapter === chapterId && !CONFIG.isHidden(p.id) && resolvedMap[p.id]);
+
+  const chapterLinks = CONFIG.chapters
+    .filter(ch => CONFIG.paragraphs.some(p => p.chapter === ch.id && !CONFIG.isHidden(p.id) && resolvedMap[p.id]))
+    .map(ch => {
+      const current = ch.id === chapterId ? " current" : "";
+      const href = chapterNavHref("chapter", ch.id, null, resolvedMap, chapterId);
+      return `<a class="side-link${current}" href="${href}"><span class="side-number">H${escapeHtml(ch.number)}</span><span>${escapeHtml(ch.name)}</span></a>`;
+    })
+    .join("\n        ");
+
+  const paragraphLinks = currentParagraphs.map(p => {
+    const pNum = p.id.split(".").pop();
+    const href = chapterNavHref("paragraaf", chapterId, p.id, resolvedMap, chapterId);
+    return `<a class="side-link" href="${href}"><span class="side-number">${escapeHtml(pNum)}</span><span>${escapeHtml(p.name)}</span></a>`;
+  }).join("\n        ");
+
+  return `    <aside class="sidebar" aria-label="Boeknavigatie">
+      <div class="brand">
+        <div class="brand-mark">4V</div>
+        <div>
+          <strong>${escapeHtml(CONFIG.displayLabel)}</strong>
+          <span>Hoofdstuknavigatie</span>
+        </div>
+      </div>
+
+      <section class="sidebar-block" aria-label="Boek">
+        <p class="sidebar-section-title">Boek</p>
+        <a class="side-link" href="../index.html"><span class="side-number">${escapeHtml(String(CONFIG.nr))}</span><span>${escapeHtml(CONFIG.name)}</span></a>
+      </section>
+
+      <section class="sidebar-block" aria-label="Hoofdstukken">
+        <p class="sidebar-section-title">Hoofdstukken</p>
+        ${chapterLinks}
+      </section>
+
+      <section class="sidebar-block" aria-label="Paragrafen in dit hoofdstuk">
+        <p class="sidebar-section-title">Paragrafen H${escapeHtml(currentChapter.number)}</p>
+        ${paragraphLinks}
+      </section>
+    </aside>`;
+}
+
+function renderChapterPage(chapterId, resolvedMap) {
+  const ch = CONFIG.chapterIndex[chapterId];
+  const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === chapterId && !CONFIG.isHidden(p.id));
+  const visibleParagrafen = paragrafen.filter(p => resolvedMap[p.id]);
+  const dc = DOMAIN_COLORS[ch.domain] || DOMAIN_COLORS.blue;
+  const meta = landingMeta(ch);
+  const summary = meta.summary || ch.summary || "Kies een paragraafpagina voor de leerroute, uitleg, oefeningen en checks.";
+  const sidebarHTML = renderChapterMinimalSidebar(chapterId, resolvedMap);
+
+  const chapterChips = visibleParagrafen.map(p => {
+    const resolved = resolvedMap[p.id];
+    const href = `${encodeURIComponent(resolved.folderName)}/index.html`;
+    return `<a class="chapter-chip" href="${href}"><b>${escapeHtml(p.id)}</b><span>${escapeHtml(p.name)}</span></a>`;
+  }).join("\n        ");
+
+  let cardHTML = "";
+
+  for (const p of visibleParagrafen) {
+    const resolved = resolvedMap[p.id];
+    const pFolder = encodeURIComponent(resolved.folderName);
+    const pNum = p.id.split(".").pop();
+    const token = domainToken(p.domain || ch.domain);
+    const meta = landingMeta(p);
+    const pSummary = meta.summary || p.summary || "Open de paragraafpagina voor de leerroute, uitleg, oefeningen en checks.";
+    const availability = sectionAvailability(scanFiles(resolved.fullPath), p);
+    const availabilityHTML = availability.length
+      ? `<div class="paragraph-route-tags para-card-tags" aria-label="Beschikbare onderdelen op de paragraafpagina">${availability.map(label => `<span class="paragraph-route-tag para-card-tag">${escapeHtml(label)}</span>`).join("")}</div>`
+      : "";
+    const pitfallHTML = renderCardPitfalls(p);
+    cardHTML += `
+          <a class="chapter-paragraph-card para-card domain-${token}" data-domain="${token}" data-paragraph-id="${escapeHtml(p.id)}" href="${pFolder}/index.html">
+            <div class="para-num">${escapeHtml(p.id)}</div>
+            <div class="para-info">
+              <div class="para-card-topline">
+                <span class="para-card-index">Paragraaf ${escapeHtml(pNum)}</span>
+                <span class="para-card-index">Lesroute</span>
+              </div>
+              <h3>${escapeHtml(p.name)}</h3>
+              <p>${escapeHtml(pSummary)}</p>${availabilityHTML ? `\n              ${availabilityHTML}` : ""}${pitfallHTML ? `\n              ${pitfallHTML}` : ""}
+            </div>
+            <div class="open-arrow" aria-hidden="true">→</div>
+          </a>`;
+  }
+
+  const bodyHTML = `
+  <div class="app-shell chapter-shell" style="--accent: ${dc.main}; --accent-soft: ${dc.light};">
+${sidebarHTML}
+    <main class="content">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">${escapeHtml(CONFIG.displayLabel)}</p>
+          <strong>Boek ${escapeHtml(String(CONFIG.nr))} / Hoofdstuk ${escapeHtml(String(ch.number))}</strong>
+        </div>
+        <button class="theme-note" type="button" onclick="toggleTheme()" aria-label="Wissel tussen licht en donker thema">◐ Licht / donker</button>
+      </div>
+
+      <section class="hero chapter-hero" aria-labelledby="chapter-title">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Hoofdstuk ${escapeHtml(String(ch.number))}</p>
+            <h1 id="chapter-title">${escapeHtml(ch.name)}</h1>
+            <p>${escapeHtml(summary)}</p>
+          </div>
+          <aside class="target-panel chapter-panel" aria-label="Hoofdstukinformatie">
+            <h2>Hoofdstukinformatie</h2>
+            <p>${escapeHtml(CONFIG.displayLabel)}. Deze pagina organiseert het hoofdstuk en stuurt door naar paragraafpagina's.</p>
+            <div class="stats">
+              <div class="stat"><strong>${visibleParagrafen.length}</strong><span>paragrafen</span></div>
+              <div class="stat"><strong>H${escapeHtml(String(ch.number))}</strong><span>hoofdstuk</span></div>
+              <div class="stat"><strong>VWO 4</strong><span>niveau</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <nav class="chapter-overview chapter-strip" aria-label="Snel naar paragraaf">
+        ${chapterChips}
+      </nav>
+
+      <section aria-labelledby="paragraphs-title">
+        <div class="section-title">
+          <div>
+            <h2 id="paragraphs-title">Paragrafen in dit hoofdstuk</h2>
+            <p>Open een paragraafpagina voor de leerroute, uitleg, oefeningen en checks.</p>
+          </div>
+        </div>
+
+        <div class="chapter-overview paragraph-list">
+${cardHTML}
+        </div>
+      </section>
+
+      <aside class="chapter-note">
+        <strong>Ontwerpprincipe:</strong> deze hoofdstukpagina blijft navigatie en orientatie. Leeractiviteiten, checks, games en lesboekbronnen horen op paragraafpagina's.
+      </aside>
+
+      <p class="footer-note">Economie VWO 4 · ${escapeHtml(CONFIG.displayLabel)} · hoofdstuknavigatie</p>
+    </main>
+  </div>`;
+
+  return chapterPageShell(`${CONFIG.chapterFullLabel(chapterId)} - Hoofdstuknavigatie`, bodyHTML);
+}
+
 // PARAGRAAF PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
