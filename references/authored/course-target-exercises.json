@@ -605,27 +605,28 @@
       },
       "lesson_goals": [
         "Explain that collective demand is the horizontal sum of individual demand curves",
-        "Calculate collective demand from individual data (table method)",
-        "Derive collective demand algebraically (adding Q's at equal P)",
-        "Recognise the kink in the collective curve when one consumer drops out"
+        "Calculate collective demand from individual data by adding quantities at the same price",
+        "Derive collective demand algebraically by adding linear demand functions at the same price",
+        "Explain in ordinary language when one buyer group contributes zero demand beyond a price range"
       ],
       "required_skills": [
-        "A01"
+        "A01",
+        "A47",
+        "A48"
       ],
       "prior_knowledge_assumed": [
         "A01"
       ],
-      "new_skills_introduced": [],
-      "missing_units_flagged": [
-        "Horizontal sum: aggregate individual demand tables into collective demand (A-domain candidate, mirror of A31 for aanbod)",
-        "Algebraic horizontal sum of linear demand functions (A-domain candidate, Q-at-equal-P)",
-        "Recognise the kink in collective demand when one consumer exits (concept-level)"
+      "new_skills_introduced": [
+        "A47",
+        "A48"
       ],
+      "missing_units_flagged": [],
       "exam_codes": [
         "A2.9",
         "D1.3"
       ],
-      "difficulty_notes": "The horizontal addition (adding Q's, not P's) is counter-intuitive for some students. The algebraic derivation (exercise c) requires comfort with linear equations. One lesson works if algebra skills from §1.1 are solid. The kink (exercise d) can be mentioned but is not essential.",
+      "difficulty_notes": "The horizontal addition (adding quantities, not prices) is counter-intuitive for some students. The algebraic derivation requires comfort with linear equations. Buyer-group dropout may be retained as a term-light table/function interpretation, but formal kink terminology, piecewise notation, and advanced domain analysis are not Year 1 requirements.",
       "source_ref": "references/owned/course-blueprint-v5.md §1.2.3",
       "paragraph_kind": "theory",
       "introduces_new_theory": true,
@@ -648,6 +649,31 @@
         "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
         "decision_summary": "Existing doeloefening-aligned collective-demand target reviewed final; A2.9 confirmed and D1.3 added.",
         "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
+      },
+      "collective_demand_dropout_decision": {
+        "sprint_id": "B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1",
+        "review_date": "2026-06-17",
+        "decision": "retain_term_light_table_based_dropout",
+        "decision_summary": "Retain buyer-group dropout/zero-demand reasoning as part of Year 1 collective-demand aggregation, but keep it table/function based and term-light.",
+        "allowed_year1_operation": "Given individual or group demand tables/functions, students aggregate quantities at the same price and notice/explain that a buyer group may contribute zero demand beyond a price range, changing the collective-demand shape.",
+        "not_required": [
+          "formal kink terminology",
+          "piecewise-function notation",
+          "advanced function-domain analysis",
+          "abstract curve-shape theory"
+        ],
+        "mapped_units": [
+          "A47",
+          "A48"
+        ],
+        "target_operation_boundary": "Students may explain the consumer-exit/dropout point in ordinary language as one group leaving the market or contributing zero units. They are not required to use formal kink/piecewise terminology or prove curve domains algebraically.",
+        "evidence": {
+          "review_packet": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-review-packet.md",
+          "quality_log": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-quality-log.md",
+          "sprint_plan": "reports/sprints/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-plan.md",
+          "mixed_target_audit_rerun": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-mixed-target-audit-rerun.md"
+        },
+        "authority_boundary": "Authored target-registry disposition only; does not close target-equivalent lesson proof, Year 1, CP-6, Scale Gate, product-route adoption, diagnostics, mastery, PV, or student/product-use authority."
       }
     },
     {
@@ -673,7 +699,7 @@
           },
           {
             "label": "e",
-            "prompt": "Find the price where office workers leave the smoothie market and explain the kink in the collective demand curve."
+            "prompt": "Find the price where office workers leave the smoothie market and explain how the collective demand curve changes shape at that point."
           },
           {
             "label": "f",
@@ -721,12 +747,14 @@
         "Determine collective demand from tables, functions, and graphs by adding quantities at the same price.",
         "Distinguish movement along a demand curve from demand-curve shifts in simultaneous-change contexts.",
         "Classify demand-factor effects, including preference changes and substitute/complement reasoning.",
-        "Interpret dropout and kink logic in collective demand curves."
+        "Interpret buyer-group dropout and zero-demand effects in collective demand using tables/functions."
       ],
       "required_skills": [
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -738,6 +766,8 @@
         "A01",
         "A42",
         "A44",
+        "A47",
+        "A48",
         "D27",
         "D32",
         "D33",
@@ -783,6 +813,45 @@
         "lesson_evidence_commit": "b858bca602bb7afdf75cad7c3ecc1a79b31fbb76",
         "decision_summary": "Existing generated 1.2.4 consolidation evidence used to replace placeholder with reviewed source-registry integration target; D1.4a deferred.",
         "authority_boundary": "Reviewed source-registry target/exam-code decision only; does not close target-equivalent proof, accessibility/support evidence, pack readiness, or school-owned evidence."
+      },
+      "collective_demand_dropout_boundary": {
+        "sprint_id": "B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1",
+        "review_date": "2026-06-17",
+        "decision_summary": "1.2.4 may consolidate buyer-group dropout/zero-demand reasoning from 1.2.3 only within the term-light table/function boundary accepted by this sprint.",
+        "allowed_in_mixed_target": "Mixed practice may ask students to find the price where a buyer group leaves the market and explain the resulting collective-demand shape change in ordinary language.",
+        "not_required_in_mixed_target": [
+          "formal kink terminology",
+          "piecewise-function notation",
+          "advanced function-domain analysis",
+          "abstract curve-shape theory"
+        ],
+        "mapped_units": [
+          "A47",
+          "A48"
+        ],
+        "evidence": {
+          "review_packet": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-review-packet.md",
+          "quality_log": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-quality-log.md",
+          "sprint_plan": "reports/sprints/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-plan.md",
+          "mixed_target_audit_rerun": "reports/reference-planning/B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1-mixed-target-audit-rerun.md"
+        },
+        "authority_boundary": "Authored target-registry disposition only; does not close target-equivalent lesson proof, Year 1, CP-6, Scale Gate, product-route adoption, diagnostics, mastery, PV, or student/product-use authority."
+      },
+      "mixed_target_audit_after_disposition": {
+        "sprint_id": "B1-COLLECTIVE-DEMAND-KINK-DISPOSITION-1",
+        "result": "passes_for_registry_mixed_target_audit",
+        "basis": "The former 1.2.4 blocker is closed for authored-registry purposes because 1.2.3 now records a term-light buyer-group dropout boundary mapped to A47/A48, and 1.2.4 no longer requires formal kink terminology.",
+        "does_not_authorize": [
+          "target-equivalent lesson proof",
+          "Year 1 closure",
+          "CP-6 closure",
+          "Scale Gate",
+          "product-route adoption",
+          "diagnostics",
+          "mastery",
+          "PV",
+          "student/product use"
+        ]
       }
     },
     {

@@ -48,11 +48,16 @@ function rowBlock(html, id, nextId) {
 }
 
 function chapterCardTags(html) {
-    const match = html.match(/<div class="para-card-tags">([\s\S]*?)<\/div>/);
+    const match = html.match(/<div class="[^"]*\bpara-card-tags\b[^"]*"[^>]*>([\s\S]*?)<\/div>/);
     if (!match) {
         return [];
     }
-    return Array.from(match[1].matchAll(/<span class="para-card-tag">([^<]+)<\/span>/g)).map(tag => tag[1]);
+    return Array.from(match[1].matchAll(/<span class="[^"]*\bpara-card-tag\b[^"]*">([^<]+)<\/span>/g)).map(tag => tag[1]);
+}
+
+function chapterParagraphCards(html) {
+    return Array.from(html.matchAll(/<a class="[^"]*\bchapter-paragraph-card\b[^"]*"[^>]*data-paragraph-id="([^"]+)"[^>]*href="([^"]+)"/g))
+        .map(match => ({ id: match[1], href: match[2] }));
 }
 
 function writeFile(filePath, body = 'stub') {
@@ -199,6 +204,53 @@ describe('paragraph landing V2 prototype port', () => {
         expect(html).not.toMatch(/\b(PV|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
 
         const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
+        for (const marker of [
+            'app-shell',
+            'sidebar',
+            'content',
+            'topbar',
+            'hero',
+            'hero-grid',
+            'target-panel',
+            'chapter-overview',
+            'chapter-paragraph-card',
+            'paragraph-route-tags',
+            'footer-note',
+        ]) {
+            expect(chapterHtml).toContain(marker);
+        }
+        for (const forbidden of [
+            'page-layout',
+            'sidebar-toggle',
+            'sidebar-overlay',
+            'viewer-panel',
+            '../../shared/voorkennis.css',
+        ]) {
+            expect(chapterHtml).not.toContain(forbidden);
+        }
+        expect(chapterHtml).toContain('html[data-theme="dark"]');
+        expect(chapterHtml).not.toMatch(/<span class="para-card-domain">/);
+        expect(chapterHtml).not.toMatch(/<span class="[^"]*para-card-domain[^"]*">Rekenen<\/span>/);
+        expect(chapterHtml).toContain('Paragraaf 1');
+        expect(chapterHtml).toContain('Lesroute');
+        expect(chapterParagraphCards(chapterHtml)).toEqual([
+            { id: '1.1.1', href: '1.1.1%20Testparagraaf/index.html' },
+        ]);
+        for (const forbiddenHref of [
+            'opgaven.html',
+            'antwoorden.html',
+            'paragraaf.html',
+            'instapquiz.html',
+            'korte-check.html',
+            'exit-ticket.html',
+            'redeneer-spel.html',
+            'wiskundevaardigheden.html',
+            'grafiekenspel.html',
+            '.docx',
+            '.pptx',
+        ]) {
+            expect(chapterHtml).not.toContain(forbiddenHref);
+        }
         expect(chapterCardTags(chapterHtml)).toEqual(['Start', 'Leer', 'Check', 'Oefen', 'Exit ticket']);
     });
 
@@ -233,6 +285,51 @@ describe('paragraph landing V2 prototype port', () => {
         expect(tileBlock(html, 'uitleg-vaardigheden')).toMatch(/href="[^"]*uitleg%20vaardigheden\.html"/);
         expect(tileBlock(html, 'uitleg-vaardigheden')).toContain('Open uitleg vaardigheden');
         expect(html).not.toContain('href="#"');
+    });
+
+    test('chapter landing renders one neutral card per visible paragraph', () => {
+        const configPath = path.join(tmpDir, 'deploy-config.json');
+        const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        config.hiddenParagraphs = ['1.1.3'];
+        config.paragraphs = [
+            {
+                id: '1.1.1',
+                name: 'Eerste zichtbare paragraaf',
+                chapter: '1.1',
+                domain: 'amber',
+            },
+            {
+                id: '1.1.2',
+                name: 'Tweede zichtbare paragraaf',
+                chapter: '1.1',
+                domain: 'blue',
+            },
+            {
+                id: '1.1.3',
+                name: 'Verborgen paragraaf',
+                chapter: '1.1',
+                domain: 'green',
+            },
+        ];
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+
+        fs.mkdirSync(path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Eerste zichtbare paragraaf'), { recursive: true });
+        fs.mkdirSync(path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.2 Tweede zichtbare paragraaf'), { recursive: true });
+        fs.mkdirSync(path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.3 Verborgen paragraaf'), { recursive: true });
+
+        const result = runBuilder(tmpDir);
+
+        expect(result.status).toBe(0);
+        const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
+        expect(chapterParagraphCards(chapterHtml)).toEqual([
+            { id: '1.1.1', href: '1.1.1%20Eerste%20zichtbare%20paragraaf/index.html' },
+            { id: '1.1.2', href: '1.1.2%20Tweede%20zichtbare%20paragraaf/index.html' },
+        ]);
+        expect(chapterHtml).not.toContain('Verborgen paragraaf');
+        expect(chapterHtml).not.toMatch(/<span class="[^"]*para-card-domain[^"]*">/);
+        expect(chapterHtml).toContain('Paragraaf 1');
+        expect(chapterHtml).toContain('Paragraaf 2');
+        expect(chapterHtml).toContain('Lesroute');
     });
 
     test('falls back to the vaardigheden Word explainer when HTML is missing', () => {

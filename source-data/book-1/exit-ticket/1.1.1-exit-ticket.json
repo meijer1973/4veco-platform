@@ -4,7 +4,7 @@
   "parNr": "1.1.1",
   "parName": "Schaarste en economisch denken",
   "title": "Exit ticket",
-  "intro": "Maak de volledige paragraaf-check. Laat bij de berekeningen zien welke keuze of opbrengst je vergelijkt.",
+  "intro": "Maak de volledige paragraaf-check. Laat bij de berekeningen zien welke keuze of winst je vergelijkt.",
   "targetSkillIds": ["A43", "B01", "B02"],
   "skillScopeIds": ["A43", "B01", "B02"],
   "targetEquivalent": {
@@ -40,7 +40,7 @@
         "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20stappenplan.html"
       },
       {
-        "label": "Gemengde opbrengst",
+        "label": "Gemengde winst",
         "surface": "Vaardigheden",
         "href": "1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20uitleg%20vaardigheden.html"
       }
@@ -53,16 +53,16 @@
       "taskShell": {
         "id": "tarwe-opbrengst",
         "family": "calculation_work_capture",
-        "skillLabel": "Opbrengst berekenen",
-        "purpose": "Bereken de opbrengst van een keuze met hectares en opbrengst per hectare.",
-        "prompt": "Een boer gebruikt 10 hectare voor tarwe. Tarwe levert EUR 500 per hectare op. Bereken zijn totale opbrengst uit tarwe.",
+        "skillLabel": "Winst berekenen",
+        "purpose": "Bereken de winst van een keuze met hectares en winst per hectare.",
+        "prompt": "Een boer gebruikt 10 hectare voor tarwe. Tarwe levert EUR 500 winst per hectare op. Bereken zijn totale winst uit tarwe.",
         "interaction": {
           "workLabel": "Berekening",
-          "finalAnswerLabel": "Totale opbrengst",
-          "placeholder": "Laat hectares keer opbrengst per hectare zien.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 5000",
+          "finalAnswerLabel": "Totale winst",
+          "placeholder": "Laat hectares keer winst per hectare zien.",
+          "finalAnswerPlaceholder": "vul de totale winst in",
           "unitNotationLabel": "Eenheid",
-          "unitNotationPlaceholder": "Bijvoorbeeld euro"
+          "unitNotationPlaceholder": "vul de eenheid in"
         },
         "expected": {
           "kind": "calculation",
@@ -78,15 +78,29 @@
           "workRequired": true,
           "requiredWorkText": [
             { "label": "hectares", "any": ["10"] },
-            { "label": "tarwe per hectare", "any": ["500"] },
-            { "label": "vermenigvuldigen", "any": ["10 x 500", "10*500", "10 * 500", "10 keer 500", "10 maal 500"] }
+            { "label": "tarwewinst per hectare", "any": ["500"] },
+            {
+              "label": "vermenigvuldigen",
+              "any": [
+                "10 x 500",
+                "10*500",
+                "10 * 500",
+                "10 keer 500",
+                "10 maal 500",
+                "500 x 10",
+                "500*10",
+                "500 * 10",
+                "500 keer 10",
+                "500 maal 10"
+              ]
+            }
           ]
         },
         "feedback": {
-          "matchTitle": "Opbrengst klopt",
-          "matchText": "10 hectare keer EUR 500 per hectare geeft EUR 5000.",
-          "retryTitle": "Controleer hectares en opbrengst",
-          "retryText": "Gebruik 10 hectare en EUR 500 per hectare."
+          "matchTitle": "Winst klopt",
+          "matchText": "10 hectare keer EUR 500 winst per hectare geeft EUR 5000.",
+          "retryTitle": "Controleer hectares en winst",
+          "retryText": "Gebruik 10 hectare en EUR 500 winst per hectare."
         },
         "practiceRoute": {
           "label": "Oefen dit nog met de vaardigheid",
@@ -102,14 +116,14 @@
         "family": "calculation_work_capture",
         "skillLabel": "Alternatieve kosten berekenen",
         "purpose": "Bereken de waarde van het beste niet-gekozen alternatief.",
-        "prompt": "Mais levert EUR 350 per hectare op. De boer kiest geen mais op de 10 hectare. Bereken de alternatieve kosten.",
+        "prompt": "Mais levert EUR 350 winst per hectare op. De boer kiest geen mais op de 10 hectare. Bereken de alternatieve kosten.",
         "interaction": {
           "workLabel": "Berekening",
           "finalAnswerLabel": "Alternatieve kosten",
-          "placeholder": "Laat zien welke opbrengst de boer laat liggen.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 3500",
+          "placeholder": "Laat zien welke winst de boer laat liggen.",
+          "finalAnswerPlaceholder": "vul de alternatieve kosten in",
           "unitNotationLabel": "Eenheid",
-          "unitNotationPlaceholder": "Bijvoorbeeld euro"
+          "unitNotationPlaceholder": "vul de eenheid in"
         },
         "expected": {
           "kind": "calculation",
@@ -125,15 +139,29 @@
           "workRequired": true,
           "requiredWorkText": [
             { "label": "hectares", "any": ["10"] },
-            { "label": "mais per hectare", "any": ["350"] },
-            { "label": "vermenigvuldigen", "any": ["10 x 350", "10*350", "10 * 350", "10 keer 350", "10 maal 350"] }
+            { "label": "maiswinst per hectare", "any": ["350"] },
+            {
+              "label": "vermenigvuldigen",
+              "any": [
+                "10 x 350",
+                "10*350",
+                "10 * 350",
+                "10 keer 350",
+                "10 maal 350",
+                "350 x 10",
+                "350*10",
+                "350 * 10",
+                "350 keer 10",
+                "350 maal 10"
+              ]
+            }
           ]
         },
         "feedback": {
           "matchTitle": "Alternatieve kosten kloppen",
-          "matchText": "De boer laat EUR 3500 aan maisopbrengst liggen.",
+          "matchText": "De boer laat EUR 3500 aan maiswinst liggen.",
           "retryTitle": "Zoek het niet-gekozen alternatief",
-          "retryText": "Alternatieve kosten zijn de opbrengst van mais die hij niet kiest."
+          "retryText": "Alternatieve kosten zijn de winst uit mais die hij niet kiest."
         },
         "practiceRoute": {
           "label": "Oefen alternatieve kosten nog",
@@ -147,16 +175,16 @@
       "taskShell": {
         "id": "buurvrouw-gemengd",
         "family": "calculation_work_capture",
-        "skillLabel": "Gemengde opbrengst berekenen",
-        "purpose": "Bereken de totale opbrengst bij twee gewassen.",
-        "prompt": "Een buurvrouw gebruikt 6 hectare voor tarwe en 4 hectare voor mais. Bereken haar totale opbrengst.",
+        "skillLabel": "Gemengde winst berekenen",
+        "purpose": "Bereken de totale winst bij twee gewassen.",
+        "prompt": "Een buurvrouw gebruikt 6 hectare voor tarwe en 4 hectare voor mais. Bereken haar totale winst.",
         "interaction": {
           "workLabel": "Berekening",
-          "finalAnswerLabel": "Totale opbrengst buurvrouw",
+          "finalAnswerLabel": "Totale winst buurvrouw",
           "placeholder": "Laat beide delen en de optelling zien.",
-          "finalAnswerPlaceholder": "Bijvoorbeeld 4400",
+          "finalAnswerPlaceholder": "vul de totale winst in",
           "unitNotationLabel": "Eenheid",
-          "unitNotationPlaceholder": "Bijvoorbeeld euro"
+          "unitNotationPlaceholder": "vul de eenheid in"
         },
         "expected": {
           "kind": "calculation",
@@ -171,13 +199,24 @@
           },
           "workRequired": true,
           "requiredWorkText": [
-            { "label": "tarwe-deel", "any": ["6 x 500", "6*500", "6 * 500", "3000"] },
-            { "label": "mais-deel", "any": ["4 x 350", "4*350", "4 * 350", "1400"] },
-            { "label": "totale opbrengst", "any": ["4400", "3000 + 1400", "3000+1400"] }
+            { "label": "tarwe-winstdeel", "any": ["6 x 500", "6*500", "6 * 500", "6 keer 500", "6 maal 500", "500 x 6", "500*6", "500 * 6", "500 keer 6", "500 maal 6", "3000"] },
+            { "label": "mais-winstdeel", "any": ["4 x 350", "4*350", "4 * 350", "4 keer 350", "4 maal 350", "350 x 4", "350*4", "350 * 4", "350 keer 4", "350 maal 4", "1400"] },
+            {
+              "label": "totale winst",
+              "any": [
+                "4400",
+                "3000 + 1400",
+                "3000+1400",
+                "3000 plus 1400",
+                "1400 + 3000",
+                "1400+3000",
+                "1400 plus 3000"
+              ]
+            }
           ]
         },
         "feedback": {
-          "matchTitle": "Gemengde opbrengst klopt",
+          "matchTitle": "Gemengde winst klopt",
           "matchText": "6 keer 500 plus 4 keer 350 geeft EUR 4400.",
           "retryTitle": "Bereken beide gewassen apart",
           "retryText": "Reken eerst tarwe en mais apart uit en tel daarna op."
@@ -195,46 +234,63 @@
         "id": "betere-keuze-uitleg",
         "family": "structured_short_response",
         "skillLabel": "Keuze uitleggen met schaarste",
-        "purpose": "Vergelijk opbrengsten en leg uit waarom kiezen nodig is.",
+        "purpose": "Vergelijk winsten en leg uit waarom kiezen nodig is.",
         "prompt": "Heeft de buurvrouw een betere keuze gemaakt dan de boer? Vul de vergelijking aan.",
         "interaction": {
           "fields": [
             {
               "id": "boer",
-              "label": "Opbrengst boer",
-              "placeholder": "Bijvoorbeeld 5000",
+              "label": "Winst boer",
+              "placeholder": "vul de winst van de boer in",
               "inputMode": "decimal"
             },
             {
               "id": "buurvrouw",
-              "label": "Opbrengst buurvrouw",
-              "placeholder": "Bijvoorbeeld 4400",
+              "label": "Winst buurvrouw",
+              "placeholder": "vul de winst van de buurvrouw in",
               "inputMode": "decimal"
             },
             {
               "id": "schaarste",
               "label": "Waarom moet er gekozen worden?",
-              "placeholder": "Bijvoorbeeld: de grond is beperkt",
+              "placeholder": "noem het beperkte middel",
               "inputMode": "text"
             }
           ],
           "options": [
-            { "id": "boer-beter", "label": "Nee, de boer heeft de hogere opbrengst." },
-            { "id": "buurvrouw-beter", "label": "Ja, de buurvrouw heeft de hogere opbrengst." },
+            { "id": "boer-beter", "label": "Nee, de boer heeft de hogere winst." },
+            { "id": "buurvrouw-beter", "label": "Ja, de buurvrouw heeft de hogere winst." },
             { "id": "niet-te-zeggen", "label": "Dat kun je niet vergelijken." }
           ]
         },
         "expected": {
           "kind": "structured_text_criteria",
           "criteria": [
-            "Vergelijk de opbrengst van de boer met die van de buurvrouw.",
-            "Kies de hogere opbrengst.",
+            "Vergelijk de winst van de boer met die van de buurvrouw.",
+            "Kies de hogere winst.",
             "Noem het beperkte middel waardoor er gekozen moet worden."
           ],
           "fields": [
-            { "id": "boer", "label": "opbrengst boer", "accepted": ["5000", "EUR 5000", "5000 euro"] },
-            { "id": "buurvrouw", "label": "opbrengst buurvrouw", "accepted": ["4400", "EUR 4400", "4400 euro"] },
-            { "id": "schaarste", "label": "beperkt middel", "accepted": ["de grond is beperkt", "grond is beperkt", "er is maar 10 hectare", "10 hectare is beperkt", "grond kan niet tegelijk voor alles worden gebruikt"] }
+            { "id": "boer", "label": "winst boer", "accepted": ["5000", "EUR 5000", "5000 euro"] },
+            { "id": "buurvrouw", "label": "winst buurvrouw", "accepted": ["4400", "EUR 4400", "4400 euro"] },
+            {
+              "id": "schaarste",
+              "label": "beperkt middel",
+              "accepted": [
+                "de grond is beperkt",
+                "grond is beperkt",
+                "de grond is schaars",
+                "grond is schaars",
+                "grond is het schaarse middel",
+                "grond is beperkt beschikbaar",
+                "er is maar 10 hectare",
+                "10 hectare is beperkt",
+                "de 10 hectare grond is beperkt",
+                "de 10 hectare grond is schaars",
+                "grond kan niet tegelijk voor alles worden gebruikt",
+                "dezelfde grond kan niet tegelijk voor tarwe en mais worden gebruikt"
+              ]
+            }
           ],
           "choice": {
             "value": "boer-beter"
@@ -242,7 +298,7 @@
         },
         "feedback": {
           "matchTitle": "Vergelijking klopt",
-          "matchText": "De boer heeft EUR 5000 en de buurvrouw EUR 4400. Omdat de grond beperkt is, moet er gekozen worden.",
+          "matchText": "De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden.",
           "retryTitle": "Vergelijk eerst de bedragen",
           "retryText": "Gebruik EUR 5000 voor de boer, EUR 4400 voor de buurvrouw en noem het beperkte middel."
         },

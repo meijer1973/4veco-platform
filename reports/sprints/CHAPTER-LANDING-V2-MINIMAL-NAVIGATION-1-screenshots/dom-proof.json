@@ -1,0 +1,51 @@
+{
+  "url": "http://127.0.0.1:8766/Boek%201%20-%20Grondslagen%2C%20vraag%20en%20aanbod/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/index.html?v=1781681589102",
+  "screenshots": {
+    "desktopLight": "C:\\wt\\PARA-LANDING-20260610\\4veco-platform\\reports\\sprints\\CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots\\chapter-1-1-desktop-light.png",
+    "desktopDark": "C:\\wt\\PARA-LANDING-20260610\\4veco-platform\\reports\\sprints\\CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots\\chapter-1-1-desktop-dark.png",
+    "mobileLight": "C:\\wt\\PARA-LANDING-20260610\\4veco-platform\\reports\\sprints\\CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots\\chapter-1-1-mobile-light.png"
+  },
+  "domProof": {
+    "cards": [
+      {
+        "href": "1.1.1%20Schaarste%20en%20economisch%20denken/index.html",
+        "id": "1.1.1",
+        "labelText": "Paragraaf 1 Lesroute",
+        "tagLinks": 0
+      },
+      {
+        "href": "1.1.2%20Percentages%20en%20indexcijfers/index.html",
+        "id": "1.1.2",
+        "labelText": "Paragraaf 2 Lesroute",
+        "tagLinks": 0
+      },
+      {
+        "href": "1.1.3%20Grafieken%20en%20tabellen/index.html",
+        "id": "1.1.3",
+        "labelText": "Paragraaf 3 Lesroute",
+        "tagLinks": 0
+      },
+      {
+        "href": "1.1.4%20Gemengde%20opgaven/index.html",
+        "id": "1.1.4",
+        "labelText": "Paragraaf 4 Lesroute",
+        "tagLinks": 0
+      }
+    ],
+    "hasAppShell": true,
+    "hasChapterOverview": true,
+    "hasHeroGrid": true,
+    "hasSidebar": true,
+    "hasTargetPanel": true,
+    "layout": "chapter-landing-v2",
+    "oldShellMarkers": {
+      "domainChip": false,
+      "pageLayout": false,
+      "sidebarOverlay": false,
+      "sidebarToggle": false,
+      "viewerPanel": false
+    },
+    "theme": "light",
+    "title": "Hoofdstuk 1 – Economisch denken en rekenen - Hoofdstuknavigatie"
+  }
+}
