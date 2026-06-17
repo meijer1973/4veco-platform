@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GATE-PRODUCT-3P-PREP-2",
+  "generated": "2026-06-17",
+  "status": "prep_pass_gate_blocked",
+  "verdict": "PREP COMPLETE / GATE-PRODUCT-3P NOT READY",
+  "baseline": {
+    "platform_branch_base": "43b375a3325638983bf55d65714b1c62f1fae843",
+    "platform_pr_77_merge": "62bc0245c8625ec1ff35bd41379cb8d3dbf20024",
+    "platform_pr_82_merge": "934549990fc950b10648d24d6238d38f12d29fd0",
+    "lesson_pr_18_merge": "d0f676e27c8dc05e80f4c0c43367e1e0dd878e55",
+    "lesson_main": "d0f676e27c8dc05e80f4c0c43367e1e0dd878e55"
+  },
+  "required_citations": {
+    "product_end_state": [
+      "../4veco-lessen/specifications/product-end-state.md",
+      "../4veco-lessen/specifications/companion-core-specifications.md"
+    ],
+    "original_specs": [
+      "reports/sprints/SCALE-PROOF-3P-PREP-1-result.md",
+      "reports/sprints/SCALE-PROOF-3P-PREP-1-evidence-map.md",
+      "reports/sprints/SCALE-PROOF-3P-PREP-1-blocker-log.md",
+      "reports/sprints/B1-GRAPH-EVIDENCE-113-CLOSURE-RETRY-1-result.md",
+      "reports/sprints/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1-result.md",
+      "reports/review-gates/B1-GRAPH-EVIDENCE-113-FLAG-IMPLEMENTATION-1/review-packet.json"
+    ]
+  },
+  "readiness_scores": {
+    "evidence_inventory_completeness": 9.3,
+    "authority_boundary_clarity": 9.7,
+    "next_blocker_specificity": 9.5,
+    "readiness_map_usefulness_for_later_gate_product_3p": 9.0
+  },
+  "assertions": {
+    "platform_and_lesson_113_exit_agree": true,
+    "source_data_mutated_by_this_sprint": false,
+    "generated_lesson_output_mutated_by_this_sprint": false,
+    "route_migration_authorized": false,
+    "product_route_adoption_authorized": false,
+    "scale_gate_1_authorized": false,
+    "completion_language_authorized": false
+  },
+  "paragraphs": [
+    {
+      "paragraph_id": "1.1.1",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A43",
+        "B01",
+        "B02"
+      ],
+      "exit_ticket_candidate": true,
+      "gate_approved": false,
+      "target_readiness_evidence": false,
+      "completion_language_eligible": false,
+      "product_gate_ready": false,
+      "next_action": "later planning/rendered-proof lane"
+    },
+    {
+      "paragraph_id": "1.1.2",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A38",
+        "A39",
+        "D31"
+      ],
+      "golden_visual_proof_present": true,
+      "exit_ticket_candidate": true,
+      "gate_approved": false,
+      "target_readiness_evidence": false,
+      "completion_language_eligible": false,
+      "product_gate_ready": false,
+      "next_action": "B1-GRAPH-EVIDENCE-112-CLOSURE-RETRY-1"
+    },
+    {
+      "paragraph_id": "1.1.3",
+      "target_registry_status": "reviewed_final",
+      "target_skills": [
+        "A38",
+        "A45",
+        "A46"
+      ],
+      "graph_exit_proof_present": true,
+      "source_data_skill_metadata_current": true,
+      "generated_lesson_metadata_current": true,
+      "exit_ticket_candidate": true,
+      "gate_approved": true,
+      "target_readiness_evidence": true,
+      "completion_language_eligible": false,
+      "advisory_short_check_target_readiness_evidence": false,
+      "product_gate_ready": false,
+      "next_action": "carry into later product-path proof with completion language held"
+    }
+  ],
+  "findings": [
+    {
+      "id": "G3PP2-001",
+      "classification": "core_requirement_met",
+      "finding": "1.1.3 exit ticket readiness flags now match the human decision in source and generated lesson output.",
+      "blocks": [],
+      "does_not_block": [
+        "non-authorizing prep",
+        "later rendered product-path capture"
+      ],
+      "proof_required_to_close": "Preserve source/generated agreement and focused checkers that require completion language to remain false."
+    },
+    {
+      "id": "G3PP2-002",
+      "classification": "core_requirement_met",
+      "finding": "1.1.3 short check remains advisory and non-readiness.",
+      "blocks": [],
+      "does_not_block": [
+        "route-advice evidence",
+        "first-three inventory refresh"
+      ],
+      "proof_required_to_close": "Preserve advisory surface and targetReadinessEvidence:false."
+    },
+    {
+      "id": "G3PP2-003",
+      "classification": "core_requirement_missing",
+      "finding": "1.1.2 Golden transfer remains held.",
+      "blocks": [
+        "1.1.2 target-equivalent closure",
+        "completion-language claims",
+        "GATE-PRODUCT-3P closure"
+      ],
+      "does_not_block": [
+        "evidence-map publication",
+        "renewed 1.1.2 closure-review sprint"
+      ],
+      "proof_required_to_close": "Human review decides whether current Golden transfer can set gateApproved and targetReadinessEvidence, or records residual blockers."
+    },
+    {
+      "id": "G3PP2-004",
+      "classification": "core_requirement_missing",
+      "finding": "1.1.1 remains held and lacks comparable Golden visual proof in this prep input set.",
+      "blocks": [
+        "1.1.1 target-equivalent closure",
+        "full first-three product proof"
+      ],
+      "does_not_block": [
+        "1.1.2 closure review",
+        "non-authorizing prep"
+      ],
+      "proof_required_to_close": "Later planning/rendered-proof lane captures or constructs missing 1.1.1 evidence and records a human decision."
+    },
+    {
+      "id": "G3PP2-005",
+      "classification": "core_requirement_missing",
+      "finding": "Full first-three rendered product-path proof has not been captured as a gate packet.",
+      "blocks": [
+        "GATE-PRODUCT-3P",
+        "product-route adoption",
+        "Scale Gate 1",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "targeted evidence-closure sprints",
+        "source/output consistency checks"
+      ],
+      "proof_required_to_close": "Rendered proof for landing, Start, Leer, Oefen, skill-map/learn-path, practice, advisory check, exit ticket, feedback, and next action for 1.1.1 through 1.1.3."
+    },
+    {
+      "id": "G3PP2-006",
+      "classification": "process_flag",
+      "finding": "PR #82 and lesson PR #18 were merged before visible review comments were recorded, and merge order was reversed.",
+      "blocks": [
+        "future paired-governance looseness if repeated"
+      ],
+      "does_not_block": [
+        "current 1.1.3 implementation",
+        "non-authorizing prep"
+      ],
+      "proof_required_to_close": "Future paired PRs record review comments before merge and merge platform first, lesson output second."
+    },
+    {
+      "id": "G3PP2-007",
+      "classification": "scale_blocker",
+      "finding": "Downstream authority remains blocked.",
+      "blocks": [
+        "product-route adoption",
+        "diagnostics",
+        "mastery/sequencing",
+        "PV",
+        "Scale Gate 1",
+        "broad product use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "evidence-map publication",
+        "1.1.2 closure review",
+        "1.1.1 planning"
+      ],
+      "proof_required_to_close": "Separate GATE-PRODUCT-3P and downstream Scale Gate review after all missing core proof is repaired."
+    }
+  ],
+  "authority": {
+    "product_route_adoption_authorized": false,
+    "new_target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "scale_gate_1_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "recommended_next_sprint": "B1-GRAPH-EVIDENCE-112-CLOSURE-RETRY-1",
+  "validation": {
+    "status": "passed",
+    "notes": [
+      "Generated proof timestamp churn from validation scripts was inspected and excluded from this prep-only diff.",
+      "The first three route checkers were run against the canonical lesson main book root under C:/Projects/4veco/4veco-lessen."
+    ],
+    "commands": [
+      "node build-scripts/sprints/check-checksurface-113-exemplar-exit1.js 'C:/Projects/4veco/4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod'",
+      "node build-scripts/sprints/check-graph-exit-ux1.js 'C:/Projects/4veco/4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod'",
+      "node build-scripts/sprints/check-graph-check-ux1.js 'C:/Projects/4veco/4veco-lessen/Boek 1 - Grondslagen, vraag en aanbod'",
+      "node build-scripts/sprints/check-golden-exercise-workbench.js",
+      "node build-scripts/sprints/check-checksurface-policy-regression1.js",
+      "node scripts/check-course-target-exercises-v5.js",
+      "node build-scripts/reports/validate-report-json.js",
+      "node build-scripts/references/check-roadmap-version-index.js",
+      "node build-scripts/sprints/emit-url-index.js --check",
+      "npm.cmd run check:scope-language",
+      "npm.cmd run check:platform",
+      "git diff --check",
+      "git -C C:/Projects/4veco/4veco-lessen diff --check"
+    ]
+  }
+}
