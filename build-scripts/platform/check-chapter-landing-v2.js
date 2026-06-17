@@ -19,6 +19,17 @@ const REQUIRED_SOURCE_MARKERS = [
   "paragraph-route-tags",
 ];
 
+const FORBIDDEN_SOURCE_MARKERS = [
+  "function renderChapterPageLegacy",
+  "<span class=\"para-card-domain\">${domainLabel(token)}</span>",
+];
+
+const FORBIDDEN_FIXTURE_MARKERS = [
+  "para-card-domain",
+  ">Rekenen</span>",
+  "Hoofdstuk 1 · rekenen",
+];
+
 const REQUIRED_HTML_MARKERS = [
   "app-shell",
   "sidebar",
@@ -232,8 +243,17 @@ function runBuilder(moduleRoot) {
 }
 
 function checkGeneratorSource() {
-  requireIncludes(readText(BUILDER), REQUIRED_SOURCE_MARKERS, "build-landing-page.js");
-  readText(path.join(PLATFORM_ROOT, "references", "ui", "chapter-landing-v2", "approved-minimal.html"));
+  const builderSource = readText(BUILDER);
+  requireIncludes(builderSource, REQUIRED_SOURCE_MARKERS, "build-landing-page.js");
+  requireExcludes(builderSource, FORBIDDEN_SOURCE_MARKERS, "build-landing-page.js");
+
+  const fixtureHtml = readText(path.join(PLATFORM_ROOT, "references", "ui", "chapter-landing-v2", "approved-minimal.html"));
+  requireExcludes(fixtureHtml, FORBIDDEN_FIXTURE_MARKERS, "approved-minimal.html");
+
+  const lesrouteLabels = fixtureHtml.match(/<span class="para-card-index">Lesroute<\/span>/g) || [];
+  if (lesrouteLabels.length !== 4) {
+    fail(`approved-minimal.html must use neutral Lesroute labels on all four paragraph cards; found ${lesrouteLabels.length}`);
+  }
 }
 
 function checkSyntheticOutput() {

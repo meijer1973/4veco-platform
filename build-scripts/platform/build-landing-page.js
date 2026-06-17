@@ -844,59 +844,6 @@ function renderBookPage(resolvedMap) {
 // CHAPTER PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-function renderChapterPageLegacy(chapterId, resolvedMap) {
-  const ch = CONFIG.chapterIndex[chapterId];
-  const paragrafen = CONFIG.paragraphs.filter(p => p.chapter === chapterId && !CONFIG.isHidden(p.id));
-  const dc = DOMAIN_COLORS[ch.domain];
-  const navHTML = renderNav(resolvedMap, "chapter", chapterId);
-
-  let bodyHTML = `
-<header class="hero">
-  <div class="hero-inner">
-    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Boek ${CONFIG.nr}</a>
-    <span class="hero-badge">Hoofdstuk ${ch.number}</span>
-    <h1>${ch.name}</h1>
-    <p class="hero-sub">${CONFIG.displayLabel}</p>
-  </div>
-</header>
-<main>`;
-
-  for (const p of paragrafen) {
-    const resolved = resolvedMap[p.id];
-    if (!resolved) continue;
-    const pFolder = encodeURIComponent(resolved.folderName);
-    const pNum = p.id.split(".").pop();
-    const token = domainToken(p.domain || ch.domain);
-    const meta = landingMeta(p);
-    const summary = meta.summary || p.summary || "Open de webpagina's, oefeningen en lesboekbronnen voor deze paragraaf.";
-    const availability = sectionAvailability(scanFiles(resolved.fullPath), p);
-    const availabilityHTML = availability.length
-      ? `<div class="para-card-tags">${availability.map(label => `<span class="para-card-tag">${escapeHtml(label)}</span>`).join("")}</div>`
-      : "";
-    const pitfallHTML = renderCardPitfalls(p);
-    bodyHTML += `
-  <a class="para-card domain-${token}" data-domain="${token}" data-paragraph-id="${escapeHtml(p.id)}" href="${pFolder}/index.html" style="--ch-color: ${dc.main}">
-    <div class="para-num">${p.id}</div>
-    <div class="para-info">
-      <div class="para-card-topline">
-        <span class="para-card-domain">${domainLabel(token)}</span>
-        <p>Paragraaf ${pNum}</p>
-      </div>
-      <h3>${escapeHtml(p.name)}</h3>
-      <p>${escapeHtml(summary)}</p>${availabilityHTML ? `\n      ${availabilityHTML}` : ""}${pitfallHTML ? `\n      ${pitfallHTML}` : ""}
-    </div>
-  </a>`;
-  }
-
-  bodyHTML += `
-</main>
-<footer>Economie VWO 4 &middot; ${CONFIG.displayLabel}</footer>`;
-
-  const accentToken = DOMAIN_SHARED_TOKEN[ch.domain] || "wiskunde";
-  return pageShell(`${CONFIG.chapterFullLabel(chapterId)} – Lesmateriaal`, dc, navHTML, bodyHTML, "../shared", accentToken);
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
 const CHAPTER_V2_FIXTURE_DIR = path.join(__dirname, "..", "..", "references", "ui", "chapter-landing-v2");
 
 function chapterFixtureStyle() {
@@ -908,8 +855,7 @@ function chapterFixtureStyle() {
 }
 
 function chapterMinimalCSS() {
-  const fixtureCSS = chapterFixtureStyle().replace(/\n\s*\.para-card-domain,\r?\n/g, "\n");
-  return `${fixtureCSS}
+  return `${chapterFixtureStyle()}
 
     .chapter-paragraph-card,
     .paragraph-route-tags,
@@ -1106,7 +1052,7 @@ ${cardHTML}
       </section>
 
       <aside class="chapter-note">
-        <strong>Ontwerpprincipe:</strong> deze hoofdstukpagina blijft navigatie en orientatie. Leeractiviteiten, checks, games en lesboekbronnen horen op paragraafpagina's.
+        <strong>Ontwerpprincipe:</strong> deze hoofdstukpagina blijft navigatie en oriëntatie. Leeractiviteiten, checks, games en lesboekbronnen horen op paragraafpagina's.
       </aside>
 
       <p class="footer-note">Economie VWO 4 · ${escapeHtml(CONFIG.displayLabel)} · hoofdstuknavigatie</p>

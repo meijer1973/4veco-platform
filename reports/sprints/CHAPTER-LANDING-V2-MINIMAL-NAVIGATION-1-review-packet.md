@@ -1,7 +1,7 @@
 # CHAPTER-LANDING-V2-MINIMAL-NAVIGATION-1 Review Packet
 
 Review standard: `REV-STD-1`
-Status for human review: implementation-ready
+Status for human review: implementation-ready after reviewer revision
 
 ## Product End-State And Sprint Spec
 
@@ -30,7 +30,11 @@ approved prototype imported as
 - [x] Product end-state and sprint spec are cited.
 - [x] Non-negotiable requirements are named.
 - [x] Chapter fixture is present.
+- [x] Chapter fixture uses neutral `Paragraaf N` / `Lesroute` labels.
+- [x] Chapter fixture has no visible fallback `Rekenen` paragraph-card badge.
 - [x] Platform renderer owns the implementation.
+- [x] Unused legacy chapter renderer has been removed.
+- [x] Source checker forbids the legacy renderer and rejected badge template.
 - [x] Generated Book 1 chapter output exists.
 - [x] Direct resource links are blocked by checker and tests.
 - [x] Old shell markers are blocked by checker and tests.
@@ -45,9 +49,10 @@ Classified findings:
 
 - `does_not_block`: Book-level pages still use the historical shared shell.
   This sprint only replaces chapter pages and preserves book output scope.
-- `does_not_block`: The approved prototype fixture itself contains the old
-  `Rekenen` card chip as visual baseline content. Generated output corrects
-  this by removing the chip and using neutral labels.
+- `does_not_block`: No screenshot recapture was needed for the reviewer
+  revision because the generated first-viewport layout did not change; the
+  repair changes the fixture baseline, source guardrails, and one below-fold
+  spelling string in generated output.
 
 ## Carried Issues
 
@@ -69,3 +74,5 @@ proof_required_to_close:
   before treating this sprint as closed.
 - Any future Scale Gate or product-proof packet must cite this packet and the
   current rendered evidence.
+- If a reviewer requires new visual evidence, recapture the chapter page
+  screenshots from the regenerated lesson output before final closure.

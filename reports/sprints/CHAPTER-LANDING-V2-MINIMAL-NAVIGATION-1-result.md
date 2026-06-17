@@ -12,6 +12,15 @@ The chapter page now functions as navigation/orientation only. Learning rows,
 games, checks, exit tickets, textbook links, and companion resources remain on
 paragraph landing pages.
 
+Reviewer revision:
+
+- cleaned the canonical chapter fixture so paragraph cards use neutral
+  `Paragraaf N` / `Lesroute` labels and no visible `Rekenen` badge;
+- removed the unused legacy chapter renderer from the generator source;
+- added source/fixture guards for the legacy renderer and rejected badge
+  template;
+- corrected generated `orientatie` to `oriëntatie`.
+
 ## Changed Files
 
 Platform:
@@ -65,6 +74,16 @@ DOM proof confirms:
 - route tags contain zero links;
 - old shell markers are absent;
 - `.para-card-domain` is absent.
+
+Revision proof confirms:
+
+- fixture `.para-card-domain` count is `0`;
+- fixture visible `>Rekenen</span>` badge count is `0`;
+- fixture `Lesroute` label count is `4`;
+- generated output uses `body[data-layout="chapter-landing-v2"]`;
+- generated output `.para-card-domain` count is `0`;
+- generated output contains `navigatie en oriëntatie` and not the old
+  `navigatie en orientatie`.
 
 ## Authority Boundary
 
