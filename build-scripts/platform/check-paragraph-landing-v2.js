@@ -84,7 +84,7 @@ const REQUIRED_TILE_IDS = [
   "skill-engine",
   "begeleide-oefeningen",
   "zelfstandige-oefeningen",
-  "adaptieve-oefenroute",
+  "oefenadvies",
   "korte-check",
   "exit-ticket",
   "lesboek-openen",

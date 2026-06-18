@@ -18,7 +18,7 @@ const REQUIRED_TILE_IDS = [
     'skill-engine',
     'begeleide-oefeningen',
     'zelfstandige-oefeningen',
-    'adaptieve-oefenroute',
+    'oefenadvies',
     'korte-check',
     'exit-ticket',
     'lesboek-openen',
@@ -213,8 +213,8 @@ describe('paragraph landing V2 prototype port', () => {
         expect(explanationTile).toContain('Open uitleg vaardigheden');
         expect(explanationTile).toMatch(/class="tile-secondary" href="[^"]*uitleg%20vaardigheden\.docx" download>Uitleg vaardigheden \(Word\)<\/a>/);
         expect(explanationTile).toMatch(/class="tile-secondary" href="[^"]*uitleg%20voorkennis\.html">Voorkennis<\/a>/);
-        expect(tileBlock(html, 'adaptieve-oefenroute')).toContain('data-tile-state="in-preparation"');
-        expect(tileBlock(html, 'adaptieve-oefenroute')).not.toMatch(/\shref=/);
+        expect(tileBlock(html, 'oefenadvies')).toContain('data-tile-state="in-preparation"');
+        expect(tileBlock(html, 'oefenadvies')).not.toMatch(/\shref=/);
         expect(html).not.toMatch(/\b(PV|diagnostisch|diagnose|mastery|sequencing|summatief|summative|AI)\b/i);
 
         const chapterHtml = fs.readFileSync(path.join(tmpDir, '1.1 Hoofdstuk Test', 'index.html'), 'utf8');
@@ -289,7 +289,7 @@ describe('paragraph landing V2 prototype port', () => {
         expect(rowBlock(html, 'exit-ticket', 'open')).toContain('class="tile-grid single"');
         expect((html.match(/data-tile-id="/g) || []).length).toBe(16);
 
-        for (const tileId of ['nieuwsdetective', 'rekenen', 'grafieken', 'skill-engine', 'adaptieve-oefenroute', 'korte-check', 'exit-ticket']) {
+        for (const tileId of ['nieuwsdetective', 'rekenen', 'grafieken', 'skill-engine', 'oefenadvies', 'korte-check', 'exit-ticket']) {
             const block = tileBlock(html, tileId);
             expect(block).toContain('data-tile-state="in-preparation"');
             expect(block).toContain('aria-disabled="true"');
