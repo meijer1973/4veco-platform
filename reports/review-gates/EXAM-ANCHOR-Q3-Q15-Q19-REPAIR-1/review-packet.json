@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "packet_id": "EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1",
+  "sprint_id": "EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1",
+  "pr_number": null,
+  "pr_url": null,
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "references/data/document_inventory.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q3-anchor-packet.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q15-anchor-packet.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q19-anchor-packet.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-updated-anchor-status.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-subagent-review.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-quality-log.md",
+    "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-review-packet.md",
+    "reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json",
+    "reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-plan.md",
+    "reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_READ_ONLY_SUBAGENT_REVIEW_COMPLETE_FOCUSED_PACKET_READY_FOR_HUMAN_REVIEW",
+    "rationale": "This high-authority packet refines official-exam anchor routing for Q3, Q15, and Q19 and preserves downstream blockers. Human review is required before merge."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "official_exam_anchor_incomplete",
+    "q19_source_annex_gap",
+    "q19_graph_object_gap",
+    "q19_checker_authority_gap",
+    "answer_skill_gap",
+    "product_authority_boundary",
+    "scale_gate_boundary"
+  ],
+  "date": "2026-06-18",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-plan.md",
+    "reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-review-packet.md",
+    "reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json",
+    "reports/reference-planning/EX-1-exam-ingestion-pilot.md",
+    "reports/review-gates/GATE-EX2-exam-to-mtu-mapping/gate-closure.json"
+  ],
+  "non_negotiable_requirements": [
+    "Cite product end-state and original sprint/gate/source specs.",
+    "Create focused Q3, Q15, and Q19 anchor packets.",
+    "Name affected operation rows and preserve blockers.",
+    "Keep Q3 and Q15 as pending-review/routing evidence, not production closure.",
+    "Keep Q19 blocked by q19-source-annex-gap and q19-graph-object-gap.",
+    "Do not mutate references/external/*, references/machine/*, references/authored/*, or generated lesson output.",
+    "Treat Q19 future source-annex extraction storage as blocked candidate evidence only until execution authority is reviewed.",
+    "Do not create Year 2/3 paragraph targets.",
+    "Do not claim product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, or student/product use.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate/source specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Q3 anchor packet created",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q3-anchor-packet.md"
+    },
+    {
+      "requirement": "Q15 anchor packet created",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q15-anchor-packet.md"
+    },
+    {
+      "requirement": "Q19 anchor packet created",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q19-anchor-packet.md"
+    },
+    {
+      "requirement": "Affected rows named",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-updated-anchor-status.md"
+    },
+    {
+      "requirement": "Findings classified",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-quality-log.md"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "The verdict is focused repair packet ready for human review, not PASS WITH FLAGS."
+    }
+  ],
+  "authority_claims": {
+    "focused_anchor_repair_packet_complete": true,
+    "official_exam_operation_closure_authorized": false,
+    "q3_official_operation_closure_authorized": false,
+    "q15_official_operation_closure_authorized": false,
+    "q19_official_operation_closure_authorized": false,
+    "q19_lesson_handoff_authorized": false,
+    "year2_or_year3_paragraph_targets_created": false,
+    "target_registry_mutation_in_scope": false,
+    "mtus_minted": false,
+    "machine_sources_mutated": false,
+    "external_sources_mutated": false,
+    "authored_sources_mutated": false,
+    "generated_lesson_output_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "proof": {
+    "subagent_reviews": {
+      "exam_evidence": "passed_read_only_evidence_audit_q3_q15_present_q19_blocked",
+      "source_annex_graph": "passed_blocker_review_q19_not_source_graph_ready",
+      "correction_model_answer_form": "passed_partial_not_closure_q3_q15_q19_answer_boundaries_visible",
+      "downstream_authority": "passed_boundary_review_product_scale_student_use_blocked"
+    },
+    "checkers": [
+      {
+        "command": "node scripts/check-course-target-exercises-v5.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-document-registry.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-manifest.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-document-inventory.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/ci/check-evidence-line-endings.js",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C ..\\4veco-lessen diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C ..\\4veco-lessen status --short",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      }
+    ]
+  },
+  "decision": {
+    "status": "focused_anchor_repair_packet_ready_for_human_review",
+    "official_exam_closure": false,
+    "production_reliance": "blocked",
+    "downstream_authority": "blocked"
+  },
+  "findings": [
+    {
+      "id": "EQR-001",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "Focused Q3/Q15/Q19 packets are complete.",
+      "status": "met"
+    },
+    {
+      "id": "EQR-003",
+      "classification": "carried_gap",
+      "severity": "high",
+      "finding": "Q3 remains operation/answer-skill repair evidence, not closure.",
+      "status": "open"
+    },
+    {
+      "id": "EQR-004",
+      "classification": "carried_gap",
+      "severity": "high",
+      "finding": "Q15 remains answer-skill and metadata repair evidence, not closure.",
+      "status": "open"
+    },
+    {
+      "id": "EQR-005",
+      "classification": "blocking_gap",
+      "severity": "critical",
+      "finding": "Q19 remains blocked by source-annex and graph-object extraction gaps.",
+      "status": "open"
+    },
+    {
+      "id": "EQR-007",
+      "classification": "checker_authority_gap",
+      "severity": "high",
+      "finding": "Q19 future source-annex extraction storage exists, but execution authority is false and legacy checker surfaces cannot be cited as clean closure proof.",
+      "status": "open"
+    },
+    {
+      "id": "EQR-008",
+      "classification": "downstream_blocker",
+      "severity": "critical",
+      "finding": "Product/Scale/student-use authority remains false.",
+      "status": "open"
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "EQR-003",
+      "classification": "carried_gap",
+      "flag": "Q3 operation and answer-skill gaps remain open.",
+      "blocks": [
+        "OP-R1 production reliance",
+        "OP-ANS2 production reliance",
+        "OP-ANS1 production reliance"
+      ],
+      "does_not_block": [
+        "using Q3 as partial planning evidence with visible gaps"
+      ],
+      "proof_required_to_close": "Governed review deciding the annual cost-threshold operation route and threshold-conclusion answer-skill route."
+    },
+    {
+      "id": "EQR-004",
+      "classification": "carried_gap",
+      "flag": "Q15 answer-skill and metadata gaps remain open.",
+      "blocks": [
+        "OP-S1 production reliance",
+        "OP-ANS3 production reliance",
+        "OP-ANS1 production reliance"
+      ],
+      "does_not_block": [
+        "using Q15 as partial planning evidence with visible gaps"
+      ],
+      "proof_required_to_close": "Governed answer-skill review plus required-skill metadata review."
+    },
+    {
+      "id": "EQR-005",
+      "classification": "blocking_gap",
+      "flag": "Q19 source-annex and graph-object gaps remain open.",
+      "blocks": [
+        "full Q19 reconstruction",
+        "graph/PV route adoption",
+        "lesson handoff",
+        "OP-G3 production reliance",
+        "OP-LT1 production reliance",
+        "OP-MP1 production reliance",
+        "OP-ANS3 production reliance"
+      ],
+      "does_not_block": [
+        "recording Q19 as blocked evidence",
+        "planning a future source/graph extraction lane"
+      ],
+      "proof_required_to_close": "Official source figure and worksheet reconstruction, graph axes, units, line geometry, source locators, and human-reviewed closure."
+    },
+    {
+      "id": "EQR-007",
+      "classification": "checker_authority_gap",
+      "flag": "Q19 future source-annex extraction storage is not execution authority.",
+      "blocks": [
+        "source/graph closure",
+        "checker-backed authority claims"
+      ],
+      "does_not_block": [
+        "carrying blocked candidate storage as visible evidence"
+      ],
+      "proof_required_to_close": "Reconcile checker/gate authority or run a later reviewed source-annex extraction execution gate."
+    },
+    {
+      "id": "EQR-008",
+      "classification": "downstream_blocker",
+      "flag": "Product/Scale/student-use authority remains blocked.",
+      "blocks": [
+        "product-route adoption",
+        "CP-6 closure",
+        "Scale Gate",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "summative use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "evidence routing",
+        "ordinary scoped planning"
+      ],
+      "proof_required_to_close": "Separate REV-STD-1 product-proof and Scale/CP gates with rendered/product evidence."
+    }
+  ],
+  "recommended_next_action": "Human review this packet, then run Q19 source-annex/graph extraction planning or Q3/Q15 answer-skill planning. Do not use this packet to start downstream Scale/product/diagnostics/mastery/PV or student/product-use work."
+}
