@@ -5,8 +5,8 @@ Repository: `4veco-platform`
 Primary target path: `docs/roadmaps/quality-standards/inspection-standards-roadmap.md`
 Secondary evidence target: `../4veco-lessen/`
 Roadmap ID: `dutch-quality-control`
-Roadmap version: `v2.7-inspect-11a-chapter-13-remediation-plan`
-Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` in progress / Chapter 1.3 diagnostic readiness remediation plan
+Roadmap version: `v2.8-inspect-11b-remediation-results`
+Sprint status: `QS-DUTCH-ROADMAP-1` closed / Dutch-only proposal ready for human review; `QS-DUTCH-ROADMAP-1A` closed / PR prep complete; `QS-DUTCH-ROADMAP-1B` closed / CI repair ready for PR validation; `INSPECT-8` closed / readiness audit complete; `INSPECT-9` closed / gap-closure plan complete; `INSPECT-9A` closed / Chapter 1.2 target and exam-linkage source remediation complete; `INSPECT-9B` closed / Chapter 1.2 target-equivalent and accessibility/support review complete; `INSPECT-9C` closed / Chapter 1.2 proof and support remediation complete; `INSPECT-10` closed / diagnostic-only generator planning accepted and merged; `INSPECT-10A` closed / implementation-plan packet accepted and merged; `INSPECT-10B` closed / merged internal diagnostic generator; `INSPECT-10C` closed / diagnostic generator stability hardening merged; `INSPECT-10D` closed / internal diagnostic tool operating procedure merged; `INSPECT-11` closed / internal diagnostic scope readiness audit merged; `INSPECT-11A` closed / Chapter 1.3 diagnostic readiness remediation plan merged; `INSPECT-11B` in progress / Chapter 1.3 readiness remediation and diagnostic tool health repair
 Human owner: HCS / Marcel
 Team mode: isolated worktree, Dutch quality-control package first, no broad production
 
@@ -643,6 +643,45 @@ Acceptance criteria:
 - the recommendation names only a later bounded remediation/proof route, not
   report generation.
 
+### INSPECT-11B - Chapter 1.3 Readiness Remediation And Diagnostic Tool Health Repair
+
+Goal: produce the full post-INSPECT-11A remediation packet before any later
+Chapter 1.3 diagnostic report implementation plan is considered.
+
+Scope:
+
+- repair or formally classify the existing Chapter 1.2 diagnostic
+  byte-stability mismatch;
+- reconcile current `1.3.1` through `1.3.4` lesson-side quality-ref/review
+  status against source-registry target status;
+- create route-local proof-record candidates for operation-chain match,
+  answer-form match, scaffold/no-answer-before-attempt boundary, and
+  local-only authority;
+- decide the `1.3.4` integration/no-code/no-new-theory posture;
+- create accessibility/support and companion/advisory evidence decisions;
+- keep every blocker fielded with `blocks`, `does_not_block`, and
+  `proof_required_to_close`.
+
+Expected outputs:
+
+```text
+archive/sprints/INSPECT-11B/
+reports/inspection-standards/chapter-1-3-readiness-remediation-results.md
+reports/inspection-standards/chapter-1-3-readiness-remediation-results.json
+```
+
+Acceptance criteria:
+
+- the existing Chapter 1.2 diagnostic report pair is byte-stable or the exact
+  blocker remains explicit;
+- no Chapter 1.3 diagnostic report is generated;
+- no evidence pack is generated;
+- no generated lesson output, protected reference, or source-registry record is
+  mutated;
+- Chapter 1.3 is not declared diagnostic-ready while any core requirement is
+  missing;
+- lead review and specialist reviews are complete before human review.
+
 ### INSPECT-12 - Dutch Teacher/School Evidence Pack
 
 Goal: make the Dutch evidence pack useful as a school/teacher review artifact.
@@ -756,14 +795,15 @@ privacy-boundary-risk
 Recommended next operational step:
 
 ```text
-Complete INSPECT-11A Chapter 1.3 diagnostic readiness remediation plan
+Complete INSPECT-11B Chapter 1.3 readiness remediation and diagnostic tool health repair
 ```
 
-Recommended posture after INSPECT-11 merge:
+Recommended posture after INSPECT-11A merge:
 
 ```text
-accept or revise only INSPECT-11A remediation-plan output and next-route recommendation
-do not generate a new diagnostic report during INSPECT-11A
+accept or revise only INSPECT-11B remediation-results output and next-route recommendation
+repair or explicitly classify the Chapter 1.2 diagnostic byte-stability issue first
+do not generate a Chapter 1.3 diagnostic report during INSPECT-11B
 keep the older multi-scope evidence-pack INSPECT-11 row blocked
 keep Chapter 1.3 diagnostic report generation blocked until later human-reviewed remediation closes core proof gaps
 keep Chapter 1.2 pack-strength, teacher/school-facing, and public/external work blocked
@@ -774,13 +814,12 @@ keep non-Dutch standards work out of this roadmap
 keep personal-data processing and compliance/approval claims blocked
 ```
 
-The practical product question carried forward from INSPECT-11 into
-INSPECT-11A is:
+The practical product question carried forward from INSPECT-11A into
+INSPECT-11B is:
 
-> What exact proof, quality-ref/review reconciliation, accessibility/support,
-> companion/advisory, and authority-boundary work is required before Chapter
-> 1.3 can move from best next planning candidate to any future diagnostic
-> report consideration?
+> Which Chapter 1.3 blockers can be closed or formally carried now, and does
+> the result permit any later diagnostic report implementation plan without
+> hiding missing core requirements?
 
 ## 9. Explicit Out-Of-Scope Work
 
