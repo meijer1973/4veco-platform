@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-3-readiness-closure",
+  "sprint_id": "INSPECT-11D",
+  "generated_date": "2026-06-18",
+  "status": "locally_validated_subagent_and_pr_validation_pending",
+  "recommended_state_for_human_review": "A",
+  "implementation_plan_readiness_recommended": true,
+  "human_review_required_to_close_gate": true,
+  "diagnostic_report_generated": false,
+  "chapter_1_3_diagnostic_report_generated": false,
+  "evidence_pack_generated": false,
+  "teacher_school_facing_output_generated": false,
+  "public_external_output_generated": false,
+  "dashboard_gate_created": false,
+  "quality_ref_or_scale_gate_integration_created": false,
+  "generated_lesson_output_mutated": true,
+  "generated_lesson_output_mutation_route": "platform_source_generator_then_regenerate_lesson_output",
+  "source_registry_mutated": false,
+  "personal_data_present": false,
+  "compliance_claim": false,
+  "product_route_adoption_authorized": false,
+  "student_product_use_authorized": false,
+  "diagnostics_mastery_pv_authorized": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "strategic_product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "original_sprint_gate_spec": "archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md",
+  "controlling_prior_output": "reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.json",
+  "sprint_plan": "archive/sprints/INSPECT-11D/INSPECT-11D-sprint-plan.md",
+  "non_negotiable_requirements": [
+    "Use REV-STD-1.",
+    "Cite product end-state and original sprint/gate spec.",
+    "Name non-negotiable requirements.",
+    "Include a core-requirement checklist.",
+    "Classify findings.",
+    "Include blocks, does_not_block, and proof_required_to_close.",
+    "PASS WITH FLAGS may not carry a missing core requirement.",
+    "Repair 1.3.4 through platform source/generator and regenerate lesson output.",
+    "Platform PR first, lesson PR second.",
+    "Do not generate a Chapter 1.3 diagnostic report or evidence pack.",
+    "Do not unlock product-route, diagnostics/mastery/PV, Scale Gate, student-use, product-use, personal-data, or compliance authority."
+  ],
+  "executive_decision": {
+    "recommended_state": "A",
+    "summary": "Chapter 1.3 is locally ready for a later internal diagnostic implementation-plan sprint after the named 1.3.4 divergence, quality-ref/review reconciliation, route-local proof, rendered proof, companion/advisory N/A, and source-traceability blockers are closed.",
+    "authority_boundary": "No diagnostic report, evidence pack, product-route adoption, Scale Gate, diagnostics/mastery/PV, student-use, or product-use authority is unlocked until renewed human review accepts this packet and a later sprint explicitly authorises downstream work."
+  },
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state, operational_product_end_state, strategic_product_vision"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "original_sprint_gate_spec"
+    },
+    {
+      "requirement": "1.3.4 registry/output divergence repaired",
+      "status": "met",
+      "evidence": "target_134_repair"
+    },
+    {
+      "requirement": "Quality-ref/review reconciliation recorded for 1.3.1 through 1.3.4",
+      "status": "met",
+      "evidence": "target_reconciliation"
+    },
+    {
+      "requirement": "Route-local proof records include exercise IDs and line ranges",
+      "status": "met",
+      "evidence": "route_local_proof_records"
+    },
+    {
+      "requirement": "Rendered mobile/desktop proof included",
+      "status": "met",
+      "evidence": "rendered_proof"
+    },
+    {
+      "requirement": "Companion/advisory status resolved",
+      "status": "met_reviewed_not_applicable_for_this_packet",
+      "evidence": "companion_advisory"
+    },
+    {
+      "requirement": "Source traceability formalised",
+      "status": "met",
+      "evidence": "docs/inspection-standards/chapter-1-3-source-traceability.md"
+    },
+    {
+      "requirement": "Carried issues include blocks, does_not_block, proof_required_to_close",
+      "status": "met",
+      "evidence": "carried_issues"
+    },
+    {
+      "requirement": "PASS WITH FLAGS does not carry missing core requirement",
+      "status": "met",
+      "evidence": "All core requirements are closed for readiness recommendation; downstream authority remains blocked."
+    }
+  ],
+  "target_134_repair": {
+    "old_task": "Opgave 4: Vraag en aanbod verschuiven tegelijk",
+    "new_task": "Opgave 4: Eigen prijs of vraagfactor",
+    "platform_source": "build-scripts/books/book-manifests/book-1-print-1.3.4-gemengde-opgaven.md",
+    "generator_source": "build-scripts/sprints/l-cp6a-remediate-book1-chapter13.js",
+    "lesson_opgaven_range": "1.3.4 Gemengde opgaven - opgaven.md lines 54-70",
+    "lesson_answers_range": "1.3.4 Gemengde opgaven - antwoorden.md lines 43-53",
+    "classification": "core_requirement_closed",
+    "proof": [
+      "archive/sprints/INSPECT-11D/rendered-proof/1.3.4-opgaven-before-after-contact-sheet.png",
+      "archive/sprints/INSPECT-11D/rendered-proof/1.3.4-antwoorden-before-after-contact-sheet.png"
+    ]
+  },
+  "target_reconciliation": [
+    {
+      "target": "1.3.1",
+      "registry_status": "reviewed_final",
+      "resolved_state": "quality-ref graph/text blocker reconciled as resolved; unresolved_blockers 0",
+      "classification": "core_requirement_closed",
+      "blocks": [],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 sprint may remove residual non-INSPECT flags."
+    },
+    {
+      "target": "1.3.2",
+      "registry_status": "reviewed_final",
+      "resolved_state": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags."
+    },
+    {
+      "target": "1.3.3",
+      "registry_status": "reviewed_final",
+      "resolved_state": "reviewed_final_source_registry_with_lesson_flags; CP-6/Year 1 not claimed",
+      "classification": "core_requirement_closed_with_scope_flag",
+      "blocks": [
+        "CP-6 closure claims",
+        "Year 1 closure claims"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure",
+        "bounded simultaneous-shift work inside 1.3.3"
+      ],
+      "proof_required_to_close": "Later CP-6/Year 1 route must close duplicated exercise-pattern flags."
+    },
+    {
+      "target": "1.3.4",
+      "registry_status": "reviewed_final_no_new_theory",
+      "resolved_state": "reviewed_final_source_registry_no_new_theory; simultaneous_shift_divergence repaired_in_generated_output",
+      "classification": "core_requirement_closed",
+      "blocks": [
+        "diagnostic report generation until human review and later implementation-plan authority"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure packet",
+        "later implementation-plan consideration after human review"
+      ],
+      "proof_required_to_close": "Human review must confirm INSPECT-11D before any later diagnostic implementation-plan sprint."
+    }
+  ],
+  "route_local_proof_records": [
+    {
+      "target": "1.3.1",
+      "exercise_id": "Opgave 10",
+      "opgaven_lines": "165-178",
+      "answer_lines": "331-384",
+      "operation_chain": "supply-factor shifts and movement-versus-shift distinction",
+      "answer_form": "graph plus short explanation",
+      "boundary": "Route must isolate independent exercise from worked example before attempt."
+    },
+    {
+      "target": "1.3.2",
+      "exercise_id": "Opgave 9",
+      "opgaven_lines": "194-211",
+      "answer_lines": "251-284",
+      "operation_chain": "equilibrium solve, substitution check, surplus/shortage reasoning",
+      "answer_form": "algebraic calculation and short explanation",
+      "boundary": "Route must isolate independent exercise from worked example before attempt."
+    },
+    {
+      "target": "1.3.3",
+      "exercise_id": "Opgave 5",
+      "opgaven_lines": "122-141",
+      "answer_lines": "105-146",
+      "operation_chain": "one-shift and bounded two-shift market reasoning",
+      "answer_form": "calculation, graph, explanation",
+      "boundary": "Simultaneous-shift reasoning stays bounded to 1.3.3."
+    },
+    {
+      "target": "1.3.3",
+      "exercise_id": "Opgave 7",
+      "opgaven_lines": "161-178",
+      "answer_lines": "169-208",
+      "operation_chain": "combined demand/supply shift calculation",
+      "answer_form": "new equilibrium calculation and comparison",
+      "boundary": "Route must isolate independent exercise before attempt."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 1",
+      "opgaven_lines": "11-25",
+      "answer_lines": "3-14",
+      "operation_chain": "equilibrium and surplus/shortage consolidation",
+      "answer_form": "calculation and short explanation",
+      "boundary": "No worked example precedes Opgave 1."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 4",
+      "opgaven_lines": "54-70",
+      "answer_lines": "43-53",
+      "operation_chain": "own-price movement versus demand-factor shift",
+      "answer_form": "explanation plus graph direction",
+      "boundary": "Repaired; no simultaneous supply shift."
+    },
+    {
+      "target": "1.3.4",
+      "exercise_id": "Opgave 5",
+      "opgaven_lines": "72-91",
+      "answer_lines": "57-67",
+      "operation_chain": "supply-shift calculation and comparison",
+      "answer_form": "calculation and short explanation",
+      "boundary": "No answer-before-attempt issue inside opgaven file."
+    }
+  ],
+  "rendered_proof": {
+    "directory": "archive/sprints/INSPECT-11D/rendered-proof",
+    "artifacts": [
+      "1.3.4-opgaven-before-after-contact-sheet.png",
+      "1.3.4-antwoorden-before-after-contact-sheet.png",
+      "chapter-1.3-after-desktop.png",
+      "chapter-1.3-after-mobile.png",
+      "1.3.4-opgaven-after-desktop.png",
+      "1.3.4-opgaven-after-mobile.png",
+      "viewport-metrics.json"
+    ],
+    "viewport_summary": [
+      {
+        "surface": "chapter-1.3-after-desktop",
+        "viewport": "1366x900",
+        "horizontal_overflow": false
+      },
+      {
+        "surface": "chapter-1.3-after-mobile",
+        "viewport": "390x844",
+        "horizontal_overflow": false
+      },
+      {
+        "surface": "1.3.4-opgaven-after-desktop",
+        "viewport": "1366x900",
+        "horizontal_overflow": false
+      },
+      {
+        "surface": "1.3.4-opgaven-after-mobile",
+        "viewport": "390x844",
+        "horizontal_overflow": false
+      }
+    ]
+  },
+  "companion_advisory": {
+    "decision": "reviewed_not_applicable_for_this_packet",
+    "reason": "INSPECT-11D repairs generated textbook/consolidation output and readiness proof only. Creating companion/advisory artifacts would expand scope without closing the named blocker.",
+    "proof_required_to_close_future_route": "A later product-route sprint must review actual companion/check artifacts if used."
+  },
+  "source_traceability": {
+    "decision": "authored_json_registry_controls_reviewed_final_target_status_when_blueprint_prose_is_stale",
+    "record": "docs/inspection-standards/chapter-1-3-source-traceability.md",
+    "source_registry_mutated": false
+  },
+  "carried_issues": [
+    {
+      "id": "INSPECT11D-HUMAN-REVIEW",
+      "finding": "INSPECT-11D is not closed until paired PRs are published, fresh, green, and human-reviewed.",
+      "classification": "human_gate_blocker",
+      "blocks": [
+        "downstream diagnostic implementation-plan start",
+        "report generation",
+        "product-route authority"
+      ],
+      "does_not_block": [
+        "local repair validation",
+        "PR review"
+      ],
+      "proof_required_to_close": "Platform PR and lesson PR green, final lead review, and renewed human approval."
+    },
+    {
+      "id": "INSPECT11D-SPECIALIST-GATES",
+      "finding": "Specialist gates and final lead review must be recorded before the packet can be used for human review.",
+      "classification": "gate_sequence_blocker",
+      "blocks": [
+        "state-A closure",
+        "human review",
+        "final PR-ready claim"
+      ],
+      "does_not_block": [
+        "local repair validation",
+        "specialist dispatch",
+        "round-1 lead review correction"
+      ],
+      "proof_required_to_close": "Record specialist results, complete corrections/reruns, and record final lead review after paired PRs are open and green."
+    },
+    {
+      "id": "INSPECT11D-FULL-BOOK",
+      "finding": "Full Book 1 validation may still report pre-existing Chapter 1.1/1.4 issues outside the Chapter 1.3 repair.",
+      "classification": "scope_boundary_flag",
+      "blocks": [
+        "Book 1 clean-health claim"
+      ],
+      "does_not_block": [
+        "scoped Chapter 1.3 readiness closure if Chapter 1.3 validators pass"
+      ],
+      "proof_required_to_close": "Separate Chapter 1.1/1.4 repair route."
+    },
+    {
+      "id": "INSPECT11D-CHECK-SURFACE-AUTHORITY",
+      "finding": "Check-surface gate authority remains separate from this repair packet.",
+      "classification": "downstream_gate_blocker",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product-use"
+      ],
+      "does_not_block": [
+        "ordinary scoped PR work",
+        "INSPECT-11D review"
+      ],
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming authority unlocked."
+    },
+    {
+      "id": "INSPECT11D-ACCESSIBILITY-DEPTH",
+      "finding": "Rendered proof and static support evidence are present, but this is not a full WCAG/PDF-tagging certification.",
+      "classification": "future_audit_flag",
+      "blocks": [
+        "accessibility certification",
+        "teacher/school-facing accessibility claim"
+      ],
+      "does_not_block": [
+        "Chapter 1.3 readiness closure"
+      ],
+      "proof_required_to_close": "Later accessibility audit for product-facing route."
+    }
+  ],
+  "next_route_if_accepted": "INSPECT-11E - Chapter 1.3 Internal Diagnostic Implementation Plan"
+}

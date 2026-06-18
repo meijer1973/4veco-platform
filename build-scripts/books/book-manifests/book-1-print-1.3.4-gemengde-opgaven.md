@@ -51,22 +51,23 @@ Door een nieuwe techniek kunnen producenten zonnepanelen goedkoper maken. Bij el
 
 **e.** Leg uit waarom consumenten door deze verandering waarschijnlijk meer zonnepanelen kopen, ook al is hun voorkeur niet veranderd.
 
-## Opgave 4: Vraag en aanbod verschuiven tegelijk
+## Opgave 4: Eigen prijs of vraagfactor
 
-Op de markt voor elektrische fietsen gebeuren twee dingen tegelijk:
+Op de markt voor elektrische fietsen bekijk je twee aparte situaties. De aanbodlijn blijft in beide situaties gelijk.
 
-- Consumenten krijgen meer interesse in elektrische fietsen.
-- De accu's worden duurder voor producenten.
+Situatie A: de prijs van elektrische fietsen daalt.
 
-**a.** Leg uit welke verandering de vraaglijn verschuift.
+Situatie B: elektrische fietsen worden populairder door een campagne over duurzaam reizen.
 
-**b.** Leg uit welke verandering de aanbodlijn verschuift.
+**a.** Leg uit of situatie A een beweging langs de vraaglijn of een verschuiving van de vraaglijn is.
 
-**c.** Teken de richting van beide verschuivingen in een grafiek.
+**b.** Leg uit of situatie B een beweging langs de vraaglijn of een verschuiving van de vraaglijn is.
 
-**d.** Is het effect op de evenwichtshoeveelheid zeker of onzeker? Leg uit.
+**c.** Teken voor situatie B de oude vraaglijn, de nieuwe vraaglijn en dezelfde aanbodlijn.
 
-**e.** Is het effect op de evenwichtsprijs zeker of onzeker? Leg uit.
+**d.** Geef aan wat er in situatie B waarschijnlijk gebeurt met de evenwichtsprijs en de evenwichtshoeveelheid.
+
+**e.** Leg in twee zinnen uit wat het verschil is tussen een verandering van de eigen prijs en een verandering van een vraagfactor.
 
 ## Opgave 5: Doeloefening
 
