@@ -228,13 +228,6 @@
         "reason": "incidence/pass-through operation has no incidence MTU or reviewed equivalent"
       },
       {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-1",
-        "defect_class": "scale_factor_usage_without_scaling_unit_mtu",
-        "reason": "scale/unit operation has no scaling MTU or reviewed equivalent"
-      },
-      {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
         "operation_id": "q27-step-2",
@@ -331,13 +324,6 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-REVIEW-review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-1",
-        "hook": "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-PROCEDURE-REVIEW-D07",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
         "operation_id": "q27-step-2",
@@ -355,7 +341,7 @@
     ],
     "blocked": []
   },
-  "report_generated": "2026-06-17",
+  "report_generated": "2026-06-18",
   "source_fixture": "reports/mtu-hardening/mtu-h5-regression-fixture.json",
   "source_validator_command": "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --expect-fail --json",
   "source_review_packet": "reports/review-gates/GATE-MTU-H5-mainline-checker-repair/review-packet.md",
@@ -363,8 +349,8 @@
   "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.",
   "bucket_totals": {
     "passed": 1,
-    "failed": 3,
-    "review_required": 15,
+    "failed": 2,
+    "review_required": 14,
     "blocked": 0
   },
   "question_bucket_counts": {
@@ -381,20 +367,19 @@
       "review_required": 6
     },
     "q27": {
-      "failed": 3,
-      "review_required": 5
+      "failed": 2,
+      "review_required": 4
     },
     "global_negative_guard": {
       "passed": 1
     }
   },
   "failed_by_defect_class": {
-    "incidence_pass_through_task_without_incidence_mtu": 2,
-    "scale_factor_usage_without_scaling_unit_mtu": 1
+    "incidence_pass_through_task_without_incidence_mtu": 2
   },
   "review_required_by_defect_class": {
     "apply_analyze_unit_without_usable_canonical_procedure": 4,
-    "fixture_review_hooks": 11
+    "fixture_review_hooks": 10
   },
   "procedure_statuses": {
     "procedure_present": 17,
@@ -416,10 +401,10 @@
       "blocks_mtu_h5_closure": true
     },
     "q27": {
-      "status": "incidence_scaling_levy_capacity_procedure_blocker",
-      "failed": 3,
-      "review_required": 5,
-      "diagnostic_focus": "incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review",
+      "status": "incidence_levy_capacity_procedure_blocker_scaling_repaired",
+      "failed": 2,
+      "review_required": 4,
+      "diagnostic_focus": "incidence/pass-through missing; A88 scaling support accepted for per-1,000-liter handling; levy capacity and D07 tax-burden semantic-fit review remain",
       "blocks_mtu_h5_closure": true
     },
     "q15": {

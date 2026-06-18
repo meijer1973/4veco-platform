@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-18T11:38:28.479Z
+Generated: 2026-06-18T11:47:00.196Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4916
+Files indexed: 4914
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 501
+Count: 502
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -340,6 +340,7 @@ Count: 501
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
+- build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -681,7 +682,7 @@ Count: 42
 
 ## validators
 
-Count: 487
+Count: 488
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -778,6 +779,7 @@ Count: 487
 - build-scripts/references/check-mtu-h5-q19-source-graph-extraction-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
+- build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -1801,7 +1803,7 @@ Count: 623
 
 ## reports
 
-Count: 3080
+Count: 3077
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1840,10 +1842,6 @@ Count: 3080
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.json
-- reports/github-agent-index-lessen.md
-- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
 - reports/github-agent-index-platform.json
@@ -1877,10 +1875,6 @@ Count: 3080
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/dashboard-data.json
-- reports/internal-dashboard/index.html
-- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2059,6 +2053,8 @@ Count: 3080
 - reports/mtu-hardening/mtu-h5-q19-source-graph-procedure-reasoning-gate-1.md
 - reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json
 - reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md
+- reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json
+- reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -2567,6 +2563,9 @@ Count: 3080
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md

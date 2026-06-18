@@ -5,7 +5,6 @@ const { spawnSync } = require('child_process');
 const crypto = require('crypto');
 
 const {
-  assertFutureStorageAbsent,
   validateOperationCandidate,
 } = require('./lib/exam-ingestion-candidate-validation');
 
@@ -20,6 +19,8 @@ const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h
 const MTUS = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const H3_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3-incidence-pass-through', 'gate-closure.json');
 const H3A_GATE = path.join(ROOT, 'reports', 'review-gates', 'GATE-MTU-H3A-incidence-cli-mutation-plan', 'gate-closure.json');
+const OPERATION_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'operation-candidates.json');
+const ANSWER_SKILL_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'answer-skill-candidates.json');
 
 const AUTHORITY_FALSE_KEYS = [
   'protected_reference_mutation_authorized',
@@ -48,17 +49,34 @@ const AUTHORITY_FALSE_KEYS = [
   'product_route_readiness_claimed',
 ];
 
-const REQUIRED_Q27_FAILED_ASSERTIONS = [
+const REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS = [
   'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING',
-  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING',
   'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING',
 ];
 
-const REQUIRED_Q27_REVIEW_MARKERS = [
+const PRE_SCALING_Q27_FAILED_ASSERTION =
+  'vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-SCALING-MISSING';
+
+const REQUIRED_Q27_FAILED_ASSERTIONS = [
+  ...REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS,
+  PRE_SCALING_Q27_FAILED_ASSERTION,
+];
+
+const REQUIRED_Q27_REVIEW_MARKERS_ALWAYS = [
   'review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation',
-  'review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent',
   'review whether this is an incidence/pass-through family case or a distinct levy-capacity operation',
 ];
+
+const PRE_SCALING_Q27_REVIEW_MARKER =
+  'review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent';
+
+const REQUIRED_Q27_REVIEW_MARKERS = [
+  ...REQUIRED_Q27_REVIEW_MARKERS_ALWAYS,
+  PRE_SCALING_Q27_REVIEW_MARKER,
+];
+
+const Q27_SCALING_REF =
+  'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json#Q27_STEP1_A88_PER_1000_LITER_SCALE';
 
 function fail(message) {
   console.error(`MTU-H5 RP-005 q27 planning packet check failed: ${message}`);
@@ -145,6 +163,12 @@ function runH5Validator() {
     return JSON.parse(run.stdout);
   } catch (error) {
     fail(`MTU-H5 validator did not emit JSON: ${error.message}`);
+  }
+}
+
+function assertQ27CandidateStoresAbsent() {
+  for (const file of [OPERATION_CANDIDATES, ANSWER_SKILL_CANDIDATES]) {
+    if (fs.existsSync(file)) fail(`q27 planning packet must not create candidate storage: ${rel(file)}`);
   }
 }
 
@@ -246,8 +270,13 @@ function main() {
     if (!operation.expected_misconception_refs?.length) fail(`${operation.operation_id} must keep misconception refs`);
     if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail(`${operation.operation_id} must keep D07 procedure review`);
     if (operation.operation_id === 'q27-step-1') {
-      if (operation.scale_factor_expected !== true || operation.missing_scaling_expected !== true) {
-        fail('q27-step-1 must keep scale factor and missing scaling expectations');
+      if (operation.scale_factor_expected !== true) fail('q27-step-1 must keep scale_factor_expected true');
+      if (operation.missing_scaling_expected === false) {
+        requireIncludesAll(operation.mapped_mtu_ids || [], ['A88'], 'q27-step-1 mapped MTUs after scaling execution');
+        requireIncludesAll(operation.expected_scaling_mtu_ids || [], ['A88'], 'q27-step-1 expected scaling MTUs after scaling execution');
+        requireIncludesAll(operation.scaling_reviewed_equivalent_refs || [], [Q27_SCALING_REF], 'q27-step-1 scaling refs after scaling execution');
+      } else if (operation.missing_scaling_expected !== true) {
+        fail('q27-step-1 missing_scaling_expected must be true before execution or false after approved A88 execution');
       }
     }
   }
@@ -255,14 +284,29 @@ function main() {
   const result = runH5Validator();
   const failedIds = new Set(result.buckets.failed.map((item) => item.assertion_id));
   const reviewIds = (result.buckets.review_required || []).map((item) => item.assertion_id);
-  for (const assertionId of REQUIRED_Q27_FAILED_ASSERTIONS) {
+  const q27Step1 = q27.official_correction_model_operations.find((operation) => operation.operation_id === 'q27-step-1');
+  const scalingExecuted = q27Step1?.missing_scaling_expected === false;
+
+  for (const assertionId of REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS) {
     if (!failedIds.has(assertionId)) fail(`current validator result must still expose q27 assertion: ${assertionId}`);
   }
-  for (const marker of REQUIRED_Q27_REVIEW_MARKERS) {
+  if (!scalingExecuted && !failedIds.has(PRE_SCALING_Q27_FAILED_ASSERTION)) {
+    fail(`current validator result must still expose q27 assertion: ${PRE_SCALING_Q27_FAILED_ASSERTION}`);
+  }
+  if (scalingExecuted && failedIds.has(PRE_SCALING_Q27_FAILED_ASSERTION)) {
+    fail(`current validator result must not expose repaired q27 scaling assertion: ${PRE_SCALING_Q27_FAILED_ASSERTION}`);
+  }
+  for (const marker of REQUIRED_Q27_REVIEW_MARKERS_ALWAYS) {
     if (!reviewIds.some((id) => id.includes(marker))) fail(`current validator result must still expose q27 review marker: ${marker}`);
   }
+  if (!scalingExecuted && !reviewIds.some((id) => id.includes(PRE_SCALING_Q27_REVIEW_MARKER))) {
+    fail(`current validator result must still expose q27 review marker: ${PRE_SCALING_Q27_REVIEW_MARKER}`);
+  }
+  if (scalingExecuted && reviewIds.some((id) => id.includes(PRE_SCALING_Q27_REVIEW_MARKER))) {
+    fail(`current validator result must not expose repaired q27 scaling review marker: ${PRE_SCALING_Q27_REVIEW_MARKER}`);
+  }
 
-  assertFutureStorageAbsent();
+  assertQ27CandidateStoresAbsent();
   validateOperationCandidate(packet.dry_run_operation_candidate, 'packet.dry_run_operation_candidate');
   if (packet.dry_run_operation_candidate.operation_id !== 'EX_OP_Q27_LEVY_CAPACITY_OVERCONSUMPTION_CHECK') {
     fail('unexpected dry-run operation candidate');
@@ -293,7 +337,10 @@ function main() {
     REQUIRED_Q27_FAILED_ASSERTIONS,
     'negative regression live failed assertions'
   );
-  for (const assertionId of REQUIRED_Q27_FAILED_ASSERTIONS) {
+  const liveNegativeAssertions = scalingExecuted
+    ? REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS
+    : REQUIRED_Q27_FAILED_ASSERTIONS;
+  for (const assertionId of liveNegativeAssertions) {
     if (!failedIds.has(assertionId)) fail(`live negative q27 assertion is absent from validator output: ${assertionId}`);
   }
   if (packet.review_team_threshold?.minimum_verdict !== 'MORE_THAN_SATISFIED') {
