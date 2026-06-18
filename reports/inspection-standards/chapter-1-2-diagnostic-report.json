@@ -38,63 +38,63 @@
   "source_files_used": [
     {
       "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.json",
-      "sha256": "86651b558b8ff3c834eea154a0454c4bf300436891f69f8f9004511e9a18629c",
-      "bytes": 16481
+      "sha256": "d009bacef1f04f2cc6466a13e32bca2b01c31e47f1263d7d3467861b7301a7f4",
+      "bytes": 16178
     },
     {
       "path": "reports/inspection-standards/dutch-report-only-generator-diagnostic-planning.md",
-      "sha256": "ae33dd83ed7b8fbeb1fbc697554c7bd929f993fd120b8f48dd7c895c8c8273ae",
-      "bytes": 15490
+      "sha256": "d90bb7cba92ebfc1d23cc478f95919224d9797a24c46b65f8333c2efb96d9c49",
+      "bytes": 15261
     },
     {
       "path": "archive/sprints/INSPECT-10/INSPECT-10R-three-reviewer-gate-results.md",
-      "sha256": "4f41d7fec000cdf889b89827c4ad65d661a410c2123b18f32f2dcb72a0d5425f",
-      "bytes": 5508
+      "sha256": "bac718c71bb10983ee790f449d16b1dfaf8ff11ba8100b880141c075406605a8",
+      "bytes": 5390
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-proof-support-remediation.json",
-      "sha256": "fdea37d31e340c2a61960c0d250c48c75c54571e077ae8947426be58251d311b",
-      "bytes": 23672
+      "sha256": "410c9ddef7295b232b332f047f769d21288e4404b2b18b55346f0d6803f501e6",
+      "bytes": 23234
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-proof-support-remediation.md",
-      "sha256": "046ffdff9d8e7d33749b5a73a37d1719413661d5760776b50d7bbfae790f1138",
-      "bytes": 20076
+      "sha256": "eeb9753fa8df6bd20552f0daf33914eafff0f18234882a5fda33f0281e636bba",
+      "bytes": 19866
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.json",
-      "sha256": "25e61d3fdda61275ed5418059db5bb4b6932952ef072b06b54ded88885118016",
-      "bytes": 17257
+      "sha256": "c33219672ad84a9969245dadd6843797d06c234f5b0413c5a543142636fc1043",
+      "bytes": 16942
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-target-equivalent-accessibility-support-review.md",
-      "sha256": "2a4955094de5fec0e8620ce85238fc2d9e436fef49bfa616b2e5898f234aa6d9",
-      "bytes": 12349
+      "sha256": "ef0a0872018b877298298efbefae18291375e30306c999352a153e28e9c1f532",
+      "bytes": 12201
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.json",
-      "sha256": "63ac55dd6bcaac2ed5bf51b566fb4dba249a1de7c991ee0532b8544085319da3",
-      "bytes": 13913
+      "sha256": "30fb1d1e3b56d62b86f00ce595cdc531e808ee992c0f8dbcd47f4fe65bf7b3be",
+      "bytes": 13604
     },
     {
       "path": "reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md",
-      "sha256": "34622e9f4bf8a1a1495e9896b9f72fcdfa9720cea08169bd4164d1ab333b076c",
-      "bytes": 8555
+      "sha256": "c40776fc7837c5942f1b0939a10ce64ded1198a4a92b23c154828baa807ad27d",
+      "bytes": 8402
     },
     {
       "path": "reports/inspection-standards/dutch-evidence-scale-readiness.json",
-      "sha256": "154de37d192a1dc3c6c587ac3a6629c7669af3be4d43a2be7534cb38f7a4c3e0",
-      "bytes": 20304
+      "sha256": "9ac80db88d95f261e6261772e81414dcb4308737560898c3030eeee881e19042",
+      "bytes": 19902
     },
     {
       "path": "reports/inspection-standards/dutch-evidence-gap-closure-plan.json",
-      "sha256": "ede8f63819f9cf157c715150df8a3ef986c43405f2c85aeee0f4dd010cdf089c",
-      "bytes": 22749
+      "sha256": "7e5cffef1fda828545375ca56d1871c0e71984bfb5247925acb62fc1cef0312a",
+      "bytes": 22322
     },
     {
       "path": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json",
-      "sha256": "58addd68e96d99c948ef4999799a7a6c770449e771abb8b052b4845a5045f178",
-      "bytes": 38467
+      "sha256": "8d5959f30cb68ab212c107ad5b2eb1462c11444031847c1f4da3935047b35c66",
+      "bytes": 37732
     },
     {
       "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
@@ -103,33 +103,33 @@
     },
     {
       "path": "../4veco-lessen/specifications/product-end-state.md",
-      "sha256": "48da85d599adc912997b357599919ea7916509f849c21c7a5814c80252493cfa",
-      "bytes": 25844
+      "sha256": "4a5555faecda72b8ca0506a1962273ea4d97cd95026785cb9050e8a4331744d1",
+      "bytes": 25959
     },
     {
       "path": "../4veco-lessen/specifications/product-vision.md",
-      "sha256": "8e7e0c60c350146f1b8ece8bca8c41beab8c2d8ef4ae4874f77c121a226e08df",
-      "bytes": 7890
+      "sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "bytes": 8047
     },
     {
       "path": "docs/inspection-standards/report-only-generator-plan.md",
-      "sha256": "61e96d594b89cc217cdb3855ecb265855d98f1b814142e64d9ba236fee345ae4",
-      "bytes": 9182
+      "sha256": "246c36f2f85c2f3ea09d3c4d6d8e8fd7c2540025c56fe1331cbb35efe6f96ca3",
+      "bytes": 8910
     },
     {
       "path": "docs/inspection-standards/evidence-pack-source-contract.md",
-      "sha256": "4f6a248378e32dc97fe5194148343d1bfd1ccfe2f633eedcc2e088fc15c5bdca",
-      "bytes": 6394
+      "sha256": "ae1d8e95bf436007e3f443c9727265cb8af8ff8722633fa7f1d4b18c5185c753",
+      "bytes": 6133
     },
     {
       "path": "docs/inspection-standards/report-only-validator-design.md",
-      "sha256": "e788a5e0b67b2dd3c909bc10c4426b0223db6a1516290c1b6d8ecdf90cac2133",
-      "bytes": 5417
+      "sha256": "bffa8e727130633b4a116ea172fdfe10678fc716ba6c027438048562e2f21072",
+      "bytes": 5268
     }
   ],
   "source_checkout_notes": {
     "platform_head_policy": "not_embedded_in_generated_output; use validation logs and PR CI for platform commit evidence",
-    "lesson_specs_head": "8b007cd86a485518bca8881051e11f5272f162c7",
+    "lesson_specs_head": "6c3331a4ed09ae58467c6cc4a8bf51abc48badbf",
     "lesson_specs_mode": "read-only specification source; no generated lesson-output path is read"
   },
   "evidence_status": "diagnostic_candidate_with_blocker",
