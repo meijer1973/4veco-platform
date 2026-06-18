@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "packet_id": "EXAM-OPERATION-SPINE-ANCHOR-1",
+  "sprint_id": "EXAM-OPERATION-SPINE-ANCHOR-1",
+  "pr_number": 106,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/106",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "references/data/document_inventory.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-evidence-packet.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-quality-log.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-review-packet.md",
+    "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-subagent-review.md",
+    "reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json",
+    "reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md",
+    "reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-result.md",
+    "reports/url-index.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_READ_ONLY_SUBAGENT_REVIEW_COMPLETE_MATRIX_READY_FOR_HUMAN_REVIEW",
+    "rationale": "This high-authority packet classifies operation-spine evidence for future mapping and production decisions. Human review is required before merge."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "official_exam_anchor_missing",
+    "year2_year3_target_anchor_missing",
+    "mtu_task_family_blockers",
+    "product_authority_boundary",
+    "scale_gate_boundary"
+  ],
+  "date": "2026-06-18",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md",
+    "references/owned/course-blueprint-v6-three-year.md",
+    "references/owned/course-blueprint-v6-three-year.meta.json",
+    "reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json",
+    "reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-review-packet.md",
+    "reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md"
+  ],
+  "non_negotiable_requirements": [
+    "Classify every v6 operation row from OP-A1 through OP-ANS3.",
+    "Cite or mark missing official prompt, source-annex, and correction-model anchors.",
+    "Cite or mark missing or partial target-exercise anchors.",
+    "Cite MTU and task-family support without mutating references/machine/*.",
+    "Do not mutate references/authored/course-target-exercises.json.",
+    "Do not mutate references/external/*.",
+    "Do not create Year 2/3 paragraph targets.",
+    "Do not generate lesson output.",
+    "Do not claim product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, or student/product use.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate/source specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Every operation row classified",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md"
+    },
+    {
+      "requirement": "Official anchors cited or marked missing",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-evidence-packet.md"
+    },
+    {
+      "requirement": "Target anchors cited or marked missing/partial",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md"
+    },
+    {
+      "requirement": "MTU/task-family support cited without mutation",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-subagent-review.md"
+    },
+    {
+      "requirement": "Findings classified",
+      "status": "met",
+      "evidence": "reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-quality-log.md"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "The verdict is matrix ready for human review, not PASS WITH FLAGS."
+    }
+  ],
+  "authority_claims": {
+    "operation_spine_anchor_matrix_complete": true,
+    "official_exam_operation_closure_authorized": false,
+    "year2_or_year3_paragraph_targets_created": false,
+    "target_registry_mutation_in_scope": false,
+    "mtus_minted": false,
+    "machine_sources_mutated": false,
+    "external_sources_mutated": false,
+    "generated_lesson_output_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "proof": {
+    "subagent_reviews": {
+      "exam_evidence": "passed_as_read_only_evidence_audit_all_official_closure_blocked",
+      "target_exercise": "passed_target_side_matrix_safe_rows_and_missing_rows_identified",
+      "mtu_task_family": "passed_mtu_task_family_blockers_identified",
+      "downstream_authority": "passed_boundary_review"
+    },
+    "checkers": [
+      {
+        "command": "node scripts/check-course-target-exercises-v5.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-document-registry.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-source-manifest.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-document-inventory.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/ci/check-evidence-line-endings.js",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "decision": {
+    "status": "anchor_status_matrix_ready_for_human_review",
+    "official_exam_closure": false,
+    "production_reliance": "blocked",
+    "downstream_authority": "blocked"
+  },
+  "findings": [
+    {
+      "id": "EXOP-001",
+      "classification": "core_requirement_met",
+      "severity": "high",
+      "finding": "Full operation-spine matrix complete.",
+      "status": "met"
+    },
+    {
+      "id": "EXOP-003",
+      "classification": "core_spec_failure",
+      "severity": "high",
+      "finding": "No operation row reaches strict complete official exam closure.",
+      "status": "open"
+    },
+    {
+      "id": "EXOP-004",
+      "classification": "core_spec_failure",
+      "severity": "high",
+      "finding": "Year 2/3 and answer-form rows lack reviewed target anchors.",
+      "status": "open"
+    },
+    {
+      "id": "EXOP-005",
+      "classification": "core_spec_failure",
+      "severity": "medium",
+      "finding": "Several rows have MTU/task-family blockers.",
+      "status": "open"
+    },
+    {
+      "id": "EXOP-006",
+      "classification": "scale_blocker",
+      "severity": "critical",
+      "finding": "Product/Scale/student-use authority remains false.",
+      "status": "open"
+    }
+  ],
+  "carried_flags": [
+    {
+      "id": "EXOP-003",
+      "classification": "core_spec_failure",
+      "flag": "Official exam-operation closure is not reached for any row.",
+      "blocks": [
+        "official exam-operation closure",
+        "operation-spine production reliance"
+      ],
+      "does_not_block": [
+        "matrix publication for human review",
+        "future evidence-routing work"
+      ],
+      "proof_required_to_close": "Operation-specific CvTE prompt, source-annex, correction-model, answer-model, and review trace for each row."
+    },
+    {
+      "id": "EXOP-004",
+      "classification": "core_spec_failure",
+      "flag": "Reviewed target-exercise anchors are missing or partial for several rows.",
+      "blocks": [
+        "Year 2/3 paragraph production",
+        "target-finality claims"
+      ],
+      "does_not_block": [
+        "book-level planning",
+        "future mapping preparation"
+      ],
+      "proof_required_to_close": "Reviewed target-exercise packet for each row before paragraph production."
+    },
+    {
+      "id": "EXOP-005",
+      "classification": "core_spec_failure",
+      "flag": "MTU/task-family support is missing, held, stale, broad, or incomplete for several rows.",
+      "blocks": [
+        "production reliance on those operation rows"
+      ],
+      "does_not_block": [
+        "identifying blocker classes",
+        "routing later proof work"
+      ],
+      "proof_required_to_close": "Governed MTU/task-family proof or registry review without unauthorized machine mutation."
+    },
+    {
+      "id": "EXOP-006",
+      "classification": "scale_blocker",
+      "flag": "Product/Scale/student-use authority remains blocked.",
+      "blocks": [
+        "product-route adoption",
+        "CP-6 closure",
+        "Scale Gate",
+        "diagnostics",
+        "mastery",
+        "PV",
+        "summative use",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "evidence classification",
+        "ordinary scoped planning"
+      ],
+      "proof_required_to_close": "Separate REV-STD-1 product-proof and Scale/CP gates with rendered/product evidence."
+    }
+  ],
+  "recommended_next_action": "Run focused official-exam anchor repair for Q3, Q15, and Q19, then use Y2-ROOT-MAPPING-1 only within rows whose blockers are compatible with mapping."
+}
