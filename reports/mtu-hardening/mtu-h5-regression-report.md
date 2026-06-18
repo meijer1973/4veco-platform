@@ -1,6 +1,6 @@
 # MTU-H5 Regression Report
 
-Generated: 2026-06-17
+Generated: 2026-06-18
 
 Status: `failed`
 
@@ -25,8 +25,8 @@ AI, summative use, product-route readiness, or student/product use.
 | Bucket | Count |
 | --- | --- |
 | passed | 1 |
-| failed | 3 |
-| review_required | 15 |
+| failed | 2 |
+| review_required | 14 |
 | blocked | 0 |
 
 ## Question And Lane Counts
@@ -35,7 +35,7 @@ AI, summative use, product-route readiness, or student/product use.
 | --- | --- | --- | --- |
 | q3 | 0 | 0 | clean after q3 fixture execution |
 | q19 | 0 | 6 | source_graph_reasoning_review_blocker |
-| q27 | 3 | 5 | incidence_scaling_levy_capacity_procedure_blocker |
+| q27 | 2 | 4 | incidence_levy_capacity_procedure_blocker_scaling_repaired |
 | q15 | 0 | 4 | answer_skill_procedure_semantic_fit_review_blocker |
 | global negative guard | 0 | 0 | 1 passed |
 
@@ -43,7 +43,7 @@ AI, summative use, product-route readiness, or student/product use.
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
 - q19 remains a source/graph/reasoning review blocker: 0 failed / 6 review_required.
-- q27 remains an incidence/scaling/levy-capacity/procedure blocker: 3 failed / 5 review_required.
+- q27 remains an incidence/levy-capacity/procedure blocker with scaling repaired: 2 failed / 4 review_required.
 - q15 remains an answer-skill/procedure semantic-fit review blocker: 0 failed / 4 review_required.
 - MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
 
@@ -52,7 +52,7 @@ AI, summative use, product-route readiness, or student/product use.
 | Lane | Diagnostic meaning |
 | --- | --- |
 | q19 | answer-form equivalent accepted by PR #80; procedure semantic-fit accepted by MTU-H5-Q19-PROCEDURE-SEMANTIC-FIT-PACKAGE-1; source-annex and graph-object review; chained multi-market reasoning; third graph-shift dependency |
-| q27 | incidence/pass-through missing; per-1,000-liter scaling missing; levy capacity and D07 tax-burden semantic-fit review |
+| q27 | incidence/pass-through missing; A88 scaling support accepted for per-1,000-liter handling; levy capacity and D07 tax-burden semantic-fit review remain |
 | q15 | A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review |
 
 ## Failed Defect Classes
@@ -60,14 +60,13 @@ AI, summative use, product-route readiness, or student/product use.
 | Defect class | Count |
 | --- | --- |
 | `incidence_pass_through_task_without_incidence_mtu` | 2 |
-| `scale_factor_usage_without_scaling_unit_mtu` | 1 |
 
 ## Review-Required Classes
 
 | Class or hook group | Count |
 | --- | --- |
 | `apply_analyze_unit_without_usable_canonical_procedure` | 4 |
-| `fixture_review_hooks` | 11 |
+| `fixture_review_hooks` | 10 |
 
 ## Procedure Statuses
 

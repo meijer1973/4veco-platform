@@ -136,7 +136,7 @@ const SOURCE_RECORD_FALSE_KEYS = [
   'student_product_use_authorized',
 ];
 
-const ALLOWED_CHANGED_PATHS = new Set([
+const Q19_PACKET_AUTHORIZED_PATHS = [
   'build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js',
   'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
   'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
@@ -147,10 +147,24 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
+];
+
+const ALLOWED_CHANGED_PATHS = new Set([
+  ...Q19_PACKET_AUTHORIZED_PATHS,
+  'build-scripts/references/build-mtu-h5-regression-report.js',
+  'build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js',
+  'build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js',
+  'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json',
+  'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md',
+  'reports/mtu-hardening/mtu-h5-regression-fixture.json',
+  'reports/mtu-hardening/mtu-h5-regression-report.json',
+  'reports/mtu-hardening/mtu-h5-regression-report.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md',
 ]);
 
 const FORBIDDEN_CHANGED_EXACT = new Set([
-  'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'references/data/exam-ingestion/source-annex-extraction-overlays.json',
   'references/data/exam-ingestion/exam-item-overlays.json',
   'references/authored/course-target-exercises.json',
@@ -314,10 +328,17 @@ function requireCurrentDiagnosticState(packet) {
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must be 0/0');
   if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 6) fail('report q19 counts must be 0/6');
-  if (counts.q27?.failed !== 3 || counts.q27?.review_required !== 5) fail('report q27 counts must be 3/5');
   if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 counts must be 0/4');
-  if (report.bucket_totals?.failed !== 3 || report.bucket_totals?.review_required !== 15) {
-    fail('report overall counts must be 3 failed / 15 review_required');
+  const q27BeforeScalingExecution = counts.q27?.failed === 3 &&
+    counts.q27?.review_required === 5 &&
+    report.bucket_totals?.failed === 3 &&
+    report.bucket_totals?.review_required === 15;
+  const q27AfterScalingExecution = counts.q27?.failed === 2 &&
+    counts.q27?.review_required === 4 &&
+    report.bucket_totals?.failed === 2 &&
+    report.bucket_totals?.review_required === 14;
+  if (!q27BeforeScalingExecution && !q27AfterScalingExecution) {
+    fail('report q27/overall counts must be either pre-q27-scaling 3/5 + 3/15 or post-q27-scaling 2/4 + 2/14');
   }
 
   if (packet.current_diagnostic_state?.q19?.failed !== 0 ||
@@ -487,7 +508,7 @@ function requirePackage(packet) {
       packet.exact_write_surface?.protected_reference_mutation_authorized !== false) {
     fail('package exact write surface must be non-mutating');
   }
-  requireIncludesAll(packet.exact_write_surface?.authorized_paths || [], Array.from(ALLOWED_CHANGED_PATHS), 'package authorized paths');
+  requireIncludesAll(packet.exact_write_surface?.authorized_paths || [], Q19_PACKET_AUTHORIZED_PATHS, 'package authorized paths');
   for (const command of REQUIRED_VALIDATION_COMMANDS) requireIncludes(packet.validation_commands || [], command, 'package validation commands');
 }
 

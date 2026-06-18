@@ -563,7 +563,8 @@
           "answer_model_summary": "The correction model awards one point for the new price and equilibrium quantity after the heffing.",
           "mapped_mtu_ids": [
             "D07",
-            "A98"
+            "A98",
+            "A88"
           ],
           "mapped_route_tags": [
             "tax_or_levy",
@@ -586,7 +587,12 @@
             "A98"
           ],
           "expected_incidence_mtu_ids": [],
-          "expected_scaling_mtu_ids": [],
+          "expected_scaling_mtu_ids": [
+            "A88"
+          ],
+          "scaling_reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json#Q27_STEP1_A88_PER_1000_LITER_SCALE"
+          ],
           "expected_misconception_refs": [
             "heffing_amount_confused_with_price_or_capacity_effect"
           ],
@@ -594,8 +600,7 @@
           "incidence_or_pass_through_expected": true,
           "predictable_misconception_expected": true,
           "review_required_hooks": [
-            "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
-            "review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent"
+            "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation"
           ],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
@@ -606,7 +611,7 @@
             "D07"
           ],
           "missing_incidence_expected": true,
-          "missing_scaling_expected": true
+          "missing_scaling_expected": false
         },
         {
           "operation_id": "q27-step-2",
