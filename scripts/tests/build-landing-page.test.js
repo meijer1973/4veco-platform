@@ -60,6 +60,20 @@ function chapterParagraphCards(html) {
         .map(match => ({ id: match[1], href: match[2] }));
 }
 
+function bookChapterCards(html) {
+    return Array.from(html.matchAll(/<a class="[^"]*\bbook-chapter-card\b[^"]*"[^>]*data-chapter-id="([^"]+)"[^>]*href="([^"]+)"/g))
+        .map(match => ({ id: match[1], href: match[2] }));
+}
+
+function bookChapterCardBlocks(html) {
+    return Array.from(html.matchAll(/<a class="[^"]*\bbook-chapter-card\b[^"]*"[\s\S]*?<\/a>/g))
+        .map(match => match[0]);
+}
+
+function htmlHrefs(html) {
+    return Array.from(html.matchAll(/\shref="([^"]+)"/g)).map(match => match[1]);
+}
+
 function writeFile(filePath, body = 'stub') {
     fs.mkdirSync(path.dirname(filePath), { recursive: true });
     fs.writeFileSync(filePath, body);
@@ -330,6 +344,131 @@ describe('paragraph landing V2 prototype port', () => {
         expect(chapterHtml).toContain('Paragraaf 1');
         expect(chapterHtml).toContain('Paragraaf 2');
         expect(chapterHtml).toContain('Lesroute');
+    });
+
+    test('book landing emits V2 minimal navigation with chapter-only links', () => {
+        const paragraph = path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf');
+        fs.mkdirSync(paragraph, { recursive: true });
+        const prefix = '1.1.1 Testparagraaf';
+        writeFile(path.join(paragraph, `${prefix} ${DASH} instapquiz.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} korte-check.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} exit-ticket.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} opgaven.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} antwoorden.html`));
+        writeFile(path.join(paragraph, `${prefix} ${DASH} paragraaf.pdf`));
+
+        const result = runBuilder(tmpDir);
+
+        expect(result.status).toBe(0);
+        const bookHtml = fs.readFileSync(path.join(tmpDir, 'index.html'), 'utf8');
+        for (const marker of [
+            'data-layout="book-landing-v2"',
+            'app-shell',
+            'sidebar',
+            'content',
+            'topbar',
+            'hero',
+            'hero-grid',
+            'target-panel',
+            'book-overview',
+            'chapter-list',
+            'book-chapter-card',
+            'footer-note',
+            'html[data-theme="dark"]',
+        ]) {
+            expect(bookHtml).toContain(marker);
+        }
+        for (const forbidden of [
+            'landing-book-v1',
+            'page-layout',
+            'sidebar-toggle',
+            'sidebar-overlay',
+            'viewer-panel',
+            'shared/voorkennis.js',
+            '../../shared/voorkennis.css',
+            'chapter-card-domain',
+            'href="#"',
+        ]) {
+            expect(bookHtml).not.toContain(forbidden);
+        }
+        expect(bookChapterCards(bookHtml)).toEqual([
+            { id: '1.1', href: '1.1%20Hoofdstuk%20Test/index.html' },
+        ]);
+        expect(bookHtml).toContain('<strong>1</strong><span>hoofdstuk</span>');
+        expect(bookHtml).not.toContain('<strong>1</strong><span>hoofdstukken</span>');
+        expect(bookHtml).toContain('Hoofdstuk 1');
+        expect(bookHtml).toContain('Hoofdstukroute');
+        expect(bookHtml).not.toMatch(/<span class="[^"]*chapter-card-domain[^"]*">Rekenen<\/span>/);
+        for (const href of htmlHrefs(bookHtml)) {
+            expect(href).not.toMatch(/\/\d+\.\d+\.\d+/);
+            for (const forbiddenHref of [
+                'opgaven.html',
+                'antwoorden.html',
+                'paragraaf.html',
+                'instapquiz.html',
+                'korte-check.html',
+                'exit-ticket.html',
+                '.docx',
+                '.pptx',
+                '.pdf',
+            ]) {
+                expect(href).not.toContain(forbiddenHref);
+            }
+        }
+        for (const block of bookChapterCardBlocks(bookHtml)) {
+            const summary = block.match(/<div class="[^"]*\bchapter-summary-tags\b[^"]*"[^>]*>([\s\S]*?)<\/div>/);
+            expect(summary).toBeTruthy();
+            expect(summary[1]).toContain('chapter-summary-tag');
+            expect(summary[1]).not.toMatch(/<a\b/);
+        }
+    });
+
+    test('book landing skips empty and hidden chapters', () => {
+        const configPath = path.join(tmpDir, 'deploy-config.json');
+        const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        config.hiddenParagraphs = ['1.3.1'];
+        config.chapters = [
+            ...config.chapters,
+            {
+                id: '1.2',
+                folder: '1.2 Hoofdstuk Empty',
+                name: 'Leeg hoofdstuk',
+                number: '2',
+                domain: 'blue',
+            },
+            {
+                id: '1.3',
+                folder: '1.3 Hoofdstuk Hidden',
+                name: 'Verborgen hoofdstuk',
+                number: '3',
+                domain: 'green',
+            },
+        ];
+        config.paragraphs = [
+            ...config.paragraphs,
+            {
+                id: '1.3.1',
+                name: 'Verborgen paragraaf',
+                chapter: '1.3',
+                domain: 'green',
+            },
+        ];
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+
+        fs.mkdirSync(path.join(tmpDir, '1.1 Hoofdstuk Test', '1.1.1 Testparagraaf'), { recursive: true });
+        fs.mkdirSync(path.join(tmpDir, '1.2 Hoofdstuk Empty'), { recursive: true });
+        fs.mkdirSync(path.join(tmpDir, '1.3 Hoofdstuk Hidden', '1.3.1 Verborgen paragraaf'), { recursive: true });
+
+        const result = runBuilder(tmpDir);
+
+        expect(result.status).toBe(0);
+        const bookHtml = fs.readFileSync(path.join(tmpDir, 'index.html'), 'utf8');
+        expect(bookChapterCards(bookHtml)).toEqual([
+            { id: '1.1', href: '1.1%20Hoofdstuk%20Test/index.html' },
+        ]);
+        expect(bookHtml).not.toContain('Leeg hoofdstuk');
+        expect(bookHtml).not.toContain('Verborgen hoofdstuk');
+        expect(bookHtml).not.toContain('Verborgen paragraaf');
     });
 
     test('falls back to the vaardigheden Word explainer when HTML is missing', () => {

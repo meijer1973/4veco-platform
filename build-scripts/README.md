@@ -26,6 +26,14 @@ baseline, but generated paragraph cards must show neutral `Paragraaf N` /
 navigation/orientation only: paragraph route rows, checks, games, textbook
 links, and other companion resources remain on paragraph landing pages.
 
+Book Landing V2 Minimal Navigation is fixture-owned one level higher. Book
+pages must use `references/ui/book-landing-v2/approved-minimal.html` as the
+visual baseline, and generated chapter cards must show neutral `Hoofdstuk N` /
+`Hoofdstukroute` labels instead of fallback aspect/domain labels. Book pages are
+navigation/orientation only: they link to chapter landing pages, not directly to
+paragraph pages, route rows, checks, games, textbook links, or other companion
+resources.
+
 Sprint plans and active roadmaps must also pass scope-language discipline:
 
 ```bash
