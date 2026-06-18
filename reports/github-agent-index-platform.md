@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-17T11:33:46.184Z
+Generated: 2026-06-18T06:13:53.650Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4791
+Files indexed: 4875
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 498
+Count: 500
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -480,6 +480,7 @@ Count: 498
 - build-scripts/review-gates/review-throughput-fields.test.js
 - build-scripts/review-gates/validate-gate.js
 - build-scripts/review-gates/validate-rag-review-packet.js
+- build-scripts/sprints/capture-b1-target-evidence-111-rendered-closure-and-flag-bundle-1.js
 - build-scripts/sprints/capture-check-route-copy1-screenshots.js
 - build-scripts/sprints/capture-check-short-exit2-screenshots.js
 - build-scripts/sprints/capture-checksurface-113-exemplar-review1-screenshots.js
@@ -503,6 +504,7 @@ Count: 498
 - build-scripts/sprints/capture-task-ingest-transform3-textbook-screenshots.js
 - build-scripts/sprints/capture-task-shell-ux2-screenshots.js
 - build-scripts/sprints/check-b1-target-evidence-111-closure-and-implementation-bundle-1.js
+- build-scripts/sprints/check-b1-target-evidence-111-rendered-closure-and-flag-bundle-1.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -678,7 +680,7 @@ Count: 42
 
 ## validators
 
-Count: 484
+Count: 485
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -851,6 +853,7 @@ Count: 484
 - build-scripts/sprints/capture-graph-check-ux1-screenshots.js
 - build-scripts/sprints/capture-short-check-workbench-112-rendered-screenshots.js
 - build-scripts/sprints/check-b1-target-evidence-111-closure-and-implementation-bundle-1.js
+- build-scripts/sprints/check-b1-target-evidence-111-rendered-closure-and-flag-bundle-1.js
 - build-scripts/sprints/check-batch-sprint-closure.js
 - build-scripts/sprints/check-bundle-urls.js
 - build-scripts/sprints/check-check-q2-plan-evidence.js
@@ -1167,7 +1170,7 @@ Count: 484
 
 ## references
 
-Count: 619
+Count: 621
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1263,6 +1266,8 @@ Count: 619
 - references/data/sprints/B2-2.1.4-HARDEN.result.json
 - references/data/sprints/B2-2.2-READY-1.plan.json
 - references/data/sprints/B2-2.2-READY-1.result.json
+- references/data/sprints/B2-2.2.1-HARDEN.plan.json
+- references/data/sprints/B2-2.2.1-HARDEN.result.json
 - references/data/sprints/B2-READY-1.plan.json
 - references/data/sprints/B2-READY-1.result.json
 - references/data/sprints/BOOK1-FIX-1.plan.json
@@ -1791,7 +1796,7 @@ Count: 619
 
 ## reports
 
-Count: 2969
+Count: 3049
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1862,6 +1867,7 @@ Count: 2969
 - reports/json/aspects-coverage.json
 - reports/json/b1-graph-evidence-112-closure-and-implementation-bundle-1-proof.json
 - reports/json/b1-target-evidence-111-closure-and-implementation-bundle-1-proof.json
+- reports/json/b1-target-evidence-111-rendered-closure-and-flag-bundle-1-proof.json
 - reports/json/begrippen-coverage.json
 - reports/json/blueprint-flag-triage.json
 - reports/json/check-route-copy1-proof.json
@@ -2141,9 +2147,16 @@ Count: 2969
 - reports/reference-planning/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-review-packet.md
 - reports/reference-planning/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-quality-log.md
 - reports/reference-planning/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-review-packet.md
+- reports/reference-planning/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-quality-log.md
+- reports/reference-planning/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-review-packet.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-book-level-matrix.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-quality-log.md
 - reports/reference-planning/BLUEPRINT-3Y-RECONCILE-1-reconciliation-report.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-decision.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-authority-matrix.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-quality-log.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-review-packet.md
+- reports/reference-planning/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-subagent-review.md
 - reports/reference-planning/CP.6a-lesson-side-alignment.md
 - reports/reference-planning/CP.6a-lesson-side-recheck.md
 - reports/reference-planning/CP.6b-target-exercise-review.md
@@ -2173,6 +2186,45 @@ Count: 2969
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden-contact-sheet.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-1.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-2.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-3.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-4.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-5.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk-contact-sheet.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-01.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-02.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-03.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-04.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-05.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-06.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-07.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-08.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-09.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-10.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-hoofdstuk/page-11.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden-contact-sheet.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden/page-1.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden/page-2.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden/page-3.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden/page-4.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-antwoorden/page-5.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-opgaven-contact-sheet.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-opgaven/page-1.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-opgaven/page-2.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-opgaven/page-3.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-opgaven/page-4.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf-contact-sheet.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-1.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-2.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-3.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-4.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-5.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-6.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-7.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/2.2.1-paragraaf/page-8.png
+- reports/rendered-proof/B2-2.2.1-HARDEN/manifest.md
 - reports/representation-operation-coverage.md
 - reports/representation-transfer-gaps.md
 - reports/review-gates/B1-CHAPTER-MIXED-TARGET-AUDIT-1/review-packet.json
@@ -2187,6 +2239,8 @@ Count: 2969
 - reports/review-gates/B1-SIMSHIFT-MISSING-UNIT-DESIGN-1/review-packet.json
 - reports/review-gates/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
+- reports/review-gates/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1/review-packet.json
+- reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -2854,6 +2908,21 @@ Count: 2969
 - reports/sprints/B1-SIMSHIFT-PROTECTED-REFERENCE-IMPLEMENTATION-1-result.md
 - reports/sprints/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-plan.md
 - reports/sprints/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1-result.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-plan.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-rendered-proof.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-result.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshot-manifest.md
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-completed-held.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-initial.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-wrong-retry.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/landing-desktop-dark-neutral.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/landing-mobile-light-neutral.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/manifest.json
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-dark-completed-held.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-dark-initial.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-light-completed-held.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-light-initial.png
+- reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/route-reload-completed-held.png
 - reports/sprints/B2-2.1-A-214-exercise-answer-plan.md
 - reports/sprints/B2-2.1-A-baseline.md
 - reports/sprints/B2-2.1-A-command-log.jsonl
@@ -2945,6 +3014,20 @@ Count: 2969
 - reports/sprints/B2-2.2-READY-1-plan.md
 - reports/sprints/B2-2.2-READY-1-readiness-brief.md
 - reports/sprints/B2-2.2-READY-1-result.md
+- reports/sprints/B2-2.2.1-HARDEN-baseline.md
+- reports/sprints/B2-2.2.1-HARDEN-command-log.jsonl
+- reports/sprints/B2-2.2.1-HARDEN-command-log.md
+- reports/sprints/B2-2.2.1-HARDEN-diff-summary.md
+- reports/sprints/B2-2.2.1-HARDEN-figure-proof.md
+- reports/sprints/B2-2.2.1-HARDEN-lead-review-assignment.md
+- reports/sprints/B2-2.2.1-HARDEN-lead-review-corrections.md
+- reports/sprints/B2-2.2.1-HARDEN-lead-review-round1.md
+- reports/sprints/B2-2.2.1-HARDEN-lead-review-round2.md
+- reports/sprints/B2-2.2.1-HARDEN-plan.md
+- reports/sprints/B2-2.2.1-HARDEN-quality-notes.md
+- reports/sprints/B2-2.2.1-HARDEN-rendered-proof.md
+- reports/sprints/B2-2.2.1-HARDEN-result.md
+- reports/sprints/B2-2.2.1-HARDEN-stale-output-audit.md
 - reports/sprints/B2-READY-1-baseline.md
 - reports/sprints/B2-READY-1-command-log.jsonl
 - reports/sprints/B2-READY-1-diff-summary.md
@@ -2957,6 +3040,8 @@ Count: 2969
 - reports/sprints/B2-READY-1-result.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-plan.md
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
+- reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-plan.md
+- reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
