@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-18T06:13:53.650Z
+Generated: 2026-06-18T06:36:47.506Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4875
+Files indexed: 4895
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 500
+Count: 501
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -235,6 +235,7 @@ Count: 500
 - build-scripts/platform/build-reasoning-engine.js
 - build-scripts/platform/build-reasoning-questions.js
 - build-scripts/platform/build-skilltree-shells.js
+- build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/platform/generate-quiz-shells.js
@@ -680,7 +681,7 @@ Count: 42
 
 ## validators
 
-Count: 485
+Count: 486
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -722,6 +723,7 @@ Count: 485
 - build-scripts/ci/check-evidence-line-endings.test.js
 - build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 - build-scripts/inspection/validate-inspection-evidence.js
+- build-scripts/platform/check-book-landing-v2.js
 - build-scripts/platform/check-chapter-landing-v2.js
 - build-scripts/platform/check-paragraph-landing-v2.js
 - build-scripts/rag/validate-chunks.js
@@ -1170,7 +1172,7 @@ Count: 485
 
 ## references
 
-Count: 621
+Count: 623
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1777,6 +1779,8 @@ Count: 621
 - references/schemas/unit.schema.json
 - references/schemas/worked-example.schema.json
 - references/SOURCE_OF_TRUTH.md
+- references/ui/book-landing-v2/approved-minimal.html
+- references/ui/book-landing-v2/README.md
 - references/ui/chapter-landing-v2/approved-minimal.html
 - references/ui/chapter-landing-v2/README.md
 - references/ui/exercise-workbench-policy.md
@@ -1796,7 +1800,7 @@ Count: 621
 
 ## reports
 
-Count: 3049
+Count: 3066
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -2166,6 +2170,11 @@ Count: 3049
 - reports/reference-planning/CP.6e-113-part-a-rereview.md
 - reports/reference-planning/CP.6f-113-part-a-recheck.md
 - reports/reference-planning/EX-1-exam-ingestion-pilot.md
+- reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md
+- reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-evidence-packet.md
+- reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-quality-log.md
+- reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-review-packet.md
+- reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-subagent-review.md
 - reports/reference-planning/REF-CP6-blocker-routing.md
 - reports/reference-planning/REF-CP6-remediation-readiness.md
 - reports/reference-planning/REF-CT0-candidate-review-packet.md
@@ -2241,6 +2250,7 @@ Count: 3049
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1/review-packet.json
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
+- reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.md
@@ -3042,6 +3052,15 @@ Count: 3049
 - reports/sprints/BLUEPRINT-3Y-RECONCILE-1-result.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-plan.md
 - reports/sprints/BLUEPRINT-V6-AUTHORITY-PROMOTION-1-result.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-baseline.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-plan.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-result.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-review-packet.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-screenshot-manifest.md
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/book-1-desktop-dark.png
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/book-1-desktop-light.png
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/book-1-mobile-light.png
+- reports/sprints/BOOK-LANDING-V2-MINIMAL-NAVIGATION-1-screenshots/dom-proof.json
 - reports/sprints/BOOK1-FIX-1-baseline.md
 - reports/sprints/BOOK1-FIX-1-diff-summary.md
 - reports/sprints/BOOK1-FIX-1-lead-review-assignment.md
@@ -3469,6 +3488,8 @@ Count: 3049
 - reports/sprints/EX-NS0-lead-review-round2.md
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
+- reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md
+- reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-baseline.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-command-log.jsonl
 - reports/sprints/EXAM-SOURCE-AUTH-1-command-log.md
