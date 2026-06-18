@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-18T11:45:59.402Z",
+  "generated_at": "2026-06-18T11:48:04.878Z",
   "sprint_id": "R0.2",
   "scope": [
     "references",
@@ -25484,8 +25484,8 @@
       "path": "reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json",
       "file_name": "review-packet.json",
       "extension": "json",
-      "size_bytes": 13006,
-      "sha256": "96d96cdf9104348f757571fe7c069dad6d89d4b1e163cb2d6c88a5b3df001404",
+      "size_bytes": 13056,
+      "sha256": "9ed42888228c6be15c61aa4b95a5d109b737f17e182e8de8152eaa8103ef0969",
       "layer": "generated_report",
       "authority_level": "generated_report",
       "source_type": "report_json",
