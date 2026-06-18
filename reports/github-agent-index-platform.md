@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-18T12:13:49.839Z
+Generated: 2026-06-18T13:01:37.841Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4920
+Files indexed: 4942
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -1804,7 +1804,7 @@ Count: 623
 
 ## reports
 
-Count: 3075
+Count: 3097
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1843,8 +1843,16 @@ Count: 3075
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1874,6 +1882,10 @@ Count: 3075
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2180,6 +2192,13 @@ Count: 3075
 - reports/reference-planning/CP.6e-113-part-a-rereview.md
 - reports/reference-planning/CP.6f-113-part-a-recheck.md
 - reports/reference-planning/EX-1-exam-ingestion-pilot.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q15-anchor-packet.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q19-anchor-packet.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q3-anchor-packet.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-quality-log.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-review-packet.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-subagent-review.md
+- reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-updated-anchor-status.md
 - reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-anchor-matrix.md
 - reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-evidence-packet.md
 - reports/reference-planning/EXAM-OPERATION-SPINE-ANCHOR-1-quality-log.md
@@ -2260,6 +2279,7 @@ Count: 3075
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1/review-packet.json
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
+- reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/comment-resolution-log.json
@@ -3501,6 +3521,8 @@ Count: 3075
 - reports/sprints/EX-NS0-lead-review-round2.md
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
+- reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-plan.md
+- reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-result.md
 - reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md
 - reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-result.md
 - reports/sprints/EXAM-SOURCE-AUTH-1-baseline.md
