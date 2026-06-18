@@ -2,8 +2,8 @@
   "schema_version": 1,
   "packet_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
   "sprint_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
-  "pr_number": null,
-  "pr_url": null,
+  "pr_number": 111,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/111",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "product_authority",
@@ -38,7 +38,22 @@
     "rationale": "This packet prepares product-path gate evidence after repairing the Exit ticket and adaptive-practice authority-copy blockers. Human gate review remains required."
   },
   "human_decision_required": true,
-  "paired_prs": [],
+  "paired_prs": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/gate-product-3p-authority-copy-repair-and-rereview-1-20260618",
+      "pr_number": 111,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/111",
+      "role": "platform proof, checker, report, and generator repair"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/gate-product-3p-authority-copy-repair-and-rereview-1-20260618",
+      "pr_number": 26,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/26",
+      "role": "generated landing output only"
+    }
+  ],
   "auto_merge_allowed_after_ci": false,
   "escalation_triggers": [
     "product_path_gate_review",
