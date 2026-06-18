@@ -49,6 +49,7 @@
     "round1": "reports/sprints/B2-2.2.2-HARDEN-lead-review-round1.md",
     "corrections": "reports/sprints/B2-2.2.2-HARDEN-lead-review-corrections.md",
     "round2": "reports/sprints/B2-2.2.2-HARDEN-lead-review-round2.md",
+    "terminology_delta": "reports/sprints/B2-2.2.2-HARDEN-lead-review-terminology-delta.md",
     "final_verdict": "PASS WITH FLAGS",
     "flags": [
       {
