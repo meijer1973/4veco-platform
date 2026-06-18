@@ -62,13 +62,13 @@ be explicitly outside the sprint authority.
 
 | Specification requirement | Implementation evidence required | Review/proof required | Status |
 |---|---|---|---|
-| Repair `1.3.4` registry/output divergence | platform manifest/generator diff and regenerated lesson output | teacher/economics review, exact before/after proof | in progress |
-| Reconcile `1.3.1` through `1.3.4` quality-ref/review state | generated quality-ref/review updates and canonical resolution table | lead review and Dutch quality-inspection review | in progress |
-| Produce final route-local proof records | exact exercise IDs, opgaven ranges, answer/model ranges, scaffold boundary | teacher/economics and lead review | in progress |
-| Produce rendered accessibility/support evidence | PDF contact sheets, desktop/mobile screenshots, viewport metrics, support matrix | accessibility review | in progress |
-| Resolve companion/advisory status | reviewed N/A decision with rationale for this non-interactive route-local packet | Dutch quality-inspection review | in progress |
-| Formalise source traceability | supersession rule for authored JSON registry versus stale blueprint prose | Dutch quality-inspection review | in progress |
-| Preserve forbidden authority boundaries | false authority flags, blocker ledger, safe-use note | validation, legal/privacy check, final lead review | in progress |
+| Repair `1.3.4` registry/output divergence | platform manifest/generator diff and regenerated lesson output | teacher/economics review, exact before/after proof | complete |
+| Reconcile `1.3.1` through `1.3.4` quality-ref/review state | generated quality-ref/review updates and canonical resolution table | lead review and Dutch quality-inspection review | complete |
+| Produce final route-local proof records | exact exercise IDs, opgaven ranges, answer/model ranges, scaffold boundary | teacher/economics and lead review | complete |
+| Produce rendered accessibility/support evidence | PDF contact sheets, desktop/mobile screenshots, viewport metrics, support matrix | accessibility review | complete |
+| Resolve companion/advisory status | reviewed N/A decision with rationale for this non-interactive route-local packet | Dutch quality-inspection review | complete |
+| Formalise source traceability | supersession rule for authored JSON registry versus stale blueprint prose | Dutch quality-inspection review | complete |
+| Preserve forbidden authority boundaries | false authority flags, blocker ledger, safe-use note | validation, legal/privacy check, final lead review | complete |
 
 ## Quality Improvement Candidates
 

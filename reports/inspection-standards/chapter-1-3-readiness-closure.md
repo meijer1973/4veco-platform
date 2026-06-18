@@ -1,6 +1,6 @@
 # INSPECT-11D Chapter 1.3 Readiness Closure
 
-Status: locally validated; subagent and PR validation pending
+Status: paired PRs opened and final-lead approved; human review pending
 Date: 2026-06-18
 Sprint: `INSPECT-11D`
 
@@ -154,7 +154,7 @@ expand scope without improving the named blocker.
 | ID | Finding | REV-STD-1 classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|---|
 | `INSPECT11D-HUMAN-REVIEW` | INSPECT-11D is not closed until paired PRs are published, fresh, green, and human-reviewed. | `human_gate_blocker` | downstream diagnostic implementation-plan start; report generation; product-route authority | local repair validation; PR review | Platform PR and lesson PR green, final lead review, and renewed human approval. |
-| `INSPECT11D-SPECIALIST-GATES` | Specialist gates and final lead review must be recorded before the packet can be used for human review. | `gate_sequence_blocker` | state-A closure; human review; final PR-ready claim | local repair validation; specialist dispatch; round-1 lead review correction | Record specialist results, complete corrections/reruns, and record final lead review after paired PRs are open and green. |
+| `INSPECT11D-SPECIALIST-GATES` | Specialist gates and final lead review are recorded; this no longer blocks human-review request. | `closed_gate_sequence` | none | human-review request; scoped PR review | Completed: specialist gates recorded and final lead review returned `PASS`. |
 | `INSPECT11D-FULL-BOOK` | Full Book 1 validation may still report pre-existing Chapter 1.1/1.4 issues outside the Chapter 1.3 repair. | `scope_boundary_flag` | Book 1 clean-health claim | scoped Chapter 1.3 readiness closure if Chapter 1.3 validators pass | Separate Chapter 1.1/1.4 repair route. |
 | `INSPECT11D-CHECK-SURFACE-AUTHORITY` | Check-surface gate authority remains separate from this repair packet. | `downstream_gate_blocker` | Scale Gate 1; product-route adoption; diagnostics/mastery/PV; student/product-use | ordinary scoped PR work and INSPECT-11D review | Renewed human review confirming check-surface gate closure and naming authority unlocked. |
 | `INSPECT11D-ACCESSIBILITY-DEPTH` | Rendered proof and static support evidence are present, but this is not a full WCAG/PDF-tagging certification. | `future_audit_flag` | accessibility certification; teacher/school-facing accessibility claim | readiness closure | Later accessibility audit for product-facing route. |

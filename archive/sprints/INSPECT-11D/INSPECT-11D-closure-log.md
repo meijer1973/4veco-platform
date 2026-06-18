@@ -1,6 +1,6 @@
 # INSPECT-11D Closure Log
 
-Status: locally validated and lead-approved for paired PR publication; human review blocked until paired PRs are fresh and green
+Status: paired PRs open, fresh, green, and final-lead approved; human review pending
 Date: 2026-06-18
 Sprint: `INSPECT-11D`
 
@@ -54,6 +54,7 @@ Gate, diagnostics/mastery/PV, student-use, or product-use work.
 | Dutch quality-inspection | `MORE_THAN_SATISFIED`. |
 | Legal/privacy/claims | `MORE_THAN_SATISFIED`. |
 | Lead review round 2 | `PASS` for paired PR publication sequence. |
+| Final post-PR lead review | `PASS` for human-review request. |
 
 ## Validation Evidence
 
@@ -76,11 +77,11 @@ Chapter 1.1 and Chapter 1.4 assembly issues. The same run reports `OK chapter
 
 ## Required PR Sequence
 
-1. Publish the platform PR first.
-2. Publish the lesson PR second.
-3. Verify both PRs are fresh against current main, mergeable, and green.
-4. Record final post-PR lead review.
-5. Request human review only after the paired PR proof is visible.
+1. Platform PR opened first: `https://github.com/meijer1973/4veco-platform/pull/114`.
+2. Lesson PR opened second: `https://github.com/meijer1973/4veco-lessen/pull/28`.
+3. Both PRs were verified fresh against current main, mergeable, and green.
+4. Final post-PR lead review recorded `PASS`.
+5. Human review is now the remaining gate before merge/closure.
 
 ## Forbidden Authority Preserved
 
@@ -102,5 +103,7 @@ INSPECT-11D does not authorise:
 
 ## Next Operational Step
 
-Publish the platform PR, then the lesson PR. Wait for fresh remote checks on
-both PRs before final lead review and human review.
+Request renewed human review for platform PR #114 and lesson PR #28. Do not
+merge or start downstream diagnostic implementation-plan, report-generation,
+Scale Gate, product-route, diagnostics/mastery/PV, or student/product-use work
+until human review approves the paired PRs.

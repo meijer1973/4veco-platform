@@ -3,7 +3,7 @@
   "report_id": "chapter-1-3-readiness-closure",
   "sprint_id": "INSPECT-11D",
   "generated_date": "2026-06-18",
-  "status": "locally_validated_subagent_and_pr_validation_pending",
+  "status": "paired_prs_opened_final_lead_pass_human_review_pending",
   "recommended_state_for_human_review": "A",
   "implementation_plan_readiness_recommended": true,
   "human_review_required_to_close_gate": true,
@@ -279,7 +279,7 @@
   "carried_issues": [
     {
       "id": "INSPECT11D-HUMAN-REVIEW",
-      "finding": "INSPECT-11D is not closed until paired PRs are published, fresh, green, and human-reviewed.",
+      "finding": "INSPECT-11D is not closed until renewed human review approves the paired PRs.",
       "classification": "human_gate_blocker",
       "blocks": [
         "downstream diagnostic implementation-plan start",
@@ -290,23 +290,20 @@
         "local repair validation",
         "PR review"
       ],
-      "proof_required_to_close": "Platform PR and lesson PR green, final lead review, and renewed human approval."
+      "proof_required_to_close": "Renewed human approval and governed merge sequence."
     },
     {
       "id": "INSPECT11D-SPECIALIST-GATES",
-      "finding": "Specialist gates and final lead review must be recorded before the packet can be used for human review.",
-      "classification": "gate_sequence_blocker",
+      "finding": "Specialist gates and final lead review are recorded; this no longer blocks human-review request.",
+      "classification": "closed_gate_sequence",
       "blocks": [
-        "state-A closure",
-        "human review",
-        "final PR-ready claim"
+        "none"
       ],
       "does_not_block": [
-        "local repair validation",
-        "specialist dispatch",
-        "round-1 lead review correction"
+        "human-review request",
+        "scoped PR review"
       ],
-      "proof_required_to_close": "Record specialist results, complete corrections/reruns, and record final lead review after paired PRs are open and green."
+      "proof_required_to_close": "Completed: specialist gates recorded and final lead review returned PASS."
     },
     {
       "id": "INSPECT11D-FULL-BOOK",

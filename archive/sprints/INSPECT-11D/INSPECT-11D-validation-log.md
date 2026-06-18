@@ -1,6 +1,6 @@
 # INSPECT-11D Validation Log
 
-Status: post-rebase local validation complete; PR validation pending
+Status: post-rebase local validation complete; paired PRs opened and final lead reviewed
 Date: 2026-06-18
 Sprint: `INSPECT-11D`
 
@@ -57,8 +57,16 @@ horizontal overflow for:
 Before/after PDF contact sheets for `1.3.4` opgaven and answers are present in
 `archive/sprints/INSPECT-11D/rendered-proof/`.
 
-## Final Validation Before PR Publication
+## Final Validation And PR Publication
 
-All required local validation has been run. Before human review, the platform
-PR and lesson PR must still be pushed, visible, fresh against current main,
-mergeable, and green in their remote checks.
+All required local validation has been run. The platform and lesson PRs were
+pushed, visible, fresh against current main, mergeable, and green before final
+lead review.
+
+## Paired PR Validation And Final Lead Review
+
+- Platform PR: `https://github.com/meijer1973/4veco-platform/pull/114`
+- Lesson PR: `https://github.com/meijer1973/4veco-lessen/pull/28`
+- Platform PR was opened first; lesson PR was opened second.
+- Final lead review returned `PASS` for human-review request.
+- Remaining gate: renewed human review and governed merge sequence.
