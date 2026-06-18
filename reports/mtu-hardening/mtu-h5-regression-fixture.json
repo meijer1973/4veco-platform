@@ -562,9 +562,10 @@
           "description": "Explain from the graph that the levy increases the price to EUR 2 per 1,000 liter and creates a new equilibrium at Qv2 = Qa2 where Q = 14,000.",
           "answer_model_summary": "The correction model awards one point for the new price and equilibrium quantity after the heffing.",
           "mapped_mtu_ids": [
-            "D07",
             "A98",
-            "A88"
+            "A88",
+            "D41",
+            "D05"
           ],
           "mapped_route_tags": [
             "tax_or_levy",
@@ -573,7 +574,9 @@
             "answer_form"
           ],
           "expected_required_mtu_ids": [
-            "A98"
+            "A98",
+            "D41",
+            "D05"
           ],
           "expected_forbidden_mtu_ids": [],
           "expected_route_tags": [
@@ -587,6 +590,9 @@
             "A98"
           ],
           "expected_incidence_mtu_ids": [],
+          "reviewed_equivalent_refs": [
+            "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json#Q27_STEP1_D41_D05_A88_LEVY_EQUILIBRIUM_REVIEWED_EQUIVALENT"
+          ],
           "expected_scaling_mtu_ids": [
             "A88"
           ],
@@ -599,18 +605,15 @@
           "scale_factor_expected": true,
           "incidence_or_pass_through_expected": true,
           "predictable_misconception_expected": true,
-          "review_required_hooks": [
-            "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation"
-          ],
+          "review_required_hooks": [],
           "expected_forbidden_route_tags": [],
           "expected_procedure_unit_ids": [
             "A98",
-            "D07"
+            "D41",
+            "D05"
           ],
-          "procedure_review_required_unit_ids": [
-            "D07"
-          ],
-          "missing_incidence_expected": true,
+          "procedure_review_required_unit_ids": [],
+          "missing_incidence_expected": false,
           "missing_scaling_expected": false
         },
         {

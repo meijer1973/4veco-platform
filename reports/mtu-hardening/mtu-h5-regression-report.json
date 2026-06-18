@@ -180,11 +180,20 @@
     {
       "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
       "operation_id": "q27-step-1",
-      "unit_id": "D07",
-      "status": "procedure_review_required",
+      "unit_id": "D41",
+      "status": "procedure_present",
       "mastery_target": "apply",
       "procedure_steps": 5,
-      "reason": "canonical procedure is present, but the fixture marks semantic fit review as required"
+      "reason": "canonical procedure is present"
+    },
+    {
+      "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
+      "operation_id": "q27-step-1",
+      "unit_id": "D05",
+      "status": "procedure_present",
+      "mastery_target": "apply",
+      "procedure_steps": 5,
+      "reason": "canonical procedure is present"
     },
     {
       "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
@@ -220,13 +229,6 @@
       }
     ],
     "failed": [
-      {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-INCIDENCE-MISSING",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-1",
-        "defect_class": "incidence_pass_through_task_without_incidence_mtu",
-        "reason": "incidence/pass-through operation has no incidence MTU or reviewed equivalent"
-      },
       {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-INCIDENCE-MISSING",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
@@ -309,21 +311,6 @@
         "reason": "fixture marks this validator hook as review_required"
       },
       {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-PROCEDURE-REVIEW-D07",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-1",
-        "defect_class": "apply_analyze_unit_without_usable_canonical_procedure",
-        "unit_id": "D07",
-        "reason": "canonical procedure exists but needs semantic fit review for this operation"
-      },
-      {
-        "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-1:ASSERT-REVIEW-review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
-        "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
-        "operation_id": "q27-step-1",
-        "hook": "review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation",
-        "reason": "fixture marks this validator hook as review_required"
-      },
-      {
         "assertion_id": "vw-1022-a-25-2-o:opgave-6:question-27:q27-step-2:ASSERT-PROCEDURE-REVIEW-D07",
         "record_id": "vw-1022-a-25-2-o:opgave-6:question-27",
         "operation_id": "q27-step-2",
@@ -349,8 +336,8 @@
   "report_status_note": "Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.",
   "bucket_totals": {
     "passed": 1,
-    "failed": 2,
-    "review_required": 14,
+    "failed": 1,
+    "review_required": 12,
     "blocked": 0
   },
   "question_bucket_counts": {
@@ -367,23 +354,23 @@
       "review_required": 6
     },
     "q27": {
-      "failed": 2,
-      "review_required": 4
+      "failed": 1,
+      "review_required": 2
     },
     "global_negative_guard": {
       "passed": 1
     }
   },
   "failed_by_defect_class": {
-    "incidence_pass_through_task_without_incidence_mtu": 2
+    "incidence_pass_through_task_without_incidence_mtu": 1
   },
   "review_required_by_defect_class": {
-    "apply_analyze_unit_without_usable_canonical_procedure": 4,
-    "fixture_review_hooks": 10
+    "apply_analyze_unit_without_usable_canonical_procedure": 3,
+    "fixture_review_hooks": 9
   },
   "procedure_statuses": {
-    "procedure_present": 17,
-    "procedure_review_required": 4
+    "procedure_present": 19,
+    "procedure_review_required": 3
   },
   "remaining_lane_status": {
     "q3": {
@@ -401,10 +388,10 @@
       "blocks_mtu_h5_closure": true
     },
     "q27": {
-      "status": "incidence_levy_capacity_procedure_blocker_scaling_repaired",
-      "failed": 2,
-      "review_required": 4,
-      "diagnostic_focus": "incidence/pass-through missing; A88 scaling support accepted for per-1,000-liter handling; levy capacity and D07 tax-burden semantic-fit review remain",
+      "status": "step1_levy_equilibrium_repaired_step2_capacity_governance_blocker",
+      "failed": 1,
+      "review_required": 2,
+      "diagnostic_focus": "q27-step-1 D41/D05/A88 reviewed equivalent accepted for levy price/equilibrium/scale; q27-step-2 capacity/overconsumption governance and D07 semantic-fit review remain",
       "blocks_mtu_h5_closure": true
     },
     "q15": {

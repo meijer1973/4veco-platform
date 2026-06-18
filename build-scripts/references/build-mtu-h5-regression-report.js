@@ -32,8 +32,8 @@ const LANE_DETAILS = {
     procedure_semantic_fit_executed: true,
   },
   q27: {
-    status: 'incidence_levy_capacity_procedure_blocker_scaling_repaired',
-    summary: 'incidence/pass-through missing; A88 scaling support accepted for per-1,000-liter handling; levy capacity and D07 tax-burden semantic-fit review remain',
+    status: 'step1_levy_equilibrium_repaired_step2_capacity_governance_blocker',
+    summary: 'q27-step-1 D41/D05/A88 reviewed equivalent accepted for levy price/equilibrium/scale; q27-step-2 capacity/overconsumption governance and D07 semantic-fit review remain',
   },
   q15: {
     status: 'answer_skill_procedure_semantic_fit_review_blocker',
@@ -306,7 +306,7 @@ ${markdownTable(['Surface', 'Failed', 'Review required', 'Status'], questionRows
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
 - q19 remains a ${q19Details.status === 'source_graph_reasoning_review_blocker' ? 'source/graph/reasoning review blocker' : 'source/graph/procedure/reasoning review blocker'}: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
-- q27 remains an incidence/levy-capacity/procedure blocker with scaling repaired: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
+- q27 remains a step-2 capacity/overconsumption governance blocker after q27-step-1 repair: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
 - q15 remains an answer-skill/procedure semantic-fit review blocker: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
 - MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
 
