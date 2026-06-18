@@ -1,0 +1,1469 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1",
+  "generated": "2026-06-17T10:45:47.607Z",
+  "status": "rendered_proof_complete_readiness_approved_completion_held",
+  "source_route": {
+    "book_root": "C:\\wt\\B1-111-RENDERED-20260617\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+    "exit_ticket_page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+    "landing_page_path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+    "exit_ticket_local_url": "http://127.0.0.1:51193/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/1.1.1%20Schaarste%20en%20economisch%20denken%20%E2%80%93%20exit-ticket.html",
+    "landing_local_url": "http://127.0.0.1:51193/1.1%20Hoofdstuk%20Economisch%20denken%20en%20rekenen/1.1.1%20Schaarste%20en%20economisch%20denken/index.html"
+  },
+  "rendered_states": {
+    "required_cases": [
+      "desktop-light-initial",
+      "desktop-light-wrong-retry",
+      "desktop-light-completed-held",
+      "mobile-light-initial",
+      "mobile-light-completed-held",
+      "mobile-dark-initial",
+      "mobile-dark-completed-held",
+      "route-reload-completed-held",
+      "landing-mobile-light-neutral",
+      "landing-desktop-dark-neutral"
+    ],
+    "captured_cases": [
+      "desktop-light-initial",
+      "desktop-light-wrong-retry",
+      "desktop-light-completed-held",
+      "mobile-light-initial",
+      "mobile-light-completed-held",
+      "mobile-dark-initial",
+      "mobile-dark-completed-held",
+      "route-reload-completed-held",
+      "landing-mobile-light-neutral",
+      "landing-desktop-dark-neutral"
+    ],
+    "desktop_mobile_dark_captured": true,
+    "wrong_retry_captured": true,
+    "completed_held_captured": true,
+    "mobile_completed_held_captured": true,
+    "route_reload_completed_held_captured": true,
+    "landing_neutral_captured": true
+  },
+  "readiness_at_capture": {
+    "gate_approved": true,
+    "target_readiness_evidence": true,
+    "metadata_status": "target_equivalent_aligned",
+    "completion_language_eligible": false,
+    "complete_correct_attempt_is_proof_candidate": true,
+    "final_answer_only_rejected": true
+  },
+  "authority": {
+    "generated_lesson_output_changed": true,
+    "broad_rollout_authorized": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "scale_gate_1_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "summative_use_authorized": false,
+    "pv_authorized": false,
+    "student_product_use_authorized": false,
+    "human_review_completed_for_readiness": true,
+    "human_review_required_to_close": false,
+    "human_review_required_for_downstream_closure": true
+  },
+  "screenshot_manifest": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshot-manifest.md",
+  "screenshot_manifest_json": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/manifest.json",
+  "screenshots": [
+    {
+      "case": "desktop-light-initial",
+      "route": "exit-ticket",
+      "action": "initial",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-initial.png",
+      "bytes": 271606,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 2914
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 0,
+        "allTaskFeedbackMatch": false,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "desktop-light-wrong-retry",
+      "route": "exit-ticket",
+      "action": "wrong-retry",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-wrong-retry.png",
+      "bytes": 283898,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 3073
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback is-retry",
+            "isMatch": false,
+            "isRetry": true,
+            "text": "Controleer hectares en winst Gebruik 10 hectare en EUR 500 winst per hectare. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-retry",
+            "matched": false,
+            "retry": true
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 1,
+        "matchFeedbackCount": 0,
+        "allTaskFeedbackMatch": false,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "desktop-light-completed-held",
+      "route": "exit-ticket",
+      "action": "complete",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/desktop-light-completed-held.png",
+      "bytes": 325419,
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 3550
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "boer-beter",
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 4,
+        "allTaskFeedbackMatch": true,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "mobile-light-initial",
+      "route": "exit-ticket",
+      "action": "initial",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-light-initial.png",
+      "bytes": 242495,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3762
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 0,
+        "allTaskFeedbackMatch": false,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "mobile-light-completed-held",
+      "route": "exit-ticket",
+      "action": "complete",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-light-completed-held.png",
+      "bytes": 290848,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4566
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "boer-beter",
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 4,
+        "allTaskFeedbackMatch": true,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "mobile-dark-initial",
+      "route": "exit-ticket",
+      "action": "initial",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-dark-initial.png",
+      "bytes": 242590,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 3762
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "dark",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": null,
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback",
+            "isMatch": false,
+            "isRetry": false,
+            "text": ""
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback",
+            "matched": false,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 0,
+        "allTaskFeedbackMatch": false,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "mobile-dark-completed-held",
+      "route": "exit-ticket",
+      "action": "complete",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/mobile-dark-completed-held.png",
+      "bytes": 285395,
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 4566
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "dark",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "boer-beter",
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 4,
+        "allTaskFeedbackMatch": true,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "route-reload-completed-held",
+      "route": "exit-ticket",
+      "action": "route-reload-complete",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/route-reload-completed-held.png",
+      "bytes": 314222,
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 3550
+      },
+      "proof": {
+        "route": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "dark",
+        "dataLoaded": true,
+        "engineLoaded": true,
+        "uiLoaded": true,
+        "legacyRoot": true,
+        "taskShellRuntimeLoaded": true,
+        "goldenRoot": false,
+        "loaded": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ],
+        "parNr": "1.1.1",
+        "surface": "target_equivalent_exit_ticket",
+        "gateApproved": true,
+        "completionLanguageEligible": false,
+        "targetReadinessEvidence": true,
+        "metadataStatus": "target_equivalent_aligned",
+        "taskCount": 4,
+        "calculationTaskCount": 3,
+        "structuredTaskCount": 1,
+        "workFieldCount": 3,
+        "finalAnswerFieldCount": 3,
+        "unitNotationFieldCount": 3,
+        "structuredFieldCount": 3,
+        "structuredChoiceCount": 3,
+        "selectedStructuredChoice": "boer-beter",
+        "feedback": [
+          {
+            "id": "tarwe-opbrengst",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "className": "et-feedback is-match",
+            "isMatch": true,
+            "isRetry": false,
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "taskStates": [
+          {
+            "id": "tarwe-opbrengst",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "alternatieve-kosten-mais",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "buurvrouw-gemengd",
+            "family": "calculation_work_capture",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          },
+          {
+            "id": "betere-keuze-uitleg",
+            "family": "structured_short_response",
+            "feedbackClass": "et-feedback is-match",
+            "matched": true,
+            "retry": false
+          }
+        ],
+        "retryFeedbackCount": 0,
+        "matchFeedbackCount": 4,
+        "allTaskFeedbackMatch": true,
+        "completionHidden": true,
+        "completionVisible": false,
+        "completionText": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+        "visibleWinst": true,
+        "visibleOpbrengst": false,
+        "answerRevealingPlaceholderCount": 0,
+        "studentVisibleInternalCode": false,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "engineProgressProbe": {
+          "finalAnswerOnlyRejected": true,
+          "finalAnswerOnlyProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 1,
+            "total": 4,
+            "pending": 3,
+            "matched": 0,
+            "needsRepair": 1,
+            "proofCandidate": false,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          },
+          "completeCorrectProgress": {
+            "practiceProgressOnly": false,
+            "targetEquivalentAttempt": true,
+            "viewed": 4,
+            "total": 4,
+            "pending": 0,
+            "matched": 4,
+            "needsRepair": 0,
+            "proofCandidate": true,
+            "gateApproved": true,
+            "completionLanguageEligible": false
+          }
+        }
+      }
+    },
+    {
+      "case": "landing-mobile-light-neutral",
+      "route": "landing",
+      "action": "initial",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/landing-mobile-light-neutral.png",
+      "bytes": 546628,
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot_dimensions": {
+        "width": 390,
+        "height": 7084
+      },
+      "proof": {
+        "route": "landing",
+        "title": "1.1.1 Schaarste en economisch denken - Lesroute",
+        "theme": "light",
+        "exitTicketLinks": [
+          {
+            "tag": "a",
+            "href": "#exit-ticket",
+            "text": "5Exit ticket"
+          },
+          {
+            "tag": "a",
+            "href": "#exit-ticket",
+            "text": "Exit ticket eindcontrole"
+          },
+          {
+            "tag": "div",
+            "href": null,
+            "text": "5 Exit ticket Maak de aparte eindcontrole wanneer je de paragraaf hebt geoefend. E eindcontrole Exit ticket Werk de eindcontrole uit en gebruik de feedback om je volgende oefenstap te kiezen. Maak exit ticket →"
+          }
+        ],
+        "neutralExitTicketCopyPresent": true,
+        "contentBoxSizingPresent": true,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    },
+    {
+      "case": "landing-desktop-dark-neutral",
+      "route": "landing",
+      "action": "initial",
+      "file": "reports/sprints/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1-screenshots/landing-desktop-dark-neutral.png",
+      "bytes": 836557,
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot_dimensions": {
+        "width": 1280,
+        "height": 3028
+      },
+      "proof": {
+        "route": "landing",
+        "title": "1.1.1 Schaarste en economisch denken - Lesroute",
+        "theme": "dark",
+        "exitTicketLinks": [
+          {
+            "tag": "a",
+            "href": "#exit-ticket",
+            "text": "5 Exit ticket"
+          },
+          {
+            "tag": "a",
+            "href": "#exit-ticket",
+            "text": "Exit ticket eindcontrole"
+          },
+          {
+            "tag": "div",
+            "href": null,
+            "text": "5 Exit ticket Maak de aparte eindcontrole wanneer je de paragraaf hebt geoefend. E eindcontrole Exit ticket Werk de eindcontrole uit en gebruik de feedback om je volgende oefenstap te kiezen. Maak exit ticket →"
+          }
+        ],
+        "neutralExitTicketCopyPresent": true,
+        "contentBoxSizingPresent": true,
+        "overclaimVisible": false,
+        "horizontalOverflow": false,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        }
+      }
+    }
+  ]
+}

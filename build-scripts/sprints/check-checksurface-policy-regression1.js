@@ -229,6 +229,12 @@ function containsAuthorityOverclaim(data) {
     if (/beheerst|automatisch door|volgende paragraaf|diagnost|summatief|cijfer/.test(completionText)) return true;
     return false;
   }
+  if (data.parNr === '1.1.1') {
+    if (data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true) return true;
+    const completionText = normalizeText([data.completion && data.completion.title, data.completion && data.completion.text]);
+    if (/beheerst|automatisch door|volgende paragraaf|diagnost|summatief|cijfer/.test(completionText)) return true;
+    return false;
+  }
   if (data.parNr === '1.1.3') {
     if (data.targetEquivalent && data.targetEquivalent.completionLanguageEligible === true) return true;
     return BAD_COMPLETION.test(text);
@@ -311,11 +317,17 @@ function checkCurrentSources() {
     assert(!containsMissingFeedbackOrNextAction(exitData), `${par} exit ticket has missing feedback or next action`);
   }
 
-  const held111 = sources['1.1.1-exit-ticket'];
-  assert(held111.targetEquivalent && held111.targetEquivalent.gateApproved === false, '1.1.1-exit-ticket must remain unapproved');
-  assert(held111.targetEquivalent.completionLanguageEligible === false, '1.1.1-exit-ticket completion language must remain held');
-  assert(held111.metadataAlignment.targetReadinessEvidence === false, '1.1.1-exit-ticket must not claim target-readiness evidence');
-  assert(!containsAuthorityOverclaim(held111), '1.1.1-exit-ticket has authority overclaim');
+  const approved111 = sources['1.1.1-exit-ticket'];
+  assert(approved111.targetEquivalent && approved111.targetEquivalent.gateApproved === true, '1.1.1-exit-ticket must record human-approved gate evidence');
+  assert(approved111.targetEquivalent.completionLanguageEligible === false, '1.1.1-exit-ticket completion language must remain held');
+  assert(approved111.metadataAlignment.status === 'target_equivalent_aligned', '1.1.1-exit-ticket metadata must record target-equivalent alignment');
+  assert(approved111.metadataAlignment.targetReadinessEvidence === true, '1.1.1-exit-ticket must record human-approved target-readiness evidence');
+  assert(
+    JSON.stringify(approved111).includes('B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1') &&
+      JSON.stringify(approved111).includes('Completion language remains held'),
+    '1.1.1 must record narrow readiness approval while holding completion language'
+  );
+  assert(!containsAuthorityOverclaim(approved111), '1.1.1-exit-ticket has authority overclaim');
 
   const approved113 = sources['1.1.3-exit-ticket'];
   assert(approved113.targetEquivalent && approved113.targetEquivalent.gateApproved === true, '1.1.3-exit-ticket must record human-approved gate evidence');
@@ -437,6 +449,8 @@ function main() {
     current_sources: current,
     negative_fixtures: negativeFixtures,
     authority: {
+      current_111_target_readiness_authority_approved: true,
+      current_111_completion_language_authorized: false,
       current_112_target_readiness_authority_approved: true,
       current_112_completion_language_authorized: false,
       historical_112_exact_copy_authority_not_broadened: true,
