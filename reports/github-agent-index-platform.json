@@ -2,7 +2,7 @@
   "repo": "4veco-platform",
   "root": "4veco-platform",
   "available": true,
-  "generated_at": "2026-06-18T06:36:47.506Z",
+  "generated_at": "2026-06-18T06:40:04.344Z",
   "file_count": 4895,
   "inventory_scope": "git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path",
   "skipped_directories": [
