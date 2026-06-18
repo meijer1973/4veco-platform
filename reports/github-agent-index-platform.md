@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-18T11:47:00.196Z
+Generated: 2026-06-18T12:13:49.839Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 4914
+Files indexed: 4920
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -682,7 +682,7 @@ Count: 42
 
 ## validators
 
-Count: 488
+Count: 489
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -694,6 +694,7 @@ Count: 488
 - archive/sprints/INSPECT-11/INSPECT-11-validation-log.md
 - archive/sprints/INSPECT-11A/INSPECT-11A-validation-log.md
 - archive/sprints/INSPECT-11B/INSPECT-11B-validation-log.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -1803,7 +1804,7 @@ Count: 623
 
 ## reports
 
-Count: 3077
+Count: 3075
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1844,10 +1845,6 @@ Count: 3077
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1862,6 +1859,8 @@ Count: 3077
 - reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.md
 - reports/inspection-standards/chapter-1-3-readiness-remediation-results.json
 - reports/inspection-standards/chapter-1-3-readiness-remediation-results.md
+- reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.json
+- reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.md
 - reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.json
 - reports/inspection-standards/dutch-diagnostic-report-generator-implementation-plan.md
 - reports/inspection-standards/dutch-evidence-gap-closure-plan.json
@@ -4903,7 +4902,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 536
+Count: 543
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -4981,6 +4980,13 @@ Count: 536
 - archive/sprints/INSPECT-11B/INSPECT-11B-lead-review-round2.md
 - archive/sprints/INSPECT-11B/INSPECT-11B-specialist-gate-results.md
 - archive/sprints/INSPECT-11B/INSPECT-11B-sprint-plan.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-authorisation-note.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-closure-log.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-correction-log.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-lead-review-round1.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-lead-review-round2.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-specialist-gate-results.md
+- archive/sprints/INSPECT-11C/INSPECT-11C-sprint-plan.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T11:38:33.028Z",
+  "generatedAt": "2026-06-18T12:13:49.804Z",
   "internalOnly": true,
   "teams": [
     {
@@ -1432,7 +1432,7 @@
           "generated": "",
           "updated": "",
           "scope": "planning/audit only.",
-          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.8-inspect-11b-remediation-results Sprint status: QS-DUTCH-ROADMAP-1 closed / Dutch-only proposal ready for human review; QS-DUTCH-ROADMAP-1A closed / PR prep complete; QS-DUTCH-ROADMAP-1B closed / CI repair ready for PR validation; INSPECT-8 c...",
+          "summary": "Dutch Quality Control Roadmap Status: proposed Dutch-only roadmap Repository: 4veco-platform Primary target path: docs/roadmaps/quality-standards/inspection-standards-roadmap.md Secondary evidence target: ../4veco-lessen/ Roadmap ID: dutch-quality-control Roadmap version: v2.9-inspect-11c-reconciliation-proof-remediation Sprint status: QS-DUTCH-ROADMAP-1 closed / Dutch-only proposal ready for human review; QS-DUTCH-ROADMAP-1A closed / PR prep complete; QS-DUTCH-ROADMAP-1B closed / CI repair ready for PR validation...",
           "sprints": []
         },
         {

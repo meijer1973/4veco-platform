@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "report_id": "chapter-1-3-reconciliation-and-proof-remediation",
+  "sprint_id": "INSPECT-11C",
+  "generated_date": "2026-06-18",
+  "status": "reconciliation_and_proof_remediation_results",
+  "implementation_plan_readiness": false,
+  "diagnostic_report_generated": false,
+  "chapter_1_3_diagnostic_report_generated": false,
+  "evidence_pack_generated": false,
+  "teacher_school_facing_output_generated": false,
+  "public_external_output_generated": false,
+  "dashboard_gate_created": false,
+  "quality_ref_or_scale_gate_integration_created": false,
+  "generated_lesson_output_mutated": false,
+  "source_registry_mutated": false,
+  "personal_data_present": false,
+  "compliance_claim": false,
+  "product_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "operational_product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "strategic_product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "original_sprint_gate_spec": "archive/sprints/INSPECT-11C/INSPECT-11C-authorisation-note.md",
+  "prior_roadmap_context": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "controlling_prior_output": "reports/inspection-standards/chapter-1-3-readiness-remediation-results.json",
+  "sprint_plan": "archive/sprints/INSPECT-11C/INSPECT-11C-sprint-plan.md",
+  "evidence_checkout": {
+    "platform_base": "origin/main c2db2bdc",
+    "lesson_evidence_path": "../4veco-lessen",
+    "lesson_evidence_commit": "f91a544",
+    "lesson_evidence_mode": "read_only_detached_worktree"
+  },
+  "non_negotiable_requirements": [
+    "Use REV-STD-1.",
+    "Cite product end-state and original sprint/gate spec.",
+    "Name non-negotiable requirements.",
+    "Include a core-requirement checklist.",
+    "Classify findings.",
+    "Include blocks, does_not_block, and proof_required_to_close for carried issues.",
+    "PASS WITH FLAGS may not carry a missing core requirement.",
+    "Do not generate a Chapter 1.3 diagnostic report.",
+    "Do not generate an evidence pack.",
+    "Do not mutate generated lesson output, protected references, or source registry records.",
+    "Do not unlock dashboard, quality-ref, Scale Gate, product-route, diagnostics/mastery/PV, student-use, or product-use authority."
+  ],
+  "executive_decision": {
+    "state": "B",
+    "summary": "Chapter 1.3 is still the right next diagnostic candidate, but it is not ready for an INSPECT-11D implementation-plan sprint yet.",
+    "chapter_1_3_ready_for_later_internal_diagnostic_report_implementation_plan": false,
+    "chapter_1_3_diagnostic_report_ready": false,
+    "reason": "1.3.4 generated-output divergence remains unresolved, proof candidates require route-level exercise isolation, and diagnostic-depth accessibility/support plus companion/advisory evidence remains incomplete.",
+    "recommended_next_route": "Authorise a paired lesson-side repair/review route for 1.3.4 and quality-ref metadata, plus rendered accessibility/support proof, before considering INSPECT-11D."
+  },
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "product_end_state and operational_product_end_state"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "original_sprint_gate_spec"
+    },
+    {
+      "requirement": "Quality-ref/review reconciliation for 1.3.1 through 1.3.4 recorded",
+      "status": "met_with_blockers_carried",
+      "evidence": "target_reconciliation"
+    },
+    {
+      "requirement": "1.3.4 divergence decision recorded",
+      "status": "met_with_blocker_carried",
+      "evidence": "target_134_divergence_decision"
+    },
+    {
+      "requirement": "Proof-record candidates include exercise IDs and line ranges",
+      "status": "met_with_route_conditions",
+      "evidence": "proof_record_candidates"
+    },
+    {
+      "requirement": "Accessibility/support records included",
+      "status": "met_with_blockers_carried",
+      "evidence": "accessibility_support_records"
+    },
+    {
+      "requirement": "Companion/advisory decisions included",
+      "status": "met_with_blockers_carried",
+      "evidence": "companion_advisory_records"
+    },
+    {
+      "requirement": "PASS WITH FLAGS does not carry a missing core requirement",
+      "status": "met",
+      "evidence": "executive_decision is state B, not PASS WITH FLAGS"
+    }
+  ],
+  "target_reconciliation": [
+    {
+      "target": "1.3.1",
+      "registry_status": "reviewed_final",
+      "quality_ref_status": "blocker: numerical graph-text mismatch in supply figures",
+      "review_status": "PASS; later review says previous graph-text mismatch was corrected and remaining notes are non-blocking",
+      "resolved_state_or_carried_blocker": "carried_blocker",
+      "classification": "scale_blocker",
+      "blocks": [
+        "quality-ref reliance",
+        "Chapter 1.3 diagnostic generation",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11C route-local proof candidate inventory",
+        "using 1.3.1 review evidence as later correction evidence"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile 1.3.1-quality-ref.yaml so the stale blocker no longer contradicts 1.3.1-review.md."
+    },
+    {
+      "target": "1.3.2",
+      "registry_status": "reviewed_final",
+      "quality_ref_status": "top-level migrated_from_v4_needs_v5_review and cp6_quality_ready false",
+      "review_status": "PASS WITH FLAGS; unresolved_blockers 0; aligned_with_active_v5_with_flags",
+      "resolved_state_or_carried_blocker": "minor_carry_flag",
+      "classification": "minor_carry_flag",
+      "blocks": [
+        "CP-6 closure",
+        "Year 1 closure",
+        "target-exercise promotion claims beyond authored registry status"
+      ],
+      "does_not_block": [
+        "route-local proof candidate design",
+        "INSPECT-11C closure"
+      ],
+      "proof_required_to_close": "Later authorised lesson-side metadata refresh should remove or explicitly preserve the stale top-level migration/CP6 fields."
+    },
+    {
+      "target": "1.3.3",
+      "registry_status": "reviewed_final",
+      "quality_ref_status": "top-level migrated_from_v4_needs_v5_review and cp6_quality_ready false",
+      "review_status": "PASS WITH FLAGS; unresolved_blockers 0; aligned_with_active_v5_with_flags",
+      "resolved_state_or_carried_blocker": "minor_carry_flag",
+      "classification": "minor_carry_flag",
+      "blocks": [
+        "CP-6 closure",
+        "Year 1 closure",
+        "target-exercise promotion claims beyond authored registry status"
+      ],
+      "does_not_block": [
+        "route-local proof candidate design",
+        "INSPECT-11C closure",
+        "using bounded simultaneous-shift candidates in 1.3.3 only"
+      ],
+      "proof_required_to_close": "Later authorised lesson-side metadata refresh should remove or explicitly preserve the stale top-level migration/CP6 fields."
+    },
+    {
+      "target": "1.3.4",
+      "registry_status": "reviewed_final",
+      "quality_ref_status": "placeholder_needs_review and cp6_quality_ready false",
+      "review_status": "PASS WITH FLAGS; review says target-exercise placeholder is not promoted",
+      "resolved_state_or_carried_blocker": "carried_blocker",
+      "classification": "scale_blocker",
+      "blocks": [
+        "diagnostic use of 1.3.4",
+        "Chapter 1.3 diagnostic implementation-plan readiness"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "recording source-registry no-new-theory status"
+      ],
+      "proof_required_to_close": "Authorised lesson-side review must reconcile quality-ref/review state with reviewed_final source-registry replacement and the generated-output divergence decision."
+    }
+  ],
+  "target_134_divergence_decision": {
+    "registry_decision": "1.3.4 is reviewed_final, gemengde_opgaven, introduces_new_theory false, exam_codes empty, and excludes simultaneous-shift reasoning from the reviewed replacement.",
+    "lesson_output_evidence": "1.3.4 Gemengde opgaven - opgaven.md lines 54-69 and antwoorden.md lines 43-53 include simultaneous demand/supply shift reasoning.",
+    "options_assessed": {
+      "A_remove_or_relocate_task": "Not performed in INSPECT-11C because lesson-output mutation is not authorised in this platform packet.",
+      "B_update_registry_or_review_to_admit_task": "Not performed in INSPECT-11C because source-registry/protected-reference mutation is not authorised.",
+      "C_keep_blocked_or_exclude": "Selected for this packet."
+    },
+    "decision": "Keep 1.3.4 blocked and exclude generated 1.3.4 output from any diagnostic proof candidate set until a paired lesson-output repair or registry/review update closes the divergence.",
+    "classification": "scale_blocker",
+    "proof_required_to_close": "Remove/relocate the simultaneous-shift task through an authorised lesson-output repair route, or complete an authorised registry/review update admitting and bounding the task."
+  },
+  "proof_record_candidates": [
+    {
+      "target": "1.3.1",
+      "candidate_status": "usable_only_with_route_level_isolation",
+      "candidate_exercises": [
+        {
+          "exercise_id": "Opgave 10",
+          "opgaven_lines": "165-177",
+          "answer_lines": "331-381",
+          "operation_chain": "supply shift from input costs and subsidy; graph and explanation",
+          "answer_form": "graph plus short written supply-factor explanation"
+        }
+      ],
+      "scaffold_boundary": "Worked example with answers appears before independent exercises at opgaven lines 3-35; independent Opgaven start at line 37 and Opgave 1 at line 41.",
+      "answer_model_separation": "Answers are in a separate antwoorden file, but the opgaven file itself includes worked-example answers before the candidate section.",
+      "local_only_authority": "May support route-local proof design only; not diagnostic generation.",
+      "proof_required_to_close": "A later route must present only selected independent exercise lines, exclude worked-example answer/model content, and prove answer/repair steps are not exposed before attempt."
+    },
+    {
+      "target": "1.3.2",
+      "candidate_status": "usable_only_with_route_level_isolation",
+      "candidate_exercises": [
+        {
+          "exercise_id": "Opgave 9",
+          "opgaven_lines": "194-210",
+          "answer_lines": "251-281",
+          "operation_chain": "equilibrium solve, substitution check, surplus/shortage reasoning",
+          "answer_form": "algebraic calculation, control check, surplus/shortage explanation"
+        }
+      ],
+      "scaffold_boundary": "Worked example with answers appears before independent exercises at opgaven lines 3-69; independent Opgaven start at line 71 and Opgave 1 at line 75.",
+      "answer_model_separation": "Answers are in a separate antwoorden file, and early start exercises include hints at opgaven lines 77, 92, and 107.",
+      "local_only_authority": "May support route-local proof design only; not diagnostic generation.",
+      "proof_required_to_close": "A later route must present only selected independent exercise lines, exclude worked-example answer/model content, and prove answer/repair steps are not exposed before attempt."
+    },
+    {
+      "target": "1.3.3",
+      "candidate_status": "usable_only_with_route_level_isolation",
+      "candidate_exercises": [
+        {
+          "exercise_id": "Opgave 5",
+          "opgaven_lines": "122-138",
+          "answer_lines": "105-143",
+          "operation_chain": "one-shift calculations plus bounded simultaneous-shift reasoning",
+          "answer_form": "calculation, graph, and verbal explanation"
+        },
+        {
+          "exercise_id": "Opgave 7",
+          "opgaven_lines": "161-175",
+          "answer_lines": "169-205",
+          "operation_chain": "combined demand/supply shift calculation",
+          "answer_form": "new equilibrium calculation and comparison"
+        }
+      ],
+      "scaffold_boundary": "Worked example with answers appears before independent exercises at opgaven lines 1-49; independent Opgaven start at line 51 and Opgave 1 at line 55.",
+      "answer_model_separation": "Answers are in a separate antwoorden file. Simultaneous-shift candidates are bounded to 1.3.3, where D47 is reviewed_final in the registry.",
+      "local_only_authority": "May support route-local proof design only; not diagnostic generation.",
+      "proof_required_to_close": "A later route must isolate selected independent exercise lines, exclude worked-example answer/model content, and prove answer/repair steps are not exposed before attempt."
+    },
+    {
+      "target": "1.3.4",
+      "candidate_status": "blocked_exclude_from_diagnostic_candidate_set",
+      "candidate_exercises": [
+        {
+          "exercise_id": "Opgave 1",
+          "opgaven_lines": "11-24",
+          "answer_lines": "3-11",
+          "operation_chain": "equilibrium and surplus/shortage consolidation",
+          "answer_form": "calculation and short explanation"
+        },
+        {
+          "exercise_id": "Opgave 5",
+          "opgaven_lines": "71-90",
+          "answer_lines": "57-67",
+          "operation_chain": "one supply-shift calculation and comparison",
+          "answer_form": "calculation and short explanation"
+        }
+      ],
+      "scaffold_boundary": "No worked example precedes Opgave 1, but the same opgaven file includes divergent Opgave 4 at lines 54-69.",
+      "answer_model_separation": "Answers are in a separate antwoorden file, but divergent Opgave 4 answer surface appears at lines 43-53.",
+      "local_only_authority": "Do not use generated 1.3.4 output as diagnostic proof until divergence is repaired or authorised.",
+      "proof_required_to_close": "Remove/relocate Opgave 4 or update registry/review authority; then reselect 1.3.4 proof candidates."
+    }
+  ],
+  "accessibility_support_records": [
+    {
+      "dimension": "mobile/responsive",
+      "evidence": "HTML/PDF/Markdown files exist for 1.3.1 through 1.3.4, but no viewport render proof was produced in INSPECT-11C.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Rendered mobile and desktop proof for selected candidate surfaces."
+    },
+    {
+      "dimension": "contrast/theme",
+      "evidence": "No contrast or theme measurement was produced.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed contrast/theme evidence for graph-heavy and text surfaces."
+    },
+    {
+      "dimension": "semantic/PDF",
+      "evidence": "HTML has heading structure and PDFs exist; HTML titles are '-' and no PDF tagging/semantic extraction proof was produced.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed semantic HTML/PDF evidence, including useful titles/language metadata and PDF reading order/tag proof where applicable."
+    },
+    {
+      "dimension": "keyboard/focus applicability",
+      "evidence": "No interactive route or keyboard/focus proof was produced.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Explicit keyboard/focus applicability decision for selected route surfaces."
+    },
+    {
+      "dimension": "text equivalents / alt / caption",
+      "evidence": "Several opgaven HTML images have alt text and figcaptions; coverage was not audited for all graph-heavy chapter/paragraaf/answer surfaces.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Complete text-equivalent audit for all selected graph/table surfaces."
+    },
+    {
+      "dimension": "hints/repair/next action",
+      "evidence": "1.3.2 early opgaven include explicit hints; chapter/paragraph surfaces refer to guided practice, but actual companion/advisory route records were not reviewed.",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Per-target hints, repair, feedback, and next-action evidence tied to selected candidate exercises."
+    },
+    {
+      "dimension": "product/school support boundary",
+      "evidence": "INSPECT-11B/11C packet boundary forbids teacher/school-facing and product-route claims.",
+      "classification": "core_requirement_met",
+      "proof_required_to_close": "Keep boundary visible in later PRs."
+    }
+  ],
+  "companion_advisory_records": [
+    {
+      "target": "1.3.1",
+      "status": "route_text_mentions_guided_practice_but_companion_record_missing",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decision."
+    },
+    {
+      "target": "1.3.2",
+      "status": "route_text_mentions_guided_practice_but_companion_record_missing",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decision."
+    },
+    {
+      "target": "1.3.3",
+      "status": "route_text_mentions_guided_practice_but_companion_record_missing",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decision."
+    },
+    {
+      "target": "1.3.4",
+      "status": "no reviewed companion/advisory evidence found",
+      "classification": "scale_blocker",
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decision after 1.3.4 divergence closes."
+    }
+  ],
+  "blocker_ledger": [
+    {
+      "id": "INSPECT11C-13-QUALITY-REF-131",
+      "finding": "1.3.1 quality-ref still carries stale blocker language while the later review says the mismatch was corrected.",
+      "classification": "scale_blocker",
+      "owner_surface": "lesson-side quality-ref/review",
+      "blocks": [
+        "quality-ref reliance",
+        "Chapter 1.3 diagnostic generation",
+        "pack-strength or teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "route-local proof candidate inventory"
+      ],
+      "proof_required_to_close": "Refresh or formally reconcile 1.3.1-quality-ref.yaml against 1.3.1-review.md."
+    },
+    {
+      "id": "INSPECT11C-13-MIGRATION-METADATA-132-133",
+      "finding": "1.3.2 and 1.3.3 quality refs still carry stale migrated/CP6 false top-level metadata despite reviewed_final source-registry records and zero unresolved review blockers.",
+      "classification": "minor_carry_flag",
+      "owner_surface": "lesson-side quality-ref metadata",
+      "blocks": [
+        "CP-6 closure",
+        "Year 1 closure",
+        "unqualified lesson-side promotion claims"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "route-local proof candidate design"
+      ],
+      "proof_required_to_close": "Later authorised lesson-side metadata refresh should remove or explicitly preserve the stale migration/CP6 fields."
+    },
+    {
+      "id": "INSPECT11C-13-QUALITY-REF-134",
+      "finding": "1.3.4 quality-ref/review remains placeholder-oriented while the source registry is reviewed_final.",
+      "classification": "scale_blocker",
+      "owner_surface": "lesson-side quality-ref/review and source-registry reconciliation",
+      "blocks": [
+        "diagnostic use of 1.3.4",
+        "Chapter 1.3 implementation-plan readiness"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "recording the source-registry no-new-theory decision"
+      ],
+      "proof_required_to_close": "Authorised lesson-side reconciliation confirming no-new-theory/no-code status and generated-output scope."
+    },
+    {
+      "id": "INSPECT11C-134-LESSON-OUTPUT-DIVERGENCE",
+      "finding": "Generated 1.3.4 output includes simultaneous demand/supply shift reasoning while the reviewed registry replacement excludes it.",
+      "classification": "scale_blocker",
+      "owner_surface": "lesson-side generated output and authored target registry",
+      "blocks": [
+        "using generated 1.3.4 output as diagnostic proof",
+        "Chapter 1.3 implementation-plan readiness"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "excluding 1.3.4 from candidate proof until repaired"
+      ],
+      "proof_required_to_close": "Remove/relocate the simultaneous-shift task or complete an authorised registry/review update that admits and bounds it."
+    },
+    {
+      "id": "INSPECT11C-13-SCAFFOLD-ROUTE-ISOLATION",
+      "finding": "1.3.1, 1.3.2, and 1.3.3 have usable independent candidate exercises, but the full opgaven files include worked-example answer/model content before the candidates.",
+      "classification": "scale_blocker",
+      "owner_surface": "proof-record route selection",
+      "blocks": [
+        "treating full opgaven files as diagnostic attempts",
+        "no-answer-before-attempt claim without route-level isolation"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "recording route-local candidate line ranges"
+      ],
+      "proof_required_to_close": "A later route must isolate selected independent exercise lines and prove answer/repair content is not exposed before attempt."
+    },
+    {
+      "id": "INSPECT11C-13-SOURCE-TRACEABILITY",
+      "finding": "Authored JSON registry is controlling, while course-blueprint-v5 prose remains stale for Chapter 1.3.",
+      "classification": "scale_blocker",
+      "owner_surface": "source traceability documentation",
+      "blocks": [
+        "unqualified finality claim from blueprint prose",
+        "relying on blueprint prose as reviewed-final proof"
+      ],
+      "does_not_block": [
+        "using references/authored/course-target-exercises.json as controlling registry in INSPECT-11C",
+        "INSPECT-11C closure"
+      ],
+      "proof_required_to_close": "Refresh/reconcile blueprint prose or record a formal supersession rule."
+    },
+    {
+      "id": "INSPECT11C-13-ACCESSIBILITY-SUPPORT",
+      "finding": "Diagnostic-depth accessibility/support evidence remains incomplete.",
+      "classification": "scale_blocker",
+      "owner_surface": "rendered evidence and support proof",
+      "blocks": [
+        "accessibility/support claims",
+        "Chapter 1.3 implementation-plan readiness",
+        "teacher/school-facing reliance"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "recording missing evidence precisely"
+      ],
+      "proof_required_to_close": "Reviewed mobile/responsive, contrast/theme, semantic/PDF, keyboard/focus, text-equivalent, hints/repair, next-action, and boundary evidence."
+    },
+    {
+      "id": "INSPECT11C-13-COMPANION-ADVISORY",
+      "finding": "Reviewed companion/advisory evidence or explicit not-applicable decisions are absent for all targets.",
+      "classification": "scale_blocker",
+      "owner_surface": "companion/advisory support route",
+      "blocks": [
+        "companion/advisory claim",
+        "support-strength claim",
+        "Chapter 1.3 implementation-plan readiness"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure"
+      ],
+      "proof_required_to_close": "Reviewed companion/advisory evidence or explicit not-applicable decisions per target."
+    },
+    {
+      "id": "INSPECT11C-13-CHECK-SURFACE-AUTHORITY",
+      "finding": "Check-surface gate authority remains separate from Chapter 1.3 remediation.",
+      "classification": "scale_blocker",
+      "owner_surface": "separate human gate",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "diagnostics/mastery/PV",
+        "student/product-use work relying on check-surface closure"
+      ],
+      "does_not_block": [
+        "INSPECT-11C closure",
+        "ordinary scoped internal freshness checks"
+      ],
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming any authority unlocked."
+    }
+  ],
+  "final_questions": {
+    "is_chapter_1_3_still_the_right_next_diagnostic_candidate": "Yes, but only after lesson-side divergence and support/accessibility blockers are closed or explicitly excluded.",
+    "can_1_3_4_be_safely_reconciled_or_must_it_be_excluded": "Not in this platform packet. Keep it blocked and exclude generated 1.3.4 output until paired lesson-output or registry/review work closes the divergence.",
+    "are_1_3_1_to_1_3_3_proof_candidates_usable_after_excluding_scaffold": "Conditionally yes for route-local design, if selected independent exercise line ranges are isolated and answer/model content is hidden before attempt.",
+    "are_accessibility_support_gaps_still_blocking": "Yes.",
+    "is_chapter_1_3_ready_for_implementation_plan_sprint": "No."
+  }
+}
