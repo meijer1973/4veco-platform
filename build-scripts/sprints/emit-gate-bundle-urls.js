@@ -141,7 +141,7 @@ function emit(gateId, branch) {
   const sortedReferences = Array.from(referenceSet).sort();
 
   const lines = [];
-  lines.push(`# ${gateId} — Artifact URLs`);
+  lines.push(`# ${gateId} - Artifact URLs`);
   lines.push('');
   lines.push(
     "This file lists every artifact in this gate's bundle as a full raw-GitHub URL " +

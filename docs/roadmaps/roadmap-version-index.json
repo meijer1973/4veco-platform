@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-06-18",
+  "updated_on": "2026-06-19",
   "generated_by": "manual-roadmap-versioning",
   "canonical_archive_directory": "docs/roadmaps/outdated",
   "current_operational_roadmaps": [
@@ -97,14 +97,14 @@
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",
-      "version": "v1.0-surface-stabilization",
+      "version": "v1.2-product-3p-closed-111-bundle-next",
       "title": "Golden Workbench Rollout Roadmap",
       "status": "active",
       "path": "docs/roadmaps/golden-workbench/golden-workbench-rollout-roadmap.md",
       "owner": "platform_team",
-      "updated_on": "2026-06-12",
+      "updated_on": "2026-06-19",
       "supersedes": [],
-      "notes": "Active subordinate roadmap for the governed Golden Exercise Workbench rollout. It records that the rollout is early governed implementation, not broad adoption, and makes GOLDEN-SURFACE-VISUAL-REVIEW-1 the recommended next sprint before further route migration. It does not supersede the reference-team roadmap or authorize generated lesson output, product-route adoption, target-equivalent completion language, diagnostics, mastery/sequencing, PV, Scale Gate 1, broad product use, or student/product use."
+      "notes": "Active subordinate roadmap for the governed Golden Exercise Workbench rollout after GATE-PRODUCT-3P closed narrowly for the first-three rendered product-path proof. Scale Gate 1 remains held with lead result HOLD_FOR_GOLDEN_ROUTE_REPAIR. The next roadmap-controlled substantial bundle is GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1, with EXIT-SHORT-WORKBENCH-111-PLAN-1 treated as an internal phase rather than a human-review stop. The following sequence is GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1, A96-CALCULATION-WORKBENCH-REFINE-1, then FIRST-THREE-POST-REPAIR-PROOF-AND-SCALE-GATE-1-REVIEW-1. It does not supersede the reference-team roadmap or authorize generated lesson output, product-route adoption, target-equivalent completion language, diagnostics, mastery/sequencing, PV, broad product use, or student/product use."
     },
     {
       "roadmap_id": "golden-workbench-rollout-original-plan",
