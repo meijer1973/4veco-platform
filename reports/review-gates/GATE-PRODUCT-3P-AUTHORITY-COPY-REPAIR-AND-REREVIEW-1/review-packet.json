@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "packet_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
+  "sprint_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
+  "pr_number": 111,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/111",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "product_authority",
+  "changed_paths": [
+    "build-scripts/platform/build-landing-page.js",
+    "build-scripts/platform/check-paragraph-landing-v2.js",
+    "build-scripts/sprints/capture-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+    "build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+    "references/ui/paragraph-landing-v2/approved-dark.html",
+    "references/ui/paragraph-landing-v2/approved-light.html",
+    "scripts/tests/build-landing-page.test.js",
+    "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-plan.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-evidence-map.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-quality-log.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-result.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-route-inventory.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshot-manifest.md",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/manifest.json",
+    "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/*.png",
+    "reports/review-gates/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1/review-packet.json"
+  ],
+  "lesson_changed_paths": [
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+    "Boek 1 - Grondslagen, vraag en aanbod/1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "READY_FOR_HUMAN_GATE_PRODUCT_3P_REVIEW",
+    "rationale": "This packet prepares product-path gate evidence after repairing the Exit ticket and adaptive-practice authority-copy blockers. Human gate review remains required."
+  },
+  "human_decision_required": true,
+  "paired_prs": [
+    {
+      "repository": "meijer1973/4veco-platform",
+      "branch": "codex/gate-product-3p-authority-copy-repair-and-rereview-1-20260618",
+      "pr_number": 111,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/111",
+      "role": "platform proof, checker, report, and generator repair"
+    },
+    {
+      "repository": "meijer1973/4veco-lessen",
+      "branch": "codex/gate-product-3p-authority-copy-repair-and-rereview-1-20260618",
+      "pr_number": 26,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/26",
+      "role": "generated landing output only"
+    }
+  ],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "product_path_gate_review",
+    "authority_copy_repair",
+    "scale_gate_boundary",
+    "student_product_use_boundary"
+  ],
+  "date": "2026-06-18",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md",
+    "reports/sprints/GOLDEN-EXERCISE-WORKBENCH-ROLLOUT-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "../4veco-lessen/specifications/companion-core-specifications.md",
+    "reports/sprints/GATE-PRODUCT-3P-RENDERED-PATH-PROOF-BUNDLE-1-result.md",
+    "reports/json/gate-product-3p-rendered-path-proof-bundle-1-proof.json",
+    "reports/review-gates/GATE-PRODUCT-3P-RENDERED-PATH-PROOF-BUNDLE-1/review-packet.json"
+  ],
+  "non_negotiable_requirements": [
+    "Repair first-three landing Exit ticket authority copy while completionLanguageEligible remains false.",
+    "Use neutral end-control, feedback, and next-step copy rather than target-capability or completion-equivalent copy.",
+    "Confirm forbidden strings are absent from the first-three landing pages.",
+    "Keep Korte checks advisory and non-target-readiness.",
+    "Keep Exit tickets as target-readiness evidence only while target-equivalent completion language remains held.",
+    "Preserve first-three route/link/rendered proof.",
+    "Treat 1.1.4 only as same-copy hygiene, not as part of the GATE-PRODUCT-3P evidence claim.",
+    "Do not authorize product-route adoption, Scale Gate 1, diagnostics, mastery/sequencing, PV, summative use, broad product use, or student/product use.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/companion-core-specifications.md"
+    },
+    {
+      "requirement": "Neutral first-three landing authority copy",
+      "status": "met",
+      "evidence": "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json#authority_copy_audit"
+    },
+    {
+      "requirement": "Forbidden authority copy absent",
+      "status": "met",
+      "evidence": "proof.first_three_landing_authority_copy_neutral:true"
+    },
+    {
+      "requirement": "1.1.4 included only as hygiene",
+      "status": "met",
+      "evidence": "proof.same_copy_hygiene_114_neutral_not_gate_claim:true"
+    },
+    {
+      "requirement": "Route inventory complete",
+      "status": "met",
+      "evidence": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-route-inventory.md"
+    },
+    {
+      "requirement": "Links resolve",
+      "status": "met",
+      "evidence": "proof.all_landing_links_resolve:true"
+    },
+    {
+      "requirement": "Rendered screenshots captured",
+      "status": "met",
+      "evidence": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshot-manifest.md"
+    },
+    {
+      "requirement": "Korte checks advisory only",
+      "status": "met",
+      "evidence": "proof.short_checks_advisory_only:true"
+    },
+    {
+      "requirement": "Exit ticket completion language held",
+      "status": "met",
+      "evidence": "completionLanguageEligible:false for 1.1.1, 1.1.2, and 1.1.3"
+    },
+    {
+      "requirement": "No downstream authority claimed",
+      "status": "met",
+      "evidence": "authority flags all false"
+    },
+    {
+      "requirement": "No missing core requirement carried under PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "authority_copy_issue_count:0"
+    }
+  ],
+  "authority_claims": {
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "product_use_authorized": false,
+    "student_product_use_authorized": false,
+    "scale_gate_authorized": false,
+    "scale_gate_1_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "generated_lesson_output_changed": true,
+    "source_flags_mutated": false,
+    "route_migration_performed": false
+  },
+  "proof": {
+    "lead_review": {
+      "verdict": "READY_FOR_HUMAN_GATE_PRODUCT_3P_REVIEW",
+      "status": "completed",
+      "summary": "Specialist and lead rereview found no remaining route, rendered proof, or authority-boundary blockers after the adaptive-copy and 1.1.1 feedback screenshot repairs."
+    },
+    "machine_proof": "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json",
+    "route_inventory": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-route-inventory.md",
+    "screenshot_manifest": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshot-manifest.md",
+    "checker": {
+      "command": "node build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+      "status": "passed"
+    },
+    "capture": {
+      "command": "node build-scripts/sprints/capture-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+      "status": "passed"
+    },
+    "validation": [
+      {
+        "command": "node build-scripts/reports/validate-report-json.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-roadmap-version-index.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/sprints/emit-url-index.js --check",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:scope-language",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:platform",
+        "status": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "status": "passed"
+      },
+      {
+        "command": "git -C C:\\wt\\GATE-PRODUCT-3P-AUTHCOPY-20260618\\4veco-lessen diff --check",
+        "status": "passed"
+      }
+    ]
+  },
+  "carried_issues": [
+    {
+      "id": "G3P-AUTHCOPY-001",
+      "classification": "closed_by_repair",
+      "severity": "core_requirement_missing",
+      "finding": "1.1.2 and 1.1.3 landing Exit ticket tiles used target-capability copy while completionLanguageEligible remained false.",
+      "blocks": [],
+      "does_not_block": [
+        "renewed human gate review of repaired first-three evidence",
+        "ordinary scoped PR work after validation"
+      ],
+      "proof_required_to_close": "Neutral row and tile copy in first-three landing pages, forbidden old strings absent, completionLanguageEligible:false preserved, regenerated lesson output, recaptured rendered proof, and checker pass.",
+      "closure_evidence": [
+        "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json",
+        "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-route-inventory.md",
+        "node build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js"
+      ]
+    }
+  ],
+  "findings": [],
+  "lead_verdict": "READY_FOR_HUMAN_GATE_PRODUCT_3P_REVIEW",
+  "recommended_next_step": "Open paired platform and lesson PRs for renewed human GATE-PRODUCT-3P review. Merge platform first, lesson second, if review and CI approve."
+}

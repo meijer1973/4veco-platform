@@ -1,0 +1,1652 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
+  "generated": "2026-06-18T11:58:21.869Z",
+  "screenshots": [
+    {
+      "id": "111-landing-desktop-light-overview",
+      "paragraph": "1.1.1",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll_selector": ".route-strip",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-landing-desktop-light-overview.png",
+        "bytes": 344815,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.1 Schaarste en economisch denken - Lesroute",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "4v Economie VWO 4 Boek 1: Grondslagen, vraag en aanbod HOOFDSTUK 1 1.1.1 Schaarste en economisch denken 1.1.2 Percentages en indexcijfers 1.1.3 Grafieken en tabellen 1.1.4 Gemengde opgaven ROUTE 1 Start 2 Leer 3 Check 4 Oefen 5 Exit ticket Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.1 Licht thema · duidelijke route PARAGRAAF LANDING Schaarste en economisch denken Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraa",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "111-landing-mobile-dark-exit-row",
+      "paragraph": "1.1.1",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/index.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll_selector": "#exit-ticket .tile",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-landing-mobile-dark-exit-row.png",
+        "bytes": 55031,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.1 Schaarste en economisch denken - Lesroute",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.1 Licht thema · duidelijke route PARAGRAAF LANDING Schaarste en economisch denken Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf actueel maken. Q voorkennis Instapquiz voorkennis Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → N context Nieuws-detective Ontdek waar de economie uit deze paragraaf zichtbaar wordt in een actuele bron. Ond",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "111-short-check-desktop-light",
+      "paragraph": "1.1.1",
+      "surface": "short-check",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – korte-check.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-short-check-desktop-light.png",
+        "bytes": 97594,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "short-check",
+        "title": "Schaarste en economisch denken - Korte check",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.1 Schaarste en economisch denken Donkere modus AFRONDEN Korte check Kies per vraag wat het beste past bij de uitleg. Gebruik de oefentip als je nog wilt oefenen. Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten kiezen Vraag 1 Schaarste herkennen Wanneer is er sprake van schaarste? A Als iets bijna nergens voorkomt. B Als behoeften groter zijn dan de beschikbare middelen. C Als iedereen precies genoeg heeft. Vraag 2 Schaarste herkennen Een gemeente heeft grond voor of een park of nieuwe woningen. Welk middel is hier schaars? A Grond. B Alleen geld. C Alle woningen in Nederland. Vraag 3 Alternatieve kosten kiezen Lisa kiest een bioscoopkaartje van 12 euro en laat een pizza van 9 euro liggen. Wat zijn de alternatieve kosten? A 12 euro, want dat betaalt Lisa. B 9 euro, want dat is de opbrengst van het beste niet-gekozen alternatief. C 21 euro,",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": true,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "parNr": "1.1.1",
+          "targetReadinessEvidence": false,
+          "metadataStatus": "paragraph_skill_aligned_not_target_readiness",
+          "layoutFramework": null
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 12,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          }
+        ],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Kies je volgende oefenstapGebruik de reacties bij de vragen om te kiezen wat je nog even wilt oefenen.RedenerenSchaarste herkennenStappenplanAlternatieve kosten kiezen",
+            "hidden": true,
+            "className": "et-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-korte-check.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "111-exit-ticket-desktop-light-initial",
+      "paragraph": "1.1.1",
+      "surface": "exit-ticket",
+      "action": "initial",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-exit-ticket-desktop-light-initial.png",
+        "bytes": 94884,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.1 Schaarste en economisch denken Donkere modus AFRONDEN Exit ticket Maak de volledige paragraaf-check. Laat bij de berekeningen zien welke keuze of winst je vergelijkt. Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten Vaardigheden Gemengde winst Taak 1 Winst berekenen Berekening tonen Een boer gebruikt 10 hectare voor tarwe. Tarwe levert EUR 500 winst per hectare op. Bereken zijn totale winst uit tarwe. Bereken de winst van een keuze met hectares en winst per hectare. Berekening Totale winst Eenheid Controleer Taak 2 Alternatieve kosten berekenen Berekening tonen Mais levert EUR 350 winst per hectare op. De boer kiest geen mais op de 10 hectare. Bereken de alternatieve kosten. Bereken de waarde van het beste niet-gekozen alternatief. Berekening Alternatieve kosten Eenheid Controleer Taak 3 Gemengde winst berekenen Berekening tonen Een buur",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": true,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.1",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": null
+        },
+        "task_counts": {
+          "legacy_task_shell": 4,
+          "golden_task": 19,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          }
+        ],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+            "hidden": true,
+            "className": "et-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "111-exit-ticket-desktop-light-completed-feedback",
+      "paragraph": "1.1.1",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-exit-ticket-desktop-light-completed-feedback.png",
+        "bytes": 74156,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.1 Schaarste en economisch denken Donkere modus AFRONDEN Exit ticket Maak de volledige paragraaf-check. Laat bij de berekeningen zien welke keuze of winst je vergelijkt. Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten Vaardigheden Gemengde winst Taak 1 Winst berekenen Berekening tonen Een boer gebruikt 10 hectare voor tarwe. Tarwe levert EUR 500 winst per hectare op. Bereken zijn totale winst uit tarwe. Bereken de winst van een keuze met hectares en winst per hectare. Berekening Totale winst Eenheid Controleer Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid Taak 2 Alternatieve kosten berekenen Berekening tonen Mais levert EUR 350 winst per hectare op. De boer kiest geen mais op de 10 hectare. Bereken de alternatieve kosten. Bereken de waarde van het beste niet-gekozen alternatief. Bere",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": true,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.1",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": null
+        },
+        "task_counts": {
+          "legacy_task_shell": 4,
+          "golden_task": 19,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "feedback_good_count": 4,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+            "hidden": true,
+            "className": "et-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "111-exit-ticket-mobile-dark-completed-feedback",
+      "paragraph": "1.1.1",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – exit-ticket.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-exit-ticket-mobile-dark-completed-feedback.png",
+        "bytes": 50152,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Schaarste en economisch denken - Exit ticket",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.1 Schaarste en economisch denken Lichte modus AFRONDEN Exit ticket Maak de volledige paragraaf-check. Laat bij de berekeningen zien welke keuze of winst je vergelijkt. Oefenroute compact Redeneren Schaarste herkennen Stappenplan Alternatieve kosten Vaardigheden Gemengde winst Taak 1 Winst berekenen Berekening tonen Een boer gebruikt 10 hectare voor tarwe. Tarwe levert EUR 500 winst per hectare op. Bereken zijn totale winst uit tarwe. Bereken de winst van een keuze met hectares en winst per hectare. Berekening Totale winst Eenheid Controleer Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid Taak 2 Alternatieve kosten berekenen Berekening tonen Mais levert EUR 350 winst per hectare op. De boer kiest geen mais op de 10 hectare. Bereken de alternatieve kosten. Bereken de waarde van het beste niet-gekozen alternatief. Berek",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": true,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.1",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": null
+        },
+        "task_counts": {
+          "legacy_task_shell": 4,
+          "golden_task": 19,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Winst klopt 10 hectare keer EUR 500 winst per hectare geeft EUR 5000. Oefen dit nog met de vaardigheid"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Alternatieve kosten kloppen De boer laat EUR 3500 aan maiswinst liggen. Oefen alternatieve kosten nog"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Gemengde winst klopt 6 keer 500 plus 4 keer 350 geeft EUR 4400. Lees de vaardigheid nog terug"
+          },
+          {
+            "selector": "et-feedback is-match",
+            "tone": "good",
+            "text": "Vergelijking klopt De boer heeft EUR 5000 winst en de buurvrouw EUR 4400 winst. Omdat de grond beperkt is, moet er gekozen worden. Oefen schaarste en keuzes nog"
+          }
+        ],
+        "feedback_good_count": 4,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.RedenerenSchaarste herkennenStappenplanAlternatieve kostenVaardighedenGemengde winst",
+            "hidden": true,
+            "className": "et-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.1-exit-ticket.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "111-practice-desktop-light-redeneer-spel",
+      "paragraph": "1.1.1",
+      "surface": "practice",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.1 Schaarste en economisch denken/1.1.1 Schaarste en economisch denken – redeneer-spel.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
+        "bytes": 80710,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "practice",
+        "title": "Schaarste en economisch denken – Redeneer-spel",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel Schaarste en economisch denken Train je redeneervaardigheid. Kies een spelmodus om te beginnen.",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap",
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/reasoning.css",
+          "../../shared/theme.js"
+        ]
+      }
+    },
+    {
+      "id": "112-landing-desktop-light-overview",
+      "paragraph": "1.1.2",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll_selector": ".route-strip",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-landing-desktop-light-overview.png",
+        "bytes": 370742,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.2 Percentages en indexcijfers - Lesroute",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "4v Economie VWO 4 Boek 1: Grondslagen, vraag en aanbod HOOFDSTUK 1 1.1.1 Schaarste en economisch denken 1.1.2 Percentages en indexcijfers 1.1.3 Grafieken en tabellen 1.1.4 Gemengde opgaven ROUTE 1 Start 2 Leer 3 Check 4 Oefen 5 Exit ticket Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.2 Licht thema · duidelijke route PARAGRAAF LANDING Percentages en indexcijfers Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf a",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "112-landing-mobile-dark-exit-row",
+      "paragraph": "1.1.2",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/index.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll_selector": "#exit-ticket .tile",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-landing-mobile-dark-exit-row.png",
+        "bytes": 55191,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.2 Percentages en indexcijfers - Lesroute",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.2 Licht thema · duidelijke route PARAGRAAF LANDING Percentages en indexcijfers Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf actueel maken. Q voorkennis Instapquiz voorkennis Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → N context Nieuws-detective Ontdek waar de economie uit deze paragraaf zichtbaar wordt in een actuele bron. Onderz",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "112-short-check-desktop-light",
+      "paragraph": "1.1.2",
+      "surface": "short-check",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – korte-check.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-short-check-desktop-light.png",
+        "bytes": 135860,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "short-check",
+        "title": "Percentages en indexcijfers - Korte check",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus KORTE CHECK - PARAGRAAF 1.1.2 Korte check Check snel of je de basisstappen nog scherp hebt. Gebruik de oefentip als een keuze niet klopt. Oefenroute Rekenen Procentuele verandering Rekenen Indexcijfers gebruiken Redeneren Indexpunten uitleggen Context 1 - Prijsverandering Een prijs stijgt van 80 naar 100. Tabel 1 - Mand en index Moment Waarde Eerst 150 Later 162 Indexcijfer 108 Tabel 2 - Indexpunten Moment Index Oude index 108 Nieuwe index 112 Gebruik deze korte gegevens bij de keuzes. De feedback wijst alleen naar een oefenstap. 1 PROCENTUELE VERANDERING Een prijs stijgt van 80 naar 100. Welke basis gebruik je voor de procentuele verandering? Gebruik: Context 1 80, want dat is de oude waarde. 100, want dat is de nieuwe waarde. 20, want dat is het verschil. Controleer onderdeel Oefentip Oefen dit nog met Rekenen 2 INDEXCIJFER B",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.2-korte-check"
+        },
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "parNr": "1.1.2",
+          "gateApproved": false,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": false,
+          "metadataStatus": "paragraph_skill_aligned_not_target_readiness",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 3,
+          "golden_graph": 0,
+          "context_blocks": 3
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Kies je volgende oefenstapGebruik de feedback om te bepalen welke rekenstap je nog wilt oefenen.",
+            "hidden": true,
+            "className": "ge-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-korte-check.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "112-exit-ticket-desktop-light-initial",
+      "paragraph": "1.1.2",
+      "surface": "exit-ticket",
+      "action": "initial",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-exit-ticket-desktop-light-initial.png",
+        "bytes": 117534,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel 2 BEREKENING Indexcijfer berekenen Zet een waarde om naar een ",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.2-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.2",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 4,
+          "golden_graph": 0,
+          "context_blocks": 3
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Werk nagekekenJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": true,
+            "className": "ge-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "112-exit-ticket-desktop-light-completed-feedback",
+      "paragraph": "1.1.2",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-exit-ticket-desktop-light-completed-feedback.png",
+        "bytes": 122783,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Donkere modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel Berekening klopt Je gebruikt de oude prijs als basis en komt u",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.2-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.2",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 4,
+          "golden_graph": 0,
+          "context_blocks": 3
+        },
+        "feedback": [
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "feedback_good_count": 4,
+        "completion_nodes": [
+          {
+            "text": "Werk nagekeken Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": false,
+            "className": "ge-completion is-visible",
+            "visible": true
+          }
+        ],
+        "visible_completion_text": "Werk nagekeken Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "112-exit-ticket-mobile-dark-completed-feedback",
+      "paragraph": "1.1.2",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – exit-ticket.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-exit-ticket-mobile-dark-completed-feedback.png",
+        "bytes": 62883,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Percentages en indexcijfers - Exit ticket",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.2 Percentages en indexcijfers Lichte modus EXIT TICKET - PARAGRAAF 1.1.2 Exit ticket Maak de volledige paragraaf-check. Laat je berekening zien en controleer je notatie. Oefenroute Rekenen Percentages berekenen Rekenen Indexcijfers gebruiken Redeneren Uitleg bij indexpunten Bron 1 - Fietsprijs Een fiets kost eerst 800 euro en daarna 920 euro. Moment Prijs Basisjaar 150 Dit jaar 162 Moment Index Oude index 108 Nieuwe index 112 Gebruik deze gegevens als bron voor je berekeningen en uitleg. 1 BEREKENING Procentuele verandering berekenen Bereken een procentuele stijging vanuit een oude en nieuwe prijs. Een fiets kost eerst 800 euro en daarna 920 euro. Bereken met hoeveel procent de prijs stijgt. Berekening Methode, invulling en tussenstap Antwoord en notatie Eindantwoord in procenten Notatie Controleer onderdeel Berekening klopt Je gebruikt de oude prijs als basis en komt ui",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.2-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.2",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 4,
+          "golden_graph": 0,
+          "context_blocks": 3
+        },
+        "feedback": [
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Berekening klopt Je gebruikt de oude prijs als basis en komt uit op 15 procent."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Index klopt 162 gedeeld door 150 keer 100 geeft index 108."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Stijging klopt De stijging is 4 indexpunten, maar procentueel is dat ongeveer 3,7 procent van 108."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Uitleg sluit aan Je maakt onderscheid tussen 4 indexpunten en ongeveer 3,7 procent ten opzichte van 108."
+          }
+        ],
+        "feedback_good_count": 4,
+        "completion_nodes": [
+          {
+            "text": "Werk nagekeken Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": false,
+            "className": "ge-completion is-visible",
+            "visible": true
+          }
+        ],
+        "visible_completion_text": "Werk nagekeken Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.2-exit-ticket.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "112-practice-desktop-light-wiskundevaardigheden",
+      "paragraph": "1.1.2",
+      "surface": "practice",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.2 Percentages en indexcijfers/1.1.2 Percentages en indexcijfers – wiskundevaardigheden.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png",
+        "bytes": 169553,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "practice",
+        "title": "1.1.2 Percentages en indexcijfers – Wiskunde vaardigheden",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Terug naar overzicht ← Overzicht §1.1.2 Info Afhankelijkheden § Paragraaf Licht Percentages en indexcijfers ● 0/2 GEOEFEND ★ 0/10 STERREN Tip: tap op een kaartje om een doel te kiezen. REKENEN Oefenroute Rekenen PARAGRAAFDOEL Procentuele verandering en indexcijfers controleerbaar berekenen. Oefen eerst procentuele verandering en daarna indexcijfers met zichtbare tussenstappen. Open rekenroute Focus: Procentuele verandering berekenen Procentuele verandering berekenen aanbevolen om nu te oefenen 0/3 Prijsindex (CPI) berekenen later nodig 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route. FUNDAMENT VAARDIGHEID Procentuele verandering berekenen tik om te oefenen ★★★★★ BOUWSTENEN VAARDIGHEID Prijsindex (CPI) berekenen Eerst: Procentuele verandering berekenen ★★★★★ Reset",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
+          "../../shared/task-shell.css",
+          "../../shared/skilltree.css",
+          "../../shared/skill-map-route.css",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.2.js",
+          "../../shared/skilltree/explanations.js",
+          "../../shared/adaptive-seam.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree-engine.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/skilltree-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "113-landing-desktop-light-overview",
+      "paragraph": "1.1.3",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll_selector": ".route-strip",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-landing-desktop-light-overview.png",
+        "bytes": 368334,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.3 Grafieken en tabellen - Lesroute",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "4v Economie VWO 4 Boek 1: Grondslagen, vraag en aanbod HOOFDSTUK 1 1.1.1 Schaarste en economisch denken 1.1.2 Percentages en indexcijfers 1.1.3 Grafieken en tabellen 1.1.4 Gemengde opgaven ROUTE 1 Start 2 Leer 3 Check 4 Oefen 5 Exit ticket Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.3 Licht thema · duidelijke route PARAGRAAF LANDING Grafieken en tabellen Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf actueel",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "113-landing-mobile-dark-exit-row",
+      "paragraph": "1.1.3",
+      "surface": "landing",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/index.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll_selector": "#exit-ticket .tile",
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-landing-mobile-dark-exit-row.png",
+        "bytes": 55738,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.3 Grafieken en tabellen - Lesroute",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.3 Licht thema · duidelijke route PARAGRAAF LANDING Grafieken en tabellen Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → Instapquiz voorkennis richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf actueel maken. Q voorkennis Instapquiz voorkennis Check snel welke begrippen en basishandelingen je al paraat hebt. Maak quiz → N context Nieuws-detective Ontdek waar de economie uit deze paragraaf zichtbaar wordt in een actuele bron. Onderzoek br",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    },
+    {
+      "id": "113-short-check-desktop-light",
+      "paragraph": "1.1.3",
+      "surface": "short-check",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – korte-check.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-short-check-desktop-light.png",
+        "bytes": 110458,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "short-check",
+        "title": "Grafieken en tabellen - Korte check",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus AFRONDEN Korte check Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap. Oefenroute compact Grafieken Grafieken aflezen Vaardigheden Tabel naar grafiek Rekenen Procentuele verandering CONTEXT Bekijk eerst de bron Bron 1 - Smoothiekraam na school Een smoothiekraam ziet dat de verkochte hoeveelheid smoothies verandert als de prijs verandert. Gebruik de tabel om snel te controleren welke oefenroute je nodig hebt. Korte tekstbron met een smoothiekraamvoorbeeld voor tabel en P-Q-grafiek. Tabel 1 - Prijs en verkochte smoothies Tabel met prijzen 2.00, 2.50, 3.00, 3.50 en 4.00 euro en verkochte hoeveelheden 300, 250, 200, 150 en 100 smoothies. Tabel 1: Prijs en verkochte smoothies Prijs P (EUR) Aantal verkocht Q 2.00 300 2.50 250 3.00 200 3.50 150 4.00 100 Taak 1 P-Q-grafiek",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": true,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": {
+          "surface": "advisory_short_check",
+          "parNr": "1.1.3",
+          "targetReadinessEvidence": false,
+          "metadataStatus": "paragraph_skill_aligned_not_target_readiness",
+          "layoutFramework": null
+        },
+        "task_counts": {
+          "legacy_task_shell": 3,
+          "golden_task": 16,
+          "golden_graph": 0,
+          "context_blocks": 2
+        },
+        "feedback": [
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          },
+          {
+            "selector": "et-feedback",
+            "tone": "unknown",
+            "text": ""
+          }
+        ],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Kies je volgende oefenstapGebruik de feedback: oefen tabel naar grafiek als assen of punten haperen, oefen grafieken aflezen als de aflezing lastig was, of probeer daarna pas het exit ticket.GrafiekenGrafieken aflezenVaardighedenTabel naar grafiekRekenenProcentuele verandering",
+            "hidden": true,
+            "className": "et-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/exit-ticket.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.3.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/exit-ticket/1.1.3-korte-check.js",
+          "../../shared/exit-ticket-engine.js",
+          "../../shared/exit-ticket-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "113-exit-ticket-desktop-light-initial",
+      "paragraph": "1.1.3",
+      "surface": "exit-ticket",
+      "action": "initial",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-exit-ticket-desktop-light-initial.png",
+        "bytes": 157272,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.3-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 3,
+          "golden_graph": 1,
+          "context_blocks": 2
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerondJe antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": true,
+            "className": "ge-completion",
+            "visible": false
+          }
+        ],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.3-exit-ticket.js",
+          "../../shared/golden-ticket-graph.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "113-exit-ticket-desktop-light-completed-feedback",
+      "paragraph": "1.1.3",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-exit-ticket-desktop-light-completed-feedback.png",
+        "bytes": 147067,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; d",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.3-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 3,
+          "golden_graph": 1,
+          "context_blocks": 2
+        },
+        "feedback": [
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent."
+          }
+        ],
+        "feedback_good_count": 3,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerond Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": false,
+            "className": "ge-completion is-visible",
+            "visible": true
+          }
+        ],
+        "visible_completion_text": "Exit ticket afgerond Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.3-exit-ticket.js",
+          "../../shared/golden-ticket-graph.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "113-exit-ticket-mobile-dark-completed-feedback",
+      "paragraph": "1.1.3",
+      "surface": "exit-ticket",
+      "action": "complete",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – exit-ticket.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-exit-ticket-mobile-dark-completed-feedback.png",
+        "bytes": 64742,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "exit-ticket",
+        "title": "Grafieken en tabellen - Exit ticket: van tabel naar grafiek naar kritische controle",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.3 Grafieken en tabellen Lichte modus EXIT TICKET · §1.1.3 Exit ticket: van tabel naar grafiek naar kritische controle Werk zelfstandig met de bron. Je bouwt een economisch P-Q-diagram, leest een tussenwaarde af en controleert een procentuele claim. Er staat geen formulekaart klaar: als je een berekening nodig hebt, bouw je die zelf. Oefenroute bij herstel Grafieken Tabel naar P-Q-grafiek Grafieken Interpoleren uit een grafiek Rekenen Procentuele verandering Bron 1 — broodjeskraam bij het station Een broodjeskraam bij het station houdt bij hoeveel broodjes per dag worden verkocht bij verschillende prijzen. Voor dit exit ticket neem je aan dat het verband tussen prijs en verkochte hoeveelheid rechtlijnig is. Prijs P (EUR) Hoeveelheid Q 1.00 350 1.50 300 2.00 250 2.50 200 3.00 150 Gebruik deze bron als enige gegevensbron. De tabel geeft niet voor welke as je moet kiezen; da",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": true,
+          "source_key": "1.1.3-exit-ticket"
+        },
+        "data_flags": {
+          "surface": "target_equivalent_exit_ticket",
+          "parNr": "1.1.3",
+          "gateApproved": true,
+          "completionLanguageEligible": false,
+          "targetReadinessEvidence": true,
+          "metadataStatus": "target_equivalent_aligned",
+          "layoutFramework": "golden_exercise_workbench"
+        },
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 3,
+          "golden_graph": 1,
+          "context_blocks": 2
+        },
+        "feedback": [
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Grafiekopzet klopt Je gebruikt Q horizontaal, P verticaal en twee verschillende tabelpunten. Omdat het verband rechtlijnig is, bepalen twee punten de lijn."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Aflezing past EUR 2,25 ligt halverwege 2,00 en 2,50. De hoeveelheid ligt daarom rond 225 broodjes."
+          },
+          {
+            "selector": "ge-feedback is-visible is-good",
+            "tone": "good",
+            "text": "Claimcontrole klopt Je gebruikt het interval EUR 1,50 tot EUR 3,00: Q gaat van 300 naar 150. Dat is een daling van 50 procent."
+          }
+        ],
+        "feedback_good_count": 3,
+        "completion_nodes": [
+          {
+            "text": "Exit ticket afgerond Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+            "hidden": false,
+            "className": "ge-completion is-visible",
+            "visible": true
+          }
+        ],
+        "visible_completion_text": "Exit ticket afgerond Je antwoorden zijn lokaal nagekeken. Gebruik de oefenroute als je een onderdeel wilt versterken.",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "../../shared/golden-ticket-layout.css",
+          "../../shared/exit-ticket/1.1.3-exit-ticket.js",
+          "../../shared/golden-ticket-graph.js",
+          "../../shared/golden-ticket-layout.js"
+        ]
+      }
+    },
+    {
+      "id": "113-practice-desktop-light-grafiekenspel",
+      "paragraph": "1.1.3",
+      "surface": "practice",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.3 Grafieken en tabellen/1.1.3 Grafieken en tabellen – grafiekenspel.html",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-practice-desktop-light-grafiekenspel.png",
+        "bytes": 115826,
+        "dimensions": {
+          "width": 1280,
+          "height": 900
+        }
+      },
+      "inspection": {
+        "surface": "practice",
+        "title": "Grafieken en tabellen - Grafiekenspel",
+        "theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "← Overzicht §1.1.3 Grafieken en tabellen Donkere modus GRAFIEKENSPEL Grafieken en tabelwaarden lezen Lees eerst titel, assen en eenheid. Kies daarna pas waarden, punten of berekening. 1 / 7 GRAFIEKEN Oefenroute Grafieken PARAGRAAFDOEL Tabel- en grafiekgegevens kiezen, aflezen en gebruiken. Oefen tabelselectie, staafdiagrammen en lijngrafieken als een samenhangende bronroute. Open grafiekenspel Focus: Tabelwaarden selecteren voor berekening Tabelwaarden selecteren voor berekening aanbevolen om nu te oefenen 0/3 Waarden aflezen uit staafdiagram beschikbaar 0/3 Waarden aflezen uit lijngrafiek beschikbaar 0/3 Alleen lokale oefenvoortgang. Geen diagnose, beoordeling of automatische route. OPGAVE 1 Kies een tabelwaarde Welke verkoop hoort in de tabel bij prijs EUR 2,00? IJsjesverkoop per prijs Prijs Verkoop per dag EUR 1,00 500 ijsjes EUR 1,50 400 ijsjes EUR 2,00 300 ijsjes EUR 2,50 200 ijsjes",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 0,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 3,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&display=swap",
+          "../../shared/skill-map-route.css",
+          "../../shared/task-shell.css",
+          "../../shared/graphical.css",
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.3.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/graphical/1.1.3.js",
+          "../../shared/adaptive-seam.js",
+          "../../shared/graphical-engine.js",
+          "../../shared/graphical-ui.js"
+        ]
+      }
+    },
+    {
+      "id": "114-landing-mobile-dark-exit-row-same-copy-hygiene",
+      "paragraph": "1.1.4",
+      "surface": "landing",
+      "action": "same-copy-hygiene",
+      "path": "1.1 Hoofdstuk Economisch denken en rekenen/1.1.4 Gemengde opgaven/index.html",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll_selector": "#exit-ticket .tile",
+      "gate_claim": false,
+      "screenshot": {
+        "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png",
+        "bytes": 65337,
+        "dimensions": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "inspection": {
+        "surface": "landing",
+        "title": "1.1.4 Gemengde opgaven - Lesroute",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "horizontal_overflow": false,
+        "body_text_excerpt": "Boek 1: Grondslagen, vraag en aanbod › Hoofdstuk 1 › Paragraaf 1.1.4 Licht thema · duidelijke route PARAGRAAF LANDING Gemengde opgaven Een duidelijke route voor de hele paragraaf: eerst bepalen wat je nodig hebt, daarna trainen, leren, oefenen, controleren en tenslotte het lesboek of extra materiaal openen. JOUW LEERPAD De normale opgavenroute van de paragraaf: dit is de kern van het oefenen. Maak opgaven → Zelfstandige oefeningen richting exit ticket Start voorkennis + nieuws Leer uitleg + presentatie + leerpad Check kort advies Oefen begeleid - zelfstandig - lokaal advies Exit ticket eindcontrole 1 Start Oriënteren, voorkennis ophalen en de paragraaf actueel maken. Q in voorbereiding Instapquiz voorkennis Check snel welke begrippen en basishandelingen je al paraat hebt. In voorbereiding ... N in voorbereiding Nieuws-detective Ontdek waar de economie uit deze paragraaf zichtbaar wordt i",
+        "forbidden_authority_terms": [],
+        "target_completion_terms": [],
+        "roots": {
+          "landing_route_layer_count": 17,
+          "legacy_exit_ticket_app": false,
+          "golden_ticket_root": false,
+          "source_key": null
+        },
+        "data_flags": null,
+        "task_counts": {
+          "legacy_task_shell": 0,
+          "golden_task": 0,
+          "golden_graph": 0,
+          "context_blocks": 0
+        },
+        "feedback": [],
+        "feedback_good_count": 0,
+        "completion_nodes": [],
+        "visible_completion_text": "",
+        "loaded_assets": []
+      }
+    }
+  ]
+}
