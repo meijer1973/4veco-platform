@@ -118,7 +118,7 @@
     };
 
     NewsDetectiveEngine.prototype.getDomainColors = function () {
-        return JSON.parse(JSON.stringify(this._data.domainColors));
+        return JSON.parse(JSON.stringify(this._data.domainColors || {}));
     };
 
     NewsDetectiveEngine.prototype.getLesLink = function () {
