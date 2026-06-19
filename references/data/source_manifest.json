@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-19T11:27:53.404Z",
+  "generated_at": "2026-06-19T11:31:49.474Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums. Text file size and sha256 use LF-normalized bytes for OS-stable output.",
