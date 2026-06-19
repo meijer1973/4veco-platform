@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "sprint_id": "GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1",
-  "generated": "2026-06-18T11:58:21.869Z",
+  "generated": "2026-06-19T11:21:27.722Z",
   "status": "ready_for_human_gate_product_3p_review",
   "lead_recommendation": "READY_FOR_HUMAN_GATE_PRODUCT_3P_REVIEW",
   "source_route": {
-    "platform_root": "C:\\wt\\GATE-PRODUCT-3P-AUTHCOPY-20260618\\4veco-platform",
-    "book_root": "C:\\wt\\GATE-PRODUCT-3P-AUTHCOPY-20260618\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
-    "local_server": "http://127.0.0.1:61574"
+    "platform_root": "C:\\wt\\GATE-PRODUCT-3P-CLOSURE-SG1-20260619\\4veco-platform",
+    "book_root": "C:\\wt\\GATE-PRODUCT-3P-CLOSURE-SG1-20260619\\4veco-lessen\\Boek 1 - Grondslagen, vraag en aanbod",
+    "local_server": "http://127.0.0.1:51563"
   },
   "product_end_state_ref": "../4veco-lessen/specifications/product-end-state.md",
   "original_gate_spec_ref": "../4veco-lessen/specifications/companion-core-specifications.md",
@@ -1918,7 +1918,7 @@
       "scroll_selector": "#exit-ticket .tile",
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-landing-mobile-dark-exit-row.png",
-        "bytes": 55031,
+        "bytes": 54768,
         "dimensions": {
           "width": 390,
           "height": 844
@@ -2381,7 +2381,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/111-practice-desktop-light-redeneer-spel.png",
-        "bytes": 80710,
+        "bytes": 207102,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -2396,7 +2396,7 @@
           "height": 900
         },
         "horizontal_overflow": false,
-        "body_text_excerpt": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel Schaarste en economisch denken Train je redeneervaardigheid. Kies een spelmodus om te beginnen.",
+        "body_text_excerpt": "← Terug naar overzicht 1.1.1 Schaarste en economisch denken – Redeneer-spel Schaarste en economisch denken Train je redeneervaardigheid. Kies een spelmodus om te beginnen. 🔢 Stappen ordenen Selecteer 3 juiste stappen en zet ze in de goede volgorde. 5 rondes ❓ Deelvragen opbouwen Kies de 3 juiste deelvragen in de goede volgorde. 5 rondes 🔍 Vind de fout Welke van de 3 stappen bevat een fout? 5 rondes 📈 Stroomdiagram bouwen Bouw een stroomdiagram door blokken in de juiste volgorde te plaatsen. 5 rondes 🧩 Structuren matchen Koppel 6 opgaven aan 3 paren die dezelfde oplossingsstructuur delen. 1 ronde ✍️ Redeneerantwoord opbouwen Schrijf zelf een korte oorzaak-tussenstap-conclusie redenering. 5 rondes 📊 Structuurtypen in deze les: A: Situatie herkennen → Schaarste benoemen → Alternatieve kosten bepalen (4 opgaven) B: Alternatieven opsommen → Opbrengst per alternatief berekenen → Beste nie",
         "forbidden_authority_terms": [],
         "target_completion_terms": [],
         "roots": {
@@ -2422,7 +2422,18 @@
           "../../shared/skill-map-route.css",
           "../../shared/task-shell.css",
           "../../shared/reasoning.css",
-          "../../shared/theme.js"
+          "../../shared/theme.js",
+          "../../shared/skill-map-engine.js",
+          "../../shared/skilltree/base-elements.js",
+          "../../shared/skilltree/1.1.1.js",
+          "../../shared/skill-map-route-ui.js",
+          "../../shared/reasoning/1.1.1.js",
+          "../../shared/reasoning/meta-categories.js",
+          "../../shared/adaptive-seam.js",
+          "../../shared/task-shell-engine.js",
+          "../../shared/task-shell-ui.js",
+          "../../shared/reasoning-engine.js",
+          "../../shared/reasoning-ui.js"
         ]
       }
     },
@@ -2490,7 +2501,7 @@
       "scroll_selector": "#exit-ticket .tile",
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-landing-mobile-dark-exit-row.png",
-        "bytes": 55191,
+        "bytes": 55937,
         "dimensions": {
           "width": 390,
           "height": 844
@@ -2873,7 +2884,7 @@
       },
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/112-practice-desktop-light-wiskundevaardigheden.png",
-        "bytes": 169553,
+        "bytes": 171783,
         "dimensions": {
           "width": 1280,
           "height": 900
@@ -2990,7 +3001,7 @@
       "scroll_selector": "#exit-ticket .tile",
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/113-landing-mobile-dark-exit-row.png",
-        "bytes": 55738,
+        "bytes": 56308,
         "dimensions": {
           "width": 390,
           "height": 844
@@ -3461,7 +3472,7 @@
       "gate_claim": false,
       "screenshot": {
         "file": "reports/sprints/GATE-PRODUCT-3P-AUTHORITY-COPY-REPAIR-AND-REREVIEW-1-screenshots/114-landing-mobile-dark-exit-row-same-copy-hygiene.png",
-        "bytes": 65337,
+        "bytes": 65891,
         "dimensions": {
           "width": 390,
           "height": 844

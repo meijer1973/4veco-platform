@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1",
+  "generated": "2026-06-19T11:45:00.000Z",
+  "status": "hold_for_golden_route_repair",
+  "lead_recommendation": "HOLD_FOR_GOLDEN_ROUTE_REPAIR",
+  "gate_product_3p": {
+    "current_main_closure": true,
+    "closure_scope": "bounded_first_three_rendered_product_path_only",
+    "platform_pr": 111,
+    "platform_merge_commit": "992aa30360cf3b919ac8b866613537752c416203",
+    "lesson_pr": 26,
+    "lesson_merge_commit": "3f03e06309c9fef9b46b5ce229a27d2ebb4a1f44",
+    "proof_json": "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json",
+    "proof_generated": "2026-06-19T11:21:27.722Z",
+    "checker": "node build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+    "checker_status": "passed"
+  },
+  "scale_gate_1": {
+    "ready": false,
+    "primary_hold": "golden_route_repair",
+    "secondary_holds": [
+      "start_route_mastery_copy_repair",
+      "a96_calculation_answer_form_refinement"
+    ],
+    "product_route_adoption_authorized": false,
+    "student_product_use_authorized": false,
+    "target_equivalent_completion_language_authorized": false,
+    "diagnostics_authorized": false,
+    "mastery_or_sequencing_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "broad_product_use_authorized": false
+  },
+  "surface_disposition": [
+    {
+      "surface": "1.1.1-exit-ticket",
+      "rendered_shell": "legacy_task_shell",
+      "gateApproved": true,
+      "targetReadinessEvidence": true,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted",
+      "scale_gate_1": "blocks_until_golden_route_repair_or_waiver"
+    },
+    {
+      "surface": "1.1.1-korte-check",
+      "rendered_shell": "legacy_task_shell",
+      "gateApproved": false,
+      "targetReadinessEvidence": false,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted_as_advisory",
+      "scale_gate_1": "blocks_until_golden_advisory_repair_or_waiver"
+    },
+    {
+      "surface": "1.1.2-exit-ticket",
+      "rendered_shell": "golden_exercise_workbench",
+      "gateApproved": true,
+      "targetReadinessEvidence": true,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted",
+      "scale_gate_1": "a96_refinement_required_before_scale_reliance"
+    },
+    {
+      "surface": "1.1.2-korte-check",
+      "rendered_shell": "golden_exercise_workbench",
+      "gateApproved": false,
+      "targetReadinessEvidence": false,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted_as_advisory",
+      "scale_gate_1": "accepted_as_first_golden_advisory_proof"
+    },
+    {
+      "surface": "1.1.3-exit-ticket",
+      "rendered_shell": "golden_exercise_workbench",
+      "gateApproved": true,
+      "targetReadinessEvidence": true,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted",
+      "scale_gate_1": "accepted_as_golden_graph_table_proof"
+    },
+    {
+      "surface": "1.1.3-korte-check",
+      "rendered_shell": "legacy_task_shell",
+      "gateApproved": false,
+      "targetReadinessEvidence": false,
+      "completionLanguageEligible": false,
+      "g3p_closure": "accepted_as_advisory",
+      "scale_gate_1": "blocks_until_golden_graph_advisory_repair_or_waiver"
+    }
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original companion/gate specification cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/companion-core-specifications.md"
+    },
+    {
+      "requirement": "GATE-PRODUCT-3P current-main proof refreshed",
+      "status": "met",
+      "evidence": "reports/json/gate-product-3p-authority-copy-repair-and-rereview-1-proof.json"
+    },
+    {
+      "requirement": "First-three authority copy neutral",
+      "status": "met",
+      "evidence": "proof.first_three_landing_authority_copy_neutral:true"
+    },
+    {
+      "requirement": "No downstream authority claimed",
+      "status": "met",
+      "evidence": "authority flags remain false"
+    },
+    {
+      "requirement": "All first-three route surfaces scale-ready",
+      "status": "not_met",
+      "evidence": "1.1.1 and 1.1.3-korte-check legacy-shell surfaces"
+    },
+    {
+      "requirement": "Start-route copy scale-safe",
+      "status": "not_met",
+      "evidence": "first-three instapquiz pages still include mastery/closure wording"
+    },
+    {
+      "requirement": "Full A96 calculation answer form scale-ready",
+      "status": "not_met",
+      "evidence": "1.1.2 route compresses formula/substitution/intermediate work in shared work capture"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "SG1-002",
+      "classification": "scale_blocker",
+      "finding": "First-three set still contains legacy-shell route surfaces.",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "GATE-PRODUCT-3P narrow closure",
+        "ordinary scoped PR work",
+        "Golden-route repair planning"
+      ],
+      "proof_required_to_close": "Reviewed Golden-route repair or explicit human waiver, followed by refreshed first-three rendered proof."
+    },
+    {
+      "id": "SG1-003",
+      "classification": "scale_blocker",
+      "finding": "1.1.2 calculation route is not yet full A96 answer-form proof.",
+      "blocks": [
+        "Scale Gate 1 calculation reliance",
+        "broad calculation-route rollout"
+      ],
+      "does_not_block": [
+        "GATE-PRODUCT-3P narrow closure",
+        "current held-completion first-three proof"
+      ],
+      "proof_required_to_close": "A96-CALCULATION-WORKBENCH-REFINE-1 rendered proof or explicit human waiver with consequences."
+    },
+    {
+      "id": "SG1-004",
+      "classification": "scale_blocker",
+      "finding": "First-three Start pages still include mastery/closure phrasing while mastery/sequencing and student/product-use authority remain held.",
+      "blocks": [
+        "Scale Gate 1",
+        "product-route adoption",
+        "student/product use"
+      ],
+      "does_not_block": [
+        "GATE-PRODUCT-3P narrow closure",
+        "landing Exit ticket authority-copy repair closure"
+      ],
+      "proof_required_to_close": "START-ROUTE-MASTERY-COPY-REPAIR-1 or equivalent reviewed repair with rendered first-three proof."
+    }
+  ],
+  "validation": [
+    {
+      "command": "node build-scripts/sprints/check-gate-product-3p-authority-copy-repair-and-rereview-1.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/reports/validate-report-json.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/references/check-roadmap-version-index.js",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/emit-url-index.js --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-review-throughput-packet.js reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-gate-ci-proof.js reports/review-gates/GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1/review-packet.json",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:scope-language",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run check:platform",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git -C C:\\wt\\GATE-PRODUCT-3P-CLOSURE-SG1-20260619\\4veco-lessen diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "node build-scripts/sprints/check-bundle-urls.js GATE-PRODUCT-3P-CLOSURE-AND-SCALE-GATE-1-READINESS-BUNDLE-1",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd ci",
+      "status": "passed_with_existing_audit_warnings"
+    }
+  ],
+  "next_sprint_sequence": [
+    "EXIT-SHORT-WORKBENCH-111-PLAN-1",
+    "EXIT-TICKET-WORKBENCH-111-RENDERED-1",
+    "SHORT-CHECK-WORKBENCH-111-RENDERED-1",
+    "SHORT-CHECK-WORKBENCH-113-PLAN-1",
+    "SHORT-CHECK-WORKBENCH-113-RENDERED-1",
+    "START-ROUTE-MASTERY-COPY-REPAIR-1",
+    "A96-CALCULATION-WORKBENCH-REFINE-1",
+    "GATE-PRODUCT-3P-SCALE-GATE-1-READY-REVIEW-1"
+  ],
+  "local_validation_summary": "passed on 2026-06-19; remote PR CI not yet available for this new platform-only bundle"
+}
