@@ -311,14 +311,22 @@ The generated Chapter 1.3 report must visibly retain:
 ## Acceptance tests
 
 The legacy `check-sprint-bundle` command is retained as deterministic
-visibility for the archive sprint layout; the supported closure validator is
-`check-sprint-plan` plus the explicit generator, stability, refusal, roadmap,
-diff, and platform checks below.
+visibility text for the archive sprint layout; it is not closure proof because
+the helper expects the `reports/sprints/<id>` bundle layout and rejects archived
+INSPECT packets. The supported closure validator is `check-sprint-plan` plus
+the explicit generator, stability, refusal, roadmap, diff, and platform checks
+below.
+
+Visibility-only archive-layout command, expected to fail with the current
+legacy checker:
+
+```bash
+node build-scripts/sprints/check-sprint-bundle.js archive/sprints/INSPECT-11EF
+```
 
 ```bash
 npm.cmd run check:agent-worktree-safety -- --check --task INSPECT-11EF --agent codex-main --require-prefix codex/,agent/
 node build-scripts/sprints/check-sprint-plan.js archive/sprints/INSPECT-11EF/INSPECT-11EF-sprint-plan.md
-node build-scripts/sprints/check-sprint-bundle.js archive/sprints/INSPECT-11EF
 node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope all
 node build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 node build-scripts/inspection/build-dutch-diagnostic-report.js --public
