@@ -2,9 +2,11 @@
 /**
  * check-source-annex-extraction-overlays.js
  *
- * Read-only validator for future source-annex and graph-object extraction
- * overlays. Default mode only proves the future storage file is absent.
- * Explicit input mode validates temporary dry-run fixture files.
+ * Read-only validator for source-annex and graph-object extraction overlays.
+ * Default mode proves that operation/answer candidate storage is absent and
+ * that any real q19 source-annex storage is still blocked, non-executing
+ * candidate evidence. Explicit input mode validates temporary dry-run fixture
+ * files.
  *
  * HOW TO ADAPT:
  * - Keep q19 reconstructability conservative: source/graph detail must be
