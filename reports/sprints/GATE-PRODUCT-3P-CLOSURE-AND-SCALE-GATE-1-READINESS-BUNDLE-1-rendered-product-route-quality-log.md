@@ -53,7 +53,7 @@ PR #111 and lesson PR #26 merged.
 | route/link | hold for scale | Mixed Golden/legacy shells block Scale Gate. |
 | teacher/didactic | hold for scale | Narrow human gate readiness only; legacy short-check copy polish remains. |
 | A96 calculation | hold for scale | Calculation route needs full answer-form refinement before scale reliance. |
-| repository/CI | process flags | Packet must satisfy review-throughput, URL, roadmap, report JSON, and platform validation. |
+| repository/CI | pass with remote CI evidence | PR #116 head `b2d85991ef1963e4486c319a1d3458739e61163e` passed `platform-ci` run `27824019140`, job `validate-platform`; fresh remote CI is still required after this minor revision before merge. |
 | lead | hold | `HOLD_FOR_GOLDEN_ROUTE_REPAIR`. |
 
 ## Validation Expectations

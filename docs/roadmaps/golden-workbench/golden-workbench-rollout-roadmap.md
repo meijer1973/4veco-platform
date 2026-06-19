@@ -2,7 +2,7 @@
 
 Updated: 2026-06-19
 Roadmap ID: `golden-workbench-rollout-roadmap`
-Roadmap version: `v1.1-product-3p-closed-scale-held`
+Roadmap version: `v1.2-product-3p-closed-111-bundle-next`
 Roadmap status: `active`
 Owner: `platform_team`
 Original planning input: `docs/roadmaps/golden-workbench/golden-workbench-rollout-original-plan-20260612.md`
@@ -58,8 +58,10 @@ As of 2026-06-19:
   language remain unauthorized.
 - The lead Scale Gate readiness result is
   `HOLD_FOR_GOLDEN_ROUTE_REPAIR`.
-- The next roadmap-controlled implementation-planning sprint is
-  `EXIT-SHORT-WORKBENCH-111-PLAN-1`.
+- The next roadmap-controlled substantial bundle is
+  `GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1`.
+- `EXIT-SHORT-WORKBENCH-111-PLAN-1` is an internal phase of that bundle, not a
+  separate human-review stop.
 
 ## Non-Negotiables
 
@@ -86,33 +88,39 @@ As of 2026-06-19:
 
 | Order | Sprint | Kind | Purpose | May proceed when |
 |---|---|---|---|---|
-| 1 | `EXIT-SHORT-WORKBENCH-111-PLAN-1` | Planning | Decide the reviewed Golden route plan for `1.1.1` exit ticket and short check without mutating target-readiness flags. | Start next from current `main`. |
-| 2 | `EXIT-TICKET-WORKBENCH-111-RENDERED-1` | Bounded implementation | Render `1.1.1` exit ticket through Golden Workbench or record an explicit human waiver. | The `1.1.1` plan has a reviewed operation chain and variant decision. |
-| 3 | `SHORT-CHECK-WORKBENCH-111-RENDERED-1` | Bounded implementation | Render `1.1.1` short check through Golden advisory Workbench or record an explicit human waiver. | The `1.1.1` advisory route plan is approved. |
-| 4 | `SHORT-CHECK-WORKBENCH-113-PLAN-1` | Planning | Repair/plan the graph advisory short-check variant before any `1.1.3-korte-check` render. | Do not render directly from current source; graph-advisory risks are resolved first. |
-| 5 | `SHORT-CHECK-WORKBENCH-113-RENDERED-1` | Bounded implementation | Render `1.1.3-korte-check` through a reviewed Golden advisory graph variant. | The graph-advisory plan is approved. |
-| 6 | `START-ROUTE-MASTERY-COPY-REPAIR-1` | Authority-copy repair | Remove first-three Start-route mastery/closure phrasing while mastery/sequencing and product-use authority remain held. | Can run in parallel with planning only if scoped to copy and proof. |
-| 7 | `A96-CALCULATION-WORKBENCH-REFINE-1` | Quality refinement | Move calculation answers toward explicit formula, substitution, intermediate step, final answer, notation, and conclusion sections. | The current calculation transfer proof is stable and review has bandwidth. |
-| 8 | `GATE-PRODUCT-3P-SCALE-GATE-1-READY-REVIEW-1` | Gate preparation/review | Refresh first-three rendered proof and prepare a human Scale Gate 1 readiness packet. | Golden-route repair, Start-copy repair, and A96 disposition are complete or explicitly waived. |
+| 1 | `GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1` | Substantial implementation/review | Treat `EXIT-SHORT-WORKBENCH-111-PLAN-1` as an internal phase, migrate both `1.1.1` check surfaces to governed Golden Workbench routes, repair first-three Start-route mastery/closure copy, regenerate output, and return only with rendered proof or a hard blocker. | Start next from updated `main` after PR #116 merges. |
+| 2 | `GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1` | Substantial implementation/review | Design and implement the `1.1.3` graph advisory short check without reviving fake graph controls. | The `1.1.1` migration/Start-copy bundle is merged or explicitly unblocks `1.1.3` work. |
+| 3 | `A96-CALCULATION-WORKBENCH-REFINE-1` | Quality refinement | Move `1.1.2` calculation answers toward explicit formula, substitution, intermediate step, final answer, notation, and conclusion sections. | Golden route repairs are stable enough that A96 refinement can be reviewed without masking route blockers. |
+| 4 | `FIRST-THREE-POST-REPAIR-PROOF-AND-SCALE-GATE-1-REVIEW-1` | Gate preparation/review | Recapture first-three evidence after repairs and return for the actual Scale Gate 1 human decision. | Golden-route repair, Start-copy repair, and A96 disposition are complete or explicitly waived. |
 
 ## Immediate Sprint Contract
 
-`EXIT-SHORT-WORKBENCH-111-PLAN-1` is the recommended next sprint from this
-roadmap.
+`GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1` is the
+recommended next substantial bundle from this roadmap. `EXIT-SHORT-WORKBENCH-111-PLAN-1`
+is an internal phase of this bundle, not a separate human-review stop.
 
 Scope:
 
+- Internal `1.1.1` architecture planning and fit analysis.
 - `1.1.1` exit ticket route architecture.
 - `1.1.1` advisory short-check route architecture.
+- `1.1.1` exit ticket Golden rendering.
+- `1.1.1` advisory short-check Golden rendering.
+- First-three Start-route mastery/closure copy repair.
 - Source-data authority flags for `1.1.1`, which must not be mutated unless a
   strict source/generated mismatch is discovered and separately justified.
-- Operation-chain and rendered-proof requirements needed for later
-  implementation sprints.
+- Rendered proof, checker coverage, and source/generated parity for the
+  implemented bundle.
 
 Required review work:
 
-- Decide whether `1.1.1` needs an exit ticket, short check, or both in Golden
-  Workbench form before Scale Gate 1.
+- Decide internally whether the current Golden calculation/structured and
+  advisory variants fit `1.1.1`, or whether narrow extensions are required.
+- Have the sub-agent lead reviewer approve the architecture plan before
+  implementation.
+- Implement and render both `1.1.1` check surfaces unless a hard blocker is
+  fully specified.
+- Repair first-three Start-route mastery/closure copy centrally where possible.
 - Preserve `completionLanguageEligible:false`.
 - Preserve advisory-only posture for short checks.
 - Name the required rendered states, route links, mobile/dark evidence, and
@@ -122,17 +130,20 @@ Required review work:
 
 Acceptance:
 
-- `PASS`: a precise, implementation-ready Golden route plan with no authority
-  overclaim.
-- `REVISE`: missing proof detail or ambiguous route operation chain.
+- `PASS`: both `1.1.1` check surfaces are implemented as governed Golden
+  routes, first-three Start copy is repaired, rendered proof is complete, and
+  no authority overclaim is present.
+- `REVISE`: missing proof detail, ambiguous route operation chain, incomplete
+  Start-copy repair, or a rendered/state coverage gap.
 - `FAIL`: target-readiness mutation, completion-language authorization,
   product-use claim, or a plan that carries a missing core Scale Gate
   requirement under `PASS WITH FLAGS`.
 
 Explicit non-actions:
 
-- Do not migrate routes in this planning sprint.
 - Do not hand-edit generated lesson output.
+- Do not return after planning alone, checker work alone, Start-copy repair
+  alone, or a partial renderer.
 - Do not claim product use, target-equivalent completion, diagnostics,
   mastery/sequencing, PV, Scale Gate 1, or student use.
 

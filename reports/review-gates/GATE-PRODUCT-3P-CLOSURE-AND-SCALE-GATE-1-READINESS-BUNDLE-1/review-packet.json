@@ -179,7 +179,7 @@
         "GATE-PRODUCT-3P narrow closure",
         "landing Exit ticket authority-copy repair closure"
       ],
-      "proof_required_to_close": "START-ROUTE-MASTERY-COPY-REPAIR-1 or equivalent reviewed repair with rendered first-three proof."
+      "proof_required_to_close": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1 or equivalent reviewed repair with rendered first-three proof."
     },
     {
       "id": "SG1-005",
@@ -230,7 +230,7 @@
       },
       {
         "role": "repository/CI reviewer",
-        "result": "PROCESS_FLAGS_UNTIL_VALIDATION_AND_PR_CI"
+        "result": "PASS_REMOTE_CI_CONFIRMED_FOR_REVIEWED_HEAD"
       },
       {
         "role": "lead reviewer",
@@ -238,14 +238,17 @@
       }
     ]
   },
-  "ci_waiver": {
-    "owner": "Codex local closure bundle before PR CI",
-    "reason": "No remote PR run exists yet for this platform-only report and roadmap bundle.",
-    "affected_claim": "Merge readiness only; it does not affect the narrow GATE-PRODUCT-3P closure record and does not grant Scale Gate 1 approval.",
-    "consequence": "The packet may be reviewed as a blocker bundle locally, but the PR cannot be merged until remote platform-ci validates the reviewed commit or the merge note records equivalent CI evidence.",
-    "review_may_proceed": "yes for blocker-bundle review, no for merge without PR CI",
-    "follow_up_required": "Replace this waiver with reviewed commit/run metadata after PR CI passes, or record PR CI in the merge note."
-  },
   "lead_verdict": "HOLD_FOR_GOLDEN_ROUTE_REPAIR",
-  "recommended_next_step": "Start EXIT-SHORT-WORKBENCH-111-PLAN-1 from updated main. Do not request Scale Gate 1 closure until Golden-route repair, Start-route copy repair, and A96 disposition are complete or explicitly waived."
+  "recommended_next_step": "Start GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1 from updated main. Treat EXIT-SHORT-WORKBENCH-111-PLAN-1 as an internal phase, not a human-review stop. Do not request Scale Gate 1 closure until the 1.1.1 Golden migration/Start-copy bundle, 1.1.3 graph-advisory bundle, and A96 disposition are complete or explicitly waived.",
+  "remote_ci": {
+    "head_sha": "b2d85991ef1963e4486c319a1d3458739e61163e",
+    "reviewed_commit_sha": "b2d85991ef1963e4486c319a1d3458739e61163e",
+    "run_id": 27824019140,
+    "github_actions_run_id": "27824019140",
+    "workflow": "platform-ci",
+    "job": "validate-platform",
+    "status": "passed",
+    "conclusion": "success",
+    "ci_run_corresponds_to_reviewed_commit": true
+  }
 }

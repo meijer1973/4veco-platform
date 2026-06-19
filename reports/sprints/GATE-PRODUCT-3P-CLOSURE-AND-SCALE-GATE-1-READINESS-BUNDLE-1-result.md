@@ -41,7 +41,7 @@ Local validation passed on 2026-06-19:
 
 - dedicated first-three product-path checker;
 - review-throughput packet checker;
-- gate CI proof checker with local pre-PR CI waiver;
+- gate CI proof checker with remote CI evidence;
 - bundle URL checker;
 - report JSON validation;
 - roadmap version index check;
@@ -50,17 +50,30 @@ Local validation passed on 2026-06-19:
 - platform Jest via `npm.cmd run check:platform`;
 - platform and lesson `git diff --check`.
 
-Remote PR CI is not yet available for this new platform-only blocker bundle and
-must be recorded before merge.
+Remote PR CI evidence is recorded for the reviewed PR #116 head:
+
+```text
+head: b2d85991ef1963e4486c319a1d3458739e61163e
+workflow: platform-ci
+run: 27824019140
+job: validate-platform
+status: passed
+```
+
+The final minor-revision commit still requires fresh remote CI before merge;
+that evidence belongs in the PR thread or merge note so the repository packet
+does not need a CI-evidence-only churn commit.
 
 ## Next Step
 
-Start the Golden-route repair sequence from updated main:
+Start the first substantial Golden-route repair bundle from updated main:
 
 ```text
-EXIT-SHORT-WORKBENCH-111-PLAN-1
+GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1
 ```
 
-Do not start Scale Gate 1 closure until `1.1.1`, `1.1.3-korte-check`,
-Start-route mastery/closure copy, and the A96 calculation-answer-form
-disposition have been repaired or explicitly waived by human decision.
+Treat `EXIT-SHORT-WORKBENCH-111-PLAN-1` as an internal phase of that bundle,
+not a human-review stop. Do not start Scale Gate 1 closure until `1.1.1`,
+`1.1.3-korte-check`, Start-route mastery/closure copy, and the A96
+calculation-answer-form disposition have been repaired or explicitly waived by
+human decision.

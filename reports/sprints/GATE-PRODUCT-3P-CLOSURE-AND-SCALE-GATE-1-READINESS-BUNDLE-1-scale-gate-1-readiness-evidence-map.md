@@ -68,11 +68,13 @@ sequencing, and student/product-use authority remain held.
 
 ## Required Proof Before Scale Gate 1
 
-1. A reviewed Golden-route disposition for `1.1.1` exit ticket and short check.
-2. A reviewed Golden graph-advisory disposition for `1.1.3-korte-check`.
-3. A Start-route copy repair that removes mastery/closure phrasing while
-   authority remains held.
-4. A96 calculation-answer-form refinement or an explicit human waiver with
+1. `GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1`, including
+   internal `1.1.1` planning, both `1.1.1` Golden check-surface migrations,
+   Start-route copy repair, regenerated output, rendered proof, and sub-agent
+   lead review.
+2. `GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1`, including reviewed graph-advisory
+   planning and rendered `1.1.3-korte-check` proof.
+3. A96 calculation-answer-form refinement or an explicit human waiver with
    stated consequences.
-5. Fresh first-three rendered proof after the route repairs.
-6. Lead review returning `READY_FOR_HUMAN_SCALE_GATE_1_REVIEW`.
+4. Fresh first-three rendered proof after the route repairs.
+5. Lead review returning `READY_FOR_HUMAN_SCALE_GATE_1_REVIEW`.

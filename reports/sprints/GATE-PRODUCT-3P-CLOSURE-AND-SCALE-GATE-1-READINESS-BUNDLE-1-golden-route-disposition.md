@@ -37,14 +37,20 @@ Scale Gate 1 should not rely on a first-three set where:
 
 ## Required Repair Sequence
 
-1. Plan `1.1.1` route migration without changing target-readiness flags.
-2. Render `1.1.1` exit ticket through Golden Workbench or record a human waiver.
-3. Render `1.1.1` short check through Golden advisory Workbench or record a
-   human waiver.
-4. Plan `1.1.3-korte-check` as a graph advisory route before rendering.
-5. Render `1.1.3-korte-check` through a reviewed Golden advisory graph variant.
-6. Repair first-three Start-route mastery/closure copy.
-7. Refresh first-three rendered proof and rerun checkers.
+1. Run `GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1` as the next
+   substantial bundle. Treat `EXIT-SHORT-WORKBENCH-111-PLAN-1` as an internal
+   phase, not a human-review stop.
+2. Within that bundle, plan `1.1.1` route migration without changing
+   target-readiness flags.
+3. Render `1.1.1` exit ticket through Golden Workbench or record a hard blocker
+   with exact repair plan.
+4. Render `1.1.1` short check through Golden advisory Workbench or record a hard
+   blocker with exact repair plan.
+5. Repair first-three Start-route mastery/closure copy.
+6. Then run `GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1`.
+7. Then run `A96-CALCULATION-WORKBENCH-REFINE-1`.
+8. Refresh first-three rendered proof and prepare the actual Scale Gate 1
+   review in `FIRST-THREE-POST-REPAIR-PROOF-AND-SCALE-GATE-1-REVIEW-1`.
 
 ## Forbidden During Repair
 

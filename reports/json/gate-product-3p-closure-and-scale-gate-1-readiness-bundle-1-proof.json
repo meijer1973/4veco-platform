@@ -174,7 +174,7 @@
         "GATE-PRODUCT-3P narrow closure",
         "landing Exit ticket authority-copy repair closure"
       ],
-      "proof_required_to_close": "START-ROUTE-MASTERY-COPY-REPAIR-1 or equivalent reviewed repair with rendered first-three proof."
+      "proof_required_to_close": "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1 or equivalent reviewed repair with rendered first-three proof."
     }
   ],
   "validation": [
@@ -228,14 +228,21 @@
     }
   ],
   "next_sprint_sequence": [
-    "EXIT-SHORT-WORKBENCH-111-PLAN-1",
-    "EXIT-TICKET-WORKBENCH-111-RENDERED-1",
-    "SHORT-CHECK-WORKBENCH-111-RENDERED-1",
-    "SHORT-CHECK-WORKBENCH-113-PLAN-1",
-    "SHORT-CHECK-WORKBENCH-113-RENDERED-1",
-    "START-ROUTE-MASTERY-COPY-REPAIR-1",
+    "GOLDEN-ROUTE-111-MIGRATION-AND-START-COPY-REPAIR-BUNDLE-1",
+    "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
     "A96-CALCULATION-WORKBENCH-REFINE-1",
-    "GATE-PRODUCT-3P-SCALE-GATE-1-READY-REVIEW-1"
+    "FIRST-THREE-POST-REPAIR-PROOF-AND-SCALE-GATE-1-REVIEW-1"
   ],
-  "local_validation_summary": "passed on 2026-06-19; remote PR CI not yet available for this new platform-only bundle"
+  "local_validation_summary": "local validation passed on 2026-06-19; remote platform-ci run 27824019140 validate-platform passed on reviewed PR #116 head b2d85991ef1963e4486c319a1d3458739e61163e; fresh post-revision CI required before merge and should be recorded in the PR thread or merge note",
+  "remote_ci": {
+    "head_sha": "b2d85991ef1963e4486c319a1d3458739e61163e",
+    "reviewed_commit_sha": "b2d85991ef1963e4486c319a1d3458739e61163e",
+    "run_id": 27824019140,
+    "github_actions_run_id": "27824019140",
+    "workflow": "platform-ci",
+    "job": "validate-platform",
+    "status": "passed",
+    "conclusion": "success",
+    "ci_run_corresponds_to_reviewed_commit": true
+  }
 }
