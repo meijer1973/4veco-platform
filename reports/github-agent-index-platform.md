@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-19T13:22:00.452Z
+Generated: 2026-06-19T13:30:08.312Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 5074
+Files indexed: 5079
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -128,7 +128,7 @@ Count: 82
 
 ## build scripts
 
-Count: 505
+Count: 506
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -301,6 +301,7 @@ Count: 505
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
 - build-scripts/references/check-ex6-validator-cli-planning.js
 - build-scripts/references/check-ex7-dry-run-cli-implementation.js
+- build-scripts/references/check-exam-anchor-atomic-closure-bundle-1.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -685,7 +686,7 @@ Count: 42
 
 ## validators
 
-Count: 495
+Count: 496
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -745,6 +746,7 @@ Count: 495
 - build-scripts/references/check-ex5-operation-answer-skill-contract.js
 - build-scripts/references/check-ex6-validator-cli-planning.js
 - build-scripts/references/check-ex7-dry-run-cli-implementation.js
+- build-scripts/references/check-exam-anchor-atomic-closure-bundle-1.js
 - build-scripts/references/check-exam-ingestion-contract.js
 - build-scripts/references/check-exam-ingestion-coverage.js
 - build-scripts/references/check-exam-ingestion-pilots.js
@@ -1815,7 +1817,7 @@ Count: 625
 
 ## reports
 
-Count: 3197
+Count: 3200
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1856,10 +1858,6 @@ Count: 3197
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.json
-- reports/github-agent-index-platform.md
-- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -2200,6 +2198,10 @@ Count: 3197
 - reports/reference-planning/CP.6e-113-part-a-rereview.md
 - reports/reference-planning/CP.6f-113-part-a-recheck.md
 - reports/reference-planning/EX-1-exam-ingestion-pilot.md
+- reports/reference-planning/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-atomic-status.md
+- reports/reference-planning/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-quality-log.md
+- reports/reference-planning/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-review-packet.md
+- reports/reference-planning/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-subagent-review.md
 - reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q15-anchor-packet.md
 - reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q19-anchor-packet.md
 - reports/reference-planning/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-q3-anchor-packet.md
@@ -2342,6 +2344,7 @@ Count: 3197
 - reports/review-gates/B1-TARGET-EVIDENCE-111-CLOSURE-AND-IMPLEMENTATION-BUNDLE-1/review-packet.json
 - reports/review-gates/B1-TARGET-EVIDENCE-111-RENDERED-CLOSURE-AND-FLAG-BUNDLE-1/review-packet.json
 - reports/review-gates/BLUEPRINT-V6-AUTHORITY-PROMOTION-1/review-packet.json
+- reports/review-gates/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1/review-packet.json
 - reports/review-gates/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1/review-packet.json
 - reports/review-gates/EXAM-OPERATION-SPINE-ANCHOR-1/review-packet.json
 - reports/review-gates/GATE-CHECK-SHORT-EXIT-2-first-three-check-surfaces-review/bundle-urls.md
@@ -3603,6 +3606,8 @@ Count: 3197
 - reports/sprints/EX-NS0-lead-review-round2.md
 - reports/sprints/EX-NS0-plan.md
 - reports/sprints/EX-NS0-result.md
+- reports/sprints/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-plan.md
+- reports/sprints/EXAM-ANCHOR-ATOMIC-CLOSURE-BUNDLE-1-result.md
 - reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-plan.md
 - reports/sprints/EXAM-ANCHOR-Q3-Q15-Q19-REPAIR-1-result.md
 - reports/sprints/EXAM-OPERATION-SPINE-ANCHOR-1-plan.md
@@ -5035,7 +5040,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 569
+Count: 570
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5123,6 +5128,7 @@ Count: 569
 - archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-closure-log.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-correction-log.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-final.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-round1.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-round2.md
 - archive/sprints/INSPECT-11D/INSPECT-11D-specialist-gate-results.md

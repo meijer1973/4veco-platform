@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_at": "2026-06-19T11:31:49.474Z",
+  "generated_at": "2026-06-19T13:30:20.941Z",
   "sprint_id": "R0.2",
   "scope": "references/",
   "note": "Self-generated inventory files intentionally omit size and sha256 to avoid unstable self-checksums. Text file size and sha256 use LF-normalized bytes for OS-stable output.",
@@ -1495,7 +1495,7 @@
       "file_name": "source-document-registry.json",
       "extension": "json",
       "size_bytes": 922776,
-      "sha256": "6dfeac12377bfeb490fb9c2979afa005b83d92dc766de49e719fb152f67e1fa0",
+      "sha256": "10096644564a2bee7f459895dc726701c5b228b8bc8219924f0316ff8eb7bd44",
       "layer": "governance_data",
       "authority_level": "generated_report",
       "source_type": "inventory",
