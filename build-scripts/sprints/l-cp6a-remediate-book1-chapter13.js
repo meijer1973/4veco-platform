@@ -40,7 +40,8 @@ function read(filePath) {
 
 function write(filePath, content) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, content, 'utf8');
+  const normalized = typeof content === 'string' ? content.replace(/\r\n/g, '\n') : content;
+  fs.writeFileSync(filePath, normalized, 'utf8');
 }
 
 function move(src, dest) {
@@ -327,9 +328,127 @@ function buildChapterScript() {
   write(path.join(NEW_CHAPTER_DIR, 'build_chapter.py'), script);
 }
 
+const SCREEN_SUPPORT_CSS = `
+
+@media screen and (max-width: 700px) {
+  html { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    overflow-wrap: anywhere;
+  }
+  .chapter-front h1,
+  h1 {
+    font-size: 20pt;
+    line-height: 1.15;
+  }
+  h2 {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 9.5pt;
+  }
+  pre,
+  code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  figure img,
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+`;
+
+function addScreenSupportCssToBuildScripts() {
+  const scripts = [
+    path.join(NEW_CHAPTER_DIR, 'build_chapter.py'),
+    path.join(NEW_CHAPTER_DIR, '1.3.1 Aanbod', 'build_pdf.py'),
+    path.join(NEW_CHAPTER_DIR, '1.3.2 Marktevenwicht', 'build_pdf.py'),
+    path.join(NEW_CHAPTER_DIR, '1.3.3 Verschuivingen en nieuw evenwicht', 'build_pdf.py'),
+    path.join(NEW_CHAPTER_DIR, '1.3.4 Gemengde opgaven', 'build_pdf.py'),
+  ];
+  for (const file of scripts) {
+    if (!exists(file)) continue;
+    let before = read(file);
+    let after = before;
+    if (!after.includes('@media screen and (max-width: 700px)')) {
+      ensure(after.includes('</style>'), `missing CSS closing style tag in ${file}`);
+      after = after.replace('</style>', `${SCREEN_SUPPORT_CSS}</style>`);
+    }
+    after = replaceAllLiteral(
+      after,
+      '.write_text(html, encoding="utf-8")',
+      '.write_text(html, encoding="utf-8", newline="\\n")'
+    );
+    after = replaceAllLiteral(
+      after,
+      '.write_text(chapter_md, encoding="utf-8")',
+      '.write_text(chapter_md, encoding="utf-8", newline="\\n")'
+    );
+    after = replaceAllLiteral(
+      after,
+      '.write_text(answers_md, encoding="utf-8")',
+      '.write_text(answers_md, encoding="utf-8", newline="\\n")'
+    );
+    if (!after.includes('def normalize_generated_text(text):')) {
+      after = after.replace(
+        '\ndef wrap_exercises(html):',
+        '\ndef normalize_generated_text(text):\n    return "\\n".join(line.rstrip() for line in text.splitlines()) + "\\n"\n\n\ndef wrap_exercises(html):'
+      );
+    }
+    after = replaceAllLiteral(
+      after,
+      '.write_text(html, encoding="utf-8", newline="\\n")',
+      '.write_text(normalize_generated_text(html), encoding="utf-8", newline="\\n")'
+    );
+    after = replaceAllLiteral(
+      after,
+      '.write_text(chapter_md, encoding="utf-8", newline="\\n")',
+      '.write_text(normalize_generated_text(chapter_md), encoding="utf-8", newline="\\n")'
+    );
+    after = replaceAllLiteral(
+      after,
+      '.write_text(answers_md, encoding="utf-8", newline="\\n")',
+      '.write_text(normalize_generated_text(answers_md), encoding="utf-8", newline="\\n")'
+    );
+    if (!after.includes("html.replace('<title>-</title>'")) {
+      if (path.basename(file) === 'build_chapter.py') {
+        after = after.replace(
+          '    html = result.stdout.decode("utf-8")\n\n    # Wrap exercises',
+          `    html = result.stdout.decode("utf-8")
+    html = html.replace('<title>-</title>', f'<title>{output_stem}</title>')
+
+    # Wrap exercises`
+        );
+      } else {
+        after = after.replace(
+          '    html = result.stdout\n\n    # Strip default Pandoc stylesheet',
+          `    html = result.stdout
+    html = html.replace('<title>-</title>', f'<title>{Path(md_path).stem}</title>')
+
+    # Strip default Pandoc stylesheet`
+        );
+      }
+    }
+    if (after === before) continue;
+    write(file, after);
+  }
+}
+
 function writeGemengdeOpgaven() {
   const dir = path.join(NEW_CHAPTER_DIR, '1.3.4 Gemengde opgaven');
   fs.mkdirSync(path.join(dir, '_assets'), { recursive: true });
+  write(path.join(dir, '_assets', '.gitkeep'), '\n');
   const oldBuild = path.join(DISPLACED_DIR, '1.3.4 Gemengde opgaven', 'build_pdf.py');
   if (exists(oldBuild)) fs.copyFileSync(oldBuild, path.join(dir, 'build_pdf.py'));
   const opgaven = read(path.join(PLATFORM_ROOT, 'build-scripts', 'books', 'book-manifests', 'book-1-print-1.3.4-gemengde-opgaven.md'));
@@ -376,17 +495,17 @@ function writeGemengdeOpgaven() {
 
 ---
 
-## Opgave 4: Vraag en aanbod verschuiven tegelijk
+## Opgave 4: Eigen prijs of vraagfactor
 
-**a.** Meer interesse van consumenten verschuift de vraaglijn naar rechts.
+**a.** Situatie A is een **beweging langs de vraaglijn**. De eigen prijs verandert; daardoor verandert de gevraagde hoeveelheid op dezelfde vraaglijn.
 
-**b.** Duurdere accu's verschuiven de aanbodlijn naar links.
+**b.** Situatie B is een **verschuiving van de vraaglijn**. De campagne verandert de voorkeur/interesse van consumenten, dus bij elke prijs willen consumenten meer elektrische fietsen kopen.
 
-**c.** Teken V naar rechts en A naar links.
+**c.** Teken de oude vraaglijn V dalend. Teken de nieuwe vraaglijn V' rechts van V. De aanbodlijn A blijft gelijk.
 
-**d.** Het effect op de evenwichtshoeveelheid is onzeker. Meer vraag vergroot Q, maar minder aanbod verkleint Q.
+**d.** De evenwichtsprijs stijgt waarschijnlijk en de evenwichtshoeveelheid stijgt waarschijnlijk. Bij de oude prijs ontstaat vraagoverschot, waardoor de prijs stijgt tot er een nieuw evenwicht is.
 
-**e.** Het effect op de evenwichtsprijs is zeker: de prijs stijgt. Meer vraag duwt de prijs omhoog en minder aanbod duwt de prijs ook omhoog.
+**e.** Bij een verandering van de eigen prijs beweeg je langs de bestaande vraaglijn. Bij een verandering van een vraagfactor verschuift de hele vraaglijn, omdat consumenten bij elke prijs meer of minder willen kopen.
 
 ---
 
@@ -461,8 +580,9 @@ PASS WITH FLAGS.
   shifts.
 - Costs, revenue, break-even, and marginal analysis are excluded from this Book
   1 consolidation paragraph.
-- The v5 target-exercise placeholder is not promoted to reviewed_final in this
-  sprint.
+- INSPECT-11D replaced the simultaneous demand/supply shift task with a
+  movement-versus-demand-shift consolidation task, preserving the reviewed
+  no-new-theory integration target.
 
 ## Boundary
 
@@ -478,7 +598,7 @@ chapter: "1.3 Aanbod en marktevenwicht"
 type: theory
 framework_version: "onderzoekskader 2021, bijgesteld 2025"
 standards_verified: "2026-05-19"
-target_exercise_status: "migrated_from_v4_needs_v5_review"
+target_exercise_status: "reviewed_final_source_registry_with_lesson_flags"
 cp6_quality_ready: false
 content:
   paragraaf_md: true
@@ -500,13 +620,18 @@ review:
   unresolved_blockers: 0
   verdict: "PASS WITH FLAGS"
   flags:
-    - "Target exercise is migrated from v4 and still needs v5 final review."
+    - "Source registry is reviewed_final; CP-6/Year 1 closure is not claimed here."
     - "Opgaven staan zowel in paragraaf.md als opgaven.md as current Part A pattern."
 l_cp6a:
   status: "aligned_with_active_v5_with_flags"
   migrated_from: "1.4.1 Marktevenwicht"
   cp6_closed: false
   year1_closed: false
+l_inspect11d:
+  status: "quality_ref_review_reconciled"
+  source_registry_status: "reviewed_final"
+  remaining_flags:
+    - "Duplicated exercise pattern remains a Part A maintenance flag."
 `);
 
   write(path.join(NEW_CHAPTER_DIR, '1.3.3 Verschuivingen en nieuw evenwicht', '1.3.3-quality-ref.yaml'), `# Quality Reference - 1.3.3 Verschuivingen en nieuw evenwicht
@@ -516,7 +641,7 @@ chapter: "1.3 Aanbod en marktevenwicht"
 type: theory
 framework_version: "onderzoekskader 2021, bijgesteld 2025"
 standards_verified: "2026-05-19"
-target_exercise_status: "migrated_from_v4_needs_v5_review"
+target_exercise_status: "reviewed_final_source_registry_with_lesson_flags"
 cp6_quality_ready: false
 content:
   paragraaf_md: true
@@ -538,13 +663,18 @@ review:
   unresolved_blockers: 0
   verdict: "PASS WITH FLAGS"
   flags:
-    - "Target exercise is migrated from v4 and still needs v5 final review."
+    - "Source registry is reviewed_final; CP-6/Year 1 closure is not claimed here."
     - "Opgaven staan zowel in paragraaf.md als opgaven.md as current Part A pattern."
 l_cp6a:
   status: "aligned_with_active_v5_with_flags"
   migrated_from: "1.4.2 Verschuivingen"
   cp6_closed: false
   year1_closed: false
+l_inspect11d:
+  status: "quality_ref_review_reconciled"
+  source_registry_status: "reviewed_final"
+  remaining_flags:
+    - "Duplicated exercise pattern remains a Part A maintenance flag."
 `);
 
   write(path.join(NEW_CHAPTER_DIR, '1.3.4 Gemengde opgaven', '1.3.4-quality-ref.yaml'), `# Quality Reference - 1.3.4 Gemengde opgaven
@@ -554,7 +684,7 @@ chapter: "1.3 Aanbod en marktevenwicht"
 type: gemengde_opgaven
 framework_version: "onderzoekskader 2021, bijgesteld 2025"
 standards_verified: "2026-05-19"
-target_exercise_status: "placeholder_needs_review"
+target_exercise_status: "reviewed_final_source_registry_no_new_theory"
 cp6_quality_ready: false
 content:
   opgaven_md: true
@@ -574,12 +704,18 @@ review:
   unresolved_blockers: 0
   verdict: "PASS WITH FLAGS"
   flags:
-    - "V5 gemengde-opgaven target exercise remains placeholder_needs_review."
+    - "INSPECT-11D repaired the prior simultaneous-shift divergence in generated Opgave 4."
+    - "CP-6/Year 1 closure is not claimed here."
 l_cp6a:
   status: "rescoped_to_active_v5_with_flags"
   excludes_costs_revenue_break_even: true
   cp6_closed: false
   year1_closed: false
+l_inspect11d:
+  status: "quality_ref_review_reconciled"
+  source_registry_status: "reviewed_final"
+  no_new_theory: true
+  simultaneous_shift_divergence: "repaired_in_generated_output"
 `);
 }
 
@@ -593,6 +729,45 @@ function updateAanbodParagraph() {
     );
     return out;
   });
+
+  const qualityRef = path.join(dir, '1.3.1-quality-ref.yaml');
+  if (exists(qualityRef)) {
+    let quality = read(qualityRef);
+    quality = replaceAllLiteral(
+      quality,
+      'review_status: "blocker: numerical graph-text mismatch in supply figures"',
+      'review_status: "resolved: numerical graph-text mismatch corrected; remaining notes non-blocking"'
+    );
+    if (!quality.includes('review_reconciliation:')) {
+      quality += `
+  review_reconciliation:
+    status: "graph_text_blocker_resolved"
+    source_registry_status: "reviewed_final"
+    review_evidence: "1.3.1-review.md confirms the previous graph-text number mismatch was corrected."
+    unresolved_blockers: 0
+    cp6_closed: false
+    year1_closed: false
+`;
+    }
+    write(qualityRef, quality);
+  }
+
+  const review = path.join(dir, '1.3.1-review.md');
+  if (exists(review)) {
+    let reviewText = read(review);
+    if (!reviewText.includes('## INSPECT-11D Reconciliation')) {
+      reviewText += `
+
+## INSPECT-11D Reconciliation
+
+The stale quality-ref blocker for the numerical graph-text mismatch is closed.
+This review already confirms the coordinates and text now match. Remaining notes
+are non-blocking refinement flags; no CP-6, Year 1, diagnostic, mastery/PV,
+student-use, product-use, or compliance authority is claimed.
+`;
+    }
+    write(review, reviewText);
+  }
 }
 
 function collectChapterAssets() {
@@ -603,6 +778,7 @@ function collectChapterAssets() {
     const assetDir = path.join(NEW_CHAPTER_DIR, paragraph, '_assets');
     if (!exists(assetDir)) continue;
     for (const file of listFiles(assetDir)) {
+      if (path.basename(file) === '.gitkeep') continue;
       const dest = path.join(chapterAssets, path.basename(file));
       if (!exists(dest)) fs.copyFileSync(file, dest);
     }
@@ -705,6 +881,7 @@ function main() {
   writeGemengdeOpgaven();
   writeChapterPlan();
   buildChapterScript();
+  addScreenSupportCssToBuildScripts();
   writeQualityAndReviews();
   collectChapterAssets();
   writeSprintRecords();

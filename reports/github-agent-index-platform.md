@@ -1,11 +1,11 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-19T12:49:33.560Z
+Generated: 2026-06-19T13:22:00.452Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 5041
+Files indexed: 5074
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -685,7 +685,7 @@ Count: 42
 
 ## validators
 
-Count: 494
+Count: 495
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -698,6 +698,7 @@ Count: 494
 - archive/sprints/INSPECT-11A/INSPECT-11A-validation-log.md
 - archive/sprints/INSPECT-11B/INSPECT-11B-validation-log.md
 - archive/sprints/INSPECT-11C/INSPECT-11C-validation-log.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-validation-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-validation-log.md
 - archive/sprints/INSPECT-2/INSPECT-2-validation-log.md
 - archive/sprints/INSPECT-2A/INSPECT-2A-validation-log.md
@@ -1814,7 +1815,7 @@ Count: 625
 
 ## reports
 
-Count: 3191
+Count: 3197
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1855,6 +1856,10 @@ Count: 3191
 - reports/github-agent-index-lessen.json
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -1867,6 +1872,8 @@ Count: 3191
 - reports/inspection-standards/chapter-1-2-target-exam-linkage-remediation.md
 - reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.json
 - reports/inspection-standards/chapter-1-3-diagnostic-readiness-remediation-plan.md
+- reports/inspection-standards/chapter-1-3-readiness-closure.json
+- reports/inspection-standards/chapter-1-3-readiness-closure.md
 - reports/inspection-standards/chapter-1-3-readiness-remediation-results.json
 - reports/inspection-standards/chapter-1-3-readiness-remediation-results.md
 - reports/inspection-standards/chapter-1-3-reconciliation-and-proof-remediation.json
@@ -5028,7 +5035,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 543
+Count: 569
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5113,6 +5120,31 @@ Count: 543
 - archive/sprints/INSPECT-11C/INSPECT-11C-lead-review-round2.md
 - archive/sprints/INSPECT-11C/INSPECT-11C-specialist-gate-results.md
 - archive/sprints/INSPECT-11C/INSPECT-11C-sprint-plan.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-closure-log.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-correction-log.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-round1.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-lead-review-round2.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-specialist-gate-results.md
+- archive/sprints/INSPECT-11D/INSPECT-11D-sprint-plan.md
+- archive/sprints/INSPECT-11D/rendered-proof/1.3.4-antwoorden-before-after-contact-sheet.png
+- archive/sprints/INSPECT-11D/rendered-proof/1.3.4-opgaven-after-desktop.png
+- archive/sprints/INSPECT-11D/rendered-proof/1.3.4-opgaven-after-mobile.png
+- archive/sprints/INSPECT-11D/rendered-proof/1.3.4-opgaven-before-after-contact-sheet.png
+- archive/sprints/INSPECT-11D/rendered-proof/chapter-1.3-after-desktop.png
+- archive/sprints/INSPECT-11D/rendered-proof/chapter-1.3-after-mobile.png
+- archive/sprints/INSPECT-11D/rendered-proof/INSPECT-11D-rendered-proof-manifest.md
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-antwoorden-after-1.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-antwoorden-after-2.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-antwoorden-before-1.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-antwoorden-before-2.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-after-1.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-after-2.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-after-3.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-1.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-2.png
+- archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-3.png
+- archive/sprints/INSPECT-11D/rendered-proof/viewport-metrics.json
 - archive/sprints/INSPECT-1A/INSPECT-1A-closure-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-log.md
 - archive/sprints/INSPECT-1A/INSPECT-1A-correction-report.md
@@ -5264,6 +5296,7 @@ Count: 543
 - BUILD-CHAPTER.md
 - BUILD-PARAGRAPH.md
 - CLAUDE.md
+- docs/inspection-standards/chapter-1-3-source-traceability.md
 - docs/inspection-standards/evidence-pack-source-contract.md
 - docs/inspection-standards/external-review-privacy-and-claim-guardrails.md
 - docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md
