@@ -1,0 +1,289 @@
+{
+  "sprint_id": "B2-2.2-CHAPTER-QA-1",
+  "artifacts": [
+    {
+      "artifact_id": "2.2.1-paragraaf",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – paragraaf.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-6.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-7.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf/page-8.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-paragraaf-contact-sheet.png",
+      "page_count": 8,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.1-opgaven",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – opgaven.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-opgaven/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-opgaven/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-opgaven/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-opgaven/page-4.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-opgaven-contact-sheet.png",
+      "page_count": 4,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.1-antwoorden",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.1 Prijselasticiteit/2.2.1 Prijselasticiteit – antwoorden.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden/page-5.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.1-antwoorden-contact-sheet.png",
+      "page_count": 5,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.2-paragraaf",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – paragraaf.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-6.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-7.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf/page-8.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-paragraaf-contact-sheet.png",
+      "page_count": 8,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.2-opgaven",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – opgaven.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven/page-5.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-opgaven-contact-sheet.png",
+      "page_count": 5,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.2-antwoorden",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.2 Elasticiteit en omzet/2.2.2 Elasticiteit en omzet – antwoorden.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden/page-6.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.2-antwoorden-contact-sheet.png",
+      "page_count": 6,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.3-paragraaf",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – paragraaf.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-01.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-02.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-03.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-04.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-05.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-06.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-07.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-08.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-09.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf/page-10.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-paragraaf-contact-sheet.png",
+      "page_count": 10,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.3-opgaven",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – opgaven.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven/page-5.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-opgaven-contact-sheet.png",
+      "page_count": 5,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.3-antwoorden",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit/2.2.3 Inkomenselasticiteit en kruiselingse elasticiteit – antwoorden.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden/page-6.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.3-antwoorden-contact-sheet.png",
+      "page_count": 6,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.4-opgaven",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – opgaven.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven/page-6.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-opgaven-contact-sheet.png",
+      "page_count": 6,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2.4-antwoorden",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2.4 Gemengde opgaven elasticiteit/2.2.4 Gemengde opgaven elasticiteit – antwoorden.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-1.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-2.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-3.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-4.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-5.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-6.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden/page-7.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2.4-antwoorden-contact-sheet.png",
+      "page_count": 7,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2-chapter-hoofdstuk",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – hoofdstuk.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-01.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-02.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-03.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-04.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-05.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-06.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-07.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-08.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-09.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-10.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-11.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-12.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-13.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-14.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-15.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-16.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-17.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-18.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-19.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-20.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-21.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-22.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-23.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-24.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-25.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-26.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-27.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-28.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-29.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-30.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-31.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-32.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-33.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-34.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-35.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-36.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk/page-37.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-hoofdstuk-contact-sheet.png",
+      "page_count": 37,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    },
+    {
+      "artifact_id": "2.2-chapter-antwoorden",
+      "source_pdf": "../4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit/2.2 Elasticiteit – antwoorden.pdf",
+      "rendered_pages": [
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-01.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-02.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-03.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-04.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-05.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-06.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-07.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-08.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-09.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-10.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-11.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-12.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-13.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-14.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-15.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-16.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-17.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-18.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-19.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-20.png",
+        "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden/page-21.png"
+      ],
+      "contact_sheet": "reports/rendered-proof/B2-2.2-CHAPTER-QA-1/2.2-chapter-antwoorden-contact-sheet.png",
+      "page_count": 21,
+      "pages_inspected": "all",
+      "inspected_at_normal_reading_scale": true,
+      "visible_student_defects": 0,
+      "warnings": []
+    }
+  ]
+}

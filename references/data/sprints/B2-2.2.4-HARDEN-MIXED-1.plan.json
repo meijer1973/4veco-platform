@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sprint_id": "B2-2.2.4-HARDEN-MIXED-1",
+  "name": "Book 2 Paragraph 2.2.4 Mixed Elasticity Practice",
+  "created": "2026-06-19",
+  "plan": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-plan.md",
+  "baseline": "reports/sprints/B2-2.2.4-HARDEN-MIXED-1-baseline.md",
+  "human_review_required": false,
+  "lead_review_required": true,
+  "lead_review_schema_version": 3,
+  "lead_review_phase": "before_sprint_closure",
+  "protected_reference_data_changes_allowed": false,
+  "generated_lesson_output_allowed": true,
+  "review_standard": "REV-STD-1",
+  "core_requirements": [
+    "Create a real mixed target.",
+    "Introduce no new theory.",
+    "Require source selection and structured answers."
+  ],
+  "acceptance_tests": [
+    "node build-scripts/sprints/check-sprint-plan.js reports/sprints/B2-2.2.4-HARDEN-MIXED-1-plan.md",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.4-HARDEN-MIXED-1",
+    "node scripts/check-course-target-exercises-v5.js",
+    "node scripts/validate-chapter.js \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus/2.2 Hoofdstuk Elasticiteit\"",
+    "node scripts/check-book.js --paragraph-mode part-a --paragraph-profile publisher-print \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen/Boek 2 - Kosten, opbrengsten, elasticiteit en surplus\"",
+    "npm.cmd run check:platform",
+    "git diff --check",
+    "git -C \"C:/wt/TEXT-20260608/GOAL-B2-2.2-CHAPTER-COMPLETE-1/4veco-lessen\" diff --check",
+    "node build-scripts/sprints/check-sprint-result.js reports/sprints/B2-2.2.4-HARDEN-MIXED-1-result.md",
+    "node build-scripts/sprints/check-sprint-command-log.js B2-2.2.4-HARDEN-MIXED-1",
+    "node build-scripts/sprints/check-lead-review-substance.js B2-2.2.4-HARDEN-MIXED-1",
+    "node build-scripts/sprints/check-sprint-bundle.js B2-2.2.4-HARDEN-MIXED-1 --complete"
+  ],
+  "forbidden": [
+    "No edits under references/machine/ or references/external/.",
+    "No protected reference data writes.",
+    "No generated-output hand patches that bypass the lesson build workflow.",
+    "No Chapter 2.3, Book 3, diagnostics, adaptive routing, mastery/sequencing, student-facing AI, summative use, product-wide use, product-route adoption, PV, Scale Gate 1, check-surface gate closure, or broad companion scaling authorization."
+  ]
+}
