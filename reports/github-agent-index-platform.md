@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T07:28:53.041Z
+Generated: 2026-06-20T07:29:16.587Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `HEAD`
-Source commit: `07aa184abdbcb586f83419fe5e4bee7a22cc108f`
-Files indexed: 5142
+Source commit: `78abe245de5e21c517c642a983c13ef06f2c766f`
+Files indexed: 5144
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -5103,7 +5103,7 @@ _No files indexed in this group._
 
 ## other
 
-Count: 575
+Count: 577
 
 - .gitattributes
 - .github/ci-python-requirements.txt
@@ -5215,7 +5215,9 @@ Count: 575
 - archive/sprints/INSPECT-11D/rendered-proof/pdf-pages/1.3.4-opgaven-before-3.png
 - archive/sprints/INSPECT-11D/rendered-proof/viewport-metrics.json
 - archive/sprints/INSPECT-11EF/BOOK1-ASSEMBLY-HEALTH-1-triage-note.md
+- archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md
 - archive/sprints/INSPECT-11EF/INSPECT-11EF-correction-log.md
+- archive/sprints/INSPECT-11EF/INSPECT-11EF-final-lead-review.md
 - archive/sprints/INSPECT-11EF/INSPECT-11EF-lead-review-plan.md
 - archive/sprints/INSPECT-11EF/INSPECT-11EF-specialist-gate-results.md
 - archive/sprints/INSPECT-11EF/INSPECT-11EF-sprint-plan.md

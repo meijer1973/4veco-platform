@@ -1,6 +1,6 @@
 # INSPECT-11E/F Closure Log
 
-Status: pending final lead re-review
+Status: ready for final PR CI and final lead re-review
 Date: 2026-06-19
 
 ## Product End-State And Original Spec
@@ -38,8 +38,8 @@ Date: 2026-06-19
 | Exact source/output allowlists used | met | Scope descriptors and stability checker |
 | Refusal/currentness checks deterministic | met | Stability checker, 20 refusal cases |
 | Specialist corrections resolved | met | Specialist-gate results; legal/privacy REVISE then PASS |
-| Final lead review complete | pending re-review | Initial final lead returned REVISE for closure records, draft PR, and bundle-check wording |
-| PR open, fresh, mergeable, green, non-draft | pending final commit / CI | PR #119 open and prior head CI green; final closure commit still required |
+| Final lead review complete | pending final re-review | Initial final lead returned REVISE for closure records, draft PR, and bundle-check wording; corrections are recorded. |
+| PR open, fresh, mergeable, green, non-draft | pending final pushed head | PR #119 must be checked after the final rebased commit and remote CI. |
 
 ## Findings And Carried Issues
 
@@ -66,22 +66,20 @@ Post-rebase local validation passed:
 - platform tests;
 - scoped Chapter 1.3 chapter and paragraph validators.
 
-Remote PR #119 `platform-ci / validate-platform` passed at commit
-`512afdae6eb4e91f88ba3938b66521fefdcc50a3`. A final closure-record commit
-will require fresh CI before handoff.
+Remote PR #119 `platform-ci / validate-platform` must pass on the final pushed
+head before human-review handoff.
 
 ## Closure Decision
 
-Not yet closed. The implementation is content-ready, but closure is pending:
+Not yet closed. The implementation is content-ready, but final handoff is
+pending:
 
-1. final closure-record commit;
-2. rerun validation;
-3. push to PR #119;
-4. wait for green remote CI at the final head;
-5. mark PR #119 ready for review;
-6. final lead re-review PASS.
+1. push the final rebased closure/index state to PR #119;
+2. wait for green remote CI at the final head;
+3. confirm PR #119 is non-draft, fresh, and mergeable;
+4. final lead re-review PASS.
 
 ## Owner Next Action
 
-Complete the six pending closure steps above. Do not unlock any downstream
+Complete the four pending handoff steps above. Do not unlock any downstream
 product, evidence-pack, teacher/school-facing, public, or Scale Gate authority.
