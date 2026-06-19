@@ -32,12 +32,12 @@ const LANE_DETAILS = {
     procedure_semantic_fit_executed: true,
   },
   q27: {
-    status: 'step1_levy_equilibrium_repaired_step2_capacity_governance_blocker',
-    summary: 'q27-step-1 D41/D05/A88 reviewed equivalent accepted for levy price/equilibrium/scale; q27-step-2 capacity/overconsumption governance and D07 semantic-fit review remain',
+    status: 'clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent',
+    summary: 'q27-step-1 D41/D05/A88 reviewed equivalent and q27-step-2 capacity/source-readout reviewed equivalent accepted; no D07/D08 closure claim',
   },
   q15: {
-    status: 'answer_skill_procedure_semantic_fit_review_blocker',
-    summary: 'A97 procedure semantic-fit review; dominant-strategy/prisoners-dilemma two-step answer-skill coverage review',
+    status: 'clean_after_q15_two_step_answer_skill_reviewed_equivalent',
+    summary: 'EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION accepted as reviewed-equivalent answer-skill; D27/F03/F09 remain content support and A97 remains answer-form/procedure support',
   },
 };
 
@@ -117,7 +117,6 @@ function runValidator() {
     VALIDATOR_REL,
     '--fixture',
     FIXTURE_REL,
-    '--expect-fail',
     '--json',
   ], {
     cwd: ROOT,
@@ -192,7 +191,7 @@ function buildReport(result, generatedDate) {
     ...result,
     report_generated: generatedDate,
     source_fixture: FIXTURE_REL,
-    source_validator_command: `node ${VALIDATOR_REL} --fixture ${FIXTURE_REL} --expect-fail --json`,
+    source_validator_command: `node ${VALIDATOR_REL} --fixture ${FIXTURE_REL} --json`,
     source_review_packet: PR43_REVIEW_PACKET_REL,
     source_merge_commit: PR43_MERGE_COMMIT,
     report_status_note: 'Diagnostic report only; non-mutating MTU-H5 validator output. Failed and review_required entries are expected live coverage gaps, not authorization for reference mutation or product use.',
@@ -224,14 +223,14 @@ function buildReport(result, generatedDate) {
         failed: questions.q27.failed,
         review_required: questions.q27.review_required,
         diagnostic_focus: LANE_DETAILS.q27.summary,
-        blocks_mtu_h5_closure: true,
+        blocks_mtu_h5_closure: false,
       },
       q15: {
         status: LANE_DETAILS.q15.status,
         failed: questions.q15.failed,
         review_required: questions.q15.review_required,
         diagnostic_focus: LANE_DETAILS.q15.summary,
-        blocks_mtu_h5_closure: true,
+        blocks_mtu_h5_closure: false,
       },
     },
     authority_boundary: authorityBoundary(),
@@ -306,9 +305,9 @@ ${markdownTable(['Surface', 'Failed', 'Review required', 'Status'], questionRows
 
 - q3 is clean in the current post-q3 diagnostic surface: 0 failed / 0 review_required.
 - q19 remains a ${q19Details.status === 'source_graph_reasoning_review_blocker' ? 'source/graph/reasoning review blocker' : 'source/graph/procedure/reasoning review blocker'}: ${report.question_bucket_counts.q19.failed} failed / ${report.question_bucket_counts.q19.review_required} review_required.
-- q27 remains a step-2 capacity/overconsumption governance blocker after q27-step-1 repair: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
-- q15 remains an answer-skill/procedure semantic-fit review blocker: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
-- MTU-H5 final closure and product-route readiness remain blocked until q19, q27, and q15 are resolved by separately authorized gates.
+- q27 is clean after the q27-step-2 capacity/source-readout reviewed-equivalent repair: ${report.question_bucket_counts.q27.failed} failed / ${report.question_bucket_counts.q27.review_required} review_required.
+- q15 is clean after the two-step dominant-strategy/prisoner-dilemma reviewed-equivalent answer-skill repair: ${report.question_bucket_counts.q15.failed} failed / ${report.question_bucket_counts.q15.review_required} review_required.
+- MTU-H5 final closure and product-route readiness remain blocked until the separately held q19 source/graph/reasoning lane is resolved.
 
 ## Lane-Specific Diagnostic Meaning
 

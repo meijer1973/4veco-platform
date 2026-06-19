@@ -157,6 +157,7 @@ Single-fetch entry point for external research agents (notably planning Claude i
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md
+- https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-mainline-checker-repair/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - https://raw.githubusercontent.com/meijer1973/4veco-platform/main/reports/review-gates/GATE-MTU-H5-q3-fixture-execution/bundle-urls.md

@@ -35,6 +35,7 @@ const Q27_RECORD_ID = 'vw-1022-a-25-2-o:opgave-6:question-27';
 const Q19_RECORD_ID = 'vw-1022-a-25-1-o:opgave-4:question-19';
 const SCALING_REF = 'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json#Q27_STEP1_A88_PER_1000_LITER_SCALE';
 const INCIDENCE_LEVY_CAPACITY_REF = 'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json#Q27_STEP1_D41_D05_A88_LEVY_EQUILIBRIUM_REVIEWED_EQUIVALENT';
+const STEP2_REF = 'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT';
 const SCALE_HOOK = 'review whether per-1,000-liter scale/unit handling needs a dedicated MTU or reviewed equivalent';
 const D07_HOOK = 'review whether D07 tax-burden percentage is insufficient for levy price/quantity/capacity operation';
 const STEP2_HOOK = 'review whether this is an incidence/pass-through family case or a distinct levy-capacity operation';
@@ -72,13 +73,18 @@ const EXPECTED_Q19_REVIEW = [
 const ALLOWED_CHANGED_PATHS = new Set([
   'build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js',
+  'build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js',
   'build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js',
+  'build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js',
   'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
   'build-scripts/references/build-mtu-h5-regression-report.js',
+  'build-scripts/reports/github-agent-index.js',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md',
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json',
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md',
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'reports/mtu-hardening/mtu-h5-regression-report.json',
   'reports/mtu-hardening/mtu-h5-regression-report.md',
@@ -88,9 +94,14 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
+  'reports/github-agent-index-lessen.json',
+  'reports/github-agent-index-lessen.md',
 ]);
 
 const FORBIDDEN_CHANGED_PREFIXES = [
@@ -151,14 +162,15 @@ function git(args) {
   return spawnSync('git', args, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 }
 
-function runValidator(fixturePath = FIXTURE) {
-  const run = spawnSync(process.execPath, [
+function runValidator(fixturePath = FIXTURE, expectFail = false) {
+  const args = [
     rel(H5_VALIDATOR),
     '--fixture',
     path.isAbsolute(fixturePath) ? fixturePath : rel(fixturePath),
-    '--expect-fail',
-    '--json',
-  ], { cwd: ROOT, encoding: 'utf8' });
+  ];
+  if (expectFail) args.push('--expect-fail');
+  args.push('--json');
+  const run = spawnSync(process.execPath, args, { cwd: ROOT, encoding: 'utf8' });
   if (run.status !== 0) fail(`validator failed: ${(run.stderr || run.stdout).trim()}`);
   return JSON.parse(run.stdout);
 }
@@ -228,13 +240,25 @@ function requireFixtureShape(fixture, executed) {
   if (!step1IncidenceRepaired && step1.missing_incidence_expected !== true) {
     fail('q27-step-1 incidence missing expectation must remain true until package 2 repair');
   }
-  if (step2.incidence_or_pass_through_expected !== true || step2.missing_incidence_expected !== true) {
-    fail('q27-step-2 incidence missing expectation must remain true');
+  const step2Resolved = (step2.reviewed_equivalent_refs || []).includes(STEP2_REF);
+  if (step2Resolved) {
+    if (step2.incidence_or_pass_through_expected !== false || step2.missing_incidence_expected !== false) {
+      fail('q27-step-2 incidence missing expectation must be cleared after later execution');
+    }
+  } else if (step2.incidence_or_pass_through_expected !== true || step2.missing_incidence_expected !== true) {
+    fail('q27-step-2 incidence missing expectation must remain true until later execution');
   }
   requireExact(step1.expected_incidence_mtu_ids || [], [], 'q27-step-1 incidence MTUs');
   requireExact(step2.expected_incidence_mtu_ids || [], [], 'q27-step-2 incidence MTUs');
-  requireIncludes(step2.procedure_review_required_unit_ids || [], 'D07', 'q27-step-2 procedure review');
-  requireIncludes(step2.review_required_hooks || [], STEP2_HOOK, 'q27-step-2 review hooks');
+  if (step2Resolved) {
+    requireExact(step2.procedure_review_required_unit_ids || [], [], 'q27-step-2 procedure review after later execution');
+    requireExact(step2.review_required_hooks || [], [], 'q27-step-2 review hooks after later execution');
+    requireNotIncludes(step2.mapped_mtu_ids || [], 'D07', 'q27-step-2 mapped MTUs after later execution');
+    requireNotIncludes(step2.mapped_mtu_ids || [], 'D08', 'q27-step-2 mapped MTUs after later execution');
+  } else {
+    requireIncludes(step2.procedure_review_required_unit_ids || [], 'D07', 'q27-step-2 procedure review');
+    requireIncludes(step2.review_required_hooks || [], STEP2_HOOK, 'q27-step-2 review hooks');
+  }
 
   if (step1IncidenceRepaired) {
     requireIncludes(step1.mapped_mtu_ids || [], 'D41', 'q27-step-1 mapped MTUs after package 2');
@@ -284,8 +308,12 @@ function requireValidatorState(executed) {
 
   const q27Failed = bucketIds(result, 'failed', Q27_RECORD_ID);
   const q27Review = bucketIds(result, 'review_required', Q27_RECORD_ID);
+  const step2Resolved = (findOperation(findRecord(readJson(FIXTURE), Q27_RECORD_ID), 'q27-step-2').reviewed_equivalent_refs || []).includes(STEP2_REF);
   if (executed) {
-    if (step1IncidenceRepaired) {
+    if (step2Resolved) {
+      requireExact(q27Failed, [], 'q27 final failed assertions');
+      requireExact(q27Review, [], 'q27 final review assertions');
+    } else if (step1IncidenceRepaired) {
       requireExact(q27Failed, EXPECTED_PACKAGE2_Q27_FAILED, 'q27 package 2 failed assertions');
       requireExact(q27Review, EXPECTED_PACKAGE2_Q27_REVIEW, 'q27 package 2 review assertions');
     } else {
@@ -300,7 +328,7 @@ function requireValidatorState(executed) {
     const tempFixture = path.join(tempDir, 'fixture.json');
     try {
       fs.writeFileSync(tempFixture, JSON.stringify(cloneWithScalingExecuted(readJson(FIXTURE)), null, 2));
-      const dry = runValidator(tempFixture);
+      const dry = runValidator(tempFixture, true);
       requireExact(bucketIds(dry, 'failed', Q27_RECORD_ID), EXPECTED_POST_Q27_FAILED, 'q27 dry-run failed assertions');
       requireExact(bucketIds(dry, 'review_required', Q27_RECORD_ID), EXPECTED_POST_Q27_REVIEW, 'q27 dry-run review assertions');
     } finally {
@@ -315,7 +343,9 @@ function requireReportState(executed) {
   const reportText = `${JSON.stringify(report)}\n${reportMd}`;
   const counts = report.question_bucket_counts || {};
   if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 6) fail('report q19 must remain 0/6');
-  if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 4) fail('report q15 must remain 0/4');
+  const q15Carried = counts.q15?.failed === 0 && counts.q15?.review_required === 4;
+  const q15Clean = counts.q15?.failed === 0 && counts.q15?.review_required === 0;
+  if (!q15Carried && !q15Clean) fail('report q15 must be carried 0/4 or clean 0/0');
   if (executed) {
     const package1PostState = counts.q27?.failed === 2 &&
       counts.q27?.review_required === 4 &&
@@ -325,15 +355,24 @@ function requireReportState(executed) {
       counts.q27?.review_required === 2 &&
       report.bucket_totals?.failed === 1 &&
       report.bucket_totals?.review_required === 12;
-    if (!package1PostState && !package2PostState) {
-      fail('report q27/totals must be package-1 post-state 2/4 + 2/14 or package-2 post-state 1/2 + 1/12');
+    const finalState = counts.q15?.failed === 0 &&
+      counts.q15?.review_required === 0 &&
+      counts.q27?.failed === 0 &&
+      counts.q27?.review_required === 0 &&
+      report.bucket_totals?.failed === 0 &&
+      report.bucket_totals?.review_required === 6;
+    if (!package1PostState && !package2PostState && !finalState) {
+      fail('report q27/totals must be package-1 post-state 2/4 + 2/14, package-2 post-state 1/2 + 1/12, or final clean state 0/6');
     }
     if (package1PostState) {
       requireText(reportText, 'incidence_levy_capacity_procedure_blocker_scaling_repaired', 'post-execution report');
       requireText(reportText, 'scaling repaired', 'post-execution report');
-    } else {
+    } else if (package2PostState) {
       requireText(reportText, 'step1_levy_equilibrium_repaired_step2_capacity_governance_blocker', 'package-2 report');
       requireText(reportText, 'q27-step-1 D41/D05/A88 reviewed equivalent accepted', 'package-2 report');
+    } else {
+      requireText(reportText, 'clean_after_q27_step2_capacity_taxonomy_reviewed_equivalent', 'final report');
+      requireText(reportText, 'clean_after_q15_two_step_answer_skill_reviewed_equivalent', 'final report');
     }
     for (const stale of [
       'per-1,000-liter scaling missing',

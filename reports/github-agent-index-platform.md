@@ -1,11 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-19T14:39:58.011Z
+Generated: 2026-06-20T07:22:35.168Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
-Files indexed: 5106
+Source branch: `HEAD`
+Source commit: `6e08b347985cfc84ae770b7d3d539f651fbd9853`
+Files indexed: 5132
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -130,7 +132,7 @@ Count: 84
 
 ## build scripts
 
-Count: 507
+Count: 509
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -346,6 +348,7 @@ Count: 507
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js
 - build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
+- build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -392,6 +395,7 @@ Count: 507
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
+- build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
 - build-scripts/references/close-and-apply-rx3a-first-lane.js
@@ -689,7 +693,7 @@ Count: 42
 
 ## validators
 
-Count: 497
+Count: 499
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -792,6 +796,7 @@ Count: 497
 - build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js
 - build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js
 - build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js
+- build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js
 - build-scripts/references/check-mtu-h5-q3-execution-gate-packet.js
 - build-scripts/references/check-mtu-h5-q3-fixture-execution-authorization-packet.js
 - build-scripts/references/check-mtu-h5-rp001-rp002-q3-repair-packet.js
@@ -838,6 +843,7 @@ Count: 497
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
+- build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
 - build-scripts/references/validate-core-schemas.js
@@ -1823,7 +1829,7 @@ Count: 627
 
 ## reports
 
-Count: 3222
+Count: 3246
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1862,8 +1868,16 @@ Count: 3222
 - reports/fixtures/review-throughput-1/positive-human-gate-protected.json
 - reports/flag-backlog.md
 - reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.json
+- reports/github-agent-index-lessen.md
+- reports/github-agent-index-lessen.md
 - reports/github-agent-index-lessen.md
 - reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.json
+- reports/github-agent-index-platform.md
+- reports/github-agent-index-platform.md
 - reports/github-agent-index-platform.md
 - reports/graph-skill-tree.md
 - reports/inspection-standards/chapter-1-2-diagnostic-report.json
@@ -2079,6 +2093,8 @@ Count: 3222
 - reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md
 - reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json
 - reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md
+- reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json
+- reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.json
 - reports/mtu-hardening/mtu-h5-q3-execution-gate-packet.md
 - reports/mtu-hardening/mtu-h5-q3-fixture-execution-authorization-packet.json
@@ -2241,6 +2257,14 @@ Count: 3222
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-assessment-retrieval-spine.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-book8-compression-review.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-exam-anchor-backlog.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-paragraph-candidate-matrix.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-quality-log.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md
+- reports/reference-planning/Y2-ROOT-MAPPING-1-subagent-review.md
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden-contact-sheet.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-1.png
 - reports/rendered-proof/B2-2.2.1-HARDEN/2.2-chapter-antwoorden/page-2.png
@@ -2661,6 +2685,9 @@ Count: 3222
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json
 - reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md
+- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md
+- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json
+- reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/bundle-urls.md
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.json
 - reports/review-gates/GATE-MTU-H5-q3-execution/review-packet.md
@@ -2982,6 +3009,7 @@ Count: 3222
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
+- reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.md
@@ -5042,6 +5070,8 @@ Count: 3222
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
+- reports/sprints/Y2-ROOT-MAPPING-1-plan.md
+- reports/sprints/Y2-ROOT-MAPPING-1-result.md
 - reports/terminology-drift.md
 - reports/terms-coverage.md
 - reports/unit-term-slug-migration.md

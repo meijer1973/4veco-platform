@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1",
+  "package_id": "MTU-H5-Q27-STEP2-Q15-CLOSURE-READINESS-BUNDLE-1",
+  "created": "2026-06-19",
+  "status": "pending_human_review",
+  "review_standard": "REV-STD-1",
+  "index_source_provenance": {
+    "platform_base_sha_after_rebase": "32ce3d93eab585471a7349536d5c52831efb635f",
+    "lessen_source_branch": "origin/main",
+    "lessen_source_sha": "a020f7dece0d9acec7f7376e9bd51e632843902b",
+    "lessen_source_remote": "https://github.com/meijer1973/4veco-lessen.git",
+    "known_book2_anchor_indexed": "Boek 2 / 2.1 Hoofdstuk Kosten en opbrengsten / 2.1.1 Kostenstructuren / paragraaf.md"
+  },
+  "product_end_state": "MTU-H5 remains blocked from final closure, Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use because q19 remains held at 0 failed / 6 review_required. This packet only asks reviewers to approve the q27-step-2 and q15 checker/fixture repair.",
+  "original_sprint_gate_spec": "MTU-H5 required a fresh approved non-Solo sample with operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, and negative regression guards. After PR #113, q27-step-2 and q15 were the next lane-specific repair surface while q19 stayed held.",
+  "non_negotiable_requirements": [
+    "q27-step-2 must be capacity/source-readout/conclusion, not incidence/pass-through.",
+    "D07 and D08 must not be used to close q27-step-2.",
+    "q27-step-1 package-1 and package-2 refs must remain intact.",
+    "q15 must use EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION as reviewed-equivalent answer-skill evidence for both correction-model points.",
+    "D27/F03/F09 remain content-only support and A97 remains answer-form/procedure support only.",
+    "A97 alone may not close q15.",
+    "q15 must not introduce graph, calculus, function-construction, incidence, or scaling routes.",
+    "q19 must remain visible at 0 failed / 6 review_required.",
+    "No protected/reference/MTU/candidate/target-exercise/lesson/diagnostic/PV/product/student mutation is authorized."
+  ],
+  "core_requirement_checklist": [
+    {"requirement_id": "core-1-current-live-counts", "status": "met", "evidence": "Validator without --expect-fail is expected to produce 0 failed / 6 review_required / 0 blocked."},
+    {"requirement_id": "core-2-q27-taxonomy", "status": "met", "evidence": "q27-step-2 reviewed-equivalent ref classifies the operation as capacity/source-readout/conclusion and removes D07/D08 closure support."},
+    {"requirement_id": "core-3-q15-answer-skill", "status": "met", "evidence": "q15-step-1 and q15-step-2 both cite Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT."},
+    {"requirement_id": "core-4-negative-guards", "status": "met", "evidence": "Global Solo negative fixture plus temporary q27-step-2 and q15 negative clones are checked."},
+    {"requirement_id": "core-5-report-builder", "status": "met", "evidence": "Regression report builder runs validator without --expect-fail and reports q27/q15 clean."},
+    {"requirement_id": "core-6-monotonic-checkers", "status": "met", "evidence": "q27 planning/package and q15 planning checkers are compatible with the post-execution state."},
+    {"requirement_id": "core-7-boundary", "status": "met", "evidence": "Changed-path guard forbids protected reference, external, authored, exam-ingestion, candidate, lesson, diagnostic, PV, product, and student-facing paths."},
+    {"requirement_id": "core-8-remote-discoverability", "status": "met", "evidence": "Bundle URLs, URL index, and GitHub agent index include the review packet and checker."},
+    {"requirement_id": "core-9-lessen-index-provenance", "status": "met", "evidence": "reports/github-agent-index-lessen.* record origin/main at a020f7dece0d9acec7f7376e9bd51e632843902b and include the known Book 2 2.1.1 paragraaf anchor."}
+  ],
+  "requested_decision": {
+    "decision_needed": "Human review of the q27-step-2 and q15 closure-readiness checker/fixture repair.",
+    "valid_decisions": [
+      "APPROVE_FOR_MERGE_AS_Q27_STEP2_Q15_CLOSURE_READINESS_REPAIR",
+      "REVISE_OR_HOLD"
+    ],
+    "execution_authorized_by_this_packet": false,
+    "fixture_mutation_authorized_by_this_packet": false,
+    "protected_reference_mutation_authorized_by_this_packet": false,
+    "product_or_student_use_authorized_by_this_packet": false
+  },
+  "must_review": [
+    "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md",
+    "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json",
+    "build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.md",
+    "build-scripts/references/build-mtu-h5-regression-report.js",
+    "build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+    "build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+    "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=7&question=15",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=11&question=15",
+    "references/machine/micro-teaching-units.json#A97",
+    "references/machine/micro-teaching-units.json#A98",
+    "references/machine/micro-teaching-units.json#A88",
+    "references/machine/micro-teaching-units.json#D27",
+    "references/machine/micro-teaching-units.json#F03",
+    "references/machine/micro-teaching-units.json#F09",
+    "references/machine/micro-teaching-units.json#D07",
+    "references/machine/micro-teaching-units.json#D08"
+  ],
+  "evidence_base": [
+    "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json"
+  ],
+  "findings": [
+    {
+      "finding_id": "q27-step2-ready",
+      "classification": "supports_execution_review",
+      "blocks": [],
+      "does_not_block": ["human review of q27-step-2 fixture/checker repair"],
+      "proof_required_to_close": "Post-execution checker proves q27-step-2 exact reviewed-equivalent ref, no D07/D08 support, no incidence/pass-through expectation, and q27-step-1 refs intact."
+    },
+    {
+      "finding_id": "q15-ready",
+      "classification": "supports_execution_review",
+      "blocks": [],
+      "does_not_block": ["human review of q15 fixture/checker repair"],
+      "proof_required_to_close": "Post-execution checker proves both q15 operations cite the reviewed-equivalent answer skill, A97 review hooks are cleared, content units remain content-only, and no forbidden routes are introduced."
+    },
+    {
+      "finding_id": "q19-carried-hold",
+      "classification": "blocks",
+      "blocks": ["MTU-H5 final closure", "Scale Gate 1", "product-route readiness", "diagnostics", "PV", "mastery", "sequencing", "lesson output", "student/product use"],
+      "does_not_block": ["q27-step-2 repair", "q15 repair", "checker/report stabilization"],
+      "proof_required_to_close": "Separate reviewed source-annex/graph-object and chained reasoning evidence with q19 negative guards preserved."
+    }
+  ],
+  "review_results": {
+    "teacher": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+    "economist": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+    "quality_inspection": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+    "lead": "APPROVE_EXECUTE_BOTH"
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q27_closure_claimed": false,
+    "q15_closure_claimed": false,
+    "mtu_h5_closure_claimed": false
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "FOURVECO_LESSEN_ROOT=<clean 4veco-lessen origin/main worktree> FOURVECO_LESSEN_SOURCE_REF=origin/main npm run agent:index",
+    "npm run check:platform",
+    "git diff --check"
+  ]
+}

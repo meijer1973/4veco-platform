@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "package_id": "MTU-H5-Q27-STEP2-Q15-CLOSURE-READINESS-BUNDLE-1",
+  "gate_id": "GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1",
+  "created": "2026-06-19",
+  "status": "pending_human_review_after_more_than_satisfied_execution",
+  "start_commit": "7c3dc631378cf90fcbbfda6ac343db0477557aa7",
+  "review_branch": "codex/mtu-h5-q27-step2-q15-closure-readiness-bundle-1-20260619",
+  "index_source_provenance": {
+    "platform_base_sha_after_rebase": "32ce3d93eab585471a7349536d5c52831efb635f",
+    "lessen_source_branch": "origin/main",
+    "lessen_source_sha": "a020f7dece0d9acec7f7376e9bd51e632843902b",
+    "lessen_source_remote": "https://github.com/meijer1973/4veco-lessen.git",
+    "known_book2_anchor_indexed": "Boek 2 / 2.1 Hoofdstuk Kosten en opbrengsten / 2.1.1 Kostenstructuren / paragraaf.md"
+  },
+  "purpose": "Execute the approved q27-step-2 capacity/source-readout reviewed-equivalent repair and q15 two-step dominant-strategy/prisoner-dilemma reviewed-equivalent answer-skill repair while leaving q19 as the only MTU-H5 closure blocker.",
+  "product_end_state": "MTU-H5 remains blocked from final closure, Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use because q19 remains held at 0 failed / 6 review_required. This bundle only clears q27 and q15 from the MTU-H5 regression surface.",
+  "original_sprint_gate_spec": "MTU-H5 required all public H5 diagnostic surfaces to reflect the approved fresh sample and to keep over-trigger, answer-form, incidence/scaling/misconception, procedure, and negative-fixture hooks visible. PR #113 left q27-step-2 and q15 as the next lane-specific blockers after q27-step-1 execution.",
+  "pre_execution_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6},
+    "q27": {"failed": 1, "review_required": 2},
+    "q15": {"failed": 0, "review_required": 4},
+    "overall": {"passed": 1, "failed": 1, "review_required": 12, "blocked": 0}
+  },
+  "post_execution_actual_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6},
+    "q27": {"failed": 0, "review_required": 0},
+    "q15": {"failed": 0, "review_required": 0},
+    "overall": {"passed": 1, "failed": 0, "review_required": 6, "blocked": 0}
+  },
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "reports/mtu-hardening/mtu-h5-rp005-q27-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-rp006-q15-planning-packet.json",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json",
+    "reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json",
+    "references/external/exams/vw-1022-a-25-2-o.pdf#page=12&question=27",
+    "references/external/exams/vw-1022-a-25-2-c.pdf#page=13&question=27",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=7&question=15",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=11&question=15",
+    "references/machine/micro-teaching-units.json#A97",
+    "references/machine/micro-teaching-units.json#A98",
+    "references/machine/micro-teaching-units.json#A88",
+    "references/machine/micro-teaching-units.json#D27",
+    "references/machine/micro-teaching-units.json#F03",
+    "references/machine/micro-teaching-units.json#F09",
+    "references/machine/micro-teaching-units.json#D07",
+    "references/machine/micro-teaching-units.json#D08"
+  ],
+  "reviewed_equivalent_evidence": [
+    {
+      "anchor_id": "Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT",
+      "operation_id": "q27-step-2",
+      "decision": "approved_capacity_source_readout_reviewed_equivalent_only",
+      "supporting_unit_ids": ["A98", "A88"],
+      "answer_model_summary": "The correction model awards one point for linking Q = 14,000 to production capacity and concluding that overconsumption is countered.",
+      "evidence_summary": "q27-step-2 is a capacity/source-readout/conclusion operation: demand equals capacity at Q = 14,000, so overconsumption is countered. A98 supplies only the leg-uit-of answer form, and A88 supplies unit/source-readout support for the per-1,000-liter graph context. The operation is not an incidence/pass-through percentage task.",
+      "does_not_cover": [
+        "D07 pass-through percentage",
+        "D08 elasticity route",
+        "A15 elasticity prerequisite",
+        "q27 closure",
+        "MTU-H5 closure",
+        "product-route readiness",
+        "student/product use"
+      ]
+    },
+    {
+      "anchor_id": "Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT",
+      "operation_ids": ["q15-step-1", "q15-step-2"],
+      "decision": "approved_reviewed_equivalent_answer_skill_for_fixture_only",
+      "answer_skill_id": "EX_ANS_TWO_STEP_DOMINANT_STRATEGY_PD_EXPLANATION",
+      "content_support_unit_ids": ["D27", "F03", "F09"],
+      "answer_form_support_unit_ids": ["A97"],
+      "answer_model_summary": "The q15 correction model awards one point for the dominant strategy to lower or undercut price and one point for lower revenue/profit for both firms plus the prisoner-dilemma conclusion.",
+      "evidence_summary": "D27/F03/F09 remain content-only support for substitutes, dominant strategy, and prisoner dilemma. A97 remains the leg-uit-dat answer-form/procedure support. The reviewed-equivalent answer skill is the two-step correction-model explanation, not a broad claim that A97 or the content units alone close the answer skill.",
+      "does_not_cover": [
+        "A97 alone closing q15",
+        "D27/F03/F09 content-only support as answer-skill closure",
+        "graph route",
+        "calculus route",
+        "incidence route",
+        "scaling route",
+        "MTU-H5 closure",
+        "product-route readiness",
+        "student/product use"
+      ]
+    }
+  ],
+  "operation_decision_matrix": [
+    {
+      "operation_id": "q27-step-2",
+      "decision": "execute_capacity_source_readout_taxonomy_repair",
+      "authorized_fixture_changes": [
+        "remove D07 from q27 record and q27-step-2 support/procedure review surface",
+        "set q27-step-2 incidence_or_pass_through_expected false",
+        "set q27-step-2 missing_incidence_expected false",
+        "add Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT reviewed-equivalent ref",
+        "keep q27-step-1 package 1 and package 2 refs intact"
+      ],
+      "forbidden_closure_claims": [
+        "D07 closes q27-step-2",
+        "D08 closes q27-step-2",
+        "A15 elasticity is required for q27-step-2",
+        "q27 closure authorizes MTU-H5 closure or product use"
+      ]
+    },
+    {
+      "operation_id": "q15-step-1",
+      "decision": "execute_reviewed_equivalent_answer_skill_repair",
+      "authorized_fixture_changes": [
+        "add Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT reviewed-equivalent ref",
+        "clear A97 procedure semantic-fit review hook",
+        "clear q15-answer-1 review hook"
+      ],
+      "forbidden_closure_claims": [
+        "A97 alone closes q15",
+        "D27/F03 content support alone closes q15",
+        "graph/calculus/incidence/scaling route introduced for q15"
+      ]
+    },
+    {
+      "operation_id": "q15-step-2",
+      "decision": "execute_reviewed_equivalent_answer_skill_repair",
+      "authorized_fixture_changes": [
+        "add Q15_TWO_STEP_DOMINANT_STRATEGY_PD_REVIEWED_EQUIVALENT reviewed-equivalent ref",
+        "clear A97 procedure semantic-fit review hook",
+        "clear q15-answer-1 review hook"
+      ],
+      "forbidden_closure_claims": [
+        "A97 alone closes q15",
+        "F09 content support alone closes q15",
+        "graph/calculus/incidence/scaling route introduced for q15"
+      ]
+    }
+  ],
+  "subagent_review_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+      "summary": "q27-step-2 is capacity/source-readout/conclusion, not incidence/pass-through; q15 needs the explicit two-step answer-skill reviewed equivalent, with D27/F03/F09 content support and A97 answer-form/procedure support only."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+      "summary": "The economic interpretation is honest only if D07 and D08 are not used as q27-step-2 closure authority, and if q15 preserves both scoring links."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED_EXECUTE_BOTH",
+      "summary": "Execution is acceptable with a post-execution checker, negative guards, q15 planning checker compatibility repair, monotonic q27 checkers, and validator/report state at 0 failed / 6 review_required."
+    }
+  ],
+  "subagent_lead_review": {
+    "status": "approved",
+    "lead_verdict": "APPROVE_EXECUTE_BOTH",
+    "lead_summary": "Lead approved execution because q27-step-2 and q15 can be repaired without protected-reference, candidate, MTU, target-exercise, lesson, diagnostic, PV, product, or student-use mutation. q19 remains the only MTU-H5 closure blocker."
+  },
+  "remaining_assertions_after_execution": {
+    "failed": [],
+    "review_required": [
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-1:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-source-annex-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19-graph-object-gap remains blocking",
+      "vw-1022-a-25-1-o:opgave-4:question-19:q19-step-3:ASSERT-REVIEW-q19 third graph-shift element is now modeled but still depends on blocked graph/source reconstruction"
+    ]
+  },
+  "negative_regression_guards": [
+    "global original Solo q1-q3 function-construction negative fixture still passes by failing as expected",
+    "temporary q27-step-2 incidence/pass-through reintroduction clone must produce q27-step-2 ASSERT-INCIDENCE-MISSING",
+    "temporary q15 A97-only/answer-skill-hook reintroduction clone must produce q15 procedure review_required assertions",
+    "checker rejects D07 or D08 as q27-step-2 support",
+    "checker rejects A97 alone or D27/F03/F09 content-only support as q15 answer-skill closure",
+    "checker rejects protected-reference, external-source, authored-target, exam-ingestion, candidate, lesson, diagnostic, PV, product, or student-facing writes"
+  ],
+  "authority_boundary": {
+    "fixture_mutation_authorized_after_subagent_lead_approval": true,
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "q27_closure_claimed": false,
+    "q15_closure_claimed": false,
+    "mtu_h5_closure_claimed": false
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "node build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "FOURVECO_LESSEN_ROOT=<clean 4veco-lessen origin/main worktree> FOURVECO_LESSEN_SOURCE_REF=origin/main npm run agent:index",
+    "npm run check:platform",
+    "git diff --check"
+  ]
+}

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const crypto = require('crypto');
@@ -87,6 +88,9 @@ const Q27_SCALING_REF =
 const Q27_INCIDENT_LEVY_CAPACITY_REF =
   'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json#Q27_STEP1_D41_D05_A88_LEVY_EQUILIBRIUM_REVIEWED_EQUIVALENT';
 
+const Q27_STEP2_CAPACITY_REF =
+  'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json#Q27_STEP2_CAPACITY_OVERCONSUMPTION_TAXONOMY_REVIEWED_EQUIVALENT';
+
 function fail(message) {
   console.error(`MTU-H5 RP-005 q27 planning packet check failed: ${message}`);
   process.exit(1);
@@ -157,7 +161,6 @@ function runH5Validator() {
     rel(H5_VALIDATOR),
     '--fixture',
     rel(FIXTURE),
-    '--expect-fail',
     '--json',
   ], {
     cwd: ROOT,
@@ -184,6 +187,48 @@ function assertQ27CandidateStoresAbsent() {
 function unitById(units, id) {
   const list = units.units || units;
   return list.find((unit) => unit.id === id);
+}
+
+function cloneWithQ27Step2Held(fixture) {
+  const clone = JSON.parse(JSON.stringify(fixture));
+  const records = clone.question_records || clone.records || [];
+  const q27 = records.find((record) => record.record_id === 'vw-1022-a-25-2-o:opgave-6:question-27');
+  const step2 = q27.official_correction_model_operations.find((operation) => operation.operation_id === 'q27-step-2');
+  step2.reviewed_equivalent_refs = [];
+  step2.incidence_or_pass_through_expected = true;
+  step2.missing_incidence_expected = true;
+  step2.mapped_mtu_ids = ['D07', 'A98'];
+  step2.expected_procedure_unit_ids = ['A98', 'D07'];
+  step2.procedure_review_required_unit_ids = ['D07'];
+  step2.review_required_hooks = ['review whether this is an incidence/pass-through family case or a distinct levy-capacity operation'];
+  return clone;
+}
+
+function runValidatorForTempFixture(fixture, expectFail = false) {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mtu-h5-rp005-q27-negative-'));
+  const tempFixture = path.join(tempDir, 'fixture.json');
+  try {
+    fs.writeFileSync(tempFixture, `${JSON.stringify(fixture, null, 2)}\n`, 'utf8');
+    const args = [
+      rel(H5_VALIDATOR),
+      '--fixture',
+      tempFixture,
+    ];
+    if (expectFail) args.push('--expect-fail');
+    args.push('--json');
+    const run = spawnSync(process.execPath, args, {
+      cwd: ROOT,
+      encoding: 'utf8',
+    });
+    if (run.status !== 0) {
+      process.stderr.write(run.stdout || '');
+      process.stderr.write(run.stderr || '');
+      fail('temporary MTU-H5 validator failed');
+    }
+    return JSON.parse(run.stdout);
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
 }
 
 function main() {
@@ -272,8 +317,15 @@ function main() {
   const q27 = records.find((record) => record.record_id === 'vw-1022-a-25-2-o:opgave-6:question-27');
   if (!q27) fail('fixture must contain q27 record');
   if (q27.question_word !== 'leg_uit_of') fail('q27 fixture question_word must be leg_uit_of');
-  requireIncludesAll(q27.mapped_mtu_ids || [], ['D07', 'A98'], 'q27 mapped MTUs');
+  requireIncludesAll(q27.mapped_mtu_ids || [], ['A98'], 'q27 mapped MTUs');
+  if ((q27.mapped_mtu_ids || []).includes('D07')) {
+    const step2 = (q27.official_correction_model_operations || []).find((operation) => operation.operation_id === 'q27-step-2');
+    if ((step2?.reviewed_equivalent_refs || []).includes(Q27_STEP2_CAPACITY_REF)) {
+      fail('q27 record must not retain D07 after q27-step-2 execution');
+    }
+  }
   let step1IncidenceRepaired = false;
+  let step2CapacityResolved = false;
   for (const operation of requireArray(q27, 'official_correction_model_operations', 'q27', 2)) {
     if (!operation.expected_answer_form_mtu_ids?.includes('A98')) fail(`${operation.operation_id} must keep A98 answer form`);
     if (!operation.expected_misconception_refs?.length) fail(`${operation.operation_id} must keep misconception refs`);
@@ -303,8 +355,20 @@ function main() {
         fail('q27-step-1 missing_scaling_expected must be true before execution or false after approved A88 execution');
       }
     } else if (operation.operation_id === 'q27-step-2') {
-      if (operation.missing_incidence_expected !== true) fail('q27-step-2 must keep missing_incidence_expected true');
-      if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail('q27-step-2 must keep D07 procedure review');
+      step2CapacityResolved = operation.incidence_or_pass_through_expected === false &&
+        operation.missing_incidence_expected === false &&
+        (operation.reviewed_equivalent_refs || []).includes(Q27_STEP2_CAPACITY_REF);
+      if (step2CapacityResolved) {
+        requireIncludesAll(operation.mapped_mtu_ids || [], ['A98', 'A88'], 'q27-step-2 mapped MTUs after execution');
+        if ((operation.mapped_mtu_ids || []).includes('D07')) fail('q27-step-2 must not map D07 after execution');
+        if ((operation.mapped_mtu_ids || []).includes('D08')) fail('q27-step-2 must not map D08 after execution');
+        if ((operation.expected_procedure_unit_ids || []).includes('D07')) fail('q27-step-2 procedure units must not include D07 after execution');
+        if ((operation.procedure_review_required_unit_ids || []).length !== 0) fail('q27-step-2 procedure review must be empty after execution');
+        if ((operation.review_required_hooks || []).length !== 0) fail('q27-step-2 review hooks must be empty after execution');
+      } else {
+        if (operation.missing_incidence_expected !== true) fail('q27-step-2 must keep missing_incidence_expected true until execution');
+        if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail('q27-step-2 must keep D07 procedure review until execution');
+      }
     } else {
       if (operation.missing_incidence_expected !== true) fail(`${operation.operation_id} must keep missing_incidence_expected true`);
       if (!operation.procedure_review_required_unit_ids?.includes('D07')) fail(`${operation.operation_id} must keep D07 procedure review`);
@@ -317,11 +381,16 @@ function main() {
   const q27Step1 = q27.official_correction_model_operations.find((operation) => operation.operation_id === 'q27-step-1');
   const scalingExecuted = q27Step1?.missing_scaling_expected === false;
 
-  const requiredCurrentFailedAssertions = step1IncidenceRepaired
-    ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
-    : REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS;
+  const requiredCurrentFailedAssertions = step2CapacityResolved
+    ? []
+    : step1IncidenceRepaired
+      ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
+      : REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS;
   for (const assertionId of requiredCurrentFailedAssertions) {
     if (!failedIds.has(assertionId)) fail(`current validator result must still expose q27 assertion: ${assertionId}`);
+  }
+  if (step2CapacityResolved && failedIds.has(Q27_STEP2_INCIDENCE_FAILED_ASSERTION)) {
+    fail(`current validator result must not expose repaired q27-step-2 assertion: ${Q27_STEP2_INCIDENCE_FAILED_ASSERTION}`);
   }
   if (step1IncidenceRepaired && failedIds.has(Q27_STEP1_INCIDENCE_FAILED_ASSERTION)) {
     fail(`current validator result must not expose repaired q27 assertion: ${Q27_STEP1_INCIDENCE_FAILED_ASSERTION}`);
@@ -332,7 +401,9 @@ function main() {
   if (scalingExecuted && failedIds.has(PRE_SCALING_Q27_FAILED_ASSERTION)) {
     fail(`current validator result must not expose repaired q27 scaling assertion: ${PRE_SCALING_Q27_FAILED_ASSERTION}`);
   }
-  const requiredCurrentReviewMarkers = step1IncidenceRepaired
+  const requiredCurrentReviewMarkers = step2CapacityResolved
+    ? []
+    : step1IncidenceRepaired
     ? ['review whether this is an incidence/pass-through family case or a distinct levy-capacity operation']
     : REQUIRED_Q27_REVIEW_MARKERS_ALWAYS;
   for (const marker of requiredCurrentReviewMarkers) {
@@ -379,13 +450,18 @@ function main() {
     REQUIRED_Q27_FAILED_ASSERTIONS,
     'negative regression live failed assertions'
   );
-  const liveNegativeAssertions = step1IncidenceRepaired
+  const negativeFailedIds = step2CapacityResolved
+    ? new Set(runValidatorForTempFixture(cloneWithQ27Step2Held(fixture), true).buckets.failed.map((item) => item.assertion_id))
+    : failedIds;
+  const liveNegativeAssertions = step2CapacityResolved
     ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
-    : scalingExecuted
-      ? REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS
-      : REQUIRED_Q27_FAILED_ASSERTIONS;
+    : step1IncidenceRepaired
+      ? [Q27_STEP2_INCIDENCE_FAILED_ASSERTION]
+      : scalingExecuted
+        ? REQUIRED_Q27_FAILED_ASSERTIONS_ALWAYS
+        : REQUIRED_Q27_FAILED_ASSERTIONS;
   for (const assertionId of liveNegativeAssertions) {
-    if (!failedIds.has(assertionId)) fail(`live negative q27 assertion is absent from validator output: ${assertionId}`);
+    if (!negativeFailedIds.has(assertionId)) fail(`live negative q27 assertion is absent from validator output: ${assertionId}`);
   }
   if (packet.review_team_threshold?.minimum_verdict !== 'MORE_THAN_SATISFIED') {
     fail('review team threshold must require MORE_THAN_SATISFIED');
