@@ -153,15 +153,21 @@ const ALLOWED_CHANGED_PATHS = new Set([
   ...Q19_PACKET_AUTHORIZED_PATHS,
   'build-scripts/references/build-mtu-h5-regression-report.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js',
+  'build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js',
   'build-scripts/references/check-mtu-h5-rp005-q27-planning-packet.js',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.json',
   'reports/mtu-hardening/mtu-h5-q27-incidence-scaling-levy-capacity-package-1.md',
+  'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.json',
+  'reports/mtu-hardening/mtu-h5-q27-incidence-levy-capacity-package-2.md',
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'reports/mtu-hardening/mtu-h5-regression-report.json',
   'reports/mtu-hardening/mtu-h5-regression-report.md',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q27-incidence-scaling-levy-capacity-package-1/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q27-incidence-levy-capacity-package-2/bundle-urls.md',
 ]);
 
 const FORBIDDEN_CHANGED_EXACT = new Set([
@@ -337,8 +343,12 @@ function requireCurrentDiagnosticState(packet) {
     counts.q27?.review_required === 4 &&
     report.bucket_totals?.failed === 2 &&
     report.bucket_totals?.review_required === 14;
-  if (!q27BeforeScalingExecution && !q27AfterScalingExecution) {
-    fail('report q27/overall counts must be either pre-q27-scaling 3/5 + 3/15 or post-q27-scaling 2/4 + 2/14');
+  const q27AfterPackage2Execution = counts.q27?.failed === 1 &&
+    counts.q27?.review_required === 2 &&
+    report.bucket_totals?.failed === 1 &&
+    report.bucket_totals?.review_required === 12;
+  if (!q27BeforeScalingExecution && !q27AfterScalingExecution && !q27AfterPackage2Execution) {
+    fail('report q27/overall counts must be pre-q27-scaling 3/5 + 3/15, post-q27-scaling 2/4 + 2/14, or post-q27-package2 1/2 + 1/12');
   }
 
   if (packet.current_diagnostic_state?.q19?.failed !== 0 ||
