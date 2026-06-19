@@ -91,9 +91,32 @@ function assertMutationProductFlags(record, label) {
   if (record.authority_boundary) assertAuthorityBoundaryFalse(record.authority_boundary, `${label}.authority_boundary`);
 }
 
+function assertBlockedSourceAnnexStorage(doc, label = 'source-annex extraction storage') {
+  validateSourceExtractionDocument(doc, label);
+  ensure(doc.storage_status === 'future_candidate_storage', `${label}.storage_status must be future_candidate_storage`);
+
+  const records = [...(doc.graph_overlays || []), ...(doc.source_annex_overlays || [])];
+  ensure(records.length > 0, `${label} must contain blocked q19 source/graph records`);
+  for (const [index, record] of records.entries()) {
+    const recordLabel = `${label}.records[${index}]`;
+    ensure(record.source_exam_item_id === 'vw-1022-a-25-1-o:opgave-4:question-19', `${recordLabel}.source_exam_item_id must be q19`);
+    ensure(record.review_state === 'blocked', `${recordLabel}.review_state must remain blocked`);
+    ensure(record.extraction_status === 'partial_with_blocking_gap', `${recordLabel}.extraction_status must remain partial_with_blocking_gap`);
+    ensure(record.blocking_gap_ids.includes('q19-source-annex-gap'), `${recordLabel} must carry q19-source-annex-gap`);
+    ensure(record.blocking_gap_ids.includes('q19-graph-object-gap'), `${recordLabel} must carry q19-graph-object-gap`);
+  }
+}
+
 function assertFutureStorageAbsent() {
+  const sourceAnnexStorage = 'references/data/exam-ingestion/source-annex-extraction-overlays.json';
   const existing = FUTURE_STORAGE.filter((rel) => fs.existsSync(file(rel)));
-  ensure(existing.length === 0, `future candidate storage must not exist: ${existing.join(', ')}`);
+  const disallowed = existing.filter((rel) => rel !== sourceAnnexStorage);
+  ensure(disallowed.length === 0, `future candidate storage must not exist: ${disallowed.join(', ')}`);
+
+  if (existing.includes(sourceAnnexStorage)) {
+    const doc = readJson(file(sourceAnnexStorage));
+    assertBlockedSourceAnnexStorage(doc, sourceAnnexStorage);
+  }
 }
 
 function allUnitIds(candidate) {
@@ -453,6 +476,7 @@ module.exports = {
   ValidationError,
   assertFutureStorageAbsent,
   assertAuthorityBoundaryFalse,
+  assertBlockedSourceAnnexStorage,
   ensure,
   ensureDryRunOnly,
   file,
