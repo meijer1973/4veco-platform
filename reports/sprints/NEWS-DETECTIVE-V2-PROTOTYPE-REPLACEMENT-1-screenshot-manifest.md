@@ -12,7 +12,7 @@ Files:
 - `active-desktop-dark.png` - active round, desktop dark.
 - `active-mobile-light.png` - active round, 390px mobile, stacked article first.
 - `result-desktop-light.png` - result screen.
-- `dom-proof.json` - DOM/computed-style proof.
+- `dom-proof.json` - DOM/computed-style, reset, and result-score proof.
 
 DOM proof summary:
 
@@ -23,5 +23,10 @@ DOM proof summary:
 - legacy high-level markers: none
 - fake links: none
 - horizontal overflow: false
+- reset after answered round: unavailable
+- incomplete consequence reset: clears two placed blocks to zero
+- result score text: `Score: 4/4`
+- result score ring: `4/4`
+- score matches engine result: true
 - mobile article before round: true
 - overall pass: true

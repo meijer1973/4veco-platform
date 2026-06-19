@@ -31,6 +31,8 @@ prototype `4veco-news-detective-v2-prototype.html` as the approved baseline.
 - [x] Article source/date/source URL render.
 - [x] Dynamic article facts supported when provided.
 - [x] All four rounds render in V2 controls.
+- [x] Reset cannot reopen an answered round.
+- [x] Incomplete consequence-chain reset remains available before submission.
 - [x] Result, replay, and return-to-paragraph navigation render.
 - [x] Light and dark mode share one DOM.
 - [x] Mobile stacks article above round.
@@ -48,6 +50,20 @@ Blocking finding, closed:
 Rendered desktop proof exposed horizontal overflow from `100vw` content sizing.
 Production CSS now uses grid-column-relative width, and the checker forbids the
 old `calc(100vw - var(--sidebar))` pattern.
+
+Blocking finding, closed:
+Post-answer reset could desynchronize UI and engine state. Reset is now a
+pre-answer consequence-chain action only, guarded by round state and
+hidden/disabled after submission. The JSDOM interaction test proves answered
+rounds cannot be reopened and round 2 still accepts a first submission after
+clearing an incomplete chain.
+
+High guardrail finding, closed:
+`npm run check:news-detective-v2` is now wired into `platform-ci`.
+
+Low proof finding, closed:
+The rendered proof now captures the final score text and ring value, both
+matching the expected engine result.
 
 No open blocking findings remain.
 
@@ -67,8 +83,8 @@ Evidence files:
 - `dom-proof.json`
 
 `dom-proof.json` records `pass: true`, exact article-body length match in all
-active rounds, no clamp styles, no legacy markers, no fake links, and no
-horizontal overflow.
+active rounds, no clamp styles, no legacy markers, no fake links, no horizontal
+overflow, reset proof, and `scoreMatchesEngineResult: true`.
 
 ## Blocks / Does Not Block / Proof Required To Close
 

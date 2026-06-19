@@ -118,7 +118,7 @@
                 else if (action === "chain-submit") submitChain();
                 else if (action === "model") answerModel(target.getAttribute("data-id"));
                 else if (action === "error") answerError(target.getAttribute("data-phrase"));
-                else if (action === "reset-round") renderRound();
+                else if (action === "reset-round") resetRound();
                 else if (action === "next-round") advanceRound();
             });
         }
@@ -175,11 +175,20 @@
 
         html += '<div class="feedback" id="feedback"></div>'
             + '<div class="actions">'
-            + '<button class="btn btn-secondary" type="button" data-action="reset-round">Reset ronde</button>'
+            + (currentRound.type === "consequence"
+                ? '<button class="btn btn-secondary" type="button" data-action="reset-round">Reset ronde</button>'
+                : "")
             + '<button class="btn btn-primary" type="button" id="nextBtn" data-action="next-round" style="display:none">Volgende ronde &rarr;</button>'
             + '</div>';
 
         els.roundCard.innerHTML = html;
+    }
+
+    function resetRound() {
+        if (!currentRound) return;
+        var roundIndex = currentRound.roundNumber - 1;
+        if (roundStates[roundIndex] !== null) return;
+        renderRound();
     }
 
     function renderConceptRound() {
@@ -339,6 +348,11 @@
         var roundIndex = currentRound.roundNumber - 1;
         roundStates[roundIndex] = result.correct;
         updateProgress(roundIndex);
+        var reset = q("[data-action='reset-round']", els.roundCard);
+        if (reset) {
+            reset.disabled = true;
+            reset.style.display = "none";
+        }
         showFeedback(result);
     }
 
