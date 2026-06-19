@@ -86,14 +86,14 @@
     },
     {
       "roadmap_id": "inspection-standards-compatibility",
-      "version": "v2.10-inspect-11d-paired-repair-readiness-closure",
+      "version": "v2.11-inspect-11ef-chapter-13-diagnostic-onboarding",
       "title": "Inspection Standards Compatibility Roadmap",
       "status": "active",
       "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
       "owner": "references_team",
-      "updated_on": "2026-06-18",
+      "updated_on": "2026-06-19",
       "supersedes": [],
-      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B merged only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. INSPECT-10C closed diagnostic generator review/stability hardening. INSPECT-10D closed the internal diagnostic tool operating procedure. INSPECT-11 through INSPECT-11C narrowed Chapter 1.3 readiness blockers, and PR #110 merged the INSPECT-11C state-B reconciliation packet. INSPECT-11D is active as a paired Chapter 1.3 platform/lesson repair and readiness-closure sprint: it may repair the named 1.3.4 generated-output divergence through platform source and regenerated lesson output, but it does not generate a Chapter 1.3 diagnostic report or evidence pack. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard gates, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
+      "notes": "Governance roadmap for Dutch inspection-relevant evidence first. INSPECT-10B merged only a manually invoked internal diagnostic generator and Chapter 1.2 diagnostic report pair from the exact INSPECT-10A source/output allowlists, with carried blockers visible. INSPECT-10C closed diagnostic generator review/stability hardening. INSPECT-10D closed the internal diagnostic tool operating procedure. INSPECT-11 through INSPECT-11D accepted Chapter 1.3 readiness state A and merged the paired platform/lesson repair. INSPECT-11E/F is active as a manual internal Chapter 1.3 diagnostic onboarding track with exact source/output allowlists, Chapter 1.2 semantic regression protection, and refusal checks. Evidence-pack generation, teacher/school-facing pack work, public/external generated output or sharing, package-script, CI/dashboard gates, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use work, personal-data processing, and compliance/approval claims remain unauthorised."
     },
     {
       "roadmap_id": "golden-workbench-rollout-roadmap",

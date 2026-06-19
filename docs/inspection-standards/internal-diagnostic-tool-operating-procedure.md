@@ -1,8 +1,8 @@
 # Internal Diagnostic Tool Operating Procedure
 
-Status: draft for INSPECT-10D human review
-Date: 2026-06-17
-Applies to: INSPECT-10B/10C manual internal diagnostic generator
+Status: updated for INSPECT-11E/F human review
+Date: 2026-06-19
+Applies to: manual internal diagnostic generator for Chapter 1.2 and Chapter 1.3
 
 ## Product End-State And Original Spec
 
@@ -11,14 +11,22 @@ Applies to: INSPECT-10B/10C manual internal diagnostic generator
 - Generator implementation spec: `archive/sprints/INSPECT-10B/INSPECT-10B-sprint-plan.md`
 - Stability-hardening spec: `archive/sprints/INSPECT-10C/INSPECT-10C-sprint-plan.md`
 - Operating-procedure spec: `archive/sprints/INSPECT-10D/INSPECT-10D-sprint-plan.md`
+- Chapter 1.3 readiness gate:
+  `archive/sprints/INSPECT-11D/INSPECT-11D-authorisation-note.md`
+- Chapter 1.3 onboarding spec:
+  `archive/sprints/INSPECT-11EF/INSPECT-11EF-sprint-plan.md`
 
 ## Non-Negotiable Requirements
 
 - The tool is internal-only.
 - The tool is manual-only.
 - The tool is diagnostic-only.
-- The tool applies only to the Chapter 1.2 diagnostic report pair created by
-  INSPECT-10B and hardened by INSPECT-10C.
+- The tool applies only to explicit scope descriptors for Chapter 1.2 and
+  Chapter 1.3.
+- Chapter 1.3 may read only its descriptor's exact source allowlist, including
+  exact read-only lesson Markdown proof paths. Directory globbing, implicit
+  discovery, generated lesson-output scanning, and lesson mutation remain
+  forbidden.
 - Generated diagnostic output is not student-facing, teacher/school-facing,
   public, external, pack-strength, product-use, compliance, approval, or
   inspection-readiness proof.
@@ -46,6 +54,8 @@ Applies to: INSPECT-10B/10C manual internal diagnostic generator
 | Changed-output semantics defined | met | Meaning Of Changed Output |
 | Stop conditions defined | met | Stop Conditions |
 | Carried blockers classified | met | Finding Classification |
+| Chapter 1.2 regression protected | met | Stability checker semantic hash |
+| Chapter 1.3 source/output allowlists explicit | met | Scope descriptors and stability checker |
 
 ## Allowed Invocation
 
@@ -53,24 +63,27 @@ Agents may invoke the manual diagnostic generator only when all of these are
 true:
 
 1. The work is part of a human-reviewed or human-requested sprint whose scope
-   explicitly includes the internal Chapter 1.2 diagnostic report pair.
+   explicitly includes one of the manual internal diagnostic report scopes:
+   `chapter-1-2`, `chapter-1-3`, or `all`.
 2. The branch is a dedicated `codex/` or `agent/` task branch, not `main`.
 3. The platform worktree safety check passes for the current task.
 4. The requested action is internal diagnostic review, freshness checking,
    stability checking, or blocker visibility checking.
 5. The action does not request a stronger audience, integration, or authority
-   than INSPECT-10B/10C granted.
+   than the controlling sprint granted.
 
 Allowed commands:
 
 ```powershell
-node build-scripts/inspection/build-dutch-diagnostic-report.js --check
+node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope chapter-1-2
+node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope chapter-1-3
+node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope all
 node build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 ```
 
 Running the generator without `--check` is allowed only inside a sprint that
-explicitly authorises refreshing the Chapter 1.2 diagnostic report pair and
-lists the generated Markdown/JSON files as allowed output paths.
+explicitly authorises refreshing the named diagnostic report pair and lists the
+generated Markdown/JSON files as allowed output paths.
 
 ## Preconditions Before Running
 
@@ -87,8 +100,8 @@ Before invoking the tool, the agent must verify:
   generated lesson-output work is being requested.
 - The sprint plan names allowed source paths and output paths if report files
   may be refreshed.
-- The known Chapter 1.2 blockers remain in scope as blockers, not as resolved
-  issues.
+- The known Chapter 1.2 and Chapter 1.3 blockers remain in scope as blockers,
+  not as resolved issues.
 - The diagnostic source and report files that are compared byte-for-byte must
   be checked out with stable LF bytes according to `.gitattributes`; if a
   local Windows worktree expands them differently, run the normalization
@@ -110,7 +123,7 @@ git ls-files --eol `
   docs/roadmaps/quality-standards/quality-standards-end-state.md `
   reports/inspection-standards/chapter-1-2-diagnostic-report.json `
   reports/inspection-standards/chapter-1-2-diagnostic-report.md
-node build-scripts/inspection/build-dutch-diagnostic-report.js --check
+node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope all
 node build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 ```
 
@@ -124,7 +137,7 @@ before continuing.
 After a diagnostic report check or authorised report refresh, run and record:
 
 ```powershell
-node build-scripts/inspection/build-dutch-diagnostic-report.js --check
+node build-scripts/inspection/build-dutch-diagnostic-report.js --check --scope all
 node build-scripts/inspection/check-dutch-diagnostic-report-stability.js
 npm.cmd run check:scope-language
 node build-scripts/references/check-roadmap-version-index.js
@@ -183,8 +196,9 @@ asks for:
 - compliance, approval, inspection-ready, complete OP0, PTA-validity,
   summative-validity, classroom-implementation, school-obligation, or
   school-SKA claims;
-- hiding or softening the `1.2.2`, `1.2.4`, accessibility/support, or
-  check-surface blockers.
+- hiding or softening the `1.2.2`, `1.2.4`, Chapter 1.3 route-local-only,
+  school-owned evidence, accessibility/support, full-Book assembly,
+  check-surface authority, or downstream-product blockers.
 
 ## Finding Classification
 
@@ -197,9 +211,13 @@ asks for:
 | Chapter 1.2 generated-output blockers remain open. | `scale_blocker` | Pack-strength Chapter 1.2 closure and teacher/school-facing reliance | Internal diagnostic reporting with blockers visible | Scoped remediation or reviewed waiver/carry decision |
 | Accessibility/support evidence remains below pack-strength. | `scale_blocker` | Accessibility-strength and support-strength claims | Internal diagnostic reporting with gaps visible | Reviewed mobile/responsive, contrast/theme, semantic/PDF, support/advisory, hints/repair, and product/school-boundary proof |
 | Check-surface authority remains outside this tool. | `scale_blocker` | Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use work | Ordinary scoped internal diagnostic checks | Renewed human review confirming check-surface gate closure and naming authority unlocked |
+| Chapter 1.2 semantic report contract remains protected. | `core_requirement_met` | Silent semantic drift in the existing Chapter 1.2 report | Deterministic metadata repair and Chapter 1.3 onboarding | Stability checker semantic hash and diff review |
+| Chapter 1.3 internal diagnostic report exists with blockers visible. | `core_requirement_met` | Treating route-local evidence as school-owned, teacher/school-facing, public, product-route, or Scale Gate authority | Manual internal diagnostic reporting | Later authorised sprint with school-owned evidence and renewed human review |
+| Chapter 1.3 full Book 1 assembly health remains separate. | `scope_boundary_flag` | Book 1 clean-health claims | Scoped Chapter 1.3 diagnostic report when Chapter 1.3 validators pass | Separate `BOOK1-ASSEMBLY-HEALTH-1` repair route |
 
 ## Review Boundary
 
-Human review of INSPECT-10D may accept, revise, or reject this operating
-procedure. It may not, by accepting the procedure, authorise any broader output
-surface, integration, route adoption, or downstream product authority.
+Human review of INSPECT-11E/F may accept, revise, or reject this operating
+procedure update and the Chapter 1.3 internal diagnostic onboarding work. It
+may not, by accepting the procedure, authorise any broader output surface,
+integration, route adoption, or downstream product authority.
