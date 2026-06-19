@@ -49,6 +49,9 @@ html[data-theme="dark"] {
 body {
   margin: 0;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--ge-bg);
   color: var(--ge-text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -161,9 +164,11 @@ a {
 }
 
 .ge-page {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 28px 24px 56px;
+  overflow-x: hidden;
 }
 
 .ge-hero {
@@ -270,6 +275,7 @@ a {
   background: var(--ge-panel);
   box-shadow: var(--ge-shadow);
   min-width: 0;
+  max-width: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -277,10 +283,12 @@ a {
   position: sticky;
   top: 88px;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .ge-task-card {
   padding: 22px;
+  overflow-x: hidden;
 }
 
 .ge-source-card h2,
@@ -323,10 +331,12 @@ a {
 
 .ge-source-table {
   width: 100%;
+  max-width: 100%;
   margin-top: 12px;
   border-collapse: collapse;
   font-size: 15px;
   table-layout: fixed;
+  word-break: break-word;
 }
 
 .ge-source-table th,
@@ -792,6 +802,9 @@ a {
     grid-template-columns: 1fr;
     gap: 8px;
     align-items: start;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .ge-topbar strong {
@@ -804,11 +817,13 @@ a {
 
   .ge-page {
     padding: 24px 16px 40px;
+    max-width: 100%;
   }
 
   .ge-hero-card,
   .ge-route-panel {
     padding: 18px;
+    max-width: 100%;
   }
 
   .ge-hero h1 {
@@ -817,6 +832,7 @@ a {
 
   .ge-workbench {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .ge-source-card {

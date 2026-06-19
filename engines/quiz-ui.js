@@ -11,7 +11,7 @@
  *   - category chip with a colored dot + level chip with bolts
  *   - option cards with mono letter keys (A/B/C/D) + state icons
  *   - feedback block with icon + title + rationale
- *   - mastery sidebar with 3-step mastery bars per category
+ *   - practice-progress sidebar with 3-step status bars per category
  */
 (function () {
     'use strict';
@@ -82,7 +82,7 @@
         feedbackText:     document.getElementById('feedback-text'),
         nextBtn:          document.getElementById('next-btn'),
         finalScore:       document.getElementById('final-score'),
-        masteryDash:      document.getElementById('mastery-dashboard'),
+        progressDash:     document.getElementById('progress-dashboard'),
         themeToggle:      document.getElementById('theme-toggle')
     };
 
@@ -117,8 +117,8 @@
         }
     }
 
-    function renderMasteryDashboard() {
-        if (!els.masteryDash) return;
+    function renderPracticeProgress() {
+        if (!els.progressDash) return;
         var progress = engine.getProgress();
         var html = '';
         for (var cat in data.categories) {
@@ -132,17 +132,17 @@
                 : steps + '/3';
             var bars = '';
             for (var s = 0; s < 3; s++) {
-                bars += '<div class="mastery-step' + (s < steps ? ' filled' : '') + '"></div>';
+                bars += '<div class="progress-step' + (s < steps ? ' filled' : '') + '"></div>';
             }
-            html += '<div class="mastery-item' + (p.closed ? ' closed' : '') + '" style="color:' + color + '">'
-                +   '<div class="mastery-label">'
+            html += '<div class="progress-item' + (p.closed ? ' closed' : '') + '" style="color:' + color + '">'
+                +   '<div class="progress-label">'
                 +     '<span class="cat-name">' + escapeHtml(info.name) + '</span>'
                 +     '<span class="status-text">' + statusHtml + '</span>'
                 +   '</div>'
-                +   '<div class="mastery-steps">' + bars + '</div>'
+                +   '<div class="progress-steps">' + bars + '</div>'
                 + '</div>';
         }
-        els.masteryDash.innerHTML = html;
+        els.progressDash.innerHTML = html;
     }
 
     function escapeHtml(s) {
@@ -279,7 +279,7 @@
         els.feedbackText.innerHTML = result.rationale;
         els.nextBtn.style.display = 'inline-flex';
         updateClosedCount();
-        renderMasteryDashboard();
+        renderPracticeProgress();
     }
 
     function setStateIcon(btn, iconClass) {
@@ -294,7 +294,7 @@
         els.finalScore.innerText = result.score + ' van de ' + result.total;
         showScreen('end');
         updateClosedCount();
-        renderMasteryDashboard();
+        renderPracticeProgress();
     }
 
     // ── Public functions (called from HTML) ─────────────────────────
@@ -302,7 +302,7 @@
         engine.startSession();
         els.scoreDisplay.innerText = '0';
         showScreen('game');
-        renderMasteryDashboard();
+        renderPracticeProgress();
         updateClosedCount();
         presentQuestion();
     };
@@ -314,7 +314,7 @@
         }
         els.scoreDisplay.innerText = '0';
         showScreen('game');
-        renderMasteryDashboard();
+        renderPracticeProgress();
         updateClosedCount();
         presentQuestion();
     };
@@ -356,6 +356,6 @@
 
     // ── Initial render ──────────────────────────────────────────────
     renderThemeToggle();
-    renderMasteryDashboard();
+    renderPracticeProgress();
     updateClosedCount();
 })();
