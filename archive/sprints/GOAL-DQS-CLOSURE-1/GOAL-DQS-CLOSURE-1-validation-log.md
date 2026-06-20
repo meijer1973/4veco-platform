@@ -1,6 +1,6 @@
 # GOAL-DQS-CLOSURE-1 Validation Log
 
-Status: local validation passed; PR CI pending
+Status: local validation, final lead, and reviewed-head PR CI passed; final metadata CI guard pending
 Date: 2026-06-20
 
 ## Product End-State And Original Spec
@@ -45,7 +45,8 @@ Date: 2026-06-20
 | Diff hygiene clean | met | `git diff --check` PASS |
 | Platform tests pass | met | 56 suites / 814 tests passed |
 | Specialist gates pass at required level | met | Three MORE_THAN_SATISFIED verdicts |
-| Remote PR CI | pending | PR not opened yet |
+| Final lead review | met after correction | Final lead PASS on `d77fce9a` after EOF hygiene correction |
+| Remote PR CI | met with final metadata guard | PR #124 run `27865421666` passed on reviewed head `d77fce9a`; final metadata commit requires fresh green CI |
 
 ## Command Results
 
@@ -66,6 +67,7 @@ Date: 2026-06-20
 | `git diff --check` | PASS | No whitespace errors. |
 | `git diff --check origin/main...HEAD` | PASS after correction | Final lead initially found an extra blank line at EOF in the generated DQS Markdown. Commit `a88e0d3a` fixed the generator, regenerated the Markdown, and the PR-diff hygiene check now passes. |
 | `npm.cmd run check:platform` | PASS | 56 suites passed, 6 skipped; 814 tests passed, 8 skipped. Known fixture diagnostic output printed during tests. |
+| PR #124 `platform-ci / validate-platform` run `27865421666` | PASS | Fresh remote CI passed on reviewed head `d77fce9a47b1de4c8348b498ca4444c2ef9e8698`; final metadata commit still requires a final green CI guard. |
 
 ## DQS Refusal Matrix
 
@@ -117,6 +119,5 @@ Expected refusal families:
 
 | Finding | Classification | blocks | does_not_block | proof_required_to_close |
 |---|---|---|---|---|
-| Remote PR CI is not available until the PR is opened. | publication_pending | Human-review-ready merge recommendation | Local validation and final lead review preparation | Open PR, wait for fresh green `platform-ci / validate-platform`, and record run evidence. |
-| Branch is locally ahead of `origin/main` until pushed. | publication_pending | Remote review and CI | Local validation and final lead review preparation | Push branch and confirm PR freshness/mergeability. |
+| Final metadata commit must receive fresh PR CI. | publication_pending | Human-review-ready merge recommendation until final CI guard is green | Local validation, final lead PASS, and reviewed-head CI evidence | Push final metadata commit, convert PR to ready for review, wait for fresh green `platform-ci / validate-platform`, and confirm PR freshness/mergeability. |
 | L4/L5 authority remains blocked. | future_authority_required | Evidence packs, teacher/school-facing output, public/external output, Scale Gate, product-route, diagnostics/mastery/PV, student/product-use, and compliance/approval claims | Current internal/report-only DQS closure candidate | Fresh human-authorised future sprint and MORE_THAN_SATISFIED specialist gates. |

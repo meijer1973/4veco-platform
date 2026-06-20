@@ -1,6 +1,6 @@
 # GOAL-DQS-CLOSURE-1 Human Review Packet
 
-Status: ready for final lead and PR publication
+Status: ready for human review after final metadata CI guard
 Date: 2026-06-20
 
 ## Decision Requested
@@ -62,8 +62,8 @@ student-use, or compliance authority.
 | Refusal matrix covers forbidden authority | met | 21 DQS refusal cases |
 | Specialist gates completed at required level | met | Three MORE_THAN_SATISFIED verdicts |
 | Local validation passed | met | Validation log |
-| Final lead review | pending | To run after packet assembly |
-| PR publication and remote CI | pending | PR not opened yet |
+| Final lead review | met after correction | Final lead PASS on `d77fce9a` after EOF hygiene correction |
+| PR publication and remote CI | met with final metadata guard | PR #124 open and mergeable; CI passed on reviewed head; final metadata commit requires fresh green CI |
 
 ## Closure Candidate Summary
 
@@ -117,6 +117,7 @@ Local validation passed:
 - report JSON contract;
 - diff hygiene;
 - platform tests.
+- PR-diff hygiene after final lead correction.
 
 Platform tests passed:
 
@@ -131,6 +132,15 @@ Specialist gate:
 Teacher/economics: MORE_THAN_SATISFIED
 Legal/privacy: MORE_THAN_SATISFIED
 Dutch quality-inspection: MORE_THAN_SATISFIED
+```
+
+Final lead:
+
+```text
+Initial final lead: REVISE for generated Markdown EOF hygiene
+Correction: commit a88e0d3a fixed generator/report EOF hygiene
+Final lead re-review: PASS
+Reviewed PR CI: platform-ci / validate-platform run 27865421666 passed on d77fce9a
 ```
 
 ## Forbidden Inference
@@ -177,6 +187,6 @@ claim current-layer DQS closure.
 
 ## Required Next Action
 
-Complete final lead review, publish the PR, verify fresh mergeability and
-green remote CI, then send this packet for human review. Do not merge or
-unlock downstream authority before human acceptance.
+Verify the final metadata commit has fresh green PR CI, then send this packet
+for human review. Do not merge or unlock downstream authority before human
+acceptance.
