@@ -1,13 +1,13 @@
 # GitHub Agent File Index - 4veco-platform
 
-Generated: 2026-06-20T07:29:16.587Z
+Generated: 2026-06-20T07:50:32.254Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists files by repository surface; it is not a Book 1 status system and does not certify lesson completeness.
 
 Root: `4veco-platform`
 Source branch: `HEAD`
-Source commit: `78abe245de5e21c517c642a983c13ef06f2c766f`
-Files indexed: 5144
+Source commit: `e8dfc9e8303187ffc9babd220ba3d74ae5cd19eb`
+Files indexed: 5158
 Scope: git-indexed files from `git ls-files --cached`; falls back to filesystem scan outside git worktrees; root is a logical repository name, not a local path
 
 Skipped directories: `.cache`, `.git`, `.tmp`, `__pycache__`, `coverage`, `dist`, `node_modules`, `out`, `output`, `outputs`, `temp`, `tmp`
@@ -132,7 +132,7 @@ Count: 84
 
 ## build scripts
 
-Count: 509
+Count: 510
 
 - build-scripts/archive/extract-all-antwoorden.py
 - build-scripts/archive/extract-quiz-data.js
@@ -395,6 +395,7 @@ Count: 509
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
+- build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/close-and-apply-rx2-first-lane.js
 - build-scripts/references/close-and-apply-rx2b-graphical-foundation.js
@@ -693,7 +694,7 @@ Count: 42
 
 ## validators
 
-Count: 500
+Count: 501
 
 - archive/sprints/INSPECT-0/INSPECT-0-validation-log.md
 - archive/sprints/INSPECT-1/INSPECT-1-validation-log.md
@@ -844,6 +845,7 @@ Count: 500
 - build-scripts/references/check-source-of-truth.js
 - build-scripts/references/check-target-exercise-flags.js
 - build-scripts/references/check-unit-design-status.js
+- build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js
 - build-scripts/references/check-y2-root-mapping-1.js
 - build-scripts/references/lib/exam-ingestion-candidate-validation.js
 - build-scripts/references/validate-alignment-graph.js
@@ -1198,7 +1200,7 @@ Count: 500
 
 ## references
 
-Count: 627
+Count: 628
 
 - references/authored/archive/course-target-exercises-v4.json
 - references/authored/course-target-exercises.json
@@ -1225,6 +1227,7 @@ Count: 627
 - references/data/exam-ingestion/source-annex-extraction-overlays.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.json
 - references/data/exam-ingestion/validator-cli-implementation-plan.md
+- references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json
 - references/data/exercises/exam-question-overlays.json
 - references/data/exercises/graph-spec-representation-plan.json
 - references/data/exercises/graph-spec-representation-plan.md
@@ -1830,7 +1833,7 @@ Count: 627
 
 ## reports
 
-Count: 3250
+Count: 3262
 
 - reports/alignment-graph-integrity.md
 - reports/aspects-coverage.md
@@ -1914,6 +1917,10 @@ Count: 3250
 - reports/inspection-standards/internal-diagnostic-scope-readiness.json
 - reports/inspection-standards/internal-diagnostic-scope-readiness.md
 - reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/dashboard-data.json
+- reports/internal-dashboard/index.html
+- reports/internal-dashboard/index.html
 - reports/internal-dashboard/index.html
 - reports/json/alignment-graph-integrity.json
 - reports/json/aspects-coverage.json
@@ -2262,6 +2269,11 @@ Count: 3250
 - reports/reference-planning/Y1-FOUNDATION-REVIEW-1-review-packet.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-quality-log.md
 - reports/reference-planning/Y1-PLACEHOLDER-TARGET-REVIEW-1-review-packet.md
+- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-evidence-packet.md
+- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-integrated-update.md
+- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-quality-log.md
+- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-review-packet.md
+- reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-assessment-retrieval-spine.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book-architecture.md
 - reports/reference-planning/Y2-ROOT-MAPPING-1-book8-compression-review.md
@@ -3014,6 +3026,7 @@ Count: 3250
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-next-action-focus.png
 - reports/review-gates/GATE-TASK-FAMILY-1-structured-choice-and-construction-task-family-review/screenshots/gate-task-family1-playable-retry-feedback.png
 - reports/review-gates/Y1-FOUNDATION-CLOSURE-REVIEW-1/review-packet.json
+- reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json
 - reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json
 - reports/sprints/AGENT-BRANCH-SAFETY-1-baseline.md
 - reports/sprints/AGENT-BRANCH-SAFETY-1-command-log.jsonl
@@ -5075,6 +5088,8 @@ Count: 3250
 - reports/sprints/Y1-FOUNDATION-REVIEW-1-result.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-plan.md
 - reports/sprints/Y1-PLACEHOLDER-TARGET-REVIEW-1-result.md
+- reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-plan.md
+- reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md
 - reports/sprints/Y2-ROOT-MAPPING-1-plan.md
 - reports/sprints/Y2-ROOT-MAPPING-1-result.md
 - reports/terminology-drift.md

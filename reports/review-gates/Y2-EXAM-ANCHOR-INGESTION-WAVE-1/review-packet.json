@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "packet_id": "Y2-EXAM-ANCHOR-INGESTION-WAVE-1",
+  "sprint_id": "Y2-EXAM-ANCHOR-INGESTION-WAVE-1",
+  "pr_number": 122,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/122",
+  "pr_throughput_class": "high_authority",
+  "bundle_id": null,
+  "authority_class": "high_authority",
+  "changed_paths": [
+    "build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js",
+    "references/data/document_inventory.json",
+    "references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json",
+    "references/data/source-document-registry.json",
+    "references/data/source_manifest.json",
+    "reports/github-agent-index-lessen.json",
+    "reports/github-agent-index-lessen.md",
+    "reports/github-agent-index-platform.json",
+    "reports/github-agent-index-platform.md",
+    "reports/internal-dashboard/dashboard-data.json",
+    "reports/internal-dashboard/index.html",
+    "reports/json/source-document-registry.json",
+    "reports/markdown/source-document-registry.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-evidence-packet.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-integrated-update.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-quality-log.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-review-packet.md",
+    "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md",
+    "reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json",
+    "reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-plan.md",
+    "reports/sprints/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-result.md"
+  ],
+  "review_autonomy": {
+    "level": "L4",
+    "lead_review_result": "PASS_WITH_FLAGS_READ_ONLY_LEAD_REVIEW_NO_MISSING_CORE_REQUIREMENTS",
+    "rationale": "This high-authority packet reviews official exam evidence for Year 2 architecture. Read-only lead review is complete with no missing core requirement carried. Human review is required before merge."
+  },
+  "human_decision_required": true,
+  "paired_prs": [],
+  "auto_merge_allowed_after_ci": false,
+  "escalation_triggers": [
+    "official_exam_anchor_wave",
+    "year2_candidate_disposition_changes",
+    "q23_macro_boundary",
+    "q3_q15_planning_anchor_boundary",
+    "q19_hold_boundary",
+    "product_authority_boundary",
+    "scale_gate_boundary"
+  ],
+  "date": "2026-06-20",
+  "product_end_state_refs": [
+    "../4veco-lessen/specifications/product-end-state.md"
+  ],
+  "original_sprint_or_gate_spec_refs": [
+    "references/owned/course-blueprint-v6-three-year.md",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-review-packet.md",
+    "reports/review-gates/Y2-ROOT-MAPPING-1/review-packet.json",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-paragraph-candidate-matrix.md",
+    "reports/reference-planning/Y2-ROOT-MAPPING-1-exam-anchor-backlog.md",
+    "references/data/exam-ingestion/README.md",
+    "references/data/exam-ingestion/review-procedure.md",
+    "references/data/exam-ingestion/operation-answer-skill-contract.json"
+  ],
+  "non_negotiable_requirements": [
+    "Represent the full Year 2 evidence wave, not one isolated case.",
+    "Cover Book 5, Book 6, Book 7, and two Book 8 families.",
+    "Include official prompt/source/correction-model traces for every selected case.",
+    "Include operation and answer-form decomposition.",
+    "Include OP-row and Year 2 paragraph-candidate mapping.",
+    "Include MTU/task-family support or explicit gap.",
+    "Include exact blockers and proof required to close them.",
+    "Include integrated candidate-impact update.",
+    "Keep Q3 as complementary planning evidence only.",
+    "Keep Q19 on HOLD.",
+    "Keep q23 monetary-policy evidence routed to later macro scope.",
+    "Do not mutate references/external/*, references/machine/*, or references/authored/*.",
+    "Do not create target-registry records, operation-candidate storage, answer-skill-candidate storage, MTUs, or lessons.",
+    "Do not claim product-route adoption, CP-6, Scale Gate, diagnostics, mastery, PV, summative use, or student/product use.",
+    "Use read-only lead review before human return.",
+    "Do not carry a missing core requirement under PASS WITH FLAGS."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-review-packet.md"
+    },
+    {
+      "requirement": "Original sprint/gate/source specs cited",
+      "status": "met",
+      "evidence": "original_sprint_or_gate_spec_refs"
+    },
+    {
+      "requirement": "Full evidence wave represented",
+      "status": "met",
+      "evidence": "references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json"
+    },
+    {
+      "requirement": "17 selected questions traced",
+      "status": "met",
+      "evidence": "references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json"
+    },
+    {
+      "requirement": "OP/candidate mapping included",
+      "status": "met",
+      "evidence": "references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json"
+    },
+    {
+      "requirement": "Integrated update included",
+      "status": "met",
+      "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-integrated-update.md"
+    },
+    {
+      "requirement": "Downstream authority false",
+      "status": "met",
+      "evidence": "authority_claims"
+    },
+    {
+      "requirement": "Read-only lead review complete",
+      "status": "met",
+      "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+    }
+  ],
+  "authority_claims": {
+    "year2_exam_anchor_wave_ready": true,
+    "official_exam_evidence_wave_complete": true,
+    "curriculum_mapping_only": true,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_reference_mutation_authorized": false,
+    "target_registry_mutation_in_scope": false,
+    "target_registry_records_created": false,
+    "mtus_minted": false,
+    "mtu_mutation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "operation_candidate_storage_created": false,
+    "answer_skill_candidate_storage_created": false,
+    "generated_lesson_output_authorized": false,
+    "official_exam_operation_closure_authorized": false,
+    "broad_operation_row_closure_authorized": false,
+    "product_authority": false,
+    "product_route_adoption_authorized": false,
+    "cp6_closure_authorized": false,
+    "scale_gate_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "pv_authorized": false,
+    "summative_use_authorized": false,
+    "student_use_authorized": false,
+    "student_product_use_authorized": false
+  },
+  "wave_summary": {
+    "selected_case_count": 5,
+    "selected_question_count": 17,
+    "book_5_anchor_family": "Y2-W1-B5-PENSIONMODEL-Q7-Q11",
+    "book_6_anchor_family": "Y2-W1-B6-HOUSING-Q26-Q29",
+    "book_7_anchor_family": "Y2-W1-B7-NONPAYMENT-Q12-Q15",
+    "book_8_anchor_families": [
+      "Y2-W1-B8-STRATEGIC-IJSSALON-Q15-Q16",
+      "Y2-W1-B8-GREEN-GROWTH-Q22-Q23"
+    ],
+    "q3_status": "complementary_planning_evidence_only",
+    "q19_status": "hold",
+    "q23_status": "macro_boundary_split_required"
+  },
+  "proof": {
+    "lead_reviews": {
+      "economics_curriculum_fit": {
+        "lead": "Hilbert",
+        "status": "PASS_WITH_FLAGS",
+        "blockers": [],
+        "flags": [
+          "Evidence improves mapping but does not close target, MTU, operation, or production authority."
+        ],
+        "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+      },
+      "source_figure_extraction": {
+        "lead": "Lagrange",
+        "status": "BLOCK_RESOLVED",
+        "blockers": [],
+        "flags": [
+          "Book 7 q12-q14 source context now cites the official page 6 credit-insurance figure and conditions."
+        ],
+        "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+      },
+      "correction_model_answer_form": {
+        "lead": "Plato",
+        "status": "BLOCK_RESOLVED",
+        "blockers": [],
+        "flags": [
+          "Book 7 adverse-selection answer form and REV-STD-1 finding classifications were repaired."
+        ],
+        "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+      },
+      "operation_mtu_compatibility": {
+        "lead": "Galileo",
+        "status": "PASS_WITH_FLAGS",
+        "blockers": [],
+        "flags": [
+          "Checker now enforces OP-spine row existence and mirrored skill-ID/task-family semantics."
+        ],
+        "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+      },
+      "authority_boundaries": {
+        "lead": "Cicero",
+        "status": "PASS_WITH_FLAGS",
+        "blockers": [],
+        "flags": [
+          "Downstream product, Scale, diagnostics, mastery, PV, summative, and student/product authority remains false."
+        ],
+        "evidence": "reports/reference-planning/Y2-EXAM-ANCHOR-INGESTION-WAVE-1-subagent-review.md"
+      }
+    },
+    "checkers": [
+      {
+        "command": "node --check build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "node build-scripts/references/check-y2-exam-anchor-ingestion-wave-1.js",
+        "status": "passed"
+      },
+      {
+        "command": "npm.cmd run check:review-throughput -- reports/review-gates/Y2-EXAM-ANCHOR-INGESTION-WAVE-1/review-packet.json",
+        "status": "passed"
+      }
+    ]
+  },
+  "decision": {
+    "status": "ready_for_human_review",
+    "downstream_authority": "blocked",
+    "human_review_required": true
+  }
+}
