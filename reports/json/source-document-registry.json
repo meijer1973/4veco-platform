@@ -1,17 +1,17 @@
 {
   "generated_by": "build-scripts/references/build-source-document-registry.js",
-  "generated_on": "2026-06-19T14:39:48.793Z",
+  "generated_on": "2026-06-20T07:50:44.553Z",
   "status": "pass",
   "summary": {
-    "record_count": 618,
-    "source_manifest_file_count": 627,
+    "record_count": 619,
+    "source_manifest_file_count": 628,
     "by_authority_level": {
       "external_primary": 30,
       "machine_registry": 5,
       "owned_curriculum_design": 7,
       "authored_judgement": 12,
       "generated_report": 2,
-      "governance_data": 469,
+      "governance_data": 470,
       "unknown": 58,
       "quality_protocol": 5,
       "planning": 1,
@@ -26,7 +26,7 @@
       "report_md": 1,
       "external_pdf": 25,
       "authored_markdown": 9,
-      "inventory": 50,
+      "inventory": 51,
       "exercise_metadata_overlay": 6,
       "exercise_overlay_readme": 1,
       "sprint_metadata": 410,
@@ -48,7 +48,7 @@
       "archived": 1,
       "generated_diagnostic": 2,
       "mirrored": 25,
-      "governance_data": 467,
+      "governance_data": 468,
       "review_required": 58,
       "planning": 1,
       "schema_contract": 29
@@ -57,7 +57,7 @@
       "public_citation_allowed_with_source_name": 30,
       "internal_only": 82,
       "internal_diagnostic_only": 2,
-      "not_public_citation_source": 504
+      "not_public_citation_source": 505
     },
     "evidence_anchor_coverage": {
       "required_document_ids": [
@@ -1889,6 +1889,44 @@
       "refresh_policy": "regenerate",
       "source_hash": "6c64248b5c5d2db31537c3bf8cebfc5f134a783a6621cd08d5e519f6a01a6890",
       "size_bytes": 6993,
+      "primary_evidence": false,
+      "curriculum_authority": false,
+      "allowed_downstream_uses": [
+        "internal_reference_context",
+        "rag_retrieval_with_authority_label"
+      ],
+      "blocked_downstream_uses": [
+        "student_diagnostics",
+        "adaptive_routing",
+        "student_facing_ai",
+        "automatic_lesson_sequencing",
+        "automatic_mastery_decisions",
+        "summative_assessment_decisions",
+        "external_authority",
+        "override_machine_registry"
+      ],
+      "evidence_anchor_ids": [],
+      "notes": [
+        "Governance data is canonical only for its declared governance artifact."
+      ]
+    },
+    {
+      "document_id": "path-references-data-exam-ingestion-y2-exam-anchor-ingestion-wave-1",
+      "path": "references/data/exam-ingestion/y2-exam-anchor-ingestion-wave-1.json",
+      "title": "Y2 Exam Anchor Ingestion Wave 1",
+      "source_type": "inventory",
+      "authority_level": "governance_data",
+      "source_version": "sha256:b61c5766cf956ae5350e8e997467ab0befbf83345eb8951fb115f409b23b9e08",
+      "status": "governance_data",
+      "owner": "references_team",
+      "citation_policy": "cite_as_governance_record_only",
+      "public_citation_policy": "not_public_citation_source",
+      "layer": "governance_data",
+      "generated_status": "generated_or_sprint_metadata",
+      "edit_policy": "generated_by_inventory_script",
+      "refresh_policy": "regenerate",
+      "source_hash": "b61c5766cf956ae5350e8e997467ab0befbf83345eb8951fb115f409b23b9e08",
+      "size_bytes": 29647,
       "primary_evidence": false,
       "curriculum_authority": false,
       "allowed_downstream_uses": [
