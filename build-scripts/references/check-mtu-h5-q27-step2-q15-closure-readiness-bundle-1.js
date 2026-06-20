@@ -25,6 +25,8 @@ const FIXTURE = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-f
 const REPORT_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.json');
 const REPORT_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-regression-report.md');
 const H5_VALIDATOR = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-mapping-regression.js');
+const FINAL_Q19_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-final-resolution-and-closure-bundle-1.json');
+const FINAL_Q19_CHECKER = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js');
 const MTUS = path.join(ROOT, 'references', 'machine', 'micro-teaching-units.json');
 const SOURCE_EXTRACTION_OVERLAY = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'source-annex-extraction-overlays.json');
 const OPERATION_CANDIDATES = path.join(ROOT, 'references', 'data', 'exam-ingestion', 'operation-candidates.json');
@@ -93,7 +95,13 @@ const AUTHORITY_FALSE_KEYS = [
 const ALLOWED_CHANGED_PATHS = new Set([
   'build-scripts/references/build-mtu-h5-regression-report.js',
   'build-scripts/reports/github-agent-index.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js',
   'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js',
+  'build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js',
   'build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js',
   'build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js',
@@ -101,12 +109,25 @@ const ALLOWED_CHANGED_PATHS = new Set([
   'build-scripts/references/check-mtu-h5-rp006-q15-planning-packet.js',
   'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json',
   'reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png',
   'reports/mtu-hardening/mtu-h5-regression-fixture.json',
   'reports/mtu-hardening/mtu-h5-regression-report.json',
   'reports/mtu-hardening/mtu-h5-regression-report.md',
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q27-step2-q15-closure-readiness-bundle-1/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
@@ -205,6 +226,24 @@ function runValidator(fixturePath = FIXTURE, expectFail = false) {
   return JSON.parse(run.stdout);
 }
 
+function q19FinalClosureActive() {
+  if (!fs.existsSync(FINAL_Q19_PACKAGE_JSON) || !fs.existsSync(FINAL_Q19_CHECKER)) return false;
+  if (!fs.existsSync(REPORT_JSON)) return false;
+  const report = readJson(REPORT_JSON);
+  return report.status === 'passed' &&
+    report.question_bucket_counts?.q19?.failed === 0 &&
+    report.question_bucket_counts?.q19?.review_required === 0 &&
+    report.bucket_totals?.failed === 0 &&
+    report.bucket_totals?.review_required === 0;
+}
+
+function requireSupersededByFinalQ19(container, context) {
+  const superseded = container.superseded_by;
+  if (!superseded || superseded.package_id !== 'MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1') {
+    fail(`${context} must be marked superseded_by MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`);
+  }
+}
+
 function records(fixture) {
   return fixture.records || fixture.question_records || [];
 }
@@ -245,6 +284,10 @@ function requirePackage(packet, gate) {
   }
   if (gate.requested_decision?.product_or_student_use_authorized_by_this_packet !== false) {
     fail('gate must not authorize product/student use');
+  }
+  if (q19FinalClosureActive()) {
+    requireSupersededByFinalQ19(packet, 'q27-step2/q15 package');
+    requireSupersededByFinalQ19(gate, 'q27-step2/q15 gate');
   }
   for (const row of packet.subagent_review_results || []) {
     if (row.verdict !== 'MORE_THAN_SATISFIED_EXECUTE_BOTH') fail(`${row.agent} verdict must be MORE_THAN_SATISFIED_EXECUTE_BOTH`);
@@ -323,10 +366,15 @@ function requireFixtureShape(fixture) {
 
 function requireValidatorState() {
   const result = runValidator();
-  if (result.status !== 'review_required') fail(`validator status must be review_required, got ${result.status}`);
+  const finalClosed = q19FinalClosureActive();
+  if (finalClosed) {
+    if (result.status !== 'passed') fail(`validator status must be passed after q19 final closure, got ${result.status}`);
+  } else if (result.status !== 'review_required') {
+    fail(`validator status must be review_required, got ${result.status}`);
+  }
   if ((result.buckets.failed || []).length !== 0) fail('validator failed bucket must be empty');
   if ((result.buckets.blocked || []).length !== 0) fail('validator blocked bucket must be empty');
-  requireExact(bucketIds(result, 'review_required', Q19_RECORD_ID), EXPECTED_Q19_REVIEW, 'q19 held review assertions');
+  requireExact(bucketIds(result, 'review_required', Q19_RECORD_ID), finalClosed ? [] : EXPECTED_Q19_REVIEW, 'q19 held or closed review assertions');
   requireExact(bucketIds(result, 'review_required', Q15_RECORD_ID), [], 'q15 review assertions');
   requireExact(bucketIds(result, 'review_required', Q27_RECORD_ID), [], 'q27 review assertions');
   requireExact(bucketIds(result, 'failed', Q15_RECORD_ID), [], 'q15 failed assertions');
@@ -340,22 +388,31 @@ function requireReportState() {
   if (report.source_validator_command !== 'node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json') {
     fail('report source validator command must not include --expect-fail');
   }
-  if (report.status !== 'review_required') fail('report status must be review_required');
-  if (report.bucket_totals?.failed !== 0 || report.bucket_totals?.review_required !== 6 || report.bucket_totals?.blocked !== 0) {
-    fail('report totals must be 0 failed / 6 review_required / 0 blocked');
+  const finalClosed = q19FinalClosureActive();
+  if (finalClosed) {
+    if (report.status !== 'passed') fail('report status must be passed after q19 final closure');
+    if (report.bucket_totals?.failed !== 0 || report.bucket_totals?.review_required !== 0 || report.bucket_totals?.blocked !== 0) {
+      fail('report totals must be 0 failed / 0 review_required / 0 blocked after q19 final closure');
+    }
+    if (report.question_bucket_counts?.q19?.failed !== 0 || report.question_bucket_counts?.q19?.review_required !== 0) fail('report q19 must be 0/0 after q19 final closure');
+  } else {
+    if (report.status !== 'review_required') fail('report status must be review_required');
+    if (report.bucket_totals?.failed !== 0 || report.bucket_totals?.review_required !== 6 || report.bucket_totals?.blocked !== 0) {
+      fail('report totals must be 0 failed / 6 review_required / 0 blocked');
+    }
+    if (report.question_bucket_counts?.q19?.failed !== 0 || report.question_bucket_counts?.q19?.review_required !== 6) fail('report q19 must be 0/6');
   }
-  if (report.question_bucket_counts?.q19?.failed !== 0 || report.question_bucket_counts?.q19?.review_required !== 6) fail('report q19 must be 0/6');
   if (report.question_bucket_counts?.q15?.failed !== 0 || report.question_bucket_counts?.q15?.review_required !== 0) fail('report q15 must be 0/0');
   if (report.question_bucket_counts?.q27?.failed !== 0 || report.question_bucket_counts?.q27?.review_required !== 0) fail('report q27 must be 0/0');
   if (report.remaining_lane_status?.q27?.blocks_mtu_h5_closure !== false) fail('report q27 must not block MTU-H5 closure');
   if (report.remaining_lane_status?.q15?.blocks_mtu_h5_closure !== false) fail('report q15 must not block MTU-H5 closure');
-  if (report.remaining_lane_status?.q19?.blocks_mtu_h5_closure !== true) fail('report q19 must remain the closure blocker');
-  for (const required of [
-    'q27 is clean',
-    'q15 is clean',
-    'q19 remains',
-    'product-route readiness remain blocked',
-  ]) {
+  if (report.remaining_lane_status?.q19?.blocks_mtu_h5_closure !== !finalClosed) {
+    fail(finalClosed ? 'report q19 must not remain the closure blocker' : 'report q19 must remain the closure blocker');
+  }
+  const requiredText = finalClosed
+    ? ['q27 is clean', 'q15 is clean', 'q19 is clean', 'student/product use remain unauthorized']
+    : ['q27 is clean', 'q15 is clean', 'q19 remains', 'product-route readiness remain blocked'];
+  for (const required of requiredText) {
     requireText(reportText, required, 'report');
   }
   for (const stale of [
@@ -546,7 +603,9 @@ function main() {
   requireRemoteDiscoverability(packet, gate);
   requireLessenIndexProvenance();
   requireChangedPathBoundary();
-  console.log('OK MTU-H5 q27-step2/q15 closure-readiness bundle 1: q27 and q15 clean, q19 remains held');
+  console.log(q19FinalClosureActive()
+    ? 'OK MTU-H5 q27-step2/q15 closure-readiness bundle 1: q27 and q15 clean, historical q19 hold superseded by final closure'
+    : 'OK MTU-H5 q27-step2/q15 closure-readiness bundle 1: q27 and q15 clean, q19 remains held');
 }
 
 try {

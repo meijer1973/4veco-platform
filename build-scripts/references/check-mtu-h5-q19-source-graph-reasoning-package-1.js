@@ -17,6 +17,8 @@ const {
 const ROOT = process.cwd();
 const PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-source-graph-reasoning-package-1.json');
 const PACKAGE_MD = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-source-graph-reasoning-package-1.md');
+const FINAL_Q19_PACKAGE_JSON = path.join(ROOT, 'reports', 'mtu-hardening', 'mtu-h5-q19-final-resolution-and-closure-bundle-1.json');
+const FINAL_Q19_CHECKER = path.join(ROOT, 'build-scripts', 'references', 'check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js');
 const GATE_ID = 'GATE-MTU-H5-Q19-source-graph-reasoning-package-1';
 const GATE_DIR = path.join(ROOT, 'reports', 'review-gates', GATE_ID);
 const GATE_JSON = path.join(GATE_DIR, 'review-packet.json');
@@ -137,13 +139,27 @@ const SOURCE_RECORD_FALSE_KEYS = [
 ];
 
 const Q19_PACKET_AUTHORIZED_PATHS = [
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-equivalent-execution-gate-1.js',
+  'build-scripts/references/check-mtu-h5-q19-answer-form-gate-1.js',
   'build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-source-graph-procedure-reasoning-gate-1.js',
   'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
+  'build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js',
   'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
   'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png',
+  'reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png',
   'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json',
   'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md',
   'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md',
+  'reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md',
   'reports/url-index.md',
   'reports/github-agent-index-platform.json',
   'reports/github-agent-index-platform.md',
@@ -302,6 +318,24 @@ function runH5Validator(fixturePath = FIXTURE, expectFail = false) {
   }
 }
 
+function q19FinalClosureActive() {
+  if (!fs.existsSync(FINAL_Q19_PACKAGE_JSON) || !fs.existsSync(FINAL_Q19_CHECKER)) return false;
+  if (!fs.existsSync(REGRESSION_REPORT_JSON)) return false;
+  const report = readJson(REGRESSION_REPORT_JSON);
+  return report.status === 'passed' &&
+    report.question_bucket_counts?.q19?.failed === 0 &&
+    report.question_bucket_counts?.q19?.review_required === 0 &&
+    report.bucket_totals?.failed === 0 &&
+    report.bucket_totals?.review_required === 0;
+}
+
+function requireSupersededByFinalQ19(packet, context) {
+  const superseded = packet.superseded_by;
+  if (!superseded || superseded.package_id !== 'MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1') {
+    fail(`${context} must be marked superseded_by MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1`);
+  }
+}
+
 function assertionIds(result, bucket) {
   return (result.buckets?.[bucket] || []).map((item) => item.assertion_id);
 }
@@ -346,6 +380,22 @@ function requireCurrentDiagnosticState(packet) {
   const report = readJson(REGRESSION_REPORT_JSON);
   const counts = report.question_bucket_counts || {};
   if (counts.q3?.failed !== 0 || counts.q3?.review_required !== 0) fail('report q3 counts must be 0/0');
+  if (q19FinalClosureActive()) {
+    requireSupersededByFinalQ19(packet, 'q19 source/graph/reasoning package');
+    if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 0) fail('final q19 closure report q19 counts must be 0/0');
+    if (counts.q27?.failed !== 0 || counts.q27?.review_required !== 0) fail('final q19 closure report q27 counts must be 0/0');
+    if (counts.q15?.failed !== 0 || counts.q15?.review_required !== 0) fail('final q19 closure report q15 counts must be 0/0');
+    if (report.remaining_lane_status?.q19?.blocks_mtu_h5_closure !== false) fail('final q19 closure report q19 must not block closure');
+    const result = runH5Validator();
+    if (result.status !== 'passed') fail('final q19 closure validator status must be passed');
+    for (const bucket of ['failed', 'review_required', 'blocked']) {
+      if ((result.buckets?.[bucket] || []).length !== 0) fail(`final q19 closure validator ${bucket} bucket must be empty`);
+    }
+    if (!assertionIds(result, 'passed').includes('MTUH5-NEGATIVE-negative-solo-q2-function-construction-overtrigger-FAILS-AS-EXPECTED')) {
+      fail('inherited Solo q1-q3 negative fixture guard must remain passing');
+    }
+    return;
+  }
   if (counts.q19?.failed !== 0 || counts.q19?.review_required !== 6) fail('report q19 counts must be 0/6');
   const q15Carried = counts.q15?.failed === 0 && counts.q15?.review_required === 4;
   const q15Clean = counts.q15?.failed === 0 && counts.q15?.review_required === 0;
@@ -413,7 +463,15 @@ function requireFixtureQ19Shape() {
   if (q19.question_word !== 'teken') fail('q19 question_word must be teken');
   requireExactArray(q19.mapped_mtu_ids || [], REQUIRED_UNITS, 'q19 mapped_mtu_ids');
   if ((q19.mapped_mtu_ids || []).includes('A45')) fail('q19 mapped_mtu_ids must not include A45');
-  requireExactQ19HookShape(q19);
+  const finalClosed = q19FinalClosureActive();
+  if (finalClosed) {
+    for (const operation of q19.official_correction_model_operations || []) {
+      requireExactArray(operation.review_required_hooks || [], [], `${operation.operation_id}.review_required_hooks`);
+      requireIncludes(operation.reviewed_equivalent_refs || [], `reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#${operation.operation_id === 'q19-step-1' ? 'Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT' : operation.operation_id === 'q19-step-2' ? 'Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT' : 'Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT'}`, `${operation.operation_id}.reviewed_equivalent_refs`);
+    }
+  } else {
+    requireExactQ19HookShape(q19);
+  }
 
   for (const operation of q19.official_correction_model_operations || []) {
     if (operation.missing_answer_form_expected !== false) {
@@ -541,7 +599,20 @@ function requirePackage(packet) {
       packet.exact_write_surface?.protected_reference_mutation_authorized !== false) {
     fail('package exact write surface must be non-mutating');
   }
-  requireIncludesAll(packet.exact_write_surface?.authorized_paths || [], Q19_PACKET_AUTHORIZED_PATHS, 'package authorized paths');
+  if (q19FinalClosureActive()) requireSupersededByFinalQ19(packet, 'q19 source/graph/reasoning package');
+  const historicalAuthorizedPaths = [
+    'build-scripts/references/check-mtu-h5-q19-procedure-semantic-fit-package-1.js',
+    'build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js',
+    'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json',
+    'reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.md',
+    'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.json',
+    'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/review-packet.md',
+    'reports/review-gates/GATE-MTU-H5-Q19-source-graph-reasoning-package-1/bundle-urls.md',
+    'reports/url-index.md',
+    'reports/github-agent-index-platform.json',
+    'reports/github-agent-index-platform.md',
+  ];
+  requireIncludesAll(packet.exact_write_surface?.authorized_paths || [], historicalAuthorizedPaths, 'package authorized paths');
   for (const command of REQUIRED_VALIDATION_COMMANDS) requireIncludes(packet.validation_commands || [], command, 'package validation commands');
 }
 
@@ -613,6 +684,7 @@ function requireGatePacket(gate) {
   ], 'gate must_review');
   if (gate.required_review_team_threshold?.minimum_verdict !== 'MORE_THAN_SATISFIED') fail('gate review threshold mismatch');
   if (gate.required_review_team_threshold?.all_three_required !== true) fail('gate must require all three review agents');
+  if (q19FinalClosureActive()) requireSupersededByFinalQ19(gate, 'q19 source/graph/reasoning gate');
   for (const command of REQUIRED_VALIDATION_COMMANDS) requireIncludes(gate.validation_commands || [], command, 'gate validation commands');
 }
 
@@ -620,14 +692,33 @@ function requireNegativeGuards() {
   const fixture = readJson(FIXTURE);
   const q19 = findRecord(fixture, Q19_RECORD_ID);
 
-  const allHooksCleared = JSON.parse(JSON.stringify(q19));
-  for (const operation of allHooksCleared.official_correction_model_operations || []) operation.review_required_hooks = [];
-  expectFailure(() => requireExactQ19HookShape(allHooksCleared), 'temporary q19 all-hooks-clear clone');
+  if (q19FinalClosureActive()) {
+    const hookClone = readJson(FIXTURE);
+    const hookQ19 = findRecord(hookClone, Q19_RECORD_ID);
+    const step2 = (hookQ19.official_correction_model_operations || []).find((operation) => operation.operation_id === 'q19-step-2');
+    step2.review_required_hooks = [
+      'q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support',
+    ];
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mtu-h5-q19-source-graph-reasoning-hook-'));
+    const tempFixture = path.join(tempDir, 'fixture-with-hook.json');
+    try {
+      fs.writeFileSync(tempFixture, JSON.stringify(hookClone, null, 2));
+      const result = runH5Validator(tempFixture);
+      if (result.status === 'passed') fail('temporary q19 hook reintroduction clone must not pass');
+      requireIncludes(assertionIds(result, 'review_required'), `${Q19_RECORD_ID}:q19-step-2:ASSERT-REVIEW-q19 chained multi-market reasoning remains operation_registry_need with D10/D13 partial support`, 'temporary q19 hook reintroduction review assertions');
+    } finally {
+      fs.rmSync(tempDir, { recursive: true, force: true });
+    }
+  } else {
+    const allHooksCleared = JSON.parse(JSON.stringify(q19));
+    for (const operation of allHooksCleared.official_correction_model_operations || []) operation.review_required_hooks = [];
+    expectFailure(() => requireExactQ19HookShape(allHooksCleared), 'temporary q19 all-hooks-clear clone');
 
-  const chainedCleared = JSON.parse(JSON.stringify(q19));
-  const step2 = (chainedCleared.official_correction_model_operations || []).find((operation) => operation.operation_id === 'q19-step-2');
-  step2.review_required_hooks = [];
-  expectFailure(() => requireExactQ19HookShape(chainedCleared), 'temporary q19 chained-hook-clear clone');
+    const chainedCleared = JSON.parse(JSON.stringify(q19));
+    const step2 = (chainedCleared.official_correction_model_operations || []).find((operation) => operation.operation_id === 'q19-step-2');
+    step2.review_required_hooks = [];
+    expectFailure(() => requireExactQ19HookShape(chainedCleared), 'temporary q19 chained-hook-clear clone');
+  }
 
   const overlayClone = readJson(SOURCE_OVERLAY);
   for (const record of allQ19SourceRecords(overlayClone)) record.extraction_status = 'reconstructable_pending_review';
@@ -760,7 +851,11 @@ function main() {
   requireRemoteDiscoverability(packet, gate);
   requireChangedPathBoundary();
 
-  console.log('OK MTU-H5 q19 source/graph/reasoning package 1: six live hooks held, no fixture/source/reference/product/student mutation authorized');
+  if (q19FinalClosureActive()) {
+    console.log('OK MTU-H5 q19 source/graph/reasoning package 1: historical hold package is superseded by final q19 closure; no protected/product/student mutation authorized');
+  } else {
+    console.log('OK MTU-H5 q19 source/graph/reasoning package 1: six live hooks held, no fixture/source/reference/product/student mutation authorized');
+  }
 }
 
 try {

@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "sprint_id": "MTU-H5",
+  "package_id": "MTU-H5-Q19-FINAL-RESOLUTION-AND-CLOSURE-BUNDLE-1",
+  "gate_id": "GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1",
+  "created": "2026-06-20",
+  "status": "pending_human_review_after_more_than_satisfied_q19_closure_execution",
+  "start_commit": "e8dfc9e8303187ffc9babd220ba3d74ae5cd19eb",
+  "review_branch": "codex/mtu-h5-q19-final-resolution-closure-bundle-1-20260620",
+  "review_standard": "REV-STD-1",
+  "purpose": "Resolve q19's six remaining source/graph/reasoning review hooks for the MTU-H5 regression surface by admitting direct rendered official prompt/source/correction pages as reviewed-equivalent evidence. This closes q19 and prepares MTU-H5 mapping-regression closure evidence for human review.",
+  "product_end_state": "MTU-H5 mapping-regression evidence may be reviewed as closed after q19 reaches 0 failed / 0 review_required. Scale Gate 1, product-route readiness, diagnostics, PV, mastery, sequencing, lesson output, and student/product use remain unauthorized until separate downstream human review.",
+  "original_sprint_gate_spec": "MTU-H5 required a fresh approved non-Solo sample with operation decomposition, required/forbidden MTUs, answer-form/misconception/scale/procedure hooks, and negative regression guards. After q3, q19, q27, and q15 lane repairs, q19's six source/graph/reasoning hooks were the only live blockers.",
+  "source_text_excerpt_policy": "No long verbatim exam passages are embedded. Official prompt and correction-model sources are cited by stable local source paths, rendered evidence images, and summaries.",
+  "mtu_h5_mapping_regression_surface_closed_by_this_packet": true,
+  "product_route_readiness_claimed": false,
+  "scale_gate_1_authorized": false,
+  "pre_execution_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 6, "status": "source_graph_reasoning_review_blocker"},
+    "q27": {"failed": 0, "review_required": 0},
+    "q15": {"failed": 0, "review_required": 0},
+    "overall": {"failed": 0, "review_required": 6, "blocked": 0}
+  },
+  "post_execution_actual_state": {
+    "q3": {"failed": 0, "review_required": 0},
+    "q19": {"failed": 0, "review_required": 0, "status": "clean_after_q19_final_resolution_reviewed_equivalent"},
+    "q27": {"failed": 0, "review_required": 0},
+    "q15": {"failed": 0, "review_required": 0},
+    "overall": {"failed": 0, "review_required": 0, "blocked": 0}
+  },
+  "source_evidence": [
+    "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+    "reports/mtu-hardening/mtu-h5-regression-report.json",
+    "build-scripts/references/check-mtu-h5-mapping-regression.js",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=8&question=19",
+    "references/external/exams/vw-1022-a-25-1-o.pdf#page=9&source=opgave-4",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=13&question=19",
+    "references/external/exams/vw-1022-a-25-1-c.pdf#page=14&question=19",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+    "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png",
+    "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+    "reports/mtu-hardening/mtu-h5-q19-procedure-semantic-fit-package-1.json",
+    "reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json",
+    "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json",
+    "references/machine/micro-teaching-units.json#A42",
+    "references/machine/micro-teaching-units.json#D10",
+    "references/machine/micro-teaching-units.json#D13",
+    "references/machine/micro-teaching-units.json#A81",
+    "references/machine/micro-teaching-units.json#A45",
+    "references/data/exam-ingestion/source-annex-extraction-overlays.json#q19-historical-text-layer-limitation"
+  ],
+  "source_overlay_disposition": {
+    "storage_path": "references/data/exam-ingestion/source-annex-extraction-overlays.json",
+    "mutation_authorized": false,
+    "status_after_this_packet": "unchanged_historical_text_layer_limitations",
+    "decision": "Direct rendered official pages supersede the old text-layer source/graph reconstruction hooks for the MTU-H5 regression fixture only.",
+    "does_not_authorize": [
+      "source overlay rewrite",
+      "PV graph extraction",
+      "product graph rendering",
+      "lesson handoff",
+      "student diagnostics",
+      "student/product use"
+    ]
+  },
+  "operation_evidence_surface": [
+    {
+      "anchor_id": "Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT",
+      "operation_id": "q19-step-1",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao labor market and conclude that the wage level rises.",
+      "decision": "close_by_reviewed_equivalent",
+      "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP1_LABOR_MARKET_SHIFT_REVIEWED_EQUIVALENT",
+      "required_mtu_ids": ["A42", "D10", "A81"],
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "rendered_evidence": [
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png"
+      ],
+      "evidence_summary": "The rendered source page contains the Curacao labor-market graph with wage and labor axes; the rendered correction page shows a rightward labor-demand shift and the wage-rises conclusion."
+    },
+    {
+      "anchor_id": "Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "operation_id": "q19-step-2",
+      "answer_model_summary": "Draw a rightward demand shift on the Curacao goods/services market and conclude that Curacao inflation rises; the correction model also accepts a correct aggregate-supply alternative.",
+      "decision": "close_by_reviewed_equivalent",
+      "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP2_CURACAO_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "rendered_evidence": [
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png"
+      ],
+      "evidence_summary": "The rendered source page contains the Curacao goods/services graph with inflation and Y axes; the correction model shows the inflation-rises conclusion and accepts aggregate-supply alternatives for this element."
+    },
+    {
+      "anchor_id": "Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "operation_id": "q19-step-3",
+      "answer_model_summary": "Draw a rightward demand shift on the Aruban goods/services market and conclude that Aruba inflation rises; the correction model also accepts a correct aggregate-supply alternative.",
+      "decision": "close_by_reviewed_equivalent",
+      "reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json#Q19_STEP3_ARUBA_INFLATION_SHIFT_REVIEWED_EQUIVALENT",
+      "required_mtu_ids": ["A42", "D10", "D13", "A81"],
+      "forbidden_mtu_ids": ["A45"],
+      "forbidden_route_tags": ["full_graph_construction", "calculus_route", "function_construction"],
+      "rendered_evidence": [
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+        "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png"
+      ],
+      "evidence_summary": "The rendered source page contains the Aruban goods/services graph with inflation and Y axes; the correction model shows the Aruba inflation-rises conclusion and accepts aggregate-supply alternatives for this element."
+    }
+  ],
+  "answer_form_and_misconception_evidence": [
+    {
+      "operation_id": "q19-step-1",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["source_market_shift_without_price_or_wage_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scale-factor operation.",
+      "procedure_expectation": "A42, D10, and A81 procedures are sufficient for the regression fixture; no procedure review hooks remain."
+    },
+    {
+      "operation_id": "q19-step-2",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["linked_market_shift_without_inflation_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scale-factor operation.",
+      "procedure_expectation": "A42, D10, D13, and A81 procedures are sufficient for the regression fixture; no procedure review hooks remain."
+    },
+    {
+      "operation_id": "q19-step-3",
+      "question_word": "teken",
+      "answer_form_reviewed_equivalent_ref": "reports/mtu-hardening/mtu-h5-q19-answer-form-equivalent-execution-gate-1.json#EX_ANS_GRAPH_DRAW_MARKET_SHIFT_DIRECTION",
+      "misconception_refs": ["foreign_spillover_without_aruba_inflation_direction"],
+      "scale_factor_evidence": "The about-1-cm instruction is a drawing-position constraint, not a numeric scale-factor operation.",
+      "procedure_expectation": "A42, D10, D13, and A81 procedures are sufficient for the regression fixture; no procedure review hooks remain."
+    }
+  ],
+  "negative_guards": [
+    "temporary q19 fixture with A45 reintroduced as mapped support must fail ASSERT-OVER-TRIGGER for all three q19 operations",
+    "temporary q19 fixture with full_graph_construction reintroduced must fail forbidden-route assertions",
+    "temporary q19 fixture with answer-form reviewed-equivalent refs removed must fail answer-form assertions",
+    "temporary q19 fixture with the old chained-reasoning hook reintroduced must not pass",
+    "temporary q19 fixture with A42 procedure review reintroduced must produce review_required",
+    "temporary q19 fixture missing final rendered-page closure evidence must be rejected by the final checker",
+    "inherited Solo q1-q3 function-construction negative fixture must continue to pass as fail-as-expected"
+  ],
+  "superseded_by": {
+    "supersedes": [
+      "reports/mtu-hardening/mtu-h5-q19-source-graph-reasoning-package-1.json",
+      "reports/mtu-hardening/mtu-h5-q27-step2-q15-closure-readiness-bundle-1.json"
+    ],
+    "note": "Those packets remain historical audit records. Their q19 0 failed / 6 review_required statements are no longer current after this bundle."
+  },
+  "subagent_review_results": [
+    {
+      "agent": "teacher",
+      "verdict": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
+      "summary": "Official rendered prompt/source/correction pages supply the graph objects, required shifts, and conclusions; A42/D10/D13/A81 are sufficient and A45 remains forbidden."
+    },
+    {
+      "agent": "economist",
+      "verdict": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
+      "summary": "The market chain is economically correct: labor demand right raises wages, Curacao inflation rises, and Aruba inflation rises; aggregate-supply alternatives remain acknowledged for steps 2 and 3."
+    },
+    {
+      "agent": "quality_inspection",
+      "verdict": "MORE_THAN_SATISFIED_TO_CLEAR_Q19",
+      "summary": "Closure is acceptable only with durable rendered evidence, updated stale checkers, negative guards, regenerated reports, remote discoverability, and no protected/product/student mutation."
+    }
+  ],
+  "subagent_lead_review": {
+    "status": "approved",
+    "lead_verdict": "APPROVE_Q19_FINAL_RESOLUTION_EXECUTION",
+    "lead_summary": "All three role reviews exceeded the threshold. Execute the fixture/report/checker closure only, preserve all no-product boundaries, and send the final packet for human remote review."
+  },
+  "authority_boundary": {
+    "protected_reference_mutation_authorized": false,
+    "external_source_mutation_authorized": false,
+    "machine_reference_mutation_authorized": false,
+    "authored_target_exercise_mutation_authorized": false,
+    "unit_minting_authorized": false,
+    "unit_update_authorized": false,
+    "unit_split_authorized": false,
+    "unit_merge_authorized": false,
+    "unit_deprecation_authorized": false,
+    "operation_registry_mutation_authorized": false,
+    "answer_skill_mutation_authorized": false,
+    "candidate_storage_creation_authorized": false,
+    "candidate_writes_authorized": false,
+    "source_overlay_mutation_authorized": false,
+    "lesson_output_mutation_authorized": false,
+    "diagnostics_authorized": false,
+    "adaptive_routing_authorized": false,
+    "mastery_authorized": false,
+    "sequencing_authorized": false,
+    "student_facing_ai_authorized": false,
+    "summative_use_authorized": false,
+    "pv_projection_authorized": false,
+    "pv_machine_promotion_authorized": false,
+    "student_product_use_authorized": false,
+    "product_route_readiness_claimed": false,
+    "scale_gate_1_authorized": false
+  },
+  "exact_write_surface": {
+    "authorized_after_subagent_lead_approval": true,
+    "authorized_paths": [
+      "reports/mtu-hardening/mtu-h5-regression-fixture.json",
+      "reports/mtu-hardening/mtu-h5-regression-report.json",
+      "reports/mtu-hardening/mtu-h5-regression-report.md",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.json",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1.md",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-08.png",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-opgave-09.png",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-13.png",
+      "reports/mtu-hardening/mtu-h5-q19-final-resolution-and-closure-bundle-1-evidence/q19-correction-14.png",
+      "reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.json",
+      "reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/review-packet.md",
+      "reports/review-gates/GATE-MTU-H5-Q19-final-resolution-and-closure-bundle-1/bundle-urls.md",
+      "build-scripts/references/build-mtu-h5-regression-report.js",
+      "build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js",
+      "build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+      "build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+      "build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+      "build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+      "reports/url-index.md",
+      "reports/github-agent-index-platform.json",
+      "reports/github-agent-index-platform.md"
+    ],
+    "forbidden_paths": [
+      "references/machine/*",
+      "references/external/*",
+      "references/data/exam-ingestion/*",
+      "references/authored/*",
+      "references/candidates/*",
+      "reports/candidates/*",
+      "lesson-output/*",
+      "lessons/*",
+      "product/*",
+      "diagnostics/*",
+      "pv/*"
+    ]
+  },
+  "validation_commands": [
+    "node --check build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-final-resolution-and-closure-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q19-source-graph-reasoning-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-step2-q15-closure-readiness-bundle-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-scaling-levy-capacity-package-1.js",
+    "node build-scripts/references/check-mtu-h5-q27-incidence-levy-capacity-package-2.js",
+    "node build-scripts/references/build-mtu-h5-regression-report.js --check",
+    "node build-scripts/references/check-mtu-h5-mapping-regression.js --fixture reports/mtu-hardening/mtu-h5-regression-fixture.json --json",
+    "node build-scripts/reports/validate-report-json.js",
+    "node build-scripts/sprints/emit-url-index.js --check",
+    "FOURVECO_LESSEN_ROOT=<clean 4veco-lessen origin/main worktree> FOURVECO_LESSEN_SOURCE_REF=origin/main npm run agent:index",
+    "npm run check:platform",
+    "git diff --check"
+  ]
+}
