@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "report_id": "dutch-quality-standards-closure-candidate",
+  "sprint_id": "GOAL-DQS-CLOSURE-1",
+  "generated_date": "2026-06-20",
+  "status": "current_authority_closure_candidate",
+  "dutch_only": true,
+  "internal_closure_candidate_only": true,
+  "human_review_required": true,
+  "evidence_pack_generated": false,
+  "teacher_school_facing_output_generated": false,
+  "public_external_output_generated": false,
+  "public_external_sharing_authorized": false,
+  "package_script_or_ci_integration_created": false,
+  "dashboard_gate_created": false,
+  "quality_ref_or_scale_gate_integration_created": false,
+  "generated_lesson_output_mutated": false,
+  "protected_reference_or_source_registry_mutated": false,
+  "personal_data_present": false,
+  "product_route_adoption_authorized": false,
+  "diagnostics_mastery_pv_authorized": false,
+  "student_or_product_use_authorized": false,
+  "non_dutch_standards_work_authorized": false,
+  "compliance_or_approval_claim": false,
+  "inspection_readiness_claim": false,
+  "product_end_state": "../4veco-lessen/specifications/product-end-state.md",
+  "strategic_product_vision": "../4veco-lessen/specifications/product-vision.md",
+  "quality_standards_end_state": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+  "original_sprint_gate_spec": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+  "controlling_recent_gate": "archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md",
+  "source_files_used": [
+    {
+      "path": "docs/roadmaps/quality-standards/quality-standards-end-state.md",
+      "sha256": "10f9874eb12e5748991a0c92334ec74871dee9d64662591fc51aa2d0d65270ec",
+      "bytes": 9039
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md",
+      "sha256": "8541d72fa5751c6cbe9940a87f20ff1f652e812326ed6937f11dab4635723b04",
+      "bytes": 42304
+    },
+    {
+      "path": "docs/roadmaps/quality-standards/sprint-ledger.md",
+      "sha256": "e47f4c1a8bfad73ec468d4d4e211361ed9f011c04f38609bfb68079e639a571b",
+      "bytes": 52148
+    },
+    {
+      "path": "references/data/inspection-standards/source-register.json",
+      "sha256": "f65b2f6d786e67b7f22c99acf55a867d4f0192886d8fecaa26f40b8da3450e40",
+      "bytes": 31051
+    },
+    {
+      "path": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json",
+      "sha256": "f2ff9d783b2f5d31b0fcf448b7b457f55bd198bb969872d45e514bbe4b45d326",
+      "bytes": 31838
+    },
+    {
+      "path": "docs/inspection-standards/nl-vo-evidence-model.md",
+      "sha256": "7db63a506e0563af71060517bce5e62dc1323a2fa9fa7f778e8de20a4d51ba94",
+      "bytes": 17478
+    },
+    {
+      "path": "docs/inspection-standards/external-review-privacy-and-claim-guardrails.md",
+      "sha256": "7e0c54ee324cc03046a404d67c67514b1cfbf56a144b2f4f53c2f1f7539d4d40",
+      "bytes": 8946
+    },
+    {
+      "path": "docs/inspection-standards/teacher-facing-evidence-pack-template.md",
+      "sha256": "28e9e1ac3ca38156a84586201e8a0602f3053e0481199861619ba5c0732d687d",
+      "bytes": 9311
+    },
+    {
+      "path": "build-scripts/inspection/validate-inspection-evidence.js",
+      "sha256": "1d0ac24dbe9ee62d41db637f3efa05344f877189933d8b392c3c1ed99153c120",
+      "bytes": 25153
+    },
+    {
+      "path": "docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md",
+      "sha256": "5ce9394893edce99b95d0dd6a6f0e040e04a4e804ef7600eb7adacc68de47df4",
+      "bytes": 12042
+    },
+    {
+      "path": "archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md",
+      "sha256": "c5d62027d29e6842461f9a398756aff2df859022df5facbdb236c68e4e789034",
+      "bytes": 5247
+    },
+    {
+      "path": "archive/sprints/INSPECT-11EF/INSPECT-11EF-final-lead-review.md",
+      "sha256": "c7e725a1a35bfaff04c6680113afe7b1d90d0d2573f840311f9092bb0acf683a",
+      "bytes": 7521
+    },
+    {
+      "path": "archive/sprints/INSPECT-11EF/INSPECT-11EF-validation-log.md",
+      "sha256": "f02d0c67d9ed38de343c0581b87e15d1a7426a7329e9e3cedb64041950cc0159",
+      "bytes": 8409
+    },
+    {
+      "path": "archive/sprints/INSPECT-11EF/INSPECT-11EF-specialist-gate-results.md",
+      "sha256": "2f899a316a239caeeeb10261bac2fe3d7930ffc57948d22bfce58dcc7a372cf5",
+      "bytes": 5280
+    },
+    {
+      "path": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json",
+      "sha256": "8d5959f30cb68ab212c107ad5b2eb1462c11444031847c1f4da3935047b35c66",
+      "bytes": 37732
+    },
+    {
+      "path": "reports/inspection-standards/internal-diagnostic-scope-readiness.json",
+      "sha256": "1c8ea8c57f612fca47e8373887c20a725420a577e07383d4fcea87e5ec11d96d",
+      "bytes": 22158
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-3-readiness-closure.json",
+      "sha256": "b2f2e81849208ee464e4220c06292bf51fcf59065050d4a3d459ec4e45211e81",
+      "bytes": 14458
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-2-diagnostic-report.json",
+      "sha256": "b48b5762330f9a1c49b4fb1d736a2004dea478bae7655abebe67835406fc59ea",
+      "bytes": 42020
+    },
+    {
+      "path": "reports/inspection-standards/chapter-1-3-diagnostic-report.json",
+      "sha256": "ddd48ee7418c232b8666798eb94902f221305096030701ac81ba51782123573a",
+      "bytes": 39272
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-end-state.md",
+      "sha256": "4a5555faecda72b8ca0506a1962273ea4d97cd95026785cb9050e8a4331744d1",
+      "bytes": 25959
+    },
+    {
+      "path": "../4veco-lessen/specifications/product-vision.md",
+      "sha256": "21d97f2dc980de77d6e2d423745e6a4d9553a3295f0f7a7d896261c9b95eec56",
+      "bytes": 8047
+    }
+  ],
+  "non_negotiable_requirements": [
+    "Use REV-STD-1 for review packet, validation, closure, and PR body.",
+    "Cite product end-state and the original sprint/gate spec.",
+    "Name non-negotiable requirements.",
+    "Include a core-requirement checklist.",
+    "Classify findings with blocks, does_not_block, and proof_required_to_close.",
+    "PASS WITH FLAGS may not carry a missing core requirement.",
+    "Close only the current authorised Dutch quality-standards layer, not L4/L5 teacher/school-facing maturity.",
+    "Keep evidence packs, teacher/school-facing output, public/external output, package/CI/dashboard gates, quality-ref, Scale Gate, product-route adoption, diagnostics/mastery/PV, student/product-use, personal data, and compliance/approval claims blocked.",
+    "Do not mutate generated lesson output, protected references, source registries, or external source records."
+  ],
+  "core_requirement_checklist": [
+    {
+      "requirement": "Product end-state cited",
+      "status": "met",
+      "evidence": "../4veco-lessen/specifications/product-end-state.md"
+    },
+    {
+      "requirement": "Original sprint/gate spec cited",
+      "status": "met",
+      "evidence": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    },
+    {
+      "requirement": "Current authorised DQS layer inventoried",
+      "status": "met",
+      "evidence": "maturity_assessment and authorised_surfaces"
+    },
+    {
+      "requirement": "INSPECT-11E/F incorporated after PR #119 merge",
+      "status": "met",
+      "evidence": "archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md"
+    },
+    {
+      "requirement": "Closure recommendation does not carry missing L4/L5 requirements as PASS WITH FLAGS",
+      "status": "met",
+      "evidence": "maturity_assessment marks L4 and L5 blocked / future-authority-required"
+    },
+    {
+      "requirement": "All carried issues classify blocks, does_not_block, and proof_required_to_close",
+      "status": "met",
+      "evidence": "finding_classification"
+    },
+    {
+      "requirement": "No downstream authority unlocked",
+      "status": "met",
+      "evidence": "output_boundary and forbidden_inference"
+    },
+    {
+      "requirement": "Deterministic source/output allowlists used",
+      "status": "met",
+      "evidence": "source_files_used and output_files_written"
+    }
+  ],
+  "closure_recommendation": {
+    "decision": "close_current_authorised_dutch_quality_standards_layer_after_human_review",
+    "scope": "Close the current Dutch-only quality-standards layer as a reviewed internal/report-only evidence-support and diagnostic layer through Chapter 1.3. This is not full L5 maturity and does not authorise teacher/school-facing evidence packs, public output, product routes, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data processing, or compliance/approval claims.",
+    "owner_next_action": "Owner next action: review this closure candidate. If accepted, merge the PR and treat future INSPECT-12/13/14 work as fresh human-authorised sprints with the three-reviewer MORE_THAN_SATISFIED gate. If rejected, keep the current internal diagnostic layer merged but revise this closure packet before claiming system-level closure."
+  },
+  "maturity_assessment": [
+    {
+      "level": "L0",
+      "name": "Setup",
+      "status": "met",
+      "evidence": "quality-standards roadmap, README, end-state, and sprint ledger exist.",
+      "source": "docs/roadmaps/quality-standards/sprint-ledger.md"
+    },
+    {
+      "level": "L1",
+      "name": "Source/profile design",
+      "status": "met_as_draft_bounded_profile_not_final",
+      "evidence": "Dutch source register and evidence profile exist with draft status and bounded Dutch-only use; they are not final, compliant, or inspection-ready.",
+      "source": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json"
+    },
+    {
+      "level": "L2",
+      "name": "Evidence schema",
+      "status": "met_for_report_only_use",
+      "evidence": "Report-only schema and manual validator exist; no build/CI gate is created by this closure candidate.",
+      "source": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    },
+    {
+      "level": "L3",
+      "name": "Bounded pack",
+      "status": "met_historically_for_inspect_7_scope",
+      "evidence": "INSPECT-7 produced a bounded Book 1 Chapter 1.1 first-three evidence-pack sample with three-reviewer MORE_THAN_SATISFIED results.",
+      "source": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json"
+    },
+    {
+      "level": "internal-diagnostic-layer",
+      "name": "Manual internal diagnostic reports",
+      "status": "met_for_chapter_1_2_and_chapter_1_3",
+      "evidence": "Chapter 1.2 and Chapter 1.3 internal diagnostic reports exist, are manual/internal only, and preserve blockers.",
+      "source": "docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md"
+    },
+    {
+      "level": "L4",
+      "name": "Dutch multi-scope scale",
+      "status": "blocked_future_authority_required",
+      "evidence": "Multi-scope evidence packs and pack-strength claims remain unauthorised.",
+      "source": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    },
+    {
+      "level": "L5",
+      "name": "Dutch quality-control layer",
+      "status": "not_claimed",
+      "evidence": "Full teacher/school-facing quality-control maturity requires fresh INSPECT-12/13/14 authority and MORE_THAN_SATISFIED gates.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    }
+  ],
+  "authorised_surfaces": [
+    {
+      "surface": "Dutch source register and evidence profile",
+      "status": "draft_bounded_dutch_only",
+      "evidence": "references/data/inspection-standards/source-register.json; references/data/inspection-standards/nl-vo-evidence-profile.v0.json"
+    },
+    {
+      "surface": "Dutch quality-standards roadmap and governance docs",
+      "status": "active_dutch_only",
+      "evidence": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    },
+    {
+      "surface": "Manual report-only inspection evidence validator",
+      "status": "manual_report_only",
+      "evidence": "build-scripts/inspection/validate-inspection-evidence.js"
+    },
+    {
+      "surface": "Bounded INSPECT-7 evidence-pack sample",
+      "status": "historical_bounded_sample_only",
+      "evidence": "reports/inspection-standards/inspect-7-book-1-1-evidence-pack.json"
+    },
+    {
+      "surface": "Chapter 1.2 internal diagnostic report",
+      "status": "manual_internal_diagnostic_only",
+      "evidence": "reports/inspection-standards/chapter-1-2-diagnostic-report.json"
+    },
+    {
+      "surface": "Chapter 1.3 internal diagnostic report",
+      "status": "manual_internal_diagnostic_only",
+      "evidence": "reports/inspection-standards/chapter-1-3-diagnostic-report.json"
+    },
+    {
+      "surface": "Internal diagnostic operating procedure",
+      "status": "manual_internal_procedure_only",
+      "evidence": "docs/inspection-standards/internal-diagnostic-tool-operating-procedure.md"
+    }
+  ],
+  "source_profile_status": {
+    "source_register_status": "draft",
+    "source_register_review_status": "draft_accepted_for_bounded_pilot_audit",
+    "evidence_profile_status": "draft",
+    "evidence_profile_review_status": "draft_dutch_scope_only_roadmap_proposed",
+    "active_scope": "Dutch VO/vwo-economie only",
+    "non_dutch_inventory_policy": "Non-Dutch standards sources, if present in the register, are historical or comparator inventory only and are not active DQS closure scope.",
+    "source": "references/data/inspection-standards/source-register.json",
+    "profile_source": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json"
+  },
+  "finding_classification": [
+    {
+      "finding": "The current authorised Dutch quality-standards layer is ready for human closure review as an internal/report-only evidence-support and diagnostic layer.",
+      "classification": "closure_candidate",
+      "blocks": "Nothing inside the current internal/report-only closure candidate after human acceptance and green PR CI.",
+      "does_not_block": "Reviewing and merging this closure candidate.",
+      "proof_required_to_close": "REV-STD-1 packet, specialist gates, final lead PASS, fresh PR CI, and human acceptance.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "finding": "Full L4/L5 Dutch quality-control maturity is not claimed.",
+      "classification": "future_authority_required",
+      "blocks": "Multi-scope evidence packs, teacher/school-facing packs, public/external output, product-route adoption, Scale Gate, diagnostics/mastery/PV, student/product-use, and compliance/approval claims.",
+      "does_not_block": "Closing the current authorised internal/report-only DQS layer.",
+      "proof_required_to_close": "Fresh INSPECT-12/13/14-style sprints with explicit human authority and teacher, legal/privacy, and Dutch quality-inspection MORE_THAN_SATISFIED gates.",
+      "source": "docs/roadmaps/quality-standards/inspection-standards-roadmap.md"
+    },
+    {
+      "finding": "Source register and Dutch evidence profile remain draft/bounded rather than final compliance sources.",
+      "classification": "draft_source_profile_boundary",
+      "blocks": "Final source/profile authority, public/external claims, compliance/approval claims, and full L5 maturity.",
+      "does_not_block": "Current internal/report-only closure candidate because draft status and boundaries remain visible.",
+      "proof_required_to_close": "Fresh source/profile maintenance sprint with renewed review and explicit human acceptance before stronger source/profile authority.",
+      "source": "references/data/inspection-standards/nl-vo-evidence-profile.v0.json"
+    },
+    {
+      "finding": "Chapter 1.2 and Chapter 1.3 reports are internal diagnostic only.",
+      "classification": "downstream_gate_blocker",
+      "blocks": "Evidence-pack, teacher/school-facing, public/external, product-route, Scale Gate, diagnostics/mastery/PV, student/product-use, personal-data, compliance, approval, OP0, PTA, summative, and inspection-readiness authority.",
+      "does_not_block": "Manual internal diagnostic checks with blockers visible.",
+      "proof_required_to_close": "Renewed human review explicitly naming any stronger audience, output, integration, or authority.",
+      "source": "archive/sprints/INSPECT-11EF/INSPECT-11EF-closure-log.md"
+    },
+    {
+      "finding": "Check-surface authority remains separate.",
+      "classification": "downstream_gate_blocker",
+      "blocks": "Scale Gate 1, product-route adoption, diagnostics/mastery/PV, and student/product-use.",
+      "does_not_block": "DQS closure-candidate review and ordinary scoped PR work.",
+      "proof_required_to_close": "Renewed human review confirming check-surface gate closure and naming the authority unlocked.",
+      "source": "reports/inspection-standards/chapter-1-3-diagnostic-report.json"
+    },
+    {
+      "finding": "School-owned evidence is still needed before school-facing or external claims.",
+      "classification": "school_evidence_gap",
+      "blocks": "Teacher/school-facing reliance, public/external sharing, compliance, approval, OP0, PTA, summative, inspection-readiness, school-obligation, and school-SKA claims.",
+      "does_not_block": "Internal/report-only closure candidate with explicit boundaries.",
+      "proof_required_to_close": "Separate school-owned evidence route and renewed human review before any teacher/school-facing or public/external output.",
+      "source": "docs/roadmaps/quality-standards/quality-standards-end-state.md"
+    },
+    {
+      "finding": "Book 1 Chapter 1.1 and Chapter 1.4 assembly-health failures are separate from DQS closure.",
+      "classification": "scope_boundary_flag",
+      "blocks": "Book 1 clean-health claims.",
+      "does_not_block": "DQS closure-candidate review because this packet does not claim Book 1 clean health.",
+      "proof_required_to_close": "Separate BOOK1-ASSEMBLY-HEALTH-1 route.",
+      "source": "archive/sprints/INSPECT-11EF/BOOK1-ASSEMBLY-HEALTH-1-triage-note.md"
+    }
+  ],
+  "forbidden_inference": [
+    "This closure candidate proves 4veco is compliant, approved, inspection-ready, OP0-complete, PTA-valid, summative-valid, or school-SKA complete.",
+    "This closure candidate authorises evidence-pack generation, teacher/school-facing output, public/external output or sharing.",
+    "This closure candidate authorises package scripts, CI/build invocation, dashboard gates, quality-ref integration, Scale Gate integration, product-route adoption, diagnostics/mastery/PV, student-use, or product-use.",
+    "This closure candidate authorises generated lesson-output mutation, protected-reference mutation, source-registry mutation, or personal-data processing.",
+    "This closure candidate closes full L4/L5 Dutch quality-control maturity."
+  ],
+  "school_owned_evidence_still_needed": [
+    "School implementation, classroom-use, monitoring, intervention, accommodation, and support evidence.",
+    "PTA, grading, summative-validity, and assessment-policy evidence.",
+    "School governance, SKA, inspection conversation, and competent-authority judgement evidence."
+  ],
+  "output_boundary": {
+    "evidence_pack_generated": false,
+    "teacher_school_facing_output_generated": false,
+    "public_external_output_generated": false,
+    "public_external_sharing_authorized": false,
+    "package_script_or_ci_integration_created": false,
+    "dashboard_gate_created": false,
+    "quality_ref_or_scale_gate_integration_created": false,
+    "generated_lesson_output_mutated": false,
+    "protected_reference_or_source_registry_mutated": false,
+    "personal_data_present": false,
+    "product_route_adoption_authorized": false,
+    "diagnostics_mastery_pv_authorized": false,
+    "student_or_product_use_authorized": false,
+    "non_dutch_standards_work_authorized": false,
+    "compliance_or_approval_claim": false,
+    "inspection_readiness_claim": false
+  },
+  "output_files_written": [
+    "reports/inspection-standards/dutch-quality-standards-closure-candidate.md",
+    "reports/inspection-standards/dutch-quality-standards-closure-candidate.json"
+  ],
+  "proof_required_to_close": [
+    "REV-STD-1 packet, specialist gates, final lead PASS, fresh PR CI, and human acceptance.",
+    "Fresh INSPECT-12/13/14-style sprints with explicit human authority and teacher, legal/privacy, and Dutch quality-inspection MORE_THAN_SATISFIED gates.",
+    "Fresh source/profile maintenance sprint with renewed review and explicit human acceptance before stronger source/profile authority.",
+    "Renewed human review explicitly naming any stronger audience, output, integration, or authority.",
+    "Renewed human review confirming check-surface gate closure and naming the authority unlocked.",
+    "Separate school-owned evidence route and renewed human review before any teacher/school-facing or public/external output.",
+    "Separate BOOK1-ASSEMBLY-HEALTH-1 route."
+  ]
+}
