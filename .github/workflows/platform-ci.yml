@@ -109,6 +109,9 @@ jobs:
       - name: Validate active scope language
         run: npm run check:scope-language
 
+      - name: Validate Golden Graph Advisory 113 proof
+        run: npm run check:golden-graph-advisory-113
+
       - name: Validate report JSON
         run: node build-scripts/reports/validate-report-json.js
 

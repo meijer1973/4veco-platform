@@ -7,6 +7,26 @@
   "intro": "Controleer of je de grafiekroute kunt starten: lees de tabel, zet punten in het werkvlak en kies je volgende oefenstap.",
   "targetSkillIds": ["A38", "A45", "A46"],
   "skillScopeIds": ["A38", "A45", "A46"],
+  "targetEquivalent": {
+    "candidate": false,
+    "gateApproved": false,
+    "completionLanguageEligible": false
+  },
+  "layout": {
+    "kind": "source_task_workspace",
+    "framework": "golden_exercise_workbench",
+    "variant": "golden_graph_advisory_v1",
+    "kicker": "Korte check - paragraaf 1.1.3",
+    "sourcePaneTitle": "Context",
+    "taskPaneTitle": "Korte check",
+    "sourceNote": "Gebruik de bron en tabel bij je grafiekwerk. De feedback wijst alleen naar een oefenstap."
+  },
+  "advisory": {
+    "intent": "Geef lokale oefenroute- en reparatiefeedback voor grafiekopzet en aflezen in paragraaf 1.1.3.",
+    "hintsAbsent": true,
+    "routeAdvice": true,
+    "targetEquivalentProof": false
+  },
   "metadataAlignment": {
     "status": "paragraph_skill_aligned_not_target_readiness",
     "paragraphSkillIds": ["A38", "A45", "A46"],
@@ -19,7 +39,8 @@
     },
     "notes": [
       "This advisory check uses graph/table interaction for local route advice but does not claim target readiness.",
-      "The reviewed-final target registry lists A38/A45/A46 for 1.1.3; this advisory check remains non-target-readiness evidence."
+      "The reviewed-final target registry lists A38/A45/A46 for 1.1.3; this advisory check remains non-target-readiness evidence.",
+      "Golden graph-advisory revision: line drawing is automatic after two table points; students do not answer a line-slope, line-shape, or line-confirmation control."
     ]
   },
   "skillMap": {
@@ -28,7 +49,7 @@
       {
         "label": "Grafieken aflezen",
         "surface": "Grafieken",
-        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+        "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
       },
       {
         "label": "Tabel naar grafiek",
@@ -38,7 +59,7 @@
       {
         "label": "Procentuele verandering",
         "surface": "Rekenen",
-        "href": "1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+        "href": "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
       }
     ]
   },
@@ -79,18 +100,16 @@
         "id": "grafiekroute-starten",
         "family": "graph_construction_substitute",
         "skillLabel": "P-Q-grafiek starten",
-        "purpose": "Kies de assen en zet twee tabelpunten in het grafiekwerkvlak.",
-        "prompt": "Gebruik Tabel 1. Bepaal zelf welke variabele op welke as komt, klik de punten bij EUR 2,50 en EUR 3,50 en trek de lijn.",
+        "purpose": "Kies de assen en zet twee verschillende tabelpunten in het grafiekwerkvlak. Na punt 2 verschijnt de lijn vanzelf.",
+        "prompt": "Gebruik Tabel 1. Bepaal zelf welke variabele op welke as komt en klik twee verschillende tabelpunten in het werkvlak. Na punt 2 verschijnt de lijn vanzelf.",
         "contextRefs": ["ctx-smoothie-short-source", "ctx-smoothie-short-table"],
         "interaction": {
           "workspaceTitle": "Grafiekwerkvlak",
           "xAxisLabel": "Horizontale as",
           "yAxisLabel": "Verticale as",
-          "pointRowsLabel": "Punten uit de tabel",
-          "lineConfirmationLabel": "Trek lijn door punten",
-          "lineShapeLabel": "Lijnvorm",
-          "xInputLabel": "Q-waarde",
-          "yInputLabel": "P-waarde",
+          "pointRowsLabel": "Twee punten uit de tabel",
+          "xInputLabel": "Waarde op horizontale as",
+          "yInputLabel": "Waarde op verticale as",
           "emptyGraphAltText": "P-Q-diagram met raster voor de korte check.",
           "hideAxisLabelsUntilAxisSelection": true,
           "pointCount": 2,
@@ -116,7 +135,9 @@
             { "id": "hoeveelheid", "label": "Hoeveelheid Q", "value": "Q" },
             { "id": "omzet", "label": "Omzet", "value": "omzet" },
             { "id": "tijd", "label": "Tijd", "value": "tijd" }
-          ]
+          ],
+          "pointSnapMode": "magnetic_table_point",
+          "pointSnapTolerancePx": 72
         },
         "expected": {
           "kind": "graph_construction_substitute",
@@ -128,15 +149,24 @@
             { "x": 250, "y": 2.5 },
             { "x": 150, "y": 3.5 }
           ],
-          "toleranceX": 0.01,
-          "toleranceY": 0.01,
-          "lineShape": "decreasing"
+          "toleranceX": 25,
+          "toleranceY": 0.2,
+          "lineShape": "decreasing",
+          "pointPolicy": "straight_line_two_distinct_table_points",
+          "minimumPointCount": 2,
+          "acceptedTablePoints": [
+            { "x": 300, "y": 2 },
+            { "x": 250, "y": 2.5 },
+            { "x": 200, "y": 3 },
+            { "x": 150, "y": 3.5 },
+            { "x": 100, "y": 4 }
+          ]
         },
         "feedback": {
           "matchTitle": "Grafiekroute gestart",
           "matchText": "Je gebruikt Q horizontaal, P verticaal en twee tabelpunten in hetzelfde werkvlak.",
           "retryTitle": "Controleer assen en tabelpunten",
-          "retryText": "Zet hoeveelheid Q horizontaal, prijs P verticaal en gebruik de rijen EUR 2,50 en EUR 3,50."
+          "retryText": "Zet hoeveelheid Q horizontaal, prijs P verticaal en klik twee verschillende bronwaarden uit de tabel. Je hoeft niet alle vijf punten te plaatsen."
         },
         "practiceRoute": {
           "label": "Oefen tabel naar grafiek",
@@ -152,16 +182,48 @@
         "family": "graph_reading",
         "skillLabel": "Grafiek aflezen",
         "purpose": "Lees tussen twee tabelpunten een hoeveelheid af.",
-        "prompt": "Lees af hoeveel smoothies ongeveer worden verkocht bij een prijs van EUR 2,75.",
+        "prompt": "Lees uit je P-Q-grafiek af hoeveel smoothies ongeveer worden verkocht bij een prijs van EUR 2,75. Kies eerst het broninterval; vul daarna de afgelezen hoeveelheid Q in.",
         "contextRefs": ["ctx-smoothie-short-source", "ctx-smoothie-short-table"],
         "interaction": {
-          "inputLabel": "Afgelezen hoeveelheid Q"
+          "inputLabel": "2. Afgelezen hoeveelheid Q",
+          "inputPlaceholder": "vul hoeveelheid in",
+          "stepOrder": [
+            "interval_selection",
+            "read_q_value"
+          ],
+          "intervalLabel": "1. Gebruikt interval",
+          "intervalOptions": [
+            {
+              "id": "200-250",
+              "label": "EUR 2,00 -> EUR 2,50",
+              "correct": false
+            },
+            {
+              "id": "250-300",
+              "label": "EUR 2,50 -> EUR 3,00",
+              "correct": true
+            },
+            {
+              "id": "300-350",
+              "label": "EUR 3,00 -> EUR 3,50",
+              "correct": false
+            },
+            {
+              "id": "350-400",
+              "label": "EUR 3,50 -> EUR 4,00",
+              "correct": false
+            }
+          ]
         },
         "expected": {
           "kind": "number",
           "value": 225,
           "tolerance": 5,
-          "unit": "smoothies"
+          "unit": "smoothies",
+          "interval": {
+            "kind": "choice",
+            "value": "250-300"
+          }
         },
         "feedback": {
           "matchTitle": "Aflezing past",
@@ -171,7 +233,7 @@
         },
         "practiceRoute": {
           "label": "Oefen grafieken aflezen",
-          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafieken.html"
+          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
         }
       }
     },
@@ -190,40 +252,69 @@
           "options": [
             {
               "id": "tabel-naar-grafiek",
-              "label": "Tabel naar grafiek oefenen",
-              "description": "Gebruik de tabel om assen, punten en lijn opnieuw te oefenen."
+              "label": "Grafiekopzet oefenen",
+              "description": "Gebruik de tabel om assen, punten en lijn opnieuw te oefenen.",
+              "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+            },
+            {
+              "id": "grafieken-aflezen",
+              "label": "Grafieken aflezen oefenen",
+              "description": "Handig als vooral het interval of de tussenwaarde lastig was.",
+              "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
             },
             {
               "id": "procenten",
               "label": "Procentuele verandering oefenen",
-              "description": "Handig als vooral de halvering of procenten lastig waren."
-            },
-            {
-              "id": "exit-ticket",
-              "label": "Meteen het exit ticket maken",
-              "description": "Alleen logisch als de grafiekroute al soepel ging."
+              "description": "Handig als vooral de procentuele controle later lastig is.",
+              "href": "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
             }
           ]
         },
         "expected": {
-          "kind": "choice",
-          "value": "tabel-naar-grafiek"
+          "kind": "advisory_choice",
+          "values": ["tabel-naar-grafiek", "grafieken-aflezen", "procenten"]
         },
         "feedback": {
-          "matchTitle": "Goede reparatieroute",
-          "matchText": "Als assen of punten nog onzeker zijn, oefen je eerst tabel naar grafiek.",
-          "retryTitle": "Kies de route die bij de fout past",
-          "retryText": "Deze korte check gaat vooral over assen, tabelpunten en de lijn in de grafiek."
+          "matchTitle": "Oefenstap gekozen",
+          "matchText": "Gebruik de toelichting bij je keuze om lokaal verder te oefenen.",
+          "retryTitle": "Kies een oefenstap",
+          "retryText": "Kies de route die past bij wat je net wilde oefenen."
+        },
+        "feedbackByOption": {
+          "tabel-naar-grafiek": {
+            "title": "Oefen grafiekopzet",
+            "text": "Kies deze route als assen kiezen of punten plaatsen nog onzeker voelt.",
+            "route": {
+              "label": "Ga naar tabel naar grafiek",
+              "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+            }
+          },
+          "grafieken-aflezen": {
+            "title": "Oefen grafieken aflezen",
+            "text": "Kies deze route als het interval of de tussenwaarde lastig was.",
+            "route": {
+              "label": "Ga naar grafiekenspel",
+              "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20grafiekenspel.html"
+            }
+          },
+          "procenten": {
+            "title": "Oefen procentuele verandering",
+            "text": "Kies deze route als vooral de procentuele controle later lastig is.",
+            "route": {
+              "label": "Ga naar procenten oefenen",
+              "href": "../1.1.2%20Percentages%20en%20indexcijfers/1.1.2%20Percentages%20en%20indexcijfers%20%E2%80%93%20wiskundevaardigheden.html"
+            }
+          }
         },
         "practiceRoute": {
-          "label": "Ga naar tabel naar grafiek",
-          "href": "1.1.3%20Grafieken%20en%20tabellen%20%E2%80%93%20uitleg%20vaardigheden.html"
+          "label": "Terug naar paragraafroute",
+          "href": "index.html"
         }
       }
     }
   ],
   "completion": {
     "title": "Kies je volgende oefenstap",
-    "text": "Gebruik de feedback: oefen tabel naar grafiek als assen of punten haperen, oefen grafieken aflezen als de aflezing lastig was, of probeer daarna pas het exit ticket."
+    "text": "Gebruik de feedback: oefen tabel naar grafiek als assen of punten haperen, oefen grafieken aflezen als de aflezing lastig was, en kies daarna je volgende oefenstap."
   }
 }

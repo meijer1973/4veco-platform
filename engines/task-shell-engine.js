@@ -1848,6 +1848,14 @@
     requireString(expected.kind, task.id + '.expected.kind');
 
     if (task.family === 'choice' || task.family === 'table_value_selection') {
+      if (task.family === 'table_value_selection' && expected.kind === 'advisory_choice') {
+        requireArray(expected.values, task.id + '.expected.values', 1);
+        expected.values.forEach(function (value, idx) {
+          requireString(value, task.id + '.expected.values[' + idx + ']');
+          assert(optionIds[value], task.id + '.expected.values[' + idx + '] must match an option id');
+        });
+        return;
+      }
       assert(expected.kind === 'choice', task.id + '.expected.kind must be choice');
       requireString(expected.value, task.id + '.expected.value');
       assert(optionIds[expected.value], task.id + '.expected.value must match an option id');
@@ -3434,6 +3442,11 @@
 
   function deterministicMatch(task, response) {
     if (task.family === 'choice' || task.family === 'table_value_selection') {
+      if (task.family === 'table_value_selection' && task.expected.kind === 'advisory_choice') {
+        var advisoryValues = {};
+        (task.expected.values || []).forEach(function (value) { advisoryValues[normalizeText(value)] = true; });
+        return Boolean(advisoryValues[normalizeText(response && response.value != null ? response.value : response)]);
+      }
       return normalizeText(response && response.value != null ? response.value : response) === normalizeText(task.expected.value);
     }
     if (task.family === 'multi_select') {

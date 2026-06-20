@@ -32,16 +32,20 @@ Current supported renderer variants:
 ```text
 golden_graph_reading_claim_v1
 golden_calculation_structured_v1
+golden_graph_advisory_v1
 golden_advisory_short_check_v1
 ```
 
 Current governed surface variant specifications:
 
 ```text
+golden_graph_advisory_v1
 golden_advisory_short_check_v1
 ```
 
 The advisory short-check variant is a narrow current renderer selector for governed advisory choice checks. The only current real-route migration under this selector is `1.1.2-korte-check`; this does not authorize broad short-check migration or exit-ticket authority.
+
+The graph advisory variant is a narrow current renderer selector for `1.1.3-korte-check`. It keeps the short check advisory while allowing real graph/table work. It does not authorize target-equivalent proof, paragraph completion, product-route adoption, or Scale Gate 1.
 
 The graph variant requires task-shell families:
 
@@ -58,6 +62,27 @@ The calculation/structured transfer variant requires task-shell families:
 calculation_work_capture
 structured_short_response
 contextBlocks referenced by each task
+```
+
+The graph advisory short-check renderer variant requires:
+
+```text
+surface_type: advisory_short_check
+layout.framework: golden_exercise_workbench
+layout.variant: golden_graph_advisory_v1
+graph_construction_substitute
+graph_reading
+table_value_selection
+graph spec from graph_construction_substitute
+axis choices with plausible distractors
+automatic line drawing after two table points
+interval selection before numeric graph reading
+targetEquivalent.candidate: false
+targetEquivalent.gateApproved: false
+targetEquivalent.completionLanguageEligible: false
+metadataAlignment.targetReadinessEvidence: false
+advisory.targetEquivalentProof: false
+no lineConfirmationLabel, lineShapeLabel, lineShapeOptions, fake slope, or fake line-control question
 ```
 
 The advisory short-check renderer variant requires:

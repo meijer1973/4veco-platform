@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "sprint_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
+  "generated": "2026-06-20T15:52:04.846Z",
+  "screenshots": [
+    {
+      "id": "desktop-light-initial",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-initial.png",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "desktop-light-wrong-retry",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-wrong-retry.png",
+      "route": "short-check",
+      "action": "wrong-retry",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "desktop-light-graph-after-action",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-graph-after-action.png",
+      "route": "short-check",
+      "action": "graph-after-action",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "desktop-light-local-success-advisory-complete",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/desktop-light-local-success-advisory-complete.png",
+      "route": "short-check",
+      "action": "local-success-advisory-complete",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "mobile-light-initial",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-light-initial.png",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      }
+    },
+    {
+      "id": "mobile-dark-initial",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-initial.png",
+      "route": "short-check",
+      "action": "initial",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      }
+    },
+    {
+      "id": "mobile-dark-local-success",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/mobile-dark-local-success.png",
+      "route": "short-check",
+      "action": "local-success-advisory-complete",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 860
+      }
+    },
+    {
+      "id": "route-reload-desktop-light",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/route-reload-desktop-light.png",
+      "route": "short-check",
+      "action": "route-reload",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "landing-to-short-check-route",
+      "file": "reports/sprints/GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1-screenshots/landing-to-short-check-route.png",
+      "route": "landing",
+      "action": "landing-to-short-check-route",
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    }
+  ]
+}
