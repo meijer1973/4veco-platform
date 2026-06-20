@@ -2,8 +2,8 @@
   "schema_version": 1,
   "packet_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
   "sprint_id": "GOLDEN-GRAPH-ADVISORY-113-BUNDLE-1",
-  "pr_number": null,
-  "pr_url": null,
+  "pr_number": 127,
+  "pr_url": "https://github.com/meijer1973/4veco-platform/pull/127",
   "pr_throughput_class": "high_authority",
   "bundle_id": null,
   "authority_class": "golden_exercise_workbench_governance",
@@ -51,15 +51,15 @@
     {
       "repository": "meijer1973/4veco-platform",
       "branch": "codex/golden-graph-advisory-113-bundle-20260620",
-      "pr_number": null,
-      "pr_url": null,
+      "pr_number": 127,
+      "pr_url": "https://github.com/meijer1973/4veco-platform/pull/127",
       "role": "platform source, renderer, checker, proof, reports, and CI wiring"
     },
     {
       "repository": "meijer1973/4veco-lessen",
       "branch": "codex/golden-graph-advisory-113-bundle-20260620",
-      "pr_number": null,
-      "pr_url": null,
+      "pr_number": 31,
+      "pr_url": "https://github.com/meijer1973/4veco-lessen/pull/31",
       "role": "generated lesson output only"
     }
   ],
